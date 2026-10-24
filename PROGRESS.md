@@ -20,6 +20,8 @@ Repo: https://github.com/foggysteam/metaculus-bot (private)
 - 24 Oct 2026: Step 1 rules check (UK fine, Ramp payout, credits closed). See `docs/step1-rules.md`, `docs/step1-winning-bots.md`.
 - 24 Oct 2026: Confirmed the documented way to use a Max subscription in CI is the `claude` CLI with `CLAUDE_CODE_OAUTH_TOKEN`.
 - 24 Oct 2026: Repo created from template, Claude wrapper, research/forecast prompts, logging, workflow written.
+- 24 Oct 2026: First end-to-end dry run (sample question "Brent > $110 on 30 Oct"): research 92s with 6 web searches and dated sources, 5 Opus forecasts 72-77%, final 76%, nothing submitted. Notional usage about $2.1 per question at list prices (covered by the Max plan, not billed).
+- Forecast workflow is pushed but disabled until the secrets exist.
 
 ## Next
 - First test run on bot-testing-area once the Metaculus token is in `.env`.
