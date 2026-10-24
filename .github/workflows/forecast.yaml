@@ -15,8 +15,9 @@ on:
       dry_run:
         description: "true = do not submit forecasts"
         default: "false"
-  schedule:
-    - cron: "7,37 * * * *"
+  # Schedule is off until the backtest is done. To go live, uncomment:
+  # schedule:
+  #   - cron: "7,37 * * * *"
 
 concurrency:
   group: forecast
