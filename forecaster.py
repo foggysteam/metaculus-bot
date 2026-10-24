@@ -39,7 +39,7 @@ from main import FallTemplateBot2026
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-10-25.1"
+BOT_VERSION = "2026-10-25.2"
 
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
