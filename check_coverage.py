@@ -17,11 +17,14 @@ from bot_helpers import silence_noisy_dependencies
 silence_noisy_dependencies()
 dotenv.load_dotenv()
 
-from forecasting_tools import MetaculusClient  # noqa: E402
+from forecasting_tools import MetaculusClient, MetaculusQuestion  # noqa: E402
 from forecasting_tools.helpers.metaculus_client import ApiFilter  # noqa: E402
 
 
-async def coverage(tournament: str | int, since: datetime) -> None:
+async def find_missed(
+    tournament: str | int, since: datetime
+) -> tuple[list[MetaculusQuestion], list[MetaculusQuestion], list[MetaculusQuestion]]:
+    """Returns (opened since `since`, of those closed, of those closed without our forecast)."""
     client = MetaculusClient()
     api_filter = ApiFilter(
         allowed_tournaments=[tournament],
@@ -33,6 +36,11 @@ async def coverage(tournament: str | int, since: datetime) -> None:
     now = datetime.now(timezone.utc)
     closed = [q for q in questions if q.close_time and q.close_time <= now]
     missed = [q for q in closed if not q.already_forecasted]
+    return questions, closed, missed
+
+
+async def coverage(tournament: str | int, since: datetime) -> None:
+    questions, closed, missed = await find_missed(tournament, since)
     print(
         f"{tournament}: {len(questions)} questions opened since {since.date()}, "
         f"{len(closed)} closed, {len(missed)} missed"

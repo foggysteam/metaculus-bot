@@ -22,6 +22,7 @@ Models run through the Claude Code CLI in headless mode (`claude -p`), authentic
 - `evidence.py`: AskNews, prediction-market and Metaculus lookups.
 - `numeric_baseline.py`: statistical baseline for questions about traded prices (Yahoo Finance) and economic data (FRED).
 - `check_coverage.py`: lists tournament questions that closed without a forecast.
+- `weekly_report.py` + `.github/workflows/weekly_report.yaml`: Monday report posted as a GitHub issue.
 - `main.py`, `main_with_no_framework.py`: the unmodified upstream template, kept for reference.
 - `.github/workflows/forecast.yaml`: scheduled GitHub Actions run that keeps polling for new questions.
 
