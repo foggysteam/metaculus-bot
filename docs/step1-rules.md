@@ -27,7 +27,7 @@ Main sources:
 - To be paid, winners must provide: proof of identity / eligibility certification, a US tax form (**W-8BEN** for non-US residents), bank details via the third-party service, and sign any acceptance documents. Must respond within 180 days or the prize is forfeited ([tournament rules, Distribution of Prizes](https://www.metaculus.com/tournament-rules/)).
 - To win any prize, the bot maker must submit code or a description of the bot and agree to an inspection (show code, demo on new questions, answer questions; may be a call) ([resources, Competition Rules](https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/#competition-rules)).
 - Everyone must fill in the first section of the participation form (3 required questions) and later the end-of-season survey.
-- Closed-source commercial bots cannot win. "Commercial" means a for-profit entity with 3+ founders/employees/contractors; solo founders and personal-time bots are not commercial. Ahmad as a solo sole trader is fine.
+- Closed-source commercial bots cannot win. "Commercial" means a for-profit entity with 3+ founders/employees/contractors; solo founders and personal-time bots are not commercial.
 - A human must create the Metaculus account and be ready to identify themselves.
 
 ## 4. Bot rules
