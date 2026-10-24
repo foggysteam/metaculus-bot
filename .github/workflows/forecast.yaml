@@ -61,8 +61,12 @@ jobs:
           if [ -n "$URL" ]; then args="$args --url $URL"; fi
           if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
           end=$(( $(date +%s) + LOOP_MINUTES * 60 ))
+          failures=0
           while true; do
-            uv run python run_bot.py $args || echo "Bot pass failed, will retry next pass"
+            if ! uv run python run_bot.py $args; then
+              failures=$(( failures + 1 ))
+              echo "Bot pass failed, will retry next pass"
+            fi
             if [ -n "$(git status --porcelain forecast_logs)" ]; then
               git add forecast_logs
               git commit -q -m "Forecast logs $(date -u +%Y-%m-%dT%H:%MZ)"
@@ -73,3 +77,8 @@ jobs:
             fi
             sleep "$POLL_SECONDS"
           done
+          # Mark the run red if any pass failed, so problems are visible.
+          if [ "$failures" -gt 0 ]; then
+            echo "$failures bot pass(es) failed"
+            exit 1
+          fi
