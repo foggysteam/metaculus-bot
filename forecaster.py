@@ -10,6 +10,7 @@ Metaculus/metac-bot-template without conflicts.
 """
 from __future__ import annotations
 
+import contextvars
 import json
 import logging
 import re
@@ -70,8 +71,14 @@ def build_llms() -> dict:
     }
 
 
+# Backtests set this so prompts say "Today is <question open date>".
+as_of_date: contextvars.ContextVar[str | None] = contextvars.ContextVar(
+    "as_of_date", default=None
+)
+
+
 def _utc_today() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return as_of_date.get() or datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
 def _fmt_time(value: datetime | None) -> str:

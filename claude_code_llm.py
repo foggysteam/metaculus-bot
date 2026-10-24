@@ -183,23 +183,31 @@ class ClaudeCodeLlm(GeneralLlm):
         start = time.time()
         async with _PROCESS_LIMIT:
             with tempfile.TemporaryDirectory(prefix="claude-call-") as workdir:
-                proc = await asyncio.create_subprocess_exec(
-                    *self._build_args(system_prompt),
-                    stdin=asyncio.subprocess.PIPE,
-                    stdout=asyncio.subprocess.PIPE,
-                    stderr=asyncio.subprocess.PIPE,
-                    cwd=workdir,
-                    env=env,
-                )
-                try:
-                    stdout, stderr = await asyncio.wait_for(
-                        proc.communicate(prompt.encode("utf-8")), timeout=self.timeout
+                # The prompt goes in via a file rather than a pipe: the CLI gives
+                # up if stdin is empty for 3s, which a busy event loop can cause.
+                prompt_path = os.path.join(workdir, "prompt.txt")
+                with open(prompt_path, "w", encoding="utf-8") as f:
+                    f.write(prompt)
+                with open(prompt_path, "rb") as prompt_file:
+                    proc = await asyncio.create_subprocess_exec(
+                        *self._build_args(system_prompt),
+                        stdin=prompt_file,
+                        stdout=asyncio.subprocess.PIPE,
+                        stderr=asyncio.subprocess.PIPE,
+                        cwd=workdir,
+                        env=env,
                     )
-                except asyncio.TimeoutError:
-                    proc.kill()
-                    await proc.wait()
-                    self._record(question_id, start, {}, ok=False, error="timeout")
-                    raise TimeoutError(f"Claude Code call timed out after {self.timeout}s")
+                    try:
+                        stdout, stderr = await asyncio.wait_for(
+                            proc.communicate(), timeout=self.timeout
+                        )
+                    except asyncio.TimeoutError:
+                        proc.kill()
+                        await proc.wait()
+                        self._record(question_id, start, {}, ok=False, error="timeout")
+                        raise TimeoutError(
+                            f"Claude Code call timed out after {self.timeout}s"
+                        )
 
         out_text = stdout.decode("utf-8", errors="replace").strip()
         err_text = stderr.decode("utf-8", errors="replace").strip()
