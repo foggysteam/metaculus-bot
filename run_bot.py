@@ -2,7 +2,7 @@
 Entry point for our bot (see forecaster.py). Modes:
   tournament      forecast new questions in the Fall 2026 tournament and MiniBench (publishes)
   test_questions  forecast the unscored bot-testing-area questions (publishes, safe to repeat)
-  question        forecast a single question by URL (use --dry-run to avoid publishing)
+  question        forecast specific questions by URL (use --dry-run to avoid publishing)
 
 Add --dry-run to any mode to run everything except submitting to Metaculus.
 """
@@ -41,7 +41,7 @@ def check_environment() -> None:
     find_claude_binary()
 
 
-async def run(mode: str, publish: bool, url: str | None):
+async def run(mode: str, publish: bool, urls: list[str]):
     bot = ClaudeForecaster(
         research_reports_per_question=1,
         predictions_per_research_report=5,
@@ -65,8 +65,8 @@ async def run(mode: str, publish: bool, url: str | None):
     elif mode == "test_questions":
         reports = await bot.forecast_on_tournament("bot-testing-area", return_exceptions=True)
     else:
-        question = client.get_question_by_url(url)
-        reports = await bot.forecast_questions([question], return_exceptions=True)
+        questions = [client.get_question_by_url(url) for url in urls]
+        reports = await bot.forecast_questions(questions, return_exceptions=True)
     return bot, reports
 
 
@@ -81,7 +81,7 @@ def main() -> None:
         choices=["tournament", "test_questions", "question"],
         default="tournament",
     )
-    parser.add_argument("--url", help="Question URL for --mode question")
+    parser.add_argument("--url", nargs="+", default=[], help="Question URL(s) for --mode question")
     parser.add_argument("--dry-run", action="store_true", help="Do not submit to Metaculus")
     args = parser.parse_args()
     if args.mode == "question" and not args.url:
@@ -89,7 +89,7 @@ def main() -> None:
 
     check_environment()
     publish = not args.dry_run
-    bot, reports = asyncio.run(run(args.mode, publish, args.url))
+    bot, reports = asyncio.run(run(args.mode, publish, args.url))  # noqa: E501
 
     bot.log_report_summary(reports)
     print_run_summary_banner(

@@ -1,7 +1,8 @@
 # PROGRESS
 
 Metaculus FutureEval forecasting bot. Cheap bet on prize money.
-Repo: https://github.com/foggysteam/metaculus-bot (private)
+Repo: https://github.com/foggysteam/metaculus-bot (public since 24 Oct 2026, commits use the GitHub no-reply email)
+Bot: KCAP2.0 (Metaculus primary bot, prize-eligible), owner account alasadi.dev@gmail.com
 
 ## Fixed test (do not move without Ahmad's approval)
 - 8 Nov 2026: bot live and submitting automatically, or stop.
@@ -30,8 +31,6 @@ Repo: https://github.com/foggysteam/metaculus-bot (private)
 - Coverage check script: list tournament questions we missed.
 
 ## Waiting on Ahmad
-1. Metaculus: Settings > My Forecasting Bots > Create Bot. Tell me the bot name.
-2. Put the bot token in `.env` (METACULUS_TOKEN) and in GitHub secret `METACULUS_TOKEN`.
-3. Run `claude setup-token` and save the output as GitHub secret `CLAUDE_CODE_OAUTH_TOKEN`.
-4. claude.ai Settings > Usage: make sure extra usage is off.
-5. Decide: public or private repo (public = unlimited free Actions minutes, so the bot can poll all day).
+1. Add GitHub secrets `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) and `METACULUS_TOKEN` (helper running in the terminal tab).
+2. Submit the participation form (email alasadi.dev@gmail.com, bot KCAP2.0, Non-Student Hobbyist, No to credits).
+3. claude.ai Settings > Usage: make sure extra usage is off.
