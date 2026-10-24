@@ -25,6 +25,7 @@ Bot: KCAP2.0 (Metaculus primary bot, prize-eligible), owner account alasadi.dev@
 - 24 Oct 2026: Repo made public. GitHub secrets METACULUS_TOKEN and CLAUDE_CODE_OAUTH_TOKEN added. Repo variables LOOP_MINUTES=330, POLL_SECONDS=600.
 - 24 Oct 2026: CI dry run passed on GitHub Actions (Claude Code 2.1.310 on the subscription token, 16 calls, nothing submitted).
 - 24 Oct 2026: Live test on the unscored bot-testing-area: forecasts and comments posted by KCAP2.0 (binary, multiple choice, numeric so far).
+- 24 Oct 2026: FutureEval participation form submitted (KCAP2.0, alasadi.dev@gmail.com, repo listed as open source). Data Needs Form submitted for the Bot Benchmarking Tier (non-commercial data agreement accepted by Ahmad); awaiting Metaculus approval.
 - Forecast workflow is enabled for manual runs only; the schedule is commented out until the backtest is done.
 
 ## Next
@@ -34,5 +35,6 @@ Bot: KCAP2.0 (Metaculus primary bot, prize-eligible), owner account alasadi.dev@
 - Coverage check (check_coverage.py) after go-live.
 
 ## Waiting on Ahmad
-1. Submit the Metaculus Data Needs Form for the Bot Benchmarking Tier (needs agreeing to a non-commercial data sharing agreement, his call).
-2. claude.ai: make sure extra usage is off.
+1. claude.ai Settings > Usage > Usage credits: make sure it is off (or capped).
+2. Watch alasadi.dev@gmail.com for Metaculus's reply on the Bot Benchmarking Tier (may include an agreement to sign).
+3. If the data has not arrived by Fri 30 Oct: decide whether to go live on the 2 Nov MiniBench without the backtest.
