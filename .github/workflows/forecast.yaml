@@ -1,0 +1,74 @@
+name: Forecast
+
+# Questions open for only 3 hours at random times, and GitHub drops many cron
+# firings. So each run can keep polling for LOOP_MINUTES (repo variable) and
+# runs queue behind each other via the concurrency group.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "tournament, test_questions, or question"
+        default: "tournament"
+      url:
+        description: "Question URL (only for mode=question)"
+        default: ""
+      dry_run:
+        description: "true = do not submit forecasts"
+        default: "false"
+  schedule:
+    - cron: "7,37 * * * *"
+
+concurrency:
+  group: forecast
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      LOOP_MINUTES: ${{ vars.LOOP_MINUTES || '0' }}
+      POLL_SECONDS: ${{ vars.POLL_SECONDS || '600' }}
+      MODE: ${{ inputs.mode || 'tournament' }}
+      URL: ${{ inputs.url || '' }}
+      DRY_RUN: ${{ inputs.dry_run || 'false' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.3.0
+        with:
+          version: "0.13.1"
+          enable-cache: true
+      - name: Install dependencies
+        run: uv sync --locked
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code && claude --version
+      - name: Run bot (and keep polling for LOOP_MINUTES)
+        run: |
+          git config user.name "forecast-bot"
+          git config user.email "forecast-bot@users.noreply.github.com"
+          args="--mode $MODE"
+          if [ -n "$URL" ]; then args="$args --url $URL"; fi
+          if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
+          end=$(( $(date +%s) + LOOP_MINUTES * 60 ))
+          while true; do
+            uv run python run_bot.py $args || echo "Bot pass failed, will retry next pass"
+            if [ -n "$(git status --porcelain forecast_logs)" ]; then
+              git add forecast_logs
+              git commit -q -m "Forecast logs $(date -u +%Y-%m-%dT%H:%MZ)"
+              git pull -q --rebase && git push -q || echo "Log push failed, will retry next pass"
+            fi
+            if [ "$MODE" != "tournament" ] || [ $(( $(date +%s) + POLL_SECONDS )) -ge $end ]; then
+              break
+            fi
+            sleep "$POLL_SECONDS"
+          done
