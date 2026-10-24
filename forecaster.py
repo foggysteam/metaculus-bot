@@ -38,6 +38,9 @@ from main import FallTemplateBot2026
 
 logger = logging.getLogger(__name__)
 
+# Bump on every change that can alter forecasts, so results can be traced to a version.
+BOT_VERSION = "2026-10-25.1"
+
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
 TEST_LOG_DIR = Path(__file__).parent / "test_logs"
@@ -160,6 +163,7 @@ class ClaudeForecaster(FallTemplateBot2026):
         notional_cost = round(sum(u["notional_cost_usd"] for u in usage), 4)
         entry = {
             "logged_at": datetime.now(timezone.utc).isoformat(),
+            "bot_version": BOT_VERSION,
             "started_at": started.isoformat(),
             "published": bool(report) and self.publish_reports_to_metaculus,
             "status": "ok" if report else "failed",
