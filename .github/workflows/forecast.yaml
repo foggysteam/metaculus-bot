@@ -15,9 +15,10 @@ on:
       dry_run:
         description: "true = do not submit forecasts"
         default: "false"
-  # Schedule is off until the backtest is done. To go live, uncomment:
-  # schedule:
-  #   - cron: "7,37 * * * *"
+  # Live since 24 Oct 2026. Each run polls for LOOP_MINUTES; queued runs keep coverage
+  # going even when GitHub drops cron firings.
+  schedule:
+    - cron: "7,37 * * * *"
 
 concurrency:
   group: forecast
