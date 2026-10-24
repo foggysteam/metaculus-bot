@@ -92,11 +92,18 @@ def describe_prediction(value) -> object:
     if isinstance(value, PredictedOptionList):
         return {o.option_name: round(o.probability, 4) for o in value.predicted_options}
     if isinstance(value, NumericDistribution):
-        return [
-            {"percentile": p.percentile, "value": p.value}
-            for p in value.declared_percentiles
-        ]
+        points = sorted((p.percentile, p.value) for p in value.declared_percentiles)
+        return {f"p{round(q * 100)}": _interpolate(points, q) for q in (0.1, 0.25, 0.5, 0.75, 0.9)}
     return str(value)
+
+
+def _interpolate(points: list[tuple[float, float]], q: float) -> float:
+    """Value at cumulative probability q from sorted (percentile, value) pairs."""
+    for (p0, v0), (p1, v1) in zip(points, points[1:]):
+        if p0 <= q <= p1:
+            weight = 0 if p1 == p0 else (q - p0) / (p1 - p0)
+            return round(v0 + weight * (v1 - v0), 4)
+    return round(points[0][1] if q < points[0][0] else points[-1][1], 4)
 
 
 class ClaudeForecaster(FallTemplateBot2026):

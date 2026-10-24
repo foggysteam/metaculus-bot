@@ -22,15 +22,17 @@ Bot: KCAP2.0 (Metaculus primary bot, prize-eligible), owner account alasadi.dev@
 - 24 Oct 2026: Confirmed the documented way to use a Max subscription in CI is the `claude` CLI with `CLAUDE_CODE_OAUTH_TOKEN`.
 - 24 Oct 2026: Repo created from template, Claude wrapper, research/forecast prompts, logging, workflow written.
 - 24 Oct 2026: First end-to-end dry run (sample question "Brent > $110 on 30 Oct"): research 92s with 6 web searches and dated sources, 5 Opus forecasts 72-77%, final 76%, nothing submitted. Notional usage about $2.1 per question at list prices (covered by the Max plan, not billed).
-- Forecast workflow is pushed but disabled until the secrets exist.
+- 24 Oct 2026: Repo made public. GitHub secrets METACULUS_TOKEN and CLAUDE_CODE_OAUTH_TOKEN added. Repo variables LOOP_MINUTES=330, POLL_SECONDS=600.
+- 24 Oct 2026: CI dry run passed on GitHub Actions (Claude Code 2.1.310 on the subscription token, 16 calls, nothing submitted).
+- 24 Oct 2026: Live test on the unscored bot-testing-area: forecasts and comments posted by KCAP2.0 (binary, multiple choice, numeric so far).
+- Forecast workflow is enabled for manual runs only; the schedule is commented out until the backtest is done.
 
 ## Next
-- First test run on bot-testing-area once the Metaculus token is in `.env`.
-- Turn on the schedule; go live on Fall 2026 + MiniBench (next MiniBench round starts Mon 2 Nov).
-- Backtest harness: replay the forecasting step on logged research once questions resolve (leak-free), plus a small pre-live set.
-- Coverage check script: list tournament questions we missed.
+- Backtest before go-live. Bulk-reading public question pages gets blocked by Cloudflare (403), so we use the official route: Metaculus "Bot Benchmarking Tier" (250 resolved questions with community prediction) via the Data Needs Form. Fallback: forward-test on main-site questions (allowed) and score once they resolve.
+- Backtest design: research each question as of its open date (drop dated facts after it), 5 forecasts per question; score log/Brier vs the bots' aggregate at close; single forecast vs median-of-5 and an MC probability floor come free from the same run.
+- Go live: uncomment the schedule in forecast.yaml before the MiniBench round on Mon 2 Nov.
+- Coverage check (check_coverage.py) after go-live.
 
 ## Waiting on Ahmad
-1. Add GitHub secrets `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) and `METACULUS_TOKEN` (helper running in the terminal tab).
-2. Submit the participation form (email alasadi.dev@gmail.com, bot KCAP2.0, Non-Student Hobbyist, No to credits).
-3. claude.ai Settings > Usage: make sure extra usage is off.
+1. Submit the Metaculus Data Needs Form for the Bot Benchmarking Tier (needs agreeing to a non-commercial data sharing agreement, his call).
+2. claude.ai: make sure extra usage is off.
