@@ -26,9 +26,11 @@ Bot: KCAP2.0 (Metaculus primary bot, prize-eligible), owner account alasadi.dev@
 - 24 Oct 2026: CI dry run passed on GitHub Actions (Claude Code 2.1.310 on the subscription token, 16 calls, nothing submitted).
 - 24 Oct 2026: Live test on the unscored bot-testing-area: forecasts and comments posted by KCAP2.0 (binary, multiple choice, numeric so far).
 - 24 Oct 2026: FutureEval participation form submitted (KCAP2.0, alasadi.dev@gmail.com, repo listed as open source). Data Needs Form submitted for the Bot Benchmarking Tier (non-commercial data agreement accepted by Ahmad); awaiting Metaculus approval.
+- 25 Oct 2026: Reliability and evidence upgrades: model fallback (Opus then Sonnet) on errors or usage limits; evidence pack from AskNews (1 call per question), Kalshi, Polymarket, Manifold and Metaculus main-site community predictions; code-computed baseline percentiles for questions about traded prices (Yahoo Finance); market-anchor rule in prompts; daily health check workflow (coverage + canary, opens a GitHub issue on problems).
 - Forecast workflow is enabled for manual runs only; the schedule is commented out until the backtest is done.
 
 ## Next
+- Improvement roadmap (each change kept only if the backtest score improves): calibration fix (shrink/extremise), multiple-choice probability floor, yes/no clip range, status-quo bias correction for "by date" questions, skip question types with negative expected score, effort high vs xhigh, second independent research report.
 - Backtest before go-live. Bulk-reading public question pages gets blocked by Cloudflare (403), so we use the official route: Metaculus "Bot Benchmarking Tier" (250 resolved questions with community prediction) via the Data Needs Form. Fallback: forward-test on main-site questions (allowed) and score once they resolve.
 - Backtest design: research each question as of its open date (drop dated facts after it), 5 forecasts per question; score log/Brier vs the bots' aggregate at close; single forecast vs median-of-5 and an MC probability floor come free from the same run.
 - Go live: uncomment the schedule in forecast.yaml before the MiniBench round on Mon 2 Nov.

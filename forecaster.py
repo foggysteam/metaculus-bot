@@ -10,6 +10,7 @@ Metaculus/metac-bot-template without conflicts.
 """
 from __future__ import annotations
 
+import asyncio
 import contextvars
 import json
 import logging
@@ -31,6 +32,8 @@ from forecasting_tools import (
 from forecasting_tools.data_models.forecast_report import ForecastReport
 
 from claude_code_llm import USAGE_LEDGER, ClaudeCodeLlm, current_question_id
+from evidence import gather_evidence
+from numeric_baseline import statistical_baseline
 from main import FallTemplateBot2026
 
 logger = logging.getLogger(__name__)
@@ -58,6 +61,7 @@ def build_llms() -> dict:
             effort="high",
             purpose="forecast",
             system_prompt=FORECAST_SYSTEM_PROMPT,
+            fallback_models=("sonnet",),
         ),
         "researcher": ClaudeCodeLlm(
             model="opus",
@@ -65,8 +69,11 @@ def build_llms() -> dict:
             tools="WebSearch,WebFetch",
             purpose="research",
             system_prompt=RESEARCH_SYSTEM_PROMPT,
+            fallback_models=("sonnet",),
         ),
-        "parser": ClaudeCodeLlm(model="haiku", effort=None, purpose="parser"),
+        "parser": ClaudeCodeLlm(
+            model="haiku", effort=None, purpose="parser", fallback_models=("sonnet",)
+        ),
         "summarizer": ClaudeCodeLlm(model="haiku", effort=None, purpose="summary"),
     }
 
@@ -245,8 +252,27 @@ class ClaudeForecaster(FallTemplateBot2026):
 
     async def run_research(self, question: MetaculusQuestion) -> str:
         async with self._concurrency_limiter:
+            (news, markets), baseline = await asyncio.gather(
+                gather_evidence(question), statistical_baseline(question)
+            )
+            if baseline:
+                markets = f"{markets}\n\nStatistical baseline:\n{baseline}".strip()
             researcher = self.get_llm("researcher", "llm")
-            research = await researcher.invoke(self._get_research_prompt(question, researcher))
+            prompt = self._get_research_prompt(question, researcher)
+            if news:
+                prompt += (
+                    "\n\nNews articles already collected by a news API "
+                    f"(use them, and verify key claims):\n{news}"
+                )
+            if markets:
+                prompt += (
+                    "\n\nPrediction market and Metaculus prices already collected "
+                    f"by code (use them in section 5):\n{markets}"
+                )
+            research = await researcher.invoke(prompt)
+            if markets:
+                # Forecasters see the raw prices too, in case the summary drops them.
+                research += f"\n\n## Raw prediction market and Metaculus prices\n{markets}"
             logger.info(f"Found research for URL {question.page_url}")
             return research
 
@@ -260,6 +286,7 @@ class ClaudeForecaster(FallTemplateBot2026):
             - Your forecast is scored with a log score against other forecasters, so overconfidence on a wrong answer is punished heavily.
             - Good forecasters put extra weight on the status quo outcome since the world changes slowly most of the time.
             - Start from the base rate, then adjust for the specific evidence. Say how far you moved and why.
+            - If a liquid prediction market or a Metaculus community prediction covers the same question (same event, threshold and date), treat its price as a strong anchor. Move away from it only for specific evidence the market is unlikely to have priced in, and say what it is. Check the market's exact wording, threshold and timing against the resolution criteria before using it.
             - Only give a probability below 3% or above 97% when the research shows the outcome is already decided or can no longer realistically change before the deadline.
             """
         )
@@ -393,6 +420,7 @@ class ClaudeForecaster(FallTemplateBot2026):
 
             {self._get_conditional_disclaimer_if_necessary(question)}
             You remind yourself that good forecasters are humble and set wide 90/10 confidence intervals to account for unknown unknowns, but anchor the middle of the distribution on the latest known value and trend.
+            If the research includes a statistical baseline computed by code, or market prices on the same quantity and date, start your percentiles from them and adjust only for specific news or events, checking that they measure exactly what the resolution criteria measure.
 
             The last thing you write is your final answer as:
             "

@@ -1,0 +1,61 @@
+name: Health check
+
+# Daily: (1) list tournament questions that closed without our forecast,
+# (2) forecast one unscored bot-testing-area question end to end.
+# Any problem opens a GitHub issue, which emails the repo owner.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 7 * * *"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      ASKNEWS_API_KEY: ${{ secrets.ASKNEWS_API_KEY }}
+      GO_LIVE_DATE: ${{ vars.GO_LIVE_DATE }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v10.3.0
+        with:
+          version: "0.13.1"
+          enable-cache: true
+      - run: uv sync --locked
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: Coverage (questions missed since go-live, last 3 days)
+        id: coverage
+        run: |
+          if [ -z "$GO_LIVE_DATE" ]; then echo "Not live yet, skipping"; exit 0; fi
+          since=$(python -c "import datetime as d,os; g=d.date.fromisoformat(os.environ['GO_LIVE_DATE']); print(max(g, d.date.today()-d.timedelta(days=3)))")
+          uv run python check_coverage.py --since "$since" | tee coverage.txt
+          if grep -q "MISSED" coverage.txt; then echo "missed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Canary forecast on the bot testing area
+        id: canary
+        continue-on-error: true
+        run: uv run python run_bot.py --mode question --url https://www.metaculus.com/questions/43327/
+      - name: Open an issue if anything is wrong
+        if: steps.coverage.outputs.missed == 'true' || steps.canary.outcome == 'failure'
+        run: |
+          {
+            echo "Health check on $(date -u +%Y-%m-%d) found a problem."
+            echo
+            echo "Canary forecast: ${{ steps.canary.outcome }}"
+            echo
+            echo '```'
+            cat coverage.txt 2>/dev/null || echo "no coverage output"
+            echo '```'
+            echo
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } > body.md
+          gh issue create --title "Bot health check failed $(date -u +%Y-%m-%d)" --body-file body.md

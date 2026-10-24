@@ -33,6 +33,7 @@ jobs:
     env:
       METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      ASKNEWS_API_KEY: ${{ secrets.ASKNEWS_API_KEY }}
       LOOP_MINUTES: ${{ vars.LOOP_MINUTES || '0' }}
       POLL_SECONDS: ${{ vars.POLL_SECONDS || '600' }}
       MODE: ${{ inputs.mode || 'tournament' }}

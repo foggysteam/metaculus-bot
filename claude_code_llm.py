@@ -41,9 +41,9 @@ class ClaudeUsageLimitError(RuntimeError):
     """The subscription's usage limit was hit; further calls will also fail."""
 
 
-# Once a usage limit is hit, every later call in this run fails fast. Questions
-# left unforecast are picked up by the next scheduled run.
-_usage_limit_message: str | None = None
+# Models whose usage limit was hit in this run. Calls skip them and fall back
+# to the next model; questions left unforecast are retried by the next run.
+_limited_models: dict[str, str] = {}
 
 
 @dataclass
@@ -114,6 +114,7 @@ class ClaudeCodeLlm(GeneralLlm):
         system_prompt: str = DEFAULT_SYSTEM_PROMPT,
         timeout: int = 900,
         allowed_tries: int = 2,
+        fallback_models: tuple[str, ...] = (),
     ) -> None:
         super().__init__(
             model=f"claude-code/{model}", allowed_tries=allowed_tries, timeout=timeout
@@ -124,6 +125,7 @@ class ClaudeCodeLlm(GeneralLlm):
         self.purpose = purpose
         self.system_prompt = system_prompt
         self.timeout = timeout
+        self.fallback_models = fallback_models
 
     def to_dict(self) -> dict:
         return {
@@ -131,34 +133,43 @@ class ClaudeCodeLlm(GeneralLlm):
             "effort": self.effort,
             "tools": self.tools,
             "purpose": self.purpose,
+            "fallback_models": list(self.fallback_models),
         }
 
     async def invoke(self, prompt, system_prompt: str | None = None) -> str:  # type: ignore[override]
         if not isinstance(prompt, str):
             raise TypeError("ClaudeCodeLlm only accepts plain string prompts")
-        if _usage_limit_message:
-            raise ClaudeUsageLimitError(_usage_limit_message)
+        # A weaker forecast beats a missed question, so try each model in turn.
         last_error: Exception | None = None
-        for attempt in range(1, self.allowed_tries + 1):
-            try:
-                return await self._run_once(prompt, system_prompt or self.system_prompt)
-            except ClaudeUsageLimitError:
-                raise
-            except Exception as e:  # noqa: BLE001 - retry any CLI failure
-                last_error = e
-                logger.warning(
-                    f"Claude Code call failed (attempt {attempt}/{self.allowed_tries}): {e}"
-                )
-                await asyncio.sleep(10 * attempt)
+        for model in (self.cli_model, *self.fallback_models):
+            if model in _limited_models:
+                last_error = ClaudeUsageLimitError(_limited_models[model])
+                continue
+            for attempt in range(1, self.allowed_tries + 1):
+                try:
+                    return await self._run_once(
+                        prompt, system_prompt or self.system_prompt, model
+                    )
+                except ClaudeUsageLimitError as e:
+                    last_error = e
+                    break
+                except Exception as e:  # noqa: BLE001 - retry any CLI failure
+                    last_error = e
+                    logger.warning(
+                        f"Claude Code call on {model} failed "
+                        f"(attempt {attempt}/{self.allowed_tries}): {e}"
+                    )
+                    await asyncio.sleep(10 * attempt)
+            logger.warning(f"Giving up on {model} for this call, trying the next model")
         assert last_error is not None
         raise last_error
 
-    def _build_args(self, system_prompt: str) -> list[str]:
+    def _build_args(self, system_prompt: str, model: str) -> list[str]:
         args = [
             find_claude_binary(),
             "-p",
             "--model",
-            self.cli_model,
+            model,
             "--output-format",
             "json",
             "--no-session-persistence",
@@ -171,11 +182,11 @@ class ClaudeCodeLlm(GeneralLlm):
         ]
         if self.tools:
             args += ["--allowedTools", self.tools]
-        if self.effort:
+        if self.effort and model != "haiku":
             args += ["--effort", self.effort]
         return args
 
-    async def _run_once(self, prompt: str, system_prompt: str) -> str:
+    async def _run_once(self, prompt: str, system_prompt: str, model: str) -> str:
         env = dict(os.environ)
         # Never fall back to pay-as-you-go API billing.
         env.pop("ANTHROPIC_API_KEY", None)
@@ -190,7 +201,7 @@ class ClaudeCodeLlm(GeneralLlm):
                     f.write(prompt)
                 with open(prompt_path, "rb") as prompt_file:
                     proc = await asyncio.create_subprocess_exec(
-                        *self._build_args(system_prompt),
+                        *self._build_args(system_prompt, model),
                         stdin=prompt_file,
                         stdout=asyncio.subprocess.PIPE,
                         stderr=asyncio.subprocess.PIPE,
@@ -222,8 +233,7 @@ class ClaudeCodeLlm(GeneralLlm):
             message = (result or err_text or out_text or "no output")[:500]
             self._record(question_id, start, payload, ok=False, error=message)
             if any(marker in message.lower() for marker in _USAGE_LIMIT_MARKERS):
-                global _usage_limit_message
-                _usage_limit_message = message
+                _limited_models[model] = message
                 raise ClaudeUsageLimitError(message)
             raise RuntimeError(f"Claude Code returned an error: {message}")
 
