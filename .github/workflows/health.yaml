@@ -58,5 +58,7 @@ jobs:
             echo '```'
             echo
             echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo "cc @${{ github.repository_owner }}"
           } > body.md
           gh issue create --title "Bot health check failed $(date -u +%Y-%m-%d)" --body-file body.md

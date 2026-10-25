@@ -37,4 +37,7 @@ jobs:
       - name: Post report as an issue
         run: |
           gh label create weekly-report --color 0E8A16 --force
+          # The @mention makes GitHub email the owner even if they are not watching the repo.
+          echo "" >> report.md
+          echo "cc @${{ github.repository_owner }}" >> report.md
           gh issue create --title "Weekly report $(date -u +%Y-%m-%d)" --body-file report.md --label weekly-report
