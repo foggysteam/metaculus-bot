@@ -109,10 +109,10 @@ def failed_runs(since: datetime) -> str:
     runs = r.json().get("workflow_runs", [])
     if not runs:
         return "No failed workflow runs."
-    names: dict[str, int] = {}
-    for run in runs:
-        names[run["name"]] = names.get(run["name"], 0) + 1
-    return "Failed runs: " + ", ".join(f"{n} x{c}" for n, c in names.items())
+    lines = [f"{len(runs)} failed run(s):"]
+    for run in runs[:10]:
+        lines.append(f"  - {run['name']} ({run['event']}) started {run['created_at']}: {run['html_url']}")
+    return "\n".join(lines)
 
 
 async def missed_questions(since: datetime) -> str:
