@@ -9,7 +9,9 @@ from __future__ import annotations
 
 import asyncio
 import csv
+import json
 import os
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -95,6 +97,73 @@ def recent_forecasts(since: datetime) -> tuple[str, float]:
     return text, cost
 
 
+def _num(x: float) -> str:
+    if abs(x) >= 1000:
+        return f"{x:,.0f}"
+    if abs(x) >= 100:
+        return f"{x:.0f}"
+    if abs(x) >= 10:
+        return f"{x:.1f}"
+    return f"{x:.2f}"
+
+
+def _answer(question_type: str, final, unit: str = "") -> str:
+    """The bot's final forecast in plain words."""
+    if final is None:
+        return "no forecast"
+    if isinstance(final, (int, float)):
+        return f"{final:.0%} yes"
+    if isinstance(final, dict) and "p50" in final:
+        if question_type == "DateQuestion":
+            fmt = lambda v: datetime.fromtimestamp(v, timezone.utc).strftime("%d %b %Y")  # noqa: E731
+        else:
+            fmt = lambda v: f"{_num(v)}{' ' + unit if unit else ''}"  # noqa: E731
+        return f"median {fmt(final['p50'])} (80% range {fmt(final['p10'])} to {fmt(final['p90'])})"
+    if isinstance(final, dict):
+        top = sorted(final.items(), key=lambda kv: kv[1], reverse=True)[:4]
+        return ", ".join(f"{name}: {p:.0%}" for name, p in top)
+    return str(final)
+
+
+def _outcome(post_id: int | None) -> str:
+    if not post_id:
+        return ""
+    question = None
+    for wait in (1, 15):  # Metaculus rate-limits bursts of requests (HTTP 429)
+        time.sleep(wait)
+        try:
+            question = _metaculus(f"posts/{post_id}/").get("question") or {}
+            break
+        except Exception:  # noqa: BLE001 - outcome is optional
+            continue
+    if question is None:
+        return "?"
+    resolution = question.get("resolution")
+    if resolution not in (None, ""):
+        return f"resolved: {resolution}"
+    return "pending"
+
+
+def forecasts_table(since: datetime) -> str:
+    rows = []
+    for path in sorted((Path(__file__).parent / "forecast_logs").glob("*/*.json")):
+        entry = json.loads(path.read_text(encoding="utf-8"))
+        if datetime.fromisoformat(entry["started_at"]) < since:
+            continue
+        q = entry["question"]
+        title = q["text"].replace("|", "/")
+        title = title if len(title) <= 90 else title[:87] + "..."
+        tournament = "MiniBench" if any("minibench" in t for t in q.get("tournaments", [])) else "Main"
+        answer = _answer(q["type"], entry.get("final_forecast"), q.get("unit") or "")
+        if entry["status"] != "ok":
+            answer = f"FAILED: {(entry.get('error') or '')[:60]}"
+        rows.append(f"| [{title}]({q['url']}) | {tournament} | {answer} | {_outcome(q.get('post_id'))} |")
+    if not rows:
+        return "No questions this week."
+    header = "| Question | Series | KCAP2.0 answer | Outcome |\n|---|---|---|---|"
+    return header + "\n" + "\n".join(rows)
+
+
 def failed_runs(since: datetime) -> str:
     token, repo = os.getenv("GH_TOKEN"), os.getenv("GITHUB_REPOSITORY")
     if not token or not repo:
@@ -133,6 +202,7 @@ async def build_report() -> str:
     forecasts, cost = recent_forecasts(since)
     sections = {
         "Forecasts (last 7 days)": forecasts,
+        "Questions and answers (last 7 days)": forecasts_table(since),
         "Missed questions": await missed_questions(since),
         "Main season leaderboard": leaderboard(MAIN_PROJECT),
         "Current MiniBench leaderboard": (

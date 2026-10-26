@@ -173,6 +173,7 @@ class ClaudeForecaster(FallTemplateBot2026):
                 "post_id": question.id_of_post,
                 "url": question.page_url,
                 "type": type(question).__name__,
+                "unit": question.unit_of_measure,
                 "tournaments": question.tournament_slugs,
                 "text": question.question_text,
                 "resolution_criteria": question.resolution_criteria,
