@@ -1,0 +1,305 @@
+{
+  "logged_at": "2026-10-26T21:11:02.608054+00:00",
+  "bot_version": "2026-10-25.2",
+  "started_at": "2026-10-26T21:08:21.145142+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46430,
+    "post_id": 46203,
+    "url": "https://www.metaculus.com/questions/46203",
+    "type": "DiscreteQuestion",
+    "unit": "mass shootings",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How many mass shootings will the U.S. experience in November 2026?",
+    "resolution_criteria": "This question resolves as the number of mass shootings reported at the Mass Shooting Tracker [Mass Shootings in 2026](https://www.massshootingtracker.site/data/?year=2026) database for November 2026.",
+    "fine_print": "",
+    "close_time": "2026-10-27 00:00 UTC",
+    "scheduled_resolution_time": "2026-12-04 00:00 UTC"
+  },
+  "research": [
+    "# Mass Shooting Tracker: research for November 2026\n\n## 1. Resolution source\n- 2026-10-26: The page at massshootingtracker.site/data/?year=2026 showed no incidents when I fetched it. It loads its data from per-year JSON files on S3. The 2026 file does exist and is being updated. [MST page](https://www.massshootingtracker.site/data/?year=2026), [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- 2026-10-25: This is the latest entry in the 2026 JSON, with incidents in Charlotte, NC and Muncie, IN. October 2026 so far has 34 entries, listed individually, covering Oct 3 to Oct 25. September 2026 has 38. [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- Other 2026 months, counted by the fetch tool from the truncated file: July 74 (only from Jul 4 onward was visible, so treat it with caution), August 56. I could not see January through June.\n- Caveat: the monthly counts come from a summarizing tool, not my own script. The individually listed months (Oct 2026, Sep 2026, Nov 2025) are the most reliable.\n\n## 2. Current status\n- Nothing about November 2026 has happened yet. The month starts in 6 days, so nothing is settled.\n- The source may log incidents a few days late, which matters for the resolution date (about Dec 4).\n\n## 3. Recent news\n- 2026-10-25: An ABC7 NY newscast reported a shooting at Florida A&M in Tallahassee with 11 people shot, including six children. My search found no written confirmation, only older FAMU incidents from 2022. MST does have a Tallahassee, FL entry dated 2026-10-24. [news API audio](https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/ESP9929074913.mp3), [search results, e.g. WFSU 2022](https://news.wfsu.org/wfsu-local-news/2022-11-27/one-dead-four-injured-in-shooting-on-florida-a-m-universitys-campus-police-are-investigating)\n- 2026-10-25: A Climate Central/The Trace analysis links heat to more shootings. That supports the usual pattern of fewer shootings in cooler months like November. [Grist](https://grist.org/extreme-heat/higher-temperatures-fuel-gun-violence-now-we-know-how-much-is-from-climate-change/)\n- 2026-10-24: Malcolm Gladwell's new book argues that mass shootings are under 1% of gun deaths. This is context only, with no effect on the count.\n\n## 4. Base rates (MST counts for November, from the yearly JSON files)\n- November 2022: 45 (October 2022: 73). [2022 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2022-data.json)\n- November 2023: 39 (October 2023: 69, a figure that looks high and should be treated with caution; December 2023: 45). [2023 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2023-data.json)\n- November 2024: 33 (October 2024: 31; December 2024: 35). [2024 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2024-data.json)\n- November 2025: 32, each entry listed. Up to 1 may be a duplicate: a Newark entry dated Nov 15 matches a Dec 10 entry. Nearby months: September 38, October 38, December 35. [2025 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2025-data.json)\n- Trend: November counts fell from 45 to 39 to 33 to 32 between 2022 and 2025. November usually comes in at or a little below October.\n- 2026 so far: October is at 34 with 6 days left. If it keeps the same pace it would finish around 40, but some of those days will have no incidents. October 2026 so far is running close to October 2025 (38), and September 2026 equaled September 2025 (38).\n- Variation: in recent years, November has been between about 32 and 45. The figures from 2024 onward cluster in the low to mid 30s.\n- Calendar for November 2026: there are 4 full weekends (Nov 1 is a Sunday, so there are 5 Sundays). Thanksgiving is Nov 26. Weekends and holidays usually produce clusters of incidents. In November 2025, for example, Nov 1-2 alone had 11 entries.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on mass shootings in November 2026. None of the pre-collected market prices (CPI, deportations, etc.) relate to this question. [search](https://www.kucoin.com/ru/blog/th-polymarket-vs-kalshi-2026-comparison)\n- I found no expert forecast.\n\n## 6. Upcoming events before resolution\n- 2026-11-01: Sunday, the end of Halloween weekend. Halloween parties often produce mass shootings: Nov 1-2, 2025 had 11 MST entries.\n- 2026-11-03: Midterm elections. I found no specific evidence that they affect the count.\n- 2026-11-26 to 2026-11-29: Thanksgiving weekend.\n- About 2026-12-04: Resolution. Incidents from late November may still be getting added as the resolution date arrives.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-26 21:08 UTC; check each market really matches the question)\n- Kalshi: Core CPI in November (In Nov 2026). Yes prices: Above 0.2%: 0.49; Above 0.3%: 0.20; Above 0.1%: 0.84; Above 0.4%: 0.07; Above 0.0%: 0.95; Above 0.5%: 0.01; Above 0.6%: 0.01; Above 0.7%: 0.01; Above 0.9%: 0.01; Above 0.8%: 0.01.\n- Kalshi: Core CPI YoY in November (Nov 2026). Yes prices: Above 2.8%: 0.59; Above 2.9%: 0.34; Above 3.0%: 0.18; Above 2.7%: 0.81; Above 3.1%: 0.10; Above 2.6%: 0.88; Above 3.3%: 0.06; Above 3.2%: 0.04; Above 3.5%: 0.01; Above 3.4%: 0.01.\n- Kalshi: Deportations this year? (FY2026). Yes prices: Above 450,000: 0.40; Above 425,000: 0.89; Above 500,000: 0.10; Above 600,000: 0.04; Above 400,000: 0.96; Above 200,000: 0.99; Above 300,000: 0.98.\n- Kalshi: How many gonorrhea cases will be reported in the United States this year? (2026). Yes prices: Above 425k: 0.33; Above 400k: 0.67; Above 450k: 0.23; Above 500k: 0.05; Above 350k: 0.98; Above 375k: 0.93; Above 300k: 0.9900; Above 285k: 0.9900; Above 325k: 0.9900.\n- Kalshi: How many mpox clade Ib cases will be reported in the United States this year? (2026). Yes prices: Above 20: 0.47; Above 25: 0.29; Above 15: 0.72; Above 30: 0.27; Above 35: 0.23; Above 40: 0.21; Above 10: 0.84.\n- Kalshi: Number of US data centers this year? (2026). Yes prices: At least 5,800: 0.23; At least 5,900: 0.17; At least 6,000: 0.14; At least 5,300: 0.41; At least 5,400: 0.40; At least 5,500: 0.41; At least 5,600: 0.51; At least 5,100: 0.89; At least 5,200: 0.51; At least 5,700: 0.52.\n- Kalshi: When will Yang–Mills and the Mass Gap be resolved? (Before 2032). Yes prices: Before 2032: 0.47; Before 2031: 0.38; Before 2030: 0.36; Before 2029: 0.26; Before 2028: 0.16; Before 2027: 0.04.\n- Kalshi: What countries will Trump say in October? (Before Nov 1, 2026). Yes prices: Panama / Panamanian: 0.56; Australia / Australian: 0.43; UAE / United Arab Emirates: 0.59; Kuwait / Kuwaiti: 0.26; Paraguay / Paraguayan: 0.16; Hungary / Hungarian: 0.20; Bahrain / Bahraini: 0.21; South Africa / South African: 0.20; Belgium / Belgian: 0.19; Sudan / Sudanese: 0.15.\n- Kalshi: What nicknames will Trump say before 2027? (Before Jan 1, 2027). Yes prices: Piggy: 0.48; Slopadopolous / Slopadopolus: 0.65; Crying Chuck / Cryin Chuck: 0.70; Low Energy: 0.26; Fat Slob: 0.29; Crazy Nancy: 0.24; Crazy Bernie: 0.20; Rocket Man: 0.14; Biden Crime Family: 0.14; Little Communist: 0.14.\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.185\", \"0.815\"]; $2M: [\"0.055\", \"0.945\"]; $3M: [\"0.024\", \"0.976\"]; $4M: [\"0.0215\", \"0.9785\"]; $5M: [\"0.005\", \"0.995\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 25.0,
+        "p25": 28.75,
+        "p50": 32.5,
+        "p75": 37.0,
+        "p90": 41.0
+      },
+      "reasoning": "**(a) Time left:** November 2026 begins in 6 days and ends in about 5 weeks. Resolution is around December 4, 2026, so incidents from late November may still be added after that date.\n\n**(b) Latest known value:** As of October 25, 2026, the 2026 JSON showed 34 October entries (covering Oct 3 to 25) and 38 for September. November 2026 has no entries yet.\n\n**(c) Outcome if nothing changed:** The count would be 0. This is not meaningful, because November has not started.\n\n**(d) Outcome if the current trend continued:** 2026 is running very close to 2025. September matched exactly at 38, and October is on pace for about 38 to 40. Applying 2025's ratio of November to October (32/38) gives roughly 32 to 34.\n\n**(e) Historical variation:** November counts were 45 (2022), 39 (2023), 33 (2024) and 32 (2025). The last two years cluster in the low 30s. Month-to-month noise is roughly Poisson plus some extra spread, with a standard deviation of about 6. Late logging near the resolution date could take off a couple of entries.\n\n**(f) Experts and markets:** I found no market or expert forecast. The base rate and the recent trend point to a median of about 33.\n\n**(g) Unexpected scenarios:**\n- Low: Cold weather combined with slow data entry by the tracker before resolution (or duplicates being removed) could give 22 to 25.\n- High: A large Halloween-weekend cluster on Nov 1, plus a violent Thanksgiving weekend and a warm November, could push the count into the mid 40s.\n\nPercentile 10: 25\nPercentile 20: 28\nPercentile 40: 31\nPercentile 60: 34\nPercentile 80: 38\nPercentile 90: 41"
+    },
+    {
+      "value": {
+        "p10": 25.0,
+        "p25": 28.75,
+        "p50": 32.5,
+        "p75": 37.0,
+        "p90": 42.0
+      },
+      "reasoning": "(a) The month runs from Nov 1 to Nov 30, 2026, and resolution is around Dec 4, 2026. That is about 5.5 weeks from now, and the source may still be logging late incidents when it resolves.\n\n(b) The latest known values come from the 2026 JSON as of 2026-10-25. October 2026 had 34 incidents through Oct 25, and September 2026 had 38. November 2025 had 32, and up to one of those may be a duplicate.\n\n(c) If nothing changed, I would expect November 2026 to look like November 2025 and 2024, which had 32 and 33. That gives a midpoint of about 32-33.\n\n(d) If the current trend continued, 2026 is running roughly level with 2025 (September is identical, and October is similar). The decline from 2022 to 2024 has flattened. Halloween is on Saturday Oct 31, so early-morning shootings on Sunday Nov 1 will count in November, which adds a little upside. A trend-based estimate is about 32-35.\n\n(e) Historical variation:\n- November counts ranged from 32 to 45 over 2022-2025, and from 32 to 33 in the recent regime.\n- Random variation for a count of about 33 is roughly plus or minus 6.\n- Late logging at the resolution date could subtract 1-2.\n\n(f) I found no market or expert forecast. The question creator's range of 15-50 is broad and consistent with these numbers.\n\n(g) Unexpected scenarios:\n- **Low:** a cold, quiet month and slow logging by MST before resolution leave the count in the low-to-mid 20s.\n- **High:** a violent Halloween night spilling into Nov 1, a busy Thanksgiving weekend and warm weather push the count into the 40s, as in 2022.\n\nPercentile 10: 25\nPercentile 20: 28\nPercentile 40: 31\nPercentile 60: 34\nPercentile 80: 38\nPercentile 90: 42"
+    },
+    {
+      "value": {
+        "p10": 25.0,
+        "p25": 28.75,
+        "p50": 32.5,
+        "p75": 36.25,
+        "p90": 41.0
+      },
+      "reasoning": "**(a) Time left:** About 5 weeks. November starts in 6 days, and resolution is around December 4, 2026.\n\n**(b) Latest known value:** No November 2026 data exists yet. As of 2026-10-25, the MST 2026 JSON showed October 2026 at 34 incidents (through Oct 25) and September 2026 at 38.\n\n**(c) If nothing changed:** The count would be 0, but that is not meaningful because the month has not started. The status-quo analog is November 2025, which had 32 (31 to 32 if one entry is a duplicate).\n\n**(d) If the current trend continued:**\n- 2026 is tracking 2025 closely. September matched at 38, and October is heading toward roughly 38 to 40.\n- November usually comes in at or a little below October.\n- That points to roughly 31 to 36.\n- Recent Novembers were 45, 39, 33 and 32, a decline that has flattened.\n- A small reporting lag at the Dec 4 resolution could trim one or two late-November entries.\n\n**(e) Historical variation:**\n- Over 2022 to 2025, November ranged from 32 to 45.\n- Count noise alone is about plus or minus 6 (one standard deviation, Poisson-like), with some extra spread from clustered events like Halloween and Thanksgiving weekends.\n\n**(f) Experts and markets:** I found no markets or expert forecasts. The baseline from MST history and the 2026 trend is about 33.\n\n**(g) Unexpected scenarios:**\n- **Low:** MST logs late or incompletely, for example a maintainer lapse so late-November incidents are missing by Dec 4, combined with a quiet, cold month. The result could be around 20 to 25.\n- **High:** Heavy Halloween-weekend spillover on Nov 1, a violent Thanksgiving weekend and warm weather. The count could return to 2022-23 levels, around 42 to 45 or more.\n\nPercentile 10: 25\nPercentile 20: 28\nPercentile 40: 31\nPercentile 60: 34\nPercentile 80: 37\nPercentile 90: 41"
+    },
+    {
+      "value": {
+        "p10": 25.0,
+        "p25": 29.0,
+        "p50": 33.5,
+        "p75": 38.0,
+        "p90": 43.0
+      },
+      "reasoning": "(a) **Time left:** November 2026 begins in 6 days. The question resolves around 2026-12-04, about 5.5 weeks from now. Late-November incidents may still be added close to the resolution date.\n\n(b) **Latest known value:** As of the 2026-10-25 entry in the 2026 JSON, October 2026 has 34 incidents (Oct 3 to Oct 25) and September 2026 has 38. No November 2026 data exists yet.\n\n(c) **If nothing changed:** No November incidents are recorded yet, so a literal \"no change\" gives 0. That is not meaningful here. The best stand-in is the November 2025 value of 32.\n\n(d) **If the current trend continued:** Several signals point to a November 2026 count in the low to mid 30s, roughly 32 to 36:\n- September 2026 equaled September 2025 (38).\n- October 2026 is on pace for about 38 to 40, against 38 in October 2025.\n- November usually comes in at or a little below October.\n- November 2024 was 33 and November 2025 was 32.\n- A heavy Halloween-weekend spillover on Nov 1 (a Sunday) and Thanksgiving weekend add a little upside.\n\n(e) **Historical variation:** November counts were 45, 39, 33 and 32 in 2022 through 2025. Month-to-month noise is roughly plus or minus 6 to 7, a bit more spread than a Poisson count would give. A few entries may be duplicates or added late.\n\n(f) **Experts and markets:** I found no market or expert forecast. The question creator's likely range is 15 to 50.\n\n(g) **Unexpected scenarios:**\n- *Low:* A cold, quiet month combined with tracker lag, or the volunteer maintainers falling behind, so that late-November incidents are not entered before resolution. The count could then fall to the low 20s.\n- *High:* Unusually warm weather plus a violent Halloween and Thanksgiving weekend, with clustered incidents. The count could then reach the mid 40s, as in 2022.\n\nPercentile 10: 25\nPercentile 20: 28\nPercentile 40: 32\nPercentile 60: 35\nPercentile 80: 39\nPercentile 90: 43"
+    },
+    {
+      "value": {
+        "p10": 25.0,
+        "p25": 28.75,
+        "p50": 32.5,
+        "p75": 37.0,
+        "p90": 41.0
+      },
+      "reasoning": "(a) About 5 weeks remain. November 2026 starts in 6 days and ends Nov 30, and resolution is around Dec 4. That leaves a few days for late entries to be logged.\n\n(b) As of 2026-10-25, the source (MST 2026 JSON) shows October 2026 at 34 entries through Oct 25, and September 2026 at 38. November 2026 is at 0 because the month has not started.\n\n(c) If nothing changed, the count would be 0. That is not meaningful, because the month has not begun.\n\n(d) If the current trend continues, the 2026 counts track 2025 almost exactly: September matched at 38, and October is on pace for roughly 38 to 40. November usually comes in at or slightly below October. November 2025 had 32 (possibly 31 after removing a duplicate) and November 2024 had 33. This points to roughly 32 to 35.\n\n(e) November has ranged from 32 to 45 over 2022 to 2025, with a declining trend, and recent years cluster around 32 to 33. Poisson noise alone at a mean of about 33 gives a standard deviation near 6. Holiday clustering, including the Halloween spillover into Nov 1 and Thanksgiving weekend, adds some overdispersion.\n\n(f) I found no markets or expert forecasts on this question. The question creator's range of 15 to 50 is consistent with my estimate.\n\n(g) A low outcome would come from an unusually cold, quiet month combined with slow MST data entry, leaving late-November incidents unlogged by resolution. That could produce a count in the low to mid 20s. A high outcome would come from a heavy Halloween weekend spillover (Nov 1 is a Sunday) plus a violent Thanksgiving weekend and a mild-weather month, pushing the count into the 40s, similar to the 2022 level.\n\nPercentile 10: 25\nPercentile 20: 28\nPercentile 40: 31\nPercentile 60: 34\nPercentile 80: 38\nPercentile 90: 41"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 24.4548,
+    "p25": 28.7204,
+    "p50": 32.5,
+    "p75": 37.0352,
+    "p90": 41.4845
+  },
+  "usage": [
+    {
+      "question_id": "46430",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 6.78e-05,
+      "input_tokens": 493,
+      "output_tokens": 37,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.00020020000000000001,
+      "input_tokens": 837,
+      "output_tokens": 66,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 110.1,
+      "notional_cost_usd": 0.2804828,
+      "input_tokens": 67479,
+      "output_tokens": 3790,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 9.4,
+      "notional_cost_usd": 0.054155999999999996,
+      "input_tokens": 4798,
+      "output_tokens": 789,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 10.3,
+      "notional_cost_usd": 0.05562,
+      "input_tokens": 4796,
+      "output_tokens": 863,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.8,
+      "notional_cost_usd": 0.054476,
+      "input_tokens": 4798,
+      "output_tokens": 805,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0005733,
+      "input_tokens": 2590,
+      "output_tokens": 111,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.0006333,
+      "input_tokens": 2695,
+      "output_tokens": 189,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.0006461,
+      "input_tokens": 2639,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 19.7,
+      "notional_cost_usd": 0.0187808,
+      "input_tokens": 4796,
+      "output_tokens": 762,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.4,
+      "notional_cost_usd": 0.0218568,
+      "input_tokens": 4798,
+      "output_tokens": 915,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.0002021,
+      "input_tokens": 2696,
+      "output_tokens": 223,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.1,
+      "notional_cost_usd": 0.00024186,
+      "input_tokens": 2591,
+      "output_tokens": 305,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00014513999999999998,
+      "input_tokens": 2638,
+      "output_tokens": 111,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.0,
+      "notional_cost_usd": 0.0006764,
+      "input_tokens": 2658,
+      "output_tokens": 290,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.0006762,
+      "input_tokens": 2732,
+      "output_tokens": 260,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00023684,
+      "input_tokens": 2658,
+      "output_tokens": 294,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46430",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.00020256,
+      "input_tokens": 2730,
+      "output_tokens": 224,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.4899
+}
