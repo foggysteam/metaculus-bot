@@ -38,6 +38,8 @@ Bot: KCAP2.0 (Metaculus primary bot, prize-eligible), owner account alasadi.dev@
 - 27 Oct 2026: Shipped calibration fix (bot 2026-10-27.1): binary forecasts pulled towards 50% by x0.8 in log-odds (calibration.py). Backtest gain +1.3 on vs-market, positive on both Polymarket and Manifold. Runner can now reuse a run's research and compare runs question by question.
 - 27 Oct 2026: Cloud session started for two experiments on v1's research: no status-quo rule, and xhigh effort. Results go to branch backtest-v1-experiments.
 - 27 Oct 2026: Reviewed public forecasting-bot repos and write-ups (Metaculus template/tools/platform, edisonymy/forecast-scaffold, No-Stream/nostreambot, Panshul42 Q2 2025 winner, Spring 2026 bot survey, AIA Forecaster, others). Shipped a 1% floor per multiple-choice option (bot 2026-10-27.2); forecasting-tools allows 0.1%.
+- 27 Oct 2026: Entered Market Pulse 26Q4 ($7,500, bots allowed, one entry per person; Ahmad approved, has not forecast there himself). market_pulse.py: forecast each question on first sight, then once more in the last 30h before its spot scoring time (CP reveal, about 2 days before close); max 3 per pass so FutureEval is never delayed. Added to the coverage check and weekly report. Slug changes each quarter (market-pulse-27q1 in January).
+- 27 Oct 2026: The Metaculus API hides resolutions from our token, so the numeric backtest will use questions built from Yahoo/FRED series with known outcomes instead. Ahmad added METACULUS_TOKEN to the Claude cloud environment.
 
 ## Next
 - Read the experiment results on branch backtest-v1-experiments; keep a change only if it beats v1.
