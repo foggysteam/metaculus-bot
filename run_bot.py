@@ -1,6 +1,7 @@
 """
 Entry point for our bot (see forecaster.py). Modes:
-  tournament      forecast new questions in the Fall 2026 tournament and MiniBench (publishes)
+  tournament      forecast new questions in the Fall 2026 tournament and MiniBench, and
+                  due questions in Market Pulse 26Q4 (publishes)
   test_questions  forecast the unscored bot-testing-area questions (publishes, safe to repeat)
   question        forecast specific questions by URL (use --dry-run to avoid publishing)
 
@@ -25,6 +26,7 @@ from forecasting_tools import MetaculusClient  # noqa: E402
 
 from claude_code_llm import USAGE_LEDGER, find_claude_binary  # noqa: E402
 from forecaster import LOG_DIR, TEST_LOG_DIR, ClaudeForecaster, build_llms  # noqa: E402
+from market_pulse import forecast_market_pulse  # noqa: E402
 
 logger = logging.getLogger(__name__)
 
@@ -62,6 +64,7 @@ async def run(mode: str, publish: bool, urls: list[str]):
         reports += await bot.forecast_on_tournament(
             client.CURRENT_MINIBENCH_ID, return_exceptions=True
         )
+        reports += await forecast_market_pulse(bot, client)
     elif mode == "test_questions":
         reports = await bot.forecast_on_tournament("bot-testing-area", return_exceptions=True)
     else:

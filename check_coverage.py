@@ -1,6 +1,8 @@
 """
 Coverage check: which tournament questions opened after we went live but closed
-without a forecast from our bot? Read-only; never submits anything.
+without a forecast from our bot? For Market Pulse, where questions stay open for weeks,
+it is the questions whose spot scoring time passed without a forecast.
+Read-only; never submits anything.
 
 Usage: uv run python check_coverage.py [--since 2026-10-26]
 """
@@ -19,6 +21,8 @@ dotenv.load_dotenv()
 
 from forecasting_tools import MetaculusClient, MetaculusQuestion  # noqa: E402
 from forecasting_tools.helpers.metaculus_client import ApiFilter  # noqa: E402
+
+from market_pulse import ENTERED, MARKET_PULSE_ID, spot_time  # noqa: E402
 
 
 async def find_missed(
@@ -39,12 +43,33 @@ async def find_missed(
     return questions, closed, missed
 
 
-async def coverage(tournament: str | int, since: datetime) -> None:
-    questions, closed, missed = await find_missed(tournament, since)
-    print(
-        f"{tournament}: {len(questions)} questions opened since {since.date()}, "
-        f"{len(closed)} closed, {len(missed)} missed"
+async def find_missed_spot(
+    tournament: str | int, since: datetime
+) -> tuple[list[MetaculusQuestion], list[MetaculusQuestion], list[MetaculusQuestion]]:
+    """Like find_missed, for long-open questions: due = spot scoring time between since and now."""
+    api_filter = ApiFilter(
+        allowed_tournaments=[tournament],
+        allowed_statuses=["open", "closed", "resolved"],
+        group_question_mode="unpack_subquestions",
     )
+    questions = await MetaculusClient().get_questions_matching_filter(api_filter)
+    now = datetime.now(timezone.utc)
+    due = [q for q in questions if (spot := spot_time(q)) and since <= spot <= now]
+    missed = [q for q in due if not q.already_forecasted]
+    return due, due, missed
+
+
+async def coverage(tournament: str | int, since: datetime) -> None:
+    if tournament == MARKET_PULSE_ID:
+        since = max(since, ENTERED)
+        due, _, missed = await find_missed_spot(tournament, since)
+        print(f"{tournament}: {len(due)} questions reached their scoring time since {since.date()}, {len(missed)} missed")
+    else:
+        questions, closed, missed = await find_missed(tournament, since)
+        print(
+            f"{tournament}: {len(questions)} questions opened since {since.date()}, "
+            f"{len(closed)} closed, {len(missed)} missed"
+        )
     for q in missed:
         print(f"  MISSED {q.close_time:%Y-%m-%d %H:%M} {q.page_url} {q.question_text[:80]}")
 
@@ -55,7 +80,7 @@ def main() -> None:
     args = parser.parse_args()
     since = datetime.fromisoformat(args.since).replace(tzinfo=timezone.utc)
     client = MetaculusClient()
-    for tournament in (client.CURRENT_AI_COMPETITION_ID, client.CURRENT_MINIBENCH_ID):
+    for tournament in (client.CURRENT_AI_COMPETITION_ID, client.CURRENT_MINIBENCH_ID, MARKET_PULSE_ID):
         asyncio.run(coverage(tournament, since))
 
 

@@ -23,9 +23,10 @@ from bot_helpers import silence_noisy_dependencies
 silence_noisy_dependencies()
 dotenv.load_dotenv()
 
-from check_coverage import find_missed  # noqa: E402
+from check_coverage import find_missed, find_missed_spot  # noqa: E402
 from claude_code_llm import ClaudeCodeLlm  # noqa: E402
 from forecaster import BOT_VERSION  # noqa: E402
+from market_pulse import ENTERED, MARKET_PULSE_ID, MARKET_PULSE_PROJECT  # noqa: E402
 
 BOT_USERNAME = "KCAP2.0"
 MAIN_PROJECT = 33121  # Fall 2026 FutureEval
@@ -153,7 +154,8 @@ def forecasts_table(since: datetime) -> str:
         q = entry["question"]
         title = q["text"].replace("|", "/")
         title = title if len(title) <= 90 else title[:87] + "..."
-        tournament = "MiniBench" if any("minibench" in t for t in q.get("tournaments", [])) else "Main"
+        slugs = " ".join(q.get("tournaments", []))
+        tournament = "MiniBench" if "minibench" in slugs else "Market Pulse" if "market-pulse" in slugs else "Main"
         answer = _answer(q["type"], entry.get("final_forecast"), q.get("unit") or "")
         if entry["status"] != "ok":
             answer = f"FAILED: {(entry.get('error') or '')[:60]}"
@@ -193,6 +195,10 @@ async def missed_questions(since: datetime) -> str:
         lines.append(f"{tournament}: {len(questions)} opened, {len(closed)} closed, {len(missed)} missed.")
         for q in missed[:10]:
             lines.append(f"  - missed: {q.page_url} {q.question_text[:80]}")
+    due, _, missed = await find_missed_spot(MARKET_PULSE_ID, max(start, ENTERED))
+    lines.append(f"{MARKET_PULSE_ID}: {len(due)} reached their scoring time, {len(missed)} missed.")
+    for q in missed[:10]:
+        lines.append(f"  - missed: {q.page_url} {q.question_text[:80]}")
     return "\n".join(lines)
 
 
@@ -208,6 +214,7 @@ async def build_report() -> str:
         "Current MiniBench leaderboard": (
             leaderboard(mb) if (mb := current_minibench_id()) else "No active MiniBench round found."
         ),
+        "Market Pulse 26Q4 leaderboard (humans and bots)": leaderboard(MARKET_PULSE_PROJECT),
         "Workflow health": failed_runs(since),
         "Usage": f"Notional model usage ${cost:.2f} on the Max plan (not billed). Own-key spend: GBP 0.",
     }
