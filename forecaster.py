@@ -31,7 +31,7 @@ from forecasting_tools import (
 )
 from forecasting_tools.data_models.forecast_report import ForecastReport
 
-from calibration import shrink_binary
+from calibration import floor_options, shrink_binary
 from claude_code_llm import USAGE_LEDGER, ClaudeCodeLlm, current_question_id
 from evidence import gather_evidence
 from numeric_baseline import statistical_baseline
@@ -40,7 +40,7 @@ from main import FallTemplateBot2026
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-10-27.1"
+BOT_VERSION = "2026-10-27.2"
 
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
@@ -148,6 +148,8 @@ class ClaudeForecaster(FallTemplateBot2026):
         aggregate = await super()._aggregate_predictions(predictions, question)
         if isinstance(question, BinaryQuestion):
             return shrink_binary(aggregate)  # see calibration.py for the backtest behind this
+        if isinstance(question, MultipleChoiceQuestion):
+            return floor_options(aggregate)
         return aggregate
 
     async def _research_and_make_predictions(self, question: MetaculusQuestion):

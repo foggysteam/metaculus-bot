@@ -37,9 +37,18 @@ Bot: KCAP2.0 (Metaculus primary bot, prize-eligible), owner account alasadi.dev@
 - 27 Oct 2026: Backtest v1 done in a cloud session (87 questions, 2h20m, ~$58 notional, no errors; backtest/RESULTS.md). KCAP2.0 alone -3.7 vs market (CI -16 to +9), with the market price +2.1. Too bold on low probabilities: under 15% forecasts happened ~1 in 4. The 5 forecasts per question are near-identical.
 - 27 Oct 2026: Shipped calibration fix (bot 2026-10-27.1): binary forecasts pulled towards 50% by x0.8 in log-odds (calibration.py). Backtest gain +1.3 on vs-market, positive on both Polymarket and Manifold. Runner can now reuse a run's research and compare runs question by question.
 - 27 Oct 2026: Cloud session started for two experiments on v1's research: no status-quo rule, and xhigh effort. Results go to branch backtest-v1-experiments.
+- 27 Oct 2026: Reviewed public forecasting-bot repos and write-ups (Metaculus template/tools/platform, edisonymy/forecast-scaffold, No-Stream/nostreambot, Panshul42 Q2 2025 winner, Spring 2026 bot survey, AIA Forecaster, others). Shipped a 1% floor per multiple-choice option (bot 2026-10-27.2); forecasting-tools allows 0.1%.
 
 ## Next
 - Read the experiment results on branch backtest-v1-experiments; keep a change only if it beats v1.
+- Ranked ideas from the repo review (each gated by a backtest):
+  1. Numeric overhaul: ask for P1/P5/P95/P99 as well, smooth the CDF (PCHIP) instead of linear, average the 5 CDFs instead of median, set width from the series' historical changes. Three top bots do this; forecast-scaffold measured +4.9 per numeric question. Needs a numeric backtest on resolved Summer/Spring 2026 FutureEval questions (API works with our token; keep that data in backtest/private/).
+  2. Make the 5 forecasts differ: a different framing per sample (outside view, inside view, devil's advocate), later a second independent research pass. Shared research makes forecasts herd (AIA, InfoDelphi, forecast-scaffold).
+  3. Fetch the pages named in the resolution criteria and the latest value; guardrails for units, already-happened, impossible outcomes. Biggest single losses for other bots came from these.
+  4. Refit calibration (Platt) on our own resolved Metaculus forecasts once there are about 100.
+  5. MiniBench same-template priors: earlier waves' outcomes for repeated question templates.
+  6. A second model family (Gemini or GPT) in the ensemble: mixed evidence, needs an API key and own money (LLM credits form closed).
+  Avoid: extremizing, LLM stackers, forced hedging language, long rationale templates, temperature tricks.
 - Improvement roadmap (each change kept only if the backtest score improves): calibration fix (DONE 27 Oct), multiple-choice probability floor, yes/no clip range, status-quo bias correction for "by date" questions, skip question types with negative expected score, effort high vs xhigh (running), second independent research report (should add diversity: the 5 forecasts agree too closely), numeric interval width (ours runs narrower than the crowd).
 - Backtest before go-live. Bulk-reading public question pages gets blocked by Cloudflare (403), so we use the official route: Metaculus "Bot Benchmarking Tier" (250 resolved questions with community prediction) via the Data Needs Form. Fallback: forward-test on main-site questions (allowed) and score once they resolve.
 - Backtest design: research each question as of its open date (drop dated facts after it), 5 forecasts per question; score log/Brier vs the bots' aggregate at close; single forecast vs median-of-5 and an MC probability floor come free from the same run.

@@ -13,6 +13,9 @@ import math
 
 BINARY_SHRINK = 0.8
 CLIP = (0.01, 0.99)
+# forecasting-tools 0.3.5 lets an option go down to 0.1%. If such an option wins, the
+# log score against a crowd at a few percent is around -300, so keep every option at 1%.
+MC_FLOOR = 0.01
 
 
 def shrink_binary(p: float, factor: float = BINARY_SHRINK) -> float:
@@ -20,3 +23,24 @@ def shrink_binary(p: float, factor: float = BINARY_SHRINK) -> float:
     p = min(max(p, CLIP[0]), CLIP[1])
     shrunk = 1 / (1 + math.exp(-factor * math.log(p / (1 - p))))
     return round(min(max(shrunk, CLIP[0]), CLIP[1]), 4)
+
+
+def floor_options(prediction, floor: float = MC_FLOOR):
+    """Raise every option of a PredictedOptionList to at least floor, taking the extra mass proportionally from the rest."""
+    from forecasting_tools import PredictedOption, PredictedOptionList  # kept local so the backtest scorer stays light
+
+    probs = [o.probability for o in prediction.predicted_options]
+    total = sum(probs)
+    probs = [p / total for p in probs]
+    low = [p < floor for p in probs]
+    if not any(low) or floor * len(probs) >= 1:
+        return prediction
+    spare = 1 - floor * sum(low)
+    rest = sum(p for p, is_low in zip(probs, low) if not is_low)
+    new = [floor if is_low else p * spare / rest for p, is_low in zip(probs, low)]
+    return PredictedOptionList(
+        predicted_options=[
+            PredictedOption(option_name=o.option_name, probability=p)
+            for o, p in zip(prediction.predicted_options, new)
+        ]
+    )
