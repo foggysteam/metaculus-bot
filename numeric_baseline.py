@@ -9,6 +9,7 @@ distribution of past changes over the same horizon into percentiles.
 Language models are poor at this arithmetic; this gives them a sound anchor.
 For FRED, if the target period is already published, the published value is reported.
 Returns "" when no series fits or anything fails.
+In backtests (as_of_date set) only data published before the as-of date is used.
 """
 from __future__ import annotations
 
@@ -18,13 +19,13 @@ import logging
 import math
 import os
 import re
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 import numpy as np
 import requests
 from forecasting_tools import BinaryQuestion, MetaculusQuestion, NumericQuestion, clean_indents
 
-from claude_code_llm import ClaudeCodeLlm
+from claude_code_llm import ClaudeCodeLlm, as_of_date
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +72,13 @@ def _quantiles(changes: np.ndarray, recent: int) -> np.ndarray:
     return np.percentile(sample, PERCENTILES)
 
 
+def _as_of() -> date | None:
+    value = as_of_date.get()
+    return date.fromisoformat(value) if value else None
+
+
 def _yahoo_history(symbol: str) -> tuple[list[date], np.ndarray]:
+    """Daily closes; in a backtest only those before the as-of date."""
     r = requests.get(
         f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}",
         params={"range": "3y", "interval": "1d"},
@@ -86,6 +93,8 @@ def _yahoo_history(symbol: str) -> tuple[list[date], np.ndarray]:
         for ts, c in zip(result["timestamp"], closes)
         if c is not None
     ]
+    if cutoff := _as_of():
+        pairs = [(d, c) for d, c in pairs if d < cutoff]
     return [d for d, _ in pairs], np.array([c for _, c in pairs], dtype=float)
 
 
@@ -114,6 +123,10 @@ def _yahoo_baseline(symbol: str, target: date) -> str:
 
 
 def _fred_get(path: str, **params) -> dict:
+    if (cutoff := _as_of()) and path == "series/observations":
+        # The vintage published just before the as-of date, so later releases and revisions are unseen.
+        day_before = (cutoff - timedelta(days=1)).isoformat()
+        params = {**params, "realtime_start": day_before, "realtime_end": day_before}
     r = requests.get(
         f"https://api.stlouisfed.org/fred/{path}",
         params={**params, "api_key": os.environ["FRED_API_KEY"], "file_type": "json"},

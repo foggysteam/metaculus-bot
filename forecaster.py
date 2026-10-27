@@ -11,7 +11,6 @@ Metaculus/metac-bot-template without conflicts.
 from __future__ import annotations
 
 import asyncio
-import contextvars
 import json
 import logging
 import re
@@ -32,7 +31,7 @@ from forecasting_tools import (
 from forecasting_tools.data_models.forecast_report import ForecastReport
 
 from calibration import floor_options, shrink_binary
-from claude_code_llm import USAGE_LEDGER, ClaudeCodeLlm, current_question_id
+from claude_code_llm import USAGE_LEDGER, ClaudeCodeLlm, as_of_date, current_question_id
 from evidence import gather_evidence
 from numeric_baseline import statistical_baseline
 from main import FallTemplateBot2026
@@ -82,11 +81,6 @@ def build_llms() -> dict:
     }
 
 
-# Backtests set this so prompts say "Today is <question open date>".
-as_of_date: contextvars.ContextVar[str | None] = contextvars.ContextVar(
-    "as_of_date", default=None
-)
-
 
 def _utc_today() -> str:
     return as_of_date.get() or datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -120,6 +114,9 @@ def _interpolate(points: list[tuple[float, float]], q: float) -> float:
 class ClaudeForecaster(FallTemplateBot2026):
     # Research runs one question at a time; forecasts are capped in claude_code_llm.
     _max_concurrent_questions = 1
+    # What the numeric prompt asks for; backtests try other settings.
+    numeric_percentiles: tuple[int, ...] = (10, 20, 40, 60, 80, 90)
+    numeric_tail_rule: str = ""
 
     def __init__(self, *args, log_dir: Path = LOG_DIR, **kwargs) -> None:
         super().__init__(*args, **kwargs)
@@ -436,15 +433,18 @@ class ClaudeForecaster(FallTemplateBot2026):
             You remind yourself that good forecasters are humble and set wide 90/10 confidence intervals to account for unknown unknowns, but anchor the middle of the distribution on the latest known value and trend.
             If the research includes a statistical baseline computed by code, or market prices on the same quantity and date, start your percentiles from them and adjust only for specific news or events, checking that they measure exactly what the resolution criteria measure.
 
+            {self.numeric_tail_rule}
+
             The last thing you write is your final answer as:
             "
-            Percentile 10: XX (lowest number value)
-            Percentile 20: XX
-            Percentile 40: XX
-            Percentile 60: XX
-            Percentile 80: XX
-            Percentile 90: XX (highest number value)
+            {self._percentile_answer_format()}
             "
             """
         )
         return await self._numeric_prompt_to_forecast(question, prompt)
+
+    def _percentile_answer_format(self) -> str:
+        lines = [f"Percentile {p}: XX" for p in self.numeric_percentiles]
+        lines[0] += " (lowest number value)"
+        lines[-1] += " (highest number value)"
+        return "\n".join(lines)

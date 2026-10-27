@@ -27,6 +27,11 @@ logger = logging.getLogger(__name__)
 current_question_id: contextvars.ContextVar[str] = contextvars.ContextVar(
     "current_question_id", default="none"
 )
+# Backtests set this (YYYY-MM-DD) so prompts say "Today is <as-of date>" and data
+# fetched by code stops at that date.
+as_of_date: contextvars.ContextVar[str | None] = contextvars.ContextVar(
+    "as_of_date", default=None
+)
 
 DEFAULT_SYSTEM_PROMPT = (
     "You are a careful, well-calibrated professional forecaster. "
