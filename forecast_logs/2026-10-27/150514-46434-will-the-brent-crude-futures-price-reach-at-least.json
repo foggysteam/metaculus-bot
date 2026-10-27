@@ -1,0 +1,269 @@
+{
+  "logged_at": "2026-10-27T15:07:52.928957+00:00",
+  "bot_version": "2026-10-25.2",
+  "started_at": "2026-10-27T15:05:14.396000+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46434,
+    "post_id": 46207,
+    "url": "https://www.metaculus.com/questions/46207",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "Will the Brent crude futures price reach at least $130 per barrel in the final quarter of 2026?",
+    "resolution_criteria": "This question resolves as **Yes** if before January 1, 2027 the high price presented by Yahoo Finance at its [Brent Crude Oil Last Day Financial Futures](https://finance.yahoo.com/quote/BZ%3DF/history/) is greater than or equal to $130.00 for any day in October, November or December 2026.",
+    "fine_print": "Please note that in order to streamline resolution, no other resolution source will be used to resolve the question.",
+    "close_time": "2026-10-27 18:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 00:00 UTC"
+  },
+  "research": [
+    "I've finished the research and am writing up the summary now.\n\n## 1. Resolution source\n- 2026-10-27: The Yahoo Finance BZ=F history page shows Oct 27 (intraday, delayed) at open 110.28, high 111.92, low 109.15, last 109.28. [Yahoo](https://finance.yahoo.com/quote/BZ%3DF/history/)\n- 2026-10-26: The highest high in October 2026 so far is **117.42**. That is $12.58 below the $130 threshold. Oct 23 had a high of 117.41 and a close of 116.72. [Yahoo](https://finance.yahoo.com/quote/BZ%3DF/history/)\n- The series rolled contracts between Oct 26 and Oct 27. Oct 26 closed at 115.81, which matches the December contract settlement reported elsewhere. Oct 27 shows about 110, which is the January contract. So the front-month spread (backwardation) was roughly $5 to $6. Another roll, from January to February, is likely around Nov 30, and the steep backwardation could pull the series down again then. [noticiasaominuto](https://www.noticiasaominuto.com/mundo/3073372/cotacao-do-brent-para-entrega-em-dezembro-baixa-0-78-para-115-81-dolares), [royanews](https://royanews.tv/news/398598/)\n\n## 2. Current status\n- Nothing has settled the question. On Yahoo, BZ=F has never reached $130 in 2026. The year-to-date high is **126.10 on 2026-04-30**. Monthly highs: March 119.40, April 126.10, May 115.25, June 99.00, July 102.01, August 94.81, September 110.19, October 117.42. [Yahoo](https://finance.yahoo.com/quote/BZ%3DF/history/?period1=1767225600&period2=1793000000)\n- Caution: countryeconomy.com lists figures above $125 for October (for example 135.51 on Oct 2). These do not match Yahoo and are probably a different benchmark, such as Dated Brent. They do not count for resolution. [countryeconomy](https://countryeconomy.com/raw-materials/brent?dr=2026-10)\n\n## 3. Recent news (newest first)\n- 2026-10-27: The January Brent contract fell 0.7% to $109.96 early in the session. [1prime](https://1prime.ru/20261027/tsena-874627285.html)\n- 2026-10-27: Goldman raised its December 2026 Brent forecast to $90 (from $85) and sees $80 on average in 2027. It expects a market surplus in Q4 as Persian Gulf exports recover. [Financial Express](https://www.financialexpress.com/india-news/goldman-sachs-sees-brent-at-80-in-2027-what-it-means-for-indias-oil-import-bill/4370562/)\n- 2026-10-26/27: Prices pulled back from near six-month highs on hopes that US-Iran hostilities ease. Iran, Saudi Arabia, Pakistan and Turkey agreed to keep talking after a meeting in Tehran. Trump has left further military action against Iran on the table; one report says US forces could strike within 96 hours of an order. Houthi forces claimed attacks on Saudi pipeline pumping stations and Riyadh airport, and there was a fire near Ras Tanura. [Asharq Al-Awsat](https://english.aawsat.com/business/5333750-oil-drops-near-six-month-highs-hopes-iran-war-hostilities-ease), [Gulf News](https://gulfnews.com/world/mena/middle-east-war-trump-leaves-iran-attack-on-the-table-tehran-vows-changes-to-hormuz-strait-houthis-claim-saudi-strikes-1.500723497), [Türkiye Today](https://www.turkiyetoday.com/business/oil-prices-rise-as-saudi-ras-tanura-hub-catches-fire-after-houthi-attack-3231114)\n- 2026-10-23: Brent settled at $116.72, its highest since April 29, after Houthi attacks on Saudi Arabia and Iranian attacks on tankers near Hormuz. It was up 6.2% for the week and has gained three weeks in a row. [CNBC](https://www.cnbc.com/2026/10/23/oil-price-brent-wti-iran-war-saudi-arabia.html)\n- Background (Seeking Alpha): an economist says oil could spike to $125 if the US-Iran conflict returns to a \"hot war\". Even that scenario is below $130. [SeekingAlpha](https://seekingalpha.com/news/4613237-oil-could-spike-to-125-if-us-iran-conflict-returns-to-hot-war-economist-says)\n\n## 4. Base rates\n- Through the 2026 Hormuz crisis, including the peak disruption in March and April, BZ=F's highest daily high was 126.10. $130 has not been reached on this series since 2008 (the all-time high was about $147.50 in July 2008). [Trading Economics](https://tradingeconomics.com/commodity/brent-crude-oil%20)\n- From the current price of about 109.3, reaching $130 takes a gain of about 19%. The provided empirical baseline gives a 75th percentile of 121.4 and a 90th of 146.5 for the price on Dec 31. Those figures are for the end-point price, not the highest price along the way, so the chance of touching $130 at some point is higher than the end-point percentiles suggest. The baseline also does not account for roll effects.\n- October's range on Yahoo went from a low of 96.56 to a high of 117.42, which shows high volatility.\n\n## 5. Other forecasts\n- Kalshi, Oct 30 close: Above $116.99 is about 0.07 to 0.09 and Above $118.99 is about 0.07 to 0.09. These settle on the Pyth feed, not Yahoo. I found no Kalshi strike near $130. (Code-collected data.)\n- Polymarket: I found no market on Brent reaching $130 in Q4 2026. [Dune](https://dune.com/blog/how-polymarket-priced-2026-iran-hormuz-crisis)\n- Goldman (July): Brent could top $120 in Q4 if Hormuz stays disrupted; its base case was $80. Its October update has December at $90. [Engineering News](https://www.engineeringnews.co.za/print-version/goldman-sees-brent-exceeding-120bbl-in-q4-if-hormuz-disruptions-persist-2026-07-21)\n- BofA (August): an average of about $130 was an \"unlikely\" extreme scenario. Citi (April): $150 if disruption lasted through June, and a bull case falling to $100 in Q4. [OilandGas360](https://www.oilandgas360.com/bofa-raises-brent-oil-price-forecast-for-2026-on-strait-of-hormuz-disruptions/)\n\n## 6. Upcoming events before resolution\n- Possible US strikes on Iran. This is openly discussed and is the main upside risk, along with more Houthi or Iranian attacks on Saudi infrastructure and tankers.\n- Talks among Iran and the regional states, and any US-Iran diplomacy. These are the main downside risks.\n- Contract rolls: the January contract probably expires around Nov 30 and the series will switch to February. With the current backwardation, that could lower the Yahoo price by several dollars.\n- The US midterm elections are on Nov 3, 2026. I could not confirm the date of the next OPEC+ meeting (likely late November or early December).\n- A Q4 market surplus is expected by Goldman if Gulf exports recover.\n\nSources: those linked inline above.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-27 15:05 UTC; check each market really matches the question)\n- Kalshi: Brent crude oil price on October 30, 2026 at 5:00 PM EDT? (October 30, 2026 at 5:00 PM EDT). Yes prices: Above $108.99: 0.55; Above $110.99: 0.37; Above $106.99: 0.66; Above $112.99: 0.24; Above $104.99: 0.80; Above $114.99: 0.17; Above $102.99: 0.89; Above $118.99: 0.09; Above $116.99: 0.07; Above $100.99: 0.94. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n- Kalshi: Brent crude oil price today at 5:00 PM EDT? (Oct 27, 2026 at 5:00 PM EDT). Yes prices: Above $109.50: 0.48; Above $109: 0.59; Above $110: 0.34; Above $108.50: 0.71; Above $110.50: 0.27; Above $108: 0.80; Above $111: 0.17; Above $107.50: 0.86; Above $111.50: 0.10; Above $107: 0.93. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n- Kalshi: Brent crude oil price on Friday at 5:00 PM EDT? (Oct 30, 2026 at 5:00 PM EDT). Yes prices: Above $108.99: 0.52; Above $110.99: 0.36; Above $106.99: 0.67; Above $112.99: 0.23; Above $104.99: 0.80; Above $114.99: 0.14; Above $102.99: 0.88; Above $116.99: 0.09; Above $118.99: 0.07; Above $100.99: 0.94. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n- Kalshi: Annual Return: WTI vs. Brent? (2026). Yes prices: Brent Crude Oil: 0.92; WTI Crude Oil: 0.07.\n- Kalshi: Brent crude oil price today at 5:00 PM EDT? (Oct 27, 2026 at 5:00 PM EDT). Yes prices: Above $109.50: 0.47; Above $109: 0.59; Above $110: 0.34; Above $108.50: 0.71; Above $110.50: 0.27; Above $108: 0.81; Above $111: 0.17; Above $107.50: 0.86; Above $111.50: 0.10; Above $107: 0.93. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n- Kalshi: Brent Crude Oil 15 min · $109.33 target (Oct 27 - 11:00AM EDT to 11:15AM EDT). Yes prices: Target Price: $109.33: 0.51. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BZ=F: latest close 109.2500 on 2026-10-27.\nTarget date 2026-12-31 is 45 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 45-observation returns over the last 3 years (last year weighted double):\np5: 91.3868, p10: 94.6214, p25: 101.6618, p50: 108.7631, p75: 121.3784, p90: 146.4985, p95: 164.7732\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": 0.13,
+      "reasoning": "(a) About 9 weeks remain (Oct 27 to Dec 31, 2026). Yes requires any daily high of at least $130.00 on Yahoo Finance BZ=F during October to December 2026.\n\n(b) Status quo: No. BZ=F is around $109.3, about 19% below the threshold. The October high so far is $117.42.\n\n(c) Base rate: BZ=F has not traded at $130 since 2008. Even the peak of the 2026 Hormuz disruption only reached $126.10, on April 30. Using a volatility-based estimate instead: Kalshi near-term strikes imply roughly 40-45% annualized volatility, which gives about a 30-35% chance of touching $130 within 45 trading days. That estimate ignores drift and roll effects. Taking the historical reference class and the volatility model together, the base rate is about 20%.\n\n(d) Evidence:\n- For Yes:\n  - Brent settled at $116.72 on Oct 23, up three weeks in a row.\n  - Houthi strikes hit Saudi infrastructure, and there was a fire near Ras Tanura (Oct 26-27).\n  - Trump openly keeps US strikes on Iran on the table, with one report saying forces could act within 96 hours.\n  - Volatility is extreme: October ranged from $96.56 to $117.42.\n- For No:\n  - The price pulled back to about $109-110 on Oct 27 on hopes for de-escalation, and regional talks are ongoing.\n  - Goldman (Oct 27) expects a Q4 surplus and Brent at $90 in December.\n  - Steep backwardation of about $5-6 per month means the late-November roll to the February contract likely knocks several dollars off the series.\n  - Even the \"hot war\" scenario in the background article tops out at $125.\n  - The worst disruption of 2026 failed to reach $130.\n\n(e) Scenarios:\n- No: Talks hold and Gulf exports keep recovering. The January-to-February roll pulls the series down to around $100-105, and the price drifts between $95 and $115 through December.\n- Yes: US strikes on Iran, plus Iranian or Houthi attacks on tankers and Saudi export terminals, re-close Hormuz flows in November. The front month spikes past its April high to $130 or more intraday.\n\n(f) Adjustment: I start from the roughly 20% blend. I move down for three reasons: the negative drift from rolls in a backwardated curve, the fact that the most severe disruption this year still failed to reach $130, and the consensus expecting a surplus. I keep meaningful weight on the risk of a live escalation, because the near-term catalysts are concrete. Final estimate: about 13%.\n\nProbability: 13%"
+    },
+    {
+      "value": 0.12,
+      "reasoning": "(a) There are about 9 weeks left, until Dec 31, 2026. For Yes, the daily high on Yahoo Finance's BZ=F history page must reach at least $130.00 on any day in Oct to Dec 2026. The series last printed about $109.3 on the January contract, so it needs a rise of roughly 19%. After the likely late-November roll to the February contract, the gap would be wider because of backwardation.\n\n(b) Status quo: No. The highest high so far in Q4 is 117.42, and the year-to-date high is 126.10 (Apr 30), set during the peak of the Hormuz disruption.\n\n(c) Base rate: BZ=F has not printed $130 since 2008, even through the March and April 2026 crisis. A volatility-based estimate gives a similar picture:\n- Kalshi's Friday strikes (about 8% for above $117 in 4 days) imply annualized volatility of roughly 40%.\n- That gives about 14% for the end-point price to be above $130 on Dec 31, and roughly 25% for touching $130 at any point, before adjusting for roll and mean reversion.\n- The empirical baseline's 75th to 90th percentile range (121 to 146) for the end-point is consistent with this.\n\nA reasonable starting point is about 20%.\n\n(d) Evidence for Yes:\n- Brent settled at 116.72 on Oct 23, its highest since April, after three weekly gains in a row.\n- Houthi and Iranian attacks on Saudi infrastructure and tankers are continuing (Oct 23 to 27).\n- Trump has kept US strikes on Iran on the table, with one report saying forces could strike within 96 hours of an order (Oct 26 to 27).\n\nEvidence for No:\n- Even peak disruption in April only reached 126.10.\n- Prices pulled back on Oct 26 and 27 on hopes for de-escalation talks.\n- On Oct 27, Goldman raised its December forecast only to $90 and expects a Q4 surplus.\n- The contract roll knocked about $6 off the series, and another roll around Nov 30 is likely to lower it again.\n- The economist's \"hot war\" scenario in the background article tops out at $125.\n\n(e) No scenario: talks continue, attacks stay sporadic, and Brent drifts between $95 and $115. The roll to the February contract lowers the series further.\nYes scenario: the US strikes Iran in November, Iran retaliates against Gulf export infrastructure or closes Hormuz again, and the front month spikes intraday above $130 before the roll.\n\n(f) I start at about 20% from the volatility-implied touch probability. I adjust down for three reasons:\n- The roll and backwardation drag on the Yahoo series.\n- Mean-reversion signals, including Goldman's expected Q4 surplus and the current talks.\n- Even the worst disruption this year stopped short of $130.\n\nI adjust slightly up for the fat-tailed escalation risk from possible US strikes. That leaves me at about 12%.\n\nProbability: 12%"
+    },
+    {
+      "value": 0.14,
+      "reasoning": "(a) About 9 weeks remain (Oct 27 to Dec 31, 2026). Yes requires any daily high on Yahoo's BZ=F page during Oct to Dec 2026 to be at least $130.00. The October high so far is 117.42, and the current price is about 109.3 on the January contract.\n\n(b) Status quo: No. Price is about $20.7 (19%) below the threshold. BZ=F never reached $130 in 2026, even at the peak of the Hormuz disruption (YTD high 126.10 on Apr 30).\n\n(c) Base rate: A simple touch model is the starting point. With implied volatility around 45-50% (Kalshi's 3-day strikes imply roughly this) and about 0.18 years remaining, a 19% rise needs about a 0.9-1.0 sigma move. That gives a touch probability of roughly 30-35% before adjustments. Two adjustments pull this down:\n- The roll to the February contract around Nov 30 should lower the series by several dollars, because of steep backwardation.\n- A negative carry drift also works against the price.\n\nAfter these, the base rate is about 20-25%. Historically, $130 has not been touched on this series since 2008.\n\n(d) Evidence for Yes:\n- Brent settled at 116.72 on Oct 23, its highest since April, after three straight weekly gains.\n- Houthi attacks on Saudi infrastructure and a fire near Ras Tanura.\n- Iranian attacks on tankers near Hormuz.\n- Trump has kept US strikes on the table (Oct 26-27).\n- Volatility is extreme: the October range was 96.56 to 117.42.\n\nEvidence for No:\n- The price pulled back to about 109 on Oct 27 on hopes for de-escalation, and regional talks are continuing.\n- On Oct 27 Goldman forecast December at $90 and a Q4 surplus as Gulf exports recover.\n- Even the peak crisis of March-April only reached 126.10.\n- The economist's \"hot war\" scenario tops out at $125.\n- The roll-down from backwardation works against Yes.\n\n(e) No scenario: Talks continue and attacks stay sporadic. Brent trades between 95 and 118, then rolls lower at the end of November and drifts toward $90-100 by December.\n\nYes scenario: US strikes on Iran prompt Iranian retaliation that shuts Hormuz traffic again, plus major damage to Saudi export facilities. Brent spikes past its April high to $130+ intraday in November.\n\n(f) I start from a model-based base rate of about 22%. I move down for three reasons: the roll effect, the fact that the 2026 peak crisis failed to reach $130, and analyst consensus pointing to easing. I keep a meaningful tail because escalation risk is live and explicitly discussed, and volatility is very high. My final estimate is about 14%.\n\nProbability: 14%"
+    },
+    {
+      "value": 0.11,
+      "reasoning": "**(a) Time left and what Yes requires.** About two months remain (Oct 27 to Dec 31, 2026). Yes needs any daily high on Yahoo's BZ=F series to be at least $130.00 on some day in October, November or December. The current price is about $109.3, so the market must rise roughly 19% intraday.\n\n**(b) Status quo.** No. The October high is 117.42, the year-to-date high is 126.10 (April 30), and prices are easing on de-escalation hopes.\n\n**(c) Base rate.** BZ=F has not printed $130 since 2008. That held even through the March to April 2026 Hormuz peak disruption, which topped out at 126.10. Reference class: two-month windows starting about 19% below a threshold during a high-volatility geopolitical regime.\n- With roughly 50% annualized volatility (Kalshi's 3-day strikes imply about 45-50%), a simple barrier-touch model gives roughly 25-30%.\n- Contract rolls under steep backwardation cut this. The roll to the February contract around Nov 30 likely knocks $4-6 off the series.\n- Volatility also tends to fade without fresh shocks.\n\nAdjusted for these, the base rate is about 15-20%.\n\n**(d) Strongest evidence.**\n- **For Yes:**\n  - Oct 23: three straight weekly gains, with the close at a six-month high of 116.72.\n  - Oct 26-27: Houthi attacks on Saudi pipelines and Riyadh airport, and a fire near Ras Tanura.\n  - Trump openly keeps US strikes on Iran on the table, reportedly within 96 hours of an order.\n- **For No:**\n  - Oct 27: the price fell to about 109 after the roll.\n  - Regional talks among Iran, Saudi Arabia, Pakistan and Turkey are continuing.\n  - Goldman (Oct 27) sees December Brent at $90 and a Q4 surplus as Gulf exports recover.\n  - Even the \"hot war\" scenario in the Seeking Alpha piece gives about $125.\n  - The worst disruption of 2026 peaked at 126.\n\n**(e) Scenarios.**\n- **No:** Talks and Gulf export recovery cap prices in the $100-118 range. The late-November roll lowers the series further, and December drifts toward $100.\n- **Yes:** US strikes on Iran plus renewed tanker attacks or a Hormuz closure push the January contract from about 110 to above 130 in November, exceeding the April peak.\n\n**(f) From base rate to final probability.** I start from a model-based 20-25%. I move down because:\n- the roll mechanics favor No;\n- the 2026 crisis peak never reached $130 even during maximal disruption;\n- analyst scenarios mostly stop at $120-125.\n\nI keep meaningful tail weight because escalation risk is live and volatility is extreme. There is no matching market to anchor on. My final estimate is about 11%.\n\nProbability: 11%"
+    },
+    {
+      "value": 0.12,
+      "reasoning": "(a) There are about 9 weeks left (Oct 27 to Dec 31, 2026). For Yes, the Yahoo Finance BZ=F daily high must print at or above $130.00 on any day from October through December 2026.\n\n(b) Status quo: BZ=F is about $109.3 after rolling to the January contract. The October high is $117.42 and the 2026 high is $126.10 (Apr 30). If nothing changes, the answer is No.\n\n(c) Base rate: For a front-month Brent rise of 19% or more within two months, from an already elevated level during a geopolitical crisis, a rough option-style estimate with about 45% implied volatility gives a touch probability of about 20-25% before adjustments. Two things cut that sharply:\n- Backwardation makes the series step down at each contract roll. Near Nov 30 it likely drops another $4-5 when the series switches to the February contract.\n- Volatility tends to fall back after spikes.\n\nAfter those adjustments, the base rate is roughly 12-18%. Historically, $130 has not printed on this series since 2008, and even the peak of the March-April Hormuz disruption only reached $126.10.\n\n(d) Evidence for Yes:\n- Brent settled at $116.72 on Oct 23, up three weeks in a row, its highest since April.\n- Houthi strikes hit Saudi pumping stations and Riyadh, and there was a fire near Ras Tanura (Oct 26-27).\n- Trump is keeping US strikes on Iran on the table, reportedly ready within 96 hours of an order.\n- The empirical baseline has a fat right tail, with p90 at $146.\n\nEvidence for No:\n- Prices pulled back on Oct 26-27 as regional talks continued in Tehran.\n- Goldman (Oct 27) expects a Q4 surplus as Gulf exports recover, with December Brent at $90.\n- The economist's \"hot war\" scenario only reaches $125.\n- Kalshi prices only about 7-9% for Brent above $117 by Oct 30.\n- The roll-down from backwardation works against Yes.\n\n(e) No scenario: Diplomacy limits escalation, Gulf exports recover, Brent drifts between $95 and $115, and the late-November roll lowers the series further.\n\nYes scenario: US strikes on Iran lead to renewed Hormuz closures or major damage to Saudi infrastructure, and the January or February contract spikes above $130 intraday in November or December.\n\n(f) Starting from a roughly 15-20% option-implied touch estimate, I adjust down for roll-down from backwardation, the year-to-date ceiling of $126 even at peak disruption, and analyst consensus for easing. I adjust up modestly for the active and credible escalation risk. The result is about 12%.\n\nProbability: 12%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.12,
+  "usage": [
+    {
+      "question_id": "46434",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 7.26e-05,
+      "input_tokens": 506,
+      "output_tokens": 44,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00028930000000000004,
+      "input_tokens": 890,
+      "output_tokens": 223,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 93.5,
+      "notional_cost_usd": 0.2877051,
+      "input_tokens": 70624,
+      "output_tokens": 4128,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.6,
+      "notional_cost_usd": 0.06944800000000001,
+      "input_tokens": 5272,
+      "output_tokens": 1364,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.8,
+      "notional_cost_usd": 0.07025200000000001,
+      "input_tokens": 5270,
+      "output_tokens": 1405,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.1,
+      "notional_cost_usd": 0.0733,
+      "input_tokens": 5271,
+      "output_tokens": 1557,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0005142,
+      "input_tokens": 2267,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.0005285,
+      "input_tokens": 2376,
+      "output_tokens": 107,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.0005154000000000001,
+      "input_tokens": 2333,
+      "output_tokens": 98,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.00013361999999999998,
+      "input_tokens": 2267,
+      "output_tokens": 95,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.00015762000000000003,
+      "input_tokens": 2374,
+      "output_tokens": 142,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.00013098,
+      "input_tokens": 2334,
+      "output_tokens": 88,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 36.2,
+      "notional_cost_usd": 0.038083799999999994,
+      "input_tokens": 5272,
+      "output_tokens": 1722,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 36.8,
+      "notional_cost_usd": 0.03728379999999999,
+      "input_tokens": 5272,
+      "output_tokens": 1682,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 1.9,
+      "notional_cost_usd": 0.0005105999999999999,
+      "input_tokens": 2299,
+      "output_tokens": 102,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0005254,
+      "input_tokens": 2363,
+      "output_tokens": 106,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 1.8,
+      "notional_cost_usd": 0.00014065,
+      "input_tokens": 2301,
+      "output_tokens": 108,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46434",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 0.00013657,
+      "input_tokens": 2362,
+      "output_tokens": 99,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.5797
+}
