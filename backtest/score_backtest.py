@@ -6,6 +6,7 @@ Log score: ln(probability given to what happened); higher is better, 0 is perfec
 we beat the market's price on the as-of date (roughly what Metaculus peer score measures).
 
 Usage: uv run python backtest/score_backtest.py --run v1
+       uv run python backtest/score_backtest.py --run v1-no-status-quo --baseline v1
 """
 from __future__ import annotations
 
@@ -14,11 +15,20 @@ import json
 import math
 import random
 import statistics
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from calibration import BINARY_SHRINK  # noqa: E402
+
 ROOT = Path(__file__).parent
 CLIP = (0.01, 0.99)  # same clipping the bot applies before submitting
+# Questions whose resolution does not match their wording; scoring them measures noise.
+EXCLUDE = {
+    "mf-ppPhqSSddu": "asks whether Navier-Stokes is solved on 3 June 2027 but resolved Yes in 2026",
+}
 
 
 def clip(p: float) -> float:
@@ -46,11 +56,36 @@ def bootstrap_ci(values: list[float], n: int = 2000) -> tuple[float, float]:
     return means[int(0.025 * n)], means[int(0.975 * n)]
 
 
+def load(run: str) -> list[dict]:
+    return [json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "results" / run).glob("*.json")]
+
+
+def compare(rows: list[dict], baseline_run: str) -> list[str]:
+    """Question-by-question difference against another run (same questions, same research when reused)."""
+    base = {r["id"]: r for r in load(baseline_run) if r["forecasts"]}
+    pairs = [(r, base[r["id"]]) for r in rows if r["id"] in base]
+    lines = [f"Compared with run `{baseline_run}` on the same {len(pairs)} questions (positive means this run is better, x100):", ""]
+    for label, a in (("raw median of 5", 1.0), (f"after the live shrink x{BINARY_SHRINK}", BINARY_SHRINK)):
+        diff = [
+            100 * (log_score(stretch(med(r["forecasts"]), a), r["outcome"]) - log_score(stretch(med(b["forecasts"]), a), b["outcome"]))
+            for r, b in pairs
+        ]
+        lo, hi = bootstrap_ci(diff)
+        better = sum(d > 0 for d in diff)
+        lines.append(f"- {label}: {statistics.fmean(diff):+.1f} (95% CI {lo:+.1f} to {hi:+.1f}), better on {better}, worse on {sum(d < 0 for d in diff)}")
+    return lines + [""]
+
+
+def med(forecasts: list[dict]) -> float:
+    return statistics.median(f["p"] for f in forecasts)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", required=True)
+    parser.add_argument("--baseline", help="Another run to compare with question by question")
     args = parser.parse_args()
-    records = [json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "results" / args.run).glob("*.json")]
+    records = [r for r in load(args.run) if r["id"] not in EXCLUDE]
     leaked = [r for r in records if r["leaked"]]
     rows = [r for r in records if not r["leaked"] and r["forecasts"]]
     if not rows:
@@ -58,11 +93,12 @@ def main() -> None:
         return
 
     def ours(r):
-        return statistics.median(f["p"] for f in r["forecasts"])
+        return med(r["forecasts"])
 
     methods = {
         "Market price on the as-of date": lambda r: r["market_price"],
-        "KCAP2.0 (median of 5, live setup)": ours,
+        "KCAP2.0 median of 5 (live until 2026-10-26)": ours,
+        f"KCAP2.0 median of 5, shrunk x{BINARY_SHRINK} (live from 2026-10-27)": lambda r: stretch(ours(r), BINARY_SHRINK),
         "KCAP2.0 single forecast": None,  # scored separately: average over samples
         "KCAP2.0 given the market price": lambda r: statistics.median(f["p"] for f in r["forecasts_with_market"])
         if r["forecasts_with_market"]
@@ -101,7 +137,7 @@ def main() -> None:
     lines = [
         f"## Run `{args.run}` ({datetime.now(timezone.utc):%Y-%m-%d})",
         "",
-        f"{len(rows)} questions scored ({len(leaked)} excluded for hindsight leaks), "
+        f"{len(rows)} questions scored ({len(leaked)} excluded for hindsight leaks, {len(EXCLUDE)} for a bad resolution), "
         f"{sum(r['outcome'] for r in rows)} resolved yes. Notional usage ${cost:.0f}.",
         "",
         "| Method | Log score | Brier | vs market (x100) | 95% CI |",
@@ -116,6 +152,7 @@ def main() -> None:
         "|---|---|---|---|",
         *calib,
         "",
+        *(compare(rows, args.baseline) if args.baseline else []),
     ]
     report = "\n".join(lines)
     print(report)

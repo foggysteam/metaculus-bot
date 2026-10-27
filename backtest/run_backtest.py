@@ -9,6 +9,11 @@ Hindsight guards:
 
 Each question is saved to backtest/results/<run>/<id>.json, so an interrupted run resumes.
 
+Prompt or settings experiments can reuse an earlier run's research, so only the
+forecasting step changes and the two runs compare question by question:
+  uv run python backtest/run_backtest.py --run v1-no-status-quo --reuse-research v1 --variant no-status-quo --market-predictions 0
+  uv run python backtest/score_backtest.py --run v1-no-status-quo --baseline v1
+
 Usage:
   uv run python backtest/run_backtest.py --run v1 --limit 100
   uv run python backtest/score_backtest.py --run v1
@@ -49,6 +54,25 @@ HISTORICAL_RULES = (
     "published on or before {as_of}. If a search result or page is dated after {as_of}, ignore it "
     "completely and do not mention it. Never state or hint at how the question was resolved.\n\n"
 )
+_STATUS_QUO_RULE = (
+    "- Good forecasters put extra weight on the status quo outcome since the world changes slowly most of the time.\n"
+)
+
+
+def apply_variant(bot: ClaudeForecaster, variant: str | None) -> None:
+    """Experiments, each changing one thing from the live setup."""
+    if variant is None:
+        return
+    if variant == "no-status-quo":
+        rules = ClaudeForecaster._calibration_rules()
+        assert _STATUS_QUO_RULE in rules, "status quo rule not found in the live prompt"
+        bot._calibration_rules = lambda: rules.replace(_STATUS_QUO_RULE, "")
+    elif variant == "xhigh":
+        bot.get_llm("default", "llm").effort = "xhigh"
+    else:
+        raise ValueError(f"Unknown variant {variant}")
+
+
 _DATED_LINE = re.compile(r"^\s*[-*]\s*(\d{4}-\d{2}-\d{2})")
 
 
@@ -76,10 +100,18 @@ async def leak_check(question: str, research: str, as_of: str) -> bool:
     return "LEAK" in verdict.upper()
 
 
-async def run_question(bot: ClaudeForecaster, row: dict, out_dir: Path, n: int, n_market: int) -> None:
+async def run_question(
+    bot: ClaudeForecaster, row: dict, out_dir: Path, n: int, n_market: int, reuse_dir: Path | None = None
+) -> None:
     path = out_dir / f"{row['id']}.json"
     if path.exists():
         return
+    reused = None
+    if reuse_dir:
+        source = reuse_dir / f"{row['id']}.json"
+        if not source.exists():
+            return
+        reused = json.loads(source.read_text(encoding="utf-8"))
     as_of = datetime.fromisoformat(row["as_of"])
     as_of_str = as_of.date().isoformat()
     as_of_date.set(as_of_str)
@@ -97,9 +129,13 @@ async def run_question(bot: ClaudeForecaster, row: dict, out_dir: Path, n: int, 
     researcher = bot.get_llm("researcher", "llm")
     prompt = HISTORICAL_RULES.format(as_of=as_of_str) + bot._get_research_prompt(question, researcher)
     try:
-        raw_research = await researcher.invoke(prompt)
-        research = remove_later_facts(raw_research, as_of.date())
-        leaked = await leak_check(row["question"], research, as_of_str)
+        if reused:
+            raw_research = research = reused["research"]
+            leaked = reused["leaked"]
+        else:
+            raw_research = await researcher.invoke(prompt)
+            research = remove_later_facts(raw_research, as_of.date())
+            leaked = await leak_check(row["question"], research, as_of_str)
 
         async def sample(text: str) -> dict:
             pred = await bot._run_forecast_on_binary(question, text)
@@ -148,17 +184,21 @@ async def main() -> None:
     parser.add_argument("--predictions", type=int, default=5)
     parser.add_argument("--market-predictions", type=int, default=3)
     parser.add_argument("--parallel", type=int, default=3, help="Questions in flight at once")
+    parser.add_argument("--reuse-research", help="Run whose saved research to reuse instead of researching again")
+    parser.add_argument("--variant", help="Experiment to apply: no-status-quo or xhigh")
     args = parser.parse_args()
 
     rows = [json.loads(line) for line in DATA.open(encoding="utf-8")][args.offset : args.offset + args.limit]
     out_dir = ROOT / "results" / args.run
     out_dir.mkdir(parents=True, exist_ok=True)
     bot = ClaudeForecaster(llms=build_llms(), publish_reports_to_metaculus=False)
+    apply_variant(bot, args.variant)
+    reuse_dir = ROOT / "results" / args.reuse_research if args.reuse_research else None
     gate = asyncio.Semaphore(args.parallel)
 
     async def guarded(row: dict) -> None:
         async with gate:
-            await run_question(bot, row, out_dir, args.predictions, args.market_predictions)
+            await run_question(bot, row, out_dir, args.predictions, args.market_predictions, reuse_dir)
 
     await asyncio.gather(*[guarded(row) for row in rows])
     done = len(list(out_dir.glob("*.json")))
