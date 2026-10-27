@@ -61,3 +61,31 @@ Compared with run `v1` on the same 77 questions (positive means this run is bett
 - raw median of 5: -2.6 (95% CI -8.0 to +0.7), better on 18, worse on 25
 - after the live shrink x0.8: -2.0 (95% CI -6.1 to +0.5), better on 18, worse on 25
 
+## Run `v1-xhigh` (2026-10-27)
+
+77 questions scored (9 excluded for hindsight leaks, 1 for a bad resolution), 41 resolved yes. Notional usage $24.
+
+| Method | Log score | Brier | vs market (x100) | 95% CI |
+|---|---|---|---|---|
+| Market price on the as-of date | -0.561 | 0.186 | +0.0 | +0.0 to +0.0 |
+| KCAP2.0 median of 5 (live until 2026-10-26) | -0.611 | 0.203 | -5.0 | -17.3 to +7.7 |
+| KCAP2.0 median of 5, shrunk x0.8 (live from 2026-10-27) | -0.595 | 0.201 | -3.3 | -14.1 to +8.0 |
+| KCAP2.0 single forecast | -0.621 | 0.207 | -6.0 | -18.0 to +6.5 |
+| KCAP2.0 given the market price | -0.611 | 0.203 | -5.0 | -17.3 to +7.7 |
+| 50/50 blend of KCAP2.0 and market | -0.548 | 0.185 | +1.3 | -4.9 to +9.0 |
+
+Best stretch factor for KCAP2.0's forecasts: 0.65 (log score -0.590 vs -0.611 unchanged). Above 1 means it was too cautious, below 1 too bold. This is fitted on the same questions, so treat it as a hint.
+
+| KCAP2.0 forecast | Questions | Average forecast | Happened |
+|---|---|---|---|
+| 0% to 20% | 22 | 9% | 23% |
+| 20% to 40% | 11 | 28% | 27% |
+| 40% to 60% | 23 | 50% | 70% |
+| 60% to 80% | 13 | 69% | 85% |
+| 80% to 100% | 8 | 89% | 75% |
+
+Compared with run `v1` on the same 77 questions (positive means this run is better, x100):
+
+- raw median of 5: -1.3 (95% CI -3.1 to +0.1), better on 24, worse on 24
+- after the live shrink x0.8: -0.9 (95% CI -2.3 to +0.2), better on 24, worse on 24
+
