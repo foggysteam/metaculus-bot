@@ -1,0 +1,305 @@
+{
+  "logged_at": "2026-10-28T02:15:50.299547+00:00",
+  "bot_version": "2026-10-27.2",
+  "started_at": "2026-10-28T02:09:28.718741+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46250,
+    "post_id": 46016,
+    "url": "https://www.metaculus.com/questions/46016",
+    "type": "DiscreteQuestion",
+    "unit": "Billion $",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "What will be NVIDIA's forward guidance in its Q3 FY2027 earnings release? (Operating expenses (GAAP))",
+    "resolution_criteria": "This question will resolve as the midpoint of the guidance range for Q4 FY2027 as stated in NVIDIA’s “Outlook” section of its Q3 FY2027 earnings press release, expected to be published on [NVIDIA’s investor relations site](https://nvidianews.nvidia.com/) and the [SEC’s EDGAR system](https://www.sec.gov/) on November 17, 2026.\n\nThe unit value for revenues is billions of U.S. dollars, and it will be rounded to the nearest billion. GAAP gross margin will be rounded to the nearest tenth of a percent. GAAP operating expenses are in a unit value of billions of U.S. dollars and will be rounded to the nearest tenth of a billion dollars.",
+    "fine_print": "* If a single figure (not a range) is provided, that figure will be used.\n* If multiple ranges or scenarios are presented, the primary range specified in the official “Outlook” or “Guidance” section will be used to resolve the subquestions.\n* If NVIDIA does not issue guidance for Q4 FY2027 in the Q3 FY2027 release, the corresponding subquestion will be **annulled**.\n* Only the originally published figure will be used; subsequent updates, corrections, or guidance revisions will be ignored.",
+    "close_time": "2026-11-17 11:00 UTC",
+    "scheduled_resolution_time": "2026-11-17 21:00 UTC"
+  },
+  "research": [
+    "Nothing has settled this yet. NVIDIA hasn't published its Q3 FY2027 release or confirmed the report date. Kress's full-year opex comment implies Q4 GAAP opex of roughly $9.4-10.1B. Some estimates below are my own arithmetic, not NVIDIA figures.\n\n## 1. Resolution source\n- 2026-08-26: The Q2 FY2027 release (the latest source) guides Q3 GAAP opex to about $9.2B and non-GAAP to about $9.0B. Q2 FY27 actual GAAP opex was $8,408M; Q1 FY27 was $7,621M. [NVIDIA](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027), [8-K on EDGAR](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm)\n- The question resolves on the \"approximately $X billion\" GAAP opex figure for Q4 FY27 in the Q3 FY27 release. NVIDIA usually gives a single number, not a range.\n\n## 2. Current status\n- 2026-10-28: Nothing settles it yet. The Q3 FY27 release is not out.\n- The report date is not confirmed, and the sources disagree:\n  - The question says November 17.\n  - Kalshi's earnings-call market says November 18.\n  - Der Aktionär says November 19.\n- A CME tracker (as of 2026-10-21) and a 2026-09-28 article both said no date had been announced. I found no official \"Sets Conference Call\" notice for Q3 FY27. Last year's notice came on 2025-10-29 for a 2025-11-19 report. [CME](https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date/), [Trend and Ticker](https://trendandticker.com/markets/semiconductors/nvidia-earnings-date-q3-fiscal-2027-2026), [Der Aktionär](https://www.deraktionaer.de/artikel/deraktionaerplus/nvidia-erst-doener-dann-super-zahlen-20424952.html)\n\n## 3. Recent news (newest first)\n- 2026-10-27: Microsoft, Alphabet and Amazon report on October 28-29. Their capex is the key demand signal for NVIDIA. [Motley Fool](https://www.fool.com/investing/2026/10/27/big-tech-is-about-to-report-nvidia-investors-should-watch-one-number/)\n- 2026-10-20: Musk said SpaceX plans to add 10 GW of AI compute in 2027, using only NVIDIA chips. [Motley Fool](https://www.fool.com/investing/2026/10/26/elon-musk-and-spacex-just-delivered-incredible-new/)\n- 2026-08-26 (Q2 call): CFO Kress said \"we now expect OPEX to grow in the low 50s\" for FY27. She cited a broader product portfolio and more use of AI tools. Q2 GAAP opex rose 10% from Q1, mainly on compute infrastructure and compensation costs. [Transcript](https://transcripts.platformaeronaut.com/transcripts/NVDA-2Q27-transcript)\n- 2026-05 (Q1 call): The full-year opex growth guide was \"upper 40s\" percent, so it was raised in August. [Summary](https://transcripts.platformaeronaut.com/summaries/NVDA-1Q27-AI-Summary)\n- Starting with Q1 FY27, non-GAAP no longer excludes stock-based compensation, so GAAP and non-GAAP are now only about $0.2B apart.\n\n## 4. Base rates: GAAP opex guidance vs. actuals\n| Quarter | Guide (GAAP) | Actual | Guide minus prior-quarter actual |\n|---|---|---|---|\n| Q3 FY26 | ~$5.9B | $5.839B | +$0.49B |\n| Q4 FY26 | ~$6.7B | $6.794B | +$0.86B |\n| Q1 FY27 | ~$7.7B | $7.621B | +$0.91B |\n| Q2 FY27 | ~$8.5B | $8.408B | +$0.88B |\n| Q3 FY27 | ~$9.2B | due Nov | +$0.79B |\n\nSources: [Q3 FY26 PR](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026), [Q4 FY26 PR](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026), [Q1 FY27 PR](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027)\n\n- Actuals have usually landed within about ±$0.3B of guidance, mostly a little below. Q4 FY26 was the exception, coming in above.\n- For the last four quarters, the new guide has been about $0.8-0.9B above the latest actual.\n- Implied Q4 from the full-year guide (my own calculation; the Q1 FY26 figure is from memory and unverified):\n  - FY26 GAAP opex is about $23.08B. That uses Q1 FY26 ≈ $5.03B plus the verified $5.413B, $5.839B and $6.794B.\n  - Growth in the \"low 50s\" (50-53%) gives FY27 of about $34.6-35.3B.\n  - Q1 + Q2 actuals + the Q3 guide total $25.23B, which leaves about $9.4-10.1B for Q4. The 51.5% midpoint gives about $9.7B.\n  - The answer moves with Q3 actuals: if Q3 comes in under $9.2B, the implied Q4 rises.\n  - If Kress's percentage refers to non-GAAP (now including SBC), the result is similar.\n- Simple extrapolation: about $9.1-9.2B Q3 actual plus $0.8-0.9B gives about $9.9-10.1B.\n\n## 5. Other forecasts\n- I found no market or analyst consensus on NVIDIA's Q4 GAAP opex guidance.\n- Related markets (fetched 2026-10-28):\n  - Polymarket, Q3 non-GAAP gross margin: 73-75% at 84.5%.\n  - Polymarket, Q3 Data Center revenue: above $100B at 80%; above $105B at 27.5%.\n  - Kalshi, FY2027 headcount: above 50k at 81%; above 52k at 41%. Headcount drives compensation opex.\n  - Kalshi's earnings-call mention market dates the call to November 18.\n- None of these resolve on opex directly.\n\n## 6. Upcoming events before resolution\n- Expected around late October or early November: NVIDIA's notice confirming the call date.\n- 2026-10-28/29: Microsoft, Alphabet and Amazon earnings, with capex commentary.\n- November 17-19 (unconfirmed): the Q3 FY27 release and CFO commentary. Watch for Q3 actual opex and whether the full-year \"low 50s\" growth outlook changes.\n- Possible upside to opex: acquisitions or deal-related costs (for example the Groq deal; Kalshi gives a DOJ fine 7%), and possible legal or accrual items, which only GAAP includes.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-28 02:13 UTC; check each market really matches the question)\n- Kalshi: First Solar module volume sold in Q3 (module volume sold in Q3 2026). Yes prices: Above 4200 mw: 0.47; Above 4300 mw: 0.33; Above 4100 mw: 0.68; Above 4400 mw: 0.20; Above 4000 mw: 0.81; Above 4500 mw: 0.10; Above 3900 mw: 0.93; Above 3800 mw: 0.94; Above 4600 mw: 0.06; Above 4700 mw: 0.03.\n- Kalshi: Urban Outfitters total stores in Q3 2027 (total urbn stores in Q3 2027 ). Yes prices: Above 820: 0.52; Above 825: 0.29; Above 815: 0.79; Above 835: 0.12; Above 830: 0.17; Above 840: 0.04; Above 845: 0.01; Above 800: 0.50; Above 805: 0.50; Above 810: 0.50.\n- Kalshi: Nvidia headcount in fiscal 2027 (in 2027). Yes prices: Above 52000: 0.41; Above 54000: 0.33; Above 56000: 0.22; Above 50000: 0.81; Above 48000: 0.82; Above 46000: 0.95.\n- Kalshi: What will NVIDIA say during their next earnings call? (On Nov 18, 2026). Yes prices: Gaming: 0.56; Taiwan: 0.46; Isaac: 0.45; Self Driving: 0.40; Humanoid: 0.39; Dividend (2+ times): 0.31; Rent / Renting: 0.70; Omniverse: 0.73; DSX: 0.73; Cosmos: 0.73.\n- Kalshi: Will the DOJ fine Nvidia over the Groq deal this year? (Before Jan 1, 2027). Yes prices: Yes: 0.07.\n- Kalshi: What will Winnebago say during their next earnings call? (On Dec 18, 2026). Yes prices: Tariff: 0.44; Oil: 0.40; Restructuring: 0.38; Luxury: 0.67; Lineage: 0.66; Dividend: 0.65; Inflation: 0.70; Holiday: 0.70; AI / Artificial Intelligence: 0.18; Sunflyer: 0.18.\n- Polymarket: NVIDIA (NVDA) Q3 adjusted gross margin (non-GAAP)? (ends 2026-11-18). [Yes, No] prices: <71%: [\"0.088\", \"0.912\"]; 71% to 73%: [\"0.0105\", \"0.9895\"]; 73% to 75%: [\"0.845\", \"0.155\"]; 75% to 77%: [\"0.1\", \"0.9\"]; 77%+: [\"0.031\", \"0.969\"]\n- Polymarket: Will NVIDIA (NVDA) Q3 Data Center Revenue be above __? (ends 2026-11-18). [Yes, No] prices: $95B: [\"0.63\", \"0.37\"]; $100B: [\"0.8\", \"0.2\"]; $105B: [\"0.275\", \"0.725\"]; $110B: [\"0.255\", \"0.745\"]; $115B: [\"0.2\", \"0.8\"]\n- Polymarket: DOJ fines Nvidia over Groq deal in 2026? (ends 2027-01-01). [Yes, No] prices: DOJ fines Nvidia over Groq deal in 2026?: [\"0.105\", \"0.895\"]\n- Polymarket: What will Microsoft say during their next earnings call? (ends 2026-10-29). [Yes, No] prices: Copilot 20+ times: [\"0.93\", \"0.07\"]; Azure 15+ times: [\"0.885\", \"0.115\"]; GitHub 15+ times: [\"0.195\", \"0.805\"]; Agent / Agentic: [\"0.992\", \"0.008\"]; Xbox: [\"0.965\", \"0.035\"]; Anthropic: [\"0.9\", \"0.1\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 9.4,
+        "p25": 9.6625,
+        "p50": 9.925,
+        "p75": 10.15,
+        "p90": 10.5
+      },
+      "reasoning": "(a) About 20 days remain. NVIDIA's Q3 FY2027 release is expected around November 17-19, 2026. The exact date is not yet confirmed.\n\n(b) The latest value is from the August 26, 2026 release, which guided Q3 FY27 GAAP opex to about $9.2B. Recent actuals were $7.621B in Q1 FY27 and $8.408B in Q2 FY27.\n\n(c) If nothing changed, the guide would stay flat at about $9.2B. That is unrealistic given NVIDIA's steady pattern of sequential opex growth.\n\n(d) If the current trend continued, each new guide has come in about $0.8-0.9B above the latest actual. A Q3 actual of about $9.1-9.2B would give a Q4 guide of about $9.9-10.1B. The full-year \"low 50s\" opex growth comment points slightly lower, to about $9.4-10.1B with a midpoint near $9.7B. Two things could push it higher:\n- The full-year growth outlook was raised last quarter, from \"upper 40s\" to \"low 50s\", and could be raised again.\n- If the Q3 actual comes in under $9.2B, the implied Q4 figure rises.\n\n(e) Historical variation: quarter-to-quarter guide increments have ranged from +$0.49B to +$0.91B, and actuals have landed within ±$0.3B of the guide. That puts the plausible spread for the Q4 guide at roughly ±$0.4B around the center.\n\n(f) There is no direct consensus or market on this figure. The full-year guide arithmetic centers near $9.7-9.8B, and trend extrapolation centers near $10.0B. The question creator's range is $9.5-11.2B.\n\n(g) Low scenario: NVIDIA reins in hiring or infrastructure spend, or the Q3 actual comes in high so the remaining full-year budget is small. The guide could then be about $9.3-9.4B. High scenario: a costly acquisition or integration (for example Groq-related costs), legal accruals, a big compute-infrastructure ramp, or another raise to the full-year growth outlook. Any of these could push the guide to $10.5B or more.\n\nPercentile 10: 9.4\nPercentile 20: 9.6\nPercentile 40: 9.85\nPercentile 60: 10.0\nPercentile 80: 10.2\nPercentile 90: 10.5"
+    },
+    {
+      "value": {
+        "p10": 9.5,
+        "p25": 9.7,
+        "p50": 9.925,
+        "p75": 10.15,
+        "p90": 10.4
+      },
+      "reasoning": "(a) About 20 days remain. The Q3 FY2027 release is expected around November 17-19, 2026, and the date is not yet confirmed.\n\n(b) The latest known value is the Q3 FY27 GAAP opex guide of about $9.2B, given on 2026-08-26. Q2 FY27 actual GAAP opex was $8.408B.\n\n(c) If nothing changed, meaning a flat guide, the Q4 figure would be about $9.2B. That is unlikely given the steady sequential growth.\n\n(d) If the trend continued:\n- The new guide has run about $0.8-0.9B above the latest actual. A Q3 actual of about $9.1-9.2B would put the Q4 guide around $9.9-10.1B.\n- The \"low 50s\" full-year growth comment implies about $9.4-10.1B for Q4, with a midpoint near $9.7-9.8B. That number rises if Q3 comes in under guidance.\n\n(e) Over the last four quarters, the sequential step in the guide has ranged from about +$0.5B to +$0.9B. Actuals have usually landed within ±$0.3B of guidance.\n\n(f) I found no consensus on the opex guide. Kalshi's FY2027 headcount market shows continued hiring (above 50k at 81%). Kress raised the full-year opex growth outlook from \"upper 40s\" to \"low 50s\", which is a pattern of upward revisions.\n\n(g) Unexpected scenarios:\n- Low outcome (about $9.3-9.5B): management moderates hiring or compute spending, or holds to the low end of the \"low 50s\" full-year growth.\n- High outcome (about $10.5-11B): the full-year guide is raised to \"mid-50s\" or higher, or the Groq deal, acquisitions or legal accruals add GAAP-only costs.\n\nPercentile 10: 9.5\nPercentile 20: 9.65\nPercentile 40: 9.85\nPercentile 60: 10.0\nPercentile 80: 10.2\nPercentile 90: 10.4"
+    },
+    {
+      "value": {
+        "p10": 9.5,
+        "p25": 9.75,
+        "p50": 9.975,
+        "p75": 10.2375,
+        "p90": 10.6
+      },
+      "reasoning": "(a) **Time left:** About 3 weeks. The Q3 FY2027 release is expected around November 17-19, 2026.\n\n(b) **Latest known value:** The Q2 FY2027 release (August 26, 2026) guided Q3 GAAP opex to about $9.2B. Q2 actual GAAP opex was $8.408B. The CFO guided full-year FY27 opex growth to the \"low 50s\" percent, up from \"upper 40s\" in May.\n\n(c) **If nothing changed:** A flat guide would be about $9.2B. That is very unlikely, because opex has risen every quarter.\n\n(d) **If the current trend continued:**\n* Each new guide has come in about $0.8-0.9B above the prior quarter's actual. With a Q3 actual of roughly $9.1-9.2B, that gives a Q4 guide of about $9.9-10.1B.\n* The \"low 50s\" full-year growth (on FY26 of about $23.1B) implies Q4 of about $9.4-10.1B, centered near $9.7-9.8B. That center is about $9.85B if the Q3 actual comes in slightly below $9.2B.\n\n(e) **Historical variation:**\n* Quarter-to-quarter increments in the guide have ranged from +$0.5B to +$0.9B over the past year.\n* The full-year growth outlook was raised once already this year, which could push Q4 to around $10.3-10.5B.\n\n(f) **Expert and market expectations:** I found no direct consensus or market on this figure. Related markets show strong demand: Data Center revenue above $100B is priced at 80%, and headcount above 50k at 81%. Both support continued opex growth.\n\n(g) **Unexpected scenarios:**\n* **Low:** Management restrains hiring and compute spending, or the Q3 actual comes in well under guidance. The guide then lands around $9.4-9.5B.\n* **High:** Acquisition or integration costs (for example from the Groq deal), a legal accrual, or a big expansion of compute infrastructure. Combined with another raise of the full-year outlook, the guide could exceed $10.7B.\n\nPercentile 10: 9.5\nPercentile 20: 9.7\nPercentile 40: 9.9\nPercentile 60: 10.05\nPercentile 80: 10.3\nPercentile 90: 10.6"
+    },
+    {
+      "value": {
+        "p10": 9.6,
+        "p25": 9.8375,
+        "p50": 10.025,
+        "p75": 10.25,
+        "p90": 10.5
+      },
+      "reasoning": "(a) About 20 days remain. The Q3 FY2027 release is expected around November 17-19, 2026, and the forecast window closes November 17.\n\n(b) The latest known value is from the Q2 FY2027 release on 2026-08-26. It guided Q3 GAAP opex to about $9.2B. Actual GAAP opex was $8.408B in Q2 and $7.621B in Q1.\n\n(c) If nothing changed, a flat guide of about $9.2B is very unlikely. NVIDIA has raised its opex guide every quarter.\n\n(d) If the trend continued, each new guide has been about $0.8-0.9B above the latest actual. With a Q3 actual of about $9.1-9.3B, that gives roughly $9.9-10.2B. The CFO's \"low 50s\" full-year growth comment points to a Q4 of about $9.4-10.1B (midpoint about $9.7B). Last year NVIDIA beat its own full-year opex growth guide, ending near 41% against \"high 30s\". So the upper part of that implied range is more likely.\n\n(e) Historical variation:\n- The quarter-over-quarter step in the guide has ranged from about $0.5B to $0.9B over the last five quarters.\n- Actuals have landed within about ±$0.3B of the guide.\n- The uncertainty on the Q4 guide is about ±$0.4B around the trend.\n\n(f) There is no analyst or market consensus on opex specifically. Related signals point to continued growth:\n- Strong demand signals.\n- Headcount growth markets centred around 50-52k employees.\n- An upward revision to opex guidance in August.\n\nThe question creator expects $9.5-11.2B.\n\n(g) Unexpected scenarios:\n- **Low:** NVIDIA restrains spending, or Q3 opex comes in well under $9.2B with a conservative full-year framing. That could produce a guide of about $9.5B.\n- **High:** The Groq deal or other acquisitions add integration costs, there is a large one-time legal or accrual item (GAAP only), or compute and compensation spending accelerates. That could produce a guide of $10.7-11B or more.\n\nPercentile 10: 9.6\nPercentile 20: 9.8\nPercentile 40: 9.95\nPercentile 60: 10.1\nPercentile 80: 10.3\nPercentile 90: 10.5"
+    },
+    {
+      "value": {
+        "p10": 9.5,
+        "p25": 9.7,
+        "p50": 9.925,
+        "p75": 10.15,
+        "p90": 10.4
+      },
+      "reasoning": "(a) **Time left:** about 3 weeks. The Q3 FY2027 release is expected November 17-19, 2026. The forecast closes November 17.\n\n(b) **Latest known value:** In the Q2 FY27 release (2026-08-26), NVIDIA guided Q3 FY27 GAAP opex to about $9.2B. Actual GAAP opex was $8.408B in Q2 FY27 and $7.621B in Q1 FY27.\n\n(c) **If nothing changed:** The guide would stay at about $9.2B.\n- That is very unlikely, because NVIDIA's opex guide has risen every quarter.\n\n(d) **If the current trend continued:**\n- **Sequential pattern:** Each new guide has been about $0.8-0.9B above the latest actual. With Q3 actual likely around $9.1-9.2B, that gives a Q4 guide of about $9.9-10.1B.\n- **Step between guides:** The guide sequence is 5.9, 6.7, 7.7, 8.5 and 9.2, which is steps of 0.7-1.0. That gives roughly $9.9-10.2B.\n- **Full-year comment:** CFO Kress said FY27 opex would grow in the \"low 50s\" percent. That implies Q4 of about $9.4-10.1B, with a midpoint near $9.7B. This is somewhat lower than the sequential trend.\n- **Raised outlook:** The full-year growth guide was already raised once, from \"upper 40s\" to \"low 50s.\" That points to the upper part of the full-year-implied range.\n\n(e) **Historical variation:** Quarter-to-quarter changes in the guide have ranged from +$0.7B to +$1.0B. Uncertainty in the Q3 actual adds about ±$0.2B.\n\n(f) **Expert and market expectations:**\n- There is no direct market or consensus on Q4 opex guidance.\n- Kalshi's headcount market points to continued hiring, with above 50k at 81%.\n- The question creator's range is $9.5B to $11.2B.\n\n(g) **Unexpected scenarios:**\n- **Low:** NVIDIA slows hiring or compute spending, or the Q3 actual comes in well below the guide, and the Q4 guide is around $9.4-9.5B.\n- **High:** An acquisition (for example, Groq-related costs) adds legal or accrual items, or there is a sharp increase in compute infrastructure spending, and the Q4 guide is $10.5B or more.\n\nMy central estimate is $9.9-10.0B.\n\nPercentile 10: 9.5\nPercentile 20: 9.65\nPercentile 40: 9.85\nPercentile 60: 10.0\nPercentile 80: 10.2\nPercentile 90: 10.4"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 9.5098,
+    "p25": 9.7006,
+    "p50": 9.9268,
+    "p75": 10.1562,
+    "p90": 10.5555
+  },
+  "usage": [
+    {
+      "question_id": "46250",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 18.7,
+      "notional_cost_usd": 0.0001308,
+      "input_tokens": 515,
+      "output_tokens": 56,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 20.4,
+      "notional_cost_usd": 0.00024930000000000004,
+      "input_tokens": 1035,
+      "output_tokens": 85,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 76.6,
+      "notional_cost_usd": 0.2617966,
+      "input_tokens": 60685,
+      "output_tokens": 5181,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.5,
+      "notional_cost_usd": 0.072016,
+      "input_tokens": 5788,
+      "output_tokens": 1286,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.9,
+      "notional_cost_usd": 0.029767000000000005,
+      "input_tokens": 5788,
+      "output_tokens": 1301,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.1,
+      "notional_cost_usd": 0.07796,
+      "input_tokens": 5786,
+      "output_tokens": 1584,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.0007080000000000001,
+      "input_tokens": 2861,
+      "output_tokens": 272,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.8,
+      "notional_cost_usd": 0.029955000000000002,
+      "input_tokens": 5789,
+      "output_tokens": 1310,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.0007174,
+      "input_tokens": 2763,
+      "output_tokens": 330,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 13.6,
+      "notional_cost_usd": 0.0007391,
+      "input_tokens": 2884,
+      "output_tokens": 325,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.1,
+      "notional_cost_usd": 0.035027,
+      "input_tokens": 5788,
+      "output_tokens": 1564,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.00026658000000000004,
+      "input_tokens": 2863,
+      "output_tokens": 349,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.2,
+      "notional_cost_usd": 0.0007044000000000001,
+      "input_tokens": 2868,
+      "output_tokens": 262,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00022558000000000002,
+      "input_tokens": 2763,
+      "output_tokens": 269,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.00023129,
+      "input_tokens": 2884,
+      "output_tokens": 278,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.0,
+      "notional_cost_usd": 0.0007970000000000001,
+      "input_tokens": 3006,
+      "output_tokens": 392,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.00028214,
+      "input_tokens": 2869,
+      "output_tokens": 380,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46250",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00026880000000000003,
+      "input_tokens": 3004,
+      "output_tokens": 351,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.5118
+}
