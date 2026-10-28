@@ -11,6 +11,11 @@ The hindsight guards are the same as the binary backtest's (run_backtest.py).
 Usage:
   uv run python backtest/run_numeric_backtest.py --run n1 --parallel 3
   uv run python backtest/score_numeric.py --run n1
+
+Where Yahoo and FRED are blocked (Claude cloud sessions), fetch the as-of baselines on a
+machine that can reach them, commit the file, then rerun on an earlier run's research:
+  uv run python backtest/run_numeric_backtest.py --save-baselines backtest/data/numeric_baselines.json
+  uv run python backtest/run_numeric_backtest.py --run n2 --reuse-research n1 --baselines backtest/data/numeric_baselines.json
 """
 from __future__ import annotations
 
@@ -70,23 +75,55 @@ def make_question(row: dict) -> NumericQuestion:
     )
 
 
-async def run_question(bots: dict[str, ClaudeForecaster], row: dict, out_dir: Path, n: int) -> None:
+async def save_baselines(rows: list[dict], path: Path) -> None:
+    baselines = {}
+    for row in rows:
+        as_of_date.set(row["as_of"])
+        current_question_id.set(row["id"])
+        baselines[row["id"]] = await statistical_baseline(make_question(row))
+        print(f"{row['id']}: baseline={'yes' if baselines[row['id']] else 'no'}", flush=True)
+    path.write_text(json.dumps(baselines, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Saved {sum(bool(b) for b in baselines.values())} of {len(rows)} baselines to {path}")
+
+
+async def run_question(
+    bots: dict[str, ClaudeForecaster],
+    row: dict,
+    out_dir: Path,
+    n: int,
+    reuse_dir: Path | None = None,
+    baselines: dict[str, str] | None = None,
+) -> None:
     path = out_dir / f"{row['id']}.json"
     if path.exists():
         return
+    reused = None
+    if reuse_dir:
+        source = reuse_dir / f"{row['id']}.json"
+        if not source.exists():
+            return
+        reused = json.loads(source.read_text(encoding="utf-8"))
     as_of_date.set(row["as_of"])
     current_question_id.set(row["id"])
     question = make_question(row)
     any_bot = next(iter(bots.values()))
     researcher = any_bot.get_llm("researcher", "llm")
     try:
-        baseline = await statistical_baseline(question)
-        prompt = HISTORICAL_RULES.format(as_of=row["as_of"]) + any_bot._get_research_prompt(question, researcher)
-        if baseline:
-            prompt += f"\n\nPrices and data already collected by code (use them):\nStatistical baseline:\n{baseline}"
-        raw_research = await researcher.invoke(prompt)
-        research = remove_later_facts(raw_research, datetime.fromisoformat(row["as_of"]).date())
-        leaked = await leak_check(row["question"], research, row["as_of"])
+        if baselines is not None:
+            baseline = baselines.get(row["id"], "")
+        else:
+            baseline = await statistical_baseline(question)
+        if reused:
+            # The earlier run's research, without its baseline section if it had one.
+            research = reused["research"].split("\n\n## Raw prediction market and Metaculus prices\n")[0]
+            leaked = reused["leaked"]
+        else:
+            prompt = HISTORICAL_RULES.format(as_of=row["as_of"]) + any_bot._get_research_prompt(question, researcher)
+            if baseline:
+                prompt += f"\n\nPrices and data already collected by code (use them):\nStatistical baseline:\n{baseline}"
+            raw_research = await researcher.invoke(prompt)
+            research = remove_later_facts(raw_research, datetime.fromisoformat(row["as_of"]).date())
+            leaked = await leak_check(row["question"], research, row["as_of"])
         if baseline:
             research += f"\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n{baseline}"
 
@@ -122,15 +159,25 @@ async def run_question(bots: dict[str, ClaudeForecaster], row: dict, out_dir: Pa
 
 async def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", required=True)
+    parser.add_argument("--run")
     parser.add_argument("--limit", type=int, default=1000)
     parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--predictions", type=int, default=5, help="Forecasts per variant")
     parser.add_argument("--variants", default="six,thirteen")
     parser.add_argument("--parallel", type=int, default=3)
+    parser.add_argument("--reuse-research", help="Run whose saved research to reuse instead of researching again")
+    parser.add_argument("--baselines", help="JSON file of as-of baselines from --save-baselines, used instead of fetching")
+    parser.add_argument("--save-baselines", help="Only fetch each question's as-of baseline and save them to this JSON file")
     args = parser.parse_args()
 
     rows = [json.loads(line) for line in DATA.open(encoding="utf-8")][args.offset : args.offset + args.limit]
+    if args.save_baselines:
+        await save_baselines(rows, Path(args.save_baselines))
+        return
+    if not args.run:
+        parser.error("--run is required")
+    reuse_dir = ROOT / "results" / args.reuse_research if args.reuse_research else None
+    baselines = json.loads(Path(args.baselines).read_text(encoding="utf-8")) if args.baselines else None
     out_dir = ROOT / "results" / args.run
     out_dir.mkdir(parents=True, exist_ok=True)
     bots = {}
@@ -143,7 +190,7 @@ async def main() -> None:
 
     async def guarded(row: dict) -> None:
         async with gate:
-            await run_question(bots, row, out_dir, args.predictions)
+            await run_question(bots, row, out_dir, args.predictions, reuse_dir, baselines)
 
     await asyncio.gather(*[guarded(row) for row in rows])
     print(f"Done: {len(list(out_dir.glob('*.json')))} questions in {out_dir}; notional usage ${USAGE_LEDGER.total_cost():.2f}")
