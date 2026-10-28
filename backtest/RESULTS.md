@@ -122,3 +122,44 @@ Share of forecasters whose 10th-90th percentile range contained the answer (80% 
 
 Live setup: six percentiles, linear CDF, median of 5, no widening.
 
+## Run `v1-r2` (2026-10-28)
+
+84 questions scored (2 excluded for hindsight leaks, 1 for a bad resolution), 42 resolved yes. Notional usage $44.
+
+| Method | Log score | Brier | vs market (x100) | 95% CI |
+|---|---|---|---|---|
+| Market price on the as-of date | -0.538 | 0.177 | +0.0 | +0.0 to +0.0 |
+| KCAP2.0 median of 5 (live until 2026-10-26) | -0.542 | 0.180 | -0.4 | -10.0 to +10.8 |
+| KCAP2.0 median of 5, shrunk x0.8 (live from 2026-10-27) | -0.541 | 0.181 | -0.2 | -9.0 to +10.6 |
+| KCAP2.0 single forecast | -0.537 | 0.179 | +0.1 | -9.3 to +11.2 |
+| KCAP2.0 given the market price | -0.542 | 0.180 | -0.4 | -10.0 to +10.8 |
+| 50/50 blend of KCAP2.0 and market | -0.515 | 0.172 | +2.3 | -3.1 to +9.7 |
+
+Best stretch factor for KCAP2.0's forecasts: 0.85 (log score -0.540 vs -0.542 unchanged). Above 1 means it was too cautious, below 1 too bold. This is fitted on the same questions, so treat it as a hint.
+
+| KCAP2.0 forecast | Questions | Average forecast | Happened |
+|---|---|---|---|
+| 0% to 20% | 24 | 9% | 17% |
+| 20% to 40% | 15 | 28% | 33% |
+| 40% to 60% | 22 | 49% | 64% |
+| 60% to 80% | 16 | 71% | 81% |
+| 80% to 100% | 7 | 88% | 86% |
+
+Compared with run `v1` on the same 84 questions (positive means this run is better, x100):
+
+- raw median of 5: +4.9 (95% CI -4.6 to +14.6), better on 36, worse on 37
+- after the live shrink x0.8: +3.7 (95% CI -3.7 to +11.3), better on 36, worse on 37
+
+## Two research reports: `v1` + `v1-r2`
+
+75 questions (leaked in either run excluded). Median, then the live x0.8 shrink.
+
+| Forecasts | vs market (x100) | vs 5 from A (x100) | 95% CI | Better on | Worse on |
+|---|---|---|---|---|---|
+| 5 from A (live) | -2.0 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from A + 3 from B | -0.5 | +1.5 | -4.3 to +7.0 | 32 | 34 |
+| 5 from A + 5 from B | -0.5 | +1.5 | -4.2 to +7.0 | 32 | 32 |
+| 5 from B | +1.0 | +3.0 | -4.2 to +10.7 | 33 | 32 |
+
+Spread of the 5 forecasts on one report: 0.020 (standard deviation, averaged). Gap between the two reports' medians: 0.075 (averaged).
+
