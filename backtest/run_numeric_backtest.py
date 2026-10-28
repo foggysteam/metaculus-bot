@@ -2,8 +2,8 @@
 Numeric backtest: research each question in backtest/data/numeric_questions.jsonl as of
 its date (with the statistical baseline cut at that date, like the live bot sees it),
 then make 5 forecasts per prompt variant from the same research:
-- six: the live prompt (percentiles 10, 20, 40, 60, 80, 90)
-- thirteen: percentiles 1 to 99 with a rule for the tails
+- six: percentiles 10, 20, 40, 60, 80, 90 (the live prompt until 27 Oct 2026)
+- thirteen: percentiles 1 to 99 with a rule for the tails (live from 28 Oct 2026)
 Saves every forecaster's percentiles to backtest/results/<run>/<id>.json, so different
 ways of building and combining the CDFs can be scored afterwards (score_numeric.py).
 The hindsight guards are the same as the binary backtest's (run_backtest.py).
@@ -45,15 +45,8 @@ ROOT = Path(__file__).parent
 DATA = ROOT / "data" / "numeric_questions.jsonl"
 
 VARIANTS = {
-    "six": {},
-    "thirteen": {
-        "numeric_percentiles": (1, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99),
-        "numeric_tail_rule": (
-            "Percentiles 1 and 99 are for outcomes that would genuinely surprise you. Before writing them, "
-            "name a plausible way the outcome could end up there, and set them from that, not by stretching "
-            "the middle of your distribution."
-        ),
-    },
+    "six": {"numeric_percentiles": (10, 20, 40, 60, 80, 90), "numeric_tail_rule": ""},  # live until 2026-10-27
+    "thirteen": {},  # live from 2026-10-28 (forecaster.py defaults)
 }
 
 

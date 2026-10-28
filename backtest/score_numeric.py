@@ -1,8 +1,8 @@
 """
 Scores a numeric backtest run the way Metaculus scores continuous questions: the log of
 the probability the submitted CDF puts in the bucket where the answer landed. Each way of
-building the final forecast is compared, question by question, with the live setup
-(six percentiles, straight lines, median of 5). Continuous peer scores are halved on
+building the final forecast is compared, question by question, with the setup that was
+live until 27 Oct 2026 (six percentiles, straight lines, median of 5). Continuous peer scores are halved on
 Metaculus, so "points" below are 50 x the difference in log score, roughly the effect
 on our tournament score per numeric question.
 
@@ -122,7 +122,7 @@ def main() -> None:
             for (v, m, h, w), n, ls, d, lo, hi, b in table
         ],
         "",
-        f"Live setup: {LIVE[0]} percentiles, {LIVE[1]} CDF, {LIVE[2]} of 5, no widening.",
+        f"\"vs live\" compares with the setup live until 27 Oct 2026: {LIVE[0]} percentiles, {LIVE[1]} CDF, {LIVE[2]} of 5, no widening.",
         "",
     ]
     report = "\n".join(lines)

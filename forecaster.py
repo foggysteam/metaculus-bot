@@ -39,7 +39,7 @@ from main import FallTemplateBot2026
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-10-27.2"
+BOT_VERSION = "2026-10-28.1"
 
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
@@ -114,9 +114,15 @@ def _interpolate(points: list[tuple[float, float]], q: float) -> float:
 class ClaudeForecaster(FallTemplateBot2026):
     # Research runs one question at a time; forecasts are capped in claude_code_llm.
     _max_concurrent_questions = 1
-    # What the numeric prompt asks for; backtests try other settings.
-    numeric_percentiles: tuple[int, ...] = (10, 20, 40, 60, 80, 90)
-    numeric_tail_rule: str = ""
+    # What the numeric (and discrete) prompt asks for. Numeric backtest n1 (backtest/RESULTS.md):
+    # percentiles 1 to 99 with this tail rule scored +10 points per question over 10/20/40/60/80/90,
+    # because answers just outside a 10-90 range got almost no probability.
+    numeric_percentiles: tuple[int, ...] = (1, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99)
+    numeric_tail_rule: str = (
+        "Percentiles 1 and 99 are for outcomes that would genuinely surprise you. Before writing them, "
+        "name a plausible way the outcome could end up there, and set them from that, not by stretching "
+        "the middle of your distribution."
+    )
 
     def __init__(self, *args, log_dir: Path = LOG_DIR, **kwargs) -> None:
         super().__init__(*args, **kwargs)
