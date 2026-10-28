@@ -39,7 +39,7 @@ from main import FallTemplateBot2026
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-10-28.1"
+BOT_VERSION = "2026-10-28.2"
 
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
@@ -128,6 +128,7 @@ class ClaudeForecaster(FallTemplateBot2026):
         super().__init__(*args, **kwargs)
         self.log_dir = log_dir
         self._research_by_question: dict[str, list] = {}
+        self._evidence_by_question: dict[str, asyncio.Future] = {}
 
     ##################################### LOGGING #####################################
 
@@ -171,6 +172,7 @@ class ClaudeForecaster(FallTemplateBot2026):
     ) -> None:
         key = self._question_key(question)
         collections = self._research_by_question.pop(key, [])
+        self._evidence_by_question.pop(key, None)
         usage = USAGE_LEDGER.for_question(key)
         notional_cost = round(sum(u["notional_cost_usd"] for u in usage), 4)
         entry = {
@@ -267,13 +269,24 @@ class ClaudeForecaster(FallTemplateBot2026):
             """
         )
 
+    async def _collect_evidence(self, question: MetaculusQuestion) -> tuple[str, str]:
+        (news, markets), baseline = await asyncio.gather(
+            gather_evidence(question), statistical_baseline(question)
+        )
+        if baseline:
+            markets = f"{markets}\n\nStatistical baseline:\n{baseline}".strip()
+        return news, markets
+
     async def run_research(self, question: MetaculusQuestion) -> str:
         async with self._concurrency_limiter:
-            (news, markets), baseline = await asyncio.gather(
-                gather_evidence(question), statistical_baseline(question)
-            )
-            if baseline:
-                markets = f"{markets}\n\nStatistical baseline:\n{baseline}".strip()
+            # With several research reports per question, the news, prices and baseline that
+            # code collects are fetched once and shared, so only the research call differs.
+            key = self._question_key(question)
+            if key not in self._evidence_by_question:
+                self._evidence_by_question[key] = asyncio.ensure_future(
+                    self._collect_evidence(question)
+                )
+            news, markets = await self._evidence_by_question[key]
             researcher = self.get_llm("researcher", "llm")
             prompt = self._get_research_prompt(question, researcher)
             if news:

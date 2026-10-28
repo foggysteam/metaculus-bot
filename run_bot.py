@@ -45,8 +45,10 @@ def check_environment() -> None:
 
 async def run(mode: str, publish: bool, urls: list[str]):
     bot = ClaudeForecaster(
-        research_reports_per_question=1,
-        predictions_per_research_report=5,
+        # Two independent research reports, 3 forecasts each: backtest v1 + v1-r2 in
+        # backtest/RESULTS.md (+1.5 per question vs one report with 5, not significant).
+        research_reports_per_question=2,
+        predictions_per_research_report=3,
         use_research_summary_to_forecast=False,
         enable_summarize_research=False,
         publish_reports_to_metaculus=publish,
