@@ -88,4 +88,37 @@ Compared with run `v1` on the same 77 questions (positive means this run is bett
 
 - raw median of 5: -1.3 (95% CI -3.1 to +0.1), better on 24, worse on 24
 - after the live shrink x0.8: -0.9 (95% CI -2.3 to +0.2), better on 24, worse on 24
+## Numeric run `n1` (2026-10-28)
+
+61 questions scored (3 excluded for hindsight leaks). Notional usage $46.
+Share of forecasters whose 10th-90th percentile range contained the answer (80% is calibrated): six 85%, thirteen 85%.
+
+| Prompt | CDF | Combine | Widen | n | Log score | vs live (points per question) | 95% CI | Better on |
+|---|---|---|---|---|---|---|---|---|
+| thirteen | linear | median | 1.0 | 61 | -4.464 | +10.3 | +4.0 to +17.5 | 36 |
+| thirteen | pchip | median | 1.0 | 61 | -4.472 | +9.8 | +4.0 to +17.1 | 39 |
+| thirteen | linear | mean | 1.0 | 61 | -4.485 | +9.2 | +3.1 to +16.5 | 37 |
+| thirteen | pchip | mean | 1.0 | 61 | -4.489 | +9.0 | +3.2 to +16.0 | 38 |
+| thirteen | pchip | median | 1.15 | 61 | -4.516 | +7.7 | +0.9 to +15.7 | 30 |
+| thirteen | linear | median | 1.15 | 61 | -4.524 | +7.3 | +0.4 to +15.3 | 29 |
+| thirteen | pchip | mean | 1.15 | 61 | -4.525 | +7.2 | +0.6 to +15.2 | 29 |
+| thirteen | linear | mean | 1.15 | 61 | -4.534 | +6.8 | -0.2 to +14.8 | 28 |
+| thirteen | linear | median | 1.3 | 61 | -4.573 | +4.8 | -2.6 to +13.2 | 22 |
+| thirteen | pchip | median | 1.3 | 61 | -4.577 | +4.6 | -2.6 to +13.0 | 19 |
+| thirteen | pchip | mean | 1.3 | 61 | -4.588 | +4.0 | -3.1 to +12.4 | 16 |
+| thirteen | linear | mean | 1.3 | 61 | -4.592 | +3.9 | -3.3 to +12.4 | 17 |
+| six | pchip | mean | 1.0 | 61 | -4.611 | +2.9 | -0.2 to +6.0 | 38 |
+| six | pchip | median | 1.0 | 61 | -4.614 | +2.8 | -0.4 to +5.8 | 38 |
+| six | pchip | mean | 1.15 | 61 | -4.640 | +1.5 | -2.3 to +5.7 | 22 |
+| six | pchip | median | 1.15 | 61 | -4.641 | +1.4 | -2.1 to +5.4 | 19 |
+| six | linear | mean | 1.3 | 61 | -4.646 | +1.1 | -5.6 to +8.9 | 19 |
+| six | pchip | mean | 1.3 | 61 | -4.659 | +0.5 | -5.2 to +7.0 | 16 |
+| six | linear | median | 1.0 | 61 | -4.669 | +0.0 | +0.0 to +0.0 | 0 |
+| six | linear | median | 1.15 | 61 | -4.670 | -0.1 | -4.4 to +5.7 | 14 |
+| six | pchip | median | 1.3 | 61 | -4.671 | -0.1 | -5.4 to +6.1 | 14 |
+| six | linear | mean | 1.15 | 61 | -4.675 | -0.3 | -4.1 to +4.6 | 15 |
+| six | linear | mean | 1.0 | 61 | -4.678 | -0.4 | -1.5 to +0.5 | 28 |
+| six | linear | median | 1.3 | 61 | -4.679 | -0.5 | -6.4 to +6.2 | 17 |
+
+Live setup: six percentiles, linear CDF, median of 5, no widening.
 
