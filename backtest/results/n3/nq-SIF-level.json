@@ -1,0 +1,185 @@
+{
+  "id": "nq-SIF-level",
+  "question": "What will be the closing value of front-month silver futures (SI=F on Yahoo Finance) on September 5, 2026?",
+  "resolution_criteria": "Resolves to the daily close of SI=F on Yahoo Finance for 2026-09-05. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD per troy ounce",
+  "outcome": 66.046997,
+  "outcome_date": "2026-09-04",
+  "as_of": "2026-08-22",
+  "resolve_date": "2026-09-05",
+  "lower_bound": 40.0,
+  "upper_bound": 100.0,
+  "source": "yahoo",
+  "series": "SI=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for SI=F: latest close 69.4660 on 2026-08-21.\nTarget date 2026-09-05 is 10 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 10-observation returns over the last 3 years (last year weighted double):\np5: 60.6458, p10: 63.4805, p25: 67.0764, p50: 70.8176, p75: 74.6197, p90: 78.7004, p95: 81.2577\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "Silver futures (SI=F) closed at **69.466 on 2026-08-21**, after a sharp August rally. Nothing has happened yet that settles the question. September 5, 2026 is a Saturday, so the resolving value is **the close on Friday September 4**. That is also the day the August jobs report comes out. Most article pages wouldn't load (the proxy refused the connection), so much of this comes from search-result summaries rather than full pages.\n\n## 1. Resolution source\n- 2026-08-21: The latest close in the code-collected Yahoo Finance data for SI=F is 69.466. Other sources give different \"close\" numbers for the same day: Kitco says \"just above $69\", StatMuse $68.99, SilverPrice 68.23. Those likely use different price series or cut-off times. [Kitco](https://www.kitco.com/opinion/2026-08-21/gold-and-silver-cap-strong-week-dollar-faith-wavers-warsh-faces-first-test), [StatMuse](https://www.statmuse.com/money/ask/silver-price-per-ounce-august-2026-chart), [silverprice.org](https://silverprice.org/gold-price-today/2026-08-21)\n- Calendar: there are 10 trading days from 2026-08-24 to 2026-09-04, which matches the code baseline.\n- Contract roll: on 2026-08-21 SI=F was quoting the September contract, which opened at $68.20. [Yahoo](https://finance.yahoo.com/personal-finance/investing/article/silver-prices-today-friday-august-21-2026-silver-pushes-higher-on-weaker-dollar-161325787.html) The September contract's first notice day falls around the end of August. If Yahoo switches SI=F to the December contract before Sept 4, the quote could jump slightly, because later contracts are usually priced a bit higher. I couldn't confirm when Yahoo makes that switch.\n\n## 2. Current status\n- Nothing settles the question yet. Price on 2026-08-21: about $69.5. That is far from both ends of the 40 to 100 range.\n\n## 3. Recent news (newest first)\n- 2026-08-21: Silver futures rose 2.09% on the day and 6.46% on the week. Next week's Jackson Hole symposium is Fed Chair Kevin Warsh's first test. Markets see a September hold as about twice as likely as a hike. [Kitco](https://www.kitco.com/opinion/2026-08-21/gold-and-silver-cap-strong-week-dollar-faith-wavers-warsh-faces-first-test)\n- 2026-08-21: Silver reached about $70.08, its first move above $70 since mid-June. Gold hit a three-month high as the dollar weakened. [Forbes](https://www.forbes.com/sites/conormurray/2026/08/21/gold-reaches-highest-price-in-three-months-as-dollar-weakens/)\n- About 2026-08-21: Silver's August gain is over 20% and it is at a nearly two-month high. [TradingKey](https://www.tradingkey.com/analysis/commodities/metal/262137990-), [Mining.com](https://www.mining.com/silver-price-20-august-surge-sends-miners-soaring/)\n- About 2026-08-20: OCBC's Christopher Wong said further gains would need silver to clearly break above the $70.60 to $72 range, plus a weaker dollar and lower yields. Some of the drop in yields has already reversed, and 10-year and 30-year yields are near their highs for the year. Markets price about a 34% chance of a September hike, down from about 60% three weeks earlier. [Mining.com](https://www.mining.com/gold-silver-miners-surge-as-treasury-doubles-buybacks/)\n- 2026-08-19: The Treasury said it will at least double its buybacks of longer-dated bonds, starting September 9. The dollar index fell to about 98.8, and silver rose about 3.3% to about $65.44. [FXStreet](https://www.fxstreet.com/news/silver-surges-as-treasury-buyback-plan-sinks-the-us-dollar-202608191908)\n- Other drivers analysts mention: the US-Iran peace process and a possible reopening of the Strait of Hormuz. [Free Press Journal](https://www.freepressjournal.in/amp/business/gold-silver-may-extend-rally-next-week-us-inflation-data-fed-signals-in-focus)\n\n## 4. Base rates and recent values\n- Code baseline (empirical 10-day returns over 3 years) for the Sept 4 close: p5 60.6, p10 63.5, p25 67.1, **p50 70.8**, p75 74.6, p90 78.7, p95 81.3.\n- 2026 so far, an unusually volatile year:\n  - 2026-01-29: record high of about $121.6 to $121.8.\n  - 2026-01-30: a crash of about 30 to 33% within days, after CME margin hikes forced selling.\n  - 2026-03-02: futures high of $97.555.\n  - 2026-06-26: low of about $55.7 to $56.1.\n  - July: prices stayed in the mid-to-high $50s, with a low of $55.33 on 2026-07-17 and a weekly close of $57.78 for the week ending 2026-07-31.\n  \n  [Monex](https://www.monex.com/silver-market-outlook-july-2026.md), [CQG](https://news.cqg.com/blogs/commentary/2026/06/silver-heading-test-technical-support), [Farms.com](https://www.farms.com/markets/commodity/silver-commodity-update-for-the-week-ending-jul-31-2026)\n- Trend: a strong rebound from about $57.8 at end-July to about $69.5, roughly +20% in three weeks. Moves of 6% in a week have been common in 2026.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market for silver in early September 2026. The only ones I found were May 2026 contracts that have already expired. [SimpleFunctions](https://simplefunctions.dev/answer/what-silver-xagusd-hit-may)\n- One analyst preview expects the bias to stay positive but says some profit-taking can't be ruled out. [Free Press Journal](https://www.freepressjournal.in/amp/business/gold-silver-may-extend-rally-next-week-us-inflation-data-fed-signals-in-focus)\n- I didn't find any formal bank forecast published in August. An older JPMorgan view warned silver could fall back to $50 in 2026. [Yahoo](https://finance.yahoo.com/news/silver-price-predictions-why-jpmorgan-123001668.html)\n\n## 6. Upcoming events before resolution\n- 2026-08-27 to 08-29: Jackson Hole symposium, with Warsh's first keynote as Fed Chair. A hawkish or dovish signal on a September hike is a key risk for the dollar and for silver. [Free Press Journal](https://www.freepressjournal.in/amp/business/gold-silver-may-extend-rally-next-week-us-inflation-data-fed-signals-in-focus)\n- About late August: the September contract reaches first notice day, and Yahoo's SI=F may switch contracts around then.\n- 2026-09-04, 8:30 ET: the August jobs report comes out on the resolution day itself. It is the last major labor reading before the Sept 15 to 16 FOMC meeting. [Regards of Wall Street](https://www.regardsofwallstreet.com/news/september-2026-fed-meeting-dates-hike-odds)\n- 2026-09-07: Labor Day. It falls after resolution, but it can thin out trading on Sept 4.\n- 2026-09-09: the larger Treasury buybacks start. That is after resolution, but expectations about them can move prices beforehand. [FXStreet](https://www.fxstreet.com/news/silver-surges-as-treasury-buyback-plan-sinks-the-us-dollar-202608191908)\n- Ongoing: the dollar and yields, US-Iran and Strait of Hormuz headlines, and possible profit-taking after a 20%+ monthly gain.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for SI=F: latest close 69.4660 on 2026-08-21.\nTarget date 2026-09-05 is 10 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 10-observation returns over the last 3 years (last year weighted double):\np5: 60.6458, p10: 63.4805, p25: 67.0764, p50: 70.8176, p75: 74.6197, p90: 78.7004, p95: 81.2577\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          56.0
+        ],
+        [
+          0.05,
+          60.5
+        ],
+        [
+          0.1,
+          63.0
+        ],
+        [
+          0.2,
+          66.2
+        ],
+        [
+          0.3,
+          68.2
+        ],
+        [
+          0.4,
+          69.5
+        ],
+        [
+          0.5,
+          70.4
+        ],
+        [
+          0.6,
+          71.4
+        ],
+        [
+          0.7,
+          72.8
+        ],
+        [
+          0.8,
+          74.8
+        ],
+        [
+          0.9,
+          78.0
+        ],
+        [
+          0.95,
+          80.8
+        ],
+        [
+          0.99,
+          86.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          55.0
+        ],
+        [
+          0.05,
+          59.5
+        ],
+        [
+          0.1,
+          62.3
+        ],
+        [
+          0.2,
+          65.5
+        ],
+        [
+          0.3,
+          67.6
+        ],
+        [
+          0.4,
+          69.0
+        ],
+        [
+          0.5,
+          70.2
+        ],
+        [
+          0.6,
+          71.4
+        ],
+        [
+          0.7,
+          73.0
+        ],
+        [
+          0.8,
+          75.3
+        ],
+        [
+          0.9,
+          78.8
+        ],
+        [
+          0.95,
+          81.8
+        ],
+        [
+          0.99,
+          88.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          55.5
+        ],
+        [
+          0.05,
+          60.5
+        ],
+        [
+          0.1,
+          63.2
+        ],
+        [
+          0.2,
+          66.3
+        ],
+        [
+          0.3,
+          68.2
+        ],
+        [
+          0.4,
+          69.4
+        ],
+        [
+          0.5,
+          70.4
+        ],
+        [
+          0.6,
+          71.5
+        ],
+        [
+          0.7,
+          73.0
+        ],
+        [
+          0.8,
+          75.2
+        ],
+        [
+          0.9,
+          78.8
+        ],
+        [
+          0.95,
+          81.6
+        ],
+        [
+          0.99,
+          87.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4365
+}
