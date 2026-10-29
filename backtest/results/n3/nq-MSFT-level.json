@@ -1,0 +1,185 @@
+{
+  "id": "nq-MSFT-level",
+  "question": "What will be the closing value of Microsoft (MSFT) stock (MSFT on Yahoo Finance) on September 19, 2026?",
+  "resolution_criteria": "Resolves to the daily close of MSFT on Yahoo Finance for 2026-09-19. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD",
+  "outcome": 493.779999,
+  "outcome_date": "2026-09-18",
+  "as_of": "2026-09-09",
+  "resolve_date": "2026-09-19",
+  "lower_bound": 400.0,
+  "upper_bound": 600.0,
+  "source": "yahoo",
+  "series": "MSFT",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for MSFT: latest close 493.9500 on 2026-09-08.\nTarget date 2026-09-19 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 458.4487, p10: 467.2566, p25: 482.0701, p50: 494.7477, p75: 507.6749, p90: 520.959, p95: 530.9912\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "Note that September 19, 2026 is a Saturday, so the question resolves on MSFT's Yahoo Finance close for Friday, September 18. That leaves 8 trading sessions after the last close (Sept 9 to 18). Several search results contained material dated after September 9; I have left it out entirely.\n\n## 1. Resolution source\n- Yahoo Finance's MSFT history page (finance.yahoo.com/quote/MSFT/history) would not load because the proxy refused the connection. I could not view it directly.\n- 2026-09-08: The latest close from the code-collected Yahoo data is **$493.95**. One news report independently gives the same figure: down about 1.15% on the day, with an intraday range of $490.15 to $495.19, volume of about 18.9M, and the Nasdaq down about 0.3%. [ad-hoc-news](https://www.ad-hoc-news.de/boerse/news/corporate-news/microsoft-stock-heads-into-the-open-after-a-1-15-percent-drop/70079407)\n\n## 2. Current status\n- Nothing has settled the outcome yet. The question depends on the September 18 close, and 8 sessions of trading remain.\n- The price of $493.95 sits close to the middle of the question's range (400 to 600). Reaching either end would take a move of roughly 19% down or 21% up.\n\n## 3. Recent news (newest first)\n- 2026-09-08: MSFT fell about 1.15% to $493.95, a bigger drop than the Nasdaq's. [ad-hoc-news](https://www.ad-hoc-news.de/boerse/news/corporate-news/microsoft-stock-heads-into-the-open-after-a-1-15-percent-drop/70079407)\n- 2026-07-31: MSFT was at $464.72, with a 52-week range of $349.20 to $555.45. MarketBeat says it gained about 18.9% over the prior month, helped by a reset of the Microsoft-OpenAI partnership, under which Microsoft could cut its equity stake in exchange for access to future technology. So the stock rose roughly 6% more between July 31 and September 8. [MarketBeat](https://www.marketbeat.com/articles/microsoft-and-openai-just-hit-resetheres-why-msft-stock-wins/)\n- 2026 context: In April, a revised OpenAI deal removed Microsoft's obligation to pay OpenAI 20% of Azure OpenAI Service and Bing revenue. OpenAI reportedly makes up about 45% of Microsoft's cloud backlog, which ties the stock to concerns about OpenAI's funding. [Barchart](https://www.barchart.com/story/news/313188/as-microsoft-extends-20-openai-deal-is-the-bull-case-for-msft-stronger-here), [iamsterdam](https://startupmap.iamsterdam.com/news/feed/microsoft-down-22-ytd-as-investors-weigh-openai-agreement-changes-and-azure-growth)\n- Fiscal Q4 2026 (reported late July): revenue was about $90.0B against a consensus of about $87.6B. Capex guidance above $115B, mostly for AI data centers, is the main thing analysts worry about. [Investing.com](https://www.investing.com/equities/microsoft-corp)\n- Early 2026: the stock fell about 10% in a single session after January earnings. In January, Barclays cut its target to $610 and Wells Fargo cut to $665. [StockAlarm](https://pro.stockalarm.io/quote/MSFT/analysts)\n\n## 4. Base rates\n- Code baseline (empirical 8-session returns over 3 years, with the last year weighted double): p5 $458.4, p10 $467.3, p25 $482.1, **p50 $494.7**, p75 $507.7, p90 $521.0, p95 $531.0.\n- That means the middle 50% band is about ±2.6%, and the 5 to 95% band runs from about -7.2% to +7.5%.\n- Volatility in 2026 has been above normal. The 52-week range is $349 to $555, and the stock rose about 42% from the July lows to $494 within roughly six weeks. That argues for keeping tails at least as wide as the empirical baseline.\n- Trend: strong upward momentum from July into early September, with a pullback on September 8.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on MSFT's September 18 close.\n- Analyst consensus targets are about $617 to $643, from aggregators of unclear date. These are 12-month targets and say little about a 10-day horizon. [MarketBeat](https://www.marketbeat.com/stocks/nasdaq/msft/price-target), [StockAlarm](https://pro.stockalarm.io/quote/MSFT/analysts)\n- Before the Fed meeting, prediction markets reportedly put the chance of a September cut at only about 1 to 2%, a hold at about 55 to 63%, and a hike at about 37 to 43%. [futuresearch](https://futuresearch.ai/app/p/a/will-the-u-s-federal-reserve-fomc-announce-a)\n\n## 6. Upcoming events before resolution\n- 2026-09-15/16: FOMC meeting, with the decision on September 16. The funds rate is 3.50 to 3.75%. The July hold was a 9-3 vote, and all three dissenters wanted a **hike**, so a hawkish surprise is a real risk for megacap tech. [futuresearch](https://futuresearch.ai/app/p/a/will-the-u-s-federal-reserve-fomc-announce-a), [Manifold](https://manifold.markets/event/will-the-fed-cut-rates-by-at-least)\n- Mid-September: August CPI and PPI releases. I did not confirm the exact dates.\n- 2026-09-18 (the resolution day): quarterly options expiration (\"quad witching\") and S&P index rebalancing, which can bring heavy volume and price distortions near the close.\n- Macro: the oil price environment is elevated. I found no confirmed pre-September 9 figure.\n- Microsoft-specific: the next earnings report is expected in late October, after resolution. A Microsoft product or AI event, or OpenAI funding and partnership news, could move the stock in the window. I did not find a confirmed Microsoft event dated September 9 to 18.\n\nSources: [ad-hoc-news](https://www.ad-hoc-news.de/boerse/news/corporate-news/microsoft-stock-heads-into-the-open-after-a-1-15-percent-drop/70079407), [MarketBeat article](https://www.marketbeat.com/articles/microsoft-and-openai-just-hit-resetheres-why-msft-stock-wins/), [Barchart](https://www.barchart.com/story/news/313188/as-microsoft-extends-20-openai-deal-is-the-bull-case-for-msft-stronger-here), [iamsterdam](https://startupmap.iamsterdam.com/news/feed/microsoft-down-22-ytd-as-investors-weigh-openai-agreement-changes-and-azure-growth), [Investing.com](https://www.investing.com/equities/microsoft-corp), [StockAlarm](https://pro.stockalarm.io/quote/MSFT/analysts), [MarketBeat targets](https://www.marketbeat.com/stocks/nasdaq/msft/price-target), [futuresearch](https://futuresearch.ai/app/p/a/will-the-u-s-federal-reserve-fomc-announce-a), [Manifold](https://manifold.markets/event/will-the-fed-cut-rates-by-at-least)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for MSFT: latest close 493.9500 on 2026-09-08.\nTarget date 2026-09-19 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 458.4487, p10: 467.2566, p25: 482.0701, p50: 494.7477, p75: 507.6749, p90: 520.959, p95: 530.9912\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          438.0
+        ],
+        [
+          0.05,
+          456.0
+        ],
+        [
+          0.1,
+          466.0
+        ],
+        [
+          0.2,
+          477.0
+        ],
+        [
+          0.3,
+          485.0
+        ],
+        [
+          0.4,
+          490.5
+        ],
+        [
+          0.5,
+          495.0
+        ],
+        [
+          0.6,
+          499.5
+        ],
+        [
+          0.7,
+          505.0
+        ],
+        [
+          0.8,
+          512.0
+        ],
+        [
+          0.9,
+          522.0
+        ],
+        [
+          0.95,
+          531.0
+        ],
+        [
+          0.99,
+          549.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          433.0
+        ],
+        [
+          0.05,
+          455.0
+        ],
+        [
+          0.1,
+          465.0
+        ],
+        [
+          0.2,
+          477.0
+        ],
+        [
+          0.3,
+          485.0
+        ],
+        [
+          0.4,
+          491.0
+        ],
+        [
+          0.5,
+          495.0
+        ],
+        [
+          0.6,
+          499.0
+        ],
+        [
+          0.7,
+          505.0
+        ],
+        [
+          0.8,
+          513.0
+        ],
+        [
+          0.9,
+          524.0
+        ],
+        [
+          0.95,
+          533.0
+        ],
+        [
+          0.99,
+          553.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          438.0
+        ],
+        [
+          0.05,
+          456.0
+        ],
+        [
+          0.1,
+          465.0
+        ],
+        [
+          0.2,
+          477.0
+        ],
+        [
+          0.3,
+          485.0
+        ],
+        [
+          0.4,
+          491.0
+        ],
+        [
+          0.5,
+          495.0
+        ],
+        [
+          0.6,
+          499.0
+        ],
+        [
+          0.7,
+          504.0
+        ],
+        [
+          0.8,
+          511.0
+        ],
+        [
+          0.9,
+          522.0
+        ],
+        [
+          0.95,
+          531.0
+        ],
+        [
+          0.99,
+          549.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3712
+}

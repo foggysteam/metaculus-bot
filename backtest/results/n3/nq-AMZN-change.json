@@ -1,0 +1,185 @@
+{
+  "id": "nq-AMZN-change",
+  "question": "What will be the percentage change in Amazon (AMZN) stock (AMZN on Yahoo Finance) from the close on 2026-09-03 to the close on 2026-10-02?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-10-02 / close on 2026-09-03 - 1), using daily closes of AMZN on Yahoo Finance. If there is no close on 2026-10-02, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -2.850517,
+  "outcome_date": "2026-10-02",
+  "as_of": "2026-09-04",
+  "resolve_date": "2026-10-02",
+  "lower_bound": -35.0,
+  "upper_bound": 40.0,
+  "source": "yahoo",
+  "series": "AMZN",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for AMZN: latest close 258.9000 on 2026-09-03.\nTarget date 2026-10-02 is 20 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 20-observation returns over the last 3 years (last year weighted double):\np5: 223.5569, p10: 235.0303, p25: 250.2852, p50: 265.1176, p75: 276.294, p90: 289.7508, p95: 298.7303\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "AMZN closed at $258.90 on 2026-09-03, which is the base for the question. Nothing so far settles the outcome. The stock had fallen about 9% from its August 3 record close, partly because the FTC and 22 states sued over its ad auctions on August 31. Between now and October 2 there is no earnings report or other scheduled Amazon catalyst, so macro data and the Fed meeting matter more.\n\n## 1. Resolution source\n- The result uses AMZN daily closes on Yahoo Finance, from 2026-09-03 to 2026-10-02. The tools couldn't reach Yahoo directly. The code-collected Yahoo data gives a 2026-09-03 close of $258.90.\n- 2026-09-03: StockAnalysis matches. It shows a close of $258.90, up 1.54% on the day, with an open of $256.20, a range of $256.00 to $259.50 and volume of about 26.9M. [stockanalysis](https://stockanalysis.com/stocks/amzn/history/)\n\n## 2. Current status\n- Nothing has happened that settles or nearly settles the question. The window has only just opened.\n\n## 3. Recent news (newest first)\n- 2026-09-03: Markets rallied broadly as bond yields fell. One recap has the Nasdaq Composite up 1.40% and the S&P 500 up 1.06% to 7,747.71. That recap gets the weekday wrong, so treat its numbers with caution. QQQ closed at 717.67, up from 709.24. [tapeboard](https://tapeboard.com/blog/market-pulse-2026-09-03), [financialcontent](https://www.financialcontent.com/quote/NQ%3AQQQ/historical)\n- 2026-09-02: AMZN closed at about $254.98, down roughly 2%, which put it below its 100-day moving average. Citi's Ronald Josey said the firm would \"take advantage of any dislocation,\" pointing to AWS demand. [Yahoo Finance](https://finance.yahoo.com/markets/stocks/article/amazon-stock-just-entered-the-danger-zone-104050035.html)\n- 2026-08-31: The FTC and 22 states sued Amazon in federal court in Washington state.\n  - They allege Amazon has manipulated its ad auctions since 2018, overcharging about 1.2M advertisers by more than $20B.\n  - They want the practices stopped, civil penalties and refunds.\n  - Amazon calls the suit \"misguided\" and says it relies on \"cherry-picked\" documents.\n  - Shares fell as much as 4.6% after the filing and closed at $259.77, down 2.5%.\n  - [Axios](https://www.axios.com/2026/08/31/ftc-amazon-deceptive-advertising-lawsuit), [Outlook Business](https://www.outlookbusiness.com/corporate/ftc-22-us-states-sue-amazon-over-alleged-20-bn-ad-auction-manipulation), [capital.com](https://capital.com/en-int/analysis/amazon-stock-forecast-is-it-a-buy)\n- 2026-08-31: AMZN finished August at $259.77, down 6.7% for the month. [StatMuse](https://www.statmuse.com/money/ask/amzn-stock-price-in-august-2026)\n- 2026-08-28: Shares jumped 3.97% to $266.43. [stockanalysis](https://stockanalysis.com/stocks/amzn/history/)\n- 2026-08-27: Shares fell to $256.88, the lowest level since July. [Trading Economics](https://tradingeconomics.com/amzn:us/news/578732)\n- 2026-08-24: A Motley Fool piece noted that AMZN was lagging the S&P 500 in 2026. [Fool](https://www.fool.com/investing/2026/08/24/amazon-is-lagging-the-sp-500-in-2026-this-is-the-o/)\n- 2026-08-03: AMZN hit a record close of $284.02 and passed $3T in market value after Q2 results. [aiweekly](https://aiweekly.co/alerts/amazon-becomes-fifth-3-trillion-company-on-aws-ai-surge)\n  - AWS grew 37% year over year, its fastest in 18 quarters, with a $496B backlog.\n  - Amazon raised 2026 capex guidance to about $220B.\n  - One source reports quarterly free cash flow of about -$7.6B. [KuCoin](https://www.kucoin.com/news/flash/amazon-reports-q2-2026-earnings-raises-full-year-capital-expenditure-to-220-billion)\n\n## 4. Base rates\n- The code's empirical distribution of 20-trading-day returns (last 3 years, with the most recent year counted double), converted from $258.90:\n\n| Percentile | Price | Change |\n|---|---|---|\n| p5 | $223.56 | -13.7% |\n| p10 | $235.03 | -9.2% |\n| p25 | $250.29 | -3.3% |\n| p50 | $265.12 | +2.4% |\n| p75 | $276.29 | +6.7% |\n| p90 | $289.75 | +11.9% |\n| p95 | $298.73 | +15.4% |\n\n- That puts the interquartile range at about 10 points and the 90% range at about 29 points. The median has a mild upward drift.\n- Recent volatility is high: single-day moves were +3.97% on Aug 28 and -2.5% on Aug 31, and the stock fell 6.7% in August.\n- The stock is about 9% below its Aug 3 record close.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on AMZN's price for this window.\n- Analyst consensus is Buy or Strong Buy, with 12-month targets averaging about $321 to $327:\n  - MarketBeat (dated Sep 4): $323.26 from 59 analysts. [MarketBeat](https://www.marketbeat.com/stocks/NASDAQ/AMZN/forecast/)\n  - Bullstory (Aug 22): $326.84, with a range of $230 to $405. [Bullstory](https://bullstory.io/en/stocks/amzn/forecast)\n  - Walnut: 59 buy, 3 hold, 0 sell ratings. [Walnut](https://walnutinvest.com/stocks/amzn/forecast)\n- 2026-07-31: UBS raised its target to $318 and Telsey to $335.\n\n## 6. Upcoming events before Oct 2\n- 2026-09-04: US August jobs report (normally the first Friday of the month; I did not confirm this year's date).\n- 2026-09-07: Labor Day, market closed.\n- Mid-September: the August CPI release and an FOMC meeting. I did not confirm the exact dates; the FOMC usually meets in mid-September.\n- The FTC ad-auction case may see early filings, more states joining, or analysts estimating the hit to the ad business. Nothing is scheduled that I could find.\n- Prime Big Deal Days usually falls in early October (Oct 7-8 in 2025), so the 2026 event probably comes after Oct 2. A date announcement could land inside the window.\n- Q3 earnings are expected in late October, after the window closes. No Amazon earnings fall inside it.\n- AI and capex sentiment across megacap tech, including any AWS or Anthropic headlines, and bond-yield swings could move the stock.\n\nSources used are linked inline above.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for AMZN: latest close 258.9000 on 2026-09-03.\nTarget date 2026-10-02 is 20 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 20-observation returns over the last 3 years (last year weighted double):\np5: 223.5569, p10: 235.0303, p25: 250.2852, p50: 265.1176, p75: 276.294, p90: 289.7508, p95: 298.7303\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -19.0
+        ],
+        [
+          0.05,
+          -12.5
+        ],
+        [
+          0.1,
+          -8.5
+        ],
+        [
+          0.2,
+          -4.5
+        ],
+        [
+          0.3,
+          -2.0
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          2.4
+        ],
+        [
+          0.7,
+          4.2
+        ],
+        [
+          0.8,
+          6.6
+        ],
+        [
+          0.9,
+          10.0
+        ],
+        [
+          0.95,
+          13.0
+        ],
+        [
+          0.99,
+          19.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -19.0
+        ],
+        [
+          0.05,
+          -12.5
+        ],
+        [
+          0.1,
+          -8.8
+        ],
+        [
+          0.2,
+          -4.7
+        ],
+        [
+          0.3,
+          -2.1
+        ],
+        [
+          0.4,
+          -0.2
+        ],
+        [
+          0.5,
+          1.1
+        ],
+        [
+          0.6,
+          2.5
+        ],
+        [
+          0.7,
+          4.4
+        ],
+        [
+          0.8,
+          6.9
+        ],
+        [
+          0.9,
+          10.5
+        ],
+        [
+          0.95,
+          13.6
+        ],
+        [
+          0.99,
+          20.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -20.0
+        ],
+        [
+          0.05,
+          -13.0
+        ],
+        [
+          0.1,
+          -9.5
+        ],
+        [
+          0.2,
+          -5.5
+        ],
+        [
+          0.3,
+          -2.8
+        ],
+        [
+          0.4,
+          -0.8
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          2.8
+        ],
+        [
+          0.7,
+          4.8
+        ],
+        [
+          0.8,
+          7.5
+        ],
+        [
+          0.9,
+          11.5
+        ],
+        [
+          0.95,
+          15.0
+        ],
+        [
+          0.99,
+          22.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.434
+}

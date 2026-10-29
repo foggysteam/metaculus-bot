@@ -1,0 +1,185 @@
+{
+  "id": "nq-TSLA-change",
+  "question": "What will be the percentage change in Tesla (TSLA) stock (TSLA on Yahoo Finance) from the close on 2026-08-07 to the close on 2026-08-15?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-08-15 / close on 2026-08-07 - 1), using daily closes of TSLA on Yahoo Finance. If there is no close on 2026-08-15, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 4.166414,
+  "outcome_date": "2026-08-14",
+  "as_of": "2026-08-08",
+  "resolve_date": "2026-08-15",
+  "lower_bound": -25.0,
+  "upper_bound": 25.0,
+  "source": "yahoo",
+  "series": "TSLA",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for TSLA: latest close 328.5800 on 2026-08-07.\nTarget date 2026-08-15 is 5 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 5-observation returns over the last 3 years (last year weighted double):\np5: 295.8769, p10: 304.0099, p25: 314.9754, p50: 327.2881, p75: 343.0774, p90: 360.2098, p95: 372.9371\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I couldn't find any news or event so far that decides this question. TSLA closed at 328.58 on Friday 2026-08-07. Since 2026-08-15 is a Saturday, the question will be decided by the Friday 2026-08-14 close, five trading days away. Several search results were dated after 2026-08-08, so I left them out.\n\n## 1. Resolution source\n- 2026-08-07: The figure that matters is Yahoo Finance's daily close for TSLA. The code-collected baseline gives the latest close as **328.58**. I couldn't load Yahoo directly, so I haven't confirmed that figure there myself.\n- Because 2026-08-15 is a Saturday, the \"last close before it\" rule applies. The deciding close will be **Friday 2026-08-14**, five trading days out (Aug 10-14).\n- 2026-08-06: TSLA closed at $319.53, down 0.63% from $321.55. [StockInvest](https://stockinvest.us/stock-news/tesla-stock-price-ended-at-31953-on-thursday-after-losing-0628-2026-08-06), [StatMuse](https://www.statmuse.com/money/ask/tesla-stock-in-2026)\n- 2026-08-07: TradingKey says TSLA \"moved up by 3.31%.\" Going from 319.53 to 328.58 is actually +2.83%, so the 3.31% may be an intraday number. [TradingKey](https://www.tradingkey.com/news/market-movers/262089226-market-movers-tsla-20260807)\n\n## 2. Current status\n- Nothing has settled the question yet. The result depends entirely on how the stock trades Aug 10-14.\n- The question's ±25% range is far wider than TSLA's usual one-week moves (see section 4).\n\n## 3. Recent news (newest first)\n- 2026-08-07: TSLA rose about 2.8-3.3%. TradingKey's explanation is vague and generic. [TradingKey](https://www.tradingkey.com/news/market-movers/262089226-market-movers-tsla-20260807)\n- 2026-08-05: Motley Fool ran \"Should You Forget Tesla Stock Near a 52-Week Low?\", so the stock was still close to its yearly low. [Fool](https://www.fool.com/investing/2026/08/05/should-you-forget-tesla-stock-near-a-52-week-low/)\n- 2026-08-04: SpaceX (SPCX) reported Q2 revenue of $7.81B against $6.93B expected. Its shares fell about 8% after hours because capital spending jumped. One analysis says Tesla's bounce toward about $325 was linked to excitement over SpaceX's first earnings report. I couldn't confirm that link. [CNBC](https://www.cnbc.com/2026/08/04/spacex-spcx-earnings-live-updates-q2-2026.html), [TIKR](https://www.tikr.com/blog/tesla-has-fallen-34-from-its-high-is-the-selloff-a-setup-or-a-trap)\n- 2026-08-03: 24/7 Wall St asked whether TSLA \"could rally 30% from here.\" [24/7 Wall St](https://247wallst.com/investing/2026/08/03/tesla-price-prediction-could-the-stock-rally-30-from-here/)\n- 2026-07-29: Investing.com reported a 52-week low of $297.82. Another source puts the low at $297.38 in early August. [Investing.com](https://www.investing.com/news/company-news/tesla-stock-hits-52week-low-at-29782-93CH-4821550), [Fool 07-29](https://www.fool.com/investing/2026/07/29/tesla-closed-tuesday-3-above-its-52-week-low-heres/)\n- About 2026-07-22, Q2 earnings: adjusted EPS of $0.33 missed the roughly $0.53 consensus. Operating income fell 57% from a year earlier to $398M, a 1.4% operating margin. Quarterly capex was $5.8B and free cash flow was negative. Deliveries were 480,126, a Q2 record. One source mentions a drop of about 15% in a single day after the report. Piper Sandler cut its price target to $450. [WEEX](https://www.weex.com/learn/articles/tesla-stock-price-is-down-30-in-2026-what-the-q2-earnings-miss-and-14-operating-margin-actually-signal-nsy40tfvs0wloqz5q0lb43uc), [TIKR](https://www.tikr.com/blog/tesla-stock-slips-two-percent-capital-spending-forecast-cut)\n- Context: TSLA was down roughly 26-30% year to date and about 34% below its high. [TIKR](https://www.tikr.com/blog/tesla-has-fallen-34-from-its-high-is-the-selloff-a-setup-or-a-trap)\n\n## 4. Base rates\n- Price distribution for the Aug 14 close, computed by code from the last 3 years of 5-day returns, with the last year weighted double:\n\n| Percentile | Price | Change vs 328.58 |\n|---|---|---|\n| p5 | 295.88 | -10.0% |\n| p10 | 304.01 | -7.5% |\n| p25 | 314.98 | -4.1% |\n| p50 | 327.29 | -0.4% |\n| p75 | 343.08 | +4.4% |\n| p90 | 360.21 | +9.6% |\n| p95 | 372.94 | +13.5% |\n\n- The middle 50% of outcomes spans roughly 8.5 percentage points. The median is close to zero.\n- Trend: a sharp drop after earnings in late July, a bottom around $297-298, then a bounce of about 10% to $328.58 by Aug 7. The stock is still well below where it started the year.\n\n## 5. Other forecasts\n- I couldn't find a Polymarket, Kalshi or Manifold market for the TSLA close in the week ending Aug 14 with prices from before Aug 8. Polymarket does run weekly TSLA \"close above X\" markets, settled on the Pyth close for the last trading day of the week. The pages I found were mirror sites, and their prices for this week were either dated after the cutoff or missing.\n- 2026-08-05 and earlier: analysts mostly rated the stock Hold or Moderate Buy. GLJ Research rated it Sell, and Piper Sandler had a $450 target. These are 12-month views, not one-week forecasts. [MarketBeat](https://www.marketbeat.com/stocks/NASDAQ/TSLA/forecast/)\n\n## 6. Upcoming events before resolution (Aug 10-14)\n- 2026-08-12, 8:30 ET: July CPI release, the main macro event of the week. [eco3min](https://eco3min.fr/en/next-us-cpi-release/), [calendarx](https://www.calendarx.com/events/cpi-july-2026)\n- PPI and retail sales usually come out mid-month as well. I didn't confirm their exact dates.\n- Tesla-specific factors: no scheduled company event that I could find. Possible movers are Elon Musk's posts on X, robotaxi, Optimus or Cybercab news, China and Europe sales and registration data for July, and SPCX trading. Tesla and SpaceX move together on sentiment.\n- After the earnings miss, the stock is near its lows and bouncing, so a high-beta, momentum-driven week is plausible either way.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for TSLA: latest close 328.5800 on 2026-08-07.\nTarget date 2026-08-15 is 5 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 5-observation returns over the last 3 years (last year weighted double):\np5: 295.8769, p10: 304.0099, p25: 314.9754, p50: 327.2881, p75: 343.0774, p90: 360.2098, p95: 372.9371\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -16.0
+        ],
+        [
+          0.05,
+          -10.2
+        ],
+        [
+          0.1,
+          -7.5
+        ],
+        [
+          0.2,
+          -4.8
+        ],
+        [
+          0.3,
+          -3.0
+        ],
+        [
+          0.4,
+          -1.4
+        ],
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.6,
+          1.4
+        ],
+        [
+          0.7,
+          3.2
+        ],
+        [
+          0.8,
+          5.6
+        ],
+        [
+          0.9,
+          9.3
+        ],
+        [
+          0.95,
+          12.8
+        ],
+        [
+          0.99,
+          19.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -16.0
+        ],
+        [
+          0.05,
+          -10.5
+        ],
+        [
+          0.1,
+          -7.8
+        ],
+        [
+          0.2,
+          -4.9
+        ],
+        [
+          0.3,
+          -2.9
+        ],
+        [
+          0.4,
+          -1.3
+        ],
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.6,
+          1.4
+        ],
+        [
+          0.7,
+          3.2
+        ],
+        [
+          0.8,
+          5.6
+        ],
+        [
+          0.9,
+          9.3
+        ],
+        [
+          0.95,
+          12.5
+        ],
+        [
+          0.99,
+          18.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -16.0
+        ],
+        [
+          0.05,
+          -10.3
+        ],
+        [
+          0.1,
+          -7.6
+        ],
+        [
+          0.2,
+          -4.8
+        ],
+        [
+          0.3,
+          -2.8
+        ],
+        [
+          0.4,
+          -1.2
+        ],
+        [
+          0.5,
+          0.1
+        ],
+        [
+          0.6,
+          1.5
+        ],
+        [
+          0.7,
+          3.2
+        ],
+        [
+          0.8,
+          5.6
+        ],
+        [
+          0.9,
+          9.3
+        ],
+        [
+          0.95,
+          12.8
+        ],
+        [
+          0.99,
+          19.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4328
+}
