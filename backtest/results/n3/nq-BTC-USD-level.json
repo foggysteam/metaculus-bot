@@ -1,0 +1,185 @@
+{
+  "id": "nq-BTC-USD-level",
+  "question": "What will be the closing value of Bitcoin (BTC-USD on Yahoo Finance) on September 6, 2026?",
+  "resolution_criteria": "Resolves to the daily close of BTC-USD on Yahoo Finance for 2026-09-06. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD",
+  "outcome": 80350.046875,
+  "outcome_date": "2026-09-06",
+  "as_of": "2026-08-16",
+  "resolve_date": "2026-09-06",
+  "lower_bound": 40000.0,
+  "upper_bound": 85000.0,
+  "source": "yahoo",
+  "series": "BTC-USD",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for BTC-USD: latest close 63024.3203 on 2026-08-15.\nTarget date 2026-09-06 is 22 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 22-observation returns over the last 3 years (last year weighted double):\np5: 51438.1525, p10: 54799.6157, p25: 59758.2451, p50: 63199.8775, p75: 67615.309, p90: 72086.325, p95: 76089.1174\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "Many search results were dated after 2026-08-16. I left all of them out, including late-August prices, late-August ETF flow reports and Jackson Hole reaction stories. Every page fetch was refused by the proxy, so the facts below come from search snippets and could not be checked against the full articles.\n\n## 1. Resolution source\n- The question resolves on the Yahoo Finance BTC-USD daily close for 2026-09-06. Bitcoin trades every day, so 2026-09-06 (a Sunday) will have its own close and no fallback to an earlier date should apply. Yahoo's daily candle for BTC-USD normally closes at 00:00 UTC.\n- 2026-08-15: the latest Yahoo close collected by code was $63,024.32. That leaves 22 daily observations (calendar days) to the target date. [Yahoo Finance BTC-USD](https://finance.yahoo.com/quote/BTC-USD/)\n\n## 2. Current status\n- Nothing settles the question yet. BTC is near $63,000, which is the middle of the question's $40k to $85k range.\n\n## 3. Recent news (newest first)\n- 2026-08-14: one newsletter says US spot Bitcoin ETFs lost $389.7M from Aug 10 to Aug 14, the largest weekly outflow in six weeks. It put total net assets near $76.6B. [Coinstack](https://coinstack.beehiiv.com/p/soft-inflation-hard-etf-outflows)\n- 2026-08-13: July CPI came in at 3.4% year over year (+0.1% month over month), with core at 2.5%, both in line with forecasts. BTC barely moved and held near $64,000. Odds of a Fed rate cut in September reportedly fell. The same post mentions a weak jobs report earlier. This is a single source, so check against BLS. [Bitrue](https://www.bitrue.com/blog/july-cpi-bitcoin-price-impact)\n- 2026-08-12: BTC was about $63,500 at 1:30 p.m. EDT. [Bitcoin.com](https://news.bitcoin.com/market-updates/bitcoins-120m-betting-war-draws-a-brutal-map-for-2026-prices/)\n- 2026-08-11: BTC was about $64,190 at 6:30 a.m. ET. [Fortune](https://fortune.com/article/price-of-bitcoin-08-11-2026/)\n- 2026-08-03: BTC was about $62,707 at 7 a.m. ET. [Fortune](https://fortune.com/article/price-of-bitcoin-08-03-2026/)\n- Context: BTC is about 45-50% below its all-time high of roughly $126,000 from October 2025. A Phemex analysis from early August framed $70,000 as the key level to reclaim, with BTC near $65,000. [MoneyMagpie](https://www.moneymagpie.com/investment-articles/bitcoin-price-update-august-2026), [Phemex](https://phemex.com/blogs/bitcoin-price-analysis-august-2026)\n\n## 4. Base rates\n- Early August was range-bound, with the price roughly between $62,700 and $65,000 (sources above).\n- The code's empirical distribution of 22-day returns (last 3 years, last year weighted double) gives these price levels for the target date:\n  - p5 $51.4k, p10 $54.8k, p25 $59.8k, p50 $63.2k, p75 $67.6k, p90 $72.1k, p95 $76.1k.\n  - The middle 50% spans about -5% to +7%. The 5-95% range spans about -18% to +21%.\n- Both tails sit inside the question's $40k to $85k range. Moves of about 20% or more in three weeks do happen but are uncommon (outside p5/p95).\n\n## 5. Other forecasts\n- 2026-08-12: Polymarket gave a 68% chance BTC reaches $70,000 before the end of 2026 and 9% for $100,000, with BTC near $63,500. [Bitcoin.com](https://news.bitcoin.com/market-updates/bitcoins-120m-betting-war-draws-a-brutal-map-for-2026-prices/)\n- Kalshi lists daily BTC price markets for early September, for example Sep 5 and Sep 7 with a $79,000 strike. I could not get their prices as of Aug 16. [SimpleFunctions/Kalshi](https://simplefunctions.dev/markets/bitcoin-price-on-sep-5-2026-kalshi-kxbtcd-26sep0517-t78999.99)\n- I found no Polymarket or Manifold market for Sep 6 specifically, and no expert point forecasts dated before Aug 16.\n\n## 6. Upcoming events before resolution\n- Weekly spot ETF flows: the week of Aug 10-14 saw outflows (see section 3), so the direction of flows is worth watching.\n- Late August: the Fed's Jackson Hole symposium, reportedly Aug 27-29. Fed Chair remarks there have moved crypto before. [Trending Topics](https://www.trendingtopics.eu/bitcoin-steadies-at-80000-ahead-of-the-feds-jackson-hole-summit/)\n- Late August: the PCE inflation release (typical timing, not confirmed for this year).\n- Around Friday 2026-09-04: the August jobs report, which feeds into expectations for the mid-September FOMC meeting. That meeting itself falls after resolution.\n- End of August: monthly options and futures expiries (Deribit/CME), which can add volatility.\n- The resolving close falls on a Sunday, when liquidity is thinner.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BTC-USD: latest close 63024.3203 on 2026-08-15.\nTarget date 2026-09-06 is 22 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 22-observation returns over the last 3 years (last year weighted double):\np5: 51438.1525, p10: 54799.6157, p25: 59758.2451, p50: 63199.8775, p75: 67615.309, p90: 72086.325, p95: 76089.1174\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          46000.0
+        ],
+        [
+          0.05,
+          51800.0
+        ],
+        [
+          0.1,
+          54800.0
+        ],
+        [
+          0.2,
+          58400.0
+        ],
+        [
+          0.3,
+          60600.0
+        ],
+        [
+          0.4,
+          62000.0
+        ],
+        [
+          0.5,
+          63100.0
+        ],
+        [
+          0.6,
+          64300.0
+        ],
+        [
+          0.7,
+          66000.0
+        ],
+        [
+          0.8,
+          68500.0
+        ],
+        [
+          0.9,
+          72200.0
+        ],
+        [
+          0.95,
+          75800.0
+        ],
+        [
+          0.99,
+          82500.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          46000.0
+        ],
+        [
+          0.05,
+          51300.0
+        ],
+        [
+          0.1,
+          54700.0
+        ],
+        [
+          0.2,
+          58400.0
+        ],
+        [
+          0.3,
+          60600.0
+        ],
+        [
+          0.4,
+          62000.0
+        ],
+        [
+          0.5,
+          63100.0
+        ],
+        [
+          0.6,
+          64300.0
+        ],
+        [
+          0.7,
+          66000.0
+        ],
+        [
+          0.8,
+          68700.0
+        ],
+        [
+          0.9,
+          72400.0
+        ],
+        [
+          0.95,
+          76000.0
+        ],
+        [
+          0.99,
+          83000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          47000.0
+        ],
+        [
+          0.05,
+          52000.0
+        ],
+        [
+          0.1,
+          54800.0
+        ],
+        [
+          0.2,
+          58300.0
+        ],
+        [
+          0.3,
+          60500.0
+        ],
+        [
+          0.4,
+          61900.0
+        ],
+        [
+          0.5,
+          63000.0
+        ],
+        [
+          0.6,
+          64200.0
+        ],
+        [
+          0.7,
+          65800.0
+        ],
+        [
+          0.8,
+          68200.0
+        ],
+        [
+          0.9,
+          72000.0
+        ],
+        [
+          0.95,
+          75500.0
+        ],
+        [
+          0.99,
+          82000.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3481
+}

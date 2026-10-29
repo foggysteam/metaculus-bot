@@ -1,0 +1,185 @@
+{
+  "id": "nq-USDBRLX-level",
+  "question": "What will be the closing value of the US dollar to Brazilian real exchange rate (USDBRL=X on Yahoo Finance) on September 2, 2026?",
+  "resolution_criteria": "Resolves to the daily close of USDBRL=X on Yahoo Finance for 2026-09-02. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "BRL per USD",
+  "outcome": 5.0927,
+  "outcome_date": "2026-09-02",
+  "as_of": "2026-08-05",
+  "resolve_date": "2026-09-02",
+  "lower_bound": 4.5,
+  "upper_bound": 6.0,
+  "source": "yahoo",
+  "series": "USDBRL=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for USDBRL=X: latest close 5.1437 on 2026-08-04.\nTarget date 2026-09-02 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 4.9175, p10: 4.9652, p25: 5.0418, p50: 5.1385, p75: 5.2387, p90: 5.3205, p95: 5.3734\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "Research brief: USD/BRL (USDBRL=X) close on 2026-09-02\n\n## 1. Resolution source\n- 2026-08-04: The latest Yahoo Finance USDBRL=X close, collected by code, is **5.1437**. I could not fetch Yahoo directly. Yahoo's FX \"close\" is a time-of-day snapshot, so it can differ by a few tenths of a percent from the B3 spot close or the BCB PTAX rate.\n- Other closes for comparison: spot about R$5.069 on 07-31 and R$5.0870 on 08-03 (B3 spot, from press reports). Yahoo's 5.1437 on 08-04 points to a sizable rise on Aug 4, or a mismatch in timing. I could not find a press report of the Aug 4 spot close.\n\n## 2. Current status\n- Nothing settles the question yet. Resolution is about 20 trading days away, and the rate is near the middle of the 4.5-6.0 range.\n\n## 3. Recent news (newest first)\n- 2026-08-05: The Copom statement on the Selic rate is due today, with the meeting held Aug 4-5. The Selic is 14.25% after a 0.25 pp cut in June. The market expects further gradual cuts, and the Focus survey's year-end Selic median is 14.00%. [soubrasilia](https://soubrasilia.com/?p=8584), [O Povo/Focus](https://www.opovo.com.br/noticias/economia/2026/07/27/focus-selic-no-fim-de-2026-segue-em-1400-fim-de-2027-segue-em-1200.html)\n- 2026-08-05: An Ideia/Meio poll has Lula ahead of Flávio Bolsonaro, 43% to 35% in the first round and 48.5% to 43% in a runoff. The election is the main domestic risk factor. [O Povo+](https://mais.opovo.com.br/jornal/politica/2026/08/06/na-ideia-lula-lidera-no-1-e-no-2-turno.html)\n- 2026-08-03: The dollar rose 0.33% to R$5.0870 as oil fell about 5% on hopes that US-Iran talks would resume. The Copom statement was awaited. [Acessa](https://www.acessa.com/economia/2026/08/amp/336016-dolar-fecha-em-leve-alta-com-queda-do-petroleo-mercado-aguarda-comunicado-do-copom.html)\n- 2026-08-03: B3's Bora Investir says the real had gained 8.48% against the dollar year to date, the second-best among major currencies. [Bora Investir](https://borainvestir.b3.com.br/tipos-de-investimentos/renda-variavel/cambio/subir-cair-ou-ficar-de-lado-como-o-mercado-enxerga-a-trajetoria-do-dolar-ate-o-fim-de-2026/)\n- 2026-07-31: The dollar closed about R$5.069, down 1.82% in July and down 7.73% year to date. Reports credited strong oil prices, foreign inflows and the carry trade. Middle East tension and higher US Treasury yields limited the fall. [O Povo](https://www.opovo.com.br/noticias/economia/2026/07/31/dolar-fecha-estavel-mas-acumula-queda-de-182-em-julho.html)\n- 2026-07-30: PTAX was R$5.0739, down 0.93% on the day. [EBC](https://www.ebc.com/pt/forex/dolar-em-agosto-de-2026-vai-subir-ou-vai-cair)\n- 2026-07-29: The Fed held rates at 3.50-3.75%. The vote split 9-3, with three members wanting a 0.25 pp hike. Chair Warsh called the inflation data \"encouraging\". The dollar fell 0.22% to R$5.1104. [Notícias Agrícolas](https://www.noticiasagricolas.com.br/noticia/425584)\n\n## 4. Base rates\n- Code baseline, using 21-day returns over the last 3 years:\n  - Median (p50): 5.1385\n  - Middle half (p25-p75): 5.04 to 5.24\n  - p10-p90: 4.97 to 5.32\n  - p5-p95: 4.92 to 5.37\n- Recent path: the rate fell from about 5.57 at the start of the year (implied by the -7.73% YTD figure) to about 5.07 at the end of July, then bounced to about 5.14 on Aug 4. Monthly moves of 1-2% are typical, such as -1.82% in July.\n- The 4.5 and 6.0 range bounds sit far in the tails, more than 10% from the current level.\n\n## 5. Other forecasts\n- 2026-07-27: The Focus survey median for year-end 2026 was R$5.20, unchanged for six weeks. The 2027 median was R$5.29. Note that Focus measures the December average, not the year-end close. [Diário de Pernambuco](https://www.diariodepernambuco.com.br/economia/2026/07/11719637-dolar-no-fim-de-2026-segue-em-rs-520-projeta-focus.html)\n- 2026-07-30: EBC's commentary projected August trading between R$4.95 and R$5.25. [EBC](https://www.ebc.com/pt/forex/dolar-em-agosto-de-2026-vai-subir-ou-vai-cair)\n- I found no Polymarket, Kalshi or Manifold market on USD/BRL for this date.\n\n## 6. Upcoming events before resolution\n- 2026-08-05: The Copom decision and statement. The Brazil-US rate gap drives carry flows.\n- Early and mid August: US July payrolls and CPI. With the Fed split, a hawkish surprise could lift the dollar.\n- Mid August: The official presidential campaign begins and the election polls keep coming. The first round is in early October. Market reaction to the polls is the main driver of volatility in the real.\n- Late August: The Fed's Jackson Hole symposium (date not confirmed), US PCE inflation data, and Brazil's 2027 budget bill (PLOA), which is due by Aug 31 and is a fiscal risk.\n- Ongoing: Oil prices and US-Iran and Middle East developments. These have recently moved the real.\n- I could not fetch a detailed August FX risk calendar (Maino intelligence) because the proxy blocked it.\n\nSources:\n- [soubrasilia](https://soubrasilia.com/?p=8584)\n- [O Povo Focus](https://www.opovo.com.br/noticias/economia/2026/07/27/focus-selic-no-fim-de-2026-segue-em-1400-fim-de-2027-segue-em-1200.html)\n- [O Povo+](https://mais.opovo.com.br/jornal/politica/2026/08/06/na-ideia-lula-lidera-no-1-e-no-2-turno.html)\n- [Acessa](https://www.acessa.com/economia/2026/08/amp/336016-dolar-fecha-em-leve-alta-com-queda-do-petroleo-mercado-aguarda-comunicado-do-copom.html)\n- [Bora Investir](https://borainvestir.b3.com.br/tipos-de-investimentos/renda-variavel/cambio/subir-cair-ou-ficar-de-lado-como-o-mercado-enxerga-a-trajetoria-do-dolar-ate-o-fim-de-2026/)\n- [O Povo July close](https://www.opovo.com.br/noticias/economia/2026/07/31/dolar-fecha-estavel-mas-acumula-queda-de-182-em-julho.html)\n- [EBC](https://www.ebc.com/pt/forex/dolar-em-agosto-de-2026-vai-subir-ou-vai-cair)\n- [Notícias Agrícolas](https://www.noticiasagricolas.com.br/noticia/425584)\n- [Diário de Pernambuco](https://www.diariodepernambuco.com.br/economia/2026/07/11719637-dolar-no-fim-de-2026-segue-em-rs-520-projeta-focus.html)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for USDBRL=X: latest close 5.1437 on 2026-08-04.\nTarget date 2026-09-02 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 4.9175, p10: 4.9652, p25: 5.0418, p50: 5.1385, p75: 5.2387, p90: 5.3205, p95: 5.3734\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          4.8
+        ],
+        [
+          0.05,
+          4.91
+        ],
+        [
+          0.1,
+          4.97
+        ],
+        [
+          0.2,
+          5.03
+        ],
+        [
+          0.3,
+          5.08
+        ],
+        [
+          0.4,
+          5.115
+        ],
+        [
+          0.5,
+          5.145
+        ],
+        [
+          0.6,
+          5.175
+        ],
+        [
+          0.7,
+          5.215
+        ],
+        [
+          0.8,
+          5.27
+        ],
+        [
+          0.9,
+          5.35
+        ],
+        [
+          0.95,
+          5.42
+        ],
+        [
+          0.99,
+          5.58
+        ]
+      ],
+      [
+        [
+          0.01,
+          4.79
+        ],
+        [
+          0.05,
+          4.9
+        ],
+        [
+          0.1,
+          4.96
+        ],
+        [
+          0.2,
+          5.03
+        ],
+        [
+          0.3,
+          5.08
+        ],
+        [
+          0.4,
+          5.11
+        ],
+        [
+          0.5,
+          5.14
+        ],
+        [
+          0.6,
+          5.17
+        ],
+        [
+          0.7,
+          5.21
+        ],
+        [
+          0.8,
+          5.27
+        ],
+        [
+          0.9,
+          5.35
+        ],
+        [
+          0.95,
+          5.42
+        ],
+        [
+          0.99,
+          5.6
+        ]
+      ],
+      [
+        [
+          0.01,
+          4.8
+        ],
+        [
+          0.05,
+          4.91
+        ],
+        [
+          0.1,
+          4.96
+        ],
+        [
+          0.2,
+          5.03
+        ],
+        [
+          0.3,
+          5.08
+        ],
+        [
+          0.4,
+          5.12
+        ],
+        [
+          0.5,
+          5.15
+        ],
+        [
+          0.6,
+          5.18
+        ],
+        [
+          0.7,
+          5.22
+        ],
+        [
+          0.8,
+          5.28
+        ],
+        [
+          0.9,
+          5.36
+        ],
+        [
+          0.95,
+          5.43
+        ],
+        [
+          0.99,
+          5.6
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.5379
+}

@@ -1,0 +1,185 @@
+{
+  "id": "nq-BTC-USD-change",
+  "question": "What will be the percentage change in Bitcoin (BTC-USD on Yahoo Finance) from the close on 2026-08-19 to the close on 2026-09-24?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-24 / close on 2026-08-19 - 1), using daily closes of BTC-USD on Yahoo Finance. If there is no close on 2026-09-24, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 21.818546,
+  "outcome_date": "2026-09-24",
+  "as_of": "2026-08-20",
+  "resolve_date": "2026-09-24",
+  "lower_bound": -50.0,
+  "upper_bound": 40.0,
+  "source": "yahoo",
+  "series": "BTC-USD",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for BTC-USD: latest close 69266.1875 on 2026-08-19.\nTarget date 2026-09-24 is 36 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 36-observation returns over the last 3 years (last year weighted double):\np5: 53781.1024, p10: 56267.7887, p25: 63930.3829, p50: 70032.0903, p75: 75133.755, p90: 83478.578, p95: 92445.55\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# BTC-USD research brief, as of 2026-08-20\n\n## 1. Resolution source\n- 2026-08-19: Yahoo Finance BTC-USD closed at **69,266.19** (from the code-supplied data). This is the base value. Yahoo's daily \"close\" for crypto is the 00:00 UTC rollover price. I could not open the Yahoo pages directly because the proxy refused the connection.\n- The question resolves as 100 × (close on 2026-09-24 / 69,266.19 − 1). Rough price levels for each outcome: −10% ≈ 62,340; 0% ≈ 69,266; +10% ≈ 76,190; +20% ≈ 83,120.\n\n## 2. Current status\n- Nothing has settled the outcome yet. About 5 weeks remain.\n- BTC is in a strong short squeeze right now. Most of the day's move happened after the 2026-08-19 base close, so the price is already above the base.\n- 2026-08-20: One report put BTC up 10.52% at $71,750 at 8:18 AM EDT, which it tied to a record $2.7B short squeeze. Another reported an intraday high of $72,801. [Yahoo](https://finance.yahoo.com/markets/crypto/articles/short-squeeze-sends-bitcoin-72-184201085.html)\n- 2026-08-20: CoinDesk ran the headline \"BTC tops $75,000 for first time since May\". I could not confirm the timestamp, so it is unclear whether this happened before the forecast closes at 18:00 UTC. [CoinDesk](https://www.coindesk.com/markets/2026/08/20/bitcoin-pushes-past-usd75-000-as-rally-continues)\n- If spot is near 72,000 to 75,000, the starting point is already about +4% to +8% against the base.\n\n## 3. Recent news (newest first)\n- 2026-08-20: Treasury Secretary Bessent suggested more Treasury intervention. Treasury's doubling of long-dated bond buybacks was cited as a trigger for the rally. [CoinDesk live](https://www.coindesk.com/tech/2026/08/20/live-updates-bitcoin-etfs-draw-usd517-million-ether-pulls-usd189-million-in-biggest-inflows-in-months)\n- 2026-08-20: Trump pushed Congress to pass the Clarity Act. The bill is stalled in the Senate, with a procedural vote scheduled for September. A White House summit included Coinbase, Ripple, a16z, SEC Chair Atkins and CFTC Chair Selig. [Yahoo](https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-august-20-2026-crypto-prices-surge-after-president-trump-pushes-for-clarity-act-154014757.html), [Substack digest](https://bitcoinnewsdigest.substack.com/p/bitcoin-news-digest-august-20-2026)\n- 2026-08-19: Spot Bitcoin ETFs took in about $517M, the largest single day since early May. [CoinDesk live](https://www.coindesk.com/tech/2026/08/20/live-updates-bitcoin-etfs-draw-usd517-million-ether-pulls-usd189-million-in-biggest-inflows-in-months)\n- 2026-08-19: BTC rose about 8%, from the low 64,000s to 69,749, as $1.1B to $1.3B of short positions were liquidated. Crypto also gained after the SEC announced a proposed regulation. [KuCoin](https://www.kucoin.com/news/flash/bitcoin-surges-8-amid-1b-short-squeeze-on-august-19), [Yahoo](https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-wednesday-august-19-2026-crypto-prices-rise-after-sec-announces-proposed-regulation-161733939.html)\n- 2026-08-19: Fortune put BTC at about $64,339 that morning, roughly $48,600 lower than a year earlier. [Fortune](https://fortune.com/article/price-of-bitcoin-08-19-2026/)\n- 2026-08-19: CoinDesk said BTC was near a technical breakout that could push it to $76,000. [CoinDesk](https://www.coindesk.com/markets/2026/08/19/bitcoin-nears-key-technical-breakout-that-could-propel-prices-to-usd76-000)\n- 2026-08-12: BTC was about $63,500. [Bitcoin.com](https://news.bitcoin.com/market-updates/bitcoins-120m-betting-war-draws-a-brutal-map-for-2026-prices/)\n- 2026-07-29: The Fed held rates at 3.50% to 3.75% for a fifth straight meeting. The vote was 9-3, with all three dissenters wanting a hike. Inflation is high: PCE ran 3.7% year on year, and CPI hit 4.2% in May. [Investment News](https://www.investmentnews.com/equities/no-fed-relief-at-jackson-hole-warsh-keeps-rate-hike-door-open/267991)\n\n## 4. Base rates\n- Code-computed distribution of the price 36 days out (last 3 years, last year weighted double), with the implied % change from 69,266:\n  - p5: 53,781 (−22.4%)\n  - p10: 56,268 (−18.8%)\n  - p25: 63,930 (−7.7%)\n  - p50: 70,032 (+1.1%)\n  - p75: 75,134 (+8.5%)\n  - p90: 83,479 (+20.5%)\n  - p95: 92,446 (+33.5%)\n- The middle 50% of outcomes spans about 16 percentage points. The 5th to 95th percentile range spans about 56 points.\n- Trend: BTC is in a downtrend over the year (about −41% year on year by Fortune's numbers). August is currently up about 15%, which would be its first positive August since 2021 (CoinDesk, 2026-08-20).\n- September has historically been one of BTC's weakest months.\n- Short-squeeze-driven rallies often partly reverse, but this one comes with real ETF inflows behind it.\n\n## 5. Other forecasts\n- 2026-08-12: Polymarket gave BTC about 51% odds of reaching $75,000, 32% for $80,000 and 17% for $90,000 (horizon not specified). [Bitcoin.com](https://news.bitcoin.com/market-updates/bitcoins-120m-betting-war-draws-a-brutal-map-for-2026-prices/)\n- An aggregator showed Polymarket's \"$100K in 2026\" contract at about 19¢. [SimpleFunctions](https://simplefunctions.dev/markets/what-price-will-bitcoin-hit-in-2026-100000-polymarket-0xdaa4866bae)\n- Robinhood/Kalshi run daily BTC price contracts, but I could not find a dated quote for 2026-09-24.\n- I did not find any dated Polymarket or Kalshi price, as of 2026-08-20, for BTC's level around 2026-09-24.\n- Around 2026-08-20, CME FedWatch put the odds of a September rate hike at roughly 35% to 40%. [Investment News](https://www.investmentnews.com/equities/no-fed-relief-at-jackson-hole-warsh-keeps-rate-hike-door-open/267991)\n\n## 6. Upcoming events before resolution\n- About Aug 27 to 29: Jackson Hole symposium, Fed Chair Warsh's first speech there. Markets are watching whether he leans hawkish given the inflation readings. [edgeX preview](https://pro.edgex.exchange/en-US/news/article/warsh-jackson-hole-speech-bitcoin-80000)\n- Late August: July PCE release. Early September: August jobs report. Mid-September: August CPI.\n- Sep 15 to 16: FOMC meeting. A rate hike, which would be the first since 2023, is a real possibility and would weigh on risk assets.\n- September: Senate procedural vote on the Clarity Act.\n- Ongoing: daily ETF flow data, Treasury buyback operations, and changes in leverage and positioning after the squeeze.\n- 2026-09-25 (the day after resolution): Deribit's quarterly options expiry. Positioning ahead of it could affect prices in the days before the 2026-09-24 close.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BTC-USD: latest close 69266.1875 on 2026-08-19.\nTarget date 2026-09-24 is 36 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 36-observation returns over the last 3 years (last year weighted double):\np5: 53781.1024, p10: 56267.7887, p25: 63930.3829, p50: 70032.0903, p75: 75133.755, p90: 83478.578, p95: 92445.55\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -30.0
+        ],
+        [
+          0.05,
+          -19.0
+        ],
+        [
+          0.1,
+          -13.0
+        ],
+        [
+          0.2,
+          -6.5
+        ],
+        [
+          0.3,
+          -2.0
+        ],
+        [
+          0.4,
+          1.5
+        ],
+        [
+          0.5,
+          3.5
+        ],
+        [
+          0.6,
+          6.0
+        ],
+        [
+          0.7,
+          9.0
+        ],
+        [
+          0.8,
+          13.0
+        ],
+        [
+          0.9,
+          19.5
+        ],
+        [
+          0.95,
+          25.0
+        ],
+        [
+          0.99,
+          38.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -30.0
+        ],
+        [
+          0.05,
+          -20.0
+        ],
+        [
+          0.1,
+          -14.0
+        ],
+        [
+          0.2,
+          -7.5
+        ],
+        [
+          0.3,
+          -3.0
+        ],
+        [
+          0.4,
+          0.5
+        ],
+        [
+          0.5,
+          3.0
+        ],
+        [
+          0.6,
+          6.0
+        ],
+        [
+          0.7,
+          9.5
+        ],
+        [
+          0.8,
+          14.0
+        ],
+        [
+          0.9,
+          21.0
+        ],
+        [
+          0.95,
+          27.0
+        ],
+        [
+          0.99,
+          40.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -31.0
+        ],
+        [
+          0.05,
+          -21.0
+        ],
+        [
+          0.1,
+          -15.5
+        ],
+        [
+          0.2,
+          -8.5
+        ],
+        [
+          0.3,
+          -3.5
+        ],
+        [
+          0.4,
+          0.5
+        ],
+        [
+          0.5,
+          3.0
+        ],
+        [
+          0.6,
+          5.5
+        ],
+        [
+          0.7,
+          8.5
+        ],
+        [
+          0.8,
+          12.5
+        ],
+        [
+          0.9,
+          18.5
+        ],
+        [
+          0.95,
+          24.0
+        ],
+        [
+          0.99,
+          35.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4239
+}

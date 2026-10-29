@@ -1,0 +1,185 @@
+{
+  "id": "nq-ETH-USD-level",
+  "question": "What will be the closing value of Ether (ETH-USD on Yahoo Finance) on September 30, 2026?",
+  "resolution_criteria": "Resolves to the daily close of ETH-USD on Yahoo Finance for 2026-09-30. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD",
+  "outcome": 2683.679443,
+  "outcome_date": "2026-09-30",
+  "as_of": "2026-09-09",
+  "resolve_date": "2026-09-30",
+  "lower_bound": 1500.0,
+  "upper_bound": 4000.0,
+  "source": "yahoo",
+  "series": "ETH-USD",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ETH-USD: latest close 2484.9414 on 2026-09-08.\nTarget date 2026-09-30 is 22 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 22-observation returns over the last 3 years (last year weighted double):\np5: 1866.1529, p10: 2014.6304, p25: 2245.9015, p50: 2480.7858, p75: 2739.9569, p90: 3141.1227, p95: 3325.2562\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I have enough material and am writing up the brief now. Several search results contained data dated after 2026-09-09; I left all of it out.\n\n# ETH-USD close on 2026-09-30: research brief (information as of 2026-09-09)\n\n## 1. Resolution source\n- The question resolves on the daily close of ETH-USD on Yahoo Finance for 2026-09-30, a Wednesday. Crypto trades every day, so there will be a close on that date. Yahoo dates its crypto closes by the UTC day.\n- 2026-09-08: Latest Yahoo close was 2,484.94 (from the code-collected data). I could not fetch Yahoo directly.\n- 2026-09-09: Fortune's daily snapshot showed ETH at $2,487.92, so the price is roughly flat against the Yahoo close. [Fortune](https://fortune.com/article/price-of-ethereum-09-09-2026/)\n\n## 2. Current status\n- Nothing has settled the question. ETH is about 2,485, close to the middle of the 1,500 to 4,000 range, with three weeks left.\n\n## 3. Recent news (newest first)\n- 2026-09-08: Fortune put ETH at $2,471.99. [Fortune](https://fortune.com/article/price-of-ethereum-09-08-2026/)\n- 2026-09-07: ETH opened about $2,515 and later fell to about $2,498. A \"bombastic\" August jobs report on Friday raised expectations of a Fed rate *hike* this month. Traders were watching the August CPI and PPI releases. [edgeX](https://pro.edgex.exchange/en-US/news/article/bitcoin-ethereum-prices-inflation-data-fed)\n- 2026-09-06: ETH rose above $2,490, helped by ETF demand. [Sunday Guardian](https://sundayguardianlive.com/business/ethereum-price-today-06-september-eth-climbs-above-2490-as-etf-demand-and-softer-fed-rate-expectations-support-recovery-check-latest-ethereum-prices-in-usd-inr-gbp-euro-jpy-278731/)\n- Early September: A futures market preview said traders were pricing a 70%+ chance of a September Fed hike, which would be the first since 2023. [investingLive](https://investinglive.com/stock-market-update/preview-august-cpi-due-friday-to-decide-odds-of-first-fed-hike-since-2023/)\n- 2026-09-02: ETH was $2,377.98, about $1,950 lower than a year earlier. Fortune linked the early-2026 drop to recession fears and sales by Vitalik Buterin. [Fortune](https://fortune.com/article/price-of-ethereum-09-02-2026/)\n- Through 2026-09-02: A promotional source said spot ETH ETFs had 12 straight days of inflows totaling about $1.62B. [openPR](https://www.openpr.com/news/4631126/ethereum-price-prediction-september-2026-eth-etfs-pull-1-62)\n- August 2026: ETH gained about 32.6% for the month, after +18.5% in July. Sources disagree, with figures ranging from 32% to 40%. Spot ETH ETFs took in about $824M in the week ending Aug 28, their biggest weekly inflow of 2026. ETH was around $1,900 in early August and got back above $2,000 by Aug 20. That day's move was a short squeeze after US Treasury buyback news. BTC rose about 24% in August and briefly went above $80K. [Analytics Insight](https://www.analyticsinsight.net/cryptocurrency-analytics-insight/what-to-expect-from-ethereum-price-in-september-2026), [Pluang](https://pluang.com/en/news-feed/harga-ethereum-eth-tom-lee-fundstrat-target-konservatif-6000), [ms-aktuell](https://ms-aktuell.de/welt/ethereum-2000-dollar-20-08-2026/)\n\n## 4. Base rates\n- The code's baseline, built from 22-day returns over the last 3 years, gives these percentiles for the Sept 30 price:\n\n| Percentile | Price (USD) |\n|---|---|\n| p5 | 1,866 |\n| p10 | 2,015 |\n| p25 | 2,246 |\n| p50 | 2,481 |\n| p75 | 2,740 |\n| p90 | 3,141 |\n| p95 | 3,325 |\n\n- The p25 to p75 band is roughly ±10% around today's price. The p5 to p95 band runs from about -25% to +34%.\n- Seasonality: ETH has averaged about -6.84% in September over the last ten years. September is historically a weak month. [Analytics Insight](https://www.analyticsinsight.net/cryptocurrency-analytics-insight/what-to-expect-from-ethereum-price-in-september-2026)\n- Momentum: ETH has risen about 60% since early August. That is strong upward momentum, but after a run that big, sharp pullbacks are also possible.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market for ETH's price at the end of September, quoted on or before 2026-09-09. Polymarket does run daily \"ETH price on [date]\" markets, but I did not find pre-Sept-9 prices for the Sept 30 market.\n- Before Sept 9, Polymarket's year-end markets were mixed. Bitcoin.com reported only a 17% chance that ETH reaches $3,000 in 2026. Coinotag reported a 70% chance of touching $3,000. Both articles are undated in my results, so I could not confirm when either figure was quoted. [Bitcoin.com](https://news.bitcoin.com/polymarket-bettors-give-ethereum-just-a-17-shot-at-reaching-3000-in-2026/), [Coinotag](https://en.coinotag.com/polymarket-ethereum-eth-3000-touch-odds-70)\n- One forecast site projected a September 2026 range of $2,677 to $3,166, averaging $2,953. That is a low-quality, model-generated projection. [LiteFinance](https://www.litefinance.org/blog/analysts-opinions/ethereum-price-prediction-forecast/)\n\n## 6. Upcoming events before resolution\n- Week of 2026-09-07: August PPI comes out.\n- 2026-09-11: August CPI is released at 8:30 ET. Consensus is about +0.38% headline and +0.22% core month on month. This release is seen as deciding whether the Fed hikes. [investingLive](https://investinglive.com/stock-market-update/preview-august-cpi-due-friday-to-decide-odds-of-first-fed-hike-since-2023/)\n- 2026-09-15/16: The FOMC meets, with a rate decision and new projections. A hike would be the first since 2023 and is a significant risk for crypto.\n- Ongoing: Daily spot ETH ETF flows, tracked by Farside and SoSoValue, and oil-driven pressure on bond yields.\n- Glamsterdam upgrade: mainnet is targeted for Q4 2026 with no date set. Testnet forks are expected in October, so the upgrade is unlikely to be a direct catalyst before Sept 30. [KuCoin](https://www.kucoin.com/news/flash/ethereum-s-glamsterdam-upgrade-enters-final-testnet-phase-ahead-of-q4-2026-mainnet-target), [investingLive](https://investinglive.com/education/glamsterdam-in-plain-english-how-ethereum-plans-to-cut-out-the-middlemen-in-block-building/)\n- End of quarter on 2026-09-30, plus the usual monthly and quarterly options and futures expiry around Sept 25 on Deribit and CME.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ETH-USD: latest close 2484.9414 on 2026-09-08.\nTarget date 2026-09-30 is 22 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 22-observation returns over the last 3 years (last year weighted double):\np5: 1866.1529, p10: 2014.6304, p25: 2245.9015, p50: 2480.7858, p75: 2739.9569, p90: 3141.1227, p95: 3325.2562\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1650.0
+        ],
+        [
+          0.05,
+          1880.0
+        ],
+        [
+          0.1,
+          2020.0
+        ],
+        [
+          0.2,
+          2190.0
+        ],
+        [
+          0.3,
+          2310.0
+        ],
+        [
+          0.4,
+          2405.0
+        ],
+        [
+          0.5,
+          2475.0
+        ],
+        [
+          0.6,
+          2550.0
+        ],
+        [
+          0.7,
+          2645.0
+        ],
+        [
+          0.8,
+          2780.0
+        ],
+        [
+          0.9,
+          3030.0
+        ],
+        [
+          0.95,
+          3230.0
+        ],
+        [
+          0.99,
+          3580.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          1700.0
+        ],
+        [
+          0.05,
+          1920.0
+        ],
+        [
+          0.1,
+          2040.0
+        ],
+        [
+          0.2,
+          2210.0
+        ],
+        [
+          0.3,
+          2330.0
+        ],
+        [
+          0.4,
+          2420.0
+        ],
+        [
+          0.5,
+          2480.0
+        ],
+        [
+          0.6,
+          2550.0
+        ],
+        [
+          0.7,
+          2640.0
+        ],
+        [
+          0.8,
+          2770.0
+        ],
+        [
+          0.9,
+          2980.0
+        ],
+        [
+          0.95,
+          3150.0
+        ],
+        [
+          0.99,
+          3500.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          1650.0
+        ],
+        [
+          0.05,
+          1880.0
+        ],
+        [
+          0.1,
+          2010.0
+        ],
+        [
+          0.2,
+          2180.0
+        ],
+        [
+          0.3,
+          2300.0
+        ],
+        [
+          0.4,
+          2400.0
+        ],
+        [
+          0.5,
+          2475.0
+        ],
+        [
+          0.6,
+          2555.0
+        ],
+        [
+          0.7,
+          2650.0
+        ],
+        [
+          0.8,
+          2790.0
+        ],
+        [
+          0.9,
+          3000.0
+        ],
+        [
+          0.95,
+          3180.0
+        ],
+        [
+          0.99,
+          3550.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.447
+}

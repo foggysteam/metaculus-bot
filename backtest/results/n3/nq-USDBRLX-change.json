@@ -1,0 +1,185 @@
+{
+  "id": "nq-USDBRLX-change",
+  "question": "What will be the percentage change in the US dollar to Brazilian real exchange rate (USDBRL=X on Yahoo Finance) from the close on 2026-08-06 to the close on 2026-09-04?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-04 / close on 2026-08-06 - 1), using daily closes of USDBRL=X on Yahoo Finance. If there is no close on 2026-09-04, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -0.406109,
+  "outcome_date": "2026-09-03",
+  "as_of": "2026-08-07",
+  "resolve_date": "2026-09-04",
+  "lower_bound": -10.0,
+  "upper_bound": 15.0,
+  "source": "yahoo",
+  "series": "USDBRL=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for USDBRL=X: latest close 5.1218 on 2026-08-06.\nTarget date 2026-09-04 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 4.8969, p10: 4.9441, p25: 5.0209, p50: 5.1166, p75: 5.2161, p90: 5.2973, p95: 5.3504\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I couldn't find any single development that settles this question. USD/BRL was 5.1218 at the 2026-08-06 close. The code's historical baseline puts the median 21-day move at about -0.1%, with a 90% range of roughly -4.4% to +4.5%. Several pages I found contained data dated after 2026-08-07, and I left all of it out.\n\n## 1. Resolution source\n- 2026-08-06: The latest Yahoo Finance USDBRL=X close is **5.1218**, per the code-supplied data. I did not fetch the Yahoo page. The question resolves to 100 x (close on 2026-09-04 / 5.1218 - 1).\n- Yahoo's USDBRL=X is a quote that trades around the clock. Its daily \"close\" can differ slightly from the B3 spot close or the central bank's PTAX rate, which is what Brazilian press reports.\n\n## 2. Current status\n- Nothing has settled the question yet. 21 trading days remain, and 2026-09-04 is a Friday with US payrolls due that morning.\n- 2026-08-05: Reports put the real near R$5.10 at the time of the Copom decision. One site (Mais Goiás) gave R$5.27 for that day, but its text mixes in old content, so I treat it as unreliable. [Mais Goiás](https://www.maisgoias.com.br/brasil/economia/dolar-fecha-estavel-a-r-527-em-dia-de-decisao-do-copom/)\n\n## 3. Recent news (newest first)\n- 2026-08-05: The Copom cut the Selic 25bp to **14.00%**, unanimously. It was the fourth straight cut since March. The statement cited caution about external uncertainty. [Atlas Público/BCB](https://atlaspublico.com.br/bcb/noticias/copom-reduz-selic-para-14pct-ao-ano-em-quarto-corte-77284), [BCB Comunicado via CGU](https://basedeconhecimento.cgu.gov.br/bitstreams/ea1bada8-b405-4a1a-8a5b-9c2b170d784e/download)\n- 2026-08-05: Remessa Online said the cut was already priced in, but the statement read **more hawkish than expected**. A hawkish tone tends to support the real through the carry trade. [Remessa Online](https://www.remessaonline.com.br/blog/comunicado-do-copom-agosto-2026/)\n- About 2026-08-05: Another report says the Copom kept guidance data-dependent and saw inflation risks as higher than usual with an upward bias. Markets priced one more cut, at the 15-16 September meeting, which falls after resolution. It also says the real was about R$5.10 despite worries about the Middle East war. [BL2020](https://www.bl2020.com/misc_bl/index.cfm/fuseaction/shownewsroompage/newsid/3a8a1294-3aa7-4c9f-b475-b45a5ea4d89d/slang/en)\n- 2026-08-03: The Focus survey cut its year-end Selic forecast from 14% to 13.75% and its 2026 IPCA forecast to 5.03%. The year-end dollar forecast was around R$5.20. [O Povo](https://www.opovo.com.br/noticias/economia/2026/08/03/amp/selic-no-fim-de-2026-cai-de-14-para-1375-calcula-focus.html), [Revista Oeste](https://revistaoeste.com/economia/focus-projeta-selic-a-1375-e-inflacao-a-503-para-o-fim-de-2026/)\n- Undated: One bank forecast R$5.35 at year-end, citing a narrowing rate gap, possible global dollar strength and fiscal risk in an election year. [Agrolink](https://www.agrolink.com.br/noticias/banco-preve-dolar-a-r--5-35-no-fim-do-ano_515909.html)\n- July 2026: A 25% US tariff on Brazil was reported to be in place. [Analistas](https://www.analistas.com.br/assuntos/copom)\n\n## 4. Base rates\n- The code's empirical distribution of 21-day returns (3 years, with the last year weighted double) gives these levels, with the implied % change from 5.1218 in brackets:\n  - p5: 4.8969 (-4.4%)\n  - p10: 4.9441 (-3.5%)\n  - p25: 5.0209 (-2.0%)\n  - p50: 5.1166 (-0.1%)\n  - p75: 5.2161 (+1.8%)\n  - p90: 5.2973 (+3.4%)\n  - p95: 5.3504 (+4.5%)\n- That implies a one-month standard deviation of about 2.7%. The upside tail is slightly fatter, which is typical for USD/BRL in risk-off episodes.\n- Earlier shocks show how big a single event can be: on 2025-07-09, after the 50% tariff announcement, USD/BRL rose 1.05% in a day and was up as much as 2.9% intraday. [Notícias Agrícolas](https://www.noticiasagricolas.com.br/noticias/politica-economia/403756-dolar-a-vista-fecha-em-alta-de-105-a-r550359-na-venda.amp.html)\n- The rate entered August near the low R$5.1 area, after trading around R$5.2 to R$5.35 earlier in 2026, so the recent trend was a firmer real.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on USD/BRL for 2026-09-04.\n- Kalshi does list USD/BRL threshold markets, but they are very thin. A 2026-06-30 \"max rate\" market had very low volume, and a 2026-12-31 market had about $202 in open interest. [SimpleFunctions/Kalshi](https://simplefunctions.dev/markets/KXUSDBRLMAX-26DEC31-T4.9999)\n- Expert views: the Focus median for year-end was about R$5.20 (2026-08-03), and one bank forecast R$5.35. Both sit above spot, which suggests mild depreciation of the real is expected over the rest of the year rather than within one month.\n\n## 6. Upcoming events before resolution\n- About 2026-08-11: Copom minutes, which will be read for confirmation of the hawkish tone. July IPCA inflation is also due around this date.\n- 2026-08-16: Brazil's official election campaign period begins, with free TV airtime starting in late August. Polls and fiscal messaging from the October 2026 presidential race are a key risk for the real.\n- Late August: Kansas City Fed Jackson Hole symposium, where Fed Chair commentary will steer the US dollar.\n- About 2026-09-01: Brazil Q2 GDP.\n- 2026-09-04: US August payrolls, released before the resolution close, so they can move the final print directly.\n- Ongoing: US-Brazil tariff developments, Middle East war and oil prices, fiscal news such as the 2027 budget proposal due by 31 August, and global risk sentiment.\n- The next Copom meeting (15-16 September) and the next FOMC meeting fall after resolution.\n\nSources: [Atlas Público/BCB](https://atlaspublico.com.br/bcb/noticias/copom-reduz-selic-para-14pct-ao-ano-em-quarto-corte-77284), [CGU/BCB comunicado](https://basedeconhecimento.cgu.gov.br/bitstreams/ea1bada8-b405-4a1a-8a5b-9c2b170d784e/download), [Remessa Online](https://www.remessaonline.com.br/blog/comunicado-do-copom-agosto-2026/), [BL2020](https://www.bl2020.com/misc_bl/index.cfm/fuseaction/shownewsroompage/newsid/3a8a1294-3aa7-4c9f-b475-b45a5ea4d89d/slang/en), [O Povo](https://www.opovo.com.br/noticias/economia/2026/08/03/amp/selic-no-fim-de-2026-cai-de-14-para-1375-calcula-focus.html), [Revista Oeste](https://revistaoeste.com/economia/focus-projeta-selic-a-1375-e-inflacao-a-503-para-o-fim-de-2026/), [Agrolink](https://www.agrolink.com.br/noticias/banco-preve-dolar-a-r--5-35-no-fim-do-ano_515909.html), [Analistas](https://www.analistas.com.br/assuntos/copom), [Mais Goiás](https://www.maisgoias.com.br/brasil/economia/dolar-fecha-estavel-a-r-527-em-dia-de-decisao-do-copom/), [Notícias Agrícolas](https://www.noticiasagricolas.com.br/noticias/politica-economia/403756-dolar-a-vista-fecha-em-alta-de-105-a-r550359-na-venda.amp.html), [SimpleFunctions](https://simplefunctions.dev/markets/KXUSDBRLMAX-26DEC31-T4.9999)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for USDBRL=X: latest close 5.1218 on 2026-08-06.\nTarget date 2026-09-04 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 4.8969, p10: 4.9441, p25: 5.0209, p50: 5.1166, p75: 5.2161, p90: 5.2973, p95: 5.3504\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -6.5
+        ],
+        [
+          0.05,
+          -4.3
+        ],
+        [
+          0.1,
+          -3.3
+        ],
+        [
+          0.2,
+          -2.0
+        ],
+        [
+          0.3,
+          -1.1
+        ],
+        [
+          0.4,
+          -0.4
+        ],
+        [
+          0.5,
+          0.1
+        ],
+        [
+          0.6,
+          0.7
+        ],
+        [
+          0.7,
+          1.4
+        ],
+        [
+          0.8,
+          2.3
+        ],
+        [
+          0.9,
+          3.6
+        ],
+        [
+          0.95,
+          4.8
+        ],
+        [
+          0.99,
+          7.6
+        ]
+      ],
+      [
+        [
+          0.01,
+          -6.8
+        ],
+        [
+          0.05,
+          -4.5
+        ],
+        [
+          0.1,
+          -3.4
+        ],
+        [
+          0.2,
+          -2.1
+        ],
+        [
+          0.3,
+          -1.2
+        ],
+        [
+          0.4,
+          -0.4
+        ],
+        [
+          0.5,
+          0.2
+        ],
+        [
+          0.6,
+          0.8
+        ],
+        [
+          0.7,
+          1.6
+        ],
+        [
+          0.8,
+          2.6
+        ],
+        [
+          0.9,
+          4.0
+        ],
+        [
+          0.95,
+          5.2
+        ],
+        [
+          0.99,
+          8.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -6.5
+        ],
+        [
+          0.05,
+          -4.3
+        ],
+        [
+          0.1,
+          -3.3
+        ],
+        [
+          0.2,
+          -2.0
+        ],
+        [
+          0.3,
+          -1.1
+        ],
+        [
+          0.4,
+          -0.4
+        ],
+        [
+          0.5,
+          0.1
+        ],
+        [
+          0.6,
+          0.6
+        ],
+        [
+          0.7,
+          1.3
+        ],
+        [
+          0.8,
+          2.2
+        ],
+        [
+          0.9,
+          3.5
+        ],
+        [
+          0.95,
+          4.6
+        ],
+        [
+          0.99,
+          7.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4773
+}

@@ -1,0 +1,185 @@
+{
+  "id": "nq-GCF-level",
+  "question": "What will be the closing value of front-month gold futures (GC=F on Yahoo Finance) on September 22, 2026?",
+  "resolution_criteria": "Resolves to the daily close of GC=F on Yahoo Finance for 2026-09-22. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD per troy ounce",
+  "outcome": 4376.399902,
+  "outcome_date": "2026-09-22",
+  "as_of": "2026-09-12",
+  "resolve_date": "2026-09-22",
+  "lower_bound": 3500.0,
+  "upper_bound": 5000.0,
+  "source": "yahoo",
+  "series": "GC=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for GC=F: latest close 4408.8999 on 2026-09-11.\nTarget date 2026-09-22 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 4185.9754, p10: 4241.4788, p25: 4350.3989, p50: 4450.1187, p75: 4553.6244, p90: 4649.975, p95: 4720.6064\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "## Gold futures (GC=F) research for the September 22, 2026 close\n\nGold futures last closed at about $4,409 on September 11, after their lowest open in over a month. Fed rate-hike bets are pressing on the price, and a Fed meeting on September 15-16 falls inside the window. The code's baseline median for September 22 is about $4,450, with a 90% range of roughly $4,186 to $4,721.\n\n### 1. Resolution source\n- **2026-09-11:** The latest GC=F close in the code-collected Yahoo data is **$4,408.90**. (Yahoo Finance data supplied with the question)\n- **2026-09-11:** Yahoo Finance's own article says GC=F was tracking the **December 2026** futures contract. It opened at $4,359.40, down 1.1%, its lowest open in over a month. A 1:43 PM EDT snapshot on that page showed 4,351.30, down 57.60 (-1.31%). That snapshot doesn't match the $4,408.90 close, so check that the code's close and the article refer to the same day and contract. [Yahoo Finance](https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-friday-september-11-2026-gold-opens-at-lowest-level-in-over-a-month-ahead-of-cpi-data-111016419.html)\n- The October contract is the one Robinhood's prediction markets reference, but Yahoo's front-month series appears to follow December. A switch from one contract month to the next during the window looks unlikely. [Robinhood](https://robinhood.com/us/en/prediction-markets/metals/events/gold-price-september-11-2026-sep-11-2026/)\n- I couldn't fetch CME settlement data directly because the proxy blocked several pages.\n\n### 2. Current status\n- Nothing settles the question yet. The price is near the middle of the question's $3,500 to $5,000 range, and the outcome depends on the 8 trading days from September 14 to 22.\n\n### 3. Recent news (newest first)\n- **2026-09-11:** August CPI matched expectations on the headline number, but core inflation was firm enough to raise the odds of a Fed hike. Spot gold held $4,300 support, near $4,347 in the afternoon (up about 0.7%) after Thursday's selloff. [Kitco](https://www.kitco.com/news/article/2026-09-11/gold-price-holds-4300-support-cpi-lifts-fed-hike-odds-kitco-pm-report)\n- **2026-09-11:** A weekly futures preview said gold fell from about 4,475 early in the week to near 4,345, then recovered to about 4,394 on Friday morning. [bestfuturestradingplatform](https://bestfuturestradingplatform.com/en/market-news/futuresuken-11-september-2026/)\n- **2026-09-10:** Producer prices (PPI) for August were hot: +0.4% for the month and 5.4% year over year, one tenth above forecast. Core PPI was 0.2%. Gold fell below $4,350 as the dollar and Treasury yields rose. Rising oil prices and the US-Iran conflict were also cited. Odds of a September hike were put at about 60-70%; sources differ. [FXStreet](https://www.fxstreet.com/news/gold-falls-below-4-350-as-rising-oil-prices-us-ppi-reinforces-fed-hike-bets-202609102336), [GoldSilver](https://goldsilver.com/industry-news/article/gold-price-outlook-september-2026/)\n- **2026-09-07:** Gold eased after strong payrolls boosted rate-hike bets. [CNBC](https://www.cnbc.com/amp/2026/09/07/gold-eases-as-robust-us-payrolls-boost-rate-hike-bets.html)\n- **2026-09-01:** Gold fell for a third straight session to a two-week low. Spot was down 1.7% at about $4,362.57, erasing its 2026 gains, with odds of a Fed hike about 70%. [Mining Reporters](https://www.miningreporters.com/noticia/news/2026/09/gold-prices-fall-fed-rate-increase-expectations)\n- **2026-08-28:** Gold fell more than 3% around Fed Chair Warsh's Jackson Hole speech, its sharpest one-day drop since June 10. September hike odds rose to about 64% from about 36%. [CNBC](https://www.cnbc.com/2026/08/28/gold-slips-as-fed-chief-warshs-jackson-hole-speech-looms.html)\n- **2026-06 to 07:** Gold traded mostly between $4,040 and $4,160 while hike bets moved up and down. It then rallied about 9% when July CPI was soft. [USAGold](https://www.usagold.com/daily-precious-metals-market-report-july-28-2026/), [Crux Investor](https://www.cruxinvestor.com/posts/gold-jumps-9-as-fed-hike-odds-fall-with-q2-central-bank-buying-adding-longer-term-support)\n\n### 4. Base rates\n- **Code-computed baseline:** these are the prices that would result from 8-day moves over the last 3 years (last year weighted double), starting from $4,408.90:\n\n  | Percentile | Price |\n  |---|---|\n  | p5 | $4,186 |\n  | p10 | $4,241 |\n  | p25 | $4,350 |\n  | p50 (median) | $4,450 |\n  | p75 | $4,554 |\n  | p90 | $4,650 |\n  | p95 | $4,721 |\n\n- The middle 50% of outcomes spans about ±2.3%, and the 5th to 95th percentile spans about -5% to +7%.\n- **2026 context:** prices have swung widely this year. One source mentions a high near $5,600 earlier in the year, but I couldn't confirm its date. Since June, gold has mostly traded between about $4,000 and $4,500. Single-day moves of 2-3% around Fed communication have happened several times (June 17, August 28). [BullionVault](https://www.bullionvault.com/gold-news/gold-price-news/gold-fed-rates-jobs-060520261), [Kitco](https://www.kitco.com/news/article/2026-06-17/gold-and-silver-slide-after-hawkish-fed-hold-kitco-pm-report)\n- **Short-term trend:** gold has been falling since late August as Fed hike pricing rose.\n\n### 5. Other forecasts\n- **Kalshi:** runs weekly and hourly gold markets, including a contract for the week ending September 25 (kxgoldw-26sep2517). I couldn't find a snapshot of its prices dated on or before September 12. [Kalshi](https://kalshi.com/markets/kxgoldw/gold-weekly-price-/kxgoldw-26sep2517)\n- **Robinhood:** lists daily gold prediction markets that settle on the October futures contract; I couldn't retrieve the prices. [Robinhood](https://robinhood.com/us/en/prediction-markets/metals/events/gold-price-september-11-2026-sep-11-2026/)\n- **Polymarket and Manifold:** I found no relevant market.\n- **Bank and analyst targets:** a September roundup of bank targets exists, but I couldn't read it. [Golden Ark Reserve](https://goldenarkreserve.com/insights/gold-price-forecast-september-2026/)\n\n### 6. Upcoming events before September 22\n- **2026-09-15 to 16: FOMC meeting.** This is the main event risk. Markets were pricing a hike at roughly 60-70%. The decision, the projections and Warsh's press conference could move gold several percent in either direction. [GoldSilver](https://goldsilver.com/tag/september-fomc/)\n- **Mid-September:** US retail sales and industrial production, plus weekly jobless claims.\n- **Ongoing:** oil prices and US-Iran conflict headlines, dollar and Treasury yield moves, and central bank buying.\n- **2026-09-22 (resolution day):** this is a Tuesday, so a normal trading close is expected.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for GC=F: latest close 4408.8999 on 2026-09-11.\nTarget date 2026-09-22 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 4185.9754, p10: 4241.4788, p25: 4350.3989, p50: 4450.1187, p75: 4553.6244, p90: 4649.975, p95: 4720.6064\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          4020.0
+        ],
+        [
+          0.05,
+          4160.0
+        ],
+        [
+          0.1,
+          4225.0
+        ],
+        [
+          0.2,
+          4300.0
+        ],
+        [
+          0.3,
+          4350.0
+        ],
+        [
+          0.4,
+          4385.0
+        ],
+        [
+          0.5,
+          4410.0
+        ],
+        [
+          0.6,
+          4438.0
+        ],
+        [
+          0.7,
+          4475.0
+        ],
+        [
+          0.8,
+          4530.0
+        ],
+        [
+          0.9,
+          4610.0
+        ],
+        [
+          0.95,
+          4680.0
+        ],
+        [
+          0.99,
+          4830.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          3980.0
+        ],
+        [
+          0.05,
+          4150.0
+        ],
+        [
+          0.1,
+          4220.0
+        ],
+        [
+          0.2,
+          4300.0
+        ],
+        [
+          0.3,
+          4355.0
+        ],
+        [
+          0.4,
+          4392.0
+        ],
+        [
+          0.5,
+          4420.0
+        ],
+        [
+          0.6,
+          4450.0
+        ],
+        [
+          0.7,
+          4490.0
+        ],
+        [
+          0.8,
+          4545.0
+        ],
+        [
+          0.9,
+          4630.0
+        ],
+        [
+          0.95,
+          4700.0
+        ],
+        [
+          0.99,
+          4860.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          4020.0
+        ],
+        [
+          0.05,
+          4160.0
+        ],
+        [
+          0.1,
+          4225.0
+        ],
+        [
+          0.2,
+          4300.0
+        ],
+        [
+          0.3,
+          4350.0
+        ],
+        [
+          0.4,
+          4382.0
+        ],
+        [
+          0.5,
+          4405.0
+        ],
+        [
+          0.6,
+          4430.0
+        ],
+        [
+          0.7,
+          4465.0
+        ],
+        [
+          0.8,
+          4515.0
+        ],
+        [
+          0.9,
+          4590.0
+        ],
+        [
+          0.95,
+          4655.0
+        ],
+        [
+          0.99,
+          4800.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4423
+}

@@ -1,0 +1,185 @@
+{
+  "id": "nq-ETH-USD-change",
+  "question": "What will be the percentage change in Ether (ETH-USD on Yahoo Finance) from the close on 2026-08-17 to the close on 2026-09-08?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-08 / close on 2026-08-17 - 1), using daily closes of ETH-USD on Yahoo Finance. If there is no close on 2026-09-08, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 29.951815,
+  "outcome_date": "2026-09-08",
+  "as_of": "2026-08-18",
+  "resolve_date": "2026-09-08",
+  "lower_bound": -40.0,
+  "upper_bound": 40.0,
+  "source": "yahoo",
+  "series": "ETH-USD",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ETH-USD: latest close 1912.2021 on 2026-08-17.\nTarget date 2026-09-08 is 22 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 22-observation returns over the last 3 years (last year weighted double):\np5: 1429.0295, p10: 1542.8848, p25: 1724.4905, p50: 1899.5961, p75: 2078.8117, p90: 2329.6925, p95: 2553.0636\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# ETH-USD research brief (as of 2026-08-18)\n\n## 1. Resolution source\n- 2026-08-17: Yahoo Finance shows ETH-USD closing at **1912.2021** on 2026-08-17. This is the base for the question (figure supplied by the code baseline). Yahoo quotes crypto every day, so a close on 2026-09-08 should exist. I could not fetch the Yahoo page directly because the proxy refused the connection.\n- 2026-08-17: Yahoo Finance said ETH opened at $1,874.10 and was at $1,894.98 at 9:17 a.m. ET. Its headline: \"crypto prices down slightly as analysts question timing of bear market bottom.\" [Yahoo Finance](https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-august-17-2026-crypto-prices-down-slightly-as-analysts-question-timing-of-bear-market-bottom-135747407.html)\n- 2026-08-17: Fortune put ETH at about $1,891.33 at 6:15 a.m. ET, with a market cap of about $233B. [Fortune](https://fortune.com/article/price-of-ethereum-08-17-2026/)\n- On 2026-08-17, Robinhood's hourly ETH contracts (which settle on the CF Benchmarks index) settled near $1,900. That is a different index from Yahoo's. [Robinhood](https://robinhood.com/us/en/prediction-markets/crypto/events/eth-price-range-on-aug-17-2026-at-1am-edt-aug-16-2026/)\n\n## 2. Current status\n- Nothing has settled the question yet. The 22-day window runs from the 2026-08-17 close to the 2026-09-08 close.\n\n## 3. Recent news (newest first)\n- 2026-08-17: Yahoo Finance coverage described the market as a bear market, with analysts debating when the bottom will come. [Yahoo Finance](https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-august-17-2026-crypto-prices-down-slightly-as-analysts-question-timing-of-bear-market-bottom-135747407.html)\n- Around 2026-08-18: A piece carried via Plus500 cited an analyst who sees about $1,500 as a possible floor for this bearish cycle, and a long-run rally toward $5,000. [Plus500](https://us.plus500.com/en/forecasts/ethereum-price-prediction-2026-forecast)\n- Late July to early August 2026: ETH traded roughly between $1,850 and $1,930. A dip around 2026-08-06 was blamed on cautious macro sentiment and continuing net outflows from spot ETH ETFs. [Plus500](https://us.plus500.com/en/forecasts/ethereum-price-prediction-2026-forecast)\n- On ETH-specific fundamentals, Glamsterdam (ePBS, block-level access lists) has slipped from its H1 2026 target. The latest reporting points to a Q4 2026 mainnet, so it should not land before 2026-09-08. [KuCoin](https://www.kucoin.com/news/flash/ethereum-s-glamsterdam-upgrade-enters-final-testnet-phase-ahead-of-q4-2026-mainnet-target), [OneKey](https://onekey.so/blog/ecosystem/ethereum-glamsterdam-upgrade-gains-momentum-with-mainnet-activation-targeted-for-h1-2026-20260504162656/)\n- For macro context, Kevin Warsh became Fed Chair in 2026-05 and has cut back on forward guidance. [regardsofwallstreet](https://www.regardsofwallstreet.com/news/jackson-hole-2026-dates-schedule-warsh-first-speech)\n\n## 4. Base rates\n- The code baseline uses 22-observation returns over the last 3 years, with the last year weighted double. Converted to percent change from 1912.20:\n  - p5: -25.3%\n  - p10: -19.3%\n  - p25: -9.8%\n  - p50: -0.7%\n  - p75: +8.7%\n  - p90: +21.8%\n  - p95: +33.5%\n- The interquartile range is about ±9%, and the 90% interval runs from roughly -25% to +33%. The distribution is right-skewed.\n- ETH price level and trend: the coin is down sharply from its all-time high of $4,878 (2025) and has been in a bear market at about $1,850 to $1,930 since late July 2026. That range is narrow, and long low-volatility stretches like this often end with a bigger move in one direction or the other.\n- Recent ETF flows: spot ETH ETFs had modest or negative flows for most of 2026, with outflows in early August.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market dated before the cutoff that targets an ETH price on or near 2026-09-08. Mirror sites of \"Ethereum price on September 3/4\" markets came up, but their price brackets ($2,400 to $2,600) look like stale snapshots from an earlier year, so I would not rely on them.\n- Robinhood/Kalshi-style hourly and daily ETH contracts exist, but I did not find any long-dated September ones.\n- Analyst views:\n  - About $1,500 as a cycle floor (2026-08). [Plus500](https://us.plus500.com/en/forecasts/ethereum-price-prediction-2026-forecast)\n  - Ben Cowen said in 2025-12 that new ETH highs in 2026 are unlikely. [Cointelegraph](https://cointelegraph.com/news/ether-price-new-highs-2026-unlikely-ben-cowen-crypto-analyst)\n\n## 6. Upcoming events before 2026-09-08\n- **2026-08-27 to 08-29: Jackson Hole Symposium.** Warsh gives his first keynote as Fed Chair, most likely Friday 2026-08-28 at 10:00 ET. The theme is \"Financial Innovation: Implications for Payments and Policy,\" and there is a session on tokenized finance. A BofA survey found 69% of fund managers expect a neutral tone. [ATFX](https://www.atfx.com/en/news/market-news/jackson-hole-symposium-2026-what-you-need-to-know), [Kansas City Fed](https://www.kansascityfed.org/research/jackson-hole-economic-symposium/jackson-hole-faqs/)\n- **Around 2026-08-28: Deribit monthly options expiry.** This is the usual last-Friday-of-the-month expiry (I did not confirm the date), along with the July PCE inflation release (not confirmed).\n- **2026-09-04: August US jobs report.** This is the expected first-Friday date, not confirmed.\n- **2026-09-07: US Labor Day.** ETF markets are closed, but crypto keeps trading.\n- **2026-09-16: FOMC decision.** This comes after resolution, but expectations about it will shape trading in early September.\n- **Ongoing:** daily spot ETH ETF flows, which turned negative in early August, are a key signal to watch.\n\nSources: the links given inline above.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ETH-USD: latest close 1912.2021 on 2026-08-17.\nTarget date 2026-09-08 is 22 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 22-observation returns over the last 3 years (last year weighted double):\np5: 1429.0295, p10: 1542.8848, p25: 1724.4905, p50: 1899.5961, p75: 2078.8117, p90: 2329.6925, p95: 2553.0636\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -35.0
+        ],
+        [
+          0.05,
+          -23.0
+        ],
+        [
+          0.1,
+          -17.0
+        ],
+        [
+          0.2,
+          -10.5
+        ],
+        [
+          0.3,
+          -6.0
+        ],
+        [
+          0.4,
+          -2.8
+        ],
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          0.6,
+          2.0
+        ],
+        [
+          0.7,
+          5.5
+        ],
+        [
+          0.8,
+          10.0
+        ],
+        [
+          0.9,
+          17.5
+        ],
+        [
+          0.95,
+          25.0
+        ],
+        [
+          0.99,
+          40.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -33.0
+        ],
+        [
+          0.05,
+          -23.0
+        ],
+        [
+          0.1,
+          -17.0
+        ],
+        [
+          0.2,
+          -10.5
+        ],
+        [
+          0.3,
+          -6.0
+        ],
+        [
+          0.4,
+          -3.0
+        ],
+        [
+          0.5,
+          -1.0
+        ],
+        [
+          0.6,
+          1.5
+        ],
+        [
+          0.7,
+          4.5
+        ],
+        [
+          0.8,
+          9.0
+        ],
+        [
+          0.9,
+          16.5
+        ],
+        [
+          0.95,
+          24.0
+        ],
+        [
+          0.99,
+          39.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -36.0
+        ],
+        [
+          0.05,
+          -24.0
+        ],
+        [
+          0.1,
+          -18.0
+        ],
+        [
+          0.2,
+          -11.0
+        ],
+        [
+          0.3,
+          -6.5
+        ],
+        [
+          0.4,
+          -3.0
+        ],
+        [
+          0.5,
+          -0.6
+        ],
+        [
+          0.6,
+          2.2
+        ],
+        [
+          0.7,
+          5.5
+        ],
+        [
+          0.8,
+          10.5
+        ],
+        [
+          0.9,
+          18.5
+        ],
+        [
+          0.95,
+          26.0
+        ],
+        [
+          0.99,
+          40.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3956
+}

@@ -1,0 +1,185 @@
+{
+  "id": "nq-USDCNYX-change",
+  "question": "What will be the percentage change in the US dollar to Chinese yuan exchange rate (USDCNY=X on Yahoo Finance) from the close on 2026-09-17 to the close on 2026-10-10?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-10-10 / close on 2026-09-17 - 1), using daily closes of USDCNY=X on Yahoo Finance. If there is no close on 2026-10-10, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -0.079018,
+  "outcome_date": "2026-10-08",
+  "as_of": "2026-09-19",
+  "resolve_date": "2026-10-10",
+  "lower_bound": -2.5,
+  "upper_bound": 2.0,
+  "source": "yahoo",
+  "series": "USDCNY=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for USDCNY=X: latest close 6.7074 on 2026-09-17.\nTarget date 2026-10-10 is 16 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 16-observation returns over the last 3 years (last year weighted double):\np5: 6.626, p10: 6.6412, p25: 6.6672, p50: 6.6907, p75: 6.717, p90: 6.7437, p95: 6.7748\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I've gathered enough for the brief. Writing it up now, leaving out anything dated after 2026-09-19.\n\n## 1. Resolution source\n- 2026-09-17: The latest Yahoo Finance close for USDCNY=X, collected by code, is **6.7074**. This is the base for the question. I could not fetch Yahoo directly to check the 2026-09-18 close.\n- The question resolves on the close for 2026-10-10, a Saturday. So the last close before it counts, most likely Friday 2026-10-09. Yahoo's USDCNY=X is a composite quote. It usually keeps printing while onshore markets are shut for China's National Day \"Golden Week\" (roughly Oct 1-8), but liquidity is thin then.\n- Code baseline for the price on 10-10, based on 16 trading observations: p5 6.626, p25 6.667, p50 6.691, p75 6.717, p95 6.775. In percent from 6.7074 that is about -1.21%, -0.60%, -0.25%, +0.14% and +1.01%.\n\n## 2. Current status\n- Nothing settles the question yet. The yuan is at multi-year highs, and USD/CNY has been falling steadily.\n\n## 3. Recent news (newest first)\n- 2026-09-18: The offshore yuan touched about 6.6957 per USD, its strongest level since July 2022 according to Bloomberg (other reports say since January 2023). This came after the PBOC set a stronger fixing for the 8th straight session, with the midpoint at about 6.7521. [Bloomberg](https://www.bloomberg.com/news/articles/2026-09-18/chinese-yuan-hits-strongest-level-since-2022-after-pboc-fixing); [Trading Economics](https://tradingeconomics.com/china/currency/news/584824)\n- Around 2026-09-18: Reuters, via Investing.com, reported that the PBOC is \"easing its curb\", meaning the midpoint has strengthened faster this month and closed the gap with model estimates. The fix is still weaker than models imply. Goldman says this leaves room for further spot gains. [Investing.com/Reuters](https://www.investing.com/news/economy-news/yuan-hits-fresh-multiyear-peak-as-pboc-eases-curb-ahead-of-trumpxi-summit-4908242)\n- 2026-09-17: The offshore yuan was around 6.70. [Trading Economics](https://tradingeconomics.com/china/currency/news/584858)\n- 2026-09-16: The Fed reportedly raised rates by 25bp to 3.75-4.00%, which was widely expected. The dollar index was about 99.7 before the decision. The sources are thin and conflict on the vote count, so this should be checked against the Fed's release. [Babypips](https://www.babypips.com/news/headline-sept-fomc-minutes-support-hawkish-stance-2026-10-08); [Forexfundamentals](https://forexfundamentals.com/economic-calendar/fomc/2026-09-16); [VT Markets](https://www.vtmarkets.com/?p=44735)\n- 2026-09-15: The PBOC fix was 6.7670, about 600 pips weaker than the survey estimate. It was the longest run of stronger fixes since December 2025, set ahead of the Trump-Xi summit. [Bloomberg](https://www.bloomberg.com/news/articles/2026-09-15/china-s-pboc-strengthens-yuan-fix-ahead-of-trump-xi-summit)\n- 2026-09-04: The yuan reached about 6.71, its strongest since February 2023. [Trading Economics](https://tradingeconomics.com/china/currency/news/581127)\n- 2026-08-20: The PBOC set a weaker-than-expected fix to slow the yuan's gains. This shows it resists sharp moves. [Bloomberg](https://www.bloomberg.com/news/articles/2026-08-20/pboc-moves-to-slow-yuan-gains-with-weaker-than-expected-fixing)\n- 2026-07-10: The fix went below 6.8 for the first time since 2023. [Bloomberg](https://www.bloomberg.com/news/articles/2026-07-10/pboc-sets-fixing-below-6-8-per-dollar-for-first-time-since-2023-mre95kva)\n\n## 4. Base rates\n- The trend is a steady fall in USD/CNY: below 6.8 in July, about 6.71 in early September, and about 6.70 by mid-September. That is roughly 0.5-1% a month.\n- The code's empirical 16-observation distribution has a median of about -0.25% and a 5-95% range of about -1.2% to +1.0%. The PBOC's tight management keeps the spread narrow. Its typical pattern is to lean against fast moves either way, for example the weaker fix in August.\n\n## 5. Other forecasts\n- No Polymarket, Kalshi or Manifold market on this pair turned up.\n- Goldman Sachs (around May 2026): 6.80 in 3 months, 6.70 in 6 months, 6.50 in 12 months. Spot is already ahead of that path. [The Standard HK](https://www.thestandard.com.hk/finance/article/331751/Yuan-hovers-near-three-year-high-ahead-of-Trump-Xi-summit); [IDN Financials](https://www.idnfinancials.com/news/63693/goldman-sachs-chinas-yuan-still-undervalued-has-room-to-strengthen)\n- Mizuho (Serena Zhou, September): offshore yuan about 6.70 by end-September and 6.65 by year-end. [Briefs.co](https://www.briefs.co/news/yuan-climbs-to-four-year-high-as-pboc-nudges-it-up-before-tr/)\n- JPMorgan AM: a \"productive\" summit could push the yuan toward 6.50. Analysts also note that Beijing is unlikely to accept large gains because of export competitiveness. [The Edge](https://theedgemalaysia.com/node/818477)\n\n## 6. Upcoming events before resolution\n- About 2026-09-23 to 25: Trump-Xi summit, reportedly in Washington. Analysts expect no major breakthrough. The talks are expected to focus on AI, trade and Taiwan. The yuan strength seen beforehand may unwind if the outcome disappoints, a \"sell the news\" move. [Arise](https://www.arise.tv/yuan-climbs-to-three-year-high-as-china-eases-resistance-to-currency-gains-ahead-of-trump-xi-summit/)\n- Daily PBOC fixings: watch whether the streak of stronger fixes holds or reverses.\n- 2026-10-01 to about 10-08: China's Golden Week holiday. The onshore market is closed, so Yahoo's quote may be thin, stale or driven by offshore trading.\n- Early October: US data, including the September jobs report around 10-02 if it is released on schedule, and the Fed's pricing for its October meeting. Hawkish Fed signals would support the dollar.\n- Around 10-07: minutes of the September FOMC meeting.\n\nCaveats: several facts come from secondary aggregators, and the Bloomberg, Reuters and Trading Economics pages would not load directly. The vote details for the Fed hike conflict between sources.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for USDCNY=X: latest close 6.7074 on 2026-09-17.\nTarget date 2026-10-10 is 16 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 16-observation returns over the last 3 years (last year weighted double):\np5: 6.626, p10: 6.6412, p25: 6.6672, p50: 6.6907, p75: 6.717, p90: 6.7437, p95: 6.7748\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -2.0
+        ],
+        [
+          0.05,
+          -1.4
+        ],
+        [
+          0.1,
+          -1.1
+        ],
+        [
+          0.2,
+          -0.8
+        ],
+        [
+          0.3,
+          -0.6
+        ],
+        [
+          0.4,
+          -0.45
+        ],
+        [
+          0.5,
+          -0.32
+        ],
+        [
+          0.6,
+          -0.2
+        ],
+        [
+          0.7,
+          -0.05
+        ],
+        [
+          0.8,
+          0.15
+        ],
+        [
+          0.9,
+          0.5
+        ],
+        [
+          0.95,
+          0.8
+        ],
+        [
+          0.99,
+          1.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -1.9
+        ],
+        [
+          0.05,
+          -1.3
+        ],
+        [
+          0.1,
+          -1.05
+        ],
+        [
+          0.2,
+          -0.76
+        ],
+        [
+          0.3,
+          -0.56
+        ],
+        [
+          0.4,
+          -0.42
+        ],
+        [
+          0.5,
+          -0.3
+        ],
+        [
+          0.6,
+          -0.18
+        ],
+        [
+          0.7,
+          -0.04
+        ],
+        [
+          0.8,
+          0.17
+        ],
+        [
+          0.9,
+          0.5
+        ],
+        [
+          0.95,
+          0.8
+        ],
+        [
+          0.99,
+          1.4
+        ]
+      ],
+      [
+        [
+          0.01,
+          -1.9
+        ],
+        [
+          0.05,
+          -1.3
+        ],
+        [
+          0.1,
+          -1.02
+        ],
+        [
+          0.2,
+          -0.72
+        ],
+        [
+          0.3,
+          -0.53
+        ],
+        [
+          0.4,
+          -0.4
+        ],
+        [
+          0.5,
+          -0.28
+        ],
+        [
+          0.6,
+          -0.16
+        ],
+        [
+          0.7,
+          -0.02
+        ],
+        [
+          0.8,
+          0.18
+        ],
+        [
+          0.9,
+          0.52
+        ],
+        [
+          0.95,
+          0.82
+        ],
+        [
+          0.99,
+          1.45
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3951
+}

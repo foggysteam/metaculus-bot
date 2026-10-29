@@ -1,0 +1,185 @@
+{
+  "id": "nq-GCF-change",
+  "question": "What will be the percentage change in front-month gold futures (GC=F on Yahoo Finance) from the close on 2026-07-31 to the close on 2026-08-31?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-08-31 / close on 2026-07-31 - 1), using daily closes of GC=F on Yahoo Finance. If there is no close on 2026-08-31, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 9.118578,
+  "outcome_date": "2026-08-31",
+  "as_of": "2026-08-03",
+  "resolve_date": "2026-08-31",
+  "lower_bound": -30.0,
+  "upper_bound": 30.0,
+  "source": "yahoo",
+  "series": "GC=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for GC=F: latest close 4107.0000 on 2026-07-31.\nTarget date 2026-08-31 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 3774.7326, p10: 3897.7807, p25: 4063.8313, p50: 4207.4323, p75: 4367.9559, p90: 4493.8961, p95: 4556.489\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# Gold futures (GC=F), July 31 to August 31, 2026: research notes\n\nI'm writing up the findings now; page fetches were blocked by the proxy, so most of the detail below comes from search-result snippets. Search also surfaced several results dated after 2026-08-03, and I left them all out.\n\n## 1. Resolution source\n- 2026-07-31: The latest GC=F close is **4107.00**, from the code-supplied Yahoo data. This is the base for the calculation. [Yahoo GC=F](https://finance.yahoo.com/quote/gc=f)\n- **Contract-roll caveat:** A Yahoo article on Aug 3 describes GC=F as the **December** contract, opening at $4,135.20 and trading near $4,111.50 by 7:58 a.m. ET. Other Jul 31 coverage cites **August** futures opening near $4,102. So the 4107 close may already be the December contract, or GC=F may switch from August to December during the window. The August contract expires in late August. If the switch happens inside the window, contango of about 0.5 to 1% could add a mechanical upward jump. I could not confirm which contract the Jul 31 close reflects. [Yahoo Aug 3](https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-monday-august-3-2026-gold-prices-open-higher-after-us-pauses-planned-airstrikes-121655731.html)\n\n## 2. Current status\n- Nothing settles the question yet; the window has barely started.\n- 2026-08-03 (morning): December futures were trading about 1% above the Jul 31 level, around $4,111 to $4,135. Spot was $4,045.55 at 9:00 a.m. ET (CNBC). GoldPrice.org shows a spot close of 4073.61, up 0.55%. [CNBC](https://www.cnbc.com/amp/select/the-price-of-gold-today-august-3-2026/), [goldprice.org](https://goldprice.org/gold-price-today/2026-08-03)\n\n## 3. Recent news (newest first)\n- 2026-08-03: Gold opened higher after the U.S. paused planned airstrikes on Iran. RTTNews reports spot up about 1% to about $4,094 as the dollar and yields dipped, and says Iran halted counterattacks after a strike campaign of nearly two weeks was paused (the snippet was undated). [Yahoo](https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-monday-august-3-2026-gold-prices-open-higher-after-us-pauses-planned-airstrikes-121655731.html), [RTTNews](https://www.rttnews.com/story.aspx?Id=3670722)\n- 2026-07-31: Gold broke above $4,100 overnight (Yahoo). CME's market note said futures slipped on light volume as rising Treasury yields weighed, with gold on track for a third weekly decline in July. AlgoIndex ran the headline \"Every reason to rally, and it didn't.\" [Yahoo](https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-friday-july-31-2026-gold-price-finally-breaks-above-4100-as-us-paused-airstrikes-overnight-123436216.html), [CME](https://www.cmegroup.com/videos/2026/07/31/gold-futures-slip-as-rising-treasury-yields-weigh-on-prices-7-3.html), [AlgoIndex](https://algoindex.com/market-outlook/gold-gc-every-reason-to-rally-and-it-didnt-july-31-2026)\n- 2026-07-29/30: The Fed (Chair Warsh) held rates. Spot gold rose about 2% after the decision, and August futures settled at $4,036.30. CME notes that three officials dissented in favour of a rate **hike**. [CNBC](https://www.cnbc.com/2026/07/29/gold-ticks-higher-as-markets-brace-for-fed-decision.html), [Yahoo Jul 30](https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-thursday-july-30-2026-gold-prices-crest-4100-after-fed-holds-rates-steady-123355668.html)\n- 2026-07-28: Gold fell as the dollar held near a one-month high ahead of the Fed. [CNBC](https://www.cnbc.com/2026/07/28/gold-slips-as-firm-dollar-weighs-focus-turns-to-fed-meeting.html)\n- July 2026: Comex settles were $4,145.30 on Jul 7 and $4,044.00 on Jul 15. Gold was up 0.52% month to date as of Jul 15. [Morningstar/DJ](https://www.morningstar.com/news/dow-jones/202607157264/comex-gold-settles-042-lower-at-404400-data-talk)\n- 2026-06-30: Spot gold was down about 12 to 12.7% in June, the worst month since October 2008. Reports blamed bets on Fed rate hikes, a stronger dollar and easing Middle East tensions. Gold peaked near $5,030 in February 2026. [Pakistan Today/Reuters](https://profit.pakistantoday.com.pk/2026/06/30/gold-heads-for-worst-monthly-fall-since-2008-as-rate-hike-bets-strengthen), [WAM](https://www.wam.ae/en/article/c0zi4y2-gold-faces-biggest-monthly-drop-since-late-2008)\n\n## 4. Base rates\n- Code baseline (21 trading days, 3 years of history, last year double-weighted), expressed as % change from 4107:\n  - p5: -8.1%\n  - p10: -5.1%\n  - p25: -1.1%\n  - p50: +2.4%\n  - p75: +6.4%\n  - p90: +9.4%\n  - p95: +10.9%\n- The median of +2.4% reflects the strong uptrend during 2024 to early 2026. Since February, the regime has been a drawdown: June fell about 12%, and July was roughly flat to slightly negative in USD.\n- Volatility is high. The p5 to p95 band spans about 19 points, and June's move would sit beyond p5.\n- Seasonality: August has historically been a mildly positive month for gold. [OilPriceAPI](https://www.oilpriceapi.com/blog/gold-seasonality-monthly-price-patterns)\n\n## 5. Other forecasts\n- Kalshi lists weekly and hourly gold price markets (KXGOLDW/KXGOLDH) for August dates, but I could not get prices as of Aug 3. [Kalshi](https://kalshi.com/markets/kxgoldw/gold-weekly-price-/kxgoldw-26aug2817)\n- Robinhood has an Aug 3 gold price prediction market (a same-day contract only). [Robinhood](https://robinhood.com/us/en/prediction-markets/metals/events/gold-price-august-3-2026-aug-03-2026/)\n- CBS has an expert outlook for August, but I could not read it. [CBS](https://www.cbsnews.com/news/silver-and-gold-prices-forecast-august-2026-experts/)\n- I did not find a Polymarket or Manifold market on the monthly change.\n\n## 6. Upcoming events before resolution\n- Around Aug 7: the July jobs report. Markets are sensitive to whether the Fed hikes, given the three dissents for a hike.\n- Mid-August: July CPI and PPI.\n- Late August: the Jackson Hole symposium (Warsh's first as Chair), then PCE.\n- The U.S.-Iran situation: whether the strike pause holds. De-escalation weighed on gold in June, but this pause coincided with gains through lower oil and yields.\n- The dollar and Treasury yields.\n- The GC=F roll from the August to the December contract around the late-August expiry; see the caveat in section 1.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for GC=F: latest close 4107.0000 on 2026-07-31.\nTarget date 2026-08-31 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 3774.7326, p10: 3897.7807, p25: 4063.8313, p50: 4207.4323, p75: 4367.9559, p90: 4493.8961, p95: 4556.489\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -15.0
+        ],
+        [
+          0.05,
+          -9.5
+        ],
+        [
+          0.1,
+          -7.0
+        ],
+        [
+          0.2,
+          -4.3
+        ],
+        [
+          0.3,
+          -2.5
+        ],
+        [
+          0.4,
+          -0.9
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.6,
+          1.9
+        ],
+        [
+          0.7,
+          3.5
+        ],
+        [
+          0.8,
+          5.5
+        ],
+        [
+          0.9,
+          8.3
+        ],
+        [
+          0.95,
+          10.5
+        ],
+        [
+          0.99,
+          15.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -13.0
+        ],
+        [
+          0.05,
+          -8.0
+        ],
+        [
+          0.1,
+          -5.8
+        ],
+        [
+          0.2,
+          -3.0
+        ],
+        [
+          0.3,
+          -1.3
+        ],
+        [
+          0.4,
+          -0.1
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          1.8
+        ],
+        [
+          0.7,
+          3.0
+        ],
+        [
+          0.8,
+          4.6
+        ],
+        [
+          0.9,
+          7.0
+        ],
+        [
+          0.95,
+          8.8
+        ],
+        [
+          0.99,
+          13.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -14.0
+        ],
+        [
+          0.05,
+          -8.5
+        ],
+        [
+          0.1,
+          -5.8
+        ],
+        [
+          0.2,
+          -3.2
+        ],
+        [
+          0.3,
+          -1.6
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          0.7
+        ],
+        [
+          0.6,
+          1.8
+        ],
+        [
+          0.7,
+          3.1
+        ],
+        [
+          0.8,
+          4.9
+        ],
+        [
+          0.9,
+          7.6
+        ],
+        [
+          0.95,
+          10.0
+        ],
+        [
+          0.99,
+          15.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4457
+}
