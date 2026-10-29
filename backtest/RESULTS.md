@@ -207,3 +207,48 @@ Share of forecasters whose 10th-90th percentile range contained the answer (80% 
 | 3 from A + 3 from B (live) | -4.437 | +1.1 | -0.4 to +2.7 | 26 | 20 |
 | 3 from B | -4.443 | +0.9 | -1.6 to +3.3 | 27 | 20 |
 
+## Yes/no shift towards Yes: `v1` + `v1-r2`
+
+75 questions (leaked in either run excluded). Live setup: median of 3 from each report, then the x0.8 shrink.
+
+| Questions | n | Resolved Yes | Our average | Market average |
+|---|---|---|---|---|
+| All questions | 75 | 52% | 43% | 47% |
+| Closed on schedule | 44 | 36% | 38% | 42% |
+| Closed early | 31 | 74% | 49% | 53% |
+
+Change in log score from the shift (x100 per question, 95% CI). "Market" shifts the market price by the same amount: what the dataset alone rewards.
+
+| Shift (log-odds) | Ours, all | Market, all | Ours, on schedule | Market, on schedule | Ours minus market, on schedule |
+|---|---|---|---|---|---|
+| +0.1 | +0.8 (-0.1 to +1.8) | +0.5 (-0.5 to +1.4) | -0.3 (-1.5 to +1.0) | -0.7 (-1.9 to +0.6) | +0.4 (+0.0 to +0.8) |
+| +0.2 | +1.5 (-0.5 to +3.4) | +0.7 (-1.2 to +2.7) | -0.8 (-3.2 to +1.8) | -1.5 (-3.9 to +1.0) | +0.8 (-0.0 to +1.6) |
+| +0.3 | +1.9 (-1.0 to +4.7) | +0.8 (-2.0 to +3.7) | -1.4 (-5.1 to +2.4) | -2.5 (-6.2 to +1.2) | +1.1 (-0.1 to +2.4) |
+| +0.4 | +2.1 (-1.7 to +5.9) | +0.8 (-3.0 to +4.6) | -2.3 (-7.2 to +2.8) | -3.7 (-8.6 to +1.2) | +1.4 (-0.1 to +3.2) |
+| +0.5 | +2.2 (-2.6 to +6.9) | +0.5 (-4.2 to +5.3) | -3.4 (-9.4 to +2.9) | -5.1 (-11.1 to +1.1) | +1.7 (-0.2 to +4.0) |
+| +0.6 | +2.1 (-3.8 to +7.7) | +0.1 (-5.5 to +5.8) | -4.6 (-11.9 to +2.9) | -6.6 (-13.8 to +0.7) | +2.0 (-0.3 to +4.7) |
+| +0.7 | +1.7 (-5.1 to +8.4) | -0.5 (-7.0 to +6.2) | -6.1 (-14.6 to +2.8) | -8.4 (-16.8 to +0.2) | +2.3 (-0.5 to +5.4) |
+| +0.8 | +1.2 (-6.6 to +8.8) | -1.3 (-8.7 to +6.4) | -7.7 (-17.5 to +2.3) | -10.3 (-19.9 to -0.4) | +2.5 (-0.7 to +6.1) |
+
+Best shift fitted in-sample (ours / market):
+- All questions: +0.50 / +0.30
+- Closed on schedule: -0.10 / -0.35
+- Closed early: +1.45 / +1.30
+
+Fitted on 9/10 of the questions and scored on the rest (10-fold, 50 repeats), gain x100 and average fitted shift:
+- All questions: +0.7 (shift +0.48)
+- Closed on schedule: -2.4 (shift -0.10)
+
+On-schedule questions by source and by run (shift +0.3):
+- Polymarket (25): -1.5 (-6.7 to +3.4)
+- Manifold (19): -1.3 (-6.3 to +4.6)
+- 5 from v1 only (44): -1.5 (-5.2 to +2.3)
+- 5 from v1-r2 only (44): -1.3 (-4.9 to +2.5)
+
+### What the shift test showed (29 Oct)
+
+- The lean towards No is a dataset artifact, not the bot's. 31 of the 75 markets closed early, and since each as-of date was picked 3 to 21 days before the actual close, those questions are 74% Yes. On the 44 that closed on schedule, 36% resolved Yes, our average was 38% and the market's 42%.
+- On the on-schedule questions every shift towards Yes lowers our score (+0.3: -1.4, CI -5.1 to +2.4), the best in-sample shift is -0.10, and the cross-validated gain is -2.4. Both runs and both sources agree. Not shipped.
+- The same artifact flattered the x0.8 shrink: on on-schedule questions it scores +0.1 (v1, CI -2.8 to +3.7) and -1.3 (v1-r2, CI -3.1 to +1.0) against no shrink, with best factors 0.9 and 1.2. Kept, since it is neutral there and guards against confident misses, but the 0.6 to 0.7 fitted on all questions should not be trusted.
+- The next yes/no dataset should pick the as-of date from each market's scheduled end, or leave out markets that closed early.
+
