@@ -1,0 +1,185 @@
+{
+  "id": "nq-NVDA-level",
+  "question": "What will be the closing value of NVIDIA (NVDA) stock (NVDA on Yahoo Finance) on August 25, 2026?",
+  "resolution_criteria": "Resolves to the daily close of NVDA on Yahoo Finance for 2026-08-25. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD",
+  "outcome": 213.050003,
+  "outcome_date": "2026-08-25",
+  "as_of": "2026-08-04",
+  "resolve_date": "2026-08-25",
+  "lower_bound": 150.0,
+  "upper_bound": 250.0,
+  "source": "yahoo",
+  "series": "NVDA",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for NVDA: latest close 206.6400 on 2026-08-03.\nTarget date 2026-08-25 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 183.9954, p10: 190.0646, p25: 199.5654, p50: 211.3308, p75: 224.3031, p90: 241.0459, p95: 250.0648\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I only used sources dated on or before 2026-08-04. Search results also returned later material, including how the earnings went and August prices, and I left all of it out.\n\n## 1. Resolution source\n- 2026-08-03: The last Yahoo Finance daily close in the code-collected data is **$206.64**. I could not fetch Yahoo directly. The question uses the NVDA Nasdaq close on Yahoo Finance for 2026-08-25, a Tuesday and a normal trading day. [Yahoo Finance](https://finance.yahoo.com/quote/NVDA/history/)\n- Related Polymarket markets settle on the Pyth \"Close\" value, not Yahoo's, so small differences between the two are possible. [Polymarket](https://polymarket.com/event/nvda-above-in-august-2026)\n\n## 2. Current status\n- Nothing has settled the question yet. The stock is at about $206.64, close to the middle of the 150-250 range, and 15 trading sessions remain.\n- The key timing point: **Nvidia reports Q2 FY2027 results on 2026-08-26 after the close**, the day *after* the resolution date. The earnings jump itself will not be in the Aug 25 close, but positioning ahead of earnings will be. [investor.nvidia.com](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Second-Quarter-Financial-Results/default.aspx)\n\n## 3. Recent news (newest first)\n- 2026-08-02: Motley Fool says NVDA was up only about 2% year to date against roughly 7% for the S&P 500, and calls the Aug 26 earnings a possible catalyst. I could not get the full text. [Fool](https://www.fool.com/investing/2026/08/02/prediction-nvidia-stock-will-skyrocket-on-aug-26/), [Nasdaq repost](https://www.nasdaq.com/articles/prediction-nvidia-stock-will-skyrocket-aug-26)\n- 2026-07-30: A secondary write-up confirms the Q2 call date. [aitoolly](https://aitoolly.com/en/ai-news/article/2026-07-30-nvidia-schedules-conference-call-for-second-quarter-fiscal-year-2027-financial-results)\n- 2026-07-29: Nvidia announced the Q2 FY2027 call for Aug 26, 2pm PT. The quarter ended July 26. [investor.nvidia.com](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Second-Quarter-Financial-Results/default.aspx)\n- Around 2026-07-29: Trading Economics reported NVDA fell to about $191.13, its lowest level since June 2026. The stock has since recovered about 8% to $206.64. [Trading Economics](https://tradingeconomics.com/nvda:us/news/570803)\n- 2026-07-18: According to a German outlet, US officials described H200 shipments to China as \"negligible\" and said know-your-customer talks had stalled. The same piece mentions a buyback authorization of about €80B and an average analyst target of about €264. [boerse-express](https://www.boerse-express.com/news/articles/nvidia-aktie-rubin-transition-gegen-chart-schwaeche-929621)\n- Undated: Rubin production is expected to ramp in the second half of 2026. [boerse-express](https://www.boerse-express.com/news/articles/nvidia-aktie-rubin-transition-gegen-chart-schwaeche-929621)\n\n## 4. Base rates\n- 2026-08-03: This is the code-computed empirical distribution of 15-session returns over 3 years, with the last year weighted double. Percentiles for the price on Aug 25:\n\n  | Percentile | Price |\n  |---|---|\n  | p5 | $184.0 |\n  | p10 | $190.1 |\n  | p25 | $199.6 |\n  | p50 | $211.3 |\n  | p75 | $224.3 |\n  | p90 | $241.0 |\n  | p95 | $250.1 |\n\n  The middle 50% band is about -3.4% to +8.5%. The median sits above spot because of NVDA's historical upward drift.\n- Recent trend: the stock has moved sideways to slightly down for the year (about +2% YTD according to Fool). It swung from a late-July low of about $191 back to about $207, so roughly 8% in a week, which matches the width of the base-rate band.\n- Since earnings fall after the target date, implied volatility over Aug 4-25 should mostly reflect non-earnings volatility. Pre-earnings run-ups or drawdowns are common.\n\n## 5. Other forecasts\n- Polymarket lists NVDA \"close above X\" markets, including Aug 25, Aug 21 and an end-of-August series. The only odds I could see came from unofficial mirror sites, the snapshots were undated and contradicted each other, and liquidity was tiny. I could not verify current odds as of Aug 4. [Polymarket](https://polymarket.com/event/nvda-above-in-august-2026), [struct.to Aug 25 >215](https://explorer.struct.to/markets/nvda-close-above-215-on-august-25-2026)\n- Analyst targets: the only figure I found was the average of about €264 cited by boerse-express. I found no Kalshi or Manifold market for this specific date.\n\n## 6. Upcoming events before Aug 25\n- Early to mid August: CPI and PPI reports for July (dates not confirmed), and earnings from other AI and semiconductor companies.\n- Around Aug 20-22: the Fed's Jackson Hole symposium (2026 dates not confirmed).\n- Any news on China and H200 export policy, tariffs or semiconductor trade.\n- The run-up to the Aug 26 earnings report. The report itself comes after the resolution date.\n\nSources:\n- [investor.nvidia.com](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Second-Quarter-Financial-Results/default.aspx)\n- [Motley Fool](https://www.fool.com/investing/2026/08/02/prediction-nvidia-stock-will-skyrocket-on-aug-26/)\n- [Nasdaq](https://www.nasdaq.com/articles/prediction-nvidia-stock-will-skyrocket-aug-26)\n- [Trading Economics](https://tradingeconomics.com/nvda:us/news/570803)\n- [boerse-express](https://www.boerse-express.com/news/articles/nvidia-aktie-rubin-transition-gegen-chart-schwaeche-929621)\n- [aitoolly](https://aitoolly.com/en/ai-news/article/2026-07-30-nvidia-schedules-conference-call-for-second-quarter-fiscal-year-2027-financial-results)\n- [Polymarket](https://polymarket.com/event/nvda-above-in-august-2026)\n- [struct.to](https://explorer.struct.to/markets/nvda-close-above-215-on-august-25-2026)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for NVDA: latest close 206.6400 on 2026-08-03.\nTarget date 2026-08-25 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 183.9954, p10: 190.0646, p25: 199.5654, p50: 211.3308, p75: 224.3031, p90: 241.0459, p95: 250.0648\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          172.0
+        ],
+        [
+          0.05,
+          185.0
+        ],
+        [
+          0.1,
+          191.0
+        ],
+        [
+          0.2,
+          198.0
+        ],
+        [
+          0.3,
+          202.5
+        ],
+        [
+          0.4,
+          206.0
+        ],
+        [
+          0.5,
+          209.0
+        ],
+        [
+          0.6,
+          212.0
+        ],
+        [
+          0.7,
+          216.0
+        ],
+        [
+          0.8,
+          222.0
+        ],
+        [
+          0.9,
+          231.0
+        ],
+        [
+          0.95,
+          239.0
+        ],
+        [
+          0.99,
+          253.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          168.0
+        ],
+        [
+          0.05,
+          182.0
+        ],
+        [
+          0.1,
+          189.0
+        ],
+        [
+          0.2,
+          197.0
+        ],
+        [
+          0.3,
+          202.0
+        ],
+        [
+          0.4,
+          205.5
+        ],
+        [
+          0.5,
+          208.5
+        ],
+        [
+          0.6,
+          211.5
+        ],
+        [
+          0.7,
+          215.5
+        ],
+        [
+          0.8,
+          221.0
+        ],
+        [
+          0.9,
+          230.0
+        ],
+        [
+          0.95,
+          238.0
+        ],
+        [
+          0.99,
+          252.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          170.0
+        ],
+        [
+          0.05,
+          183.0
+        ],
+        [
+          0.1,
+          189.0
+        ],
+        [
+          0.2,
+          197.0
+        ],
+        [
+          0.3,
+          202.0
+        ],
+        [
+          0.4,
+          206.0
+        ],
+        [
+          0.5,
+          209.5
+        ],
+        [
+          0.6,
+          213.0
+        ],
+        [
+          0.7,
+          218.0
+        ],
+        [
+          0.8,
+          224.0
+        ],
+        [
+          0.9,
+          234.0
+        ],
+        [
+          0.95,
+          242.0
+        ],
+        [
+          0.99,
+          258.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3659
+}
