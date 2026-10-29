@@ -25,19 +25,26 @@ def shrink_binary(p: float, factor: float = BINARY_SHRINK) -> float:
     return round(min(max(shrunk, CLIP[0]), CLIP[1]), 4)
 
 
-def floor_options(prediction, floor: float = MC_FLOOR):
-    """Raise every option of a PredictedOptionList to at least floor, taking the extra mass proportionally from the rest."""
-    from forecasting_tools import PredictedOption, PredictedOptionList  # kept local so the backtest scorer stays light
-
-    probs = [o.probability for o in prediction.predicted_options]
+def floor_probs(probs: list[float], floor: float = MC_FLOOR) -> list[float] | None:
+    """Normalise, then raise every option to at least floor, taking the extra mass proportionally
+    from the rest. None if nothing needs to change."""
     total = sum(probs)
     probs = [p / total for p in probs]
     low = [p < floor for p in probs]
     if not any(low) or floor * len(probs) >= 1:
-        return prediction
+        return None
     spare = 1 - floor * sum(low)
     rest = sum(p for p, is_low in zip(probs, low) if not is_low)
-    new = [floor if is_low else p * spare / rest for p, is_low in zip(probs, low)]
+    return [floor if is_low else p * spare / rest for p, is_low in zip(probs, low)]
+
+
+def floor_options(prediction, floor: float = MC_FLOOR):
+    """Raise every option of a PredictedOptionList to at least floor (see floor_probs)."""
+    from forecasting_tools import PredictedOption, PredictedOptionList  # kept local so the backtest scorer stays light
+
+    new = floor_probs([o.probability for o in prediction.predicted_options], floor)
+    if new is None:
+        return prediction
     return PredictedOptionList(
         predicted_options=[
             PredictedOption(option_name=o.option_name, probability=p)
