@@ -1,0 +1,185 @@
+{
+  "id": "nq-GOOGL-level",
+  "question": "What will be the closing value of Alphabet class A (GOOGL) stock (GOOGL on Yahoo Finance) on September 12, 2026?",
+  "resolution_criteria": "Resolves to the daily close of GOOGL on Yahoo Finance for 2026-09-12. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD",
+  "outcome": 338.5,
+  "outcome_date": "2026-09-11",
+  "as_of": "2026-08-22",
+  "resolve_date": "2026-09-12",
+  "lower_bound": 250.0,
+  "upper_bound": 450.0,
+  "source": "yahoo",
+  "series": "GOOGL",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for GOOGL: latest close 344.8200 on 2026-08-21.\nTarget date 2026-09-12 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 312.6416, p10: 319.932, p25: 334.5615, p50: 353.0418, p75: 370.1491, p90: 391.3625, p95: 404.4833\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I couldn't get the resolution page or any non-leaking market odds, so the code's baseline (close of $344.82 on 2026-08-21) is the best anchor. Some search results contained information dated after 2026-08-22. I left that out completely.\n\n## 1. Resolution source\n- The deciding figure is GOOGL's (Nasdaq, Alphabet Class A) daily close on Yahoo Finance. 2026-09-12 is a Saturday, so the last close before it, **Friday 2026-09-11**, is what counts.\n- 2026-08-21: the latest close was **$344.82**, from the Yahoo daily closes the code collected. I could not fetch Yahoo or the StockAnalysis history page myself because the proxy refused the connection.\n- Counting from Aug 21: Monday Sept 7 is Labor Day, which leaves about 14 trading sessions up to Sept 11. The code counted 15 observations, a minor difference.\n\n## 2. Current status\n- Nothing has happened that settles the question. The price on Sept 11 is still open.\n\n## 3. Recent news (newest first)\n- 2026-08-11/12: Pichai said Gemini has passed 1 billion monthly users. German-language reports said the shares still fell about 2.5% to 2.7% that day. Coverage also pointed to heavy bond issuance (about $25B in investment-grade bonds, about $100B net debt) and ongoing social-media lawsuits as concerns. [goldesel](https://goldesel.de/aktien/news/alphabet-meldet-1-mrd-gemini-nutzer-monatlich-aktie-fallt-trotz-rekordtempo), [goldesel](https://goldesel.de/aktien/news/alphabet-gemini-erreicht-1-mrd-nutzer-monatlich-rechtsklagen-und-kursdruck-bleiben-zentrale-risiken)\n- 2026-08-05: CNBC reported the shares fell after a major shakeup at Google's AI unit. Reports said Jeff Dean is leaving and Demis Hassabis is stepping back from day-to-day management. [CNBC](https://www.cnbc.com/video/2026/08/05/alphabet-shares-fall-after-major-shakeup-at-googles-ai-unit.html)\n- 2026-07-24: ChartRow put GOOGL 20.6% below its all-time high of $402.6 (set 2026-05-13), which implies roughly $320. The stock has recovered to about $345 since then. [ChartRow](https://chartrow.com/quote/googl/drawdown)\n- About 2026-07-22, Q2 results:\n  - Revenue was $119.8B, up 24%. Google Cloud grew 82% to $24.8B.\n  - Q2 capex was about $44.9B. Full-year 2026 capex guidance was raised to $195B to $205B, and management said 2027 spending will rise further.\n  - Free cash flow was about -$5.9B. Management warned of pressure on Q3 operating margins.\n  - The shares fell about 5% to 6% after the report.\n  - Sources: [TNW](https://thenextweb.com/news/alphabet-q2-2026-capex-205bn-cloud-82), [Fierce](https://www.fierce-network.com/cloud/google-cloud-surges-alphabets-ai-capex-problem-grows), [S&P](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/alphabet-postq-ai-growth-accelerates-as-spending-weighs-on-cash-flow), [Rivkin](https://rivkin.com.au/?p=37098)\n- Ongoing: the remedy decision in the US ad-tech antitrust case (Judge Brinkema, E.D. Va.) is still pending. The liability finding against Google dates from April 2025. [Bloomberg Law](https://news.bloomberglaw.com/us-law-week/google-ad-tech-ruling-is-major-indicator-in-wider-antitrust-war)\n\n## 4. Base rates\n- Code baseline for the target date, built from 15-session returns over 3 years with the last year weighted double:\n  - p5: $312.6\n  - p10: $319.9\n  - p25: $334.6\n  - p50: $353.0\n  - p75: $370.1\n  - p90: $391.4\n  - p95: $404.5\n- That puts the middle 50% range at about -3% to +7% from $344.82, and the 5th to 95th percentile range at about -9% to +17%.\n- The median ($353) sits about 2.4% above the current price. That reflects the stock's strong past drift and may overstate the expected move.\n- Trend in 2026:\n  - February high around $349. [TIKR](https://www.tikr.com/blog/alphabet-has-fallen-20-from-its-february-high-is-googl-finally-a-buy-in-2026)\n  - March 30 low.\n  - May 13 all-time high of about $402.6 to $409. Sources disagree on the exact figure, and on whether it was an intraday or closing high.\n  - Late July around $320.\n  - Aug 21 close of $344.82.\n- The stock has been volatile: about a 20% drawdown from May to July, then a partial recovery.\n\n## 5. Other forecasts\n- Polymarket lists GOOGL markets for the week of Sept 11 and \"close above on Sept 11, 2026\". I found them only on third-party mirror sites, and the snapshots I saw were taken after the cutoff, so I can't report any pricing from before Aug 22.\n- I found no Kalshi or Manifold market specific to this date.\n- MarketBeat shows a consensus \"Buy\" from 56 analysts with an average target of about $425. That page is current, not from before the cutoff, so treat it only as a rough idea of long-term targets. [MarketBeat](https://www.marketbeat.com/stocks/NASDAQ/GOOGL/forecast/)\n- 2026-08-12: one report said 28 of 33 analysts rated the stock a buy and 5 rated it hold. [goldesel](https://goldesel.de/aktien/news/alphabet-gemini-erreicht-1-mrd-nutzer-monatlich-rechtsklagen-und-kursdruck-bleiben-zentrale-risiken)\n\n## 6. Upcoming events before Sept 11\n- 2026-08-26: Nvidia FQ2 earnings after the close, with guidance of about $91B in revenue. This is a key event for AI and megacap sentiment. [regardsofwallstreet](https://www.regardsofwallstreet.com/news/when-does-nvidia-report-earnings-august-26-2026)\n- Around Aug 28: July PCE inflation data.\n- Around Sept 4: the August jobs report.\n- Around Sept 10 to 11: August CPI, likely within the last couple of sessions before resolution.\n- The Fed meeting (around Sept 15 to 16) falls after resolution, but expectations about it will move markets beforehand.\n- The ad-tech antitrust remedy ruling from Judge Brinkema could come at any time. A breakup order versus conduct-only remedies would be a big swing factor.\n- Possible further news on the AI unit's leadership changes, Gemini or Cloud announcements, and AI-capex debt financing.\n- Sept 7: Labor Day, US markets closed.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for GOOGL: latest close 344.8200 on 2026-08-21.\nTarget date 2026-09-12 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 312.6416, p10: 319.932, p25: 334.5615, p50: 353.0418, p75: 370.1491, p90: 391.3625, p95: 404.4833\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          295.0
+        ],
+        [
+          0.05,
+          312.0
+        ],
+        [
+          0.1,
+          321.0
+        ],
+        [
+          0.2,
+          331.0
+        ],
+        [
+          0.3,
+          338.0
+        ],
+        [
+          0.4,
+          343.0
+        ],
+        [
+          0.5,
+          347.5
+        ],
+        [
+          0.6,
+          352.0
+        ],
+        [
+          0.7,
+          357.5
+        ],
+        [
+          0.8,
+          365.0
+        ],
+        [
+          0.9,
+          377.0
+        ],
+        [
+          0.95,
+          387.0
+        ],
+        [
+          0.99,
+          406.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          288.0
+        ],
+        [
+          0.05,
+          309.0
+        ],
+        [
+          0.1,
+          318.0
+        ],
+        [
+          0.2,
+          330.0
+        ],
+        [
+          0.3,
+          338.0
+        ],
+        [
+          0.4,
+          343.0
+        ],
+        [
+          0.5,
+          347.0
+        ],
+        [
+          0.6,
+          351.0
+        ],
+        [
+          0.7,
+          357.0
+        ],
+        [
+          0.8,
+          366.0
+        ],
+        [
+          0.9,
+          379.0
+        ],
+        [
+          0.95,
+          389.0
+        ],
+        [
+          0.99,
+          408.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          288.0
+        ],
+        [
+          0.05,
+          306.0
+        ],
+        [
+          0.1,
+          316.0
+        ],
+        [
+          0.2,
+          328.0
+        ],
+        [
+          0.3,
+          336.0
+        ],
+        [
+          0.4,
+          342.0
+        ],
+        [
+          0.5,
+          347.0
+        ],
+        [
+          0.6,
+          352.0
+        ],
+        [
+          0.7,
+          358.0
+        ],
+        [
+          0.8,
+          366.0
+        ],
+        [
+          0.9,
+          379.0
+        ],
+        [
+          0.95,
+          390.0
+        ],
+        [
+          0.99,
+          412.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4318
+}

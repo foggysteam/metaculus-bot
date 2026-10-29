@@ -1,0 +1,185 @@
+{
+  "id": "nq-GOOGL-change",
+  "question": "What will be the percentage change in Alphabet class A (GOOGL) stock (GOOGL on Yahoo Finance) from the close on 2026-08-21 to the close on 2026-09-21?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-21 / close on 2026-08-21 - 1), using daily closes of GOOGL on Yahoo Finance. If there is no close on 2026-09-21, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 2.943563,
+  "outcome_date": "2026-09-21",
+  "as_of": "2026-08-24",
+  "resolve_date": "2026-09-21",
+  "lower_bound": -25.0,
+  "upper_bound": 30.0,
+  "source": "yahoo",
+  "series": "GOOGL",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for GOOGL: latest close 344.8200 on 2026-08-21.\nTarget date 2026-09-21 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 309.079, p10: 316.4876, p25: 336.3, p50: 357.3064, p75: 379.2737, p90: 401.3879, p95: 413.2424\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I've collected the research below. One thing to know first: many search results included material published after 2026-08-24, such as later prices, the ad tech remedy outcome and later Polymarket pages. I left all of it out.\n\n## 1. Resolution source\n- 2026-08-21: The code-collected Yahoo Finance data puts the GOOGL (Nasdaq, Class A) close at **344.82**, which is the baseline. The question resolves on Yahoo's 2026-09-21 close (a Monday, normally a trading day). I could not fetch Yahoo directly to confirm.\n- 2026-08-21: As a cross-check, GOOG (Class C) closed at 341.75, up about 1.05% on the day, after 338.20 on 08-20. [stockanalysis](https://stockanalysis.com/stocks/goog/history/)\n\n## 2. Current status\n- Nothing has happened yet that settles or nearly settles the question. The full one-month window is still ahead.\n\n## 3. Recent news (newest first)\n- ~2026-08-21/22: At Jackson Hole, Fed Chair Kevin Warsh reportedly put more weight on persistent inflation, which raised the odds of a rate hike in September. [kucoin](https://www.kucoin.com/blog/september-2026-fomc-decision-will-the-fed-hike-rates-or-hold)\n- 2026-07-23: Shares fell about 6-7% after Q2 results, even though revenue was strong. [Motley Fool via search summary, investingcube](https://www.investingcube.com/shares/alphabets-ai-bill-comes-due-and-heres-what-it-means-for-the-stock/)\n  - Revenue was about $119.8B. [S&P Global](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/alphabet-postq-ai-growth-accelerates-as-spending-weighs-on-cash-flow)\n  - Google Cloud grew about 82% to about $24.8B, with a $514B backlog.\n  - Capex was about $44.9B, and free cash flow was about -$5.9B, the first negative result since the 2004 IPO.\n  - 2026 capex guidance went up to $195-205B (from $180-190B), and management said capex would \"increase significantly\" in 2027.\n- 2026-07-29: The FOMC held rates at 3.50-3.75% on a 9-3 vote. All three dissenters wanted a hike. [atfx](https://www.atfx.com/en-au/analysis/financial-events/september-fomc-meeting-2026-is-a-rate-hike-on-the-table)\n- 2026-06-01: Alphabet announced an $80B equity raise to fund AI spending. [press release](https://s206.q4cdn.com/479360582/files/doc_news/2026/Jun/01/attachments/2026-June-Alphabet-Equity-Capital-Raise-Press-Release-PDF.pdf), [424B5](https://www.sec.gov/Archives/edgar/data/0001652044/000119312526252392/d152175d424b5.htm)\n  - $30B in underwritten offerings.\n  - A **$40B at-the-market (ATM) program**, with sales expected to start in Q3 2026. This could add steady selling pressure during the window.\n  - A $10B private placement to Berkshire Hathaway, with Class A shares priced at $351.81. That is about 2% above the 08-21 close.\n- Pending: Judge Brinkema's remedy decision in the DOJ ad tech case had not been issued as of the cutoff, as far as I can tell. It could come during the window. Google has said it plans to appeal the liability finding. [thecurrent](https://www.thecurrent.com/ad-tech/google-ad-tech-decision-takeaways)\n\n## 4. Base rates\n- Code-computed distribution of 21-trading-day outcomes (last 3 years, last year weighted double), converted from 344.82:\n\n| Percentile | Price | Change |\n|---|---|---|\n| p5 | 309.08 | -10.4% |\n| p10 | 316.49 | -8.2% |\n| p25 | 336.30 | -2.5% |\n| p50 | 357.31 | +3.6% |\n| p75 | 379.27 | +10.0% |\n| p90 | 401.39 | +16.4% |\n| p95 | 413.24 | +19.8% |\n\n- The median of about +3.6% reflects GOOGL's strong uptrend over the last few years. The middle half of outcomes spans roughly 12.5 percentage points.\n- The 52-week range is about $267.67 to $408.61, so the stock is currently about 15% below its high. [search summary/Morningstar](https://www.morningstar.com/stocks/xnas/googl/quote)\n- September has historically been a seasonally weak month for US large-cap tech. This is general knowledge; I did not quantify it here.\n\n## 5. Other forecasts\n- Polymarket lists GOOGL \"close above\" markets: weekly ones and an end-of-September one, which resolves on the Pyth price on 09-30, not 09-21. [polymarket series](https://polymarket.com/series/googl-neg-risk-weekly) I could not find odds dated on or before 08-24.\n- I found no Kalshi or Manifold market for GOOGL in September 2026.\n- MarketBeat's average analyst price target is about $425, with a low of $310. That is about +23% versus 344.82, but price targets are 12-month views. [MarketBeat](https://www.marketbeat.com/stocks/NASDAQ/GOOGL/forecast/)\n\n## 6. Upcoming events before 2026-09-21\n- Early September: August jobs report.\n- ~2026-09-11: August CPI. [atfx](https://www.atfx.com/en-au/analysis/financial-events/september-fomc-meeting-2026-is-a-rate-hike-on-the-table)\n- 2026-09-15/16: FOMC meeting, with a new Summary of Economic Projections (SEP). Markets priced roughly 53-58% odds of a 25 bp **hike**, which would be the first since 2023. A hike would weigh on long-duration tech stocks; a hold could bring relief. [kucoin](https://www.kucoin.com/blog/september-2026-fomc-decision-will-the-fed-hike-rates-or-hold)\n- 2026-09-18: Quarterly options expiration and index rebalancing, which can push volume and volatility up.\n- Any time in the window: the ad tech remedy ruling. A breakup order versus behavioral remedies only would be the key distinction.\n- Ongoing: ATM share sales, developments in the search-case appeal, and AI and Cloud news, including Gemini launches and peers' AI capex commentary.\n- Alphabet's Q3 earnings fall in late October, after the window closes.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for GOOGL: latest close 344.8200 on 2026-08-21.\nTarget date 2026-09-21 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 309.079, p10: 316.4876, p25: 336.3, p50: 357.3064, p75: 379.2737, p90: 401.3879, p95: 413.2424\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -18.0
+        ],
+        [
+          0.05,
+          -11.5
+        ],
+        [
+          0.1,
+          -8.3
+        ],
+        [
+          0.2,
+          -4.7
+        ],
+        [
+          0.3,
+          -2.2
+        ],
+        [
+          0.4,
+          -0.4
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          2.6
+        ],
+        [
+          0.7,
+          4.6
+        ],
+        [
+          0.8,
+          7.3
+        ],
+        [
+          0.9,
+          11.2
+        ],
+        [
+          0.95,
+          14.5
+        ],
+        [
+          0.99,
+          21.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -19.0
+        ],
+        [
+          0.05,
+          -12.5
+        ],
+        [
+          0.1,
+          -9.0
+        ],
+        [
+          0.2,
+          -5.2
+        ],
+        [
+          0.3,
+          -2.6
+        ],
+        [
+          0.4,
+          -0.6
+        ],
+        [
+          0.5,
+          1.1
+        ],
+        [
+          0.6,
+          2.9
+        ],
+        [
+          0.7,
+          5.0
+        ],
+        [
+          0.8,
+          7.8
+        ],
+        [
+          0.9,
+          11.8
+        ],
+        [
+          0.95,
+          15.0
+        ],
+        [
+          0.99,
+          21.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -19.0
+        ],
+        [
+          0.05,
+          -12.0
+        ],
+        [
+          0.1,
+          -9.0
+        ],
+        [
+          0.2,
+          -5.0
+        ],
+        [
+          0.3,
+          -2.5
+        ],
+        [
+          0.4,
+          -0.7
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          2.3
+        ],
+        [
+          0.7,
+          4.2
+        ],
+        [
+          0.8,
+          6.8
+        ],
+        [
+          0.9,
+          10.5
+        ],
+        [
+          0.95,
+          13.5
+        ],
+        [
+          0.99,
+          20.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4553
+}

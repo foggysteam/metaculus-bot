@@ -1,0 +1,185 @@
+{
+  "id": "nq-PAYEMS-2026-09-01",
+  "question": "What will be the monthly change in US nonfarm payrolls (BLS) for September 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of the monthly change in US nonfarm payrolls (BLS) for September 2026 (FRED series PAYEMS, diff). Later revisions are ignored.",
+  "unit": "thousands of jobs",
+  "outcome": 29.0,
+  "outcome_date": "2026-10-02",
+  "as_of": "2026-09-11",
+  "resolve_date": "2026-10-02",
+  "lower_bound": -500.0,
+  "upper_bound": 1000.0,
+  "source": "fred",
+  "series": "PAYEMS",
+  "baseline": "\nComputed by code from FRED PAYEMS (All Employees, Total Nonfarm, percent change from the previous period, frequency M): latest observation 0.1019 for 2026-08-01.\nThe target period 2026-09-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: -0.0903, p10: -0.033, p25: 0.0383, p50: 0.0985, p75: 0.1683, p90: 0.2238, p95: 0.2898\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I was able to use pre-September-11 sources only through search snippets. The BLS, CNBC, UPI and Yahoo pages all refused the connection when I tried to fetch them directly.\n\n## 1. Resolution source\n- The question resolves on the first published September 2026 change in BLS total nonfarm payrolls (CES, seasonally adjusted, in thousands). That number matches FRED PAYEMS month-over-month. Release date: Fri 2026-10-02, 8:30 ET. [financecalendar](https://www.financecalendar.com/event/us-employment-situation-non-farm-payrolls-september-2026/)\n- 2026-09-04: The latest release, for August 2026 (USDL-26-1435), showed +162K and unemployment at 4.1%. [BLS archive](https://www.bls.gov/news.release/archives/empsit_09042026.htm), [BLS TED](https://www.bls.gov/opub/ted/2026/payroll-employment-rose-162000-in-august-2026.htm)\n- **Units warning:** the code baseline is in percent change. Total employment is roughly 159-160M (my approximation), so the baseline median of about 0.0985% works out to about +155K. The p5 to p95 range of -0.09% to +0.29% is roughly -145K to +460K. That distribution includes 2005-2024, when trend growth was much higher than in 2026, so it is probably biased upward.\n\n## 2. Current status\n- Nothing has settled the question. The September data will not be published until 2026-10-02.\n\n## 3. Recent news (newest first)\n- 2026-09-10: First Trust says the preliminary benchmark revision (year to March 2026) was -79K total and -178K private, the smallest since 2021. [First Trust](https://www.ftportfolios.com/Commentary/EconomicResearch/2026/9/10/bls-payroll-revisions-fall-back-in-line-down-just-79,000)\n- 2026-09-04, August report details:\n  - +162K against a Dow Jones consensus of 53K and a FactSet consensus of 65K. It was the strongest month since March.\n  - July was revised from -23K to +21K and June from 20K to 31K, so the two revisions added 55K together.\n  - Food services led the gains and the information sector lost jobs.\n  - Economists warned that August is often revised for seasonal reasons, and that the underlying 2026 trend is about 80K a month. [CNBC](https://www.cnbc.com/2026/09/04/jobs-report-august-2026.html), [NBC](https://www.nbcnews.com/business/economy/august-jobs-report-trump-inflation-rcna595974), [PBS](https://www.pbs.org/newshour/economy/hiring-burst-of-162000-jobs-in-august-puts-the-focus-squarely-back-on-inflation-in-the-u-s)\n- 2026-09-02: ADP private payrolls for August were +38K (consensus about 47K), the weakest since January. July was revised to 46K. [ADP](https://mediacenter.adp.com/2026-09-02-ADP-National-Employment-Report-Private-Sector-Employment-Increased-by-38,000-Jobs-in-August)\n- Late Aug 2026: ADP's weekly NER Pulse was rising from a low of about 8K a week (four weeks ending July 25). [investinglive](https://investinglive.com/news/adp-weekly-ner-pulse-16-500-vs-19-750-last-week)\n- Aug-Sep 2026:\n  - Fed Chair Warsh said at Jackson Hole that there is \"work to do\" on inflation.\n  - Before the September 15-16 FOMC meeting, a 25bp hike was widely expected.\n  - The labor market is described as stable. [Kiplinger](https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-september-2026)\n\n## 4. Base rates\n- First prints in 2026: March about 178K, April about 115K, May about 172K, June 57K, July -23K, August 162K. That averages about 110K, with a range of -23K to 178K. [First Trust June](https://www.ftportfolios.com/Commentary/EconomicResearch/2026/7/2/nonfarm-payrolls-rose-57,000-in-june), [FactSet](https://insight.factset.com/total-nonfarm-payrolls-for-april-2026-are-projected-to-rise-by-65000)\n- Recent first prints swing about 60-100K from month to month. In 2026, the miss against consensus has often been around ±100K (August beat by about 100K; July missed).\n- A month after a big upside surprise is often weaker, but this is a loose pattern. The August report had economists citing trend growth of about 80K a month.\n\n## 5. Other forecasts\n- An undated preview found in search put the September consensus at about 90K. One forecasting-model page showed +157K. I could not confirm their dates, so treat them with caution. [therighttrader](https://therighttrader.com/economic-calendar/nonfarm-payrolls), [fedratecalc](https://fedratecalc.com/nonfarm-payrolls-release-date/)\n- Kalshi KXPAYROLLS-26SEP: snapshots from May to July 2026 showed \"above 0\" at about 83¢ and \"above 125K\" at about 22-41¢ (the snapshots conflict). I found no current price as of 2026-09-11. [simplefunctions T125000](https://simplefunctions.dev/markets/will-above-125000-jobs-be-added-in-september-2026-kalshi-kxpayrolls-26sep-t125000), [T0](https://simplefunctions.dev/api/agent/inspect/KXPAYROLLS-26SEP-T0)\n- Manifold has a market on the September 2026 NFP; I did not get its price. [Manifold](https://manifold.markets/CalibratedGhosts/will-september-2026-us-nonfarm-payr)\n- I could not find a formal Bloomberg or Reuters consensus dated on or before 2026-09-11. It normally comes out in the week before the release.\n\n## 6. Upcoming events before resolution\n- Weekly jobless claims every Thursday. The claims for the reference week (the week containing September 12) come out around September 17.\n- ADP NER Pulse weekly updates every Tuesday.\n- FOMC decision on September 16. A hike could affect sentiment, but not September hiring itself.\n- Late September: Conference Board labor differential.\n- About September 30: ADP September monthly report.\n- About October 1: ISM manufacturing employment index.\n- Risk of a government shutdown at the October 1 fiscal-year start: I found no reporting on this. A shutdown could delay the October 2 release, as happened in 2025.\n- 2026-10-02: BLS releases the September Employment Situation, which resolves the question.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED PAYEMS (All Employees, Total Nonfarm, percent change from the previous period, frequency M): latest observation 0.1019 for 2026-08-01.\nThe target period 2026-09-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: -0.0903, p10: -0.033, p25: 0.0383, p50: 0.0985, p75: 0.1683, p90: 0.2238, p95: 0.2898\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -110.0
+        ],
+        [
+          0.05,
+          -40.0
+        ],
+        [
+          0.1,
+          -5.0
+        ],
+        [
+          0.2,
+          35.0
+        ],
+        [
+          0.3,
+          62.0
+        ],
+        [
+          0.4,
+          80.0
+        ],
+        [
+          0.5,
+          95.0
+        ],
+        [
+          0.6,
+          110.0
+        ],
+        [
+          0.7,
+          128.0
+        ],
+        [
+          0.8,
+          152.0
+        ],
+        [
+          0.9,
+          190.0
+        ],
+        [
+          0.95,
+          222.0
+        ],
+        [
+          0.99,
+          290.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -130.0
+        ],
+        [
+          0.05,
+          -50.0
+        ],
+        [
+          0.1,
+          -12.0
+        ],
+        [
+          0.2,
+          33.0
+        ],
+        [
+          0.3,
+          60.0
+        ],
+        [
+          0.4,
+          80.0
+        ],
+        [
+          0.5,
+          97.0
+        ],
+        [
+          0.6,
+          114.0
+        ],
+        [
+          0.7,
+          133.0
+        ],
+        [
+          0.8,
+          158.0
+        ],
+        [
+          0.9,
+          195.0
+        ],
+        [
+          0.95,
+          228.0
+        ],
+        [
+          0.99,
+          300.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -150.0
+        ],
+        [
+          0.05,
+          -60.0
+        ],
+        [
+          0.1,
+          -20.0
+        ],
+        [
+          0.2,
+          25.0
+        ],
+        [
+          0.3,
+          55.0
+        ],
+        [
+          0.4,
+          76.0
+        ],
+        [
+          0.5,
+          92.0
+        ],
+        [
+          0.6,
+          110.0
+        ],
+        [
+          0.7,
+          130.0
+        ],
+        [
+          0.8,
+          160.0
+        ],
+        [
+          0.9,
+          200.0
+        ],
+        [
+          0.95,
+          238.0
+        ],
+        [
+          0.99,
+          315.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4643
+}

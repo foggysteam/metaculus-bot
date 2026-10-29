@@ -1,0 +1,185 @@
+{
+  "id": "nq-UNRATE-2026-08-01",
+  "question": "What will be the US unemployment rate (seasonally adjusted, BLS) for August 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of the US unemployment rate (seasonally adjusted, BLS) for August 2026 (FRED series UNRATE). Later revisions are ignored.",
+  "unit": "percent",
+  "outcome": 4.1,
+  "outcome_date": "2026-09-04",
+  "as_of": "2026-08-21",
+  "resolve_date": "2026-09-04",
+  "lower_bound": 3.5,
+  "upper_bound": 4.5,
+  "source": "fred",
+  "series": "UNRATE",
+  "baseline": "\nComputed by code from FRED UNRATE (Unemployment Rate, Percent, frequency M): latest observation 4.1000 for 2026-07-01.\nThe target period 2026-08-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 3.8, p10: 3.9, p25: 4.0, p50: 4.1, p75: 4.2, p90: 4.3, p95: 4.3\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I found nothing dated on or before 2026-08-21 that settles the question. July's rate was 4.1%, down from 4.2% in June, but the drop came from people leaving the labor force while payrolls shrank. Direct fetches of BLS, FRED and other pages failed through the proxy, so the facts below come from search-result summaries. Several results dated after 2026-08-21 were excluded.\n\n## 1. Resolution source\n- The resolving series is FRED UNRATE, which is the BLS Employment Situation (CPS) rate, seasonally adjusted, in percent. Only the first published value counts.\n- 2026-07-01 observation (released 2026-08-07): 4.1%, per the code-collected FRED data. I could not fetch the BLS or FRED pages myself.\n- The August 2026 figure is due in the Employment Situation release, expected Friday 2026-09-04, which matches the question's resolution date.\n\n## 2. Current status\n- 2026-08-21: The August figure has not been released, and no published data settles the question. The household survey reference week (the week including August 12) has passed.\n\n## 3. Recent news (newest first)\n- 2026-08-20: Initial jobless claims for the week ending Aug 15 (the survey reference week) fell to 206,000 from a revised 212,000. [Bloomberg Gov](https://news.bgov.com/daily-labor-report/us-weekly-jobless-claims-rise-2k-to-206k-est-205k), [JM Financial](https://www.jmfinancialservices.in/market-news-and-insights/1725860)\n- 2026-08-13: Claims for the week ending Aug 8 rose 9,000 to 209,000. The 4-week average was 199,000. [JM Financial](https://www.jmfinancialservices.in/market-news-and-insights/1723515)\n- 2026-08-06: Claims for the week ending Aug 1 were 199,000. [JM Financial](https://www.jmfinancialservices.in/market-news-and-insights/1718613)\n- Overall, claims stayed low at about 200,000 to 212,000 through the reference week, with no sign of a layoff wave.\n- 2026-08-07: July jobs report:\n  - Payrolls fell by 23,000 against a consensus of about +80,000.\n  - Unemployment fell to 4.1% from 4.2%, below expectations, because people left the labor force. Participation was 61.4%, the lowest since early 2021.\n  - May was revised down from 129,000 to 63,000, and June from 57,000 to 20,000.\n  - Average hourly earnings rose 3.2% year over year.\n  - [Trading Economics](https://tradingeconomics.com/united-states/unemployment-rate/news/573793), [Babypips](https://www.babypips.com/news/headline-us-nonfarm-payrolls-july-2026-jobs-report-fed-rate-outlook), [Fox Business](https://foxbusiness.com/economy/us-jobs-report-july-2026), [Focus Economics](https://www.focus-economics.com/countries/united-states/news/unemployment/united-states-unemployment-07-08-2026-employment-sees-surprise-fall-in-july/), [Addison Group](https://addisongroup.com/insights/july-2026-labor-report/)\n- What this means: July's drop came from labor force exits rather than more people working, so a bounce in participation could push the rate back up in August.\n\n## 4. Base rates\n- Recent path: 4.2% (June 2026) to 4.1% (July 2026).\n- Code baseline for August from 1-month changes since 2005 (last 3 years weighted double):\n\n  | p5 | p10 | p25 | p50 | p75 | p90 | p95 |\n  |----|-----|-----|-----|-----|-----|-----|\n  | 3.8 | 3.9 | 4.0 | 4.1 | 4.2 | 4.3 | 4.3 |\n\n- Typical month-to-month moves are 0.0 or ±0.1 points, which covers most months outside recessions. Moves of ±0.2 or more are rarer.\n- Partial reversals after a participation-driven drop are fairly common, because the household survey is noisy (90% confidence interval about ±0.2 pt). This is my general characterization, not a computed statistic.\n\n## 5. Other forecasts\n- 2026-05-24 snapshot of Kalshi's \"exactly\" contracts for August 2026 (stale and thin, set before the June and July data): 4.4% at 19¢, 4.3% at 14¢, 4.8% at 12¢. [SimpleFunctions T4.4](https://simplefunctions.dev/api/agent/inspect/KXECONSTATU3-26AUG-T4.4), [T4.3](https://simplefunctions.dev/api/agent/inspect/KXECONSTATU3-26AUG-T4.3)\n- An undated PredictionHunt aggregator page for \"Unemployment in August\" showed: above 3.7% at 95%, above 4.0% at 86.8%, above 4.1% at 58%. Because it has no date, it could come from any time, including after 2026-08-21, so give it little weight. [PredictionHunt](https://www.predictionhunt.com/odds/unemployment-in-august/30926)\n- I could not find a live Kalshi or Polymarket price, or an economist consensus for August's rate, published on or before 2026-08-21. Consensus surveys usually come out in the week before the release.\n\n## 6. Upcoming events before resolution\n- 2026-08-27 and 2026-09-03: weekly jobless claims, including continuing claims covering the reference week.\n- Late August: Fed Chair remarks at the Jackson Hole symposium (I did not confirm the exact date), and the Conference Board consumer confidence \"jobs plentiful/hard to get\" gauge.\n- 2026-09-02: JOLTS (July) and ADP (August) data (dates approximate).\n- 2026-09-04: BLS Employment Situation for August, which resolves the question.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED UNRATE (Unemployment Rate, Percent, frequency M): latest observation 4.1000 for 2026-07-01.\nThe target period 2026-08-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 3.8, p10: 3.9, p25: 4.0, p50: 4.1, p75: 4.2, p90: 4.3, p95: 4.3\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          3.85
+        ],
+        [
+          0.05,
+          3.95
+        ],
+        [
+          0.1,
+          3.98
+        ],
+        [
+          0.2,
+          4.05
+        ],
+        [
+          0.3,
+          4.08
+        ],
+        [
+          0.4,
+          4.11
+        ],
+        [
+          0.5,
+          4.14
+        ],
+        [
+          0.6,
+          4.17
+        ],
+        [
+          0.7,
+          4.2
+        ],
+        [
+          0.8,
+          4.23
+        ],
+        [
+          0.9,
+          4.29
+        ],
+        [
+          0.95,
+          4.33
+        ],
+        [
+          0.99,
+          4.45
+        ]
+      ],
+      [
+        [
+          0.01,
+          3.8
+        ],
+        [
+          0.05,
+          3.9
+        ],
+        [
+          0.1,
+          3.95
+        ],
+        [
+          0.2,
+          4.0
+        ],
+        [
+          0.3,
+          4.05
+        ],
+        [
+          0.4,
+          4.1
+        ],
+        [
+          0.5,
+          4.14
+        ],
+        [
+          0.6,
+          4.18
+        ],
+        [
+          0.7,
+          4.21
+        ],
+        [
+          0.8,
+          4.25
+        ],
+        [
+          0.9,
+          4.3
+        ],
+        [
+          0.95,
+          4.37
+        ],
+        [
+          0.99,
+          4.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          3.85
+        ],
+        [
+          0.05,
+          3.95
+        ],
+        [
+          0.1,
+          4.0
+        ],
+        [
+          0.2,
+          4.05
+        ],
+        [
+          0.3,
+          4.08
+        ],
+        [
+          0.4,
+          4.12
+        ],
+        [
+          0.5,
+          4.15
+        ],
+        [
+          0.6,
+          4.18
+        ],
+        [
+          0.7,
+          4.21
+        ],
+        [
+          0.8,
+          4.25
+        ],
+        [
+          0.9,
+          4.3
+        ],
+        [
+          0.95,
+          4.35
+        ],
+        [
+          0.99,
+          4.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3569
+}

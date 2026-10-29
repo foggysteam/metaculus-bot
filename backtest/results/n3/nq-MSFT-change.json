@@ -1,0 +1,185 @@
+{
+  "id": "nq-MSFT-change",
+  "question": "What will be the percentage change in Microsoft (MSFT) stock (MSFT on Yahoo Finance) from the close on 2026-08-07 to the close on 2026-09-06?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-06 / close on 2026-08-07 - 1), using daily closes of MSFT on Yahoo Finance. If there is no close on 2026-09-06, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -0.057997,
+  "outcome_date": "2026-09-04",
+  "as_of": "2026-08-09",
+  "resolve_date": "2026-09-06",
+  "lower_bound": -30.0,
+  "upper_bound": 35.0,
+  "source": "yahoo",
+  "series": "MSFT",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for MSFT: latest close 499.9900 on 2026-08-07.\nTarget date 2026-09-06 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 437.7006, p10: 454.3505, p25: 478.5393, p50: 498.5703, p75: 521.4007, p90: 541.6721, p95: 561.981\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# MSFT research brief: % change from the 2026-08-07 close to the 2026-09-06 close\n\n**Short version:** MSFT closed at 499.99 on 2026-08-07, after rising about 28% in two weeks on strong fiscal Q4 earnings and lower capex guidance. 2026-09-06 is a Sunday, so the question will use the 2026-09-04 close. Before then come CPI, Nvidia earnings and the Jackson Hole meeting. I found no prediction market or analyst view that maps cleanly onto this question.\n\nSeveral search results returned pages dated after 2026-08-09. I ignored all of them, as instructed.\n\n## 1. Resolution source\n- 2026-08-07: The latest close is **499.99**, taken from your code's Yahoo Finance data. My fetches were blocked by the proxy, so I could not open Yahoo or stockanalysis.com myself to confirm it.\n- The resolution date, 2026-09-06, is a Sunday, and Monday 2026-09-07 is Labor Day. That means the **Friday 2026-09-04 close** will decide the question. Counting trading days, that is about 20 sessions ahead, while your baseline assumed 21.\n- Your baseline's percentiles, converted to % change from 499.99: p5 -12.5%, p10 -9.1%, p25 -4.3%, p50 -0.3%, p75 +4.3%, p90 +8.3%, p95 +12.4%.\n\n## 2. Current status\n- Nothing has happened yet that settles the question. The stock has run up very sharply going into the window, as detailed in sections 3 and 4.\n\n## 3. Recent news (newest first)\n- 2026-08-07: The Toronto-listed MSFT receipt (TSX:MSFT) closed at 34.98, up about 7.5% from its 2026-07-31 close of 32.54. That roughly matches the US move. [stockanalysis TSX](https://stockanalysis.com/quote/tsx/MSFT/history/)\n- 2026-08-03: MSFT closed at 487.76, up 4.96% on the day. That implies a 2026-07-31 close of about 464.7. Getting to 499.99 on 08-07 means a gain of about 7.6% in the week of Aug 3-7. [stockanalysis](https://stockanalysis.com/stocks/msft/)\n- 2026-08-02/03: The Motley Fool reported the shares rose nearly 22% in the week after earnings. [Fool](https://www.fool.com/investing/2026/08/02/why-microsoft-stock-is-surging/)\n- 2026-07-30: The stock jumped more than 14% at the open. Before the open it was quoted up about 8% at $420.02, which implies a prior close of about $389. [Investing.com](https://www.investing.com/news/earnings/microsoft-beats-on-profit-and-revenue-shares-rise-after-hours-4821565)\n- 2026-07-29: Microsoft reported fiscal Q4 2026 results:\n  - Revenue was about $90.0B, up 18%, against a ~$87.6B estimate.\n  - Adjusted EPS was $4.74 against a $4.24 estimate.\n  - Azure grew about 41-43%; sources disagree on the exact figure.\n  - Guidance for the current quarter calls for about 45% Azure growth, above estimates.\n  - Calendar-2026 capex guidance fell to about $175B from about $190B. Microsoft says the two figures are comparable once a change in assumed data center lifespans is accounted for. Investors had feared FY27 capex near $220B.\n  - Sources: [AA](https://aa.com.tr/en/science-technology/microsoft-beats-quarterly-revenue-estimates-as-azure-growth-accelerates/4013210), [Constellation](https://www.constellationr.com/insights/news/microsoft-azure-q4-revenue-surges-41-tops-100-billion-annual-revenue), [KuCoin](https://www.kucoin.com/blog/microsoft-q4-earnings-azure-growth-hits-43-percent-as-annual-cloud-revenue-tops-100-billion)\n- 2026-07-23: Previews framed the report around capex and Azure. [S&P Global](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/microsoft-and-meta-earnings-previews), [Pepperstone](https://pepperstone.com/en-ae/insights/market-analysis/equities/microsoft-q4-fy2026-earnings-preview-ai-spending-free-cash-flow-guidance-and-the-key-levels-that-could-move-msft)\n- Late April / May 2026 analyst price targets, all set before the rally:\n  - Morgan Stanley $625\n  - Goldman Sachs $610\n  - Cantor Fitzgerald $608\n  - Jefferies $575\n  - Benchmark $525\n  - BofA $515\n  - Rothschild Redburn $440 (Neutral)\n  - Sources: [TipRanks](https://www.tipranks.com/news/the-fly/morgan-stanley-ups-microsoft-target-elevates-to-top-pick-in-software-thefly), [Yahoo](https://finance.yahoo.com/markets/stocks/articles/microsoft-corp-msft-price-target-143459021.html)\n\n## 4. Base rates\n- Your code's 3-year empirical distribution for 21-session returns has a median of about 0%. The 25-75% range is about ±4.3%, and the 5-95% range runs from about -12.5% to +12.4%.\n- MSFT's recent volatility is well above that baseline. It gained about 22% in one week and then about 7.6% the next, so roughly +28% in two weeks. Moves on that scale usually come with higher implied volatility, so the tails may be wider than the historical baseline suggests. I could not find current options-implied volatility.\n- I could not find specific studies on how mega-caps perform in the month after a post-earnings gap of more than 20%.\n\n## 5. Other forecasts\n- Polymarket lists \"MSFT above ___ in August 2026\" contracts that settle on the last trading day of August. That is a different date from this question's 09-04 close, and one mirror site flagged the related markets as illiquid. I could not retrieve prices as of 08-09 or earlier. [Polymarket](https://polymarket.com/event/msft-above-in-august-2026)\n- I found no Kalshi or Manifold market on MSFT for this window.\n- The analyst targets listed above predate the rally. I found no target changes after earnings that were dated on or before 2026-08-09.\n\n## 6. Upcoming events before resolution\n- Around 2026-08-12/13: US CPI and PPI for July (my estimate; the exact release dates are not confirmed).\n- 2026-08-26, after the close: Nvidia's fiscal Q2 2027 earnings, a key read-across for AI and capex sentiment (confirmed). [Wall Street Horizon](https://www.wallstreethorizon.com/nvidia-earnings-calendar)\n- 2026-08-27 to 08-29: the Jackson Hole symposium, with the Fed Chair's keynote expected 08-28. [Regards of Wall Street](https://www.regardsofwallstreet.com/news/stock-market-week-ahead-august-24-2026)\n- 2026-09-04: the August jobs report, released the same day as the deciding close.\n- Microsoft-specific risks with no set date: news on the OpenAI or Anthropic relationships, AI capex commentary from peers, and Copilot adoption numbers (30M+ paid seats were cited at earnings).\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for MSFT: latest close 499.9900 on 2026-08-07.\nTarget date 2026-09-06 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 437.7006, p10: 454.3505, p25: 478.5393, p50: 498.5703, p75: 521.4007, p90: 541.6721, p95: 561.981\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -20.0
+        ],
+        [
+          0.05,
+          -13.0
+        ],
+        [
+          0.1,
+          -9.5
+        ],
+        [
+          0.2,
+          -5.5
+        ],
+        [
+          0.3,
+          -3.0
+        ],
+        [
+          0.4,
+          -1.0
+        ],
+        [
+          0.5,
+          0.4
+        ],
+        [
+          0.6,
+          1.9
+        ],
+        [
+          0.7,
+          3.8
+        ],
+        [
+          0.8,
+          6.3
+        ],
+        [
+          0.9,
+          10.0
+        ],
+        [
+          0.95,
+          13.2
+        ],
+        [
+          0.99,
+          20.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -21.0
+        ],
+        [
+          0.05,
+          -13.5
+        ],
+        [
+          0.1,
+          -10.0
+        ],
+        [
+          0.2,
+          -6.0
+        ],
+        [
+          0.3,
+          -3.4
+        ],
+        [
+          0.4,
+          -1.3
+        ],
+        [
+          0.5,
+          0.3
+        ],
+        [
+          0.6,
+          1.9
+        ],
+        [
+          0.7,
+          3.8
+        ],
+        [
+          0.8,
+          6.4
+        ],
+        [
+          0.9,
+          10.0
+        ],
+        [
+          0.95,
+          13.5
+        ],
+        [
+          0.99,
+          21.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -21.0
+        ],
+        [
+          0.05,
+          -13.5
+        ],
+        [
+          0.1,
+          -9.8
+        ],
+        [
+          0.2,
+          -5.7
+        ],
+        [
+          0.3,
+          -3.1
+        ],
+        [
+          0.4,
+          -1.1
+        ],
+        [
+          0.5,
+          0.3
+        ],
+        [
+          0.6,
+          1.8
+        ],
+        [
+          0.7,
+          3.8
+        ],
+        [
+          0.8,
+          6.4
+        ],
+        [
+          0.9,
+          10.2
+        ],
+        [
+          0.95,
+          13.3
+        ],
+        [
+          0.99,
+          19.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4284
+}

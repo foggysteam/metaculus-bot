@@ -1,0 +1,185 @@
+{
+  "id": "nq-ICSA-2026-10-03",
+  "question": "What will be US initial jobless claims for the week (seasonally adjusted, Department of Labor) for the week ending 2026-10-03, as first published?",
+  "resolution_criteria": "Resolves to the first published value of US initial jobless claims for the week (seasonally adjusted, Department of Labor) for the week ending 2026-10-03 (FRED series ICSA). Later revisions are ignored.",
+  "unit": "claims",
+  "outcome": 197000.0,
+  "outcome_date": "2026-10-08",
+  "as_of": "2026-09-24",
+  "resolve_date": "2026-10-08",
+  "lower_bound": 150000.0,
+  "upper_bound": 250000.0,
+  "source": "fred",
+  "series": "ICSA",
+  "baseline": "\nComputed by code from FRED ICSA (Initial Claims, Number, frequency W): latest observation 196000.0000 for 2026-09-12.\nThe target period 2026-10-03 is 3 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 3-period changes since 2005 (last 3 years weighted double):\np5: 175014.9553, p10: 180283.0189, p25: 187529.152, p50: 195033.2908, p75: 202533.3333, p90: 210654.2056, p95: 215873.1654\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I've finished the searches and am writing up the findings now. I couldn't open the DOL PDF, the Trading Economics page or Yahoo directly because the proxy refused them. The figures below come from search summaries of those pages and secondary reports.\n\n## 1. Resolution source\n- The question resolves on the advance seasonally adjusted figure in the DOL weekly claims release (FRED ICSA) for the week ending 2026-10-03. That release is due Thursday 2026-10-08 at 8:30 ET.\n- 2026-09-24: The latest DOL release puts claims for the week ending Sept 19 at **197,000**. That is down 1,000 from the prior week, which was revised up from 196,000 to 198,000. The 4-week average is 202,250. Unadjusted claims were 163,811, up 6.7% on the week; the same week of 2025 had 180,992. [DOL PDF](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20261535.pdf), [Quartz](https://qz.com/us-jobless-claims-197000-57-year-low-092526)\n- The code baseline's latest value (196,000 for Sept 12) is now out of date: it was revised to 198,000, and the Sept 19 week adds 197,000. The target week is therefore 2 releases ahead, not 3.\n\n## 2. Current status\n- Nothing settles the question yet. The number won't be published until 2026-10-08.\n- The chance of a delayed release looks low. The House passed a stopgap funding bill 370-48 on 2026-09-01, and it was reportedly signed on 2026-09-02. It funds the government through Dec 11, so a shutdown on Oct 1 is unlikely. This matters because the Oct-Nov 2025 shutdown disrupted the regular DOL releases. [NASFAA](https://www.nasfaa.org/news-item/39735/House_Passes_Continuing_Resolution_Funding_Government_Through_December_11), [Fedtools](https://www.fedtools.com/blog/government-shutdown-october-2026), [Breaking Defense](https://breakingdefense.com/2026/09/house-passes-funding-stopgap-averting-government-shutdown-in-october/). I could not check the bill text on congress.gov.\n\n## 3. Recent news (newest first)\n- 2026-09-24: Claims of 197,000 came in below consensus, which was 201,000 in the Reuters poll and 204,000 per Yahoo. Coverage called the level \"near 57-year low.\" Sources disagree on continuing claims: one says 1.701M, the lowest since April 2023, another says 1.719M. [Yahoo](https://finance.yahoo.com/economy/articles/u-initial-jobless-claims-edge-133118625.html), [Times of Oman](https://timesofoman.com/article/177344-us-weekly-jobless-claims-fall-to-197000-pointing-to-continued-labour-market-resilience)\n- 2026-09-17: The week ending Sept 12 came in at 196,000, the lowest since mid-July. It was later revised to 198,000. [GovDelivery DOL](https://content.govdelivery.com/accounts/USDOL/bulletins/4299777)\n- 2026-09-10: The week ending Sept 5 came in at 206,000. [BGOV](https://news.bgov.com/daily-labor-report/us-weekly-jobless-claims-rise-2k-to-206k-est-205k)\n- The story behind the numbers is a \"low hire, low fire\" labor market. I found no reports of large new layoff waves.\n- I found no reports of a US hurricane landfall in late September that could push up claims in the target week.\n\n## 4. Base rates and recent values\nAdvance (first-published) values:\n- Week ending Aug 1: 199,000\n- Week ending Aug 8: 209,000 (revised to 212,000)\n- Week ending Aug 15: 206,000\n- Week ending Aug 22: 203,000 (4-week average 205,500) [Staffing Industry](https://www.staffingindustry.com/news/global-daily-news/initial-jobless-claims-fall-by-4000-remain-historically-low)\n- Week ending Sept 5: 206,000\n- Week ending Sept 12: 196,000\n- Week ending Sept 19: 197,000\n\nTrend and variation:\n- From August through September, advance prints ranged from 196,000 to 209,000 and drifted slightly lower in late September. AP describes the past year's range as roughly 200,000 to 230,000.\n- Week-to-week moves are typically ±2,000 to 10,000. Prior-week revisions are usually small, about +1,000 to +3,000.\n- The code baseline anchored at 196,000 gives a 3-step change distribution of p5 175k, p25 187.5k, p50 195k, p75 202.5k and p95 216k. Re-anchoring on 197,000 with only 2 steps left would narrow that range a little.\n- Seasonal note: early October usually has low unadjusted claims, and the seasonal factors are built to absorb that. The Columbus Day effect falls in the following week (the week ending Oct 10), not the target week.\n\n## 5. Other forecasts\n- I could not find a Kalshi (KXJOBLESSCLAIMS), Polymarket or Manifold market for the week ending Oct 3 dated before the cutoff.\n- I found no published economist consensus for the Oct 8 release yet. For the week ending Sept 19, the consensus was 201,000 to 204,000, and actual claims came in below it. Consensus has tended to sit a few thousand above recent prints.\n\n## 6. Upcoming events before resolution\n- 2026-10-01 (Thursday, 8:30 ET): DOL release for the week ending Sept 26. This is the next data point and gives a new anchor.\n- 2026-10-02 (Friday): September jobs report from BLS, if it comes out on schedule.\n- 2026-10-08 (Thursday, 8:30 ET): Release of the target figure for the week ending Oct 3.\n- Risks to watch:\n  - any federal or state layoff events\n  - tropical storms in the Gulf or Southeast during late September or early October\n  - state-level processing quirks\n  \n  The government funding risk looks resolved through Dec 11.\n\nSources:\n- [DOL release PDF](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20261535.pdf)\n- [Quartz](https://qz.com/us-jobless-claims-197000-57-year-low-092526)\n- [Yahoo Finance](https://finance.yahoo.com/economy/articles/u-initial-jobless-claims-edge-133118625.html)\n- [Times of Oman](https://timesofoman.com/article/177344-us-weekly-jobless-claims-fall-to-197000-pointing-to-continued-labour-market-resilience)\n- [GovDelivery DOL](https://content.govdelivery.com/accounts/USDOL/bulletins/4299777)\n- [BGOV](https://news.bgov.com/daily-labor-report/us-weekly-jobless-claims-rise-2k-to-206k-est-205k)\n- [Staffing Industry](https://www.staffingindustry.com/news/global-daily-news/initial-jobless-claims-fall-by-4000-remain-historically-low)\n- [NASFAA](https://www.nasfaa.org/news-item/39735/House_Passes_Continuing_Resolution_Funding_Government_Through_December_11)\n- [Fedtools](https://www.fedtools.com/blog/government-shutdown-october-2026)\n- [Breaking Defense](https://breakingdefense.com/2026/09/house-passes-funding-stopgap-averting-government-shutdown-in-october/)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED ICSA (Initial Claims, Number, frequency W): latest observation 196000.0000 for 2026-09-12.\nThe target period 2026-10-03 is 3 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 3-period changes since 2005 (last 3 years weighted double):\np5: 175014.9553, p10: 180283.0189, p25: 187529.152, p50: 195033.2908, p75: 202533.3333, p90: 210654.2056, p95: 215873.1654\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          181000.0
+        ],
+        [
+          0.05,
+          186000.0
+        ],
+        [
+          0.1,
+          189000.0
+        ],
+        [
+          0.2,
+          193000.0
+        ],
+        [
+          0.3,
+          196000.0
+        ],
+        [
+          0.4,
+          198000.0
+        ],
+        [
+          0.5,
+          200000.0
+        ],
+        [
+          0.6,
+          202000.0
+        ],
+        [
+          0.7,
+          204500.0
+        ],
+        [
+          0.8,
+          208000.0
+        ],
+        [
+          0.9,
+          213000.0
+        ],
+        [
+          0.95,
+          219000.0
+        ],
+        [
+          0.99,
+          240000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          179000.0
+        ],
+        [
+          0.05,
+          185000.0
+        ],
+        [
+          0.1,
+          188500.0
+        ],
+        [
+          0.2,
+          192500.0
+        ],
+        [
+          0.3,
+          195500.0
+        ],
+        [
+          0.4,
+          198000.0
+        ],
+        [
+          0.5,
+          200000.0
+        ],
+        [
+          0.6,
+          202000.0
+        ],
+        [
+          0.7,
+          204500.0
+        ],
+        [
+          0.8,
+          207500.0
+        ],
+        [
+          0.9,
+          212500.0
+        ],
+        [
+          0.95,
+          217500.0
+        ],
+        [
+          0.99,
+          232000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          178000.0
+        ],
+        [
+          0.05,
+          185000.0
+        ],
+        [
+          0.1,
+          188500.0
+        ],
+        [
+          0.2,
+          192500.0
+        ],
+        [
+          0.3,
+          195500.0
+        ],
+        [
+          0.4,
+          198000.0
+        ],
+        [
+          0.5,
+          200000.0
+        ],
+        [
+          0.6,
+          202000.0
+        ],
+        [
+          0.7,
+          204500.0
+        ],
+        [
+          0.8,
+          208000.0
+        ],
+        [
+          0.9,
+          213500.0
+        ],
+        [
+          0.95,
+          219000.0
+        ],
+        [
+          0.99,
+          235000.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3831
+}

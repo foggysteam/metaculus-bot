@@ -1,0 +1,185 @@
+{
+  "id": "nq-META-change",
+  "question": "What will be the percentage change in Meta Platforms (META) stock (META on Yahoo Finance) from the close on 2026-09-18 to the close on 2026-10-19?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-10-19 / close on 2026-09-18 - 1), using daily closes of META on Yahoo Finance. If there is no close on 2026-10-19, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 5.961698,
+  "outcome_date": "2026-10-19",
+  "as_of": "2026-09-21",
+  "resolve_date": "2026-10-19",
+  "lower_bound": -40.0,
+  "upper_bound": 35.0,
+  "source": "yahoo",
+  "series": "META",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for META: latest close 665.7500 on 2026-09-18.\nTarget date 2026-10-19 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 570.8453, p10: 590.2206, p25: 630.8225, p50: 672.9502, p75: 716.418, p90: 754.6887, p95: 785.9798\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "## 1. Resolution source\n- 2026-09-18: The close used for this question is **$665.75**, from the Yahoo Finance daily closes your code pulled. Resolution will be 100 × (Yahoo close on 2026-10-19 / 665.75 − 1). I did not fetch Yahoo's page separately. Third-party pages I found were dated after the cutoff, so I left them out.\n\n## 2. Current status\n- Nothing so far settles the question. The window runs 2026-09-18 to 2026-10-19, about 21 trading days, and is still open.\n\n## 3. Recent news (newest first, only items dated on or before 2026-09-21)\n- Around 2026-09-18 to 09-21 (exact date unclear): A Wells Fargo analyst kept an Overweight rating and raised the price target to $796 from $640. The reason given was early traction for Muse ahead of Meta Connect on Sept 23-24. Reported Muse figures: about 448k US daily active users on Sept 18 and a record 264k US downloads on Sept 19. [Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/meta-meta-stock-trades-why-235025743.html)\n- Mid-September 2026: Sensor Tower data showed 1.43M US iOS downloads of Muse in its first 12 days, against 1.37M for ChatGPT over the same launch period. [KuCoin blog](https://www.kucoin.com/blog/meta-stock-rally-muse-ai-agent-downloads)\n- 2026-09-09: Meta unveiled its Muse AI agent the day before. Shares opened up more than 5% (about $646.65) and reportedly closed up about 6.5% at about $654. The Muse launch had been pushed back from April over safety and reliability concerns. [Forbes AU](https://forbes.com.au/news/innovation/meta-shares-boosted-after-muse-ai-agent-launch), [TIKR](https://www.tikr.com/blog/meta-stock-jumped-6-5-on-the-muse-launch-the-streets-targets-say-theres-more-room)\n- 2026-07-29: Q2 results:\n  - Revenue was about $60.8B, up 28% and slightly above estimates.\n  - EPS was $6.18 against roughly $7.2 expected.\n  - Free cash flow was only $784M.\n  - Full-year 2026 capex guidance moved to $130-145B.\n  - Q3 revenue guidance of $61-64B came in below consensus of about $63.15B.\n  - Shares fell 5-11% after hours and reportedly closed nearly 8% lower on July 30.\n\n  [Leverage Shares](https://leverageshares.com/en-eu/insights/meta-q2-2026-earnings-ai-capex-turns-market-sentiment/), [CryptoBriefing](https://cryptobriefing.com/meta-stock-falls-5-as-capex-outlook-climbs-to-145-billion/), [Stocktwits](https://stocktwits.com/news-articles/markets/equity/meta-stock-tumbles-11-after-hours-soaring-ai-costs-squeeze-profits-and-soft-q3-outlook-disappoints/cZNTe7URJT8?.tsrc=rss)\n- 2026 context: The stock also fell after its April earnings report. Before the Q2 report it was on what Stocktwits called its longest losing streak on record. [Zacks](https://www.zacks.com/commentary/2993773/facebook-parent-meta-surges-ahead-of-connect-2026-event), [Stocktwits](https://stocktwits.com/news-articles/markets/equity/meta-stock-on-longest-losing-streak-in-history-will-q2-earnings-report-reverse-the-trend/cZNRYw2RJR0)\n- Takeaway: Coming into Sept 18, the stock had strong momentum driven by Muse, from roughly $610-620 before the launch to $665.75. That momentum has been working against a story of heavy capex and falling free cash flow.\n\n## 4. Base rates\n- Your code's empirical distribution of 21-trading-day META returns (last 3 years, with the most recent year weighted double), shown as returns from $665.75:\n  - p5 = −14.3% ($570.85)\n  - p10 = −11.3%\n  - p25 = −5.2%\n  - p50 = +1.1% ($672.95)\n  - p75 = +7.6%\n  - p90 = +13.4%\n  - p95 = +18.1% ($785.98)\n- That works out to an interquartile range of about 13 points and a 90% range of about 32 points. This window has no earnings report in it (see section 6), so it would normally sit toward the calmer end of that range. The recent catalyst-driven swings (+6.5% on launch day, −8% after earnings) suggest realized volatility is high right now.\n- 2026 range: The 52-week low was about $520 on 2026-03-27. [CNBC](https://www.cnbc.com/quotes/META)\n\n## 5. Other forecasts\n- I could not find any Polymarket, Kalshi or Manifold market on META's price for this window.\n- Sell-side views: Wells Fargo has a $796 target with Overweight (see above). I could not confirm other target changes dated before 2026-09-21.\n\n## 6. Upcoming events before 2026-10-19\n- 2026-09-23 to 09-24: Meta Connect 2026. Expect AI glasses and VR hardware plus Muse announcements. This is a \"sell the news\" risk after the run-up into the event. [Zacks/Finviz](https://finviz.com/news/394395/facebook-parent-meta-surges-ahead-of-connect-2026-event)\n- Q3 2026 earnings: Meta usually reports in the last week of October. In 2025 it reported on Oct 29. The report will most likely land **after** Oct 19, so earnings would fall outside the window. The pre-earnings positioning and the date announcement (normally made in early or mid October) fall inside it.\n- Macro and sector news:\n  - Late-September PCE inflation data.\n  - Early-October jobs report.\n  - Mid-October CPI.\n  - Big-bank earnings starting around Oct 13-14.\n  - Any Fed commentary.\n  - Peer AI capex news, such as TSMC's mid-October results.\n- Legal and regulatory: There is ongoing litigation risk. The FTC antitrust case and youth-harm trials were described as \"looming legal battles,\" but I did not find specific rulings scheduled inside the window.\n- Muse adoption data (Sensor Tower and app-ranking releases) has been moving the stock and will probably keep doing so.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for META: latest close 665.7500 on 2026-09-18.\nTarget date 2026-10-19 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 570.8453, p10: 590.2206, p25: 630.8225, p50: 672.9502, p75: 716.418, p90: 754.6887, p95: 785.9798\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -20.5
+        ],
+        [
+          0.05,
+          -13.5
+        ],
+        [
+          0.1,
+          -10.0
+        ],
+        [
+          0.2,
+          -6.0
+        ],
+        [
+          0.3,
+          -3.4
+        ],
+        [
+          0.4,
+          -1.2
+        ],
+        [
+          0.5,
+          0.7
+        ],
+        [
+          0.6,
+          2.6
+        ],
+        [
+          0.7,
+          4.8
+        ],
+        [
+          0.8,
+          7.6
+        ],
+        [
+          0.9,
+          11.6
+        ],
+        [
+          0.95,
+          15.0
+        ],
+        [
+          0.99,
+          22.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -22.0
+        ],
+        [
+          0.05,
+          -13.5
+        ],
+        [
+          0.1,
+          -10.0
+        ],
+        [
+          0.2,
+          -6.0
+        ],
+        [
+          0.3,
+          -3.4
+        ],
+        [
+          0.4,
+          -1.2
+        ],
+        [
+          0.5,
+          0.7
+        ],
+        [
+          0.6,
+          2.6
+        ],
+        [
+          0.7,
+          4.8
+        ],
+        [
+          0.8,
+          7.6
+        ],
+        [
+          0.9,
+          11.8
+        ],
+        [
+          0.95,
+          15.5
+        ],
+        [
+          0.99,
+          23.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -21.0
+        ],
+        [
+          0.05,
+          -13.5
+        ],
+        [
+          0.1,
+          -9.5
+        ],
+        [
+          0.2,
+          -5.5
+        ],
+        [
+          0.3,
+          -3.0
+        ],
+        [
+          0.4,
+          -0.9
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          2.6
+        ],
+        [
+          0.7,
+          4.8
+        ],
+        [
+          0.8,
+          7.6
+        ],
+        [
+          0.9,
+          11.8
+        ],
+        [
+          0.95,
+          15.5
+        ],
+        [
+          0.99,
+          23.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3641
+}

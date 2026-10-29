@@ -1,0 +1,185 @@
+{
+  "id": "nq-UNRATE-2026-09-01",
+  "question": "What will be the US unemployment rate (seasonally adjusted, BLS) for September 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of the US unemployment rate (seasonally adjusted, BLS) for September 2026 (FRED series UNRATE). Later revisions are ignored.",
+  "unit": "percent",
+  "outcome": 4.2,
+  "outcome_date": "2026-10-02",
+  "as_of": "2026-09-11",
+  "resolve_date": "2026-10-02",
+  "lower_bound": 3.5,
+  "upper_bound": 4.5,
+  "source": "fred",
+  "series": "UNRATE",
+  "baseline": "\nComputed by code from FRED UNRATE (Unemployment Rate, Percent, frequency M): latest observation 4.1000 for 2026-08-01.\nThe target period 2026-09-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 3.8, p10: 3.9, p25: 4.0, p50: 4.1, p75: 4.2, p90: 4.3, p95: 4.3\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I couldn't open BLS, FRED, Trading Economics or Kalshi pages directly because fetches were refused, so the figures below come from search snippets. I left out everything published after 2026-09-11.\n\n## 1. Resolution source\n- The question resolves on FRED UNRATE (BLS CPS, seasonally adjusted), using the first value published. The September 2026 figure is due in the Employment Situation release scheduled for 2026-10-02 at 8:30 ET. [BLS](https://www.bls.gov/news.release/empsit.htm)\n- 2026-09-04: The latest published value was 4.1% for August 2026, the same as July. The code-supplied FRED baseline agrees (4.1 for 2026-08-01). [TrendForce](https://datatrack.trendforce.com/blog/content/63698/us-august-unemployment-rate-remains-flat-at-41-surge-in-nonfarm-payrolls-reverses-weak-expectations)\n\n## 2. Current status\n- Nothing has settled the question yet. The September CPS reference week includes 2026-09-12, and the figure won't be published until 2026-10-02.\n\n## 3. Recent news (newest first)\n- 2026-09-10: Initial jobless claims for the week ending Sept 5 were 206,000, unchanged for a second week. The 4-week average was about 206k, so layoffs remain low. [TrendForce](https://datatrack.trendforce.com/blog/content/63997/us-early-september-initial-jobless-claims-flat-for-second-consecutive-week-at-206000-labor-market-maintains-low-layoff-environment)\n- Mid-July 2026: Claims bottomed at 189,000, described as the lowest since 1969. Claims have stayed below 220k all year. [TheStreet](https://pro.thestreet.com/market-commentary/initial-jobless-claims-remain-near-57-year-lows-continuing-claims-a-3-year-low)\n- 2026-09-04: The August report:\n  - Payrolls rose 162k against a consensus of about 53-56k, and June-July were revised up by a combined 55k.\n  - Unemployment held at 4.1%.\n  - The labor force grew by 683k, and participation rose to 61.6% from 61.4%.\n  - U-6 fell to 7.7% from 7.9%.\n  - Average hourly earnings rose 0.3% m/m and 3.1% y/y.\n  - Commentary said the report raised the odds of a Fed rate hike.\n  \n  Sources: [Fox Business](https://www.foxbusiness.com/economy/us-jobs-report-august-2026), [BabyPips](https://www.babypips.com/news/headline-us-jobs-august-2026-nonfarm-payrolls-beat-forecasts), [FT Portfolios](https://www.ftportfolios.com/Commentary/EconomicResearch/2026/9/4/nonfarm-payrolls-increased-162,000-in-august), [search summary of Trading Economics](https://tradingeconomics.com/united-states/unemployment-rate/news/581285)\n- Early August 2026: The July report showed unemployment falling to 4.1% from 4.2%. Most of the drop came from people leaving the labor force (down 264k), and participation hit 61.4%, the lowest since early 2021. Payrolls fell 23k, with prior months revised down 103k. [Trading Economics](https://tradingeconomics.com/united-states/unemployment-rate/news/573793), [KuCoin](https://www.kucoin.com/news/flash/us-unemployment-dips-to-4-1-as-labor-force-shrinks-by-264-000)\n- A caution from the commentary: the July decline was participation-driven. In August the labor force rebounded and the rate still held at 4.1%.\n\n## 4. Base rates\n- The 2026 path:\n  - January: 4.3\n  - February: 4.4\n  - March: 4.3\n  - April: 4.3\n  - May: 4.3\n  - June: 4.2\n  - July: 4.1\n  - August: 4.1\n  \n  The trend is gently downward. [Trading Economics](https://tradingeconomics.com/united-states/unemployment-rate), [YCharts](https://ycharts.com/indicators/us_unemployment_rate), [TE May](https://tradingeconomics.com/united-states/unemployment-rate/news/556895)\n- The code baseline, built from 1-month changes since 2005, gives:\n  - median 4.1\n  - p25 to p75: 4.0 to 4.2\n  - p10 to p90: 3.9 to 4.3\n  - p5 to p95: 3.8 to 4.3\n- Typical pattern: in non-recession periods the first-print change is 0.0 about half the time and ±0.1 most of the rest. Moves of ±0.2 or more are uncommon. The CPS standard error on the monthly change is about ±0.2 percentage points (90% confidence).\n- Over the past 8 months, the monthly changes ranged from -0.1 to +0.1, and there were no moves of 0.2.\n\n## 5. Other forecasts\n- Kalshi has a market on September US unemployment (KXU3-26SEP). The only snapshot I found was undated, but its \"64 days\" countdown suggests it was taken around late July, before the July and August reports. It showed:\n  - above 4.1%: 68%\n  - above 4.2%: 55%\n  - above 4.3%: 45%\n  \n  These prices are stale, set when unemployment was 4.2-4.3, so they shouldn't be read as current. [Kalshi](https://kalshi.com/markets/kxu3/unemployment/kxu3-26sep)\n- Kalshi also lists September payroll threshold markets (KXPAYROLLS-26SEP), but the snapshots I saw were thin and old. [SimpleFunctions](https://simplefunctions.dev/api/public/market/KXPAYROLLS-26SEP-T60000?depth=true)\n- I found no published economist consensus for the September unemployment rate dated on or before 2026-09-11. Consensus surveys usually appear in the week before the release.\n- The Fed's June 2026 SEP had a median of 4.3% for end-2026 unemployment, above where the rate is now. [Chapman](https://www.chapman.edu/research/institutes-and-centers/anderson-center/_files/current-economic-news-pdfs/2026-current-economic-news/fomc-unemployment.pdf)\n\n## 6. Upcoming events before resolution\n- 2026-09-12: The CPS reference week (the week containing the 12th).\n- 2026-09-15/16: An FOMC meeting with a new SEP. The commentary around the August report was discussing a possible hike. [Fed SEP page](https://federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm)\n- Weekly jobless claims on Sept 17 and Sept 24. The Sept 17 release covers the reference week, which makes it the most informative.\n- Late September: the Conference Board's labor differential (jobs plentiful versus hard to get).\n- 2026-09-30: ADP for September.\n- 2026-10-02: The September Employment Situation, which decides the question.\n- Key swing factor: participation has been volatile (61.4% in July, 61.6% in August). A reversal in labor force entries could move the rate by ±0.1 regardless of how strong hiring is.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED UNRATE (Unemployment Rate, Percent, frequency M): latest observation 4.1000 for 2026-08-01.\nThe target period 2026-09-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 3.8, p10: 3.9, p25: 4.0, p50: 4.1, p75: 4.2, p90: 4.3, p95: 4.3\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          3.8
+        ],
+        [
+          0.05,
+          3.9
+        ],
+        [
+          0.1,
+          3.95
+        ],
+        [
+          0.2,
+          4.0
+        ],
+        [
+          0.3,
+          4.04
+        ],
+        [
+          0.4,
+          4.08
+        ],
+        [
+          0.5,
+          4.1
+        ],
+        [
+          0.6,
+          4.12
+        ],
+        [
+          0.7,
+          4.15
+        ],
+        [
+          0.8,
+          4.2
+        ],
+        [
+          0.9,
+          4.22
+        ],
+        [
+          0.95,
+          4.28
+        ],
+        [
+          0.99,
+          4.4
+        ]
+      ],
+      [
+        [
+          0.01,
+          3.8
+        ],
+        [
+          0.05,
+          3.9
+        ],
+        [
+          0.1,
+          3.95
+        ],
+        [
+          0.2,
+          4.0
+        ],
+        [
+          0.3,
+          4.04
+        ],
+        [
+          0.4,
+          4.08
+        ],
+        [
+          0.5,
+          4.1
+        ],
+        [
+          0.6,
+          4.12
+        ],
+        [
+          0.7,
+          4.15
+        ],
+        [
+          0.8,
+          4.2
+        ],
+        [
+          0.9,
+          4.24
+        ],
+        [
+          0.95,
+          4.3
+        ],
+        [
+          0.99,
+          4.45
+        ]
+      ],
+      [
+        [
+          0.01,
+          3.8
+        ],
+        [
+          0.05,
+          3.9
+        ],
+        [
+          0.1,
+          3.95
+        ],
+        [
+          0.2,
+          4.0
+        ],
+        [
+          0.3,
+          4.04
+        ],
+        [
+          0.4,
+          4.08
+        ],
+        [
+          0.5,
+          4.1
+        ],
+        [
+          0.6,
+          4.12
+        ],
+        [
+          0.7,
+          4.15
+        ],
+        [
+          0.8,
+          4.2
+        ],
+        [
+          0.9,
+          4.24
+        ],
+        [
+          0.95,
+          4.3
+        ],
+        [
+          0.99,
+          4.4
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.446
+}
