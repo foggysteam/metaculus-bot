@@ -1,0 +1,185 @@
+{
+  "id": "nq-AAPL-change",
+  "question": "What will be the percentage change in Apple (AAPL) stock (AAPL on Yahoo Finance) from the close on 2026-08-14 to the close on 2026-08-25?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-08-25 / close on 2026-08-14 - 1), using daily closes of AAPL on Yahoo Finance. If there is no close on 2026-08-25, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 1.297683,
+  "outcome_date": "2026-08-25",
+  "as_of": "2026-08-15",
+  "resolve_date": "2026-08-25",
+  "lower_bound": -15.0,
+  "upper_bound": 20.0,
+  "source": "yahoo",
+  "series": "AAPL",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for AAPL: latest close 305.9300 on 2026-08-14.\nTarget date 2026-08-25 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 286.6361, p10: 290.8979, p25: 298.7737, p50: 308.0602, p75: 318.9026, p90: 326.6116, p95: 331.8873\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "## 1. Resolution source\n- 2026-08-14: AAPL closed at **$305.93** (open $306.00, high $307.49, low $304.30, volume about 28.2M). This matches the code-supplied Yahoo Finance baseline. I couldn't open Yahoo's history page directly, so the confirmation comes from StatMuse. [StatMuse](https://www.statmuse.com/money/ask/apple-stock-prices-2026), [Yahoo Finance](https://finance.yahoo.com/quote/AAPL/)\n- Resolution compares the Nasdaq close on 2026-08-25 (a Tuesday, normal trading day) with $305.93. The question moves 1% for roughly every $3.06 in price.\n- Note: StockAnalysis showed a figure of 247.25 for Aug 14, but that is the Swiss SWX listing and is not relevant. [StockAnalysis](https://stockanalysis.com/quote/swx/AAPL/history/)\n\n## 2. Current status\n- Nothing settles the question yet. The window covers 7 trading sessions (Aug 17 to Aug 25), and the code counts 8 observations.\n- 2026-08-10: Apple was around $313 when Finbold wrote about it, up more than 15% year to date. That means the stock fell about 2% between then and the Aug 14 close. Aug 10 was also the ex-dividend date ($0.27), so the dividend no longer affects the window. [Finbold](https://finbold.com/apple-to-pay-dividends-this-week-heres-how-much-100-aapl-shares-will-earn/)\n\n## 3. Recent news (newest first)\n- 2026-08-13: Apple paid its $0.27 quarterly dividend. [Finbold](https://finbold.com/apple-to-pay-dividends-next-week-heres-how-much-100-aapl-shares-will-earn-2/)\n- 2026-08-03: 24/7 Wall St. described August as a typical \"news vacuum\" month for Apple, with no catalysts until the September iPhone event. I couldn't open the article itself. [24/7 Wall St.](https://247wallst.com/investing/2026/08/03/apples-predictable-august-news-vacuum-tells-you-exactly-what-to-expect-this-month/)\n- 2026-07-30: Apple reported fiscal Q3 results:\n  - Revenue was $109.4B, up 16% and above the roughly $108.7B consensus. iPhone revenue was $54.25B, up 22%.\n  - EPS was $2.02, which included $0.11 from tariff refunds. Gross margin was 50.1%, or 48.1% without the refunds.\n  - Services ($30.74B) and Greater China ($18.82B against about $19.6B expected) came in below estimates.\n  - Q4 revenue growth guidance was 9% to 11%, below the more than 12% analysts expected, and Apple warned of component and memory supply constraints.\n  - Shares fell about 4% to 8% after hours and nearly 5% after the report.\n  - [Rivkin](https://rivkin.com.au/?p=37147), [Neowin](https://www.neowin.net/news/apple-posts-strongest-june-quarter-ever-driven-by-iphone-and-mac-growth/), [Trending Topics](https://www.trendingtopics.eu/apple-delivers-record-quarter-stock-still-punished-hard-over-memory-chip-crisis/), [Las Vegas Sun](https://lasvegassun.com/news/2026/jul/30/strong-iphone-sales-propel-apples-fiscal-q3-result/), [Mactrast](https://www.mactrast.com/2026/07/apple-posts-fiscal-q3-2026-results-29-8b-profit-on-109-4-billion-in-revenue/)\n- 2026-07-30: This was Tim Cook's last earnings call. John Ternus becomes CEO on 2026-09-01, after the window closes. [Las Vegas Sun](https://lasvegassun.com/news/2026/jul/30/apple-reports-third-quarter-results/)\n\n## 4. Base rates\n- These figures come from the code's empirical 8-observation distribution (3 years, with the last year weighted double), anchored at $305.93:\n  - p5 $286.64 (-6.3%)\n  - p10 $290.90 (-4.9%)\n  - p25 $298.77 (-2.3%)\n  - p50 $308.06 (+0.7%)\n  - p75 $318.90 (+4.2%)\n  - p90 $326.61 (+6.8%)\n  - p95 $331.89 (+8.5%)\n- The middle 50% of outcomes falls between about -2.3% and +4.2%, and the 90% range is about -6.3% to +8.5%. The median has a slight upward drift, about +0.7%.\n- Historically, late August is a quiet stretch for Apple, between earnings and the September event. Volatility usually comes from the macro picture (the Fed, Jackson Hole) rather than company news.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on AAPL's price for Aug 25, 2026.\n- Algorithmic \"prediction\" sites, such as 30rates, publish daily targets that have no credible track record. I left them out.\n- 24/7 Wall St. ran a summary of BofA and Morgan Stanley analyst views on Apple, but it is dated 2026-08-18, after the cutoff, so I excluded it.\n- I did not find analyst price-target changes dated Aug 10 to 15.\n\n## 6. Upcoming events before resolution (Aug 17 to Aug 25)\n- Jackson Hole Economic Symposium: the dates are uncertain. One low-quality source says Aug 27 to 29, with new Fed Chair Kevin Warsh giving the keynote on Aug 28, which would fall after the window. Jackson Hole has traditionally been held in the third or fourth week of August, so it could land inside the window. I found no official Kansas City Fed confirmation. [usahousinginformation.com](https://usahousinginformation.com/jackson-hole-fed-meeting/)\n- FOMC minutes from the late-July meeting are typically released about three weeks after the meeting, which would put them around Aug 19. I did not confirm the date.\n- Nvidia's quarterly earnings typically come in the last week of August, likely after Aug 25. A release inside the window could move megacap tech. I did not confirm the date.\n- Apple-specific catalysts:\n  - Possible announcement of the date for the September iPhone 18 event, where a foldable iPhone is rumored. The event itself is reportedly Sep 9, after the window.\n  - Updates on component and memory supply constraints.\n  - Tariff and trade headlines. The Supreme Court ruling that struck down tariffs led to refunds, so new tariff actions are a risk in both directions.\n- Scheduled company events: none known between Aug 17 and Aug 25.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for AAPL: latest close 305.9300 on 2026-08-14.\nTarget date 2026-08-25 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 286.6361, p10: 290.8979, p25: 298.7737, p50: 308.0602, p75: 318.9026, p90: 326.6116, p95: 331.8873\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -9.5
+        ],
+        [
+          0.05,
+          -6.2
+        ],
+        [
+          0.1,
+          -4.6
+        ],
+        [
+          0.2,
+          -2.7
+        ],
+        [
+          0.3,
+          -1.4
+        ],
+        [
+          0.4,
+          -0.4
+        ],
+        [
+          0.5,
+          0.4
+        ],
+        [
+          0.6,
+          1.2
+        ],
+        [
+          0.7,
+          2.3
+        ],
+        [
+          0.8,
+          3.8
+        ],
+        [
+          0.9,
+          5.9
+        ],
+        [
+          0.95,
+          7.6
+        ],
+        [
+          0.99,
+          10.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          -9.5
+        ],
+        [
+          0.05,
+          -6.2
+        ],
+        [
+          0.1,
+          -4.7
+        ],
+        [
+          0.2,
+          -2.9
+        ],
+        [
+          0.3,
+          -1.6
+        ],
+        [
+          0.4,
+          -0.6
+        ],
+        [
+          0.5,
+          0.3
+        ],
+        [
+          0.6,
+          1.2
+        ],
+        [
+          0.7,
+          2.3
+        ],
+        [
+          0.8,
+          3.7
+        ],
+        [
+          0.9,
+          5.8
+        ],
+        [
+          0.95,
+          7.5
+        ],
+        [
+          0.99,
+          11.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -9.5
+        ],
+        [
+          0.05,
+          -6.0
+        ],
+        [
+          0.1,
+          -4.5
+        ],
+        [
+          0.2,
+          -2.7
+        ],
+        [
+          0.3,
+          -1.4
+        ],
+        [
+          0.4,
+          -0.4
+        ],
+        [
+          0.5,
+          0.4
+        ],
+        [
+          0.6,
+          1.2
+        ],
+        [
+          0.7,
+          2.2
+        ],
+        [
+          0.8,
+          3.6
+        ],
+        [
+          0.9,
+          5.6
+        ],
+        [
+          0.95,
+          7.2
+        ],
+        [
+          0.99,
+          10.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3653
+}

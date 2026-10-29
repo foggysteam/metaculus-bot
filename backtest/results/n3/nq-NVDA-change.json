@@ -1,0 +1,185 @@
+{
+  "id": "nq-NVDA-change",
+  "question": "What will be the percentage change in NVIDIA (NVDA) stock (NVDA on Yahoo Finance) from the close on 2026-08-21 to the close on 2026-09-21?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-21 / close on 2026-08-21 - 1), using daily closes of NVDA on Yahoo Finance. If there is no close on 2026-09-21, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 5.896052,
+  "outcome_date": "2026-09-21",
+  "as_of": "2026-08-24",
+  "resolve_date": "2026-09-21",
+  "lower_bound": -35.0,
+  "upper_bound": 30.0,
+  "source": "yahoo",
+  "series": "NVDA",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for NVDA: latest close 214.7200 on 2026-08-21.\nTarget date 2026-09-21 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 189.2851, p10: 195.6749, p25: 208.5702, p50: 220.6497, p75: 238.2342, p90: 259.2638, p95: 274.2575\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# NVDA research brief: % change from the 2026-08-21 close to the 2026-09-21 close\n\nMany search results contained information from after 2026-08-24, including earnings results, post-earnings price moves and the September Fed decision. I left all of it out as instructed. Everything below is dated on or before 2026-08-24, or is a schedule that was already known by then.\n\n## 1. Resolution source\n- 2026-08-21: The NVDA close on Yahoo Finance was **$214.72**, the baseline figure from the code-collected data. Ticker NVDA trades on Nasdaq and the question uses the regular daily close.\n- I could not fetch Yahoo Finance directly. Third-party reports of closes line up with the baseline: about $225.01 on 2026-08-17 and $216.85 on 2026-08-20. [roic.ai](https://www.roic.ai/news/nvidia-falls-for-7th-day-longest-losing-streak-since-2022-08-24-2026)\n\n## 2. Current status\n- Nothing settles the question yet. The biggest single scheduled catalyst, fiscal Q2 2027 earnings, comes after the forecast deadline.\n- 2026-08-21: NVDA was on a multi-day losing streak going into the baseline date. Reports describe about $204B in market value lost over five days, with a sixth straight drop looming. [thecryptobasic](https://thecryptobasic.com/2026/08/21/nvidia-loses-204-billion-in-five-days-as-sixth-straight-drop-looms-before-earnings/)\n- 2026-08-24: Coverage dated that day says the stock fell about 2.9% intraday for a 7th straight losing session, its longest streak since 2022, as tech pulled back. [roic.ai](https://www.roic.ai/news/nvidia-falls-for-7th-day-longest-losing-streak-since-2022-08-24-2026) If that held at the close, NVDA would be at about $208.5, roughly -2.9% against the baseline. That is an intraday report and I could not confirm the closing price.\n\n## 3. Recent news (newest first)\n- 2026-08-24: The decline was put down to rising Treasury yields hitting high-valuation tech and caution ahead of earnings. Some reports also cite a 15% price hike for some chip customers, US-Canada tariff threats, Iran sanctions and criticism of \"circular financing\". [roic.ai](https://www.roic.ai/news/nvidia-falls-for-7th-day-longest-losing-streak-since-2022-08-24-2026); [beincrypto](https://beincrypto.com/nvidia-stock-losing-streak-earnings/)\n- 2026-08-24: A Motley Fool piece reviewed how the stock has moved after past earnings reports. [fool.com](https://www.fool.com/investing/2026/08/24/will-nvidia-stock-soar-after-aug-26-here-s-what-history-shows/)\n- 2026-08-21: CNBC's preview of the week said it would bring PCE data, Nvidia earnings and Jackson Hole, and that tech had been a notable loser. [CNBC](https://www.cnbc.com/2026/08/21/stock-market-next-week-outlook-for-aug-24-28-2026.html)\n- 2026-08-21: A Motley Fool piece made a bullish case tied to the earnings report. [fool.com](https://www.fool.com/investing/2026/08/21/prediction-nvidia-stock-will-go-parabolic-after-aug-26-here-are-2-3-trillion-reasons-why/)\n- 2026-08-17: Nvidia filed an 8-K, likely the earnings date announcement. [SEC](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000069/nvda-20260817.htm)\n- About 2026-08-10: Some reports trace the start of the slide to a roughly $500B financing plan with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR. [cryptobriefing](https://cryptobriefing.com/nvidia-longest-losing-streak-five-years/)\n- Pre-earnings consensus:\n  - Fiscal Q2 revenue of about $91.8B and EPS of about $2.08-2.09. Nvidia's own guidance was $91B ±2%.\n  - The Street expected about $104B for fiscal Q3 revenue.\n  - Nvidia had beaten estimates 13 quarters in a row.\n  - The stock fell the day after each of the previous four reports.\n  - Bank of America's price target was $350, and all 26 analysts on TipRanks rated it Buy.\n  - [Kiplinger](https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-august-2026); [beincrypto](https://beincrypto.com/nvidia-stock-losing-streak-earnings/)\n\n## 4. Base rates\n- The code baseline gives an empirical 21-day price distribution. Expressed as % change from $214.72:\n\n| Percentile | Price | Change |\n|---|---|---|\n| p5 | $189.29 | -11.8% |\n| p10 | $195.67 | -8.9% |\n| p25 | $208.57 | -2.9% |\n| p50 | $220.65 | +2.8% |\n| p75 | $238.23 | +11.0% |\n| p90 | $259.26 | +20.7% |\n| p95 | $274.26 | +27.7% |\n\n- The p25-p75 range is about 14 percentage points wide.\n- This window includes an earnings report. NVDA's next-day moves after earnings have historically been about ±3% to ±10%, and the post-report move has often been negative even on beats (four in a row before this report).\n- Up to 2026-08-25 the stock was still up more than 13% year to date despite the streak. [CNBC](https://www.cnbc.com/2026/08/24/stock-market-today-live-updates.html)\n- September has historically been a seasonally weak month for equities and semiconductors.\n\n## 5. Other forecasts\n- Polymarket ran NVDA \"close above\" markets for late August 2026. [polymarket](https://polymarket.com/event/nvda-above-in-august-2026) The snapshots I found were from mirror sites with unclear dates and possibly post-earnings, so I could not get reliable pre-deadline prices.\n- I could not find a pre-earnings options implied move. Historically it has been around ±6-7%.\n- I found no Polymarket, Kalshi or Manifold market covering the 2026-09-21 date.\n\n## 6. Upcoming events before resolution\n- 2026-08-26 (Wed, after the close): Nvidia fiscal Q2 2027 earnings and Q3 guidance, the main catalyst. [SEC 8-K](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/nvda-20260826.htm)\n- Week of 2026-08-24: PCE inflation data, then the Jackson Hole symposium. [CNBC](https://www.cnbc.com/2026/08/21/stock-market-next-week-outlook-for-aug-24-28-2026.html)\n- Around 2026-09-04: August jobs report. Around 2026-09-10/11: CPI. These dates are typical, not confirmed.\n- 2026-09-15/16: FOMC meeting, with projections and the dot plot. [fedratecalc](https://fedratecalc.com/fomc-meeting-schedule/september-2026/)\n- 2026-09-18: Quarterly options expiration (\"quad witching\"), a typical date I did not confirm.\n- Ongoing: US-China export and tariff news (Nvidia's guidance excludes China data center sales), Treasury yields and AI capex headlines.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for NVDA: latest close 214.7200 on 2026-08-21.\nTarget date 2026-09-21 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 189.2851, p10: 195.6749, p25: 208.5702, p50: 220.6497, p75: 238.2342, p90: 259.2638, p95: 274.2575\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -24.0
+        ],
+        [
+          0.05,
+          -15.5
+        ],
+        [
+          0.1,
+          -11.5
+        ],
+        [
+          0.2,
+          -6.8
+        ],
+        [
+          0.3,
+          -3.6
+        ],
+        [
+          0.4,
+          -1.2
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          3.0
+        ],
+        [
+          0.7,
+          5.8
+        ],
+        [
+          0.8,
+          9.5
+        ],
+        [
+          0.9,
+          15.0
+        ],
+        [
+          0.95,
+          19.5
+        ],
+        [
+          0.99,
+          28.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -24.0
+        ],
+        [
+          0.05,
+          -15.5
+        ],
+        [
+          0.1,
+          -11.0
+        ],
+        [
+          0.2,
+          -6.5
+        ],
+        [
+          0.3,
+          -3.5
+        ],
+        [
+          0.4,
+          -1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          3.0
+        ],
+        [
+          0.7,
+          5.5
+        ],
+        [
+          0.8,
+          9.0
+        ],
+        [
+          0.9,
+          14.0
+        ],
+        [
+          0.95,
+          18.5
+        ],
+        [
+          0.99,
+          27.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -27.0
+        ],
+        [
+          0.05,
+          -17.0
+        ],
+        [
+          0.1,
+          -12.5
+        ],
+        [
+          0.2,
+          -7.5
+        ],
+        [
+          0.3,
+          -4.5
+        ],
+        [
+          0.4,
+          -2.0
+        ],
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.6,
+          2.5
+        ],
+        [
+          0.7,
+          5.5
+        ],
+        [
+          0.8,
+          9.0
+        ],
+        [
+          0.9,
+          14.0
+        ],
+        [
+          0.95,
+          18.5
+        ],
+        [
+          0.99,
+          27.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3994
+}

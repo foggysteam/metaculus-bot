@@ -1,0 +1,185 @@
+{
+  "id": "nq-AAPL-level",
+  "question": "What will be the closing value of Apple (AAPL) stock (AAPL on Yahoo Finance) on September 17, 2026?",
+  "resolution_criteria": "Resolves to the daily close of AAPL on Yahoo Finance for 2026-09-17. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD",
+  "outcome": 337.0,
+  "outcome_date": "2026-09-17",
+  "as_of": "2026-09-10",
+  "resolve_date": "2026-09-17",
+  "lower_bound": 270.0,
+  "upper_bound": 350.0,
+  "source": "yahoo",
+  "series": "AAPL",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for AAPL: latest close 315.3400 on 2026-09-09.\nTarget date 2026-09-17 is 5 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 5-observation returns over the last 3 years (last year weighted double):\np5: 298.6715, p10: 302.1973, p25: 309.8366, p50: 317.4506, p75: 324.5624, p90: 330.9727, p95: 335.7445\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I've finished searching and am now writing up the findings. I left out every source dated after 2026-09-10.\n\n## 1. Resolution source\n- 2026-09-09: Yahoo Finance shows AAPL's last close at **$315.34** (from the code baseline). Bloomberg, as reported by Oneindia, gives the same close and a fall of 1.53% that day. [Oneindia](https://www.oneindia.com/business/apple-shares-slip-after-iphone-18-pro-foldable-iphone-launch-8201077.html)\n- Other sources disagree. A table on investsmart lists the 9 Sep close as 316.31 (-0.29%), Traders Union gives $316.23, and Equentis, citing Reuters, says the stock closed about 0.3% lower. Yahoo is the resolution source, so use $315.34. [investsmart](https://www.investsmart.com.au/security/nasdaq/aapl/apple/share-price), [Traders Union](https://tradersunion.com/news/stocks/show/3277878-apple-slips-0-04percent-to-usd316-23/), [Equentis](https://www.equentis.com/blog/apple-shares-slip-after-iphone-18-pro-foldable-launch-what-investors-should-know/)\n\n## 2. Current status\n- Nothing settles the question yet. It resolves five trading sessions after the last known close.\n- 2026-09-10: The Globe and Mail said AAPL was edging up in early premarket trading. A BingX headline claims the stock was \"up 3.56% today, Sep 10\", which would put it around $326. I couldn't open that page or confirm the number anywhere else, so treat it as unconfirmed. [Globe and Mail](https://www.theglobeandmail.com/investing/markets/stocks/AAPL/pressreleases/4557478/apple-unveils-foldable-iphone-but-stocks-muted-reaction-raises-questions/), [BingX](https://bingx.com/en/news/post/why-is-apple-aapl-stock-price-up-today-sep-iphone-pro-lineup-and-foldable-iphone-duo-fuel-rally)\n\n## 3. Recent news (newest first)\n- 2026-09-10: BofA kept its Buy rating but lowered its price target from $370 to $380... correction: from $380 to $370, citing margin pressure from higher memory and component costs. [TipRanks](https://www.tipranks.com/stocks/aapl/forecast)\n- 2026-09-09: At the \"Surprise and shine\" event Apple announced the iPhone 18 Pro ($1,199) and Pro Max ($1,299), both $100 more than last year, plus a foldable \"iPhone Duo\" ($1,999, on sale 23 Oct), new Apple Watches and AirPods. The stock fell during the keynote, and analysts said the products were largely priced in already. [CNBC](https://www.cnbc.com/2026/09/09/apple-event-today-live-updates.html), [Businessday](https://businessday.ng/technology/article/apple-shares-slip-after-iphone-18-launch-as-investors-weigh-ai-foldable-strategy/)\n- 2026-09-01: John Ternus took over as CEO from Tim Cook. [CNBC](https://www.cnbc.com/2026/08/26/apple-iphone-launch-date-john-ternus.html)\n- 2026-09-04: The stock fell about 2.5% that Friday to roughly $319.98. [Vantage](https://www.vantagemarkets.com/market-analysis/aapl-stock-price-today-iphone-launch-analyst-reaction-september-7-2026/)\n- Before the event: AAPL was up about 16% for the year but roughly 8% below its July all-time high. One unverified source puts the 52-week high at about $344.57. [Oneindia](https://www.oneindia.com/business/apple-shares-slip-after-iphone-18-pro-foldable-iphone-launch-8201077.html)\n\n## 4. Base rates\n- The code baseline, built from 5-session returns over the last 3 years, gives: p5 298.7, p10 302.2, p25 309.8, p50 317.5, p75 324.6, p90 331.0, p95 335.7. That implies a 1-sigma move of about ±3% over a week.\n- History: AAPL usually drifts lower or stays flat around iPhone events (\"sell the news\"). Moves in the week after preorders open have been mixed. [Yahoo Finance](https://finance.yahoo.com/technology/article/how-apple-stock-usually-reacts-to-big-iphone-reveal-events-152915777.html), [ECM Source](https://ecmsource.com/apple-sept-9-iphone-event-foldable-aapl-history-september-2026/)\n- Recent level: the stock has traded around $315-320 since early September.\n\n## 5. Other forecasts\n- Polymarket appears to list weekly AAPL markets (\"AAPL week September 11\", \"AAPL above in September 2026\"). I only found them on unofficial mirror sites, and the odds there contradict each other, so I couldn't get usable prices. I found no market for 17 Sep specifically, and nothing on Kalshi or Manifold. [mirror](https://polymarket.technogab.duckdns.org/event/aapl-above-on-september-11-2026)\n- Analyst targets: Morgan Stanley Overweight at $360, UBS Neutral at $296, BofA $370. The consensus is around $325, which is not a 1-week forecast. [TipRanks](https://www.tipranks.com/stocks/aapl/forecast)\n\n## 6. Upcoming events before resolution\n- 2026-09-11 (Fri): August CPI is released at 8:30 ET. [fedratecalc](https://fedratecalc.com/us-economic-calendar/)\n- 2026-09-12: iPhone 18 Pro preorders open, according to one less-established recap site. Early reports on delivery lead times could move the stock. [stockmarkethours](https://stockmarkethours.org/events/apple-event)\n- 2026-09-15/16: FOMC meeting, with the decision, new projections and press conference on 16 Sep. Pricing earlier in the summer put the chance of a 25bp **hike** at about 53-58% (target range stated as 3.50-3.75%). That makes this a significant macro risk the day before resolution. [Federal Reserve](https://www.federalreserve.gov/newsevents/2026-september.htm), [CoinGape](https://coingape.com/fomc-meeting-sept-2026-date-schedule-expectations-and-how-to-watch/)\n- 2026-09-18: iPhone 18 Pro goes on sale, one day after the resolution date. [stockmarkethours](https://stockmarkethours.org/events/apple-event)\n\n## Sources\n- [Yahoo Finance: September surprise](https://finance.yahoo.com/markets/stocks/articles/apple-stock-september-surprise-could-130002154.html)\n- [AppleInsider](https://appleinsider.com/articles/26/08/26/what-to-expect-from-apples-surprise-and-shine-iphone-18-pro-event-on-september-9)\n- [TradingKey](https://www.tradingkey.com/analysis/stocks/us-stocks/262138323-apple-stock-319-breakout-iphone-event-ceo-change-tradingkey)\n- [KuCoin](https://www.kucoin.com/news/flash/apple-unveils-iphone-18-pro-and-foldable-iphone-duo-sparks-market-reactions)\n- [BeInCrypto](https://beincrypto.com/apple-foldable-iphone-aapl-stock-dip/)\n- [Yahoo live blog](https://finance.yahoo.com/markets/stocks/live/apple-event-live-updates-first-foldable-iphone-iphone-18-pro-and-watches-expected-122840434.html)\n- Plus the sources linked inline above.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for AAPL: latest close 315.3400 on 2026-09-09.\nTarget date 2026-09-17 is 5 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 5-observation returns over the last 3 years (last year weighted double):\np5: 298.6715, p10: 302.1973, p25: 309.8366, p50: 317.4506, p75: 324.5624, p90: 330.9727, p95: 335.7445\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          290.0
+        ],
+        [
+          0.05,
+          299.0
+        ],
+        [
+          0.1,
+          303.0
+        ],
+        [
+          0.2,
+          308.5
+        ],
+        [
+          0.3,
+          312.5
+        ],
+        [
+          0.4,
+          315.5
+        ],
+        [
+          0.5,
+          318.0
+        ],
+        [
+          0.6,
+          320.5
+        ],
+        [
+          0.7,
+          323.5
+        ],
+        [
+          0.8,
+          327.5
+        ],
+        [
+          0.9,
+          333.0
+        ],
+        [
+          0.95,
+          337.5
+        ],
+        [
+          0.99,
+          347.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          289.0
+        ],
+        [
+          0.05,
+          298.5
+        ],
+        [
+          0.1,
+          302.5
+        ],
+        [
+          0.2,
+          308.5
+        ],
+        [
+          0.3,
+          312.0
+        ],
+        [
+          0.4,
+          315.0
+        ],
+        [
+          0.5,
+          317.5
+        ],
+        [
+          0.6,
+          320.0
+        ],
+        [
+          0.7,
+          323.0
+        ],
+        [
+          0.8,
+          327.0
+        ],
+        [
+          0.9,
+          332.5
+        ],
+        [
+          0.95,
+          337.0
+        ],
+        [
+          0.99,
+          346.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          290.0
+        ],
+        [
+          0.05,
+          299.0
+        ],
+        [
+          0.1,
+          303.0
+        ],
+        [
+          0.2,
+          308.5
+        ],
+        [
+          0.3,
+          312.0
+        ],
+        [
+          0.4,
+          315.0
+        ],
+        [
+          0.5,
+          317.5
+        ],
+        [
+          0.6,
+          320.0
+        ],
+        [
+          0.7,
+          323.0
+        ],
+        [
+          0.8,
+          327.0
+        ],
+        [
+          0.9,
+          332.0
+        ],
+        [
+          0.95,
+          336.5
+        ],
+        [
+          0.99,
+          345.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4096
+}

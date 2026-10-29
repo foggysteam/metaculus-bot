@@ -1,0 +1,185 @@
+{
+  "id": "nq-TNX-level",
+  "question": "What will be the closing value of the CBOE 10-year Treasury yield index (^TNX) (^TNX on Yahoo Finance) on September 1, 2026?",
+  "resolution_criteria": "Resolves to the daily close of ^TNX on Yahoo Finance for 2026-09-01. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "percent",
+  "outcome": 4.796,
+  "outcome_date": "2026-09-01",
+  "as_of": "2026-08-04",
+  "resolve_date": "2026-09-01",
+  "lower_bound": 4.0,
+  "upper_bound": 5.5,
+  "source": "yahoo",
+  "series": "^TNX",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^TNX: latest close 4.6860 on 2026-08-03.\nTarget date 2026-09-01 is 20 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 20-observation returns over the last 3 years (last year weighted double):\np5: 4.346, p10: 4.4443, p25: 4.5447, p50: 4.6958, p75: 4.8327, p90: 4.9822, p95: 5.0976\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "## Research brief: ^TNX close on 2026-09-01 (only information published on or before 2026-08-04)\n\nMany search results were dated after 2026-08-04. As instructed, I have not used or cited them.\n\n### 1. Resolution source\n- The question resolves on the Yahoo Finance daily close of ^TNX for 2026-09-01, which is a Tuesday and a normal trading day. The Labor Day holiday falls on Monday, 2026-09-07. ^TNX is the CBOE index, quoted directly in percent.\n- 2026-08-03: Yahoo Finance ^TNX closed at 4.686, according to the data your code collected. I could not fetch Yahoo directly: the proxy refused the connection.\n- 2026-08-03: YCharts shows the 10-year Treasury rate at 4.70%. That differs a little from Yahoo's 4.686 because it measures at a different time and from a different source. [YCharts](https://ycharts.com/indicators/10_year_treasury_rate)\n\n### 2. Current status\n- Nothing has happened yet that settles the question. The target date is about 20 trading days away.\n- 2026-07-31: The 10-year note closed at 4.75% and the 2-year at 4.28%. [Advisor Perspectives](https://www.advisorperspectives.com/dshort/updates/2026/07/31/treasury-yields-snapshot-july-31-2026), [Asset Management News](https://asset-management-news.com/markets/us-treasury-yields-snapshot-july-31-2026/)\n- 2026-08-03: The yield was around 4.69 to 4.70%, roughly 5 to 6 basis points below the July 31 close.\n\n### 3. Recent news (newest first)\n- 2026-08-03: Treasury raised its July to September borrowing estimate to $739B, $68B more than its May estimate, because of lower cash inflows. It expects $628B for October to December. Auction sizes for nominal coupons are expected to stay the same for \"at least the next several quarters.\" [Treasury](https://home.treasury.gov/news/press-releases/sb0584), [MyChesco](https://www.mychesco.com/a/news/national/treasury-raises-quarterly-borrowing-estimate-to-739-billion/)\n- 2026-07-29: The FOMC held rates at 3.50 to 3.75% on a 9-3 vote. Hammack, Kashkari and Logan dissented because they wanted a 25bp hike. Before the meeting, markets priced roughly a one-in-three chance of a hike. After the decision the 10-year rose about 5bp to roughly 4.66%, while the 30-year reached about 5.19%, its highest since 2007. Chair Warsh's press conference was read as dovish on inflation. [Fed](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm), [CNBC](https://www.cnbc.com/2026/07/29/fed-rate-decision-july-2026.html), [CNBC yields](https://www.cnbc.com/2026/07/29/treasury-yields-fed-interest-rates.html)\n- 2026-07-10: The Fed's Monetary Policy Report noted that the expected policy path and nominal yields had moved up somewhat. [Fed MPR](https://www.federalreserve.gov/monetarypolicy/files/20260710_mprfullreport.pdf)\n- 2026-07-02: June payrolls rose only 57k and unemployment was 4.2%. The 2-year yield eased as hike bets faded. [CNBC](https://www.cnbc.com/2026/07/02/us-treasury-yields-rise-as-investors-await-june-jobs-report.html)\n- 2026 context: energy prices drove inflation higher. April CPI was reported at 3.8% year over year. In May, the 30-year yield topped 5% and yields hit their 2026 highs. [Canadian Mortgage Trends/Bloomberg](https://www.canadianmortgagetrends.com/2026/05/bond-investors-flee-as-inflation-worry-sends-yields-to-2026-high/), [FXStreet](https://www.fxstreet.com/analysis/us-stocks-slide-as-30-year-yield-rises-to-july-2007-levels-202605191456)\n\n### 4. Base rates and typical variation\n- Your code's baseline: the latest close was 4.686 on 2026-08-03. The empirical distribution of 20-trading-day moves gives p5 4.35, p10 4.44, p25 4.54, p50 4.70, p75 4.83, p90 4.98 and p95 5.10.\n- That means the middle 50% band is about ±15bp and the 90% band is about -34bp to +41bp. The upper tail is somewhat fatter.\n- Recent trend: the yield went from about 4.66% after the FOMC to 4.75% on July 31 and about 4.69% on August 3. That is a range-bound, high-yield regime: the 30-year is near multi-decade highs and the curve has steepened, with the 2-year near 4.24 to 4.28%.\n- The question's range of 4.0 to 5.5 comfortably covers the empirical 5 to 95% band.\n\n### 5. Other forecasts\n- Kalshi lists daily and weekly 10-year yield markets plus a year-end 2026 ladder. [Kalshi example](https://kalshi.com/markets/kxust10ad/ust-10-year-daily/kxust10ad-26aug05) I could not find any price from on or before Aug 4 for a market expiring on or near Sept 1. The aggregator snapshots I found were dated after the cutoff, so I left them out.\n- I found no Polymarket or Manifold market, and no dated expert point forecast for September 1.\n\n### 6. Upcoming events before resolution\n- 2026-08-05: Treasury's quarterly refunding announcement at 8:30 ET, covering auction sizes and buyback details. [Newsquawk](https://www.newsquawk.com/headlines/primer-quarterly-refunding-due-wednesday-august-5th-at-1330bst0830edt)\n- About 2026-08-07: the July jobs report.\n- About Aug 11 to 13: the 3-year ($58B), 10-year ($42B) and 30-year ($25B) refunding auctions. [MNI](https://www.mnimarkets.com/events/117654-575)\n- About 2026-08-12: July CPI. PPI and retail sales come mid-month.\n- About 2026-08-19: minutes of the July 28 to 29 FOMC meeting.\n- Late August: the Jackson Hole symposium, with a speech by Chair Warsh.\n- About Aug 28: July PCE inflation.\n- Ongoing: oil and energy prices, which have driven inflation in 2026, and the fiscal and term-premium pressure at the long end.\n- The next FOMC meeting is in mid-September, after the resolution date. Hike pricing for that meeting is a key driver of yields.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^TNX: latest close 4.6860 on 2026-08-03.\nTarget date 2026-09-01 is 20 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 20-observation returns over the last 3 years (last year weighted double):\np5: 4.346, p10: 4.4443, p25: 4.5447, p50: 4.6958, p75: 4.8327, p90: 4.9822, p95: 5.0976\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          4.18
+        ],
+        [
+          0.05,
+          4.33
+        ],
+        [
+          0.1,
+          4.43
+        ],
+        [
+          0.2,
+          4.54
+        ],
+        [
+          0.3,
+          4.61
+        ],
+        [
+          0.4,
+          4.66
+        ],
+        [
+          0.5,
+          4.7
+        ],
+        [
+          0.6,
+          4.74
+        ],
+        [
+          0.7,
+          4.79
+        ],
+        [
+          0.8,
+          4.86
+        ],
+        [
+          0.9,
+          4.97
+        ],
+        [
+          0.95,
+          5.07
+        ],
+        [
+          0.99,
+          5.26
+        ]
+      ],
+      [
+        [
+          0.01,
+          4.2
+        ],
+        [
+          0.05,
+          4.35
+        ],
+        [
+          0.1,
+          4.44
+        ],
+        [
+          0.2,
+          4.53
+        ],
+        [
+          0.3,
+          4.6
+        ],
+        [
+          0.4,
+          4.65
+        ],
+        [
+          0.5,
+          4.69
+        ],
+        [
+          0.6,
+          4.73
+        ],
+        [
+          0.7,
+          4.79
+        ],
+        [
+          0.8,
+          4.86
+        ],
+        [
+          0.9,
+          4.97
+        ],
+        [
+          0.95,
+          5.07
+        ],
+        [
+          0.99,
+          5.25
+        ]
+      ],
+      [
+        [
+          0.01,
+          4.18
+        ],
+        [
+          0.05,
+          4.35
+        ],
+        [
+          0.1,
+          4.44
+        ],
+        [
+          0.2,
+          4.53
+        ],
+        [
+          0.3,
+          4.6
+        ],
+        [
+          0.4,
+          4.66
+        ],
+        [
+          0.5,
+          4.7
+        ],
+        [
+          0.6,
+          4.75
+        ],
+        [
+          0.7,
+          4.8
+        ],
+        [
+          0.8,
+          4.88
+        ],
+        [
+          0.9,
+          4.98
+        ],
+        [
+          0.95,
+          5.07
+        ],
+        [
+          0.99,
+          5.25
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4364
+}
