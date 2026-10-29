@@ -1,0 +1,185 @@
+{
+  "id": "nq-N225-level",
+  "question": "What will be the closing value of the Nikkei 225 index (^N225 on Yahoo Finance) on September 3, 2026?",
+  "resolution_criteria": "Resolves to the daily close of ^N225 on Yahoo Finance for 2026-09-03. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "points",
+  "outcome": 64214.480469,
+  "outcome_date": "2026-09-03",
+  "as_of": "2026-08-13",
+  "resolve_date": "2026-09-03",
+  "lower_bound": 50000.0,
+  "upper_bound": 85000.0,
+  "source": "yahoo",
+  "series": "^N225",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^N225: latest close 67524.0625 on 2026-08-12.\nTarget date 2026-09-03 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 62864.3813, p10: 64344.3834, p25: 66732.6568, p50: 69018.366, p75: 71718.2579, p90: 73222.7291, p95: 74096.0282\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I'm finishing the write-up from what I've gathered. Several pages could not be fetched because the proxy refused the connection, so some facts below come only from search-result summaries. I left out every result dated after 2026-08-13.\n\n## 1. Resolution source\n- The question resolves on the Yahoo Finance ^N225 daily close for 2026-09-03, a Thursday and a normal Tokyo trading day. I could not load Yahoo directly. [Yahoo](https://finance.yahoo.com/quote/%5EN225/)\n- 2026-08-12: the code baseline shows a latest Yahoo close of 67,524.06. CNBC reports the same figure, up 0.83%, with the Topix up 0.94% at 4,139. [CNBC](https://www.cnbc.com/2026/08/11/stock-market-today-live-updates.html)\n- 2026-08-13: CNBC and FRED both report the Nikkei up 1.16% at 68,308.59, with the Topix up 0.89% at 4,176.04. This is the newest close as of the cutoff. [CNBC](https://www.cnbc.com/2026/08/12/stock-market-today-live-updates.html), [FRED](https://fred.stlouisfed.org/series/nikkei225)\n\n## 2. Current status\n- Nothing has settled the question. There are about 14 trading sessions left after the 08-13 close.\n- 2026-08-13: the index, at about 68,300, sits roughly in the middle of the 50,000-85,000 question range. It is about 5.6% below the record and about 11% above the late-July low.\n\n## 3. Recent news (newest first)\n- 2026-08-13: the index gained 1.16%, its second straight up session. [CNBC](https://www.cnbc.com/2026/08/12/stock-market-today-live-updates.html)\n- 2026-08-12: Tokyo reopened after the Mountain Day holiday on 08-11 and rose 0.83%. [CNBC](https://www.cnbc.com/2026/08/11/stock-market-today-live-updates.html)\n- 2026-08-10: close of about 66,970. [note.com market report](https://note.com/hirokimiyano/n/ncb031d2f0747?hl=en)\n- 2026-08-07: Xinhua reported that Tokyo stocks ended mixed. I could not open the article. [Xinhua](https://english.news.cn/20260807/dcefea1cb363485bb2f90d67524a1b05/c.html)\n- 2026-08-06: according to the search summary, SoftBank fell about 6% before its earnings and was more than 30% below its year-to-date high, while the yen weakened. [Invezz](https://invezz.com/news/2026/08/06/nikkei-225-index-on-edge-ahead-of-softbank-earnings-as-japanese-yen-dips/)\n- July 2026: the index fell 8.13% to 64,362.02, its first monthly drop in four months. The July high was 70,474.96 on 07-01 and the low was about 61,434 on 07-29. Nikkei's monthly report blames caution after fast gains, worries about AI and semiconductor competition, and renewed Middle East tensions. [Nikkei newsletter vol80](https://indexes.nikkei.co.jp/nkave/archives/file/nikkei_indexes_newsletter_vol80.pdf)\n- 2026-06-25: record close of 72,366.34. The index first closed above 72,000 on 06-22. [Nikkei vol79](https://indexes.nikkei.co.jp/nkave/archives/file/nikkei_indexes_newsletter_vol79.pdf), [Jiji/Adnkronos](https://english.adnkronos.com/2026/06/22/nikkei-closes-above-72000-for-1st-time/)\n- 2026-05-13: first record close above 63,000. [Adnkronos](https://english.adnkronos.com/2026/05/13/nikkei-225-hits-record-closing-high-above-63000/)\n\n## 4. Base rates\n- Code baseline: 15-session percentiles from 67,524 (3-year empirical returns, with the last year weighted double):\n  - p5: 62,864\n  - p10: 64,344\n  - p25: 66,733\n  - p50: 69,018\n  - p75: 71,718\n  - p90: 73,223\n  - p95: 74,096\n- The 08-13 close was already about 1.2% above that baseline's starting level, and one fewer session remains.\n- How big recent moves have been:\n  - From 07-01 to 07-29, the index fell about 13% (70,475 to 61,434).\n  - From the late-July low to 08-13, it rose about 11%.\n  - Moves of 1% or more in a day are common. The index is volatile, and the chip stocks Advantest and SoftBank carry very large weights in it.\n- Trend: a strong rise through late June, a sharp fall in July, then a partial recovery in August.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the Nikkei 225 close for 2026-09-03.\n- I found no recent broker or strategist target that applies to this short a horizon.\n\n## 6. Upcoming events before 2026-09-03\n- Late August: Nvidia quarterly earnings, usually in the last week of August. These are a big driver for Advantest, SoftBank and Tokyo Electron, and so for the Nikkei.\n- Late August: the Fed's Jackson Hole symposium (usually the last full week of August), US PCE inflation, and Tokyo CPI for August (end of month).\n- Ongoing: the USD/JPY level and the risk of Japanese currency intervention. A weaker yen tends to lift the Nikkei, and intervention or hawkish Bank of Japan signals tend to hurt it. The next BOJ policy meeting is in September, probably after 09-03, so hike expectations matter before then.\n- Ongoing: Middle East tensions and oil prices, which Nikkei's own report cited as a July headwind.\n- After resolution, so irrelevant: the US August jobs report, normally the first Friday of September (09-04).\n\nSources:\n- [CNBC Aug 13 live updates](https://www.cnbc.com/2026/08/12/stock-market-today-live-updates.html)\n- [CNBC Aug 12 live updates](https://www.cnbc.com/2026/08/11/stock-market-today-live-updates.html)\n- [FRED NIKKEI225](https://fred.stlouisfed.org/series/nikkei225)\n- [Yahoo ^N225](https://finance.yahoo.com/quote/%5EN225/)\n- [note.com Japan Market Report Aug 12](https://note.com/hirokimiyano/n/ncb031d2f0747?hl=en)\n- [Xinhua Aug 7](https://english.news.cn/20260807/dcefea1cb363485bb2f90d67524a1b05/c.html)\n- [Invezz Aug 6](https://invezz.com/news/2026/08/06/nikkei-225-index-on-edge-ahead-of-softbank-earnings-as-japanese-yen-dips/)\n- [Nikkei newsletter vol80](https://indexes.nikkei.co.jp/nkave/archives/file/nikkei_indexes_newsletter_vol80.pdf)\n- [Nikkei newsletter vol79](https://indexes.nikkei.co.jp/nkave/archives/file/nikkei_indexes_newsletter_vol79.pdf)\n- [Adnkronos Jun 22](https://english.adnkronos.com/2026/06/22/nikkei-closes-above-72000-for-1st-time/)\n- [Adnkronos May 13](https://english.adnkronos.com/2026/05/13/nikkei-225-hits-record-closing-high-above-63000/)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^N225: latest close 67524.0625 on 2026-08-12.\nTarget date 2026-09-03 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 62864.3813, p10: 64344.3834, p25: 66732.6568, p50: 69018.366, p75: 71718.2579, p90: 73222.7291, p95: 74096.0282\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          58000.0
+        ],
+        [
+          0.05,
+          62300.0
+        ],
+        [
+          0.1,
+          64000.0
+        ],
+        [
+          0.2,
+          66000.0
+        ],
+        [
+          0.3,
+          67300.0
+        ],
+        [
+          0.4,
+          68200.0
+        ],
+        [
+          0.5,
+          68900.0
+        ],
+        [
+          0.6,
+          69600.0
+        ],
+        [
+          0.7,
+          70500.0
+        ],
+        [
+          0.8,
+          71800.0
+        ],
+        [
+          0.9,
+          73500.0
+        ],
+        [
+          0.95,
+          74800.0
+        ],
+        [
+          0.99,
+          77800.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          57500.0
+        ],
+        [
+          0.05,
+          62000.0
+        ],
+        [
+          0.1,
+          63800.0
+        ],
+        [
+          0.2,
+          65800.0
+        ],
+        [
+          0.3,
+          67200.0
+        ],
+        [
+          0.4,
+          68000.0
+        ],
+        [
+          0.5,
+          68700.0
+        ],
+        [
+          0.6,
+          69400.0
+        ],
+        [
+          0.7,
+          70300.0
+        ],
+        [
+          0.8,
+          71500.0
+        ],
+        [
+          0.9,
+          73200.0
+        ],
+        [
+          0.95,
+          74500.0
+        ],
+        [
+          0.99,
+          77500.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          58800.0
+        ],
+        [
+          0.05,
+          62900.0
+        ],
+        [
+          0.1,
+          64500.0
+        ],
+        [
+          0.2,
+          66300.0
+        ],
+        [
+          0.3,
+          67600.0
+        ],
+        [
+          0.4,
+          68500.0
+        ],
+        [
+          0.5,
+          69200.0
+        ],
+        [
+          0.6,
+          69900.0
+        ],
+        [
+          0.7,
+          70800.0
+        ],
+        [
+          0.8,
+          71900.0
+        ],
+        [
+          0.9,
+          73500.0
+        ],
+        [
+          0.95,
+          74700.0
+        ],
+        [
+          0.99,
+          77300.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3902
+}

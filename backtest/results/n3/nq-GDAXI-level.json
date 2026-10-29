@@ -1,0 +1,185 @@
+{
+  "id": "nq-GDAXI-level",
+  "question": "What will be the closing value of the DAX index (^GDAXI on Yahoo Finance) on September 24, 2026?",
+  "resolution_criteria": "Resolves to the daily close of ^GDAXI on Yahoo Finance for 2026-09-24. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "points",
+  "outcome": 25266.529297,
+  "outcome_date": "2026-09-24",
+  "as_of": "2026-09-14",
+  "resolve_date": "2026-09-24",
+  "lower_bound": 23500.0,
+  "upper_bound": 28000.0,
+  "source": "yahoo",
+  "series": "^GDAXI",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^GDAXI: latest close 25568.5605 on 2026-09-11.\nTarget date 2026-09-24 is 9 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 9-observation returns over the last 3 years (last year weighted double):\np5: 24606.6712, p10: 24856.3368, p25: 25309.5744, p50: 25710.8766, p75: 26149.4176, p90: 26576.6117, p95: 26861.2306\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I've excluded everything dated after 2026-09-14, including later DAX closes and later oil moves that turned up in searches. Most page fetches were refused by the proxy, so several facts below come from search-result summaries rather than the full articles.\n\n## 1. Resolution source\n- The question resolves on the Yahoo Finance ^GDAXI daily close for 2026-09-24, a Thursday and a normal Xetra trading day. I could not open Yahoo directly.\n- 2026-09-11: The code-collected Yahoo close is 25,568.56. dpa-AFX reports the same close of 25,568.56, up 0.82% on the day and down 1.83% for the week. boerse.de also shows about 25,569 (+0.82%). [ariva/dpa-AFX](https://www.ariva.de/dax-index/news/aktien-frankfurt-schluss-dax-stabilisiert-sich-auf-12134049), [boerse.de](https://www.boerse.de/historische-kurse-tage/Dax/DE0008469008)\n- 2026-09-10: According to XTB, the DAX closed near 25,336 after a sharp drop. [XTB](https://www.xtb.com/de/Marktanalysen/Trading-News/dax-prognose-fuer-freitag-11-09-26-aktuelle-einschaetzung-und-chartanalyse)\n\n## 2. Current status\n- Nothing has settled the question yet. The index sits about 0.9% inside the lower half of the question's 23,500 to 28,000 range, roughly 2,070 points above the floor and 2,430 below the ceiling.\n- Early September 2026: Weekly-outlook headlines describe the DAX returning above 26,000 and having to \"defend a high level\". The week ending 09-11 then pulled it back to about 25,570. [finanznachrichten](https://www.finanznachrichten.de/nachrichten-2026-09/69506321-wochenausblick-dax-muss-sich-auf-hohem-niveau-behaupten-016.htm), [finanzen.net](https://finanzen.net/nachricht/aktien/xetra-schluss-fester-dax-wieder-ueber-26-000-punkten-16020013)\n\n## 3. Recent news (newest first)\n- 2026-09-14: A stock3 analysis says CME FedWatch puts the chance of a 25 bp Fed hike to 3.75% to 4.00% at about 90%. Kevin Warsh is Fed chair. It names the Fed decision, quarterly expiry and the oil price as the week's main sources of volatility. [stock3](https://stock3.com/news/exklusive-stock3-plus-analyse-jetzt-wird-es-ernst-fed-und-hexensabbat-warten-auf-die-anleger-17284648)\n- Around 2026-09-11: A DAX-FLASH headline reads \"DAX extends weekly loss, Brent nears 110 dollars\". Oil prices tied to the Iran conflict are the main pressure. [finanzen.at](https://www.finanzen.at/nachrichten/aktien/dax-flash-leitindex-weitet-wochenverlust-brent-nahert-sich-110-dollar-1036538459)\n- 2026-09-10: According to a secondary source, the ECB raised all three key rates by 25 bp, citing inflation risks from the Middle East conflict. I could not confirm this on the ECB site. [duratio](https://www.duratio.de/finanznews/zinsprognose-voraussichtliche-zinsentwicklung)\n- 2026-09-09: Brent rose 2.92% to 100.78 USD after attacks in the Persian Gulf, its first move above 100 since 07-24. The DAX lost 0.68% that day. [stock3](https://stock3.com/news/midday-flash-brent-springt-ueber-100-dollar-dax-verliert-068-prozent-17277876)\n- Around 2026-09-05/06: A stock3 weekend summary says oil prices and interest rates weighed on the DAX, which lost 1.9% for the week. [stock3](https://stock3.com/news/weekend-flash-oelpreis-und-zinsen-belasten-dax-verliert-19-prozent-17273001)\n- The overall backdrop is an oil shock (Brent around 100 to 110), central banks turning toward hikes, and two straight weekly losses.\n\n## 4. Base rates\n- Code baseline (Yahoo, 9-trading-day returns over 3 years, last year double-weighted):\n  - p5: 24,607\n  - p10: 24,856\n  - p25: 25,310\n  - p50: 25,711\n  - p75: 26,149\n  - p90: 26,577\n  - p95: 26,861\n- The middle 50% band is about ±1.7% around the median, and the 5th to 95th percentile spread is about -3.8% to +5.1%. The median carries a slight upward drift of about +0.6%.\n- Realized volatility is probably higher than the 3-year average right now: there were moves of -1.9% and -1.8% in consecutive weeks, and a single-day drop on 09-10. That argues for somewhat wider tails than the baseline.\n- September has historically been a seasonally weak month for the DAX. I did not find a specific 2026 statistic for this.\n\n## 5. Other forecasts\n- I could not find any Polymarket, Kalshi or Manifold market on the DAX level for 09-24.\n- Related market pricing: CME FedWatch was at about 90% for a Fed hike on 09-16 (stock3, 09-14). Other sources from earlier in September gave conflicting probabilities, ranging from about 58% for a hike to about 58% for a hold. [atfx](https://www.atfx.com/en-au/analysis/financial-events/september-fomc-meeting-2026-is-a-rate-hike-on-the-table), [coingape](https://coingape.com/fomc-meeting-sept-2026-date-schedule-expectations-and-how-to-watch/)\n- I found no published bank targets for the DAX over this horizon.\n\n## 6. Upcoming events before resolution\n- 2026-09-15 to 16: FOMC meeting with new projections and dot plot. The decision comes on 09-16, followed by Warsh's press conference at 14:30 ET. A hike is largely priced in, so the dot plot and guidance are the main risks. [coingape](https://coingape.com/fomc-meeting-sept-2026-date-schedule-expectations-and-how-to-watch/)\n- 2026-09-18: Quarterly options and futures expiry on Eurex. [stock3](https://stock3.com/news/exklusive-stock3-plus-analyse-jetzt-wird-es-ernst-fed-und-hexensabbat-warten-auf-die-anleger-17284648)\n- 2026-09-21: Changes to the DAX Dividend Indices take effect. This is minor and does not affect the main ^GDAXI index. [STOXX](https://www.stoxx.com/document/News/2026/September/STOXX_Components_Changes_DAX_Dividend_Indices_20260911.pdf)\n- Around 09-17 to 09-24 (dates not checked): Bank of England and Bank of Japan decisions, flash PMIs for the eurozone and Germany (likely around 09-23), and the ifo business climate index (likely around 09-21 to 24).\n- Ongoing: Brent oil prices and news on Iran and Persian Gulf shipping are the main driver named in DAX coverage this month.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^GDAXI: latest close 25568.5605 on 2026-09-11.\nTarget date 2026-09-24 is 9 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 9-observation returns over the last 3 years (last year weighted double):\np5: 24606.6712, p10: 24856.3368, p25: 25309.5744, p50: 25710.8766, p75: 26149.4176, p90: 26576.6117, p95: 26861.2306\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          23300.0
+        ],
+        [
+          0.05,
+          24200.0
+        ],
+        [
+          0.1,
+          24560.0
+        ],
+        [
+          0.2,
+          24980.0
+        ],
+        [
+          0.3,
+          25270.0
+        ],
+        [
+          0.4,
+          25470.0
+        ],
+        [
+          0.5,
+          25640.0
+        ],
+        [
+          0.6,
+          25810.0
+        ],
+        [
+          0.7,
+          26000.0
+        ],
+        [
+          0.8,
+          26260.0
+        ],
+        [
+          0.9,
+          26620.0
+        ],
+        [
+          0.95,
+          26920.0
+        ],
+        [
+          0.99,
+          27500.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          23500.0
+        ],
+        [
+          0.05,
+          24350.0
+        ],
+        [
+          0.1,
+          24700.0
+        ],
+        [
+          0.2,
+          25080.0
+        ],
+        [
+          0.3,
+          25330.0
+        ],
+        [
+          0.4,
+          25500.0
+        ],
+        [
+          0.5,
+          25640.0
+        ],
+        [
+          0.6,
+          25780.0
+        ],
+        [
+          0.7,
+          25950.0
+        ],
+        [
+          0.8,
+          26180.0
+        ],
+        [
+          0.9,
+          26500.0
+        ],
+        [
+          0.95,
+          26780.0
+        ],
+        [
+          0.99,
+          27350.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          23400.0
+        ],
+        [
+          0.05,
+          24200.0
+        ],
+        [
+          0.1,
+          24550.0
+        ],
+        [
+          0.2,
+          24980.0
+        ],
+        [
+          0.3,
+          25250.0
+        ],
+        [
+          0.4,
+          25450.0
+        ],
+        [
+          0.5,
+          25610.0
+        ],
+        [
+          0.6,
+          25770.0
+        ],
+        [
+          0.7,
+          25960.0
+        ],
+        [
+          0.8,
+          26220.0
+        ],
+        [
+          0.9,
+          26600.0
+        ],
+        [
+          0.95,
+          26930.0
+        ],
+        [
+          0.99,
+          27500.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4397
+}

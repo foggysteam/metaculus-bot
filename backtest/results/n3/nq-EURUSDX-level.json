@@ -1,0 +1,185 @@
+{
+  "id": "nq-EURUSDX-level",
+  "question": "What will be the closing value of the euro to US dollar exchange rate (EURUSD=X on Yahoo Finance) on October 2, 2026?",
+  "resolution_criteria": "Resolves to the daily close of EURUSD=X on Yahoo Finance for 2026-10-02. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD per EUR",
+  "outcome": 1.124986,
+  "outcome_date": "2026-10-01",
+  "as_of": "2026-09-04",
+  "resolve_date": "2026-10-02",
+  "lower_bound": 1.1,
+  "upper_bound": 1.2,
+  "source": "yahoo",
+  "series": "EURUSD=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for EURUSD=X: latest close 1.1628 on 2026-09-03.\nTarget date 2026-10-02 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 1.1351, p10: 1.1406, p25: 1.1503, p50: 1.1648, p75: 1.1773, p90: 1.1896, p95: 1.1979\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I have enough sources from before the cutoff, so I'm writing up the findings now. I left out anything published after 2026-09-04.\n\n## 1. Resolution source\n- 2026-09-03: The EURUSD=X close supplied by code was **1.1628**. I could not fetch Yahoo Finance directly. The question resolves on the Yahoo daily close for Friday 2026-10-02, which is a normal FX trading day.\n- 2026-08-28: Before Warsh's speech, EUR/USD held at about 1.1645 with the dollar at a one-week high. [Vantage](https://www.vantagemarkets.com/market-analysis/eur-usd-forecast-august-28-2026-warsh-jackson-hole/)\n\n## 2. Current status\n- Nothing has settled the question yet. Spot is about 1.163, near the middle of the 1.1 to 1.2 range, with about 21 trading days to go.\n\n## 3. Recent news (newest first)\n- 2026-09-01: Eurostat's flash estimate put euro area HICP at **3.3%** for August, up from 2.9% in July. Energy prices jumped because of the war involving Iran and disruption around the Strait of Hormuz. [Eurostat](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-01092026-ap), [Euronews](https://www.euronews.com/business/2026/09/01/eurozone-inflation-jumps-to-33-in-august-as-energy-prices-surge)\n- 2026-08-31: Danske Bank wrote that Fed Chair Warsh's hawkish Jackson Hole speech pushed EUR/USD lower. Markets were treating a September Fed hike as close to a coin flip. [FXStreet/Danske](https://www.fxstreet.com/news/euro-warsh-speech-weighs-on-eur-against-us-dollar-danske-bank-202608310619)\n- 2026-08-28/29: Warsh called the 2% PCE target \"firm\" and \"fixed\". EUR/USD fell about 0.34% to roughly 1.1611, and the dollar index reached its strongest level since Aug 19. [FinanceFeeds](https://financefeeds.com/warsh-turns-hawkish-at-jackson-hole-dollar-jumps-stocks-wobble-bitcoin-slips/), [Convera](https://convera.com/blog/market-insights/fx-research/daily-market-updates/a-hole-lot-riding-on-warsh/)\n- 2026-08-21 (approx.): EUR/USD hit a 2-month high, around 1.17, ahead of the Fed minutes and Jackson Hole. [Investing.com](https://www.investing.com/analysis/eurusd-hits-2month-high-before-fed-minutes-and-warshs-jackson-hole-debut-200685918)\n- Context: Both the Fed and the ECB are in a tightening phase because of the energy shock. The ECB is fully priced to raise rates by 25bp on Sept 10. The Fed's September move is close to 50/50. [Morningstar](https://www.morningstar.com/economy/will-ecb-raise-interest-rates-again-2026-cut-them-2027), [Yahoo Finance](https://finance.yahoo.com/economy/policy/articles/fomc-september-2026-odds-rate-201618784.html)\n\n## 4. Base rates\n- These figures come from the code-supplied empirical distribution of 21-day returns over 3 years, using the latest close of 1.1628:\n  - p5 1.1351, p10 1.1406, p25 1.1503\n  - **p50 1.1648**\n  - p75 1.1773, p90 1.1896, p95 1.1979\n- That puts the 25-75% band at about ±1.1% and the 5-95% band at about ±3%. Under this baseline, the chance of finishing outside 1.10 to 1.20 is small, under 5% on each side.\n- Recent trend: the pair has traded sideways, roughly 1.16 to 1.17, for about two months. Late August brought a modest pullback on dollar strength.\n\n## 5. Other forecasts\n- 2026-06-19: ING raised its year-end 2026 EUR/USD forecast to **1.18**, put short-term fair value at about 1.160, and saw support above 1.140. [VT Markets summary](https://www.vtmarkets.com/?p=52899)\n- An undated BitMEX blog lists a consensus Q3 2026 range of 1.18 to 1.25. I don't consider it reliable because no sources are named. [BitMEX](https://testnet.bitmex.com/blog/eur-usd-forecast-2026)\n- I could not find a Polymarket, Kalshi or Manifold market on the EUR/USD level, or a current Danske forecast with a specific number.\n- Related market: Kalshi and Polymarket have Fed-decision markets, which DeFi Rate aggregates. Around Aug 31, pricing put the September hike near a coin flip, per Danske.\n\n## 6. Upcoming events before Oct 2\n- 2026-09-04: US August jobs report. Sources say a weak July report had pushed down the odds of a Fed hike. [Yahoo Finance](https://finance.yahoo.com/economy/policy/articles/fomc-september-2026-odds-rate-201618784.html)\n- 2026-09-10: ECB decision. A 25bp hike to a 2.50% deposit rate is fully priced, so guidance on further hikes matters most. [ECB calendar](https://www.financecalendar.com/event/ecb-rate-decision-september-2026/)\n- Around 2026-09-10/11: US August CPI.\n- 2026-09-16: FOMC decision plus a new dot plot. With pricing near a coin flip, this is the biggest scheduled risk for EUR/USD in either direction.\n- Around 2026-09-17: Final August euro area HICP.\n- Late September: US PCE inflation and euro area PMIs.\n- 2026-10-01/02: Euro area September flash HICP, and possibly US September payrolls on Oct 2, the resolution day itself.\n- Unscheduled: oil prices and Middle East / Strait of Hormuz developments. The energy shock hits the euro area harder, which has tended to weigh on the euro.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for EURUSD=X: latest close 1.1628 on 2026-09-03.\nTarget date 2026-10-02 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 1.1351, p10: 1.1406, p25: 1.1503, p50: 1.1648, p75: 1.1773, p90: 1.1896, p95: 1.1979\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1.118
+        ],
+        [
+          0.05,
+          1.133
+        ],
+        [
+          0.1,
+          1.14
+        ],
+        [
+          0.2,
+          1.149
+        ],
+        [
+          0.3,
+          1.155
+        ],
+        [
+          0.4,
+          1.16
+        ],
+        [
+          0.5,
+          1.1635
+        ],
+        [
+          0.6,
+          1.167
+        ],
+        [
+          0.7,
+          1.172
+        ],
+        [
+          0.8,
+          1.179
+        ],
+        [
+          0.9,
+          1.189
+        ],
+        [
+          0.95,
+          1.197
+        ],
+        [
+          0.99,
+          1.212
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.118
+        ],
+        [
+          0.05,
+          1.134
+        ],
+        [
+          0.1,
+          1.141
+        ],
+        [
+          0.2,
+          1.149
+        ],
+        [
+          0.3,
+          1.155
+        ],
+        [
+          0.4,
+          1.16
+        ],
+        [
+          0.5,
+          1.1635
+        ],
+        [
+          0.6,
+          1.167
+        ],
+        [
+          0.7,
+          1.172
+        ],
+        [
+          0.8,
+          1.178
+        ],
+        [
+          0.9,
+          1.187
+        ],
+        [
+          0.95,
+          1.195
+        ],
+        [
+          0.99,
+          1.21
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.121
+        ],
+        [
+          0.05,
+          1.134
+        ],
+        [
+          0.1,
+          1.14
+        ],
+        [
+          0.2,
+          1.1485
+        ],
+        [
+          0.3,
+          1.1545
+        ],
+        [
+          0.4,
+          1.1595
+        ],
+        [
+          0.5,
+          1.1635
+        ],
+        [
+          0.6,
+          1.1675
+        ],
+        [
+          0.7,
+          1.1725
+        ],
+        [
+          0.8,
+          1.179
+        ],
+        [
+          0.9,
+          1.1885
+        ],
+        [
+          0.95,
+          1.1965
+        ],
+        [
+          0.99,
+          1.212
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4015
+}

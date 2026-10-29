@@ -1,0 +1,185 @@
+{
+  "id": "nq-FTSE-change",
+  "question": "What will be the percentage change in the FTSE 100 index (^FTSE on Yahoo Finance) from the close on 2026-09-21 to the close on 2026-10-02?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-10-02 / close on 2026-09-21 - 1), using daily closes of ^FTSE on Yahoo Finance. If there is no close on 2026-10-02, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -2.579384,
+  "outcome_date": "2026-10-02",
+  "as_of": "2026-09-22",
+  "resolve_date": "2026-10-02",
+  "lower_bound": -10.0,
+  "upper_bound": 10.0,
+  "source": "yahoo",
+  "series": "^FTSE",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^FTSE: latest close 10739.0000 on 2026-09-21.\nTarget date 2026-10-02 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 10477.4232, p10: 10547.7383, p25: 10667.1894, p50: 10796.5389, p75: 10914.6279, p90: 11019.9235, p95: 11088.8712\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I've gathered enough context and am writing it up now. Note: some search results were dated after 2026-09-22. I excluded them as the exercise requires.\n\n## 1. Resolution source\n- The question resolves on Yahoo Finance ^FTSE daily closes. Code-collected data puts the latest close at **10,739.00 on 2026-09-21**, which is the base value. I could not fetch a live Yahoo page or a news report giving the 2026-09-22 close.\n- Code baseline (empirical 8-trading-day returns over 3 years, last year weighted double), converted to % change from 10,739:\n  - p5 -2.44%, p10 -1.78%, p25 -0.67%\n  - p50 +0.54%\n  - p75 +1.63%, p90 +2.62%, p95 +3.26%\n\n## 2. Current status\n- Nothing settles the question yet. The window covers 9 trading sessions (Sep 22 to Oct 2). The base close is known, and the outcome depends entirely on future moves.\n\n## 3. Recent news (newest first)\n- 2026-09-17: The Bank of England held Bank Rate at 3.75% on a 6-3 vote. Greene, Mann and Pill voted for a rise to 4%. The guidance turned more hawkish, with inflation risks \"tilted to the upside\", and a November hike is described as live. The next MPC meeting is 2026-11-05. [Cambridge Currencies](https://cambridgecurrencies.com/next-bank-of-england-interest-rate-decision/?nb=1), [Forex Fundamentals](https://forexfundamentals.com/economic-calendar/boe/2026-09-17)\n- 2026-09-16: The Fed reportedly hiked 25bp to 3.75-4.00% on a 12-0 vote. The dot plot reportedly showed one more hike in 2026. US stocks reportedly turned lower during Chair Warsh's press conference as yields and the dollar rose. These are secondary trading-site sources I could not confirm. [Admiral Markets](https://admiralmarkets.com/analytics/traders-blog/fed-raised-interest-rates), [MetaTradingClub](https://www.metatradingclub.com/?p=25647), [Kiplinger](https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-september-2026)\n- 2026-09-10: The ECB raised rates 25bp (deposit rate 2.50%) and revised its 2027-28 inflation projections up. The FTSE fell that day as Brent hit $106 a barrel. One report puts the close at 10,608.92. ABF dropped after a Primark sales warning. [HL/Sharecast](https://www.hl.co.uk/shares/stock-market-news/market-reports/london-close-ftse-falls-amid-inflation-worries-as-brent-hits-$106-a-barrel), [BBN Times](https://www.bbntimes.com/financial/ftse-100-today-london-stocks-fall-to-10-608-92-as-ecb-delivers-rate-hike-amid-inflation-concerns)\n- 2026-08-31: The FTSE 100 ended August roughly flat at about 10,767, held back by weakness in tobacco stocks. [interactive investor](https://www.ii.co.uk/analysis-commentary/uk-stock-market-winners-and-losers-august-2026-ii540146)\n- 2026-08-28: A snapshot shows the index at 10,824.26. [finanzen.ch](https://styles.finanzen.ch/index/analysen/ftse_100?p=64)\n- Taken together: the global backdrop is a tightening cycle (Fed, ECB, BoE leaning hawkish) with oil above $100. From about 10,609 on Sep 10 the index recovered to 10,739 by Sep 21, close to where it ended August.\n\n## 4. Base rates\n- The empirical distribution above has a median of about +0.5% over 8 trading days, with an interquartile range of about -0.7% to +1.6%. The 5-95% band is roughly -2.4% to +3.3%. That implies a standard deviation of about 1.7%.\n- The FTSE has moved in a fairly tight range for months: about 10,650 in early July, 10,738 on Jul 24, about 10,945 at end-July (monthly figure), about 10,767 at end-August, about 10,609 on Sep 10 and 10,739 on Sep 21. [Upstox](https://upstox.com/global-indices/ftse-100/), [digrin](https://www.digrin.com/stocks/detail/%5EFTSE/price)\n- The 2026 trend is broadly sideways after the index broke 10,000 in January. [MarketScreener](https://in.marketscreener.com/news/ftse-100-tops-10-000-as-starts-new-year-in-style-ce7e59d9dc8df422)\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the FTSE 100 level for this window.\n- poundf.co.uk publishes model-generated daily \"predictions\" for late September (for example 10,535 for Sep 23, with a very wide range). These are low quality. [poundf](https://poundf.co.uk/ftse)\n- Before the meeting, prediction markets priced a BoE hold at about 76%, and the hold happened. [Polyguana](https://polyguana.com/market/2661519)\n\n## 6. Upcoming events before resolution (Sep 22 to Oct 2)\n- **Late September:** US PCE inflation data. After a hawkish Fed, an inflation surprise matters more than usual.\n- **Sep 30:** Quarter-end rebalancing, final UK Q2 GDP, and around this date flash euro-area CPI for September. Euro-area inflation drew attention after the ECB hike.\n- **Oct 1-2:** Global manufacturing PMIs, then US September payrolls on Oct 2, the last session in the window.\n- **Ongoing:** Oil prices with Brent above $100, which helps the FTSE's energy-heavy weighting but hurts the wider risk mood. Also gilt yields and sterling: a stronger pound tends to weigh on the FTSE's dollar earners. Any BoE speakers hinting at a November hike could move gilts and sterling.\n- I could not confirm exact release dates for these items from primary sources.\n\nSources: [Yahoo/Reuters FTSE item](https://finance.yahoo.com/markets/world-indices/articles/uks-ftse-100-hits-near-100819876.html), [Cambridge Currencies](https://cambridgecurrencies.com/next-bank-of-england-interest-rate-decision/?nb=1), [Forex Fundamentals](https://forexfundamentals.com/economic-calendar/boe/2026-09-17), [Admiral Markets](https://admiralmarkets.com/analytics/traders-blog/fed-raised-interest-rates), [MetaTradingClub](https://www.metatradingclub.com/?p=25647), [Kiplinger](https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-september-2026), [HL/Sharecast](https://www.hl.co.uk/shares/stock-market-news/market-reports/london-close-ftse-falls-amid-inflation-worries-as-brent-hits-$106-a-barrel), [BBN Times](https://www.bbntimes.com/financial/ftse-100-today-london-stocks-fall-to-10-608-92-as-ecb-delivers-rate-hike-amid-inflation-concerns), [interactive investor](https://www.ii.co.uk/analysis-commentary/uk-stock-market-winners-and-losers-august-2026-ii540146), [finanzen.ch](https://styles.finanzen.ch/index/analysen/ftse_100?p=64), [Upstox](https://upstox.com/global-indices/ftse-100/), [digrin](https://www.digrin.com/stocks/detail/%5EFTSE/price), [MarketScreener](https://in.marketscreener.com/news/ftse-100-tops-10-000-as-starts-new-year-in-style-ce7e59d9dc8df422), [poundf](https://poundf.co.uk/ftse), [Polyguana](https://polyguana.com/market/2661519)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^FTSE: latest close 10739.0000 on 2026-09-21.\nTarget date 2026-10-02 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 10477.4232, p10: 10547.7383, p25: 10667.1894, p50: 10796.5389, p75: 10914.6279, p90: 11019.9235, p95: 11088.8712\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -5.0
+        ],
+        [
+          0.05,
+          -2.9
+        ],
+        [
+          0.1,
+          -2.1
+        ],
+        [
+          0.2,
+          -1.1
+        ],
+        [
+          0.3,
+          -0.5
+        ],
+        [
+          0.4,
+          -0.05
+        ],
+        [
+          0.5,
+          0.3
+        ],
+        [
+          0.6,
+          0.7
+        ],
+        [
+          0.7,
+          1.15
+        ],
+        [
+          0.8,
+          1.75
+        ],
+        [
+          0.9,
+          2.6
+        ],
+        [
+          0.95,
+          3.3
+        ],
+        [
+          0.99,
+          4.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          -4.9
+        ],
+        [
+          0.05,
+          -2.8
+        ],
+        [
+          0.1,
+          -2.0
+        ],
+        [
+          0.2,
+          -1.1
+        ],
+        [
+          0.3,
+          -0.5
+        ],
+        [
+          0.4,
+          -0.05
+        ],
+        [
+          0.5,
+          0.3
+        ],
+        [
+          0.6,
+          0.65
+        ],
+        [
+          0.7,
+          1.05
+        ],
+        [
+          0.8,
+          1.6
+        ],
+        [
+          0.9,
+          2.4
+        ],
+        [
+          0.95,
+          3.0
+        ],
+        [
+          0.99,
+          4.4
+        ]
+      ],
+      [
+        [
+          0.01,
+          -5.0
+        ],
+        [
+          0.05,
+          -2.9
+        ],
+        [
+          0.1,
+          -2.1
+        ],
+        [
+          0.2,
+          -1.1
+        ],
+        [
+          0.3,
+          -0.5
+        ],
+        [
+          0.4,
+          -0.05
+        ],
+        [
+          0.5,
+          0.3
+        ],
+        [
+          0.6,
+          0.65
+        ],
+        [
+          0.7,
+          1.1
+        ],
+        [
+          0.8,
+          1.7
+        ],
+        [
+          0.9,
+          2.6
+        ],
+        [
+          0.95,
+          3.3
+        ],
+        [
+          0.99,
+          4.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4156
+}

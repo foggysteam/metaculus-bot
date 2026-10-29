@@ -1,0 +1,185 @@
+{
+  "id": "nq-GDAXI-change",
+  "question": "What will be the percentage change in the DAX index (^GDAXI on Yahoo Finance) from the close on 2026-09-18 to the close on 2026-10-10?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-10-10 / close on 2026-09-18 - 1), using daily closes of ^GDAXI on Yahoo Finance. If there is no close on 2026-10-10, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -0.856744,
+  "outcome_date": "2026-10-09",
+  "as_of": "2026-09-19",
+  "resolve_date": "2026-10-10",
+  "lower_bound": -10.0,
+  "upper_bound": 15.0,
+  "source": "yahoo",
+  "series": "^GDAXI",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^GDAXI: latest close 25304.0605 on 2026-09-18.\nTarget date 2026-10-10 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 24098.4462, p10: 24580.0167, p25: 25018.8628, p50: 25533.1267, p75: 26116.2139, p90: 26663.2775, p95: 26977.4494\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I could not open most article pages because the proxy refused the connection, so several facts below rest on search-result summaries. I left out everything published after 2026-09-19.\n\n## 1. Resolution source\n- **Which close counts:** 2026-10-10 is a Saturday, so the last close before it, Friday 2026-10-09, will decide the question. That is 15 trading days after 2026-09-18, which matches the code baseline.\n- 2026-09-18: The Yahoo ^GDAXI close collected by code was 25,304.06. finanzen.net's dpa-AFX report gives the same figure: the DAX fell 1.60% to 25,304.06 on the big expiry day (\"großer Verfallstag\"). [finanzen.net](https://www.finanzen.net/nachricht/aktien/dax-aktuell-zinsentscheid-der-us-notenbank-fed-steht-bevor-dax-freundlich-erwartet-15932001)\n- A second outlet reports a slightly different close of 25,308.88 (-1.65%), probably from a different data feed. Use Yahoo's 25,304.06. [ad-hoc-news](https://www.ad-hoc-news.de/boerse/news/corporate-news/deutsche-boerse-stock-heads-into-the-open-after-a-dax-led-decline/70142189)\n\n## 2. Current status\n- Nothing has settled the question. The starting value is fixed at 25,304.06 and every day of the window is still ahead.\n- Reports put the all-time high at about 26,659 in late August. The DAX therefore starts about 5% below its record, after a weak September. I could not confirm the exact record from a primary source. [finanznachrichten](https://www.finanznachrichten.de/nachrichten-2026-09/69506321-wochenausblick-dax-muss-sich-auf-hohem-niveau-behaupten-016.htm)\n\n## 3. Recent news (newest first)\n- 2026-09-18: The DAX closed \"deep red\" on expiry day even though oil prices kept falling. Reports mention Trump announcing a \"big decision\" on the Iran conflict. [finanzen.net](https://www.finanzen.net/nachricht/aktien/dax-aktuell-trotz-weiterem-rueckgang-der-oelpreise-dax-weit-im-minus-am-grossen-verfallstag-15932001)\n- 2026-09-18: The Bank of Japan raised its rate 25bp to 1.25%, the highest level in about 30 years (same finanzen.net coverage).\n- 2026-09-16: The Fed hiked 25bp to 3.75-4.00%, its first hike since 2023. The vote was reported as unanimous and the move was widely expected. Stocks dipped during the press conference as yields and the dollar rose. One more hike in 2026 is seen as possible. [investinglive](https://investinglive.com/central-banks/fomc-rate-decision-fed-hikes-for-the-first-time-in-three-years/), [admiralmarkets](https://admiralmarkets.com/analytics/traders-blog/fed-raised-interest-rates)\n- 2026-09-10: The ECB hiked 25bp, taking the deposit rate to 2.50%. It was the second hike of 2026, and the ECB gave no guidance on further moves. It sees 2026 inflation around 3.0% and raised its 2027-28 inflation projections. [newsquawk](https://www.newsquawk.com/headlines/european-ecb-interest-rate-decision-265-vs-exp-265-prev-240), [cryptobriefing](https://cryptobriefing.com/ecb-lagarde-no-debate-future-rate-path/)\n- 2026-09-09: Brent rose above $100 as US-Iran strikes escalated. Gulf oil shipments through the Strait of Hormuz have slowed sharply. Trump said oil prices likely won't come down until after the Nov 3 midterms. [KBTX/AP](https://www.kbtx.com/2026/09/09/trump-oil-prices-likely-wont-come-down-until-after-midterms-iran-war-continues/?outputType=amp)\n\n**Overall picture:** central banks are raising rates, an energy shock is ongoing, and the market is sensitive to news from the Iran war in both directions.\n\n## 4. Base rates\n- Code baseline for the 15-day horizon from 25,304: the median is 25,533 (+0.9%). The p5 to p95 range is 24,098 to 26,977, which is -4.8% to +6.6%. The p25 to p75 range is -1.1% to +3.2%.\n- That empirical distribution comes from a strong 3-year bull market, so its upward drift (about +0.9% median) may overstate the likely gain in a tightening, high-oil environment.\n- Seasonality: September has historically been one of the DAX's weaker months. Early October is mixed and often volatile. [finanznachrichten](https://www.finanznachrichten.de/nachrichten-2026-09/69506321-wochenausblick-dax-muss-sich-auf-hohem-niveau-behaupten-016.htm)\n- Moves of -1.6% in a day on news days suggest volatility is currently above its long-run average, so the tails may be wider than the baseline shows.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on DAX levels for early October 2026.\n- I found no bank strategist targets covering this short window dated on or before 2026-09-19.\n\n## 6. Upcoming events before 2026-10-09\nI did not verify these dates for 2026; they follow the usual calendar pattern.\n- Week of Sept 21: euro-area and German flash PMIs and the German Ifo index, plus comments from Fed speakers after the hike.\n- About Sept 29-30: German flash CPI for September. About Oct 1: euro-area flash HICP.\n- Oct 1: start of the US fiscal year, which brings a possible government-shutdown risk (not verified).\n- About Oct 2: US September jobs report.\n- Around Oct 7-8: FOMC minutes. Before resolution: German industrial data.\n- Throughout: Iran war, oil and Strait of Hormuz news, which has been the main swing factor for the DAX. Any hint of a ceasefire or escalation could move the index several percent.\n- The next ECB meeting (about Oct 29) and Q3 earnings season (mid-October onward) mostly fall after the window.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^GDAXI: latest close 25304.0605 on 2026-09-18.\nTarget date 2026-10-10 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 24098.4462, p10: 24580.0167, p25: 25018.8628, p50: 25533.1267, p75: 26116.2139, p90: 26663.2775, p95: 26977.4494\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -9.5
+        ],
+        [
+          0.05,
+          -6.0
+        ],
+        [
+          0.1,
+          -4.3
+        ],
+        [
+          0.2,
+          -2.3
+        ],
+        [
+          0.3,
+          -1.1
+        ],
+        [
+          0.4,
+          -0.1
+        ],
+        [
+          0.5,
+          0.6
+        ],
+        [
+          0.6,
+          1.3
+        ],
+        [
+          0.7,
+          2.2
+        ],
+        [
+          0.8,
+          3.4
+        ],
+        [
+          0.9,
+          5.0
+        ],
+        [
+          0.95,
+          6.4
+        ],
+        [
+          0.99,
+          9.2
+        ]
+      ],
+      [
+        [
+          0.01,
+          -9.5
+        ],
+        [
+          0.05,
+          -6.0
+        ],
+        [
+          0.1,
+          -4.3
+        ],
+        [
+          0.2,
+          -2.4
+        ],
+        [
+          0.3,
+          -1.1
+        ],
+        [
+          0.4,
+          -0.1
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.6,
+          1.2
+        ],
+        [
+          0.7,
+          2.1
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          0.9,
+          4.9
+        ],
+        [
+          0.95,
+          6.3
+        ],
+        [
+          0.99,
+          9.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -9.5
+        ],
+        [
+          0.05,
+          -6.0
+        ],
+        [
+          0.1,
+          -4.3
+        ],
+        [
+          0.2,
+          -2.4
+        ],
+        [
+          0.3,
+          -1.1
+        ],
+        [
+          0.4,
+          -0.2
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.6,
+          1.2
+        ],
+        [
+          0.7,
+          2.0
+        ],
+        [
+          0.8,
+          3.1
+        ],
+        [
+          0.9,
+          4.8
+        ],
+        [
+          0.95,
+          6.1
+        ],
+        [
+          0.99,
+          8.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.381
+}

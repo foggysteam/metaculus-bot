@@ -1,0 +1,185 @@
+{
+  "id": "nq-N225-change",
+  "question": "What will be the percentage change in the Nikkei 225 index (^N225 on Yahoo Finance) from the close on 2026-08-21 to the close on 2026-09-12?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-12 / close on 2026-08-21 - 1), using daily closes of ^N225 on Yahoo Finance. If there is no close on 2026-09-12, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -3.037156,
+  "outcome_date": "2026-09-11",
+  "as_of": "2026-08-22",
+  "resolve_date": "2026-09-12",
+  "lower_bound": -30.0,
+  "upper_bound": 30.0,
+  "source": "yahoo",
+  "series": "^N225",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^N225: latest close 66016.3594 on 2026-08-21.\nTarget date 2026-09-12 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 61462.6666, p10: 62914.3854, p25: 65300.7586, p50: 67488.0505, p75: 70168.4343, p90: 71583.7155, p95: 72439.1481\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "## Nikkei 225: percentage change from the 2026-08-21 close to the 2026-09-12 close\n\nMost article pages refused to load through the proxy, so several facts below come from search-result snippets and could not be checked against the full article. I ignored any information dated after 2026-08-22.\n\n### 1. Resolution source\n- 2026-08-21: The ^N225 close on Yahoo Finance was **66,016.36**, according to the code-collected data. Business Standard reports the same: down 0.3% on the day and down 3.93% for the week, ending a two-week winning streak. [Business Standard](https://www.business-standard.com/markets/capital-market-news/japan-s-nikkei-falls-as-rising-bond-yields-and-rate-hike-fears-weigh-on-sentiment-126082100689_1.html), [Yahoo](https://finance.yahoo.com/quote/%5EN225/)\n\n### 2. Current status\n- Nothing has settled the question yet. The whole 15-session window is still ahead.\n- 2026-08-20: The close was 66,216.79, up 1.36%. [note.com market report](https://note.com/hirokimiyano/n/n6b0ba82f04f8?hl=en)\n- The index is about 7% below its record. It closed at a record for the fifth day in a row on 2026-06-19, with intraday trade reaching 71,250.06. [nippon.com](https://www.nippon.com/en/news/yjj2026061900882/)\n\n### 3. Recent news (newest first)\n- 2026-08-22: Bloomberg reports that Fed Chair Kevin Warsh will give his first Jackson Hole speech as chair. [Bloomberg](https://www.bloomberg.com/news/articles/2026-08-22/kevin-warsh-to-make-first-jackson-hole-speech-as-fed-chair)\n- 2026-08-22: A market commentary frames the last week of August as \"the battle for 160 yen\" per dollar, driven by Jackson Hole and a speech by a BOJ deputy governor. It also notes that the week's high was 68,713.80 and that rising interest rates hit stocks mid-week. [note.com](https://note.com/hirokimiyano/n/ncf26c2817dcd?hl=en)\n- 2026-08-21: Japan's inflation sped up for a second month in a row, which raised expectations of a near-term BOJ rate hike. Rising bond yields weighed on stocks. [Business Standard](https://www.business-standard.com/markets/capital-market-news/japan-s-nikkei-falls-as-rising-bond-yields-and-rate-hike-fears-weigh-on-sentiment-126082100689_1.html)\n- 2026-08-19: Japan's bad week deepened as the yen, government bonds (JGBs) and stocks all fell. The causes cited were worries about government spending under PM Takaichi and a global tech selloff. [Japan Times](https://www.japantimes.co.jp/business/2026/08/19/markets/yen-bonds-nikkei/)\n- Around 2026-08-17 to 19: The 10-year JGB yield hit a 30-year high and approached 3%, on bets the BOJ will tighten faster and on fiscal worries. [Nikkei Asia](https://asia.nikkei.com/business/markets/bonds/japan-bond-yields-spike-on-takaichi-budget-fears-worries-over-us-view)\n- Background: The BOJ raised its policy rate to 1.0% in June and held it in July. July was the index's first down month in four, falling 8.13% to 64,362.02. [Nikkei Indexes newsletter](https://indexes.nikkei.co.jp/nkave/archives/file/nikkei_indexes_newsletter_vol80.pdf)\n\n### 4. Base rates\nI converted the code's price percentiles for the target date into percentage changes from 66,016.36:\n\n| Percentile | Price | Change |\n|---|---|---|\n| p5 | 61,463 | -6.9% |\n| p10 | 62,914 | -4.7% |\n| p25 | 65,301 | -1.1% |\n| p50 | 67,488 | +2.2% |\n| p75 | 70,168 | +6.3% |\n| p90 | 71,584 | +8.4% |\n| p95 | 72,439 | +9.7% |\n\n- The middle 50% of outcomes spans about 7.4 points, and the middle 90% about 16.6 points.\n- The positive median reflects the strong 2023-2026 bull market. The current backdrop is weaker: a -3.9% week, record JGB yields, and a downtrend since the June highs.\n- Recent swings are large: -8.1% in July and -3.9% in the week to Aug 21.\n\n### 5. Other forecasts\n- 2026-08-11: An aggregator page for Kalshi's \"Nikkei at least ¥70,000 in 2026\" market showed a leading bracket around 48-51%. Liquidity was thin and the page's figures contradict each other, so it is unreliable. [SimpleFunctions](https://simplefunctions.dev/answer/nikkei)\n- Polymarket runs daily Nikkei \"up or down\" markets, but I found none covering this window. [lines.com](https://www.lines.com/prediction-markets/finance/nik-up-or-down-on-june-24-2026)\n- I found no analyst target for the Nikkei in early or mid-September.\n\n### 6. Upcoming events before resolution\n- Late August (exact dates not confirmed as of Aug 22): Warsh's Jackson Hole keynote and a speech by a BOJ deputy governor. Both could move the yen and yields. [Bloomberg](https://www.bloomberg.com/news/articles/2026-08-22/kevin-warsh-to-make-first-jackson-hole-speech-as-fed-chair), [note.com](https://note.com/hirokimiyano/n/ncf26c2817dcd?hl=en)\n- 2026-08-26, after the US close: Nvidia earnings. These matter for Japan's AI and chip-heavy stocks such as Advantest and Tokyo Electron. [Wall Street Horizon](https://www.wallstreethorizon.com/nvidia-earnings-calendar)\n- About 2026-09-04: US payrolls report.\n- About 2026-09-08: Japan's revised Q2 GDP, previewed as a test of bets on a September BOJ hike. [investinglive](https://investinglive.com/stocks/preview-japan-revised-q2-gdp-set-to-test-boj-september-rate-hike-bets/)\n- About 2026-09-10 to 11: US CPI and the SQ settlement on Sep 11.\n- The BOJ meeting on Sep 17-18 and the FOMC fall after resolution, but positioning ahead of them should affect the window.\n- Ongoing risks: the 3% level on the 10-year JGB, the yen near 160 per dollar (where Japan could intervene to support the yen), and Takaichi's fiscal plans.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^N225: latest close 66016.3594 on 2026-08-21.\nTarget date 2026-09-12 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 61462.6666, p10: 62914.3854, p25: 65300.7586, p50: 67488.0505, p75: 70168.4343, p90: 71583.7155, p95: 72439.1481\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -13.5
+        ],
+        [
+          0.05,
+          -8.3
+        ],
+        [
+          0.1,
+          -5.9
+        ],
+        [
+          0.2,
+          -3.3
+        ],
+        [
+          0.3,
+          -1.6
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          1.9
+        ],
+        [
+          0.7,
+          3.2
+        ],
+        [
+          0.8,
+          4.9
+        ],
+        [
+          0.9,
+          7.2
+        ],
+        [
+          0.95,
+          8.9
+        ],
+        [
+          0.99,
+          12.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -14.0
+        ],
+        [
+          0.05,
+          -8.5
+        ],
+        [
+          0.1,
+          -6.0
+        ],
+        [
+          0.2,
+          -3.3
+        ],
+        [
+          0.3,
+          -1.6
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          1.9
+        ],
+        [
+          0.7,
+          3.2
+        ],
+        [
+          0.8,
+          4.9
+        ],
+        [
+          0.9,
+          7.3
+        ],
+        [
+          0.95,
+          9.0
+        ],
+        [
+          0.99,
+          13.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -15.0
+        ],
+        [
+          0.05,
+          -9.5
+        ],
+        [
+          0.1,
+          -7.0
+        ],
+        [
+          0.2,
+          -4.2
+        ],
+        [
+          0.3,
+          -2.3
+        ],
+        [
+          0.4,
+          -0.8
+        ],
+        [
+          0.5,
+          0.4
+        ],
+        [
+          0.6,
+          1.7
+        ],
+        [
+          0.7,
+          3.1
+        ],
+        [
+          0.8,
+          4.9
+        ],
+        [
+          0.9,
+          7.4
+        ],
+        [
+          0.95,
+          9.2
+        ],
+        [
+          0.99,
+          13.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.513
+}
