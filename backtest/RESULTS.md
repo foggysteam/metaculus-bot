@@ -197,3 +197,13 @@ Share of forecasters whose 10th-90th percentile range contained the answer (80% 
 
 "vs live" compares with the setup live until 27 Oct 2026: six percentiles, linear CDF, median of 5, no widening.
 
+## Two research reports, numeric: `n2` + `n3`
+
+59 questions (leaked in either run excluded). Thirteen percentiles, straight-line CDF, median CDF.
+
+| Forecasts | Log score | vs 3 from A (points per question) | 95% CI | Better on | Worse on |
+|---|---|---|---|---|---|
+| 3 from A | -4.460 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from A + 3 from B (live) | -4.437 | +1.1 | -0.4 to +2.7 | 26 | 20 |
+| 3 from B | -4.443 | +0.9 | -1.6 to +3.3 | 27 | 20 |
+
