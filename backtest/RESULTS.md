@@ -163,3 +163,37 @@ Compared with run `v1` on the same 84 questions (positive means this run is bett
 
 Spread of the 5 forecasts on one report: 0.020 (standard deviation, averaged). Gap between the two reports' medians: 0.075 (averaged).
 
+## Numeric run `n2` (2026-10-28)
+
+61 questions scored (3 excluded for hindsight leaks). Notional usage $18.
+Share of forecasters whose 10th-90th percentile range contained the answer (80% is calibrated): six 82%, thirteen 83%.
+
+| Prompt | CDF | Combine | Widen | n | Log score | vs live (points per question) | 95% CI | Better on |
+|---|---|---|---|---|---|---|---|---|
+| thirteen | pchip | mean | 1.0 | 61 | -4.463 | +12.6 | +5.6 to +20.6 | 40 |
+| thirteen | linear | mean | 1.0 | 61 | -4.465 | +12.5 | +5.1 to +20.9 | 40 |
+| thirteen | linear | median | 1.0 | 61 | -4.470 | +12.3 | +5.1 to +20.5 | 38 |
+| thirteen | pchip | median | 1.0 | 61 | -4.470 | +12.3 | +5.5 to +19.9 | 40 |
+| thirteen | pchip | median | 1.15 | 61 | -4.494 | +11.1 | +3.0 to +20.0 | 32 |
+| thirteen | pchip | mean | 1.15 | 61 | -4.498 | +10.9 | +2.9 to +19.9 | 29 |
+| thirteen | linear | mean | 1.15 | 61 | -4.536 | +9.0 | +0.8 to +17.7 | 28 |
+| thirteen | linear | median | 1.15 | 61 | -4.549 | +8.3 | +0.4 to +17.0 | 25 |
+| thirteen | pchip | median | 1.3 | 61 | -4.553 | +8.1 | -0.5 to +17.6 | 19 |
+| thirteen | pchip | mean | 1.3 | 61 | -4.557 | +7.9 | -0.6 to +17.6 | 16 |
+| thirteen | linear | median | 1.3 | 61 | -4.558 | +7.9 | -0.9 to +17.9 | 18 |
+| thirteen | linear | mean | 1.3 | 61 | -4.564 | +7.6 | -1.2 to +17.4 | 16 |
+| six | pchip | mean | 1.0 | 61 | -4.635 | +4.0 | +0.6 to +7.6 | 41 |
+| six | pchip | mean | 1.15 | 61 | -4.648 | +3.4 | -0.9 to +8.7 | 21 |
+| six | pchip | median | 1.0 | 61 | -4.648 | +3.4 | +0.4 to +6.3 | 41 |
+| six | pchip | median | 1.15 | 61 | -4.656 | +3.0 | -1.4 to +8.5 | 20 |
+| six | pchip | mean | 1.3 | 61 | -4.672 | +2.2 | -3.7 to +9.2 | 14 |
+| six | linear | mean | 1.0 | 61 | -4.689 | +1.3 | -0.6 to +4.4 | 35 |
+| six | pchip | median | 1.3 | 61 | -4.695 | +1.0 | -4.7 to +7.9 | 14 |
+| six | linear | mean | 1.3 | 61 | -4.705 | +0.5 | -6.0 to +8.3 | 14 |
+| six | linear | median | 1.0 | 61 | -4.715 | +0.0 | +0.0 to +0.0 | 0 |
+| six | linear | median | 1.3 | 61 | -4.731 | -0.8 | -7.4 to +7.2 | 14 |
+| six | linear | mean | 1.15 | 61 | -4.743 | -1.4 | -4.5 to +3.7 | 16 |
+| six | linear | median | 1.15 | 61 | -4.752 | -1.8 | -4.9 to +3.3 | 15 |
+
+"vs live" compares with the setup live until 27 Oct 2026: six percentiles, linear CDF, median of 5, no widening.
+
