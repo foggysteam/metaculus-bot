@@ -1,0 +1,185 @@
+{
+  "id": "nq-USDCNYX-level",
+  "question": "What will be the closing value of the US dollar to Chinese yuan exchange rate (USDCNY=X on Yahoo Finance) on August 14, 2026?",
+  "resolution_criteria": "Resolves to the daily close of USDCNY=X on Yahoo Finance for 2026-08-14. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "CNY per USD",
+  "outcome": 6.7428,
+  "outcome_date": "2026-08-13",
+  "as_of": "2026-08-04",
+  "resolve_date": "2026-08-14",
+  "lower_bound": 6.65,
+  "upper_bound": 6.85,
+  "source": "yahoo",
+  "series": "USDCNY=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for USDCNY=X: latest close 6.7523 on 2026-08-03.\nTarget date 2026-08-14 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 6.6891, p10: 6.7094, p25: 6.7277, p50: 6.7447, p75: 6.7603, p90: 6.7786, p95: 6.7979\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# USD/CNY (Yahoo Finance USDCNY=X) research: close on 2026-08-14\n\n## 1. Resolution source\n- 2026-08-03: The latest Yahoo close for USDCNY=X is **6.7523** (from the data your code collected). [Yahoo history](https://finance.yahoo.com/quote/USDCNY=X/history/)\n- 2026-08-04: I couldn't load the Yahoo page because the proxy refused the connection, so I have not checked the 8/3 figure myself.\n- Note: Yahoo's USDCNY=X is a market quote for onshore CNY. It is not the PBOC fixing, and it usually trades well below the fixing at the moment (see below).\n\n## 2. Current status\n- Nothing has settled the question yet. Spot is about 6.75, close to the middle of the 6.65-6.85 range. That is near the stronger end of the yuan's 2026 range, and the yuan has been gaining.\n\n## 3. Recent news (newest first, up to 2026-08-04)\n- 2026-07-31: The yuan hit its strongest level against the dollar in more than 3 years. The PBOC still set a weaker-than-expected midpoint of 6.7894. [The Edge](https://theedgemalaysia.com/node/812845)\n- 2026-07-30: After the Fed held rates, the onshore yuan rose to its strongest since February 2023. The fixing was about 6.7892. [Bloomberg](https://www.bloomberg.com/news/articles/2026-07-30/yuan-rises-to-highest-since-early-2023-as-dollar-drops-after-fed); [Le Private Banker](https://leprivatebanker.com/2026/07/30/yuan-hits-strongest-level-since-february-2023-after-fed-holds-rates/)\n- July 2026, exact date unclear: one report has spot around 6.7443-6.7521, the strongest since February 2023. [iTiger](https://www.itiger.com/news/1119883658); [askfuzz](https://askfuzz.ai/discover/news/currencies/yuan-hits-3-5-year-high-as-fed-rate-hike-bets-fade)\n- Late July 2026: the PBOC set fixings well on the weak side of Reuters estimates, at times by about 400-600 pips. This leans against how fast the yuan rises without reversing the trend. [VT Markets](https://www.vtmarkets.com/live-updates/pboc-sets-weaker-than-expected-yuan-fix-fueling-bets-on-further-usd-cny-gains/)\n- 2026-07-10: The fixing went below 6.80 (6.7989) for the first time since 2023. [Bloomberg](https://www.bloomberg.com/news/articles/2026-07-10/pboc-sets-fixing-below-6-8-per-dollar-for-first-time-since-2023-mre95kva)\n- 2026-07-03: Spot was about 6.78. The yuan was heading for its first weekly gain in three weeks after soft US payrolls reduced bets on Fed rate hikes. [NST](https://www.nst.com.my/amp/business/economy/2026/07/1479414/chinas-yuan-inches-higher-set-first-weekly-gain-three-weeks)\n- June 2026: the yuan weakened at times when the dollar was strong and bets on Fed hikes rose. Rate-hike expectations are a live risk in both directions. [NST](https://www.nst.com.my/amp/business/economy/2026/06/1466272/chinas-yuan-weakens-one-week-low-strong-dollar-fed-hike-bets-weigh)\n\n## 4. Base rates\n- From the code's baseline, 8 trading days ahead of 6.7523: median 6.7447, middle 50% between 6.7277 and 6.7603, middle 90% between 6.6891 and 6.7979. The median sits slightly below the current price, which reflects the yuan's appreciation drift.\n- Trend: USD/CNY was about 7.0 in January 2026 (fixing 6.9929), about 6.80 in early July and about 6.75 at the start of August. That is roughly 0.4% per month of yuan gains lately. [Investing.com](https://www.investing.com/analysis/china-signals-greater-yuan-tolerance-as-pboc-sets-strongest-fixing-since-2023-200673742)\n- CNY is a low-volatility currency because the PBOC manages it. A move of more than about 1% (about 0.07) in two weeks is unusual. Reaching the range edges (6.65 or 6.85) would take a move of about 1.5% or more.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on USD/CNY for mid-August 2026.\n- 2026-05-18: Deutsche Bank cut its year-end 2026 USD/CNY forecast to 6.55 from 6.70. Goldman Sachs stayed bullish on the yuan but gave no number in the coverage I found. [Invezz](https://invezz.com/ca/news/2026/05/18/yuan-gains-momentum-as-global-banks-revise-forecasts-higher/)\n- I found no near-term (2-week) forecasts from sell-side analysts.\n\n## 6. Upcoming events before 2026-08-14\nI didn't check any of these dates; they follow the usual release calendars.\n- Daily PBOC fixings, around 09:15 Beijing time. The size of the weak-side gap against estimates is the main signal of how much appreciation Beijing will allow.\n- About 2026-08-07: US July jobs report, which affects Fed hike or cut expectations and the dollar.\n- About 2026-08-07: China July trade data. A large surplus would support the yuan.\n- About 2026-08-09/10: China July CPI and PPI.\n- About 2026-08-12/13: US July CPI and PPI.\n- Possibly on or around 2026-08-14: China's July activity data (industrial output, retail sales).\n- Wildcards: US-China trade or diplomatic headlines (there were earlier reports of a Trump-Xi summit) and sharp swings in the broad dollar (DXY) or the yen.\n\nCaveat: several pages I fetched failed to load (proxy refusals), so some July dates and levels come from search snippets.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for USDCNY=X: latest close 6.7523 on 2026-08-03.\nTarget date 2026-08-14 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 6.6891, p10: 6.7094, p25: 6.7277, p50: 6.7447, p75: 6.7603, p90: 6.7786, p95: 6.7979\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          6.655
+        ],
+        [
+          0.05,
+          6.689
+        ],
+        [
+          0.1,
+          6.704
+        ],
+        [
+          0.2,
+          6.721
+        ],
+        [
+          0.3,
+          6.732
+        ],
+        [
+          0.4,
+          6.74
+        ],
+        [
+          0.5,
+          6.746
+        ],
+        [
+          0.6,
+          6.752
+        ],
+        [
+          0.7,
+          6.759
+        ],
+        [
+          0.8,
+          6.769
+        ],
+        [
+          0.9,
+          6.784
+        ],
+        [
+          0.95,
+          6.798
+        ],
+        [
+          0.99,
+          6.832
+        ]
+      ],
+      [
+        [
+          0.01,
+          6.655
+        ],
+        [
+          0.05,
+          6.687
+        ],
+        [
+          0.1,
+          6.704
+        ],
+        [
+          0.2,
+          6.722
+        ],
+        [
+          0.3,
+          6.733
+        ],
+        [
+          0.4,
+          6.74
+        ],
+        [
+          0.5,
+          6.746
+        ],
+        [
+          0.6,
+          6.752
+        ],
+        [
+          0.7,
+          6.759
+        ],
+        [
+          0.8,
+          6.77
+        ],
+        [
+          0.9,
+          6.786
+        ],
+        [
+          0.95,
+          6.802
+        ],
+        [
+          0.99,
+          6.835
+        ]
+      ],
+      [
+        [
+          0.01,
+          6.665
+        ],
+        [
+          0.05,
+          6.692
+        ],
+        [
+          0.1,
+          6.707
+        ],
+        [
+          0.2,
+          6.723
+        ],
+        [
+          0.3,
+          6.732
+        ],
+        [
+          0.4,
+          6.739
+        ],
+        [
+          0.5,
+          6.745
+        ],
+        [
+          0.6,
+          6.751
+        ],
+        [
+          0.7,
+          6.758
+        ],
+        [
+          0.8,
+          6.768
+        ],
+        [
+          0.9,
+          6.783
+        ],
+        [
+          0.95,
+          6.798
+        ],
+        [
+          0.99,
+          6.828
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.437
+}

@@ -1,0 +1,185 @@
+{
+  "id": "nq-EURUSDX-change",
+  "question": "What will be the percentage change in the euro to US dollar exchange rate (EURUSD=X on Yahoo Finance) from the close on 2026-08-05 to the close on 2026-08-13?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-08-13 / close on 2026-08-05 - 1), using daily closes of EURUSD=X on Yahoo Finance. If there is no close on 2026-08-13, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -0.190335,
+  "outcome_date": "2026-08-13",
+  "as_of": "2026-08-06",
+  "resolve_date": "2026-08-13",
+  "lower_bound": -3.5,
+  "upper_bound": 2.5,
+  "source": "yahoo",
+  "series": "EURUSD=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for EURUSD=X: latest close 1.1557 on 2026-08-05.\nTarget date 2026-08-13 is 6 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 6-observation returns over the last 3 years (last year weighted double):\np5: 1.1392, p10: 1.1435, p25: 1.1485, p50: 1.156, p75: 1.1626, p90: 1.1687, p95: 1.1751\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I have enough material and am writing up the brief now. Anything dated after 2026-08-06 is left out.\n\n# EUR/USD, close 2026-08-05 to close 2026-08-13: research brief\n\n## 1. Resolution source\n- 2026-08-05: Yahoo Finance EURUSD=X closed at **1.1557**, according to the data your code collected. I couldn't fetch Yahoo directly because the proxy refused the connection.\n- 2026-08-05: Other providers' figures for that day are close to Yahoo's. The ECB reference rate was 1.1554 ([EUR-Lex OJ C/2026/4082](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AC_202604082)), and Pound Sterling Live shows open 1.1533, high 1.1559, low 1.1527, close 1.1543 ([PSL](https://www.poundsterlinglive.com/history/EUR-USD-2026)). Yahoo's daily close is usually a late-London or early-US snapshot, so it can differ from other providers by a few pips.\n\n## 2. Current status\n- 2026-08-06: The pair was about 1.1547 to 1.1555 in Asian and European trading ([RoboForex](https://roboforex.com/beginners/analytics/forex-forecast/currencies/eur-usd-forecast-2026-08-06/), [FXStreet](https://www.fxstreet.com/news/eur-usd-price-forecast-looks-set-to-extend-advance-beyond-11600-202608060316)). That is roughly -0.1% to 0.0% from the 2026-08-05 close.\n- Nothing has happened that settles the question. Most of the window is still ahead.\n\n## 3. Recent news (newest first)\n- 2026-08-06: FXStreet had the pair near 1.1555 with the dollar soft after weak US jobs data: ADP private payrolls rose 44K in July against about 70K expected. It named 1.1600 as the upside level and the July low of 1.1353 as the downside risk if support at the 20-day EMA fails ([FXStreet](https://www.fxstreet.com/news/eur-usd-price-forecast-looks-set-to-extend-advance-beyond-11600-202608060316)).\n- 2026-08-06: RoboForex said the pair was correcting after a recent rise, with buyers still in control. It put resistance at 1.1565 and a target at 1.1685 ([RoboForex](https://roboforex.com/beginners/analytics/forex-forecast/currencies/eur-usd-forecast-2026-08-06/)).\n- 2026-08-05: The ISM services index was 54.1, below the 54.5 expected. Business activity rose to 59.1, employment fell to 47.4, and prices increased ([XTB](https://www.xtb.com/de/Marktanalysen/Trading-News/eilmeldung-us-dienstleistungssektor-bleibt-stark-inflationsdruck-steigt)).\n- 2026-07-29: The Fed held rates at 3.50% to 3.75% on a 9-3 vote. Hammack, Kashkari and Logan dissented in favour of a hike. The statement called inflation elevated, partly because of energy supply shocks linked to the Middle East conflict ([Fed statement](https://www.federalreserve.gov/monetarypolicy/files/monetary20260729a1.pdf), [AgWest](https://www.agwestfc.com/education-and-resources/industry-and-economic-insights/economic-updates/updates-from-the-fed/fomc-meeting-results)).\n- 2026-07-23: The ECB held its deposit rate at 2.25% after hiking in June. Lagarde said some governors had raised the idea of a hike, and markets are close to fully pricing a September hike ([OrbitRemit](https://blog.orbitremit.com/ecb-rate-decision-july-2026/), [Il Foglio](https://www.ilfoglio.it/en/economy/2026/07/23/news/asp-the-ecb-leaves-interest-rates-unchanged--402995)).\n- So both central banks lean hawkish, and US labour and inflation data are the swing factors.\n\n## 4. Base rates\n- Your code's empirical distribution for 6 trading days, starting from 1.1557:\n  - p5: 1.1392, which is -1.43%\n  - p10: 1.1435, which is -1.06%\n  - p25: 1.1485, which is -0.62%\n  - p50: 1.1560, which is +0.03%\n  - p75: 1.1626, which is +0.60%\n  - p90: 1.1687, which is +1.12%\n  - p95: 1.1751, which is +1.68%\n- The usual 6-day move is about ±0.6% (interquartile range). The 90% band runs from roughly -1.4% to +1.7%.\n- Recent trend: the July low was 1.1353 ([FXStreet](https://www.fxstreet.com/news/eur-usd-price-forecast-looks-set-to-extend-advance-beyond-11600-202608060316)). The pair has recovered about 1.8% since then and is now trading in roughly 1.15 to 1.16.\n\n## 5. Other forecasts\n- Robinhood (Kalshi-style) runs daily EUR/USD markets with strike levels, for example [2026-08-05](https://robinhood.com/us/en/prediction-markets/fx/events/euro-to-us-dollar-exchange-rate-august-5-2026-aug-05-2026/) and [2026-08-06](https://robinhood.com/us/en/prediction-markets/fx/events/euro-to-us-dollar-exchange-rate-august-6-2026-aug-06-2026/). I couldn't find current prices for an 2026-08-13 contract.\n- I found no Polymarket or Manifold market on this question.\n- The technical outlooks from 2026-08-06 lean mildly bullish: a possible break above 1.1565 to 1.1600 ([FXStreet](https://www.fxstreet.com/news/eur-usd-price-forecast-looks-set-to-extend-advance-beyond-11600-202608060316), [RoboForex](https://roboforex.com/beginners/analytics/forex-forecast/currencies/eur-usd-forecast-2026-08-06/)).\n\n## 6. Upcoming events before resolution\n- 2026-08-07: US July jobs report (nonfarm payrolls), released before the 2026-08-13 resolution close. Coming after the weak ADP number, this is a major risk event ([KuCoin](https://www.kucoin.com/news/flash/u-s-july-cpi-to-be-released-on-august-12-2026)).\n- 2026-08-12, 08:30 ET: US July CPI. This is the biggest event inside the window. With three hawkish dissents at the Fed, a hot reading could boost the dollar and a soft one could weaken it ([Crypto Briefing](https://cryptobriefing.com/us-july-cpi-report-august-12/)).\n- Other things to watch:\n  - US weekly jobless claims.\n  - Euro-area news, such as the German ZEW survey (usually mid-month) and the Q2 GDP second estimate.\n  - Middle East conflict and energy prices, which affect both inflation and risk sentiment.\n- There are no Fed or ECB meetings in the window. The next ones are in September: the Fed on 15-16 September, and the ECB, where a hike is expected.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for EURUSD=X: latest close 1.1557 on 2026-08-05.\nTarget date 2026-08-13 is 6 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 6-observation returns over the last 3 years (last year weighted double):\np5: 1.1392, p10: 1.1435, p25: 1.1485, p50: 1.156, p75: 1.1626, p90: 1.1687, p95: 1.1751\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -2.4
+        ],
+        [
+          0.05,
+          -1.55
+        ],
+        [
+          0.1,
+          -1.15
+        ],
+        [
+          0.2,
+          -0.68
+        ],
+        [
+          0.3,
+          -0.4
+        ],
+        [
+          0.4,
+          -0.17
+        ],
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.6,
+          0.18
+        ],
+        [
+          0.7,
+          0.42
+        ],
+        [
+          0.8,
+          0.72
+        ],
+        [
+          0.9,
+          1.17
+        ],
+        [
+          0.95,
+          1.6
+        ],
+        [
+          0.99,
+          2.4
+        ]
+      ],
+      [
+        [
+          0.01,
+          -2.6
+        ],
+        [
+          0.05,
+          -1.6
+        ],
+        [
+          0.1,
+          -1.15
+        ],
+        [
+          0.2,
+          -0.65
+        ],
+        [
+          0.3,
+          -0.35
+        ],
+        [
+          0.4,
+          -0.12
+        ],
+        [
+          0.5,
+          0.03
+        ],
+        [
+          0.6,
+          0.18
+        ],
+        [
+          0.7,
+          0.42
+        ],
+        [
+          0.8,
+          0.72
+        ],
+        [
+          0.9,
+          1.15
+        ],
+        [
+          0.95,
+          1.6
+        ],
+        [
+          0.99,
+          2.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -2.2
+        ],
+        [
+          0.05,
+          -1.45
+        ],
+        [
+          0.1,
+          -1.08
+        ],
+        [
+          0.2,
+          -0.65
+        ],
+        [
+          0.3,
+          -0.38
+        ],
+        [
+          0.4,
+          -0.17
+        ],
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.6,
+          0.18
+        ],
+        [
+          0.7,
+          0.4
+        ],
+        [
+          0.8,
+          0.68
+        ],
+        [
+          0.9,
+          1.1
+        ],
+        [
+          0.95,
+          1.5
+        ],
+        [
+          0.99,
+          2.2
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4256
+}

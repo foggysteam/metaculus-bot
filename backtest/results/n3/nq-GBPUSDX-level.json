@@ -1,0 +1,185 @@
+{
+  "id": "nq-GBPUSDX-level",
+  "question": "What will be the closing value of the British pound to US dollar exchange rate (GBPUSD=X on Yahoo Finance) on September 3, 2026?",
+  "resolution_criteria": "Resolves to the daily close of GBPUSD=X on Yahoo Finance for 2026-09-03. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD per GBP",
+  "outcome": 1.35318,
+  "outcome_date": "2026-09-03",
+  "as_of": "2026-08-20",
+  "resolve_date": "2026-09-03",
+  "lower_bound": 1.3,
+  "upper_bound": 1.4,
+  "source": "yahoo",
+  "series": "GBPUSD=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for GBPUSD=X: latest close 1.3600 on 2026-08-19.\nTarget date 2026-09-03 is 11 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 11-observation returns over the last 3 years (last year weighted double):\np5: 1.3352, p10: 1.3402, p25: 1.3494, p50: 1.3609, p75: 1.3726, p90: 1.3848, p95: 1.391\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I couldn't fetch any pages directly because the proxy refused every connection. Everything below comes from search-result snippets plus the baseline your code computed. Some snippets mentioned events after 2026-08-20, and I have left those out.\n\n## 1. Resolution source\n- **Source:** the question resolves on the Yahoo Finance daily close for GBPUSD=X on 2026-09-03, which is a Thursday, so it should be a normal trading day. I could not load the Yahoo page.\n- 2026-08-19: Yahoo GBPUSD=X closed at **1.3600** (your code's data).\n- 2026-08-19 and 2026-08-20: a Pound Sterling Live daily table (column labels not visible) shows 2026-08-19 at about 1.3532 / 1.3606 / 1.3630 / 1.3524 / 1.3577, and 2026-08-20 so far at about 1.3606 / 1.3631 / 1.3659 / 1.3595 / 1.3627. The Thursday figures were still forming when I searched. [PSL](https://www.poundsterlinglive.com/history/GBP-USD-2026)\n- Bank of England reference rates for USD/GBP were 0.7384 on 2026-08-18, 0.7348 on 08-19 and 0.7336 on 08-20, which works out to roughly 1.354, 1.361 and 1.363 dollars per pound. [PSL/BoE](https://www.poundsterlinglive.com/bank-of-england-spot/historical-spot-exchange-rates/usd/USD-to-GBP-2026)\n\n## 2. Current status\n- Nothing settles the question yet. Spot is about 1.36 to 1.363, near the middle of the question's 1.30 to 1.40 range, with 10 trading days left before 2026-09-03.\n\n## 3. Recent news (newest first)\n- 2026-08-19: UK CPI for July came in at **2.9% y/y**, against a 3.0% consensus and up from 2.6% in June. The calendar site called it negative for sterling, yet GBP/USD still rose that day to about 1.36. [Forex Fundamentals](https://forexfundamentals.com/economic-calendar/uk-cpi/2026-08-19)\n- 2026-08-17: a Reuters item reposted by BBC Bermuda said sterling was flat at $1.3547 and up about 2% against the dollar so far in August, helped by upbeat data. It said markets saw about a 93% chance of no BoE change in September. Monex expected a slightly hotter CPI reading. That item also describes a \"hawkish BoE cut to 4%\" with a re-vote, which conflicts with other sources (see below), so I'd treat it with caution. [bbc.bm](https://bbc.bm/?p=21513), [bbc.bm](https://bbc.bm/?p=20682)\n- Week of about 2026-08-10: VT Markets wrote that sterling was steady near 1.35, with markets watching US CPI and UK GDP. IG published a piece headlined \"Fed, BoE hold\". [VT Markets](https://www.vtmarkets.com/en-ca/?p=58634), [IG](https://www.ig.com/uk/trading-strategies/gbp-usd-forecast-fed-boe-hold-260810)\n- 2026-07-30: according to most sources, the BoE held Bank Rate at **3.75%** on a 6-3 vote, with Greene, Pill and Mann voting for a hike to 4.00%. Policy is leaning hawkish. [RTTNews](https://www.rttnews.com/3673042/bank-of-england-keeps-rate-on-hold.aspx), [CoStar](https://www.costar.com/article/711235437/bank-of-england-holds-rate-at-3-75), [OrbitRemit](https://blog.orbitremit.com/bank-of-england-july-2026-analysis/)\n- Late July 2026: the Fed held at **3.50 to 3.75%**, its fifth straight hold, with three dissents. The statement said inflation remains elevated. [mql5](https://www.mql5.com/ja/blogs/post/773357)\n- Early 2026-08: GBP/USD was around 1.343 to 1.345 on 2026-08-03, its low for the month so far, then climbed about 1.5 to 2% to 1.36. [Wise](https://wise.com/gb/currency-converter/gbp-to-usd-rate/history)\n\n## 4. Base rates\n- Your code's baseline is 11 observations ahead of 1.3600: p5 1.3352, p10 1.3402, p25 1.3494, **p50 1.3609**, p75 1.3726, p90 1.3848, p95 1.391. The middle 50% band is about ±1.7 cents.\n- **Trend:** the pair has moved up from about 1.343 at the start of August to 1.36. Over August to date the range has been about 1.34 to 1.365.\n- Pricing outside 1.30 to 1.40 looks unlikely on history. Even the p5 and p95 points stay well inside that range.\n\n## 5. Other forecasts\n- **Prediction markets:** I found no Polymarket, Kalshi or Manifold market on the GBP/USD level for early September. Polymarket does run \"Will GBP/USD hit __ in 2026\" ladders: per an aggregator, 1.70 was at 6¢ and 1.10 at 14¢. Those touch-style contracts don't map onto a single closing price. Robinhood has listed date-specific GBP/USD contracts before, but I didn't find one for 2026-09-03. [SimpleFunctions](https://simplefunctions.dev/odds/gbpusd-hit), [Robinhood example](https://robinhood.com/us/en/prediction-markets/fx/events/pound-sterling-to-us-dollar-exchange-rate-march-25-2026-mar-25-2026)\n- **Analyst views:** one forecast site gave an August range of roughly 1.33 to 1.38. I found no dated bank forecast for early September. [Cambridge Currencies](https://cambridgecurrencies.com/gbp-usd-forecast/)\n\n## 6. Upcoming events before 2026-09-03\n- **About 2026-08-20 to 08-22: Jackson Hole symposium.** This would be Kevin Warsh's first speech there as Fed chair. Previews say the market is weighing a hold against a 25bp hike at the 2026-09-15/16 FOMC, so a hawkish tone could strengthen the dollar. [OFX](https://www.ofx.com/en-gb/forex-news/articles/what-jackson-hole-2026-could-mean-for-the-dollar/), [ATFX](https://www.atfx.com/en-au/analysis/financial-events/september-fomc-meeting-2026-is-a-rate-hike-on-the-table)\n- **Policy setup:** the Fed's 3.50 to 3.75% range sits just below Bank Rate at 3.75%, so a hawkish repricing at the Fed would erode sterling's small yield advantage.\n- **2026-08-21:** UK and US flash PMIs (standard timing, not confirmed).\n- **2026-08-31:** UK bank holiday, so London liquidity will be thin.\n- **About 2026-08-28:** US PCE for July.\n- **2026-09-01 to 09-03:** US ISM manufacturing, JOLTS and ADP. US payrolls are due 2026-09-04, the day after resolution.\n- **Next scheduled policy meetings:** both the BoE and the Fed meet in mid-September, after the resolution date.\n\nSources:\n- [Pound Sterling Live GBP/USD 2026](https://www.poundsterlinglive.com/history/GBP-USD-2026)\n- [PSL BoE reference rates](https://www.poundsterlinglive.com/bank-of-england-spot/historical-spot-exchange-rates/usd/USD-to-GBP-2026)\n- [Forex Fundamentals UK CPI](https://forexfundamentals.com/economic-calendar/uk-cpi/2026-08-19)\n- [bbc.bm 21513](https://bbc.bm/?p=21513)\n- [bbc.bm 20682](https://bbc.bm/?p=20682)\n- [VT Markets](https://www.vtmarkets.com/en-ca/?p=58634)\n- [IG](https://www.ig.com/uk/trading-strategies/gbp-usd-forecast-fed-boe-hold-260810)\n- [RTTNews](https://www.rttnews.com/3673042/bank-of-england-keeps-rate-on-hold.aspx)\n- [CoStar](https://www.costar.com/article/711235437/bank-of-england-holds-rate-at-3-75)\n- [OrbitRemit](https://blog.orbitremit.com/bank-of-england-july-2026-analysis/)\n- [mql5 FOMC](https://www.mql5.com/ja/blogs/post/773357)\n- [Wise](https://wise.com/gb/currency-converter/gbp-to-usd-rate/history)\n- [OFX Jackson Hole](https://www.ofx.com/en-gb/forex-news/articles/what-jackson-hole-2026-could-mean-for-the-dollar/)\n- [ATFX](https://www.atfx.com/en-au/analysis/financial-events/september-fomc-meeting-2026-is-a-rate-hike-on-the-table)\n- [SimpleFunctions](https://simplefunctions.dev/odds/gbpusd-hit)\n- [Cambridge Currencies](https://cambridgecurrencies.com/gbp-usd-forecast/)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for GBPUSD=X: latest close 1.3600 on 2026-08-19.\nTarget date 2026-09-03 is 11 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 11-observation returns over the last 3 years (last year weighted double):\np5: 1.3352, p10: 1.3402, p25: 1.3494, p50: 1.3609, p75: 1.3726, p90: 1.3848, p95: 1.391\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1.318
+        ],
+        [
+          0.05,
+          1.333
+        ],
+        [
+          0.1,
+          1.339
+        ],
+        [
+          0.2,
+          1.347
+        ],
+        [
+          0.3,
+          1.353
+        ],
+        [
+          0.4,
+          1.358
+        ],
+        [
+          0.5,
+          1.362
+        ],
+        [
+          0.6,
+          1.366
+        ],
+        [
+          0.7,
+          1.371
+        ],
+        [
+          0.8,
+          1.377
+        ],
+        [
+          0.9,
+          1.386
+        ],
+        [
+          0.95,
+          1.392
+        ],
+        [
+          0.99,
+          1.405
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.321
+        ],
+        [
+          0.05,
+          1.335
+        ],
+        [
+          0.1,
+          1.341
+        ],
+        [
+          0.2,
+          1.349
+        ],
+        [
+          0.3,
+          1.355
+        ],
+        [
+          0.4,
+          1.359
+        ],
+        [
+          0.5,
+          1.362
+        ],
+        [
+          0.6,
+          1.365
+        ],
+        [
+          0.7,
+          1.369
+        ],
+        [
+          0.8,
+          1.375
+        ],
+        [
+          0.9,
+          1.383
+        ],
+        [
+          0.95,
+          1.389
+        ],
+        [
+          0.99,
+          1.401
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.318
+        ],
+        [
+          0.05,
+          1.333
+        ],
+        [
+          0.1,
+          1.339
+        ],
+        [
+          0.2,
+          1.347
+        ],
+        [
+          0.3,
+          1.353
+        ],
+        [
+          0.4,
+          1.358
+        ],
+        [
+          0.5,
+          1.361
+        ],
+        [
+          0.6,
+          1.365
+        ],
+        [
+          0.7,
+          1.37
+        ],
+        [
+          0.8,
+          1.376
+        ],
+        [
+          0.9,
+          1.385
+        ],
+        [
+          0.95,
+          1.391
+        ],
+        [
+          0.99,
+          1.404
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4361
+}

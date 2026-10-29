@@ -1,0 +1,185 @@
+{
+  "id": "nq-GBPUSDX-change",
+  "question": "What will be the percentage change in the British pound to US dollar exchange rate (GBPUSD=X on Yahoo Finance) from the close on 2026-09-03 to the close on 2026-09-12?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-12 / close on 2026-09-03 - 1), using daily closes of GBPUSD=X on Yahoo Finance. If there is no close on 2026-09-12, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -0.166166,
+  "outcome_date": "2026-09-10",
+  "as_of": "2026-09-05",
+  "resolve_date": "2026-09-12",
+  "lower_bound": -3.0,
+  "upper_bound": 4.0,
+  "source": "yahoo",
+  "series": "GBPUSD=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for GBPUSD=X: latest close 1.3532 on 2026-09-03.\nTarget date 2026-09-12 is 6 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 6-observation returns over the last 3 years (last year weighted double):\np5: 1.3332, p10: 1.337, p25: 1.3451, p50: 1.3536, p75: 1.3623, p90: 1.371, p95: 1.3765\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I've finished searching and am now writing up the findings, using only information published by 2026-09-05.\n\n## 1. Resolution source\n- 2026-09-03: Yahoo Finance GBPUSD=X closed at **1.3532**, according to the code baseline. I couldn't open Yahoo directly, and the pages I tried to fetch were blocked by the proxy.\n- 2026-09-03: For comparison, PoundSterlingLive shows 1.3514 for the day, within a range of about 1.3480 to 1.3548. Its Bank of England reference rate was 1.3518. The ~0.1% gap from Yahoo's figure probably comes from the time each source takes its \"close\". [PSL history](https://www.poundsterlinglive.com/history/GBP-USD-2026), [PSL BoE rates](https://www.poundsterlinglive.com/bank-of-england-spot/historical-spot-exchange-rates/gbp/gbp-to-usd-2026)\n\n## 2. Current status\n- 2026-09-04: PoundSterlingLive lists a close of about 1.3517, with a range of about 1.3485 to 1.3549. The BoE reference rate was about 1.3515 and ExchangeRates.org.uk shows 1.3517. [PSL](https://www.poundsterlinglive.com/history/GBP-USD-2026), [exchangerates.org.uk](https://www.exchangerates.org.uk/historical/find-exchange-rate-history-for-04_09_2026)\n- If Yahoo's 4 Sep close is similar, the pair is about **-0.1%** against the 3 Sep reference, with 5 trading days left. Nothing has settled the question yet.\n\n## 3. Recent news (newest first)\n- 2026-09-04: US August payrolls came in at +162k against expectations of about 53k to 65k. It was the biggest gain since March. Unemployment stayed at 4.1% and hourly earnings rose 0.3% m/m and 3.1% y/y. July was revised up from -23k to +21k. CNBC reported that short-end Treasury yields rose sharply and traders added to bets on a Fed **hike** at the September meeting. This supports the dollar. [CNBC](https://www.cnbc.com/2026/09/04/jobs-report-august-2026.html), [CBS](https://www.cbsnews.com/news/august-jobs-report-us-labor-market/)\n- Fed context: the Fed is in a possible tightening phase. Odds of a September hike fell after the weak July jobs report on 2026-08-07. [CNBC](https://www.cnbc.com/2026/08/07/odds-the-fed-hikes-in-september-tumble-following-big-july-jobs-miss.html) A Yahoo piece said September hike odds had risen above 50%, but I couldn't confirm its date. [Yahoo](https://finance.yahoo.com/economy/policy/articles/fomc-september-2026-odds-rate-201618784.html)\n- 2026-08-21: GBP/USD hit about 1.3675, the high for August. Since then it has fallen roughly 1.2% to around 1.351. [exchangerates.org.uk](https://www.exchangerates.org.uk/GBP-USD-spot-exchange-rates-history-2026.html)\n- UK: Bank Rate is 3.75%, and markets are debating whether the BoE will hike. I found no sterling-specific news from 3 to 5 September.\n\n## 4. Base rates\n- Code-computed distribution of the 6-trading-day outcome, starting from 1.3532:\n  - p5: 1.3332 (-1.48%)\n  - p10: 1.3370 (-1.20%)\n  - p25: 1.3451 (-0.60%)\n  - p50: 1.3536 (+0.03%)\n  - p75: 1.3623 (+0.67%)\n  - p90: 1.3710 (+1.32%)\n  - p95: 1.3765 (+1.72%)\n- In other words, a typical 6-day move is about ±0.65% (the middle half of outcomes) and about ±1.5% at the 5th and 95th percentiles. Results outside the question's -3% to +4% range would be very rare.\n- Recent trend: since the 21 Aug high the pair has drifted lower, as the dollar firmed on Fed hike talk.\n\n## 5. Other forecasts\n- Robinhood runs daily prediction markets on GBP/USD, and its 4 Sep market used a threshold of about 1.3525. I couldn't find a market for 11 or 12 Sep, or its prices. [Robinhood](https://robinhood.com/us/en/prediction-markets/fx/events/pound-sterling-to-us-dollar-exchange-rate-september-4-2026-sep-04-2026/)\n- I found no Polymarket, Kalshi or Manifold market on this pair for this date, and no bank forecast for one week ahead published before 5 Sep.\n\n## 6. Upcoming events before resolution\n- **2026-09-11 (Fri), 8:30 ET: US August CPI.** This is the biggest scheduled risk, and it lands on the day that decides the question. With a Fed hike in play, it could move the pair a lot. [fedratecalc](https://fedratecalc.com/cpi-release-date/), [eco3min](https://eco3min.fr/en/next-us-cpi-release/)\n- Around 10 to 11 Sep: UK monthly GDP for July should come out, but I couldn't confirm the date.\n- The week of 7 Sep may bring US PPI and Fed comments before the blackout period for the mid-September FOMC meeting. I didn't check the dates.\n- Just after the window: the FOMC meets around 15 to 16 Sep and the BoE MPC around 17 Sep. Positioning ahead of those meetings could affect the pair during the window.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for GBPUSD=X: latest close 1.3532 on 2026-09-03.\nTarget date 2026-09-12 is 6 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 6-observation returns over the last 3 years (last year weighted double):\np5: 1.3332, p10: 1.337, p25: 1.3451, p50: 1.3536, p75: 1.3623, p90: 1.371, p95: 1.3765\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -2.4
+        ],
+        [
+          0.05,
+          -1.55
+        ],
+        [
+          0.1,
+          -1.2
+        ],
+        [
+          0.2,
+          -0.75
+        ],
+        [
+          0.3,
+          -0.48
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          -0.13
+        ],
+        [
+          0.6,
+          0.04
+        ],
+        [
+          0.7,
+          0.25
+        ],
+        [
+          0.8,
+          0.55
+        ],
+        [
+          0.9,
+          1.0
+        ],
+        [
+          0.95,
+          1.35
+        ],
+        [
+          0.99,
+          2.1
+        ]
+      ],
+      [
+        [
+          0.01,
+          -2.3
+        ],
+        [
+          0.05,
+          -1.55
+        ],
+        [
+          0.1,
+          -1.2
+        ],
+        [
+          0.2,
+          -0.75
+        ],
+        [
+          0.3,
+          -0.48
+        ],
+        [
+          0.4,
+          -0.27
+        ],
+        [
+          0.5,
+          -0.1
+        ],
+        [
+          0.6,
+          0.08
+        ],
+        [
+          0.7,
+          0.3
+        ],
+        [
+          0.8,
+          0.58
+        ],
+        [
+          0.9,
+          1.0
+        ],
+        [
+          0.95,
+          1.35
+        ],
+        [
+          0.99,
+          2.1
+        ]
+      ],
+      [
+        [
+          0.01,
+          -2.4
+        ],
+        [
+          0.05,
+          -1.55
+        ],
+        [
+          0.1,
+          -1.2
+        ],
+        [
+          0.2,
+          -0.75
+        ],
+        [
+          0.3,
+          -0.46
+        ],
+        [
+          0.4,
+          -0.25
+        ],
+        [
+          0.5,
+          -0.08
+        ],
+        [
+          0.6,
+          0.1
+        ],
+        [
+          0.7,
+          0.32
+        ],
+        [
+          0.8,
+          0.62
+        ],
+        [
+          0.9,
+          1.05
+        ],
+        [
+          0.95,
+          1.4
+        ],
+        [
+          0.99,
+          2.1
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4243
+}

@@ -1,0 +1,185 @@
+{
+  "id": "nq-USDJPYX-change",
+  "question": "What will be the percentage change in the US dollar to Japanese yen exchange rate (USDJPY=X on Yahoo Finance) from the close on 2026-09-15 to the close on 2026-09-26?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-26 / close on 2026-09-15 - 1), using daily closes of USDJPY=X on Yahoo Finance. If there is no close on 2026-09-26, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 2.283177,
+  "outcome_date": "2026-09-24",
+  "as_of": "2026-09-16",
+  "resolve_date": "2026-09-26",
+  "lower_bound": -5.0,
+  "upper_bound": 5.0,
+  "source": "yahoo",
+  "series": "USDJPY=X",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for USDJPY=X: latest close 155.2660 on 2026-09-15.\nTarget date 2026-09-26 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 150.5883, p10: 151.9928, p25: 154.137, p50: 155.7662, p75: 156.8695, p90: 158.0444, p95: 158.8633\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# USD/JPY research note: Sept 15 close to Sept 26 close\n\nTwo central bank decisions fall inside the window. The Fed decision on Sept 16 lands exactly at the forecast close, and the BOJ decision is around Sept 18. Several pages I found were published after Sept 16. I ignored them.\n\n## 1. Resolution source\n- 2026-09-15: The code-collected Yahoo Finance USDJPY=X close is **155.2660**. That is the baseline price for the question.\n- The resolution value is the Yahoo close on 2026-09-26. That date is a Saturday, so in practice the Friday 2026-09-25 close will be used.\n- I could not fetch Yahoo directly, so I have not independently checked the latest value.\n\n## 2. Current status\n- Nothing has settled the question yet. Both central bank decisions inside the window are still to come or happening as forecasts close.\n\n## 3. Recent news (newest first)\n- 2026-09-16: The FOMC decision was due at 2:00 pm EDT, which is 18:00 UTC, the same moment forecasts close. The Fed's release and CNBC report a 25bp **hike** to 3.75%-4.00%, voted 12-0. It is the first hike since 2023 and the first under Chair Warsh. [Fed](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm), [CNBC](https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html)\n- 2026-09-16: A CNBC survey finds most respondents expect the BOJ to raise rates by 25bp to a new three-decade high. I could not open the page. [CNBC](https://www.cnbc.com/2026/09/16/boj-hike-rates-cnbc-survey.html)\n- 2026-09-09: Kalshi USD/JPY contracts repriced sharply on expectations of a hawkish BOJ. Spot was near a seven-month low of about 153.40, according to a third-party summary. [Octagon AI](https://www.octagonai.co/news/usd-jpy-prediction-market-odds-shift/)\n- 2026-09-08: RoboForex says USD/JPY broke below 155 with no new official intervention, so the yen's gains were driven by the market rather than by authorities. [RoboForex](https://roboforex.com/beginners/analytics/forex-forecast/currencies/usd-jpy-forecast-2026-09-08/)\n- 2026-09-03/04: The yen jumped more than 2%, at one point touching 155.28. The move was triggered by Treasury Secretary Bessent's remarks after the G20 and by bets on a BOJ hike. BOJ account data showed no Finance Ministry yen buying. Vice Finance Minister Mimura said authorities were \"neither satisfied nor reassured.\" [CNBC](https://www.cnbc.com/2026/09/03/yen-japan-intervention-boj.html), [IntelliNews](https://www.intellinews.com/yen-surges-nearly-jpy3-against-dollar-on-bets-of-boj-rate-hike-465699/), [EBC](https://www.ebc.com/forex/usd-jpy-155-no-fresh-intervention)\n- Early Sept: MUFG says the pair opened the week at 160.11 and fell to about 155.50 by Sept 3. [MUFG](https://www.mufgresearch.com/fx/jpy-weekly-7-september-2026/)\n- 2026-08-03: Japan and the US confirmed a rare joint intervention in late July to support the yen. [Al Jazeera](https://www.aljazeera.com/economy/2026/8/3/japan-and-us-confirm-rare-joint-intervention-to-prop-up-yen)\n\n## 4. Base rates\n- The empirical 8-trading-day distribution from 3 years of data (provided by code) gives these price percentiles:\n\n| Percentile | Price | Change from 155.266 |\n|---|---|---|\n| p5 | 150.59 | about -3.0% |\n| p10 | 151.99 | about -2.1% |\n| p25 | 154.14 | about -0.7% |\n| p50 | 155.77 | about +0.3% |\n| p75 | 156.87 | about +1.0% |\n| p90 | 158.04 | about +1.8% |\n| p95 | 158.86 | about +2.3% |\n\n- The interquartile range is roughly -0.7% to +1.0%.\n- Recent volatility is high. The pair fell from about 160 to about 153.4 within roughly one week in early September (about -4%), and there was a 2-3 yen single-day move on Sept 3.\n- Trend: the yen has been strengthening since the late-July joint intervention and the BOJ repricing in early September.\n\n## 5. Other forecasts\n- Kalshi and Robinhood list daily and weekly USD/JPY range contracts. I could not find prices for the Sept 25/26 contract.\n- The only data point I found: on 2026-09-09 the chance of finishing above 154.367 on Sept 11 fell 61 points to 28%. Treat this with caution, because the source's tables are internally inconsistent. [Octagon AI](https://www.octagonai.co/news/usd-jpy-prediction-market-odds-shift/)\n- On Polymarket's \"Will USD/JPY hit __ in 2026\", one aggregator shows about 55% for hitting 165 at some point in 2026. I could not confirm the snapshot date. [SimpleFunctions](https://simplefunctions.dev/answer/usdjpy-hit)\n- I found no bank point forecasts specifically for late September.\n\n## 6. Upcoming events before resolution\n- 2026-09-16, 18:00 UTC: The Fed decision (a hike to 3.75%-4.00%), the dot plot and Warsh's press conference. The market reaction comes after forecasts close.\n- About 2026-09-17/18: The BOJ decision, which CNBC reported as due Sept 18. A 25bp hike is widely expected, so the yen's move will likely depend on Ueda's guidance about further hikes.\n- Throughout the window: intervention risk. Japan and the US jointly intervened in late July, and Tokyo's informal line has been around 160. Officials in both countries keep the option open, though that matters more if the pair climbs back toward 158-160.\n- Around 2026-09-18 to 09-25: Japan's national CPI for August is due near the BOJ meeting (exact date not confirmed), plus US data in the week of Sept 21-25 such as PMIs and the PCE release on about Sept 25-26 (date not confirmed).\n- Political or official yen commentary from Finance Minister Katayama, Mimura and Bessent.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for USDJPY=X: latest close 155.2660 on 2026-09-15.\nTarget date 2026-09-26 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 150.5883, p10: 151.9928, p25: 154.137, p50: 155.7662, p75: 156.8695, p90: 158.0444, p95: 158.8633\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -4.8
+        ],
+        [
+          0.05,
+          -3.0
+        ],
+        [
+          0.1,
+          -2.2
+        ],
+        [
+          0.2,
+          -1.3
+        ],
+        [
+          0.3,
+          -0.7
+        ],
+        [
+          0.4,
+          -0.25
+        ],
+        [
+          0.5,
+          0.1
+        ],
+        [
+          0.6,
+          0.45
+        ],
+        [
+          0.7,
+          0.85
+        ],
+        [
+          0.8,
+          1.35
+        ],
+        [
+          0.9,
+          2.0
+        ],
+        [
+          0.95,
+          2.6
+        ],
+        [
+          0.99,
+          3.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          -4.8
+        ],
+        [
+          0.05,
+          -3.2
+        ],
+        [
+          0.1,
+          -2.4
+        ],
+        [
+          0.2,
+          -1.4
+        ],
+        [
+          0.3,
+          -0.8
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          0.1
+        ],
+        [
+          0.6,
+          0.5
+        ],
+        [
+          0.7,
+          0.95
+        ],
+        [
+          0.8,
+          1.5
+        ],
+        [
+          0.9,
+          2.2
+        ],
+        [
+          0.95,
+          2.8
+        ],
+        [
+          0.99,
+          3.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          -4.6
+        ],
+        [
+          0.05,
+          -3.1
+        ],
+        [
+          0.1,
+          -2.3
+        ],
+        [
+          0.2,
+          -1.35
+        ],
+        [
+          0.3,
+          -0.75
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          0.05
+        ],
+        [
+          0.6,
+          0.4
+        ],
+        [
+          0.7,
+          0.8
+        ],
+        [
+          0.8,
+          1.3
+        ],
+        [
+          0.9,
+          2.0
+        ],
+        [
+          0.95,
+          2.55
+        ],
+        [
+          0.99,
+          3.6
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4563
+}
