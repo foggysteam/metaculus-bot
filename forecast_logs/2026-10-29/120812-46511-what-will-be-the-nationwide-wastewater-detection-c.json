@@ -1,0 +1,345 @@
+{
+  "logged_at": "2026-10-29T12:12:37.414016+00:00",
+  "bot_version": "2026-10-28.2",
+  "started_at": "2026-10-29T12:08:12.485455+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46511,
+    "post_id": 46281,
+    "url": "https://www.metaculus.com/questions/46281",
+    "type": "MultipleChoiceQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "What will be the nationwide wastewater detection category of enterovirus D68 on December 1, 2026?",
+    "resolution_criteria": "This question resolves as the WastewaterSCAN wastewater national category of EVD68 at the [WastewaterSCAN Dashboard](https://data.wastewaterscan.org/) displayed by the site when first checked by Metaculus on or after December 1, 2026.",
+    "fine_print": "If the category is Not Detected or Not Calculated (or functional equivalent), the question resolves as Other. In case of accessibility issues with the main resolution source, Metaculus may check the [monthly update](https://wwscan.ghost.io/) as a backup source. In case of changes to categorization, the question may resolve based on which third the new category falls into. For example, a new category of Very Low would be in the lower third and would be encompassed by the current Low category.\n\nPlease note that this question resolves solely according to what the dashboard displays at the time Metaculus checks it, regardless of subsequent revisions to it, revisions to historical data, reporting delays, or the accuracy of the displayed category.",
+    "close_time": "2026-10-29 15:00 UTC",
+    "scheduled_resolution_time": "2026-12-01 00:00 UTC"
+  },
+  "research": [
+    "I found nothing that settles this yet. The latest category shown is still **High**, in a wave the program calls one of its strongest on record. My main gap is that I couldn't find what the national category was in late 2024, the last big wave.\n\n## 1. Resolution source\n- 2026-10-29: When I fetched the WastewaterSCAN dashboard, the page text showed only navigation (\"Overview for National\", region filters). No EV-D68 category was readable, probably because the page loads its data with scripts. [dashboard](https://data.wastewaterscan.org/)\n- 2026-10-26: People's Pharmacy reported a WastewaterSCAN dashboard snapshot dated October 23, 2026, with EV-D68 nationally \"High\", alongside SARS-CoV-2 and Influenza A. [People's Pharmacy](https://www.peoplespharmacy.com/articles/flying-blind-into-influenza-season-global-trends-vs-cdcs-lag)\n- 2026-10-02: The September 2026 monthly update (the newest issue) says: \"Nationally, EV-D68 is in the 'HIGH' Wastewater Category due to high concentrations.\" [WWSCAN Sep 2026](https://wwscan.ghost.io/nationwide-wastewaterscan-september-2026-update/)\n- How the category works: EV-D68 is treated as a seasonal virus and judged site by site. The program publishes no rule for rolling sites up into the national category; the inferences below are mine.\n  - **Onset:** a site's season starts on the first day when every sample in a 14-day look-back is at or above 2,000 copies/g. After that, the standard method (trend, level, detection frequency) sets the category.\n  - **Offset:** the season ends on the first day after onset when only 50% of samples in a 14-day look-back are at or above 2,000 copies/g. Sites in offset are rated \"LOW\". [About](https://data.wastewaterscan.org/about/)\n  - **National view:** past updates call the national level LOW when more than half of sites are in offset, so the national category appears to follow the majority of sites. [Oct 2025 update](https://wwscan.ghost.io/nationwide-wastewaterscan-october-2025-update/)\n  - **Medium is rare:** past site counts show 0 MEDIUM sites, for example 120 Low / 0 Medium / 15 High in October 2025, so the result is close to a High-or-Low choice.\n\n## 2. Current status\n- Nothing settles the question yet. The category was High as of about October 23, 2026. The question turns on whether more than half of sites fall into offset (below 2,000 copies/g in at least half of samples over 14 days) before about December 1.\n\n## 3. Recent news (newest first)\n- 2026-10-26: People's Pharmacy reported EV-D68 \"High\" on the WWSCAN dashboard (Oct 23 snapshot). [link](https://www.peoplespharmacy.com/articles/flying-blind-into-influenza-season-global-trends-vs-cdcs-lag)\n- 2026-10-16: Iowa HHS said EV-D68 increases had been seen nationally in wastewater in recent weeks, while AFM (acute flaccid myelitis, a rare paralysis linked to EV-D68) case reports had stayed relatively low. [Iowa HHS](https://content.govdelivery.com/attachments/IACIO/2026/10/16/file_attachments/3820773/Epi%20Update%20For%20Friday%20October%2016%202026.pdf)\n- Early October 2026: Bay Area sites (Palo Alto, Napa, San Francisco, San Rafael) were reported high and still climbing. [Hoodline](https://hoodline.com/2026/10/rare-polio-like-virus-surges-in-bay-area-wastewater-kids-most-at-risk/), [Bay Area Telegraph](https://bayareatelegraph.com/2026/10/05/virus-linked-to-rare-scary-illness-in-kids-is-circulating-in-california-experts-warn/)\n- 2026-10-02: The September update reported:\n  - detection in about 72% of samples, up from about 20% in August;\n  - a median of 8,864 copies/g;\n  - concentrations since mid-September among the highest since monitoring began in September 2023;\n  - increases in the Midwest, Northeast and South. [WWSCAN Sep 2026](https://wwscan.ghost.io/nationwide-wastewaterscan-september-2026-update/), [Medical Daily](https://www.medicaldaily.com/ev-d68-wastewater-high-children-asthma-afm-warning-signs-479686)\n- I found no report of a peak or decline after October 23. The October 2026 monthly update was not yet published as of today.\n\n## 4. Base rates\n- Early 2026: EV-D68 was detected in about 20% of samples in January, 9% in February and 1-5% from March to June, with the national category LOW. In January 2026 sites were 94 Low / 0 Medium / 7 High, all the High sites in California. [Jan 2026](https://wwscan.ghost.io/nationwide-wastewaterscan-january-2026-update/)\n- 2025 season (a smaller year):\n  - Midwest levels rose in mid-August 2025 and declined in November, about 3 months of elevation.\n  - West levels rose in late September 2025 and declined from early January 2026, about 3.5 months.\n  - The national category was LOW in both the October and November 2025 updates. In November 2025 sites were 111 Low / 0 Medium / 21 High. [Nov 2025](https://wwscan.ghost.io/nationwide-wastewaterscan-november-2025-update/)\n- 2024 season (the last large wave): there were elevated levels across all regions in the 2024-25 season. Press in September 2024 described a rise starting in early August. I could not find the 2024 national category for late November or December; the 2024 monthly update URLs I tried returned 404.\n- Timing: the 2026 surge began in late August or September, with very high levels from mid-September. If the wave lasts about 3 months, as regional waves did in 2025, many sites could still be at or above 2,000 copies/g around December 1. A national peak in September or October followed by decline could push most sites into offset by late November. Both readings fit the data I found.\n\n## 5. Other forecasts\n- None of the supplied Kalshi or Polymarket markets relate to EV-D68 or wastewater. I found no Manifold, Polymarket or expert forecast on this question.\n\n## 6. Upcoming events before resolution\n- Early November 2026 (expected): the WWSCAN October 2026 monthly update, giving the national category, detection rate and site counts.\n- Early December 2026: the November update, which comes after the resolution check (the backup source only).\n- Weekly dashboard refreshes: the key thing to watch is the share of sites still in onset compared with offset.\n- CDC NREVSS enterovirus data and any AFM reports could show whether clinical activity has peaked.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-29 12:08 UTC; check each market really matches the question)\n- Kalshi: Roshan Hunters vs. Level Up Academy (Roshan Hunters vs. Level Up Academy (Oct 29)). Yes prices: Level Up Academy: 0.58; Roshan Hunters: 0.42.\n- Kalshi: How bad will CO2 atmospheric concentration get before 2030? (Before 2030). Yes prices: At least 445: 0.28; At least 450: 0.17; At least 440: 0.83; At least 455: 0.09; At least 460: 0.06.\n- Kalshi: Will the US issue a Level 4 travel advisory for Taiwan? (Taiwan Travel Advisory). Yes prices: Before Jan 1, 2030: 0.35; Before Jan 1, 2029: 0.29; Before Jan 1, 2027: 0.03; Before Jan 1, 2028: 0.10; Before Jul 1, 2026: 0.0010.\n- Kalshi: Will CDC cut the childhood vaccine schedule below 11 diseases? (Before Jul 1, 2027). Yes prices: Before Jul 1, 2027: 0.30; Before Jan 1, 2027: 0.17.\n- Kalshi: Which vaccines will the CDC no longer recommend this year? (Before Jan 1, 2027). Yes prices: COVID-19: 0.19; Influenza: 0.07; Polio: 0.04; Hepatitis B: 0.05; Rotavirus: 0.04; Dengue: 0.04.\n- Kalshi: When will FISA be reauthorized again? (legislation that reauthorizes FISA Section 702 authority). Yes prices: Before Apr 1, 2027: 0.47; Before Jan 1, 2027: 0.43; Before Dec 1, 2026: 0.17; Before Jun 13, 2026: 0.0100; Before Jun 12, 2026: 0.0100; Before Aug 1, 2026: 0.0400; Before Oct 1, 2026: 0.0100; Before Jun 11, 2026: 0.0100; Before Jun 14, 2026: 0.0100; Before Jun 15, 2026: 0.0100.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.04; Before Oct 1, 2027: 0.04; Before Sep 1, 2027: 0.04; Before Dec 1, 2027: 0.05; Before Jan 1, 2028: 0.05.\n- Kalshi: Chevron Credit Card Spend in October (October 2026). Yes prices: Above 107: 0.51; Above 108: 0.42; Above 106: 0.64; Above 109: 0.23; Above 105: 0.81; Above 104: 0.91; Above 103: 0.92; Above 114: 0.04; Above 98: 0.98.\n- Kalshi: Ro Credit Card Spend in October (October 2026). Yes prices: Above 259: 0.65; Above 272: 0.22; Above 246: 0.93; Above 285: 0.18; Above 298: 0.04; Above 326: 0.03; Above 410: 0.01; Above 134: 0.98; Above 162: 0.98; Above 190: 0.98.\n- Polymarket: Lowest Mississippi level at Baton Rouge by November 30? (ends 2026-12-02). [Yes, No] prices: Below 3.00 ft: [\"0.029\", \"0.971\"]; 3.00 to 3.99 ft: [\"0.054\", \"0.946\"]; 4.00 to 4.99 ft: [\"0.2475\", \"0.7525\"]; 5.00 to 5.99 ft: [\"0.405\", \"0.595\"]; 6.00 ft or more: [\"0.315\", \"0.685\"]\n- Polymarket: Lowest Mississippi level at St. Louis by November 30? (ends 2026-12-02). [Yes, No] prices: Below -3.00 ft: [\"0.054\", \"0.946\"]; -3.00 to -1.01 ft: [\"0.152\", \"0.848\"]; -1.00 to 0.99 ft: [\"0.375\", \"0.625\"]; 1.00 to 2.99 ft: [\"0.2925\", \"0.7075\"]; 3.00 ft or more: [\"0.1415\", \"0.8585\"]\n- Polymarket: Highest sea level in San Diego this winter? (ends 2027-04-01). [Yes, No] prices: 7.70 ft or more: [\"0.945\", \"0.055\"]; 7.90 ft or more: [\"0.92\", \"0.08\"]; 8.10 ft or more: [\"0.57\", \"0.43\"]; 8.30 ft or more: [\"0.29\", \"0.71\"]\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.145\", \"0.855\"]; $2M: [\"0.045\", \"0.955\"]; $3M: [\"0.024\", \"0.976\"]; $4M: [\"0.02\", \"0.98\"]; $5M: [\"0.006\", \"0.994\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.235\", \"0.765\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.185\", \"0.815\"]",
+    "# EV-D68 national wastewater category (WastewaterSCAN): research for the December 1, 2026 question\n\n## 1. Resolution source\n- 2026-10-29: I fetched the WastewaterSCAN dashboard, but the page loads its data with JavaScript. All I got back was the \"Overview for National\" heading and a region selector, with no EV-D68 category. **I could not read the live value myself.** [dashboard](https://data.wastewaterscan.org/)\n- 2026-10-02: The latest monthly update (September 2026 data, samples through Sep 30) says: \"Nationally, EV-D68 is in the 'HIGH' Wastewater Category due to high concentrations.\" [wwscan.ghost.io](https://wwscan.ghost.io/nationwide-wastewaterscan-september-2026-update/)\n  - Detection rose from about 20% of samples in August to about 72% in September.\n  - The September national median was 8,864 copies per gram. The August median was below the limit of detection.\n  - Since mid-September, concentrations have been \"some of the highest... since monitoring began back in September 2023.\"\n- How categories are set: they combine the 21-day trend, the level compared with national tertiles over the last 365 days, and how often the virus is detected. EV-D68 is treated as a \"seasonal\" pathogen, meaning it is rarely detected outside its season or outbreaks. [same](https://wwscan.ghost.io/nationwide-wastewaterscan-september-2026-update/)\n\n## 2. Current status\n- 2026-10-26: A People's Pharmacy article reproduces the WastewaterSCAN national dashboard for 2026-10-23 and lists EV-D68 as \"High\", alongside SARS-CoV-2 and Influenza A. This is secondhand; I could not confirm it on the dashboard. [peoplespharmacy](https://www.peoplespharmacy.com/articles/flying-blind-into-influenza-season-global-trends-vs-cdcs-lag)\n- Nothing settles the question yet. The current reading is High, and the question is whether it stays there through December 1.\n- The October 2026 monthly update, expected around early November, does not appear to be out yet. On 2026-10-29 the blog's front page still showed the October 2 issue as the latest.\n\n## 3. Recent news (newest first)\n- 2026-10-28: News reports say the respiratory season is starting early, with COVID rising in every state according to CDC data. This is not specific to EV-D68. [revolver.news](https://revolver.news/2026/10/sponsored-hacking-and-sneezing-put-down-the-kleenex-weve-got-you-covered/)\n- Oct 2026, exact date unknown: The Kansas health department (KDHE) says EV-D68 in WastewaterSCAN sewersheds (Wyandotte, Douglas and Saline counties) began rising in July 2026 and rose sharply in August. Some of those sites have since started to fall but remain above earlier readings. This comes from a search snippet; the page itself returned 403 to me. [KDHE](https://www.kdhe.ks.gov/m/newsflash/home/detail/2151)\n- Oct 2026: Hoodline reports EV-D68 rising in Bay Area wastewater. [hoodline](https://hoodline.com/2026/10/rare-polio-like-virus-surges-in-bay-area-wastewater-kids-most-at-risk/)\n- 2026-10-05: Data cited in the Bay Area press showed high and rising concentrations in Palo Alto, Napa and southeast San Francisco. [bayareatelegraph](https://bayareatelegraph.com/2026/10/05/virus-linked-to-rare-scary-illness-in-kids-is-circulating-in-california-experts-warn/)\n- Early Oct 2026: Medical Daily says positive samples were concentrated in the Midwest, Northeast and South, with the West lower. [medicaldaily](https://www.medicaldaily.com/ev-d68-wastewater-high-children-asthma-afm-warning-signs-479686)\n- I could not find the Idaho Statesman background article.\n\n## 4. Base rates\n- Monthly updates for March through July 2026 put EV-D68 in the national LOW category, with detection around 1 to 3%. [May 2026](https://wwscan.ghost.io/nationwide-wastewaterscan-may-2026-update/)\n- The 2025 season was a smaller, regional one. The national category stayed LOW throughout even though some regions were high:\n  - 2025-11-03 (October data): national LOW. Site counts: 120 Low, 0 Medium, 15 High, 12 not enough data. About 28% of samples positive, mostly in the Midwest and California. [Oct 2025](https://wwscan.ghost.io/nationwide-wastewaterscan-october-2025-update/)\n  - 2025-12-05 (November data): national LOW. Site counts: 111 Low, 0 Medium, 21 High. The Midwest came down during November, while the West was HIGH because of California. [Nov 2025](https://wwscan.ghost.io/nationwide-wastewaterscan-november-2025-update/)\n  - 2026-01-08 (December data): national LOW. Site counts: 99 Low, 0 Medium, 22 High. [Dec 2025](https://wwscan.ghost.io/nationwide-wastewaterscan-december-2025-update/)\n- Two patterns from 2025:\n  - Site-level categories for EV-D68 were almost entirely Low or High, with essentially no Medium. That suggests the category is driven by whether sites are in seasonal \"onset\" or \"offset\".\n  - The Midwest wave that started in mid-August 2025 had declined by November, about 3 months later.\n- 2024 wave: around 2024-09-21 the national level was reported as \"moderate\", with 306 of 400 samples positive. [Fox News](https://noticias.foxnews.com/health/virus-linked-rare-paralyzing-illness-children-could-spike-us-wastewater-data-suggests) I could not find the November or December 2024 national category; the monthly blog archive for 2024 returned 404.\n- The 2026 wave started sharply in August, which is earlier and more national than 2025. Past waves in the US have tended to peak in September or October.\n\n## 5. Other forecasts\n- None of the Kalshi or Polymarket markets provided relate to EV-D68 or wastewater.\n- I found no Metaculus community forecast and no expert projection for this question.\n\n## 6. Upcoming events before resolution\n- Early November 2026: the October 2026 monthly update, which should show whether national concentrations have peaked.\n- Early December 2026: the November update, likely after Metaculus checks the dashboard. It only matters if the dashboard is inaccessible.\n- The dashboard updates continuously as samples are processed. The category it shows on December 1 will reflect roughly the 21 days before, about mid-November onward.\n- Things to watch:\n  - Whether more than half of sites move to offset, as the Midwest did in November 2025.\n  - Whether the national median falls toward the limit of detection.\n  - Whether a rise in the West, especially California, offsets declines elsewhere, as happened late in 2025.\n  - Any change in how categories are calculated.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-29 12:08 UTC; check each market really matches the question)\n- Kalshi: Roshan Hunters vs. Level Up Academy (Roshan Hunters vs. Level Up Academy (Oct 29)). Yes prices: Level Up Academy: 0.58; Roshan Hunters: 0.42.\n- Kalshi: How bad will CO2 atmospheric concentration get before 2030? (Before 2030). Yes prices: At least 445: 0.28; At least 450: 0.17; At least 440: 0.83; At least 455: 0.09; At least 460: 0.06.\n- Kalshi: Will the US issue a Level 4 travel advisory for Taiwan? (Taiwan Travel Advisory). Yes prices: Before Jan 1, 2030: 0.35; Before Jan 1, 2029: 0.29; Before Jan 1, 2027: 0.03; Before Jan 1, 2028: 0.10; Before Jul 1, 2026: 0.0010.\n- Kalshi: Will CDC cut the childhood vaccine schedule below 11 diseases? (Before Jul 1, 2027). Yes prices: Before Jul 1, 2027: 0.30; Before Jan 1, 2027: 0.17.\n- Kalshi: Which vaccines will the CDC no longer recommend this year? (Before Jan 1, 2027). Yes prices: COVID-19: 0.19; Influenza: 0.07; Polio: 0.04; Hepatitis B: 0.05; Rotavirus: 0.04; Dengue: 0.04.\n- Kalshi: When will FISA be reauthorized again? (legislation that reauthorizes FISA Section 702 authority). Yes prices: Before Apr 1, 2027: 0.47; Before Jan 1, 2027: 0.43; Before Dec 1, 2026: 0.17; Before Jun 13, 2026: 0.0100; Before Jun 12, 2026: 0.0100; Before Aug 1, 2026: 0.0400; Before Oct 1, 2026: 0.0100; Before Jun 11, 2026: 0.0100; Before Jun 14, 2026: 0.0100; Before Jun 15, 2026: 0.0100.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.04; Before Oct 1, 2027: 0.04; Before Sep 1, 2027: 0.04; Before Dec 1, 2027: 0.05; Before Jan 1, 2028: 0.05.\n- Kalshi: Chevron Credit Card Spend in October (October 2026). Yes prices: Above 107: 0.51; Above 108: 0.42; Above 106: 0.64; Above 109: 0.23; Above 105: 0.81; Above 104: 0.91; Above 103: 0.92; Above 114: 0.04; Above 98: 0.98.\n- Kalshi: Ro Credit Card Spend in October (October 2026). Yes prices: Above 259: 0.65; Above 272: 0.22; Above 246: 0.93; Above 285: 0.18; Above 298: 0.04; Above 326: 0.03; Above 410: 0.01; Above 134: 0.98; Above 162: 0.98; Above 190: 0.98.\n- Polymarket: Lowest Mississippi level at Baton Rouge by November 30? (ends 2026-12-02). [Yes, No] prices: Below 3.00 ft: [\"0.029\", \"0.971\"]; 3.00 to 3.99 ft: [\"0.054\", \"0.946\"]; 4.00 to 4.99 ft: [\"0.2475\", \"0.7525\"]; 5.00 to 5.99 ft: [\"0.405\", \"0.595\"]; 6.00 ft or more: [\"0.315\", \"0.685\"]\n- Polymarket: Lowest Mississippi level at St. Louis by November 30? (ends 2026-12-02). [Yes, No] prices: Below -3.00 ft: [\"0.054\", \"0.946\"]; -3.00 to -1.01 ft: [\"0.152\", \"0.848\"]; -1.00 to 0.99 ft: [\"0.375\", \"0.625\"]; 1.00 to 2.99 ft: [\"0.2925\", \"0.7075\"]; 3.00 ft or more: [\"0.1415\", \"0.8585\"]\n- Polymarket: Highest sea level in San Diego this winter? (ends 2027-04-01). [Yes, No] prices: 7.70 ft or more: [\"0.945\", \"0.055\"]; 7.90 ft or more: [\"0.92\", \"0.08\"]; 8.10 ft or more: [\"0.57\", \"0.43\"]; 8.30 ft or more: [\"0.29\", \"0.71\"]\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.145\", \"0.855\"]; $2M: [\"0.045\", \"0.955\"]; $3M: [\"0.024\", \"0.976\"]; $4M: [\"0.02\", \"0.98\"]; $5M: [\"0.006\", \"0.994\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.235\", \"0.765\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.185\", \"0.815\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "High": 0.5,
+        "Medium": 0.05,
+        "Low": 0.42,
+        "Other": 0.03
+      },
+      "reasoning": "(a) Time left: about 33 days. Forecasts close today, October 29, 2026, and the question resolves on the first Metaculus check on or after December 1, 2026.\n\n(b) Status quo: High. That was the national category in the September 2026 update and in the October 23 dashboard snapshot.\n\n(c) Base rates:\n- Medium almost never appears for EV-D68. Site counts in past updates showed 0 Medium sites, so this is nearly a High-or-Low question.\n- In the smaller 2025 season the national category was Low in both October and November.\n- In early 2026 it was Low as activity faded.\n- I could not find the 2024 national category for late November.\n- EV-D68 seasons historically peak in September or October and decline through November. That pattern favors a move toward Low by early December, but the timing is uncertain.\n- Regional waves in 2025 lasted about 3 to 3.5 months. This year's wave started in late August or September, which would put the end of a similar-length wave right around December 1.\n\n(d) Strongest evidence:\n- September 2026 update (October 2): the national category was High. The median was 8,864 copies/g, detection was about 72% of samples, and levels were among the highest since monitoring began.\n- October 16: Iowa HHS reported national increases \"in recent weeks\".\n- October 23 snapshot: still High, with no reported peak yet.\n- Offset rule: a site's season ends when only 50% of samples over 14 days are at or above 2,000 copies/g. Getting there needs roughly a 4-fold or larger drop from September's median levels. That is achievable within about 6 weeks of a mid to late October peak, but it is borderline.\n- The national category seems to track the majority of sites, so most sites would need to be in offset (or rated Low by the standard method) by about December 1.\n\n(e) Unexpected scenarios:\n- The national wave peaks in early to mid October and falls quickly, as in typical EV-D68 seasons. Most sites drop into offset by late November and the national category reads Low.\n- A change in how the dashboard aggregates sites, or a data outage, produces Medium or \"Not Calculated\".\n\nReasoning and adjustment: My starting point from seasonality was roughly 40% High and 55% Low for early December. I moved toward High, to about 50%, because this wave is unusually large and late-starting, there was no sign of a peak as of October 23, and the status quo deserves weight. I kept substantial weight on Low because EV-D68 reliably declines in November and the offset threshold is relatively easy to reach once decline begins. No market covers this question.\n\nOption_A: 0.50\nOption_B: 0.05\nOption_C: 0.42\nOption_D: 0.03"
+    },
+    {
+      "value": {
+        "High": 0.5,
+        "Medium": 0.08,
+        "Low": 0.37,
+        "Other": 0.05
+      },
+      "reasoning": "(a) **Time left:** About 33 days. The dashboard will be checked on or after December 1, 2026, roughly 5 weeks after the last known reading (October 23).\n\n(b) **Status quo:** High. Both the September 2026 monthly update and the October 23 dashboard snapshot show EV-D68 nationally High.\n\n(c) **Base rates:**\n- EV-D68 waves usually peak clinically from mid-September to early October and decline through November.\n- In 2025, regional wastewater elevations lasted about 3 to 3.5 months.\n- In the October and November 2025 updates the national category was Low, but that was a weak year with only 15 to 21 High sites.\n- Medium has essentially never appeared in the site counts, so the outcome is mostly High versus Low.\n- I don't know the national category for late 2024, the last large wave.\n\n(d) **Strongest evidence:**\n- September 2026 update (dated 2026-10-02): detection in 72% of samples, a median of 8,864 copies/g, and the highest levels on record since mid-September.\n- 2026-10-16: Iowa HHS reported national increases in recent weeks.\n- Early October: Bay Area sites were still climbing.\n- 2026-10-23: the dashboard still showed High.\n\nThe offset rule matters most here. A site's season only ends when half or fewer of its samples over 14 days are at or above 2,000 copies/g. With median levels around 4 times that threshold, most sites would need a sharp fall to drop into offset. A wave that started in late August or September and lasts about 3 months would still be underway at many sites on December 1. Against this, waves in a big year may peak in October and fall quickly. The national category may also respond to trend and level, not only to whether sites are still in season, so a clear national decline could pull it down to Low or Medium before most sites formally reach offset.\n\n(e) **Unexpected scenario:** The wave peaks in early October and concentrations collapse in November. Most sites fall below 2,000 copies/g and enter offset, so the national category reads Low on December 1. A dashboard methodology change or a display glitch showing \"Not calculated\" would instead resolve the question as Other.\n\n**Adjustment:** Starting from the status quo (High), I moved down to about a coin flip. Five weeks is a long time late in an EV-D68 season, and 2025 showed the national category reads Low once most sites end their season. I kept High slightly favored because this wave is unusually large and recent.\n\nOption_A: 0.50\nOption_B: 0.08\nOption_C: 0.37\nOption_D: 0.05"
+    },
+    {
+      "value": {
+        "High": 0.52,
+        "Medium": 0.06,
+        "Low": 0.39,
+        "Other": 0.03
+      },
+      "reasoning": "(a) **Time left:** About 33 days. Metaculus checks the dashboard on or after December 1, 2026, and that check settles the question.\n\n(b) **Status quo:** High. The September 2026 monthly update put the national category at High, and a dashboard snapshot from October 23, 2026 still showed High.\n\n(c) **Base rates:**\n- The program sets the national category from site-level onset and offset rules.\n- Medium has almost never appeared: past updates show 0 Medium sites.\n- The 2025 season was smaller. The national category was Low in both October and November 2025, while regional elevations lasted about 3 to 3.5 months.\n- EV-D68 clinical waves usually peak in September and October and fade by November. Wastewater can lag that somewhat.\n- I could not find the 2024 national category for late November.\n- Overall, past seasons point to a fall wave being in decline by late November. Whether the category has flipped to Low by December 1 is roughly a coin flip, tilted by how strong the wave is.\n\n(d) **Strongest evidence:**\n- **October 2, 2026 (September update):** Samples with detections jumped from 20% to 72%. The median was 8,864 copies/g, which is among the highest levels since monitoring began in 2023. Levels were rising in the Midwest, Northeast and South.\n- **Early October 2026:** Bay Area sites were still climbing.\n- **October 16, 2026:** Iowa HHS reported national increases in recent weeks.\n- **October 23, 2026:** The dashboard still showed High.\n- **Offset rule:** A site's season ends only when at least half of its samples over 14 days fall below 2,000 copies/g. That needs roughly a fourfold drop from the September median, which takes time. On the other hand, once a site enters offset it stays Low.\n- **Wave timing:** The surge began in late August or September. A wave lasting about 3 months would put the end near December 1.\n- **No peak signal:** I found no report of a peak after October 23.\n\n(e) **Unexpected outcome scenarios:**\n- The wave peaked in early October and dropped sharply. Most sites enter offset by mid-November and the national category flips to Low.\n- The category methodology changes, or the dashboard shows Not Calculated, which would resolve as Other.\n- Mixed trends produce a rare national Medium.\n\n**How far I moved:** I started near 50/50 between High and Low based on past wave lengths. I moved somewhat toward High for three reasons: the status quo, the record strength of this wave (which makes falling below the 2,000 copies/g offset threshold slower), and the lack of any sign of a peak. I kept substantial weight on Low because seasonal decline by late November is typical.\n\nOption_A: 0.52\nOption_B: 0.06\nOption_C: 0.39\nOption_D: 0.03"
+    },
+    {
+      "value": {
+        "High": 0.5,
+        "Medium": 0.08,
+        "Low": 0.37,
+        "Other": 0.05
+      },
+      "reasoning": "(a) Time left: about 33 days. Metaculus checks the dashboard on or after December 1, 2026, and the displayed category will mostly reflect samples from roughly mid-November onward.\n\n(b) Status quo: High. The September 2026 monthly update put national EV-D68 at HIGH, and a secondhand reproduction of the dashboard for October 23 still showed High.\n\n(c) Base rates:\n- Outside its season, EV-D68 sits at national Low, as in March through July 2026 and throughout the smaller, regional 2025 season.\n- In 2025 the site-level categories were almost all Low or High, with essentially no Medium. That suggests the seasonal-pathogen method works roughly like an on/off switch based on onset and offset.\n- US EV-D68 waves usually peak in September or October. The 2025 Midwest wave began in mid-August and had declined by November, about 3 months later.\n- I could not find the November or December 2024 national category, so there is no clean precedent for a national High lasting into December.\n\n(d) Strongest evidence:\n- 2026-10-02 (September data): national HIGH, with about 72% of samples positive and concentrations among the highest since monitoring began in 2023.\n- 2026-10-23 (secondhand dashboard reproduction): still High.\n- Around October 2026: Kansas reports some sewersheds starting to fall from August peaks, though they remain elevated.\n- Early October 2026: the Bay Area and the West were rising, which could prop up the national level as the Midwest declines, as California did in late 2025.\n- The national tertiles are set over the past 365 days, which were mostly low. A level well down from the peak could therefore still rank as High unless the method flags the season as over.\n\n(e) Unexpected-outcome scenarios:\n- The wave started early in August, so by mid-to-late November most sites could trigger seasonal offset and the national category could flip to Low. That is a large move but plausible.\n- The method could change, or national data could be missing, giving \"Not Calculated\" and resolving as Other.\n- A transitional state could produce Medium.\n\nReasoning: I start from the status quo of High, which still held only about 5 weeks before the check. I then move substantially toward Low, because by December 1 the wave will be about 3.5 months old and past waves fade on roughly that timescale. Western activity and the low 365-day comparison window could keep the category High. Overall, High is a slight favorite, with Low a strong second.\n\nOption_A: 0.50\nOption_B: 0.08\nOption_C: 0.37\nOption_D: 0.05"
+    },
+    {
+      "value": {
+        "High": 0.45,
+        "Medium": 0.19,
+        "Low": 0.33,
+        "Other": 0.03
+      },
+      "reasoning": "(a) **Time left:** About 33 days. Metaculus checks the dashboard on or after December 1, 2026, and the category shown will reflect roughly mid-November samples.\n\n(b) **Status quo:** \"High\". The September monthly update put EV-D68 at High nationally, and a secondhand reproduction of the dashboard showed it still High on October 23.\n\n(c) **Base rates:**\n- In 2025 the wave was regional. The national category stayed Low through October, November and December, with about 28% of samples positive in October.\n- In 2024 the national level was reported as \"moderate\" in late September, with roughly 75% of samples positive. I don't know what it was in November or December 2024.\n- EV-D68 waves usually peak in September or October and fall within about three months. The 2025 Midwest wave ran from mid-August to a decline by November.\n- Category inputs:\n  - Level is judged against tertiles from the last 365 days, which were mostly below the detection limit, so any detectable national median would likely count as top tertile.\n  - The 21-day trend is also used, and a falling trend could pull the category to Medium.\n  - Detection frequency matters too. If fewer than half of samples are positive, the national median falls below the detection limit, which points to Low.\n\n(d) **Strongest evidence:**\n- 2026-10-02: the September update reported High nationally, 72% detection, a median of 8,864 copies per gram, and concentrations among the highest since monitoring began.\n- 2026-10-23: the dashboard, as reproduced by People's Pharmacy, still showed High.\n- October 2026: Kansas reported some sites already declining from an August surge. Bay Area sites were still rising in early to mid October.\n- The 2026 wave began in August, earlier and broader than in 2025. That suggests a peak around September or October and a decline through November.\n\n(e) **Unexpected-outcome scenario:** The national median drops below the detection limit by mid-November as detection falls under 50%, and the dashboard switches to Low. Alternatively, a falling 21-day trend with the median still detectable puts it at Medium. A less likely path is a dashboard methodology change or \"Not Calculated\" display, which would resolve as Other.\n\n**How I moved from the status quo:** I start at High as the current state, but EV-D68 seasonality strongly favours a decline by late November. I moved substantially down from about 80% High to about 45%. I spread the rest across Low, because detection falling under 50% is plausible, and Medium, to cover a declining trend with concentrations still detectable.\n\nOption_A: 0.45\nOption_B: 0.19\nOption_C: 0.33\nOption_D: 0.03"
+    },
+    {
+      "value": {
+        "High": 0.48,
+        "Medium": 0.18,
+        "Low": 0.29,
+        "Other": 0.05
+      },
+      "reasoning": "(a) Time left: about 33 days. Metaculus checks the dashboard on or after December 1, 2026, and the displayed category will reflect roughly mid-November onward.\n\n(b) Status quo: High. The September 2026 monthly update put EV-D68 nationally in HIGH, and a secondhand reproduction of the dashboard showed it was still High on October 23.\n\n(c) Base rates:\n- From March to July 2026, the national category was LOW, the usual off-season state.\n- In the 2025 regional season, the national category stayed LOW throughout. Site-level categories were nearly all Low or High with almost no Medium. Sites that turned High tended to stay High for months: High site counts went from 15 in October to 21 in November to 22 in December.\n- In 2024, a national \"moderate\" level was reported in September. I could not find the late-November 2024 national category.\n- EV-D68 waves usually peak in September or October and fall over the following 2 to 3 months.\n\n(d) Strongest evidence:\n- 2026-10-02: the September update says the national category is HIGH, detection is 72%, and concentrations are among the highest since monitoring began in 2023.\n- 2026-10-23: the dashboard, as reproduced by People's Pharmacy on 2026-10-26, shows EV-D68 High.\n- October 2026: Kansas sites are starting to decline but remain elevated. California and the Bay Area are rising in October, which mirrors 2025, when the West stayed High late into the year.\n- The seasonal onset and offset method appears sticky: once a season starts, the High category tends to persist until concentrations clearly drop.\n\n(e) Unexpected-outcome scenario: the wave, which started in August, peaked in September. By mid-to-late November, most sites in the Midwest and Northeast decline toward the limit of detection and are flagged as in \"offset\". That would drop the national category to Low, or to Medium if the method blends the trend with tertile levels. Alternatively, a dashboard or method change could produce a \"Not Calculated\" display.\n\nReasoning: I start from the status quo of High and sticky seasonal categories, then shift weight toward decline because the wave is about 3.5 months old by late November. The Western rise partly offsets that shift. I put High near 48%, with substantial weight on Low and a moderate weight on Medium.\n\nOption_A: 0.48\nOption_B: 0.18\nOption_C: 0.29\nOption_D: 0.05"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "High": 0.4917,
+    "Medium": 0.1067,
+    "Low": 0.3617,
+    "Other": 0.04
+  },
+  "usage": [
+    {
+      "question_id": "46511",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 7.49e-05,
+      "input_tokens": 504,
+      "output_tokens": 49,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 114.4,
+      "notional_cost_usd": 0.39528510000000006,
+      "input_tokens": 134173,
+      "output_tokens": 5224,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.074548,
+      "input_tokens": 5802,
+      "output_tokens": 1407,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.9,
+      "notional_cost_usd": 0.08091200000000001,
+      "input_tokens": 5805,
+      "output_tokens": 1724,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.4,
+      "notional_cost_usd": 0.0007667,
+      "input_tokens": 2462,
+      "output_tokens": 549,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.9,
+      "notional_cost_usd": 0.0008428,
+      "input_tokens": 2500,
+      "output_tokens": 686,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 33.7,
+      "notional_cost_usd": 0.03551019999999999,
+      "input_tokens": 5804,
+      "output_tokens": 1588,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.8,
+      "notional_cost_usd": 0.0005215700000000001,
+      "input_tokens": 2462,
+      "output_tokens": 867,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0007334,
+      "input_tokens": 2548,
+      "output_tokens": 448,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.8,
+      "notional_cost_usd": 0.00046045,
+      "input_tokens": 2500,
+      "output_tokens": 744,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00033664,
+      "input_tokens": 2550,
+      "output_tokens": 495,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 100.3,
+      "notional_cost_usd": 0.32861470000000004,
+      "input_tokens": 113310,
+      "output_tokens": 5141,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.9,
+      "notional_cost_usd": 0.08005999999999999,
+      "input_tokens": 5896,
+      "output_tokens": 1645,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 19.4,
+      "notional_cost_usd": 0.07916000000000001,
+      "input_tokens": 5896,
+      "output_tokens": 1600,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 21.8,
+      "notional_cost_usd": 0.08444,
+      "input_tokens": 5896,
+      "output_tokens": 1864,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.0007180999999999999,
+      "input_tokens": 2419,
+      "output_tokens": 469,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.0008571,
+      "input_tokens": 2459,
+      "output_tokens": 731,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.00041684,
+      "input_tokens": 2420,
+      "output_tokens": 658,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.0008908,
+      "input_tokens": 2485,
+      "output_tokens": 788,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00028753,
+      "input_tokens": 2458,
+      "output_tokens": 399,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.00038379,
+      "input_tokens": 2484,
+      "output_tokens": 591,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1658
+}
