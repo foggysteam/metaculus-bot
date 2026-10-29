@@ -1,0 +1,185 @@
+{
+  "id": "nq-RUT-level",
+  "question": "What will be the closing value of the Russell 2000 index (^RUT on Yahoo Finance) on October 23, 2026?",
+  "resolution_criteria": "Resolves to the daily close of ^RUT on Yahoo Finance for 2026-10-23. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "points",
+  "outcome": 2775.899902,
+  "outcome_date": "2026-10-23",
+  "as_of": "2026-10-16",
+  "resolve_date": "2026-10-23",
+  "lower_bound": 2450.0,
+  "upper_bound": 3000.0,
+  "source": "yahoo",
+  "series": "^RUT",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^RUT: latest close 2767.2700 on 2026-10-15.\nTarget date 2026-10-23 is 5 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 5-observation returns over the last 3 years (last year weighted double):\np5: 2667.1074, p10: 2691.9778, p25: 2729.7377, p50: 2772.5411, p75: 2821.7596, p90: 2872.6146, p95: 2904.8258\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I couldn't open Yahoo Finance or CNBC directly (the proxy refused both fetches), so everything below comes from your code baseline and search-result summaries. Results dated after 2026-10-16 were left out. The Fed facts and the September CPI figures (3.7% headline, 2.6% core, gasoline up 9.1% on the month) come from a search summary that also used post-cutoff Morningstar and CNN pages. I couldn't confirm those figures in a source dated on or before Oct 16.\n\n## 1. Resolution source\n- Yahoo Finance ^RUT daily close for 2026-10-23, a Friday and a normal trading day. I could not load the page.\n- 2026-10-15: latest close was **2,767.27** (+1.38%), per your code data. An Investing.com summary shows the same figure. [Investing.com](https://www.investing.com/indices/smallcap-2000-historical-data)\n\n## 2. Current status\n- Nothing settles the question yet. There are 5 trading sessions between the Oct 15 close and the target date, Oct 16 to Oct 23.\n- I found no close or recap for the 2026-10-16 session that was published on or before today.\n\n## 3. Recent news (newest first)\n- 2026-10-15: The index rose 1.38% to 2,767.27, a rebound after a low in correction territory.\n- 2026-10-15: CNBC reported that small caps had \"quietly\" slid into correction, ending Wednesday (Oct 14) about 11% below the Aug 14 record close. The index was down 2.8% for the week against a 2.5% drop for the Nasdaq. The implied Oct 14 close, about 2,730, fits an 11% drop from 3,068. [CNBC](https://www.cnbc.com/2026/10/15/small-cap-stocks-slide-into-correction-territory.html)\n- 2026-10-14/15: Seeking Alpha linked the selloff to inflation and rate fears, with money rotating back into big tech. [Seeking Alpha](https://seekingalpha.com/news/4653255-small-caps-slide-as-russell-2000-enters-correction-territory)\n- 2026-10-14: The September CPI report came in hotter than expected (CNBC report dated Oct 14). Stock futures turned negative, Treasury yields jumped, and the odds of an October Fed hike went up. CNBC put them at about 54% after the print. Another snapshot said about 45%, up from about 20% before the data. [CNBC](https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html), [Admiral Markets preview](https://admiralmarkets.com/analytics/traders-blog/us-cpi-september-2026-scenarios-fed-october)\n- 2026-09-16: The Fed raised rates to 3.75 to 4.00%, its first hike since 2023 (from a search summary).\n- 2026-08-14: Record close of 3,068.42, with an intraday high of 3,069.71. The index first traded above 3,000 on 2026-06-22. [Wikipedia](https://en.wikipedia.org/wiki/Russell_2000_Index)\n- August 2026: Coverage called the rally \"a rates trade, not an earnings trade.\" Small caps are very sensitive to the expected Fed path. [ts2.tech](https://ts2.tech/en/russell-2000-hits-a-record-with-a-9-point-2026-lead-and-34-valuation-discount/)\n\n## 4. Base rates and recent trend\n- 2026-10-15, code baseline from 5-session returns over 3 years (last year weighted double):\n  - p5 2,667, p10 2,692, p25 2,730\n  - p50 2,773\n  - p75 2,822, p90 2,873, p95 2,905\n- The middle 50% range is about ±1.7%, and the 5 to 95% range is about -3.6% to +5.0%.\n- Trend: the index is down about 10% from its August peak, and recent weeks have been mostly declines. It hit its correction low on Oct 14, then rose 1.4% on Oct 15.\n- Relative to the question range of 2,450 to 3,000:\n  - 2,450 would need a drop of about 11.5% in a week.\n  - 3,000 would need a gain of about 8.4%.\n  - Both lie well outside the historical 5 to 95% band.\n- Realized volatility right now looks higher than normal, with daily moves of 1 to 1.5%. Because the CPI shock was recent, the tails may be wider than the baseline suggests.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the RUT close for Oct 23, 2026.\n- I found no dated expert target for the week. An FXEmpire piece describes \"Small-Cap Pullback Eyes 2,500 Retest As Fed Cut Holds Firm,\" but I couldn't confirm its date, so treat it with caution. [FXEmpire](https://www.fxempire.com/forecasts/article/russell-2000-forecast-small-cap-pullback-eyes-2500-retest-as-fed-cut-holds-firm-1636865)\n\n## 6. Upcoming events before resolution (Oct 16 to 23)\n- 2026-10-16 (Fri): The session is under way. Monthly options expire that day, which is normal for the third Friday of the month (I didn't confirm this from a source).\n- Week of Oct 19 to 23: Peak Q3 earnings season, including regional banks and big tech. Big tech results can trigger rotation into or out of small caps.\n- The Fed is in its quiet period before the late-October FOMC meeting, which falls after Oct 23. Pricing of hike odds, driven by Treasury yields and any data releases, is the main swing factor for small caps.\n- I could not confirm the exact US data calendar for Oct 19 to 23 (housing data, jobless claims, flash PMIs are typical).\n\nKey point: the index is about 2,767, rebounding from correction lows as the market weighs Fed hike risk after a hot CPI. The code's median of about 2,773 sits close to spot, and the extremes of the question range would take moves of 8% or more in a week.\n\nSources:\n- [Investing.com RUT historical data](https://www.investing.com/indices/smallcap-2000-historical-data)\n- [CNBC, Oct 15 2026](https://www.cnbc.com/2026/10/15/small-cap-stocks-slide-into-correction-territory.html)\n- [Seeking Alpha](https://seekingalpha.com/news/4653255-small-caps-slide-as-russell-2000-enters-correction-territory)\n- [CNBC CPI, Oct 14 2026](https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html)\n- [Admiral Markets CPI preview](https://admiralmarkets.com/analytics/traders-blog/us-cpi-september-2026-scenarios-fed-october)\n- [Wikipedia Russell 2000](https://en.wikipedia.org/wiki/Russell_2000_Index)\n- [ts2.tech](https://ts2.tech/en/russell-2000-hits-a-record-with-a-9-point-2026-lead-and-34-valuation-discount/)\n- [FXEmpire](https://www.fxempire.com/forecasts/article/russell-2000-forecast-small-cap-pullback-eyes-2500-retest-as-fed-cut-holds-firm-1636865)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^RUT: latest close 2767.2700 on 2026-10-15.\nTarget date 2026-10-23 is 5 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 5-observation returns over the last 3 years (last year weighted double):\np5: 2667.1074, p10: 2691.9778, p25: 2729.7377, p50: 2772.5411, p75: 2821.7596, p90: 2872.6146, p95: 2904.8258\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          2555.0
+        ],
+        [
+          0.05,
+          2630.0
+        ],
+        [
+          0.1,
+          2665.0
+        ],
+        [
+          0.2,
+          2710.0
+        ],
+        [
+          0.3,
+          2740.0
+        ],
+        [
+          0.4,
+          2760.0
+        ],
+        [
+          0.5,
+          2775.0
+        ],
+        [
+          0.6,
+          2791.0
+        ],
+        [
+          0.7,
+          2811.0
+        ],
+        [
+          0.8,
+          2838.0
+        ],
+        [
+          0.9,
+          2880.0
+        ],
+        [
+          0.95,
+          2915.0
+        ],
+        [
+          0.99,
+          2985.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          2560.0
+        ],
+        [
+          0.05,
+          2643.0
+        ],
+        [
+          0.1,
+          2680.0
+        ],
+        [
+          0.2,
+          2721.0
+        ],
+        [
+          0.3,
+          2747.0
+        ],
+        [
+          0.4,
+          2763.0
+        ],
+        [
+          0.5,
+          2775.0
+        ],
+        [
+          0.6,
+          2788.0
+        ],
+        [
+          0.7,
+          2805.0
+        ],
+        [
+          0.8,
+          2830.0
+        ],
+        [
+          0.9,
+          2868.0
+        ],
+        [
+          0.95,
+          2900.0
+        ],
+        [
+          0.99,
+          2962.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          2570.0
+        ],
+        [
+          0.05,
+          2650.0
+        ],
+        [
+          0.1,
+          2685.0
+        ],
+        [
+          0.2,
+          2724.0
+        ],
+        [
+          0.3,
+          2749.0
+        ],
+        [
+          0.4,
+          2764.0
+        ],
+        [
+          0.5,
+          2776.0
+        ],
+        [
+          0.6,
+          2790.0
+        ],
+        [
+          0.7,
+          2806.0
+        ],
+        [
+          0.8,
+          2830.0
+        ],
+        [
+          0.9,
+          2867.0
+        ],
+        [
+          0.95,
+          2898.0
+        ],
+        [
+          0.99,
+          2960.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3471
+}

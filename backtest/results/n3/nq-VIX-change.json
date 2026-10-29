@@ -1,0 +1,185 @@
+{
+  "id": "nq-VIX-change",
+  "question": "What will be the percentage change in the CBOE Volatility Index (VIX) (^VIX on Yahoo Finance) from the close on 2026-08-06 to the close on 2026-08-17?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-08-17 / close on 2026-08-06 - 1), using daily closes of ^VIX on Yahoo Finance. If there is no close on 2026-08-17, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 0.264026,
+  "outcome_date": "2026-08-17",
+  "as_of": "2026-08-07",
+  "resolve_date": "2026-08-17",
+  "lower_bound": -100.0,
+  "upper_bound": 50.0,
+  "source": "yahoo",
+  "series": "^VIX",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^VIX: latest close 15.1500 on 2026-08-06.\nTarget date 2026-08-17 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 11.2793, p10: 12.3397, p25: 13.6448, p50: 15.2137, p75: 16.6075, p90: 18.5747, p95: 19.7957\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# VIX (^VIX): research brief for the Aug 6 → Aug 17, 2026 change\n\n## 1. Resolution source\n- The question resolves on Yahoo Finance ^VIX daily closes. I tried to fetch Yahoo pages directly, but the proxy refused the connection.\n- 2026-08-06: VIX closed at **15.15**, down 4.17% from 15.81 the previous session. This matches the baseline your code computed. [YCharts](https://ycharts.com/indicators/vix_volatility_index)\n- 2026-08-05: VIX fell 4.2% to 15.81. The S&P 500 fell 0.2% to 7,723.55. [Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-6-094500461.html)\n\n## 2. Current status\n- Nothing has settled the question. The window runs from the Aug 6 close (15.15) to the Aug 17 close, which is 7 trading days after Aug 7. For the question to move 10%, VIX would need to close around 16.67 or 13.64.\n- The question allows -100% to +50%. A +50% move would mean a close of about 22.7.\n- Several search results were published after 2026-08-07. I ignored them and left them out of this brief.\n\n## 3. Recent news (newest first)\n- 2026-08-07 (pre-market): The July jobs report showed payrolls **falling by 23,000**, against an expected gain of about 80,000. June was revised to -20,000 and unemployment edged down to 4.1%. Markets read the weak data as lowering the chance of a Fed rate **hike**, and stocks rose. [The Business Journal](https://thebusinessjournal.com/stocks-rise-weak-jobs-report-fed-rate-outlook-august-2026/), [TheStreet](https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-7-2026), [Yahoo live blog](https://finance.yahoo.com/markets/live/stock-market-today-friday-august-7-nasdaq-dow-sp-500-july-jobs-report-surprises-100009572.html)\n- 2026-08-07: Stock futures were steady ahead of the jobs report. [IC Markets](https://ic.com/blog/friday-7th-august-2026-u-s-stock-futures-hold-steady-ahead-of-july-jobs-report/)\n- Context: the policy debate is about whether the Fed **hikes**, not when it cuts. Inflation sensitivity is high and crude oil prices are a factor. [Newsquawk](https://www.newsquawk.com/headlines/preview-us-cpi-due-wednesday-12th-august-2026-at-1330bst0830edt)\n- Early August: VIX fell from 15.81 to 15.15 over two sessions while the S&P 500 sat near record levels in the mid-7,700s. Implied volatility looks low to moderate.\n\n## 4. Base rates\n- Your code's empirical distribution of 8-trading-day moves (last 3 years, last year weighted double) gives these VIX levels:\n  - p5: 11.28 (-25.5%)\n  - p10: 12.34 (-18.6%)\n  - p25: 13.64 (-9.9%)\n  - p50: 15.21 (+0.4%)\n  - p75: 16.61 (+9.6%)\n  - p90: 18.57 (+22.6%)\n  - p95: 19.80 (+30.7%)\n- The distribution is right-skewed: VIX tends to spike up more sharply than it falls. At a starting level around 15, big downside moves are limited because VIX rarely goes much below about 12 to 13.\n- On seasonality, a Barchart piece titled \"Is the VIX Inexpensive Going into the Historically Volatile Fall in 2026?\" argues VIX looks cheap ahead of the usually volatile fall season. I couldn't fetch it to confirm its date. [Barchart](https://www.barchart.com/story/news/3956689/is-the-vix-inexpensive-going-into-the-historically-volatile-fall-in-2026)\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the VIX level for Aug 17, 2026.\n- I couldn't get August or September VIX futures prices dated on or before Aug 7. These would show the term structure (whether futures sit above spot, which is the usual contango). [Barchart VIX futures](https://www.barchart.com/futures/quotes/VI*0)\n\n## 6. Upcoming events before resolution\n- 2026-08-07: The market reaction to the weak jobs report through Friday's close. The report came out before the forecast deadline, but the close comes after it.\n- 2026-08-12 (Wed), 08:30 ET: July CPI. This is the main scheduled risk, given that the market is pricing possible Fed hikes. [Newsquawk](https://www.newsquawk.com/headlines/preview-us-cpi-due-wednesday-12th-august-2026-at-1330bst0830edt)\n- Around 2026-08-13 and 08-14: PPI and retail sales are typically released in this window. I haven't confirmed the exact dates.\n- Mid-August: earnings season is winding down. The window also includes a weekend (Aug 15 to 16) right before the Aug 17 close. Weekend timing affects how VIX is calculated, and that effect usually pushes Friday closes a little lower.\n- The monthly VIX expiration (around Aug 19) falls after the resolution date.\n- Other risks: Fed officials' speeches, oil price moves and geopolitical headlines. I didn't find any specific scheduled catalysts beyond those listed.\n\nSources:\n- [YCharts VIX](https://ycharts.com/indicators/vix_volatility_index)\n- [Yahoo Finance: Stock Market News for Aug 6, 2026](https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-6-094500461.html)\n- [The Business Journal](https://thebusinessjournal.com/stocks-rise-weak-jobs-report-fed-rate-outlook-august-2026/)\n- [TheStreet](https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-7-2026)\n- [Yahoo Finance live, Aug 7](https://finance.yahoo.com/markets/live/stock-market-today-friday-august-7-nasdaq-dow-sp-500-july-jobs-report-surprises-100009572.html)\n- [IC Markets](https://ic.com/blog/friday-7th-august-2026-u-s-stock-futures-hold-steady-ahead-of-july-jobs-report/)\n- [Newsquawk CPI preview](https://www.newsquawk.com/headlines/preview-us-cpi-due-wednesday-12th-august-2026-at-1330bst0830edt)\n- [Barchart](https://www.barchart.com/story/news/3956689/is-the-vix-inexpensive-going-into-the-historically-volatile-fall-in-2026)\n- [Barchart VIX futures](https://www.barchart.com/futures/quotes/VI*0)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^VIX: latest close 15.1500 on 2026-08-06.\nTarget date 2026-08-17 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 11.2793, p10: 12.3397, p25: 13.6448, p50: 15.2137, p75: 16.6075, p90: 18.5747, p95: 19.7957\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -22.0
+        ],
+        [
+          0.05,
+          -16.0
+        ],
+        [
+          0.1,
+          -12.5
+        ],
+        [
+          0.2,
+          -8.0
+        ],
+        [
+          0.3,
+          -5.0
+        ],
+        [
+          0.4,
+          -2.5
+        ],
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          0.6,
+          2.0
+        ],
+        [
+          0.7,
+          5.0
+        ],
+        [
+          0.8,
+          9.5
+        ],
+        [
+          0.9,
+          17.0
+        ],
+        [
+          0.95,
+          25.0
+        ],
+        [
+          0.99,
+          45.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -29.0
+        ],
+        [
+          0.05,
+          -21.0
+        ],
+        [
+          0.1,
+          -16.0
+        ],
+        [
+          0.2,
+          -10.5
+        ],
+        [
+          0.3,
+          -6.5
+        ],
+        [
+          0.4,
+          -3.0
+        ],
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.6,
+          3.0
+        ],
+        [
+          0.7,
+          7.0
+        ],
+        [
+          0.8,
+          12.5
+        ],
+        [
+          0.9,
+          21.5
+        ],
+        [
+          0.95,
+          30.0
+        ],
+        [
+          0.99,
+          52.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -28.0
+        ],
+        [
+          0.05,
+          -21.0
+        ],
+        [
+          0.1,
+          -16.5
+        ],
+        [
+          0.2,
+          -11.0
+        ],
+        [
+          0.3,
+          -7.0
+        ],
+        [
+          0.4,
+          -3.5
+        ],
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          0.6,
+          3.0
+        ],
+        [
+          0.7,
+          7.0
+        ],
+        [
+          0.8,
+          12.5
+        ],
+        [
+          0.9,
+          22.0
+        ],
+        [
+          0.95,
+          31.0
+        ],
+        [
+          0.99,
+          52.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3283
+}

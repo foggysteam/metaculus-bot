@@ -1,0 +1,185 @@
+{
+  "id": "nq-IXIC-change",
+  "question": "What will be the percentage change in the Nasdaq Composite index (^IXIC on Yahoo Finance) from the close on 2026-08-28 to the close on 2026-09-09?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-09 / close on 2026-08-28 - 1), using daily closes of ^IXIC on Yahoo Finance. If there is no close on 2026-09-09, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -0.564646,
+  "outcome_date": "2026-09-09",
+  "as_of": "2026-08-30",
+  "resolve_date": "2026-09-09",
+  "lower_bound": -10.0,
+  "upper_bound": 15.0,
+  "source": "yahoo",
+  "series": "^IXIC",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^IXIC: latest close 26402.4199 on 2026-08-28.\nTarget date 2026-09-09 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 25208.195, p10: 25586.1167, p25: 26065.4808, p50: 26638.2261, p75: 27120.8235, p90: 27682.341, p95: 28057.5482\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# Nasdaq Composite (^IXIC): research brief for the 2026-08-28 to 2026-09-09 change\n\nThe Nasdaq closed at 26,402.42 on Friday 2026-08-28, down 0.52% on the day. Nothing that would settle the question had happened by 2026-08-30. The main events before resolution are the August jobs report on Sep 4 and comments ahead of a Fed meeting where a rate hike looked like roughly a coin flip.\n\n## 1. Resolution source\n- 2026-08-28: Yahoo Finance shows ^IXIC at **26,402.42**, down 138.93 (-0.52%), \"At close: August 28.\" This matches the baseline your code computed. [Yahoo](https://ca.finance.yahoo.com/quote/%5EIXIC/components/)\n- The result is 100 x (Sep 9 close / 26,402.42 - 1). Sep 9 is a Wednesday and a normal trading day. Markets are closed Mon Sep 7 for Labor Day, so there are **7 sessions** in the window (Aug 31, Sep 1-4, Sep 8-9), not 8. Your code's 8-observation distribution is therefore slightly too wide.\n\n## 2. Current status\n- Nothing settles the question yet. The window starts Monday 2026-08-31.\n\n## 3. Recent news (newest first)\n- 2026-08-28/29: After Fed Chair Kevin Warsh's Jackson Hole speech, CME FedWatch showed about a **56-57% chance of a 25 bp rate hike** at the Sep 15-16 FOMC meeting, up from 39.9% on Aug 21. Kalshi had it at 48% and Polymarket at 49%. Before the speech, the odds of a hold had been close to 70%. [KuCoin/FedWatch](https://www.kucoin.com/news/flash/cme-fedwatch-probability-of-fed-hiking-rates-in-september-rises-to-57), [fnnews](https://en.fnnews.com/news/202608290307001007)\n- 2026-08-28: Nasdaq futures slipped before the speech as the AI rally cooled. Marvell fell more than 7% after hours following its earnings. Commentators warned that a hawkish tone would push yields and the dollar higher. FedWatch hike odds were 35.9% before the speech. [Kitco](https://www.kitco.com/news/off-the-wire/2026-08-28/nasdaq-futures-slip-tech-rally-pauses-ahead-warshs-speech), [Nasdaq.com](https://www.nasdaq.com/articles/us-stocks-may-lack-direction-ahead-warsh-speech)\n- 2026-08-28: The Nasdaq closed down 0.52%. One report said Nvidia fell more than 3%, giving back part of its post-earnings gain. [Yahoo/Zacks](https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-28-133400922.html)\n- 2026-08-27: The Nasdaq rose 411 points (+1.6%), its best day since Aug 4, after Nvidia's fiscal Q2 results (revenue reported at about $96B, up 106% year over year). Nvidia closed up nearly 9%. [Yahoo](https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nasdaq-p-104324380.html), [CNBC](https://www.cnbc.com/2026/08/26/stock-market-today-live-updates.html)\n- 2026-08-26: July core PCE was +0.2% month over month and 3.3% year over year, roughly as expected. [Crypto Briefing](https://cryptobriefing.com/nasdaq-rises-nvidia-earnings-pce-inflation/)\n- 2026-08-18: The Nasdaq fell 1.33% to 26,289.71, so the Aug 28 close is only slightly above that mid-month level. [NBC Palm Springs](https://www.nbcpalmsprings.com/2026/08/18/wall-street-ends-lower-as-nasdaq-drops-133-in-august-18-trading)\n- Late July 2026: The Fed made a \"hawkish hold.\" Inflation is sticky, and higher 10-year yields and oil prices are flagged as risks. [Kitco/Reuters](https://www.kitco.com/news/off-the-wire/2026-07-31/wall-st-week-ahead-teetering-us-stock-market-faces-jobs-report-big)\n\n## 4. Base rates\nYour code's baseline (8-session returns over 3 years, with the last year weighted double), converted to percent change from 26,402.42:\n\n| Percentile | Index level | Change |\n|---|---|---|\n| p5 | 25,208 | -4.52% |\n| p10 | 25,586 | -3.09% |\n| p25 | 26,065 | -1.28% |\n| p50 | 26,638 | +0.89% |\n| p75 | 27,121 | +2.72% |\n| p90 | 27,682 | +4.85% |\n| p95 | 28,058 | +6.27% |\n\n- The p25 to p75 range is about 4.0 points wide. With 7 sessions instead of 8, the spread would shrink by about 6% (the square root of 7/8). The median would also come down a little, to about +0.8%.\n- Seasonality: September has historically been the Nasdaq's weakest month on average, and its first week is often choppy. This is general background; I did not pull exact statistics.\n\n## 5. Other forecasts\n- I could not find a Polymarket, Kalshi or Manifold market on this exact window. Manifold has user-created markets on ^IXIC closing levels ([example](https://manifold.markets/Lunar/will-the-nasdaq-composite-ixic-clos-efd31392282b)), but I couldn't confirm their dates or prices.\n- The related Fed markets as of about Aug 28-29: Kalshi 48% and Polymarket 49% for a September hike (see section 3).\n- I found no published strategist targets for this specific window.\n\n## 6. Upcoming events before resolution\n- Mon 2026-08-31: Month-end rebalancing.\n- Tue 2026-09-01: ISM Manufacturing.\n- Wed 2026-09-02 to Thu 2026-09-03: JOLTS, ISM Services and jobless claims (these are the usual dates; I did not confirm them).\n- **Fri 2026-09-04: August jobs report.** This is the key input for whether the Fed hikes at its Sep 15-16 meeting. Coverage before the release did not give a firm consensus figure in the sources I read.\n- Mon 2026-09-07: Markets closed for Labor Day.\n- Sep 8-9: Fed speakers before the blackout period begins around Sep 5-6. Treasury auctions. The August CPI is probably due after Sep 9 (I did not confirm the date), so it falls outside the window.\n- Ongoing: The reaction to Nvidia and Marvell earnings (AI semiconductor sentiment) and moves in Treasury yields after Warsh's hawkish-leaning speech.\n\nSources:\n- [Yahoo ^IXIC](https://ca.finance.yahoo.com/quote/%5EIXIC/components/)\n- [Yahoo/Zacks Aug 28](https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-28-133400922.html)\n- [Yahoo Aug 27](https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nasdaq-p-104324380.html)\n- [CNBC Aug 26](https://www.cnbc.com/2026/08/26/stock-market-today-live-updates.html)\n- [CNBC Aug 27/28](https://www.cnbc.com/2026/08/27/stock-market-today-live-updates.html)\n- [Crypto Briefing](https://cryptobriefing.com/nasdaq-rises-nvidia-earnings-pce-inflation/)\n- [Kitco Aug 28](https://www.kitco.com/news/off-the-wire/2026-08-28/nasdaq-futures-slip-tech-rally-pauses-ahead-warshs-speech)\n- [Nasdaq.com](https://www.nasdaq.com/articles/us-stocks-may-lack-direction-ahead-warsh-speech)\n- [KuCoin FedWatch](https://www.kucoin.com/news/flash/cme-fedwatch-probability-of-fed-hiking-rates-in-september-rises-to-57)\n- [fnnews Aug 29](https://en.fnnews.com/news/202608290307001007)\n- [NBC Palm Springs](https://www.nbcpalmsprings.com/2026/08/18/wall-street-ends-lower-as-nasdaq-drops-133-in-august-18-trading)\n- [Kitco Jul 31](https://www.kitco.com/news/off-the-wire/2026-07-31/wall-st-week-ahead-teetering-us-stock-market-faces-jobs-report-big)\n- [Manifold](https://manifold.markets/Lunar/will-the-nasdaq-composite-ixic-clos-efd31392282b)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^IXIC: latest close 26402.4199 on 2026-08-28.\nTarget date 2026-09-09 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 25208.195, p10: 25586.1167, p25: 26065.4808, p50: 26638.2261, p75: 27120.8235, p90: 27682.341, p95: 28057.5482\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -8.5
+        ],
+        [
+          0.05,
+          -5.0
+        ],
+        [
+          0.1,
+          -3.4
+        ],
+        [
+          0.2,
+          -1.8
+        ],
+        [
+          0.3,
+          -0.8
+        ],
+        [
+          0.4,
+          -0.1
+        ],
+        [
+          0.5,
+          0.4
+        ],
+        [
+          0.6,
+          0.9
+        ],
+        [
+          0.7,
+          1.6
+        ],
+        [
+          0.8,
+          2.5
+        ],
+        [
+          0.9,
+          3.9
+        ],
+        [
+          0.95,
+          5.0
+        ],
+        [
+          0.99,
+          7.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -7.6
+        ],
+        [
+          0.05,
+          -4.7
+        ],
+        [
+          0.1,
+          -3.3
+        ],
+        [
+          0.2,
+          -1.8
+        ],
+        [
+          0.3,
+          -0.8
+        ],
+        [
+          0.4,
+          -0.1
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.6,
+          1.1
+        ],
+        [
+          0.7,
+          1.9
+        ],
+        [
+          0.8,
+          2.9
+        ],
+        [
+          0.9,
+          4.3
+        ],
+        [
+          0.95,
+          5.5
+        ],
+        [
+          0.99,
+          7.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          -8.0
+        ],
+        [
+          0.05,
+          -4.7
+        ],
+        [
+          0.1,
+          -3.3
+        ],
+        [
+          0.2,
+          -1.8
+        ],
+        [
+          0.3,
+          -0.8
+        ],
+        [
+          0.4,
+          -0.1
+        ],
+        [
+          0.5,
+          0.4
+        ],
+        [
+          0.6,
+          0.9
+        ],
+        [
+          0.7,
+          1.6
+        ],
+        [
+          0.8,
+          2.5
+        ],
+        [
+          0.9,
+          3.9
+        ],
+        [
+          0.95,
+          5.0
+        ],
+        [
+          0.99,
+          7.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.406
+}

@@ -1,0 +1,185 @@
+{
+  "id": "nq-RUT-change",
+  "question": "What will be the percentage change in the Russell 2000 index (^RUT on Yahoo Finance) from the close on 2026-08-24 to the close on 2026-09-15?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-15 / close on 2026-08-24 - 1), using daily closes of ^RUT on Yahoo Finance. If there is no close on 2026-09-15, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -4.166501,
+  "outcome_date": "2026-09-15",
+  "as_of": "2026-08-25",
+  "resolve_date": "2026-09-15",
+  "lower_bound": -20.0,
+  "upper_bound": 15.0,
+  "source": "yahoo",
+  "series": "^RUT",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^RUT: latest close 2995.0801 on 2026-08-24.\nTarget date 2026-09-15 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 2798.117, p10: 2862.4545, p25: 2964.1259, p50: 3044.4769, p75: 3116.7535, p90: 3205.4459, p95: 3268.7147\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I have the key pre-cutoff data. Now I'm writing up the findings and leaving out anything published after 2026-08-25.\n\n# Russell 2000 (^RUT): research brief for 2026-08-24 to 2026-09-15\n\n## 1. Resolution source\n- 2026-08-24: ^RUT closed at **2,995.08**, down 22.79 points (about -0.76%). The Yahoo close collected by code (2995.0801) matches news reports of the session. [La Nacion/AP](https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-monday-8242026-nid24082026/)\n- I did not fetch the Yahoo Finance page directly. The baseline close above came from the code-collected Yahoo data.\n- The resolution value is the 2026-09-15 close, which is 15 trading sessions ahead (Labor Day, 2026-09-07, is a market holiday).\n\n## 2. Current status\n- Nothing settles the question yet. It depends on the 2026-09-15 close.\n- 2026-08-14: the index set a record close of 3,068.42, after the previous record of 3,052.85 on 2026-08-13. The 2026-08-24 close is about 2.4% below that record. [Wikipedia](https://en.wikipedia.org/wiki/Russell_2000_Index)\n\n## 3. Recent news (newest first)\n- 2026-08-24: Stocks ended mixed. The Dow rose 0.3% to 53,417, the S&P 500 fell 0.3% to 7,652.86, the Nasdaq fell 0.8%, and the Russell 2000 fell 0.8%. Money rotated out of tech into defensive sectors ahead of Nvidia earnings on Wednesday. The Russell 2000 was up about 20.7% year to date. [La Nacion/AP](https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-monday-8242026-nid24082026/), [StockMarketWatch digest](https://stockmarketwatch.com/digest/2026-08-24)\n- 2026-08-24: Yahoo Finance ran a Russell 2000 stock-pick piece that day, but it has no macro content. [Yahoo](https://finance.yahoo.com/markets/stocks/articles/1-russell-2000-stock-target-151336393.html)\n- 2026-08-19: CME FedWatch priced about a 33% chance of a rate **hike** at the September 15-16 FOMC meeting, and about 67% for a hold. Cut expectations had fallen to roughly zero. The effective fed funds rate was about 3.63%. [CryptoBriefing](https://cryptobriefing.com/us-august-job-gains-surpass-forecasts-impacting-fed-rate-hike-expectations/)\n- 2026-08-18: The Nasdaq fell 1.33%. Mid-August was choppy after the small-cap record. [NBC Palm Springs](https://www.nbcpalmsprings.com/2026/08/18/wall-street-ends-lower-as-nasdaq-drops-133-in-august-18-trading)\n- 2026-08-14: The Russell 2000 hit an all-time high and was outpacing the S&P 500 with a year-to-date gain of more than 22%. [24/7 Wall St.](https://247wallst.com/investing/2026/08/14/the-russell-2000-hits-all-time-highs-4-ultra-high-yield-dividend-stocks-to-buy-hand-over-fist/)\n- The macro backdrop: the Fed, chaired by Kevin Warsh, is leaning hawkish because inflation is above target. Small caps are the most sensitive to rate-hike risk.\n\n## 4. Base rates\nThe code baseline uses 15-session returns over the last 3 years, with the last year weighted double. Converted to percent change from 2,995.08:\n\n| Percentile | Price | % change |\n|---|---|---|\n| p5 | 2,798.1 | -6.6% |\n| p10 | 2,862.5 | -4.4% |\n| p25 | 2,964.1 | -1.0% |\n| p50 | 3,044.5 | +1.7% |\n| p75 | 3,116.8 | +4.1% |\n| p90 | 3,205.4 | +7.0% |\n| p95 | 3,268.7 | +9.1% |\n\n- The interquartile range is about 5 points wide, and the 5-95 range is about 16 points.\n- The median has an upward drift of about 1.7%, which reflects the strong rally over the sample period.\n- September is historically one of the weakest months for US equities. This is a common seasonal claim that I did not verify against data here.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the Russell 2000 level for 2026-09-15.\n- Related: a Manifold market on a Fed hike in 2026 was around 46% in late August. That reading is dated 2026-08-26, one day after the cutoff, so I'm treating it as context only. [tech-insider](https://tech-insider.org/manifold-fed-interest-rate-hike-2026-odds/)\n- I found no published expert targets for the Russell 2000 over this specific window.\n\n## 6. Upcoming events before resolution\n- **2026-08-26 (Wed):** Nvidia earnings. This is a major sentiment event for the whole market. [La Nacion/AP](https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-monday-8242026-nid24082026/)\n- **About 2026-08-27 to 08-29:** Jackson Hole symposium, with Chair Warsh giving his first keynote (expected 2026-08-28). This is the biggest rate-path catalyst. A hawkish tone would tend to hurt small caps the most.\n- **Late August:** July PCE inflation data.\n- **2026-09-04 (Fri):** August jobs report.\n- **2026-09-07:** Labor Day, markets closed.\n- **About 2026-09-10 to 09-11:** August PPI and CPI. These are probably the last key inputs before the FOMC meeting.\n- **2026-09-15:** The first day of the FOMC meeting is the resolution date. The decision comes on 2026-09-16, after resolution, so only positioning into the meeting matters. Pricing for a hike or a hold will shape the 2026-09-15 close.\n\nSources:\n- [La Nacion/AP, 8/24/2026](https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-monday-8242026-nid24082026/)\n- [StockMarketWatch digest 2026-08-24](https://stockmarketwatch.com/digest/2026-08-24)\n- [Wikipedia: Russell 2000 Index](https://en.wikipedia.org/wiki/Russell_2000_Index)\n- [24/7 Wall St., 2026-08-14](https://247wallst.com/investing/2026/08/14/the-russell-2000-hits-all-time-highs-4-ultra-high-yield-dividend-stocks-to-buy-hand-over-fist/)\n- [Yahoo Finance Russell 2000 piece](https://finance.yahoo.com/markets/stocks/articles/1-russell-2000-stock-target-151336393.html)\n- [NBC Palm Springs, 2026-08-18](https://www.nbcpalmsprings.com/2026/08/18/wall-street-ends-lower-as-nasdaq-drops-133-in-august-18-trading)\n- [CryptoBriefing (FedWatch 2026-08-19 figures)](https://cryptobriefing.com/us-august-job-gains-surpass-forecasts-impacting-fed-rate-hike-expectations/)\n- [tech-insider Manifold piece](https://tech-insider.org/manifold-fed-interest-rate-hike-2026-odds/)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^RUT: latest close 2995.0801 on 2026-08-24.\nTarget date 2026-09-15 is 15 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 15-observation returns over the last 3 years (last year weighted double):\np5: 2798.117, p10: 2862.4545, p25: 2964.1259, p50: 3044.4769, p75: 3116.7535, p90: 3205.4459, p95: 3268.7147\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -11.5
+        ],
+        [
+          0.05,
+          -7.2
+        ],
+        [
+          0.1,
+          -5.0
+        ],
+        [
+          0.2,
+          -2.8
+        ],
+        [
+          0.3,
+          -1.3
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          0.6
+        ],
+        [
+          0.6,
+          1.5
+        ],
+        [
+          0.7,
+          2.6
+        ],
+        [
+          0.8,
+          3.9
+        ],
+        [
+          0.9,
+          5.9
+        ],
+        [
+          0.95,
+          7.6
+        ],
+        [
+          0.99,
+          11.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -11.5
+        ],
+        [
+          0.05,
+          -7.3
+        ],
+        [
+          0.1,
+          -5.3
+        ],
+        [
+          0.2,
+          -2.9
+        ],
+        [
+          0.3,
+          -1.3
+        ],
+        [
+          0.4,
+          -0.1
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          1.7
+        ],
+        [
+          0.7,
+          2.8
+        ],
+        [
+          0.8,
+          4.2
+        ],
+        [
+          0.9,
+          6.3
+        ],
+        [
+          0.95,
+          8.1
+        ],
+        [
+          0.99,
+          11.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -12.5
+        ],
+        [
+          0.05,
+          -7.6
+        ],
+        [
+          0.1,
+          -5.4
+        ],
+        [
+          0.2,
+          -2.9
+        ],
+        [
+          0.3,
+          -1.3
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.6,
+          1.4
+        ],
+        [
+          0.7,
+          2.5
+        ],
+        [
+          0.8,
+          3.9
+        ],
+        [
+          0.9,
+          6.1
+        ],
+        [
+          0.95,
+          7.9
+        ],
+        [
+          0.99,
+          11.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3917
+}

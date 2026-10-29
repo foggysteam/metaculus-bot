@@ -1,0 +1,185 @@
+{
+  "id": "nq-FTSE-level",
+  "question": "What will be the closing value of the FTSE 100 index (^FTSE on Yahoo Finance) on October 17, 2026?",
+  "resolution_criteria": "Resolves to the daily close of ^FTSE on Yahoo Finance for 2026-10-17. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "points",
+  "outcome": 10881.900391,
+  "outcome_date": "2026-10-16",
+  "as_of": "2026-10-10",
+  "resolve_date": "2026-10-17",
+  "lower_bound": 10000.0,
+  "upper_bound": 11000.0,
+  "source": "yahoo",
+  "series": "^FTSE",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^FTSE: latest close 10552.0996 on 2026-10-09.\nTarget date 2026-10-17 is 6 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 6-observation returns over the last 3 years (last year weighted double):\np5: 10289.9871, p10: 10392.0785, p25: 10482.2522, p50: 10587.1113, p75: 10699.7381, p90: 10777.1795, p95: 10844.3804\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I have enough material and am now writing the brief. I left out everything dated after 2026-10-10.\n\n# FTSE 100 (^FTSE) close for 2026-10-17: research brief\n\n## 1. Resolution source\n- 2026-10-09: the code-collected Yahoo ^FTSE close is **10,552.10**. Investing.com shows 10,552.05, up 110.45 points or 1.06% on the day, with a range of 10,441.50 to 10,577.33. [Investing.com](https://www.investing.com/indices/uk-100-historical-data), [Yahoo](https://finance.yahoo.com/quote/%5EFTSE/)\n- I could not fetch the Yahoo page directly. The small gap (about 0.05 points) between the code value and Investing.com looks like a data-vendor rounding difference.\n\n## 2. Current status\n- Nothing has settled the question yet. The index sits near the middle of the 10,000 to 11,000 question range.\n- 2026-10-09: the index was about 4.0% below its 52-week high of 10,989.45. The all-time closing high is about 10,911, set in February 2026. [Investing.com](https://www.investing.com/indices/uk-100-historical-data), [AJ Bell](https://www.ajbell.co.uk/news/can-record-dividends-help-ftse-100-outrun-gilt-yields)\n\n## 3. Recent news (newest first)\n- 2026-10-09: the FTSE closed up about 1.1% at 10,552, its highest close since 30 Sep. That ended a two-day losing streak.\n  - RELX rose about 4.8% and Sage about 4.3%.\n  - Miners rallied on firmer copper, silver and gold (Antofagasta +5%, Fresnillo +3%).\n  - Vodafone fell 4.9%, BT 2.4% and Airtel Africa 6.3% after SpaceX agreed to buy spectrum for Starlink Mobile.\n  - Oil eased. The index gained 0.9% over the week. [Trading Economics](https://tradingeconomics.com/united-kingdom/stock-market/news/590929), [BBN Times](https://www.bbntimes.com/global-economy/ftse-100-climbs-to-10-552-05-as-software-and-mining-stocks-rally-and-oil-eases-while-telecoms-slide-on-spacex-threat)\n- 2026-10-08: the UK 10-year gilt yield reportedly reached about 5.51%, its highest since July 2007. I could not confirm this date-specific figure from a source dated before the cutoff. [Vantage](https://www.vantagemarkets.com/market-analysis/ftse-100-today-banks-gilt-yields-uk100-october-13-2026/)\n- 2026-10-07: gilt yields climbed as markets priced in a Bank of England rate **hike**. I could not open the article itself. [Invezz](https://invezz.com/news/2026/10/07/ftse-100-outlook-gilt-yields-climb-as-markets-price-in-a-boe-rate-hike/)\n- About 2026-10-01: the FTSE fell 177 points (1.68%) to about 10,428, its steepest one-day drop since May. The 30-year gilt yield broke above 6%. [Share Talk](https://www.share-talk.com/ftse-100-falls-1-7-as-uk-30-year-gilt-yield-breaks-6.md)\n- Q3 2026 context: gilt yields are near their highest since 2007, driven by Middle East and US-Iran tensions, UK fiscal worries and sticky inflation. Elevated oil supports the index's energy majors but adds pressure for BoE tightening. [AJ Bell](https://www.ajbell.co.uk/news/can-record-dividends-help-ftse-100-outrun-gilt-yields), [StoneX](https://www.stonex.com/en-gb/news-and-analysis/ftse-100-today-oil-rates-and-stocks-to-watch/)\n\n## 4. Base rates\n- 2026-10-09: the code baseline, built from about 3 years of 6-session returns, gives these percentiles for the target close:\n\n| Percentile | Level |\n|---|---|\n| p5 | 10,290 |\n| p10 | 10,392 |\n| p25 | 10,482 |\n| **p50** | **10,587** |\n| p75 | 10,700 |\n| p90 | 10,777 |\n| p95 | 10,844 |\n\n- The middle 50% band (p25 to p75) is about ±1.1% around spot. The 90% band (p5 to p95) is about -2.5% / +2.8%.\n- Recent volatility looks a little above normal: there was a 1.7% one-day drop on about 10-01 and moves of ±1% are common. The past 2 weeks traded between about 10,428 and 10,600.\n- The resolving horizon is 5 sessions, not 6, so the true spread is a bit narrower than the baseline (about 9% narrower in standard-deviation terms).\n- The 10,000 and 11,000 bounds are about 5.2% below and 4.2% above spot. Historically, a 5-session move that large is rare (under about 2%).\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the FTSE 100 close for mid-October 2026.\n- I found no dated analyst point target for this week.\n\n## 6. Upcoming events before Friday 2026-10-16\n- **UK labour-market data** (usually mid-month Tuesday, so probably about 10-13 or 10-14), plus possibly the August monthly GDP. Exact dates are not confirmed. The ONS lists July GDP on 11 Sep and September GDP on 12 Nov, and I could not find the August release date. [ONS](https://www.ons.gov.uk/releases/gdpmonthlyestimateukjuly2026), [ONS](https://www.ons.gov.uk/releases/gdpmonthlyestimateukseptember2026)\n- **UK September CPI** probably comes out about 10-21, after resolution. I could not confirm the date. Expectations ahead of it may still move gilts.\n- **US Q3 earnings season** begins with the big banks (usually around the middle of the month), and **US CPI** for September is expected mid-month. Neither date is confirmed.\n- **BoE speeches and gilt-yield moves:** the 10-year near 5.5% and the 30-year above 6% are a key downside risk.\n- **Oil and US-Iran headlines:** these cut both ways for the index, since higher oil lifts BP and Shell but adds inflation pressure.\n- **Commodity prices** (copper, gold, silver) matter for the heavily weighted miners.\n- **Telecoms:** Vodafone and BT could stay under pressure from Starlink competition.\n- **UK Budget:** I could not confirm whether it falls within the window. It appears to come later in October.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^FTSE: latest close 10552.0996 on 2026-10-09.\nTarget date 2026-10-17 is 6 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 6-observation returns over the last 3 years (last year weighted double):\np5: 10289.9871, p10: 10392.0785, p25: 10482.2522, p50: 10587.1113, p75: 10699.7381, p90: 10777.1795, p95: 10844.3804\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          10080.0
+        ],
+        [
+          0.05,
+          10270.0
+        ],
+        [
+          0.1,
+          10360.0
+        ],
+        [
+          0.2,
+          10450.0
+        ],
+        [
+          0.3,
+          10505.0
+        ],
+        [
+          0.4,
+          10545.0
+        ],
+        [
+          0.5,
+          10570.0
+        ],
+        [
+          0.6,
+          10600.0
+        ],
+        [
+          0.7,
+          10640.0
+        ],
+        [
+          0.8,
+          10695.0
+        ],
+        [
+          0.9,
+          10770.0
+        ],
+        [
+          0.95,
+          10830.0
+        ],
+        [
+          0.99,
+          10950.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          10020.0
+        ],
+        [
+          0.05,
+          10240.0
+        ],
+        [
+          0.1,
+          10330.0
+        ],
+        [
+          0.2,
+          10430.0
+        ],
+        [
+          0.3,
+          10495.0
+        ],
+        [
+          0.4,
+          10535.0
+        ],
+        [
+          0.5,
+          10565.0
+        ],
+        [
+          0.6,
+          10600.0
+        ],
+        [
+          0.7,
+          10640.0
+        ],
+        [
+          0.8,
+          10700.0
+        ],
+        [
+          0.9,
+          10780.0
+        ],
+        [
+          0.95,
+          10840.0
+        ],
+        [
+          0.99,
+          10960.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          10050.0
+        ],
+        [
+          0.05,
+          10220.0
+        ],
+        [
+          0.1,
+          10320.0
+        ],
+        [
+          0.2,
+          10430.0
+        ],
+        [
+          0.3,
+          10495.0
+        ],
+        [
+          0.4,
+          10537.0
+        ],
+        [
+          0.5,
+          10567.0
+        ],
+        [
+          0.6,
+          10600.0
+        ],
+        [
+          0.7,
+          10640.0
+        ],
+        [
+          0.8,
+          10700.0
+        ],
+        [
+          0.9,
+          10782.0
+        ],
+        [
+          0.95,
+          10850.0
+        ],
+        [
+          0.99,
+          10980.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3675
+}
