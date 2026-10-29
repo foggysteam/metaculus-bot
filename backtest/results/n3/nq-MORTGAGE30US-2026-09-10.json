@@ -1,0 +1,185 @@
+{
+  "id": "nq-MORTGAGE30US-2026-09-10",
+  "question": "What will be the Freddie Mac 30-year fixed mortgage rate for the week ending 2026-09-10, as first published?",
+  "resolution_criteria": "Resolves to the first published value of the Freddie Mac 30-year fixed mortgage rate for the week ending 2026-09-10 (FRED series MORTGAGE30US). Later revisions are ignored.",
+  "unit": "percent",
+  "outcome": 6.76,
+  "outcome_date": "2026-09-10",
+  "as_of": "2026-08-20",
+  "resolve_date": "2026-09-10",
+  "lower_bound": 6.25,
+  "upper_bound": 6.95,
+  "source": "fred",
+  "series": "MORTGAGE30US",
+  "baseline": "\nComputed by code from FRED MORTGAGE30US (30-Year Fixed Rate Mortgage Average in the United States, Percent, frequency W): latest observation 6.6700 for 2026-08-13.\nThe target period 2026-09-10 is 4 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 4-period changes since 2005 (last 3 years weighted double):\np5: 6.38, p10: 6.46, p25: 6.55, p50: 6.65, p75: 6.77, p90: 6.94, p95: 7.07\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I have the data I need, including the August 20 Freddie Mac release. Here is the brief. Some searches also returned pages dated after 2026-08-20. I left those out completely.\n\n## 1. Resolution source\n- The question resolves on the Freddie Mac PMMS 30-year fixed rate (FRED MORTGAGE30US), first published value, for the week of 2026-09-10. Freddie Mac usually publishes on Thursdays around noon ET. I could not load freddiemac.com/pmms because the proxy refused the connection, so the figures below come from news release copies.\n- 2026-08-13: 30-year rate 6.67%, 15-year 5.96%. It was 6.58% a year earlier. This matches the latest FRED value in the code baseline. [GlobeNewswire/Freddie Mac](https://www.globenewswire.com/news-release/2026/08/13/3344775/0/en/mortgage-rates-average-6-67.html)\n- 2026-08-20 (published today, before the 18:00 UTC close): 30-year rate 6.65%, down 2 bp, under the headline \"Mortgage Rates Decline for Second Consecutive Week\". 15-year 5.95%. [Freddie Mac](https://freddiemac.gcs-web.com/news-releases/news-release-details/mortgage-rates-decline-second-consecutive-week), [Fox Business](https://www.foxbusiness.com/economy/mortgage-rates-8-20-2026)\n- Because the 08-20 print exists, the target is now 3 weekly releases ahead, not the 4 the code baseline assumed.\n\n## 2. Current status\n- Nothing settles the question yet. The rate is 6.65%, close to the middle of the question's 6.25 to 6.95 range.\n\n## 3. Recent news (newest first)\n- 2026-08-20: The MBA's August forecast raised its 30-year path to 6.6% for Q3 2026 and 6.7% for Q4, up from 6.5% in July. It sees the 10-year Treasury yield ending 2026 at 4.7% (previously 4.5%) and fed funds holding at 3.5 to 3.75% through 2026. [Scotsman Guide](https://www.scotsmanguide.com/news/mba-raises-rate-forecast-slashes-refinance-outlook/)\n- 2026-08-20: 30-year rate 6.65%, its second weekly decline. [Freddie Mac](https://freddiemac.gcs-web.com/news-releases/news-release-details/mortgage-rates-decline-second-consecutive-week)\n- 2026-08-13: Fannie Mae's August forecast has the 30-year averaging 6.7% in Q3 and 6.8% in Q4 2026, with the 10-year ending 2026 at 4.8%. [Scotsman Guide](https://www.scotsmanguide.com/?p=124662)\n- 2026-08-13: 6.67%. [GlobeNewswire](https://www.globenewswire.com/news-release/2026/08/13/3344775/0/en/mortgage-rates-average-6-67.html)\n- 2026-08-06: 6.69%. [Fox Business](https://www.foxbusiness.com/economy/mortgage-rates-8-6-2026)\n- Both forecasters raised their 10-year yield outlooks in August, which suggests mild upward pressure on rates.\n\n## 4. Base rates and trend\n- Recent weekly path: Jul 2: 6.43, Jul 9: 6.49, Jul 16: 6.55, Jul 23: 6.58, Jul 30: 6.66, Aug 6: 6.69, Aug 13: 6.67, Aug 20: 6.65. [Freddie Mac releases](https://freddiemac.gcs-web.com/news-releases/news-release-details/mortgage-rates-average-666), [Trading Economics](https://tradingeconomics.com/united-states/30-year-mortgage-rate/news/569358)\n- The pattern: a rise of about 26 bp through July, a peak of 6.69 in early August, then small declines.\n- Code baseline over 4 weeks, anchored at 6.67: p5 6.38, p25 6.55, p50 6.65, p75 6.77, p95 7.07. Re-anchored at 6.65 with 3 weeks to go, the spread should be somewhat narrower, roughly ±10 to 12 bp for the interquartile range. That is my rough scaling, not something the code computed.\n- In recent weeks the weekly moves were usually 2 to 8 bp.\n\n## 5. Other forecasts\n- Fannie Mae, Q3 2026 average: 6.7%. MBA, Q3 2026 average: 6.6%. [Scotsman Guide](https://www.scotsmanguide.com/news/mba-raises-rate-forecast-slashes-refinance-outlook/)\n- I found no Polymarket, Kalshi or Manifold market on this week's PMMS value.\n\n## 6. Upcoming events before resolution\n- Late August: the Jackson Hole symposium, where Fed Chair Kevin Warsh is expected to speak. Before this date I found no reporting on what he might say.\n- Late August: the July PCE inflation report.\n- 2026-08-27 and 2026-09-03: the next two PMMS releases.\n- About 2026-09-04: the August jobs report. This is probably the biggest scheduled event for Treasury yields before the target week.\n- Week of 2026-09-10: August CPI may come out around Sept 10 to 11. It could land after the PMMS survey window closes, since the survey mostly reflects Monday to Wednesday applications.\n- 2026-09-15 to 16: the FOMC meeting, which is after resolution. Market pricing of a September hike or hold will feed into yields before then. I could not find hike or cut odds dated on or before Aug 20.\n- Mortgage rates have generally followed the 10-year Treasury yield, with a spread of roughly 1.9 to 2.0 points. I could not confirm the 10-year level as of Aug 20.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED MORTGAGE30US (30-Year Fixed Rate Mortgage Average in the United States, Percent, frequency W): latest observation 6.6700 for 2026-08-13.\nThe target period 2026-09-10 is 4 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 4-period changes since 2005 (last 3 years weighted double):\np5: 6.38, p10: 6.46, p25: 6.55, p50: 6.65, p75: 6.77, p90: 6.94, p95: 7.07\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          6.26
+        ],
+        [
+          0.05,
+          6.38
+        ],
+        [
+          0.1,
+          6.45
+        ],
+        [
+          0.2,
+          6.53
+        ],
+        [
+          0.3,
+          6.58
+        ],
+        [
+          0.4,
+          6.62
+        ],
+        [
+          0.5,
+          6.65
+        ],
+        [
+          0.6,
+          6.68
+        ],
+        [
+          0.7,
+          6.72
+        ],
+        [
+          0.8,
+          6.77
+        ],
+        [
+          0.9,
+          6.85
+        ],
+        [
+          0.95,
+          6.92
+        ],
+        [
+          0.99,
+          7.06
+        ]
+      ],
+      [
+        [
+          0.01,
+          6.3
+        ],
+        [
+          0.05,
+          6.42
+        ],
+        [
+          0.1,
+          6.48
+        ],
+        [
+          0.2,
+          6.55
+        ],
+        [
+          0.3,
+          6.59
+        ],
+        [
+          0.4,
+          6.63
+        ],
+        [
+          0.5,
+          6.65
+        ],
+        [
+          0.6,
+          6.68
+        ],
+        [
+          0.7,
+          6.71
+        ],
+        [
+          0.8,
+          6.76
+        ],
+        [
+          0.9,
+          6.83
+        ],
+        [
+          0.95,
+          6.89
+        ],
+        [
+          0.99,
+          7.02
+        ]
+      ],
+      [
+        [
+          0.01,
+          6.3
+        ],
+        [
+          0.05,
+          6.41
+        ],
+        [
+          0.1,
+          6.47
+        ],
+        [
+          0.2,
+          6.54
+        ],
+        [
+          0.3,
+          6.59
+        ],
+        [
+          0.4,
+          6.63
+        ],
+        [
+          0.5,
+          6.65
+        ],
+        [
+          0.6,
+          6.68
+        ],
+        [
+          0.7,
+          6.71
+        ],
+        [
+          0.8,
+          6.76
+        ],
+        [
+          0.9,
+          6.83
+        ],
+        [
+          0.95,
+          6.89
+        ],
+        [
+          0.99,
+          7.02
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3681
+}

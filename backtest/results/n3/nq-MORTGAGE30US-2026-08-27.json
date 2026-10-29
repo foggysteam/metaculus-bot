@@ -1,0 +1,185 @@
+{
+  "id": "nq-MORTGAGE30US-2026-08-27",
+  "question": "What will be the Freddie Mac 30-year fixed mortgage rate for the week ending 2026-08-27, as first published?",
+  "resolution_criteria": "Resolves to the first published value of the Freddie Mac 30-year fixed mortgage rate for the week ending 2026-08-27 (FRED series MORTGAGE30US). Later revisions are ignored.",
+  "unit": "percent",
+  "outcome": 6.66,
+  "outcome_date": "2026-08-27",
+  "as_of": "2026-08-20",
+  "resolve_date": "2026-08-27",
+  "lower_bound": 6.25,
+  "upper_bound": 7.05,
+  "source": "fred",
+  "series": "MORTGAGE30US",
+  "baseline": "\nComputed by code from FRED MORTGAGE30US (30-Year Fixed Rate Mortgage Average in the United States, Percent, frequency W): latest observation 6.6700 for 2026-08-13.\nThe target period 2026-08-27 is 2 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 2-period changes since 2005 (last 3 years weighted double):\np5: 6.47, p10: 6.53, p25: 6.59, p50: 6.66, p75: 6.74, p90: 6.84, p95: 6.9195\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I found the most important pre-cutoff fact: Freddie Mac's August 20 release put the 30-year rate at 6.65%. That is one week before the target week, so the target value is now one weekly move away.\n\nMost page fetches failed because the proxy refused the connections, so the figures below come from search-result summaries rather than the primary pages. Several searches also returned material published after 2026-08-20. I left all of it out.\n\n## 1. Resolution source\n- The question resolves on FRED series MORTGAGE30US, which is Freddie Mac's weekly Primary Mortgage Market Survey (PMMS). It is published on Thursdays at noon ET, and the survey collects lender data from Monday to Wednesday of that week. The August 27 value will therefore reflect rate sheets from about August 24-26.\n- 2026-08-13: the 30-year fixed was 6.67%, down from 6.69% a week earlier. It was 6.58% a year earlier. [Nasdaq/Freddie release](https://www.nasdaq.com/press-release/mortgage-rates-average-667-2026-08-13)\n- 2026-08-20: the newest PMMS release put the 30-year fixed at 6.65%, down from 6.67%. The 15-year fixed was 5.95%, down from 5.96%. Fox Business headlined it \"Mortgage rates fall to 6.65%.\" [Fox Business](https://www.foxbusiness.com/economy/mortgage-rates-8-20-2026), [Freddie Mac PMMS PDF](https://freddiemac.gcs-web.com/node/31981/pdf)\n- The Mortgage Reports gave 6.67% for August 20. That conflicts with the Freddie figure, and Freddie's 6.65% is the authoritative one. [TMR](https://themortgagereports.com/mortgage-rates-now/mortgage-rates-today-august-20-2026)\n\n## 2. Current status\n- Nothing has settled the question yet. The code's baseline is anchored on 6.67% (August 13), but the August 20 print of 6.65% means only one weekly change remains before the target week.\n- The series has moved within a very narrow band of about 6.65-6.69% in recent weeks, typically by 2 basis points a week.\n\n## 3. Recent news (newest first)\n- 2026-08-20: The 30-year PMMS rate fell 2bp to 6.65%, its second straight weekly decline. Summaries tied the dip to Treasury yields around 4.7%. [Freddie Mac release](https://freddiemac.gcs-web.com/news-releases/news-release-details/mortgage-rates-decline-second-consecutive-week), [Fox Business](https://www.foxbusiness.com/economy/mortgage-rates-8-20-2026)\n- 2026-08-19: Mortgage News Daily's daily 30-year index was 6.72%, down 0.03. MND said rates fell because oil prices dropped and the Treasury announced changes to its bond buyback program. [MND newsletter](https://www.mortgagenewsdaily.com/newsletter/n/20260819)\n- 2026-08-19: Yahoo said the market was \"surprisingly calm amid bond market volatility.\" Other daily averages: NerdWallet 6.54% APR, U.S. News 6.83%, Yahoo/Zillow 6.55%. These run on different methods than the PMMS. [Yahoo](https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-and-refinance-interest-rates-today-wednesday-august-19-2026-surprisingly-calm-amid-bond-market-volatility-100000804.html), [NerdWallet](https://www.nerdwallet.com/mortgages/news/mortgage-rates-today-wednesday-august-19-2026), [U.S. News](https://money.usnews.com/loans/mortgages/articles/mortgage-rates-today-august-19-2026)\n- 2026-08-18: Bond markets settled after a volatile stretch, and the 10-year Treasury yield was about 4.68%. [TMR](https://themortgagereports.com/mortgage-rates-now/mortgage-rates-today-august-19-2026)\n- Background: the Fed's policy range is 3.50-3.75%, Kevin Warsh is Fed chair, and inflation is running hot, around 3.4% by one account. Long-end yields are high.\n\n## 4. Base rates\n- Recent PMMS values: about 6.69% (August 6), 6.67% (August 13), 6.65% (August 20). Weekly changes have been about 2bp.\n- The code's 2-step distribution (from 6.67%): p5 6.47, p25 6.59, p50 6.66, p75 6.74, p95 6.92. Re-anchored to 6.65% with only one step left, the distribution should be narrower. Historically, one-week PMMS changes are usually within ±10bp and often within ±5bp. Moves of 15bp or more happen in only a small minority of weeks, mostly during volatile periods.\n- MND's daily index (6.72% on August 19) usually runs a few basis points above the PMMS. Its drop over August 17-19 is in line with a flat-to-slightly-lower PMMS reading.\n\n## 5. Other forecasts\n- I found no Kalshi, Polymarket or Manifold market for the August 27 weekly print.\n- Kalshi has a related market on whether any 2026 PMMS reading falls below 5.75%. In a snapshot dated 2026-08-01, Yes traded at about 9¢. [simplefunctions/Kalshi](https://simplefunctions.dev/markets/will-any-2026-freddie-mac-primary-mortgage-market-kalshi-kxfm30ymtg-26dec31-t)\n- Kalshi's year-end \"how high\" contracts exist, but the snapshots I found are from April and are stale. [simplefunctions](https://simplefunctions.dev/markets/KXMORTGAGERATE-26DEC-T6.6)\n- I found no published week-ahead expert forecasts.\n\n## 6. Upcoming events before resolution\n- The pricing window is roughly August 21-26, ending with Wednesday rate sheets. Moves in the 10-year Treasury yield over those days, which sat at about 4.68-4.7% around August 18-20, will drive the print.\n- The Kansas City Fed's Jackson Hole symposium is normally held in late August. I could not confirm this year's dates from a source published before the cutoff. If the Fed chair's keynote comes after August 26, it falls outside the survey window.\n- Other drivers in the window: oil prices and Treasury refunding or buyback news, both of which MND cited on August 19. Weekly jobless claims come on Thursday, August 20 (and the bond market's reaction on Friday the 21st). The usual late-August housing data, new and existing home sales, also falls in the window.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED MORTGAGE30US (30-Year Fixed Rate Mortgage Average in the United States, Percent, frequency W): latest observation 6.6700 for 2026-08-13.\nThe target period 2026-08-27 is 2 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 2-period changes since 2005 (last 3 years weighted double):\np5: 6.47, p10: 6.53, p25: 6.59, p50: 6.66, p75: 6.74, p90: 6.84, p95: 6.9195\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          6.43
+        ],
+        [
+          0.05,
+          6.52
+        ],
+        [
+          0.1,
+          6.56
+        ],
+        [
+          0.2,
+          6.6
+        ],
+        [
+          0.3,
+          6.62
+        ],
+        [
+          0.4,
+          6.635
+        ],
+        [
+          0.5,
+          6.645
+        ],
+        [
+          0.6,
+          6.66
+        ],
+        [
+          0.7,
+          6.675
+        ],
+        [
+          0.8,
+          6.7
+        ],
+        [
+          0.9,
+          6.74
+        ],
+        [
+          0.95,
+          6.78
+        ],
+        [
+          0.99,
+          6.87
+        ]
+      ],
+      [
+        [
+          0.01,
+          6.43
+        ],
+        [
+          0.05,
+          6.52
+        ],
+        [
+          0.1,
+          6.56
+        ],
+        [
+          0.2,
+          6.6
+        ],
+        [
+          0.3,
+          6.62
+        ],
+        [
+          0.4,
+          6.63
+        ],
+        [
+          0.5,
+          6.64
+        ],
+        [
+          0.6,
+          6.66
+        ],
+        [
+          0.7,
+          6.68
+        ],
+        [
+          0.8,
+          6.7
+        ],
+        [
+          0.9,
+          6.74
+        ],
+        [
+          0.95,
+          6.78
+        ],
+        [
+          0.99,
+          6.88
+        ]
+      ],
+      [
+        [
+          0.01,
+          6.42
+        ],
+        [
+          0.05,
+          6.51
+        ],
+        [
+          0.1,
+          6.55
+        ],
+        [
+          0.2,
+          6.59
+        ],
+        [
+          0.3,
+          6.62
+        ],
+        [
+          0.4,
+          6.64
+        ],
+        [
+          0.5,
+          6.65
+        ],
+        [
+          0.6,
+          6.66
+        ],
+        [
+          0.7,
+          6.68
+        ],
+        [
+          0.8,
+          6.7
+        ],
+        [
+          0.9,
+          6.74
+        ],
+        [
+          0.95,
+          6.78
+        ],
+        [
+          0.99,
+          6.88
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3642
+}

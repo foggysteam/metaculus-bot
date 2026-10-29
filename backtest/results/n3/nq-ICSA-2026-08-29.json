@@ -1,0 +1,185 @@
+{
+  "id": "nq-ICSA-2026-08-29",
+  "question": "What will be US initial jobless claims for the week (seasonally adjusted, Department of Labor) for the week ending 2026-08-29, as first published?",
+  "resolution_criteria": "Resolves to the first published value of US initial jobless claims for the week (seasonally adjusted, Department of Labor) for the week ending 2026-08-29 (FRED series ICSA). Later revisions are ignored.",
+  "unit": "claims",
+  "outcome": 206000.0,
+  "outcome_date": "2026-09-03",
+  "as_of": "2026-08-20",
+  "resolve_date": "2026-09-03",
+  "lower_bound": 150000.0,
+  "upper_bound": 250000.0,
+  "source": "fred",
+  "series": "ICSA",
+  "baseline": "\nComputed by code from FRED ICSA (Initial Claims, Number, frequency W): latest observation 209000.0000 for 2026-08-08.\nThe target period 2026-08-29 is 3 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 3-period changes since 2005 (last 3 years weighted double):\np5: 186607.1429, p10: 191881.9048, p25: 199913.0435, p50: 207888.2979, p75: 215966.6667, p90: 224626.1682, p95: 230202.8986\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I couldn't find anything that settles this. The figure for the week ending Aug 29 comes out Thursday, Sept 3, 2026. The latest print is 206,000 for the week ending Aug 15, and claims have stayed roughly between 187K and 217K since early July.\n\n## 1. Resolution source\n- The question resolves on the first-print seasonally adjusted figure in the DOL Thursday release (FRED ICSA), due 2026-09-03 at 8:30 ET.\n- 2026-08-20: DOL advance figure for the week ending Aug 15 was **206,000** SA, down 6,000. The week ending Aug 8 was revised up from 209,000 to 212,000. The 4-week average was 204,000, up 4,250. Unadjusted claims were 172,080, against 194,217 in the same week of 2025. [DOL release](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20261413.pdf), [govdelivery](https://content.govdelivery.com/accounts/USDOL/bulletins/425f7f5)\n- The code baseline's \"latest\" value (209K for Aug 8) is out of date. The Aug 8 week now stands at 212K, and Aug 15 is 206K. That leaves the target **2 weeks** ahead of the latest data, not 3.\n- One mismatch: a YCharts table shows 207K for Aug 15, which looks like a later revision that I couldn't confirm. [YCharts](https://ycharts.com/indicators/us_initial_claims_for_unemployment_insurance)\n\n## 2. Current status\n- Nothing settles the question yet. The data won't be released until Sept 3.\n\n## 3. Recent news (newest first)\n- 2026-08-20: The 206K figure came in below the 210K consensus in the Reuters and Bloomberg polls. Continuing claims rose 18,000 to 1.799M for the week ending Aug 8, above expectations. [investingLive](https://investinglive.com/news/us-initial-jobless-claims-206k-vs-210k-expected/), [Yahoo/Reuters](https://finance.yahoo.com/economy/articles/u-weekly-jobless-claims-fall-124023010.html), [TMGM](https://www.tmgm.com/en/analysis/market-news/article/us-initial-jobless-claims-dropped-to-206k-last-week-202608201238)\n- 2026-08-13: The week ending Aug 8 printed 209K, later revised to 212K. The week ending Aug 1 was revised from 199K to 200K. [DOL/oui](https://oui.doleta.gov/press/2026/081326.pdf)\n- 2026-08-06: The week ending Aug 1 printed 199K, and the week ending Jul 25 was revised to 198K. The 4-week average was 198,750. [DOL/oui](https://oui.doleta.gov/press/2026/080626.pdf)\n- 2026-08-20: PNC published a claims note, but I couldn't open it because the proxy refused the connection. [PNC](https://www.pnc.com/content/dam/pnc-com/pdf/aboutpnc/EconomicReports/EconomicUpdates/2026/PNC_Economics_Research_Claims_20_August_2026.pdf)\n\n## 4. Base rates and recent values\nFirst prints for recent weeks, from secondary reports ([RTTNews](https://www.rttnews.com/3667654/u-s-weekly-jobless-claims-unexpectedly-dip-to-208000.aspx), [RTTNews](https://www.rttnews.com/3665805/u-s-weekly-jobless-claims-unexpectedly-edge-down-to-215000.aspx)):\n\n| Week ending | First print |\n|---|---|\n| Jul 4 | 215K |\n| Jul 11 | 208K |\n| Jul 18 | 187K |\n| Jul 25 | 197K |\n| Aug 1 | 199K |\n| Aug 8 | 209K (revised to 212K) |\n| Aug 15 | 206K |\n\n- **Trend:** Claims are low and range-bound at about 187-217K. They moved up from about 199K in early August to 206-212K mid-month, and the 4-week average rose from 198.75K to 204K.\n- **Typical swings:** Week-to-week moves are usually 3-10K, with occasional outliers like the 22K drop for Jul 18.\n- **Code baseline (3-step):** p5 187K, p25 200K, p50 208K, p75 216K, p95 230K. With the target only 2 weeks out, the real spread is probably a bit narrower.\n- **Same week in past years (from memory, not checked):** The week ending Aug 30, 2025 printed about 237K (+8K), and the week ending Aug 31, 2024 printed about 227K (-5K). I don't see a consistent late-August seasonal jump.\n- **Calendar:** Labor Day 2026 is Sept 7, so the target week is not a holiday week.\n- **Year over year:** Unadjusted claims are running about 11% below the same week of 2025.\n\n## 5. Other forecasts\n- Kalshi lists a market for exactly this week, KXJOBLESSCLAIMS-26SEP03. A Bitcoin.com mirror says it runs from Aug 27 to Sep 3, 2026, which is after today. The prices shown there are dated after the cutoff, so I left them out. [Bitcoin.com mirror](https://www.bitcoin.com/prediction-markets/kalshi/initial-jobless-claims-for-the-week-ending-august-29-2026--KXJOBLESSCLAIMS-26SEP03/)\n- For comparison, a Kalshi snapshot for the week ending Aug 1 priced about 62% for at least 205K and 47% for at least 210K. The actual print was 199K, so the market leaned too high that week. [Kalshi](https://kalshi.com/markets/kxjoblessclaims/weekly-initial-jobless-claims/kxjoblessclaims-26aug06)\n- The consensus for the week ending Aug 15 was 210K. I couldn't find a consensus for the week ending Aug 29; it usually comes out the weekend before the release.\n\n## 6. Upcoming events before resolution\n- 2026-08-27: Claims for the week ending Aug 22, which will also revise the 206K print for Aug 15.\n- 2026-09-03: Claims for the week ending Aug 29, which is the resolving print.\n- 2026-09-04: The August jobs report comes out after resolution, so it can't affect the outcome.\n- Also worth watching: state-level layoff announcements (WARN notices), hurricane season disruptions in Gulf states (which can push claims up temporarily), and seasonal factor noise around end-of-summer layoffs in education and auto plants.\n\nSources:\n- [DOL release 20261413](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20261413.pdf)\n- [DOL govdelivery bulletin](https://content.govdelivery.com/accounts/USDOL/bulletins/425f7f5)\n- [oui.doleta.gov 081326](https://oui.doleta.gov/press/2026/081326.pdf)\n- [oui.doleta.gov 080626](https://oui.doleta.gov/press/2026/080626.pdf)\n- [investingLive](https://investinglive.com/news/us-initial-jobless-claims-206k-vs-210k-expected/)\n- [Yahoo Finance](https://finance.yahoo.com/economy/articles/u-weekly-jobless-claims-fall-124023010.html)\n- [TMGM](https://www.tmgm.com/en/analysis/market-news/article/us-initial-jobless-claims-dropped-to-206k-last-week-202608201238)\n- [RTTNews 208K](https://www.rttnews.com/3667654/u-s-weekly-jobless-claims-unexpectedly-dip-to-208000.aspx)\n- [RTTNews 215K](https://www.rttnews.com/3665805/u-s-weekly-jobless-claims-unexpectedly-edge-down-to-215000.aspx)\n- [Kalshi Aug 6 market](https://kalshi.com/markets/kxjoblessclaims/weekly-initial-jobless-claims/kxjoblessclaims-26aug06)\n- [Bitcoin.com Kalshi mirror](https://www.bitcoin.com/prediction-markets/kalshi/initial-jobless-claims-for-the-week-ending-august-29-2026--KXJOBLESSCLAIMS-26SEP03/)\n- [YCharts](https://ycharts.com/indicators/us_initial_claims_for_unemployment_insurance)\n- [PNC](https://www.pnc.com/content/dam/pnc-com/pdf/aboutpnc/EconomicReports/EconomicUpdates/2026/PNC_Economics_Research_Claims_20_August_2026.pdf)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED ICSA (Initial Claims, Number, frequency W): latest observation 209000.0000 for 2026-08-08.\nThe target period 2026-08-29 is 3 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 3-period changes since 2005 (last 3 years weighted double):\np5: 186607.1429, p10: 191881.9048, p25: 199913.0435, p50: 207888.2979, p75: 215966.6667, p90: 224626.1682, p95: 230202.8986\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "leaked": true,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          182000.0
+        ],
+        [
+          0.05,
+          190000.0
+        ],
+        [
+          0.1,
+          194500.0
+        ],
+        [
+          0.2,
+          199500.0
+        ],
+        [
+          0.3,
+          203000.0
+        ],
+        [
+          0.4,
+          205500.0
+        ],
+        [
+          0.5,
+          207500.0
+        ],
+        [
+          0.6,
+          209500.0
+        ],
+        [
+          0.7,
+          212500.0
+        ],
+        [
+          0.8,
+          216000.0
+        ],
+        [
+          0.9,
+          221500.0
+        ],
+        [
+          0.95,
+          227000.0
+        ],
+        [
+          0.99,
+          240000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          182000.0
+        ],
+        [
+          0.05,
+          191000.0
+        ],
+        [
+          0.1,
+          195000.0
+        ],
+        [
+          0.2,
+          200000.0
+        ],
+        [
+          0.3,
+          203000.0
+        ],
+        [
+          0.4,
+          206000.0
+        ],
+        [
+          0.5,
+          208000.0
+        ],
+        [
+          0.6,
+          210000.0
+        ],
+        [
+          0.7,
+          213000.0
+        ],
+        [
+          0.8,
+          216000.0
+        ],
+        [
+          0.9,
+          222000.0
+        ],
+        [
+          0.95,
+          228000.0
+        ],
+        [
+          0.99,
+          245000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          186000.0
+        ],
+        [
+          0.05,
+          192000.0
+        ],
+        [
+          0.1,
+          195000.0
+        ],
+        [
+          0.2,
+          200000.0
+        ],
+        [
+          0.3,
+          203000.0
+        ],
+        [
+          0.4,
+          206000.0
+        ],
+        [
+          0.5,
+          208000.0
+        ],
+        [
+          0.6,
+          210000.0
+        ],
+        [
+          0.7,
+          213000.0
+        ],
+        [
+          0.8,
+          216500.0
+        ],
+        [
+          0.9,
+          222000.0
+        ],
+        [
+          0.95,
+          227000.0
+        ],
+        [
+          0.99,
+          240000.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3394
+}
