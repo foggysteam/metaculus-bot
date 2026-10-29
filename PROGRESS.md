@@ -56,7 +56,7 @@ Bot: KCAP2.0 (Metaculus primary bot, prize-eligible), owner account alasadi.dev@
 - 29 Oct 2026: Built a multiple-choice backtest instead (none existed): build_mc_dataset.py (Polymarket multi-outcome events from Aug 2026, non-sport, as-of date 3 to 21 days before the scheduled end, early closes left out, market prices for every option as the benchmark, beyond 7 options merged into "Other"), run_mc_backtest.py and score_mc.py (live mean + 1% floor vs other floors, median, pulling towards equal odds). Smoke test on one question OK, $1.17 notional for one research report and 2 forecasts.
 
 ## Next
-- Multiple-choice backtest run mc1 after the weekly Max reset (1 Nov 04:00 UTC), on the Max plan, which the live bot shares: start with about 40 questions x 3 forecasts (about $45 notional), check usage, then the rest.
+- Multiple-choice backtest run mc1 after the weekly Max reset (1 Nov 04:00 UTC), on the Max plan, which the live bot shares: 48 questions (backtest/data/mc_questions.jsonl, at most 2 per event family) x 5 forecasts, about $70 notional; run the first 24, check usage, then the rest.
 - Next yes/no backtest dataset: pick each as-of date from the market's scheduled end, or leave out markets that closed early (build_dataset.py uses the actual close).
 - Ranked ideas from the repo review (each gated by a backtest):
   1. (DONE 28 Oct: 13 percentiles) Numeric overhaul: ask for P1/P5/P95/P99 as well, smooth the CDF (PCHIP) instead of linear, average the 5 CDFs instead of median, set width from the series' historical changes. Three top bots do this; forecast-scaffold measured +4.9 per numeric question. Needs a numeric backtest on resolved Summer/Spring 2026 FutureEval questions (API works with our token; keep that data in backtest/private/).

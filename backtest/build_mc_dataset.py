@@ -139,6 +139,18 @@ def build_question(event: dict) -> dict | None:
     }
 
 
+def cap_families(rows: list[dict], cap: int = 2) -> list[dict]:
+    """At most cap questions whose titles share their first three words (for example the
+    winner, runner-up and margin of one election), so one event does not dominate."""
+    kept, counts = [], {}
+    for row in rows:
+        key = " ".join(re.sub(r"[^\w\s]", "", row["question"].lower()).split()[:3])
+        if counts.get(key, 0) < cap:
+            counts[key] = counts.get(key, 0) + 1
+            kept.append(row)
+    return kept
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--min-volume", type=float, default=20_000)
@@ -161,7 +173,7 @@ def main() -> None:
             rows.append(row)
             print(f"{row['id']}: {len(row['options'])} options, winner {row['options'][row['outcome']]} "
                   f"at {row['market_probs'][row['outcome']]:.0%}: {row['question'][:70]}", flush=True)
-    rows = dedupe(rows)[: args.limit]
+    rows = cap_families(dedupe(rows))[: args.limit]
     RNG.shuffle(rows)
     OUT.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
     print(f"Wrote {len(rows)} questions to {OUT}")
