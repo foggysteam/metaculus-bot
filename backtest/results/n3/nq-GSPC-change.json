@@ -1,0 +1,185 @@
+{
+  "id": "nq-GSPC-change",
+  "question": "What will be the percentage change in the S&P 500 index (^GSPC on Yahoo Finance) from the close on 2026-10-15 to the close on 2026-10-23?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-10-23 / close on 2026-10-15 - 1), using daily closes of ^GSPC on Yahoo Finance. If there is no close on 2026-10-23, the last close before it is used.",
+  "unit": "percent",
+  "outcome": -1.55448,
+  "outcome_date": "2026-10-23",
+  "as_of": "2026-10-16",
+  "resolve_date": "2026-10-23",
+  "lower_bound": -5.0,
+  "upper_bound": 5.0,
+  "source": "yahoo",
+  "series": "^GSPC",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^GSPC: latest close 7744.0601 on 2026-10-15.\nTarget date 2026-10-23 is 5 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 5-observation returns over the last 3 years (last year weighted double):\np5: 7546.1474, p10: 7593.2757, p25: 7690.8304, p50: 7778.0542, p75: 7857.3754, p90: 7943.6065, p95: 8020.4038\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "## 1. Resolution source\n- 2026-10-15: The ^GSPC close was 7,744.06. This matches both the code baseline (7744.0601) and the Stock Trader Network wrap, which reported a 0.33% gain that day, the first in four sessions. This is the base for the calculation. [source](https://www.stocktradernetwork.com/daily-wrap-up-sp-500-snaps-three-day-losing-streak-as-chip-stocks-slide-oct-15-2026/)\n- I couldn't fetch Yahoo Finance directly because the proxy refused the connection.\n\n## 2. Current status\n- 2026-10-16: The S&P 500 fell 84.62 points (-1.09%) to close at 7,659.44. Several outlets report this figure, including the AP wire via ABC News, Washington Post and CNBC. That leaves the index about **-1.09% against the 10-15 base** with four sessions left (Oct 19 to 23). [ABC/AP](https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-friday-10162026-137331951), [WaPo](https://www.washingtonpost.com/business/2026/10/16/wall-street-stocks-dow-nasdaq/b0444434-c99e-11f1-aefb-abe4112d087e_story.html), [CNBC](https://www.cnbc.com/2026/10/15/stock-market-today-live-updates.html)\n  - Timing: this close came at 20:00 UTC, after the 18:00 UTC forecast close. When forecasts close the index would have been trading intraday, and a Yahoo item from that morning showed about -0.81%. [Yahoo](https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html)\n- Ticker Daily reports a \"closes higher at 5,847\" figure. It conflicts with every other source and looks wrong, so ignore it. [source](https://tickerdaily.com/article/stock-market-today-october-16-2026-sandp-500-closes-higher-on-tech-recovery)\n- Nothing settles the question yet.\n\n## 3. Recent news (newest first)\n- 2026-10-16: The S&P 500 lost about 1.9% (-152 points) for the week, its worst week since June. The Nasdaq fell 2.14% on the day and more than 4% for the week, while the Dow gained about 0.7% for the week. [Wealth Professional](https://www.wealthprofessional.ca/investments/equity-markets/ai-sell-off-hands-nasdaq-worst-week-since-june/393805), [Portfolio Terminal](https://portfolio-terminal.com/blog/stock-market-week-in-review-october-16-2026)\n- 2026-10-16: Chipmakers fell for an eighth straight day, the longest losing streak since 2008. One review puts the chip index's weekly loss at about 11.4%. CoreWeave lost about 25% for the week amid worries about AI financing and debt. Korea's Kospi had its worst week since October 2008. [Bloomberg](https://www.bloomberg.com/news/articles/2026-10-15/stock-market-today-dow-s-p-live-updates), [Market Index](https://www.marketindex.com.au/news/morning-wrap-asx-200-to-slip-s-and-p-500-and-nasdaq-log-worst-week-since)\n- 2026-10-16: Oil was above $100. Brent was reported at about $109 to $110 after Iran-related tanker incidents near Hormuz. Reports of the VIX conflict: one says it rose about 21% to 19.9, the highest since June, and another says it went above 22. [Traders Union](https://tradersunion.com/news/institutions/show/2496895-nasdaq-weekly-loss-tech-selloff-oil/), [Market Index](https://www.marketindex.com.au/news/morning-wrap-asx-200-to-slip-s-and-p-500-and-nasdaq-log-worst-week-since)\n- 2026-10-15: The S&P rose 0.33% as money rotated into healthcare and defensive stocks, while the SOX fell 0.9%. Gold and Treasuries were in demand. [Stock Trader Network](https://www.stocktradernetwork.com/daily-wrap-up-sp-500-snaps-three-day-losing-streak-as-chip-stocks-slide-oct-15-2026/), [Bloomberg video](https://www.bloomberg.com/news/videos/2026-10-15/the-close-10-15-2026-video)\n- 2026-10-14: A hotter-than-expected CPI reading revived fears of a rate hike, and the market closed lower. [TheStreet](https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026)\n- 2026-10-09: FactSet estimated Q3 S&P 500 earnings growth at 29.6%. 84% of early reporters had beaten EPS estimates. [FactSet](https://advantage.factset.com/hubfs/Website/Resources%20Section/Research%20Desk/Earnings%20Insight/EarningsInsight_100926.pdf)\n\n## 4. Base rates\n- The code baseline uses 5-session returns over the past 3 years, with the last year weighted double, starting from 7,744.06:\n  - Median: 7,778 (+0.44%)\n  - p25 to p75: 7,691 to 7,857 (-0.69% to +1.46%)\n  - p10 to p90: 7,593 to 7,944 (-1.95% to +2.58%)\n  - p5 to p95: 7,546 to 8,020 (-2.56% to +3.57%)\n- Conditional on the Oct 16 close: the remaining four sessions would need a gain of about +1.1% to reach 0%. With typical 4-day S&P volatility of roughly ±1.5 to 2% at one standard deviation, and more now that the VIX is around 20 to 22, an unconditional 4-day median of about +0.3% would put the result near -0.8%.\n- Context: the index was around 7,811 before the week of Oct 12 (implied by the -152-point weekly change), and it was near record highs earlier in October.\n\n## 5. Other forecasts\n- I could not find a Kalshi or Polymarket market priced for the Oct 23, 2026 close. Kalshi lists daily \"above X at 4pm\" S&P contracts, but I found no page for this date. [Barchart (2025 example)](https://www.barchart.com/story/news/35360152/markets-bet-on-whether-the-sp-500-will-be-above-6724-9999-on-oct-10-2025-at-4pm-edt)\n- Related market: a Kalshi year-end 2026 bracket of 7,600 to 7,799.99 was the most likely at about 13%, but that page is undated. [next.io](https://next.io/prediction-markets/trending/what-will-be-the-sp-close-price-end-of-2026/)\n- I found no expert forecasts for this week specifically.\n\n## 6. Upcoming events (Oct 19 to 23)\n- About 70 S&P 500 companies report earnings this week. [tech-insider](https://tech-insider.org/meta-tesla-netflix-earnings-week-70-companies-2026/), [eToro](https://www.etoro.com/news-and-analysis/the-daily-breakdown/netflix-tesla-earnings-highlight-busy-week)\n  - Netflix: Oct 20, after the close\n  - Tesla and Meta: Oct 21, after the close. Tesla consensus is EPS $0.43 on revenue of about $27.8B.\n  - Also reporting: GM, Procter & Gamble, United and American Airlines\n- Economic data: [Gotrade](https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-10-19/)\n  - Housing starts: Oct 20\n  - Jobless claims: Oct 22 (about 200K expected)\n  - S&P Global flash PMIs: late in the week\n  - University of Michigan sentiment: Oct 23\n- The next Fed meeting looks set for late October, after the resolution date, but talk of a rate hike after the hot CPI could move markets. I did not confirm the meeting dates.\n- Other risks: whether the 8-day chip slide continues or rebounds, AI and credit concerns (CoreWeave), and oil and Hormuz headlines.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^GSPC: latest close 7744.0601 on 2026-10-15.\nTarget date 2026-10-23 is 5 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 5-observation returns over the last 3 years (last year weighted double):\np5: 7546.1474, p10: 7593.2757, p25: 7690.8304, p50: 7778.0542, p75: 7857.3754, p90: 7943.6065, p95: 8020.4038\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -7.5
+        ],
+        [
+          0.05,
+          -4.9
+        ],
+        [
+          0.1,
+          -3.8
+        ],
+        [
+          0.2,
+          -2.6
+        ],
+        [
+          0.3,
+          -1.8
+        ],
+        [
+          0.4,
+          -1.2
+        ],
+        [
+          0.5,
+          -0.75
+        ],
+        [
+          0.6,
+          -0.25
+        ],
+        [
+          0.7,
+          0.3
+        ],
+        [
+          0.8,
+          1.0
+        ],
+        [
+          0.9,
+          2.1
+        ],
+        [
+          0.95,
+          3.0
+        ],
+        [
+          0.99,
+          4.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          -7.5
+        ],
+        [
+          0.05,
+          -4.8
+        ],
+        [
+          0.1,
+          -3.7
+        ],
+        [
+          0.2,
+          -2.5
+        ],
+        [
+          0.3,
+          -1.7
+        ],
+        [
+          0.4,
+          -1.15
+        ],
+        [
+          0.5,
+          -0.75
+        ],
+        [
+          0.6,
+          -0.3
+        ],
+        [
+          0.7,
+          0.2
+        ],
+        [
+          0.8,
+          0.9
+        ],
+        [
+          0.9,
+          1.9
+        ],
+        [
+          0.95,
+          2.7
+        ],
+        [
+          0.99,
+          4.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          -7.0
+        ],
+        [
+          0.05,
+          -4.6
+        ],
+        [
+          0.1,
+          -3.6
+        ],
+        [
+          0.2,
+          -2.5
+        ],
+        [
+          0.3,
+          -1.8
+        ],
+        [
+          0.4,
+          -1.2
+        ],
+        [
+          0.5,
+          -0.75
+        ],
+        [
+          0.6,
+          -0.25
+        ],
+        [
+          0.7,
+          0.3
+        ],
+        [
+          0.8,
+          1.0
+        ],
+        [
+          0.9,
+          2.0
+        ],
+        [
+          0.95,
+          2.8
+        ],
+        [
+          0.99,
+          4.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4103
+}

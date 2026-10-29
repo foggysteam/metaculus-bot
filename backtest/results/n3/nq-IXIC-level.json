@@ -1,0 +1,185 @@
+{
+  "id": "nq-IXIC-level",
+  "question": "What will be the closing value of the Nasdaq Composite index (^IXIC on Yahoo Finance) on September 9, 2026?",
+  "resolution_criteria": "Resolves to the daily close of ^IXIC on Yahoo Finance for 2026-09-09. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "points",
+  "outcome": 26253.339844,
+  "outcome_date": "2026-09-09",
+  "as_of": "2026-08-12",
+  "resolve_date": "2026-09-09",
+  "lower_bound": 20500.0,
+  "upper_bound": 30500.0,
+  "source": "yahoo",
+  "series": "^IXIC",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for ^IXIC: latest close 26445.4492 on 2026-08-11.\nTarget date 2026-09-09 is 20 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 20-observation returns over the last 3 years (last year weighted double):\np5: 24937.4215, p10: 25383.535, p25: 26125.6303, p50: 26941.1306, p75: 27729.6218, p90: 28371.6487, p95: 29232.8149\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I'm writing up the findings now and leaving out anything published after 2026-08-12.\n\nNote: several searches returned pages dated after 2026-08-12. I left all of them out.\n\n## 1. Resolution source\n- Resolution uses the Yahoo Finance ^IXIC daily close for 2026-09-09, a Wednesday and a normal trading day. My fetches of the live pages were refused by the proxy, so I could not open Yahoo directly.\n- 2026-08-11: the latest close in the code-collected Yahoo data is **26,445.45**.\n- 2026-08-12 (same day, after the 18:00 UTC forecast close): CNBC reported the Nasdaq closed at **26,588.49**, up 0.54%. [CNBC](https://www.cnbc.com/2026/08/11/stock-market-today-live-updates.html)\n\n## 2. Current status\n- Nothing settles the question yet. The target date is 20 trading days away.\n- The index is about 2.4% below its record close (see below), so a new high by 2026-09-09 is plausible but not near-certain.\n\n## 3. Recent news (newest first)\n- 2026-08-12: July CPI matched expectations: headline +0.1% m/m and 3.4% y/y, core +0.2% m/m and 2.5% y/y. Stocks rose on it. AI-infrastructure names led (Supermicro, CoreWeave, Nebius). One strategist said \"the combination of CPI and payroll takes September off the table,\" meaning a September rate hike. [Yahoo Finance](https://finance.yahoo.com/markets/live/stock-market-today-wednesday-august-12-dow-sp-500-nasdaq-cpi-report-091555133.html), [TheStreet](https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-12-2026)\n- 2026-08-07: The July jobs report was weak. Sources disagree on the number: one says -23k against roughly +80k expected. Markets read it as lowering the odds of more hikes. A Substack newsletter, which I could not verify, says the Nasdaq rose 1.3% to 26,690.62. [Substack](https://nasdaqplaybook.substack.com/p/weekly-nasdaq-model-update-august-06f), [Proactive](https://www.proactiveinvestors.com/companies/news/1096726/futures-inch-higher-as-jobs-data-indicate-labor-market-weakness-1096726.html?region=ca)\n- 2026-07-29: The Fed, now chaired by Kevin Warsh, held rates after a \"cliffhanger\" meeting with three dissents. Rate hikes were the market's main macro worry. [CNN](https://www.cnn.com/2026/07/29/business/live-news/federal-reserve-interest-rate-07-29-26)\n- 2026-07-24: The Nasdaq fell 2.13% that week to 24,975.82, its July low area. [Tiger/Dow Jones](https://www.itiger.com/hans/news/2654703290)\n- 2026-06-02: Record close of **27,093.90**. [Tiger/Dow Jones Data Talk](https://www.itiger.com/hant/news/2654028597)\n- Overall path: a peak in early June, a pullback of about 8-10% into late July, then a rebound of about 6% by Aug 11.\n\n## 4. Base rates\n- Code baseline for the 20-trading-day horizon, from the last 3 years of 20-day returns (last year double-weighted):\n  - p5: 24,937\n  - p10: 25,384\n  - p25: 26,126\n  - p50: 26,941, about +1.9% drift\n  - p75: 27,730\n  - p90: 28,372\n  - p95: 29,233\n- The middle 50% spans about ±3% around the median, and the 5-95% range is roughly -5.7% to +10.5%.\n- The recent realized path fits that range: the index moved about 8-10% over a few weeks in both June-July and July-August.\n- The historical median (+1.9%) is higher than typical long-run drift (about +1%/month), because the last 3 years were strong for the Nasdaq.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the Nasdaq Composite close for September 2026.\n- A related contract: a third-party aggregator showed a Kalshi/Polymarket market on the Nasdaq-100's December 2026 close, with the 30,500-33,000 bucket at about 26%/20% as of June 2026. It was thin and is not directly comparable. [SimpleFunctions](https://simplefunctions.dev/answer/what-nasdaq-100-ndx-close-december)\n- I found no sell-side targets specific to this date.\n\n## 6. Upcoming events before 2026-09-09\n- Mid-August: retail sales, PPI and the end of the retail earnings season.\n- About 2026-08-26 (after the close): Nvidia fiscal Q2 earnings, the main single-stock catalyst for the AI trade. [Cboe](https://www.cboe.com/insights/posts/market-search-for-direction-ahead-of-nvidia-earnings/)\n- Late August: Fed Chair Warsh's keynote at the Jackson Hole symposium, July PCE inflation, and the second estimate of Q2 GDP. Hawkish or dovish signals there will drive pricing for the September FOMC.\n- 2026-09-04: the August jobs report.\n- 2026-09-07: Labor Day, markets closed.\n- Just after resolution: the FOMC meeting in mid-September and the August CPI around Sept 10-11. Expectations for both will shape trading in the days before 9/9.\n- Risk factor: long-dated Treasury yields and the debate over rate hikes have been the main headwind for tech valuations in 2026.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^IXIC: latest close 26445.4492 on 2026-08-11.\nTarget date 2026-09-09 is 20 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 20-observation returns over the last 3 years (last year weighted double):\np5: 24937.4215, p10: 25383.535, p25: 26125.6303, p50: 26941.1306, p75: 27729.6218, p90: 28371.6487, p95: 29232.8149\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          23100.0
+        ],
+        [
+          0.05,
+          24450.0
+        ],
+        [
+          0.1,
+          25050.0
+        ],
+        [
+          0.2,
+          25720.0
+        ],
+        [
+          0.3,
+          26130.0
+        ],
+        [
+          0.4,
+          26440.0
+        ],
+        [
+          0.5,
+          26700.0
+        ],
+        [
+          0.6,
+          26960.0
+        ],
+        [
+          0.7,
+          27260.0
+        ],
+        [
+          0.8,
+          27660.0
+        ],
+        [
+          0.9,
+          28220.0
+        ],
+        [
+          0.95,
+          28680.0
+        ],
+        [
+          0.99,
+          29650.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          23000.0
+        ],
+        [
+          0.05,
+          24450.0
+        ],
+        [
+          0.1,
+          25050.0
+        ],
+        [
+          0.2,
+          25750.0
+        ],
+        [
+          0.3,
+          26200.0
+        ],
+        [
+          0.4,
+          26550.0
+        ],
+        [
+          0.5,
+          26850.0
+        ],
+        [
+          0.6,
+          27150.0
+        ],
+        [
+          0.7,
+          27450.0
+        ],
+        [
+          0.8,
+          27850.0
+        ],
+        [
+          0.9,
+          28350.0
+        ],
+        [
+          0.95,
+          28950.0
+        ],
+        [
+          0.99,
+          30000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          23000.0
+        ],
+        [
+          0.05,
+          24450.0
+        ],
+        [
+          0.1,
+          25050.0
+        ],
+        [
+          0.2,
+          25800.0
+        ],
+        [
+          0.3,
+          26250.0
+        ],
+        [
+          0.4,
+          26580.0
+        ],
+        [
+          0.5,
+          26850.0
+        ],
+        [
+          0.6,
+          27120.0
+        ],
+        [
+          0.7,
+          27450.0
+        ],
+        [
+          0.8,
+          27900.0
+        ],
+        [
+          0.9,
+          28500.0
+        ],
+        [
+          0.95,
+          29000.0
+        ],
+        [
+          0.99,
+          30000.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4192
+}
