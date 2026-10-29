@@ -1,0 +1,185 @@
+{
+  "id": "nq-NGF-level",
+  "question": "What will be the closing value of front-month Henry Hub natural gas futures (NG=F on Yahoo Finance) on October 22, 2026?",
+  "resolution_criteria": "Resolves to the daily close of NG=F on Yahoo Finance for 2026-10-22. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD per MMBtu",
+  "outcome": 2.796,
+  "outcome_date": "2026-10-22",
+  "as_of": "2026-10-08",
+  "resolve_date": "2026-10-22",
+  "lower_bound": 1.0,
+  "upper_bound": 5.5,
+  "source": "yahoo",
+  "series": "NG=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for NG=F: latest close 3.2030 on 2026-10-07.\nTarget date 2026-10-22 is 10 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 10-observation returns over the last 3 years (last year weighted double):\np5: 2.5721, p10: 2.7344, p25: 2.941, p50: 3.2149, p75: 3.4548, p90: 3.7617, p95: 3.9792\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I found nothing that settles the October 22 close yet. NG=F was 3.203 on 2026-10-07, about in the middle of the code's 10-day range (median 3.21). I left out search results dated after 2026-10-08, which kept appearing. Several primary sources (AGA, NRG, Trading Economics, Oil and Gas 360) blocked direct fetches, so some figures below come from search-engine summaries.\n\n## 1. Resolution source\n- The question resolves on the Yahoo Finance NG=F daily close for 2026-10-22, the front-month NYMEX Henry Hub contract.\n- 2026-10-07: latest close was **3.203** USD/MMBtu (from the code-collected Yahoo data). An NRG early-morning note dated 2026-10-08 agrees: the prompt month settled at $3.203, up $0.09 on the day. [NRG](https://www.nrg.com/content/dam/nrg/web/en/multimedia/documents/pdfs/daily-market-update/10-08-26/update.pdf)\n- Contract in play: the October 2026 contract expired 2026-09-28 [TradingView](https://in.tradingview.com/symbols/NYMEX-NG1!/contracts). The November 2026 contract's last trading day should be 2026-10-28 (three business days before Nov 1). So on 2026-10-22, NG=F should still be the **November** contract, and there is no roll risk before the resolution date. One caveat: Yahoo's \"close\" can differ slightly from the CME settlement.\n\n## 2. Current status\n- Nothing settles the question. The price is about 3.20, mid-range, with 10 trading days to go.\n\n## 3. Recent news (newest first)\n- 2026-10-08 (Thu): EIA storage report for the week ending Oct 2 showed **+85 Bcf**, above the ~79 Bcf expected, bringing working gas to about **3,500 Bcf**. That is a bearish surprise. [Oil and Gas 360](https://www.oilandgas360.com/weekly-gas-storage-10-2-2/); [Trading Economics](https://tradingeconomics.com/united-states/natural-gas-stocks-change/news/590572)\n- 2026-10-07: front month rose about 9 cents to 3.203. [NRG](https://www.nrg.com/content/dam/nrg/web/en/multimedia/documents/pdfs/daily-market-update/10-08-26/update.pdf)\n- 2026-10-05: front month was around $3.02, supported by forecasts of cooler weather in mid-October (about Oct 12-15) in the northern and western US. [Trading Economics](https://tradingeconomics.com/commodity/natural-gas/news/592845)\n- 2026-10-01 (week ending Sep 25): storage rose +64 Bcf (in line with expectations; five-year average +80) to 3,415 Bcf. That was 138 Bcf below a year earlier and 79 Bcf above the five-year average. [Oil and Gas 360](https://www.oilandgas360.com/weekly-gas-storage-9-25/); [Trading Economics](https://tradingeconomics.com/united-states/natural-gas-stocks-change/news/588862)\n- September 2026: LNG feedgas averaged about 17.9 bcf/d, up from 17.2 bcf/d in August. Output was near record levels. [AGA](https://www.aga.org/research-policy/resource-library/natural-gas-market-indicators-october-1-2026/)\n\n## 4. Base rates\n- Code-computed 10-trading-day distribution from 3.203: p5 2.57, p10 2.73, p25 2.94, **p50 3.21**, p75 3.45, p90 3.76, p95 3.98.\n- That puts the interquartile range at roughly ±8% and the 90% interval at about -20%/+24% over 10 sessions. October is the shoulder season, when weather-forecast swings and storage surprises drive large moves.\n- Trend: the front month moved from about $2.96 (Kalshi's daily strike near Oct 1) to $3.02 (Oct 5) to $3.20 (Oct 7), so it has been firming in early October. The storage surplus over the five-year average is modest, about 2-3%.\n\n## 5. Other forecasts\n- Kalshi runs daily and weekly natural gas price markets [Kalshi](https://kalshi.com/category/commodities/natural-gas). Snapshots I found, with unclear capture times:\n  - Oct 1 daily: about 56% above $2.96. [Kalshi](https://kalshi.com/markets/kxnatgasd/natural-gas-daily/kxnatgasd-26oct0117)\n  - Oct 5 daily: 55% above $3.02. [Kalshi](https://kalshi.com/markets/kxnatgasd/natural-gas-daily/kxnatgasd-26oct0517)\n  - Oct 9 weekly: 74% above $2.899, 55% above $2.999, 31% above $3.099. This was probably captured before the Oct 7 rally. [Kalshi](https://kalshi.com/markets/kxnatgasw/natural-gas-weekly/kxnatgasw-26oct0917)\n- I found no Kalshi or Polymarket market for Oct 22 specifically, and no dated bank or EIA forecast of the November contract as of Oct 8.\n\n## 6. Upcoming events before Oct 22\n- EIA storage reports on Oct 15 (week ending Oct 9) and Oct 22 (week ending Oct 16), each at 10:30 ET. The Oct 22 report lands on the resolution day itself.\n- Updates to the 6-15 day weather models: whether the mid-October cool spell holds or turns milder, and early-winter outlooks (including any El Niño-driven expectation of a mild winter).\n- LNG feedgas levels and plant maintenance; late-season Gulf tropical activity, which could disrupt either production (bullish) or LNG exports (bearish).\n- Production levels as winter approaches; Middle East and oil-market headlines spilling over into gas.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for NG=F: latest close 3.2030 on 2026-10-07.\nTarget date 2026-10-22 is 10 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 10-observation returns over the last 3 years (last year weighted double):\np5: 2.5721, p10: 2.7344, p25: 2.941, p50: 3.2149, p75: 3.4548, p90: 3.7617, p95: 3.9792\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          2.35
+        ],
+        [
+          0.05,
+          2.58
+        ],
+        [
+          0.1,
+          2.72
+        ],
+        [
+          0.2,
+          2.88
+        ],
+        [
+          0.3,
+          2.99
+        ],
+        [
+          0.4,
+          3.08
+        ],
+        [
+          0.5,
+          3.16
+        ],
+        [
+          0.6,
+          3.24
+        ],
+        [
+          0.7,
+          3.34
+        ],
+        [
+          0.8,
+          3.47
+        ],
+        [
+          0.9,
+          3.7
+        ],
+        [
+          0.95,
+          3.9
+        ],
+        [
+          0.99,
+          4.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          2.3
+        ],
+        [
+          0.05,
+          2.56
+        ],
+        [
+          0.1,
+          2.71
+        ],
+        [
+          0.2,
+          2.88
+        ],
+        [
+          0.3,
+          3.0
+        ],
+        [
+          0.4,
+          3.09
+        ],
+        [
+          0.5,
+          3.17
+        ],
+        [
+          0.6,
+          3.25
+        ],
+        [
+          0.7,
+          3.35
+        ],
+        [
+          0.8,
+          3.49
+        ],
+        [
+          0.9,
+          3.72
+        ],
+        [
+          0.95,
+          3.93
+        ],
+        [
+          0.99,
+          4.35
+        ]
+      ],
+      [
+        [
+          0.01,
+          2.35
+        ],
+        [
+          0.05,
+          2.6
+        ],
+        [
+          0.1,
+          2.74
+        ],
+        [
+          0.2,
+          2.89
+        ],
+        [
+          0.3,
+          3.0
+        ],
+        [
+          0.4,
+          3.09
+        ],
+        [
+          0.5,
+          3.17
+        ],
+        [
+          0.6,
+          3.25
+        ],
+        [
+          0.7,
+          3.35
+        ],
+        [
+          0.8,
+          3.48
+        ],
+        [
+          0.9,
+          3.7
+        ],
+        [
+          0.95,
+          3.88
+        ],
+        [
+          0.99,
+          4.25
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4756
+}

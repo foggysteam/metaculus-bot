@@ -1,0 +1,185 @@
+{
+  "id": "nq-NGF-change",
+  "question": "What will be the percentage change in front-month Henry Hub natural gas futures (NG=F on Yahoo Finance) from the close on 2026-08-12 to the close on 2026-09-17?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-17 / close on 2026-08-12 - 1), using daily closes of NG=F on Yahoo Finance. If there is no close on 2026-09-17, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 3.459348,
+  "outcome_date": "2026-09-17",
+  "as_of": "2026-08-13",
+  "resolve_date": "2026-09-17",
+  "lower_bound": -100.0,
+  "upper_bound": 100.0,
+  "source": "yahoo",
+  "series": "NG=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for NG=F: latest close 2.8040 on 2026-08-12.\nTarget date 2026-09-17 is 25 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 25-observation returns over the last 3 years (last year weighted double):\np5: 1.9783, p10: 2.1673, p25: 2.4717, p50: 2.7774, p75: 3.1707, p90: 3.637, p95: 3.9943\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "Today is 2026-08-13 and I only used information dated on or before 2026-08-13. Several results described later events; I ignored them.\n\n## 1. Resolution source\n- 2026-08-12: Your code shows NG=F's latest close at **2.804**. I could not load Yahoo directly to confirm it. On 2026-08-12, NG=F tracks the **September 2026 (NGU26)** contract.\n- 2026-08-11: NGU26 closed at $2.767. It opened at $2.800 and traded between about $2.747 and $2.804. [Sprague](https://www.spragueenergy.com/september-nymex-natural-gas-futures-contract-closed-at-2-767-on-tuesday-august-11th/)\n- **Contract roll:** NGU26 expires 2026-08-27 (the 3rd-last business day of August). On 2026-09-17, NG=F will therefore track the **October (NGV26)** contract, which expires around 2026-09-28. The result includes the Oct-over-Sep spread. That premium is usually small and positive (contango), but I could not find its value on 2026-08-12. [CME settlements](https://www.cmegroup.com/markets/energy/natural-gas/natural-gas.settlements.html), [Barchart NGU26](https://www.barchart.com/futures/quotes/NGU26)\n\n## 2. Current status\n- Nothing has settled the question yet. The price is about 2.80, close to the statistical median (2.78).\n\n## 3. Recent news (newest first)\n- 2026-08-13 (release day): The EIA report for the week ending Aug 7 showed a 36 Bcf injection. That beat the ~31 Bcf consensus and the 33 Bcf five-year average. Stocks reached 3,153 Bcf, about 198 Bcf above the five-year average. The headline said prices slid to about $2.78. I could not open the page to check the exact time. [TradingNews](https://www.tradingnews.com/news/natural-gas-slides-to-2-78-usd-as-a-36-bcf-build0widens), [OilandGas360](https://www.oilandgas360.com/weekly-gas-storage-8-7/)\n- ~2026-08-11: NGI headline: \"Natural Gas Futures Edge Higher as September Reloads With More Heat\". [NGI](https://naturalgasintel.com/news/natural-gas-futures-edge-higher-as-september-reloads-with-more-heat/)\n- 2026-08-10: Prices rebounded to about $2.79 on LNG demand. [TradingEconomics](https://tradingeconomics.com/commodity/natural-gas/news/574149)\n- 2026-08-07: Henry Hub fell to about $2.62, the lowest since April, after a larger-than-expected storage build. [TradingEconomics](https://tradingeconomics.com/commodity/natural-gas/news/573546)\n- Early August 2026: LNG feedgas averaged 16.9 Bcf/d month-to-date, down from 17.2 in July. The drop came from reduced operations at Freeport and only one Golden Pass train running. Lower-48 output is at record levels, about 111 Bcf/d. [TradingEconomics](https://tradingeconomics.com/commodity/natural-gas/news/565866)\n- 2026-07-28: August futures (NGQ26) expired near $2.66 after a 17.7% monthly slide. The winter curve stayed much higher than the front month. [The Brief](https://www.thebrief.news/en/standard/article/6575/august-natural-gas-futures-expire-today-a-1772-monthly-slide-and-a-winter-curve-that-disagrees)\n- August 2026 STEO: EIA cut its 3Q26 Henry Hub forecast to $2.87, 50 cents lower than in July, citing weaker LNG feedgas and strong production. The 2026 average forecast fell to $3.44. EIA expects end-October storage of 3,985 Bcf, the biggest pre-winter cushion since 2016. Prices are expected to stay below $3 in the coming months. [EIA press release](https://www.eia.gov/pressroom/releases/press591.php), [STEO PDF](https://eia.gov/outlooks/steo/archives/aug26.pdf), [GreentechLead](https://greentechlead.com/energy-news/us-natural-gas-inventories-to-hit-3985-bcf-as-eia-cuts-henry-hub-price-forecast-54687)\n\n## 4. Base rates\n- The code's empirical distribution of 25-trading-day moves (last 3 years, last year double-weighted) gives these prices on 2026-09-17:\n  - p5 1.98 (-29%)\n  - p10 2.17 (-23%)\n  - p25 2.47 (-12%)\n  - p50 2.78 (-1%)\n  - p75 3.17 (+13%)\n  - p90 3.64 (+30%)\n  - p95 3.99 (+42%)\n- That historical window already contains rolls like this one, so the distribution partly reflects roll effects.\n- Trend: the front month fell from above $3 in July (EIA's July 3Q forecast was $3.37) to $2.62 on Aug 7, then recovered to about $2.80.\n- Seasonal pattern: late August to mid-September is shoulder season. Cooling demand fades and injections usually get bigger. Moves are driven mainly by weather, hurricanes, and LNG maintenance.\n\n## 5. Other forecasts\n- EIA's August STEO puts 3Q26 Henry Hub at an average of $2.87 and says prices should stay under $3 in the near term. [EIA](https://www.eia.gov/pressroom/releases/press591.php)\n- I found no Polymarket, Kalshi or Manifold market on NG=F for this window. Kalshi does run weekly and monthly natural gas price markets, but I could not get their pre-cutoff prices.\n\n## 6. Upcoming events before resolution\n- EIA weekly storage reports on Thursdays: Aug 20, Aug 27, Sep 3, Sep 10 and **Sep 17** (resolution day, 10:30 ET).\n- 2026-08-27: September contract expires and NG=F rolls to October. Expect a jump the size of the Oct-Sep spread.\n- Around 2026-09-09: September STEO.\n- Late August: Freeport LNG maintenance is expected to end, which would lift feedgas. Golden Pass ramp-up progress also matters.\n- Peak Atlantic hurricane season (late Aug to mid-Sep). Gulf storms can raise or cut prices, depending on whether they hit supply or LNG demand.\n- Late-summer heat or cooler forecasts (NOAA 6-10 and 8-14 day outlooks), and production running near the 111 Bcf/d record.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for NG=F: latest close 2.8040 on 2026-08-12.\nTarget date 2026-09-17 is 25 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 25-observation returns over the last 3 years (last year weighted double):\np5: 1.9783, p10: 2.1673, p25: 2.4717, p50: 2.7774, p75: 3.1707, p90: 3.637, p95: 3.9943\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -36.0
+        ],
+        [
+          0.05,
+          -25.0
+        ],
+        [
+          0.1,
+          -19.0
+        ],
+        [
+          0.2,
+          -12.0
+        ],
+        [
+          0.3,
+          -7.0
+        ],
+        [
+          0.4,
+          -3.5
+        ],
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          0.6,
+          3.0
+        ],
+        [
+          0.7,
+          7.0
+        ],
+        [
+          0.8,
+          12.5
+        ],
+        [
+          0.9,
+          21.0
+        ],
+        [
+          0.95,
+          29.0
+        ],
+        [
+          0.99,
+          46.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -37.0
+        ],
+        [
+          0.05,
+          -26.0
+        ],
+        [
+          0.1,
+          -19.0
+        ],
+        [
+          0.2,
+          -11.0
+        ],
+        [
+          0.3,
+          -6.0
+        ],
+        [
+          0.4,
+          -2.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          4.0
+        ],
+        [
+          0.7,
+          8.0
+        ],
+        [
+          0.8,
+          13.0
+        ],
+        [
+          0.9,
+          22.0
+        ],
+        [
+          0.95,
+          30.0
+        ],
+        [
+          0.99,
+          46.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -36.0
+        ],
+        [
+          0.05,
+          -25.0
+        ],
+        [
+          0.1,
+          -19.0
+        ],
+        [
+          0.2,
+          -11.5
+        ],
+        [
+          0.3,
+          -6.5
+        ],
+        [
+          0.4,
+          -2.5
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.6,
+          4.0
+        ],
+        [
+          0.7,
+          8.0
+        ],
+        [
+          0.8,
+          13.5
+        ],
+        [
+          0.9,
+          22.0
+        ],
+        [
+          0.95,
+          30.0
+        ],
+        [
+          0.99,
+          47.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4261
+}

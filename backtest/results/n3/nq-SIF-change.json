@@ -1,0 +1,185 @@
+{
+  "id": "nq-SIF-change",
+  "question": "What will be the percentage change in front-month silver futures (SI=F on Yahoo Finance) from the close on 2026-08-14 to the close on 2026-09-20?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-20 / close on 2026-08-14 - 1), using daily closes of SI=F on Yahoo Finance. If there is no close on 2026-09-20, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 2.412754,
+  "outcome_date": "2026-09-18",
+  "as_of": "2026-08-16",
+  "resolve_date": "2026-09-20",
+  "lower_bound": -100.0,
+  "upper_bound": 100.0,
+  "source": "yahoo",
+  "series": "SI=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for SI=F: latest close 64.9880 on 2026-08-14.\nTarget date 2026-09-20 is 25 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 25-observation returns over the last 3 years (last year weighted double):\np5: 53.1966, p10: 57.4241, p25: 62.7575, p50: 67.1566, p75: 71.8321, p90: 78.3995, p95: 87.2322\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I'm writing up the brief now, using only sources dated on or before 2026-08-16. Many search results were dated later than that, so I left them out.\n\n## 1. Resolution source\n- 2026-08-14: Yahoo Finance's SI=F closed at **64.988**. That is the base value from the data collected by code. I could not open Yahoo directly to check it.\n- 2026-08-14: A secondary source gave spot silver at about $63.98 that morning, down 1.56% from the prior close of $64.99. September futures traded between $63.85 and $64.88 during the session. [naturalresourcestocks](https://naturalresourcestocks.net/silver-price-today-aug-14-2026/)\n- Note on the contract: SI=F follows the front-month COMEX contract. The September 2026 contract (SIU26) reaches first notice around late August, so Yahoo's series probably switches to December (SIZ26) before 2026-09-20. December usually trades a little above September (contango, maybe about 0.5% to 1%). That switch could add a small upward jump to the measured change. I have not confirmed the exact switch date.\n\n## 2. Current status\n- Nothing has happened yet that settles the question. The 25-session window runs from 2026-08-14 to 2026-09-18.\n\n## 3. Recent news (newest first)\n- 2026-08-14: Silver pulled back after rising above $66 earlier in the week. [naturalresourcestocks](https://naturalresourcestocks.net/silver-price-today-aug-14-2026/)\n- 2026-08-12: Silver was near $64.78 after trading between 64.23 and 66.49, with traders waiting for CPI. [ISA Bullion](https://www.isabullion.com/?p=8607)\n- About 2026-08-12/13: July CPI came in soft, up 0.1% for the month, with the annual rate easing to 3.4% from 3.5%. Market odds of a September Fed **hike** fell to about one-third, which supported metals. [FXEmpire](https://www.fxempire.com/forecasts/article/gold-xau-usd-silver-price-forecast-softer-cpi-shifts-focus-to-ppi-whats-next-1616519)\n- 2026-08-10: Silver opened CPI week flat near $63.50, close to a roughly seven-week high of $65.16 set on 08-07. The July jobs report was weak (reportedly -23K against +80K expected), and CME FedWatch odds of a September hike fell to 46% from 67%. [TMGM/FXStreet](https://www.tmgm.com/es/analysis/market-news/article/silver-price-forecast-xag-usd-starts-us-cpi-week-on-flat-note-around-6350-202608100316)\n- Background: the Fed under Chair Warsh is weighing **rate hikes** with inflation around 3.4%. That works against non-yielding metals, so silver is very sensitive to how hike odds move.\n\n## 4. Base rates\n- From the code's empirical distribution of 25-session returns over the last 3 years (last year weighted double), expressed as % change from 64.988:\n  - p5: -18.1%\n  - p10: -11.6%\n  - p25: -3.4%\n  - p50: +3.3%\n  - p75: +10.5%\n  - p90: +20.6%\n  - p95: +34.2%\n- This is a very wide range. Silver has been extremely volatile over 2025-26, and that history includes the big rally and crash. The middle 50% of outcomes spans about 14 percentage points.\n- July 2026 monthly high (based on daily highs) was about $62.62, per a Manifold question. Silver went from the low $60s in July to $63-66 in early-to-mid August, about seven-week highs. [Manifold](https://manifold.markets/uair01/silver-futures-price-august-2026-be)\n\n## 5. Other forecasts\n- Kalshi and Robinhood list daily and hourly silver-price contracts. I did not find a market price as of 2026-08-16 for a mid or late September level. [Robinhood](https://robinhood.com/us/en/prediction-markets/metals/events/silver-price-august-6-2026-aug-06-2026/)\n- I did not find any bank forecasts made before the cutoff that target mid-September.\n\n## 6. Upcoming events before resolution\n- Week of 08-17: FOMC minutes (from the July meeting).\n- Late August (about 08-27 to 08-29): Jackson Hole symposium, where a Warsh speech would be a key signal on hikes.\n- About 08-27/28: first notice for the September COMEX contract and the likely SI=F switch to December.\n- 2026-09-04: August jobs report.\n- About 2026-09-10/11: August CPI and PPI.\n- FOMC meeting in mid-September, scheduled before the resolution date (about 09-15/16). Whether the Fed hikes is the biggest single risk.\n- Ongoing: moves in the US dollar and Treasury yields, Middle East geopolitics, and the structural silver supply deficit.\n\nSources:\n- [naturalresourcestocks Aug 14](https://naturalresourcestocks.net/silver-price-today-aug-14-2026/)\n- [ISA Bullion Aug 12](https://www.isabullion.com/?p=8607)\n- [FXEmpire CPI](https://www.fxempire.com/forecasts/article/gold-xau-usd-silver-price-forecast-softer-cpi-shifts-focus-to-ppi-whats-next-1616519)\n- [TMGM Aug 10](https://www.tmgm.com/es/analysis/market-news/article/silver-price-forecast-xag-usd-starts-us-cpi-week-on-flat-note-around-6350-202608100316)\n- [Manifold](https://manifold.markets/uair01/silver-futures-price-august-2026-be)\n- [Robinhood](https://robinhood.com/us/en/prediction-markets/metals/events/silver-price-august-6-2026-aug-06-2026/)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for SI=F: latest close 64.9880 on 2026-08-14.\nTarget date 2026-09-20 is 25 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 25-observation returns over the last 3 years (last year weighted double):\np5: 53.1966, p10: 57.4241, p25: 62.7575, p50: 67.1566, p75: 71.8321, p90: 78.3995, p95: 87.2322\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -26.0
+        ],
+        [
+          0.05,
+          -16.5
+        ],
+        [
+          0.1,
+          -11.5
+        ],
+        [
+          0.2,
+          -6.5
+        ],
+        [
+          0.3,
+          -3.5
+        ],
+        [
+          0.4,
+          -1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          3.0
+        ],
+        [
+          0.7,
+          5.8
+        ],
+        [
+          0.8,
+          9.5
+        ],
+        [
+          0.9,
+          15.0
+        ],
+        [
+          0.95,
+          20.5
+        ],
+        [
+          0.99,
+          33.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -25.0
+        ],
+        [
+          0.05,
+          -16.0
+        ],
+        [
+          0.1,
+          -11.5
+        ],
+        [
+          0.2,
+          -6.5
+        ],
+        [
+          0.3,
+          -3.3
+        ],
+        [
+          0.4,
+          -0.9
+        ],
+        [
+          0.5,
+          1.2
+        ],
+        [
+          0.6,
+          3.3
+        ],
+        [
+          0.7,
+          6.0
+        ],
+        [
+          0.8,
+          9.5
+        ],
+        [
+          0.9,
+          15.0
+        ],
+        [
+          0.95,
+          20.5
+        ],
+        [
+          0.99,
+          33.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -27.0
+        ],
+        [
+          0.05,
+          -17.0
+        ],
+        [
+          0.1,
+          -12.5
+        ],
+        [
+          0.2,
+          -7.0
+        ],
+        [
+          0.3,
+          -3.5
+        ],
+        [
+          0.4,
+          -1.0
+        ],
+        [
+          0.5,
+          1.2
+        ],
+        [
+          0.6,
+          3.5
+        ],
+        [
+          0.7,
+          6.2
+        ],
+        [
+          0.8,
+          9.8
+        ],
+        [
+          0.9,
+          15.5
+        ],
+        [
+          0.95,
+          21.0
+        ],
+        [
+          0.99,
+          34.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3783
+}

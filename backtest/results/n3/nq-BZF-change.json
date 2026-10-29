@@ -1,0 +1,185 @@
+{
+  "id": "nq-BZF-change",
+  "question": "What will be the percentage change in front-month Brent crude oil futures (BZ=F on Yahoo Finance) from the close on 2026-08-14 to the close on 2026-09-21?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-21 / close on 2026-08-14 - 1), using daily closes of BZ=F on Yahoo Finance. If there is no close on 2026-09-21, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 13.352915,
+  "outcome_date": "2026-09-21",
+  "as_of": "2026-08-17",
+  "resolve_date": "2026-09-21",
+  "lower_bound": -50.0,
+  "upper_bound": 50.0,
+  "source": "yahoo",
+  "series": "BZ=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for BZ=F: latest close 88.5200 on 2026-08-14.\nTarget date 2026-09-21 is 26 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 26-observation returns over the last 3 years (last year weighted double):\np5: 74.766, p10: 79.5711, p25: 83.7895, p50: 87.8753, p75: 93.8794, p90: 101.5355, p95: 109.8571\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "# Brent (BZ=F) % change, 2026-08-14 close to 2026-09-21 close: research brief\n\n## 1. Resolution source\n- 2026-08-14: The baseline close is **88.52**, from the Yahoo BZ=F data you supplied. CNBC reported the same figure: Brent \"rose 1.7% to close at $88.52\" and WTI settled at $82.40. [CNBC](https://www.cnbc.com/2026/08/14/oil-prices-today-brent-wti-hormuz.html)\n- Contract months: on Aug 14, BZ=F was the October ICE Brent contract. That contract expires around Aug 31, so by Sep 21 BZ=F should be tracking November. If the curve is backwardated (nearer months priced above later ones), the switch alone would lower the series' level. I couldn't find a spread figure dated on or before Aug 17. I didn't fetch the Yahoo page directly.\n- Rough thresholds: −10% is about 79.67, 0% is 88.52, +10% is about 97.37.\n\n## 2. Current status\n- Nothing settles the question yet. It depends on the Sep 21 close, which is still five weeks away.\n- 2026-08-17: Brent rose 2.7% to settle at **$90.87**, about +2.7% against the baseline. The US-Iran memorandum of understanding (MOU) signed June 17 expired that day. Iran ruled out talks to extend it, and Trump said he wasn't interested in an extension. [CNBC](https://www.cnbc.com/2026/08/17/oil-prices-iran-war-strait-hormuz.html)\n\n## 3. Recent news (newest first)\n- 2026-08-17: A senior Iranian official told Reuters that Tehran would \"shift to offense\" if diplomacy with the US fails. The June MOU had been meant to reopen the Strait of Hormuz during 60 days of nuclear talks. [CNBC](https://www.cnbc.com/2026/08/17/oil-prices-iran-war-strait-hormuz.html)\n- 2026-08-14: Prices rose after the US said its naval blockade of Iranian ports could last indefinitely and threatened Iran with \"economic isolation\". Brent gained about 5% on the week. [CNBC](https://www.cnbc.com/2026/08/14/oil-prices-today-brent-wti-hormuz.html), [Trading Economics](https://tradingeconomics.com/commodity/brent-crude-oil/news/575380)\n- 2026-08-14: Barclays kept its 2026 Brent forecast at $96. It expects the recent stock build to reverse and said hopes for a Hormuz deal had faded. [GBM/Reuters](https://gbm.com/media/noticia/barclays-mantiene-prevision-de-que-precio-del-petroleo-brent-se-situe-en-96-dolares-barril-en-2026/)\n- Week of 2026-08-10: The IEA cut its demand outlook, saying prolonged conflict and high prices are weighing on consumption. The US claims up to 9 mb/d is transiting Hormuz. Iran and Oman have not agreed on reopening. [Trading Economics](https://tradingeconomics.com/commodity/brent-crude-oil/news/575380)\n- 2026-08-12: Prices rose after attacks dented hopes that Hormuz would reopen. [Al Jazeera](https://www.aljazeera.com/economy/2026/8/12/oil-prices-rise-as-attacks-dent-hopes-for-strait-of-hormuz-reopening)\n- 2026-08-11: The EIA's August Short-Term Energy Outlook (STEO) raised its forecasts. It now expects Brent to average $87 in 2026, $85.21 in Q3 and $78.00 in Q4, and assumes severe Hormuz constraints persist through August. [S&P Global](https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/081126-us-eia-raises-brent-outlook-to-87b-on-hormuz-shipping-constraints), [OGJ](https://ogj.com/general-interest/economics-markets/news/55397500/eia-raises-third-quarter-brent-forecast-to-85-bbl-on-strait-of-hormuz-disruptions)\n- 2026-08-10: Brent was around $88 as Iranian demands clouded the outlook for a deal. [CNBC](https://www.cnbc.com/2026/08/10/oil-prices-today-brent-wti-hormuz-trump-iran.html)\n- 2026-08-06: Prices jumped after Iran published a restrictive draft plan for Hormuz. [CNBC](https://www.cnbc.com/2026/08/06/oil-price-iran-war-strait-hormuz-oman-deal.html)\n- 2026-08-04: Brent fell to about $79 after Treasury Secretary Bessent said a deal might come that week. [CNBC](https://www.cnbc.com/2026/08/04/oil-rises-after-selloff-as-talks-to-end-us-iran-war-remain-uncertain.html)\n- 2026-08-02: OPEC+ approved a 188 kb/d increase for September, completing the unwinding of the 1.65 mb/d voluntary cuts. [Arab News](https://www.arabnews.pk/node/2653118/business-economy)\n\n## 4. Base rates\n- Code-computed distribution of the Sep 21 price, from 26-observation returns over the last 3 years (last year weighted double):\n\n  | Percentile | Price | Change vs 88.52 |\n  |---|---|---|\n  | p5 | 74.77 | about −15.5% |\n  | p10 | 79.57 | −10.1% |\n  | p25 | 83.79 | −5.3% |\n  | p50 | 87.88 | −0.7% |\n  | p75 | 93.88 | +6.1% |\n  | p90 | 101.54 | +14.7% |\n  | p95 | 109.86 | +24.1% |\n- Volatility around the war is very high. Brent went from about $79 on Aug 4 to $88.5 on Aug 14, roughly +12% in eight trading days. It traded at $63 to $71 in early 2026. [Wikipedia chronology](https://en.wikipedia.org/wiki/2026%E2%80%932028_world_oil_market_chronology)\n- The price is driven by headlines in both directions. Talk of a deal produced sharp drops (Aug 4), and stalled talks produced quick rebounds.\n\n## 5. Other forecasts\n- Kalshi lists weekly and daily Brent markets (KXBRENTW, KXBRENTD) for September dates. I couldn't verify any prices captured on or before Aug 17, so I'm not reporting any. [Kalshi](https://kalshi.com/markets/kxbrentw/brent-oil/kxbrentw-26sep1817)\n- I found no Polymarket or Manifold market on this.\n- Analyst views:\n  - EIA (Aug 11): Q3 average $85.21, Q4 $78, so it expects prices to ease.\n  - Barclays (Aug 14): $96 for 2026, bullish.\n  - CMC Markets: futures were pricing 2027 Brent near $75. [CMC](https://www.cmcmarkets.com/en-gb/news-and-analysis/brent-and-natural-gas-await-key-steo-and-omr-reports)\n\n## 6. Upcoming events before resolution\n- Ongoing: US-Iran diplomacy now that the MOU has lapsed. Possible outcomes range from escalation (Iran threatening offense, the US blockade continuing) to a sudden Hormuz deal, which could cause a large drop like the one on Aug 4.\n- About Aug 31: the October Brent contract expires and BZ=F switches to November, which could shift the level depending on the spread.\n- About Sep 6: the OPEC+ monthly meeting on October output. The core group is widely expected to hold steady after the cuts were fully unwound.\n- About Sep 9 to 11: the EIA September STEO, then the IEA and OPEC monthly reports.\n- Mid-September: the FOMC meeting (about Sep 15 to 16).\n- Weekly: EIA inventory reports every Wednesday. Barclays expects the stock build to reverse.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BZ=F: latest close 88.5200 on 2026-08-14.\nTarget date 2026-09-21 is 26 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 26-observation returns over the last 3 years (last year weighted double):\np5: 74.766, p10: 79.5711, p25: 83.7895, p50: 87.8753, p75: 93.8794, p90: 101.5355, p95: 109.8571\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -27.0
+        ],
+        [
+          0.05,
+          -18.0
+        ],
+        [
+          0.1,
+          -13.0
+        ],
+        [
+          0.2,
+          -7.5
+        ],
+        [
+          0.3,
+          -4.0
+        ],
+        [
+          0.4,
+          -1.5
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.6,
+          2.5
+        ],
+        [
+          0.7,
+          5.0
+        ],
+        [
+          0.8,
+          8.5
+        ],
+        [
+          0.9,
+          14.0
+        ],
+        [
+          0.95,
+          19.0
+        ],
+        [
+          0.99,
+          30.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -27.0
+        ],
+        [
+          0.05,
+          -18.0
+        ],
+        [
+          0.1,
+          -13.0
+        ],
+        [
+          0.2,
+          -7.5
+        ],
+        [
+          0.3,
+          -3.5
+        ],
+        [
+          0.4,
+          -1.0
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          3.0
+        ],
+        [
+          0.7,
+          5.5
+        ],
+        [
+          0.8,
+          9.0
+        ],
+        [
+          0.9,
+          14.5
+        ],
+        [
+          0.95,
+          20.0
+        ],
+        [
+          0.99,
+          32.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -28.0
+        ],
+        [
+          0.05,
+          -18.0
+        ],
+        [
+          0.1,
+          -13.0
+        ],
+        [
+          0.2,
+          -7.5
+        ],
+        [
+          0.3,
+          -4.0
+        ],
+        [
+          0.4,
+          -1.5
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.6,
+          2.5
+        ],
+        [
+          0.7,
+          5.0
+        ],
+        [
+          0.8,
+          8.5
+        ],
+        [
+          0.9,
+          14.0
+        ],
+        [
+          0.95,
+          19.0
+        ],
+        [
+          0.99,
+          30.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4929
+}

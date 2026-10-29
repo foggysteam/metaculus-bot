@@ -1,0 +1,185 @@
+{
+  "id": "nq-HGF-change",
+  "question": "What will be the percentage change in front-month copper futures (HG=F on Yahoo Finance) from the close on 2026-08-21 to the close on 2026-09-27?",
+  "resolution_criteria": "Resolves to 100 x (close on 2026-09-27 / close on 2026-08-21 - 1), using daily closes of HG=F on Yahoo Finance. If there is no close on 2026-09-27, the last close before it is used.",
+  "unit": "percent",
+  "outcome": 1.763047,
+  "outcome_date": "2026-09-25",
+  "as_of": "2026-08-23",
+  "resolve_date": "2026-09-27",
+  "lower_bound": -35.0,
+  "upper_bound": 40.0,
+  "source": "yahoo",
+  "series": "HG=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for HG=F: latest close 6.5795 on 2026-08-21.\nTarget date 2026-09-27 is 25 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 25-observation returns over the last 3 years (last year weighted double):\np5: 5.8485, p10: 6.1496, p25: 6.4504, p50: 6.7939, p75: 7.1181, p90: 7.3479, p95: 7.4692\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I found enough to cover all six headings, but I could only read search-result summaries. Every page fetch (Bloomberg Law, Mining Reporters, Crux Investor, Rio Times, Trading Economics, Gold Price Tracker) was refused by the proxy. Several results contained material dated after 2026-08-23, and I left all of it out.\n\n## 1. Resolution source\n- Yahoo Finance HG=F (front-month COMEX copper, US$/lb) daily close. Your code's data shows the base close as **6.5795 on 2026-08-21**. Gold Price Tracker, which uses Yahoo's HG=F data, also lists $6.58 for Aug 21. [goldpricetracker](https://goldpricetracker.com/copper-history/2026-08/)\n- Contract roll risk: HG=F is a rolling continuous series. The September 2026 contract's last trading day should be around Sep 28 (third-last business day; I did not verify this). Yahoo may switch from Sep to Dec, or Aug to Sep, during the window. Any Sep/Dec price gap would then show up as a jump in the series. I could not confirm which contract month Yahoo showed on Aug 21.\n\n## 2. Current status\n- Nothing has settled the question. The window is about 24 to 25 trading days.\n- Base level: 6.5795, about 2% below the COMEX record of $6.7140 set on 2026-08-12. [miningreporters](https://www.miningreporters.com/noticia/news/2026/08/copper-record-us-tariffs-global-surplus-squeeze)\n\n## 3. Recent news (newest first)\n- 2026-08-21: Pre-market note says copper was up about 2.2% as metals rallied after the previous day's selloff. [swingfolio](https://swingfolio.com/daily/us/2026-08-21/morning)\n- 2026-08-19/20: HG=F closed around $6.49 (Aug 19) and $6.46 (Aug 20), after front-month copper fell about 1.8% on Aug 18 on China concerns. Falling inventories and energy-transition demand cushioned the drop. [goldpricetracker](https://goldpricetracker.com/copper-history/2026-08/), [Rio Times](https://www.riotimesonline.com/copper-markets-latam-thursday-august-20-2026/)\n- Mid-Aug 2026: Societe Generale modelling put the chance that the 15% refined-copper tariff takes effect at about 14.6%. If an exemption is announced, the COMEX premium over the LME could unwind; if the tariff is confirmed, the premium could widen. [Crux Investor](https://www.cruxinvestor.com/posts/coppers-record-run-masks-a-639-000-tonne-surplus-risk)\n- 2026-08-12 and 2026-08-05: COMEX records of $6.7140 and $6.7045. COMEX inventories hit a record (about 675k t) after weeks of tariff-driven stockpiling. More than 200k t arrived at US ports in July, the largest monthly figure since IHS Markit began tracking in 2014. [miningreporters](https://www.miningreporters.com/noticia/news/2026/08/copper-record-us-tariffs-global-surplus-squeeze), [Qatar Tribune](https://www.qatar-tribune.com/article/250626/business/us-tariff-threat-disrupts-copper-surplus-as-prices-near-all-time-peak)\n- Tariff background: the July 30, 2025 proclamation set a June 30, 2026 deadline for a Commerce update on whether to impose a phased refined-copper duty (15% from 2027-01-01, 30% from 2028). Commerce reportedly missed that deadline. Copper tariffs were modified in April 2026 and again by Proclamation 11032 on June 1, 2026. [Polsinelli](https://www.polsinelli.com/customs/publications/new-section-232-tariffs-formalized-on-copper-imports), [CRS](https://www.everycrsreport.com/files/2026-04-23_IN12614_6b675a9713bbfc628cc4e9a221cde35c68a51f22.pdf), [Plante Moran](https://www.plantemoran.com/explore-our-thinking/insight/2026/06/section-232-update)\n- Some analysts point to a large global surplus (about 639k t) hidden by US stockpiling. [Crux Investor](https://www.cruxinvestor.com/posts/coppers-record-run-masks-a-639-000-tonne-surplus-risk)\n\n## 4. Base rates\n- Your code's empirical distribution of 25-observation returns (3 years, last year weighted double), converted to percent change from 6.5795:\n  - p5: -11.1%\n  - p10: -6.5%\n  - p25: -2.0%\n  - p50: **+3.3%**\n  - p75: +8.2%\n  - p90: +11.7%\n  - p95: +13.5%\n- The positive median reflects copper's strong uptrend over the period. Over 5 weeks, the middle 50% of outcomes spans about 10 points. The tails are fat on the downside because of tariff-headline crashes; COMEX fell about 20% in a day in July 2025 when the exemption for refined copper was announced.\n- Daily moves of 1.5-2% were common in mid-August 2026.\n\n## 5. Other forecasts\n- Kalshi lists daily and weekly copper contracts, including a Sep 25 weekly contract. The snapshots I found come from trading after Aug 23, so I left them out. I found no Polymarket or Manifold market on this question. [Kalshi](https://kalshi.com/markets/kxcopperw/copper-weekly-price/kxcopperw-26sep2517)\n- Bank views as of Aug 23: SocGen's tariff probability above. I could not find a dated pre-Aug-23 bank target for end-Q3 2026. Goldman's January 2026 note expected a Q4 2026 price of $11,200/t LME and did not expect prices above $13,000 to last; LME has since gone far above that. [Mining Weekly](https://www.miningweekly.com/article/goldman-sachs-raises-first-half-copper-price-forecast-2026-01-09)\n\n## 6. Upcoming events before resolution\n- A refined-copper Section 232 decision or Commerce update could come at any time; this is the biggest risk for COMEX specifically. An exemption would hit the COMEX premium hard; a confirmed tariff would support it.\n- FOMC meeting in mid-September 2026; US CPI and PCE data; the Jackson Hole aftermath. I did not verify the exact dates.\n- China August activity data (about mid-September), China demand and premiums, and LME stock trends.\n- Chile and other mine supply disruptions. A Centinela strike was recently resolved and copper fell 1.23% on that news. [Rio Times](https://www.riotimesonline.com/chile-centinela-strike-ends-copper-falls-2026/)\n- The front-month roll on Yahoo around late September (see section 1).\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for HG=F: latest close 6.5795 on 2026-08-21.\nTarget date 2026-09-27 is 25 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 25-observation returns over the last 3 years (last year weighted double):\np5: 5.8485, p10: 6.1496, p25: 6.4504, p50: 6.7939, p75: 7.1181, p90: 7.3479, p95: 7.4692\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          -19.0
+        ],
+        [
+          0.05,
+          -11.5
+        ],
+        [
+          0.1,
+          -7.5
+        ],
+        [
+          0.2,
+          -4.0
+        ],
+        [
+          0.3,
+          -2.0
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          2.3
+        ],
+        [
+          0.7,
+          4.0
+        ],
+        [
+          0.8,
+          6.3
+        ],
+        [
+          0.9,
+          9.5
+        ],
+        [
+          0.95,
+          12.0
+        ],
+        [
+          0.99,
+          17.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          -21.0
+        ],
+        [
+          0.05,
+          -11.5
+        ],
+        [
+          0.1,
+          -7.5
+        ],
+        [
+          0.2,
+          -4.0
+        ],
+        [
+          0.3,
+          -2.0
+        ],
+        [
+          0.4,
+          -0.3
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          2.3
+        ],
+        [
+          0.7,
+          3.8
+        ],
+        [
+          0.8,
+          6.0
+        ],
+        [
+          0.9,
+          9.0
+        ],
+        [
+          0.95,
+          11.5
+        ],
+        [
+          0.99,
+          17.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          -19.0
+        ],
+        [
+          0.05,
+          -11.5
+        ],
+        [
+          0.1,
+          -8.0
+        ],
+        [
+          0.2,
+          -4.5
+        ],
+        [
+          0.3,
+          -2.2
+        ],
+        [
+          0.4,
+          -0.5
+        ],
+        [
+          0.5,
+          1.0
+        ],
+        [
+          0.6,
+          2.5
+        ],
+        [
+          0.7,
+          4.2
+        ],
+        [
+          0.8,
+          6.5
+        ],
+        [
+          0.9,
+          9.5
+        ],
+        [
+          0.95,
+          12.0
+        ],
+        [
+          0.99,
+          17.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4551
+}

@@ -1,0 +1,185 @@
+{
+  "id": "nq-BZF-level",
+  "question": "What will be the closing value of front-month Brent crude oil futures (BZ=F on Yahoo Finance) on September 19, 2026?",
+  "resolution_criteria": "Resolves to the daily close of BZ=F on Yahoo Finance for 2026-09-19. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD per barrel",
+  "outcome": 103.870003,
+  "outcome_date": "2026-09-18",
+  "as_of": "2026-08-22",
+  "resolve_date": "2026-09-19",
+  "lower_bound": 50.0,
+  "upper_bound": 150.0,
+  "source": "yahoo",
+  "series": "BZ=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for BZ=F: latest close 94.3900 on 2026-08-21.\nTarget date 2026-09-19 is 20 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 20-observation returns over the last 3 years (last year weighted double):\np5: 79.3454, p10: 85.9378, p25: 89.723, p50: 94.1467, p75: 99.3253, p90: 105.6808, p95: 117.4171\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I could only collect news up to 2026-08-22. Most page fetches were blocked by the proxy, so several facts below come from search-result summaries rather than full articles.\n\n## 1. Resolution source\n- The question resolves on the Yahoo Finance daily close of BZ=F. 2026-09-19 is a Saturday, so the Friday **2026-09-18** close will be used.\n- 2026-08-21: the latest BZ=F close is **94.39**, from the data you supplied. I could not fetch Yahoo directly.\n- Contract roll: BZ=F is a rolling front-month series. ICE Brent October 2026 normally expires on the last business day of August, so by 2026-09-18 BZ=F should be tracking the **November 2026** contract. If the curve is in backwardation, the roll alone can lower the quoted price. I did not find current spread data, so check the October/November spread.\n- 2026-08-21: Fortune put Brent at about $95.29 at 8 a.m. ET. Barchart showed the October 2026 contract's daily high at 94.83. [Fortune](https://fortune.com/article/price-of-oil-08-21-2026/), [Barchart](https://www.barchart.com/futures/quotes/CBV26)\n\n## 2. Current status\n- Nothing has settled the question. Prices are being driven by the US-Iran war and the closed Strait of Hormuz, so headline risk in both directions is very high.\n\n## 3. Recent news (newest first)\n- 2026-08-21: CNBC headline: \"Oil prices are little changed after Iran's president indicates Tehran wants war to end soon.\" Barchart said crude rose as Middle East hostilities continued. [CNBC](https://www.cnbc.com/2026/08/21/oil-prices-us-iran.html), [Barchart](https://www.barchart.com/futures/quotes/CBV26)\n- About 2026-08-18 (a Tuesday, date not confirmed): Brent neared $92, its highest of the month, after a UAE missile alert and Trump attacks on Tehran. [Al-Monitor](https://www.al-monitor.com/originals/2026/08/oil-nears-92-uae-missile-alert-trump-claims-iran-talks-stuck)\n- 2026-08-18: Trump said \"no talks\" with Iran were happening or scheduled and that the naval blockade \"remains in full force.\" A regional source told CNN that Iran and Oman expected a Hormuz arrangement within days. [CNN](https://www.cnn.com/2026/08/18/world/live-news/iran-war-trump), [Bloomberg](https://www.bloomberg.com/news/articles/2026-08-18/trump-takes-hard-line-on-iran-as-hormuz-standoff-drags-on)\n- 2026-08-17: the 60-day US-Iran truce from June ran out and Trump declined to extend it. He also threatened Oman. Brent was about $88.85. [CNBC](https://www.cnbc.com/2026/08/17/us-iran-war-trump-hormuz.html), [CNN](https://www.cnn.com/2026/08/17/world/live-news/iran-war-trump)\n- 2026-08-12: attacks hurt hopes that Hormuz would reopen, and Brent approached $90. [Al Jazeera](https://www.aljazeera.com/economy/2026/8/12/oil-prices-rise-as-attacks-dent-hopes-for-strait-of-hormuz-reopening)\n- 2026-08-10/11: Iran said Hormuz would stay closed until its conditions were met, including unfreezing its funds. Brent settled at $87.72 on 08-10. [CNBC](https://www.cnbc.com/2026/08/11/oil-prices-today-us-crude-84.html), [Al Jazeera](https://www.aljazeera.com/economy/2026/8/10/oil-prices-climb-as-iranian-demands-cloud-outlook-for-strait-of-hormuz)\n- 2026-08-03: Trump said he had called off a strike on Iran and Brent fell 4.7% to $83.77. [CNBC](https://www.cnbc.com/2026/08/03/oil-prices-today-wti-brent-hormuz-trump-iran.html)\n- 2026-07-29: Brent rose 7.9% to $90.74 after an Iranian missile attack on US forces. [CNBC](https://www.cnbc.com/2026/07/29/oil-prices-today-brent-wti-iran-us-hormuz.html)\n\n## 4. Base rates\n- Code baseline for 20 trading days ahead: p5 79.3, p10 85.9, p25 89.7, **p50 94.1**, p75 99.3, p90 105.7, p95 117.4.\n- August 2026: Brent moved roughly from $83 (08-03) to $94.4 (08-21), a swing of about 13% in under three weeks. Single-day moves of 4% to 8% have happened repeatedly on war headlines (07-29: +7.9%; 08-03: -4.7%). In March 2026, Brent dropped about 8% in one day on \"war ending soon\" comments. [newsonair](https://www.newsonair.gov.in/oil-prices-fall-sharply-after-trump-says-iran-war-could-end-soon)\n- Trend: rising through mid-to-late August as deal hopes faded. 94.39 is near the month's high.\n\n## 5. Other forecasts\n- 2026-08-11: the EIA August STEO forecast Brent averaging about $85 in Q3 2026 and $78 in Q4, with $86.81 for full-year 2026. That points to easing prices, but the forecast was made below current levels. [S&P Global](https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/081126-us-eia-raises-brent-outlook-to-87b-on-hormuz-shipping-constraints), [Ship & Bunker](https://shipandbunker.com/news/world/111159-ship-bunker-raises-q3-bunker-price-outlook-by-100mt-after-eia-abandons-hopes-of-early-hormuz-recovery)\n- Analysts warn that the war premium could vanish quickly once a Hormuz deal is reached. [Yahoo Finance](https://finance.yahoo.com/markets/commodities/articles/oils-war-premium-could-vanish-004013222.html)\n- Kalshi lists daily and weekly Brent markets, including the week ending 2026-09-18 ([kxbrentw-26sep1817](https://kalshi.com/markets/kxbrentw/brent-oil/kxbrentw-26sep1817)). I could not get prices as of 2026-08-22. I found no Polymarket or Manifold market on this question.\n- I found no August 2026 bank forecast revisions, for example from Goldman.\n\n## 6. Upcoming events before 2026-09-18\n- US-Iran or Oman-mediated Hormuz talks: a deal could cause a sharp sell-off, while escalation, such as strikes or attacks on Gulf states and shipping, could push prices higher. The US naval blockade is still in place.\n- About 2026-08-28 to 08-31: the October Brent contract expires and BZ=F rolls to November.\n- Early September: OPEC+ monthly meeting (exact date not confirmed).\n- About 2026-09-09: EIA September STEO. Mid-September: OPEC and IEA monthly oil reports (dates not confirmed).\n- About 2026-09-15/16: FOMC meeting (date not confirmed).\n- Weekly EIA inventory reports every Wednesday. US commercial crude stocks are below the five-year low.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BZ=F: latest close 94.3900 on 2026-08-21.\nTarget date 2026-09-19 is 20 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 20-observation returns over the last 3 years (last year weighted double):\np5: 79.3454, p10: 85.9378, p25: 89.723, p50: 94.1467, p75: 99.3253, p90: 105.6808, p95: 117.4171\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          67.0
+        ],
+        [
+          0.05,
+          75.0
+        ],
+        [
+          0.1,
+          79.5
+        ],
+        [
+          0.2,
+          84.5
+        ],
+        [
+          0.3,
+          87.8
+        ],
+        [
+          0.4,
+          90.3
+        ],
+        [
+          0.5,
+          92.3
+        ],
+        [
+          0.6,
+          94.4
+        ],
+        [
+          0.7,
+          96.9
+        ],
+        [
+          0.8,
+          100.5
+        ],
+        [
+          0.9,
+          106.5
+        ],
+        [
+          0.95,
+          112.5
+        ],
+        [
+          0.99,
+          126.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          65.0
+        ],
+        [
+          0.05,
+          74.0
+        ],
+        [
+          0.1,
+          79.0
+        ],
+        [
+          0.2,
+          84.5
+        ],
+        [
+          0.3,
+          88.0
+        ],
+        [
+          0.4,
+          90.5
+        ],
+        [
+          0.5,
+          92.5
+        ],
+        [
+          0.6,
+          94.5
+        ],
+        [
+          0.7,
+          97.0
+        ],
+        [
+          0.8,
+          100.5
+        ],
+        [
+          0.9,
+          106.0
+        ],
+        [
+          0.95,
+          112.0
+        ],
+        [
+          0.99,
+          126.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          64.0
+        ],
+        [
+          0.05,
+          73.0
+        ],
+        [
+          0.1,
+          78.0
+        ],
+        [
+          0.2,
+          84.0
+        ],
+        [
+          0.3,
+          87.5
+        ],
+        [
+          0.4,
+          90.0
+        ],
+        [
+          0.5,
+          92.0
+        ],
+        [
+          0.6,
+          94.0
+        ],
+        [
+          0.7,
+          96.5
+        ],
+        [
+          0.8,
+          100.0
+        ],
+        [
+          0.9,
+          106.0
+        ],
+        [
+          0.95,
+          112.0
+        ],
+        [
+          0.99,
+          126.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.5429
+}

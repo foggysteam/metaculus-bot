@@ -1,0 +1,185 @@
+{
+  "id": "nq-CLF-level",
+  "question": "What will be the closing value of front-month WTI crude oil futures (CL=F on Yahoo Finance) on October 5, 2026?",
+  "resolution_criteria": "Resolves to the daily close of CL=F on Yahoo Finance for 2026-10-05. If there is no close on that date (weekend or holiday), the last close before it is used.",
+  "unit": "USD per barrel",
+  "outcome": 89.43,
+  "outcome_date": "2026-10-05",
+  "as_of": "2026-09-07",
+  "resolve_date": "2026-10-05",
+  "lower_bound": 50.0,
+  "upper_bound": 150.0,
+  "source": "yahoo",
+  "series": "CL=F",
+  "baseline": "\nComputed by code from Yahoo Finance daily closes for CL=F: latest close 91.4800 on 2026-09-04.\nTarget date 2026-10-05 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 78.3639, p10: 82.7655, p25: 86.4891, p50: 91.2139, p75: 96.8813, p90: 102.9707, p95: 115.8162\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "research": "I couldn't open any article page directly, because the proxy refused every WebFetch call. Everything below comes from search-result snippets, and some of those are secondary or low-confidence. I left out everything dated after 2026-09-07.\n\n## 1. Resolution source\n- 2026-09-04: CL=F (Yahoo Finance, NYMEX front-month WTI) closed at 91.48, according to the code-collected data. I couldn't load the Yahoo page myself.\n- Contract roll: CL=F follows the front month. The October 2026 contract (CLV6) normally expires around Sept 22, so on Oct 5 CL=F should be tracking the November contract (CLX6). I couldn't confirm the November-October spread. If the curve is in backwardation, as is typical in a supply shock, CL=F would drop mechanically at the roll.\n\n## 2. Current status\n- Nothing has settled the outcome yet. WTI is near $91-92, the highest in about six weeks, and is moving on US-Iran fighting around the Strait of Hormuz.\n\n## 3. Recent news (newest first)\n- 2026-09-07: Oil rose to about a six-week high as US-Iran strikes in the Strait of Hormuz intensified. WTI was up 79 cents at $92.27. [Al Jazeera](https://www.aljazeera.com/economy/2026/9/7/oil-prices-surge-as-us-iran-strikes-intensify-in-strait-of-hormuz)\n- 2026-09-06: Eight OPEC+ countries (the release lists seven) kept October production at September levels. Their next meeting is Oct 4. [OPEC](https://www.opec.org/pr-detail/1835613-6-september-2026.html), [Hellenic Shipping News](https://www.hellenicshippingnews.com/saudi-arabia-russia-iraq-kuwait-kazakhstan-algeria-and-oman-reaffirm-commitment-to-market-stability/)\n- 2026-09-04: Oil fell on Friday but was on track for weekly gains of about 10% for WTI and about 7% for Brent, driven by renewed US-Iran military exchanges. [Yahoo Finance](https://finance.yahoo.com/energy/articles/oil-prices-ease-near-six-085140719.html)\n- 2026-09-04: A low-confidence source puts Brent at $95.04 and says WTI topped $90, with Hormuz throughput down about 77% since late 2025, or roughly one fifth of pre-war levels. [Eastern Herald](https://easternherald.com/2026/09/04/brent-crude-oil-price-september-4-2026-hormuz-opec/)\n- 2026-09-01/02: Per the search snippet, WTI settled at $90.22 on Sept 1 after a 5.2% jump on fresh US and Iranian strikes, then traded flat near $90.51 on Sept 2. Two tankers were disabled by mines, but a recovery in actual Hormuz transit limited the spike. [EnergyNow](https://energynow.com/2026/09/oil-holds-near-five-week-highs-as-u-s-iran-fighting-keeps-hormuz-risk-elevated/)\n- 2026-08-28: WTI was about $82.52 after falling that day, and traded between $78.55 and $84.70 that week. Optimism about US-Iran talks faded, and Gulf producers were moving oil around Hormuz through ship-to-ship transfers and alternate pipelines. [Oil and Gas 360](https://www.oilandgas360.com/tag/iran-diplomacy/), [PennWell](https://pennwellbooks.com/blogs/energy-insights/hormuz-bypass-tactics-push-oil-prices-lower)\n- 2026-08 (August STEO): The EIA forecast a 2026 average of $86.81 for Brent and $80.88 for WTI, and estimated Middle East shut-ins at 5.5 mb/d in July. Hormuz flows averaged 4.9 mb/d in Q2 2026, against 21.6 mb/d in Q4 2025. [EIA](https://www.eia.gov/outlooks/steo/archives/aug26.pdf), [S&P Global](https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/081126-us-eia-raises-brent-outlook-to-87b-on-hormuz-shipping-constraints)\n\n## 4. Base rates\n- Code-computed distribution of 21-trading-day outcomes from 91.48: p5 78.36, p10 82.77, p25 86.49, p50 91.21, p75 96.88, p90 102.97, p95 115.82.\n- 2026 has been extremely volatile:\n  - 2026-04-07/08: WTI fell 16.8% in one session, by $18.95 to $94.00, on a ceasefire. [Idaho Business Review](https://idahobusinessreview.com/2026/04/08/oil-falls-below-100-after-trump-iran-ceasefire/)\n  - 2026-05-25: July WTI fell 6.5% to $90.31 on talk of a ceasefire extension. [Asiae](https://view.asiae.co.kr/en/article/2026052606442250181)\n  - One undated report says WTI fell 14.26% after Iran declared Hormuz open to all ships. [SJV Sun](https://sjvsun.com/?p=104330)\n- Recent trend: WTI went from about $82.5 on Aug 28 to about $92 on Sept 7, roughly +11% in one week.\n- The pattern is that diplomatic headlines have brought single-day drops of 6-17%, and escalations have brought jumps of 5-10% in a week.\n\n## 5. Other forecasts\n- 2026-08-26: The Polymarket \"What will WTI hit in September 2026\" market (a touch market, not a closing price) had \"↓$80\" at about 72%, with about $18K volume. That snapshot is stale and was taken before the September rally. [PredScope](https://predscope.com/event/what-price-will-wti-hit-in-september-2026)\n- Commonwealth Bank of Australia: restoring 50-60% of pre-war Hormuz flows could push Brent toward the low end of its $70-100 range (date unclear). [PennWell](https://pennwellbooks.com/blogs/energy-insights/hormuz-bypass-tactics-push-oil-prices-lower)\n- I couldn't find a current Kalshi or Manifold contract for Oct 5, or any bank forecast published in early September.\n\n## 6. Upcoming events before resolution\n- The US-Iran conflict and Hormuz: strikes, mines, attacks on tankers and Navy ships, and any ceasefire or reopening talks. This is the main driver in both directions.\n- About Sept 9: the EIA September STEO. Also the OPEC and IEA monthly oil market reports in mid-September.\n- Weekly EIA inventory reports every Wednesday.\n- Around Sept 16-17: the FOMC meeting.\n- Around Sept 22: the October WTI contract expires and CL=F rolls to November.\n- Oct 4 (Sunday): the OPEC+ eight-country meeting sets November output. Oil would first react to it in trading on Oct 5, the resolution date.\n- Hurricane season peaks in the Gulf of Mexico.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for CL=F: latest close 91.4800 on 2026-09-04.\nTarget date 2026-10-05 is 21 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 21-observation returns over the last 3 years (last year weighted double):\np5: 78.3639, p10: 82.7655, p25: 86.4891, p50: 91.2139, p75: 96.8813, p90: 102.9707, p95: 115.8162\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).\n",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          66.0
+        ],
+        [
+          0.05,
+          74.0
+        ],
+        [
+          0.1,
+          78.5
+        ],
+        [
+          0.2,
+          83.0
+        ],
+        [
+          0.3,
+          86.5
+        ],
+        [
+          0.4,
+          88.5
+        ],
+        [
+          0.5,
+          90.5
+        ],
+        [
+          0.6,
+          92.5
+        ],
+        [
+          0.7,
+          95.5
+        ],
+        [
+          0.8,
+          99.5
+        ],
+        [
+          0.9,
+          106.0
+        ],
+        [
+          0.95,
+          112.0
+        ],
+        [
+          0.99,
+          126.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          65.0
+        ],
+        [
+          0.05,
+          73.5
+        ],
+        [
+          0.1,
+          78.0
+        ],
+        [
+          0.2,
+          83.0
+        ],
+        [
+          0.3,
+          86.0
+        ],
+        [
+          0.4,
+          88.5
+        ],
+        [
+          0.5,
+          90.3
+        ],
+        [
+          0.6,
+          92.3
+        ],
+        [
+          0.7,
+          94.8
+        ],
+        [
+          0.8,
+          98.5
+        ],
+        [
+          0.9,
+          104.0
+        ],
+        [
+          0.95,
+          109.5
+        ],
+        [
+          0.99,
+          123.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          65.0
+        ],
+        [
+          0.05,
+          73.5
+        ],
+        [
+          0.1,
+          78.0
+        ],
+        [
+          0.2,
+          83.0
+        ],
+        [
+          0.3,
+          86.5
+        ],
+        [
+          0.4,
+          88.8
+        ],
+        [
+          0.5,
+          90.5
+        ],
+        [
+          0.6,
+          92.5
+        ],
+        [
+          0.7,
+          95.5
+        ],
+        [
+          0.8,
+          99.5
+        ],
+        [
+          0.9,
+          106.0
+        ],
+        [
+          0.95,
+          112.5
+        ],
+        [
+          0.99,
+          128.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4473
+}
