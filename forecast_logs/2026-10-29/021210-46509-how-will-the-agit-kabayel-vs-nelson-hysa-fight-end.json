@@ -1,0 +1,370 @@
+{
+  "logged_at": "2026-10-29T02:16:15.773048+00:00",
+  "bot_version": "2026-10-28.2",
+  "started_at": "2026-10-29T02:12:10.752646+00:00",
+  "published": false,
+  "status": "failed",
+  "error": "HTTPError: HTTPError. Url: https://www.metaculus.com/api/questions/forecast/. Status code: 400. Response reason: Bad Request. Response text: {\"non_field_errors\":{\"0\":{\"non_field_errors\":[\"Forecast must reflect current options: ['Kabayel wins by KO/TKO/stoppage in rounds 1–3', 'Kabayel wins by KO/TKO/stoppage in rounds 4–6', 'Kabayel wins by KO/TKO/stoppage in rounds 7–12', 'Kabayel wins by decision or technical decision', 'Other outcome']\"]}}}. Response JSON: {'non_field_errors': {'0': {'non_field_errors': [\"Forecast must reflect current options: ['Kabayel wins by KO/TKO/stoppage in rounds 1–3', 'Kabayel wins by KO/TKO/stoppage in rounds 4–6', 'Kabayel wins by KO/TKO/stoppage in rounds 7–12', 'Kabayel wins by decision or technical decision', 'Other outcome']\"]}}}.",
+  "question": {
+    "id": 46509,
+    "post_id": 46279,
+    "url": "https://www.metaculus.com/questions/46279",
+    "type": "MultipleChoiceQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How will the Agit Kabayel vs. Nelson Hysa fight end on November 28, 2026?",
+    "resolution_criteria": "This question resolves as the way the boxing match ends between Agit Kabayel and Nelson Hysa, currently scheduled for Saturday, November 28, 2026. Please note that \"other outcome\" includes any other outcome, including a Hysa victory, a draw, or the boxing match for any reason not being held before November 29, 2026 (local time).",
+    "fine_print": "",
+    "close_time": "2026-10-29 03:00 UTC",
+    "scheduled_resolution_time": "2026-11-29 00:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n\n- No official resolution URL is given. The outcome will come from the official result of the bout (WBC/Queensberry, DAZN broadcast, and the usual records sites).\n- 2026-10-29: The DAZN background article returned HTTP 403, so I could not read it. Other sources confirm it is a WBC (not IBF) title defence. [DAZN](https://www.dazn.com/en-US/news/boxing/agit-kabayel-sets-first-ibf-defence-nelson-hysa-dusseldorf/m3q2qk73qx1b1s8ns5zb9g4iy)\n- Status today: the fight is upcoming. It is scheduled for 2026-11-28 at the Merkur Spiel-Arena in Düsseldorf, live on DAZN. [FanDuel](https://sportsbook.fanduel.com/boxing/boxing-matches/agit-kabayel-v-nelson-hysa-36140224)\n\n## 2. Current status\n\n- Nothing has happened yet that settles the question. The bout is confirmed and tickets are selling. I found no reports of injury, withdrawal or postponement as of 2026-10-29.\n- 2026-10-28: Bild says more than 40,000 tickets have been sold. Henry Maske will be a DAZN pundit for the fight. [Bild](https://www.bild.de/sport/mehr-sport/boxen-tv-hammer-um-henry-maske-enthuellt-6ae2041221fd087fed7ed7e9)\n\n## 3. Recent news (newest first)\n\n- 2026-10-28: The fight is billed as part of German boxing's \"biggest weekend\". The Odiase vs. Perez card is the night before, Nov 27, in Rust. [SI](https://www.si.com/fannation/boxing/german-boxing-s-biggest-weekend-begins-with-two-european-heavyweight-title-fights)\n- 2026-10-13: DAZN pundit Bernd Boente predicts \"Agit wins within five rounds\". He calls Kabayel a pressure fighter but warns about Hysa's counter right hand. Hysa is described as 42 with no top-tier opponents. A money dispute that delayed the deal has been resolved. [WBN](https://www.worldboxingnews.com/agit-kabayel-nelson-hysa-five-rounds/)\n- 2026-10-06: More than 30,000 tickets had been sold in presale. [Fightnews](https://fightnews.com/kabayel-vs-hysa-tickets-on-sale-now-%F0%9F%94%A5/197762)\n- 2026-10-02: Queensberry/Frank Warren confirmed the fight. Kabayel (34) is making his first defence of the WBC belt, which he got when Usyk vacated in June. Hysa is not ranked by the WBC and is No. 5 with the WBA. Nov 28 is Albanian independence day, so Hysa should have strong crowd support. Both fighters are with Queensberry. [The Star/Reuters](https://www.thestar.com.my/sport/boxing/2026/10/02/boxing-wbc-heavyweight-champion-kabayel039s-first-defence-confirmed-for-duesseldorf-on-november-28)\n- 2026-09-28: There was an earlier pullout claim, with Warren saying one side backed out. Hysa turned pro at 37 in 2022 and has mostly stopped \"club-level\" opponents. [Boxing News](https://boxingnews.com/news/kabayel-hysa-fight-november-dusseldorf)\n- 2026-08-29: Hysa stopped Thomas Narmo in round 2 on the Itauma vs. Hrgovic card, then confronted Kabayel at ringside. [Fightmag](https://www.fightmag.com/agit-kabayel-to-face-nelson-hysa-in-germany-in-november/)\n- Records: Kabayel is 27-0 (19 KOs). Hysa is 25-0 (23 KOs). [boxingscene](https://www.boxingscene.com/articles/agit-kabayel-nelson-hysa-confirmed-for-dusseldorf-on-november-28)\n\n## 4. Base rates\n\nKabayel's record by fight, from [Wikipedia](https://en.wikipedia.org/wiki/Agit_Kabayel):\n- Last 6 fights (2022-2026), all stoppages:\n  - Round 1: Sour\n  - Round 3: Smakici, Knyba (Jan 2026)\n  - Round 4: Makhmudov\n  - Round 6: Zhang\n  - Round 7: Sanchez\n- Split of those 6 stoppages: 3 in rounds 1-3, 2 in rounds 4-6, 1 in rounds 7-12.\n- Whole career: 19 of 27 wins by stoppage (70%). The other 8 were decisions: Chisora MD, Rudenko UD, Johnson UD and others. His last decision was in June 2021.\n- Career stoppages by round group: 14 in rounds 1-4 (counting round 4), 1 in round 6, 3 in round 7, and 1 four-round fight ending in round 4.\n- Hysa has had about four years as a pro. He has never been beyond club level and has not been tested past the early rounds against quality opposition, so his durability and stamina are unknown. A 42-year-old challenger is relevant to both stoppage chance and timing.\n\n## 5. Other forecasts\n\n- Betting odds:\n  - FanDuel: Kabayel -1800, Hysa +900 (about 90-95% implied for Kabayel, before removing the bookmaker's margin). [FanDuel](https://sportsbook.fanduel.com/boxing/boxing-matches/agit-kabayel-v-nelson-hysa-36140224)\n  - BetUS: Kabayel -2000, Hysa +1000. [BetUS](https://www.betus.com.pa/sportsbook/bouts/nelson-hysa-vs-agit-kabayel/)\n  - Box.live: 1/20 vs. 9/1. [box.live](https://box.live/fights/kabayel-vs-hysa/)\n- I could not get any method-of-victory or round-group prices. The FanDuel and box.live pages returned 403.\n- Picks:\n  - Tapology community: 100% Kabayel. [Tapology](https://www.tapology.com/fightcenter/bouts/1184806-kabayel-vs-hysa-agit-kabayel-vs-nelson-the-albanian-eagle-hysa)\n  - Box.live poll (only 8 votes): Kabayel KO 62.5%, Hysa KO 25%.\n  - Split-Decision: Kabayel by KO/TKO. [Split-Decision](https://split-decision.co.uk/boxing-news/kabayel-vs-hysa/)\n  - Boente: Kabayel inside 5 rounds.\n- Kalshi \"WBC Heavyweight Title on Jan 1, 2027\" has Kabayel at 0.82. That market only covers who holds the belt, not how this fight ends. Its prices are also inconsistent (Itauma 0.79, Fury 0.30, so the options add up to well over 1), which suggests it is illiquid or stale.\n- I found no Polymarket or Manifold market on this fight.\n\n## 6. Upcoming events before resolution\n\n- Fight-week press conference and weigh-in, around Nov 26-27. Watch for weight or medical problems or a late withdrawal. If the fight is not held by Nov 29, the question resolves as \"Other\".\n- Nov 27: the Odiase vs. Perez card in Rust, the night before.\n- Possible changes in the betting lines, and round or method props being posted.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-29 02:12 UTC; check each market really matches the question)\n- Kalshi: WBC Heavyweight Title on January 1, 2027 (Jan 1, 2027). Yes prices: Agit Kabayel: 0.82; Title is vacant: 0.0100; Daniel Dubois: 0.0100; Anthony Joshua: 0.0700; Derek Chisora: 0.0100; Deontay Wilder: 0.0100; Moses Itauma: 0.7900; Oleksandr Usyk: 0.1600; Fabio Wardley: 0.0100; Tyson Fury: 0.3000.\n- Kalshi: OK-05 House election: Jena Nelson vote percent (Vote Percent - Jena Nelson). Yes prices: At least 44%: 0.57; At least 46%: 0.37; At least 42%: 0.76; At least 48%: 0.21; At least 40%: 0.88; At least 50%: 0.10; At least 52%: 0.06; At least 36%: 0.97; At least 38%: 0.95.\n- Kalshi: Raman's LA margin vs. Talarico's Texas margin? (On Nov 3, 2026). Yes prices: Talarico by 0-5: 0.23; Talarico by 5-10: 0.21; Raman by 0-5: 0.21; Raman by 5-10: 0.21; Talarico by 10-15: 0.07; Raman by 10-15: 0.07; Raman by 15+: 0.04; Talarico by 15+: 0.04.\n- Kalshi: When will Anthropic release Opus 6? (Opus 6). Yes prices: Before Dec 1, 2026: 0.14; Before Nov 16, 2026: 0.09; Before Nov 1, 2026: 0.04; Before Sep 1, 2026: 0.0400; Before Sep 16, 2026: 0.0100; Before Oct 1, 2026: 0.0300; Before Oct 16, 2026: 0.0200.\n- Kalshi: Next Gemini Pro model release (next Gemini Pro model). Yes prices: Before Dec 1, 2026: 0.07; Before Nov 16, 2026: 0.07; Before Nov 1, 2026: 0.01; Before Oct 16, 2026: 0.0200; Before Oct 1, 2026: 0.0100; Before Sep 1, 2026: 0.0100; Before Sep 16, 2026: 0.0200.\n- Kalshi: When will OpenAI release Astra 6.1? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.53; Before Nov 13, 2026: 0.32; Before Nov 6, 2026: 0.12; Before Oct 30, 2026: 0.06; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100.\n- Kalshi: Who will Magomed Ankalaev fight next? (Magomed Ankalaev - Jan 1, 2028). Yes prices: Carlos Ulberg: 0.23; Paulo Costa: 0.20; Jiří Procházka: 0.10; Navajo Stirling: 0.07; Khalil Rountree Jr.: 0.08; Alex Pereira: 0.07; Robert Whittaker: 0.06; Alonzo Menifield: 0.0000; Bogdan Guskov: 0.0000; Ion Cutelaba: 0.0000.\n- Kalshi: Who will Song Yadong fight next? (Song Yadong - Jan 1, 2028). Yes prices: Merab Dvalishvili: 0.25; Petr Yan: 0.38; Sean O'Malley: 0.12; Mario Bautista: 0.18; Cory Sandhagen: 0.08; Payton Talbott: 0.07; Adrian Yanez: 0.0000; Bryce Mitchell: 0.0000; Charles Jourdain: 0.0000; Deiveson Figueiredo: 0.0000.\n- Kalshi: Who will Sean O'Malley fight next? (Sean O'Malley - Jan 1, 2028). Yes prices: Petr Yan: 0.50; Payton Talbott: 0.14; Merab Dvalishvili: 0.14; Adrian Yanez: 0.0200; Bryce Mitchell: 0.0200; Charles Jourdain: 0.0200; Kyler Phillips: 0.0200; Aiemann Zahabi: 0.0200; Deiveson Figueiredo: 0.0200; David Martinez: 0.0200.\n- Polymarket: What will WTI Crude Oil (WTI) hit in November 2026? (ends 2026-12-01). [Yes, No] prices: ↑ $160: [\"0.0105\", \"0.9895\"]; ↑ $150: [\"0.0205\", \"0.9795\"]; ↑ $140: [\"0.023\", \"0.977\"]; ↑ $130: [\"0.0365\", \"0.9635\"]; ↑ $120: [\"0.145\", \"0.855\"]; ↑ $110: [\"0.515\", \"0.485\"]\n- Polymarket: SpaceX’s Market Cap end of November 2026? (ends 2026-11-30). [Yes, No] prices: <$1.50T: [\"0.0315\", \"0.9685\"]; $1.50-$1.75T: [\"0.132\", \"0.868\"]; $1.75-$2.00T: [\"0.3065\", \"0.6935\"]; $2.00-$2.25T: [\"0.36\", \"0.64\"]; $2.25-$2.50T: [\"0.115\", \"0.885\"]; $2.50-$2.75T: [\"0.0505\", \"0.9495\"]\n- Polymarket: OpenAI’s valuation end of November 2026? (ends 2026-11-30). [Yes, No] prices: <$600B: [\"0.0035\", \"0.9965\"]; $600-$700B: [\"0.0005\", \"0.9995\"]; $700-$800B: [\"0.0055\", \"0.9945\"]; $800-$900B: [\"0.0015\", \"0.9985\"]; $900B-$1.00T: [\"0.003\", \"0.997\"]; $1.00-$1.10T: [\"0.0165\", \"0.9835\"]\n- Polymarket: Democratic nomination odds leader on October 31? (ends 2026-10-31). [Yes, No] prices: Jon Ossoff: [\"0.425\", \"0.575\"]; Alexandria Ocasio-Cortez: [\"0.135\", \"0.865\"]; Gavin Newsom: [\"0.375\", \"0.625\"]; Kamala Harris: [\"0.003\", \"0.997\"]; Josh Shapiro: [\"0.004\", \"0.996\"]; Person A: [\"0.5\", \"0.5\"]\n- Polymarket: Republican Senate odds hit __ by October 31? (ends 2026-11-01). [Yes, No] prices: ↑ 40%: [\"0.079\", \"0.921\"]; ↑ 45%: [\"0.012\", \"0.988\"]; ↑ 50%: [\"0.002\", \"0.998\"]; ↑ 55%: [\"0.009\", \"0.991\"]; ↑ 60%: [\"0.0065\", \"0.9935\"]; ↓ 30%: [\"0.125\", \"0.875\"]\n- Polymarket: Republican House odds hit __ by October 31? (ends 2026-11-01). [Yes, No] prices: ↑ 12%: [\"0.066\", \"0.934\"]; ↑ 15%: [\"0.002\", \"0.998\"]; ↑ 20%: [\"0.0015\", \"0.9985\"]; ↓ 7%: [\"0.148\", \"0.852\"]; ↓ 5%: [\"0.0125\", \"0.9875\"]; ↓ 8%: [\"1\", \"0\"]",
+    "# Research brief: Agit Kabayel vs. Nelson Hysa, November 28, 2026\n\n## 1. Resolution source\n- There is no official resolution URL. The outcome will be the official result of the WBC heavyweight title fight, Kabayel vs. Hysa, scheduled for 12 rounds on 2026-11-28 at the Merkur Spiel-Arena in Düsseldorf and shown live on DAZN. Early in October the event moved from a planned Oberhausen venue to Düsseldorf. BoxRec, DAZN or Ring Magazine results pages should settle it. [DAZN press](https://dazngroup.com/press-room/agit-kabayel-vs-nelson-hysa-wm-titelverteidigung-live-auf-dazn/), [boxen1](https://www.boxen1.com/kabayel-vs-hysa-ist-fix-wbc-wm-steigt-im-duesseldorfer-stadion-105606/)\n- The DAZN background link returned a 403 error and I could not read it. Its URL says \"IBF defence\", but every other source says this is a defence of the WBC title. The IBF belt belongs to Filip Hrgovic.\n\n## 2. Current status\n- Nothing has settled the question yet. The fight is about 30 days away and still on.\n- 2026-10-28: Bild reported that more than 40,000 tickets had been sold and that Henry Maske will analyse the fight for DAZN. That implies the fight was still scheduled as of yesterday. [Bild](https://www.bild.de/sport/mehr-sport/boxen-tv-hammer-um-henry-maske-enthuellt-6ae2041221fd087fed7ed7e9)\n- A search turned up a \"Hysa withdraws\" story on a low-quality aggregator site. It most likely recycles the September dispute (see section 3). I found no reputable report of a pullout after October 1.\n\n## 3. Recent news (newest first)\n- 2026-10-28: The card is billed as German boxing's \"biggest weekend\". On 2026-11-27 Emanuel Odiase fights Mike Perez in Rust, and Kabayel vs. Hysa follows on 2026-11-28. [SI](https://www.si.com/fannation/boxing/german-boxing-s-biggest-weekend-begins-with-two-european-heavyweight-title-fights)\n- 2026-10-28: Hrgovic, the IBF champion, talks about wanting to become undisputed. That points to unification fights for the Kabayel-Hysa winner in 2027. [Punch](https://punchng.com/hrgovic-sets-conditions-for-second-itauma-clash/)\n- 2026-10-07: Kabayel is 27-0 with 19 KOs and Hysa is 25-0 with 23 KOs. This is Kabayel's first defence, and he will have been out about 10 months. Frank Warren cited 35,000 tickets sold plus 5,000 more added. [Ring](https://www.ringmagazine.com/news/kabayel-promises-better-version-before-hysa-defense-on-nov-28-5AhsAvDXFLlSFsyUda5HPx)\n- 2026-10-06: Boxing247 says Hysa is No. 18 in the WBC rankings, outside the top 15. His recent wins over Narmo, Pesut, Korte and Castillo are weak opposition, and the outlet calls the fight one that \"offers little intrigue\". [Boxing247](https://www.boxing247.com/boxing-news/agit-kabayel-vs-nelson-hysa-offers-little-intrigue/310339)\n- 2026-10-01/02: The fight was officially confirmed for Düsseldorf on November 28. [The Star/Reuters](https://www.thestar.com.my/sport/boxing/2026/10/02/boxing-wbc-heavyweight-champion-kabayel039s-first-defence-confirmed-for-duesseldorf-on-november-28)\n- September 2026: Warren said Hysa had turned the fight down, but the deal was later revived. [boxingnews.com](https://boxingnews.com/news/kabayel-hysa-fight-november-dusseldorf/)\n- 2026-09-02: Hysa stopped Thomas Narmo in round 2 on the Itauma-Hrgovic undercard (August 29), then confronted Kabayel at ringside. Sources give his age as 41 or 42, and Kabayel is described as a \"ferocious body puncher\". [Boxing News](https://boxingnewsonline.net/news/agit-kabayel-confronted-by-ko-artist/)\n- 2026-06-27: Kabayel was elevated from interim to full WBC champion after Usyk vacated. [Wikipedia](https://en.wikipedia.org/wiki/Agit_Kabayel)\n\n## 4. Base rates\nKabayel's last 10 fights, from Wikipedia ([source](https://en.wikipedia.org/wiki/Agit_Kabayel)):\n- 2026-01-10: beat Knyba by TKO in round 3.\n- 2025-02-22: beat Zhang by KO in round 6.\n- 2024-05-18: beat Sánchez by KO in round 7.\n- 2023-12-23: beat Makhmudov by TKO in round 4.\n- 2023-03-04: beat Smakici by TKO in round 3.\n- 2022-05-14: beat Sour by TKO in round 1.\n- 2018 to 2021: four fights. He beat Rovcanin by TKO in round 3 and won three unanimous decisions (Rudenko, Lazaridis, Johnson).\n\nWhat that adds up to:\n- **Last 6 fights:** all stoppages. 3 were in rounds 1-3, 2 in rounds 4-6 and 1 in rounds 7-12. There were no decisions.\n- **Last 10 fights:** 3 in rounds 1-3, 2 in rounds 4-6, 1 in rounds 7-12 and 3 decisions.\n- **Whole career:** 19 of his 27 wins came by KO, about 70%.\n- **Losses or draws:** none.\n\nOn Hysa: he has 23 KOs from 25 wins, against weak opposition, and he is around 42 years old. I found no record of him being stopped or going 12 rounds against a top-level fighter.\n\n## 5. Other forecasts\n- 2026-10-27: DAZN Bet had Kabayel at 1.04 and Hysa at 10.0, which implies roughly 90-96% for Kabayel. I found no draw line, method-of-victory odds or round betting. [Wettbasis](https://www.wettbasis.com/sportwetten-news/kabayel-vs-hysa-datum-uhrzeit-uebertragung-tickets)\n- 2026-10-29: Kalshi's \"WBC Heavyweight Title on Jan 1, 2027\" market had Kabayel at 0.82. This is related but not the same question, and the prices look inconsistent: Itauma shows 0.79 and Fury 0.30, so the options add up to well over 1.\n- I found no Polymarket or Manifold market and no published expert method picks. Boxing247 expects a one-sided fight.\n\n## 6. Upcoming events before resolution\n- Fight week in late November: the final press conference and weigh-in, where any injury withdrawal or replacement opponent would show up. Hysa has backed out once before, in September, and Warren had promised a replacement opponent at that time.\n- 2026-11-27: the Odiase-Perez card in Rust, the night before.\n- 2026-11-28: the fight itself, with the main event unofficially reported for around 22:00 local time. That leaves a small chance of timing issues against the November 29 local-time deadline. [box.live](https://box.live/fights/kabayel-vs-hysa/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-29 02:12 UTC; check each market really matches the question)\n- Kalshi: WBC Heavyweight Title on January 1, 2027 (Jan 1, 2027). Yes prices: Agit Kabayel: 0.82; Title is vacant: 0.0100; Daniel Dubois: 0.0100; Anthony Joshua: 0.0700; Derek Chisora: 0.0100; Deontay Wilder: 0.0100; Moses Itauma: 0.7900; Oleksandr Usyk: 0.1600; Fabio Wardley: 0.0100; Tyson Fury: 0.3000.\n- Kalshi: OK-05 House election: Jena Nelson vote percent (Vote Percent - Jena Nelson). Yes prices: At least 44%: 0.57; At least 46%: 0.37; At least 42%: 0.76; At least 48%: 0.21; At least 40%: 0.88; At least 50%: 0.10; At least 52%: 0.06; At least 36%: 0.97; At least 38%: 0.95.\n- Kalshi: Raman's LA margin vs. Talarico's Texas margin? (On Nov 3, 2026). Yes prices: Talarico by 0-5: 0.23; Talarico by 5-10: 0.21; Raman by 0-5: 0.21; Raman by 5-10: 0.21; Talarico by 10-15: 0.07; Raman by 10-15: 0.07; Raman by 15+: 0.04; Talarico by 15+: 0.04.\n- Kalshi: When will Anthropic release Opus 6? (Opus 6). Yes prices: Before Dec 1, 2026: 0.14; Before Nov 16, 2026: 0.09; Before Nov 1, 2026: 0.04; Before Sep 1, 2026: 0.0400; Before Sep 16, 2026: 0.0100; Before Oct 1, 2026: 0.0300; Before Oct 16, 2026: 0.0200.\n- Kalshi: Next Gemini Pro model release (next Gemini Pro model). Yes prices: Before Dec 1, 2026: 0.07; Before Nov 16, 2026: 0.07; Before Nov 1, 2026: 0.01; Before Oct 16, 2026: 0.0200; Before Oct 1, 2026: 0.0100; Before Sep 1, 2026: 0.0100; Before Sep 16, 2026: 0.0200.\n- Kalshi: When will OpenAI release Astra 6.1? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.53; Before Nov 13, 2026: 0.32; Before Nov 6, 2026: 0.12; Before Oct 30, 2026: 0.06; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100.\n- Kalshi: Who will Magomed Ankalaev fight next? (Magomed Ankalaev - Jan 1, 2028). Yes prices: Carlos Ulberg: 0.23; Paulo Costa: 0.20; Jiří Procházka: 0.10; Navajo Stirling: 0.07; Khalil Rountree Jr.: 0.08; Alex Pereira: 0.07; Robert Whittaker: 0.06; Alonzo Menifield: 0.0000; Bogdan Guskov: 0.0000; Ion Cutelaba: 0.0000.\n- Kalshi: Who will Song Yadong fight next? (Song Yadong - Jan 1, 2028). Yes prices: Merab Dvalishvili: 0.25; Petr Yan: 0.38; Sean O'Malley: 0.12; Mario Bautista: 0.18; Cory Sandhagen: 0.08; Payton Talbott: 0.07; Adrian Yanez: 0.0000; Bryce Mitchell: 0.0000; Charles Jourdain: 0.0000; Deiveson Figueiredo: 0.0000.\n- Kalshi: Who will Sean O'Malley fight next? (Sean O'Malley - Jan 1, 2028). Yes prices: Petr Yan: 0.50; Payton Talbott: 0.14; Merab Dvalishvili: 0.14; Adrian Yanez: 0.0200; Bryce Mitchell: 0.0200; Charles Jourdain: 0.0200; Kyler Phillips: 0.0200; Aiemann Zahabi: 0.0200; Deiveson Figueiredo: 0.0200; David Martinez: 0.0200.\n- Polymarket: What will WTI Crude Oil (WTI) hit in November 2026? (ends 2026-12-01). [Yes, No] prices: ↑ $160: [\"0.0105\", \"0.9895\"]; ↑ $150: [\"0.0205\", \"0.9795\"]; ↑ $140: [\"0.023\", \"0.977\"]; ↑ $130: [\"0.0365\", \"0.9635\"]; ↑ $120: [\"0.145\", \"0.855\"]; ↑ $110: [\"0.515\", \"0.485\"]\n- Polymarket: SpaceX’s Market Cap end of November 2026? (ends 2026-11-30). [Yes, No] prices: <$1.50T: [\"0.0315\", \"0.9685\"]; $1.50-$1.75T: [\"0.132\", \"0.868\"]; $1.75-$2.00T: [\"0.3065\", \"0.6935\"]; $2.00-$2.25T: [\"0.36\", \"0.64\"]; $2.25-$2.50T: [\"0.115\", \"0.885\"]; $2.50-$2.75T: [\"0.0505\", \"0.9495\"]\n- Polymarket: OpenAI’s valuation end of November 2026? (ends 2026-11-30). [Yes, No] prices: <$600B: [\"0.0035\", \"0.9965\"]; $600-$700B: [\"0.0005\", \"0.9995\"]; $700-$800B: [\"0.0055\", \"0.9945\"]; $800-$900B: [\"0.0015\", \"0.9985\"]; $900B-$1.00T: [\"0.003\", \"0.997\"]; $1.00-$1.10T: [\"0.0165\", \"0.9835\"]\n- Polymarket: Democratic nomination odds leader on October 31? (ends 2026-10-31). [Yes, No] prices: Jon Ossoff: [\"0.425\", \"0.575\"]; Alexandria Ocasio-Cortez: [\"0.135\", \"0.865\"]; Gavin Newsom: [\"0.375\", \"0.625\"]; Kamala Harris: [\"0.003\", \"0.997\"]; Josh Shapiro: [\"0.004\", \"0.996\"]; Person A: [\"0.5\", \"0.5\"]\n- Polymarket: Republican Senate odds hit __ by October 31? (ends 2026-11-01). [Yes, No] prices: ↑ 40%: [\"0.079\", \"0.921\"]; ↑ 45%: [\"0.012\", \"0.988\"]; ↑ 50%: [\"0.002\", \"0.998\"]; ↑ 55%: [\"0.009\", \"0.991\"]; ↑ 60%: [\"0.0065\", \"0.9935\"]; ↓ 30%: [\"0.125\", \"0.875\"]\n- Polymarket: Republican House odds hit __ by October 31? (ends 2026-11-01). [Yes, No] prices: ↑ 12%: [\"0.066\", \"0.934\"]; ↑ 15%: [\"0.002\", \"0.998\"]; ↑ 20%: [\"0.0015\", \"0.9985\"]; ↓ 7%: [\"0.148\", \"0.852\"]; ↓ 5%: [\"0.0125\", \"0.9875\"]; ↓ 8%: [\"1\", \"0\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "Kabayel wins by KO/TKO/stoppage in rounds 1-3": 0.26,
+        "Kabayel wins by KO/TKO/stoppage in rounds 4-6": 0.31,
+        "Kabayel wins by KO/TKO/stoppage in rounds 7-12": 0.18,
+        "Kabayel wins by decision or technical decision": 0.13,
+        "Other outcome": 0.12
+      },
+      "reasoning": "(a) **Time left:** About 30 days. The fight is on November 28, 2026, and the result will be known that night.\n\n(b) **Status quo:** The bout is confirmed, ticket sales are strong (more than 40,000 sold), and there are no reported injuries. If nothing changes, Kabayel, a heavy favourite at about -1800 to -2000, most likely wins inside the distance.\n\n(c) **Base rates:**\n- Heavy favourites at around -1800 win about 92-94% of the time.\n- Kabayel has stopped 70% of his opponents over his career and all of his last 6.\n- Those 6 stoppages break down as 3 in rounds 1-3, 2 in rounds 4-6 and 1 in rounds 7-12.\n- His last decision win was in 2021.\n- Title fights booked about a month out fall through for any reason roughly 5-8% of the time.\n\n(d) **Strongest evidence:**\n- **Betting odds (October 2026):** FanDuel -1800/+900 and BetUS -2000/+1000, which works out to roughly 93% for Kabayel once the margin is removed.\n- **Pundit pick (Oct 13):** Boente predicts Kabayel inside five rounds and calls him a pressure fighter, but warns about Hysa's counter right.\n- **Hysa's profile (Oct 2):** He is 42, turned pro at 37, has faced only club-level opponents and is unranked by the WBC.\n- **Hysa's power:** He is 25-0 with 23 KOs, so he can punch.\n- **Kabayel's style:** He tends to break opponents down with body work over several rounds, as against Zhang (round 6), Sanchez (round 7) and Makhmudov (round 4).\n- **Earlier instability (Sep 28):** A money dispute and a reported pullout before the deal was resolved slightly raise the chance the fight is not held.\n\n(e) **Unexpected scenario:** Kabayel walks onto an early counter right from Hysa, with a pro-Albanian crowd behind the challenger on independence day, and is stopped. Alternatively, a training-camp injury postpones the bout past November 29.\n\n**Reasoning:**\n- I put \"Other\" at about 12%: roughly 6% for a Hysa win, 5% for the fight not happening by the deadline, and 1% for a draw or no contest.\n- That leaves about 88% for a Kabayel win. I give a decision about 13% of that total, because Hysa is 42 and untested, which makes it unlikely he lasts the distance.\n- For the stoppage rounds, I lean towards the middle group (rounds 4-6). Kabayel usually breaks opponents down gradually, and Boente's \"within five\" pick points the same way.\n- I did not move far from these numbers because no market prices method or round, so the market only anchors the winner.\n\nOption_A: 0.26\nOption_B: 0.31\nOption_C: 0.18\nOption_D: 0.13\nOption_E: 0.12"
+    },
+    {
+      "value": {
+        "Kabayel wins by KO/TKO/stoppage in rounds 1-3": 0.29,
+        "Kabayel wins by KO/TKO/stoppage in rounds 4-6": 0.31,
+        "Kabayel wins by KO/TKO/stoppage in rounds 7-12": 0.15,
+        "Kabayel wins by decision or technical decision": 0.14,
+        "Other outcome": 0.11
+      },
+      "reasoning": "(a) **Time left:** About 30 days. The fight is on 2026-11-28 in Düsseldorf, and the result will be known that night (around 2026-11-29 00:00 UTC).\n\n(b) **Status quo:** The fight goes ahead as scheduled and Kabayel, a heavy favourite at about -1800 to -2000, wins. His recent pattern is a stoppage.\n\n(c) **Base rates:**\n- Kabayel's last 6 fights were all stoppages: 3 in rounds 1-3, 2 in rounds 4-6 and 1 in rounds 7-12. His last decision win was in 2021.\n- Across his career, 70% of his wins are stoppages.\n- Heavy heavyweight favourites at these odds win about 90% or more of the time after removing the bookmaker's margin.\n- A fight being cancelled or postponed within a month of the date happens roughly 3-6% of the time.\n- Hysa is 42, has 23 KOs in 25 fights and has been untested at a high level. That means a high chance of a stoppage either way, including a small chance of a Hysa upset knockout.\n\n(d) **Strongest evidence:**\n- 2026-10-02: The fight was confirmed by Queensberry/Reuters as Kabayel's first WBC defence.\n- 2026-10-28: More than 40,000 tickets have been sold, and there are no reports of injury or withdrawal.\n- 2026-10-13: Boente predicts \"within five rounds\" and warns about Hysa's counter right hand.\n- 2026-10-29: Betting odds are Kabayel -1800/-2000 against Hysa +900/+1000.\n- Kabayel's recent stoppages against stronger opposition came in rounds 4, 6 and 7. Against a weaker, older opponent the finish could come earlier, but Kabayel's style is to wear opponents down with body work.\n\n(e) **Upset scenario:** Hysa, with a partisan Albanian crowd on independence day, lands his counter right early while Kabayel walks in, and wins by knockout. Alternatively, an injury in fight week, or the money dispute flaring up again, causes the fight to be cancelled. Either one resolves as \"Other\".\n\n**How I built the forecast:**\n- I started from about 89-90% for a Kabayel win, based on the de-vigged odds, with roughly 4% for cancellation and 6-7% for a Hysa win or a draw.\n- I split the Kabayel win mostly across early and middle stoppages, because of Hysa's age and weak opposition and because Kabayel tends to wear opponents down.\n- I kept about 14% for a decision, since Hysa's power may make Kabayel fight cautiously.\n\nOption_A: 0.29\nOption_B: 0.31\nOption_C: 0.15\nOption_D: 0.14\nOption_E: 0.11"
+    },
+    {
+      "value": {
+        "Kabayel wins by KO/TKO/stoppage in rounds 1-3": 0.3,
+        "Kabayel wins by KO/TKO/stoppage in rounds 4-6": 0.28,
+        "Kabayel wins by KO/TKO/stoppage in rounds 7-12": 0.16,
+        "Kabayel wins by decision or technical decision": 0.14,
+        "Other outcome": 0.12
+      },
+      "reasoning": "(a) **Time left:** About 30 days. The fight is on November 28, 2026, so the result will be known that night, around 2026-11-29 00:00 UTC.\n\n(b) **Status quo:** The fight is confirmed, more than 40,000 tickets are sold and no injuries have been reported. If nothing changes, Kabayel (27-0, 19 KOs) faces a 42-year-old Hysa (25-0, 23 KOs) who has never fought top-tier opposition. Kabayel is a heavy favourite, around -1800 to -2000.\n\n(c) **Base rates:**\n- **Kabayel's recent form:** His last 6 fights all ended in stoppages. Three came in rounds 1-3, two in rounds 4-6 and one in rounds 7-12. His last decision win was in 2021.\n- **Career:** About 70% of his wins came by stoppage.\n- **Heavy favourites:** At around -1800, upsets happen roughly 5-8% of the time.\n- **Cancellations:** For a fight a month out, the chance of postponement or cancellation is roughly 3-5%. This deal has already had one money dispute.\n\n(d) **Strongest evidence:**\n- **Betting odds:** FanDuel -1800 and BetUS -2000 imply roughly 91-93% for Kabayel after removing the bookmaker's margin.\n- **Pundit view (Oct 13):** Boente predicts Kabayel wins within five rounds, but warns about Hysa's counter right hand.\n- **Hysa's profile (Sep 28, Oct 2):** He turned pro at 37 and has fought only club-level opponents. His stamina and durability have never been tested late in a fight. Both points favour a Kabayel stoppage, most likely in the early-to-middle rounds, as Kabayel's body-attacking pressure wears him down.\n- **Ticket sales (Oct 6, Oct 28):** Over 40,000 sold, which lowers the chance of cancellation.\n\n(e) **Unexpected scenario:** Hysa, backed by a loud Albanian crowd on Albanian independence day, lands his counter right early and stops Kabayel. Alternatively, a training-camp injury forces a postponement past November 29. Both outcomes resolve as \"Other\".\n\n**How I got the numbers:**\n- **Kabayel win:** I start from the market's roughly 92% and shade it to about 88% to cover cancellation risk.\n- **Kabayel stoppage vs decision:** Within his wins, I put about 84% on a stoppage. That is higher than his career rate because Hysa is 42 and untested, and because Kabayel's recent run is all stoppages.\n- **Round split:** I give rounds 1-3 and rounds 4-6 nearly equal weight. That reflects Kabayel's history and the chance that Hysa comes out aggressive early, which helps his upset odds but also exposes him.\n\nOption_A: 0.30\nOption_B: 0.28\nOption_C: 0.16\nOption_D: 0.14\nOption_E: 0.12"
+    },
+    {
+      "value": {
+        "Kabayel wins by KO/TKO/stoppage in rounds 1-3": 0.29,
+        "Kabayel wins by KO/TKO/stoppage in rounds 4-6": 0.29,
+        "Kabayel wins by KO/TKO/stoppage in rounds 7-12": 0.16,
+        "Kabayel wins by decision or technical decision": 0.13,
+        "Other outcome": 0.13
+      },
+      "reasoning": "**(a) Time left:** About 30 days. The fight is on 2026-11-28 in Düsseldorf, and the result will be known that night, around 22:00-23:30 local time.\n\n**(b) Status quo:** The fight goes ahead as scheduled. More than 40,000 tickets are sold and the DAZN broadcast is set. Kabayel is a heavy favourite at about 1.04 against Hysa's 10.0, and he usually wins by stoppage.\n\n**(c) Base rates:**\n- **Kabayel's last 6 fights:** all stoppages. Three came in rounds 1-3, two in rounds 4-6 and one in rounds 7-12.\n- **Kabayel's last 10 fights:** about 30% ended in rounds 1-3, 20% in rounds 4-6, 10% in rounds 7-12 and 30% went to decision.\n- **Heavyweight title fights with a heavy favourite:** the favourite wins about 85-90% of the time.\n- **Cancellation risk:** this many weeks out, the chance of cancellation or postponement is often 5-10%. Hysa has already turned the fight down once, in September.\n\n**(d) Strongest evidence:**\n- 2026-10-27: DAZN Bet priced Kabayel at 1.04 and Hysa at 10.0, which implies about 90-92% for Kabayel once the margin is removed.\n- 2026-10-28: Bild reported more than 40,000 tickets sold and broadcast talent booked, so the fight is clearly on track.\n- 2026-10-06: Boxing247 calls the fight one-sided. Hysa is ranked No. 18 by the WBC and his wins have come against weak opposition.\n- 2026-09-02: Hysa is 41-42 years old, while Kabayel is a ferocious body puncher who has stopped his last 6 opponents. This points to a mid-round stoppage.\n- September 2026: Hysa withdrew once and then revived the deal. That raises the risk of a withdrawal or a substitute opponent, and either would resolve as \"Other\".\n\n**(e) Unexpected scenario:** Hysa, a one-punch knockout artist with 23 KOs in 25 wins, lands a big right hand early on a Kabayel who has been out for 10 months, and wins by knockout. Alternatively, Hysa pulls out during fight week with an injury or over a contract dispute and a replacement fights instead. Either way the question resolves as \"Other\". A third possibility is that Hysa survives on durability and the fight goes the distance.\n\n**Reasoning:** I start from Kabayel's recent stoppage profile and the market's roughly 90% win probability. I then move about 3 points away from the market toward \"Other\" because of cancellation and substitution risk, which the moneyline does not price in. That leaves \"Other\" at about 13%. Within Kabayel's roughly 87% win probability, I split it according to his body-attack style, which tends to finish fights in the middle rounds, and Hysa's age, which makes an early stoppage plausible. I keep some weight on a decision in case Hysa is a defensive survivor.\n\nOption_A: 0.29\nOption_B: 0.29\nOption_C: 0.16\nOption_D: 0.13\nOption_E: 0.13"
+    },
+    {
+      "value": {
+        "Kabayel wins by KO/TKO/stoppage in rounds 1-3": 0.25,
+        "Kabayel wins by KO/TKO/stoppage in rounds 4-6": 0.27,
+        "Kabayel wins by KO/TKO/stoppage in rounds 7-12": 0.18,
+        "Kabayel wins by decision or technical decision": 0.16,
+        "Other outcome": 0.14
+      },
+      "reasoning": "(a) **Time left:** The fight is about 30 days away, on 2026-11-28 in Düsseldorf, and the main event is around 22:00 local time. The result will be known that night.\n\n(b) **Status quo:** The fight is still scheduled. As of 2026-10-28, more than 40,000 tickets had been sold and DAZN had announced its broadcast plans. Kabayel is a heavy favourite to win, most likely by stoppage given his recent pattern.\n\n(c) **Base rates:**\n- **Kabayel's last 6 fights:** all were stoppages. Three came in rounds 1-3, two in rounds 4-6 and one in rounds 7-12.\n- **Kabayel's last 10 fights:** three of these went to a decision.\n- **Kabayel's career:** about 70% of his wins are by KO.\n- **Big favourites generally:** heavyweight favourites at around 1.04 win roughly 90-93% of the time.\n- **Late cancellations:** about 5-8% of fights announced a month out get cancelled or have an opponent changed. That risk is higher here because Hysa already pulled out once in September.\n\n(d) **Strongest evidence:**\n- **Betting odds (2026-10-27):** DAZN Bet had Kabayel at 1.04 and Hysa at 10.0, which implies about 91-92% for Kabayel after the bookmaker's margin.\n- **Hysa's profile (Boxing247, 2026-10-06; Boxing News, 2026-09-02):** he is around 41-42 years old and ranked No. 18 by the WBC. His wins are against weak opposition, but he is a big puncher with 23 KOs in 25 wins, and he has not been tested at this level.\n- **Kabayel's recent form:** he has not gone the distance since 2021. His body punching tends to wear opponents down in the middle rounds. He will have been out of the ring for about 10 months.\n- **Fight still on (2026-10-28):** strong ticket sales and broadcast announcements confirm it is still scheduled.\n\n(e) **Unexpected outcome scenarios:**\n- Hysa withdraws again, or one fighter is injured in camp, and a replacement opponent steps in. That resolves as \"Other\".\n- Hysa lands a big punch early on a rusty Kabayel and causes an upset.\n- Hysa, wary of being stopped, survives cautiously and the fight goes the distance.\n\n**Reasoning:** I start from about 91% for a Kabayel win implied by the market. I subtract roughly 5-6 points for the risk of cancellation or a substitute opponent, which the outright betting odds do not price, since those bets are usually voided. That leaves a Kabayel win at about 86-87%.\n\nWithin that, I expect a stoppage in about 80% of his wins. That reflects Hysa's age and lack of top-level experience, and Kabayel's recent pattern. I give decisions some weight because Kabayel has been inactive and a durable veteran may survive.\n\nThe two halves of the split:\n- **Early rounds:** a puncher like Hysa will likely trade shots, which raises the chance of an early finish.\n- **Middle rounds:** Kabayel's body attack tends to work in rounds 4-6.\n\nOption_A: 0.25\nOption_B: 0.27\nOption_C: 0.18\nOption_D: 0.16\nOption_E: 0.14"
+    },
+    {
+      "value": {
+        "Kabayel wins by KO/TKO/stoppage in rounds 1-3": 0.26,
+        "Kabayel wins by KO/TKO/stoppage in rounds 4-6": 0.29,
+        "Kabayel wins by KO/TKO/stoppage in rounds 7-12": 0.18,
+        "Kabayel wins by decision or technical decision": 0.15,
+        "Other outcome": 0.12
+      },
+      "reasoning": "**(a) Time left:** About 30 days. The fight is on Saturday, November 28, 2026, with the main event around 22:00 local time in Düsseldorf. The result should be known by about 2026-11-28 22:00-23:30 UTC.\n\n**(b) Status quo:** The fight goes ahead as scheduled. More than 40,000 tickets were reported sold on 2026-10-28 and broadcast plans are confirmed. If it happens, Kabayel, the heavy favourite, most likely wins by stoppage. All six of his last fights ended that way.\n\n**(c) Base rates:**\n- **Kabayel's last 6 fights:** all stoppages. Three came in rounds 1-3, two in rounds 4-6 and one in rounds 7-12.\n- **Kabayel's last 10 fights:** about 30% rounds 1-3, 20% rounds 4-6, 10% rounds 7-12 and 30% decisions.\n- **Whole career:** about 70% of his wins came by KO.\n- **Odds:** A favourite priced at about 1.04 wins roughly 92-94% of fights that take place.\n- **Postponement:** Heavyweight title fights a month out are cancelled or postponed roughly 5-10% of the time. The risk is somewhat higher here because Hysa already turned the fight down once in September.\n\n**(d) Strongest evidence:**\n- 2026-10-27: DAZN Bet had Kabayel at 1.04 and Hysa at 10.0, implying about 92% for Kabayel without the bookmaker margin.\n- 2026-10-28: Bild reported 40,000+ tickets sold and Henry Maske as DAZN analyst, so the fight is firmly on.\n- 2026-10-06: Boxing247 notes Hysa is No. 18 in the WBC rankings with a weak resume.\n- 2026-09-02: Hysa is 41-42 years old and an aggressive puncher with 23 KOs in 25 wins. A fighter like that tends to engage, which raises the chance of an early or mid-fight finish. Kabayel's body punching usually breaks opponents in rounds 3-7.\n- 2026-01-10: Kabayel will have been out about 10 months. That could mean a slower start, which slightly favours rounds 4-6 over rounds 1-3.\n\n**(e) Unexpected scenario:** Hysa, who withdrew once before, gets injured or falls out over money during fight week. A replacement opponent would not satisfy \"Kabayel vs. Hysa\", so the question would likely resolve \"Other\". Alternatively, rust shows on Kabayel early, Hysa lands a big right hand in round 2 and wins by KO. Or an accidental clash of heads ends the fight early as a no-contest or technical draw.\n\n**Adjustment:**\n- I put about 12% on \"Other\": roughly 6% non-occurrence or opponent change, about 5% Hysa win and about 1% draw or no-contest.\n- Within a Kabayel win (88%), I tilted toward stoppage. His recent form and Hysa's age and opposition support that.\n- I still kept meaningful weight on a decision, because Hysa's durability is untested and a cagey older fighter might survive.\n- Starting from the last-6-fights base rate, I moved some weight from rounds 1-3 to rounds 4-6 because of the 10-month layoff and his body-attack style.\n\nOption_A: 0.26\nOption_B: 0.29\nOption_C: 0.18\nOption_D: 0.15\nOption_E: 0.12"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": null,
+  "usage": [
+    {
+      "question_id": "46509",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 7.760000000000002e-05,
+      "input_tokens": 506,
+      "output_tokens": 54,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 103.4,
+      "notional_cost_usd": 0.3470789999999999,
+      "input_tokens": 112996,
+      "output_tokens": 5247,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.8,
+      "notional_cost_usd": 0.082572,
+      "input_tokens": 6825,
+      "output_tokens": 1399,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.8,
+      "notional_cost_usd": 0.080252,
+      "input_tokens": 6825,
+      "output_tokens": 1283,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.0008834,
+      "input_tokens": 2703,
+      "output_tokens": 686,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.1,
+      "notional_cost_usd": 0.0009087,
+      "input_tokens": 2657,
+      "output_tokens": 755,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 29.4,
+      "notional_cost_usd": 0.028814400000000004,
+      "input_tokens": 6825,
+      "output_tokens": 1243,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00039722,
+      "input_tokens": 2658,
+      "output_tokens": 614,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 11.5,
+      "notional_cost_usd": 0.0005866700000000001,
+      "input_tokens": 2703,
+      "output_tokens": 992,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.9,
+      "notional_cost_usd": 0.0010164,
+      "input_tokens": 2728,
+      "output_tokens": 942,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00060033,
+      "input_tokens": 2726,
+      "output_tokens": 1020,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 86.1,
+      "notional_cost_usd": 0.2559215,
+      "input_tokens": 87359,
+      "output_tokens": 4839,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.8,
+      "notional_cost_usd": 0.081484,
+      "input_tokens": 6864,
+      "output_tokens": 1329,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.9,
+      "notional_cost_usd": 0.083036,
+      "input_tokens": 6863,
+      "output_tokens": 1407,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.6,
+      "notional_cost_usd": 0.085004,
+      "input_tokens": 6864,
+      "output_tokens": 1505,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.9,
+      "notional_cost_usd": 0.0012694,
+      "input_tokens": 2793,
+      "output_tokens": 1422,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.0011151,
+      "input_tokens": 2834,
+      "output_tokens": 1097,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.0011331000000000002,
+      "input_tokens": 2894,
+      "output_tokens": 1109,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00047589,
+      "input_tokens": 2794,
+      "output_tokens": 769,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.0006081799999999999,
+      "input_tokens": 2892,
+      "output_tokens": 1032,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.1,
+      "notional_cost_usd": 0.00083849,
+      "input_tokens": 2835,
+      "output_tokens": 1493,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.00047959,
+      "input_tokens": 2833,
+      "output_tokens": 776,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46509",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.00043917999999999995,
+      "input_tokens": 2892,
+      "output_tokens": 694,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.055
+}
