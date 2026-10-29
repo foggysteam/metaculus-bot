@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-10-29T21:06:38.990939+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-10-29T21:01:41.187976+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46513,
+    "post_id": 46283,
+    "url": "https://www.metaculus.com/questions/46283",
+    "type": "NumericQuestion",
+    "unit": "value",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "What will be the 2-party Gallagher disproportionality index for North Carolina's House races in 2026?",
+    "resolution_criteria": "This question resolves as the 2-party Gallagher disproportionality index calculated from the results of the 2026 U.S. House of Representatives [elections](https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina) in North Carolina. The value will be calculated by subtracting the GOP percentage of the merged Republican and Democratic vote for the U.S. House of Representatives across all NC congressional districts from the GOP percentage of congressional seats won, then taking the absolute value of that number.",
+    "fine_print": "",
+    "close_time": "2026-10-30 00:00 UTC",
+    "scheduled_resolution_time": "2026-12-01 00:00 UTC"
+  },
+  "research": [
+    "I could not find anything that settles this yet. The election is on 2026-11-03, so no vote totals exist. The answer depends mostly on two things: how many of the 14 seats Republicans win, and the GOP share of the combined R+D vote.\n\n## 1. Resolution source\n- 2026-10-29: The Wikipedia page named in the question has no results yet. It lists Republican and Democratic nominees in all 14 districts, so none of the races is uncontested between the two parties. The general election is 2026-11-03. [Wikipedia 2026 NC](https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina)\n- How the calculation works: each Republican seat is worth 7.14 points of seat share. 11 GOP seats is 78.57%, 10 is 71.43%, 9 is 64.29% and 8 is 57.14%. The index is the absolute gap between that seat share and the GOP percentage of the combined R+D vote.\n\n## 2. Current status\n- 2025: The GOP legislature redrew the map mid-decade, aiming for an 11-3 Republican delegation. They changed District 1 (Democrat Don Davis) and District 3, and NC-1 moved to about R+8 according to Inside Elections. [The Nation](https://www.thenation.com/), [ABC11](https://abc11.com/post/1st-congressional-rematch-most-watched-us-house-races/19730542/)\n- Ratings and polls, seat by seat:\n  - **NC-1:** Toss-up at Cook (Oct 9) and Inside Elections (Oct 15), Lean D at Sabato (Oct 20). The latest poll, RedBox (D), Oct 20-23, has Davis 45%, Buckhout 44%.\n  - **NC-3:** Likely R at Cook (Oct 23). A Tulchin (D) poll from July-August had Murphy 44%, Smith 41%.\n  - **NC-11:** Toss-up at Cook and Sabato.\n  - **NC-7 and NC-9:** Two Democratic-sponsored polls each showed the Republican up by about 4-6 points (Rouzer 49-43 head-to-head in August; Hudson 46-42 in October).\n  - **Other districts:** NC-5, 6, 8 and 10 are Solid R and NC-2, 4 and 12 are Solid D. [Wikipedia](https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina), [NC Newsline](https://ncnewsline.com/2026/10/19/a-tale-of-two-farmers-ager-balkcom-compete-for-nc-11-seat/?channel=brytalocals)\n- Statewide generic ballot: ECU, Sept 29-Oct 2, had Democrats 50%, Republicans 46%. Co/efficient (R), Oct 6-8, had R 46%, D 45%, but the Wikipedia page lists it under NC-1 and may not be statewide. [Wikipedia](https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina)\n\n## 3. Recent news (newest first)\n- 2026-10-29: Early voting passed 2.1 million ballots, up 36% from the same point in 2022. Unverified detail from the news-API summary: Democrats still hold a plurality of early voters. [CBS17](https://www.cbs17.com/news/your-local-election-hq/nc-early-voting-numbers-top-2-million-a-large-increase-from-2022-midterms/)\n- 2026-10-29: NC-1 is the most expensive House race on record, with $52.9M in ads according to AdImpact. [The Hill](https://thehill.com/homenews/campaign/6181205-nc-house-race-record-spending/)\n- 2026-10-28: A national Fox News poll has Democrats ahead 54-45 on the generic ballot. [Fox News](https://www.foxnews.com/opinion/lee-carter-america-angry-everyone-who-will-actually-vote)\n- 2026-10-27: Democrats were nearly 41% of early voters. [WLOS](https://wlos.com/news/local/north-carolina-early-voting-turnout-2026-midterm-election-ballots-buncombe-county)\n- 2026-08-10: Rep. Chuck Edwards (NC-11) dropped out after a House Ethics report. State Rep. Jennifer Balkcom replaced him as the GOP nominee against Jamie Ager. [NC Newsline](https://ncnewsline.com/2026/08/10/ncgop-to-select-new-nc-11-candidate-after-us-rep-edwards-withdrawal/)\n\n## 4. Base rates\n- 2024: R 2,889,657 votes, D 2,328,248, so R had 55.38% of the two-party vote. Republicans won 10 of 14 seats (71.43%). **Index about 16.0.** [Wikipedia 2024](https://en.wikipedia.org/wiki/2024_United_States_House_of_Representatives_elections_in_North_Carolina)\n- 2022, under a court-drawn map: R 1,956,906, D 1,795,170, so R had 52.15%. Seats split 7-7 (50%). **Index about 2.2.** [Wikipedia 2022](https://en.wikipedia.org/wiki/2022_United_States_House_of_Representatives_elections_in_North_Carolina)\n- Earlier years, from memory and not checked:\n  - 2020: 8 of 13 seats R with about 50% of the vote, index about 11-12.\n  - 2018: 10 of 13 seats R with about 51% of the vote, index about 25.\n  - 2016: 10 of 13 seats R with about 53% of the vote, index about 24.\n- Pattern: under GOP-drawn maps the index has run about 16-26. Under the 2022 court map it was about 2.\n- Illustrative 2026 combinations:\n  - 11 R seats at 50% R vote: about 28.6.\n  - 10 R seats at 49%: about 22.4.\n  - 9 R seats at 49%: about 15.3.\n  - 9 R seats at 47%: about 17.3.\n  - 8 R seats at 48%: about 9.1.\n- In a Democratic-leaning year, more D votes push the index up when seats hold, but each lost GOP seat pulls it down by 7.14 points.\n\n## 5. Other forecasts\n- Kalshi, Democratic NC House seats (as of 2026-10-29): 3 at 3%, 4 at 10%, 5 at 41%, 6 at 19%, 7 at 11%, \"Above 7\" at 20%. The \"Above 7\" price looks odd given the map and is probably illiquid.\n- Polymarket, same question: 4 at 11.5%, 5 at 44%, 6+ at 39%.\n- Kalshi, other markets:\n  - NC-3: Murphy winning by 1+ points at 52%, which suggests roughly 50/50 odds of a Democratic upset.\n  - NC-9: Hudson at 50%+ of the vote, 65%.\n  - NC-10: Harrigan winning by 10+, 60%.\n  - NC-12: Alma Adams at 76%+ of the vote, 65%.\n  - Control of the US House: Democrats at 91%.\n- Polymarket, NC-6: McDowell (R) favored. The 12-15 point margin bucket is at 40%, but the 6-9 bucket is close behind at 33%.\n- I found no published expert forecast of the Gallagher index itself.\n\n## 6. Upcoming events\n- 2026-11-03: Election Day. The key seats are NC-1, NC-11 and NC-3, plus the margins in NC-7 and NC-9.\n- Mid-November: Counties finish canvassing and the State Board of Elections certifies results, which is when final vote totals are set. Any close race could go to a recount.\n- Also matters: turnout in safe Democratic seats (NC-12, 4, 2) inflates the Democratic statewide vote share without changing seats.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-29 21:01 UTC; check each market really matches the question)\n- Kalshi: Who will control the House? (In 2026). Yes prices: Democratic Party: 0.91; Republican Party: 0.08.\n- Kalshi: North Carolina's 10th District margin of victory (North Carolina's 10th District). Yes prices: Harrigan, 13+ pts: 0.44; Harrigan, 10+ pts: 0.60; Harrigan, 16+ pts: 0.28; Harrigan, 7+ pts: 0.75; Harrigan, 19+ pts: 0.18; Harrigan, 4+ pts: 0.85; Harrigan, 22+ pts: 0.09; Harrigan, 28+ pts: 0.0000; Harrigan, 25+ pts: 0.0000.\n- Kalshi: North Carolina's 3rd District margin of victory (North Carolina's 3rd District). Yes prices: Murphy, 1+ pts: 0.52; Murphy, 3+ pts: 0.41; Murphy, 6+ pts: 0.24; Murphy, 9+ pts: 0.14; Murphy, 12+ pts: 0.07; Murphy, 15+ pts: 0.0890; Murphy, 24+ pts: 0.1100; Murphy, 21+ pts: 0.0000; Murphy, 18+ pts: 0.0040.\n- Kalshi: How many House seats will Democrats win in North Carolina? (On Nov 3, 2026). Yes prices: 5: 0.41; Above 7: 0.20; 6: 0.19; 7: 0.11; 4: 0.10; 3: 0.03; Below 3: 0.0100.\n- Kalshi: North Carolina gas prices tomorrow (On Oct 30, 2026). Yes prices: Above 3.4100: 0.89; Above 3.4000: 0.93; Above 3.4150: 0.12; Above 3.3950: 0.94; Above 3.4200: 0.06; Above 3.3850: 0.95; Above 3.4250: 0.0000; Above 3.4300: 0.0000; Above 3.4350: 0.0000; Above 3.4400: 0.0000.\n- Kalshi: North Carolina State House winner? (North Carolina State House). Yes prices: Democratic party: 0.56; Republican party: 0.41.\n- Kalshi: NC-12 House election: Alma Adams vote percent (Vote Percent - Alma Adams). Yes prices: At least 78%: 0.39; At least 76%: 0.65; At least 80%: 0.17; At least 74%: 0.83; At least 72%: 0.94; At least 82%: 0.2300; At least 68%: 0.97; At least 84%: 0.0000; At least 70%: 0.97.\n- Kalshi: NC-09 House election: Richard Hudson vote percent (Vote Percent - Richard Hudson). Yes prices: At least 52%: 0.41; At least 50%: 0.65; At least 54%: 0.21; At least 48%: 0.83; At least 56%: 0.09; At least 58%: 0.05; At least 46%: 0.94; At least 60%: 0.0000; At least 62%: 0.0000; At least 64%: 0.0000.\n- Kalshi: North Carolina's 12th District margin of victory (North Carolina's 12th District). Yes prices: Adams, 56+ pts: 0.47; Adams, 53+ pts: 0.66; Adams, 59+ pts: 0.28; Adams, 50+ pts: 0.81; Adams, 62+ pts: 0.12; Adams, 47+ pts: 0.92; Adams, 38+ pts: 0.95; Adams, 44+ pts: 0.94; Adams, 41+ pts: 0.95.\n- Polymarket: How many House seats will the Democrats win in North Carolina? (ends 2026-11-04). [Yes, No] prices: <3: [\"0.0175\", \"0.9825\"]; 3: [\"0.033\", \"0.967\"]; 4: [\"0.115\", \"0.885\"]; 5: [\"0.44\", \"0.56\"]; 6+: [\"0.3915\", \"0.6085\"]\n- Polymarket: NC-03 House Election Margin of Victory (ends 2026-11-04). [Yes, No] prices: Republican 18%+: [\"0.075\", \"0.925\"]; Republican 15-18%: [\"0.016\", \"0.984\"]; Republican 12-15%: [\"0.028\", \"0.972\"]; Republican 9-12%: [\"0.038\", \"0.962\"]; Republican 6-9%: [\"0.13\", \"0.87\"]; Republican 3-6%: [\"0.18\", \"0.82\"]\n- Polymarket: NC-06 House Election Margin of Victory (ends 2026-11-04). [Yes, No] prices: Republican 18%+: [\"0.054\", \"0.946\"]; Republican 15-18%: [\"0.0445\", \"0.9555\"]; Republican 12-15%: [\"0.405\", \"0.595\"]; Republican 9-12%: [\"0.1765\", \"0.8235\"]; Republican 6-9%: [\"0.33\", \"0.67\"]; Republican 3-6%: [\"0.125\", \"0.875\"]\n- Polymarket: North Carolina enacts data center moratorium by...? (ends 2029-01-01). [Yes, No] prices: December 31, 2026: [\"0.0295\", \"0.9705\"]; June 30, 2027: [\"0.105\", \"0.895\"]; December 31, 2027: [\"0.24\", \"0.76\"]; December 31, 2028: [\"0.345\", \"0.655\"]\n- Polymarket: 2028 Presidential Election: North Carolina Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.5\", \"0.5\"]; Republican Party: [\"0.445\", \"0.555\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: North Carolina Supreme Court Election Winner (ends 2026-11-04). [Yes, No] prices: Anita Earls (D): [\"0.855\", \"0.145\"]; Sarah Stevens (R): [\"0.13\", \"0.87\"]; Candidate A: [\"0.5\", \"0.5\"]; Candidate B: [\"0.5\", \"0.5\"]; Candidate C: [\"0.5\", \"0.5\"]; Candidate D: [\"0.5\", \"0.5\"]\n- Manifold: Will a US House seat flip from Democrat to Republican in a 2027 special election? (23%) https://manifold.markets/ManifoldPolitics/will-a-us-house-seat-flip-from-demo-yRZSUSPLZ2\n- Manifold: Will a US House seat flip from Republican to Democrat in a 2027 special election? (27%) https://manifold.markets/ManifoldPolitics/will-a-us-house-seat-flip-from-repu",
+    "Nothing has been decided yet: Election Day is 2026-11-03. Using the past results below, the 2-party index for North Carolina was 11.8 in 2020, 2.2 in 2022 and 16.1 in 2024. Markets expect Democrats to win about 5 of the 14 seats. If so, the index would be about 13 to 17 for a statewide Republican vote share of 47 to 51%.\n\n### 1. Resolution source\n- 2026-10-29: The [Wikipedia 2026 NC House page](https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina) has no results yet. It shows 14 seats, a pre-election split of 10 R and 4 D, and Election Day as 2026-11-03. Official totals will come from the NC State Board of Elections; county canvass and state certification usually finish in late November.\n- How the number is calculated: with 14 seats, the Republican seat share can be 78.57% (11 R), 71.43% (10), 64.29% (9), 57.14% (8) or 50% (7). The index is the absolute gap between that share and the Republican share of the combined R+D vote. Third-party votes are left out.\n\n### 2. Current status\n- 2026-10-29: Nothing is settled. Voting ends 2026-11-03.\n- Every district I could check (NC-1 to NC-11 and NC-13) has both a D and an R candidate. I did not confirm NC-12 or NC-14. Kalshi's NC-12 market (Alma Adams) suggests that race is contested.\n- The map is the 2025 mid-decade redraw. It changed NC-1 and NC-3 to aim for an 11-3 Republican delegation. [The Nation](https://www.thenation.com/)\n\n### 3. Recent news (newest first)\n- 2026-10-29: More than 2.1 million early ballots have been cast, 36% more than at this point in 2022. Democrats are the largest group, at about 41% of early voters. [CBS17](https://www.cbs17.com/news/your-local-election-hq/nc-early-voting-numbers-top-2-million-a-large-increase-from-2022-midterms/), [WLOS](https://wlos.com/news/local/north-carolina-early-voting-turnout-2026-midterm-election-ballots-buncombe-county)\n- 2026-10-29: NC-1 (Don Davis, D, vs. Laurie Buckhout, R) is the most expensive House race on record, with $52.9M in ads. [The Hill](https://thehill.com/homenews/campaign/6181205-nc-house-race-record-spending/)\n- 2026-10-20: NC-1 polls are tied or close: RedBox (D) has Davis 45, Buckhout 44; co/efficient (R) has Buckhout 43, Davis 42. Cook and Inside Elections rate it Tossup; Sabato rates it Lean D. [Wikipedia](https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina)\n- 2026-10-19/20: In NC-9, a PPP (D) poll has Hudson (R) 46, Ojeda (D) 42. [Wikipedia](https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina)\n- 2026-10-02: The DCCC added NC-13 (Brad Knott, R) to its target list. Cook still rates it Solid R. [NC Newsline](https://ncnewsline.com/2026/10/02/national-dems-expand-us-house-battlefield-targeting-knott-in-nc-13/)\n- Statewide generic-ballot polls: ECU (Sep 29 to Oct 2) has D 50, R 46. Catawba/YouGov (September) has D 47, R 38. NYT/Siena (June) has D 49, R 44. Nationally, Fox News has D 54, R 45. [Wikipedia](https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina), [Fox](https://www.foxnews.com/opinion/lee-carter-america-angry-everyone-who-will-actually-vote)\n- August 2026: In NC-11, Chuck Edwards withdrew after an ethics recommendation, and Jennifer Balkcom (R) replaced him. Democrat Jamie Ager was described as the favorite, with the GOP at about 32% in markets in August. Trump won the district by about 10 points in 2024. [PredictionHunt](https://www.predictionhunt.com/news/balkcom-replaces-edwards-in-nc-11-gop-climbs-aug-21-2026), [WLOS](https://wlos.com/news/local/republican-congressional-nominee-balkcom-begins-84-day-campaign-for-nc-11-seat-congressman-chuck-edwards-house-ethics-fairness-womens-sports-act-jamie-ager-democrat)\n- NC-3 (Murphy, R): Cook rates it Likely R. A Tulchin (D) poll from July/August had Murphy 44, Smith 41.\n\n### 4. Base rates (my calculations from Wikipedia totals)\n- 2024: R 2,889,657 votes, D 2,328,248. R share of the 2-party vote 55.38%; R seat share 71.43% (10 of 14). **Index 16.05.** [Wiki 2024](https://en.wikipedia.org/wiki/2024_United_States_House_of_Representatives_elections_in_North_Carolina)\n- 2022: R 1,956,906, D 1,795,170. R 2-party share 52.16%; seats 50% (7 of 14). **Index 2.16.** [Wiki 2022](https://en.wikipedia.org/wiki/2022_United_States_House_of_Representatives_elections_in_North_Carolina)\n- 2020: R 2,631,336, D 2,660,535. R 2-party share 49.72%; seats 61.54% (8 of 13). **Index 11.82.** [Wiki 2020](https://en.wikipedia.org/wiki/2020_United_States_House_of_Representatives_elections_in_North_Carolina)\n- The index changes a lot from one cycle to the next (2 to 16), mostly because of court-ordered and legislative map changes.\n- Illustrative 2026 cases:\n  - D wins 5 (R 64.29%) with R at 47 to 51% of the vote: index about 13 to 17.\n  - D wins 6 (R 57.14%): about 6 to 10.\n  - D wins 4 (R 71.43%) with R at about 50 to 52%: about 19 to 21.\n  - D wins 3: about 26 to 29.\n  - D wins 7: about 0 to 2, which is below the question's 5 to 30 range.\n\n### 5. Other forecasts\n- Kalshi, Democratic seats won in NC (2026-10-29): 3 at 3%, 4 at 10%, 5 at 41%, 6 at 19%, 7 at 11%, \"Above 7\" at 20%. Those prices look inconsistent; \"Above 7\" may overlap with other buckets.\n- Polymarket, same question: <3 at 1.75%, 3 at 3.3%, 4 at 11.5%, 5 at 44%, 6+ at 39%.\n- Polymarket NC-3 margin: Republican-win buckets add up to about 47%. Kalshi has Murphy winning by 1+ points at 0.52.\n- Kalshi NC-9: Hudson getting at least 50% at 0.65. NC-10: Harrigan winning by 7+ at 0.75. NC-12: Adams getting at least 74% at 0.83. Polymarket NC-6: R margin of 12 to 15 points at 0.405.\n- Kalshi House control: Democrats 0.91.\n- I found no expert or market forecast of the Gallagher index itself.\n\n### 6. Upcoming events\n- 2026-11-03: Election Day. NC-1, NC-11, NC-3, NC-13 and NC-9 decide the seat count.\n- Mid to late November: provisional ballots, county canvass and possible recounts in close races. North Carolina allows a recount when the margin is 1% or less.\n- Around 2026-11-24: state certification, before the question resolves around 2026-12-01.\n- Statewide turnout, including the early-vote surge, mainly moves the vote-share part of the index. One more or one fewer seat moves the index by about 7.1 points.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-29 21:01 UTC; check each market really matches the question)\n- Kalshi: Who will control the House? (In 2026). Yes prices: Democratic Party: 0.91; Republican Party: 0.08.\n- Kalshi: North Carolina's 10th District margin of victory (North Carolina's 10th District). Yes prices: Harrigan, 13+ pts: 0.44; Harrigan, 10+ pts: 0.60; Harrigan, 16+ pts: 0.28; Harrigan, 7+ pts: 0.75; Harrigan, 19+ pts: 0.18; Harrigan, 4+ pts: 0.85; Harrigan, 22+ pts: 0.09; Harrigan, 28+ pts: 0.0000; Harrigan, 25+ pts: 0.0000.\n- Kalshi: North Carolina's 3rd District margin of victory (North Carolina's 3rd District). Yes prices: Murphy, 1+ pts: 0.52; Murphy, 3+ pts: 0.41; Murphy, 6+ pts: 0.24; Murphy, 9+ pts: 0.14; Murphy, 12+ pts: 0.07; Murphy, 15+ pts: 0.0890; Murphy, 24+ pts: 0.1100; Murphy, 21+ pts: 0.0000; Murphy, 18+ pts: 0.0040.\n- Kalshi: How many House seats will Democrats win in North Carolina? (On Nov 3, 2026). Yes prices: 5: 0.41; Above 7: 0.20; 6: 0.19; 7: 0.11; 4: 0.10; 3: 0.03; Below 3: 0.0100.\n- Kalshi: North Carolina gas prices tomorrow (On Oct 30, 2026). Yes prices: Above 3.4100: 0.89; Above 3.4000: 0.93; Above 3.4150: 0.12; Above 3.3950: 0.94; Above 3.4200: 0.06; Above 3.3850: 0.95; Above 3.4250: 0.0000; Above 3.4300: 0.0000; Above 3.4350: 0.0000; Above 3.4400: 0.0000.\n- Kalshi: North Carolina State House winner? (North Carolina State House). Yes prices: Democratic party: 0.56; Republican party: 0.41.\n- Kalshi: NC-12 House election: Alma Adams vote percent (Vote Percent - Alma Adams). Yes prices: At least 78%: 0.39; At least 76%: 0.65; At least 80%: 0.17; At least 74%: 0.83; At least 72%: 0.94; At least 82%: 0.2300; At least 68%: 0.97; At least 84%: 0.0000; At least 70%: 0.97.\n- Kalshi: NC-09 House election: Richard Hudson vote percent (Vote Percent - Richard Hudson). Yes prices: At least 52%: 0.41; At least 50%: 0.65; At least 54%: 0.21; At least 48%: 0.83; At least 56%: 0.09; At least 58%: 0.05; At least 46%: 0.94; At least 60%: 0.0000; At least 62%: 0.0000; At least 64%: 0.0000.\n- Kalshi: North Carolina's 12th District margin of victory (North Carolina's 12th District). Yes prices: Adams, 56+ pts: 0.47; Adams, 53+ pts: 0.66; Adams, 59+ pts: 0.28; Adams, 50+ pts: 0.81; Adams, 62+ pts: 0.12; Adams, 47+ pts: 0.92; Adams, 38+ pts: 0.95; Adams, 44+ pts: 0.94; Adams, 41+ pts: 0.95.\n- Polymarket: How many House seats will the Democrats win in North Carolina? (ends 2026-11-04). [Yes, No] prices: <3: [\"0.0175\", \"0.9825\"]; 3: [\"0.033\", \"0.967\"]; 4: [\"0.115\", \"0.885\"]; 5: [\"0.44\", \"0.56\"]; 6+: [\"0.3915\", \"0.6085\"]\n- Polymarket: NC-03 House Election Margin of Victory (ends 2026-11-04). [Yes, No] prices: Republican 18%+: [\"0.075\", \"0.925\"]; Republican 15-18%: [\"0.016\", \"0.984\"]; Republican 12-15%: [\"0.028\", \"0.972\"]; Republican 9-12%: [\"0.038\", \"0.962\"]; Republican 6-9%: [\"0.13\", \"0.87\"]; Republican 3-6%: [\"0.18\", \"0.82\"]\n- Polymarket: NC-06 House Election Margin of Victory (ends 2026-11-04). [Yes, No] prices: Republican 18%+: [\"0.054\", \"0.946\"]; Republican 15-18%: [\"0.0445\", \"0.9555\"]; Republican 12-15%: [\"0.405\", \"0.595\"]; Republican 9-12%: [\"0.1765\", \"0.8235\"]; Republican 6-9%: [\"0.33\", \"0.67\"]; Republican 3-6%: [\"0.125\", \"0.875\"]\n- Polymarket: North Carolina enacts data center moratorium by...? (ends 2029-01-01). [Yes, No] prices: December 31, 2026: [\"0.0295\", \"0.9705\"]; June 30, 2027: [\"0.105\", \"0.895\"]; December 31, 2027: [\"0.24\", \"0.76\"]; December 31, 2028: [\"0.345\", \"0.655\"]\n- Polymarket: 2028 Presidential Election: North Carolina Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.5\", \"0.5\"]; Republican Party: [\"0.445\", \"0.555\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: North Carolina Supreme Court Election Winner (ends 2026-11-04). [Yes, No] prices: Anita Earls (D): [\"0.855\", \"0.145\"]; Sarah Stevens (R): [\"0.13\", \"0.87\"]; Candidate A: [\"0.5\", \"0.5\"]; Candidate B: [\"0.5\", \"0.5\"]; Candidate C: [\"0.5\", \"0.5\"]; Candidate D: [\"0.5\", \"0.5\"]\n- Manifold: Will a US House seat flip from Democrat to Republican in a 2027 special election? (23%) https://manifold.markets/ManifoldPolitics/will-a-us-house-seat-flip-from-demo-yRZSUSPLZ2\n- Manifold: Will a US House seat flip from Republican to Democrat in a 2027 special election? (27%) https://manifold.markets/ManifoldPolitics/will-a-us-house-seat-flip-from-repu"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 5.5,
+        "p25": 9.35,
+        "p50": 15.2,
+        "p75": 17.6,
+        "p90": 22.3
+      },
+      "reasoning": "(a) **Time left:** The election is on 2026-11-03, 5 days away. Final certified totals arrive in mid-to-late November, and the question resolves around 2026-12-01.\n\n(b) **Latest known value:** The latest is from 2024, with an index of about 16.0 (10 of 14 seats R, 55.4% R two-party vote). In 2022, under the court-drawn map, it was about 2.2. No 2026 results exist yet.\n\n(c) **If nothing changed:** If the current market favorite happens (9 R seats, 5 D) with an R two-party share near 48-49%, the index is about 15-16.\n\n(d) **If the current trend continued:** The trend is a Democratic-leaning environment, with the national generic ballot at D+6 to D+9 and NC polling around D+2 to D+4.\n- If the wave sweeps NC-1, NC-11 and NC-3, Republicans hold 8 seats. The R vote would be about 47%, giving an index of about 10.\n- If one more seat (NC-7 or NC-9) also flips, the index falls to about 2-4.\n\n(e) **Historical variation:**\n- Each seat moves the index by 7.14 points. The vote share typically varies by about 2 points around expectation.\n- Under GOP-drawn maps the index has run about 16-26 (2016-2024 from memory, 2016-2020 unverified). Under the court map it was about 2.\n- The resulting distribution has several peaks, one for each seat count.\n\n(f) **Experts and markets:**\n\n| Democratic seats | Republican seats (seat share) | Kalshi / Polymarket | My blended estimate |\n|---|---|---|---|\n| 3 | 11 (78.6%) | ~3% | ~3% |\n| 4 | 10 (71.4%) | ~11% | ~11% |\n| 5 | 9 (64.3%) | ~41-44% | ~43% |\n| 6 | 8 (57.1%) | ~19% (6+ at 39% on Polymarket) | ~27% |\n| 7+ | 7 or fewer (50% or less) | small | ~10% |\n\n- Kalshi's \"Above 7\" price looks illiquid, so I discount it.\n- Expected R two-party share is about 47-49.5%.\n\nIndex by seat outcome:\n- 9 R seats: about 14.5-17.5.\n- 8 R seats: about 8-11.\n- 10 R seats: about 20-23.5.\n- 11 R seats: about 28-31.\n- 7 R seats: about 2-4.\n\n(g) **Unexpected scenarios:**\n- **Low:** A large Democratic wave flips NC-1, NC-3, NC-11 and NC-9 with an R vote near 47%. Seats would split 7-7 and the index would be about 3. A bigger wave reaching 6 R seats would also give about 3.\n- **High:** Republicans hold all 11 targeted seats despite the national environment, with the statewide R share near 49%. The index would be about 29-30.\n\nPercentile 1: 1.5\nPercentile 5: 3\nPercentile 10: 5.5\nPercentile 20: 8.8\nPercentile 30: 9.9\nPercentile 40: 13.5\nPercentile 50: 15.2\nPercentile 60: 15.9\nPercentile 70: 16.7\nPercentile 80: 18.5\nPercentile 90: 22.3\nPercentile 95: 24\nPercentile 99: 29.5"
+    },
+    {
+      "value": {
+        "p10": 3.5,
+        "p25": 7.15,
+        "p50": 12.8,
+        "p75": 15.0,
+        "p90": 19.0
+      },
+      "reasoning": "**(a) Time left:** Election Day is 2026-11-03, five days away. Certified totals arrive in mid to late November, and the question resolves around 2026-12-01.\n\n**(b) Latest known value:** The 2024 index was about 16.0: Republicans won 10 of 14 seats with 55.4% of the two-party vote. The 2022 index, under a court-drawn map, was about 2.2.\n\n**(c) If nothing changed:** Suppose Republicans repeat 10 seats on the new 11-3 map with a vote share near 52%. The index would be about 19 to 21.\n\n**(d) If the current trend continued:** The national environment favors Democrats. The national generic ballot is around D+5 to D+9, and NC polling is around D+4. That puts the GOP two-party share near 49-51%. The most likely seat outcome is 9R-5D, which gives an index near 13-15. An 8R-6D split, the next most likely, gives about 7-9.\n\n**(e) Historical variation:** Under GOP-drawn maps the index has run roughly 11 to 26. Under the 2022 court map it was about 2. Each seat moves the index by 7.14 points, so the distribution is lumpy. Within each seat count, vote-share uncertainty of about ±2.5 points smooths it out.\n\n**(f) Markets:** Combining Kalshi and Polymarket, the implied number of Republican seats is:\n\n| GOP seats | Probability |\n|---|---|\n| 11 | about 3% |\n| 10 | about 11% |\n| 9 | about 43% |\n| 8 | about 28% |\n| 7 | about 12% |\n| 6 or fewer | about 3% |\n\nNo experts have forecast the index directly.\n\n**(g) Unexpected scenarios:**\n- **Low:** A Democratic wave flips NC-1, NC-3, NC-11 and one of NC-7 or NC-9. The result is 7-7 or better for Democrats, and the index falls to near 0-3.\n- **High:** Democratic turnout disappoints and Republicans sweep NC-1, NC-3 and NC-11 for an 11-3 split while getting about 51% of the vote. The index would be about 27-28.\n\n**Combining the scenarios:**\n- About 13-15% probability below 4 (7 or fewer Republican seats).\n- About 28% in the 6-10 range (8 seats).\n- About 43% in the 12-16 range (9 seats).\n- About 11% around 19-22 (10 seats).\n- A small tail near 26-29 (11 seats).\n\nPercentile 1: 0.8\nPercentile 5: 2\nPercentile 10: 3.5\nPercentile 20: 6.5\nPercentile 30: 7.8\nPercentile 40: 9.2\nPercentile 50: 12.8\nPercentile 60: 13.6\nPercentile 70: 14.4\nPercentile 80: 15.6\nPercentile 90: 19\nPercentile 95: 21.5\nPercentile 99: 27"
+    },
+    {
+      "value": {
+        "p10": 5.2,
+        "p25": 8.55,
+        "p50": 13.8,
+        "p75": 16.75,
+        "p90": 21.5
+      },
+      "reasoning": "(a) **Time left:** Election Day is November 3, 2026, five days away. Certified totals arrive in mid to late November, and the question resolves around December 1.\n\n(b) **Latest known value:** In 2024 the index was about 16.0. Republicans won 10 of 14 seats with 55.4% of the two-party vote. No 2026 results exist yet. In 2022, under the court-drawn map, it was about 2.2.\n\n(c) **If nothing changed:** If the 2024 seat count (10 R) held with a similar vote share, the index would be about 16. Under the new map aimed at 11-3, an unchanged environment gives about 23-28.\n\n(d) **If the current trend continued:** The national environment is Democratic (Democrats lead the generic ballot by roughly 4-9 points, and the ECU NC poll has D 50-46). That points to a GOP two-party share of about 48-49.5%. The most likely result is 9 R seats (64.3% seat share), which gives an index of about 14.5-16.5.\n\n(e) **Historical variation:** Under GOP-drawn maps the index has run about 11-26. Under the court map it was about 2. Each GOP seat gained or lost moves the index by 7.14 points, which dominates the outcome. A 1-point change in vote share moves it by only 1 point.\n\n(f) **Experts and markets:** The two markets imply roughly this distribution of GOP seats:\n\n| GOP seats | Implied probability | Index (approx.) |\n|---|---|---|\n| 11 | 3% | about 30 |\n| 10 | 11% | about 22-24 |\n| 9 | 43% | about 14-17 |\n| 8 | 30% | about 7.5-11 |\n| 7 | 10% | about 1.5-5 |\n| 6 or fewer | 3% | about 4-8 |\n\nRatings have NC-1 and NC-11 as toss-ups and NC-3 as Likely R, though markets give it close to even odds.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** A Democratic wave flips NC-1, NC-11 and NC-3, and NC-7 or NC-9 falls too. Republicans end with 7 seats on about 47% of the vote, so the index is about 3. Six seats on about 46% would make it about 3 again.\n- **High outcome:** The polls overstate Democrats, and Republicans hold all of NC-1, NC-3 and NC-11 to take 11 seats on about 49-50% of the vote. The index would then be about 29-30.\n\nPercentile 1: 1.5\nPercentile 5: 3.5\nPercentile 10: 5.2\nPercentile 20: 7.8\nPercentile 30: 9.3\nPercentile 40: 11.2\nPercentile 50: 13.8\nPercentile 60: 15\nPercentile 70: 16\nPercentile 80: 17.5\nPercentile 90: 21.5\nPercentile 95: 23.8\nPercentile 99: 29"
+    },
+    {
+      "value": {
+        "p10": 4.8,
+        "p25": 8.45,
+        "p50": 13.7,
+        "p75": 15.95,
+        "p90": 19.5
+      },
+      "reasoning": "(a) **Time left:** Election Day is 2026-11-03, 5 days away. Certified totals are expected around 2026-11-24, before resolution around 2026-12-01.\n\n(b) **Latest known value:** 16.05, from the 2024 results. Republicans won 71.43% of seats (10 of 14) with 55.38% of the two-party vote.\n\n(c) **If nothing changed:** The current 10R-4D split, combined with a near-even statewide vote (about 50-52% R), gives an index of about 19-21. On the new 2025 map, though, the \"status quo\" expectation is closer to 9R-5D.\n\n(d) **If the current trend continued:** The national environment favors Democrats. NC generic-ballot polls show roughly D+4. That points to D winning 5 seats with an R two-party vote of about 49-51%. The index would then be 64.29 minus the R vote share, about 13-15.\n\n(e) **Historical variation:** The index has swung widely: 11.8 in 2020, 2.2 in 2022 and 16.1 in 2024. Each seat moves it by about 7.1 points. Vote-share uncertainty of about ±2.5 points adds spread within each seat outcome.\n\n(f) **Markets:**\n- Polymarket on Democratic seats: 4 or fewer at about 16%, 5 at 44%, 6 or more at 39%.\n- Kalshi is similar, with 5 seats at 41%.\n- Kalshi gives Democrats a 91% chance of House control.\n- I combined these into seat outcomes, with the R vote share shifting in the same direction as the seat count:\n\n| Democratic seats | Approx. probability | Likely index |\n|---|---|---|\n| 3 or fewer | ~4% | ~25 |\n| 4 | ~11% | ~19 |\n| 5 | ~45% | ~14 |\n| 6 | ~25% | ~8.5 |\n| 7 | ~10% | ~3 |\n| 8 or more | ~5% | ~3 |\n\n(g) **Unexpected scenarios:**\n- **Low:** A Democratic wave carries NC-1, NC-11, NC-3 and NC-13 (7D-7R) with a roughly 47% R vote. The index would fall to about 1-3.\n- **High:** Republicans overperform the polls, hold NC-1 and NC-11 and win 11 seats, with a 52-53% R vote. The index would be about 26-27.\n\nPercentile 1: 1.0\nPercentile 5: 2.8\nPercentile 10: 4.8\nPercentile 20: 7.4\nPercentile 30: 9.5\nPercentile 40: 12.3\nPercentile 50: 13.7\nPercentile 60: 14.5\nPercentile 70: 15.3\nPercentile 80: 16.6\nPercentile 90: 19.5\nPercentile 95: 21.8\nPercentile 99: 26.8"
+    },
+    {
+      "value": {
+        "p10": 5.0,
+        "p25": 9.55,
+        "p50": 14.8,
+        "p75": 17.4,
+        "p90": 20.8
+      },
+      "reasoning": "(a) **Time left:** Election Day is 2026-11-03, 5 days away. Certified totals should arrive around late November, before the question resolves around 2026-12-01.\n\n(b) **Latest known value:** The 2024 index was 16.05 (R 55.38% of the two-party vote, R 10 of 14 seats). The 2022 index was 2.16 and the 2020 index was 11.82.\n\n(c) **If nothing changed:** The map was drawn for 11 R to 3 D. With a 10-4 delegation and roughly 50% R vote, the index would be about 21.\n\n(d) **If the current trend continued:** The D-leaning environment points to:\n- Statewide generic-ballot polls show D+4 to D+9, so the R two-party share is likely about 46-49%.\n- Markets favour 5 Democratic seats, with 6 or more close behind.\n- With 5 D seats the index is about 16. With 6 D seats it is about 10.\n\n(e) **Historical variation:** The index has ranged from 2 to 16 across recent cycles. Each seat moves it by about 7.1 points. Each point of vote share moves it by about 1 point.\n\n(f) **Experts and markets:**\n- Polymarket on Democratic seats: 4 or fewer about 16%, 5 at 44%, 6 or more at 39%.\n- Kalshi is similar: 5 at 41%, 6 at 19%, 7 at 11%, and 20% on \"Above 7\". That last price looks inconsistent with the other buckets and is likely mispriced or overlapping.\n- My working seat distribution is 3 D seats 3%, 4 at 11%, 5 at 43%, 6 at 30%, 7 at 10%, 8 or more at 3%.\n- I expect seats and votes to move together: more D seats would come with a lower R vote share, which slightly compresses the outcomes.\n  - 5 D seats with R vote near 48% gives about 16.\n  - 6 D seats with R near 47% gives about 10.\n  - 4 D seats with R near 50% gives about 21.\n  - 7 D seats with R near 46% gives about 4.\n\n(g) **Unexpected scenarios:**\n- **Low:** A big blue wave flips NC-1, NC-11, NC-3 and NC-9 (7 or 8 D seats) with R near 45-46% of the vote, giving an index of about 1-4.\n- **High:** Republicans overperform the polls, holding NC-1 and NC-11 (3-4 D seats) while still winning about 50% of the vote, giving an index of about 22-28.\n\nPercentile 1: 1.5\nPercentile 5: 3.2\nPercentile 10: 5\nPercentile 20: 8.8\nPercentile 30: 10.3\nPercentile 40: 12.3\nPercentile 50: 14.8\nPercentile 60: 15.9\nPercentile 70: 16.8\nPercentile 80: 18\nPercentile 90: 20.8\nPercentile 95: 22.8\nPercentile 99: 27"
+    },
+    {
+      "value": {
+        "p10": 3.2,
+        "p25": 7.65,
+        "p50": 13.4,
+        "p75": 15.85,
+        "p90": 18.8
+      },
+      "reasoning": "**(a) Time left:** Election Day is 2026-11-03, 5 days away. Certified results arrive around late November, and the question resolves around 2026-12-01.\n\n**(b) Latest known value:** 16.05 in 2024 (R 55.38% of the two-party vote, 10 of 14 seats). It was 2.16 in 2022 and 11.82 in 2020.\n\n**(c) If nothing changed:** The current delegation is 10R-4D. If the House vote kept a 2024-like R share of about 55%, the index would be about 16. In this year's environment, 10R-4D with an R share near 51% would give about 20.\n\n**(d) If the current trend continued:** Polls show a Democratic wave, with the statewide generic ballot at D+4 to D+9.\n- The R share of the aggregate House vote has run more Republican than statewide results. It was about 4 points more Republican in 2024 and 0.5 points more in 2022, partly because Democrats run weak candidates in safe R seats.\n- That suggests an R share of about 48 to 51% in 2026.\n- The most likely result, 9R-5D, gives an index of about 13 to 16.\n\n**(e) Historical variation:** The index swings from 2 to 16 between cycles. One seat changing hands moves it by about 7.1 points, and seat count dominates the outcome. Within a given seat count, the vote share moves it by about ±2 to 3 points.\n\n**(f) Markets:** Probabilities for the number of Democratic seats, roughly blending Kalshi and Polymarket:\n\n| Democratic seats | Probability | Likely R share | Index range |\n|---|---|---|---|\n| 3 | ~3% | | 25 to 28 |\n| 4 | ~11% | about 51% | 18 to 23 |\n| 5 | ~45% | about 49.5% | 13 to 17 |\n| 6 | ~25% | about 48.5% | 6 to 11 |\n| 7 | ~11% | | 1 to 3 |\n| 8 or more | ~5% | | 3 to 7 |\n\n- The Kalshi \"Above 7\" price looks inconsistent with its other buckets.\n- Markets give the Democrats a 91% chance of winning House control nationally.\n- No one forecasts the index directly.\n\n**(g) Unexpected scenarios:**\n- **Low:** A Democratic wave flips NC-1, NC-11, NC-3 and NC-13, for a 7-7 split, with the R vote share near 48 to 50%. The index would be about 0 to 2.\n- **High:** The Democratic environment fades and Republicans hold NC-1 and NC-11 for an 11-3 split, with an R share near 52%. The index would be about 27.\n\nThe low tail (D7) and high tail (D3) set Percentiles 1 and 99.\n\nPercentile 1: 0.8\nPercentile 5: 2\nPercentile 10: 3.2\nPercentile 20: 6.8\nPercentile 30: 8.5\nPercentile 40: 11\nPercentile 50: 13.4\nPercentile 60: 14.4\nPercentile 70: 15.3\nPercentile 80: 16.4\nPercentile 90: 18.8\nPercentile 95: 20.8\nPercentile 99: 26"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 5.0,
+    "p25": 8.5188,
+    "p50": 13.7402,
+    "p75": 16.3701,
+    "p90": 20.4359
+  },
+  "usage": [
+    {
+      "question_id": "46513",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00011300000000000001,
+      "input_tokens": 505,
+      "output_tokens": 125,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00022390000000000002,
+      "input_tokens": 958,
+      "output_tokens": 65,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 130.2,
+      "notional_cost_usd": 0.3155637,
+      "input_tokens": 100766,
+      "output_tokens": 5162,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.6,
+      "notional_cost_usd": 0.09826,
+      "input_tokens": 6706,
+      "output_tokens": 2231,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.7,
+      "notional_cost_usd": 0.101132,
+      "input_tokens": 6705,
+      "output_tokens": 2375,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.0008301,
+      "input_tokens": 2984,
+      "output_tokens": 467,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.7,
+      "notional_cost_usd": 0.0009064000000000001,
+      "input_tokens": 3138,
+      "output_tokens": 558,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.0003783,
+      "input_tokens": 2985,
+      "output_tokens": 570,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.00027605,
+      "input_tokens": 3141,
+      "output_tokens": 362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 45.7,
+      "notional_cost_usd": 0.0439304,
+      "input_tokens": 6705,
+      "output_tokens": 2000,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0008629000000000001,
+      "input_tokens": 2983,
+      "output_tokens": 533,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00030378,
+      "input_tokens": 2983,
+      "output_tokens": 421,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 112.2,
+      "notional_cost_usd": 0.24719429999999995,
+      "input_tokens": 80456,
+      "output_tokens": 5289,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.7,
+      "notional_cost_usd": 0.095188,
+      "input_tokens": 6857,
+      "output_tokens": 2017,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.6,
+      "notional_cost_usd": 0.091628,
+      "input_tokens": 6857,
+      "output_tokens": 1839,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.4,
+      "notional_cost_usd": 0.09944,
+      "input_tokens": 6856,
+      "output_tokens": 2230,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.0008798,
+      "input_tokens": 2960,
+      "output_tokens": 576,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0008775,
+      "input_tokens": 2996,
+      "output_tokens": 557,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0008462,
+      "input_tokens": 3072,
+      "output_tokens": 464,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00032254,
+      "input_tokens": 2959,
+      "output_tokens": 459,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0003499,
+      "input_tokens": 2995,
+      "output_tokens": 513,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46513",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00026217,
+      "input_tokens": 3072,
+      "output_tokens": 336,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0998
+}
