@@ -24,6 +24,7 @@ from forecasting_tools import (
     MultipleChoiceQuestion,
     NumericDistribution,
     NumericQuestion,
+    PredictedOption,
     PredictedOptionList,
     ReasonedPrediction,
     clean_indents,
@@ -39,7 +40,7 @@ from main import FallTemplateBot2026
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-10-28.2"
+BOT_VERSION = "2026-10-29.1"
 
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
@@ -102,6 +103,26 @@ def describe_prediction(value) -> object:
     return str(value)
 
 
+def _option_key(name: str) -> str:
+    return re.sub(r"[\s–—-]+", " ", name).strip().casefold()
+
+
+def restore_option_names(prediction: PredictedOptionList, options: list[str]) -> PredictedOptionList:
+    """Puts back the question's exact option names. Our output filter turns en and em dashes
+    into hyphens, and Metaculus rejects a forecast whose option names differ from the
+    question's (question 46279 was missed this way on 29 Oct 2026)."""
+    exact = {_option_key(o): o for o in options}
+    return PredictedOptionList(
+        predicted_options=[
+            PredictedOption(
+                option_name=exact.get(_option_key(o.option_name), o.option_name),
+                probability=o.probability,
+            )
+            for o in prediction.predicted_options
+        ]
+    )
+
+
 def _interpolate(points: list[tuple[float, float]], q: float) -> float:
     """Value at cumulative probability q from sorted (percentile, value) pairs."""
     for (p0, v0), (p1, v1) in zip(points, points[1:]):
@@ -153,7 +174,7 @@ class ClaudeForecaster(FallTemplateBot2026):
         if isinstance(question, BinaryQuestion):
             return shrink_binary(aggregate)  # see calibration.py for the backtest behind this
         if isinstance(question, MultipleChoiceQuestion):
-            return floor_options(aggregate)
+            return restore_option_names(floor_options(aggregate), question.options)
         return aggregate
 
     async def _research_and_make_predictions(self, question: MetaculusQuestion):
