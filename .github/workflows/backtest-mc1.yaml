@@ -1,0 +1,124 @@
+name: Backtest mc1
+
+# Multiple-choice backtest run mc1 (backtest/run_mc_backtest.py) on the Max plan, which the
+# live bot shares. It starts after the weekly limit resets (1 Nov 2026 04:00 UTC) and runs in
+# chunks of CHUNK questions at least GAP_HOURS apart, so the live bot keeps room in the 5-hour
+# limit. GitHub drops many cron firings, so it fires hourly and each firing only runs a chunk
+# when one is due. Results are committed to branch backtest-mc1; when every question has been
+# tried it scores the run and opens an issue (emails the owner). Delete this file afterwards.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "true = test the plumbing now: no window check, no questions, nothing pushed"
+        default: "false"
+  schedule:
+    - cron: "17 * 1,2,3 11 *"
+
+concurrency:
+  group: backtest-mc1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  chunk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+      RUN: mc1
+      BRANCH: backtest-mc1
+      CHUNK: "16"
+      GAP_HOURS: "5"
+      START: "2026-11-01T04:30:00Z"
+      STOP: "2026-11-04T00:00:00Z"
+      DRY: ${{ inputs.dry_run || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Is a chunk due?
+        id: due
+        run: |
+          git config user.name "forecast-bot"
+          git config user.email "forecast-bot@users.noreply.github.com"
+          now=$(date -u +%s)
+          if [ "$DRY" = "true" ]; then
+            echo "Dry run"
+            { echo "due=true"; echo "limit=0"; echo "total=1"; } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$now" -lt "$(date -u -d "$START" +%s)" ] || [ "$now" -ge "$(date -u -d "$STOP" +%s)" ]; then
+            echo "Outside $START to $STOP, nothing to do"; echo "due=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # The branch keeps the code as it was when the run started, plus the results so far.
+          if git ls-remote --exit-code --heads origin "$BRANCH" > /dev/null; then
+            git checkout -q -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout -q -b "$BRANCH"
+          fi
+          dir="backtest/results/$RUN"
+          mkdir -p "$dir"
+          saved=$(find "$dir" -maxdepth 1 -name '*.json' | wc -l)
+          total=$(grep -c "" backtest/data/mc_questions.jsonl)
+          last=$(cat "$dir/.last_chunk" 2>/dev/null || echo 0)
+          echo "$saved of $total saved; last chunk started $(date -u -d "@$last")"
+          if [ -f "$dir/.finished" ]; then
+            echo "Run finished"; echo "due=false" >> "$GITHUB_OUTPUT"
+          elif [ $(( now - last )) -lt $(( GAP_HOURS * 3600 )) ]; then
+            echo "Last chunk less than $GAP_HOURS hours ago"; echo "due=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "due=true" >> "$GITHUB_OUTPUT"
+            echo "limit=$(( saved + CHUNK ))" >> "$GITHUB_OUTPUT"
+            echo "total=$total" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.due.outputs.due == 'true'
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v10.3.0
+        if: steps.due.outputs.due == 'true'
+        with:
+          version: "0.13.1"
+          enable-cache: true
+      - name: Install
+        if: steps.due.outputs.due == 'true'
+        run: uv sync --locked && npm install -g @anthropic-ai/claude-code && claude --version
+      - name: Run a chunk
+        if: steps.due.outputs.due == 'true'
+        run: |
+          dir="backtest/results/$RUN"
+          mkdir -p "$dir"
+          if [ "$DRY" != "true" ]; then
+            date -u +%s > "$dir/.last_chunk"
+            git add "$dir/.last_chunk"
+            git commit -q -m "Backtest $RUN: chunk started"
+            git push -q origin "$BRANCH"
+          fi
+          uv run python backtest/run_mc_backtest.py --run "$RUN" --limit "${{ steps.due.outputs.limit }}" --predictions 5 --parallel 2 2>&1 | tee chunk.log || true
+      - name: Save results, and score when every question has been tried
+        if: always() && steps.due.outputs.due == 'true' && env.DRY != 'true'
+        run: |
+          dir="backtest/results/$RUN"
+          saved=$(find "$dir" -maxdepth 1 -name '*.json' | wc -l)
+          if [ "${{ steps.due.outputs.limit }}" -ge "${{ steps.due.outputs.total }}" ]; then
+            uv run python backtest/score_mc.py --run "$RUN" > score.md 2>&1 || true
+            touch "$dir/.finished"
+            {
+              echo "Multiple-choice backtest $RUN finished: $saved of ${{ steps.due.outputs.total }} questions saved, on branch $BRANCH."
+              echo
+              cat score.md
+              echo
+              echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo
+              echo "cc @${{ github.repository_owner }}"
+            } > notice.md
+            gh issue create --title "Backtest $RUN finished" --body-file notice.md || echo "Could not open an issue"
+          fi
+          git add "$dir" backtest/RESULTS.md
+          git commit -q -m "Backtest $RUN: $saved questions saved" || true
+          git push -q origin "$BRANCH"
