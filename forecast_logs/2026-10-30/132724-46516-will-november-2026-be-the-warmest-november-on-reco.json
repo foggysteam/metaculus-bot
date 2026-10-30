@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-10-30T13:30:51.601252+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-10-30T13:27:24.948059+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46516,
+    "post_id": 46286,
+    "url": "https://www.metaculus.com/questions/46286",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "Will November 2026 be the warmest November on record, according to Copernicus?",
+    "resolution_criteria": "This question resolves as **Yes** if November 2026 is the warmest November on record (when evaluated by global average air surface temperature for the month) in the ERA5 [dataset](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview), according to the Copernicus Climate Change Service (C3S)--for example in its monthly [Climate Bulletin](https://climate.copernicus.eu/climate-bulletin).",
+    "fine_print": "A tie resolves as Yes.",
+    "close_time": "2026-10-30 15:00 UTC",
+    "scheduled_resolution_time": "2026-12-01 00:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n- 2026-10-30: I did not fetch the ERA5 dataset or the C3S bulletin page directly. The current record to beat, from C3S, is November 2023: 14.22°C, which is +0.85°C above the 1991-2020 average and about 1.75°C above pre-industrial. [C3S Nov 2023](https://climate.copernicus.eu/surface-air-temperature-november-2023)\n- 2025-12-10: November 2025 came in third at 14.02°C (+0.65°C), 0.20°C below 2023 and 0.08°C below November 2024 (second). [C3S Nov 2025](https://climate.copernicus.eu/surface-air-temperature-november-2025)\n- C3S should publish the November 2026 bulletin in early December, after the question's nominal resolution time of 2026-12-01.\n\n## 2. Current status\n- Nothing has settled this yet. November has not started.\n- 2026-10-30: celsius.earth is a third-party tracker, not Copernicus. Using ERA5 daily data through 2026-10-29, it estimates October 2026 at 15.364°C, or +0.92°C vs 1991-2020 (+1.80°C vs pre-industrial). That would be the warmest October, about 0.07°C above October 2023. [celsius.earth](https://celsius.earth/warmest-month)\n- The same page forecasts November 2026 at 14.20°C, an anomaly of +0.83°C (90% range +0.66 to +1.01). That is just under the +0.85°C record. It gives the record a 42% chance in its \"standard\" run and 59% when \"re-seeded\". The same site's figures have been inconsistent before: a search snippet showed a 45% chance for October, but the current page says 100%.\n- Key point: October's anomaly (~+0.92) sits well above the November bar (+0.85), and El Niño is still strengthening. If November simply held October's anomaly, it would set a record.\n\n## 3. Recent news (newest first)\n- 2026-10-30: Business Today, citing an ECMWF ensemble via Netweather, reports an 86% chance of a major sudden stratospheric warming in early November, linked to the \"Super El Niño\". This could redistribute cold air in the Northern Hemisphere. The effect on the global mean is unclear. [Business Today](https://www.businesstoday.in/world/story/arctic-polar-vortex-could-weaken-like-never-before-in-november-what-super-el-nino-has-to-do-with-it-564701-2026-10-30)\n- 2026-10-28/29: Forecasters expect an omega block over Europe and possible cold air from the east in early November. These are regional signals only. [Futura](https://www.futura-sciences.com/planete/actualites/meteo-meteo-va-bloquer-france-pendant-10-15-jours-voici-cest-mauvaise-nouvelle-138904/), [Il Mattino](https://www.ilmattino.it/primopiano/cronaca/meteo_inverno_2026_2027_freddo_novembre_neve-9856429.html)\n- 2026-10 (September bulletin): C3S reported September 2026 as the second warmest September, at 16.27°C (+0.82°C, 1.63°C above pre-industrial), 0.11°C below 2023. Extra-polar sea surface temperature hit a September record of 21.05°C. Niño 3.4 set an all-time high for the month, above the 2015/16 peaks. C3S Director Buontempo said the run of months above 1.5°C will likely last into 2027. [C3S](https://climate.copernicus.eu/global-temperatures-remain-over-15degc-above-pre-industrial-levels-during-second-warmest-september), [sustainabilityonline](https://sustainabilityonline.net/news/september-2026-was-the-second-warmest-on-record-says-copernicus/)\n- 2026-09: C3S reported August 2026 as the joint warmest month on record. [C3S](https://climate.copernicus.eu/copernicus-august-was-worlds-joint-hottest-month-record-pushing-global-temperatures-back-above)\n\n## 4. Base rates\n- ERA5 November anomalies vs 1991-2020: 2023 was +0.85 (record), 2024 about +0.73, 2025 +0.65. The previous record before 2023, November 2020, was 0.32°C lower than 2023. [C3S](https://climate.copernicus.eu/surface-air-temperature-november-2023)\n- Recent 2026 anomalies: September +0.82 (2023 was +0.93), October about +0.92 (estimated). The anomaly rose roughly 0.1°C from September to October.\n- Analog: in the 2023 El Niño build-up, every month from June to December set a calendar-month record. [C3S](https://climate.copernicus.eu/surface-air-temperature-november-2023) The bar for November is relatively high, because 2023's November anomaly (+0.85) was only a little below its September and October values.\n- Persistence: month-to-month changes in the global anomaly are typically about ±0.05 to 0.1°C. During a strengthening El Niño, global temperatures usually lag Niño 3.4 by a few months, which points to further warming into winter.\n\n## 5. Other forecasts\n- Kalshi, \"This November is the hottest November ever?\": Yes at 0.76 (2026-10-30 13:27 UTC). I could not confirm its resolution source; it may be NASA or NOAA rather than C3S.\n- Kalshi, \"November temperature increase\": the 1.30+ bucket is at 0.53 and all lower buckets at about 0. This is probably the NASA GISS anomaly scale, so it only maps to this question indirectly.\n- Polymarket: October 2026 as hottest October at 0.968. 2026 ranked #1 year at 0.895.\n- Kalshi: 2026 hottest year at 0.80.\n- celsius.earth model: 42% to 59% chance of a November record. [celsius.earth](https://celsius.earth/warmest-month)\n- Manifold: there is an October 2026 ranking market, but I found no November market. I found no official C3S or ECMWF statement forecasting November specifically.\n\n## 6. Upcoming events before resolution\n- About 2026-11-05 to 11-08: the C3S October 2026 bulletin is due. It should confirm whether October set a record and by how much, which tests the persistence argument.\n- Daily ERA5 values on Climate Pulse (pulse.climate.copernicus.eu) through November will give a running month-to-date picture.\n- Early to mid November: the possible sudden stratospheric warming, along with the NOAA and BoM El Niño updates (CPC update around 2026-11-12).\n- About 2026-12-04 to 12-09: the C3S November bulletin, the actual resolution document.\n\n**Summary:** October 2026 is running about 0.07°C above the previous October record, with El Niño still strengthening. November needs to reach +0.85°C or more vs 1991-2020. One model's central estimate is just below that at +0.83, but simple persistence from October would clear it.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-30 13:27 UTC; check each market really matches the question)\n- Kalshi: This November is the hottest November ever? (In Nov 2026). Yes prices: Hottest ever: 0.76.\n- Kalshi: When will OpenAI release Astra 6.1? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.57; Before Nov 13, 2026: 0.28; Before Nov 6, 2026: 0.10; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100; Before Oct 30, 2026: 0.0100.\n- Kalshi: When will Anthropic release Opus 6? (Opus 6). Yes prices: Before Dec 1, 2026: 0.14; Before Nov 16, 2026: 0.09; Before Nov 1, 2026: 0.0100; Before Sep 1, 2026: 0.0400; Before Sep 16, 2026: 0.0100; Before Oct 1, 2026: 0.0300; Before Oct 16, 2026: 0.0200.\n- Kalshi: Will 2026 be the hottest year ever? (In 2026). Yes prices: Hottest: 0.80.\n- Kalshi: November temperature increase? (In Nov 2026). Yes prices: 1.30001 or above: 0.53; 1.24 to 1.30: 0.0000; 1.02999 or below: 0.0000; 1.03 to 1.09: 0.0000; 1.10 to 1.16: 0.0000; 1.17 to 1.23: 0.0000.\n- Kalshi: Coinbase monthly transacting users in fiscal 2026 (monthly transacting users in 2026). Yes prices: Above 9.5 million: 0.15; Above 7 million: 0.46; Above 7.5 million: 0.49; Above 8 million: 0.50; Above 9 million: 0.47; Above 6.5 million: 0.95; Above 8.5 million: 0.50.\n- Polymarket: Will Canada's drop in population in 2026 be the largest on record? (ends 2027-05-01). [Yes, No] prices: Will Canada's drop in population in 2026 be the largest on record?: [\"0.18\", \"0.82\"]\n- Polymarket: Where will 2026 rank among the hottest years on record? (ends 2027-03-02). [Yes, No] prices: 1: [\"0.895\", \"0.105\"]; 2: [\"0.08\", \"0.92\"]; 3: [\"0.0025\", \"0.9975\"]; 4: [\"0.001\", \"0.999\"]; 5: [\"0.001\", \"0.999\"]; 6 or lower: [\"0.0005\", \"0.9995\"]\n- Polymarket: October 2026 1st, 2nd, or 3rd hottest on record? (ends 2026-11-29). [Yes, No] prices: 1st hottest: [\"0.968\", \"0.032\"]; 2nd hottest: [\"0.0065\", \"0.9935\"]; 3rd hottest: [\"0.0225\", \"0.9775\"]; 4th or lower : [\"0.0015\", \"0.9985\"]\n- Manifold: Where will October 2026 rank among the warmest Octobers on record (Copernicus ERA5)? (MULTIPLE_CHOICE) https://manifold.markets/Terminator2/where-will-october-2026-rank-among",
+    "Current forecasts put November 2026 roughly level with the record, so this looks close to a coin flip. One independent ERA5-based model gives it a 42% chance of a record, while Kalshi prices it at 76%. Nothing has settled it yet, because November has not started.\n\n## 1. Resolution source\n- **Record to beat:** The resolving dataset is C3S ERA5 global surface air temperature, reported in the monthly Climate Bulletin. The current November record is November 2023. It is not listed directly in a source I fetched, but working back from C3S's 2025 bulletin it is about +0.85°C above the 1991-2020 average, roughly 14.22°C. [C3S Nov 2025](https://climate.copernicus.eu/surface-air-temperature-november-2025)\n- **2025-12-09/10:** November 2025 was third warmest, at 14.02°C (+0.65°C). That was 0.20°C below November 2023 and 0.08°C below November 2024. [C3S](https://climate.copernicus.eu/surface-air-temperature-november-2025)\n- **2026-10-12, latest bulletin:** September 2026 was the second-warmest September, at 16.27°C (+0.82°C, or 1.63°C above pre-industrial). That was 0.11°C below September 2023, but sea surface temperatures were a record for September. [C3S](https://climate.copernicus.eu/surface-air-temperature-september-2026)\n- **August 2026:** 16.96°C (+0.85°C), the warmest August and the joint-hottest month on record. [sustainabilityonline](https://sustainabilityonline.net/?p=34525)\n- **C3S framing:** C3S said that if the last three months of 2026 match those of 2023, the 2026 annual average would be close to 2024's record. [C3S](https://climate.copernicus.eu/surface-air-temperature-september-2026)\n\n## 2. Current status\n- **2026-10-30:** Nothing settles the question yet. The C3S November bulletin is expected in the first days or around 9 December. That would come after the stated resolve date of 2026-12-01.\n- **2026-10-30:** celsius.earth (unofficial, based on ERA5 plus an ECMWF ensemble) estimates October 2026 month-to-date at +0.92°C. It calls the warmest October on record certain, 0.07°C above October 2023. [celsius.earth](https://celsius.earth/warmest-month)\n  - An earlier search summary of the same page gave 45% for the October record, so its numbers have been updated over time.\n- **2026-10-30:** The same site's November 2026 forecast is +0.83°C (90% range +0.66 to +1.01). That is 0.02°C below the November 2023 mark, which it treats as +0.85. It gives a **42%** chance of a record. [celsius.earth](https://celsius.earth/warmest-month)\n\n## 3. Recent news (newest first)\n- **2026-10-30:** ECMWF ensembles reportedly show an 86% chance of a major sudden stratospheric warming in early November. Business Today ties this to the El Niño. It could bring cold air to the Northern Hemisphere mid-latitudes, but its effect on the global mean is ambiguous. [Business Today](https://www.businesstoday.in/world/story/arctic-polar-vortex-could-weaken-like-never-before-in-november-what-super-el-nino-has-to-do-with-it-564701-2026-10-30)\n- **2026-10-29 / 10-28:** There are regional forecasts of an early-November cold spell in eastern Europe and an Omega block over France. These are regional and have little effect on the global mean. [Il Mattino](https://www.ilmattino.it/primopiano/cronaca/meteo_inverno_2026_2027_freddo_novembre_neve-9856429.html), [Futura](https://www.futura-sciences.com/planete/actualites/meteo-meteo-va-bloquer-france-pendant-10-15-jours-voici-cest-mauvaise-nouvelle-138904/)\n- **2026-10-18:** The Niño 3.4 daily anomaly hit a record +3.35°C on 15 October, beating the 2015-16 mark of 3.08°C. The WMO expects an October-December mean of about +3.7°C, peaking around December. [Climate Adaptation Center](https://www.theclimateadaptationcenter.org/2026/10/18/el-nino-reaches-record-strength/)\n- **October 2026:** NOAA puts the chance of the strongest El Niño on record at over 83%. [Wikipedia](https://en.wikipedia.org/wiki/2026%E2%80%932027_El_Ni%C3%B1o_event)\n- **October 2026:** The Copernicus director suggested 2026 could be the hottest year on record. [Phys.org](https://phys.org/news/2026-10-el-nio-temperature-key-pacific.html)\n\n## 4. Base rates\n- **Recent November anomalies (ERA5, vs 1991-2020):** about +0.85 in 2023 (record), about +0.73 in 2024 and +0.65 in 2025. [C3S](https://climate.copernicus.eu/surface-air-temperature-november-2025)\n- **Pattern:** New November records tend to come in strong El Niño years, such as 2015 and 2023. The global temperature response usually lags the El Niño peak by about 3 to 4 months, which favours early 2027 more than November.\n- **2026 vs 2023, month by month:** August 2026 tied the record, September was 0.11°C short, and October looks set for a record by about 0.07°C.\n- **What it takes:** Beating 0.85 requires November to hold roughly October's anomaly, at most dropping about 0.07°C.\n- **Typical variation:** Month-to-month changes in the ERA5 global anomaly are often 0.05 to 0.15°C, so the margin here is within normal noise.\n\n## 5. Other forecasts\n- **2026-10-30, Kalshi \"This November is the hottest November ever?\":** Yes at **0.76**. It likely matches this question, but I did not verify which dataset it settles on.\n- **Kalshi \"November temperature increase?\":** The \"1.30 or above\" bin is at 0.53. This is probably a NASA or NOAA-type metric, not ERA5, and I could not confirm its source.\n- **Polymarket:** October 2026 1st hottest at 0.968. 2026 rank #1 among years at 0.895.\n- **Kalshi:** 2026 hottest year at 0.80.\n- **celsius.earth model:** 42% for a November record (see section 2).\n- **Manifold:** There is a market on October's rank, but I found none on November. [Manifold](https://manifold.markets/Terminator2/where-will-october-2026-rank-among)\n- **Expert forecasts:** I found no expert forecast of the November ranking specifically.\n\n## 6. Upcoming events before resolution\n- **Early November:** C3S's October 2026 bulletin. It will confirm October's anomaly; a bigger margin over 2023 would support a November record.\n- **Throughout November:** Daily ERA5 values on Copernicus Climate Pulse. The page did not show values when I fetched it. [Climate Pulse](https://pulse.climate.copernicus.eu/)\n- **Early November:** The possible sudden stratospheric warming and Northern Hemisphere cold outbreaks.\n- **Ongoing:** El Niño strengthening toward its December peak, and NOAA's ENSO update around 2026-11-12.\n- **Early December:** The C3S November bulletin, which decides the question.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-30 13:27 UTC; check each market really matches the question)\n- Kalshi: This November is the hottest November ever? (In Nov 2026). Yes prices: Hottest ever: 0.76.\n- Kalshi: When will OpenAI release Astra 6.1? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.57; Before Nov 13, 2026: 0.28; Before Nov 6, 2026: 0.10; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100; Before Oct 30, 2026: 0.0100.\n- Kalshi: When will Anthropic release Opus 6? (Opus 6). Yes prices: Before Dec 1, 2026: 0.14; Before Nov 16, 2026: 0.09; Before Nov 1, 2026: 0.0100; Before Sep 1, 2026: 0.0400; Before Sep 16, 2026: 0.0100; Before Oct 1, 2026: 0.0300; Before Oct 16, 2026: 0.0200.\n- Kalshi: Will 2026 be the hottest year ever? (In 2026). Yes prices: Hottest: 0.80.\n- Kalshi: November temperature increase? (In Nov 2026). Yes prices: 1.30001 or above: 0.53; 1.24 to 1.30: 0.0000; 1.02999 or below: 0.0000; 1.03 to 1.09: 0.0000; 1.10 to 1.16: 0.0000; 1.17 to 1.23: 0.0000.\n- Kalshi: Coinbase monthly transacting users in fiscal 2026 (monthly transacting users in 2026). Yes prices: Above 9.5 million: 0.15; Above 7 million: 0.46; Above 7.5 million: 0.49; Above 8 million: 0.50; Above 9 million: 0.47; Above 6.5 million: 0.95; Above 8.5 million: 0.50.\n- Polymarket: Will Canada's drop in population in 2026 be the largest on record? (ends 2027-05-01). [Yes, No] prices: Will Canada's drop in population in 2026 be the largest on record?: [\"0.18\", \"0.82\"]\n- Polymarket: Where will 2026 rank among the hottest years on record? (ends 2027-03-02). [Yes, No] prices: 1: [\"0.895\", \"0.105\"]; 2: [\"0.08\", \"0.92\"]; 3: [\"0.0025\", \"0.9975\"]; 4: [\"0.001\", \"0.999\"]; 5: [\"0.001\", \"0.999\"]; 6 or lower: [\"0.0005\", \"0.9995\"]\n- Polymarket: October 2026 1st, 2nd, or 3rd hottest on record? (ends 2026-11-29). [Yes, No] prices: 1st hottest: [\"0.968\", \"0.032\"]; 2nd hottest: [\"0.0065\", \"0.9935\"]; 3rd hottest: [\"0.0225\", \"0.9775\"]; 4th or lower : [\"0.0015\", \"0.9985\"]\n- Manifold: Where will October 2026 rank among the warmest Octobers on record (Copernicus ERA5)? (MULTIPLE_CHOICE) https://manifold.markets/Terminator2/where-will-october-2026-rank-among"
+  ],
+  "forecasts": [
+    {
+      "value": 0.72,
+      "reasoning": "**(a) Time left and what Yes requires**\nAbout one month of weather remains, and C3S will publish its bulletin around 4 to 9 December 2026. For Yes, ERA5's global mean surface air temperature for November 2026 must reach at least 14.22°C, which is +0.85°C against 1991-2020. That is the November 2023 record, and a tie counts as Yes.\n\n**(b) Status quo**\nIf October's estimated anomaly of about +0.92°C simply persisted, November would beat the record by about 0.07°C. The status quo therefore leans Yes.\n\n**(c) Base rate**\n- **2023 analog:** During the 2023 El Niño build-up, every month from June to December set a calendar-month record.\n- **Persistence:** When the month before is already about 0.07°C above the target record and El Niño is still strengthening, the next month usually also sets a record. Month-to-month noise in the global anomaly is roughly ±0.08°C (one standard deviation).\n- **Implied chance:** Starting from about +0.92 and needing at least +0.85, the chance is roughly 75-80%.\n\n**(d) Strongest evidence**\nFor Yes:\n- October 2026 is estimated at +0.92°C, a record by about 0.07°C (celsius.earth, ERA5 data through 29 October).\n- The anomaly rose about 0.1°C from September (+0.82) to October.\n- Niño 3.4 was at an all-time September high (C3S, October 2026), and global temperatures lag Niño 3.4 by a few months.\n- Extra-polar sea surface temperatures are at records.\n- Kalshi prices a November record at 0.76, though its resolution source may differ from C3S.\n\nFor No:\n- The celsius.earth model's central November forecast is +0.83°C, just below the bar, giving a 42-59% chance of a record.\n- The November 2023 bar is high: it was only a little below 2023's September and October values.\n- A possible sudden stratospheric warming in early November (reported 30 October) adds variance.\n- The October figure is a third-party estimate, not yet confirmed by C3S.\n\n**(e) Scenarios**\n- **No:** The stratospheric warming and blocking patterns cause short-term dips. The anomaly falls back to around +0.80 and November ends second, a few hundredths below 2023.\n- **Yes:** El Niño-driven warmth keeps building, as it did from 2015 into 2016. November comes in around +0.90 to +0.95 and sets a record comfortably.\n\n**(f) Adjustment**\n- I start from the persistence base rate of about 78%.\n- I shade down for the dissenting central estimate from the celsius.earth model and for the stratospheric-warming variance.\n- I also shade down because Kalshi's 0.76 is not an exact match for the C3S resolution source.\n\nThis lands me at around 72%.\n\nProbability: 72%"
+    },
+    {
+      "value": 0.72,
+      "reasoning": "(a) About five weeks remain. C3S should publish the November bulletin around December 4 to 9, 2026. For Yes, the ERA5 global mean surface air temperature for November 2026 must be at least 14.22°C, or +0.85°C vs 1991-2020, matching or beating November 2023. A tie counts as Yes.\n\n(b) Status quo: if the global anomaly simply persisted at October 2026's estimated +0.92°C, November would set a record. That points to Yes.\n\n(c) Base rate: in strong El Niño build-up years, months that follow a calendar-month record usually set records too. In 2023, every month from June to December set one, and the 2015/16 pattern was similar. Conditional on the prior month being a record by about 0.07°C, the reference class gives roughly 75-80% Yes. The November bar is relatively high, though, because November 2023 was nearly as anomalous as October 2023.\n\n(d) Evidence:\n- For Yes:\n  - October 2026 is estimated at +0.92°C (celsius.earth, ERA5 data through 2026-10-29). That is about 0.07°C above the October record and above the +0.85 November bar.\n  - Niño 3.4 set an all-time monthly high (C3S, September bulletin), and El Niño is still strengthening. Global temperatures lag Niño 3.4, which points to further warming.\n  - Extra-polar sea surface temperatures are at record levels.\n  - Kalshi prices a hottest November at 0.76, though its source is probably NASA, which correlates with ERA5.\n- For No:\n  - celsius.earth's November forecast is +0.83°C, with a 42-59% chance of a record (2026-10-30).\n  - September 2026 was only second warmest, at +0.82 vs +0.93 in 2023.\n  - A possible major sudden stratospheric warming in early November (ECMWF ensemble, 2026-10-30) could cause regional cold, though its effect on the global mean is ambiguous.\n  - Month-to-month noise is about ±0.08°C.\n\n(e) Scenarios:\n- No: a weather-driven dip, such as a cold Antarctic or Northern Hemisphere land anomaly, pulls November to +0.80-0.84, just short of 2023.\n- Yes: the El Niño-driven warming continues, November holds at +0.88-0.95, and C3S declares a record.\n\n(f) My central estimate is around +0.90°C, between persistence (+0.92, with an upward El Niño drift) and the celsius model (+0.83). With a standard deviation of about 0.08, that gives roughly a 70-75% chance of exceeding +0.85. The Kalshi price of 0.76 is a moderate anchor, discounted for the possible source mismatch. The celsius.earth model pulls me down slightly, so I settle near 72%.\n\nProbability: 72%"
+    },
+    {
+      "value": 0.78,
+      "reasoning": "(a) About 5 weeks. C3S publishes the November bulletin around December 4-9, 2026. For Yes, the ERA5 global mean surface air temperature for November 2026 must be at least 14.22°C, an anomaly of about +0.85°C vs 1991-2020, which ties or beats November 2023.\n\n(b) Status quo: global temperatures are running at record levels for the calendar month. October 2026 is estimated at about +0.92°C, roughly 0.07°C above the November bar. If November simply held October's anomaly, the answer would be Yes.\n\n(c) Base rate: month-to-month changes in the global anomaly are typically about ±0.05-0.1°C. During strengthening El Niño episodes such as 2015-16 and 2023-24, the anomaly usually rises from October into the following winter. In the 2023 build-up, every month from June to December set a calendar-month record. Starting from +0.92°C with a +0.85°C bar, a persistence-plus-noise model gives roughly 75-85% Yes.\n\n(d) Evidence:\n- For Yes:\n  - October 2026 is estimated at about +0.92°C, a record by about 0.07°C (celsius.earth, 2026-10-30).\n  - Niño 3.4 set an all-time September high (C3S, October 2026), and global temperatures lag Niño 3.4 by a few months.\n  - The anomaly rose about 0.1°C from September (+0.82) to October.\n  - Kalshi prices November as the hottest ever at 0.76, though its source may be NOAA or NASA rather than C3S.\n- For No:\n  - The celsius.earth model puts November at +0.83°C (42-59% chance of a record).\n  - The bar is high: November 2023 was unusually warm relative to its season.\n  - An 86% chance of a major sudden stratospheric warming in early November (Business Today, 2026-10-30) and Northern Hemisphere cold outbreaks could depress the global mean somewhat.\n\n(e) No scenario: a sudden stratospheric warming and widespread cold over the Northern Hemisphere continents pull land temperatures down. November then comes in at about +0.80°C, second warmest behind 2023.\nYes scenario: El Niño warming of the tropical oceans keeps building, and November lands at about +0.90-0.98°C, a clear record.\n\n(f) I start at about 80% from persistence. I trim slightly for the celsius.earth model's below-threshold central estimate and the stratospheric warming risk, and stay close to the Kalshi anchor of 0.76. That gives about 78%.\n\nProbability: 78%"
+    },
+    {
+      "value": 0.57,
+      "reasoning": "(a) The question resolves when C3S publishes the November 2026 ERA5 bulletin, expected in early December, about 5 to 6 weeks from now. Yes requires the November 2026 global surface air temperature anomaly to equal or exceed November 2023's, which is about +0.85°C above the 1991-2020 average (about 14.22°C).\n\n(b) Status quo: if October's anomaly (about +0.92°C month-to-date, a record) simply persists into November, the result is Yes by about 0.07°C. Persistence of the current state favours Yes, but only modestly, because the margin is within normal month-to-month noise.\n\n(c) Base rate: in strong El Niño years with the global anomaly already at record levels in October (2015, 2023), November set or matched a record in both cases. In 2023, October and November had similar anomalies, about +0.85 each. Month-to-month changes of 0.05 to 0.15°C make a 0.07°C cushion roughly a 65 to 75% proposition on persistence alone. Taking the October record as given, my base rate is about 65%.\n\n(d) Evidence:\n- For Yes:\n  - October 2026 is a near-certain record at about +0.92, 0.07°C above October 2023 (celsius.earth, 2026-10-30).\n  - Niño 3.4 hit a record +3.35°C on 2026-10-15 and is still strengthening toward a December peak, which supports rising global anomalies.\n  - August 2026 tied the all-time monthly record, and September sea surface temperatures were a record.\n  - Kalshi prices a \"hottest November ever\" at 0.76, though the dataset is possibly NASA or NOAA rather than ERA5.\n- For No:\n  - celsius.earth's ERA5 plus ECMWF-ensemble model, dated 2026-10-30, forecasts November at +0.83 and gives only 42%. Its October forecast was earlier at 45% and then became \"certain\", which suggests the model regresses toward climatology.\n  - September 2026 fell 0.11°C short of 2023.\n  - A possible major sudden stratospheric warming in early November could perturb the global mean.\n\n(e) Scenarios:\n- No: Early-November cooling, from ensemble-forecast Southern Ocean and Arctic anomalies or the sudden stratospheric warming's effects, pulls the monthly mean to about +0.80 to +0.84, just short of 2023.\n- Yes: El Niño heat keeps building, the tropics warm further, and November lands at about +0.88 to +0.95, a new record.\n\n(f) Adjusting from the base rate: I start at about 65%. I move down for the independent ERA5-specific model at 42%, which may include real ensemble information on early November. I partly offset that with the Kalshi price of 76% and the strengthening El Niño, and I discount the market somewhat because its dataset is uncertain. The net is a slight lean toward Yes, around 57%.\n\nProbability: 57%"
+    },
+    {
+      "value": 0.69,
+      "reasoning": "(a) About one month remains. ERA5 data for November will be known through Climate Pulse in real time, and C3S will publish the official November bulletin in early December. For Yes, November 2026's ERA5 global mean surface air temperature anomaly must equal or beat November 2023, which was about +0.85°C above the 1991-2020 average (about 14.22°C).\n\n(b) Status quo: global temperatures are currently at record levels. October 2026 is running about +0.92°C, roughly 0.07°C above October 2023. If November simply holds October's anomaly, it sets a record. The status quo leans Yes, but not by much.\n\n(c) Base rate:\n- In strong El Niño years (2015 and 2023), both Octobers and Novembers set records. In 2023, October and November were both about +0.85°C, with essentially no drop.\n- When the preceding month set a record by a small margin, the next month also set a record perhaps 60-65% of the time during warming El Niño phases.\n- Base rate: about 60%.\n\n(d) Evidence:\n- For Yes:\n  - October 2026 looks set to be a record by about 0.07°C (celsius.earth, 2026-10-30).\n  - Niño 3.4 hit a record +3.35°C on 2026-10-15 and is still strengthening toward a December peak. It is far stronger than 2023 at the same point.\n  - The 2026 trajectory is rising. September to October went up about +0.10°C, while 2023 fell from September to October. The global response lags El Niño, which pushes temperatures upward through November.\n  - Kalshi's matching market is at 0.76.\n- For No:\n  - celsius.earth's model (2026-10-30) forecasts +0.83°C for November, slightly below the record, and gives only a 42% chance.\n  - An 86% chance of a major sudden stratospheric warming in early November (2026-10-30) adds noise.\n  - The margin is within normal month-to-month variation of 0.05-0.15°C.\n\n(e) Scenarios:\n- No: Cold outbreaks after the stratospheric warming hit Northern Hemisphere land, and Antarctic sea-ice anomalies swing. November comes in at +0.80°C, just short.\n- Yes: El Niño heat keeps building, with record sea surface temperatures persisting. November reaches +0.90°C or more, beating 2023 the way October did.\n\n(f) I start from the 60% base rate. The rising trajectory and the much stronger El Niño argue for nudging up. The Kalshi anchor at 76% pulls up further. The celsius.earth model at 42% and the stratospheric-warming noise pull down. I blend these to land a bit below the market.\n\nProbability: 69%"
+    },
+    {
+      "value": 0.62,
+      "reasoning": "**(a) Time left and what Yes requires.** About one month of weather remains, and the result will be known when C3S publishes its November bulletin in early December. For Yes, the ERA5 global mean surface air temperature anomaly for November 2026 must equal or exceed November 2023, which was about +0.85°C above the 1991-2020 average.\n\n**(b) Status quo.** The most recent reading has 2026 slightly above 2023. October 2026 is running about +0.92°C, roughly 0.07°C above October 2023. If November simply held October's anomaly, the answer would be Yes. The one independent model forecast, however, has November dipping to just below the record.\n\n**(c) Base rate.** New November records tend to come during strong El Niño years, such as 2015 and 2023. In the closest analogue years, the months of the warm phase set records more often than not. Recently, 2026 tied the August record, missed September by 0.11°C, and set an October record. That is roughly 2 of 3 recent months at record level. My base rate is about 55-60%.\n\n**(d) Strongest evidence.**\n\nFor Yes:\n- October 2026 is on track for a record by about 0.07°C (celsius.earth, 2026-10-30).\n- Niño 3.4 reached a record +3.35°C on 15 October (Climate Adaptation Center, 2026-10-18), with the peak expected around December. Global temperatures lag the El Niño peak, so they should keep rising into late 2026 and early 2027.\n- September 2026 set a record for sea surface temperatures (C3S, 2026-10-12).\n- Kalshi prices \"hottest November ever\" at 0.76 (2026-10-30), though the dataset it settles on is unverified.\n- celsius.earth's model looked conservative last time: it gave October a record chance of only 45% earlier and now calls it certain.\n\nFor No:\n- celsius.earth forecasts November at +0.83°C, 0.02°C below the record, and gives a record a 42% chance (2026-10-30).\n- ECMWF ensembles show an 86% chance of a major sudden stratospheric warming in early November (2026-10-30), which could cool Northern Hemisphere land.\n- November 2023 was itself an exceptionally warm month, so the bar is high.\n\n**(e) Scenarios.**\n- No: The stratospheric warming and cold outbreaks over Northern Hemisphere continents pull the global anomaly down to about +0.80°C, narrowly missing the record.\n- Yes: Ocean heat from the strengthening El Niño keeps the global anomaly near +0.88 to +0.95°C, extending October's run of records.\n\n**(f) From base rate to final probability.** I start from about 57%. The market at 0.76 and the model at 0.42 conflict:\n- I discount Kalshi because its dataset is unverified and the market is thin, and its \"1.30 or above\" bin at 0.53 sits awkwardly with the 0.76.\n- I discount the model somewhat because it appears to regress toward climatology at longer lead times, as the October example suggests.\n- The trend in El Niño strength supports the warm side.\n\nBlending these, I land at about 62%.\n\nProbability: 62%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.6675,
+  "usage": [
+    {
+      "question_id": "46516",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.000221,
+      "input_tokens": 926,
+      "output_tokens": 72,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 7.560000000000001e-05,
+      "input_tokens": 496,
+      "output_tokens": 52,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 61.5,
+      "notional_cost_usd": 0.2863121,
+      "input_tokens": 57282,
+      "output_tokens": 3671,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.8,
+      "notional_cost_usd": 0.066108,
+      "input_tokens": 4947,
+      "output_tokens": 1327,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.3,
+      "notional_cost_usd": 0.06653200000000001,
+      "input_tokens": 4945,
+      "output_tokens": 1349,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.0005471,
+      "input_tokens": 2324,
+      "output_tokens": 165,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.0005279000000000001,
+      "input_tokens": 2313,
+      "output_tokens": 131,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00015239000000000002,
+      "input_tokens": 2325,
+      "output_tokens": 131,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 27.1,
+      "notional_cost_usd": 0.026679400000000002,
+      "input_tokens": 4947,
+      "output_tokens": 1164,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.00015217000000000003,
+      "input_tokens": 2310,
+      "output_tokens": 132,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0005117,
+      "input_tokens": 2232,
+      "output_tokens": 131,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00015678000000000003,
+      "input_tokens": 2233,
+      "output_tokens": 142,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 98.0,
+      "notional_cost_usd": 0.2454844,
+      "input_tokens": 81678,
+      "output_tokens": 4245,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.3,
+      "notional_cost_usd": 0.073376,
+      "input_tokens": 5123,
+      "output_tokens": 1620,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.8,
+      "notional_cost_usd": 0.07012800000000001,
+      "input_tokens": 5122,
+      "output_tokens": 1458,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 0.0005057,
+      "input_tokens": 2257,
+      "output_tokens": 109,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0005376,
+      "input_tokens": 2419,
+      "output_tokens": 108,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 21.1,
+      "notional_cost_usd": 0.076464,
+      "input_tokens": 5124,
+      "output_tokens": 1774,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00014552,
+      "input_tokens": 2257,
+      "output_tokens": 119,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00014216,
+      "input_tokens": 2421,
+      "output_tokens": 109,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 0.000533,
+      "input_tokens": 2346,
+      "output_tokens": 128,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46516",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.00014521,
+      "input_tokens": 2345,
+      "output_tokens": 117,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9154
+}
