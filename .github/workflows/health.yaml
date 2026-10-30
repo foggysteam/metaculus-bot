@@ -40,7 +40,12 @@ jobs:
           if [ -z "$GO_LIVE_DATE" ]; then echo "Not live yet, skipping"; exit 0; fi
           since=$(python -c "import datetime as d,os; g=d.date.fromisoformat(os.environ['GO_LIVE_DATE']); print(max(g, d.date.today()-d.timedelta(days=3)))")
           uv run python check_coverage.py --since "$since" | tee coverage.txt
-          if grep -q "MISSED" coverage.txt; then echo "missed=true" >> "$GITHUB_OUTPUT"; fi
+          # The 3-day window survives dropped cron firings, but keeps showing old misses, so only
+          # a miss that no earlier issue mentions opens a new one. If the lookup fails, it alerts.
+          gh issue list --state all --limit 200 --search "health check in:title" --json body --jq '.[].body' > reported.txt || : > reported.txt
+          for url in $(grep "MISSED" coverage.txt | grep -oE "https://www\.metaculus\.com/questions/[0-9]+" || true); do
+            if ! grep -qF "$url " reported.txt; then echo "New miss: $url"; echo "missed=true" >> "$GITHUB_OUTPUT"; break; fi
+          done
       - name: Canary forecast on the bot testing area
         id: canary
         continue-on-error: true
