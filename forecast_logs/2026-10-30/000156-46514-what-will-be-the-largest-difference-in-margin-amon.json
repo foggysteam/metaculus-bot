@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-10-30T00:05:31.498753+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-10-30T00:01:56.335810+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46514,
+    "post_id": 46284,
+    "url": "https://www.metaculus.com/questions/46284",
+    "type": "NumericQuestion",
+    "unit": "percentage points",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "What will be the largest difference in margin among swing seats in the 2026 United States Senate election?",
+    "resolution_criteria": "This question will resolve as the largest difference in margin of victory in the 2026 United States Senate election between the following states: Alaska, Georgia, Iowa, Kansas, Maine, Michigan, Nebraska, North Carolina, Ohio, Texas.",
+    "fine_print": "For example if State A has a margin of D+7 and State B has a margin of R+6, while all other listed states have margins between those, this question will resolve as 13.\n\nThis question will resolve based upon the most complete results available before 2027. \n\nIf an election is ranked choice, this question will resolve based upon the final round of tabulation. If a runoff occurs, this question will resolve based upon the first round.\n\nFor the purpose of this question, a margin of victory by Dan Osborn will count for Democrats.",
+    "close_time": "2026-10-30 03:00 UTC",
+    "scheduled_resolution_time": "2026-11-10 00:00 UTC"
+  },
+  "research": [
+    "Polling averages put the gap between the two most extreme states at about 10 points. There are no results yet because the election is on 2026-11-03.\n\n## 1. Resolution source\n- The criteria don't name an official source. The question resolves on the \"most complete results available before 2027\", meaning the D minus R margins in AK, GA, IA, KS, ME, MI, NE, NC, OH and TX. Alaska uses its ranked-choice final round. Georgia uses the first round even if there is a runoff. An Osborn win in Nebraska counts as D.\n- 2026-10-30: The FiftyPlusOne Senate forecast page linked in the background came back empty, so I have no forecast margins from it. [fiftyplusone](https://fiftyplusone.news/forecast/senate)\n- Undated, fetched 2026-10-30, FiftyPlusOne polling averages: [averages](https://fiftyplusone.news/averages)\n  - GA D+10.2, NC D+10.1, MI D+4.0, OH D+3.3, ME D+3.1, TX D+3.1\n  - AK D+2.0, IA D+0.6, KS D+0.3, NE R+0.3 (Ricketts over Osborn)\n  - The implied spread is about 10.5 points (GA to NE).\n\n## 2. Current status\n- Nothing is settled. Voting ends 2026-11-03.\n- Every listed state except Nebraska leans D in the polling averages. So right now the gap mostly comes from how far the D-leaning outliers (GA, NC) sit from the closest race, or from any state that ends up voting R.\n- 2026-10-29, PollCheck averages: [pollcheck](https://www.pollcheck.co.uk/us-midterms-2026)\n  - NC Cooper +9.9, GA Ossoff +8.5, MI +3.0, OH +2.2, AK Peltola +1.8, TX Talarico +1.8\n  - ME +0.9, KS +0.4, IA Turek +0.5, NE about a tie (Osborn 46.0 vs Ricketts 45.5)\n  - The implied spread is about 9.5 to 10 points. The site's labels and vote shares don't agree with each other in some states.\n\n## 3. Recent news (newest first)\n- 2026-10-29: CNN released polls of MI, ME, TX and KS. A search summary says Hamilton (D) leads by 4 in Kansas. I could not fetch the article to check this (HTTP 451). [CNN](https://www.cnn.com/2026/10/29/politics/cnn-polls-michigan-maine-texas-kansas-senate-races-midterms-vis)\n- 2026-10-29: According to Yahoo's poll roundup, October polls put Ossoff ahead by about 9 on average, and 11 of 12 October Michigan polls had El-Sayed ahead by 1 to 7. [Yahoo](https://www.yahoo.com/news/politics/article/the-2026-midterms-are-next-week-which-party-has-a-better-chance-of-winning-heres-what-the-latest-polls-say-155319308.html)\n- 2026-10-29: Aaron Blake at Political Wire wrote that there is a \"huge margin of error\". The outcomes he lays out run from Democrats ending at 47 seats to 55-57. [Political Wire](https://politicalwire.com/2026/10/29/the-battle-for-the-senate-could-go-many-different-ways/)\n- 2026-10-29: The GD Politics podcast cited a generic ballot of about D+9 (from the news feed, not checked).\n- 2026-10-28: The Washington Post's list of seven deciding races reportedly had ME around D+2 and KS around D+1. The page was paywalled (403), so I couldn't check it. [WaPo](https://www.washingtonpost.com/politics/2026/10/28/these-seven-races-will-determine-which-party-controls-senate/)\n\n## 4. Base rates\n- I found no direct historical series for \"range of margins across these 10 states\".\n- Relevant pattern: individual Senate polling averages typically miss final margins by about 3-5 points, and the misses are partly correlated across states.\n  - In 2024, polls overstated Democrats in most Senate battlegrounds.\n  - When errors don't move together, the spread of actual results is usually wider than the spread of the polling averages.\n  - I did not find a source for this here. It is general background knowledge.\n- Things that would push the range above about 10:\n  - GA or NC landing at D+12 or more\n  - a uniform polling miss toward R, which would put NE, IA, KS or ME in R territory while GA and NC stay D+7 to 10\n- Thing that would push it below about 10: GA and NC coming in narrower while the close states break evenly.\n\n## 5. Other forecasts\n- 2026-10-30, Kalshi Iowa margin market: [Kalshi](https://kalshi.com)\n  - Turek 1+ points 43%, 3+ points 28%, 6+ points 14%.\n  - So the market puts Hinson (R) winning at roughly 57%, which is more R-leaning than the polling averages.\n- Undated snapshot, Kalshi NC margin: Cooper 5+ points 67%, 7+ points 50%, 9+ points 40%. The median is around D+7, below the polling averages. [Kalshi NC](https://kalshi.com/markets/kxgeneralmov/-/kxgeneralmov-senatenc-26)\n- Kalshi GA winner market: Ossoff about 95%. An undated snapshot of his vote share showed at least 54% at 46% and at least 56% at 25%. [Kalshi GA](https://kalshi.com/markets/senatega/georgia-senate-winner/senatega-26)\n- 2026-10-30, Senate control: Kalshi D 68%, Polymarket D 68.5%. Polymarket has Republicans at 47 or fewer seats at 42.5%, which points to a D wave being priced in.\n- I found no current market or model price for Nebraska.\n- I found no market for the exact question asked here.\n\n## 6. Upcoming events before resolution\n- 2026-11-03: Election Day.\n- Alaska's ranked-choice tabulation is usually done in mid/late November. Results arrive slowly in Alaska and in states with lots of mail ballots (MI, ME), which could push the final count past the question's resolution date (around 2026-11-10).\n- A Georgia runoff, if needed, would be in December. It doesn't matter here because the first round is used.\n- The last polls (NYT/Siena, Emerson and others) are due in the final days before the election.\n\nSources: [FiftyPlusOne averages](https://fiftyplusone.news/averages), [PollCheck](https://www.pollcheck.co.uk/us-midterms-2026), [Yahoo](https://www.yahoo.com/news/politics/article/the-2026-midterms-are-next-week-which-party-has-a-better-chance-of-winning-heres-what-the-latest-polls-say-155319308.html), [CNN](https://www.cnn.com/2026/10/29/politics/cnn-polls-michigan-maine-texas-kansas-senate-races-midterms-vis), [WaPo](https://www.washingtonpost.com/politics/2026/10/28/these-seven-races-will-determine-which-party-controls-senate/), [Political Wire](https://politicalwire.com/2026/10/29/the-battle-for-the-senate-could-go-many-different-ways/), [Kalshi NC](https://kalshi.com/markets/kxgeneralmov/-/kxgeneralmov-senatenc-26), [Kalshi GA](https://kalshi.com/markets/senatega/georgia-senate-winner/senatega-26), [OnPoint Maine](https://onpointpolitics.us/polls/me/senate), [NC Newsline](https://ncnewsline.com/2026/06/11/north-carolinas-senate-race-no-longer-a-toss-up-top-forecasters-say-with-cooper-in-the-lead/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-30 00:02 UTC; check each market really matches the question)\n- Kalshi: Who will control the Senate? (In 2026). Yes prices: Democratic Party: 0.68; Republican Party: 0.33.\n- Kalshi: How many Senate seats will Democrats hold after the Midterms? (On Feb 1, 2027). Yes prices: Above 52: 0.46; 52: 0.18; 50: 0.10; 51: 0.10; 49: 0.06; 47: 0.04; 48: 0.04; Below 45: 0.01; 45: 0.01; 46: 0.01.\n- Kalshi: How many Senate seats will Democrats win in the Midterms? (of the 35 seats up in the 2026 U.S. Senate elections, based on media calls). Yes prices: At least 18: 0.57; At least 19: 0.42; At least 17: 0.69; At least 20: 0.28; At least 16: 0.80; At least 21: 0.17; At least 15: 0.85; At least 22: 0.10; At least 14: 0.92; At least 13: 0.95.\n- Kalshi: Midterms: which party wins Latino men? (Nov 3, 2026). Yes prices: Democratic party: 0.85; Republican party: 0.15.\n- Kalshi: Iowa Senate margin of victory (On November 3, 2026). Yes prices: Turek, 2+ pts: 0.43; Turek, 1+ pts: 0.43; Turek, 3+ pts: 0.28; Turek, 4+ pts: 0.22; Turek, 5+ pts: 0.17; Turek, 6+ pts: 0.14.\n- Kalshi: Massachusetts Senate margin of victory (On November 3, 2026). Yes prices: Markey, 31+ pts: 0.53; Markey, 33+ pts: 0.45; Markey, 35+ pts: 0.36; Markey, 29+ pts: 0.67; Markey, 37+ pts: 0.26; Markey, 27+ pts: 0.75; Markey, 39+ pts: 0.19; Markey, 25+ pts: 0.81; Markey, 41+ pts: 0.15; Markey, 23+ pts: 0.89.\n- Kalshi: Louisiana Senate margin of victory (On November 3, 2026). Yes prices: Letlow, 7+ pts: 0.53; Letlow, 9+ pts: 0.39; Letlow, 5+ pts: 0.63; Letlow, 11+ pts: 0.28; Letlow, 3+ pts: 0.77; Letlow, 13+ pts: 0.19; Letlow, 1+ pts: 0.86; Letlow, 15+ pts: 0.10; Letlow, 17+ pts: 0.06; Letlow, 31+ pts: 0.0340.\n- Polymarket: Which party will win the Senate in 2026? (ends 2026-11-04). [Yes, No] prices: Democratic Party: [\"0.685\", \"0.315\"]; Republican Party: [\"0.315\", \"0.685\"]; Party A: None; Party B: None; Party C: None; Party D: None\n- Polymarket: Republican Senate seats after the 2026 midterm elections? (ends 2026-11-03). [Yes, No] prices: ≤47: [\"0.425\", \"0.575\"]; 48: [\"0.145\", \"0.855\"]; 49: [\"0.12\", \"0.88\"]; 50: [\"0.105\", \"0.895\"]; 51: [\"0.085\", \"0.915\"]; 52: [\"0.0685\", \"0.9315\"]\n- Polymarket: How many Senate and House seats will Republicans have after the midterms? (ends 2026-11-04). [Yes, No] prices: ≥53 and ≥223: [\"0.007\", \"0.993\"]; ≥53 and 208–222: [\"0.0235\", \"0.9765\"]; ≥53 and ≤207: [\"0.0565\", \"0.9435\"]; 50–52 and ≥223: [\"0.007\", \"0.993\"]; 50–52 and 208–222: [\"0.0205\", \"0.9795\"]; 50–52 and 193–207: [\"0.0845\", \"0.9155\"]\n- Polymarket: Liga MX: 2026-27 Largest Goal Differential (ends 2027-06-28). [Yes, No] prices: Club América: [\"0.415\", \"0.585\"]; Guadalajara (Chivas): [\"0.225\", \"0.775\"]; Cruz Azul: [\"0.1225\", \"0.8775\"]; CF Monterrey: [\"0.016\", \"0.984\"]; Tigres UANL: [\"0.1145\", \"0.8855\"]; UNAM Pumas: [\"0.042\", \"0.958\"]",
+    "I couldn't load the resolution data, and the election hasn't happened yet. Pre-election numbers put the spread across the ten states at about **10.5 to 12.6 points**. That gap runs from North Carolina or Georgia at about D+10 down to Nebraska at R+0.3 to R+2.8.\n\n## 1. Resolution source\n- The question resolves on certified or most-complete results before 2027, taken from the margins in the 10 listed states. Alaska uses the final ranked-choice round. Georgia uses the first round even if a runoff follows. An Osborn win in Nebraska counts as D.\n- 2026-10-30: The FiftyPlusOne forecast page linked in the question came back empty, so I couldn't read it. [FiftyPlusOne](https://fiftyplusone.news/forecast/senate)\n- No date shown, fetched 2026-10-30: the FiftyPlusOne polling averages page. Several of its margins don't match its own vote shares (Kansas shows 46.9 to 45.4 but is labeled D+0.3), so treat these figures with care:\n\n| State | Average |\n|---|---|\n| Georgia | Ossoff D+10.2 |\n| North Carolina | Cooper D+10.1 |\n| Michigan | El-Sayed D+4.0 |\n| Ohio | Brown D+3.3 |\n| Maine | Jackson D+3.1 |\n| Texas | Talarico D+3.1 |\n| Alaska | Peltola D+2.0 |\n| Iowa | Turek D+0.6 |\n| Kansas | Hamilton D+0.3 |\n| Nebraska | Ricketts R+0.3 |\n\n  The range in these averages is about 10.5 points. [FiftyPlusOne averages](https://fiftyplusone.news/averages)\n\n## 2. Current status\n- Election Day is 2026-11-03, so nothing is settled.\n- An unusual point: Democrats lead in the polls in 9 of the 10 states. The R end of the range is therefore a close race (Nebraska, Kansas or Iowa), not a safe Republican state.\n- Georgia and North Carolina are close together at the D end, so either could set the top.\n\n## 3. Recent news (newest first)\n- 2026-10-29: Yahoo poll roundup:\n  - Ossoff leads by an average of 9 in October.\n  - Cooper leads by nearly 11 on average, and SurveyUSA had him up 14.\n  - CNN polls: El-Sayed +7, Talarico +6, Jackson +4, Hamilton +4.\n  - Echelon Insights polls: Ohio tied, Ricketts +1 in Nebraska, Turek +2 in Iowa.\n  - Suffolk has Brown +3, and YouGov Blue has Talarico +8.\n  - Peltola leads by 2 to 7 in October polls. [Yahoo](https://www.yahoo.com/news/politics/article/the-2026-midterms-are-next-week-which-party-has-a-better-chance-of-winning-heres-what-the-latest-polls-say-155319308.html)\n- 2026-10-29: Aaron Blake (Political Wire) says the polls carry a \"huge margin of error\" and that Democrats could end anywhere from 47 to 57 seats. [Political Wire](https://politicalwire.com/2026/10/29/the-battle-for-the-senate-could-go-many-different-ways/)\n- 2026-10-29: A news API summary (not checked) reports a generic ballot of about D+9 and Civiqs showing Trump net-negative in every battleground state. [Merkur](https://www.merkur.de/politik/zwischenwahlen-usa-trump-ist-in-allen-swing-states-unbeliebt-zr-94565437.html)\n- 2026-10-26: On Point's Kansas average is Hamilton +2.5. Its Michigan average was El-Sayed +4.8 as of 10-23. [On Point KS](https://www.tpsielections.com/polls/ks/senate), [On Point MI](https://onpointpolitics.us/polls/mi/senate)\n\n## 4. Base rates\n- I didn't find a published series for this exact max-minus-min statistic. The points below are my reasoning, not something I looked up.\n  - Errors between final polls and results in individual states often run 2 to 5 points, and they don't all point the same way.\n  - When you take the spread across 10 states, the extremes tend to push outward, so the actual range usually ends up wider than the projected range.\n  - 2020 is a past example where Senate polls overstated Democrats by several points, and by different amounts in different states. A uniform shift moves every state together and leaves the range unchanged. Uneven errors widen it.\n- Polls in Nebraska are sparse and partly Osborn-affiliated, which adds uncertainty at the R end.\n\n## 5. Other forecasts\n- 2026-10-29, Dave Manuel model (updates every 3 hours) [Dave Manuel](https://www.davemanuel.com/2026-midterm-forecast.php):\n\n| State | Projected margin |\n|---|---|\n| North Carolina | D+10.3 |\n| Georgia | D+9.9 |\n| Michigan | D+4.6 |\n| Maine | D+2.9 |\n| Texas | D+2.5 |\n| Ohio | D+2.3 |\n| Alaska | D+1.5 |\n| Kansas | R+0.3 |\n| Iowa | R+0.8 |\n| Nebraska | R+2.3 |\n\n  The implied range is about **12.6**.\n- About 2026-10-28, from search summaries: Poliwave has NC D+11.0 and Nebraska R+0.5, a range of about 11.5. On Point projects NC at Cooper +11.6. [Poliwave](https://www.poliwave.com/us/senate), [On Point NC](https://www.onpointpolitics.us/forecast/nc/senate)\n- Kalshi, from a search snapshot that isn't dated:\n  - Nebraska: Ricketts about 70%, implied about R+2.8.\n  - Georgia margin market: D+6 or more at 64%, D+8 or more at 45%, D+10 or more at 27%.\n  - Cooper's win contract is at about 94.5% to 97%.\n  - [Kalshi GA margin](https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-gasend), [DeFi Rate](https://defirate.com/news/cooper-kalshi-north-carolina-toward-democratic-senate-pickup/)\n- Kalshi Iowa margin, collected 2026-10-30: Turek winning by 1 or more is 0.43, by 3 or more 0.28, by 6 or more 0.14. That makes Hinson the slight favorite in the market. I found no Kalshi margin market for North Carolina.\n- Senate control: Kalshi has Democrats at 0.68 and Polymarket at 0.685. Kalshi's \"Above 52\" Democratic seats is at 0.46.\n- I found no market on this exact range question.\n\n## 6. Upcoming events\n- 2026-10-30 to 11-02: final polls and the end of early voting.\n- 2026-11-03: Election Day.\n- After that, the remaining counts:\n  - Alaska's ranked-choice tabulation usually comes about two weeks later, which is after the 11-10 resolution target, so Alaska may have to rely on partial counts.\n  - Late mail ballots will still be counted in several states.\n  - Final certification comes in late November or December.\n- A Georgia runoff wouldn't matter, because the question uses the first round.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-10-30 00:02 UTC; check each market really matches the question)\n- Kalshi: Who will control the Senate? (In 2026). Yes prices: Democratic Party: 0.68; Republican Party: 0.33.\n- Kalshi: How many Senate seats will Democrats hold after the Midterms? (On Feb 1, 2027). Yes prices: Above 52: 0.46; 52: 0.18; 50: 0.10; 51: 0.10; 49: 0.06; 47: 0.04; 48: 0.04; Below 45: 0.01; 45: 0.01; 46: 0.01.\n- Kalshi: How many Senate seats will Democrats win in the Midterms? (of the 35 seats up in the 2026 U.S. Senate elections, based on media calls). Yes prices: At least 18: 0.57; At least 19: 0.42; At least 17: 0.69; At least 20: 0.28; At least 16: 0.80; At least 21: 0.17; At least 15: 0.85; At least 22: 0.10; At least 14: 0.92; At least 13: 0.95.\n- Kalshi: Midterms: which party wins Latino men? (Nov 3, 2026). Yes prices: Democratic party: 0.85; Republican party: 0.15.\n- Kalshi: Iowa Senate margin of victory (On November 3, 2026). Yes prices: Turek, 2+ pts: 0.43; Turek, 1+ pts: 0.43; Turek, 3+ pts: 0.28; Turek, 4+ pts: 0.22; Turek, 5+ pts: 0.17; Turek, 6+ pts: 0.14.\n- Kalshi: Massachusetts Senate margin of victory (On November 3, 2026). Yes prices: Markey, 31+ pts: 0.53; Markey, 33+ pts: 0.45; Markey, 35+ pts: 0.36; Markey, 29+ pts: 0.67; Markey, 37+ pts: 0.26; Markey, 27+ pts: 0.75; Markey, 39+ pts: 0.19; Markey, 25+ pts: 0.81; Markey, 41+ pts: 0.15; Markey, 23+ pts: 0.89.\n- Kalshi: Louisiana Senate margin of victory (On November 3, 2026). Yes prices: Letlow, 7+ pts: 0.53; Letlow, 9+ pts: 0.39; Letlow, 5+ pts: 0.63; Letlow, 11+ pts: 0.28; Letlow, 3+ pts: 0.77; Letlow, 13+ pts: 0.19; Letlow, 1+ pts: 0.86; Letlow, 15+ pts: 0.10; Letlow, 17+ pts: 0.06; Letlow, 31+ pts: 0.0340.\n- Polymarket: Which party will win the Senate in 2026? (ends 2026-11-04). [Yes, No] prices: Democratic Party: [\"0.685\", \"0.315\"]; Republican Party: [\"0.315\", \"0.685\"]; Party A: None; Party B: None; Party C: None; Party D: None\n- Polymarket: Republican Senate seats after the 2026 midterm elections? (ends 2026-11-03). [Yes, No] prices: ≤47: [\"0.425\", \"0.575\"]; 48: [\"0.145\", \"0.855\"]; 49: [\"0.12\", \"0.88\"]; 50: [\"0.105\", \"0.895\"]; 51: [\"0.085\", \"0.915\"]; 52: [\"0.0685\", \"0.9315\"]\n- Polymarket: How many Senate and House seats will Republicans have after the midterms? (ends 2026-11-04). [Yes, No] prices: ≥53 and ≥223: [\"0.007\", \"0.993\"]; ≥53 and 208–222: [\"0.0235\", \"0.9765\"]; ≥53 and ≤207: [\"0.0565\", \"0.9435\"]; 50–52 and ≥223: [\"0.007\", \"0.993\"]; 50–52 and 208–222: [\"0.0205\", \"0.9795\"]; 50–52 and 193–207: [\"0.0845\", \"0.9155\"]\n- Polymarket: Liga MX: 2026-27 Largest Goal Differential (ends 2027-06-28). [Yes, No] prices: Club América: [\"0.415\", \"0.585\"]; Guadalajara (Chivas): [\"0.225\", \"0.775\"]; Cruz Azul: [\"0.1225\", \"0.8775\"]; CF Monterrey: [\"0.016\", \"0.984\"]; Tigres UANL: [\"0.1145\", \"0.8855\"]; UNAM Pumas: [\"0.042\", \"0.958\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 9.8,
+        "p25": 11.85,
+        "p50": 14.3,
+        "p75": 16.85,
+        "p90": 19.4
+      },
+      "reasoning": "**(a) Time left:** Election Day is 2026-11-03, 4 days away. The question resolves around 2026-11-10. Some counts, especially Alaska's ranked-choice tabulation, may still be incomplete by then.\n\n**(b) Latest known value (polling-implied, 2026-10-29/30):**\n- FiftyPlusOne averages run from GA D+10.2 to NE R+0.3, a spread of about 10.5.\n- PollCheck averages give a spread of about 9.5 to 10.\n\n**(c) Outcome if nothing changed:** About 10.5.\n\n**(d) Outcome if the current trend continued:** The trend has been a mild D drift. A shift that moves every state equally leaves the range unchanged, so this still gives about 10 to 11. Markets are more R-leaning than the polls:\n- NC median about D+7.\n- GA about D+8.\n- Iowa median about R+1.5, with Hinson favored.\n\nOn market numbers alone, the implied range is about 10.\n\n**(e) Historical variation:** Individual Senate polling misses run about 3 to 5 points. Those misses are only partly correlated across states. With 10 states, the misses that don't move together widen the realized range. The most extreme results are what count: the max of GA/NC plus their error, and the min of six or seven close races minus theirs. That typically adds 3 to 5 points to the poll-implied range.\n\nNebraska with Osborn is a cautionary case. In 2024, polls showed Osborn close to Fischer, and Fischer won by about 7. Alaska polling is also historically noisy.\n\n**(f) Experts and markets:**\n- There is no direct market on this quantity.\n- Kalshi's state margin markets imply a range of about 10 or more before accounting for that error-driven spread.\n- Senate control is priced at about 68% D.\n\n**(g) Scenarios:**\n- **Low:** Results compress. GA and NC come in at only D+6 to 7, and the close races all land between D+0 and D+3. The range would be about 7.\n- **High:** Osborn fades badly and Ricketts wins by 8 to 10, while Ossoff or Cooper wins by 12 or more. The range would be 20 to 23 or more.\n\nMy central estimate combines a max of about D+10 with a min of about R+4, for a median of about 14.\n\nPercentile 1: 6.5\nPercentile 5: 8.5\nPercentile 10: 9.8\nPercentile 20: 11.3\nPercentile 30: 12.4\nPercentile 40: 13.4\nPercentile 50: 14.3\nPercentile 60: 15.2\nPercentile 70: 16.2\nPercentile 80: 17.5\nPercentile 90: 19.4\nPercentile 95: 21\nPercentile 99: 24.5"
+    },
+    {
+      "value": {
+        "p10": 9.5,
+        "p25": 11.5,
+        "p50": 13.6,
+        "p75": 16.05,
+        "p90": 18.6
+      },
+      "reasoning": "(a) **Time left:** Election Day is 2026-11-03, 4 days away. Most margins will be known within days. The question resolves on the most complete results available before 2027, so slow counts in Alaska (ranked-choice), Maine and Michigan do not threaten resolution.\n\n(b) **Latest known value:** There are no results yet. FiftyPlusOne polling averages as of 2026-10-30 run from GA D+10.2 to NE R+0.3, a spread of about 10.5. PollCheck on 2026-10-29 gives a spread of about 9.5 to 10.\n\n(c) **If nothing changed:** The answer would be about 10 to 10.5 points.\n\n(d) **If the current trend continued:** The national environment is drifting toward Democrats (generic ballot about D+9). That widens the range only if the strongest D states grow faster than the closest races, and the trend leaves the spread itself roughly flat, at about 10 to 11.\n\n(e) **Historical variation:**\n- Each state's final Senate polling average typically misses the result by 3 to 5 points.\n- A uniform national miss shifts every state together and does not change this range.\n- The state-specific part of the miss (roughly 3 to 4 points of standard deviation) widens the range, because the result takes the maximum and the minimum across 10 noisy states.\n- Rough working: GA and NC sit near D+8.5 to 9.5, so the expected maximum of the two is about D+11. Six states sit near even (IA, KS, NE, AK, ME, TX), so the expected minimum of those is about R+3 to R+4.\n- That implies an expected range of about 13 to 15.\n- Nebraska's independent candidacy and Alaska's ranked-choice final round add extra state-specific noise.\n\n(f) **Experts and markets:**\n- Kalshi puts North Carolina's median near D+7, below the polling averages.\n- Kalshi's Georgia vote-share market implies roughly D+8 to D+9.\n- Kalshi's Iowa market leans R (Hinson about 57% to win).\n- Markets therefore imply a slightly compressed top end, but a lower floor (some states going R), so the poll-implied centre of about 9 to 10 still holds.\n- No market exists for this exact quantity.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** State-specific errors happen to cancel. Georgia and North Carolina come in at about D+6 to 7, every close race lands between D+0 and D+3, and the range ends up around 7 to 8.\n- **High outcome:** A Democratic wave lifts Georgia or North Carolina to D+14 or more, while Ricketts beats Osborn in Nebraska by 6 or more, or Texas reverts to R+5. The range then ends up at 20 to 24.\n\nI set the median near 13.5, above the raw poll spread, to account for the widening from state-specific misses.\n\nPercentile 1: 7\nPercentile 5: 8.5\nPercentile 10: 9.5\nPercentile 20: 11\nPercentile 30: 12\nPercentile 40: 12.9\nPercentile 50: 13.6\nPercentile 60: 14.4\nPercentile 70: 15.4\nPercentile 80: 16.7\nPercentile 90: 18.6\nPercentile 95: 20\nPercentile 99: 23.5"
+    },
+    {
+      "value": {
+        "p10": 10.6,
+        "p25": 12.7,
+        "p50": 15.1,
+        "p75": 17.85,
+        "p90": 20.7
+      },
+      "reasoning": "(a) **Time left:** Election Day is 2026-11-03, about 4 days away. The question resolves around 2026-11-10 on the most complete counts available then. Alaska's ranked-choice tabulation may not be final by that date.\n\n(b) **Latest known value:** There are no results yet. FiftyPlusOne polling averages, fetched 2026-10-30, run from GA at D+10.2 to NE at R+0.3, a spread of about 10.5. PollCheck (2026-10-29) shows about 9.5 to 10.\n\n(c) **If nothing changed:** About 10.5 points.\n\n(d) **If the current trend continued:** The national environment is drifting toward Democrats, with a generic ballot of about D+9. That widens the D outliers, GA and NC, more than it moves the closest races. Trend alone suggests about 11 to 12.\n\n(e) **Historical variation:** State polling averages typically miss final Senate margins by 3 to 5 points. Part of that miss is shared across states and does not change the range. The state-specific part does widen it, because the most extreme realized values come from tails at both ends.\n- The highest of GA and NC typically lands about 2 points above its polling.\n- The lowest of the five or so near-tied states (IA, KS, NE, ME, AK) typically lands about 3 to 4 points below its polling.\n- Independent candidacies like Osborn's have had large polling misses. In 2024 he polled close and lost by about 7.\n- Together this means the realized range is usually several points wider than the polling range, so about 14 to 16 is expected.\n\n(f) **Experts and markets:**\n- Markets are more R-leaning than the polling averages in the close races. Kalshi has Hinson favored in Iowa at about 57%.\n- Kalshi's NC median is about Cooper +7.\n- Kalshi's GA vote-share pricing implies roughly Ossoff +8 to 10.\n- Put together, the market view points to a max around D+9 or D+10 and a min around R+3 to R+5, a range of about 13 to 15.\n\n(g) **Unexpected scenarios:**\n- *Low:* GA and NC both come in around D+7, and every close state lands at D+0 to D+3, giving a range of about 7 to 8.\n- *High:* Ossoff wins by 13 or more while Ricketts beats Osborn by 9 or more, as in 2024. Kansas or Iowa could also go R+6. That gives a range of 22 to 26.\n\nPercentile 1: 7.5\nPercentile 5: 9.5\nPercentile 10: 10.6\nPercentile 20: 12.1\nPercentile 30: 13.3\nPercentile 40: 14.3\nPercentile 50: 15.1\nPercentile 60: 16\nPercentile 70: 17.1\nPercentile 80: 18.6\nPercentile 90: 20.7\nPercentile 95: 22.4\nPercentile 99: 26"
+    },
+    {
+      "value": {
+        "p10": 12.0,
+        "p25": 14.05,
+        "p50": 16.3,
+        "p75": 19.0,
+        "p90": 21.8
+      },
+      "reasoning": "(a) **Time left:** The election is on 2026-11-03. Results arrive over the following days, though Alaska's ranked-choice tabulation and certification take longer. Resolution uses the most complete results available before 2027.\n\n(b) **Latest known value:** There are no results yet. As of about 2026-10-30, the FiftyPlusOne polling averages put the range at about 10.5 (GA D+10.2 to NE R+0.3). The Dave Manuel model projects about 12.6 (NC D+10.3 to NE R+2.3), and Poliwave about 11.5.\n\n(c) **If nothing changed:** Results matching the projections would give about 11 to 12.6.\n\n(d) **If the current trend continued:** Democrats are widening their leads in NC and GA, while NE, IA and KS stay close. That points to about 12 to 13 before accounting for polling error.\n\n(e) **Historical variation:** State-level Senate polling errors are typically 3 to 5 points and only partly correlated. A max-minus-min statistic across 10 states is pushed outward by these independent errors.\n- At the top, the larger of NC and GA likely rises by about 2 points.\n- At the bottom, the smallest of the many close races (NE, IA, KS, AK, OH, TX) likely falls by about 3 to 4 points.\n- In NE in 2024, polls showed a near tie, but Osborn lost by about 7.\n\nSo the expected realized range is about 15 to 17, wider than the projected 12.\n\n(f) **Experts and markets:**\n- Models put the range at about 11 to 12.6.\n- Kalshi implies NE at about R+2.8 and puts GA at D+10 or more at 27%.\n- The Kalshi Iowa market leans toward a Hinson win.\n- No market exists on this range directly.\n\n(g) **Unexpected scenarios:**\n- **Low:** Errors run uniformly toward the GOP in the safe-D states only. NC and GA land around D+7 while NE and KS stay at about R+1, giving a range of about 8 to 9.\n- **High:** A Democratic wave lifts NC to D+14, while Nebraska reverts to its partisan lean (Ricketts +9) or Iowa or Kansas swing hard right. That gives a range of about 23 to 27.\n\nPercentile 1: 9\nPercentile 5: 10.8\nPercentile 10: 12\nPercentile 20: 13.5\nPercentile 30: 14.6\nPercentile 40: 15.5\nPercentile 50: 16.3\nPercentile 60: 17.2\nPercentile 70: 18.3\nPercentile 80: 19.7\nPercentile 90: 21.8\nPercentile 95: 23.5\nPercentile 99: 27"
+    },
+    {
+      "value": {
+        "p10": 10.5,
+        "p25": 12.85,
+        "p50": 15.4,
+        "p75": 18.4,
+        "p90": 21.5
+      },
+      "reasoning": "(a) **Time left:** Election Day is November 3, 2026, 4 days away. Resolution is around November 10, with possibly partial counts in Alaska's ranked-choice tally.\n\n(b) **Latest values (FiftyPlusOne averages, fetched 2026-10-30):** the top is Georgia D+10.2 and North Carolina D+10.1, and the bottom is Nebraska R+0.3. That gives a range of about 10.5. The Dave Manuel model has a range of about 12.6, from NC D+10.3 to NE R+2.3. Poliwave has about 11.5.\n\n(c) **If nothing changed:** about 10.5 to 12.6.\n\n(d) **If the current trend continued:** Cooper has been drifting up (SurveyUSA +14, On Point +11.6), and Nebraska is around R+1 to R+3. That gives about 12 to 14.\n\n(e) **Historical variation:** State-level errors between final polls and results are typically 3 to 5 points.\n- A uniform shift across states cancels out, but the idiosyncratic part (about 3 to 4 points standard deviation) widens a 10-state max-minus-min range.\n- Max(NC, GA) adds about 1.5 to 2 points to the top.\n- The minimum of five near-tied states (NE, IA, KS, AK, TX/OH) pushes the bottom out by 3 to 5 points.\n- Polls in Nebraska, Kansas, Iowa and Texas have historically overstated Democrats and independents. In 2024 Osborn was polled close and lost by about 7.\n- Overall, the realized range is typically 3 to 6 points wider than the projected range.\n\n(f) **Experts and markets:**\n- Kalshi Georgia margin median is about D+7.5, below the polls.\n- Kalshi Nebraska implies about R+2.8.\n- Kalshi Iowa median is around a tie or slightly R.\n- Cooper is at 95% or more to win, which suggests about D+9 to 11.\n- Market-implied endpoints are roughly D+10 to 11 and R+4 to 5, so about 14 to 16 with dispersion.\n\n(g) **Scenarios:**\n- **Low:** Every state's errors are compressed. Cooper and Ossoff win by about 7, and the reddest state is Nebraska at about R+1. The range is about 8.\n- **High:** Cooper wins by 15 while Ricketts beats Osborn by 9, Texas or Kansas polling misses toward the GOP, and Alaska's count is partial. The range is 24 or more.\n\nPercentile 1: 7\nPercentile 5: 9\nPercentile 10: 10.5\nPercentile 20: 12.2\nPercentile 30: 13.5\nPercentile 40: 14.5\nPercentile 50: 15.4\nPercentile 60: 16.4\nPercentile 70: 17.6\nPercentile 80: 19.2\nPercentile 90: 21.5\nPercentile 95: 23.5\nPercentile 99: 28"
+    },
+    {
+      "value": {
+        "p10": 10.8,
+        "p25": 12.85,
+        "p50": 15.1,
+        "p75": 17.7,
+        "p90": 20.3
+      },
+      "reasoning": "(a) **Time left:** Election Day is 2026-11-03. Most margins will be clear within days. Alaska's ranked-choice tabulation and late mail ballots will take a few more weeks, and the question allows results through the end of 2026.\n\n(b) **Latest known value:** There are no results yet. FiftyPlusOne's polling averages, fetched 2026-10-30, imply a range of about 10.5 points: Georgia D+10.2 at the top and Nebraska R+0.3 at the bottom. The Dave Manuel model on 2026-10-29 implies about 12.6 (NC D+10.3 to NE R+2.3). Poliwave implies about 11.5.\n\n(c) **If nothing changed:** About 11 to 12.5.\n\n(d) **If the trend continued:** Democratic margins in North Carolina and Georgia have held near D+10 or a bit higher. The R end, made up of Nebraska, Iowa and Kansas, is still close. That gives about 12 to 13 before allowing for polling error.\n\n(e) **Historical variation:** Errors between final polls and results in individual states typically run 3 to 5 points and differ from state to state. With 10 states, the maximum tends to land above its projection and the minimum below its projection, so the range usually widens.\n- At the top, taking the larger of NC and GA adds about 2 points.\n- At the bottom, taking the smallest of Nebraska, Iowa, Kansas, Alaska and Ohio subtracts about 3 to 4 points.\n- Past misses point the same way. Nebraska in 2024 polled close and Fischer won by 6.7. Iowa in 2020 polled close and Ernst won by 6.6.\n\nThis puts the expected range at about 15.\n\n(f) **Experts and markets:**\n- Models put the range at 11 to 12.6.\n- Kalshi gives Ricketts about 70% (roughly R+2.8) and makes Hinson a slight favorite in Iowa.\n- Kalshi's Georgia margin market puts the median at about D+8.\n- Kalshi gives Cooper a win probability above 94%.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** A uniform Republican polling miss pulls NC and GA down to about D+7. The R-leaning states compress, with Nebraska at about R+1, giving a range near 8.\n- **High outcome:** Cooper wins by 15 or more, and Nebraska or Iowa breaks hard Republican to R+8 (similar to 2024 Nebraska and 2020 Iowa), giving a range of 22 to 25.\n\nPercentile 1: 7.5\nPercentile 5: 9.5\nPercentile 10: 10.8\nPercentile 20: 12.3\nPercentile 30: 13.4\nPercentile 40: 14.3\nPercentile 50: 15.1\nPercentile 60: 16\nPercentile 70: 17\nPercentile 80: 18.4\nPercentile 90: 20.3\nPercentile 95: 22\nPercentile 99: 25.5"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 10.4518,
+    "p25": 12.7264,
+    "p50": 15.0835,
+    "p75": 17.7632,
+    "p90": 20.0
+  },
+  "usage": [
+    {
+      "question_id": "46514",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00019940000000000002,
+      "input_tokens": 858,
+      "output_tokens": 56,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 7.37e-05,
+      "input_tokens": 502,
+      "output_tokens": 47,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 75.4,
+      "notional_cost_usd": 0.2381417,
+      "input_tokens": 47776,
+      "output_tokens": 4317,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.6,
+      "notional_cost_usd": 0.085108,
+      "input_tokens": 5897,
+      "output_tokens": 1897,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 21.9,
+      "notional_cost_usd": 0.08354800000000001,
+      "input_tokens": 5897,
+      "output_tokens": 1819,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.0009122000000000001,
+      "input_tokens": 3107,
+      "output_tokens": 582,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.0008715999999999999,
+      "input_tokens": 2919,
+      "output_tokens": 576,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.00029402000000000003,
+      "input_tokens": 3107,
+      "output_tokens": 399,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.6,
+      "notional_cost_usd": 0.00035395,
+      "input_tokens": 2919,
+      "output_tokens": 523,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 40.3,
+      "notional_cost_usd": 0.04078079999999999,
+      "input_tokens": 5896,
+      "output_tokens": 1851,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008447000000000001,
+      "input_tokens": 2967,
+      "output_tokens": 503,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00036011999999999996,
+      "input_tokens": 2967,
+      "output_tokens": 534,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 85.4,
+      "notional_cost_usd": 0.2153737,
+      "input_tokens": 71966,
+      "output_tokens": 4585,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.0,
+      "notional_cost_usd": 0.07626,
+      "input_tokens": 5751,
+      "output_tokens": 1513,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.4,
+      "notional_cost_usd": 0.07676,
+      "input_tokens": 5751,
+      "output_tokens": 1538,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0008131000000000001,
+      "input_tokens": 3009,
+      "output_tokens": 423,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.000857,
+      "input_tokens": 2906,
+      "output_tokens": 552,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 22.0,
+      "notional_cost_usd": 0.08504400000000001,
+      "input_tokens": 5749,
+      "output_tokens": 1953,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00028904,
+      "input_tokens": 3009,
+      "output_tokens": 391,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00026831,
+      "input_tokens": 2905,
+      "output_tokens": 352,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0008948000000000001,
+      "input_tokens": 3005,
+      "output_tokens": 588,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46514",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00030821,
+      "input_tokens": 3007,
+      "output_tokens": 429,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9084
+}
