@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-01T22:25:51.700306+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-01T22:22:56.155452+00:00",
+  "published": false,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46523,
+    "post_id": 46293,
+    "url": "https://www.metaculus.com/questions/46293",
+    "type": "NumericQuestion",
+    "unit": "PH/s",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "What will be Bitcoin's hash rate on December 31, 2026?",
+    "resolution_criteria": "This question will resolve as Bitcoin's \"close\" hash rate on December 31, 2026 according to [Coinmetrics.io](https://indexes.coinmetrics.io/cmbihash).",
+    "fine_print": "No other source will be used.",
+    "close_time": "2026-11-01 21:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 00:00 UTC"
+  },
+  "research": [
+    "I've pulled the Coin Metrics page and the mempool.space difficulty data. Writing up now.\n\n## 1. Resolution source\n- 2026-10-31: The CMBIHASH close was **1,091,535.86 PH/s**, the \"most recent NY market close\" on the page. Over 24 hours it was up 5.34%; for the year it is up 17.54%. The index uses a 48-hour lookback, so it swings a lot day to day. [Coin Metrics](https://indexes.coinmetrics.io/cmbihash)\n- Daily closes from Oct 20 to Oct 31: 1,097,140; 967,859; 1,044,729; 1,076,176; 1,002,800; 1,083,164; 1,128,587 (the 7-day high, Oct 26); 1,069,188; 1,028,846; 1,003,033; 1,036,222; 1,091,536. [Coin Metrics](https://indexes.coinmetrics.io/cmbihash)\n- Earlier closes: Oct 7, 976,408; Oct 9, 953,317; Oct 16, 971,353; Oct 19, 1,097,140. The 1-month range was 860,954 to 1,128,587. [Coin Metrics](https://indexes.coinmetrics.io/cmbihash)\n- My own working from the page's percentages: the Dec 31, 2025 close was about 928,700 (from YTD +17.54%), and the Oct 31, 2025 close was about 1,077,700 (from 1Y +1.28%).\n- Ranges shown on the page: 2-year high 1,203,394 (in Q4 2025), 1-year low 732,405 (in Q1 2026), Q3 2026 range 742,797 to 1,008,308.\n\n## 2. Current status\n- Nothing has settled the question yet. The index sits near the middle of the 750k to 1,250k range.\n- 2026-10-29: Difficulty rose 5.54% to 148.36T at block 973,728. That implies roughly 1,060 EH/s, or 1.06M PH/s. The previous adjustment, on Oct 16, was +5.92% to 140.58T. [mempool.space API](https://mempool.space/api/v1/mining/difficulty-adjustments/1y)\n- 2026-11-01: The next retarget is projected around Nov 12 at about -0.46%. Average block time is about 593 seconds, which implies roughly 1.07M PH/s. [mempool.space](https://mempool.space/api/v1/difficulty-adjustment)\n\n## 3. Recent news (newest first)\n- 2026-10-31: BTC fell below $78K to $80K after the Fed held rates. Two dissenters favoured a hike, and a December hike is seen as possible. [TalkMarkets](https://talkmarkets.com/article/fed-holds-rates-at-375-4-as-two-dissents-back-a-hike-and-bitcoin-hovers-near-81k), [20minutos](https://www.20minutos.es/lainformacion/economia-y-finanzas/oro-cae-pese-inflacion-bitcoin-tampoco-responde-que-esta-fallando_7055552_0.html)\n- 2026-10-30: BTC was at $76,636, 39% below its $126K high from October 2025. [24/7 Wall St](https://247wallst.com/investing/cryptocurrency/2026/10/30/how-much-bitcoin-would-you-need-to-be-a-millionaire-if-it-gets-back-to-its-record-high/)\n- Late October 2026: Hashprice was reported at about $36/PH/day, expected to fall to about $34 after the Oct 29 adjustment. I could not verify this. [oneminers](https://oneminers.com/blogs/news/bitcoin-difficulty-adjustment-october-29-2026-what-it-means-for-miners), [millionminer](https://millionminer.com/news/bitcoin-mining-update-october-2026)\n- 2026-10-22: KuCoin, citing BlocksBridge, reported that the 7-day average hashrate passed 1 ZH/s for the first time since March 3, 2026. [KuCoin](https://www.kucoin.com/blog/bitcoin-hashrate-rebounds-in-2026-what-it-means-for-btc)\n- Q3 2026: Hashrate Index put the Q3 average (30-day SMA) at about 940 EH/s, down 6.3% from Q2's 1,004. That was the second straight quarterly fall. Hashprice was near record lows in the low $30s. Analysts expected marginal capacity to go offline, and listed miners hold more than $70B in AI/HPC contracts. [Hashrate Index](https://hashrateindex.com/blog/global-hashrate-heatmap-update-q3-2026/)\n- 2026-08-01: Difficulty was 14% below the year's high as miners pivoted to AI. [CoinDesk](https://www.coindesk.com/business/2026/08/01/bitcoin-mining-difficulty-shrinks-14-from-this-year-s-high-as-plunging-revenues-force-operators-to-pivot)\n- Pickaxe.io pages report 1,101 to 1,131 EH/s, but they look auto-generated and contradict themselves, so I gave them little weight. [Pickaxe](https://www.pickaxe.io/resources/news/bitcoin-hashrate-surges-past-1000-ehs-amid-difficulty-hikes)\n\n## 4. Base rates and trend\n- Last year's comparable window: the index went from about 1,077,700 (Oct 31, 2025) to about 928,700 (Dec 31, 2025), a drop of about 14%. Q4 2025 as a whole was -8.23%.\n- Recent quarters on the index: Q1 2026 -8.68%, Q2 +3.20%, Q3 +11.23%. Q4 to date is +12.14%.\n- Difficulty over the past 12 months ran from 125.8T to 152.3T, roughly 900 to 1,090 EH/s implied. Sharp drops have happened: -11.2% in February 2026 and -10.1% in mid-2026. So did sharp rises, such as +14.7% in February. [mempool.space](https://mempool.space/api/v1/mining/difficulty-adjustments/1y)\n- Daily noise is large. Annualised volatility is about 107 to 118%, and over October the daily close moved within roughly ±10% of its trend. Any single day's close could land 5 to 10% away from the underlying hashrate.\n- Over two months, 1-month ranges have spanned about 25%. The 3-month range was 773k to 1,129k.\n\n## 5. Other forecasts\n- I found no prediction market or expert forecast on hashrate itself.\n- Related Kalshi markets on BTC price at the end of 2026: the most likely bucket is $75K to $80K (18%), then $80K to $85K (16%) and $70K to $75K (13%). There is a 51% chance BTC hits $70K before $100K, and a 14% chance it crosses $100K before January 2027. Lower prices would put pressure on hashprice and could push marginal machines offline.\n\n## 6. Upcoming events before resolution\n- Difficulty retargets: about Nov 12 (currently projected at -0.46%), then roughly Nov 26, Dec 10 and Dec 24.\n- 2026-12 FOMC: a possible rate hike, which could hit BTC price and therefore hashprice.\n- Winter weather and grid curtailment in US mining regions. Hashrate fell in late December 2025 and again during the early-2026 winter storms, followed by difficulty cuts.\n- More capacity moving from mining to AI/HPC, plus new-generation ASIC deliveries, which would push hashrate up.\n- The resolution value is a single-day close with a 48-hour lookback, so block-time luck on Dec 30 and 31 will have a noticeable effect.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-01 22:23 UTC; check each market really matches the question)\n- Kalshi: When will Bitcoin cross $100k again? (2026). Yes prices: Before January 2027: 0.14; Before December 2026: 0.07; Before July 2026: 0.0100; Before October 2026: 0.0100; Before June 2026: 0.0100; Before May 2026: 0.0100; Before April 2026: 0.0100; Before March 2026: 0.0100; Before November 2026: 0.0100; Before February 2026: 0.0100.\n- Kalshi: Bitcoin price at the end of 2026 (On Jan 1, 2027 at 12am EST). Yes prices: 75,000 to 79,999.99: 0.18; 80,000 to 84,999.99: 0.16; 70,000 to 74,999.99: 0.13; 85,000 to 89,999.99: 0.10; 65,000 to 69,999.99: 0.08; 90,000 to 94,999.99: 0.07; 95,000 to 99,999.99: 0.05; 100,000 to 104,999.99: 0.03; 60,000 to 64,999.99: 0.04; 105,000 to 109,999.99: 0.02.\n- Kalshi: Will BTC hit $70,000 before $100,000 by end of next month? (Before Dec 31, 2026 at 11:59 PM ET). Yes prices: 70,000 first: 0.51.\n- Kalshi: When will Bitcoin cross $130k? (When will Bitcoin cross $130k?). Yes prices: By Jul 8, 2027: 0.19; By Jun 10, 2027: 0.15; By Apr 15, 2027: 0.12; By May 13, 2027: 0.13; By Mar 18, 2027: 0.09; By Dec 24, 2026: 0.03; By Feb 18, 2027: 0.04; By Jan 21, 2027: 0.03; By Nov 26, 2026: 0.0100; By Oct 1, 2026: 0.0200.\n- Kalshi: Will Bitcoin be above $200k by next year? (Before 2027). Yes prices: Above $200000: 0.01.\n- Kalshi: Will BTC hit $50,000 before $100,000? (Before Dec 31, 2026 at 11:59 PM ET). Yes prices: 50,000 first: 0.09.\n- Polymarket: Another S&P 500 Company buys Bitcoin by ___? (ends 2027-01-01). [Yes, No] prices: November 30, 2025: [\"0\", \"1\"]; December 31, 2025: [\"0\", \"1\"]; December 31, 2026: [\"0.1825\", \"0.8175\"]\n- Polymarket: Will a new country buy Bitcoin by...? (ends 2027-01-01). [Yes, No] prices: December 31, 2025: [\"0\", \"1\"]; June 30, 2026: [\"0\", \"1\"]; December 31, 2026: [\"0.255\", \"0.745\"]\n- Polymarket: Quantum breaks Bitcoin by ___? (ends 2028-01-01). [Yes, No] prices: December 31, 2026: [\"0.0115\", \"0.9885\"]; December 31, 2027: [\"0.11\", \"0.89\"]\n- Polymarket: When will the Bitcoin halving occur? (ends 2028-07-01). [Yes, No] prices: March 31, 2028: [\"0.59\", \"0.41\"]; June 30, 2028: [\"0.925\", \"0.075\"]\n- Polymarket: Will knots flip bitcoin core by ___? (ends 2027-01-01). [Yes, No] prices: December 31: [\"0\", \"1\"]; December 31, 2026: [\"0.4025\", \"0.5975\"]",
+    "## 1. Resolution source\n\n- 2026-10-31: The CMBIHASH close was **1,091,535.86 PH/s**. That is up 5.34% on the day, 8.85% over 7 days, 18.14% over 1 month and 17.54% year to date. [Coin Metrics](https://indexes.coinmetrics.io/cmbihash)\n- The index is an \"implied hash rate\" with a 48-hour lookback, measured in PH/s and reported as a NY-close value. Because it is derived from block times, it is noisy from day to day.\n- Daily closes over the last two weeks (PH/s):\n  - Oct 30: 1,036,222\n  - Oct 29: 1,003,033\n  - Oct 28: 1,028,846\n  - Oct 27: 1,069,188\n  - Oct 26: 1,128,587, the high for the last 7 days and 1 month\n  - Oct 24: 1,002,800\n  - Oct 21: 967,859\n  - Oct 19: 1,097,140\n  - Oct 16: 971,353\n  - Oct 8: 940,122\n  - 1-month low: 860,954\n- The page shows how much the series moves:\n  - Over one day it often moves 5 to 10%. For example, Oct 21 to Oct 23 went from 968k to 1,076k (+11%).\n  - Intraday highs and lows often sit 10% apart.\n  - 3-month volatility is 107% annualised.\n- The year-to-date figure implies the Dec 31, 2025 close was about 928,600 PH/s (1,091,536 / 1.1754).\n\n## 2. Current status\n\n- Nothing has settled the question yet. The latest close (about 1.09M) sits in the upper middle of the question's 750k to 1.25M range.\n- 2026-10-29 (approx.): The latest difficulty retarget was **+5.54%**. Mempool.space shows the next one at block 975,744, about 1,560 blocks away, landing around 2026-11-12. As of today it is estimated at **-0.47%**, with average block time about 9.9 minutes. [mempool.space API](https://mempool.space/api/v1/difficulty-adjustment)\n- My own calculation, not a reported figure: 140.58T × 1.0554 ≈ 148.4T difficulty. That implies roughly 1,060 EH/s at 10-minute blocks, in line with the CMBI level.\n\n## 3. Recent news (newest first)\n\n- 2026-10-31: Bitcoin fell below $78k to $80k. The Fed held rates at 3.75 to 4%, with two dissents in favour of a hike, and the market sees a possible hike in December. [TalkMarkets](https://talkmarkets.com/article/fed-holds-rates-at-375-4-as-two-dissents-back-a-hike-and-bitcoin-hovers-near-81k), [20minutos](https://www.20minutos.es/lainformacion/economia-y-finanzas/oro-cae-pese-inflacion-bitcoin-tampoco-responde-que-esta-fallando_7055552_0.html)\n- 2026-10-30: BTC was at about $76.6k, 39% below its $126k all-time high. [24/7 Wall St.](https://247wallst.com/investing/cryptocurrency/2026/10/30/how-much-bitcoin-would-you-need-to-be-a-millionaire-if-it-gets-back-to-its-record-high/)\n- Late Oct 2026: Shattered.io reports hashprice back above $40/PH/day and October miner revenue of about $1.12B. I could not verify this with a second source. [shattered.io](https://shattered.io/?p=7614)\n- Oct 2026: Pickaxe pages report hashrate above 1,000 EH/s, with estimates between 1,019 and 1,258 EH/s. These pages look auto-generated and contradict each other. [Pickaxe](https://www.pickaxe.io/resources/news/bitcoin-hashrate-surges-past-1000-ehs-amid-difficulty-hikes), [Pickaxe](https://pickaxe.io/resources/news/bitcoin-mining-hashrate-hits-new-highs-as-difficulty-adjusts-oct-26)\n- 2026-10-16: Difficulty rose 5.92% to 140.58T, the highest since March 5, 2026. [Bitkub](https://www.bitkub.com/en/blog/bitcoin-mining-difficulty-jumps-592-to-high-7uNgmzahAeVWDSDkyPqM9F), [BlockOps](https://www.blockopsmining.com/bitcoin-mining-difficulty-october-2026/)\n- Q3 2026 (Hashrate Index heatmap): [Hashrate Index](https://hashrateindex.com/blog/global-hashrate-heatmap-update-q3-2026/)\n  - The 30-day average hashrate was about 940 EH/s, down 6.3% from Q2 (about 1,004 EH/s) and about 12% below the December 2025 peak.\n  - The US lost about 30 EH/s.\n  - Hashprice was in the low $30s.\n  - Luxor's Ethan Vera expected hashrate to keep drifting lower until price recovers.\n  - Listed miners have signed more than $70B in AI/HPC contracts, which may pull capacity away from mining.\n  - Note: October data contradicts that bearish Q3 outlook, since hashrate rose about 18% in the month.\n\n## 4. Base rates and variation\n\n- CMBI quarterly returns, with the range of values in each quarter:\n\n| Quarter | Return | Range (PH/s) |\n|---|---|---|\n| Q4 2025 | -8.23% | 870k to 1,203k |\n| Q1 2026 | -8.68% | 732k to 1,145k |\n| Q2 2026 | +3.20% | 784k to 1,081k |\n| Q3 2026 | +11.23% | 743k to 1,008k |\n| Q4 2026 so far | +12.14% | 861k to 1,129k |\n\n- Over the last year the range was 732k to 1,158k, and the 1-year return is only +1.28%. Over 2 years the range was 640k to 1,203k (all-time high, Q4 2025), and the return is +55%.\n- On a horizon of about 2 months, quarterly moves have been roughly ±8 to 12%. On top of that comes daily sampling noise of about ±5 to 10% on the specific day, Dec 31.\n- Last year Q4 was negative: BTC fell from its October 2025 peak and hashrate slid into the year end. The Dec 31, 2025 close was about 929k.\n\n## 5. Other forecasts\n\n- I found no prediction market or expert forecast on hashrate itself.\n- Related Kalshi BTC price markets, as of 2026-11-01:\n  - Price at end of 2026: the most likely buckets are $75k to 80k (18%) and $80k to 85k (16%). Above $100k is about 6% combined.\n  - Hitting $70k before $100k by Dec 31: 51%.\n  - Hitting $50k before $100k: 9%.\n  - These imply a flat to weak price, which means pressure on hashprice.\n- Hashrate Index commentators expected hashrate to drift lower in Q4. [Hashrate Index](https://hashrateindex.com/blog/global-hashrate-heatmap-update-q3-2026/)\n\n## 6. Upcoming events before resolution\n\n- Difficulty retargets fall roughly every 2 weeks: about Nov 12 (currently estimated -0.5%), then about Nov 25, about Dec 9 and about Dec 23. The Dec 31 value will reflect the 48 hours of block times before it.\n- The December FOMC meeting carries a possible rate hike, which could weigh on BTC price and therefore hashprice.\n- Winter conditions could matter:\n  - Weather-driven curtailment or grid events in the US (Texas/ERCOT) and in Russia, where seasonal restrictions apply.\n  - Cheaper hydro power ending in some regions.\n- Miners may shift capacity to AI/HPC, and new ASIC deployments are coming online. I could not find specific scheduled figures for either.\n- Random block-time luck on Dec 30 and 31 alone can move the close by ±5 to 10%.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-01 22:23 UTC; check each market really matches the question)\n- Kalshi: When will Bitcoin cross $100k again? (2026). Yes prices: Before January 2027: 0.14; Before December 2026: 0.07; Before July 2026: 0.0100; Before October 2026: 0.0100; Before June 2026: 0.0100; Before May 2026: 0.0100; Before April 2026: 0.0100; Before March 2026: 0.0100; Before November 2026: 0.0100; Before February 2026: 0.0100.\n- Kalshi: Bitcoin price at the end of 2026 (On Jan 1, 2027 at 12am EST). Yes prices: 75,000 to 79,999.99: 0.18; 80,000 to 84,999.99: 0.16; 70,000 to 74,999.99: 0.13; 85,000 to 89,999.99: 0.10; 65,000 to 69,999.99: 0.08; 90,000 to 94,999.99: 0.07; 95,000 to 99,999.99: 0.05; 100,000 to 104,999.99: 0.03; 60,000 to 64,999.99: 0.04; 105,000 to 109,999.99: 0.02.\n- Kalshi: Will BTC hit $70,000 before $100,000 by end of next month? (Before Dec 31, 2026 at 11:59 PM ET). Yes prices: 70,000 first: 0.51.\n- Kalshi: When will Bitcoin cross $130k? (When will Bitcoin cross $130k?). Yes prices: By Jul 8, 2027: 0.19; By Jun 10, 2027: 0.15; By Apr 15, 2027: 0.12; By May 13, 2027: 0.13; By Mar 18, 2027: 0.09; By Dec 24, 2026: 0.03; By Feb 18, 2027: 0.04; By Jan 21, 2027: 0.03; By Nov 26, 2026: 0.0100; By Oct 1, 2026: 0.0200.\n- Kalshi: Will Bitcoin be above $200k by next year? (Before 2027). Yes prices: Above $200000: 0.01.\n- Kalshi: Will BTC hit $50,000 before $100,000? (Before Dec 31, 2026 at 11:59 PM ET). Yes prices: 50,000 first: 0.09.\n- Polymarket: Another S&P 500 Company buys Bitcoin by ___? (ends 2027-01-01). [Yes, No] prices: November 30, 2025: [\"0\", \"1\"]; December 31, 2025: [\"0\", \"1\"]; December 31, 2026: [\"0.1825\", \"0.8175\"]\n- Polymarket: Will a new country buy Bitcoin by...? (ends 2027-01-01). [Yes, No] prices: December 31, 2025: [\"0\", \"1\"]; June 30, 2026: [\"0\", \"1\"]; December 31, 2026: [\"0.255\", \"0.745\"]\n- Polymarket: Quantum breaks Bitcoin by ___? (ends 2028-01-01). [Yes, No] prices: December 31, 2026: [\"0.0115\", \"0.9885\"]; December 31, 2027: [\"0.11\", \"0.89\"]\n- Polymarket: When will the Bitcoin halving occur? (ends 2028-07-01). [Yes, No] prices: March 31, 2028: [\"0.59\", \"0.41\"]; June 30, 2028: [\"0.925\", \"0.075\"]\n- Polymarket: Will knots flip bitcoin core by ___? (ends 2027-01-01). [Yes, No] prices: December 31: [\"0\", \"1\"]; December 31, 2026: [\"0.4025\", \"0.5975\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 910000.0,
+        "p25": 982500.0,
+        "p50": 1055000.0,
+        "p75": 1122500.0,
+        "p90": 1190000.0
+      },
+      "reasoning": "**(a) Time left:** About 2 months. The question resolves on the CMBIHASH close for December 31, 2026, known around January 1, 2027.\n\n**(b) Latest known value:** 1,091,535.86 PH/s on October 31, 2026, according to the Coin Metrics CMBIHASH close. October closes ranged from about 953k to 1,129k. The difficulty implies roughly 1.06M PH/s.\n\n**(c) If nothing changed:** About 1.06 to 1.09M PH/s.\n\n**(d) If the current trend continued:** Difficulty rose sharply twice in October, by 5.9% and 5.5%. However, the next retarget is projected to be flat (-0.46%), and hashprice is near record lows at about $34/PH/day. That points to a plateau, or modest growth to around 1.10 to 1.15M PH/s. Last year the index fell about 14% between Oct 31 and Dec 31 because of winter curtailment and a weak price, so the seasonal pattern argues for a softer number.\n\n**(e) Historical variation:** Over two months, the underlying hashrate typically moves ±5 to 10%. One-month ranges have spanned about 25%. On top of that, the single-day close has noise of about ±5 to 10% because of the 48-hour block-luck lookback. Combined, I use a standard deviation of roughly 10%.\n\n**(f) Experts and markets:** No market prices hashrate directly. Kalshi centres BTC at about $75 to 85K at year end and gives a 51% chance BTC hits $70K before $100K. That suggests continued pressure on hashprice and limits growth. Analysts expect marginal capacity to go offline and more miners to pivot to AI/HPC. New-generation ASIC deliveries partly offset this.\n\n**(g) Unexpected scenarios:**\n- **Low:** BTC drops toward $60K after a December Fed hike. Combined with a severe US winter storm causing curtailment and an unlucky block run on December 30 and 31, the close could print around 800k.\n- **High:** BTC rallies toward $100K and large new-generation ASIC fleets come online. With a lucky block streak, the close could reach about 1.3M.\n\nI centre the median slightly below the current reading, at about 1,055k, to reflect the weak hashprice and the December seasonal pattern.\n\nPercentile 1: 800000\nPercentile 5: 870000\nPercentile 10: 910000\nPercentile 20: 965000\nPercentile 30: 1000000\nPercentile 40: 1030000\nPercentile 50: 1055000\nPercentile 60: 1080000\nPercentile 70: 1105000\nPercentile 80: 1140000\nPercentile 90: 1190000\nPercentile 95: 1230000\nPercentile 99: 1310000"
+    },
+    {
+      "value": {
+        "p10": 910000.0,
+        "p25": 981500.0,
+        "p50": 1046000.0,
+        "p75": 1108000.0,
+        "p90": 1170000.0
+      },
+      "reasoning": "(a) **Time left:** About 2 months. The outcome is the Coin Metrics close on December 31, 2026, known around January 1, 2027.\n\n(b) **Latest known value:** 1,091,536 PH/s, the CMBIHASH close on October 31, 2026. Daily closes over the last two weeks ranged from about 968k to 1,129k. The underlying difficulty-implied hashrate is about 1,060 to 1,070 EH/s.\n\n(c) **If nothing changed:** The underlying hashrate stays near 1,065k PH/s. The single-day close would then land within about ±7% of that, depending on block luck under the 48-hour lookback.\n\n(d) **If the current trend continued:** Hashrate has climbed from a Q3 average of about 940 EH/s to about 1,065 EH/s. If that pace held, it would reach roughly 1,150k to 1,200k by year end. The next retarget, though, is projected flat at -0.46%. Hashprice is also near record lows, around $34 to $36 per PH/day, and BTC is at $77K to $80K, so growth is likely to slow or stall.\n\n(e) **Historical variation:**\n- Last year over the same window the index fell about 14%, from about 1,078k to about 929k. That reflected winter curtailment plus daily noise.\n- One-month ranges span about 25%.\n- Over two months, the underlying hashrate moves roughly ±7% (one standard deviation), and single-day noise adds another ±5 to 6%.\n- Combined, that gives an uncertainty of about ±10% (one standard deviation).\n\n(f) **Experts and markets:** There is no market on hashrate itself.\n- Kalshi centers BTC's year-end price at $75K to $85K, with meaningful downside risk: a 51% chance it hits $70K before $100K.\n- Hashrate Index analysts expect marginal capacity to go offline and more pivoting to AI/HPC.\n- New ASIC deliveries push the other way.\n- Taken together, this points to flat to slightly down from current levels.\n\n(g) **Unexpected scenarios:**\n- **Low:** BTC falls toward $60K after a December Fed hike, hashprice drops below $30, older machines shut off, and a severe late-December US winter storm forces curtailment. Combined with unlucky block times on Dec 30 and 31, the close could land around 780 to 850k.\n- **High:** BTC rallies toward $100K, large next-generation ASIC fleets come online, and block luck runs favorable. The close could then print 1,250k or more, near or above the 2-year high of 1,203k.\n\nMy median is about 1,045k. That sits slightly below the current level, reflecting seasonal winter curtailment and economic pressure on miners.\n\nPercentile 1: 790000\nPercentile 5: 868000\nPercentile 10: 910000\nPercentile 20: 963000\nPercentile 30: 1000000\nPercentile 40: 1025000\nPercentile 50: 1046000\nPercentile 60: 1068000\nPercentile 70: 1092000\nPercentile 80: 1124000\nPercentile 90: 1170000\nPercentile 95: 1207000\nPercentile 99: 1285000"
+    },
+    {
+      "value": {
+        "p10": 895000.0,
+        "p25": 975000.0,
+        "p50": 1050000.0,
+        "p75": 1118500.0,
+        "p90": 1180000.0
+      },
+      "reasoning": "(a) About 2 months remain. The question resolves on the Coin Metrics close for December 31, 2026, known around January 1, 2027.\n\n(b) The latest resolution-source value is a CMBIHASH close of 1,091,536 PH/s on October 31, 2026. The October daily closes ranged from about 968k to 1,129k. Difficulty implies an underlying rate of about 1,060,000 to 1,070,000 PH/s.\n\n(c) If nothing changed, the outcome would be about 1,060,000 to 1,090,000 PH/s.\n\n(d) If the current trend continued, the outcome would be higher, around 1,150,000 to 1,200,000 PH/s:\n- Q4 so far has seen two adjustments of about +5.5%, Q3 was +11%, and the 7-day average is back above 1 ZH/s.\n- However, the next retarget is projected flat at -0.46%, so the momentum is stalling.\n\n(e) Historical variation is large:\n- Last year over the same window, the index fell about 14%, from about 1,078k to about 929k.\n- Two-month swings of 10 to 15% are common, and the difficulty range over the past year implies roughly 900 to 1,090 EH/s.\n- On top of that, any single day's close carries about ±5 to 10% noise from block luck.\n\n(f) No expert or market forecasts exist on hashrate itself. Related signals point down:\n- Kalshi puts the end-2026 BTC price mostly at $70K to $85K, with a 51% chance BTC hits $70K before $100K.\n- Hashprice is near record lows, around the low-to-mid $30s per PH/day.\n- Miners are pivoting to AI/HPC.\n\nThese are headwinds, partly offset by new-generation ASIC deliveries.\n\n(g) Two unexpected scenarios:\n- **Low outcome:** BTC falls to $55K to $60K after a hawkish December FOMC, hashprice drops into the $20s, and older machines go offline. Add a late-December US winter storm forcing curtailment and an unlucky 48-hour window, and the close could reach about 750k to 800k.\n- **High outcome:** BTC rallies toward $100K, large deliveries of new ASICs are energized, and lucky blocks on Dec 30 and 31 push the close to about 1,250k to 1,300k.\n\nMy median sits slightly below the current level, reflecting price and hashprice pressure plus seasonal winter curtailment. The spread is wide because both the underlying hashrate and the single-day noise are uncertain.\n\nPercentile 1: 760000\nPercentile 5: 850000\nPercentile 10: 895000\nPercentile 20: 955000\nPercentile 30: 995000\nPercentile 40: 1025000\nPercentile 50: 1050000\nPercentile 60: 1075000\nPercentile 70: 1102000\nPercentile 80: 1135000\nPercentile 90: 1180000\nPercentile 95: 1220000\nPercentile 99: 1300000"
+    },
+    {
+      "value": {
+        "p10": 893000.0,
+        "p25": 970000.0,
+        "p50": 1042000.0,
+        "p75": 1112000.0,
+        "p90": 1185000.0
+      },
+      "reasoning": "(a) **Time left:** about 2 months. The question resolves on the CMBIHASH close for December 31, 2026, known around January 1, 2027.\n\n(b) **Latest known value:** the CMBIHASH close on 2026-10-31 was 1,091,535.86 PH/s. That day looks like a noisy upward print. Recent closes have been between 1.00M and 1.13M, and the difficulty-implied level is about 1,060 EH/s.\n\n(c) **If nothing changed:** the underlying hash rate is about 1.04 to 1.06M PH/s. The next retarget is estimated at -0.5%, which points to a flat level. The Dec 31 close would land around 1.05M, plus or minus the daily luck noise.\n\n(d) **If the current trend continued:** October rose about 18% in one month. Extrapolating that would give 1.2M or more. However, BTC price is weak at about $77 to 80k, and the latest retarget estimate is flat. Both suggest the surge is fading, so a plausible trend continuation gives about 1.10 to 1.15M.\n\n(e) **Historical variation:** quarterly returns have been about ±8 to 12%. Daily sampling noise from the 48-hour block-time window adds about ±5 to 10% on any single day. Over the last year the range was 732k to 1,158k, and the all-time high is about 1,203k. Together this gives roughly ±11 to 13% (1 sigma) for the outcome.\n\n(f) **Experts and markets:**\n- Hashrate Index and Luxor expected hashrate to drift lower until price recovers.\n- AI/HPC conversions by listed miners are a headwind.\n- Kalshi prices imply a flat to weak BTC price at year-end, centred around $75 to 85k. That means hashprice pressure, which leans against strong growth.\n- On the other side, new ASIC deployments arrived in October.\n\n(g) **Unexpected scenarios:**\n- **Low:** BTC breaks below $60k after a December Fed hike. Hashprice collapses, a Texas winter storm forces curtailment, and slow block luck on Dec 30 and 31 hits the 48-hour window. The close lands at 750 to 850k.\n- **High:** BTC rallies toward $100k and the newly deployed fleets ramp up. Fast block luck in the final 48 hours then produces a print of 1.25 to 1.35M.\n\n**Tails:**\n- P1 at about 760k corresponds to the low scenario.\n- P99 at about 1.33M corresponds to an all-time-high print with lucky blocks.\n\n**Median:** I set it at about 1.04M. That is slightly below the Oct 31 spike and close to the underlying level, with a small downward lean for the weak price and the bearish commentary.\n\nPercentile 1: 760000\nPercentile 5: 850000\nPercentile 10: 893000\nPercentile 20: 950000\nPercentile 30: 990000\nPercentile 40: 1018000\nPercentile 50: 1042000\nPercentile 60: 1066000\nPercentile 70: 1094000\nPercentile 80: 1130000\nPercentile 90: 1185000\nPercentile 95: 1230000\nPercentile 99: 1330000"
+    },
+    {
+      "value": {
+        "p10": 910000.0,
+        "p25": 985000.0,
+        "p50": 1055000.0,
+        "p75": 1126500.0,
+        "p90": 1200000.0
+      },
+      "reasoning": "(a) **Time left:** about 2 months. The question resolves on the CMBIHASH close for Dec 31, 2026, known around Jan 1, 2027.\n\n(b) **Latest value:** On 2026-10-31 the CMBIHASH close was 1,091,535.86 PH/s. That was a high-ish day. Difficulty (about 148.4T) implies an underlying level of about 1,060 EH/s, and the recent 2-week daily closes ranged from about 968k to 1,129k.\n\n(c) **If nothing changed:** the outcome would be about 1,050,000 to 1,090,000 PH/s.\n\n(d) **If the October trend continued:** hashrate rose about 18% in October. Extending a weaker version of that pace (+5 to 10% per month) would give about 1.15M to 1.25M. However, the next difficulty retarget is estimated at -0.5%, so the momentum is already stalling.\n\n(e) **Historical variation:**\n- Quarterly CMBI moves over the last year were about ±8 to 12%.\n- Sampling a single day adds roughly ±5 to 10% of noise.\n- Taken together, the log standard deviation is about 10% over this horizon.\n\n(f) **Experts and markets:**\n- Hashrate Index commentators expected hashrate to drift lower until the price recovers.\n- Kalshi prices imply BTC ending the year flat to weak, at about $75k to 85k.\n- Hashprice is about $40/PH/day, which is moderate.\n- Q4 last year was negative.\n- Overall, this points to a flat to slightly lower path from the current underlying level.\n\n(g) **Unexpected scenarios:**\n- **Low:** BTC breaks below $60k after a hawkish December Fed. Hashprice collapses, older rigs switch off and more capacity moves to AI/HPC. A Texas winter storm curtails load, and slow blocks on Dec 30 and 31 give a print near 780k to 850k.\n- **High:** BTC rallies back toward $100k and large new ASIC fleets come online. Combined with a lucky streak of fast blocks on the resolution day, the print could reach 1.3M or more.\n\nI anchor the median slightly below the latest close, at about 1.05M. The underlying level is around 1.06M, and price headwinds are mild.\n\nPercentile 1: 790000\nPercentile 5: 865000\nPercentile 10: 910000\nPercentile 20: 965000\nPercentile 30: 1005000\nPercentile 40: 1032000\nPercentile 50: 1055000\nPercentile 60: 1080000\nPercentile 70: 1108000\nPercentile 80: 1145000\nPercentile 90: 1200000\nPercentile 95: 1245000\nPercentile 99: 1330000"
+    },
+    {
+      "value": {
+        "p10": 905000.0,
+        "p25": 972500.0,
+        "p50": 1042000.0,
+        "p75": 1110500.0,
+        "p90": 1180000.0
+      },
+      "reasoning": "(a) **Time left:** About 2 months. The question resolves on the CMBIHASH close for December 31, 2026, known around January 1, 2027.\n\n(b) **Latest known value:** 1,091,535.86 PH/s on 2026-10-31. That day jumped 5.34%, so it is partly noise. The underlying level is about 1,030k to 1,060k, judging from the recent closes and from difficulty of about 148.4T at near 10-minute blocks.\n\n(c) **If nothing changed:** About 1,050k PH/s for the underlying level. A single noisy day could land anywhere from 1,000k to 1,100k.\n\n(d) **If the current trend continued:** October rose 18%. That was mostly a recovery from Q3 lows, and the next retarget is estimated at -0.5%, so the trend has flattened. Simple extrapolation of October would give 1,150k to 1,250k. That looks unlikely given weak BTC prices (about $77k to $80k) and hashprice around $40.\n\n(e) **Historical variation:**\n- Quarterly CMBI returns have run between about -9% and +12%.\n- Over 2 months, the underlying level moves with a standard deviation of roughly 7 to 8%.\n- The 48-hour block-time sampling noise on Dec 31 adds about ±5 to 6%.\n- Combined, the standard deviation is roughly 10%.\n\n(f) **Experts and markets:**\n- Hashrate Index commentators expected hashrate to drift lower until price recovers.\n- AI/HPC conversions are pulling some capacity away from mining.\n- Kalshi prices imply a flat to weak BTC into year-end (mode $75k to $85k), which pressures hashprice.\n- New ASIC deployments continue.\n- On balance this points to roughly flat to slightly down. My median is about 1,040k.\n\n(g) **Unexpected scenarios:**\n- **Low:** BTC breaks toward $60k after a hawkish December FOMC. Hashprice collapses below $35, and older rigs switch off. A winter storm in Texas forces curtailment, and slow blocks on Dec 30 and 31 make it worse. The close could fall to about 800k.\n- **High:** BTC rallies back toward $100k. Large new-generation fleets energize in December, and a lucky 48-hour block run follows. The close could print about 1,300k.\n\nPercentile 1: 790000\nPercentile 5: 865000\nPercentile 10: 905000\nPercentile 20: 955000\nPercentile 30: 990000\nPercentile 40: 1018000\nPercentile 50: 1042000\nPercentile 60: 1066000\nPercentile 70: 1093000\nPercentile 80: 1128000\nPercentile 90: 1180000\nPercentile 95: 1225000\nPercentile 99: 1310000"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 904868.8832,
+    "p25": 977385.3498,
+    "p50": 1047646.6049,
+    "p75": 1115630.8779,
+    "p90": 1183879.0967
+  },
+  "usage": [
+    {
+      "question_id": "46523",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 7.31e-05,
+      "input_tokens": 496,
+      "output_tokens": 47,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.4,
+      "notional_cost_usd": 0.00020190000000000003,
+      "input_tokens": 833,
+      "output_tokens": 71,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 70.2,
+      "notional_cost_usd": 0.2864818,
+      "input_tokens": 79153,
+      "output_tokens": 4327,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.5,
+      "notional_cost_usd": 0.068176,
+      "input_tokens": 5368,
+      "output_tokens": 1262,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.5,
+      "notional_cost_usd": 0.071324,
+      "input_tokens": 5369,
+      "output_tokens": 1419,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0009051,
+      "input_tokens": 2929,
+      "output_tokens": 639,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.0008147,
+      "input_tokens": 3062,
+      "output_tokens": 405,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.00031784,
+      "input_tokens": 2927,
+      "output_tokens": 451,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.7,
+      "notional_cost_usd": 0.00036585999999999997,
+      "input_tokens": 3060,
+      "output_tokens": 544,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.6,
+      "notional_cost_usd": 0.0280758,
+      "input_tokens": 5368,
+      "output_tokens": 1230,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0008244000000000001,
+      "input_tokens": 2993,
+      "output_tokens": 452,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.00036309,
+      "input_tokens": 2995,
+      "output_tokens": 539,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 70.7,
+      "notional_cost_usd": 0.2277715,
+      "input_tokens": 62487,
+      "output_tokens": 4202,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.067736,
+      "input_tokens": 5478,
+      "output_tokens": 1196,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.1,
+      "notional_cost_usd": 0.070408,
+      "input_tokens": 5477,
+      "output_tokens": 1330,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0007774000000000001,
+      "input_tokens": 2918,
+      "output_tokens": 388,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.7,
+      "notional_cost_usd": 0.069868,
+      "input_tokens": 5477,
+      "output_tokens": 1303,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0007947000000000001,
+      "input_tokens": 2937,
+      "output_tokens": 415,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00030893,
+      "input_tokens": 2917,
+      "output_tokens": 433,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0008385,
+      "input_tokens": 3066,
+      "output_tokens": 451,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00031632000000000003,
+      "input_tokens": 2937,
+      "output_tokens": 447,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46523",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00037983,
+      "input_tokens": 3069,
+      "output_tokens": 571,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8971
+}
