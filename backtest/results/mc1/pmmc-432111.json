@@ -1,0 +1,102 @@
+{
+  "source": "polymarket",
+  "id": "pmmc-432111",
+  "question": "Fed decisions (Jun-Sep)",
+  "resolution_criteria": "The FED interest rates are defined in this market by the upper bound of the target federal funds rate. The decisions on the target federal funds rate are made by the Federal Open Market Committee (FOMC) meetings.\n\nThis market will resolve according to the decisions made by the next three Federal Open Market Committee (FOMC) meetings: June 16-17; July 28-29; and September 15-16.\n\nA qualifying cut occurs when the new upper bound of the target federal funds rate is lower compared to the level it was prior to the respective meeting.\n\nA qualifying hike occurs when the new upper bound of the target federal funds rate is higher compared to the level it was prior to the respective meeting.\n\nA qualifying pause occurs when the new upper bound of the target federal funds rate is equal to the level it was prior to the respective meeting.\n\nIf the Fed publishes a different combination than any listed, this market will resolve to \"Other\". Any rate hike will be encompassed by \"Other\".\n\nEmergency rate cuts outside the regularly scheduled meetings will not be considered.\n\nThe resolution source for this market is the FOMC’s statement after its meetings:\nhttps://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\n\nThe level and change of the target federal funds rate is also published at the official website of the Federal Reserve:\nhttps://www.federalreserve.gov/monetarypolicy/openmarket.htm\n\n\"Other\" means any option not listed here.",
+  "options": [
+    "Cut–Pause–Pause",
+    "Cut–Pause–Cut",
+    "Cut–Cut–Pause",
+    "Cut–Cut–Cut",
+    "Pause–Pause–Pause",
+    "Pause–Pause–Cut",
+    "Other",
+    "Other"
+  ],
+  "as_of": "2026-08-26T00:00:00+00:00",
+  "resolved_at": "2026-09-16T20:02:48+00:00",
+  "outcome": 6,
+  "market_probs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.6383,
+    0.0104,
+    0.3513,
+    0.0
+  ],
+  "volume": 894797.288586,
+  "research": "I couldn't open the July 29 statement or the June 17 statement on the Fed's site. The June and July holds below come from secondary sources that agree with each other and with the Fed's rate-change table.\n\n## 1. Resolution source\n- 2026-08-26: The Fed's open-market page shows the last change on 2025-12-11, a 25 bp cut to **3.50%-3.75%**, so the upper bound is 3.75%. It lists no changes from January through August 2026. [Fed open market](https://www.federalreserve.gov/monetarypolicy/openmarket.htm)\n- The scored decisions are in the FOMC statements: June 17, July 29 and September 16, 2026. [Fed calendar](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)\n\n## 2. Current status\n- 2026-06-17: **Pause.** The FOMC held at 3.50%-3.75% in Warsh's first meeting as chair. The vote was unanimous, and the shorter statement dropped the easing bias. [KPMG](https://www.kpmg.com/us/en/articles/2026/june-2026-fomc-meeting.html), [MetalsMine](https://www.metalsmine.com/calendar/4-us-fomc-statement)\n- 2026-07-29: **Pause.** The FOMC held at 3.50%-3.75% on a 9-3 vote. Hammack, Kashkari and Logan dissented in favor of a 25 bp **hike**. [PCBB](https://www.pcbb.com/industry-insights/economy/2026-07-29-fomc-july-2026), [Star-Advertiser](https://www.staradvertiser.com/2026/07/29/breaking-news/fed-holds-rates-steady-as-3-policymakers-dissent-in-favor-of-hike/), [Fed implementation note](https://www.federalreserve.gov/monetarypolicy/files/monetary20260729a1.pdf)\n- **This settles part of the question.** The first two results are Pause-Pause, so every option that starts with \"Cut\" is ruled out. Only three outcomes are left, all decided by September 16:\n  - a hold resolves **Pause-Pause-Pause**;\n  - a cut resolves **Pause-Pause-Cut**;\n  - a hike resolves **\"Other\"**, since the rules put any hike there.\n\n## 3. Recent news (newest first)\n- 2026-08 (early August, per the URL date): a headline reported Warsh was \"open to September rate hike\". I couldn't open it (403 error). [roic.ai](https://www.roic.ai/news/warsh-open-to-september-rate-hike-08-06-2026)\n- 2026-07-30: After the July hold, a Reuters-sourced report said markets put about **57%** on a September hike, down from almost 100% before the meeting. [BusinessToday](https://www.businesstoday.com.my/2026/07/30/fed-holds-rates-steady-as-markets-cut-september-hike-expectations/)\n- 2026-07-29: U.S. stocks fell after the decision. A summary said markets priced two 25 bp hikes in 2026. [ifyouspent](https://news.ifyouspent.com/en/news/fed-decision-recap-july-2026)\n- 2026-06-17: In the June dot plot, 9 of 18 officials projected at least one hike in 2026, which analysts called hawkish. [AlphaMaven](https://www.alpha-maven.com/story/crypto/kevin-warsh-holds-interest-rates-steady-in-first-policy-meeting-as-fed-chair-crypto-briefing), [Trustnet](https://www.trustnet.com/news/13478711/fed-holds-rates-at-warshs-first-meeting-while-hawkish-dot-plot-divides-analyst-opinion), [MNI](https://www.mnimarkets.com/articles/mni-fed-review-jun-2026-jumping-past-neutral-to-hawkish-1781728747352)\n- Inflation backdrop: reports cite CPI at about 3.4% year over year and the Fed's preferred PCE measure at about 3.7%, both through July and well above the 2% target. I couldn't confirm when those figures were published.\n\n## 4. Base rates\n- The Fed has now held at five straight meetings since the December 2025 cut, counting July. [ifyouspent](https://news.ifyouspent.com/en/news/fed-decision-recap-july-2026)\n- In past cycles, a long hold that ends with hawkish dissents, as here, has more often turned into a hike than a cut. Three dissents is unusual. More than two at one meeting has been rare since the 1990s.\n- I found no source in 2026 arguing for a near-term cut. Policy talk is about holding versus hiking.\n\n## 5. Other forecasts\n- 2026-07-29: Kalshi priced a July hold at 76% and a hike at 24%. A September-hike market traded at about **44% Yes / 56% No**. [Pythia newsletter](https://pythia.beehiiv.com/p/new-post-23b5)\n- About 2026-07-30: market pricing (Reuters-sourced) put a September hike at about 57%. [BusinessToday](https://www.businesstoday.com.my/2026/07/30/fed-holds-rates-steady-as-markets-cut-september-hike-expectations/)\n- An undated article cites Kalshi at 57% for a September hike to 3.75%-4.00%. [tech-insider](https://tech-insider.org/polymarket-fed-september-2026-rate-odds/)\n- I found no current Polymarket or Kalshi price for this exact combination question. Pricing for a September **cut** looks negligible in every source I found.\n\n## 6. Upcoming events before resolution\n- Late August: the Jackson Hole symposium with Warsh's speech. It's a key signal for whether the Fed holds or hikes.\n- Late August: July PCE inflation release.\n- Early September: August jobs report.\n- About September 10-11: August CPI. One calendar lists a September 11 CPI release.\n- September 15-16: FOMC meeting, statement and new projections. This decides between Pause-Pause-Pause, Pause-Pause-Cut and \"Other\".",
+  "research_removed_lines": 0,
+  "leaked": false,
+  "forecasts": [
+    {
+      "probs": [
+        0.005,
+        0.005,
+        0.005,
+        0.005,
+        0.48,
+        0.02,
+        0.24,
+        0.24
+      ],
+      "reasoning": " (9 of 18 officials) projected a hike in 2026, and the statement dropped the easing bias.\n- 2026-07-29: The Fed held again, so July is a Pause. The vote was 9-3, with three dissents in favor of a hike. Every \"Cut-...\" option is now effectively ruled out.\n- 2026-07-29/30: Kalshi priced a September hike at about 44%. Reuters-sourced pricing put it at about 57%.\n- Early August: A headline said Warsh was \"open to September rate hike\".\n- Inflation is well above target, with CPI around 3.4% and PCE around 3.7%.\n- No source supports a September cut.\n\nI moved from my base rate toward a September hike, to roughly 50%. Market pricing and Warsh's stated openness are specific signals the base rate does not capture. I have no newer market price after early August, so I stay close to the market range rather than going above it.\n\n(e) **Unexpected scenario:** The August jobs report is very weak, or financial stress builds before mid-September. The Fed then cuts, which resolves Pause-Pause-Cut. This is a small tail. Separately, my research could be wrong about the June or July result, so I keep a sliver on the \"Cut-first\" options.\n\n**Final split:**\n- Pause-Pause-Pause (hold): about 48%.\n- Hike (\"Other\"): about 48%, split evenly across the two identical \"Other\" options.\n- Pause-Pause-Cut: 2%.\n- Cut-first options: a minimal residual for each.\n\nCut-Pause-Pause: 0.005\nCut-Pause-Cut: 0.005\nCut-Cut-Pause: 0.005\nCut-Cut-Cut: 0.005\nPause-Pause-Pause: 0.48\nPause-Pause-Cut: 0.02\nOther: 0.24\nOther: 0.24"
+    },
+    {
+      "probs": [
+        0.005,
+        0.005,
+        0.005,
+        0.005,
+        0.5,
+        0.03,
+        0.225,
+        0.225
+      ],
+      "reasoning": "07-29/30: Market pricing for a September hike was about 44% on Kalshi and about 57% in Reuters-sourced pricing, down from close to 100% before the meeting. Every source puts the chance of a September cut near zero.\n- About 2026-08-06: A headline said Warsh was \"open to September rate hike\". I could not read the article.\n- I have no market price after Jackson Hole, and no August CPI figure.\n\n**(e) Unexpected scenario:**\n- A sharp equity selloff, a credit event or a very weak August jobs report could flip the debate. The Fed could then cut, giving Pause-Pause-Cut.\n- That seems unlikely given a new chair who has positioned himself as hawkish and inflation near 3.5%.\n\n**Adjustment:** The markets are the anchor, with a September hike priced at about 44-57%. They price the same event, a hike in September, which maps onto \"Other\" here. I moved up from my 35% base rate to about 45% hike probability because of the Warsh headline and the hawkish dissents. I did not go above the midpoint of market pricing because the July hold showed the Fed was willing to disappoint markets that had priced a hike. A cut gets 3%.\n\n**Allocation:**\n- The three Cut-led options are effectively decided against, so they get a token 0.5% each. The fourth, Cut-Cut-Cut, gets 0.5% as well.\n- The two \"Other\" entries resolve the same way, so I split the hike probability evenly between them.\n\nOption_A: 0.005\nOption_B: 0.005\nOption_C: 0.005\nOption_D: 0.005\nOption_E: 0.50\nOption_F: 0.03\nOption_G: 0.225\nOption_H: 0.225"
+    },
+    {
+      "probs": [
+        0.005,
+        0.005,
+        0.005,
+        0.005,
+        0.48,
+        0.03,
+        0.235,
+        0.235
+      ],
+      "reasoning": " September hike:**\n  - Kalshi priced it at about 44%.\n  - A Reuters-sourced report put it at about 57%, down from near 100% before the meeting.\n- **June dot plot:** 9 of 18 officials projected at least one hike in 2026.\n- **Early August:** A headline said Warsh was \"open to September rate hike\".\n- **Missing data:** I have no market data after early August. Jackson Hole, July PCE, the August jobs report and August CPI could all still shift the odds either way.\n\n**How I moved from the base rate:** I started from the market anchor of roughly 45-57% for a hike. I settled on about 47% hike and 48% hold. That is a slight tilt toward the status quo, because the Fed often defers its first hike and the July meeting already showed reluctance to hike. I put about 3% on a cut.\n\n(e) **Unexpected scenario:** Something sharp hits growth before mid-September, such as a weak August payrolls report, rising unemployment or a financial-market shock. Warsh then argues that the inflation is supply-driven, and the Fed cuts, resolving Pause-Pause-Cut. Separately, there is a tiny chance that the secondary sources misreported the June or July decisions, which is the only way a \"Cut-first\" option could win.\n\n**How I split the probabilities:** \"Other\" appears twice in the option list. Any hike would resolve to it, so I divided the hike probability evenly between the two entries.\n\nOption_A: 0.005\nOption_B: 0.005\nOption_C: 0.005\nOption_D: 0.005\nOption_E: 0.48\nOption_F: 0.03\nOption_G: 0.235\nOption_H: 0.235"
+    },
+    {
+      "probs": [
+        0.005,
+        0.005,
+        0.005,
+        0.005,
+        0.49,
+        0.025,
+        0.2325,
+        0.2325
+      ],
+      "reasoning": " and under 5% cut.\n\n(d) **Strongest evidence:**\n- 2026-06-17: The Fed held, the statement dropped its easing bias, and 9 of 18 dots projected a 2026 hike.\n- 2026-07-29: The Fed held on a 9-3 vote, with three dissents in favor of a hike.\n- 2026-07-29: Kalshi priced a September hike at about 44%.\n- 2026-07-30: Reuters-sourced pricing put a September hike at about 57%, down from nearly 100% before the meeting.\n- Early August: a headline said Warsh was \"open to September rate hike\".\n- Inflation is well above target, with CPI about 3.4% and PCE about 3.7%.\n- No source supports a cut.\n\nThe market anchor is about 44-57% for a hike. I average that to about 47% for \"Other\". That leaves about 49% for a hold, slightly above the base-rate midpoint, because the Fed tends toward inertia under a new chair. A cut gets about 2.5%.\n\n(e) **Unexpected scenario:** A sharp drop in the August jobs data or a financial-market shock could push Warsh, who has argued for lower rates in the past, toward a surprise cut, giving Pause-Pause-Cut. Alternatively, the secondary sources about June or July could be wrong and an early cut actually happened. That is very unlikely given the Fed's rate table, so I put a small probability on each option that starts with \"Cut\".\n\n\"Other\" is listed twice, so I split its probability equally between the two entries.\n\nCut-Pause-Pause: 0.005\nCut-Pause-Cut: 0.005\nCut-Cut-Pause: 0.005\nCut-Cut-Cut: 0.005\nPause-Pause-Pause: 0.49\nPause-Pause-Cut: 0.025\nOther: 0.2325\nOther: 0.2325"
+    },
+    {
+      "probs": [
+        0.005,
+        0.005,
+        0.005,
+        0.005,
+        0.5,
+        0.03,
+        0.225,
+        0.225
+      ],
+      "reasoning": "026.\n- 2026-07-29: The July hold passed 9-3, with Hammack, Kashkari and Logan dissenting in favor of a hike.\n- 2026-07-29: Kalshi put a September hike at about 44%.\n- 2026-07-30: Reuters-sourced pricing put a September hike at about 57%, down from almost 100% before the meeting.\n- Early August: A headline reported that Warsh was \"open to September rate hike.\"\n- No source prices a September cut at more than a negligible level.\n\n**Weighing it:** The markets are split near 50/50 between a hike and a hold. I start there and lean slightly toward a hold, for three reasons:\n- the status quo gets extra weight;\n- the July meeting chose not to hike despite near-certain pricing beforehand;\n- the late-July pricing had been falling.\n\nThe Warsh \"open to hike\" headline pushes the other way. I end at about 45% hike, 51-52% hold and 3% cut.\n\n(e) **Unexpected scenario:** A sharp weakening in the labor market or a financial shock could produce a September cut (Pause-Pause-Cut). For example, a negative August payrolls print plus market turmoil could lead Warsh to argue that the inflation is supply-driven. Alternatively, a hot August CPI and a hawkish Jackson Hole speech could make a hike near-certain.\n\n\"Other\" appears twice in the option list and both entries cover the same outcome (any hike), so I split that probability evenly between them.\n\nCut-Pause-Pause: 0.005\nCut-Pause-Cut: 0.005\nCut-Cut-Pause: 0.005\nCut-Cut-Cut: 0.005\nPause-Pause-Pause: 0.50\nPause-Pause-Cut: 0.03\nOther: 0.225\nOther: 0.225"
+    }
+  ],
+  "errors": [],
+  "notional_cost_usd": 0.4815
+}

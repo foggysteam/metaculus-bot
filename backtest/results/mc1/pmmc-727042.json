@@ -1,0 +1,102 @@
+{
+  "source": "polymarket",
+  "id": "pmmc-727042",
+  "question": "Best Chinese AI Company end of September?",
+  "resolution_criteria": "This market will resolve according to the company that owns the model that has the highest arena rank among primarily Chinese companies, based on the arena.ai Text Arena (Overall) when the table under the \"Leaderboard\" tab is checked on September 30, 2026, 12:00 PM ET.\n\nChinese Companies include but are not limited to Alibaba, Moonshot, Baidu, Z.ai, Xiaomi, DeepSeek, ByteDance, MiniMax, Meituan, Tencent, and StepFun. Companies not headquartered in China or not primarily owned or operating within the Chinese technology ecosystem are not considered primarily Chinese.\n\nResults from the \"Rank\" column under the \"Text Arena | Overall\" Leaderboard tab at https://arena.ai/leaderboard/text/overall-no-style-control with style control off (Adjustments: None) and filtered for \"Models\" will be used to resolve this market.\n\nQualifying Chinese Models will be ordered primarily by their leaderboard rank at the market’s check time. If two or more models are tied on rank, they will be ordered by their Arena score, including any underlying, unrounded, granular values reflected in the data below the leaderboard. If a tie still remains, alphabetical order of company names as listed in this market group will be used as a final tiebreaker (e.g., if the two models are tied by exact arena score, “Meituan” would be ranked ahead of “Xiaomi”). This market will resolve based on the company that occupies first place under this ranking.\n\nThe resolution source for this market is the arena.ai Text Arena (Overall). If this resolution source is unavailable at check time, this market will remain open until the leaderboard comes back online and will resolve based on the first check after it becomes available. If it becomes permanently unavailable, this market will resolve to \"Other\".\n\n\"Other\" means any option not listed here.",
+  "options": [
+    "Alibaba",
+    "Moonshot",
+    "Baidu",
+    "Z.ai",
+    "Xiaomi",
+    "DeepSeek",
+    "MiniMax",
+    "Other"
+  ],
+  "as_of": "2026-09-14T16:00:00+00:00",
+  "resolved_at": "2026-09-30T18:10:36+00:00",
+  "outcome": 4,
+  "market_probs": [
+    0.8779,
+    0.0711,
+    0.0044,
+    0.0226,
+    0.0034,
+    0.0108,
+    0.0039,
+    0.0059
+  ],
+  "volume": 908074.7545320002,
+  "research": "I found enough to brief you, but with one important gap: the leaderboard that decides this question is blocked to me, so the current leader on that exact board is unconfirmed. Several of my sources are aggregators or blogs whose numbers don't always agree. I left out anything published after 2026-09-14.\n\n## 1. Resolution source\n- 2026-09-14: I could not open the resolution page (https://arena.ai/leaderboard/text/overall-no-style-control returned HTTP 403). So I can't confirm the current rank of any Chinese model on that board, with style control off. [arena.ai](https://arena.ai/leaderboard/text/overall-no-style-control)\n- 2026-09-02: A third-party copy of the Arena Text leaderboard probably shows the default view, with style control on, not the board used to resolve this market. Its top Chinese models are:\n\n| Rank | Model | Company | Score |\n|---|---|---|---|\n| #10 | kimi-k3-max | Moonshot | 1489±5 |\n| #17 | glm-5.3-max | Z.ai | 1482±7 |\n| #20 | qwen3.8-max | Alibaba | 1479±6 |\n| #39 | mimo-v2.5-pro | Xiaomi | 1468±4 |\n| #40 | ernie-5.1 | Baidu | 1468±5 |\n| #50 | deepseek-v4-pro-high-20260813 | DeepSeek | 1459±8 |\n\n  The page itself warns that the confidence intervals overlap a lot. [superpowers-skills](https://superpowers-skills.com/en-us/2026/09/02/ai-model-leaderboards-2026.html)\n\n## 2. Current status\n- Nothing settles the question yet. The top three Chinese labs (Moonshot, Z.ai, Alibaba) are within about 10 points of each other on the 2 September snapshot.\n- Rankings with style control off can differ a lot from the default view. Alibaba won the July and August versions of this market (see section 4), even though Moonshot led the default view on 2 September.\n\n## 3. Recent news (newest first)\n- 2026-09-10: DeepSeek V4.1 Flash was released, according to an aggregator. I found no Arena text rank for it. [okamomedia](https://llm.okamomedia.tokyo/en/china-ai/)\n- 2026-08-26: Alibaba released Qwen3.8-Flash, and Qwen 4 is reportedly only at preview or training stage. [okamomedia](https://llm.okamomedia.tokyo/en/china-ai/), [grandlinux](https://www.grandlinux.com/en/blogs/china-ai-update-september-2569.html)\n- 2026-08-14: Z.ai (Zhipu) launched GLM-5.3. [boostrail](https://www.boostrail.com/blog/chinese-ai-models-2026/)\n- 2026-08-03: Alibaba launched Qwen3.8-Max. Alibaba and the press reported it debuted 5th on Text Arena (the top Chinese model at the time) and 2nd on Vision Arena. These were vendor-reported figures, and that view probably had style control on. [Alibaba](https://home.alibabagroup.com/document-2021044032125272064), [DeepLearning.AI](https://www.deeplearning.ai/the-batch/qwen3-8-max-lands-with-a-bang)\n- 2026-07-16: Moonshot launched Kimi K3. It debuted 1st on Arena's Frontend Code board, and a test version (\"Kivine\") was seen on Arena beforehand. [TestingCatalog](https://www.testingcatalog.com/early-look-at-kimi-k3-generations-from-moonshot-ai-on-arena.md), [techsy](https://techsy.io/en/blog/kimi-k3-review)\n- Xiaomi: MiMo-V2.5-Pro was about #39 on the 2 September snapshot. I found no announced Xiaomi text model dated on or before 14 September.\n\n## 4. Base rates\n- July 2026 market: Alibaba was shown at 100% on 2026-08-01, after the market closed, which suggests Alibaba won. [predscope](https://predscope.com/event/best-chinese-ai-company-end-of-july)\n- August 2026 market: an aggregator reports it resolved to Alibaba on 2026-09-01. Note that the page carries mismatched Kalshi rule text. [prediction.com](https://prediction.com/odds/best-chinese-ai-company-end-of-august/28319)\n- Alibaba has won at least the last two monthly markets. A single new Chinese release can still change the leader within weeks, as Qwen3.8-Max did in early August.\n\n## 5. Other forecasts\n- Before or during August, Polymarket's August market had Alibaba at about 63-66%, Moonshot about 20-24%, Z.ai about 7% and DeepSeek about 5%. [cryptoslate](https://cryptoslate.com/predictions/market/best-chinese-ai-company-end-of-august/), [polymarkets.co.il](https://polymarkets.co.il/en/market/best-chinese-ai-company-end-of-august-20260717004241592/)\n- For July, Kalshi's market showed Alibaba at 69% and Moonshot at 27%. [Kalshi](https://kalshi.com/markets/kxchinaai/top-chinese-ai/kxchinaai-26jul31)\n- For the September market, mirror snapshots that seem to date from late July show Alibaba at about 44-71%, Moonshot about 28%, DeepSeek about 18%, Z.ai about 11% and Baidu about 10%. The mirrors contradict each other, and I couldn't find a reliable price dated close to 14 September. [polymarkets.co.il](https://polymarkets.co.il/bn/market/best-chinese-ai-company-end-of-september-20260717140852824/)\n\n## 6. Upcoming events before 30 September\n- New Chinese models that could reach the leaderboard: a Qwen 4 preview, further GLM-5.3 variants, DeepSeek V4.1 updates, and possibly a new Xiaomi MiMo generation. I couldn't confirm any of these dates from sources on or before 14 September.\n- New models usually show up on Arena within days of launch, and scores move as votes accumulate.\n- The check is on 2026-09-30 at 12:00 PM ET, on the board with style control off. The current order of Chinese models on that specific board is the key unknown, so it's worth checking it directly.",
+  "research_removed_lines": 0,
+  "leaked": false,
+  "forecasts": [
+    {
+      "probs": [
+        0.52,
+        0.22,
+        0.03,
+        0.1,
+        0.02,
+        0.06,
+        0.02,
+        0.03
+      ],
+      "reasoning": "nge within weeks, for example when Qwen3.8-Max launched in early August.\n\n(d) **Strongest evidence:**\n- 2026-08-03: Qwen3.8-Max debuted as the top Chinese model on Text Arena.\n- 2026-09-01: The August market resolved to Alibaba.\n- 2026-09-02: The default-view snapshot showed Kimi-K3-Max at #10, GLM-5.3-Max at #17 and Qwen3.8-Max at #20. These are within about 10 points with overlapping confidence intervals. This is the main risk to Alibaba if it reflects a newer Kimi variant or carries over to the style-off view.\n- 2026-09-10: DeepSeek V4.1 Flash was released. It is a Flash model, so it is unlikely to top the board.\n- No Qwen 4 release is confirmed before September 30.\n- I have no reliable recent market price for the September market. The late-July mirrors (Alibaba about 44-71%) are stale and inconsistent with each other.\n\n(e) **Unexpected scenario:** Moonshot or Z.ai releases a new max or thinking variant in late September that debuts high on the style-off board. Alternatively, DeepSeek ships a full V4.1 Pro, or ByteDance (Seed) or Tencent surprises, which would resolve \"Other\".\n\n**How I got the numbers:** I started from about 60% Alibaba, based on two consecutive wins and the status quo. I moved down to 52% because:\n- the style-on snapshot shows Moonshot and Z.ai ahead;\n- I cannot confirm the style-off order directly;\n- there are 16 days for new releases.\n\nOption_A: 0.52\nOption_B: 0.22\nOption_C: 0.03\nOption_D: 0.10\nOption_E: 0.02\nOption_F: 0.06\nOption_G: 0.02\nOption_H: 0.03"
+    },
+    {
+      "probs": [
+        0.54,
+        0.23,
+        0.025,
+        0.09,
+        0.02,
+        0.05,
+        0.015,
+        0.03
+      ],
+      "reasoning": "rongest evidence:**\n- **2026-08-03:** Qwen3.8-Max debuted 5th on Text Arena as the top Chinese model.\n- **August market:** It resolved to Alibaba (reported 2026-09-01). This happened after Kimi K3 launched on 2026-07-16, which suggests Qwen beats Kimi with style control off.\n- **2026-09-02 snapshot:** This copy likely shows the style-control-on view. In it, kimi-k3-max (1489) leads glm-5.3-max (1482) and qwen3.8-max (1479), with heavily overlapping confidence intervals.\n  - Qwen models historically gain relative to others when style control is off.\n  - However, \"kimi-k3-max\" may be a newer variant that was not on the board at end of August. That would be a real threat.\n- **Recent releases:** DeepSeek V4.1 Flash (2026-09-10) and Qwen3.8-Flash (2026-08-26) are both \"Flash\" models and unlikely to top the board. Qwen 4 is reportedly only at preview or training stage.\n\n(e) **Upset scenario:**\n- A late-September release, such as a GLM-5.3 Max variant, a DeepSeek V4.1 Pro, or a ByteDance Seed model (which counts as \"Other\"), could debut above Qwen3.8-Max.\n- Alternatively, kimi-k3-max could accumulate votes and overtake Qwen on the style-off board.\n\n**Reasoning:** I start from the roughly 65% market anchor for Alibaba. I move down to about 54% for two reasons: Moonshot now leads the style-on view, and the current style-off order is unconfirmed. I move Moonshot up to about 23%.\n\nAlibaba: 0.54\nMoonshot: 0.23\nBaidu: 0.025\nZ.ai: 0.09\nXiaomi: 0.02\nDeepSeek: 0.05\nMiniMax: 0.015\nOther: 0.03"
+    },
+    {
+      "probs": [
+        0.6099999999999999,
+        0.16,
+        0.03,
+        0.09,
+        0.02,
+        0.05,
+        0.02,
+        0.02
+      ],
+      "reasoning": "kets priced Alibaba at roughly 63-70%, Moonshot at 20-27%, and others in single digits. Month-to-month persistence of the leader is fairly high, but the leader can change within weeks after a major release.\n\n(d) **Strongest evidence:**\n- 2026-09-01: The August market resolved to Alibaba.\n- 2026-08-03: Qwen3.8-Max debuted as the top Chinese model on Text Arena.\n- 2026-09-02: A snapshot of the style-control-on view shows Moonshot (#10), Z.ai (#17) and Alibaba (#20) within about 10 points of each other, so the gaps are small.\n- 2026-09-10: DeepSeek V4.1 Flash was released, but a Flash model is unlikely to top the board.\n- A Qwen 4 preview is possible, which would only strengthen Alibaba.\n- I could not see the resolving board directly, so the current leader is unconfirmed. That uncertainty is a reason not to go above about 65%.\n\n(e) **Unexpected scenario:** Before Sep 30, Moonshot ships a Kimi K3 update or a \"thinking\" variant, or DeepSeek releases a V4.1 Pro. It debuts high on Arena and overtakes Qwen3.8-Max on the style-off board. Alternatively, as votes accumulate, Qwen3.8-Max's score drifts down below kimi-k3-max or glm-5.3-max.\n\n**Adjustment:** I start from the roughly 65% prior for the incumbent and move down slightly, to about 61%. The reasons are that the resolving board is unconfirmed, the style-on board shows Moonshot ahead, and there are 16 days for a new release.\n\nAlibaba: 0.61\nMoonshot: 0.16\nBaidu: 0.03\nZ.ai: 0.09\nXiaomi: 0.02\nDeepSeek: 0.05\nMiniMax: 0.02\nOther: 0.02"
+    },
+    {
+      "probs": [
+        0.57,
+        0.2,
+        0.02,
+        0.08,
+        0.02,
+        0.06,
+        0.02,
+        0.03
+      ],
+      "reasoning": "to Alibaba on 1 September.\n- On the 2 September snapshot with style control on, Moonshot ranks #10 (1489), Z.ai #17 (1482) and Alibaba #20 (1479), with confidence intervals that overlap heavily.\n- Qwen3.8-Max reportedly debuted 5th on Text Arena on 3 August.\n- Polymarket priced Alibaba at about 63-66% for August. Mirror prices for September varied widely and were stale.\n- New releases: GLM-5.3 on 14 August, Qwen3.8-Flash on 26 August, DeepSeek V4.1 Flash on 10 September. None of these has a confirmed top rank with style control off.\n- I could not verify the current resolution board because it returned HTTP 403.\n\n(e) **Unexpected outcome scenario:** A Qwen 4 preview would keep the result with Alibaba. A surprise release could change it, though: DeepSeek V4.1 or a new full model, a GLM-5.3-max variant, or a Kimi update that does well with style control off. Votes could also shift so that kimi-k3-max overtakes qwen3.8-max with style control off. The chance of an unlisted company winning, such as ByteDance's Seed or Tencent, is small but real.\n\n**Adjustment:** I started from Alibaba at about 65%, the level of the August market and its recent wins. I moved down to about 57% for three reasons: I could not confirm the board, Moonshot's lead in the default view suggests the margin is thin, and DeepSeek, Z.ai and a possible Qwen 4 could all produce new releases within the window.\n\nAlibaba: 0.57\nMoonshot: 0.20\nBaidu: 0.02\nZ.ai: 0.08\nXiaomi: 0.02\nDeepSeek: 0.06\nMiniMax: 0.02\nOther: 0.03"
+    },
+    {
+      "probs": [
+        0.58,
+        0.18,
+        0.03,
+        0.09,
+        0.02,
+        0.06,
+        0.02,
+        0.02
+      ],
+      "reasoning": "s:**\n- Alibaba won the July and August markets, and probably also led for long stretches earlier in 2026.\n- Over a two-week window, the leader usually stays the same unless a major new model launches.\n- When the leader has changed, it has usually been because of a new flagship release, as with Qwen3.8-Max in early August.\n\n(d) **Strongest evidence:**\n- 2026-08-03: Qwen3.8-Max debuted as the top Chinese model on Arena.\n- 2026-09-01: The August market resolved to Alibaba.\n- 2026-09-02: On the style-on snapshot, Moonshot is #10 (1489), Z.ai #17 (1482) and Alibaba #20 (1479), with confidence intervals that overlap heavily.\n- Earlier markets priced Alibaba at roughly 60-70%.\n- No major Chinese flagship release confirmed for late September has been found. DeepSeek V4.1 Flash (10 September) is a Flash model and unlikely to top the board.\n\n(e) **Unexpected scenario:** Moonshot releases a Kimi K3 update, or a new kimi-k3-max checkpoint gains on the style-off board, and passes Qwen. Other routes are a surprise DeepSeek V4.1 Pro release, or ByteDance's Seed model ranking strongly (which would resolve to \"Other\").\n\n**Reasoning:** I start from the status quo, roughly 65% Alibaba. I move down to 58% for three reasons: the style-off order is unverified, Moonshot's style-on lead is real and fairly fresh, and the window is 16 days. A possible Qwen 4 preview would only strengthen Alibaba.\n\nAlibaba: 0.58\nMoonshot: 0.18\nBaidu: 0.03\nZ.ai: 0.09\nXiaomi: 0.02\nDeepSeek: 0.06\nMiniMax: 0.02\nOther: 0.02"
+    }
+  ],
+  "errors": [],
+  "notional_cost_usd": 0.6693
+}
