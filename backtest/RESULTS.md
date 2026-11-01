@@ -252,3 +252,32 @@ On-schedule questions by source and by run (shift +0.3):
 - The same artifact flattered the x0.8 shrink: on on-schedule questions it scores +0.1 (v1, CI -2.8 to +3.7) and -1.3 (v1-r2, CI -3.1 to +1.0) against no shrink, with best factors 0.9 and 1.2. Kept, since it is neutral there and guards against confident misses, but the 0.6 to 0.7 fitted on all questions should not be trusted.
 - The next yes/no dataset should pick the as-of date from each market's scheduled end, or leave out markets that closed early.
 
+## Multiple-choice run `mc1`
+
+45 questions scored (2 excluded for hindsight leaks), 7.1 options on average. Forecasts combined: all forecasts from `mc1` (one research report). Notional usage $26.
+
+| Method | Log score | vs market (x100) | 95% CI | vs live (x100) | 95% CI |
+|---|---|---|---|---|---|
+| Market price on the as-of date | -0.929 | +0.0 | | | |
+| Live: mean, 1% floor | -1.007 | -7.8 | -19.9 to +5.2 | +0.0 | +0.0 to +0.0 |
+| Mean, no floor | -0.993 | -6.4 | -18.6 to +6.7 | +1.4 | +1.0 to +1.9 |
+| Mean, 0.5% floor | -0.996 | -6.6 | -18.8 to +6.5 | +1.2 | +0.8 to +1.5 |
+| Mean, 2% floor | -1.038 | -10.8 | -22.8 to +2.1 | -3.0 | -3.8 to -2.3 |
+| Mean, 3% floor | -1.066 | -13.6 | -26.4 to +0.7 | -5.8 | -8.1 to -2.9 |
+| Median, 1% floor | -1.011 | -8.2 | -20.3 to +5.1 | -0.4 | -1.3 to +0.4 |
+| Single forecast, 1% floor | -0.996 | -6.7 | -19.1 to +6.6 | +1.1 | -1.1 to +3.8 |
+| Power 0.9, 1% floor | -1.015 | -8.6 | -20.9 to +5.6 | -0.8 | -2.5 to +1.3 |
+| Power 0.8, 1% floor | -1.032 | -10.2 | -23.2 to +5.0 | -2.4 | -5.9 to +1.8 |
+| Power 0.7, 1% floor | -1.064 | -13.5 | -27.2 to +3.4 | -5.7 | -10.9 to +0.6 |
+| Uniform mix 5% | -1.014 | -8.4 | -20.9 to +5.4 | -0.6 | -1.7 to +0.8 |
+| Uniform mix 10% | -1.037 | -10.7 | -23.2 to +3.8 | -2.9 | -4.9 to -0.2 |
+| Uniform mix 20% | -1.088 | -15.9 | -28.8 to -0.0 | -8.1 | -11.8 to -3.1 |
+| 50/50 blend of live and market | -0.944 | -1.5 | | | |
+
+| Our top option at | Questions | Our average | Market's average on it | It won |
+|---|---|---|---|---|
+| under 40% | 9 | 27% | 34% | 56% |
+| 40% to 60% | 15 | 54% | 62% | 53% |
+| 60% to 80% | 18 | 67% | 73% | 67% |
+| 80% and over | 3 | 84% | 82% | 100% |
+
