@@ -15,9 +15,11 @@ import json
 import logging
 import os
 import shutil
+import sys
 import tempfile
 import time
 from dataclasses import asdict, dataclass
+from pathlib import Path
 
 from forecasting_tools import GeneralLlm
 
@@ -37,6 +39,9 @@ DEFAULT_SYSTEM_PROMPT = (
     "You are a careful, well-calibrated professional forecaster. "
     "Follow the instructions in the user's message exactly."
 )
+
+RAW_DATA_SERVER = Path(__file__).parent / "raw_data_server.py"
+RAW_DATA_TOOL = "mcp__rawdata__fetch_raw"
 
 # Phrases the CLI uses when the subscription usage window is exhausted.
 _USAGE_LIMIT_MARKERS = ("usage limit", "rate limit", "limit reached", "429")
@@ -108,6 +113,7 @@ class ClaudeCodeLlm(GeneralLlm):
 
     tools: comma separated built-in tool names (e.g. "WebSearch,WebFetch"),
     or "" for a plain completion with no tools.
+    raw_data: also give it the fetch_raw tool from raw_data_server.py.
     """
 
     def __init__(
@@ -120,6 +126,7 @@ class ClaudeCodeLlm(GeneralLlm):
         timeout: int = 900,
         allowed_tries: int = 2,
         fallback_models: tuple[str, ...] = (),
+        raw_data: bool = False,
     ) -> None:
         super().__init__(
             model=f"claude-code/{model}", allowed_tries=allowed_tries, timeout=timeout
@@ -131,6 +138,7 @@ class ClaudeCodeLlm(GeneralLlm):
         self.system_prompt = system_prompt
         self.timeout = timeout
         self.fallback_models = fallback_models
+        self.raw_data = raw_data
 
     def to_dict(self) -> dict:
         return {
@@ -139,6 +147,7 @@ class ClaudeCodeLlm(GeneralLlm):
             "tools": self.tools,
             "purpose": self.purpose,
             "fallback_models": list(self.fallback_models),
+            "raw_data": self.raw_data,
         }
 
     async def invoke(self, prompt, system_prompt: str | None = None) -> str:  # type: ignore[override]
@@ -185,11 +194,22 @@ class ClaudeCodeLlm(GeneralLlm):
             "--tools",
             self.tools,
         ]
-        if self.tools:
-            args += ["--allowedTools", self.tools]
+        if self.raw_data:
+            args += ["--mcp-config", self._raw_data_config(), "--strict-mcp-config"]
+        allowed = ",".join(x for x in (self.tools, RAW_DATA_TOOL if self.raw_data else "") if x)
+        if allowed:
+            args += ["--allowedTools", allowed]
         if self.effort and model != "haiku":
             args += ["--effort", self.effort]
         return args
+
+    @staticmethod
+    def _raw_data_config() -> str:
+        env = {"RAW_DATA_QUESTION": current_question_id.get()}
+        if os.getenv("RAW_DATA_LOG"):
+            env["RAW_DATA_LOG"] = os.environ["RAW_DATA_LOG"]
+        server = {"command": sys.executable, "args": [str(RAW_DATA_SERVER)], "env": env}
+        return json.dumps({"mcpServers": {"rawdata": server}})
 
     async def _run_once(self, prompt: str, system_prompt: str, model: str) -> str:
         env = dict(os.environ)

@@ -1,0 +1,78 @@
+name: Shadow runs
+
+# The full pipeline with the researcher's raw-data tool switched on (shadow.py), on questions the
+# live bot has already forecast and that have closed. Nothing is submitted. Runs stop at 30
+# questions. Logs go to branch shadow-logs, so they never mix with the live forecast logs on main.
+# GitHub drops many cron firings, so it fires hourly and catches up on whatever is waiting.
+on:
+  workflow_dispatch:
+    inputs:
+      post_ids:
+        description: "Comma-separated post ids (default: the newest with no shadow run)"
+        default: ""
+  schedule:
+    - cron: "43 * * * *"
+
+concurrency:
+  group: shadow
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  shadow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      ASKNEWS_API_KEY: ${{ secrets.ASKNEWS_API_KEY }}
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+      BRANCH: shadow-logs
+      POST_IDS: ${{ inputs.post_ids || '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v10.3.0
+        with:
+          version: "0.13.1"
+          enable-cache: true
+      - name: Install
+        run: uv sync --locked && npm install -g @anthropic-ai/claude-code && claude --version
+      - name: Safety checks on the tool
+        run: uv run python tests/test_raw_data_server.py
+      - name: Restore earlier shadow logs
+        run: |
+          if git ls-remote --exit-code --heads origin "$BRANCH" > /dev/null; then
+            git fetch -q origin "$BRANCH"
+            git archive "origin/$BRANCH" shadow_logs | tar -x
+          fi
+      - name: Run
+        run: |
+          args="--limit 3"
+          if [ -n "$POST_IDS" ]; then args="--limit 10 --post-ids $POST_IDS"; fi
+          uv run python shadow.py $args 2>&1 | tail -40
+      - name: Save logs to the branch
+        if: always()
+        run: |
+          if [ ! -d shadow_logs ]; then echo "No logs"; exit 0; fi
+          git config user.name "forecast-bot"
+          git config user.email "forecast-bot@users.noreply.github.com"
+          cp -r shadow_logs "$RUNNER_TEMP/shadow_logs"
+          rm -rf shadow_logs
+          if git ls-remote --exit-code --heads origin "$BRANCH" > /dev/null; then
+            git checkout -q -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout -q -B "$BRANCH"
+          fi
+          rm -rf shadow_logs
+          cp -r "$RUNNER_TEMP/shadow_logs" shadow_logs
+          git add -f shadow_logs
+          if git diff --cached --quiet; then echo "Nothing new"; exit 0; fi
+          git commit -q -m "Shadow logs $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q origin "$BRANCH"
