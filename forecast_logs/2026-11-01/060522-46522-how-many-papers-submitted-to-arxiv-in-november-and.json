@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-01T06:09:33.637904+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-01T06:05:22.982012+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46522,
+    "post_id": 46292,
+    "url": "https://www.metaculus.com/questions/46292",
+    "type": "NumericQuestion",
+    "unit": "papers",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How many papers submitted to arXiv in November and December 2026 will mention agentic reinforcement learning in their abstracts?",
+    "resolution_criteria": "This question resolves as the number of search results for \"agentic reinforcement learning\" occurring in abstracts for papers submitted in the November 1, 2026 to December 31, 2026 time period at arxiv.org. The specific search query to be conducted by Metaculus after December 31, 2026 will be this (but with the dates changed to 2026-11-01 and 2026-12-31): https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=%22agentic+reinforcement+learning%22&terms-0-field=abstract&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2026-06-01&date-to_date=2026-06-17&date-date_type=submitted_date&abstracts=show&size=200&order=-submitted_date",
+    "fine_print": "",
+    "close_time": "2026-11-01 09:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 00:00 UTC"
+  },
+  "research": [
+    "I've pulled monthly counts straight from the arXiv search page the question uses, and I'm writing them up now. I did not search news or prediction markets separately.\n\n# Research brief: arXiv abstracts mentioning \"agentic reinforcement learning\", Nov-Dec 2026\n\n## 1. Resolution source\n- The question resolves on the arXiv advanced search: the exact phrase \"agentic reinforcement learning\" in the abstract field, cross-lists included, filtered by submitted date from 2026-11-01 to 2026-12-31. [arXiv search](https://arxiv.org/search/advanced)\n- 2026-11-01: the template range in the question (2026-06-01 to 2026-06-17) returns 54 results. [arXiv](https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=%22agentic+reinforcement+learning%22&terms-0-field=abstract&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2026-06-01&date-to_date=2026-06-17&date-date_type=submitted_date&abstracts=show&size=50&order=-submitted_date)\n- One quirk matters for the count. The 2026-09-01 to 2026-10-31 search includes papers first submitted in May 2026 (for example arXiv:2605.12655). So a paper probably counts in any window where one of its versions was submitted, which means revised versions of older papers add to the total. The list also did not come back in true date order.\n\n## 2. Current status\n- Nothing is settled yet. The window opens today and the count is 0 or close to it.\n- 2026-11-01: the latest comparable figure is 221 results for 2026-09-01 to 2026-10-31. [arXiv](https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=%22agentic+reinforcement+learning%22&terms-0-field=abstract&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2026-09-01&date-to_date=2026-10-31&date-date_type=submitted_date&abstracts=show&size=50&order=-submitted_date)\n\n## 3. Recent news\n- 2026-10-31: arXiv had a cloud migration interruption around 2026-10-29, which the Open Journal of Astrophysics mentioned. It could affect how submissions are timed or indexed. [telescoper.blog](https://telescoper.blog/2026/10/31/weekly-update-from-the-open-journal-of-astrophysics-31-10-2026/)\n- 2026-10-30: Meta FAIR published a scaling law for training tool-use agents (arXiv, submitted 2026-10-27). Agent-training research is still very active. [Tech Times](https://www.techtimes.com/articles/329738/20261030/tool-diversity-beats-task-volume-meta-fair-derives-agent-training-scaling-law.htm)\n- 2026-10: arXiv IDs reached about 2610.40116, which points to unusually high overall submission volume in October.\n- 2025-09: the survey \"The Landscape of Agentic RL for LLMs\" (arXiv:2509.02547) helped popularize the term. [arXiv](https://arxiv.org/abs/2509.02547)\n\n## 4. Base rates (counts as shown on 2026-11-01)\nMonthly counts:\n- Oct 2025: 51\n- Nov 2025: 67 (the Nov-Dec 2025 total of 106 minus December)\n- Dec 2025: 39\n- Jan 2026: 44\n- Feb 2026: 61 (the Jan-Feb total of 105 minus January)\n- Mar-Apr 2026: 139 together, about 70 a month\n- May 2026: 104\n- Jun 2026: 80 (184 minus May)\n- Jul 2026: 75 (144 minus August)\n- Aug 2026: 69\n- Sep 2026: 79\n- Oct 2026: 138, of which 71 fall in Oct 15-31\n\nTwo-month totals:\n\n| Window | Count |\n|---|---|\n| Sep-Oct 2025 | 81 |\n| Nov-Dec 2025 | 106 |\n| Jan-Feb 2026 | 105 |\n| Mar-Apr 2026 | 139 |\n| May-Jun 2026 | 184 |\n| Jul-Aug 2026 | 144 |\n| Sep-Oct 2026 | 221 (the single-month queries add to 217) |\n\nWhat the numbers show:\n- The year-over-year trend is up about 2.1 to 2.7 times (Sep-Oct 2025 vs 2026: 81 to 221; Oct alone: 51 to 138).\n- There is a December dip. Last year December was about 42% below November (67 to 39), probably from holidays. The pattern is weaker after a NeurIPS-season peak.\n- There were peaks in May (likely the NeurIPS deadline) and October (likely the ICLR deadline and the arXiv flood that follows it). The October 2026 spike may be partly a one-off.\n- If Nov-Dec 2026 matches Nov-Dec 2025 scaled by 2.1 to 2.7 times, it lands at about 220 to 290. A flat rate equal to the Jul-Sep average (about 74 a month) gives about 150. Continuing the October rate (138 a month) gives about 275 minus a December dip.\n- Older windows may shift slightly as new versions get indexed, so they are not perfectly comparable.\n\n## 5. Other forecasts\n- I found no prediction market or Metaculus community forecast on this question.\n- None of the Kalshi markets that were provided match it. The closest, \"Merriam-Webster Word of the Year: Agentic\" at 0.17, only signals that the term is popular.\n\n## 6. Upcoming events before resolution\n- Conference timing: NeurIPS 2026 is in early December, and camera-ready versions get posted to arXiv. ICLR 2027 rebuttals in November may lead to revised versions, and revisions count under the version-date quirk. ICML 2027 submissions are due around late January, so papers for it mostly appear after the window.\n- Holiday slowdown: expect fewer submissions from late December through January 1.\n- arXiv infrastructure: the cloud migration could cause indexing gaps or backlogs around the window.\n- Terminology: substitutes such as \"agentic RL\" without the full phrase are not counted by the exact-phrase search, so some related papers will be missed.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-01 06:05 UTC; check each market really matches the question)\n- Kalshi: What will Snowflake CEO say during his agentic enterprise keynote? (Sridhar Ramaswamy - Snowflake Expedition 2026 — The Next Frontier: Driving Efficient Intelligence in the Agentic Enterprise originally scheduled for November 3, 2026). Yes prices: Open Source: 0.47; Postgres: 0.41; Claude / Anthropic: 0.58; CoCo: 0.62; Azure: 0.32; MCP / Model Context Protocol: 0.32; CoWork / Snowflake Intelligence: 0.68; Automated / Automation: 0.71; Cortex Sense: 0.28; Disney: 0.79.\n- Kalshi: Merriam-Webster Word of the Year 2026? (2026). Yes prices: Agentic: 0.17; Looksmaxxing: 0.14; larping: 0.12; Vibe: 0.04; Brainrot: 0.01; Lore: 0.0100; AI: 0.0400; Performative: 0.0100; Semiquincentennial: 0.0600.\n- Kalshi: What will Duolingo say during their next earnings call? (On Nov 3, 2026). Yes prices: Tutor: 0.47; 100 Million: 0.65; Flashcard: 0.32; Music: 0.71; Spotify: 0.28; Asia: 0.76; ChatGPT: 0.28; McDonald's: 0.21; China / Chinese: 0.80; Free Trial: 0.80.\n- Kalshi: Will any state submit ballot-mail data to USPS? (Before Nov 3, 2026). Yes prices: Yes: 0.12.\n- Kalshi: Will Massachusetts scientific R&D jobs rise YoY? (2026). Yes prices: Above 103,400 jobs: 0.77.\n- Kalshi: Will the Citrini scenario happen? (Before July 2028). Yes prices: Yes: 0.17.",
+    "I found no settling fact or market for this question yet. The Nov-Dec 2026 window has 0 results, as expected since it opens today, so the forecast rests on base rates. Recent monthly counts run about 69 to 138, and the 2025 holiday months dipped.\n\n## 1. Resolution source\n- 2026-11-01: The Metaculus search URL, with dates set to 2026-11-01 to 2026-12-31, returns \"Sorry, your query returned no results.\" The period has only just started. [arXiv search](https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=%22agentic+reinforcement+learning%22&terms-0-field=abstract&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2026-11-01&date-to_date=2026-12-31&date-date_type=submitted_date&abstracts=show&size=25&order=-submitted_date)\n- How the date filter works: it seems to count a paper if any version falls in the window, not just v1. The Sep-Oct 2026 search included 2605.12655 (v1 dated 12 May 2026). Of the 38 October 2026 results I could see, 26 had 2610 IDs and 12 had older IDs (2608, 2603, 2602, 2509, 2506 and others). So roughly 30% of the count may be revisions of older papers. Overlapping windows also add up to slightly more than the combined search: Sep 79 + Oct 138 = 217, while the Sep-Oct search gives 221. [arXiv search](https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=%22agentic+reinforcement+learning%22&terms-0-field=abstract&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2026-10-01&date-to_date=2026-10-31&date-date_type=submitted_date&abstracts=show&size=200&order=-submitted_date)\n\n## 2. Current status\n- 2026-11-01: Nothing settles the question. The count is 0 because the window opens today.\n- Counts for recent months may still rise a little as late listings and revisions are indexed, so treat them as approximate.\n\n## 3. Recent news\n- 2026-10-31: The Open Journal of Astrophysics reported an interruption on 29 Oct 2026 caused by an \"arXiv cloud migration.\" A short indexing or listing disruption around period boundaries is possible. [telescoper.blog](https://telescoper.blog/2026/10/31/weekly-update-from-the-open-journal-of-astrophysics-31-10-2026/)\n- 2026-10-30: Tech Times reported a Meta FAIR scaling-law paper on tool-use agent training, submitted to arXiv on 27 Oct 2026. It is one sign that research on RL for agents is still active. [Tech Times](https://www.techtimes.com/articles/329738/20261030/tool-diversity-beats-task-volume-meta-fair-derives-agent-training-scaling-law.htm)\n- 2025-09: The survey \"The Landscape of Agentic Reinforcement Learning for LLMs\" (arXiv:2509.02547) helped popularize the term. [arXiv](https://arxiv.org/abs/2509.02547)\n\n## 4. Base rates\nAll counts are from the same exact-phrase abstract search, including cross-lists, run on 2026-11-01.\n\n**Two-month windows (same shape as the question):**\n- Nov-Dec 2025: 106\n- Jan-Feb 2026: 105\n- Mar-Apr 2026: 139\n- May-Jun 2026: 184\n- Jul-Aug 2026: 144\n- Sep-Oct 2026: 221\n\n**Single months:**\n\n| Month | Count |\n|---|---|\n| Oct 2025 | 51 |\n| Nov 2025 | 66 |\n| Dec 2025 | 39 |\n| May 2026 | 104 |\n| Jun 2026 | 79 |\n| Jul 2026 | 70 |\n| Aug 2026 | 69 |\n| Sep 2026 | 79 |\n| Oct 2026 | 138 |\n| Oct 16-31, 2026 | 60 |\n\nWhat the numbers show:\n- **Year-on-year:** October went from 51 to 138, about 2.7x. Nov-Dec 2025 (106) sits at the bottom of the question's 100-500 range.\n- **Seasonality last year:** November rose about 29% over October (51 to 66), then December fell about 41% (66 to 39). That fits a holiday dip and possibly a burst of activity tied to conference reviews in November.\n- **Trend this year:** counts were not a smooth climb. They peaked in May (104, around NeurIPS submission time), held at about 70-80 from June to September, then jumped in October (138). The second half of October alone had 60.\n- **Simple extrapolations:**\n  - If Nov and Dec follow last year's pattern relative to October: about 138 × 1.29 ≈ 178 for November and 178 × 0.59 ≈ 105 for December, so about 280 in total.\n  - If the rate settles back to the roughly 70-80 per month seen in Jun-Sep: about 150-170.\n  - If October's level holds flat: about 270-280.\n- Part of October's spike is revised older papers (about 30% of the results I could see), which may be linked to the conference cycle.\n\n## 5. Other forecasts\n- I could not find a Polymarket, Kalshi, Manifold or Metaculus forecast on this or a closely related question. The Kalshi markets supplied are unrelated. The nearest is \"Merriam-Webster Word of the Year 2026: Agentic\" at 0.17, which only loosely signals how popular the term is.\n\n## 6. Upcoming events before resolution\nThese dates are typical for the conference cycle; I have not checked them for 2026-27.\n- **November:** the ICLR 2027 review and rebuttal period. Revisions posted to arXiv count under this filter.\n- **Mid-November:** the CVPR 2027 submission deadline. Its relevance here is modest.\n- **Early December:** NeurIPS 2026, where camera-ready versions and workshop papers may be posted.\n- **Late December:** a holiday slowdown. Last year December was about 41% below November.\n- **Late January 2027:** the ICML 2027 deadline. It falls after the window, but preprints sometimes appear in December.\n- **Throughout:** possible arXiv infrastructure disruptions from the cloud migration (one reported 29 Oct 2026).\n- **Wording risk:** the count depends on the exact phrase \"agentic reinforcement learning\". Authors may use variants such as \"agentic RL\" or \"RL for agents\", which would not be counted.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-01 06:05 UTC; check each market really matches the question)\n- Kalshi: What will Snowflake CEO say during his agentic enterprise keynote? (Sridhar Ramaswamy - Snowflake Expedition 2026 — The Next Frontier: Driving Efficient Intelligence in the Agentic Enterprise originally scheduled for November 3, 2026). Yes prices: Open Source: 0.47; Postgres: 0.41; Claude / Anthropic: 0.58; CoCo: 0.62; Azure: 0.32; MCP / Model Context Protocol: 0.32; CoWork / Snowflake Intelligence: 0.68; Automated / Automation: 0.71; Cortex Sense: 0.28; Disney: 0.79.\n- Kalshi: Merriam-Webster Word of the Year 2026? (2026). Yes prices: Agentic: 0.17; Looksmaxxing: 0.14; larping: 0.12; Vibe: 0.04; Brainrot: 0.01; Lore: 0.0100; AI: 0.0400; Performative: 0.0100; Semiquincentennial: 0.0600.\n- Kalshi: What will Duolingo say during their next earnings call? (On Nov 3, 2026). Yes prices: Tutor: 0.47; 100 Million: 0.65; Flashcard: 0.32; Music: 0.71; Spotify: 0.28; Asia: 0.76; ChatGPT: 0.28; McDonald's: 0.21; China / Chinese: 0.80; Free Trial: 0.80.\n- Kalshi: Will any state submit ballot-mail data to USPS? (Before Nov 3, 2026). Yes prices: Yes: 0.12.\n- Kalshi: Will Massachusetts scientific R&D jobs rise YoY? (2026). Yes prices: Above 103,400 jobs: 0.77.\n- Kalshi: Will the Citrini scenario happen? (Before July 2028). Yes prices: Yes: 0.17."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 163.0,
+        "p25": 196.5,
+        "p50": 232.0,
+        "p75": 270.0,
+        "p90": 310.0
+      },
+      "reasoning": "(a) **Time left:** about 2 months. The window is Nov 1 to Dec 31, 2026, and it resolves shortly after Dec 31.\n\n(b) **Latest known value:** for 2026-09-01 to 2026-10-31 the search returns 221 results (checked 2026-11-01). By month, September 2026 had 79 and October 2026 had 138, with 71 of October's in Oct 15-31.\n\n(c) **If nothing changed:** the window has just opened, so the count is near 0. If the recent two-month rate simply holds, the total is about 220.\n\n(d) **If the current trend continued:**\n- Last year, Nov-Dec was about 1.3 times Sep-Oct (106 vs 81).\n- November 2025 (67) was above October 2025 (51), probably because of ICLR rebuttal revisions and the CVPR and ARR deadlines.\n- December dipped by about 40% (39).\n- Applying the October rate in November (about 120-150) and a December dip (about 70-100) gives about 200-250.\n- Scaling year-over-year growth of 2.1-2.7 times onto last year's 106 gives 220-290.\n- A central estimate of about 230 fits both approaches.\n\n(e) **Historical variation:** two-month totals over the last year ranged from 105 to 221. Changes between consecutive windows ran from -22% to +50%, and single months swing ±40%.\n\n(f) **Experts and markets:** no market covers this question. The question creator's range is 100-500.\n\n(g) **Unexpected scenarios:**\n- *Low:* arXiv migration or indexing problems, or a shift to the shorter \"agentic RL\" wording, plus a steep holiday drop, give about 130.\n- *High:* the October ICLR spike persists, a wave of ICLR revisions and NeurIPS camera-ready versions count under the version-date rule, and the term keeps spreading, giving about 350 or more.\n\nPercentile 1: 115\nPercentile 5: 145\nPercentile 10: 163\nPercentile 20: 188\nPercentile 30: 205\nPercentile 40: 219\nPercentile 50: 232\nPercentile 60: 245\nPercentile 70: 260\nPercentile 80: 280\nPercentile 90: 310\nPercentile 95: 337\nPercentile 99: 400"
+    },
+    {
+      "value": {
+        "p10": 152.0,
+        "p25": 187.5,
+        "p50": 226.0,
+        "p75": 266.5,
+        "p90": 310.0
+      },
+      "reasoning": "(a) **Time left:** The window runs from 2026-11-01 to 2026-12-31, so the outcome is known around 2027-01-01, about 2 months from now.\n\n(b) **Latest known value:** The query for 2026-09-01 to 2026-10-31 returned 221 papers (checked 2026-11-01). October 2026 alone returned 138, and Sep 2026 returned 79.\n\n(c) **If nothing changed:** The Nov-Dec 2026 window is essentially at 0 today. If submissions ran at the recent baseline of about 75-80 a month, the total would be about 150-160.\n\n(d) **If the current trend continued:**\n- Last year November was above October (67 vs 51), then December fell about 42%.\n- Applying the year-over-year growth of 2.1x to 2.7x to last year's Nov-Dec total of 106 gives about 220-290.\n- Keeping October's rate of 138 a month, with a December dip, gives about 240-260.\n- A blended central estimate is about 225.\n\n(e) **Historical variation:** Two-month totals over the past year were 81, 106, 105, 139, 184, 144 and 221. Consecutive windows swung by about 20-40%. Single months varied from about 0.6x to 1.7x of neighbouring months.\n\n(f) **Experts and markets:** No market covers this question. The question creator's range is 100-500, which is consistent with a median around 200-250.\n\n(g) **Unexpected scenarios:**\n- **Low:** The October spike was a one-off from the ICLR deadline flood, and activity reverts to about 70 a month. December holidays and arXiv migration or indexing problems cut December to about 40. The terminology also shifts toward \"agentic RL\" or \"RL for agents\". The result would be about 110-130.\n- **High:** Agentic RL becomes the dominant post-training theme. CVPR, ICML-prep and NeurIPS camera-ready submissions, plus revised versions counted under the version-date quirk, push November to about 180 and December to about 130. The result would be about 300+.\n\nPercentile 1: 105\nPercentile 5: 135\nPercentile 10: 152\nPercentile 20: 178\nPercentile 30: 197\nPercentile 40: 212\nPercentile 50: 226\nPercentile 60: 240\nPercentile 70: 256\nPercentile 80: 277\nPercentile 90: 310\nPercentile 95: 340\nPercentile 99: 410"
+    },
+    {
+      "value": {
+        "p10": 155.0,
+        "p25": 185.0,
+        "p50": 218.0,
+        "p75": 256.0,
+        "p90": 298.0
+      },
+      "reasoning": "(a) **Time left:** About 2 months. The window runs from 2026-11-01 to 2026-12-31, and the question resolves shortly after.\n\n(b) **Latest known value:** Sep-Oct 2026 had 221 results (Sep 79, Oct 138), measured on 2026-11-01. Monthly counts were 69 to 80 for Jun-Sep 2026, and 104 for May.\n\n(c) **If nothing changed:** At the Sep-Oct pace, the Nov-Dec window would have about 220. At the summer baseline of about 75 a month, it would have about 150.\n\n(d) **If the trend continued:** Year over year the count is up 2.1 to 2.7 times. Applying that to Nov-Dec 2025 (106) gives about 220 to 290. Seasonality points the same way. Last year November (67) was above October (51), helped by ICLR rebuttal revisions, and December dipped about 40%. A Nov-Dec 2026 split of about 120 to 140 in November and 75 to 95 in December gives about 200 to 235.\n\n(e) **Historical variation:** Two-month totals have moved by -20% to +55% between consecutive windows: 106, 105, 139, 184, 144, 221. Single months swing by up to 70%.\n\n(f) **Experts and markets:** There is no market on this. The question creator's range is 100 to 500.\n\n(g) **Unexpected scenarios:**\n- Low: Terminology shifts to \"agentic RL\" or \"agent RL\", the October spike proves to be a one-off, arXiv migration problems cause indexing gaps, and the December holidays bite. That could give about 120 to 140.\n- High: The version-date quirk counts many ICLR and NeurIPS camera-ready revisions, plus a big wave of agentic RL papers after new frontier model releases. That could give 350 or more.\n\nPercentile 1: 115\nPercentile 5: 140\nPercentile 10: 155\nPercentile 20: 177\nPercentile 30: 193\nPercentile 40: 206\nPercentile 50: 218\nPercentile 60: 231\nPercentile 70: 246\nPercentile 80: 266\nPercentile 90: 298\nPercentile 95: 328\nPercentile 99: 400"
+    },
+    {
+      "value": {
+        "p10": 165.0,
+        "p25": 202.0,
+        "p50": 242.0,
+        "p75": 285.5,
+        "p90": 333.0
+      },
+      "reasoning": "(a) About two months remain. The window runs from 2026-11-01 to 2026-12-31, and the question resolves around 2027-01-01.\n\n(b) The latest values come from the same search, run on 2026-11-01:\n- Sep-Oct 2026: 221\n- October 2026: 138\n- October 16-31, 2026: 60\n- Nov-Dec 2026: 0, because the window has just opened.\n\n(c) If the October level stayed flat, the total would be about 270-280. If activity fell back to the Jun-Sep rate of roughly 70-80 per month, it would be about 150-170.\n\n(d) Last year's seasonal pattern gives one estimate. Nov-Dec 2025 (106) was about 2.08 times October 2025 (51), and 2.08 × 138 is about 287. That likely overstates things, because October 2026 looks inflated by conference-cycle revisions. The second half of October (60 in 16 days, about 112 per month) suggests November around 130-160 and December around 80-110. That gives a central estimate of about 220-260.\n\n(e) Historical variation is large. Two-month windows in 2026 ranged from 105 to 221. Month-to-month swings of 30-70% are common. The year-on-year growth was about 2.7x.\n\n(f) There are no markets or expert forecasts. The question creator's range is 100-500.\n\n(g) Two unexpected scenarios:\n- **Low:** arXiv cloud-migration problems hurt indexing, the October spike reverses, and authors move to \"agentic RL\" wording. December collapses and the total lands near 120.\n- **High:** ICLR rebuttal revisions, NeurIPS camera-ready versions and a wave of new agent-RL papers keep growth compounding. November tops 200 and the total exceeds 400.\n\nMy median is about 238, with wide tails.\n\nPercentile 1: 110\nPercentile 5: 145\nPercentile 10: 165\nPercentile 20: 192\nPercentile 30: 212\nPercentile 40: 228\nPercentile 50: 242\nPercentile 60: 257\nPercentile 70: 274\nPercentile 80: 297\nPercentile 90: 333\nPercentile 95: 365\nPercentile 99: 440"
+    },
+    {
+      "value": {
+        "p10": 172.0,
+        "p25": 213.5,
+        "p50": 260.0,
+        "p75": 309.0,
+        "p90": 362.0
+      },
+      "reasoning": "(a) About two months. The window runs from 2026-11-01 to 2026-12-31, and Metaculus will run the search shortly after December 31.\n\n(b) The window currently shows 0 results because it opens today (2026-11-01). The nearest comparable windows are Sep-Oct 2026 at 221 and October 2026 alone at 138. Nov-Dec 2025 was 106.\n\n(c) If nothing changed, the October level (about 138 per month) would hold flat, giving roughly 270-280. If activity fell back to the Jun-Sep rate of 70-80 per month, it would be about 150-170.\n\n(d) Last year's seasonal pattern was November up about 29% on October and December down about 41% on November. Applied to this October, that gives about 178 + 105 ≈ 280. Another check: Nov-Dec 2025 was about 2.1 times October 2025, which applied to October 2026 gives about 287. Year-on-year growth was about 2.7x, which would put Nov-Dec at about 280 or more. Some of October's spike is revisions tied to ICLR, and some of that will carry into the November rebuttal period. Late-December submissions may not be fully indexed when Metaculus checks, which is a small downward effect.\n\n(e) Two-month counts this year ranged from 105 to 221, with jumps of up to about 50% between consecutive windows. Single months varied by up to about 2x (69 in August to 138 in October).\n\n(f) I found no markets or expert forecasts on this question. The question creator's range of 100-500 is consistent with the estimates above.\n\n(g)\n- **Low scenario:** October's spike was a one-off from the ICLR cycle, the term \"agentic RL\" displaces the full phrase, and arXiv's cloud migration disrupts indexing. Together these could give about 130-150.\n- **High scenario:** the term keeps spreading, the November rebuttal revisions are numerous, a wave of NeurIPS camera-ready and workshop papers is posted, and the December dip is mild. Together these could give 400 or more.\n\nPercentile 1: 115\nPercentile 5: 150\nPercentile 10: 172\nPercentile 20: 202\nPercentile 30: 225\nPercentile 40: 244\nPercentile 50: 260\nPercentile 60: 277\nPercentile 70: 296\nPercentile 80: 322\nPercentile 90: 362\nPercentile 95: 400\nPercentile 99: 480"
+    },
+    {
+      "value": {
+        "p10": 170.0,
+        "p25": 205.5,
+        "p50": 246.0,
+        "p75": 290.5,
+        "p90": 338.0
+      },
+      "reasoning": "(a) About two months remain. The window runs from 2026-11-01 to 2026-12-31, and the result can be checked shortly after 2027-01-01.\n\n(b) The latest known value is 0 for the Nov-Dec 2026 window, checked 2026-11-01, because the window has only just opened. The closest benchmarks are Oct 2026 at 138, Sep-Oct 2026 at 221 and Nov-Dec 2025 at 106.\n\n(c) If nothing changed, the count would stay at 0. That is not realistic. If the recent monthly rate of roughly 70-140 continues, the total is about 150-280.\n\n(d) If the current trend continues, the count is about 220-290:\n- Last year, Nov-Dec was about 2.1 times October (51 to 106). Applying that ratio to October 2026's 138 gives about 285.\n- A more conservative path assumes October was inflated by ICLR submissions. That gives about 120-130 in November and 80-90 in December, roughly 210.\n\n(e) Historical variation is large:\n- Two-month windows have grown from 106 to 221 over a year.\n- Single months swing by plus or minus 40%: December 2025 fell 41% from November, and October 2026 rose 75% from September.\n- Revisions of older papers make up about 30% of the count, and they come in conference-driven bursts.\n\n(f) No markets or expert forecasts exist for this count. The question creator expects a range of roughly 100-500.\n\n(g) Two surprise scenarios:\n- **Low (about 130 or less):** The October spike was a one-off from ICLR postings. The term loses ground to variants such as \"agentic RL\", the December holiday dip is deep, and the arXiv cloud migration disrupts indexing.\n- **High (about 400 or more):** The term keeps spreading quickly. ICLR rebuttal revisions, NeurIPS camera-ready versions and workshop papers, and early ICML preprints all push both months well above 150.\n\nPercentile 1: 115\nPercentile 5: 150\nPercentile 10: 170\nPercentile 20: 196\nPercentile 30: 215\nPercentile 40: 231\nPercentile 50: 246\nPercentile 60: 261\nPercentile 70: 279\nPercentile 80: 302\nPercentile 90: 338\nPercentile 95: 372\nPercentile 99: 450"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 163.2703,
+    "p25": 198.939,
+    "p50": 237.0296,
+    "p75": 277.9782,
+    "p90": 326.2622
+  },
+  "usage": [
+    {
+      "question_id": "46522",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.1,
+      "notional_cost_usd": 0.00024129999999999998,
+      "input_tokens": 1070,
+      "output_tokens": 55,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 7.57e-05,
+      "input_tokens": 512,
+      "output_tokens": 49,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 91.6,
+      "notional_cost_usd": 0.30297029999999997,
+      "input_tokens": 54321,
+      "output_tokens": 7083,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.9,
+      "notional_cost_usd": 0.06388,
+      "input_tokens": 4651,
+      "output_tokens": 1334,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.06390000000000001,
+      "input_tokens": 4651,
+      "output_tokens": 1335,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0008101,
+      "input_tokens": 2814,
+      "output_tokens": 495,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.6,
+      "notional_cost_usd": 0.0007440000000000001,
+      "input_tokens": 2771,
+      "output_tokens": 380,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.00031729,
+      "input_tokens": 2815,
+      "output_tokens": 451,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00024745,
+      "input_tokens": 2769,
+      "output_tokens": 313,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 29.1,
+      "notional_cost_usd": 0.029140199999999998,
+      "input_tokens": 4651,
+      "output_tokens": 1290,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.0006807,
+      "input_tokens": 2747,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00033233000000000004,
+      "input_tokens": 2745,
+      "output_tokens": 484,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 115.5,
+      "notional_cost_usd": 0.27622040000000003,
+      "input_tokens": 63375,
+      "output_tokens": 7682,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.1,
+      "notional_cost_usd": 0.05994,
+      "input_tokens": 4741,
+      "output_tokens": 1101,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.5,
+      "notional_cost_usd": 0.059708,
+      "input_tokens": 4742,
+      "output_tokens": 1089,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.6,
+      "notional_cost_usd": 0.06146800000000001,
+      "input_tokens": 4742,
+      "output_tokens": 1177,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0007422,
+      "input_tokens": 2737,
+      "output_tokens": 390,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0007834000000000001,
+      "input_tokens": 2783,
+      "output_tokens": 454,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 0.0006801,
+      "input_tokens": 2809,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.4,
+      "notional_cost_usd": 0.00022213000000000002,
+      "input_tokens": 2737,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00032437000000000004,
+      "input_tokens": 2780,
+      "output_tokens": 467,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46522",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00034574,
+      "input_tokens": 2810,
+      "output_tokens": 508,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9238
+}
