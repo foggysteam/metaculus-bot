@@ -281,3 +281,14 @@ On-schedule questions by source and by run (shift +0.3):
 | 60% to 80% | 18 | 67% | 73% | 67% |
 | 80% and over | 3 | 84% | 82% | 100% |
 
+### What mc1 showed (1 Nov)
+
+Nothing changes on the live bot. One of the 48 questions was left out because 3 of its 5 forecasts failed (it had a duplicated "Other" option and a "Person A" option).
+
+- Floor: kept at 1%. No floor scores +1.4 and 0.5% scores +1.2, but that gain comes from long option lists the live bot does not get. This set averages 2.5 options per question below 1%. The 6 live multiple-choice questions so far have 27 options, lowest 1.08%, so the floor has not changed a live forecast. The tight CIs also miss the tail: none of the 111 options below 1% won, which is what you would expect (about 0.5 wins), and a win at the floor costs 69 points more at 0.5% than at 1%, so one such win in 58 questions cancels the gain.
+- Pulling towards equal odds: not needed. Every power below 1 and every uniform mix scores lower than live. Sharpening is no better either (scored on the same forecasts, not in the table): power 1.1 +0.2 (CI -1.7 to +1.8), 1.2 -0.1 (CI -4.0 to +3.3), 1.5 -1.5 (CI -9.3 to +5.6). Our top option averaged 56% and won 62%, within noise, so multiple choice does not share the boldness that v1 found on yes/no.
+- Mean, median or a single forecast: no clear difference. Kept the mean.
+- Against the market: -7.8 (CI -19.9 to +5.2), not separable from level. This run had no prices collected by code, which the live bot gets.
+- Blending with the market beats live on this set (in sample): 75% ours +3.7 (CI +0.5 to +7.1), 50% +6.3 (CI +0.4 to +12.8), 25% +7.8 (CI -1.3 to +17.1). There is nothing to build from this yet: none of the 6 live questions had a market matching its options, and the calibration rules already tell the forecasters to anchor on a market that covers the same question.
+- Notional usage was $26 against the $70 estimated from local runs, in line with the shadow runs costing less on GitHub than locally.
+
