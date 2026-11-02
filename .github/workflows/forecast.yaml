@@ -35,7 +35,7 @@ permissions:
 
 jobs:
   forecast:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # ubuntu-latest is moving to Ubuntu 26, and this must not change mid-season
     timeout-minutes: 355
     env:
       METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
