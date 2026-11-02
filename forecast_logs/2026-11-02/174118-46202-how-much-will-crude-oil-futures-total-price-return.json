@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T17:49:38.639546+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T17:41:18.665860+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46202,
+    "post_id": 46007,
+    "url": "https://www.metaculus.com/questions/46007",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "How much will Crude Oil Futures total price returns exceed S&P 500 Futures in these biweekly periods of Q4 2026? (Nov 9 - Nov 20)",
+    "resolution_criteria": "Each subquestion will resolve as the difference between the percent total price return of [Crude Oil Futures (CL)](https://finance.yahoo.com/quote/CL%3DF/history/) and that of [S\\&P 500 Futures (ES)](https://finance.yahoo.com/quote/ES%3DF/history/) for the corresponding biweekly period, according to Yahoo Finance data.\n\nSpecifically, each subquestion will resolve as CL\\_return - ES\\_return.\n\nReturns will be calculated as follows: If P₀ is the Close price of a company stock on the last trading day or half-day *before* the start of the period and P₁ is the Close price of the stock on the last trading day *of* the designated period, the percentage return will be calculated as:\n\n$$\n \\text{return} = 100 \\times \\frac{P1 - P0}{P0}\n$$",
+    "fine_print": "* If ES outperforms CL, the corresponding subquestion will resolve as a negative number.\n* If Yahoo Finance delays or ceases reporting these data or if it reports them in error, Metaculus might use alternative credible sources to resolve this question.\n\n***\n\nFor example, for the period Jun 9 - Jun 20, the subquestion would resolve based on the following calculations:\n\nCL\\_P₀ \\= 64.58 (the Close price on Jun 6)\n\nCL\\_P₁ \\= 74.93 (the Close price on Jun 20)\n\nCL\\_return \\= 100 × (74.93 - 64.58) / 64.58 \\= 16.0266\n\nES\\_P₀ \\= 6,006.75 (the Close price on Jun 6)\n\nES\\_P₁ \\= 6,010.21 (the Close price on Jun 20)\n\nES\\_return \\= 100 × (6,010.21 - 6,006.75) / 6,006.75 \\= 0.0576\n\nAnd the resolution would be 16.0266 - 0.0576 \\= **15.9690** percentage points (pp).",
+    "close_time": "2026-11-09 04:00 UTC",
+    "scheduled_resolution_time": "2026-11-20 21:00 UTC"
+  },
+  "research": [
+    "Note: none of the inputs for this period are known yet. P0 is the close on Friday 2026-11-06 and P1 is the close on 2026-11-20.\n\n## 1. Resolution source\n- 2026-11-02: Yahoo's CL=F page tracks the Dec 2026 WTI contract. It showed 96.49 at 12:36 PM EST, an intraday price. The last confirmed close was 104.12 on Oct 30. Earlier closes: 102.00 (Oct 29), 102.78 (Oct 28), 99.90 (Oct 27), 103.27 (Oct 23), 97.15 (Oct 21). [Yahoo CL=F](https://finance.yahoo.com/quote/CL%3DF/history/)\n- 2026-11-02: Yahoo's ES=F page tracks the Dec 2026 E-mini. It showed 7,640.25 intraday. Closes: 7,614.00 (Oct 30), 7,754.25 (Oct 29), 7,783.25 (Oct 28), 7,800.25 (Oct 21). [Yahoo ES=F](https://finance.yahoo.com/quote/ES%3DF/history/)\n- Both symbols are front-month continuous series. CL=F may roll from the Dec to the Jan contract around Nov 19-20, near the Dec contract's expiry, so a roll could fall on P1 day. I could not confirm when Yahoo rolls. Oil's contango or backwardation (later contracts priced above or below nearer ones) could shift the measured return.\n\n## 2. Current status\n- Nothing is settled. The period has not started, and P0 (the Nov 6 close) has not been set.\n- 2026-11-02: CL fell about 7% intraday, from 104.12 to about 96.5. ES rose about 0.3%. The CL-minus-ES gap for this question can only be measured from Nov 6.\n\n## 3. Recent news (newest first)\n- 2026-11-02: WTI fell more than 5% on US-Iran diplomacy. [FXStreet](https://www.fxstreet.com/news/wti-tumbles-over-5-as-traders-welcome-us-iran-diplomatic-efforts-202611021434); [EnergyNow](https://energynow.com/2026/11/oil-prices-plunge-more-than-4-as-u-s-iran-peace-talks-raise-hopes-of-easing-middle-east-supply-disruptions/); [Invezz](https://invezz.com/pk/news/2026/11/02/oil-price-today-wti-crude-falls-below-dollar100-as-iran-peace-talk-hopes-build/)\n- 2026-11-02: After Iranian negotiators left Qatar, a draft proposal is circulating for a follow-up meeting. Iran says \"no final agreement can be initiated\" until the US naval blockade ends. It says Hormuz could reopen within two days if its demands are met.\n  - ING: \"remains to be seen whether this will lead to anything.\" Traders fear renewed US-Israeli strikes after the midterms. [Oilprice](https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Plunge-as-Draft-Proposal-to-End-US-Iran-War-is-Circulated.html)\n- 2026-11-02: S&P futures rose about 0.35-0.4% after a tech selloff. On Oct 30 the S&P 500 fell 1.8% to 7,580.07, and the Nasdaq fell 2.9% to a three-month low after weak AI earnings from Alphabet, Amazon and Intel. [MarketScreener](https://www.marketscreener.com/news/stock-futures-higher-oil-lower-as-investors-return-to-risk-ce785fd8de8dfe21); [ADVFN](https://uk.advfn.com/market-news/article/25509/us-stock-futures-point-higher-as-oil-retreats-and-investors-assess-technology-sell-off-dow-jones-sp-nasdaq-wall-street)\n- 2026-11-02: Inflation mentions on Q3 earnings calls are the highest since 2022, driven by fuel costs from the Iran war. [Alaraby](https://www.alaraby.co.uk/economy/%D8%A7%D9%84%D8%AA%D8%B6%D8%AE%D9%85-%D9%8A%D8%B9%D9%88%D8%AF-%D8%A5%D9%84%D9%89-%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A8%D8%A3%D8%B5%D8%AF%D8%A7%D8%A1-%D8%B5%D8%AF%D9%85%D8%A9-2022)\n- October 2026: WTI rose 15.2%, its fourth straight monthly gain, on Hormuz tanker attacks and Houthi strikes on Saudi Arabia. Goldman and Citi put WTI's value without the geopolitical premium near $80. [TradingKey](https://www.tradingkey.com/analysis/commodities/oil/262263355-us-iran-oil-wti-brent-100-tradingkey)\n- 2026-10-08: Oil jumped as Iran stepped up tanker attacks and a hurricane threatened US Gulf production. On 2026-10-20 it fell on diplomacy hopes. [CNBC Oct 8](https://www.cnbc.com/2026/10/08/oil-prices-today-brent-wti-hormuz.html); [CNBC Oct 20](https://www.cnbc.com/2026/10/20/oil-price-wti-brent-crude.html)\n\n## 4. Base rates\n- Code baseline: 12-trading-day CL returns over the last 3 years, with the last year weighted double, from 96.51. Percentiles for the Nov 20 price:\n  - p5: 85.5, about -11%\n  - p25: 92.7, about -4%\n  - p50: 97.1, about +0.6%\n  - p75: 101.6, about +5%\n  - p95: 114.6, about +19%\n  - So the typical two-week CL move is roughly ±5% between the quartiles, with fat tails. This is from the provided data, not my own calculation.\n- Current oil volatility is well above the baseline. Daily CL moves of 2-7% are common in the Oct 20 - Nov 2 closes, and the series dropped from 101.79 to 97.15 to 103.27 within three days.\n- ES moves much less. Two-week swings of about 1-3% are typical, and up to about 5% in selloffs. The difference CL minus ES is therefore mostly driven by CL.\n- In this war period CL and ES have moved in opposite directions: oil down and stocks up on peace hopes, and the reverse on escalation. That makes the difference swing wider than either asset alone.\n- I could not open the Metaculus spreadsheet of past period results.\n\n## 5. Other forecasts\n- Polymarket, WTI high in November 2026: ≥$110 at 36%, ≥$120 at 13%, ≥$130 at 4.4%. For the week of Nov 2: ≥$110 at 8%.\n- Polymarket, crude all-time high by Dec 31: 13.5%.\n- Kalshi, Fear & Greed on Nov 13: Fear 38%, Extreme Fear 24%. S&P finishes 2026 positive: 90%. S&P 2026 high ≥8,000: 41%.\n- None of these markets matches the CL-minus-ES question directly. I found no expert forecast for this specific spread.\n\n## 6. Upcoming events before and during the period\n- Nov 3: US midterm elections. Traders flag the risk of US-Israeli strikes on Iran afterward.\n- Nov 4 and weekly after: EIA inventory reports.\n- Possible Qatar-mediated follow-up meeting on the draft proposal. Possible reopening of Hormuz or lifting of the blockade. ING notes that key developments often come on weekends.\n- About Nov 10-13: October CPI, by the usual schedule (not verified).\n- About Nov 18-19: Nvidia earnings, by the usual timing (not verified). This is relevant after the AI-earnings selloff.\n- Around Nov 19-20: the Dec CL contract expires and Yahoo's CL=F may roll to January.\n- Hurricane season ends Nov 30, so there is still some residual Gulf supply risk.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:46 UTC; check each market really matches the question)\n- Kalshi: Annual Return: S&P 500 vs. S&P 500 Equal Weight Index (2026). Yes prices: S&P 500 Equal Weight Index: 0.72; S&P 500 Index: 0.21.\n- Kalshi: How low will the S&P get this year? (In 2026). Yes prices: 6,300 or below: 0.07; 6,200 or below: 0.05; 6,100 or below: 0.05; 5,900 or below: 0.03; 6,000 or below: 0.05; 6,400 or below: 0.95; 6,600 or below: 0.9900; 6,500 or below: 0.9400.\n- Kalshi: How high will the S&P get this year? (In 2026). Yes prices: 8,000 or above: 0.41; 8,200 or above: 0.14; 8,400 or above: 0.04; 8,800 or above: 0.02; 8,600 or above: 0.03; 9,000 or above: 0.0150; 7,200 or above: 0.99; 7,800 or above: 0.9930; 7,600 or above: 0.9950; 7,400 or above: 0.99.\n- Kalshi: Will the S&P finish positive this year? (2026). Yes prices: Positive Growth: 0.90.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. BTC? (2026). Yes prices: S&P 500 Total Return Index: 0.89; BTC: 0.09.\n- Kalshi: OpenAI market share this week (OpenAI market share - Nov 2, 2026). Yes prices: Above 16.7%: 0.0000; Above 17.7%: 0.0000; Above 18.2%: 0.0000; Above 18.5%: 0.0000; Above 18.8%: 0.0000; Above 19.1%: 0.0000; Above 19.5%: 0.0000; Above 19.9%: 0.0000; Above 20.9%: 0.0000.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0500; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Fear & Greed Index on Nov 13, 2026? (On Nov 13, 2026). Yes prices: Fear: 0.38; Extreme Fear: 0.24; Neutral: 0.16; Greed: 0.10; Extreme Greed: 0.01.\n- Polymarket: What will WTI Crude Oil (WTI) hit in November 2026? (ends 2026-12-01). [Yes, No] prices: ↑ $160: [\"0.017\", \"0.983\"]; ↑ $150: [\"0.023\", \"0.977\"]; ↑ $140: [\"0.031\", \"0.969\"]; ↑ $130: [\"0.044\", \"0.956\"]; ↑ $120: [\"0.13\", \"0.87\"]; ↑ $110: [\"0.36\", \"0.64\"]\n- Polymarket: Crude Oil all time high by...? (ends 2027-01-01). [Yes, No] prices: May 31: [\"0\", \"1\"]; June 30: [\"0\", \"1\"]; September 30: [\"0\", \"1\"]; December 31: [\"0.135\", \"0.865\"]; March 31, 2027: [\"0.265\", \"0.735\"]\n- Polymarket: What will WTI Crude Oil (WTI) hit Week of November 2 2026? (ends 2026-11-06). [Yes, No] prices: ↑ $135: [\"0.0105\", \"0.9895\"]; ↑ $130: [\"0.0125\", \"0.9875\"]; ↑ $125: [\"0.0165\", \"0.9835\"]; ↑ $120: [\"0.028\", \"0.972\"]; ↑ $115: [\"0.039\", \"0.961\"]; ↑ $110: [\"0.08\", \"0.92\"]\n- Polymarket: WTI Crude Oil (WTI) closes above ___ on November 2? (ends 2026-11-02). [Yes, No] prices: $109: [\"0.02\", \"0.98\"]; $108: [\"0.0085\", \"0.9915\"]; $107: [\"0.0195\", \"0.9805\"]; $106: [\"0.018\", \"0.982\"]; $105: [\"0.0175\", \"0.9825\"]; $104: [\"0.0035\", \"0.9965\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for CL=F: latest close 96.5100 on 2026-11-02.\nTarget date 2026-11-20 is 12 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 12-observation returns over the last 3 years (last year weighted double):\np5: 85.5349, p10: 88.0128, p25: 92.7058, p50: 97.0692, p75: 101.5583, p90: 107.3328, p95: 114.6114\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).",
+    "# Research brief: CL minus ES return, Nov 9 to Nov 20, 2026\n\n## 1. Resolution source\n- **P₀ will be the Nov 6, 2026 close** for both CL=F and ES=F, since Nov 6 is the last trading day before Nov 9. **P₁ will be the Nov 20 close.** Neither price exists yet.\n- 2026-11-02: Yahoo lists CL=F as the \"Crude Oil Dec 26\" contract. Recent closes: Oct 30: 104.12, Oct 29: 102.00, Oct 28: 102.78, Oct 23: 103.27, Oct 20: 101.79. The Nov 2 figure was 96.50, but the market was still open, so it may be an intraday price rather than the close. [Yahoo CL=F](https://finance.yahoo.com/quote/CL%3DF/history/)\n- 2026-11-02: Yahoo lists ES=F as the \"E-Mini S&P 500 Dec 26\" contract. Closes: Oct 30: 7,614.00, Oct 29: 7,754.25, Oct 21: 7,800.25. The Nov 2 figure of 7,640.75 is also intraday. [Yahoo ES=F](https://finance.yahoo.com/quote/ES%3DF/history/)\n- **Contract roll risk:** under CME rules, the Dec 2026 WTI contract should stop trading around Nov 20, which is my own calculation. Yahoo already showed the Dec contract by Oct 20, which is when I calculate the Nov contract expired. If CL=F switches to the January contract before or on Nov 20, the series could drop mechanically by roughly the Dec/Jan backwardation. In October that spread was about $3/bbl, around 3%, though the numbers are poorly sourced. [commodity-board](https://commodity-board.com/wti-marches-above-100-while-curve-remains-steeply-backwardated), [commodity-board](https://commodity-board.com/crude-oil-rally-steepens-backwardation-as-brent-wti-spread-widens)\n- ES Dec contract: no roll until mid-December.\n\n## 2. Current status\n- Nothing has happened yet that settles the question. The period has not started.\n\n## 3. Recent news (newest first)\n- 2026-11-02: Oil fell between about 3% and 6% depending on the source. Brent was around $110 to $112 and WTI around $100 to $102.5, with Yahoo intraday near $96.5. The drop came as Trump signalled more time for Iran diplomacy and Iranian and Qatari officials held a third straight day of talks. Iran's foreign minister called the talks \"ongoing and progressing\". [The National](https://www.thenationalnews.com/business/2026/11/02/oil-prices-slide-more-than-3-as-trump-signals-more-time-for-iran-diplomacy/), [CNBC](https://www.cnbc.com/amp/2026/11/02/oil-slips-more-than-1percent-as-talks-continue-on-ending-iran-war.html), [Lapaas](https://lapaasvoice.com/oil-prices-drop-6-as-iran-signals-openness-to-peace-talks-easing-supply-fears)\n- 2026-11-01: OPEC+ left its December production targets unchanged. No further changes are expected until next year. [CNBC](https://www.cnbc.com/amp/2026/11/02/oil-slips-more-than-1percent-as-talks-continue-on-ending-iran-war.html)\n- 2026-11-02: US stock futures rose about 0.35% to 0.4%. On Oct 30 the S&P 500 had closed at 7,580.07, down 1.8%, and the Nasdaq fell 2.9%, its worst day since June. The selloff followed AI capex worries after earnings from Alphabet, Amazon and Intel. [MarketScreener](https://www.marketscreener.com/news/stock-futures-higher-oil-lower-as-investors-return-to-risk-ce785fd8de8dfe21), [ADVFN](https://uk.advfn.com/market-news/article/25509/us-stock-futures-point-higher-as-oil-retreats-and-investors-assess-technology-sell-off-dow-jones-sp-nasdaq-wall-street)\n- Late Oct 2026: Brent ended October at a six-month high, near $118 in the prior week. Tanker flows through the Strait of Hormuz were about 70% of pre-war levels (9.4 mb/d in mid-October). UBS cited record freight costs as a reason prices could stay high. Analysts warned Brent could reach $120 if tensions escalate after the midterms. [CNBC](https://www.cnbc.com/amp/2026/11/02/oil-slips-more-than-1percent-as-talks-continue-on-ending-iran-war.html), [IIFL](https://www.indiainfoline.com/news/international/crude-oil-slides-nearly-4-as-us-iran-talks-raise-hopes-of-peace-can-supply-risks-keep-prices-elevated)\n- 2026-11-02: Inflation mentions on Q3 earnings calls are the highest since 2022, driven by fuel costs. [Al Araby](https://www.alaraby.co.uk/economy/%D8%A7%D9%84%D8%AA%D8%B6%D8%AE%D9%85-%D9%8A%D8%B9%D9%88%D8%AF-%D8%A5%D9%84%D9%89-%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A8%D8%A3%D8%B5%D8%AF%D8%A7%D8%A1-%D8%B5%D8%AF%D9%85%D8%A9-2022)\n- Background: earlier in 2026, oil peaked near $118 in late March and fell to about $70 in July. [Wikipedia](https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war)\n\n## 4. Base rates\n- **CL, from the code baseline:** over 12 trading days from 96.51, the price percentiles are p5 85.5, p10 88.0, p25 92.7, p50 97.1, p75 101.6, p90 107.3, p95 114.6. As returns, that is roughly -11% at p5, -9% at p10, -4% at p25, +0.6% at the median, +5% at p75, +11% at p90 and +19% at p95.\n- **Daily volatility is currently high:** CL moved by 2% to 4% on most days in late October, for example -4.6% on Oct 21 and +3.8% on Oct 23. A peace deal or an escalation could move it 10% or more in a single fortnight.\n- **ES:** I estimate a typical biweekly standard deviation of about 2% to 3%. This is a rough judgement, not a calculation. Recently ES fell about 2.4% from Oct 21 to Nov 2.\n- **The spread:** CL dominates the variance of the difference. The middle 80% of outcomes plausibly spans roughly -11 to +11 pp, before any roll effect.\n- **Correlation:** in this war regime, oil and stocks have tended to move in opposite directions. Oil falls on peace hopes while stocks rise, as on Nov 2. That widens the spread distribution.\n- I could not access the question's Google spreadsheet of past returns.\n\n## 5. Other forecasts\n- Polymarket, WTI high in November 2026: ≥$110 at 36%, ≥$120 at 13%, ≥$130 at 4.4%. Week of Nov 2: ≥$110 at 8%. These markets may track a different WTI reference price than CL=F.\n- Polymarket, crude oil all-time high by Dec 31: 13.5%.\n- Kalshi, Fear & Greed Index on Nov 13: Fear 38%, Extreme Fear 24%, Neutral 16%.\n- Kalshi, S&P 500 positive for 2026: 90%. S&P 2026 high of 8,000 or more: 41%.\n- I found no market or expert forecast on the CL-minus-ES spread itself.\n\n## 6. Upcoming events before resolution\n- Nov 3: US midterm elections. Some analysts see risk of escalation with Iran afterward.\n- Nov 6: October jobs report. This is also the P₀ date. [SimianX calendar](https://www.simianx.ai/stories/us-economic-calendar-this-month-in-your-time-zone)\n- Nov 10: October CPI.\n- Nov 13: PPI.\n- Nov 17: retail sales, plus Nvidia earnings after the close. This is a major risk for ES given the current AI selloff.\n- Nov 18: FOMC minutes. There is no FOMC rate decision in November; the next one is Dec 9.\n- Nov 20: monthly options expiration. This is also roughly when the Dec WTI contract expires, so a CL=F roll could happen during the period.\n- Ongoing: US-Iran talks mediated by Qatar, attacks on tankers in the Strait of Hormuz, and Houthi attacks on Saudi infrastructure. A deal would likely send CL sharply lower and ES higher. A breakdown would do the reverse.\n\nNote: [CMC Markets](https://www.cmcmarkets.com/en-au/market-news/the-week-ahead-us-pce-nvidia-earnings-tokyo-cpi) and other results from my calendar search were older or off-target, and I did not use them.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:46 UTC; check each market really matches the question)\n- Kalshi: Annual Return: S&P 500 vs. S&P 500 Equal Weight Index (2026). Yes prices: S&P 500 Equal Weight Index: 0.72; S&P 500 Index: 0.21.\n- Kalshi: How low will the S&P get this year? (In 2026). Yes prices: 6,300 or below: 0.07; 6,200 or below: 0.05; 6,100 or below: 0.05; 5,900 or below: 0.03; 6,000 or below: 0.05; 6,400 or below: 0.95; 6,600 or below: 0.9900; 6,500 or below: 0.9400.\n- Kalshi: How high will the S&P get this year? (In 2026). Yes prices: 8,000 or above: 0.41; 8,200 or above: 0.14; 8,400 or above: 0.04; 8,800 or above: 0.02; 8,600 or above: 0.03; 9,000 or above: 0.0150; 7,200 or above: 0.99; 7,800 or above: 0.9930; 7,600 or above: 0.9950; 7,400 or above: 0.99.\n- Kalshi: Will the S&P finish positive this year? (2026). Yes prices: Positive Growth: 0.90.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. BTC? (2026). Yes prices: S&P 500 Total Return Index: 0.89; BTC: 0.09.\n- Kalshi: OpenAI market share this week (OpenAI market share - Nov 2, 2026). Yes prices: Above 16.7%: 0.0000; Above 17.7%: 0.0000; Above 18.2%: 0.0000; Above 18.5%: 0.0000; Above 18.8%: 0.0000; Above 19.1%: 0.0000; Above 19.5%: 0.0000; Above 19.9%: 0.0000; Above 20.9%: 0.0000.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0500; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Fear & Greed Index on Nov 13, 2026? (On Nov 13, 2026). Yes prices: Fear: 0.38; Extreme Fear: 0.24; Neutral: 0.16; Greed: 0.10; Extreme Greed: 0.01.\n- Polymarket: What will WTI Crude Oil (WTI) hit in November 2026? (ends 2026-12-01). [Yes, No] prices: ↑ $160: [\"0.017\", \"0.983\"]; ↑ $150: [\"0.023\", \"0.977\"]; ↑ $140: [\"0.031\", \"0.969\"]; ↑ $130: [\"0.044\", \"0.956\"]; ↑ $120: [\"0.13\", \"0.87\"]; ↑ $110: [\"0.36\", \"0.64\"]\n- Polymarket: Crude Oil all time high by...? (ends 2027-01-01). [Yes, No] prices: May 31: [\"0\", \"1\"]; June 30: [\"0\", \"1\"]; September 30: [\"0\", \"1\"]; December 31: [\"0.135\", \"0.865\"]; March 31, 2027: [\"0.265\", \"0.735\"]\n- Polymarket: What will WTI Crude Oil (WTI) hit Week of November 2 2026? (ends 2026-11-06). [Yes, No] prices: ↑ $135: [\"0.0105\", \"0.9895\"]; ↑ $130: [\"0.0125\", \"0.9875\"]; ↑ $125: [\"0.0165\", \"0.9835\"]; ↑ $120: [\"0.028\", \"0.972\"]; ↑ $115: [\"0.039\", \"0.961\"]; ↑ $110: [\"0.08\", \"0.92\"]\n- Polymarket: WTI Crude Oil (WTI) closes above ___ on November 2? (ends 2026-11-02). [Yes, No] prices: $109: [\"0.02\", \"0.98\"]; $108: [\"0.0085\", \"0.9915\"]; $107: [\"0.0195\", \"0.9805\"]; $106: [\"0.018\", \"0.982\"]; $105: [\"0.0175\", \"0.9825\"]; $104: [\"0.0035\", \"0.9965\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for CL=F: latest close 96.5100 on 2026-11-02.\nTarget date 2026-11-20 is 12 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 12-observation returns over the last 3 years (last year weighted double):\np5: 85.5349, p10: 88.0128, p25: 92.7058, p50: 97.0692, p75: 101.5583, p90: 107.3328, p95: 114.6114\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -14.0,
+        "p25": -6.75,
+        "p50": -0.8,
+        "p75": 5.4,
+        "p90": 12.5
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026. P0 is the Nov 6 close and P1 is the Nov 20 close. The result will be known about 18 days from today (Nov 2).\n\n(b) **Latest known values:**\n- CL=F last confirmed close was 104.12 on Oct 30. It traded around 96.5 intraday on Nov 2 and closed at 96.51 per the code baseline.\n- ES=F closed at 7,614.00 on Oct 30 and traded around 7,640 intraday on Nov 2.\n- P0 has not been set yet.\n\n(c) **If nothing changed:** The outcome would be 0 pp.\n\n(d) **If the current trend continued:** Oil is falling on US-Iran diplomacy and stocks are recovering slightly. That would give something like CL -5% and ES +1%, about -6 pp. The trend is unreliable, though, because escalation and de-escalation headlines keep reversing.\n\n(e) **Historical variation:**\n- The baseline 12-day CL interquartile range is about -4% to +5%, and its p5 to p95 range is about -11% to +19%.\n- The current regime is much more volatile than that, with 2-7% daily CL moves.\n- ES two-week moves are typically 1-3%. During this war period ES has moved opposite to CL, which widens the spread.\n- I estimate the standard deviation of the CL-minus-ES spread at about 10-12 pp, with fat tails.\n- Contract roll: the Dec CL contract's last trading day is around Nov 20, so Yahoo may roll to January inside the window. Oil is in backwardation because of the war premium, so a roll would likely shave a few percent off the measured return. That pulls the median slightly negative.\n\n(f) **Markets and experts:**\n- Polymarket gives a 36% chance that WTI trades at or above $110 at some point in November. That points to meaningful upside tail risk, especially after the midterms.\n- Goldman and Citi put WTI's value without the geopolitical premium near $80, which shows large downside if a deal happens.\n- Kalshi expects fear sentiment around Nov 13.\n- Overall the expected direction is roughly balanced, with a slight negative tilt from the roll effect and the decay of the war premium.\n\n(g) **Tail scenarios:**\n- **Low:** A US-Iran deal lifts the blockade and Hormuz reopens. WTI drops 20-25% toward the $80s, and stocks rally 3-4%. That gives roughly -25 to -30 pp.\n- **High:** Post-midterm US-Israeli strikes on Iran or major tanker and Gulf infrastructure attacks send WTI above $120 (+20-25%), while stocks fall 4-5%. That gives roughly +25 to +30 pp.\n\nPercentile 1: -30\nPercentile 5: -19\nPercentile 10: -14\nPercentile 20: -8.5\nPercentile 30: -5\nPercentile 40: -2.6\nPercentile 50: -0.8\nPercentile 60: 1.1\nPercentile 70: 3.6\nPercentile 80: 7.2\nPercentile 90: 12.5\nPercentile 95: 17.5\nPercentile 99: 28"
+    },
+    {
+      "value": {
+        "p10": -14.0,
+        "p25": -6.65,
+        "p50": -0.5,
+        "p75": 5.75,
+        "p90": 13.0
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20. P0 is the Nov 6 close, which has not been set yet. The outcome will be known at the Nov 20 close, about 18 days from now.\n\n(b) **Latest known values:**\n- CL=F closed at 104.12 on Oct 30 and was trading around 96.5 intraday on Nov 2.\n- ES=F closed at 7,614 on Oct 30 and was trading around 7,640 intraday on Nov 2.\n- Neither period input exists yet.\n\n(c) **If nothing changed:** The result would be 0 pp.\n\n(d) **If the current trend continued:** Peace-talk momentum (oil down, stocks up) would give a negative spread, perhaps -5 to -10 pp. October's escalation trend, which lifted WTI 15% in the month, would give a positive spread. The two trends conflict, so I treat drift as near zero.\n\nThere is one structural factor. The Dec CL contract expires around Nov 19-20, so Yahoo's continuous series may roll to the January contract on or before P1. In a war-driven backwardated market, that roll would cut the measured CL return by roughly 1-2%. I shift the median slightly negative to allow for it.\n\n(e) **Historical variation:**\n- The 3-year empirical 12-day CL distribution is roughly -11% at p5 and +19% at p95, with quartiles around ±5%.\n- Current realized volatility is well above that, with daily moves of 2-7%.\n- ES moves about 1-3% over two weeks, up to about 5% in selloffs. During this war it has moved opposite to oil, which widens the spread.\n- My estimated standard deviation for the spread is about 10-12 pp, with fat tails.\n\n(f) **Experts and markets:**\n- Polymarket puts a November WTI high of at least $110 at 36% and at least $120 at 13%. Those are meaningful upside tails from about $96.\n- Goldman and Citi estimate WTI near $80 without the geopolitical premium. That implies large downside if a deal is reached.\n- Kalshi shows Fear/Extreme Fear sentiment for Nov 13.\n- No market prices this spread directly.\n\n(g) **Scenarios:**\n- **Low:** A US-Iran deal lifts the blockade and reopens Hormuz. WTI drops toward $80 (about -18%) while equities rally 3%, giving roughly -20 to -25 pp.\n- **High:** Post-midterm US-Israeli strikes on Iran or new Hormuz tanker attacks send WTI to $115-125 (+15-25%) while ES sells off 3-4%, giving roughly +20 to +28 pp.\n\nPercentile 1: -30\nPercentile 5: -19\nPercentile 10: -14\nPercentile 20: -8.5\nPercentile 30: -4.8\nPercentile 40: -2.2\nPercentile 50: -0.5\nPercentile 60: 1.5\nPercentile 70: 4\nPercentile 80: 7.5\nPercentile 90: 13\nPercentile 95: 18\nPercentile 99: 29"
+    },
+    {
+      "value": {
+        "p10": -14.5,
+        "p25": -6.75,
+        "p50": -0.5,
+        "p75": 6.25,
+        "p90": 13.5
+      },
+      "reasoning": "(a) **Time left:** About 18 days. P0 is the Nov 6 close and P1 is the Nov 20 close, so the period covers 10 trading days.\n\n(b) **Latest known values:**\n- CL=F: last close 104.12 (Oct 30). Intraday on Nov 2 it traded around 96.5, and the code baseline uses 96.51.\n- ES=F: last close 7,614 (Oct 30). Intraday on Nov 2 it traded around 7,640.\n- No P0 values exist yet.\n\n(c) **If nothing changed:** 0 pp.\n\n(d) **If the current trend continued:** Oil is falling on US-Iran diplomacy and stocks are rebounding a little. Extending that gives a modestly negative spread, perhaps -3 to -6 pp. The trend is unreliable, though, because October was strongly up for oil.\n\n(e) **Historical variation:**\n- **Baseline:** The 12-day CL quartiles are about ±5%, and the 5th to 95th percentile range runs from about -11% to +19%.\n- **Current regime:** Volatility is much higher now, with daily moves of 2-7%. That implies a 10-day CL standard deviation of roughly 10-13%.\n- **ES:** ES contributes about 3% standard deviation.\n- **Correlation:** The two have been negatively correlated in this war regime, which widens the spread.\n- **Contract roll:** The Dec CL contract expires around Nov 19-20, so Yahoo may roll to January near P1. The curve is likely in backwardation, so a roll could knock roughly 1-3% off the measured CL return. This gives a slight negative bias.\n\n(f) **Markets:**\n- Polymarket gives WTI about a 36% chance of reaching $110 in November, which shows meaningful upside tail risk.\n- Goldman and Citi estimate fair value without the geopolitical premium near $80, which shows downside tail risk if peace arrives.\n- Kalshi expects fearful equity sentiment around Nov 13.\n- No market prices the spread directly.\n\n(g) **Scenarios:**\n- **Low outcome:** A US-Iran deal lifts the blockade and Hormuz reopens. WTI drops 20-25% toward the $80s, equities rally 3-4% on lower inflation fears, and a backwardated roll adds a further hit. The spread lands near -30 pp.\n- **High outcome:** Talks collapse after the midterms and US-Israeli strikes resume, with renewed tanker attacks. WTI spikes 25%+ toward $125 while equities sell off 4-5% amid AI-earnings weakness. The spread lands near +30 pp or more.\n\nPercentile 1: -32\nPercentile 5: -20\nPercentile 10: -14.5\nPercentile 20: -8.5\nPercentile 30: -5\nPercentile 40: -2.5\nPercentile 50: -0.5\nPercentile 60: 1.8\nPercentile 70: 4.5\nPercentile 80: 8\nPercentile 90: 13.5\nPercentile 95: 19\nPercentile 99: 31"
+    },
+    {
+      "value": {
+        "p10": -14.0,
+        "p25": -6.75,
+        "p50": -0.6,
+        "p75": 5.75,
+        "p90": 12.5
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026. P₀ is the Nov 6 close and P₁ is the Nov 20 close, so the outcome is known around Nov 20, about 18 days from now.\n\n(b) **Latest values:** CL=F was about 96.5 intraday on Nov 2, after closing at 104.12 on Oct 30 (Dec 26 contract). ES=F was about 7,640 intraday on Nov 2, after closing at 7,614 on Oct 30.\n\n(c) **If nothing changed:** both returns would be zero, so the spread would be 0 pp.\n\n(d) **If the current trend continued:** oil is falling on hopes for Iran diplomacy and stocks are bouncing a little. Continuing that pattern gives a mildly negative spread, around -3 to -5 pp.\n\nThere is also a roll issue. By my count, the Dec WTI contract stops trading on Nov 20. Yahoo has historically kept showing the expiring contract through its last trading day; in April 2020 it showed the May contract's final settlement. So a mechanical drop from switching to the January contract is not the base case. Still, I put roughly a 30% chance on a roll lowering the CL return by about 2 to 3 pp, which shifts the median slightly lower.\n\n(e) **Historical variation:** CL is in a high-volatility war regime, with typical daily moves of 2 to 4%.\n- The code baseline for 12 trading days gives a CL 10th to 90th percentile range of about -9% to +11%, with fat tails.\n- ES moves about 2 to 3% in a typical fortnight.\n- Oil and stocks have tended to move in opposite directions in this regime, which widens the spread.\n- I put the spread's standard deviation at about 10 to 11 pp.\n\n(f) **Experts and markets:** Polymarket gives 36% for WTI reaching $110 or more at some point in November, which implies meaningful upside risk. Analysts see escalation risk after the midterms, but the talks are \"progressing\". No forecast exists for the spread itself. Nvidia reports earnings on Nov 17, which is a two-sided risk for ES.\n\n(g) **Unexpected scenarios:**\n- **Low:** a US-Iran deal is signed and Hormuz flows normalise. CL drops 20 to 25% and ES rallies 3 to 4%, giving a spread near -25 to -30 pp.\n- **High:** talks collapse, tankers are attacked or Gulf infrastructure is hit. CL spikes 20 to 25%, while ES falls 4 to 5% on inflation fears and a weak Nvidia report, giving a spread of +25 pp or more.\n\nPercentile 1: -30\nPercentile 5: -19\nPercentile 10: -14\nPercentile 20: -8.5\nPercentile 30: -5\nPercentile 40: -2.5\nPercentile 50: -0.6\nPercentile 60: 1.4\nPercentile 70: 4\nPercentile 80: 7.5\nPercentile 90: 12.5\nPercentile 95: 17\nPercentile 99: 27"
+    },
+    {
+      "value": {
+        "p10": -10.5,
+        "p25": -4.9,
+        "p50": -0.3,
+        "p75": 4.35,
+        "p90": 9.6
+      },
+      "reasoning": "(a) **Time left:** The period runs from the Nov 6 close (P₀) to the Nov 20 close (P₁). Resolution is about 18 days away, and forecasts close Nov 9.\n\n(b) **Latest known values:** CL=F was about 96.5 intraday on 2026-11-02, after closing at 104.12 on Oct 30. ES=F was about 7,640.75 intraday on Nov 2, after closing at 7,614.00 on Oct 30.\n\n(c) **If nothing changed:** The spread would be 0 pp.\n\n(d) **If the current trend continued:** Oil is sliding on Iran peace-talk optimism and equities are rebounding, which gives a negative spread. Extrapolating the last few days would put it at roughly -5 to -8 pp. However, talks of this kind have stalled before, so I only apply a mild negative tilt.\n\n(e) **Historical variation:**\n- The code baseline for CL over 12 trading days gives about -9% at p10, +0.6% at the median and +11% at p90, with a fat right tail.\n- ES biweekly volatility is about 2 to 3%.\n- In this war regime, oil and stocks move in opposite directions, which widens the spread. I estimate a standard deviation of about 7 to 8 pp.\n- **Contract roll:** The Dec WTI contract's last trading day is Nov 20. Yahoo historically shows the expiring contract's settle on its expiry day; in April 2020, for example, CL=F showed $10.01 on Apr 21. So P₁ is likely still the Dec contract. There is some chance of an earlier roll into January, which would subtract about 3 pp mechanically. I treat this as a small negative skew.\n\n(f) **Markets and experts:**\n- Polymarket gives about a 36% chance that WTI touches $110 at some point in November, which implies meaningful upside risk.\n- Kalshi expects fear sentiment in equities around Nov 13.\n- No one forecasts the spread itself.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** A US-Iran deal is signed, Hormuz flows normalise, CL drops 15 to 20%, and ES rallies 3 to 4%. The spread would be around -20 pp or below.\n- **High outcome:** Talks collapse after the midterms and a major tanker or Saudi infrastructure attack follows. CL spikes 15 to 25% while a hot CPI print and a weak Nvidia reaction push ES down 4%. The spread would be +20 pp or more.\n\nPercentile 1: -23\nPercentile 5: -14.5\nPercentile 10: -10.5\nPercentile 20: -6.2\nPercentile 30: -3.6\nPercentile 40: -1.7\nPercentile 50: -0.3\nPercentile 60: 1.2\nPercentile 70: 3.1\nPercentile 80: 5.6\nPercentile 90: 9.6\nPercentile 95: 13.5\nPercentile 99: 22.5"
+    },
+    {
+      "value": {
+        "p10": -13.5,
+        "p25": -6.5,
+        "p50": -1.0,
+        "p75": 5.25,
+        "p90": 12.0
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026. P₀ is the Nov 6 close and P₁ is the Nov 20 close, so the outcome is known on Nov 20, about 18 days from now.\n\n(b) **Latest known values:** The last confirmed closes are from Oct 30: CL=F at 104.12 and ES=F at 7,614.00. On Nov 2, intraday prices were CL about 96.5 and ES about 7,640.75.\n\n(c) **If nothing changed:** The spread would be 0 pp. One adjustment applies: by my calculation, the Dec WTI contract expires on Nov 20 (3 business days before Nov 25). If Yahoo rolls CL=F to the January contract by the Nov 20 close, the series could show a mechanical drop of roughly 2 to 3% from backwardation. I put that at about 40 to 50% likely, which shifts the median down by about 1 pp.\n\n(d) **If the current trend continued:** Oil is falling on Iran peace talk hopes and stocks are bouncing after the AI capex selloff. Continuing that would give a negative spread, perhaps -5 to -10 pp. Trends this news-driven do not persist reliably, so I give this little weight.\n\n(e) **Historical variation:** The code baseline puts 12-day CL returns at roughly -11% (p5) to +19% (p95), with a median of +0.6%. A typical biweekly ES standard deviation is about 2 to 3%. Oil and stocks currently move in opposite directions, so the spread's standard deviation is roughly 10 to 11 pp, with fat tails.\n\n(f) **Experts and markets:** I found no forecast on the spread itself. Polymarket gives a 36% chance that WTI hits $110 in November and 13% for $120, which implies meaningful upside tail risk. OPEC+ is on hold, so it adds no supply shock. Nvidia reports on Nov 17, which is a risk for ES.\n\n(g) **Scenarios:**\n- **Low outcome:** A US-Iran deal is announced and Hormuz flows normalize. CL falls 20 to 25% and ES rallies 3 to 4%, and a contract roll adds -3 pp. The spread would be around -28 pp.\n- **High outcome:** Talks collapse after the midterms and tanker attacks escalate. CL jumps 20 to 25% and ES falls 4 to 5% on inflation fears plus a weak Nvidia reaction. The spread would be around +28 pp.\n\nPercentile 1: -28\nPercentile 5: -18\nPercentile 10: -13.5\nPercentile 20: -8\nPercentile 30: -5\nPercentile 40: -2.8\nPercentile 50: -1\nPercentile 60: 1\nPercentile 70: 3.5\nPercentile 80: 7\nPercentile 90: 12\nPercentile 95: 17\nPercentile 99: 28"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -14.1984,
+    "p25": -6.7614,
+    "p50": -0.547,
+    "p75": 5.6447,
+    "p90": 12.7164
+  },
+  "usage": [
+    {
+      "question_id": "46202",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.6,
+      "notional_cost_usd": 0.00013080000000000004,
+      "input_tokens": 530,
+      "output_tokens": 50,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 19.1,
+      "notional_cost_usd": 0.0004423,
+      "input_tokens": 1080,
+      "output_tokens": 453,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 58.8,
+      "notional_cost_usd": 0.17885630000000002,
+      "input_tokens": 38056,
+      "output_tokens": 3791,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.5,
+      "notional_cost_usd": 0.086796,
+      "input_tokens": 7033,
+      "output_tokens": 1527,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.8,
+      "notional_cost_usd": 0.087192,
+      "input_tokens": 7030,
+      "output_tokens": 1548,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0008674,
+      "input_tokens": 3138,
+      "output_tokens": 480,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.7,
+      "notional_cost_usd": 0.0008668,
+      "input_tokens": 3180,
+      "output_tokens": 462,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.00027482,
+      "input_tokens": 3137,
+      "output_tokens": 360,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.8,
+      "notional_cost_usd": 0.00036256,
+      "input_tokens": 3180,
+      "output_tokens": 535,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 31.7,
+      "notional_cost_usd": 0.0362246,
+      "input_tokens": 7034,
+      "output_tokens": 1620,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.0008619000000000001,
+      "input_tokens": 3133,
+      "output_tokens": 471,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.00042029,
+      "input_tokens": 3134,
+      "output_tokens": 651,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 78.3,
+      "notional_cost_usd": 0.22124919999999998,
+      "input_tokens": 57630,
+      "output_tokens": 4998,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.0,
+      "notional_cost_usd": 0.09268,
+      "input_tokens": 7416,
+      "output_tokens": 1668,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.9,
+      "notional_cost_usd": 0.097388,
+      "input_tokens": 7417,
+      "output_tokens": 1903,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0008966,
+      "input_tokens": 3079,
+      "output_tokens": 562,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 21.6,
+      "notional_cost_usd": 0.101588,
+      "input_tokens": 7417,
+      "output_tokens": 2113,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0009073,
+      "input_tokens": 3095,
+      "output_tokens": 577,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00034575,
+      "input_tokens": 3080,
+      "output_tokens": 503,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0008956000000000001,
+      "input_tokens": 3139,
+      "output_tokens": 536,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00030071,
+      "input_tokens": 3095,
+      "output_tokens": 413,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46202",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00036134000000000003,
+      "input_tokens": 3139,
+      "output_tokens": 533,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9099
+}

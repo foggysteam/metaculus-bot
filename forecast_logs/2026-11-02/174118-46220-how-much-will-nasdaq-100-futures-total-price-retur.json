@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T17:44:14.358934+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T17:41:18.665712+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46220,
+    "post_id": 46011,
+    "url": "https://www.metaculus.com/questions/46011",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "How much will Nasdaq-100 Futures total price returns exceed S&P 500 Futures in these biweekly periods of Q4 2026? (Nov 9 - Nov 20)",
+    "resolution_criteria": "Each subquestion will resolve as the difference between the percent total price return of [Nasdaq-100 Futures (NQ)](https://finance.yahoo.com/quote/NQ%3DF/history/) and that of [S\\&P 500 Futures (ES)](https://finance.yahoo.com/quote/ES%3DF/history/) for the corresponding biweekly period, according to Yahoo Finance data.\n\nSpecifically, each subquestion will resolve as NQ\\_return - ES\\_return.\n\nReturns will be calculated as follows: If P₀ is the Close price of an asset on the last trading day or half-day *before* the start of the period and P₁ is the Close price of the stock on the last trading day *of* the designated period, the percentage return will be calculated as:\n\n$$\n \\text{return} = 100 \\times \\frac{P1 - P0}{P0}\n$$",
+    "fine_print": "* If ES outperforms NQ, the corresponding subquestion will resolve as a negative number.\n* If Yahoo Finance delays or ceases reporting these data or if it reports them in error, Metaculus might use alternative credible sources to resolve this question.\n\n***\n\nFor example, for the period Jun 9, 2025 - Jun 20, 2025, the subquestion would have resolved based on the following calculations:\n\nNQ\\_P₀ \\= 21,789.50 (the Close price on Jun 6)\n\nNQ\\_P₁ \\= 21,889.89 (the Close price on Jun 20)\n\nNQ\\_return \\= 100 × (21,889.89 - 21,789.50) / 21,789.50 \\= 0.4607\n\nES\\_P₀ \\= 6,006.75 (the Close price on Jun 6)\n\nES\\_P₁ \\= 6,010.21 (the Close price on Jun 20)\n\nES\\_return \\= 100 × (6,010.21 - 6,006.75) / 6,006.75 \\= 0.0576\n\nAnd the resolution would be 0.4607 - 0.0576 \\= **0.4031** percentage points (pp).",
+    "close_time": "2026-11-09 04:00 UTC",
+    "scheduled_resolution_time": "2026-11-20 21:00 UTC"
+  },
+  "research": [
+    "The window runs from P0 = the Nov 6 close to P1 = the Nov 20 close, so nothing is settled yet. The Nasdaq-100 has recently been lagging the S&P 500 by large margins, which makes the gap between them unusually volatile right now.\n\n## 1. Resolution source\n- 2026-11-02: Yahoo NQ=F is the Dec 2026 contract. The Oct 30 close was 28,534.00. Nov 2 showed 28,581.75 at about 12:31 ET, which is intraday, not a close. [Yahoo NQ=F](https://finance.yahoo.com/quote/NQ%3DF/history/)\n- 2026-11-02: Yahoo ES=F is also the Dec 2026 contract. The Oct 30 close was 7,614.00. Nov 2 showed 7,643.25 intraday. [Yahoo ES=F](https://finance.yahoo.com/quote/ES%3DF/history/)\n- Both Dec contracts expire Dec 18, after Nov 20, so the series should not roll mid-period.\n\n## 2. Current status\n- Nothing has settled the question. P0 will be the Nov 6 close, after the jobs report.\n- 2026-10-20 to 10-30, from the Yahoo closes above: NQ fell 3.85% and ES fell 1.82%, so NQ lagged by about 2.0 pp.\n\n## 3. Recent news (newest first)\n- 2026-11-02: Futures rebounded. NQ was up about 0.5 to 0.85% and ES about 0.35 to 0.5%, helped by lower oil and Middle East diplomacy. AMD, Micron and Nvidia rose premarket. [stocktwits](https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-futures-rise-premarket-after-wall-street-s-worst-week-in-months-aapl-pltr-googl-intc-tgtx-in-focus/cNG9MJPR92w), [marketscreener](https://www.marketscreener.com/news/stock-futures-higher-oil-lower-as-investors-return-to-risk-ce785fd8de8dfe21)\n- 2026-10-30: The Nasdaq-100 fell 3.46% to 28,384.85 and the S&P 500 fell 1.82%. The Philadelphia Semiconductor Index dropped more than 7%. NDX ended October down 6.5%, its worst month since March 2025. [PRNewswire](https://www.prnewswire.com/news-releases/us-index-futures-turn-to-jobs-data-and-treasurys-refunding-after-fridays-3-46-nasdaq-100-drop-302926373.html), [invezz](https://invezz.com/pt/noticias/2026/11/02/futuros-do-nasdaq-100-sobem-240-pts-cinco-pontos-antes-da-abertura-em-wall-street/)\n- 2026-10-29/30: Alphabet fell about 12% after earnings that raised worries about AI cash burn and how AI spending is financed. Amazon and Intel results also weighed on tech. The Fed held rates. S&P 500 Q3 earnings were on pace for about 31% growth. [Business Recorder/Reuters](https://www.brecorder.com/news/40446970/wall-street-week-ahead-midterm-elections-earnings-jobs-data-loom-for-ai-wary-market)\n- 2026-11: One commentary says inflation is well above target and the Fed may raise rates, which would weigh more on long-duration tech. [tech-insider](https://tech-insider.org/wall-st-week-ahead-midterms-jobs-fed-hike-odds-ai-market-2026/)\n\n## 4. Base rates\nThese come from the question's linked spreadsheet. Its labels look partly inconsistent, so treat them with caution. [sheet](https://docs.google.com/spreadsheets/d/1CpeSvX9gTKngoYc-2lGmGpBrhVQysmJ7_poKo4OcriI/edit?gid=0#gid=0)\n- NQ minus ES in recent two-week periods, oldest to newest:\n  - Mar 13-27: -1.09\n  - Apr 2-17: +2.65\n  - Apr 17-May 1: +2.42\n  - May 1-15: +2.61\n  - May 15-29: +1.81\n  - May 29-Jun 12: -0.33\n  - Jun 12-26: -0.54\n  - Jul 12-24: -3.56\n  - Jul 24-Aug 7: +1.03\n  - Aug 7-21: -0.36\n  - Aug 21-Sep 4: +0.20\n  - Sep 4-18: +1.00\n  - Sep 18-Oct 2: +3.32\n  - Oct 9-23: -3.86\n- Across these 14 periods the mean is about +0.4 pp, the median about +0.6 pp and the standard deviation about 2.2 pp. NQ outperformed in 8 of 14.\n- The gap behaves like a leveraged bet on market direction: it was positive in 6 of the 7 up-market periods and negative in 6 of the 7 down-market periods (Sep 4-18 was the exception both ways). NQ's beta to ES looks like roughly 1.3 to 2.5 recently.\n- Recent extremes are large (-3.86 and +3.32), so the dispersion is now well above the roughly 1 to 1.5 pp seen in calmer regimes.\n- The code-generated baseline for NQ alone over 12 trading days has a 5th-95th percentile range of about -5.7% to +7.5%, with a median of about +0.9%.\n\n## 5. Other forecasts\n- I found no prediction market on the NQ-versus-ES spread.\n- Kalshi prices the S&P 500 at 0.90 to finish 2026 positive. It also prices the S&P 500 at only 0.21 to beat its equal-weight version this year, which suggests the market expects mega-cap underperformance (code-collected prices).\n- Polymarket's December NDX close brackets look illiquid and incoherent, with prices summing well above 1, so they are not useful.\n- A historical-seasonality commentary says NDX has averaged +4.87% in November of midterm years. That is not a forecast. [heygotrade](https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-11-02/)\n\n## 6. Upcoming events\n**Before P0 (Nov 2-6), these move the baseline only:**\n- Apple reports Nov 2. AMD, Qualcomm and Palantir report this week.\n- The midterms are Nov 3. Democrats are expected to take the House, and a sweep could mean more scrutiny of AI and tech. [Business Recorder](https://www.brecorder.com/news/40446970/wall-street-week-ahead-midterm-elections-earnings-jobs-data-loom-for-ai-wary-market)\n- The jobs report is Nov 6, with a consensus around 40k to 60k jobs.\n\n**Inside the window (Nov 9-20):**\n- 2026-11-10: October CPI at 8:30 ET, per the BLS schedule. [BLS](https://www.bls.gov/schedule/news_release/cpi.htm)\n- 2026-11-17: Nvidia reports fiscal Q3 2027 after the close (confirmed Oct 28). This is the biggest single NQ-specific catalyst, and NQ is more heavily weighted in Nvidia than ES. [NVIDIA IR](https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873)\n- 2026-11-20: Monthly options expiration, which is also the P1 date.\n- The next FOMC meeting falls after the window (December). Post-election policy headlines and the AI-capex debate are ongoing risks.\n\n**Sources:** [earningswhispers](https://www.earningswhispers.com/stocks/Nvda), [days.to](https://days.to/nvidia-earnings), [thriveinmarkets CPI](https://thriveinmarkets.com/calendar/dates/cpi-2026/), [CNBC week ahead](https://www.cnbc.com/investingclub/2026/11/01/3-big-things-were-watching-in-the-stock-market-this-week.html), [aktiencheck](https://aktiencheck.de/artikel/sp-futures-nasdaq-futures-und-dow-jones-futures-check-am-morgen-die-wall-street-)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:41 UTC; check each market really matches the question)\n- Kalshi: Annual Return: S&P 500 vs. S&P 500 Equal Weight Index (2026). Yes prices: S&P 500 Equal Weight Index: 0.72; S&P 500 Index: 0.21.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. Gold? (2026). Yes prices: S&P 500 Total Return Index: 0.90; Gold: 0.14.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. BTC? (2026). Yes prices: S&P 500 Total Return Index: 0.89; BTC: 0.09.\n- Kalshi: Will the S&P finish positive this year? (2026). Yes prices: Positive Growth: 0.90.\n- Kalshi: When will the S&P 500 Index be above $10,000? (S&P 500 Index - 10000). Yes prices: Before Dec 31, 2026: 0.0000; Before Jun 30, 2027: 0.0000; Before Dec 31, 2027: 0.0000; Before Jun 30, 2028: 0.0000; Before Dec 31, 2028: 0.5000; Before Dec 31, 2029: 0.6500.\n- Kalshi: S&P 2027 year end price range (On Dec 31, 2027 at 4pm EST). Yes prices: 7,600 to 7,799.99: 0.15; 7,800 to 7,999.99: 0.11; 8,600 to 8,799.99: 0.09; 8,000 to 8,199.99: 0.05; 7,400 to 7,599.99: 0.06; 7,000 to 7,199.99: 0.04; 8,400 to 8,599.99: 0.06; 8,200 to 8,399.99: 0.06; 9,000 to 9,199.99: 0.04; 7,200 to 7,399.99: 0.04.\n- Kalshi: S&P price range today at 4pm EST? (On Nov 2, 2026 at 4pm EST). Yes prices: 7,600 to 7,624.9999: 0.41; 7,575 to 7,599.9999: 0.23; 7,625 to 7,649.9999: 0.20; 7,550 to 7,574.9999: 0.07; 7,650 to 7,674.9999: 0.06; 7,525 to 7,549.9999: 0.02; 7,350 to 7,374.9999: 0.0000; 7,375 to 7,399.9999: 0.0000; 7,400 to 7,424.9999: 0.0000; 7,425 to 7,449.9999: 0.0000.\n- Polymarket: What will Nasdaq 100 (QQQ) hit Week of April 20 2026? (ends 2026-04-24). [Yes, No] prices: ↑ $680: [\"0.0155\", \"0.9845\"]; ↑ $675: [\"0.0245\", \"0.9755\"]; ↑ $670: [\"0.0435\", \"0.9565\"]; ↑ $665: [\"0.5\", \"0.5\"]; ↑ $660: [\"0.515\", \"0.485\"]; ↑ $655: [\"1\", \"0\"]\n- Polymarket: Nasdaq 100 (NDX) Up or Down on April 24? (ends 2026-04-24). [Yes, No] prices: Nasdaq 100 (NDX) Up or Down on April 24?: [\"0.7\", \"0.3\"]\n- Polymarket: What will Nasdaq 100 (NDX) close at in December? (ends 2026-12-31). [Yes, No] prices: <$23,500: [\"0.51\", \"0.49\"]; $23,500-$25,000: [\"0.395\", \"0.605\"]; $25,000-$26,500: [\"0.42\", \"0.58\"]; $26,500-$28,500: [\"0.43\", \"0.57\"]; $28,500-$30,500: [\"0.395\", \"0.605\"]; $30,500-$33,000: [\"0.445\", \"0.555\"]\n- Polymarket: Nasdaq round-the-clock trading by December 31? (ends 2027-01-01). [Yes, No] prices: Nasdaq round-the-clock trading by December 31?: [\"0.834\", \"0.166\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for NQ=F: latest close 28582.5000 on 2026-11-02.\nTarget date 2026-11-20 is 12 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 12-observation returns over the last 3 years (last year weighted double):\np5: 26966.0466, p10: 27414.9365, p25: 28202.9859, p50: 28829.1378, p75: 29599.3919, p90: 30337.6328, p95: 30735.4354\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).",
+    "# NQ vs ES, Nov 9-20, 2026: research notes\n\n## 1. Resolution source\n- 2026-11-02: Yahoo's NQ=F page tracks the Nasdaq 100 Dec '26 contract. Its recent closes are Oct 20: 29,675.25; Oct 21: 30,007.00; Oct 22: 29,142.00; Oct 23: 29,117.75; Oct 26: 29,437.25; Oct 27: 29,812.00; Oct 28: 29,979.50; Oct 29: 29,562.00; Oct 30: 28,534.00. Nov 2 was 28,567.75 intraday, with the market still open. [Yahoo NQ=F](https://finance.yahoo.com/quote/NQ%3DF/history/)\n- 2026-11-02: Yahoo's ES=F page tracks the E-Mini S&P 500 Dec '26 contract. Its recent closes are Oct 20: 7,755.25; Oct 21: 7,800.25; Oct 22: 7,704.50; Oct 23: 7,659.75; Oct 26: 7,714.50; Oct 27: 7,758.25; Oct 28: 7,783.25; Oct 29: 7,754.25; Oct 30: 7,614.00. Nov 2 was 7,640.50 intraday, at 12:32 PM EST. [Yahoo ES=F](https://finance.yahoo.com/quote/ES%3DF/history/)\n- P₀ will be the Friday Nov 6 close and P₁ the Friday Nov 20 close. Both fall inside the Dec contract, so no roll is involved. Neither has happened yet.\n\n## 2. Current status\n- Nothing is settled yet, because the period has not started.\n- My calculation from the Yahoo data: from Oct 20 to Oct 30, NQ returned -3.85% and ES -1.82%, a spread of about -2.0 pp. On Oct 30 alone the spread was about -1.7 pp (NQ -3.48%, ES -1.81%). Tech is underperforming sharply right now.\n\n## 3. Recent news (newest first)\n- 2026-11-02: Futures bounced. NQ was up about 0.7-0.85% and ES up 0.35-0.5%, helped by lower oil and hopes for Middle East diplomacy. AMD, Micron and Nvidia gained premarket. [Invezz](https://invezz.com/pt/noticias/2026/11/02/futuros-do-nasdaq-100-sobem-240-pts-cinco-pontos-antes-da-abertura-em-wall-street/), [MarketScreener](https://www.marketscreener.com/news/stock-futures-higher-oil-lower-as-investors-return-to-risk-ce785fd8de8dfe21)\n- 2026-11-02: The Nasdaq 100 fell 6.5% in October, its worst month since March 2025. Last week the NDX lost about 3.5% and the S&P about 2%. [Stocktwits](https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-futures-rise-premarket-after-wall-street-s-worst-week-in-months-aapl-pltr-googl-intc-tgtx-in-focus/cNG9MJPR92w)\n- 2026-10-30: The NDX fell 3.46% to 28,384.85 and the S&P 500 fell 1.82% to 7,580.07. [PRNewswire](https://www.prnewswire.com/news-releases/us-index-futures-turn-to-jobs-data-and-treasurys-refunding-after-fridays-3-46-nasdaq-100-drop-302926373.html)\n- 2026-10-30: The selloff came from AI-spending fears after earnings. Amazon's capex plans and Intel's cash-burn warning weighed (Intel fell about 29%, Nvidia 3.7%). [Kitco/Reuters](https://www.kitco.com/news/off-the-wire/2026-10-30/nasdaq-futures-sink-amazon-intel-intensify-ai-spending-fears), [Business Standard](https://business-standard.com/world-news/nasdaq-hits-near-three-month-low-as-amazon-intel-rattle-ai-trade-126103001910_1.html)\n- 2026-10-29: Alphabet fell 12.6%, its worst day on record, after AI spending pushed its free cash flow negative. [StockAnalysis](https://stockanalysis.com/news/nasdaq-100-falls-ai-spending/)\n- The semiconductor index was about 21% below its June record. [investingLive](https://investinglive.com/stocks/amazon-and-intel-results-deepen-worries-over-ai-boom-costs-as-tech-chip-stocks-slide/)\n- One caution: reported Composite closes for Oct 30 disagree across sources (25,437 vs 25,303).\n\n## 4. Base rates\n- The worked example in the question (Jun 9-20, 2025) resolved at +0.40 pp.\n- The question links a spreadsheet of past periods, but I did not fetch it. I could not compute a full historical distribution.\n- General background, not verified this session: over long runs the two-week NQ-ES spread usually averages slightly positive, around 0 to +0.2 pp. Its standard deviation is roughly 1 pp in calm regimes and 1.5-2.5 pp in tech-driven volatile regimes. The spread usually moves the same way as the overall market, because NQ tends to swing about 1.2-1.4 times as much as ES.\n- The current regime is clearly the volatile kind: a -2.0 pp spread over the last nine sessions and -1.7 pp in a single day.\n- Code baseline (unconditional, ignores news): the 12-observation distribution for NQ to Nov 20 runs from p5 of -5.7% to p95 of +7.5% versus the Nov 2 level, with a median of about +0.9%. If the spread is about 0.3 times NQ's move, that implies a rough spread range of ±2 pp.\n\n## 5. Other forecasts\n- I found no prediction market on NQ minus ES returns for this period.\n- The markets the code collected (Kalshi S&P annual or daily ranges, Polymarket NDX December close) don't match this question. A loose read:\n  - The Polymarket NDX December buckets look badly mispriced: each bucket trades around 0.4-0.5, so together they sum well above 1. Treat them as uninformative.\n  - Kalshi gives the S&P Equal Weight 0.72 to beat the cap-weighted S&P in 2026. That is consistent with mega-cap weakness late in the year.\n\n## 6. Upcoming events before resolution\n- 2026-11-03: US midterm elections. Results land before P₀ (Nov 6), so most of the reaction falls outside the period unless outcomes are contested. [Stocktwits](https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-futures-rise-premarket-after-wall-street-s-worst-week-in-months-aapl-pltr-googl-intc-tgtx-in-focus/cNG9MJPR92w)\n- Week of Nov 2: the jobs report and the Treasury quarterly refunding announcement, also before P₀. [PRNewswire](https://www.prnewswire.com/news-releases/us-index-futures-turn-to-jobs-data-and-treasurys-refunding-after-fridays-3-46-nasdaq-100-drop-302926373.html)\n- 2026-11-10: October CPI is due at 8:30 ET, inside the period. Only secondary calendars confirm this date; I did not find it on the BLS November schedule. [ThriveInMarkets](https://thriveinmarkets.com/calendar/dates/cpi-2026/)\n- 2026-11-17: Nvidia reports Q3 FY27 at 5 PM ET, inside the period. Its guidance is $108.0B revenue (±2%) and a 74.0% gross margin. This is likely the biggest single driver of the NQ-ES spread, especially with the AI-capex worries above. [NVIDIA IR](https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/NVIDIA-3rd-Quarter-FY27-Financial-Results/default.aspx), [Investing.com](https://www.investing.com/news/company-news/nvidia-schedules-q3-fiscal-2027-earnings-call-for-nov-17-93CH-4980909)\n- 2026-11-20: Monthly options expiration, the P₁ date. This is my inference from the calendar. There is no FOMC meeting in the window: it met Oct 27-28 and next meets in December (from memory, not verified).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:41 UTC; check each market really matches the question)\n- Kalshi: Annual Return: S&P 500 vs. S&P 500 Equal Weight Index (2026). Yes prices: S&P 500 Equal Weight Index: 0.72; S&P 500 Index: 0.21.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. Gold? (2026). Yes prices: S&P 500 Total Return Index: 0.90; Gold: 0.14.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. BTC? (2026). Yes prices: S&P 500 Total Return Index: 0.89; BTC: 0.09.\n- Kalshi: Will the S&P finish positive this year? (2026). Yes prices: Positive Growth: 0.90.\n- Kalshi: When will the S&P 500 Index be above $10,000? (S&P 500 Index - 10000). Yes prices: Before Dec 31, 2026: 0.0000; Before Jun 30, 2027: 0.0000; Before Dec 31, 2027: 0.0000; Before Jun 30, 2028: 0.0000; Before Dec 31, 2028: 0.5000; Before Dec 31, 2029: 0.6500.\n- Kalshi: S&P 2027 year end price range (On Dec 31, 2027 at 4pm EST). Yes prices: 7,600 to 7,799.99: 0.15; 7,800 to 7,999.99: 0.11; 8,600 to 8,799.99: 0.09; 8,000 to 8,199.99: 0.05; 7,400 to 7,599.99: 0.06; 7,000 to 7,199.99: 0.04; 8,400 to 8,599.99: 0.06; 8,200 to 8,399.99: 0.06; 9,000 to 9,199.99: 0.04; 7,200 to 7,399.99: 0.04.\n- Kalshi: S&P price range today at 4pm EST? (On Nov 2, 2026 at 4pm EST). Yes prices: 7,600 to 7,624.9999: 0.41; 7,575 to 7,599.9999: 0.23; 7,625 to 7,649.9999: 0.20; 7,550 to 7,574.9999: 0.07; 7,650 to 7,674.9999: 0.06; 7,525 to 7,549.9999: 0.02; 7,350 to 7,374.9999: 0.0000; 7,375 to 7,399.9999: 0.0000; 7,400 to 7,424.9999: 0.0000; 7,425 to 7,449.9999: 0.0000.\n- Polymarket: What will Nasdaq 100 (QQQ) hit Week of April 20 2026? (ends 2026-04-24). [Yes, No] prices: ↑ $680: [\"0.0155\", \"0.9845\"]; ↑ $675: [\"0.0245\", \"0.9755\"]; ↑ $670: [\"0.0435\", \"0.9565\"]; ↑ $665: [\"0.5\", \"0.5\"]; ↑ $660: [\"0.515\", \"0.485\"]; ↑ $655: [\"1\", \"0\"]\n- Polymarket: Nasdaq 100 (NDX) Up or Down on April 24? (ends 2026-04-24). [Yes, No] prices: Nasdaq 100 (NDX) Up or Down on April 24?: [\"0.7\", \"0.3\"]\n- Polymarket: What will Nasdaq 100 (NDX) close at in December? (ends 2026-12-31). [Yes, No] prices: <$23,500: [\"0.51\", \"0.49\"]; $23,500-$25,000: [\"0.395\", \"0.605\"]; $25,000-$26,500: [\"0.42\", \"0.58\"]; $26,500-$28,500: [\"0.43\", \"0.57\"]; $28,500-$30,500: [\"0.395\", \"0.605\"]; $30,500-$33,000: [\"0.445\", \"0.555\"]\n- Polymarket: Nasdaq round-the-clock trading by December 31? (ends 2027-01-01). [Yes, No] prices: Nasdaq round-the-clock trading by December 31?: [\"0.834\", \"0.166\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for NQ=F: latest close 28582.5000 on 2026-11-02.\nTarget date 2026-11-20 is 12 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 12-observation returns over the last 3 years (last year weighted double):\np5: 26966.0466, p10: 27414.9365, p25: 28202.9859, p50: 28829.1378, p75: 29599.3919, p90: 30337.6328, p95: 30735.4354\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -2.8,
+        "p25": -1.2,
+        "p50": 0.2,
+        "p75": 1.45,
+        "p90": 2.9
+      },
+      "reasoning": "(a) **Time left:** P0 is the Nov 6 close and P1 is the Nov 20 close. That leaves about 18 days until resolution, and the measured window is 10 trading days (Nov 9 to Nov 20).\n\n(b) **Latest values:** On Oct 30 the NQ Dec contract closed at 28,534.00 and ES closed at 7,614.00. Intraday on Nov 2, NQ was about 28,582 and ES about 7,643. NQ is up slightly more than ES today. Nothing is locked in, because P0 has not been set.\n\n(c) **If nothing changed:** The spread would be 0 pp.\n\n(d) **If the current trend continued:** Over the last month NQ has lagged ES sharply. It trailed by about 3.9 pp in Oct 9-23 and by about 2 pp in Oct 20-30, driven by the AI-capex worries and Alphabet's 12% drop. Extending that trend would give roughly -1 to -2 pp. Momentum in this spread is weak, though, and Nov 2 is already showing a rebound led by semiconductors.\n\n(e) **Historical variation:**\n- Across recent biweekly periods the spread has a standard deviation of about 2.2 pp, a mean of about +0.4 pp and a median of about +0.6 pp.\n- Recent extremes were -3.86 pp and +3.32 pp.\n- The spread acts like a leveraged bet on market direction: NQ tends to win in up markets and lose in down markets.\n- Nvidia reports on Nov 17, inside the window, which adds tail risk in both directions.\n\n(f) **Markets and experts:**\n- No market prices this spread directly.\n- Kalshi gives the S&P 500 only 0.21 to beat its equal-weight version this year. That points to mega-cap weakness for the year, but says little about this two-week window.\n- Seasonality for November in midterm years is positive for NDX. A rising market slightly favors NQ.\n\n(g) **Scenarios:**\n- **Low outcome:** A hot CPI on Nov 10 revives talk of Fed hikes, and Nvidia's guidance disappoints. Semiconductors fall another 10% or more and NQ trails ES by 4 to 6 pp or more.\n- **High outcome:** A soft CPI combines with Nvidia beating and raising guidance, which sets off a relief rally in oversold AI stocks. NQ beats ES by 4 to 5 pp or more.\n\nI center the forecast slightly positive at about +0.2 pp, below the historical median, and keep wide, fat tails for the volatile regime and the Nvidia event.\n\nPercentile 1: -6.5\nPercentile 5: -3.9\nPercentile 10: -2.8\nPercentile 20: -1.6\nPercentile 30: -0.8\nPercentile 40: -0.2\nPercentile 50: 0.2\nPercentile 60: 0.6\nPercentile 70: 1.1\nPercentile 80: 1.8\nPercentile 90: 2.9\nPercentile 95: 3.8\nPercentile 99: 5.8"
+    },
+    {
+      "value": {
+        "p10": -2.5,
+        "p25": -1.05,
+        "p50": 0.15,
+        "p75": 1.3,
+        "p90": 2.6
+      },
+      "reasoning": "(a) **Time left:** The window opens with P0 at the Nov 6 close and ends with P1 at the Nov 20 close. The outcome is known about 18 days from now (Nov 20, 2026), and nothing is settled yet.\n\n(b) **Latest known value:** On the Dec 2026 contracts, the Oct 30 closes were NQ=F 28,534.00 and ES=F 7,614.00. Nov 2 was trading intraday at about 28,582 and 7,643. Over Oct 20-30, NQ lagged ES by about 2.0 pp.\n\n(c) **If nothing changed:** NQ and ES would both be flat, so the spread would be 0 pp.\n\n(d) **If the current trend continued:** NQ has recently underperformed (October NDX -6.5%, Oct 9-23 spread -3.86, Oct 20-30 spread about -2.0). Continuing that would mean roughly -1 to -2 pp. Biweekly spreads show little persistence, though, and NQ rebounded on Nov 2.\n\n(e) **Historical variation:** Over the last 14 biweekly periods, the mean was about +0.4 pp, the median about +0.6 pp and the standard deviation about 2.2 pp, with extremes of -3.86 and +3.32. The spread behaves like a leveraged bet on market direction. Volatility is currently elevated because of AI-capex worries, a semiconductor selloff and Nvidia earnings inside the window on Nov 17.\n\n(f) **Expert and market expectations:** There is no market on this spread. Kalshi prices the S&P 500 beating its equal-weight version at only 0.21, which implies expected mega-cap underperformance for the year, though that says little about two weeks. Seasonality for November in midterm years is mildly positive, which would favour NQ through its higher beta.\n\n(g) **Unexpected scenarios:**\n- **Low:** A hot CPI on Nov 10 revives Fed hike fears, and Nvidia guides cautiously, so semiconductors fall another 10% while the S&P is cushioned by financials. The spread lands at -4 to -6 pp.\n- **High:** A cool CPI and a blowout Nvidia quarter ease AI-capex fears and spark a short-covering rally in beaten-down tech. The spread lands at +4 to +5 pp.\n\nPercentile 1: -5.6\nPercentile 5: -3.5\nPercentile 10: -2.5\nPercentile 20: -1.4\nPercentile 30: -0.7\nPercentile 40: -0.2\nPercentile 50: 0.15\nPercentile 60: 0.5\nPercentile 70: 1.0\nPercentile 80: 1.6\nPercentile 90: 2.6\nPercentile 95: 3.4\nPercentile 99: 5.2"
+    },
+    {
+      "value": {
+        "p10": -2.4,
+        "p25": -1.075,
+        "p50": 0.15,
+        "p75": 1.375,
+        "p90": 2.6
+      },
+      "reasoning": "(a) **Time left:** P0 is the Nov 6, 2026 close and P1 is the Nov 20, 2026 close, so the outcome is known in about 18 days, at the Nov 20 close. Nothing is settled yet.\n\n(b) **Latest known values (Yahoo, Dec 2026 contracts):**\n- Oct 30 closes: NQ=F 28,534.00 and ES=F 7,614.00.\n- Nov 2 intraday: NQ about 28,582 and ES about 7,643.\n\n(c) **If nothing changed:** both returns would be 0, so the outcome would be about 0 pp.\n\n(d) **If the current trend continued:** NQ has recently lagged sharply. It trailed by about 2 pp over Oct 20-30 and by 3.86 pp over Oct 9-23. A continuing rotation away from AI and mega-cap stocks would mean roughly -1 to -2 pp. Mean reversion and the Nov 2 rebound, in which NQ led, argue the other way.\n\n(e) **Historical variation:**\n- Over the last 14 biweekly periods, the NQ minus ES spread had a mean of about +0.4 pp, a median of about +0.6 pp and a standard deviation of about 2.2 pp.\n- Recent extremes were +3.3 and -3.9 pp.\n- In calmer regimes the standard deviation is about 1 to 1.5 pp.\n- Nvidia's earnings on Nov 17 fall inside the window, and the semiconductor index is highly volatile right now (down 7% in one day), so dispersion should be elevated.\n\n(f) **Expectations of experts and markets:**\n- No market prices the spread directly.\n- Kalshi gives only 0.21 that the S&P 500 beats its equal-weight version in 2026, which leans slightly toward mega-cap weakness.\n- Midterm-year November seasonality is bullish for equities, and because the spread behaves like a leveraged bet on market direction, that is mildly positive for NQ minus ES.\n- Overall, I put the center close to 0, slightly positive.\n\n(g) **Scenarios:**\n- **Low outcome:** a hot CPI on Nov 10 raises odds of a Fed hike, and Nvidia's guidance disappoints amid AI-capex financing fears. Semiconductors fall 10% or more while defensives hold up, and NQ lags by 4 to 6 pp.\n- **High outcome:** a soft CPI and a blowout Nvidia quarter trigger a sharp relief rally in beaten-down AI and semiconductor stocks. NQ beats ES by 4 to 5 pp.\n\nPercentile 1: -5.3\nPercentile 5: -3.3\nPercentile 10: -2.4\nPercentile 20: -1.4\nPercentile 30: -0.75\nPercentile 40: -0.25\nPercentile 50: 0.15\nPercentile 60: 0.55\nPercentile 70: 1.05\nPercentile 80: 1.7\nPercentile 90: 2.6\nPercentile 95: 3.3\nPercentile 99: 5.0"
+    },
+    {
+      "value": {
+        "p10": -1.8,
+        "p25": -0.825,
+        "p50": 0.05,
+        "p75": 0.925,
+        "p90": 1.85
+      },
+      "reasoning": "(a) **Time left:** Forecasts close Nov 9. The outcome is known at the Nov 20 close, about 18 days from now. The measurement window is Nov 6 close to Nov 20 close, which is 10 trading days.\n\n(b) **Latest values:** On Nov 2 intraday, NQ=F (Dec '26 contract) was about 28,568 and ES=F was about 7,640. The last full closes, on Oct 30, were NQ 28,534 and ES 7,614. Neither P₀ nor P₁ exists yet.\n\n(c) **If nothing changed:** The spread would be 0 pp, because P₀ is not yet set and flat prices give zero relative return.\n\n(d) **If the current trend continued:** Over Oct 20-30, NQ trailed ES by about 2 pp in nine sessions, driven by fears about AI capital spending. Carrying that forward gives roughly -1.5 to -2 pp. However, relative-return trends over two weeks have weak persistence, and the Nov 2 bounce already shows tech leading again.\n\n(e) **Historical variation:**\n- The two-week NQ-ES spread usually has a mean slightly above zero.\n- Its standard deviation is about 1 pp in calm regimes and 1.5-2 pp in tech-volatile regimes.\n- The current regime is volatile: there was a -1.7 pp spread on a single day.\n- Nvidia reports on Nov 17, inside the window, which widens the range further.\n- I use a standard deviation of about 1.4 pp, with fat tails.\n\n(f) **Expectations of experts and markets:** No market prices this spread directly. Kalshi's pricing of equal weight beating the cap-weighted S&P points to mega-cap weakness, which is a mild negative tilt. On the other side, oversold tech could rebound, since high beta favors NQ if the market recovers. Net, I center near zero to slightly positive.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia guides cautiously or margins disappoint on Nov 17, AI-capex fears intensify, and semiconductors sell off 10% or more. NQ falls 6% while ES falls 3%, giving a spread of about -3 to -4 pp.\n- **High:** Nvidia posts a blowout quarter and a cool CPI on Nov 10 triggers a relief rally in oversold mega-cap tech. NQ rises 7% against ES at 4%, giving about +3 to +4 pp.\n\nPercentile 1: -4.0\nPercentile 5: -2.5\nPercentile 10: -1.8\nPercentile 20: -1.05\nPercentile 30: -0.6\nPercentile 40: -0.25\nPercentile 50: 0.05\nPercentile 60: 0.35\nPercentile 70: 0.7\nPercentile 80: 1.15\nPercentile 90: 1.85\nPercentile 95: 2.5\nPercentile 99: 3.9"
+    },
+    {
+      "value": {
+        "p10": -2.2,
+        "p25": -1.0,
+        "p50": 0.1,
+        "p75": 1.2,
+        "p90": 2.4
+      },
+      "reasoning": "(a) **Time left:** The period runs from P₀, the Friday Nov 6 close, to P₁, the Friday Nov 20 close. The outcome will be known on Nov 20, 2026, about 18 days from now.\n\n(b) **Latest known values (Yahoo, Dec '26 contracts):**\n- Oct 30 closes: NQ 28,534.00 and ES 7,614.00.\n- Nov 2 intraday: NQ about 28,568 to 28,582 and ES about 7,640.\n- Over the last nine sessions, Oct 20 to Oct 30, the spread was about -2.0 pp.\n\n(c) **If nothing changed:** both returns would be 0 and the spread 0 pp.\n\n(d) **If the current trend continued:** tech underperformance from AI-capex fears would persist, and a two-week spread of around -1.5 to -2 pp would be plausible.\n\n(e) **Historical variation:**\n- The two-week NQ-ES spread typically has a standard deviation of about 1 pp in calm regimes and 1.5 to 2.5 pp in volatile, tech-driven regimes.\n- The current regime is volatile: Alphabet fell 12.6% in a day, Intel fell 29%, and the Nasdaq 100 fell 6.5% in October.\n- Nvidia reports on Nov 17, inside the window, which adds tail risk in both directions.\n- The long-run mean is slightly positive.\n\n(f) **Experts and markets:**\n- No market covers this spread directly.\n- Kalshi gives the S&P Equal Weight a 0.72 chance of beating the cap-weighted S&P in 2026, which reflects mega-cap weakness.\n- Nov 2 futures show a tech-led rebound.\n- Overall the signals are mixed: the downtrend is still active, but a rebound after a sharp selloff is plausible.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia disappoints on guidance or margins on Nov 17, AI-capex fears deepen, and semis drop another 10% while the rest of the market holds up. The spread would land around -4 to -5 pp.\n- **High:** Nvidia blows out and gives strong guidance, a cool CPI print on Nov 10 brings yields down, and a violent short-covering rally in beaten-down mega-caps follows. The spread would land around +4 to +5 pp.\n\n**Forecast:** I center the distribution slightly above zero, at about +0.1 pp, and use a standard deviation of about 1.7 pp with fat tails.\n\nPercentile 1: -5.0\nPercentile 5: -3.0\nPercentile 10: -2.2\nPercentile 20: -1.3\nPercentile 30: -0.7\nPercentile 40: -0.25\nPercentile 50: 0.1\nPercentile 60: 0.45\nPercentile 70: 0.9\nPercentile 80: 1.5\nPercentile 90: 2.4\nPercentile 95: 3.1\nPercentile 99: 4.8"
+    },
+    {
+      "value": {
+        "p10": -2.1,
+        "p25": -0.975,
+        "p50": 0.05,
+        "p75": 1.075,
+        "p90": 2.1
+      },
+      "reasoning": "(a) **Time left:** The period runs from the Nov 6 close (P₀) to the Nov 20 close (P₁). The outcome will be known about 18 days from today, Nov 2, 2026, with the result around Nov 20 at 21:00 UTC.\n\n(b) **Latest known values:**\n- Oct 30 closes: NQ (Dec '26) 28,534.00 and ES 7,614.00.\n- Nov 2 intraday: NQ about 28,568 to 28,583 and ES about 7,640.\n- The spread is undefined until P₀ is set on Nov 6.\n\n(c) **If nothing changed:** both returns would be 0, so the spread would be 0 pp.\n\n(d) **If the current trend continued:** from Oct 20 to 30, tech underperformed by about 2 pp over 9 sessions. If that persisted, the spread would be roughly -1.5 to -2.5 pp. Two-week momentum in this spread is weak and partly mean-reverting, so I give this trend only modest weight.\n\n(e) **Historical variation:**\n- The two-week NQ-ES spread usually averages about 0 to +0.2 pp.\n- Its standard deviation is about 1 pp in calm regimes and 1.5 to 2.5 pp in tech-driven volatile ones. The current regime is volatile, with a single-day move of -1.7 pp.\n- The spread tends to share the market's direction, because NQ has a beta of about 1.3 relative to ES.\n- The code baseline's NQ range of about ±6% implies a spread range of roughly ±2 pp at p5 and p95.\n\n(f) **Experts and markets:**\n- No market prices this spread directly.\n- Kalshi gives the S&P Equal Weight a 72% chance to beat the cap-weighted S&P in 2026, which mildly signals mega-cap weakness.\n- Nvidia reports on Nov 17, inside the window. Its reaction could swing the AI complex either way, so it widens the tails without shifting the median much.\n\n(g) **Scenarios:**\n- **Low:** Nvidia guides cautiously or confirms worries about the payoff from AI capex. Semiconductors and hyperscalers drop another 8 to 12% while defensives hold up. NQ falls about 7% against about 3.5% for ES, giving a spread near -4 pp.\n- **High:** Nvidia beats strongly and CPI comes in soft, triggering a violent short-covering rebound in oversold tech after its worst month since March 2025. NQ rises about 8% against about 4.5% for ES, giving a spread near +3.5 to +4 pp.\n\nMy median is near 0, slightly balancing negative momentum against mean reversion and a rebound from oversold levels. The distribution has a standard deviation of about 1.6 pp with fat tails.\n\nPercentile 1: -5.0\nPercentile 5: -2.9\nPercentile 10: -2.1\nPercentile 20: -1.25\nPercentile 30: -0.7\nPercentile 40: -0.3\nPercentile 50: 0.05\nPercentile 60: 0.4\nPercentile 70: 0.8\nPercentile 80: 1.35\nPercentile 90: 2.1\nPercentile 95: 2.8\nPercentile 99: 4.5"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -2.3536,
+    "p25": -1.0359,
+    "p50": 0.1229,
+    "p75": 1.2606,
+    "p90": 2.5433
+  },
+  "usage": [
+    {
+      "question_id": "46220",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 1.9,
+      "notional_cost_usd": 0.00013910000000000002,
+      "input_tokens": 534,
+      "output_tokens": 65,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0005058,
+      "input_tokens": 1090,
+      "output_tokens": 576,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 65.1,
+      "notional_cost_usd": 0.26322880000000004,
+      "input_tokens": 57930,
+      "output_tokens": 4208,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.2,
+      "notional_cost_usd": 0.078012,
+      "input_tokens": 6905,
+      "output_tokens": 1139,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.079596,
+      "input_tokens": 6903,
+      "output_tokens": 1219,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0008459,
+      "input_tokens": 3038,
+      "output_tokens": 477,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.9,
+      "notional_cost_usd": 0.0009448,
+      "input_tokens": 3130,
+      "output_tokens": 638,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.7,
+      "notional_cost_usd": 0.0295588,
+      "input_tokens": 6905,
+      "output_tokens": 1288,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.0,
+      "notional_cost_usd": 0.00038592,
+      "input_tokens": 3035,
+      "output_tokens": 585,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.00044796,
+      "input_tokens": 3132,
+      "output_tokens": 706,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0008722000000000001,
+      "input_tokens": 3137,
+      "output_tokens": 490,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00032583,
+      "input_tokens": 3138,
+      "output_tokens": 462,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 64.4,
+      "notional_cost_usd": 0.2213579,
+      "input_tokens": 46415,
+      "output_tokens": 4186,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.5,
+      "notional_cost_usd": 0.080304,
+      "input_tokens": 7004,
+      "output_tokens": 1214,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.7,
+      "notional_cost_usd": 0.080868,
+      "input_tokens": 7002,
+      "output_tokens": 1243,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.7,
+      "notional_cost_usd": 0.084132,
+      "input_tokens": 7005,
+      "output_tokens": 1405,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.0009037,
+      "input_tokens": 3107,
+      "output_tokens": 565,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.0009496999999999999,
+      "input_tokens": 3082,
+      "output_tokens": 667,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.4,
+      "notional_cost_usd": 0.001001,
+      "input_tokens": 3191,
+      "output_tokens": 726,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.00039653,
+      "input_tokens": 3108,
+      "output_tokens": 604,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00037809000000000003,
+      "input_tokens": 3083,
+      "output_tokens": 568,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46220",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00041257,
+      "input_tokens": 3193,
+      "output_tokens": 634,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9256
+}

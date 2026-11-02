@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T17:46:57.596354+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T17:41:18.665824+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46208,
+    "post_id": 46008,
+    "url": "https://www.metaculus.com/questions/46008",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "How much will Gold Futures total price returns exceed S&P 500 Futures in these biweekly periods of Q4 2026? (Nov 9 - Nov 20)",
+    "resolution_criteria": "Each subquestion will resolve as the difference between the percent total price return of [Gold Futures (GC)](https://finance.yahoo.com/quote/GC%3DF/history/) and that of [S\\&P 500 Futures (ES)](https://finance.yahoo.com/quote/ES%3DF/history/) for the corresponding biweekly period, according to Yahoo Finance data.\n\nSpecifically, each subquestion will resolve as GC\\_return - ES\\_return.\n\nReturns will be calculated as follows: If P₀ is the Close price of an asset on the last trading day or half-day *before* the start of the period and P₁ is the Close price of the stock on the last trading day *of* the designated period, the percentage return will be calculated as:\n\n$$\n \\text{return} = 100 \\times \\frac{P1 - P0}{P0}\n$$",
+    "fine_print": "* If ES outperforms GC, the corresponding subquestion will resolve as a negative number.\n* If Yahoo Finance delays or ceases reporting these data or if it reports them in error, Metaculus might use alternative credible sources to resolve this question.\n\n***\n\nFor example, for the period Jun 9, 2025 - Jun 20, 2025, the subquestion would resolve based on the following calculations:\n\nGC\\_P₀ \\= 3,322.70 (the Adj Close price on Jun 6)\n\nGC\\_P₁ \\= 3,368.10 (the Close price on Jun 20)\n\nGC\\_return \\= 100 × (3,368.10 - 3,322.70) / 3,322.70 \\= 1.3663\n\nES\\_P₀ \\= 6,006.75 (the Adj Close price on Jun 6)\n\nES\\_P₁ \\= 6,010.21 (the Close price on Jun 20)\n\nES\\_return \\= 100 × (6,010.21 - 6,006.75) / 6,006.75 \\= 0.0576\n\nAnd the resolution would be 1.3663 - 0.0576 \\= **1.3087** percentage points (pp).",
+    "close_time": "2026-11-09 04:00 UTC",
+    "scheduled_resolution_time": "2026-11-20 21:00 UTC"
+  },
+  "research": [
+    "I found no market or forecast that targets the Nov 9-20 GC-ES spread directly. P₀ will be the Nov 6 close, which doesn't exist yet, so nothing is settled.\n\n## 1. Resolution source\n- 2026-11-02: Yahoo GC=F (Gold Dec 26 contract) closes: Oct 20 4,142.60; Oct 21 4,150.00; Oct 23 4,007.90; Oct 27 4,074.60; Oct 29 4,031.40; Oct 30 3,898.90. The Nov 2 intraday price was 3,968.30 at 12:33 PM EST, not a final close. [Yahoo GC=F](https://finance.yahoo.com/quote/GC%3DF/history/)\n- 2026-11-02: Yahoo ES=F (E-mini Dec 26) closes: Oct 20 7,755.25; Oct 21 7,800.25; Oct 28 7,783.25; Oct 29 7,754.25; Oct 30 7,614.00. The Nov 2 intraday price was 7,638.75. [Yahoo ES=F](https://finance.yahoo.com/quote/ES%3DF/history/)\n- For resolution, P₀ is the Nov 6 close and P₁ is the Nov 20 close. Both are still in the future.\n\n## 2. Current status\n- Nothing has settled the question. The period hasn't started.\n- From the Yahoo data above, Oct 20 to Oct 30: GC was -5.88% and ES was -1.82%, a spread of about -4.06 pp. That is about two weeks but not an exact biweekly window. It shows the current regime: gold has been falling faster than stocks during the risk-off selloff.\n\n## 3. Recent news (newest first)\n- 2026-11-02: Gold rebounded about 2% intraday. Kitco showed $3,965.60 at 12:16 ET, up $91.20 on the day, after hitting a one-year low near $3,880-3,900. [CNBC](https://www.cnbc.com/select/the-price-of-gold-today-nov-2-2026/), [Kitco](https://www.kitco.com/charts/gold)\n- 2026-11-02: According to Mitrade, gold's drop came from forced liquidation to meet margin calls after the tech selloff. Brent rose to about $117.64 after a tanker attack in the Strait of Hormuz, reviving inflation worries. The Fed held at 3.75-4.00% with two dissents, and markets expect a December hike. Mitrade put the 4-hour RSI at about 20-25 (oversold). Some of its figures conflict with each other. [Mitrade](https://www.mitrade.com/insights/commodity-analysis/gold/gold-selloff-liquidation-oil-spikes-fed-hike)\n- 2026-11-02: Oil fell nearly 6% on renewed diplomatic efforts in the Middle East, and stock futures rose about 0.4-0.5%. That oil drop sits oddly beside Mitrade's report of Brent rising; the two reports may have different timestamps. [TradingView/dpa-AFX](https://www.tradingview.com/news/dpa_afx:f92868002be19:0-oil-price-plunge-tech-rebound-lift-market-sentiment/), [MarketScreener](https://www.marketscreener.com/news/stock-futures-higher-oil-lower-as-investors-return-to-risk-ce785fd8de8dfe21)\n- 2026-11-02: The semiconductor index fell 7.2% last week and 21% over four weeks. WTI for December dropped below $100. [Marc to Market](http://www.marctomarket.com/2026/11/what-difference-weekend-made.html)\n- 2026-11-01 (reported Nov 2): Doubts about AI spending caused a tech rout: Nasdaq -2.9%, S&P -1.8%. The article says this happened on \"Friday, November 1\"; the Friday was actually Oct 30. [FXStreet](https://www.fxstreet.com/analysis/ai-spending-doubts-trigger-tech-rout-monday-futures-point-to-bounce-202611021241)\n- 2026-11-01: CFTC Commitments of Traders data: speculators are cutting gold long positions, and hedge funds are adding to short positions in 10-year Treasuries after the hawkish Fed hold. [TalkMarkets](https://talkmarkets.com/article/lets-peek-into-current-hedge-fund-positioning-via-cot-report)\n\n## 4. Base rates\n- I couldn't access the linked spreadsheet of past results. Using the question's own example, Jun 9-20, 2025 resolved at +1.31 pp.\n- Typical size of moves: with gold's daily moves currently running 2-3.5% (for example -3.3% on Oct 30) and ES moving 1-2% a day, the two-week spread can plausibly swing ±4-6 pp. The recent Oct 20-30 window came in at about -4 pp.\n- The two assets don't always move in opposite directions. Lately both have fallen together during liquidation, so the spread depends mostly on which falls faster, and gold has been the weaker one.\n\n## 5. Other forecasts\n- Kalshi, gold on Nov 30 (Pyth spot feed): 48% for above $3,964 and 42% for above $4,004. The median is about $3,960, roughly flat from current levels.\n- Kalshi, gold at year end: 43% for ≥$4,000 and 56% for ≥$3,900.\n- Kalshi, S&P above 8,000: 20% before Dec 1 and 57% before Jan 1, 2027.\n- Polymarket, gold reaching a level in November: 55% for ≥$4,100 and 33% for ≥$4,200. For the week of Nov 2: 69% for ≥$4,000.\n- Year-to-date, both Kalshi (90/10) and Polymarket (S&P 81.5% vs gold 5.5%) heavily favor the S&P over gold for 2026. These are full-year contracts, not two-week ones.\n- None of these markets matches the Nov 9-20 spread directly. Together they imply roughly flat expected moves for both assets.\n\n## 6. Upcoming events\n- 2026-11-03: US midterm elections. These fall before the period starts but will set P₀ conditions. [Mitrade](https://www.mitrade.com/insights/commodity-analysis/gold/gold-selloff-liquidation-oil-spikes-fed-hike)\n- 2026-11-06 (expected): October nonfarm payrolls. This will help set the Nov 6 P₀ closes.\n- Mid-November (likely around Nov 10-13): October CPI and PPI. I couldn't confirm the BLS dates. With markets pricing a December hike, the inflation data matters a lot for both gold and stocks.\n- Nvidia's Q3 FY2027 earnings: EarningsWhispers says Nov 17 after the close is confirmed. Other calendars project Nov 18-24, so the release may fall inside the period. It is highly relevant to ES given the AI-capex jitters. [EarningsWhispers](https://www.earningswhispers.com/stocks/Nvda), [MarketScreener](https://uk.marketscreener.com/quote/stock/NVIDIA-CORPORATION-57355629/calendar/)\n- Ongoing: news from the Middle East and the Strait of Hormuz, oil swings, and more margin-call liquidation if the tech selloff resumes.\n- November PCE inflation (October data) is listed for Nov 25, after the period ends. [SimianX](https://www.simianx.ai/stories/us-economic-calendar-this-month-in-your-time-zone)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:44 UTC; check each market really matches the question)\n- Kalshi: S&P 2027 year end price range (On Dec 31, 2027 at 4pm EST). Yes prices: 7,600 to 7,799.99: 0.15; 7,800 to 7,999.99: 0.11; 8,600 to 8,799.99: 0.09; 8,000 to 8,199.99: 0.05; 7,400 to 7,599.99: 0.06; 7,000 to 7,199.99: 0.04; 8,400 to 8,599.99: 0.06; 8,200 to 8,399.99: 0.06; 9,000 to 9,199.99: 0.04; 7,200 to 7,399.99: 0.04.\n- Kalshi: When will the S&P 500 Index be above $10,000? (S&P 500 Index - 10000). Yes prices: Before Dec 31, 2026: 0.0000; Before Jun 30, 2027: 0.0000; Before Dec 31, 2027: 0.0000; Before Jun 30, 2028: 0.0000; Before Dec 31, 2028: 0.5000; Before Dec 31, 2029: 0.6500.\n- Kalshi: When will the S&P 500 Index be above $8,000? (S&P 500 Index - 8000). Yes prices: Before Feb 1, 2027: 0.62; Before Jan 1, 2027: 0.57; Before Dec 1, 2026: 0.20; Before Mar 1, 2027: 0.72; Before Nov 1, 2026: 0.0300; Before Oct 1, 2026: 0.0100; Before Sep 1, 2026: 0.0100.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. Gold? (2026). Yes prices: S&P 500 Total Return Index: 0.90; Gold: 0.10.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. BTC? (2026). Yes prices: S&P 500 Total Return Index: 0.89; BTC: 0.09.\n- Kalshi: Annual Return: S&P 500 vs. S&P 500 Equal Weight Index (2026). Yes prices: S&P 500 Equal Weight Index: 0.72; S&P 500 Index: 0.21.\n- Kalshi: Gold price on Nov 30, 2026 at 5:00 PM EST? (Nov 30, 2026 at 5:00 PM EST). Yes prices: Above $3963.99: 0.48; Above $3923.99: 0.57; Above $4003.99: 0.42; Above $4043.99: 0.35; Above $3883.99: 0.66; Above $4083.99: 0.29; Above $3843.99: 0.72; Above $3803.99: 0.78; Above $4123.99: 0.21; Above $3763.99: 0.82. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Kalshi: Gold price at year end? (On December 31, 2026 at 05:00 PM EST). Yes prices: 3,900 or above: 0.56; 4,000 or above: 0.43; 4,200 or above: 0.35; 4,100 or above: 0.31; 3,800 or above: 0.70; 4,300 or above: 0.29; 4,400 or above: 0.32; 3,700 or above: 0.80; 3,600 or above: 0.88; 4,600 or above: 0.12.\n- Kalshi: Diesel prices this month (November 30, 2026). Yes prices: Above $6.10: 0.49; Above $6.00: 0.61; Above $6.20: 0.38; Above $6.30: 0.28; Above $5.90: 0.76; Above $6.40: 0.19; Above $5.80: 0.86; Above $6.50: 0.12; Above $6.60: 0.09; Above $5.60: 0.93.\n- Polymarket: Gold (GC) Up or Down on March 25? (ends 2026-03-25). [Yes, No] prices: Gold (GC) Up or Down on March 25?: [\"0.46\", \"0.54\"]\n- Polymarket: Bitcoin vs. Gold vs. S&P 500 in 2026 (ends 2027-01-01). [Yes, No] prices: Bitcoin: [\"0.12\", \"0.88\"]; Gold: [\"0.055\", \"0.945\"]; S&P 500: [\"0.815\", \"0.185\"]\n- Polymarket: What will Gold (XAUUSD) hit in November 2026? (ends 2026-12-01). [Yes, No] prices: ↑ $4,600: [\"0.0225\", \"0.9775\"]; ↑ $4,500: [\"0.051\", \"0.949\"]; ↑ $4,400: [\"0.1\", \"0.9\"]; ↑ $4,300: [\"0.205\", \"0.795\"]; ↑ $4,200: [\"0.33\", \"0.67\"]; ↑ $4,100: [\"0.55\", \"0.45\"]\n- Polymarket: What will Gold (XAUUSD) hit Week of November 2 2026? (ends 2026-11-06). [Yes, No] prices: ↑ $4,200: [\"0.066\", \"0.934\"]; ↑ $4,150: [\"0.11\", \"0.89\"]; ↑ $4,100: [\"0.22\", \"0.78\"]; ↑ $4,050: [\"0.42\", \"0.58\"]; ↑ $4,000: [\"0.69\", \"0.31\"]; ↑ $3,950: [\"1\", \"0\"]",
+    "## 1. Resolution source\n- The question covers Nov 9 to Nov 20, 2026. P₀ is the close on Fri Nov 6 and P₁ is the close on Fri Nov 20. Both P₀ prices are still unknown.\n- 2026-11-02: On Yahoo, GC=F (Dec 26 gold contract) showed 3,968.30 for Nov 2, still updating intraday. Earlier closes: Oct 30 3,898.90, Oct 29 4,031.40, Oct 27 4,074.60, Oct 21 4,150.00. [Yahoo GC=F](https://finance.yahoo.com/quote/GC%3DF/history/)\n- 2026-11-02: On Yahoo, ES=F (Dec 26 E-mini) showed 7,638.75 for Nov 2, still intraday. Earlier closes: Oct 30 7,614.00, Oct 29 7,754.25, Oct 21 7,800.25, Oct 13 7,855.75. [Yahoo ES=F](https://finance.yahoo.com/quote/ES%3DF/history/)\n- From Oct 20 to Nov 2, which is roughly one two-week window, GC fell about 4.2% and ES fell about 1.5%, a gap of about -2.7pp. This is my own calculation from the Yahoo numbers.\n\n## 2. Current status\n- The period has not started, so nothing is settled.\n\n## 3. Recent news (newest first)\n- 2026-11-02: Spot gold fell more than 3.5% to about $3,880, a one-year low. The cause was forced selling to meet margin calls after a tech selloff. Gold then rebounded toward about $3,965 by midday ET. [Mitrade](https://www.mitrade.com/insights/commodity-analysis/gold/gold-selloff-liquidation-oil-spikes-fed-hike), [Kitco via search](https://www.kitco.com/charts/gold), [AOL/Reuters](https://www.aol.com/articles/asia-shares-bend-under-ai-004046000.html)\n- 2026-11-02: Stock futures rebounded about 0.4 to 0.5%. Crude fell about 6% on renewed diplomatic efforts in the Middle East, and December WTI dropped below $100. [TradingView/dpa-AFX](https://www.tradingview.com/news/dpa_afx:f92868002be19:0-oil-price-plunge-tech-rebound-lift-market-sentiment/), [Marc to Market](http://www.marctomarket.com/2026/11/what-difference-weekend-made.html)\n- Late Oct 2026: The Fed held rates at 3.75 to 4.00%, with two dissents in favor of a hike. Chair Warsh is described as hawkish, and markets reportedly price about an 85% chance of a December hike. The same article says the 10-year yield is about 4.93% and Brent is about $117. I could not verify these figures independently, and the article is AI-assisted and internally inconsistent. [Mitrade](https://www.mitrade.com/insights/commodity-analysis/gold/gold-selloff-liquidation-oil-spikes-fed-hike)\n- Late Oct to Nov 1, 2026: A tech rout on doubts about AI spending hit the market. The Nasdaq fell 2.9% and the S&P 500 fell 1.8% in one session, and the semiconductor index is down 21% over four weeks. The FXStreet summary dates this \"Friday, November 1\", but Nov 1, 2026 is a Sunday, so the drop was most likely Friday Oct 30, which matches ES falling to 7,614. [FXStreet](https://www.fxstreet.com/analysis/ai-spending-doubts-trigger-tech-rout-monday-futures-point-to-bounce-202611021241)\n- 2026-11-01: CFTC data shows speculators cutting gold long positions. [TalkMarkets](https://talkmarkets.com/article/lets-peek-into-current-hedge-fund-positioning-via-cot-report)\n\n## 4. Base rates\nThe question's spreadsheet lists 14 completed two-week periods for GC minus ES. The labels say 2026, but at least one row conflicts with Yahoo data (see the caveat below). [Sheet](https://docs.google.com/spreadsheets/d/1WFJ_GNmTTwrnPrCroArLgDR-K5kbtMW16VUlR8iRDS0/edit?gid=0)\n\n| Period (as labelled) | GC − ES (pp) |\n|---|---|\n| Oct 9 - Oct 23 | -2.40 |\n| Sep 18 - Oct 2 | -7.50 |\n| Sep 4 - Sep 18 | -0.32 |\n| Aug 21 - Sep 4 | -3.59 |\n| Aug 7 - Aug 21 | +7.67 |\n| Jul 24 - Aug 7 | +2.25 |\n| Jul 10 - Jul 24 | +1.46 |\n| Jun 12 - Jun 26 | -2.37 |\n| May 29 - Jun 12 | -5.46 |\n| May 15 - May 29 | -2.10 |\n| May 1 - May 15 | -4.00 |\n| Apr 17 - May 1 | -6.03 |\n| Apr 2 - Apr 17 | -3.93 |\n| Mar 13 - Mar 27 | -6.93 |\n\n- Across these 14 periods, by my calculation:\n  - The mean is about -2.4pp and the median about -3.0pp.\n  - 11 of 14 were negative.\n  - The standard deviation is about 4.1pp, and values ranged from -7.5 to +7.7.\n  - Gold's individual two-week moves ranged from -10.5% to +6.7%, so gold volatility dominates the spread.\n- Caveat: the \"Oct 9 - Oct 23\" row gives ES at -2.54%. Yahoo has ES at 7,659.75 on Oct 23 and 7,855.75 on Oct 13, a drop of about 2.5% from Oct 13 alone. The sheet's dates may be off, so verify them.\n- Trend: gold has been in a persistent decline from early 2026 highs above $5,500. It fell about 9% on Jan 30, 2026, and is now at one-year lows around $3,900. [MarketPulse](https://www.marketpulse.com/markets/chart-alert-gold-extends-plunge-by-9-approaching-4405-inflection-level-for-potential-minor-bounce/)\n\n## 5. Other forecasts\n- Kalshi, Nov 30 gold (Pyth spot feed): about 48% above $3,964, 66% above $3,884 and 21% above $4,124. This implies a median near today's price.\n- Kalshi, year-end gold: about 43% for $4,000 or above.\n- Polymarket, gold touching a level in November 2026: 55% for $4,100, 33% for $4,200 and 10% for $4,400.\n- Polymarket, gold touching a level the week of Nov 2: 69% for $4,000 and 22% for $4,100.\n- Kalshi, S&P 500 above 8,000 before Dec 1: 20%. Before Jan 1, 2027: 57%.\n- 2026 annual return: Kalshi gives S&P 500 TR 90% to beat gold, and Polymarket gives 81.5%.\n- I found no market or expert forecast specific to the Nov 9 to Nov 20 spread.\n\n## 6. Upcoming events before resolution\n- Nov 3: US midterm elections, plus JOLTS data. [Mitrade](https://www.mitrade.com/insights/commodity-analysis/gold/gold-selloff-liquidation-oil-spikes-fed-hike)\n- Week of Nov 2: October nonfarm payrolls. This will help set P₀ on Nov 6.\n- Nov 10, 8:30 ET: October CPI, which falls inside the period. [Thrive calendar](https://thriveinmarkets.com/calendar/dates/cpi-2026/)\n- Nov 17, after the close: Nvidia Q3 FY27 earnings, a key event given the AI-capex worries. [NVIDIA](https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873)\n- Ongoing:\n  - Strait of Hormuz and Middle East diplomacy, which drives oil and inflation expectations.\n  - Fed speakers and pricing of a December hike.\n  - Further margin-driven liquidation in metals.\n\nSources: [Yahoo GC=F](https://finance.yahoo.com/quote/GC%3DF/history/), [Yahoo ES=F](https://finance.yahoo.com/quote/ES%3DF/history/), [CNBC](https://www.cnbc.com/select/the-price-of-gold-today-nov-2-2026/), [Fortune](https://fortune.com/article/current-price-of-gold-11-02-2026/), [Trading Economics](https://tradingeconomics.com/commodity/gold)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:44 UTC; check each market really matches the question)\n- Kalshi: S&P 2027 year end price range (On Dec 31, 2027 at 4pm EST). Yes prices: 7,600 to 7,799.99: 0.15; 7,800 to 7,999.99: 0.11; 8,600 to 8,799.99: 0.09; 8,000 to 8,199.99: 0.05; 7,400 to 7,599.99: 0.06; 7,000 to 7,199.99: 0.04; 8,400 to 8,599.99: 0.06; 8,200 to 8,399.99: 0.06; 9,000 to 9,199.99: 0.04; 7,200 to 7,399.99: 0.04.\n- Kalshi: When will the S&P 500 Index be above $10,000? (S&P 500 Index - 10000). Yes prices: Before Dec 31, 2026: 0.0000; Before Jun 30, 2027: 0.0000; Before Dec 31, 2027: 0.0000; Before Jun 30, 2028: 0.0000; Before Dec 31, 2028: 0.5000; Before Dec 31, 2029: 0.6500.\n- Kalshi: When will the S&P 500 Index be above $8,000? (S&P 500 Index - 8000). Yes prices: Before Feb 1, 2027: 0.62; Before Jan 1, 2027: 0.57; Before Dec 1, 2026: 0.20; Before Mar 1, 2027: 0.72; Before Nov 1, 2026: 0.0300; Before Oct 1, 2026: 0.0100; Before Sep 1, 2026: 0.0100.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. Gold? (2026). Yes prices: S&P 500 Total Return Index: 0.90; Gold: 0.10.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. BTC? (2026). Yes prices: S&P 500 Total Return Index: 0.89; BTC: 0.09.\n- Kalshi: Annual Return: S&P 500 vs. S&P 500 Equal Weight Index (2026). Yes prices: S&P 500 Equal Weight Index: 0.72; S&P 500 Index: 0.21.\n- Kalshi: Gold price on Nov 30, 2026 at 5:00 PM EST? (Nov 30, 2026 at 5:00 PM EST). Yes prices: Above $3963.99: 0.48; Above $3923.99: 0.57; Above $4003.99: 0.42; Above $4043.99: 0.35; Above $3883.99: 0.66; Above $4083.99: 0.29; Above $3843.99: 0.72; Above $3803.99: 0.78; Above $4123.99: 0.21; Above $3763.99: 0.82. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Kalshi: Gold price at year end? (On December 31, 2026 at 05:00 PM EST). Yes prices: 3,900 or above: 0.56; 4,000 or above: 0.43; 4,200 or above: 0.35; 4,100 or above: 0.31; 3,800 or above: 0.70; 4,300 or above: 0.29; 4,400 or above: 0.32; 3,700 or above: 0.80; 3,600 or above: 0.88; 4,600 or above: 0.12.\n- Kalshi: Diesel prices this month (November 30, 2026). Yes prices: Above $6.10: 0.49; Above $6.00: 0.61; Above $6.20: 0.38; Above $6.30: 0.28; Above $5.90: 0.76; Above $6.40: 0.19; Above $5.80: 0.86; Above $6.50: 0.12; Above $6.60: 0.09; Above $5.60: 0.93.\n- Polymarket: Gold (GC) Up or Down on March 25? (ends 2026-03-25). [Yes, No] prices: Gold (GC) Up or Down on March 25?: [\"0.46\", \"0.54\"]\n- Polymarket: Bitcoin vs. Gold vs. S&P 500 in 2026 (ends 2027-01-01). [Yes, No] prices: Bitcoin: [\"0.12\", \"0.88\"]; Gold: [\"0.055\", \"0.945\"]; S&P 500: [\"0.815\", \"0.185\"]\n- Polymarket: What will Gold (XAUUSD) hit in November 2026? (ends 2026-12-01). [Yes, No] prices: ↑ $4,600: [\"0.0225\", \"0.9775\"]; ↑ $4,500: [\"0.051\", \"0.949\"]; ↑ $4,400: [\"0.1\", \"0.9\"]; ↑ $4,300: [\"0.205\", \"0.795\"]; ↑ $4,200: [\"0.33\", \"0.67\"]; ↑ $4,100: [\"0.55\", \"0.45\"]\n- Polymarket: What will Gold (XAUUSD) hit Week of November 2 2026? (ends 2026-11-06). [Yes, No] prices: ↑ $4,200: [\"0.066\", \"0.934\"]; ↑ $4,150: [\"0.11\", \"0.89\"]; ↑ $4,100: [\"0.22\", \"0.78\"]; ↑ $4,050: [\"0.42\", \"0.58\"]; ↑ $4,000: [\"0.69\", \"0.31\"]; ↑ $3,950: [\"1\", \"0\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -6.3,
+        "p25": -3.0,
+        "p50": 0.1,
+        "p75": 3.2,
+        "p90": 6.5
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026. P₀ is the Nov 6 close, and the outcome will be known at the Nov 20 close, about 18 days from now.\n\n(b) **Latest known values:** These are the Oct 30, 2026 closes from Yahoo.\n- GC=F closed at 3,898.90.\n- ES=F closed at 7,614.00.\n- Intraday on Nov 2, GC was about 3,968 (up about 2%) and ES about 7,639.\n\n(c) **If nothing changed:** If prices from Nov 6 to Nov 20 were flat, the spread would resolve at about 0 pp.\n\n(d) **If the current trend continued:** Over Oct 20 to Oct 30, gold underperformed by about 4 pp, as it was liquidated faster than stocks. If that continued, the spread would land around -3 to -4 pp. However, gold looks oversold (RSI around 20-25) and rebounded strongly on Nov 2, so I put only partial weight on the trend continuing.\n\n(e) **Historical variation:**\n- In normal regimes, the two-week GC-ES spread has a standard deviation of roughly 3 to 4 pp.\n- Volatility is currently elevated:\n  - Gold is moving 2 to 3.5% a day.\n  - ES is moving 1 to 2% a day.\n  - Semiconductors are down 21% over four weeks.\n- On that basis I use a spread standard deviation of about 5 pp, with fat tails.\n\n(f) **Markets:**\n- Kalshi's Nov 30 gold median is about $3,960, roughly flat.\n- The S&P markets imply modest upside drift toward 8,000 by year end.\n- Together these suggest the expected spread is close to 0, perhaps slightly negative from equity drift.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** A hot CPI cements a December hike, the dollar surges, and margin-call liquidation pushes gold down another 8 to 10%. Meanwhile, a strong Nvidia report lifts ES 3 to 4%. The spread would land around -12 pp or lower.\n- **High outcome:** A disappointing Nvidia report and an AI-capex panic drive ES down 7 to 8%. At the same time, an escalation in Hormuz or a dovish surprise reverses the gold short squeeze and lifts gold 5 to 6%. The spread would land around +12 pp or higher.\n\nPercentile 1: -14\nPercentile 5: -8.5\nPercentile 10: -6.3\nPercentile 20: -3.8\nPercentile 30: -2.2\nPercentile 40: -0.9\nPercentile 50: 0.1\nPercentile 60: 1.1\nPercentile 70: 2.4\nPercentile 80: 4\nPercentile 90: 6.5\nPercentile 95: 8.7\nPercentile 99: 13.5"
+    },
+    {
+      "value": {
+        "p10": -6.8,
+        "p25": -3.35,
+        "p50": -0.2,
+        "p75": 3.05,
+        "p90": 6.4
+      },
+      "reasoning": "(a) **Time left:** The period runs from the Nov 6 close (P₀) to the Nov 20 close (P₁). The outcome will be known in about 18 days, around Nov 20, 2026.\n\n(b) **Latest known values (Yahoo):**\n- Oct 30 closes: GC=F 3,898.90 and ES=F 7,614.00.\n- Nov 2 intraday: GC about 3,968 and ES about 7,639.\n- Oct 20 to Oct 30, GC returned -5.88% and ES returned -1.82%, a spread of about -4.06 pp.\n\n(c) **If nothing changed:** Both assets would be flat over the window, so the spread would be 0 pp.\n\n(d) **If the current trend continued:** Gold has been falling faster than stocks during margin-call liquidation. Extending that would give a spread of roughly -3 to -4 pp. Two things argue against simply extending it:\n- Gold is oversold and rebounded 2% on Nov 2.\n- Two-week momentum in this spread is weak.\n\n(e) **Historical variation:**\n- In normal regimes, the two-week GC-ES spread has a standard deviation of roughly 3.5-4 pp.\n- The current regime is elevated, with gold moving 2-3% a day and ES moving 1-2% a day. That points to about 5-6 pp, with fat tails.\n\n(f) **Markets and experts:**\n- Kalshi's gold contract for Nov 30 has a median near $3,960, which is roughly flat.\n- The S&P contracts imply modest upside: 20% odds of topping 8,000 before Dec 1 and 57% before Jan 1.\n- No market prices the spread directly. Together these imply a small expected drift near 0, perhaps slightly negative if equities keep recovering.\n\n(g) **Scenarios:**\n- **Low:** The tech selloff gives way to a relief rally after a strong Nvidia report on Nov 17, with ES up about 5%. Meanwhile a hot CPI print cements a December hike and liquidation continues, with gold down about 6%. The spread would be around -11 pp.\n- **High:** A Hormuz escalation or a renewed AI-capex rout sends ES down about 7%. Gold recovers as a safe haven and on inflation fears, up about 5%. The spread would be around +12 pp.\n\nI center slightly below 0, reflecting mild equity drift and the recent weakness in gold, but mostly mean-reverting. I set wide, fat tails.\n\nPercentile 1: -13.5\nPercentile 5: -9\nPercentile 10: -6.8\nPercentile 20: -4.2\nPercentile 30: -2.5\nPercentile 40: -1.1\nPercentile 50: -0.2\nPercentile 60: 0.8\nPercentile 70: 2.2\nPercentile 80: 3.9\nPercentile 90: 6.4\nPercentile 95: 8.6\nPercentile 99: 13"
+    },
+    {
+      "value": {
+        "p10": -6.6,
+        "p25": -3.2,
+        "p50": 0.1,
+        "p75": 3.45,
+        "p90": 6.9
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026. P₀ is the Nov 6 close, so the outcome is known about 18 days from now, on Nov 20 at roughly 21:00 UTC.\n\n(b) **Latest known values:** The last full closes on Yahoo are from Oct 30, 2026: GC=F 3,898.90 and ES=F 7,614.00. Intraday on Nov 2, GC was about 3,968 and ES about 7,639. Neither P₀ nor P₁ exists yet.\n\n(c) **If nothing changed:** Both returns would be about 0, so the spread would be about 0 pp.\n\n(d) **If the current trend continued:** The Oct 20-30 window gave a spread of about -4 pp, with gold falling faster than stocks during liquidation selling. If that continued, the outcome would be around -3 to -4 pp. However, gold is oversold (4-hour RSI around 20-25) and bounced about 2% on Nov 2, so the trend is not reliable.\n\n(e) **Historical variation:**\n- In normal conditions, the two-week GC minus ES spread has a standard deviation of roughly 3.5 to 4.5 pp.\n- The current regime is much more volatile. Gold is moving 2-3% a day and ES 1-2%, which implies a spread standard deviation of about 5 to 6 pp.\n- Fat tails are realistic.\n\n(f) **Experts and markets:**\n- Kalshi and Polymarket gold contracts for late November put the median near $3,960, roughly flat from current levels.\n- S&P contracts imply modest upside drift by year end.\n- No market prices this spread directly. Together, the markets imply a median spread near 0, perhaps slightly negative because of equity drift.\n\n(g) **Scenarios:**\n- **Low outcome (-10 pp or worse):** Hot CPI cements a December Fed hike, margin-call liquidation of gold resumes, and gold falls 8-10% toward $3,600. Meanwhile, Nvidia earnings beat and spark a tech rebound of 3-4%.\n- **High outcome (+10 pp or more):** A Strait of Hormuz escalation drives oil sharply higher, AI-capex fears deepen, and a poor Nvidia print pushes ES down 6-8%. Gold rebounds 5%+ as a safe haven once forced selling is exhausted.\n\n**Calibration:** I centre the distribution near 0 and use a wide standard deviation of about 5-5.5 pp with fat tails, slightly wider on the downside given the recent liquidation pattern.\n\nPercentile 1: -14.5\nPercentile 5: -9.2\nPercentile 10: -6.6\nPercentile 20: -4.0\nPercentile 30: -2.4\nPercentile 40: -1.0\nPercentile 50: 0.1\nPercentile 60: 1.2\nPercentile 70: 2.6\nPercentile 80: 4.3\nPercentile 90: 6.9\nPercentile 95: 9.2\nPercentile 99: 14.0"
+    },
+    {
+      "value": {
+        "p10": -6.4,
+        "p25": -3.15,
+        "p50": -0.4,
+        "p75": 2.5,
+        "p90": 5.6
+      },
+      "reasoning": "(a) Time left: forecasts close Nov 9, 2026. The outcome is known at the Nov 20, 2026 close, about 18 days from today. P₀ (the Nov 6 close) is not yet set.\n\n(b) Latest values (Yahoo, Nov 2, 2026, intraday): GC=F about 3,968, ES=F about 7,639. Over the roughly two weeks from Oct 20 to Nov 2, the spread was about -2.7pp: gold fell about 4.2% and ES fell about 1.5%.\n\n(c) If nothing changed: both returns would be 0, so the spread would be 0pp.\n\n(d) If the current trend continued: gold has been falling persistently since its early-2026 highs, and 11 of the last 14 two-week periods were negative, with a mean of -2.4pp and a median of -3.0pp. Continuing that trend gives roughly -2 to -3pp. However, gold has just been hit by forced liquidation to a one-year low, which raises the odds of a rebound. Equities are also fragile on AI-capex doubts, with Nvidia earnings on Nov 17 falling inside the period.\n\n(e) Historical variation: the two-week spread had a standard deviation of about 4.1pp and ranged from -7.5 to +7.7pp. Gold volatility dominates the spread, and recent moves in gold have been unusually violent, so tails should be wider than that sample suggests.\n\n(f) Markets:\n- Kalshi's Nov 30 gold market has a median roughly at the current price, around 3,964, which implies no strong drift.\n- Polymarket gives a 55% chance that gold touches $4,100 in November, which implies some upside skew.\n- There is no forecast specific to this spread. The momentum view says negative, while mean reversion and the safe-haven role during an equity rout say neutral to positive.\n- I center slightly negative, near -0.5pp.\n\n(g) Scenarios:\n- Low: another wave of margin-driven metals liquidation combines with a hawkish CPI on Nov 10 and rising December hike odds that strengthen the dollar and yields, while Nvidia beats and sparks a tech rally. Gold could fall 8% while ES rises 4%, giving about -12pp.\n- High: Nvidia disappoints and the AI rout deepens, with ES down 6%, while Middle East escalation or a dovish shift sends gold up 6% from oversold levels. That gives about +12pp.\n\nPercentile 1: -13\nPercentile 5: -8.5\nPercentile 10: -6.4\nPercentile 20: -3.9\nPercentile 30: -2.4\nPercentile 40: -1.3\nPercentile 50: -0.4\nPercentile 60: 0.5\nPercentile 70: 1.7\nPercentile 80: 3.3\nPercentile 90: 5.6\nPercentile 95: 7.6\nPercentile 99: 11.5"
+    },
+    {
+      "value": {
+        "p10": -6.4,
+        "p25": -3.25,
+        "p50": -0.6,
+        "p75": 2.2,
+        "p90": 5.3
+      },
+      "reasoning": "(a) **Time left:** The period runs from the close on Fri Nov 6 (P₀) to the close on Fri Nov 20 (P₁), 2026. The outcome is known in about 18 days, around Nov 20 at 21:00 UTC. Neither price is known yet.\n\n(b) **Latest known values:** On 2026-11-02 (intraday on Yahoo), GC=F was about 3,968 and ES=F was about 7,639. The last full closes, on Oct 30, were GC 3,898.90 and ES 7,614.00.\n\n(c) **If nothing changed:** The spread would be 0 pp.\n\n(d) **If the current trend continued:** Gold has fallen persistently from its early-2026 highs, and it fell about 4.2% against about -1.5% for ES over the last two weeks. That gives a spread of roughly -2.5 to -3 pp. The 14 biweekly periods in the question's spreadsheet have a mean of -2.4 pp and a median of -3.0 pp, and 11 of the 14 were negative.\n\n(e) **Historical variation:** The standard deviation of the biweekly spread was about 4.1 pp, ranging from -7.5 to +7.7. Volatility is high right now, with margin-driven metals liquidation, a tech rout and swings in oil and Fed expectations. So I use a standard deviation of about 4.5 pp with fat tails.\n\n(f) **Experts and markets:** Kalshi's Nov 30 gold distribution has a median near the current price (about 48% above 3,964), so it implies no strong drift. I found no market specific to this spread. Markets imply roughly neutral drift for both assets over the window. I shade the center only modestly negative, rather than all the way to the historical mean, because of momentum and the hawkish Fed backdrop.\n\n(g) **Unexpected scenarios:**\n- **Low:** October CPI comes in hot on Nov 10 and the market fully prices a December hike. Real yields jump, a further margin-call cascade knocks gold down 8-10%, and Nvidia's earnings on Nov 17 lift stocks 3%. The spread would be around -12 pp.\n- **High:** Nvidia disappoints and the AI-capex fears deepen, so ES falls 6-7%. Meanwhile a Hormuz escalation, or a dovish turn after soft data, sends gold up 5-6%. The spread would be around +11 pp.\n\nPercentile 1: -13\nPercentile 5: -8.6\nPercentile 10: -6.4\nPercentile 20: -4\nPercentile 30: -2.5\nPercentile 40: -1.4\nPercentile 50: -0.6\nPercentile 60: 0.3\nPercentile 70: 1.4\nPercentile 80: 3\nPercentile 90: 5.3\nPercentile 95: 7.3\nPercentile 99: 11"
+    },
+    {
+      "value": {
+        "p10": -7.0,
+        "p25": -3.65,
+        "p50": -0.7,
+        "p75": 2.35,
+        "p90": 5.8
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026, so the outcome is known on Nov 20, about 18 days from now. P₀ (the Nov 6 close) is not set yet.\n\n(b) **Latest values (Yahoo, Nov 2, 2026, intraday):** GC=F was about 3,968 and ES=F about 7,639. The Oct 30 closes were 3,898.90 for GC and 7,614.00 for ES.\n\n(c) **If nothing changed:** The spread would be about 0 pp. The period has not started, so with no price moves both returns would be zero.\n\n(d) **If the current trend continued:** Over the last two weeks GC minus ES was about -2.7 pp. The sheet's recent biweekly periods average about -2.4 pp, with a median of about -3.0. Carrying that trend forward gives roughly -2.5 to -3 pp.\n\n(e) **Historical variation:**\n- The sheet's 14 periods have a standard deviation of about 4.1 pp and range from -7.5 to +7.7. 11 of the 14 were negative.\n- Gold volatility is high right now. It moved about 3.5% in a single day, driven by margin liquidation.\n- I estimate gold's biweekly standard deviation at about 6% and ES's at about 4%.\n- The two have had some positive correlation recently, since both fell during the margin calls.\n- Overall I estimate the spread's standard deviation at about 5 pp, with fat tails.\n\n(f) **Experts and markets:**\n- Kalshi's Nov 30 gold contracts imply a median near the current price (about $3,964), so no strong directional view.\n- Kalshi gives the S&P 500 about a 20% chance of exceeding 8,000 before Dec 1, which implies modest upside.\n- No market prices this spread directly.\n- Momentum and the year-to-date regime both favor ES, but over two weeks any drift is small. I set the median slightly negative, around -0.7 pp.\n\n(g) **Unexpected scenarios:**\n- **Low:** Another wave of margin-driven liquidation in metals, combined with a hawkish shock (a hot Oct 10 CPI pushing a December hike toward certainty) and a strong Nvidia relief rally. Gold falls 8-10% while ES rises 3%, giving about -12 pp or lower.\n- **High:** The AI-capex rout deepens after Nvidia disappoints on Nov 17, and Middle East diplomacy collapses, sending oil and safe-haven demand up. Gold rebounds 6-8% while ES drops 5%, giving about +11 pp or higher.\n\nPercentile 1: -15\nPercentile 5: -9.5\nPercentile 10: -7\nPercentile 20: -4.5\nPercentile 30: -2.8\nPercentile 40: -1.6\nPercentile 50: -0.7\nPercentile 60: 0.3\nPercentile 70: 1.5\nPercentile 80: 3.2\nPercentile 90: 5.8\nPercentile 95: 8\nPercentile 99: 12.5"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -6.5757,
+    "p25": -3.2474,
+    "p50": -0.2986,
+    "p75": 2.7934,
+    "p90": 6.2369
+  },
+  "usage": [
+    {
+      "question_id": "46208",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.0,
+      "notional_cost_usd": 0.00012790000000000002,
+      "input_tokens": 528,
+      "output_tokens": 45,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.1,
+      "notional_cost_usd": 0.0003368,
+      "input_tokens": 1075,
+      "output_tokens": 244,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 53.1,
+      "notional_cost_usd": 0.1923008,
+      "input_tokens": 38104,
+      "output_tokens": 3557,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.2,
+      "notional_cost_usd": 0.081284,
+      "input_tokens": 6854,
+      "output_tokens": 1323,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.7,
+      "notional_cost_usd": 0.08107600000000001,
+      "input_tokens": 6853,
+      "output_tokens": 1313,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.7,
+      "notional_cost_usd": 0.0008971999999999999,
+      "input_tokens": 3072,
+      "output_tokens": 566,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.1,
+      "notional_cost_usd": 0.0009735,
+      "input_tokens": 3076,
+      "output_tokens": 717,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.5,
+      "notional_cost_usd": 0.030212600000000003,
+      "input_tokens": 6852,
+      "output_tokens": 1322,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.2,
+      "notional_cost_usd": 0.00035686999999999996,
+      "input_tokens": 3073,
+      "output_tokens": 525,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00034072,
+      "input_tokens": 3077,
+      "output_tokens": 493,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.0008229000000000001,
+      "input_tokens": 3123,
+      "output_tokens": 397,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00032848999999999997,
+      "input_tokens": 3123,
+      "output_tokens": 468,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 73.4,
+      "notional_cost_usd": 0.2444905,
+      "input_tokens": 58180,
+      "output_tokens": 4844,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.2,
+      "notional_cost_usd": 0.082652,
+      "input_tokens": 7325,
+      "output_tokens": 1203,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.3,
+      "notional_cost_usd": 0.08346400000000001,
+      "input_tokens": 7324,
+      "output_tokens": 1244,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.087464,
+      "input_tokens": 7324,
+      "output_tokens": 1444,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.0007923,
+      "input_tokens": 3060,
+      "output_tokens": 361,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.000996,
+      "input_tokens": 3046,
+      "output_tokens": 774,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00026126000000000003,
+      "input_tokens": 3062,
+      "output_tokens": 334,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.0008908,
+      "input_tokens": 3125,
+      "output_tokens": 532,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00039862,
+      "input_tokens": 3048,
+      "output_tokens": 609,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46208",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 0.00039108999999999997,
+      "input_tokens": 3121,
+      "output_tokens": 594,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8909
+}
