@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T08:17:05.756908+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T08:12:01.942342+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46623,
+    "post_id": 46390,
+    "url": "https://www.metaculus.com/questions/46390",
+    "type": "DiscreteQuestion",
+    "unit": "deaths",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What cumulative measles death toll (confirmed + suspected) will Bangladesh's DGHS report for 12 November 2026?",
+    "resolution_criteria": "This question resolves to the cumulative combined measles death toll reported by Bangladesh's Directorate General of Health Services (DGHS) in its daily measles bulletin covering the 24 hours ending 08:00 Bangladesh Standard Time (UTC+6) on 12 November 2026. The value is the cumulative total of measles-related deaths since 15 March 2026 stated in that bulletin — laboratory-confirmed measles deaths plus deaths among people with measles-like symptoms (suspected measles deaths) — not the number of new deaths reported for that 24-hour period. The figure is taken from The Business Standard's report of that bulletin, whose headline toll figure is the value to use, listed at https://www.tbsnews.net/bangladesh/health; if The Business Standard does not report that bulletin, the cumulative total stated for 12 November 2026 is taken from other [credible sources](https://www.metaculus.com/faq/#definitions). Example: if the bulletin reports 1,318 cumulative confirmed-plus-suspected measles deaths, the question resolves to 1318.",
+    "fine_print": "If DGHS publishes no bulletin covering the 24 hours ending 08:00 BST on 12 November 2026, the question resolves using the cumulative total in the next DGHS measles bulletin published before 19 November 2026; if no DGHS measles bulletin is published between 12 and 19 November 2026, the question is annulled.",
+    "close_time": "2026-11-02 11:07 UTC",
+    "scheduled_resolution_time": "2026-11-12 12:00 UTC"
+  },
+  "research": [
+    "# Bangladesh measles deaths (DGHS): research notes as of 2026-11-02\n\n**Bottom line:** The latest toll is 1,254, from the 1 November bulletin. New deaths have slowed sharply in the last three bulletins, to about 1.7 a day, after a run of about 5 a day the week before. That is well below the 4-6 a day the question background assumes.\n\n## 1. Resolution source\n- 2026-11-02: The TBS health page lists the newest headline as \"Measles death toll rises to 1,254, with 2 more children dying in 24 hours\". The ones before it are 1,252, 1,251 and 1,249. [TBS health](https://www.tbsnews.net/bangladesh/health)\n- 2026-11-01: The TBS report of the DGHS bulletin for the 24 hours to 08:00 on 1 November gives:\n  - deaths: 1,254 in total, of which 1,149 suspected and 105 lab-confirmed, with 2 new deaths;\n  - cases: 1,353 new suspected cases, 230,013 suspected in total, and 64 new confirmed cases, 23,935 confirmed in total;\n  - 204,783 people hospitalised since 15 March. [TBS](https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1254-2-more-children-die-24hrs-1589366)\n- I could not find the 2 November bulletin. It usually comes out around 15:30 BST, which is about 09:30 UTC.\n\n## 2. Current status\n- Nothing has settled the question yet. The resolving bulletin, for 12 November, is 11 bulletins after the latest one.\n- The 2 new deaths on 1 November were both suspected; the confirmed count stayed at 105. One was in Sylhet division and one in Chittagong. [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423455/measles-outbreak-death-toll-reaches-1-254-as-two), [UNB](https://unb.com.bd/category/Bangladesh/2-more-children-die-with-measles-like-symptoms/199278)\n- Background says cumulative cases passed 250,000. That probably means suspected plus confirmed (230,013 + 23,935 is about 254,000).\n\n## 3. Recent news (newest first)\n- 2026-11-01: Toll reaches 1,254 (+2). [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423455/measles-outbreak-death-toll-reaches-1-254-as-two)\n- 2026-10-31 to 11-01: Reuters-based reports on dengue mention measles deaths \"exceeding 1,200\". Dengue had its worst month of 2026 in October, with 173 deaths and 418 for the year, adding to pressure on hospitals. [UrduPoint](https://www.urdupoint.com/en/middle-east/dengue-fever-claims-418-lives-in-bangladesh-a-2281119.html)\n- 2026-10-31: Toll 1,252 (+1), per the TBS headline list. [TBS health](https://www.tbsnews.net/bangladesh/health)\n- 2026-10-30: Toll 1,251 (+2). [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423299/measles-outbreak-death-toll-reaches-1-251-as-two)\n- 2026-10-29: Toll 1,249 (+7). [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423195/measles-outbreak-death-toll-reaches-1-249-as)\n- 2026-10-28: Toll 1,242 (+2). [UNB](https://unb.com.bd/category/Bangladesh/2-more-children-die-with-measles-like-symptoms-death-toll-stands-at-1242/198963)\n- 2026-10-27: Toll 1,240. [TBS](https://www.tbsnews.net/bangladesh/measles-death-toll-reaches-1240-6-more-children-die-1584401) gives +6 and [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423026/measles-seven-more-die-in-bangladesh) gives +7. The two outlets sometimes give slightly different daily counts.\n- 2026-11 (CDC EID journal, November issue): a review article, \"Lessons Learned from Measles Resurgence, Bangladesh, 2026\". [CDC EID](https://wwwnc.cdc.gov/eid/article/32/11/26-1019_article)\n\n## 4. Base rates and trend\nThese are my own calculations from the reported tolls:\n\n| Period | Change | Average per day |\n|---|---|---|\n| 5 Oct (1,122) to 11 Oct (1,162) | +40 | about 6.7 |\n| 11 Oct (1,162) to 1 Nov (1,254) | +92 | about 4.4 |\n| 23 Oct (1,214) to 30 Oct (1,251) | +37 | about 5.3 |\n| 29 Oct (1,249) to 1 Nov (1,254) | +5 | about 1.7 |\n\n- Daily increments over the last two weeks ranged from 1 to 7. Low-count days often come in clusters, and big days (+7) can follow them, so three days is a short window to judge a slowdown.\n- The 1 November bulletin is 11 days before the 12 November bulletin. Carrying recent rates forward gives:\n\n| Assumed pace | Projected 12 Nov toll |\n|---|---|\n| 1.7 a day | about 1,273 |\n| 3 a day | about 1,287 |\n| 4.4 a day | about 1,302 |\n| 5.3 a day | about 1,312 |\n\n- Deaths are slowing even though new suspected cases are not: about 1,350 a day are still being reported (1,353 on 1 November).\n- DGHS has revised its counts before. The Daily Star once reported a revised total of 409, an earlier downward revision. [Daily Star](https://www.thedailystar.net/news/bangladesh/news/measles-death-toll-now-409-after-revision-4172706)\n\n## 5. Other forecasts\n- I found no market or expert forecast on Bangladesh's measles deaths.\n- The Kalshi and Polymarket measles markets supplied with the question are about US case counts. They do not bear on this question.\n\n## 6. Upcoming events before resolution\n- Ten more daily bulletins, 2 to 11 November, before the resolving one on 12 November. Each usually appears around 15:30 BST.\n- A possible new WHO SEARO epidemiological bulletin, which could signal a trend.\n- Any DGHS reclassification or revision of death counts.\n- The impact of the MR vaccination campaign (21.0 million doses given as of 18 October), and the dengue load on hospitals.\n- If the 12 November bulletin is missing, the question uses the next bulletin published before 19 November.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 08:14 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 7000: 0.55; Above 8000: 0.20; Above 6000: 0.82; Above 10000: 0.07; Above 9000: 0.10; Above 5000: 0.99; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900.\n- Kalshi: Will the US lose measles elimination status this year? (Before Jan 1, 2027). Yes prices: Yes: 0.72.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.50; At least 4500: 0.63; At least 4000: 0.71; At least 3500: 0.80; At least 3000: 0.88; At least 2500: 0.92; At least 2000: 0.96; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: Toll Brothers delivered homes next quarter (deliveries in Q1 2027 ). Yes prices: Above 1875: 0.52; Above 1925: 0.36; Above 1825: 0.68; Above 1975: 0.22; Above 1775: 0.81; Above 2025: 0.12; Above 1725: 0.90; Above 2075: 0.06; Above 1675: 0.95; Above 2175: 0.0000.\n- Polymarket: Measles cases in U.S. in 2026? (ends 2027-01-01). [Yes, No] prices: ↑3.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑500: [\"1\", \"0\"]; ↑1k: [\"1\", \"0\"]; ↑2k: [\"1\", \"0\"]\n- Polymarket: Measles cases in U.S. by November 30? (ends 2026-12-01). [Yes, No] prices: 4600+: [\"1\", \"0\"]; 4800+: [\"1\", \"0\"]; 5000+: [\"0.9965\", \"0.0035\"]; 6000+: [\"0.45\", \"0.55\"]; 5600+: [\"0.79\", \"0.21\"]; 5800+: [\"0.56\", \"0.44\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Toss Match Double (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"1\", \"0\"]; BDW: [\"0\", \"1\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Team Top Batter (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"0\", \"1\"]; BDW: [\"1\", \"0\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Most Sixes (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"0\", \"1\"]; BDW: [\"1\", \"0\"]",
+    "## Bangladesh measles death toll: research for the 12 November 2026 bulletin\n\nThe latest bulletin I found puts the cumulative toll at **1,254 as of 08:00 on 1 November**. The pace has slowed sharply: only +5 deaths over the last three bulletins, against roughly 5 a day in October. The 12 November bulletin is 11 bulletin-days away.\n\n### 1. Resolution source\n- 2026-11-02: The TBS health page shows these measles headlines, newest first: 1,254 (+2), 1,252 (+1), 1,251 (+2), 1,249 (+7). [TBS health](https://www.tbsnews.net/bangladesh/health)\n- 2026-11-01: The bulletin for the 24 hours to 08:00 on 1 Nov reported 2 new deaths (Sylhet and Chattogram divisions). The cumulative toll is **1,254**: 1,149 suspected and 105 lab-confirmed. [TBS](https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1254-2-more-children-die-24hrs-1589366); confirmed by [Observer](https://observerbd.com/news/603195) and [Financial Express](https://thefinancialexpress.com.bd/national/two-more-children-die-with-measles-like-symptoms)\n- I could not find a 2 Nov bulletin yet. These usually come out in the Bangladesh afternoon, which is around the forecast close.\n\n### 2. Current status\n- Nothing settles the question yet. The toll is 1,254, which is 34.5 deaths above the bottom of the question's range (1,219.5).\n- The lab-confirmed count has stayed at 105 since at least 29 Oct. All recent deaths are in the suspected category.\n\n### 3. Recent news (newest first)\n- 2026-11-01: The bulletin reported 1,353 new suspected cases and 64 new confirmed cases. Cumulative totals are 230,013 suspected and 23,935 confirmed. There have been 204,783 hospitalisations since 15 March, with 196,183 recovered. [TBS](https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1254-2-more-children-die-24hrs-1589366)\n  - Note: 230,013 is the suspected-case figure. The background's \"passed 250,000\" may combine suspected and confirmed cases.\n  - Case inflow (about 1,350 a day) shows no decline, even though deaths have slowed.\n- 2026-10-31: Toll 1,252 (+1). [TBS](https://www.tbsnews.net/bangladesh/health/measles-death-toll-1252-1-more-child-dies-1588426); [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423354/measles-outbreak-death-toll-reaches-1-252-as-one)\n- 2026-10-30: Toll 1,251 (+2). [TBS](https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1251-2-more-children-die-24hrs-1587806)\n- 2026-10-29: Toll 1,249 (+7); 1,144 suspected, 105 confirmed. [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423195/measles-outbreak-death-toll-reaches-1-249-as)\n- 2026-10-28: Toll 1,242 (+2). [TBS](https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1242-two-more-children-die-1585596)\n- 2026-10-27: Toll 1,240 (+6 per TBS, +7 per the Dhaka Tribune headline). [TBS](https://www.tbsnews.net/bangladesh/measles-death-toll-reaches-1240-6-more-children-die-1584401); [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423026/measles-seven-more-die-in-bangladesh)\n- 2026-10-31 to 11-01: Reuters-based reports on dengue (418 deaths this year, a record 173 in October) only say measles deaths are \"over 1,200\". [CNA](https://www.cna.com.tw/news/aopl/202610310205.aspx)\n\n### 4. Base rates and trend\n- 2026-10-05: Toll 1,122. [Capital FM](https://capitalfm.africa/bangladesh-measles-outbreak-death-toll-rises-to-1122/)\n- 5 Oct to 1 Nov: +132 deaths in 27 days, about 4.9 a day.\n- 11 Oct to 30 Oct: 1,162 to 1,251, about 4.7 a day.\n- 27 Oct to 1 Nov: +14 deaths in 5 days, about 2.8 a day.\n- 30 Oct to 1 Nov: +5 in 3 days, about 1.7 a day.\n- Day-to-day counts are lumpy. Recent daily increments were 2, 7, 2, 1, 2, so a single +7 day can follow quiet days.\n- Earlier peaks were much higher: a record 17 deaths in one day in May, when the toll was 311. [Daily Star](https://www.thedailystar.net/health/disease/news/17-die-measles-measles-symptoms-highest-single-day-toll-4167426)\n- Simple projections from 1,254 over 11 more bulletins:\n\n| Pace | Projected toll on 12 Nov |\n|---|---|\n| 1.7 a day | about 1,273 |\n| 2.8 a day | about 1,285 |\n| 4.8 a day (October rate) | about 1,307 |\n\n- The background's 1,310-1,330 range assumes 4-6 a day. The latest data run below that.\n- DGHS sometimes makes small downward revisions or moves deaths between the confirmed and suspected categories. I saw none in the last week.\n\n### 5. Other forecasts\n- None of the Kalshi or Polymarket markets provided cover Bangladesh; they all concern US measles counts or unrelated topics.\n- I found no Metaculus community forecast or expert projection of Bangladesh's death toll.\n\n### 6. Upcoming events before resolution\n- Daily DGHS bulletins on 2-12 Nov (11 more).\n- Possible WHO SEARO epidemiological bulletin updates.\n- Whether the MR vaccination campaign that began on 26 Sep is wrapping up, and how much it covered.\n- Hospital strain from the concurrent dengue surge, which experts expect to last into December. [CNA](https://www.cna.com.tw/news/aopl/202610310205.aspx)\n- Possible backlog reporting or reclassification, which could produce one-day jumps.\n\nSources: [TBS health](https://www.tbsnews.net/bangladesh/health), [TBS 1,254](https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1254-2-more-children-die-24hrs-1589366), [TBS 1,252](https://www.tbsnews.net/bangladesh/health/measles-death-toll-1252-1-more-child-dies-1588426), [TBS 1,251](https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1251-2-more-children-die-24hrs-1587806), [TBS 1,242](https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1242-two-more-children-die-1585596), [TBS 1,240](https://www.tbsnews.net/bangladesh/measles-death-toll-reaches-1240-6-more-children-die-1584401), [Dhaka Tribune 1,252](https://www.dhakatribune.com/bangladesh/health/423354/measles-outbreak-death-toll-reaches-1-252-as-one), [Dhaka Tribune 1,249](https://www.dhakatribune.com/bangladesh/health/423195/measles-outbreak-death-toll-reaches-1-249-as), [Dhaka Tribune 1,240](https://www.dhakatribune.com/bangladesh/health/423026/measles-seven-more-die-in-bangladesh), [Observer](https://observerbd.com/news/603195), [Financial Express](https://thefinancialexpress.com.bd/national/two-more-children-die-with-measles-like-symptoms), [Capital FM](https://capitalfm.africa/bangladesh-measles-outbreak-death-toll-rises-to-1122/), [Daily Star](https://www.thedailystar.net/health/disease/news/17-die-measles-measles-symptoms-highest-single-day-toll-4167426), [CNA](https://www.cna.com.tw/news/aopl/202610310205.aspx)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 08:14 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 7000: 0.55; Above 8000: 0.20; Above 6000: 0.82; Above 10000: 0.07; Above 9000: 0.10; Above 5000: 0.99; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900.\n- Kalshi: Will the US lose measles elimination status this year? (Before Jan 1, 2027). Yes prices: Yes: 0.72.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.50; At least 4500: 0.63; At least 4000: 0.71; At least 3500: 0.80; At least 3000: 0.88; At least 2500: 0.92; At least 2000: 0.96; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: Toll Brothers delivered homes next quarter (deliveries in Q1 2027 ). Yes prices: Above 1875: 0.52; Above 1925: 0.36; Above 1825: 0.68; Above 1975: 0.22; Above 1775: 0.81; Above 2025: 0.12; Above 1725: 0.90; Above 2075: 0.06; Above 1675: 0.95; Above 2175: 0.0000.\n- Polymarket: Measles cases in U.S. in 2026? (ends 2027-01-01). [Yes, No] prices: ↑3.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑500: [\"1\", \"0\"]; ↑1k: [\"1\", \"0\"]; ↑2k: [\"1\", \"0\"]\n- Polymarket: Measles cases in U.S. by November 30? (ends 2026-12-01). [Yes, No] prices: 4600+: [\"1\", \"0\"]; 4800+: [\"1\", \"0\"]; 5000+: [\"0.9965\", \"0.0035\"]; 6000+: [\"0.45\", \"0.55\"]; 5600+: [\"0.79\", \"0.21\"]; 5800+: [\"0.56\", \"0.44\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Toss Match Double (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"1\", \"0\"]; BDW: [\"0\", \"1\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Team Top Batter (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"0\", \"1\"]; BDW: [\"1\", \"0\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Most Sixes (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"0\", \"1\"]; BDW: [\"1\", \"0\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 1268.0,
+        "p25": 1277.5,
+        "p50": 1289.0,
+        "p75": 1300.0,
+        "p90": 1311.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The resolving bulletin covers the 24 hours to 08:00 BST on 12 November and should be published that afternoon.\n\n(b) **Latest known value:** 1,254 cumulative deaths (105 confirmed, 1,149 suspected), from the 1 November 2026 DGHS bulletin as reported by TBS.\n\n(c) **If nothing changed:** 1,254.\n\n(d) **If the current trend continued:** There are 11 bulletins left.\n- At the last 3 days' pace of about 1.7 a day, the toll would be about 1,273.\n- At the 3-week average of about 4.4 a day, it would be about 1,302.\n- The pace has been falling over the month: 6.7 a day in early October, about 4.3 to 5.3 a day in mid to late October, then 1.7 a day recently.\n- New cases are still steady at about 1,350 a day, so I blend these to roughly 3 a day, giving about 1,288.\n\n(e) **Historical variation:** Daily additions have ranged from 1 to 7. Recent 11-day windows have added between about 20 and 60 deaths. Uncertainty about the underlying rate (roughly 1.5 to 5.5 a day) dominates the day-to-day noise.\n\n(f) **Experts and markets:** There are no forecasts or markets on this quantity. The question creator's range of 1,220 to 1,420 is very wide.\n\n(g) **Unexpected scenarios:**\n- Low: DGHS revises historical counts downward, as it has done before (the earlier revised total of 409), or deaths nearly stop at about 1 a day. Either could give 1,245 to 1,265.\n- High: a backlog of reclassified or late-reported deaths is added, or the high October case load produces a lagged rise in deaths to 7 to 8 a day. Either could push the toll to 1,320 to 1,340 or more.\n\nPercentile 1: 1250\nPercentile 5: 1263\nPercentile 10: 1268\nPercentile 20: 1275\nPercentile 30: 1280\nPercentile 40: 1285\nPercentile 50: 1289\nPercentile 60: 1293\nPercentile 70: 1297\nPercentile 80: 1303\nPercentile 90: 1311\nPercentile 95: 1318\nPercentile 99: 1335"
+    },
+    {
+      "value": {
+        "p10": 1270.0,
+        "p25": 1279.5,
+        "p50": 1289.0,
+        "p75": 1298.5,
+        "p90": 1309.0
+      },
+      "reasoning": "(a) **Time left:** The resolving bulletin covers the 24 hours to 08:00 BST on 12 November 2026. It will be published that afternoon, about 10 days from now and 11 bulletins after the latest one.\n\n(b) **Latest value:** 1,254 cumulative deaths (1,149 suspected, 105 confirmed), from the DGHS bulletin for 1 November 2026 as reported by TBS.\n\n(c) **If nothing changed:** 1,254.\n\n(d) **If the current trend continued:**\n- At the last three days' pace (about 1.7 a day), the toll would be about 1,273.\n- At the three-week average (about 4.4 a day), it would be about 1,302.\n- The pace has been falling, from about 6.7 a day in early October to about 5 in late October to under 2 in the latest days.\n- A blended rate of about 3 a day gives about 1,287 to 1,290.\n\n(e) **Historical variation:** Daily increments range from 1 to 7. Over 11 days, recent periods have added between about 20 and 70 deaths. Clusters of low-count days are often followed by catch-up days.\n\n(f) **Experts and markets:** There are no markets or expert forecasts on this quantity. New suspected cases remain high, at about 1,350 a day, which argues against deaths collapsing. The vaccination campaign and the slowing death counts argue for a moderate pace.\n\n(g) **Unexpected scenarios:**\n- **Low:** DGHS revises the historical count downward, as with the earlier revision to 409, or reclassifies some suspected deaths. That could leave the toll near or below the current 1,254.\n- **High:** Delayed death reports from hospitals strained by the dengue peak are dumped into the count in a backlog, or deaths catch up with the high October case load. Either could produce 6 to 8 deaths a day, giving 1,320 to 1,340.\n\nPercentile 1: 1252\nPercentile 5: 1265\nPercentile 10: 1270\nPercentile 20: 1277\nPercentile 30: 1282\nPercentile 40: 1286\nPercentile 50: 1289\nPercentile 60: 1292\nPercentile 70: 1296\nPercentile 80: 1301\nPercentile 90: 1309\nPercentile 95: 1316\nPercentile 99: 1335"
+    },
+    {
+      "value": {
+        "p10": 1269.0,
+        "p25": 1280.0,
+        "p50": 1292.0,
+        "p75": 1303.0,
+        "p90": 1314.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The resolving bulletin covers the 24 hours to 08:00 BST on 12 November 2026 and is published around 15:30 BST that day. That is 11 daily increments after the latest known bulletin.\n\n(b) **Latest known value:** 1,254 cumulative deaths (1,149 suspected and 105 lab-confirmed), from the DGHS bulletin of 1 November 2026 as reported by TBS.\n\n(c) **If nothing changed:** 1,254.\n\n(d) **If the current trend continued:**\n- At the 3-week average of about 4.4 deaths a day, the toll would be about 1,302.\n- At the last week's pace of about 5.3 a day, it would be about 1,312.\n- At the last 3 days' pace of about 1.7 a day, it would be about 1,273.\n- Cases are still running at about 1,350 a day, so deaths are unlikely to stop abruptly. The recent dip may be noise, since daily increments cluster. A moderate slowdown is plausible as the campaign takes effect. I blend these to a central pace of about 3.3 a day, giving a median near 1,290.\n\n(e) **Historical variation:** Over 11-day windows since early October, the toll has risen by about 20 to 70. Daily increments ranged from 1 to 7 over the last two weeks. There have also been occasional small downward revisions, and outlets sometimes differ by about 1 on the same day.\n\n(f) **Experts and markets:** There is no market or expert forecast on this quantity. The question creator's range is 1,220 to 1,420, which is wide and centred somewhat above my estimate.\n\n(g) **Unexpected scenarios:**\n- **Low:** Deaths fall to near zero a day because the campaign takes hold, or DGHS revises the totals downward through reclassification or deduplication. That could leave the toll around 1,250 to 1,260.\n- **High:** A batch of delayed death reports is added, or deaths spike because dengue is crowding hospitals, at 7 or more a day. That would put the toll at 1,330 to 1,340 or above.\n\nPercentile 1: 1250\nPercentile 5: 1263\nPercentile 10: 1269\nPercentile 20: 1277\nPercentile 30: 1283\nPercentile 40: 1288\nPercentile 50: 1292\nPercentile 60: 1296\nPercentile 70: 1300\nPercentile 80: 1306\nPercentile 90: 1314\nPercentile 95: 1320\nPercentile 99: 1336"
+    },
+    {
+      "value": {
+        "p10": 1269.0,
+        "p25": 1277.5,
+        "p50": 1287.0,
+        "p75": 1298.0,
+        "p90": 1310.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The resolving bulletin covers the 24 hours to 08:00 BST on 12 November and should appear that afternoon. That is 11 bulletins after the latest one known.\n\n(b) **Latest known value:** 1,254 cumulative deaths (1,149 suspected, 105 lab-confirmed), from the bulletin to 08:00 on 1 November 2026, reported by TBS.\n\n(c) **If nothing changed:** 1,254. That is unrealistic, since deaths are still being added every day.\n\n(d) **If the current trend continued:**\n- The October average of about 4.7 a day would give about 1,306.\n- The last 8 days (1,222 to 1,254, about 4 a day) would give about 1,298.\n- The last 5 days (about 2.8 a day) would give about 1,285.\n- The last 3 days (about 1.7 a day) would give about 1,273.\n- Case inflow is still around 1,350 a day, so deaths are unlikely to stop. Weighting the recent slowdown and the persistent case load together gives a central estimate of about 3 a day, or roughly 1,287.\n\n(e) **Historical variation:** Over 11 days in October the toll moved by roughly 45 to 55. Daily increments are lumpy, from 1 to 7, so 11-day totals vary by about ±15 around the mean rate. Earlier in the outbreak there were spikes of 17 deaths in a day.\n\n(f) **Experts and markets:** There are no markets or expert projections on Bangladesh's death toll. The question's background suggests 1,310 to 1,330, assuming 4 to 6 deaths a day, but the latest data run below that.\n\n(g) **Unexpected scenarios:**\n- *Low:* Deaths fall to about 1 a day as the MR campaign takes effect, plus a small downward revision. This would give about 1,260 to 1,265.\n- *High:* A backlog of unreported deaths gets added, or deaths rise with a lag after the high October case load while dengue strains hospitals. Sustained 6 to 8 a day plus a catch-up jump could give about 1,335 to 1,345.\n\nPercentile 1: 1258\nPercentile 5: 1265\nPercentile 10: 1269\nPercentile 20: 1275\nPercentile 30: 1280\nPercentile 40: 1284\nPercentile 50: 1287\nPercentile 60: 1291\nPercentile 70: 1295\nPercentile 80: 1301\nPercentile 90: 1310\nPercentile 95: 1318\nPercentile 99: 1338"
+    },
+    {
+      "value": {
+        "p10": 1270.0,
+        "p25": 1278.5,
+        "p50": 1289.0,
+        "p75": 1300.0,
+        "p90": 1311.0
+      },
+      "reasoning": "(a) About 10 days remain. The 12 November bulletin covers the 24 hours to 08:00 BST and should be published that afternoon, roughly 11 bulletin-days after the latest one.\n\n(b) The latest known value is 1,254 cumulative deaths (105 lab-confirmed, 1,149 suspected), from the DGHS bulletin for the 24 hours to 08:00 on 1 November 2026, as reported by TBS.\n\n(c) If nothing changed, the toll would stay at 1,254. This is not realistic, since about 1,350 new cases are still being reported daily.\n\n(d) If the current trend continued:\n- At the 27 Oct to 1 Nov pace of about 2.8 a day, the toll would be about 1,285.\n- At the October average of about 4.8 a day, it would be about 1,307.\n- At the last-three-days pace of 1.7 a day, it would be about 1,273.\n\n(e) Historical variation:\n- In October the toll rose about 4.5 to 5.4 a day, which is about 50 to 60 over 11 days.\n- Daily increments are lumpy (1 to 7), and a backlog day can add 7 or more.\n- Recent days are noticeably slower, perhaps reflecting the vaccination campaign's effect. Case counts are not falling, though, so deaths could rebound.\n\n(f) No markets or expert projections cover this quantity. The question creator's range of 1,220 to 1,420 is broad. The background's 1,310 to 1,330 assumed 4 to 6 a day, which recent data undercut.\n\n(g) Unexpected scenarios:\n- Low: deaths nearly stop (under 1 a day), or DGHS revises some suspected deaths downward after review, giving about 1,255 to 1,265.\n- High: deaths rebound to October's pace or higher, plus a backlog dump of delayed death reports from districts, giving about 1,320 to 1,340.\n\nI centre the forecast on roughly 3 to 3.3 deaths a day, giving a median of about 1,289, with a right skew for a rebound or backlog.\n\nPercentile 1: 1258\nPercentile 5: 1265\nPercentile 10: 1270\nPercentile 20: 1276\nPercentile 30: 1281\nPercentile 40: 1285\nPercentile 50: 1289\nPercentile 60: 1293\nPercentile 70: 1297\nPercentile 80: 1303\nPercentile 90: 1311\nPercentile 95: 1318\nPercentile 99: 1335"
+    },
+    {
+      "value": {
+        "p10": 1272.0,
+        "p25": 1281.5,
+        "p50": 1292.0,
+        "p75": 1303.0,
+        "p90": 1314.0
+      },
+      "reasoning": "(a) **Time left:** The outcome is known around 12 November 2026, about 10 days from now. The resolving bulletin is the 11th one after the latest known value.\n\n(b) **Latest known value:** 1,254 cumulative deaths (1,149 suspected and 105 lab-confirmed), in the DGHS bulletin for the 24 hours to 08:00 on 1 November 2026, as reported by The Business Standard (TBS).\n\n(c) **If nothing changed:** The total would stay at 1,254. This is unrealistic, because new deaths are still being reported every day.\n\n(d) **If the current trend continued:**\n- The October pace of about 4.8 deaths a day gives about 1,307.\n- The last 5 days, at about 2.8 a day, give about 1,285.\n- The last 3 days, at about 1.7 a day, give about 1,273.\n- New cases are still arriving at about 1,350 a day with no decline. That argues against a collapse in deaths, though the low recent counts may reflect better case management. A blended pace of about 3.5 a day gives roughly 1,292.\n\n(e) **Historical variation:**\n- Over comparable 11-day windows in October, the toll rose by 45 to 60.\n- Single days range from 1 to 7 deaths.\n- The record single day was 17, in May.\n- An 11-day increment could plausibly fall anywhere from about 15 to 70.\n\n(f) **Experts and markets:** No market or expert forecast covers this quantity. The question's background frames 4 to 6 deaths a day, about 1,310 to 1,330, but the latest data run below that.\n\n(g) **Unexpected scenarios:**\n- **Low:** Deaths fall to about 1 a day as the vaccination campaign and better treatment take hold, plus a small downward revision, giving about 1,262.\n- **High:** Backlog reporting or a reclassification batch adds a one-day jump of 15 or more, on top of a return to about 5 a day, giving 1,330 or more.\n\nPercentile 1: 1262\nPercentile 5: 1268\nPercentile 10: 1272\nPercentile 20: 1279\nPercentile 30: 1284\nPercentile 40: 1288\nPercentile 50: 1292\nPercentile 60: 1296\nPercentile 70: 1300\nPercentile 80: 1306\nPercentile 90: 1314\nPercentile 95: 1320\nPercentile 99: 1336"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 1269.2398,
+    "p25": 1278.9515,
+    "p50": 1289.0959,
+    "p75": 1300.2419,
+    "p90": 1311.7384
+  },
+  "usage": [
+    {
+      "question_id": "46623",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.5,
+      "notional_cost_usd": 0.00026060000000000005,
+      "input_tokens": 1149,
+      "output_tokens": 62,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.7,
+      "notional_cost_usd": 0.0001251,
+      "input_tokens": 514,
+      "output_tokens": 45,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 53.8,
+      "notional_cost_usd": 0.2056911,
+      "input_tokens": 40244,
+      "output_tokens": 3570,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.4,
+      "notional_cost_usd": 0.071092,
+      "input_tokens": 6190,
+      "output_tokens": 1079,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.6,
+      "notional_cost_usd": 0.07122800000000001,
+      "input_tokens": 6187,
+      "output_tokens": 1087,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0007977000000000001,
+      "input_tokens": 2787,
+      "output_tokens": 481,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.6,
+      "notional_cost_usd": 0.0008111000000000001,
+      "input_tokens": 2784,
+      "output_tokens": 509,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 22.6,
+      "notional_cost_usd": 0.0255678,
+      "input_tokens": 6189,
+      "output_tokens": 1096,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.3,
+      "notional_cost_usd": 0.00032803,
+      "input_tokens": 2789,
+      "output_tokens": 473,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.00027188000000000006,
+      "input_tokens": 2781,
+      "output_tokens": 362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0007518,
+      "input_tokens": 2855,
+      "output_tokens": 362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.00037521,
+      "input_tokens": 2857,
+      "output_tokens": 566,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 61.7,
+      "notional_cost_usd": 0.175809,
+      "input_tokens": 50530,
+      "output_tokens": 3997,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.1,
+      "notional_cost_usd": 0.07696800000000001,
+      "input_tokens": 6832,
+      "output_tokens": 1116,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.9,
+      "notional_cost_usd": 0.078056,
+      "input_tokens": 6833,
+      "output_tokens": 1170,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.2,
+      "notional_cost_usd": 0.079016,
+      "input_tokens": 6833,
+      "output_tokens": 1218,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0008043,
+      "input_tokens": 2870,
+      "output_tokens": 461,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0007505000000000001,
+      "input_tokens": 2816,
+      "output_tokens": 375,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00027326,
+      "input_tokens": 2869,
+      "output_tokens": 363,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 0.0008699000000000001,
+      "input_tokens": 2843,
+      "output_tokens": 603,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.0003054,
+      "input_tokens": 2814,
+      "output_tokens": 428,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46623",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00035840000000000004,
+      "input_tokens": 2845,
+      "output_tokens": 533,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.7905
+}
