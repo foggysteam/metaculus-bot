@@ -101,12 +101,17 @@ async def run(limit: int, max_total: int, post_ids: list[int] | None) -> None:
     SHADOW_DIR.mkdir(exist_ok=True)
     os.environ["RAW_DATA_LOG"] = str(TOOL_LOG)
     done = len(_read_index(SHADOW_DIR))
-    room = max(max_total - done, 0)
-    rows = candidates(post_ids)[: min(limit, room)]
-    print(f"{done} shadow runs so far (cap {max_total}); running {len(rows)} now")
+    room = min(limit, max(max_total - done, 0))
+    rows = candidates(post_ids)
+    print(f"{done} shadow runs so far (cap {max_total}); {len(rows)} waiting, running up to {room} now")
     client = MetaculusClient()
+    ran = 0
     for row in rows:
-        await shadow_question(row, client)
+        # The newest are often still open, and those must not use up this run's slots.
+        if ran >= room:
+            break
+        if await shadow_question(row, client):
+            ran += 1
     print(f"Claude calls: {len(USAGE_LEDGER.records)}, notional cost ${USAGE_LEDGER.total_cost():.2f}")
 
 
