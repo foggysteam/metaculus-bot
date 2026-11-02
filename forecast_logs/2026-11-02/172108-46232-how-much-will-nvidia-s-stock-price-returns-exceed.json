@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T17:27:18.015377+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T17:21:08.650462+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46232,
+    "post_id": 46013,
+    "url": "https://www.metaculus.com/questions/46013",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "How much will Nvidia's stock price returns exceed Microsoft's in these biweekly periods of Q4 2026? (Nov 9 - Nov 20)",
+    "resolution_criteria": "Each subquestion will resolve as the difference between the percent stock price return of [NVDA](https://finance.yahoo.com/quote/NVDA/history/) and that of [MSFT](https://finance.yahoo.com/quote/MSFT/history/) for the corresponding biweekly period, according to Yahoo Finance data.\n\nSpecifically, each subquestion will resolve as NVDA\\_return - MSFT\\_return.\n\nReturns will be calculated as follows: If P₀ is the Adj Close price of a company stock on the last trading day or half-day *before* the start of the period and P₁ is the Adj Close price of the stock on the last trading day *of* the designated period, the percentage return will be calculated as:\n\n$$\n \\text{return} = 100 \\times \\frac{P1 - P0}{P0}\n$$",
+    "fine_print": "* If Microsoft outperforms Nvidia, the corresponding subquestion will resolve as a negative number.\n* If Yahoo Finance delays or ceases reporting these data or if it reports them in error, Metaculus might use alternative credible sources to resolve this question.\n* Resolutions are based on the prices at the market close on the last trading day of the designated period. Further adjustments to Adj Close prices after that will not cause subquestions to re-resolve.\n\n***\n\nFor example, for the period Jun 9, 2025 - Jun 20, 2025, the subquestion would resolve based on the following calculations:\n\nNVDA\\_P₀ \\= 141.71 (the Adj Close price on Jun 6)\n\nNVDA\\_P₁ \\= 143.85 (the Close price on Jun 20)\n\nNVDA\\_return \\= 100 × (143.85 - 141.71) / 141.71 \\= 1.510\n\nMSFT\\_P₀ \\= 470.38 (the Adj Close price on Jun 6)\n\nMSFT\\_P₁ \\= 477.40 (the Close price on Jun 20)\n\nMSFT\\_return \\= 100 × (477.40 - 470.38) / 470.38 \\= 1.4924\n\nAnd the resolution would be 1.510 - 1.494 \\= **0.016** percentage points (pp).",
+    "close_time": "2026-11-09 04:00 UTC",
+    "scheduled_resolution_time": "2026-11-20 21:00 UTC"
+  },
+  "research": [
+    "I couldn't find anything that settles this question or nearly settles it. The starting prices are the Nov 6 closes, which don't exist yet. The big scheduled event is Nvidia's quarterly earnings after the close on Nov 17, which falls inside the period. Nvidia closed Oct 30 near a three-month low after an AI-spending sell-off in tech stocks, and past periods containing an earnings report have produced large spreads.\n\n## 1. Resolution source\n- 2026-11-02: Yahoo's NVDA history page shows an Oct 30 close and Adj Close of 204.64, and 206.61 intraday on Nov 2 while the market was still open. [Yahoo NVDA](https://finance.yahoo.com/quote/NVDA/history/)\n- 2026-11-02: Yahoo's MSFT page shows 521.91 on Oct 30 and 520.84 intraday on Nov 2. [Yahoo MSFT](https://finance.yahoo.com/quote/MSFT/history/)\n- The starting price (P₀) will be the Nov 6 Adj Close and the ending price (P₁) the Nov 20 close. Microsoft goes ex-dividend inside the period (next bullet). Once that happens, Yahoo lowers MSFT's Nov 6 Adj Close, which adds roughly 0.19pp to MSFT's return and takes about the same amount off the NVDA minus MSFT result.\n- 2025-09-15 (release date): Microsoft's dividend is $0.98 a share, with ex-dividend and record dates of Nov 19, 2026. [Placera/Microsoft PR](https://www.placera.se/pressmeddelanden/microsoft-announces-quarterly-dividend-increase-20260916)\n\n## 2. Current status\n- Nothing is settled yet. Recent moves: NVDA went from 221.97 on Oct 21 to 204.64 on Oct 30, about -7.8%. MSFT went from 532.95 to 521.91 over the same days, about -2.1%. [Yahoo](https://finance.yahoo.com/quote/NVDA/history/)\n\n## 3. Recent news (newest first)\n- 2026-11-02: Futures rose (Nasdaq +0.8%) ahead of Apple's earnings. Apple has passed Nvidia as the world's most valuable company ($5.03T vs $4.93T). [Zonebourse](https://www.zonebourse.com/actualite-bourse/les-actions-se-stabilisent-a-l-approche-des-resultats-d-apple-le-petrole-recule-ce785fd8dd81f327), [ctee](https://www.ctee.com.tw/news/20261101700082-430704)\n- 2026-11-01: A Motley Fool writer predicts Nvidia will rise after earnings. Nvidia has guided to about $108B in revenue, against $57B a year earlier. [Fool](https://www.fool.com/investing/2026/11/01/prediction-nvidia-stock-is-going-to-soar-after-dat/)\n- 2026-10-30: Intel fell about 29% and Amazon raised its AI spending plans. The Nasdaq hit a near three-month low, the chip index fell about 7%, and NVDA fell 4.2%. [Business Standard](https://business-standard.com/world-news/nasdaq-hits-near-three-month-low-as-amazon-intel-rattle-ai-trade-126103001910_1.html), [StockAnalysis](https://stockanalysis.com/news/nasdaq-100-falls-ai-spending/)\n- Late Oct 2026: Microsoft beat expectations with Azure up 48%, and its revenue guidance was above consensus. The stock was flat afterward: 531.01 on Oct 28, then 521.91 on Oct 30. [KuCoin](https://www.kucoin.com/news/flash/microsoft-earnings-beat-expectations-azure-revenue-grows-48), [Benzinga](https://www.benzinga.com/markets/tech/26/11/62765985/earnings-microsoft-alphabet-amazon)\n\n## 4. Base rates\nPast resolutions of this question series, from the organizers' spreadsheet ([sheet](https://docs.google.com/spreadsheets/d/1C_AmOdivYdNuCnEn-I_ps2TJkCAVQkyKOirvhK2jZ2I/edit?gid=0#gid=0)):\n- **Last ~32 two-week periods:** the median is about 0pp, the mean is slightly negative, and the typical absolute value is about 3pp. Fat tails: -22.71 (Jul 24 to Aug 7, 2026, likely Microsoft's 16% post-earnings jump), -13.24, +11.74, +10.51, +9.06.\n- **Recent values:** -6.02 (Oct 9 to 23), -1.35 (Oct 23 period, provisional), 0.45, -2.22, 3.88, -0.96. Microsoft has been outperforming lately.\n- **Periods containing Nvidia earnings:**\n  - Nov 7 to 21, 2025: -0.13\n  - Aug 21 to Sep 4, 2026: +3.88\n  - May 15 to 29, 2026: -13.24 (by date, this probably contained a May 2026 Nvidia report; not verified)\n- **Computed baseline for NVDA alone over 12 trading days:**\n  - The 5th to 95th percentile range runs from about -9.5% to +17.8% from 206.57. That wide range comes from the history it uses, not from this period's news.\n  - The 25th to 75th percentile range is about -3.6% to +7.7%.\n  - MSFT's volatility is lower, so the spread mostly reflects NVDA's moves.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on NVDA vs MSFT returns.\n- Related markets:\n  - Kalshi has a market on words in Nvidia's earnings call (listed for Nov 18, which looks like a date mismatch with the Nov 17 report). Examples: \"Gaming\" at 0.52, \"Rent\" at 0.70.\n  - Polymarket's \"biggest single-day Mag 7 move in 2026\" market has NVDA at 0.415 and MSFT at 0.405.\n  - Neither is directly useful here.\n- A Manifold market exists on Nvidia's Q3 FY27 results; I did not get its price. [Manifold](https://manifold.markets/Terminator2/what-will-nvidias-q3-fiscal-2027-re)\n- Analyst views: one outlet puts consensus EPS at about $2.60, and the Motley Fool writer above is bullish. [Investing.com](https://www.investing.com/news/company-news/nvidia-schedules-q3-fiscal-2027-earnings-call-for-nov-17-93CH-4980909)\n\n## 6. Upcoming events before resolution\n- 2026-11-06: The Nov 6 closes set P₀, so the moves this week (Apple earnings and macro news) are not part of the result.\n- 2026-11-17: Nvidia reports after the close, with written CFO commentary around 4:20 pm ET and the call at 5 pm ET. The quarter ended Oct 25. This gives two full trading sessions (Nov 18 to 20) to react. [StockTitan](https://www.stocktitan.net/news/NVDA/nvidia-sets-conference-call-for-third-quarter-financial-rgdf7hquxgar.html)\n- 2026-11-19: MSFT goes ex-dividend ($0.98), which lowers the result by about 0.19pp.\n- Ongoing: the debate over AI spending and profitability after the Intel, Amazon and Alphabet results. News also mentions expectations of a rate hike, which I did not verify. Fed and macro releases in mid-November could also move the stocks.\n- Nvidia's own dividend ($0.01) has an effect too small to matter.\n\nSources:\n- https://finance.yahoo.com/quote/NVDA/history/\n- https://finance.yahoo.com/quote/MSFT/history/\n- https://www.investing.com/news/company-news/nvidia-schedules-q3-fiscal-2027-earnings-call-for-nov-17-93CH-4980909\n- https://www.stocktitan.net/news/NVDA/nvidia-sets-conference-call-for-third-quarter-financial-rgdf7hquxgar.html\n- https://www.placera.se/pressmeddelanden/microsoft-announces-quarterly-dividend-increase-20260916\n- https://business-standard.com/world-news/nasdaq-hits-near-three-month-low-as-amazon-intel-rattle-ai-trade-126103001910_1.html\n- https://stockanalysis.com/news/nasdaq-100-falls-ai-spending/\n- https://www.kucoin.com/news/flash/microsoft-earnings-beat-expectations-azure-revenue-grows-48\n- https://www.benzinga.com/markets/tech/26/11/62765985/earnings-microsoft-alphabet-amazon\n- https://www.fool.com/investing/2026/11/01/prediction-nvidia-stock-is-going-to-soar-after-dat/\n- https://www.ctee.com.tw/news/20261101700082-430704\n- https://www.zonebourse.com/actualite-bourse/les-actions-se-stabilisent-a-l-approche-des-resultats-d-apple-le-petrole-recule-ce785fd8dd81f327\n- https://manifold.markets/Terminator2/what-will-nvidias-q3-fiscal-2027-re\n- https://docs.google.com/spreadsheets/d/1C_AmOdivYdNuCnEn-I_ps2TJkCAVQkyKOirvhK2jZ2I/edit?gid=0#gid=0\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:24 UTC; check each market really matches the question)\n- Kalshi: Which member of Congress will have the biggest returns in 2025? (In 2025). Yes prices: Roger Williams: 0.45; Ron Wyden: 0.17; Nancy Pelosi: 0.04; Debbie Wasserman-Schultz: 0.41; David Kustoff: 0.02; David Rouzer: 0.02; Larry Bucshon: 0.02; Susan Collins: 0.04; Morgan McGarvey: 0.14; Pete Sessions: 0.16.\n- Kalshi: Nvidia headcount in fiscal 2027 (in 2027). Yes prices: Above 52000: 0.38; Above 54000: 0.26; Above 50000: 0.77; Above 56000: 0.21; Above 48000: 0.78; Above 46000: 0.95.\n- Kalshi: What will NVIDIA say during their next earnings call? (On Nov 18, 2026). Yes prices: Gaming: 0.52; Taiwan: 0.48; Isaac: 0.45; Self Driving: 0.40; Humanoid: 0.39; Dividend (2+ times): 0.31; DSX: 0.68; Rent / Renting: 0.70; Omniverse: 0.73; Cosmos: 0.73.\n- Kalshi: Nvidia headcount in fiscal 2027 (in 2027). Yes prices: Above 52000: 0.37; Above 54000: 0.26; Above 50000: 0.77; Above 56000: 0.21; Above 48000: 0.78; Above 46000: 0.95.\n- Kalshi: When will Jensen Huang leave as Nvidia CEO? (Before Jan 1, 2033). Yes prices: Before Jan 1, 2033: 0.26; Before Jan 1, 2031: 0.15; Before Jan 1, 2029: 0.07.\n- Kalshi: Will Tulsi Gabbard rejoin the Trump administration? (Before Apr 1, 2027). Yes prices: Before Apr 1, 2027: 0.17; Before Jan 1, 2027: 0.10; Before Nov 1, 2026: 0.0100.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. BTC? (2026). Yes prices: S&P 500 Total Return Index: 0.89; BTC: 0.09.\n- Kalshi: OpenAI market share this week (OpenAI market share - Nov 2, 2026). Yes prices: Above 16.7%: 0.50; Above 17.7%: 0.50; Above 18.2%: 0.50; Above 18.5%: 0.50; Above 18.8%: 0.50; Above 19.1%: 0.50; Above 19.5%: 0.50; Above 19.9%: 0.50; Above 20.9%: 0.50.\n- Polymarket: Which company has the best AI model end of November? (ends 2026-12-01). [Yes, No] prices: Anthropic: [\"0.3\", \"0.7\"]; Meta: [\"0.0055\", \"0.9945\"]; Google: [\"0.665\", \"0.335\"]; Alibaba: [\"0.0015\", \"0.9985\"]; Moonshot: [\"0.0015\", \"0.9985\"]; OpenAI: [\"0.0265\", \"0.9735\"]\n- Polymarket: Which company has the best Text Arena Math AI model end of November? (ends 2026-12-01). [Yes, No] prices: Anthropic: [\"0.451\", \"0.549\"]; Google: [\"0.46\", \"0.54\"]; SpaceXAI: [\"0.0005\", \"0.9995\"]; Alibaba: [\"0.005\", \"0.995\"]; OpenAI: [\"0.0435\", \"0.9565\"]; Baidu: [\"0.005\", \"0.995\"]\n- Polymarket: Second-best Text Arena Math AI Lab end of November? (ends 2026-12-01). [Yes, No] prices: Anthropic: [\"0.515\", \"0.485\"]; Google: [\"0.345\", \"0.655\"]; SpaceXAI: [\"0.0265\", \"0.9735\"]; Alibaba: [\"0.0235\", \"0.9765\"]; OpenAI: [\"0.0545\", \"0.9455\"]; Baidu: [\"0.046\", \"0.954\"]\n- Polymarket: Which Mag 7 Stock Has the Biggest Single-Day Move in 2026? (ends 2027-01-01). [Yes, No] prices: Apple (AAPL): [\"0.44\", \"0.56\"]; Microsoft (MSFT): [\"0.405\", \"0.595\"]; Alphabet (GOOGL): [\"0.44\", \"0.56\"]; Amazon (AMZN): [\"0.41\", \"0.59\"]; NVIDIA (NVDA): [\"0.415\", \"0.585\"]; Meta (META): [\"0.405\", \"0.595\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for NVDA: latest close 206.5700 on 2026-11-02.\nTarget date 2026-11-20 is 12 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 12-observation returns over the last 3 years (last year weighted double):\np5: 187.0437, p10: 191.4442, p25: 199.1588, p50: 209.3904, p75: 222.4491, p90: 236.2328, p95: 243.2756\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).",
+    "## 1. Resolution source\n- 2026-11-02: The Yahoo Finance NVDA history page showed NVDA at 206.79 intraday (quote as of 12:25 PM EST, market open). The Oct 30 Adj Close was 204.64, and Close equals Adj Close across the recent rows. [Yahoo NVDA](https://finance.yahoo.com/quote/NVDA/history/)\n- 2026-11-02: MSFT showed 520.45 intraday. Its Oct 30 Adj Close was 521.91. MSFT's adjusted closes before its Aug 20 ex-dividend date are adjusted down (for example, Aug 19: close 484.31, adj 483.40). [Yahoo MSFT](https://finance.yahoo.com/quote/MSFT/history/)\n- P₀ is the Adj Close on Fri Nov 6, 2026, and P₁ is the close on Fri Nov 20, 2026. Neither exists yet.\n- **Dividend wrinkle:** MSFT declared a $0.98 quarterly dividend on 2026-09-15, with a Nov 19, 2026 record/ex-dividend date. One German source says Nov 18 or 19. Yahoo will adjust MSFT's Nov 6 Adj Close down by about 0.19%, which adds roughly +0.19pp to MSFT's measured return and so takes about 0.19pp off the NVDA-MSFT spread. NVDA's dividend is tiny (historically $0.01) and I found no ex-date in this window. [placera](https://www.placera.se/pressmeddelanden/microsoft-announces-quarterly-dividend-increase-20260916), [goldesel](https://goldesel.de/aktien/news/microsoft-erhoht-quartalsdividende-um-8-prozent-auf-098-us-dollar)\n\n## 2. Current status\n- Nothing is settled. The period has not started, since P₀ is set on Nov 6.\n\n## 3. Recent news (newest first)\n- 2026-11-02: Futures rose (Nasdaq +0.8%) ahead of Apple's earnings. Apple passed Nvidia as the most valuable company, at $5.03T against $4.93T. [zonebourse](https://www.zonebourse.com/actualite-bourse/les-actions-se-stabilisent-a-l-approche-des-resultats-d-apple-le-petrole-recule-ce785fd8dd81f327), [ctee](https://www.ctee.com.tw/news/20261101700082-430704)\n- 2026-10-30 (reported Nov 1): The Nasdaq 100 fell more than 4% as investors turned from AI spending to profitability. Intel fell about 29% on weak guidance, and NVDA fell 4.2% to 204.64. [focus.de](https://www.focus.de/finanzen/boerse/intel-bricht-um-fast-29-prozent-ein-amazon-enttaeuscht-der-nasdaq-100-rutscht-ab_cdcedd99-269f-422d-8cf8-4369a8fb7cb4.html), [ria.ru](https://ria.ru/20261101/apple-2128470660.html)\n- 2026-10-28: Microsoft's FQ1 results reportedly showed Azure up 48%, against about 45% guidance and about 46% buy-side hopes. Even so, MSFT barely moved (531.01 → 530.14) and then fell to 521.91 on Oct 30. [Benzinga](https://www.benzinga.com/markets/tech/26/11/62765985/earnings-microsoft-alphabet-amazon). I could not independently confirm the 48% figure.\n- 2026-10-28: Nvidia set its FQ3 report for **Tue Nov 17, 2026, after the close** (5 p.m. ET call). The release lands inside the Nov 9-20 window, and Nov 18 is the first trading reaction day. Guidance is about $108B in revenue. [NVIDIA](https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873), [Fool](https://www.fool.com/investing/2026/11/01/prediction-nvidia-stock-is-going-to-soar-after-dat/)\n- Oct 2026: NVDA slid from 239.24 (Oct 6) to 204.64 (Oct 30), about -14%. MSFT went from 529.30 to 521.91, about -1.4%. Microsoft trimmed its 2026 capex plan from $175B to $170B, and Evercore estimates its in-house Maia chips cover only about 10% of its AI chip spend by early 2027. [Yahoo](https://finance.yahoo.com/quote/NVDA/history/), [Fool](https://www.fool.com/investing/2026/10/12/microsoft-now-has-3-generations-of-its-own-ai-chips-nvidia-is-still-the-chip-stock-to-buy/)\n- Background: Microsoft rose 15.5% in one day after its July 2026 earnings. [TIKR](https://www.tikr.com/blog/microsoft-stock-jumped-15-after-q4-2026-earnings-heres-where-the-stock-could-go)\n\n## 4. Base rates\n- The code-computed 12-trading-day NVDA distribution, using 3 years of data with the last year weighted double, runs from p5 -9.5% to p95 +17.8%, with a median of about +1.4%. The p25-p75 range is about -3.6% to +7.7%, which implies a standard deviation of roughly 7-8%.\n- MSFT has typically been about half as volatile. With a high NVDA/MSFT correlation (about 0.5-0.6), I estimate the two-week NVDA-MSFT spread has a standard deviation of roughly 5-7pp. That is my rough estimate, not computed from data. Two-week windows that include NVDA earnings tend to sit at the wide end.\n- Recent realized spread: in October NVDA underperformed MSFT by about 12pp over four weeks. Over Oct 16-30, NVDA went 214.13→204.64 (-4.4%) while MSFT went 529.05→521.91 (-1.3%), a spread of about -3.1pp.\n- I could not load the past resolutions in the Metaculus Google Sheet.\n- Past NVDA earnings reactions have been mixed: November 2025 saw an initial pop that then reversed into a decline the next day. The earnings move is the dominant single risk in this window.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the NVDA-MSFT relative return for Nov 9-20.\n- The Kalshi market \"What will NVIDIA say during next earnings call (Nov 18)\" is about the call's wording, not price. Its listed date of Nov 18 conflicts with the official Nov 17 date.\n- Polymarket \"Mag 7 biggest single-day move in 2026\" prices MSFT at 0.405 and NVDA at 0.415. It is not directly relevant.\n- Analysts: the 62-analyst consensus on NVDA is \"Strong Buy\" with an average target of about $329 [Yahoo](https://finance.yahoo.com/quote/NVDA/). A Motley Fool writer expects a post-earnings rally [Fool](https://www.fool.com/investing/2026/11/01/prediction-nvidia-stock-is-going-to-soar-after-dat/). Seasonality piece: [Fool](https://www.fool.com/investing/2026/10/18/history-says-nvidia-stock-november-break-pattern/)\n\n## 6. Upcoming events before resolution\n- Early November: Apple's earnings this week (sets the tone for megacaps). The Nov 6 close sets P₀.\n- Mid-November: US macro data (CPI, around Nov 10-13) and Fed rate expectations. The news reports mention markets reacting to rate-hike expectations.\n- **2026-11-17 (after close): Nvidia FQ3 earnings and guidance.** This is the key event, with reactions on Nov 18-20.\n- 2026-11-19 (possibly Nov 18): MSFT goes ex-dividend at $0.98, which mechanically shifts the spread by about -0.19pp.\n- 2026-11-20: Monthly options expiration and the P₁ close.\n- AI capex and profitability sentiment after the Intel, Amazon and Alphabet misses, plus any Microsoft Ignite or OpenAI news. Microsoft Ignite usually falls in mid-to-late November, but I did not confirm the 2026 date.\n\nSources: [Yahoo NVDA history](https://finance.yahoo.com/quote/NVDA/history/), [Yahoo MSFT history](https://finance.yahoo.com/quote/MSFT/history/), [NVIDIA IR](https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873), [placera](https://www.placera.se/pressmeddelanden/microsoft-announces-quarterly-dividend-increase-20260916), [Benzinga](https://www.benzinga.com/markets/tech/26/11/62765985/earnings-microsoft-alphabet-amazon), [focus.de](https://www.focus.de/finanzen/boerse/intel-bricht-um-fast-29-prozent-ein-amazon-enttaeuscht-der-nasdaq-100-rutscht-ab_cdcedd99-269f-422d-8cf8-4369a8fb7cb4.html), [ctee](https://www.ctee.com.tw/news/20261101700082-430704), [Fool](https://www.fool.com/investing/2026/11/01/prediction-nvidia-stock-is-going-to-soar-after-dat/), [TIKR](https://www.tikr.com/blog/microsoft-stock-jumped-15-after-q4-2026-earnings-heres-where-the-stock-could-go)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:24 UTC; check each market really matches the question)\n- Kalshi: Which member of Congress will have the biggest returns in 2025? (In 2025). Yes prices: Roger Williams: 0.45; Ron Wyden: 0.17; Nancy Pelosi: 0.04; Debbie Wasserman-Schultz: 0.41; David Kustoff: 0.02; David Rouzer: 0.02; Larry Bucshon: 0.02; Susan Collins: 0.04; Morgan McGarvey: 0.14; Pete Sessions: 0.16.\n- Kalshi: Nvidia headcount in fiscal 2027 (in 2027). Yes prices: Above 52000: 0.38; Above 54000: 0.26; Above 50000: 0.77; Above 56000: 0.21; Above 48000: 0.78; Above 46000: 0.95.\n- Kalshi: What will NVIDIA say during their next earnings call? (On Nov 18, 2026). Yes prices: Gaming: 0.52; Taiwan: 0.48; Isaac: 0.45; Self Driving: 0.40; Humanoid: 0.39; Dividend (2+ times): 0.31; DSX: 0.68; Rent / Renting: 0.70; Omniverse: 0.73; Cosmos: 0.73.\n- Kalshi: Nvidia headcount in fiscal 2027 (in 2027). Yes prices: Above 52000: 0.37; Above 54000: 0.26; Above 50000: 0.77; Above 56000: 0.21; Above 48000: 0.78; Above 46000: 0.95.\n- Kalshi: When will Jensen Huang leave as Nvidia CEO? (Before Jan 1, 2033). Yes prices: Before Jan 1, 2033: 0.26; Before Jan 1, 2031: 0.15; Before Jan 1, 2029: 0.07.\n- Kalshi: Will Tulsi Gabbard rejoin the Trump administration? (Before Apr 1, 2027). Yes prices: Before Apr 1, 2027: 0.17; Before Jan 1, 2027: 0.10; Before Nov 1, 2026: 0.0100.\n- Kalshi: Annual Return: S&P 500 Total Return Vs. BTC? (2026). Yes prices: S&P 500 Total Return Index: 0.89; BTC: 0.09.\n- Kalshi: OpenAI market share this week (OpenAI market share - Nov 2, 2026). Yes prices: Above 16.7%: 0.50; Above 17.7%: 0.50; Above 18.2%: 0.50; Above 18.5%: 0.50; Above 18.8%: 0.50; Above 19.1%: 0.50; Above 19.5%: 0.50; Above 19.9%: 0.50; Above 20.9%: 0.50.\n- Polymarket: Which company has the best AI model end of November? (ends 2026-12-01). [Yes, No] prices: Anthropic: [\"0.3\", \"0.7\"]; Meta: [\"0.0055\", \"0.9945\"]; Google: [\"0.665\", \"0.335\"]; Alibaba: [\"0.0015\", \"0.9985\"]; Moonshot: [\"0.0015\", \"0.9985\"]; OpenAI: [\"0.0265\", \"0.9735\"]\n- Polymarket: Which company has the best Text Arena Math AI model end of November? (ends 2026-12-01). [Yes, No] prices: Anthropic: [\"0.451\", \"0.549\"]; Google: [\"0.46\", \"0.54\"]; SpaceXAI: [\"0.0005\", \"0.9995\"]; Alibaba: [\"0.005\", \"0.995\"]; OpenAI: [\"0.0435\", \"0.9565\"]; Baidu: [\"0.005\", \"0.995\"]\n- Polymarket: Second-best Text Arena Math AI Lab end of November? (ends 2026-12-01). [Yes, No] prices: Anthropic: [\"0.515\", \"0.485\"]; Google: [\"0.345\", \"0.655\"]; SpaceXAI: [\"0.0265\", \"0.9735\"]; Alibaba: [\"0.0235\", \"0.9765\"]; OpenAI: [\"0.0545\", \"0.9455\"]; Baidu: [\"0.046\", \"0.954\"]\n- Polymarket: Which Mag 7 Stock Has the Biggest Single-Day Move in 2026? (ends 2027-01-01). [Yes, No] prices: Apple (AAPL): [\"0.44\", \"0.56\"]; Microsoft (MSFT): [\"0.405\", \"0.595\"]; Alphabet (GOOGL): [\"0.44\", \"0.56\"]; Amazon (AMZN): [\"0.41\", \"0.59\"]; NVIDIA (NVDA): [\"0.415\", \"0.585\"]; Meta (META): [\"0.405\", \"0.595\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for NVDA: latest close 206.5700 on 2026-11-02.\nTarget date 2026-11-20 is 12 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 12-observation returns over the last 3 years (last year weighted double):\np5: 187.0437, p10: 191.4442, p25: 199.1588, p50: 209.3904, p75: 222.4491, p90: 236.2328, p95: 243.2756\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -7.8,
+        "p25": -3.6,
+        "p50": 0.2,
+        "p75": 4.1,
+        "p90": 8.5
+      },
+      "reasoning": "**(a) Time left:** The result will be known at the Nov 20, 2026 close, about 18 days from now. The starting prices (P₀) are the Nov 6 closes, which have not happened yet.\n\n**(b) Latest known values:** On Oct 30, NVDA closed at 204.64 and MSFT at 521.91. Intraday on Nov 2, NVDA was around 206.6 and MSFT around 520.8.\n\n**(c) Outcome if nothing changed:** 0 pp, or about -0.19 pp once MSFT's ex-dividend adjustment on Nov 19 is applied.\n\n**(d) Outcome if the current trend continued:** Microsoft has outperformed recently (-6.02 and -1.35 pp in the last two periods). Simply extending that trend gives a mildly negative result, around -2 pp. Such trends carry little information over two-week windows, though.\n\n**(e) Historical variation:**\n- The typical absolute spread is about 3 pp, with fat tails (-22.7, -13.2, +11.7 pp).\n- This period contains Nvidia's earnings on Nov 17, with two full sessions to react, so the variance is higher than usual.\n- My rough estimate of the spread's standard deviation is about 6 to 7 pp:\n  - NVDA's 12-day volatility including earnings is about 7 to 8%.\n  - MSFT's is about 4%.\n  - The two stocks' correlation is about 0.5.\n- In past periods containing Nvidia earnings, the spread was -0.13, +3.88 and -13.24 pp.\n\n**(f) Expert and market expectations:**\n- No market prices this spread directly.\n- Analysts are generally bullish on Nvidia earnings, with revenue guidance of about $108B.\n- However, sentiment around AI spending is shaky after the late-October sell-off.\n- Options typically imply an Nvidia earnings move of about 6 to 7%.\n\n**(g) Scenarios:**\n- **Low outcome:** Nvidia's guidance disappoints, or there are hyperscaler capex worries or new China export curbs. NVDA drops 12 to 15% after earnings while MSFT holds steady, giving about -15 pp.\n- **High outcome:** A blowout quarter and guidance revive the AI trade. NVDA rallies 15% or more while MSFT lags, giving about +15 pp.\n\nI center the distribution near 0, slightly above it to reflect Nvidia's small upside drift partly offset by the dividend adjustment, and keep wide, fat tails because of the earnings event.\n\nPercentile 1: -17\nPercentile 5: -10.5\nPercentile 10: -7.8\nPercentile 20: -4.6\nPercentile 30: -2.6\nPercentile 40: -1.0\nPercentile 50: 0.2\nPercentile 60: 1.4\nPercentile 70: 3.0\nPercentile 80: 5.2\nPercentile 90: 8.5\nPercentile 95: 11.2\nPercentile 99: 17"
+    },
+    {
+      "value": {
+        "p10": -7.5,
+        "p25": -3.5,
+        "p50": 0.1,
+        "p75": 3.8,
+        "p90": 7.8
+      },
+      "reasoning": "(a) **Time left:** The period runs from Nov 9 to Nov 20, 2026. The starting price is the Nov 6 close, and the outcome will be known at the close on Nov 20. That is about 18 days from today (Nov 2).\n\n(b) **Latest known values (Yahoo):**\n- NVDA: 204.64 at the Oct 30 close, about 206.6 on Nov 2.\n- MSFT: 521.91 at the Oct 30 close, about 520.8 on Nov 2.\n- The period's starting prices are not set yet.\n\n(c) **If nothing changed:** The result would be about 0pp. Microsoft goes ex-dividend on Nov 19, which lowers MSFT's adjusted starting price and nudges the result to about -0.19pp.\n\n(d) **If the current trend continued:** Microsoft has outperformed recently (-6.02 and -1.35 in the last two periods), and Nvidia fell harder in the AI-spending sell-off. Continuing that trend would give a small negative result, around -1 to -2pp. Short-term momentum in this spread is weak, though, and an Nvidia earnings report usually dominates.\n\n(e) **Historical variation:**\n- The typical absolute spread is about 3pp per period, with fat tails ranging from -22.7 to +11.7.\n- Nvidia reports earnings after the close on Nov 17, leaving three sessions to react. Its implied earnings move is usually about 6-8%, which widens the distribution.\n- My estimate for the standard deviation of the spread is about 6pp.\n\n(f) **Expert and market expectations:**\n- There is no direct market on this spread.\n- Analysts are generally bullish on Nvidia's earnings, with guidance of about $108B in revenue.\n- Nvidia has often sold off after strong quarters, as in the Nov 2025 period at -0.13 and May 2026 at -13.24.\n- The center of my distribution is roughly 0.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** Nvidia's guidance disappoints amid the AI-capex skepticism, Nvidia drops 12% while Microsoft holds steady, and the result is about -13pp or worse.\n- **High outcome:** Nvidia posts a big beat and raises guidance, triggering a relief rally of 12% or more after the October sell-off. If Microsoft lags, the result is about +12pp or more.\n- **Extremes:** For the 1st percentile, a combination of an Nvidia miss and an export-control shock could reach about -17pp. For the 99th percentile, an Nvidia earnings squeeze combined with a Microsoft-specific setback could reach about +16pp.\n\nPercentile 1: -17\nPercentile 5: -10.5\nPercentile 10: -7.5\nPercentile 20: -4.5\nPercentile 30: -2.5\nPercentile 40: -1\nPercentile 50: 0.1\nPercentile 60: 1.3\nPercentile 70: 2.8\nPercentile 80: 4.8\nPercentile 90: 7.8\nPercentile 95: 10.5\nPercentile 99: 16"
+    },
+    {
+      "value": {
+        "p10": -8.5,
+        "p25": -3.7,
+        "p50": 0.2,
+        "p75": 4.35,
+        "p90": 9.0
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026. P₀ is the Nov 6 close, and the outcome will be known at the Nov 20 close, about 18 days from now.\n\n(b) **Latest known values:** On Oct 30, NVDA closed at 204.64 and MSFT at 521.91. NVDA was about 206.6 on Nov 2. The period has not started, so nothing about the outcome is fixed yet.\n\n(c) **If nothing changed:** The spread would be about 0pp. Microsoft's ex-dividend date on Nov 19 lowers it by about 0.19pp, giving roughly -0.2pp.\n\n(d) **If the current trend continued:** Microsoft has outperformed recently (-6.02 and -1.35 in the last two periods), and NVDA is near a three-month low after the AI-spending sell-off. Short-term momentum in this spread is weak, so I give the trend only a small tilt, about -0.5 to -1pp.\n\n(e) **Historical variation:**\n- Past resolutions in this series typically differ from zero by about 3pp, with fat tails (-22.7, -13.2, +11.7, +10.5).\n- This period contains Nvidia's earnings on Nov 17, with three sessions left to react, so it should be more volatile than a typical period.\n- NVDA's post-earnings moves are usually ±3 to 8%.\n- Past periods containing Nvidia earnings resolved at -0.13, +3.88 and -13.24.\n- I estimate the spread's standard deviation at about 7 to 8pp.\n\n(f) **Expectations of experts and markets:** There is no market on this spread. Analysts are bullish ahead of the report, with Nvidia guiding to revenue of about $108B. Positioning after the sell-off is lighter, which could support a relief rally, but expectations are high. On balance I see roughly symmetric risk with a slight upside skew from the depressed starting level.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia's guidance disappoints, or there are hyperscaler capex cut fears or export restrictions. NVDA falls 12 to 15% after earnings while MSFT holds steady, giving about -15 to -18pp.\n- **High:** Nvidia posts a blowout beat and raises guidance, and the AI trade rebounds sharply. NVDA rises 15 to 20% while MSFT lags, giving about +15 to +19pp.\n\nPercentile 1: -19\nPercentile 5: -12\nPercentile 10: -8.5\nPercentile 20: -4.8\nPercentile 30: -2.6\nPercentile 40: -1\nPercentile 50: 0.2\nPercentile 60: 1.5\nPercentile 70: 3.2\nPercentile 80: 5.5\nPercentile 90: 9\nPercentile 95: 12.5\nPercentile 99: 19"
+    },
+    {
+      "value": {
+        "p10": -8.0,
+        "p25": -3.7,
+        "p50": 0.3,
+        "p75": 4.45,
+        "p90": 8.8
+      },
+      "reasoning": "(a) **Time left:** P₀ is set at the Nov 6 close and P₁ at the Nov 20 close. The outcome is known about 18 days from now (Nov 20, 2026, around 21:00 UTC).\n\n(b) **Latest known values:** The period has not started. On Oct 30, NVDA's Adj Close was 204.64 and MSFT's was 521.91. Intraday on Nov 2, NVDA traded near 206.6 and MSFT near 520.5.\n\n(c) **If nothing changed:** The spread would be about 0pp. The MSFT ex-dividend date on Nov 18-19 mechanically shifts it to about -0.19pp.\n\n(d) **If the current trend continued:** NVDA underperformed MSFT by about 12pp over October and by about 3pp over Oct 16-30. Extrapolating that gives roughly -3pp to -6pp. Momentum in a two-week relative return is weak, though, so I give this little weight.\n\n(e) **Historical variation:**\n- NVDA's 12-day return has a standard deviation of about 7-8%, and MSFT's is roughly half that.\n- With a correlation of about 0.5-0.6, the spread's standard deviation is about 6pp.\n- This window contains NVDA's Nov 17 earnings report, which pushes the standard deviation to about 7pp and fattens the tails.\n\n(f) **Expert and market expectations:**\n- Analysts are bullish on NVDA, with a \"Strong Buy\" consensus and a target of about $329.\n- Some commentators expect a post-earnings rally, but recent post-earnings moves have been mixed and sometimes reversed.\n- There is no market on this spread.\n- Overall I expect a slight positive drift for NVDA, offset by the dividend effect. My median is about +0.3pp.\n\n(g) **Scenarios:**\n- **Low outcome:** NVDA guides below whisper numbers amid the \"AI spending to profitability\" rotation and falls 12% after earnings, while MSFT holds flat as a defensive name. The spread lands near -13pp.\n- **High outcome:** NVDA beats strongly and raises guidance, which sparks a short-covering rally after the October selloff. NVDA rises 15% while MSFT gains 2%, for a spread of about +13pp.\n- **1st and 99th percentiles:** A combined macro and AI-capex shock alongside an NVDA miss could take the spread near -17pp. A blowout NVDA quarter plus MSFT-specific bad news (for example, OpenAI-related) could take it near +17pp.\n\nPercentile 1: -17\nPercentile 5: -11\nPercentile 10: -8\nPercentile 20: -4.8\nPercentile 30: -2.6\nPercentile 40: -0.9\nPercentile 50: 0.3\nPercentile 60: 1.6\nPercentile 70: 3.3\nPercentile 80: 5.6\nPercentile 90: 8.8\nPercentile 95: 11.5\nPercentile 99: 17"
+    },
+    {
+      "value": {
+        "p10": -9.0,
+        "p25": -4.35,
+        "p50": 0.3,
+        "p75": 4.8,
+        "p90": 9.5
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026. P₀ is the Nov 6 close and P₁ is the Nov 20 close. The outcome will be known around Nov 20, 21:00 UTC, about 18 days from now.\n\n(b) **Latest known values:** On Oct 30, NVDA's Adj Close was 204.64 and MSFT's was 521.91. Intraday on Nov 2, NVDA was about 206.6 and MSFT about 520.5. The period has not started, so the spread so far is 0.\n\n(c) **If nothing changed:** The spread would be about -0.19pp. That comes only from the MSFT ex-dividend adjustment ($0.98, ex-date around Nov 18-19), which raises MSFT's measured return.\n\n(d) **If the trend continued:** In October, NVDA underperformed MSFT by about 12pp over four weeks, and by about 3pp in the latest two-week span. Extending that trend gives roughly -3 to -6pp. However, short-term relative momentum between these two stocks is weak.\n\n(e) **Historical variation:**\n- NVDA's 12-day return has a standard deviation of about 7-8%. Its 5th to 95th percentile range runs from -9.5% to +17.8%.\n- MSFT's volatility is about half of NVDA's, and the two are moderately correlated.\n- I estimate the two-week spread has a standard deviation of about 5-7pp.\n- This window contains NVDA's earnings (Nov 17 after the close, with reactions on Nov 18-20). That widens the distribution, so a standard deviation of about 7pp with fat tails seems right.\n\n(f) **Expert and market expectations:** No market prices this spread directly. Analysts are bullish on NVDA, with an average target of about $329 and some commentary predicting a post-earnings rally. However, the sector has recently turned against AI capex, and NVDA's earnings reactions have often faded. The median should sit near zero, with perhaps a slight positive tilt from NVDA's drift after its selloff, offset by the dividend effect.\n\n(g) **Unexpected scenarios:**\n- **Low:** NVDA guides below the roughly $108B whisper, or hyperscalers signal capex cuts. NVDA falls 12-15% after earnings while MSFT holds steady, giving a spread of about -18pp.\n- **High:** NVDA beats and raises strongly, oversold AI names rebound sharply, and NVDA gains about 18% while MSFT rises 2%. That gives a spread of about +16pp.\n\nPercentile 1: -20\nPercentile 5: -12.5\nPercentile 10: -9\nPercentile 20: -5.5\nPercentile 30: -3.2\nPercentile 40: -1.2\nPercentile 50: 0.3\nPercentile 60: 1.8\nPercentile 70: 3.6\nPercentile 80: 6\nPercentile 90: 9.5\nPercentile 95: 12.5\nPercentile 99: 19"
+    },
+    {
+      "value": {
+        "p10": -8.0,
+        "p25": -4.0,
+        "p50": 0.1,
+        "p75": 4.35,
+        "p90": 8.7
+      },
+      "reasoning": "(a) **Time left:** P₀ is set at the Nov 6 close and P₁ at the Nov 20 close. The outcome will be known about 18 days from now, on Nov 20, 2026, around 21:00 UTC.\n\n(b) **Latest known values:** On Oct 30, 2026, NVDA's Adj Close was 204.64 and MSFT's was 521.91. On Nov 2 intraday, NVDA was about 206.6-206.8 and MSFT about 520.5. The period has not started, so nothing is settled.\n\n(c) **If nothing changed:** both returns would be about 0. MSFT's ex-dividend date (Nov 18-19, $0.98) adjusts its P₀ down, which takes about 0.2pp off the spread. So the \"no change\" outcome is about -0.2pp.\n\n(d) **If the current trend continued:** in October, NVDA underperformed MSFT by about 12pp over four weeks, roughly -3 to -6pp per two weeks. Momentum in this spread is weak, so I give the trend only a small weight.\n\n(e) **Historical variation:**\n- NVDA's 12-day returns have a standard deviation of about 7-8%. Their median is about +1.4%, which reflects a strong past uptrend that I partly discount.\n- MSFT moves about half as much as NVDA, and the two are fairly correlated.\n- That puts the two-week spread's standard deviation at about 5-7pp. This window contains NVDA's Nov 17 earnings, so I use the wider end, about 7pp, with fat tails.\n\n(f) **Experts and markets:**\n- There is no market on this exact spread.\n- Analysts are strongly bullish on NVDA (average target about $329). One Fool writer predicts a post-earnings rally.\n- Earnings reactions have been mixed, including the November 2025 pop that then reversed.\n- Overall I see a slight positive tilt from NVDA's drift, roughly offset by the dividend effect and the weak AI-capex sentiment.\n\n(g) **Unexpected scenarios:**\n- **Low:** NVDA's guidance disappoints amid the AI-profitability worries, and the stock falls 10-15% over Nov 18-20. MSFT holds up as a defensive name. The spread lands around -15 to -18pp.\n- **High:** NVDA beats strongly and raises guidance with a big data-center number. Combined with a short squeeze after October's 14% slide, NVDA gains 15%+ while MSFT is flat. The spread lands around +15 to +18pp.\n\nPercentile 1: -18\nPercentile 5: -11\nPercentile 10: -8\nPercentile 20: -5\nPercentile 30: -3\nPercentile 40: -1.3\nPercentile 50: 0.1\nPercentile 60: 1.5\nPercentile 70: 3.2\nPercentile 80: 5.5\nPercentile 90: 8.7\nPercentile 95: 11.5\nPercentile 99: 18"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -8.127,
+    "p25": -3.739,
+    "p50": 0.2005,
+    "p75": 4.3858,
+    "p90": 8.8538
+  },
+  "usage": [
+    {
+      "question_id": "46232",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.3,
+      "notional_cost_usd": 0.00013350000000000002,
+      "input_tokens": 526,
+      "output_tokens": 57,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 18.6,
+      "notional_cost_usd": 0.0005741,
+      "input_tokens": 1064,
+      "output_tokens": 723,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 84.2,
+      "notional_cost_usd": 0.3254549,
+      "input_tokens": 93293,
+      "output_tokens": 5357,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.4,
+      "notional_cost_usd": 0.085336,
+      "input_tokens": 7403,
+      "output_tokens": 1306,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.087744,
+      "input_tokens": 7404,
+      "output_tokens": 1426,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0008391000000000001,
+      "input_tokens": 3094,
+      "output_tokens": 441,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.0,
+      "notional_cost_usd": 0.0008855,
+      "input_tokens": 3136,
+      "output_tokens": 517,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.3,
+      "notional_cost_usd": 0.0281706,
+      "input_tokens": 7403,
+      "output_tokens": 1214,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 12.1,
+      "notional_cost_usd": 0.0003759900000000001,
+      "input_tokens": 3092,
+      "output_tokens": 564,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.0002231,
+      "input_tokens": 3134,
+      "output_tokens": 257,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.0008748,
+      "input_tokens": 3060,
+      "output_tokens": 526,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00028635,
+      "input_tokens": 3059,
+      "output_tokens": 385,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 64.8,
+      "notional_cost_usd": 0.2373141,
+      "input_tokens": 58425,
+      "output_tokens": 4612,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.084288,
+      "input_tokens": 7462,
+      "output_tokens": 1230,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.9,
+      "notional_cost_usd": 0.08488799999999999,
+      "input_tokens": 7462,
+      "output_tokens": 1260,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.0,
+      "notional_cost_usd": 0.084312,
+      "input_tokens": 7460,
+      "output_tokens": 1232,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.0008847,
+      "input_tokens": 3082,
+      "output_tokens": 537,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.0008416,
+      "input_tokens": 3099,
+      "output_tokens": 444,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.0009296,
+      "input_tokens": 3099,
+      "output_tokens": 620,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.00030174,
+      "input_tokens": 3098,
+      "output_tokens": 415,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00035627,
+      "input_tokens": 3082,
+      "output_tokens": 524,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46232",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00029593,
+      "input_tokens": 3098,
+      "output_tokens": 403,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0253
+}

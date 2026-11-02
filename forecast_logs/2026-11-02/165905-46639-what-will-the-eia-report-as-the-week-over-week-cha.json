@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T17:08:00.763918+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T16:59:05.234224+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46639,
+    "post_id": 46406,
+    "url": "https://www.metaculus.com/questions/46406",
+    "type": "NumericQuestion",
+    "unit": "thousand bbl",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will the EIA report as the week-over-week change in U.S. commercial crude oil inventories (excluding SPR) for the week ending 6 November 2026?",
+    "resolution_criteria": "This question resolves on the \"Week-on-week change for United States\" figure for commercial crude oil stocks (excluding the Strategic Petroleum Reserve) reported in the EIA's Weekly Petroleum Status Report for the week ending 6 November 2026, scheduled for publication at 12:00 p.m. ET (17:00 UTC) on 12 November 2026 at https://www.eia.gov/petroleum/supply/weekly/. The answer is that figure in thousand barrels, with a draw reported as a negative number: for example, the −1,892 thousand barrels reported for the week ending 23 October 2026 resolves as −1892. If EIA's release for that week is delayed, the question resolves once the figure is published. Should the WPSR page no longer display that week, the figure may be taken as the week-ending stock level for 6 November 2026 minus that for 30 October 2026 from EIA's weekly ending-stocks series (https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCESTUS1&f=W).",
+    "fine_print": "The resolving figure is the one published in the 12 November 2026 release; later revisions to either week's stock level do not change the resolution.",
+    "close_time": "2026-11-02 19:03 UTC",
+    "scheduled_resolution_time": "2026-11-12 17:00 UTC"
+  },
+  "research": [
+    "I'm writing up the findings now. I pulled the EIA weekly series, the latest WPSR tables and the recent news.\n\n## 1. Resolution source\n- 2026-10-28 release (week ending 2026-10-23): commercial crude excluding SPR was 410,625 thousand bbl, down from 412,517, a change of -1,892. That is the latest published week. The SPR held 282,583 thousand bbl (-100), against 409,097 a year earlier. Refinery crude inputs were 16,526 kb/d (prior week 16,649). Commercial crude imports were 6,374 kb/d (prior 5,758). Exports were 4,854 kb/d (prior 3,442). Production was 13,992 kb/d (prior 13,269). The crude adjustment was +189 kb/d. [EIA table1.csv](https://ir.eia.gov/wpsr/table1.csv)\n- The WPSR landing page didn't show the headline numbers in the text I could read. The figures are in the linked tables. [EIA WPSR](https://www.eia.gov/petroleum/supply/weekly/)\n\n## 2. Current status\n- Nothing has settled the question. The week ending 30 Oct is due 2026-11-04 and the target week (ending 6 Nov) is due 2026-11-12. Neither the API figure nor any EIA figure for either week was available as of today.\n\n## 3. Recent news (newest first)\n- 2026-11-02: WTI fell about 6.5% to $97.32 and Brent fell to $106.30 on hopes of US-Iran peace talks through Qatar. The war has lasted about eight months and the Strait of Hormuz has been closed since March. [Invezz](https://invezz.com/cz/zpravodajstvi/2026/11/02/cena-ropy-dnes-wti-klesa-pod-dollar100-rostou-nadeje-na-mir-s-iranem/), [MarketScreener](https://www.marketscreener.com/news/us-stock-index-futures-jump-as-oil-falls-about-6-ce785fd9d989f520)\n- 2026-11-01: OPEC+ kept December supply unchanged. [PR Newswire](https://www.prnewswire.com/news-releases/oil-enters-november-with-opec-holding-steady-and-five-producers-set-to-report-302926283.html)\n- 2026-10-28: The EIA reported a 1.9 mb draw. One analyst said that \"on measured flows it drew -7.1 mb\", meaning the adjustment term offset most of the draw. The API had estimated -2.03 mb. [The Oil Report](https://www.theoilreport.pro/p/eia-inventories-084), [Rigzone](https://www.rigzone.com/news/usa_crude_oil_stocks_drop_week_on_week-30-oct-2026-184983-article/)\n- October 2026: four straight weekly draws: -3.2 mb (2 Oct, when exports rose 1.2 mb/d to 4.77), -8.6 mb (9 Oct), -3.1 mb (16 Oct, partly tied to hurricane disruption) and -1.9 mb (23 Oct). Strong exports and refinery runs were cited. [Hydrocarbon Processing](https://www.hydrocarbonprocessing.com/news/2026/10/eia-us-crude-stocks-fall-amid-strong-exports-refining-activity/), [Energies Media](https://energiesmedia.com/eia-us-crude-inventories-drop-2)\n- An Oilandgas360 page dated \"October 25, 2026\" shows +0.9 mb and 427.3 mb. Those numbers don't match the EIA data, so the page looks mislabeled. [Oilandgas360](https://www.oilandgas360.com/crude-inventories-9-25/)\n\n## 4. Base rates\n- 2026 levels in thousand bbl, from the EIA series: 22 May 441,686, then a steady decline to 404,508 on 24 Jul, then +17,423 in the week to 7 Aug. Since then: 428,910 (21 Aug), 427,320 (25 Sep), 424,134 (2 Oct), 410,625 (23 Oct). Weekly moves of 4 to 9 mb have been common this year, and the largest was +17.4 mb. [EIA series](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCESTUS1&f=W)\n- Change for the comparable early-November week, from the same series:\n  - 2021 (5 Nov): +1,002\n  - 2022 (4 Nov): +3,925\n  - 2023 (3 Nov): +13,869. That was the period when EIA delayed releases for a systems upgrade, so treat it with caution.\n  - 2024 (8 Nov): +2,089\n  - 2025 (7 Nov): +6,413\n\n  All five years were builds. That fits the seasonal pattern of autumn refinery maintenance reducing crude runs.\n- The following week was mixed: 2021 -2,101, 2022 -5,400, 2023 +3,592, 2024 +545, 2025 -3,426.\n- The typical weekly spread is roughly ±4 to 5 mb (one standard deviation, my rough reading of the series above). The API and EIA figures often differ by more than 1 mb, and in the 2025 equivalent week the API showed +6.52 mb. [SunSirs](https://www.sunsirs.com/uk/detail_news-27685.html)\n\n## 5. Other forecasts\n- Kalshi has a market on the level for the week ending **30 Oct** (the prior week, not the target week). As of 2026-11-02 17:04 UTC, \"Above 410 mb\" was 0.54 and \"Above 411 mb\" was 0.48. That puts the implied median around 410.5 to 411 mb, roughly flat against 410.6 mb. \"Above 406\" was 0.84 and \"Above 415\" was 0.24.\n- I found no market or analyst consensus for the week ending 6 Nov. I also found no analyst poll yet for the week ending 30 Oct.\n\n## 6. Upcoming events before resolution\n- 2026-11-03 (Tue): API estimate for the week ending 30 Oct.\n- 2026-11-04 (Wed, 10:30 ET): EIA WPSR for the week ending 30 Oct, which sets the starting level for this question.\n- 2026-11-10 (Tue): API estimate for the week ending 6 Nov.\n- 2026-11-12 (Thu, 12:00 ET): EIA release that resolves the question. It is delayed because of Veterans Day.\n- Other things that could move the number:\n  - The pace of US crude exports, which was elevated at 4.85 mb/d while the Hormuz crisis keeps overseas demand for US barrels high.\n  - Refinery maintenance and utilisation, which was around 92.8%.\n  - Swings in the crude adjustment term.\n  - SPR activity. The SPR is very depleted at 282.6 mb and its weekly changes are small.\n  - Any US-Iran ceasefire news that shifts the price structure and export economics.\n\nSources: [EIA series](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCESTUS1&f=W), [EIA table1](https://ir.eia.gov/wpsr/table1.csv), [EIA WPSR](https://www.eia.gov/petroleum/supply/weekly/), [Hydrocarbon Processing](https://www.hydrocarbonprocessing.com/news/2026/10/eia-us-crude-stocks-fall-amid-strong-exports-refining-activity/), [Rigzone](https://www.rigzone.com/news/usa_crude_oil_stocks_drop_week_on_week-30-oct-2026-184983-article/), [The Oil Report](https://www.theoilreport.pro/p/eia-inventories-084), [Energies Media](https://energiesmedia.com/eia-us-crude-inventories-drop-2), [Oilandgas360](https://www.oilandgas360.com/crude-inventories-9-25/), [SunSirs](https://www.sunsirs.com/uk/detail_news-27685.html), [Invezz](https://invezz.com/cz/zpravodajstvi/2026/11/02/cena-ropy-dnes-wti-klesa-pod-dollar100-rostou-nadeje-na-mir-s-iranem/), [MarketScreener](https://www.marketscreener.com/news/us-stock-index-futures-jump-as-oil-falls-about-6-ce785fd9d989f520), [PR Newswire](https://www.prnewswire.com/news-releases/oil-enters-november-with-opec-holding-steady-and-five-producers-set-to-report-302926283.html)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:04 UTC; check each market really matches the question)\n- Kalshi: US crude oil inventories for the week ending October 30, 2026 (the week ending Oct 30, 2026). Yes prices: Above 411 million barrels: 0.48; Above 410 million barrels: 0.54; Above 412 million barrels: 0.41; Above 409 million barrels: 0.67; Above 413 million barrels: 0.32; Above 408 million barrels: 0.73; Above 415 million barrels: 0.24; Above 414 million barrels: 0.27; Above 407 million barrels: 0.77; Above 406 million barrels: 0.84.\n- Kalshi: Will Oklahoma crude oil production rise YoY? (2026). Yes prices: Above 147.89 million barrels: 0.07.\n- Kalshi: Will North Dakota crude oil production rise YoY? (2026). Yes prices: Above 421.101 million barrels: 0.43.\n- Kalshi: US gasoline inventories at the end of November (the end of November 2026). Yes prices: Below 200 million barrels: 0.51; Below 195 million barrels: 0.48; Below 205 million barrels: 0.51; Below 215 million barrels: 0.78; Below 210 million barrels: 0.50.\n- Kalshi: US crude oil exports in November (November 2026). Yes prices: Above 4.5 million barrels/day: 0.46; Above 4.0 million barrels/day: 0.81; Above 5.0 million barrels/day: 0.17; Above 5.5 million barrels/day: 0.18; Above 6.0 million barrels/day: 0.03.\n- Kalshi: U.S. oil production per day this year (In 2026). Yes prices: At least 14.10M bpd: 0.38; At least 14.00M bpd: 0.85; At least 14.25M bpd: 0.13; At least 14.40M bpd: 0.06; At least 13.90M bpd: 0.9800; At least 13.75M bpd: 0.9800; At least 13.80M bpd: 0.9800.\n- Kalshi: Will Alaska crude oil production increase YoY this year? (2026). Yes prices: Above 153.607 million barrels: 0.93.\n- Polymarket: Will the Climate Clock's 1.5°C deadline change by...? (ends 2027-04-01). [Yes, No] prices: December 31, 2026: [\"0.0475\", \"0.9525\"]; March 31, 2027: [\"0.5\", \"0.5\"]\n- Polymarket: Iran leadership change by...? (ends 2027-07-01). [Yes, No] prices: September 30: [\"0\", \"1\"]; July 31: [\"0\", \"1\"]; June 30, 2027: [\"0.26\", \"0.74\"]; August 31: [\"0\", \"1\"]; August 15: [\"0\", \"1\"]; August 22: [\"0\", \"1\"]\n- Polymarket: Which company has the best Image Edit AI end of November? (ends 2026-12-01). [Yes, No] prices: OpenAI: [\"0.695\", \"0.305\"]; SpaceXAI: [\"0.011\", \"0.989\"]; Microsoft AI: [\"0.0595\", \"0.9405\"]; Meta: [\"0.049\", \"0.951\"]; ByteDance: [\"0.0635\", \"0.9365\"]; Google: [\"0.093\", \"0.907\"]\n- Polymarket: Which company has the best Image-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: MiniMax: [\"0.51\", \"0.49\"]; Google: [\"0.405\", \"0.595\"]; Alibaba/Alibaba-ATH: [\"0.011\", \"0.989\"]; ByteDance: [\"0.0025\", \"0.9975\"]; SpaceXAI: [\"0.026\", \"0.974\"]; Black Forest Labs: [\"0.001\", \"0.999\"]\n- Polymarket: Which company has the best Text-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: Google: [\"0.92\", \"0.08\"]; ByteDance: [\"0.033\", \"0.967\"]; Meta: [\"0.026\", \"0.974\"]; Alibaba/Alibaba-ATH: [\"0.01\", \"0.99\"]; OpenAI: [\"0.0225\", \"0.9775\"]; SpaceXAI: [\"0.005\", \"0.995\"]",
+    "## 1. Resolution source\n- 2026-10-28: EIA's weekly ending-stocks series (WCESTUS1) shows commercial crude excluding SPR at 410,625 thousand bbl for the week ending 2026-10-23. The prior weeks were 412,517 (10-16), 415,577 (10-09) and 424,134 (10-02). [EIA series](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCESTUS1&f=W)\n- The figure that decides the question will appear in the WPSR on 2026-11-12 at 17:00 UTC. [EIA WPSR](https://www.eia.gov/petroleum/supply/weekly/)\n\n## 2. Current status\n- Nothing has settled the question yet. The week ending 6 November has not finished, and the report for the week ending 30 October comes out on 2026-11-04.\n- One search result was a page headed \"as of October 25, 2026\" showing 427.3 million bbl and a 0.9 million bbl build. Those numbers match the week ending 25 September (427,320), so the page looks mislabeled. Ignore it. [oilandgas360](https://www.oilandgas360.com/?p=1050647)\n\n## 3. Recent news (newest first)\n- 2026-11-02: WTI fell about 6.5% to roughly $97, and Brent fell to about $106, on hopes of US-Iran peace talks run through Qatar. The war is about eight months old, and the Strait of Hormuz has been closed since March. [Invezz](https://invezz.com/cz/zpravodajstvi/2026/11/02/cena-ropy-dnes-wti-klesa-pod-dollar100-rostou-nadeje-na-mir-s-iranem/); [MarketScreener](https://www.marketscreener.com/news/us-stock-index-futures-jump-as-oil-falls-about-6-ce785fd9d989f520)\n- 2026-11-01: OPEC+ (seven members) kept December supply unchanged. [PRNewswire](https://www.prnewswire.com/news-releases/oil-enters-november-with-opec-holding-steady-and-five-producers-set-to-report-302926283.html)\n- October 2026 (Argus, single-source, not confirmed by DOE): DOE reportedly loaned about 20 to 25 million bbl to ExxonMobil, Macquarie, Trafigura and others. These barrels come from the final SPR exchange tranche of up to 40 million bbl from Bryan Mound and Big Hill, with deliveries scheduled for **November and December**. If they move into commercial tanks or get exported, that could affect commercial stocks this week. The SPR has released about 131.6 million bbl since March. [Argus](https://www.argusmedia.com/de/news-and-insights/latest-market-news/2890203-us-awards-up-to-25mn-bl-spr-crude-sources); [roic.ai](https://www.roic.ai/news/us-opens-spr-exchange-with-40-million-barrels-testing-refill-strategy-10-01-2026)\n- 2026-10-28: The week ending 23 October showed a 1.9 million bbl draw against a Reuters poll expecting a 15k bbl build. Cushing fell 624k bbl, refinery utilisation was 92.8% (down 0.6 percentage points), runs fell 123k b/d, net imports fell 796k b/d, gasoline rose 3.9 million bbl and distillates fell 1.5 million bbl. The Reuters article did not include API, export or SPR figures. [BOE Report/Reuters](https://boereport.com/2026/10/28/us-crude-stocks-and-distillate-inventories-fall-gasoline-stocks-rise-the-eia-says/)\n\n## 4. Base rates\nWeekly changes in thousand bbl, calculated from the EIA series:\n- 2026-04-10 to 2026-07-31: -913, +1925, -6234, -2313, -4306, -7863, -3327, -7974, -7227, -8263, -6088, -3775, +2998, -1692, +2010, -7167, +2479.\n- 2026-08-07 to 2026-10-23: +17423 (an outlier), +4405, +95, -4450, -391, -640, +2969, +922, -3186, -8557, -3060, -1892.\n- Over the 29 weeks: 19 draws and 10 builds. The median absolute change is about 3,000. Leaving out the +17.4 million outlier, the range runs from -8.6 million to +4.4 million.\n- Last 11 weeks (08-14 to 10-23): mean about -1,250 per week. There have been four straight draws, totaling -16.7 million since 10-02.\n- The same week in earlier years was mostly a build (secondary reports, except 2025, which I did not check against EIA directly):\n  - Week ending 2025-11-07: +6.4 million bbl, against a consensus of about +2.0 million. The SPR rose 0.8 million that week. [SunSirs](https://www.sunsirs.com/uk/detail_news-27975.html); [OGJ](https://www.ogj.com/general-interest/news/55330102/eia-us-crude-inventories-up-64-million-bbl)\n  - From memory, not verified: about +2.1 million in 2024, +3.6 million in 2023 and -5.4 million in 2022.\n  - Early November usually brings builds as refinery maintenance and lower runs take effect. However, 2026 has been dominated by draws tied to exports and the Hormuz disruption.\n\n## 5. Other forecasts\n- Kalshi, week ending 2026-10-30 stock level (a related market, not this question), prices as of 2026-11-02:\n  - Above 410M: 0.54\n  - Above 411M: 0.48\n  - Above 409M: 0.67\n  - Above 412M: 0.41\n  - Above 413M: 0.32\n  - The median implied by these prices is about 410.9M, roughly flat to a small build from 410.6M.\n- Kalshi, November crude exports: above 4.5M b/d at 0.46 and above 4.0M b/d at 0.81.\n- I found no market or analyst consensus for the week ending 6 November. The Reuters poll is usually published around 2026-11-09 or 11-10.\n\n## 6. Upcoming events before resolution\n- 2026-11-03 (Tuesday evening): API estimate for the week ending 30 October.\n- 2026-11-04, 14:30 UTC: EIA WPSR for the week ending 30 October. This sets the starting level for the question.\n- About 2026-11-09 or 11-10: Reuters and WSJ analyst polls.\n- 2026-11-10 (Tuesday evening): API estimate for the week ending 6 November. It often differs from EIA by more than 1 million bbl.\n- Ongoing:\n  - Volatility from the US-Iran talks, which affects export economics.\n  - Timing of SPR exchange deliveries in November.\n  - Refinery maintenance and run levels.\n  - Gulf Coast weather or fog delaying tankers.\n- 2026-11-12, 17:00 UTC: release that decides the question (delayed by the Veterans Day holiday).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 17:04 UTC; check each market really matches the question)\n- Kalshi: US crude oil inventories for the week ending October 30, 2026 (the week ending Oct 30, 2026). Yes prices: Above 411 million barrels: 0.48; Above 410 million barrels: 0.54; Above 412 million barrels: 0.41; Above 409 million barrels: 0.67; Above 413 million barrels: 0.32; Above 408 million barrels: 0.73; Above 415 million barrels: 0.24; Above 414 million barrels: 0.27; Above 407 million barrels: 0.77; Above 406 million barrels: 0.84.\n- Kalshi: Will Oklahoma crude oil production rise YoY? (2026). Yes prices: Above 147.89 million barrels: 0.07.\n- Kalshi: Will North Dakota crude oil production rise YoY? (2026). Yes prices: Above 421.101 million barrels: 0.43.\n- Kalshi: US gasoline inventories at the end of November (the end of November 2026). Yes prices: Below 200 million barrels: 0.51; Below 195 million barrels: 0.48; Below 205 million barrels: 0.51; Below 215 million barrels: 0.78; Below 210 million barrels: 0.50.\n- Kalshi: US crude oil exports in November (November 2026). Yes prices: Above 4.5 million barrels/day: 0.46; Above 4.0 million barrels/day: 0.81; Above 5.0 million barrels/day: 0.17; Above 5.5 million barrels/day: 0.18; Above 6.0 million barrels/day: 0.03.\n- Kalshi: U.S. oil production per day this year (In 2026). Yes prices: At least 14.10M bpd: 0.38; At least 14.00M bpd: 0.85; At least 14.25M bpd: 0.13; At least 14.40M bpd: 0.06; At least 13.90M bpd: 0.9800; At least 13.75M bpd: 0.9800; At least 13.80M bpd: 0.9800.\n- Kalshi: Will Alaska crude oil production increase YoY this year? (2026). Yes prices: Above 153.607 million barrels: 0.93.\n- Polymarket: Will the Climate Clock's 1.5°C deadline change by...? (ends 2027-04-01). [Yes, No] prices: December 31, 2026: [\"0.0475\", \"0.9525\"]; March 31, 2027: [\"0.5\", \"0.5\"]\n- Polymarket: Iran leadership change by...? (ends 2027-07-01). [Yes, No] prices: September 30: [\"0\", \"1\"]; July 31: [\"0\", \"1\"]; June 30, 2027: [\"0.26\", \"0.74\"]; August 31: [\"0\", \"1\"]; August 15: [\"0\", \"1\"]; August 22: [\"0\", \"1\"]\n- Polymarket: Which company has the best Image Edit AI end of November? (ends 2026-12-01). [Yes, No] prices: OpenAI: [\"0.695\", \"0.305\"]; SpaceXAI: [\"0.011\", \"0.989\"]; Microsoft AI: [\"0.0595\", \"0.9405\"]; Meta: [\"0.049\", \"0.951\"]; ByteDance: [\"0.0635\", \"0.9365\"]; Google: [\"0.093\", \"0.907\"]\n- Polymarket: Which company has the best Image-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: MiniMax: [\"0.51\", \"0.49\"]; Google: [\"0.405\", \"0.595\"]; Alibaba/Alibaba-ATH: [\"0.011\", \"0.989\"]; ByteDance: [\"0.0025\", \"0.9975\"]; SpaceXAI: [\"0.026\", \"0.974\"]; Black Forest Labs: [\"0.001\", \"0.999\"]\n- Polymarket: Which company has the best Text-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: Google: [\"0.92\", \"0.08\"]; ByteDance: [\"0.033\", \"0.967\"]; Meta: [\"0.026\", \"0.974\"]; Alibaba/Alibaba-ATH: [\"0.01\", \"0.99\"]; OpenAI: [\"0.0225\", \"0.9775\"]; SpaceXAI: [\"0.005\", \"0.995\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -6300.0,
+        "p25": -2950.0,
+        "p50": 300.0,
+        "p75": 3550.0,
+        "p90": 6800.0
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The EIA release is on 12 November 2026 at 17:00 UTC. The 30 October week's data comes out on 4 November, and the API estimate for the target week comes out on 10 November.\n\n(b) **Latest known value:** for the week ending 23 October 2026, commercial crude stocks were 410,625 thousand bbl, a weekly change of -1,892.\n\n(c) **If nothing changed:** a change of 0.\n\n(d) **If the current trend continued:** there have been four straight draws, averaging about -4.2 mb per week over October. If that continued, the 6 November week would show roughly -2,000 to -4,000. That is driven by strong exports (about 4.85 mb/d) while the Strait of Hormuz is closed.\n\n(e) **Historical variation:** weekly changes have a standard deviation of roughly 4 to 5 mb. This year, swings of 4 to 9 mb have been common, with one outlier of +17.4 mb. The comparable early-November week was a build in each of the last five years (+1.0, +3.9, +13.9, +2.1, +6.4 mb), consistent with refinery maintenance.\n\n(f) **Expert and market expectations:**\n- Kalshi's market for the prior week (ending 30 October) implies a median of about 410.5 to 411 mb, which is roughly flat on the week.\n- There is no market or analyst consensus yet for the target week.\n- My weighting: the seasonal tendency toward builds and the market's flat expectation offset the recent draw trend. That puts my median near zero, slightly positive.\n\n(g) **Unexpected scenarios:**\n- **Low:** exports surge above 6 mb/d, refineries return from maintenance at high runs, imports collapse and the adjustment term swings negative. That could produce a draw of 10 mb or more.\n- **High:** peace-talk headlines flip the price structure, export cargoes are deferred, imports bunch up and a refinery outage cuts runs. That could produce a build of 10 to 13 mb or more.\n\nPercentile 1: -13000\nPercentile 5: -8500\nPercentile 10: -6300\nPercentile 20: -3800\nPercentile 30: -2100\nPercentile 40: -800\nPercentile 50: 300\nPercentile 60: 1400\nPercentile 70: 2700\nPercentile 80: 4400\nPercentile 90: 6800\nPercentile 95: 8800\nPercentile 99: 13000"
+    },
+    {
+      "value": {
+        "p10": -6500.0,
+        "p25": -3150.0,
+        "p50": 300.0,
+        "p75": 3750.0,
+        "p90": 7000.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The EIA release for the week ending 6 November is due 12 November 2026 at 17:00 UTC. The 30 October week will be published on 4 November, before then.\n\n(b) **Latest known value:** For the week ending 23 October 2026, the change was -1,892 thousand bbl, leaving stocks at 410,625 thousand bbl. It was the fourth straight weekly draw: -3.2, -8.6, -3.1 and -1.9 mb.\n\n(c) **If nothing changed:** A \"no change\" outcome is a weekly change of about 0.\n\n(d) **If the current trend continued:** The October draws averaged about -4 mb. The trend has been slowing, so continuing it gives roughly -2,000.\n\n(e) **Historical variation:**\n- Weekly changes have a standard deviation of about 4 to 5 mb, with fat tails. This year saw +17.4 mb in one week and -8.6 mb in another.\n- The adjustment term alone can swing the figure by 3 to 5 mb.\n- Early November has a seasonal bias toward builds. The comparable week was a build in each of the last five years, with a median of about +3.9 mb.\n- This year that bias is offset by strong exports while Hormuz is closed: exports were 4.85 mb/d, and Kalshi's November exports market has a median near 4.5 mb/d.\n\n(f) **Expectations of experts and markets:** No consensus exists yet for the target week. The Kalshi market for the 30 October level implies roughly flat stocks, which suggests the draw trend is fading. Blending a seasonal build of about +3 mb with the export-driven draw trend of about -2 mb gives a median near +0.3 mb.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** Exports surge above 6 mb/d on wide Brent-WTI spreads, imports dip, refinery runs ramp up after maintenance, and the adjustment term turns negative. That could produce a draw of 10 mb or more.\n- **High outcome:** A US-Iran peace headline collapses the arbitrage and exports fall to about 3 mb/d. Combined with an import surge or refinery outages, and possibly an SPR exchange returning barrels, that could produce a build of 10 to 12 mb or more.\n\nPercentile 1: -12500\nPercentile 5: -8500\nPercentile 10: -6500\nPercentile 20: -4000\nPercentile 30: -2300\nPercentile 40: -900\nPercentile 50: 300\nPercentile 60: 1500\nPercentile 70: 2900\nPercentile 80: 4600\nPercentile 90: 7000\nPercentile 95: 9000\nPercentile 99: 13500"
+    },
+    {
+      "value": {
+        "p10": -5600.0,
+        "p25": -2550.0,
+        "p50": 400.0,
+        "p75": 3350.0,
+        "p90": 6400.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The EIA release covering the week ending 6 November is due 12 November 2026 at 17:00 UTC. The figure for the week ending 30 October (due 4 November) and the API estimate for the target week (due 10 November) will both appear before resolution, but neither is available now.\n\n(b) **Latest known value:** For the week ending 23 October 2026, commercial crude excluding SPR was 410,625 thousand bbl, a change of -1,892 thousand bbl (released 28 October). That was the fourth straight weekly draw: -3.2, -8.6, -3.1 and -1.9 mb.\n\n(c) **If nothing changed:** The weekly change would be 0.\n\n(d) **If the current trend continued:** October averaged a draw of about 4.2 mb per week, driven by strong exports (about 4.85 mb/d) and refinery runs. On the other hand, the comparable early-November week was a build in each of the last five years, at +1.0, +3.9, +13.9, +2.1 and +6.4 mb. That reflects refinery maintenance cutting crude runs. Two other points push towards the middle:\n- The Kalshi market for the week ending 30 October implies roughly a flat result, which suggests the draws are fading.\n- The 28 October analyst comment that measured flows drew 7.1 mb while the reported figure was only -1.9 mb shows how large the adjustment-term noise is.\n\nI put the median slightly positive, around +0.4 mb.\n\n(e) **Historical variation:** The weekly change has a standard deviation of roughly 4 to 5 mb, with fat tails. This year's moves ran from -8.6 to +17.4 mb.\n\n(f) **Experts and markets:** There is no consensus or market for the target week. Kalshi for the prior week (ending 30 October) implies a median near 410.5 to 411 mb, roughly unchanged. Seasonality points to a modest build, and the 2026 export strength points to draws.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** Export loadings spike while Hormuz stays closed, imports collapse and the adjustment swings negative, giving a draw of 10 mb or more. That would be similar to the -8.6 mb in the week ending 9 October.\n- **High outcome:** A peace deal headline and backwardation collapse delay exports, imports surge, refinery outages occur and the adjustment swings positive, giving a build of 10 mb or more. That would resemble the +17.4 mb in August or the +13.9 mb in November 2023.\n\nPercentile 1: -11500\nPercentile 5: -7600\nPercentile 10: -5600\nPercentile 20: -3300\nPercentile 30: -1800\nPercentile 40: -600\nPercentile 50: 400\nPercentile 60: 1400\nPercentile 70: 2600\nPercentile 80: 4100\nPercentile 90: 6400\nPercentile 95: 8200\nPercentile 99: 12500"
+    },
+    {
+      "value": {
+        "p10": -6500.0,
+        "p25": -3400.0,
+        "p50": -300.0,
+        "p75": 2650.0,
+        "p90": 5600.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The figure is released on 12 November 2026 at 17:00 UTC. The starting level (week ending 30 October) will be known on 4 November.\n\n(b) **Latest known value:** For the week ending 23 October 2026, the change was -1,892 thousand bbl, leaving stocks at 410,625 thousand bbl. That was the fourth straight draw.\n\n(c) **If nothing changed:** The change would be 0.\n\n(d) **If the current trend continued:** The mean over the last 11 weeks is about -1,250 per week. The last four weeks averaged about -4,200, which would point to a draw of roughly 1 to 4 million bbl.\n\n(e) **Historical variation:** The median absolute weekly change in 2026 is about 3,000. Outside one +17.4M outlier, the range has been -8.6M to +4.4M, which puts the standard deviation at roughly 4 to 5M.\n- Seasonally, early November tends toward builds because of refinery maintenance: about +6.4M in 2025 and +2 to +3.6M in 2023 and 2024.\n- 2026 has instead been dominated by export-driven draws, with the Strait of Hormuz closed since March.\n- SPR exchange deliveries in November could push barrels into commercial tanks, which would favor builds.\n\n(f) **Experts and markets:** There is no market for this week. The Kalshi market for the prior week implies roughly flat stocks, a median of about 410.9M against 410.6M. The Reuters poll is not yet published. On balance I put the median slightly negative to flat.\n\n(g) **Unexpected scenarios:**\n- **Low:** Exports surge as Brent-WTI spreads stay wide, and import arrivals are delayed by Gulf fog or weather. That could produce a 9 to 12M draw.\n- **High:** Several million bbl of SPR exchange crude land in commercial tanks, combined with a bunching of imports and a drop in exports. That could produce a 10M+ build, similar to the August outlier.\n\nPercentile 1: -12500\nPercentile 5: -8500\nPercentile 10: -6500\nPercentile 20: -4200\nPercentile 30: -2600\nPercentile 40: -1300\nPercentile 50: -300\nPercentile 60: 700\nPercentile 70: 1900\nPercentile 80: 3400\nPercentile 90: 5600\nPercentile 95: 7500\nPercentile 99: 12000"
+    },
+    {
+      "value": {
+        "p10": -6100.0,
+        "p25": -3150.0,
+        "p50": -200.0,
+        "p75": 2650.0,
+        "p90": 5500.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The figure is published on 12 November 2026 at 17:00 UTC. The report for the week ending 30 October comes out first, on 4 November.\n\n(b) **Latest known value:** In the 28 October release, commercial crude excluding SPR was 410,625 thousand bbl for the week ending 23 October 2026. That was a change of -1,892, the fourth straight draw.\n\n(c) **If nothing changed:** The weekly change would be 0.\n\n(d) **If the current trend continued:** The last 11 weeks averaged about -1,250 per week, and the last four weeks averaged about -4,200. Kalshi implies the week ending 30 October will be roughly flat to a small build (median about 410.9M). So the recent draw momentum may be fading.\n\n(e) **Historical variation:** The median absolute weekly change in 2026 has been about 3,000. Excluding one +17.4M outlier, the range over 29 weeks runs from -8.6M to +4.4M. The standard deviation is roughly 4,000 to 5,000. The same week in prior years was usually a build (+6.4M in 2025, and roughly +2M to +4M in 2023 and 2024), helped by refinery maintenance.\n\n(f) **Expectations of experts and markets:**\n- There is no consensus yet for this specific week.\n- Kalshi for the prior week points to roughly flat.\n- Two factors tilt toward builds:\n  - Seasonal refinery maintenance.\n  - SPR exchange barrels delivered in November that may enter commercial tanks.\n- One factor tilts toward draws: high exports during the Hormuz disruption, with 2026 being draw-heavy overall.\n- Net, I put the median near -200, with a wide spread.\n\n(g) **Unexpected scenarios:**\n- **Low:** Gulf Coast exports surge as waterborne imports drop, while refinery runs stay high. That could produce a draw of 8M to 12M.\n- **High:** A large batch of SPR exchange barrels lands in commercial storage, fog delays export cargoes, and imports bunch up. That could produce a build of 8M to 12M or more, similar to the +17.4M week in August.\n\nPercentile 1: -11500\nPercentile 5: -7900\nPercentile 10: -6100\nPercentile 20: -3900\nPercentile 30: -2400\nPercentile 40: -1200\nPercentile 50: -200\nPercentile 60: 800\nPercentile 70: 1900\nPercentile 80: 3400\nPercentile 90: 5500\nPercentile 95: 7300\nPercentile 99: 11500"
+    },
+    {
+      "value": {
+        "p10": -6800.0,
+        "p25": -3450.0,
+        "p50": -300.0,
+        "p75": 2800.0,
+        "p90": 6000.0
+      },
+      "reasoning": "(a) **Time left:** The figure will be published on 12 November 2026 at 17:00 UTC, about 10 days from now. The week being measured has not started yet.\n\n(b) **Latest known value:** For the week ending 23 October 2026, commercial crude stocks were 410,625 thousand bbl, a change of -1,892. The level for the week ending 30 October will be released on 4 November. Kalshi prices imply roughly 410.9M for that week, which is about flat.\n\n(c) **If nothing changed:** The weekly change would be 0.\n\n(d) **If the trend continued:** There have been four straight draws, and the last 11 weeks averaged about -1,250 per week. Continuing that gives roughly -1,000 to -2,000.\n\n(e) **Historical variation:** Over the last 29 weeks, the median absolute weekly change was about 3,000. Excluding one outlier of +17.4M, changes ranged from -8.6M to +4.4M. The standard deviation is roughly 4,500 to 5,000, with fat tails.\n\n(f) **Expert and market expectations:** There is no consensus yet for this week. Several factors point in different directions:\n- Seasonally, early November tends to bring builds as refinery maintenance lowers runs. Last year this week showed +6.4M.\n- SPR exchange barrels delivered in November could move into commercial tanks, which would push toward a build.\n- High exports driven by the Hormuz disruption push toward draws.\n\nNetting these, I put the median slightly negative to near flat, around -300.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** An export surge on wide Brent-WTI spreads combined with an import drop from fog or tanker delays could produce a draw of 9 to 13M.\n- **High outcome:** Large SPR exchange deliveries recorded as commercial stock, plus a refinery outage cutting runs and an export lull, could produce a build of 10M or more, similar to the +17M outlier in August.\n\nPercentile 1: -13000\nPercentile 5: -9000\nPercentile 10: -6800\nPercentile 20: -4300\nPercentile 30: -2600\nPercentile 40: -1300\nPercentile 50: -300\nPercentile 60: 800\nPercentile 70: 2000\nPercentile 80: 3600\nPercentile 90: 6000\nPercentile 95: 8200\nPercentile 99: 13000"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -6524.0661,
+    "p25": -3181.2874,
+    "p50": 27.1727,
+    "p75": 3114.6161,
+    "p90": 6348.587
+  },
+  "usage": [
+    {
+      "question_id": "46639",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 18.8,
+      "notional_cost_usd": 0.0001276,
+      "input_tokens": 524,
+      "output_tokens": 46,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 25.4,
+      "notional_cost_usd": 0.0007022,
+      "input_tokens": 1152,
+      "output_tokens": 944,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 96.1,
+      "notional_cost_usd": 0.25404309999999997,
+      "input_tokens": 65760,
+      "output_tokens": 4579,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.9,
+      "notional_cost_usd": 0.0794,
+      "input_tokens": 7136,
+      "output_tokens": 1116,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.6,
+      "notional_cost_usd": 0.080252,
+      "input_tokens": 7135,
+      "output_tokens": 1159,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.0007538,
+      "input_tokens": 2850,
+      "output_tokens": 368,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.0007683000000000001,
+      "input_tokens": 2940,
+      "output_tokens": 361,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.00029576,
+      "input_tokens": 2850,
+      "output_tokens": 408,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.00027165,
+      "input_tokens": 2939,
+      "output_tokens": 358,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.4,
+      "notional_cost_usd": 0.028873000000000003,
+      "input_tokens": 7132,
+      "output_tokens": 1253,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0008517,
+      "input_tokens": 3022,
+      "output_tokens": 495,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00035897,
+      "input_tokens": 3021,
+      "output_tokens": 531,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 55.7,
+      "notional_cost_usd": 0.1884244,
+      "input_tokens": 42678,
+      "output_tokens": 4038,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.2,
+      "notional_cost_usd": 0.072808,
+      "input_tokens": 6582,
+      "output_tokens": 1008,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.4,
+      "notional_cost_usd": 0.073456,
+      "input_tokens": 6583,
+      "output_tokens": 1040,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.8,
+      "notional_cost_usd": 0.07546800000000001,
+      "input_tokens": 6582,
+      "output_tokens": 1141,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.0007765000000000001,
+      "input_tokens": 2901,
+      "output_tokens": 393,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.000816,
+      "input_tokens": 2851,
+      "output_tokens": 492,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0007477,
+      "input_tokens": 2827,
+      "output_tokens": 365,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.00025472,
+      "input_tokens": 2827,
+      "output_tokens": 326,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.00037365,
+      "input_tokens": 2901,
+      "output_tokens": 562,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46639",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.00031815,
+      "input_tokens": 2851,
+      "output_tokens": 452,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8601
+}
