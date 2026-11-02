@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T02:11:27.280180+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T02:07:31.151087+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46604,
+    "post_id": 46371,
+    "url": "https://www.metaculus.com/questions/46371",
+    "type": "NumericQuestion",
+    "unit": "%",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will the EU aggregate gas storage filling level be for gas day 12 November 2026?",
+    "resolution_criteria": "This question resolves to the EU-aggregate gas storage filling level that Gas Infrastructure Europe's AGSI+ platform reports for gas day 12 November 2026 (AGSI+ labels this gas day \"2026-11-12\"; AGSI+ gas days run 06:00–06:00 CET). The resolving value is the \"full\" field of the AGSI+ dataset \"EU\" — the filling level as a percentage of working gas volume — for the entry whose gas day is 2026-11-12, taken from AGSI+'s first publication of that gas day's data (expected on 13 November 2026), readable in the AGSI+ API at https://agsi.gie.eu/api?type=eu&size=5 or at the EU page of the AGSI+ data overview https://agsi.gie.eu/data-overview/EU. Any later revision of that gas day's figure is disregarded. If AGSI+ has not published a figure for gas day 2026-11-12 at the time of resolution, the question resolves using the first figure published for that gas day.",
+    "fine_print": "The AGSI+ \"EU\" dataset is GIE's aggregate of storage facilities located in EU member states; the separate \"Europe\" aggregate (which adds the UK, Ukraine, Serbia and other non-EU facilities) is not used. AGSI+ publishes filling level as a percentage of working gas volume, and answers are on that same scale: an AGSI+ \"full\" figure of 74.64 corresponds to an answer of 74.64. Whether AGSI+ marks the gas-day-12 figure as estimated (\"E\") or confirmed (\"C\") does not affect resolution.",
+    "close_time": "2026-11-02 04:57 UTC",
+    "scheduled_resolution_time": "2026-11-13 20:00 UTC"
+  },
+  "research": [
+    "I couldn't read the resolving figure directly: the AGSI+ API needs a key. Trackers that copy AGSI+ put EU storage at about 74.6% for gas days 30-31 October. A cold snap that began around 1 November is the main thing that will move the 12 November figure.\n\n## 1. Resolution source\n- 2026-11-02: The AGSI+ API link (https://agsi.gie.eu/api?type=eu&size=5) answered \"access denied, Invalid or missing API key\", with no data. The data-overview page did not show any numbers when fetched (it loads them in the browser). [AGSI+](https://agsi.gie.eu/data-overview/EU)\n- 2026-10-31 (gas day): The Swiss Energy Dashboard, which uses AGSI+ data, shows the EU at **74.6%**, about 845 TWh. [energiedashboard.admin.ch](https://energiedashboard.admin.ch/gas/eu-gasspeicher)\n- 2026-10-30 (gas day): Voltstack shows 74.7% (846 of 1,133 TWh), against 82.8% a year earlier and a five-year average of 89.8%. The question background gives 74.64% for the same day. [Voltstack](https://voltstack.energy/insights/eu-gas-storage-tracker-winter-2026)\n- 2026-11-01 update: EnergyRiskIQ shows 74.6% with a \"+0.10 pp\" daily change, and its withdrawal figures contradict each other (1,535 GWh/d in one place, 748 GWh/d \"refill\" in another). The gas day it refers to is unclear, so I treat it as low quality. [EnergyRiskIQ](https://energyriskiq.com/gas-storage-levels-in-europe)\n\n## 2. Current status\n- Nothing settles the question yet. Ten gas days remain, and the level starts at about 74.6%.\n- The range runs from 68 to 77. Getting above about 75% would take net injections during a cold spell, which is unlikely. Getting to 68% would take an average fall of about 0.5 pp/day, which is roughly 5.9 TWh/day of net withdrawals.\n- Conversion: 1 TWh/day of net withdrawal is about 0.088 pp/day.\n\n## 3. Recent news (newest first)\n- 2026-11-01: Germany missed its legal 70% target for 1 November, at about 61.2-61.4% (AGSI data). The regulator and the ministry say supply is secure. [tagesschau](https://www.tagesschau.de/wirtschaft/energie/gasspeicher-vorgaben-ziel-verfehlt-100.html)\n- 2026-11-01: RIA Novosti, using GIE data, reports Europe at 74.68%, the lowest for the date since records began in 2011 and 15.09 pp below the 2021-25 average of 89.77%. [RIA](https://ria.ru/20261101/gaz-2128413082.html)\n- About 2026-10-30/31: Bloomberg (via Energy Connects) says a cold snap is setting in, with below-normal temperatures and possible frost in southern and eastern Germany. High pressure may also cut wind and solar output, which raises gas burn for power. TTF futures went above €100/MWh for the first time since 2022. [Energy Connects](https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/)\n- Late October 2026: Parts of continental Europe were forecast 2-3°C below normal from the weekend of 31 Oct-1 Nov. The article gives no duration. [ZeroHedge](https://www.zerohedge.com/energy/europe-faces-early-winter-stress-test-cold-snap-looms-natgas-prices-near-triple-digits)\n- 2026-10-29: Bloomberg (via Naturalnews) reports TTF above €97/MWh. [Naturalnews](https://www.naturalnews.com/2026-10-29-europe-faces-early-winter-stress-test.html)\n- IEEFA: storage may deliver 7.3 bcm less than last winter, and winter demand may need to fall about 7%. [IEEFA](https://ieefa.org/resources/eu-may-need-cut-winter-gas-demand-7-gas-storage-record-seasonal-low)\n\n## 4. Base rates\n- 2025: EU storage was 82.8% on 31 October. TASS, citing GIE data, gave 81.17% around 18 November, which is only about 1.6 pp lost in about 18 days. It then fell below 80% on 21 November after a mid-November cold spell. [Energy Outlook Advisors](https://anasalhajjieoa.substack.com/p/eus-gas-import-mix-us-remained-the), [TASS](https://tass.com/economy/2046363/amp), [TASS](https://tass.com/economy/2048027/amp)\n- Argus: November 2025 withdrawals averaged 2.8 TWh/d (about 0.25 pp/day), against a five-year November average of 2.4 TWh/d (about 0.21 pp/day). The first half of November usually runs below the monthly average. [Argus](https://www.argusmedia.com/pt/news-and-insights/latest-market-news/2760842-eu-gas-stocks-at-four-year-low-on-1-december)\n- Last 2026 data point: about -0.13 pp/day (1.49 TWh/d) on 30 October, before the cold arrived (per the question background).\n- Projecting 13 days from 74.64%:\n  - at -0.13 pp/day: about 72.9%\n  - at -0.21 pp/day (the five-year November average): about 71.9%\n  - at -0.3 pp/day: about 70.7%\n- High prices (about €100/MWh) and record-low stocks may make shippers more cautious about withdrawing. That is speculation; I found no data on it.\n- I could not verify exact 12 November figures for 2022-2025.\n\n## 5. Other forecasts\n- None of the Kalshi or Polymarket markets supplied matches this question. They cover US gasoline, Henry Hub and EU diesel stocks.\n- A Mantic forecast for the EU level on 1 November said 74.82%. That is a different date. [Mantic](https://app.mantic.com/public/54I6i9oobHV7eq2ApKpQfw)\n- Third-party trackers put the EU near 71% by 23 November (per the question background; I did not verify this).\n- I found no expert point forecast for 12 November.\n\n## 6. Upcoming events before resolution\n- 1-12 November: how deep and how long the cold snap lasts. ECMWF forecasts pointed to a possible polar-vortex disturbance and wind reversal around 9 November (per the background), which could push the last few gas days of the window toward steep withdrawals.\n- Low wind and solar output under high pressure would raise gas burn for power.\n- LNG sendout: disruption around Hormuz and competition from Asian buyers.\n- The way TTF prices move between days could affect how much gas is withdrawn versus imported.\n- 13 November: AGSI+ first publishes gas day 2026-11-12. AGSI+ revises figures later, and only the first publication counts.\n\nSources: [AGSI+](https://agsi.gie.eu/data-overview/EU), [energiedashboard.admin.ch](https://energiedashboard.admin.ch/gas/eu-gasspeicher), [Voltstack](https://voltstack.energy/insights/eu-gas-storage-tracker-winter-2026), [EnergyRiskIQ](https://energyriskiq.com/gas-storage-levels-in-europe), [Energy Connects](https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/), [ZeroHedge](https://www.zerohedge.com/energy/europe-faces-early-winter-stress-test-cold-snap-looms-natgas-prices-near-triple-digits), [Naturalnews](https://www.naturalnews.com/2026-10-29-europe-faces-early-winter-stress-test.html), [tagesschau](https://www.tagesschau.de/wirtschaft/energie/gasspeicher-vorgaben-ziel-verfehlt-100.html), [RIA](https://ria.ru/20261101/gaz-2128413082.html), [IEEFA](https://ieefa.org/resources/eu-may-need-cut-winter-gas-demand-7-gas-storage-record-seasonal-low), [TASS](https://tass.com/economy/2046363/amp), [TASS](https://tass.com/economy/2048027/amp), [Argus](https://www.argusmedia.com/pt/news-and-insights/latest-market-news/2760842-eu-gas-stocks-at-four-year-low-on-1-december), [Energy Outlook Advisors](https://anasalhajjieoa.substack.com/p/eus-gas-import-mix-us-remained-the), [Mantic](https://app.mantic.com/public/54I6i9oobHV7eq2ApKpQfw)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 02:07 UTC; check each market really matches the question)\n- Kalshi: How high will US gas prices get this month? (\n\n\n\n\n\nIn Nov 2026). Yes prices: Above $4.25: 0.48; Above $4.35: 0.42; Above $4.40: 0.20; Above $4.50: 0.15; Above $4.45: 0.21; Above $4.55: 0.14; Above $4.30: 0.61; Above $4.60: 0.13; Above $4.75: 0.07; Above $4.65: 0.09.\n- Kalshi: How low will US gas prices get this month? (\n\n\n\n\n\nIn Nov 2026). Yes prices: Below $4.05: 0.53; Below $4.00: 0.44; Below $4.10: 0.65; Below $3.95: 0.27; Below $3.90: 0.19; Below $3.85: 0.14; Below $4.15: 0.89; Below $3.80: 0.09; Below $3.75: 0.04; Below $3.70: 0.04.\n- Kalshi: Natural gas price on Nov 30, 2026 at 5:00 PM EST? (Nov 30, 2026 at 5:00 PM EST). Yes prices: Above $3.299: 0.48; Above $3.199: 0.58; Above $3.399: 0.41; Above $3.499: 0.35; Above $3.099: 0.67; Above $3.599: 0.28; Above $2.999: 0.73; Above $2.799: 0.80; Above $3.699: 0.23; Above $2.899: 0.79. Settles on the Pyth feed Commodities.Index.NATGAS/USD, which can differ from exchange settlement prices.\n- Kalshi: Tesla energy deployment next quarter (energy storage deployments (GWh) in Q1 2027 ). Yes prices: Above 14 GWh: 0.49; Above 16 GWh: 0.28; Above 12 GWh: 0.72; Above 18 GWh: 0.23; Above 20 GWh: 0.17; Above 22 GWh: 0.14; Above 10 GWh: 0.86; Above 26 GWh: 0.07; Above 28 GWh: 0.06; Above 8 GWh: 0.95.\n- Kalshi: Tesla energy deployment in Q4 (energy storage deployments (GWh) in Q4 2026). Yes prices: Above 18 GWh: 0.48; Above 16 GWh: 0.69; Above 20 GWh: 0.27; Above 14 GWh: 0.84; Above 12 GWh: 0.86; Above 22 GWh: 0.12; Above 10 GWh: 0.90; Above 24 GWh: 0.07; Above 8 GWh: 0.96.\n- Kalshi: Will Pennsylvania natural-gas production rise YoY? (2026). Yes prices: Above 7.675792 trillion cubic feet: 0.81.\n- Kalshi: When will OpenAI release Astra 6.1? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.65; Before Nov 13, 2026: 0.26; Before Nov 6, 2026: 0.15; Before Oct 30, 2026: 0.0100; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100.\n- Polymarket: EU emergency diesel stocks end of November 2026? (ends 2026-12-01). [Yes, No] prices: 30M+: [\"0.855\", \"0.145\"]; 31M+: [\"0.855\", \"0.145\"]; 32M+: [\"0.825\", \"0.175\"]; 33M+: [\"0.65\", \"0.35\"]; 34M+: [\"0.545\", \"0.455\"]; 35M+: [\"0.36\", \"0.64\"]",
+    "I couldn't read the resolution source directly, and nothing settles the question yet. The newest figure I could find is about 74.6-74.7% for gas day 30 October 2026, with daily withdrawals so far small (about 0.1 pp/day). A colder spell forecast for early November is the main thing that could speed up the decline before 12 November.\n\n## 1. Resolution source\n- 2026-11-02: The AGSI+ API (`api?type=eu`) returned \"access denied: Invalid or missing API key\", and the data-overview page showed only navigation, no numbers. I could not read the official series. [AGSI+ API](https://agsi.gie.eu/api?type=eu&size=10)\n- Gas day 2026-10-30 (newest found): the question background gives 74.64% (845.5 TWh, about -0.13 pp that day). Other sources quoting AGSI give slightly different numbers:\n  - RIA Novosti says 74.68%, with about 0.09 pp withdrawn that day. [RIA](https://ria.ru/20261101/gaz-2128413082.html)\n  - Voltstack says 74.7% (846 TWh). [Voltstack](https://voltstack.energy/insights/eu-gas-storage-tracker-winter-2026)\n  - These small gaps may be revisions or rounding. Only the first published figure counts for resolution.\n- I found no published EU figures for gas days 31 October or 1 November. Bloomberg noted official 1 November data would only come after the weekend. [Energy Connects/Bloomberg](https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/)\n\n## 2. Current status\n- Nothing settles the question yet. The value is about 10 gas days away.\n- The 30 October level was a record low for that date. It was about 15.1 pp below the 2021-25 average of 89.77% and below the five-year minimum of 77.0%. [RIA](https://ria.ru/20261101/gaz-2128413082.html), [Voltstack](https://voltstack.energy/insights/eu-gas-storage-tracker-winter-2026)\n\n## 3. Recent news (newest first)\n- 2026-11-01: Germany was at 61.17-61.4%, missing its 70% target for 1 November. The ministry and the Federal Network Agency say winter supply is still secure. [Tagesschau](https://www.tagesschau.de/wirtschaft/energie/gasspeicher-vorgaben-ziel-verfehlt-100.html)\n- 2026-11-01 (Bloomberg): Colder weather is forecast across Germany and much of Europe \"in the coming days\".\n  - Vaisala expects Berlin, Frankfurt and Munich to run 2-4°C below normal.\n  - The German weather service (DWD) expects frost in the south and east.\n  - A high-pressure \"Dunkelflaute\" (calm, cloudy, little wind) is likely, which pushes up gas burn for power.\n  - TTF futures went above €100/MWh last week, the first time since 2022. [Energy Connects](https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/)\n- 2026-11-01: RIA reports Europe switched to net withdrawal in mid-October, with the first positive net withdrawal on 20 October. The EU lowered the 1 November target from 90% to 80% in June 2026. [RIA](https://ria.ru/20261101/gaz-2128413082.html)\n- 2026-10-28: Global Energy Flow gives 74.93% for gas day 26 October, up 0.02 pp that day (injection 1,257 GWh/d, withdrawal 1,095 GWh/d). [GEF](https://global-energy-flow.com/storage/trajectory/)\n- Late October: ACER said storage was 75% full as of 21 October. [ACER](https://www.acer.europa.eu/news/eu-gas-storage-75-filled)\n- IEEFA estimates the EU may need about a 7% cut in winter gas demand. [IEEFA](https://ieefa.org/resources/eu-may-need-cut-winter-gas-demand-7-gas-storage-record-seasonal-low)\n\n## 4. Base rates\n- 2025: about 83% on 1 November and 81.17% around 18-20 November. That is roughly -0.1 pp/day, with withdrawals starting late (mid-November). [TASS](https://tass.com/economy/2046363/amp), [ACER](https://www.acer.europa.eu/sites/default/files/documents/Publications/2026-ACER-Gas-Key-Developments-winter.pdf)\n- 2021, 2022 and 2024 below are from my own memory. I did not verify them in this session.\n  - 2024: about 95.3% on 1 November to about 93% on 12 November (about -0.2 pp/day, during a Dunkelflaute).\n  - 2023 and 2022: roughly flat or slightly up through mid-November.\n  - 2021 (a low-stock year): about 77% to about 75% (about -0.2 pp/day).\n- Over 1-12 November, recent years have ranged from about +0.5 pp to about -2.5 pp.\n- Recent 2026 pace: +0.3 pp in the week to 26 October, then about -0.1 pp/day.\n- From 74.64%, 13 days at:\n\n| Daily change | Level on 12 November |\n|---|---|\n| -0.13 pp | about 72.9% |\n| -0.2 pp | about 72.0% |\n| -0.3 pp | about 70.7% |\n\n- In very cold spells, single-day falls can exceed 0.3 pp. Early January 2026 saw withdrawals above 3.5 TWh/day (about 0.3 pp/day). [VT Markets](https://www.vtmarkets.com/en-ca/?p=38584)\n\n## 5. Other forecasts\n- No Polymarket, Kalshi or Manifold market matches this question. The Kalshi markets supplied (US gasoline, Henry Hub, Tesla storage) and the Polymarket EU diesel market are not relevant.\n- Expert views and projections:\n  - The question background cites third-party trackers putting the EU at about 71% by 23 November. I did not verify this.\n  - Global Energy Flow, as of 28 October, only projected to 1 November, giving about 75.1-75.9%. That projection is already outdated. [GEF](https://global-energy-flow.com/storage/trajectory/)\n  - I found no published point forecast for 12 November.\n- Data-quality warning: EnergyRiskIQ shows 74.6% with \"+0.10 pp\" and 748 GWh/day of injections, which conflicts with the other sources. Treat it as unreliable. [EnergyRiskIQ](https://energyriskiq.com/gas-storage-levels-in-europe)\n\n## 6. Upcoming events before resolution\n- First week of November: the forecast cold, low-wind spell in Germany and Central Europe. Higher heating demand and gas use in power would push withdrawals up. [Energy Connects](https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/)\n- Around 9 November: the possible polar-vortex disturbance or wind reversal mentioned in the question background. I did not verify this. Any cold that follows typically arrives with a lag of 1-3 weeks, so most of it may land after 12 November.\n- LNG arrivals and the Strait of Hormuz situation, plus TTF prices (around €95-100+/MWh). High prices may cut industrial demand and draw in LNG cargoes.\n- AGSI+ data releases for gas days 31 October to 12 November. The resolving figure is the first publication, expected on 13 November.\n\nSources: [AGSI+](https://agsi.gie.eu/api?type=eu&size=10) · [RIA](https://ria.ru/20261101/gaz-2128413082.html) · [Voltstack](https://voltstack.energy/insights/eu-gas-storage-tracker-winter-2026) · [Energy Connects](https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/) · [Tagesschau](https://www.tagesschau.de/wirtschaft/energie/gasspeicher-vorgaben-ziel-verfehlt-100.html) · [GEF](https://global-energy-flow.com/storage/trajectory/) · [ACER news](https://www.acer.europa.eu/news/eu-gas-storage-75-filled) · [ACER winter report](https://www.acer.europa.eu/sites/default/files/documents/Publications/2026-ACER-Gas-Key-Developments-winter.pdf) · [IEEFA](https://ieefa.org/resources/eu-may-need-cut-winter-gas-demand-7-gas-storage-record-seasonal-low) · [TASS](https://tass.com/economy/2046363/amp) · [VT Markets](https://www.vtmarkets.com/en-ca/?p=38584) · [EnergyRiskIQ](https://energyriskiq.com/gas-storage-levels-in-europe)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 02:07 UTC; check each market really matches the question)\n- Kalshi: How high will US gas prices get this month? (\n\n\n\n\n\nIn Nov 2026). Yes prices: Above $4.25: 0.48; Above $4.35: 0.42; Above $4.40: 0.20; Above $4.50: 0.15; Above $4.45: 0.21; Above $4.55: 0.14; Above $4.30: 0.61; Above $4.60: 0.13; Above $4.75: 0.07; Above $4.65: 0.09.\n- Kalshi: How low will US gas prices get this month? (\n\n\n\n\n\nIn Nov 2026). Yes prices: Below $4.05: 0.53; Below $4.00: 0.44; Below $4.10: 0.65; Below $3.95: 0.27; Below $3.90: 0.19; Below $3.85: 0.14; Below $4.15: 0.89; Below $3.80: 0.09; Below $3.75: 0.04; Below $3.70: 0.04.\n- Kalshi: Natural gas price on Nov 30, 2026 at 5:00 PM EST? (Nov 30, 2026 at 5:00 PM EST). Yes prices: Above $3.299: 0.48; Above $3.199: 0.58; Above $3.399: 0.41; Above $3.499: 0.35; Above $3.099: 0.67; Above $3.599: 0.28; Above $2.999: 0.73; Above $2.799: 0.80; Above $3.699: 0.23; Above $2.899: 0.79. Settles on the Pyth feed Commodities.Index.NATGAS/USD, which can differ from exchange settlement prices.\n- Kalshi: Tesla energy deployment next quarter (energy storage deployments (GWh) in Q1 2027 ). Yes prices: Above 14 GWh: 0.49; Above 16 GWh: 0.28; Above 12 GWh: 0.72; Above 18 GWh: 0.23; Above 20 GWh: 0.17; Above 22 GWh: 0.14; Above 10 GWh: 0.86; Above 26 GWh: 0.07; Above 28 GWh: 0.06; Above 8 GWh: 0.95.\n- Kalshi: Tesla energy deployment in Q4 (energy storage deployments (GWh) in Q4 2026). Yes prices: Above 18 GWh: 0.48; Above 16 GWh: 0.69; Above 20 GWh: 0.27; Above 14 GWh: 0.84; Above 12 GWh: 0.86; Above 22 GWh: 0.12; Above 10 GWh: 0.90; Above 24 GWh: 0.07; Above 8 GWh: 0.96.\n- Kalshi: Will Pennsylvania natural-gas production rise YoY? (2026). Yes prices: Above 7.675792 trillion cubic feet: 0.81.\n- Kalshi: When will OpenAI release Astra 6.1? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.65; Before Nov 13, 2026: 0.26; Before Nov 6, 2026: 0.15; Before Oct 30, 2026: 0.0100; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100.\n- Polymarket: EU emergency diesel stocks end of November 2026? (ends 2026-12-01). [Yes, No] prices: 30M+: [\"0.855\", \"0.145\"]; 31M+: [\"0.855\", \"0.145\"]; 32M+: [\"0.825\", \"0.175\"]; 33M+: [\"0.65\", \"0.35\"]; 34M+: [\"0.545\", \"0.455\"]; 35M+: [\"0.36\", \"0.64\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 70.2,
+        "p25": 71.15,
+        "p50": 72.1,
+        "p75": 73.0,
+        "p90": 73.7
+      },
+      "reasoning": "(a) **Time left:** About 11 days. Gas day 12 November is first published on about 13 November, and resolution is around 13 November.\n\n(b) **Latest known value:** 74.64% on gas day 30 October 2026, from AGSI+ via the question background. Trackers show about 74.6% for 31 October.\n\n(c) **If nothing changed:** About 74.6%.\n\n(d) **If the current trend continued:**\n- At the pre-cold rate of -0.13 pp/day: about 72.9%.\n- The cold snap that began around 1 November, with low wind and frost, likely lifts withdrawals to about 2.5-4 TWh/d, which is 0.22-0.35 pp/day. That implies about 70.5-72%.\n- The five-year November average of -0.21 pp/day gives about 71.9%.\n\n(e) **Historical variation:** Over 12-13 early-November days, the EU level typically falls 1-4 pp. In 2025 it fell only about 1.6 pp in 18 days, while cold early Novembers have produced 3-5 pp. Daily changes range from small net injections to about -0.45 pp.\n\n(f) **Expert and market expectations:**\n- Trackers put the level near 71% by 23 November, which implies a modest pace and would mean about 72-72.5% on 12 November.\n- No markets cover this quantity.\n- Very high TTF prices, at €100/MWh or more, draw in LNG. Record-low stocks may make shippers somewhat cautious about withdrawing.\n\n(g) **Unexpected scenarios:**\n- **Low:** A deep, persistent cold and windless spell from 1 November is amplified by early polar-vortex effects. Withdrawals average about 5 TWh/d, which takes the level to about 69%.\n- **High:** The cold snap is brief and gives way to mild, windy Atlantic weather. Strong LNG sendout brings net flows near zero, and the level holds around 74%.\n\nI put the median at about 72.0%.\n\nPercentile 1: 68.6\nPercentile 5: 69.6\nPercentile 10: 70.2\nPercentile 20: 70.9\nPercentile 30: 71.4\nPercentile 40: 71.8\nPercentile 50: 72.1\nPercentile 60: 72.4\nPercentile 70: 72.8\nPercentile 80: 73.2\nPercentile 90: 73.7\nPercentile 95: 74.1\nPercentile 99: 74.8"
+    },
+    {
+      "value": {
+        "p10": 70.1,
+        "p25": 71.05,
+        "p50": 72.0,
+        "p75": 72.95,
+        "p90": 73.8
+      },
+      "reasoning": "(a) **Time left:** About 11 days. Gas day 12 November is first published around 13 November 2026, and forecasts close today, 2 November.\n\n(b) **Latest known value:** 74.64% for gas day 30 October 2026 (AGSI+, per the question background). Trackers put gas day 31 October at about 74.6%.\n\n(c) **If nothing changed:** about 74.6%.\n\n(d) **If the current trend continued:** at -0.13 pp/day, the level would be about 72.9%. But a cold snap with low wind began around 1 November, so withdrawals should speed up beyond the pre-cold pace. At 0.2 to 0.3 pp/day from 31 October, the level would be about 71.0 to 72.2%.\n\n(e) **Historical variation over about 12 days in early November:**\n- In years with continued injections (2022, 2023) the level was flat or slightly up.\n- In 2024, a dunkelflaute cut about 3 to 4 pp in two weeks.\n- In 2025, only about 1 to 1.5 pp was lost.\n- The five-year November average is about 0.21 pp/day, and the first half of the month is usually lighter.\n\n(f) **Expectations of experts and markets:**\n- No direct market prices this quantity.\n- Trackers project about 71% by 23 November, which implies roughly 72% around 12 November.\n- High TTF prices and record-low stocks may make shippers somewhat cautious about withdrawing.\n- The polar-vortex effect around 9 November would mostly reach the surface after 12 November.\n\n(g) **Scenarios:**\n- **Low:** A deep, prolonged cold spell plus dunkelflaute, LNG shortfalls and heavy gas burn for power would bring withdrawals of 5 to 6 TWh/day, giving about 68 to 69%.\n- **High:** The cold snap ends quickly, followed by mild and windy weather with strong LNG arrivals. Withdrawals would be minimal or briefly net injections, leaving the level at about 74 to 75%.\n\nMy median is about 71.9%, and I keep the tails wide for weather and data uncertainty.\n\nPercentile 1: 68.3\nPercentile 5: 69.4\nPercentile 10: 70.1\nPercentile 20: 70.8\nPercentile 30: 71.3\nPercentile 40: 71.7\nPercentile 50: 72.0\nPercentile 60: 72.3\nPercentile 70: 72.7\nPercentile 80: 73.2\nPercentile 90: 73.8\nPercentile 95: 74.3\nPercentile 99: 75.0"
+    },
+    {
+      "value": {
+        "p10": 70.5,
+        "p25": 71.3,
+        "p50": 72.05,
+        "p75": 72.8,
+        "p90": 73.5
+      },
+      "reasoning": "(a) **Time left:** The resolving figure for gas day 12 November is expected to be published on 13 November 2026, about 11 days from now. Ten to eleven gas days remain to unfold.\n\n(b) **Latest known value:** AGSI+ shows 74.64% for gas day 30 October 2026 (845.5 TWh), with net withdrawals of about 1.49 TWh/day. Trackers that copy AGSI+ show about 74.6% for 31 October.\n\n(c) **If nothing changed:** about 74.6%.\n\n(d) **If the current trend continued:** At the pre-cold pace of -0.13 pp/day, the level would be about 72.9%. At the five-year November average of about -0.21 pp/day, it would be about 71.9%. A cold snap that began around 1 November, with low wind and solar output under high pressure, points to withdrawals above the 30 October pace. Low stocks limit deliverability, and prices around €100/MWh encourage conservation, which partly offsets this.\n\n(e) **Historical variation:** EU storage in the first half of November typically falls by 1.5 to 4 pp over 12 to 13 days.\n- 2025 lost only about 1.6 pp from 31 October to about 18 November.\n- Cold spells push withdrawals to 3 to 4+ TWh/day, which is 0.3 to 0.35 pp/day.\n- Mild, windy spells can bring days of near-zero change or small net injections.\n\n(f) **Expectations of experts and markets:** No market covers this question. Third-party trackers put the EU near 71% by 23 November. That is consistent with roughly 72% on 12 November.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** The cold snap deepens and persists, the polar-vortex disruption brings an early Arctic outbreak by 8 to 12 November, wind output collapses and LNG cargoes divert to Asia. Withdrawals would average 4.5 to 5 TWh/day, giving about 69 to 70%.\n- **High outcome:** The cold breaks quickly into mild, windy Atlantic weather, and high TTF prices attract LNG cargoes. Withdrawals would be near zero, with some injection days, leaving the level around 74 to 74.6%.\n\nMy central estimate is average net withdrawals of about 2.5 TWh/day over 12 gas days, about 0.22 pp/day. That puts the median near 72.0%.\n\nPercentile 1: 69.0\nPercentile 5: 70.0\nPercentile 10: 70.5\nPercentile 20: 71.1\nPercentile 30: 71.5\nPercentile 40: 71.8\nPercentile 50: 72.05\nPercentile 60: 72.3\nPercentile 70: 72.6\nPercentile 80: 73.0\nPercentile 90: 73.5\nPercentile 95: 73.9\nPercentile 99: 74.6"
+    },
+    {
+      "value": {
+        "p10": 70.2,
+        "p25": 71.05,
+        "p50": 71.9,
+        "p75": 72.7,
+        "p90": 73.4
+      },
+      "reasoning": "(a) **Time left:** About 11 days. Gas day 12 November is first published around 13 November 2026, which leaves 13 gas days of movement after the last known value.\n\n(b) **Latest known value:** 74.64% on gas day 30 October 2026 (845.5 TWh), with a change of about -0.13 pp that day. Other trackers put it at 74.68-74.7%. No figures for 31 October or 1 November have surfaced yet.\n\n(c) **If nothing changed:** About 74.6%.\n\n(d) **If the current trend continued:** The recent pace of about -0.1 to -0.13 pp/day gives roughly 72.9-73.3%.\n- A cold, low-wind spell (Dunkelflaute) is forecast for Germany and Central Europe in early November, with temperatures 2-4°C below normal. That points to a faster pace, perhaps -0.2 to -0.3 pp/day.\n- That pace gives about 70.7-72.0%.\n\n(e) **Historical variation:** Over 1-12 November in recent years, the change has ranged from about +0.5 pp to about -2.5 pp.\n- 2024 (Dunkelflaute): about -0.2 to -0.3 pp/day.\n- 2021 (a low-stock year): about -0.2 pp/day.\n- 2022 and 2023: roughly flat.\n- Low stocks somewhat limit how much gas can be withdrawn each day.\n- High prices (about €100/MWh TTF) dampen demand and draw in LNG cargoes.\n\n(f) **Experts and markets:** No market matches this question. Third-party trackers put the EU near 71% by 23 November, which implies about 72% on 12 November at a steady pace. ACER and IEEFA expect a tight winter.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** A deep, prolonged cold spell with no wind over 3-12 November, plus LNG disruptions, could drive withdrawals of 0.4-0.5 pp/day. That would land near 69%.\n- **High outcome:** Mild, windy weather after a brief cold spell, together with strong LNG arrivals drawn in by high prices, could produce near-zero net withdrawals. That would land near 74%+.\n\nMy median is about 71.9%, weighted toward a faster withdrawal pace because of the forecast cold.\n\nPercentile 1: 68.8\nPercentile 5: 69.7\nPercentile 10: 70.2\nPercentile 20: 70.8\nPercentile 30: 71.3\nPercentile 40: 71.6\nPercentile 50: 71.9\nPercentile 60: 72.2\nPercentile 70: 72.5\nPercentile 80: 72.9\nPercentile 90: 73.4\nPercentile 95: 73.8\nPercentile 99: 74.5"
+    },
+    {
+      "value": {
+        "p10": 70.2,
+        "p25": 71.15,
+        "p50": 72.0,
+        "p75": 72.8,
+        "p90": 73.5
+      },
+      "reasoning": "(a) **Time left:** About 11 days. Gas day 12 November is first published around 13 November, and 13 gas days run from the last known value.\n\n(b) **Latest known value:** 74.64% for gas day 30 October 2026 (AGSI+ via the question background). Secondary sources quote 74.68-74.7%. The day-on-day change was about -0.09 to -0.13 pp. No figures were found for 31 October or 1 November.\n\n(c) **If nothing changed:** 74.6%.\n\n(d) **If the current trend continued:** About -0.13 pp/day gives roughly 72.9%. However, a cold, low-wind spell is forecast for Germany and Central Europe from early November, which should speed up withdrawals. At -0.2 to -0.3 pp/day the level would be 72.0% to 70.7%. TTF prices around €95-100/MWh encourage storage withdrawal but also cut demand and pull in LNG.\n\n(e) **Historical variation:** Over roughly 1-12 November, recent years have moved between about +0.5 pp and -2.5 pp. 2024, with its Dunkelflaute, was about -0.2 to -0.25 pp/day. Very cold days can bring net withdrawals of 3.5-5 TWh/day, which is 0.3-0.45 pp/day.\n\n(f) **Experts and markets:** There is no market on this quantity. Trackers put the EU near 71% by 23 November, which implies a gentle -0.15 pp/day. The Bloomberg and Vaisala forecasts of 2-4°C below normal plus a Dunkelflaute point to a faster pace in early November. I set the median at about 71.9%.\n\n(g) **Unexpected scenarios:**\n- **Low:** A severe cold snap starts early (polar-vortex effects arrive sooner), wind is calm across Europe, and LNG is diverted. Net withdrawals of 5+ TWh/day for 10 days would give about 68.5-69%.\n- **High:** The cold proves brief and mild, windy Atlantic weather returns. High prices crush demand and LNG cargoes surge, so net flows are near zero. The level would be about 74-74.5%.\n\nPercentile 1: 68.6\nPercentile 5: 69.6\nPercentile 10: 70.2\nPercentile 20: 70.9\nPercentile 30: 71.4\nPercentile 40: 71.7\nPercentile 50: 72.0\nPercentile 60: 72.3\nPercentile 70: 72.6\nPercentile 80: 73.0\nPercentile 90: 73.5\nPercentile 95: 73.9\nPercentile 99: 74.6"
+    },
+    {
+      "value": {
+        "p10": 70.0,
+        "p25": 70.95,
+        "p50": 71.9,
+        "p75": 72.7,
+        "p90": 73.4
+      },
+      "reasoning": "(a) Time left: the gas day 12 November figure is first published around 13 November 2026, about 11 days from now. That covers 13 gas days after the last known value.\n\n(b) Latest known value: 74.64% for gas day 30 October 2026 (AGSI+, as given in the question background). Secondary sources quote 74.68-74.7%. Net withdrawal that day was about 1.5 TWh/day, roughly -0.13 pp.\n\n(c) If nothing changed: about 74.6%.\n\n(d) If the current trend continued:\n- At -0.13 pp/day, the level would be about 72.9%.\n- A cold, low-wind spell is now forecast for Germany and Central Europe in early November. Withdrawals will likely rise towards 0.2-0.3 pp/day, which gives about 71-72%.\n\n(e) Historical variation: over 1-12 November in recent years, the level has moved between about +0.5 pp and -2.5 pp.\n- In low-stock or high-price years (2021) the pace was about -0.2 pp/day.\n- During the 2024 Dunkelflaute it was also about -0.2 pp/day.\n- Sustained cold could push it to 0.35-0.45 pp/day (4-5 TWh/day).\n- TTF prices around €100/MWh dampen demand and pull in LNG, which partly offsets the cold.\n\n(f) Expert and market expectations:\n- No market covers this quantity.\n- Trackers cited in the background put the EU near 71% by 23 November. That implies about 72% on 12 November.\n- Weather forecasts point to colder than normal conditions and a Dunkelflaute in early November, which skews the outcome lower.\n\n(g) Unexpected scenarios:\n- Low outcome: an early, deep cold outbreak with little wind across north-west and central Europe from about 3 November, plus LNG diversions to Asia. Withdrawals would reach 5-6 TWh/day for about 10 days, bringing the level to about 68-69%.\n- High outcome: the cold snap fizzles into mild, windy westerly weather and high prices draw in LNG. Net flows would be near zero, leaving the level at about 74%+.\n\nPercentile 1: 68.4\nPercentile 5: 69.4\nPercentile 10: 70.0\nPercentile 20: 70.7\nPercentile 30: 71.2\nPercentile 40: 71.6\nPercentile 50: 71.9\nPercentile 60: 72.2\nPercentile 70: 72.5\nPercentile 80: 72.9\nPercentile 90: 73.4\nPercentile 95: 73.8\nPercentile 99: 74.5"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 70.172,
+    "p25": 71.0927,
+    "p50": 72.0017,
+    "p75": 72.8107,
+    "p90": 73.5302
+  },
+  "usage": [
+    {
+      "question_id": "46604",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 7.14e-05,
+      "input_tokens": 499,
+      "output_tokens": 43,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00025580000000000004,
+      "input_tokens": 1110,
+      "output_tokens": 68,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 93.7,
+      "notional_cost_usd": 0.3122882,
+      "input_tokens": 85775,
+      "output_tokens": 5120,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.1,
+      "notional_cost_usd": 0.083856,
+      "input_tokens": 7458,
+      "output_tokens": 1210,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.9,
+      "notional_cost_usd": 0.08623600000000001,
+      "input_tokens": 7458,
+      "output_tokens": 1329,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.0008534,
+      "input_tokens": 2803,
+      "output_tokens": 586,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.2,
+      "notional_cost_usd": 0.0007701,
+      "input_tokens": 2854,
+      "output_tokens": 399,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.00033298999999999997,
+      "input_tokens": 2804,
+      "output_tokens": 483,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.7,
+      "notional_cost_usd": 0.00029319000000000003,
+      "input_tokens": 2855,
+      "output_tokens": 402,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 29.1,
+      "notional_cost_usd": 0.0323616,
+      "input_tokens": 7458,
+      "output_tokens": 1423,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008481000000000001,
+      "input_tokens": 2954,
+      "output_tokens": 515,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0003193,
+      "input_tokens": 2954,
+      "output_tokens": 453,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 99.3,
+      "notional_cost_usd": 0.26381580000000004,
+      "input_tokens": 87331,
+      "output_tokens": 5071,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.6,
+      "notional_cost_usd": 0.085576,
+      "input_tokens": 7503,
+      "output_tokens": 1278,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.086796,
+      "input_tokens": 7503,
+      "output_tokens": 1339,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.088656,
+      "input_tokens": 7503,
+      "output_tokens": 1432,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0008231,
+      "input_tokens": 2924,
+      "output_tokens": 477,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.0009298,
+      "input_tokens": 2865,
+      "output_tokens": 714,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0007749,
+      "input_tokens": 2873,
+      "output_tokens": 401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00033371,
+      "input_tokens": 2926,
+      "output_tokens": 482,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00030037,
+      "input_tokens": 2873,
+      "output_tokens": 416,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46604",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00038359,
+      "input_tokens": 2864,
+      "output_tokens": 583,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0469
+}
