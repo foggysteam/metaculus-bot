@@ -94,6 +94,11 @@ jobs:
           dropped_alerted=false
           touch failed_urls.txt alerted_urls.txt
           set -o pipefail
+          # GitHub's schedule cannot be relied on for the watchdog either, so this run starts it
+          # too. In the background, so that it carries on if a pass hangs.
+          if [ "$MODE" = "tournament" ] && [ "$DRY_RUN" != "true" ]; then
+            ( while true; do sleep 900; gh workflow run watchdog.yaml -R "$GITHUB_REPOSITORY" --ref main || true; done ) > /dev/null 2>&1 &
+          fi
           while true; do
             if ! timeout -k 60 "$PASS_TIMEOUT_SECONDS" uv run python run_bot.py $args 2>&1 | tee pass.log; then
               failures=$(( failures + 1 ))
