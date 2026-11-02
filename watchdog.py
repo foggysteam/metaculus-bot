@@ -38,7 +38,6 @@ MIN_TIME_LEFT = timedelta(minutes=15)
 LONG_OPEN_RESCUE_WITHIN = timedelta(hours=12)  # Market Pulse: time left before the spot scoring time
 RESTART_AFTER = timedelta(minutes=10)  # a queued run normally starts within a minute of the last one ending
 GAP_ALERT_MINUTES = 60
-HANDOFF_CONFIRMED_WITHIN_MINUTES = 5
 QUICK_RUN_SECONDS = 600
 MIN_SECONDS_TO_COUNT_AS_RAN = 600
 HEALTH_CHECK_EVERY = timedelta(hours=26)
@@ -221,17 +220,6 @@ def gap_alert() -> None:
             f"Forecast polling gap {now:%Y-%m-%d %H:%M}",
             [f"No forecast run was polling for {gap} minutes, until {now:%H:%M} UTC. Questions open for 3 hours, so a gap this long can miss some. Polling has now restarted."],
         )
-    elif gap is not None and gap <= HANDOFF_CONFIRMED_WITHIN_MINUTES:
-        confirm_first_handoff(gap, runs, now)
-
-
-def confirm_first_handoff(gap: int, runs: list[dict], now: datetime) -> None:
-    """Emails once, ever, so the owner knows the first live hand-off worked without having to look."""
-    title = "Forecast hand-off confirmed"
-    found = json.loads(_gh("issue", "list", "-R", REPO, "--state", "all", "--limit", "5", "--search", f'"{title}" in:title', "--json", "title"))
-    if not found:
-        queued = any(r["status"] in WAITING for r in runs if is_live(r))
-        open_issue(title, [f"A new forecast run took over at {now:%H:%M} UTC, {gap} minute(s) after the last one ended, and {'the next run is queued behind it' if queued else 'NO next run is queued behind it'}. This message is only sent once."])
 
 
 def watch() -> None:
