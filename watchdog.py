@@ -122,7 +122,8 @@ def has_forecast(question: dict) -> bool:
 
 def action_for(question: dict, long_open: bool, now: datetime) -> str | None:
     """None, "alert" or "rescue" for one open question."""
-    if has_forecast(question):
+    # A group post that is open can have subquestions that are upcoming, closed or annulled.
+    if has_forecast(question) or question.get("status", "open") != "open":
         return None
     opened, close, reveal = (_time(question.get(k)) for k in ("open_time", "scheduled_close_time", "cp_reveal_time"))
     # Same rule as the platform's spot scoring time (market_pulse.spot_time).

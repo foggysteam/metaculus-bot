@@ -114,6 +114,12 @@ def test_closed_or_future_questions_are_ignored() -> None:
     assert w.action_for(question(opened=-10, closes_in=170), False, NOW) is None
 
 
+def test_only_subquestions_marked_open_count() -> None:
+    annulled = question(opened=10000, closes_in=9000, reveal_in=600) | {"status": "resolved"}
+    assert w.action_for(annulled, True, NOW) is None
+    assert w.action_for(question(opened=10000, closes_in=9000, reveal_in=600) | {"status": "open"}, True, NOW) == "rescue"
+
+
 def test_long_open_question_goes_by_its_spot_time() -> None:
     # Open for weeks with no forecast is normal until the spot time is near.
     assert w.action_for(question(opened=10000, closes_in=9000, reveal_in=6000), True, NOW) is None
