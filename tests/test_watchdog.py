@@ -86,6 +86,16 @@ def test_gap_ignores_runs_that_were_replaced() -> None:
     assert w.gap_minutes([], NOW) is None
 
 
+def test_a_cancelled_run_that_really_ran_still_ends_the_gap() -> None:
+    # A run stopped by hand or at the job's time limit was polling until then, so no gap.
+    runs = [run("completed", "cancelled", started=170, ended=1), run("completed", "success", started=500, ended=400)]
+    assert w.gap_minutes(runs, NOW) == 1
+    assert not w.needs_restart(runs, NOW)
+    # It says nothing about the setup, so it does not count towards the quick-run guard either.
+    quick = [run("completed", "failure", started=3 * i + 3, ended=3 * i) for i in range(3)]
+    assert not w.should_queue([run("completed", "cancelled", started=170, ended=1), *quick])
+
+
 def test_healthy_question_is_left_alone() -> None:
     assert w.action_for(question(opened=20, closes_in=160), False, NOW) is None
     assert w.action_for(question(opened=100, closes_in=80, forecast=True), False, NOW) is None

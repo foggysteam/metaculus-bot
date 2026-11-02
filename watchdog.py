@@ -38,6 +38,7 @@ LONG_OPEN_RESCUE_WITHIN = timedelta(hours=12)  # Market Pulse: time left before 
 RESTART_AFTER = timedelta(minutes=10)  # a queued run normally starts within a minute of the last one ending
 GAP_ALERT_MINUTES = 60
 QUICK_RUN_SECONDS = 600
+MIN_SECONDS_TO_COUNT_AS_RAN = 600
 HEALTH_CHECK_EVERY = timedelta(hours=26)
 
 # Update these with the season (the January switch in PROGRESS.md): id or slug, stays open for weeks.
@@ -56,9 +57,24 @@ def is_live(run: dict) -> bool:
     return not any(word in (run.get("displayTitle") or "") for word in MANUAL_TITLES)
 
 
+def _seconds(run: dict) -> float:
+    return (_time(run["updatedAt"]) - _time(run["startedAt"])).total_seconds()
+
+
 def _finished(runs: list[dict]) -> list[dict]:
-    """Newest first. A cancelled run is one a newer run replaced in the queue, so it never ran."""
+    """Newest first, leaving out cancelled runs: a run that a newer one replaced in the queue
+    never ran, and one stopped by hand says nothing about whether the setup works."""
     return [r for r in runs if r["status"] == "completed" and r["conclusion"] != "cancelled"]
+
+
+def _end_times(runs: list[dict]) -> list[datetime]:
+    """When polling stopped. Unlike _finished this counts a cancelled run that really ran, such
+    as one that hit the job's time limit, since it was polling until then."""
+    return [
+        _time(r["updatedAt"])
+        for r in runs
+        if r["status"] == "completed" and (r["conclusion"] != "cancelled" or _seconds(r) >= MIN_SECONDS_TO_COUNT_AS_RAN)
+    ]
 
 
 def should_queue(runs: list[dict]) -> bool:
@@ -67,9 +83,7 @@ def should_queue(runs: list[dict]) -> bool:
     live = [r for r in runs if is_live(r)]
     if any(r["status"] in WAITING for r in live):
         return False
-    last = _finished(live)[:3]
-    quick = [r for r in last if (_time(r["updatedAt"]) - _time(r["startedAt"])).total_seconds() < QUICK_RUN_SECONDS]
-    return len(quick) < 3
+    return len([r for r in _finished(live)[:3] if _seconds(r) < QUICK_RUN_SECONDS]) < 3
 
 
 def needs_restart(runs: list[dict], now: datetime) -> bool:
@@ -79,13 +93,13 @@ def needs_restart(runs: list[dict], now: datetime) -> bool:
     # Runners can take a few minutes to pick up a run that has only just been queued.
     if any(r["status"] in WAITING and now - _time(r["createdAt"]) < RESTART_AFTER for r in live):
         return False
-    ended = [_time(r["updatedAt"]) for r in _finished(live)]
+    ended = _end_times(live)
     return not ended or now - max(ended) >= RESTART_AFTER
 
 
 def gap_minutes(runs: list[dict], now: datetime) -> int | None:
     """Minutes since the last live run ended, seen from the start of the next one."""
-    ended = [_time(r["updatedAt"]) for r in _finished([r for r in runs if is_live(r)])]
+    ended = _end_times([r for r in runs if is_live(r)])
     return int((now - max(ended)).total_seconds() / 60) if ended else None
 
 
