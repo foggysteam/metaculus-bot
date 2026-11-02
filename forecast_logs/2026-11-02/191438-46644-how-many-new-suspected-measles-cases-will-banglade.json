@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T19:17:26.175526+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T19:14:38.553669+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46644,
+    "post_id": 46411,
+    "url": "https://www.metaculus.com/questions/46411",
+    "type": "NumericQuestion",
+    "unit": "cases",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How many new suspected measles cases will Bangladesh's DGHS report for the 24 hours to 8:00 am on 13 November 2026?",
+    "resolution_criteria": "This question resolves using the DGHS (Directorate General of Health Services, Bangladesh) daily measles bulletin — published in Bengali as \"হাম প্রেস রিলিজ\" — covering the 24 hours from 8:00 am Bangladesh Standard Time (UTC+6) on 12 November 2026 to 8:00 am on 13 November 2026, which is listed at https://dghs.gov.bd/pages/press-releases (mirrored at https://dghs.gov.bd/pages/news). The resolved value is the bulletin's 24-hour figure for newly identified suspected measles cases (patients with measles-like symptoms) — i.e. the suspected-case line, not the combined suspected-plus-confirmed figure, not laboratory-confirmed cases alone, and not hospital admissions; a value of 1,300 new suspected cases resolves as 1,300. If the bulletin's 24-hour suspected figure cannot be obtained, the value is instead computed as the cumulative suspected-case total reported in the bulletin dated 13 November 2026 minus that reported in the bulletin dated 12 November 2026. If the DGHS bulletin itself cannot be accessed or read at all, the value as reported for that same bulletin by [credible sources](https://www.metaculus.com/faq/#definitions) will be used.",
+    "fine_print": "The bulletin is normally released in the afternoon (local time) of the date it covers; if the 13 November 2026 bulletin is delayed, resolution waits for it rather than annulling. The resolved value is the figure as first published for that bulletin, and any later upward or downward revision by DGHS of that day's count does not change the resolution. If no DGHS bulletin covering a period ending 8:00 am on 13 November 2026 (and no reporting of one) exists at all, the question is annulled.",
+    "close_time": "2026-11-02 22:05 UTC",
+    "scheduled_resolution_time": "2026-11-13 14:00 UTC"
+  },
+  "research": [
+    "The latest DGHS bulletin (2 November) reports 1,492 new suspected cases, the highest daily count in the data I found. The question is not settled yet.\n\n## 1. Resolution source\n- 2026-11-02: The DGHS press-release page lists daily \"হাম প্রেস রিলিজ\" entries from 23/10 through 01/11/2026. The 02/11 entry was not yet listed when I checked. The page shows only titles and links, no figures. [DGHS](https://dghs.gov.bd/pages/press-releases)\n- 2026-11-02 bulletin (24 h to 8:00 am, Monday 2 Nov), as reported by media:\n  - 1,492 new suspected cases and 56 new confirmed cases.\n  - Cumulative 231,505 suspected and 23,991 confirmed.\n  - 3 suspected deaths, bringing suspected deaths to 1,152 (105 confirmed deaths).\n  - 1,385 admissions in 24 h.\n  - New suspected cases by division: Dhaka 574, Chattogram 311, Barishal 150, Sylhet 145, Khulna 125, Mymensingh 102, Rajshahi 46, Rangpur 39.\n  - [tob.news](https://tob.news/3-die-with-suspected-measles-1492-new-cases-in-24hrs/), [thereport.live](https://thereport.live/health/measles-like-symptoms-claim-3-more-children/%E2%80%8D%E2%80%8Ds-lives/42493)\n- 2026-11-01 bulletin: 1,353 suspected plus 64 confirmed (1,417 combined), cumulative 230,013 suspected. [thereport.live](https://thereport.live/health/2-more-children-die-with-measles-symptoms/42460), [Financial Express](https://today.thefinancialexpress.com.bd/last-page/eight-more-die-of-dengue-1929-hospitalised-1793557681?amp=true)\n- 2026-10-31 bulletin: I could not find it directly. The cumulative totals imply about 987 suspected cases (230,013 minus 227,673 minus 1,353).\n\n## 2. Current status\n- Nothing settles the question yet. The 13 November bulletin covers 8:00 am Thursday 12 Nov to 8:00 am Friday 13 Nov. In other words, it is the Friday bulletin covering Thursday, which is a working day.\n\n## 3. Recent news (newest first)\n- 2026-11-02: Dengue is also surging, with 1,970 hospitalised in 24 h and 433 deaths this year, adding strain on hospitals. [Daily Star](https://www.thedailystar.net/news/healthcare/disease/news/6-die-dengue-1970-hospitalised-24-hours-4313826)\n- 2026-11-02: The measles bulletin above (1,492 suspected) is the highest daily suspected count I saw in October to November coverage. [Daily Waadaa](https://www.dailywaadaa.com/health/2026/11/02/three-more-children-die-with-measles-symptoms)\n- 2026-10-31/11-01: Reuters says the measles death toll is above 1,200 and dengue is unlikely to ease before December. [ThePrint](https://theprint.in/world/bangladesh-death-toll-from-dengue-rises-unlikely-to-ease-before-december/3086979/)\n- 2026-10-29/30: Combined measles deaths reached 1,251. [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423299/measles-outbreak-death-toll-reaches-1-251-as-two)\n\n## 4. Base rates\n**Daily suspected counts:**\n- 25 Oct: 1,280 [Jugantor](https://www.jugantor.com/national/1175224)\n- 27 Oct: 1,232\n- 28 Oct: 1,322\n- 29 Oct: 1,251\n- 30 Oct (a Friday bulletin): 1,316\n- 31 Oct: about 987 (implied)\n- 1 Nov: 1,353\n- 2 Nov: 1,492\n\n**Average per day, worked out from cumulative totals:**\n\n| Period | Average per day |\n|---|---|\n| 14 to 18 Oct | about 1,168 |\n| 18 to 30 Oct | about 1,202 |\n| 30 Oct to 2 Nov | about 1,277 |\n| ISO week 42 (WHO) | about 1,174 |\n\nThe trend is flat to slightly rising rather than declining.\n\n**Weekly pattern:**\n- Saturday bulletins, which cover Friday (the Bangladeshi weekend), tend to be low:\n  - 24 Oct: 1,014 [bdnews24](https://bdnews24.com/health/wqxvwh5x0b)\n  - 31 Oct: about 987\n  - An earlier Saturday: 816 [UNB tag](https://unb.com.bd/news/tag/154447)\n- Other counts I could not reliably date:\n  - 980 for 26 Sep\n  - 1,074 on 13 Oct (cumulative 207,371) [Jago News](https://www.jagonews24.com/en/national/news/97163)\n- Friday bulletins (covering Thursday) look like normal weekday counts. The one I found is 30 Oct at 1,316. I could not confirm the 16 Oct or 23 Oct Friday values.\n- Weekday values from 25 Oct to 2 Nov ranged from 1,232 to 1,492. Day-to-day swings are about ±10%, and the post-weekend counts (1 and 2 Nov) ran high, possibly catch-up reporting.\n\n## 5. Other forecasts\n- None of the Kalshi or Polymarket markets supplied matches this question. The Kalshi measles markets concern US case counts, and the Polymarket ones are cricket.\n- I found no Manifold or Metaculus forecasts or expert projections for Bangladesh's daily count.\n- WHO SEARO (21 Oct) described about 1,000 to 1,300 suspected cases per day since early September \"with no steady decline\" (as quoted in the question background).\n\n## 6. Upcoming events before resolution\n- The daily bulletins for 3 to 12 November will show whether the early-November rise (1,353, then 1,492) continues or reverts toward about 1,200.\n- The measles-rubella vaccination campaign began on 26 September. I found no reporting on its completion or effect in November.\n- The government has the EPI review recommendations, but I found no announced action.\n- Dengue is putting extra strain on hospitals, which could affect admissions and reporting.\n- Risks to the timing of the 13 Nov bulletin are Friday release habits and any holiday or delay. I found no scheduled holiday on 12 or 13 November, but did not verify this exhaustively.\n\n**Sources not linked above:** [Financial Express measles report](https://thefinancialexpress.com.bd/national/two-more-children-die-with-measles-like-symptoms), [Observer BD](https://observerbd.com/news/603195), [Daily Star](https://www.thedailystar.net/news/healthcare/disease/news/4-more-die-measles-symptoms-24-hours-4299581), [Bangla Tribune](https://www.banglatribune.com/976627)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 19:14 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 7000: 0.61; Above 8000: 0.21; Above 6000: 0.81; Above 10000: 0.07; Above 9000: 0.10; Above 5000: 0.99; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.50; At least 4500: 0.63; At least 4000: 0.71; At least 3500: 0.80; At least 3000: 0.88; At least 2500: 0.92; At least 2000: 0.96; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: Will the US lose measles elimination status this year? (Before Jan 1, 2027). Yes prices: Yes: 0.72.\n- Kalshi: Will WHO declare Hantavirus a Public Health Emergency of International Concern this Year? (In 2026). Yes prices: In Dec 31, 2026: 0.0070.\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Toss Match Double (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"1\", \"0\"]; BDW: [\"0\", \"1\"]\n- Polymarket: Test Match: Bangladesh vs West Indies (ends 2026-11-12). [Yes, No] prices: Bangladesh: [\"0.53\", \"0.47\"]; Draw: [\"0.13\", \"0.87\"]; West Indies: [\"0.355\", \"0.645\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Team Top Batter (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"0\", \"1\"]; BDW: [\"1\", \"0\"]",
+    "## 1. Resolution source\n- 2026-11-02: The DGHS press-release page lists measles bulletins (\"হাম প্রেস রিলিজ\") every day from 23 Oct to 01/11/2026. The 2 November bulletin was not yet listed when I checked. The listing shows titles only, no figures, and I could not open the bulletin PDFs. [DGHS](https://dghs.gov.bd/pages/press-releases)\n- 2026-11-02: According to media reports of the 2 Nov bulletin (24 h to 8:00 am on 2 Nov): 1,492 new suspected cases, cumulative suspected 231,505, 56 new confirmed (cumulative 23,991), 3 suspected deaths (1,152 suspected deaths, 105 confirmed deaths). The combined suspected-plus-confirmed figure was 1,548. [tob.news](https://tob.news/3-die-with-suspected-measles-1492-new-cases-in-24hrs/), [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423455/measles-outbreak-death-toll-reaches-1-254-as-two)\n\n## 2. Current status\n- Nothing settles the question yet. The bulletin that decides it will be published on 13 Nov. The window (Thu 12 Nov 8am to Fri 13 Nov 8am) falls mostly on a Bangladeshi working day.\n\n## 3. Recent news (newest first)\n- 2026-11-02: 1,492 suspected cases, the highest daily count in the recent series. Dhaka had 574 and Chattogram 311. There were 1,385 suspected-case admissions. [tob.news](https://tob.news/3-die-with-suspected-measles-1492-new-cases-in-24hrs/)\n- 2026-11-01: 1,353 suspected cases, cumulative 230,013. The combined figure was 1,417. [Dhaka Tribune](https://www.dhakatribune.com/bangladesh/health/423299/measles-outbreak-death-toll-reaches-1-251-as-two)\n- 2026-10-31: I found no direct report. Working back from the totals (230,013 − 1,353 − 227,673), the figure was about 987. That bulletin covered Friday to Saturday, the Bangladeshi weekend, which likely explains the low count.\n- 2026-11-02: Dengue is surging at the same time: 1,970 hospitalised in 24 h and 433 deaths in 2026. This adds strain on the health system. [Daily Star](https://www.thedailystar.net/news/healthcare/disease/news/6-die-dengue-1970-hospitalised-24-hours-4313826)\n\n## 4. Base rates\nDaily suspected counts by bulletin date:\n- 22 Oct: 995 [Bangla Tribune/Jugantor search results](https://www.banglatribune.com/health/976049/)\n- 27 Oct: 1,232; 28 Oct: 1,322; 29 Oct: 1,251; 30 Oct: 1,316\n- 31 Oct: about 987 (derived)\n- 1 Nov: 1,353; 2 Nov: 1,492\n\nAverage daily counts worked out from the cumulative totals:\n- 14 to 18 Oct: (213,244 − 208,570)/4 ≈ 1,169/day\n- 18 to 30 Oct: 14,429/12 ≈ 1,202/day\n- 30 Oct to 2 Nov: 3,832/3 ≈ 1,277/day\n\nTrend and variation:\n- The trend is flat to slightly rising, not declining.\n- The WHO SEARO bulletin (21 Oct) reported roughly 1,000 to 1,300 cases a day since early September. ISO week 42 had 8,216 cases (about 1,174/day). This matches the background; I did not re-check it independently.\n- Bulletins covering the weekend (Saturday release) seem to dip to about 990. The 22 Oct (Thursday) bulletin was also 995, so low days are not only weekends.\n- Recent daily spread is about 990 to 1,490. Working days have mostly been 1,230 to 1,490.\n\n## 5. Other forecasts\n- I found no prediction market or expert forecast on Bangladesh's daily measles counts.\n- The Kalshi \"Measles cases this year\" contracts are about US cases (for example, Above 7000 at 0.61). They do not match this question.\n- The Polymarket Bangladesh markets are about cricket and are irrelevant.\n\n## 6. Upcoming events before resolution\n- Daily DGHS bulletins from 3 to 12 Nov will show whether the recent rise (1,353, then 1,492) continues.\n- The MR vaccination campaign that began 26 Sep could start to bring incidence down. So far there is no sign of a decline.\n- The weekend bulletins on 6 to 7 Nov will probably dip. The window that counts (Thursday to Friday morning) is mostly a working day, so it is unlikely to show the weekend low, but this is not certain.\n- Dengue pressure on hospitals may affect how measles cases are reported or admitted.\n- If you use secondary coverage, watch for outlets quoting the combined suspected-plus-confirmed figure, which runs about 50 to 70 higher than the suspected-only count.\n\nSources: [DGHS press releases](https://dghs.gov.bd/pages/press-releases), [tob.news](https://tob.news/3-die-with-suspected-measles-1492-new-cases-in-24hrs/), [Dhaka Tribune 1,254](https://www.dhakatribune.com/bangladesh/health/423455/measles-outbreak-death-toll-reaches-1-254-as-two), [Dhaka Tribune 1,251](https://www.dhakatribune.com/bangladesh/health/423299/measles-outbreak-death-toll-reaches-1-251-as-two), [Bangla Tribune](https://www.banglatribune.com/health/976049/), [Daily Star dengue](https://www.thedailystar.net/news/healthcare/disease/news/6-die-dengue-1970-hospitalised-24-hours-4313826)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 19:14 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 7000: 0.61; Above 8000: 0.21; Above 6000: 0.81; Above 10000: 0.07; Above 9000: 0.10; Above 5000: 0.99; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.50; At least 4500: 0.63; At least 4000: 0.71; At least 3500: 0.80; At least 3000: 0.88; At least 2500: 0.92; At least 2000: 0.96; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: Will the US lose measles elimination status this year? (Before Jan 1, 2027). Yes prices: Yes: 0.72.\n- Kalshi: Will WHO declare Hantavirus a Public Health Emergency of International Concern this Year? (In 2026). Yes prices: In Dec 31, 2026: 0.0070.\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Toss Match Double (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"1\", \"0\"]; BDW: [\"0\", \"1\"]\n- Polymarket: Test Match: Bangladesh vs West Indies (ends 2026-11-12). [Yes, No] prices: Bangladesh: [\"0.53\", \"0.47\"]; Draw: [\"0.13\", \"0.87\"]; West Indies: [\"0.355\", \"0.645\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Team Top Batter (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"0\", \"1\"]; BDW: [\"1\", \"0\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 1030.0,
+        "p25": 1175.0,
+        "p50": 1305.0,
+        "p75": 1435.0,
+        "p90": 1570.0
+      },
+      "reasoning": "(a) Time left: about 11 days. The 13 November bulletin should be released on the afternoon of 13 November 2026 (around 14:00 UTC).\n\n(b) Latest known value: the bulletin of 2 November 2026 reported 1,492 new suspected cases. The 1 November bulletin reported 1,353.\n\n(c) If nothing changed: roughly 1,250 to 1,300. That is the recent weekday level, and the 30 October to 2 November average works out to about 1,277 per day.\n\n(d) If the current trend continued: there is a mild upward drift, from about 1,170 per day in mid-October to about 1,280 now. Extending that implies about 1,300 to 1,400 by 12 November. However, the high 1 and 2 November counts may partly be catch-up reporting after the weekend.\n\n(e) Historical variation: single weekday counts vary by about ±10% around the trend. Over 11 days the trend level itself could move by about ±10 to 15%. The 13 November bulletin covers Thursday, a normal working day, so the low Saturday-bulletin pattern (about 800 to 1,000) should not apply. The one Friday bulletin I found (30 October) was 1,316.\n\n(f) Experts and markets: no markets cover this quantity. WHO SEARO describes about 1,000 to 1,300 suspected cases per day \"with no steady decline\". The question creator's range is 700 to 1,800.\n\n(g) Unexpected scenarios:\n- **Low:** a reporting disruption, data-verification backlog, unexpected holiday or partial reporting from some divisions drops the count below 900. A genuine vaccination-campaign effect could also make the decline faster than expected.\n- **High:** continued acceleration (Dhaka surging, hospital strain from dengue pushing more measles cases into formal care), or a batch of delayed reports, pushes the count above 1,700.\n\nTail reasoning for the extremes:\n- **Percentile 1 (about 760):** a partial or holiday-style reporting day, similar to the Saturday lows of 816 to 987.\n- **Percentile 99 (about 1,900):** sustained growth of about 30% plus a catch-up batch.\n\nPercentile 1: 760\nPercentile 5: 930\nPercentile 10: 1030\nPercentile 20: 1140\nPercentile 30: 1210\nPercentile 40: 1260\nPercentile 50: 1305\nPercentile 60: 1350\nPercentile 70: 1400\nPercentile 80: 1470\nPercentile 90: 1570\nPercentile 95: 1660\nPercentile 99: 1900"
+    },
+    {
+      "value": {
+        "p10": 1030.0,
+        "p25": 1187.5,
+        "p50": 1325.0,
+        "p75": 1455.0,
+        "p90": 1590.0
+      },
+      "reasoning": "(a) **Time left:** About 11 days. The 13 November 2026 bulletin, covering 8:00 am Thursday 12 Nov to 8:00 am Friday 13 Nov, should be published on the afternoon of 13 November, Bangladesh time.\n\n(b) **Latest known value:** The 2 November 2026 bulletin reported 1,492 new suspected cases, the highest recent count. The day before (1 Nov) was 1,353. Weekday counts from 25 October to 2 November ranged from 1,232 to 1,492. The average from cumulative totals was about 1,277 per day for 30 Oct to 2 Nov.\n\n(c) **If nothing changed:** About 1,300. That is the prevailing weekday level, adjusted down a little from 1,492 because the 1 and 2 November counts may include catch-up reporting after the weekend. The target bulletin is a Friday bulletin covering Thursday, a working day. The one Friday value found (30 Oct) was a normal 1,316, unlike the low Saturday bulletins (about 800 to 1,000).\n\n(d) **If the current trend continued:** The trend is flat to slightly rising: about 1,168 per day in mid-October, about 1,202 in late October and about 1,277 in early November. Extending that gives roughly 1,330 to 1,400 by 12 November.\n\n(e) **Historical variation:** Single-day counts swing about ±10% around the trend. Over roughly 10 days the underlying level has drifted only around 5 to 10%. Combined, a 10th to 90th percentile range of about ±20% around 1,300 seems reasonable.\n\n(f) **Experts and markets:** WHO SEARO describes about 1,000 to 1,300 suspected cases per day since September \"with no steady decline\". No markets cover this quantity. The question creator's range is 700 to 1,800.\n\n(g) **Unexpected scenarios:**\n- **Low:** The vaccination campaign finally bends the curve, and a reporting shortfall (dengue-stretched staff, an incomplete Thursday upload, a data glitch) produces a count around 650 to 800.\n- **High:** Transmission accelerates with winter and gaps in immunity, or a batch of catch-up reporting from a division lands in this bulletin, producing about 1,800 to 2,000.\n\nPercentile 1: 650\nPercentile 5: 900\nPercentile 10: 1030\nPercentile 20: 1150\nPercentile 30: 1225\nPercentile 40: 1280\nPercentile 50: 1325\nPercentile 60: 1370\nPercentile 70: 1420\nPercentile 80: 1490\nPercentile 90: 1590\nPercentile 95: 1690\nPercentile 99: 1950"
+    },
+    {
+      "value": {
+        "p10": 1040.0,
+        "p25": 1177.5,
+        "p50": 1300.0,
+        "p75": 1422.5,
+        "p90": 1555.0
+      },
+      "reasoning": "(a) **Time left:** about 11 days. The 13 November bulletin (Friday, covering Thursday 12 November, a working day) should come out around 13 November afternoon in Bangladesh, roughly 14:00 UTC.\n\n(b) **Latest known value:** the 2 November 2026 bulletin reported 1,492 new suspected cases (cumulative 231,505). The 1 November bulletin reported 1,353.\n\n(c) **If nothing changed:** the prevailing weekday level is about 1,250 to 1,350. The 30 October to 2 November average is about 1,277 per day. The last Friday bulletin (30 October) was 1,316. So the no-change outcome is about 1,300.\n\n(d) **If the current trend continued:** the trend is flat to slightly rising. Averages went from about 1,168 per day (mid-October) to 1,202 and then 1,277. Extending that gives roughly 1,320 to 1,400 by 12 November. Part of the recent jump may be post-weekend catch-up reporting, so I give the trend only partial weight.\n\n(e) **Historical variation:** single-day counts swing about ±10% around the trend. Weekday values from 25 October to 2 November ranged from 1,232 to 1,492. Over 11 days, the underlying level could also drift by ±10 to 15%. Saturday bulletins run low (816 to 1,014), but this is a Friday bulletin covering a working day, so it is not affected.\n\n(f) **Experts and markets:** WHO SEARO described roughly 1,000 to 1,300 suspected cases per day \"with no steady decline\". There are no relevant markets; the Kalshi and Polymarket listings concern US measles counts and cricket.\n\n(g) **Unexpected scenarios:**\n- **Low:** a reporting glitch, a partial upload or an unscheduled holiday cuts Thursday's count, or the vaccination campaign starts to bend the curve sharply. That could give about 750 to 950.\n- **High:** a surge in Dhaka or Chattogram, a backlog of catch-up reporting, or a newly added reporting source pushes the count to about 1,700 to 1,900.\n\nPercentile 1: 750\nPercentile 5: 950\nPercentile 10: 1040\nPercentile 20: 1145\nPercentile 30: 1210\nPercentile 40: 1260\nPercentile 50: 1300\nPercentile 60: 1340\nPercentile 70: 1390\nPercentile 80: 1455\nPercentile 90: 1555\nPercentile 95: 1645\nPercentile 99: 1850"
+    },
+    {
+      "value": {
+        "p10": 1005.0,
+        "p25": 1140.0,
+        "p50": 1280.0,
+        "p75": 1407.5,
+        "p90": 1540.0
+      },
+      "reasoning": "(a) **Time left:** About 11 days. The deciding bulletin, dated Friday 13 November, should be published that afternoon, around 14:00 UTC.\n\n(b) **Latest known value:** The 2 November bulletin reported 1,492 new suspected cases, with cumulative suspected cases at 231,505. Earlier bulletins: 1,353 on 1 November, about 987 on 31 October (a weekend bulletin), and 1,316 on 30 October.\n\n(c) **If nothing changed:** The recent prevailing level is about 1,280 a day. Averages from cumulative totals: 30 October to 2 November about 1,277 a day, 18 to 30 October about 1,202 a day. The question's window runs Thursday 8am to Friday 8am. That is a working day, like the 30 October bulletin's window (1,316). It is not the Friday-to-Saturday weekend window that produces dips to about 990.\n\n(d) **If the current trend continued:** The trend is flat to slightly rising. Extrapolated, that gives about 1,300 to 1,400. The measles-rubella vaccination campaign that started on 26 September may begin to bend the curve down, which offsets some of this.\n\n(e) **Historical variation:** Single days vary by about ±10% around the trend, and odd low days of about 990 appear even on weekdays (22 October). Over 11 days the underlying level could drift by about ±15%.\n\n(f) **Experts and markets:** There are no markets on this quantity. WHO SEARO describes 1,000 to 1,300 cases a day with no steady decline.\n\n(g) **Unexpected scenarios:**\n- Low: the vaccination campaign takes hold and cases decline faster. Or a reporting lag, holiday-style dip, or data-system hiccup gives a figure of about 750 to 900.\n- High: transmission keeps accelerating, as the 1,492 figure hints. Or a backlog of delayed reports gets dumped into one bulletin, giving about 1,700 to 1,800 or more.\n\nI put the median at about 1,280.\n\nPercentile 1: 750\nPercentile 5: 920\nPercentile 10: 1005\nPercentile 20: 1105\nPercentile 30: 1175\nPercentile 40: 1230\nPercentile 50: 1280\nPercentile 60: 1325\nPercentile 70: 1375\nPercentile 80: 1440\nPercentile 90: 1540\nPercentile 95: 1625\nPercentile 99: 1820"
+    },
+    {
+      "value": {
+        "p10": 1030.0,
+        "p25": 1162.5,
+        "p50": 1285.0,
+        "p75": 1400.0,
+        "p90": 1525.0
+      },
+      "reasoning": "(a) **Time left:** about 11 days. The deciding bulletin, dated Friday 13 November 2026, should come out on the afternoon of 13 November, Bangladesh time.\n\n(b) **Latest known value:** the 2 November 2026 bulletin reported 1,492 new suspected cases, with cumulative suspected cases at 231,505. Earlier bulletins:\n\n| Bulletin date | New suspected cases |\n|---|---|\n| 1 Nov | 1,353 |\n| 31 Oct (Saturday, covering the weekend) | about 987, derived from cumulative totals |\n| 30 Oct (Friday) | 1,316 |\n| 29 Oct | 1,251 |\n| 28 Oct | 1,322 |\n| 27 Oct | 1,232 |\n\n(c) **If nothing changed:** the prevailing level is about 1,250 to 1,300 a day. The 30 October to 2 November average is about 1,277 a day. The resolving window runs from Thursday to Friday morning. The comparable Friday bulletin (30 October) was a normal 1,316, not a weekend dip. So the outcome would be about 1,280 to 1,300.\n\n(d) **If the current trend continued:** the average has crept up from about 1,170 a day in mid-October to 1,200 and then about 1,280. That is a slow rise of roughly 5% every two weeks, which would give about 1,330 to 1,380 by 13 November. The vaccination campaign could instead start to bend the curve down, so I centre near 1,290.\n\n(e) **Historical variation:** single days swing roughly ±10 to 15% around the trend. Occasional low days (995 on Thursday 22 October, about 987 on the Saturday 31 October bulletin) and high days (1,492) appear even when the trend is flat. Over 11 days the trend itself could move by about ±10%.\n\n(f) **Experts and markets:** I found no market or forecast on this quantity. WHO SEARO describes 1,000 to 1,300 cases a day with \"no steady decline\". The question creator's plausible range is 700 to 1,800.\n\n(g) **Unexpected scenarios:**\n- Low: the vaccination campaign's effect shows up quickly, the reporting system is disrupted by dengue strain, or a holiday or reporting lag gives a partial-day count. Any of these could push the figure to about 750 to 900.\n- High: transmission rises in Dhaka or Chattogram, or backlogged cases are added in one day. Either could push the figure to about 1,700 to 1,850.\n\nPercentile 1: 760\nPercentile 5: 940\nPercentile 10: 1030\nPercentile 20: 1130\nPercentile 30: 1195\nPercentile 40: 1245\nPercentile 50: 1285\nPercentile 60: 1325\nPercentile 70: 1370\nPercentile 80: 1430\nPercentile 90: 1525\nPercentile 95: 1610\nPercentile 99: 1800"
+    },
+    {
+      "value": {
+        "p10": 1020.0,
+        "p25": 1165.0,
+        "p50": 1300.0,
+        "p75": 1427.5,
+        "p90": 1560.0
+      },
+      "reasoning": "(a) The outcome will be known in about 11 days. The bulletin dated Friday 13 November, covering Thursday 8 am to Friday 8 am, is due around 13 November 14:00 UTC.\n\n(b) The latest known value is 1,492 new suspected cases, from the 2 November bulletin. The cumulative suspected total was 231,505.\n\n(c) If nothing changed, the figure would be about 1,300. That is the recent working-day level: 1,232 to 1,492, with a 3-day average of about 1,277.\n\n(d) If the current trend continued, the figure would be about 1,300 to 1,400. The averages have drifted up slowly, from about 1,170 to 1,200 to 1,280 per day. The single 1,492 day is probably partly noise.\n\n(e) Historical variation:\n- Single days vary by about ±10 to 15% around the trend.\n- Bulletins covering the weekend (Saturday release) dip to about 990.\n- The 13 November bulletin is a Friday release covering mostly Thursday, a working day. The comparable 30 October Friday bulletin was 1,316, so it was not depressed.\n- Over 10 days, the trend itself could shift by about ±15%.\n\n(f) Expectations of experts and markets:\n- WHO describes about 1,000 to 1,300 cases a day with no steady decline.\n- There are no markets on this quantity.\n- The question creator's range is 700 to 1,800.\n\n(g) Unexpected scenarios:\n- Low: the measles-rubella campaign starts to bite and incidence turns down. A reporting glitch, a holiday or a partial upload could also produce a figure under 900.\n- High: the epidemic accelerates in Dhaka or Chattogram, or a backlog of reports is cleared in one bulletin. The figure could then exceed 1,700. A resolver mistakenly using the combined suspected-plus-confirmed figure would add about 60.\n\nPercentile 1: 760\nPercentile 5: 930\nPercentile 10: 1020\nPercentile 20: 1130\nPercentile 30: 1200\nPercentile 40: 1255\nPercentile 50: 1300\nPercentile 60: 1345\nPercentile 70: 1395\nPercentile 80: 1460\nPercentile 90: 1560\nPercentile 95: 1650\nPercentile 99: 1850"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 1023.7233,
+    "p25": 1168.4001,
+    "p50": 1299.8059,
+    "p75": 1425.9215,
+    "p90": 1561.3939
+  },
+  "usage": [
+    {
+      "question_id": "46644",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 1.8,
+      "notional_cost_usd": 0.00012660000000000001,
+      "input_tokens": 519,
+      "output_tokens": 46,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 0.00028220000000000003,
+      "input_tokens": 1232,
+      "output_tokens": 72,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 79.7,
+      "notional_cost_usd": 0.3263463,
+      "input_tokens": 80129,
+      "output_tokens": 4475,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.5,
+      "notional_cost_usd": 0.070884,
+      "input_tokens": 6179,
+      "output_tokens": 1073,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.07308400000000001,
+      "input_tokens": 6179,
+      "output_tokens": 1183,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.0007613000000000001,
+      "input_tokens": 2875,
+      "output_tokens": 373,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.0008844,
+      "input_tokens": 2923,
+      "output_tokens": 600,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 22.9,
+      "notional_cost_usd": 0.026573600000000003,
+      "input_tokens": 6179,
+      "output_tokens": 1146,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.00029871,
+      "input_tokens": 2876,
+      "output_tokens": 413,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0007972999999999999,
+      "input_tokens": 2870,
+      "output_tokens": 447,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.00039747999999999997,
+      "input_tokens": 2922,
+      "output_tokens": 610,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.00032795,
+      "input_tokens": 2869,
+      "output_tokens": 472,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 49.2,
+      "notional_cost_usd": 0.1634231,
+      "input_tokens": 40414,
+      "output_tokens": 3182,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.0728,
+      "input_tokens": 5806,
+      "output_tokens": 1318,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.071392,
+      "input_tokens": 5805,
+      "output_tokens": 1248,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.1,
+      "notional_cost_usd": 0.074588,
+      "input_tokens": 5807,
+      "output_tokens": 1407,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008382999999999999,
+      "input_tokens": 2835,
+      "output_tokens": 543,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.0008245,
+      "input_tokens": 3001,
+      "output_tokens": 449,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 0.0007452000000000001,
+      "input_tokens": 2787,
+      "output_tokens": 376,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00021601000000000001,
+      "input_tokens": 2837,
+      "output_tokens": 248,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00026525,
+      "input_tokens": 2999,
+      "output_tokens": 344,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46644",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00021552000000000002,
+      "input_tokens": 2788,
+      "output_tokens": 248,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8861
+}
