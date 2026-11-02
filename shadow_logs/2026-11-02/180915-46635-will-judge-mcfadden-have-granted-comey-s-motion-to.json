@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-02T18:13:08.831980+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T18:09:15.800242+00:00",
+  "published": false,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46635,
+    "post_id": 46402,
+    "url": "https://www.metaculus.com/questions/46402",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will Judge McFadden have granted Comey's motion to dismiss the D.C. criminal information by November 13, 2026?",
+    "resolution_criteria": "This question resolves Yes if, on or before November 13, 2026, the U.S. District Court for the District of Columbia issues an order in United States v. Comey, No. 1:26-cr-00229-TNM, granting James Comey's motion to dismiss the criminal information (ECF No. 11, including any amended or refiled version of that motion) and dismissing the criminal information in its entirety, with or without prejudice; an order granting the motion only in part, so that any count of the information survives, resolves No. It resolves No if the Court denies that motion or has issued no order granting it by that date. Resolution is based on the case docket in 1:26-cr-00229-TNM (case filings are compiled at https://www.nacdl.org/brief/United-States-v-Comey-(2)) or, if the docket is unavailable, on reporting by [credible sources](https://www.metaculus.com/faq/#definitions).",
+    "fine_print": "Dismissal of the criminal information on any other basis — for example, a motion by the government to dismiss, or the return of a grand jury indictment that supersedes the information — does not count as granting ECF No. 11, including where the Court denies that motion as moot. If the Court issues an order granting ECF No. 11 on or before November 13, 2026, but the order becomes public only after that date, the question still resolves Yes.",
+    "close_time": "2026-11-02 17:22 UTC",
+    "scheduled_resolution_time": "2026-11-13 23:59 UTC"
+  },
+  "research": [
+    "I found no order on Comey's motion to dismiss (ECF No. 11) as of November 2. The October 30 hearing ended with the motion taken under advisement. McFadden openly questioned whether it was premature to rule while the government is still seeking a grand jury indictment, and an indictment would likely make the motion moot. Under the fine print, a denial as moot resolves No.\n\n## 1. Resolution source\n- 2026-11-02 (fetched): The NACDL tracker lists only four filings: ECF 1, the information (10/05/26); ECF 6, the first motion to dismiss plus a request for an emergency hearing (10/09/26); ECF 11, the motion to dismiss (10/16/26); and ECF 12, the government's response (10/23/26). It shows no order on ECF 11 and doesn't yet list ECF 14, the unsealing order. [NACDL](https://www.nacdl.org/brief/United-States-v-Comey-(2))\n- The CourtListener docket API needs a login, so I couldn't read the live docket directly.\n\n## 2. Current status\n- 2026-10-30: McFadden heard argument and did not rule. He said the case turns on \"very novel issues\" and asked, \"Aren't we getting a little ahead of ourselves?\" He questioned both sides on whether an indictment would make the issue moot. [CBS](https://www.cbsnews.com/news/doj-james-comey-information-espionage-act-hearing/), [Spokesman/Bloomberg](https://www.spokesman.com/stories/2026/oct/30/doj-seeks-grand-jury-indictment-of-comey-on-defens/)\n- 2026-10-30: He did not bar the government from going to a grand jury, calling it the government's choice. He also said that if a grand jury refused to indict, the proceedings would have been futile, and joked that \"ham sandwiches are harder to indict these days.\" [NBC](https://www.nbcnews.com/politics/justice-department/james-comey-team-court-seeking-toss-third-doj-case-longtime-trump-foe-rcna606394)\n- One summary said McFadden \"seemed inclined to rule for the defense\" on whether an indictment was required, but noted that Comey could renew his limitations argument after any indictment. [search summary; WaPo](https://www.washingtonpost.com/national-security/2026/10/30/judge-weighs-whether-justice-dept-violated-statute-charging-james-comey/)\n- So far nothing settles the question.\n\n## 3. Recent news (newest first)\n- 2026-11-02: In a separate D.D.C. case, Magistrate Judge Zia Faruqui dismissed a criminal complaint against former FBI officials Floris and Benavides, citing \"weaponization.\" It shows how that courthouse is treating similar prosecutions but is not this case. [NY Post](https://nypost.com/2026/11/02/us-news/dc-federal-judge-tosses-case-against-fbi-officials-accused-of-lying-about-hunter-biden-laptop/)\n- 2026-10-31: Commentary argued the information \"might get tossed.\" [Townhall](https://townhall.com/news/mattvespa/2026/10/31/the-james-comey-national-security-leak-indictment-might-get-tossed-n2685635)\n- 2026-10-30: The prosecutor told the court, \"We are still going to the grand jury very diligently.\" DOJ said it is considering charges for conduct through April 2017, which would fall inside the limitations period and so would not depend on the information question. [Spokesman](https://www.spokesman.com/stories/2026/oct/30/doj-seeks-grand-jury-indictment-of-comey-on-defens/), [NBC](https://www.nbcnews.com/politics/justice-department/james-comey-team-court-seeking-toss-third-doj-case-longtime-trump-foe-rcna606394)\n- 2026-10-30: McFadden warned he would be \"extremely frustrated\" by a \"dawn raid\" to arrest Comey. [ABC7](https://abc7news.com/story/attorneys-james-comey-return-court-fight-dojs-efforts-charge-3rd-time/20000350/)\n- 2026-10-16: According to Comey's filing, DOJ had planned to seek an indictment on October 9 but agreed to wait 30 days. That pause ends in early November: ABC says November 5, and 30 days from October 9 would be November 8. [Spokesman](https://www.spokesman.com/stories/2026/oct/30/doj-seeks-grand-jury-indictment-of-comey-on-defens/)\n- I found no reporting from October 31 to November 2 of an indictment, a ruling, or any new filing in 1:26-cr-00229.\n\n## 4. Base rates\n- I found no data on how often a judge grants a statute-of-limitations dismissal of a waiverless information within two weeks of argument. NACDL calls the issue novel.\n- Federal judges often deny pretrial motions as moot once a superseding indictment arrives. McFadden's mootness questions point toward waiting rather than ruling.\n- Earlier Comey prosecutions: the Eastern District of Virginia case was dismissed about two months after indictment (November 24, 2025). As of late October, the North Carolina judge had not ruled on Comey's motions.\n\n## 5. Other forecasts\nPrices as of 2026-11-02 18:09 UTC:\n- Kalshi, \"Will James Comey's national defense information case be dismissed?\" for 1:26-cr-00229 (D.D.C.): 22% before January 1, 2027, 90% before July 1, 2027. This is the closest market, but it is broader than this question. It likely counts any dismissal, including on the government's own motion, and covers a longer window.\n- Kalshi, the general \"Comey case dismissed\" market (case not specified): 27% before January 1, 2027.\n- Polymarket, \"Comey charges dropped by December 31?\": 39%. It doesn't specify which case.\n- No market covers the November 13 deadline or a dismissal specifically by grant of ECF 11.\n\n## 6. Upcoming events before November 13\n- About November 5 to 8: the agreed 30-day pause on seeking an indictment ends, and DOJ is expected to go to a grand jury.\n- If an indictment comes back, ECF 11 would likely be denied as moot or overtaken by a new motion, which resolves No.\n- If the grand jury declines to indict, or DOJ doesn't seek one, McFadden could rule on the merits. Reporting suggests he is skeptical of the government's position.\n- Possible new filings: DOJ notices about grand jury status or additional charges, or supplemental briefing. None found so far.\n- The November 3 midterms make the political backdrop noisier, but nothing is scheduled in court.\n\nSources: [NACDL](https://www.nacdl.org/brief/United-States-v-Comey-(2)), [CBS](https://www.cbsnews.com/news/doj-james-comey-information-espionage-act-hearing/), [NBC](https://www.nbcnews.com/politics/justice-department/james-comey-team-court-seeking-toss-third-doj-case-longtime-trump-foe-rcna606394), [Spokesman/Bloomberg](https://www.spokesman.com/stories/2026/oct/30/doj-seeks-grand-jury-indictment-of-comey-on-defens/), [WaPo](https://www.washingtonpost.com/national-security/2026/10/30/judge-weighs-whether-justice-dept-violated-statute-charging-james-comey/), [WaPo/AP](https://www.washingtonpost.com/politics/2026/10/30/fbi-justice-department-james-comey/a989d162-d453-11f1-9931-2a41b76fc976_story.html), [ABC7](https://abc7news.com/story/attorneys-james-comey-return-court-fight-dojs-efforts-charge-3rd-time/20000350/), [Dayton Daily News/AP](https://www.daytondailynews.com/nation-world/judge-puts-off-decision-in-comey-case-as-prosecutors-pursue-new-indictment-against-ex-fbi/article_74d057ae-585e-53a5-b303-66ddbec6beff.html), [Townhall](https://townhall.com/news/mattvespa/2026/10/31/the-james-comey-national-security-leak-indictment-might-get-tossed-n2685635), [NY Post](https://nypost.com/2026/11/02/us-news/dc-federal-judge-tosses-case-against-fbi-officials-accused-of-lying-about-hunter-biden-laptop/), [CNN](https://www.cnn.com/2026/10/30/politics/comey-motion-hearing-leak-charges) (it blocked fetching, so this is the search summary only)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 18:09 UTC; check each market really matches the question)\n- Kalshi: Will James Comey’s criminal case be dismissed? (United States of America v. James Brien Comey, Jr.). Yes prices: Before Jul 1, 2027: 0.60; Before Jan 1, 2027: 0.27; Before Oct 1, 2026: 0.0200.\n- Kalshi: Comey indictment reinstated on appeal before 2027? (Before 2027). Yes prices: Before 2027: 0.07.\n- Kalshi: Will James Comey’s national defense information case be dismissed? (United States of America v. James Brien Comey, Jr. (No. 1:26-cr-00229, D.D.C.)). Yes prices: Before Jan 1, 2027: 0.22; Before Jul 1, 2027: 0.90.\n- Polymarket: James Comey sentenced to Prison in 2026? (ends 2027-01-01). [Yes, No] prices: James Comey sentenced to Prison in 2026?: [\"0.0175\", \"0.9825\"]\n- Polymarket: James Comey charges dropped by December 31? (ends 2027-01-01). [Yes, No] prices: James Comey charges dropped by December 31?: [\"0.39\", \"0.61\"]\n- Polymarket: 2026 Tarrant County Judge Election Winner (ends 2026-11-04). [Yes, No] prices: Tim O'Hare: [\"0.42\", \"0.58\"]; Alisa Simmons: [\"0.585\", \"0.415\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: 2026 Collin County Judge Election Winner (ends 2026-11-04). [Yes, No] prices: Chris Hill: [\"0.865\", \"0.135\"]; John R. \"Buster\" Brown: [\"0.12\", \"0.88\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: 2026 Harris County Judge Election Winner (ends 2026-11-04). [Yes, No] prices: Letitia Plummer: [\"0.893\", \"0.107\"]; Orlando Sanchez: [\"0.11\", \"0.89\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]",
+    "## Comey D.C. case: research notes as of 2026-11-02\n\n**Bottom line:** I found no order on ECF No. 11 as of November 2. At the October 30 argument, McFadden chose to wait rather than rule, and let prosecutors keep seeking an indictment. If the case ends because the government moves to dismiss, because an indictment replaces the information, or because ECF 11 is denied as moot, the question resolves No.\n\n### 1. Resolution source\n- 2026-11-02 (fetched): The NACDL tracker lists only four filings: ECF 1 (Information, 10/05/26), ECF 6 (motion to dismiss and for emergency hearing, 10/09/26), ECF 11 (Motion to Dismiss, 10/16/26) and ECF 12 (government opposition, 10/23/26). It shows no order on ECF 11. It also does not list ECF 14 (the unsealing order), so it runs behind the docket. [NACDL](https://www.nacdl.org/brief/United-States-v-Comey-(2))\n- I could not get the CourtListener docket for gov.uscourts.dcd.297297. The API needs a login, and the docket URL I tried was a different case.\n\n### 2. Current status\n- 2026-10-30: McFadden declined to rule, saying the case turned on very novel issues, and asked, \"Aren't we getting a little ahead of ourselves?\" He said seeking an indictment was the government's choice, and remarked that the DOJ could come back in two weeks with one. [CBS](https://www.cbsnews.com/news/doj-james-comey-information-espionage-act-hearing/), [NBC](https://www.nbcnews.com/politics/justice-department/james-comey-team-court-seeking-toss-third-doj-case-longtime-trump-foe-rcna606394)\n- 2026-10-30: McFadden said that if a grand jury refused to indict, the proceedings would be futile. One search summary described this as the limitations issue becoming \"moot\". A mootness path points toward No under the fine print. [NBC](https://www.nbcnews.com/politics/justice-department/james-comey-team-court-seeking-toss-third-doj-case-longtime-trump-foe-rcna606394)\n- 2026-11-02: Searches turned up no indictment, no dismissal and no ruling. One Townhall headline (10/26) calls it an \"indictment\", but CNN, CBS and AP say no grand jury has indicted. [Townhall](https://townhall.com/news/josephchalfant/2026/10/26/james-comey-indicted-for-violation-of-the-espionage-act-n2685345), [CNN](https://www.cnn.com/2026/10/30/politics/comey-motion-hearing-leak-charges)\n\n### 3. Recent news (newest first)\n- 2026-11-02: In an unrelated D.C. case, Magistrate Judge Faruqui dismissed charges against former FBI officials Floris and Benavides, calling the probe \"weaponization\". This shows the D.C. bench's current mood but is a different judge and case. [NY Post](https://nypost.com/2026/11/02/us-news/dc-federal-judge-tosses-case-against-fbi-officials-accused-of-lying-about-hunter-biden-laptop/)\n- 2026-10-31: Townhall published \"A Judge Might Chuck the James Comey National Security Leak Indictment.\" [Townhall](https://townhall.com/news/mattvespa/2026/10/31/the-james-comey-national-security-leak-indictment-might-get-tossed-n2685635)\n- 2026-10-30: McFadden called an indictment \"no sure thing\" and said \"ham sandwiches are harder to indict these days.\" He warned against a \"predawn raid,\" and prosecutor Farahnak replied that \"it's not going to happen.\" [KSL/AP](https://www.ksl.com/article/51642507/judge-puts-off-decision-in-comey-case-as-prosecutors-pursue-new-indictment)\n- 2026-10-30: Farahnak said the DOJ is \"still going to the grand jury very diligently.\" He cited newly surfaced evidence of overt acts after October 2016, possibly from April 2017, which he said could give the government another six months to charge. [Bloomberg](https://www.bloomberg.com/news/articles/2026-10-30/doj-seeks-grand-jury-indictment-of-comey-in-defense-secrets-case), [ABC7](https://abc7news.com/story/attorneys-james-comey-return-court-fight-dojs-efforts-charge-3rd-time/20000350/)\n- 2026-10-30: ABC says Thursday, November 5 is \"technically the last day\" for the government to seek an indictment before the information would be dismissed under the Speedy Trial Act. It was unclear whether McFadden would rule by then. A Speedy Trial dismissal would probably not count as granting ECF 11. [ABC7](https://abc7news.com/story/attorneys-james-comey-return-court-fight-dojs-efforts-charge-3rd-time/20000350/)\n- Before 10/30: Comey's lawyers wrote in filings that after the emergency hearing, the DOJ agreed not to seek an indictment for 30 days. [CBS](https://www.cbsnews.com/news/doj-james-comey-information-espionage-act-hearing/)\n\n### 4. Base rates\n- I found no direct base rate. Federal judges rarely grant pretrial motions to dismiss within two weeks of argument, especially when they have said they would rather wait for prosecutors to act. Here the judge called the issues novel, and the government argued the motion was premature.\n- 2025-11-24: The E.D. Va. Comey case was dismissed on appointment grounds, which shows courts will dismiss cases against Comey. That ruling took weeks after argument.\n\n### 5. Other forecasts (prices as of 2026-11-02 18:09 UTC)\n- Kalshi, \"Will James Comey's national defense information case be dismissed?\" (No. 1:26-cr-00229, D.D.C.): 22% before Jan 1, 2027; 90% before Jul 1, 2027. This is the closest match, but it counts dismissal on any basis and has a longer window.\n- Kalshi, \"Will James Comey's criminal case be dismissed?\": 27% before Jan 1, 2027. It is unclear which case this covers.\n- Polymarket, \"Comey charges dropped by Dec 31?\": 39%. Also broader than this question.\n- I found no market specifically on McFadden granting ECF 11 by November 13.\n\n### 6. Upcoming events before November 13\n- 2026-11-05 (Thursday): The reported last day for an indictment under the Speedy Trial timeline. Three outcomes are possible:\n  - An indictment would probably make ECF 11 moot (No).\n  - No indictment could lead the government to dismiss, or to a Speedy Trial dismissal (No).\n  - McFadden could rule on the merits (the only path to Yes).\n- Any grand jury no-bill: D.C. grand juries have repeatedly refused politically sensitive indictments.\n- The pending E.D.N.C. case and the Fourth Circuit appeal of the E.D. Va. dismissal are not directly relevant.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 18:09 UTC; check each market really matches the question)\n- Kalshi: Will James Comey’s criminal case be dismissed? (United States of America v. James Brien Comey, Jr.). Yes prices: Before Jul 1, 2027: 0.60; Before Jan 1, 2027: 0.27; Before Oct 1, 2026: 0.0200.\n- Kalshi: Comey indictment reinstated on appeal before 2027? (Before 2027). Yes prices: Before 2027: 0.07.\n- Kalshi: Will James Comey’s national defense information case be dismissed? (United States of America v. James Brien Comey, Jr. (No. 1:26-cr-00229, D.D.C.)). Yes prices: Before Jan 1, 2027: 0.22; Before Jul 1, 2027: 0.90.\n- Polymarket: James Comey sentenced to Prison in 2026? (ends 2027-01-01). [Yes, No] prices: James Comey sentenced to Prison in 2026?: [\"0.0175\", \"0.9825\"]\n- Polymarket: James Comey charges dropped by December 31? (ends 2027-01-01). [Yes, No] prices: James Comey charges dropped by December 31?: [\"0.39\", \"0.61\"]\n- Polymarket: 2026 Tarrant County Judge Election Winner (ends 2026-11-04). [Yes, No] prices: Tim O'Hare: [\"0.42\", \"0.58\"]; Alisa Simmons: [\"0.585\", \"0.415\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: 2026 Collin County Judge Election Winner (ends 2026-11-04). [Yes, No] prices: Chris Hill: [\"0.865\", \"0.135\"]; John R. \"Buster\" Brown: [\"0.12\", \"0.88\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: 2026 Harris County Judge Election Winner (ends 2026-11-04). [Yes, No] prices: Letitia Plummer: [\"0.893\", \"0.107\"]; Orlando Sanchez: [\"0.11\", \"0.89\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.07,
+      "reasoning": "**(a) Time left and what Yes requires.** About 11 days remain, to November 13, 2026. For Yes, Judge McFadden must issue an order granting ECF No. 11 and dismissing both counts of the information. Partial grants, mootness denials, government dismissals and supersession by indictment all resolve No.\n\n**(b) Status quo.** The motion has been under advisement since October 30, with no order. If nothing changes, the answer is No.\n\n**(c) Base rate.** I found no data on fast merits grants of pretrial limitations dismissals, especially while the government says it is actively seeking an indictment. Within two weeks of argument, such grants are rare, around 5-10%. The closest market is Kalshi's 22% for any dismissal of this case before January 1. That covers a broader set of outcomes (including a voluntary government dismissal) over a window roughly five times longer.\n\n**(d) Evidence.**\n- For Yes:\n  - At the October 30 hearing, McFadden was skeptical of the government's \"waiverless information\" maneuver.\n  - The Washington Post summary said he \"seemed inclined to rule for the defense\" on whether an indictment was required.\n  - D.D.C. grand juries and judges have been hostile to similar cases. On November 2, Magistrate Judge Faruqui dismissed the Floris and Benavides complaint.\n  - McFadden himself noted that an indictment was no sure thing.\n- For No:\n  - On October 30 he asked, \"Aren't we getting a little ahead of ourselves?\" and raised mootness with both sides.\n  - He explicitly left the grand jury route open to the government.\n  - DOJ says it is \"still going to the grand jury very diligently,\" with the pause ending around November 5-8.\n  - An indictment would most likely lead to a mootness denial or a renewed motion, which resolves No.\n  - DOJ may also add charges based on later conduct that fall inside the limitations period.\n\n**(e) Scenarios.**\n- No: A grand jury returns an indictment around November 5-10. McFadden denies ECF 11 as moot or simply leaves it pending. Alternatively, there is no news by November 13 and the motion is still pending.\n- Yes: The grand jury declines to indict, or DOJ stalls past its own deadline. McFadden then promptly issues an opinion granting the motion before DOJ can voluntarily dismiss, around November 10-13.\n\n**(f) Moving from base rate to forecast.** I put the chance of no indictment by about November 8 at around 35%. Given no indictment, the chance McFadden grants by November 13 is around 25%, since he might wait, or DOJ might dismiss first. That gives about 9%. A small chance of an early merits ruling adds a little, while the overall preference for the status quo trims it. I land at about 7%.\n\nProbability: 7%"
+    },
+    {
+      "value": 0.1,
+      "reasoning": "(a) About 11 days remain, until November 13, 2026. For Yes, Judge McFadden must issue an order granting ECF No. 11 and dismissing the whole information. A denial as moot after an indictment, a dismissal on the government's own motion, or a partial grant all resolve No.\n\n(b) Status quo: the motion is under advisement. McFadden signaled he would rather wait to see what the grand jury does. If nothing changes, the result is No.\n\n(c) Base rate: judges who take a novel pretrial dismissal motion under advisement while the government says it is actively seeking a superseding indictment rarely grant it within two weeks. They usually wait and then deny as moot. I put the reference-class rate around 5-10%.\n\n(d) Evidence:\n- **For Yes:** On October 30, McFadden was described as skeptical of the government's maneuver. The Washington Post summary said he \"seemed inclined to rule for the defense\" on whether an indictment is required. His \"ham sandwiches are harder to indict\" remark signals that a grand jury no-bill is plausible. DC grand juries have recently refused politically charged indictments. On November 2, a D.D.C. magistrate dismissed a similar complaint against former FBI officials. The government's window to indict (about November 5-8) closes before the deadline. If no indictment arrives, McFadden could rule quickly.\n- **For No:** On October 30 McFadden asked, \"Aren't we getting a little ahead of ourselves?\" and openly weighed mootness. DOJ says it is \"going to the grand jury very diligently.\" An indictment leads to denial as moot, which resolves No. Even if the grand jury balks, DOJ might dismiss the information itself, or McFadden might take longer than a few days to write an opinion on \"very novel issues.\" Kalshi puts any dismissal of this case before January 1, 2027 at only 22%, and that market is broader than this question.\n\n(e) Scenarios:\n- **No:** DOJ obtains an indictment around November 5. McFadden denies ECF 11 as moot, and Comey files a new motion against the indictment.\n- **Yes:** The grand jury declines to indict, or DOJ misses its window. McFadden promptly issues an opinion holding that a waiverless information does not satisfy the limitations period, and dismisses both counts before November 13.\n\n(f) My estimate breaks down as follows:\n- The chance there is no indictment by about November 8 is roughly 35%.\n- Given that, the chance McFadden fully grants the motion by November 13, rather than seeing DOJ dismiss or waiting longer, is about 30-35%.\n- There is a small added chance he rules on the merits before any indictment.\n\nThat gives roughly 11-13%. I shade down slightly toward the Kalshi anchor, since that market covers a longer window and any form of dismissal and still sits at only 22%. I end at about 10%, slightly above the base rate because of the judge's apparent skepticism and the real chance of a no-bill.\n\nProbability: 10%"
+    },
+    {
+      "value": 0.07,
+      "reasoning": "(a) About 11 days remain, until November 13, 2026. For Yes, Judge McFadden must issue an order granting ECF No. 11 and dismissing the whole information by that date. A denial as moot, a dismissal on the government's motion, or supersession by an indictment all resolve No.\n\n(b) Status quo: the motion was taken under advisement on October 30, and the judge signaled he would wait for the government's grand jury effort. If nothing changes, there is no order by November 13, which resolves No.\n\n(c) Base rate: judges rarely grant a pretrial motion to dismiss on a novel issue within two weeks of argument while the government is actively seeking an indictment that would moot it. Mootness denials are common in that posture. I put the reference-class rate around 5-10%.\n\n(d) Evidence:\n- **For Yes:**\n  - On October 30 McFadden was described as skeptical of the government's waiverless-information maneuver and \"seemed inclined to rule for the defense.\"\n  - He also noted that indicting is harder these days (\"ham sandwiches are harder to indict\"), which leaves open a grand jury no-bill.\n  - On November 2 a fellow D.D.C. judge dismissed a related prosecution, showing the courthouse's posture.\n- **For No:**\n  - McFadden asked \"Aren't we getting a little ahead of ourselves?\" and openly raised mootness on October 30.\n  - The government says it is \"still going to the grand jury very diligently,\" and the 30-day pause ends around November 5-8.\n  - The government is also weighing charges for conduct through April 2017, which would be inside the limitations period.\n  - Kalshi prices any dismissal of this case before January 1, 2027 at only 22%, a broader event over a longer window.\n\n(e) Scenarios:\n- **No:** DOJ obtains an indictment around November 5-10, and McFadden denies ECF 11 as moot or directs Comey to refile against the indictment. Alternatively, the judge simply waits past November 13 while the grand jury process continues.\n- **Yes:** The grand jury declines to indict, or DOJ signals it won't proceed, and McFadden quickly issues a merits ruling that the waiverless information cannot satisfy the limitations period, dismissing both counts before November 13.\n\n(f) I start from a base rate of roughly 7%. The judge's skepticism and the real chance of a no-bill push slightly up. His explicit preference to wait, the short window, and the fact that even a no-bill might not prompt an immediate ruling pull back down. The closest market (22% for any dismissal through year-end) implies a much smaller share for this narrow route by November 13. My final estimate is about 7%.\n\nProbability: 7%"
+    },
+    {
+      "value": 0.1,
+      "reasoning": "**(a) Time left and what Yes requires.** There are about 11 days until November 13. Yes requires McFadden to issue an order granting ECF No. 11 and dismissing both counts of the information. A dismissal by the government, a Speedy Trial dismissal, an indictment superseding the information, a denial as moot, or a partial grant all resolve No.\n\n**(b) Status quo.** The motion is pending. At the October 30 argument the judge said \"Aren't we getting a little ahead of ourselves?\" and chose to wait for prosecutors to act. If nothing changes, the question resolves No.\n\n**(c) Base rate.** Federal judges who have just declined to rule, and have said they will wait for the government's next move, rarely grant that same motion within two weeks. I put the base rate at roughly 5-10%.\n\n**(d) Evidence.**\n- For Yes:\n  - On October 30 McFadden was openly skeptical of the \"waiverless information\" maneuver.\n  - He said an indictment was \"no sure thing,\" and D.C. grand juries have repeatedly refused politically sensitive indictments.\n  - November 5 is reported as the last day to obtain an indictment. If none comes and the government does not dismiss, he may rule on the merits.\n  - The D.C. bench's mood is hostile: on November 2 Judge Faruqui dismissed the charges against Floris and Benavides as \"weaponization.\"\n- For No:\n  - He explicitly deferred and invited the DOJ to come back with an indictment.\n  - On October 30 the government said it is \"still going to the grand jury very diligently.\"\n  - The government cited possible overt acts from April 2017, which could extend the conspiracy deadline. That gives it room to let the information lapse or dismiss it voluntarily.\n  - An indictment would make the motion moot.\n  - If no indictment comes, the information is more likely to end through the Speedy Trial Act or a government dismissal, or the motion would be denied as moot.\n  - A partial grant (for example, Count I time-barred but the conspiracy count surviving) resolves No.\n  - Kalshi puts any dismissal by January 1 at only 22%. This narrower question must be well below that.\n\n**(e) Scenarios.**\n- No: A grand jury returns an indictment around November 5 and ECF 11 is denied as moot. Alternatively, there is no indictment, the government moves to dismiss to pursue charges later using the 2017 overt acts, and the court grants that dismissal.\n- Yes: The grand jury no-bills or the government misses November 5. DOJ refuses to drop the information and insists it preserved the limitations period. McFadden issues an opinion around November 10 holding that a waiverless information cannot institute a prosecution, and dismisses both counts under ECF 11.\n\n**(f) From base rate to final probability.** I start at about 8%. I move up a little because the judge is skeptical, there is a hard deadline inside the window, and this DOJ has tended to resist dismissing voluntarily. I hold well below the 22% Kalshi price because several No-resolving paths (mootness, government dismissal, Speedy Trial dismissal, partial grant) absorb much of the dismissal probability. I land at about 10%.\n\nProbability: 10%"
+    },
+    {
+      "value": 0.07,
+      "reasoning": "(a) About 11 days remain, until November 13, 2026. For Yes, McFadden must issue an order that grants ECF No. 11 itself and dismisses the whole information. Dismissals that come from a government motion, from an indictment superseding the information, from a Speedy Trial ruling, or from denying ECF 11 as moot all resolve No.\n\n(b) The status quo is No. The motion is pending, and on October 30 the judge deliberately chose to wait while prosecutors pursue an indictment.\n\n(c) Base rate: federal judges rarely grant a pretrial motion to dismiss on a novel legal issue within two weeks of argument after saying they would rather wait for the prosecution to act. I put that at about 5-10%. The closest market is Kalshi's question on whether the D.D.C. case is dismissed on any basis before January 1, 2027, priced at 22%. That market has a longer window and counts any form of dismissal, so it caps this narrower question well below 22%.\n\n(d) Evidence:\n- **For Yes:**\n  - On October 30, reporting described McFadden as skeptical of the government's \"waiverless information\" maneuver.\n  - He called an indictment \"no sure thing\" and said further proceedings would be futile if a grand jury refused to indict.\n  - D.C. grand juries have refused politically sensitive indictments before.\n  - The D.C. bench is in a hostile mood: Judge Faruqui dismissed the Floris and Benavides case on November 2.\n  - November 5 is the reported deadline for an indictment.\n- **For No:**\n  - On October 30, McFadden explicitly declined to rule (\"Aren't we getting a little ahead of ourselves?\") and said the DOJ could come back in two weeks with an indictment.\n  - The government says it is pursuing an indictment diligently and claims evidence of overt acts in April 2017 that could extend its time.\n  - An indictment would most likely moot ECF 11.\n  - If no indictment comes, the more natural endings are a government motion to dismiss (possibly to use the six-month savings period under 18 U.S.C. § 3288) or a Speedy Trial dismissal. Neither counts.\n  - Even a merits ruling might come after November 13.\n\n(e) Scenarios:\n- **No:** A grand jury returns an indictment around November 5. The court denies ECF 11 as moot or leaves it pending, and Comey files a new motion against the indictment.\n- **Yes:** The grand jury declines to indict by November 5. McFadden then issues a short opinion holding that a waiverless information cannot satisfy the statute of limitations, and grants ECF 11 before November 13.\n\n(f) I start from about 8%, below the 22% Kalshi price for the broader market. The Yes path needs three things in sequence: no indictment, the government not dismissing first, and McFadden choosing a merits grant over a mootness or Speedy Trial disposition, all within 11 days. The judge's demonstrated reluctance to rule pulls the estimate down. His evident skepticism and the real chance of a no-bill hold it at a few percent rather than lower. I settle at about 7%.\n\nProbability: 7%"
+    },
+    {
+      "value": 0.08,
+      "reasoning": "(a) About 11 days remain, until November 13, 2026. For Yes, Judge McFadden must issue an order granting ECF No. 11 that dismisses the whole information. Dismissal by government motion, dismissal under the Speedy Trial Act, supersession by an indictment, or denial of ECF 11 as moot all resolve No.\n\n(b) Status quo: the motion stays pending with no ruling, which resolves No. At the October 30 argument McFadden explicitly declined to rule and said the government could come back in about two weeks with an indictment. That puts the natural next checkpoint near November 13 itself.\n\n(c) Base rate: federal district judges seldom grant a pretrial motion to dismiss within two weeks of argument on issues they call \"very novel,\" especially after signalling they will wait for prosecutors. Granted-within-two-weeks in comparable situations is roughly 5-10%.\n\n(d) Evidence:\n- **For Yes:**\n  - On October 30 McFadden seemed skeptical of the \"waiverless information\" maneuver.\n  - He said the proceedings would be futile if a grand jury refused to indict.\n  - D.C. grand juries have no-billed politically sensitive cases.\n  - The D.C. bench is in a hostile mood: Magistrate Judge Faruqui's \"weaponization\" dismissal on November 2.\n  - November 5 is reported as a deadline, which could force action.\n- **For No:**\n  - McFadden asked on October 30, \"Aren't we getting a little ahead of ourselves?\" and chose to wait.\n  - The government says it is diligently pursuing an indictment.\n  - The government cites possible April 2017 overt acts that could extend its window, which reduces pressure for a quick merits ruling.\n  - Most ways the case ends quickly are carved out as No: an indictment mooting the motion, a government dismissal, or a Speedy Trial Act dismissal.\n  - Kalshi gives only 22% for dismissal on any basis before January 1, 2027.\n\n(e) Scenarios:\n- **No:** The government returns an indictment on the conspiracy count, or keeps the information alive while it works with the grand jury. McFadden denies ECF 11 as moot or leaves it pending past November 13. Alternatively, the government voluntarily dismisses the information after a no-bill.\n- **Yes:** The grand jury declines to indict, or the November 5 deadline passes without an indictment. McFadden then rules on the merits that a waiverless information cannot satisfy the limitations period, and grants ECF 11 by about November 12.\n\n(f) I start at a base rate of about 7%. I move up slightly because the judge appeared skeptical on the merits and November 5 is a forcing date. I move down because the Kalshi market covering any kind of dismissal through year-end sits at only 22%, and most dismissal routes are excluded here. That leaves roughly 8-10%.\n\nProbability: 8%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.1182,
+  "usage": [
+    {
+      "question_id": "46635",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 0.00010493,
+      "input_tokens": 1079,
+      "output_tokens": 61,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 7.37e-05,
+      "input_tokens": 512,
+      "output_tokens": 45,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 103.1,
+      "notional_cost_usd": 0.37846389999999985,
+      "input_tokens": 182718,
+      "output_tokens": 5367,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.077824,
+      "input_tokens": 6434,
+      "output_tokens": 1318,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.1,
+      "notional_cost_usd": 0.08194800000000001,
+      "input_tokens": 6432,
+      "output_tokens": 1525,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.0005119,
+      "input_tokens": 2298,
+      "output_tokens": 105,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 0.0005340000000000001,
+      "input_tokens": 2366,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 0.00013963,
+      "input_tokens": 2299,
+      "output_tokens": 106,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.7,
+      "notional_cost_usd": 0.00013720000000000003,
+      "input_tokens": 2363,
+      "output_tokens": 101,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.3,
+      "notional_cost_usd": 0.028696800000000005,
+      "input_tokens": 6434,
+      "output_tokens": 1250,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0005197,
+      "input_tokens": 2257,
+      "output_tokens": 137,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00015503,
+      "input_tokens": 2258,
+      "output_tokens": 138,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 92.8,
+      "notional_cost_usd": 0.33670059999999996,
+      "input_tokens": 145574,
+      "output_tokens": 4532,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.9,
+      "notional_cost_usd": 0.07652,
+      "input_tokens": 5906,
+      "output_tokens": 1464,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0005521,
+      "input_tokens": 2329,
+      "output_tokens": 173,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.7,
+      "notional_cost_usd": 0.082052,
+      "input_tokens": 5905,
+      "output_tokens": 1741,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.8,
+      "notional_cost_usd": 0.081704,
+      "input_tokens": 5904,
+      "output_tokens": 1724,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 0.0005473,
+      "input_tokens": 2430,
+      "output_tokens": 123,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0005377,
+      "input_tokens": 2402,
+      "output_tokens": 115,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00018985,
+      "input_tokens": 2328,
+      "output_tokens": 207,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 0.00014574,
+      "input_tokens": 2429,
+      "output_tokens": 116,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46635",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00017699000000000002,
+      "input_tokens": 2404,
+      "output_tokens": 179,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1482
+}
