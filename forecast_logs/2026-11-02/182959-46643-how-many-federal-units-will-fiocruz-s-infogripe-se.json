@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T18:33:28.769591+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T18:29:59.653779+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46643,
+    "post_id": 46410,
+    "url": "https://www.metaculus.com/questions/46410",
+    "type": "DiscreteQuestion",
+    "unit": "UFs",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How many federal units will Fiocruz's InfoGripe SE 44 bulletin (released 12 November 2026) flag with SRAG incidence at alert level or above and a rising long-term trend?",
+    "resolution_criteria": "This question resolves using the \"Resumo do Boletim InfoGripe – Semana Epidemiológica (SE) 44 2026\" published by Fiocruz, expected at https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_44.pdf ; a version of that file with a filename suffix (e.g. Resumo_InfoGripe_2026_44_0.pdf) counts as the same document. The resolved value is the number of Brazilian federal units (26 states plus the Federal District, out of 27 total) that this edition reports as having SRAG incidence at alert level, risk level, or high risk (based on the last two weeks) together with a rising long-term trend (last six weeks) — the figure given in the edition's national-situation bullet of the form \"N das 27 unidades federativas apresentam incidência de SRAG em nível de alerta ou risco (últimas duas semanas) com sinal de crescimento na tendência de longo prazo (últimas 6 semanas) até a semana 44\", followed by the names of those units. If the edition lists the qualifying units without stating a total, count the distinct units listed; if a stated total and the number of units named disagree, the stated total prevails. If the SE 44 summary is not hosted at that URL or a suffixed variant, the same document published elsewhere on agencia.fiocruz.br or fiocruz.br, or Fiocruz's own press release reporting the SE 44 figure, may be used; failing that, [credible sources](https://www.metaculus.com/faq/#definitions) may be used. If publication of the SE 44 edition is delayed beyond 13 November 2026, the question resolves on that edition once it is published.",
+    "fine_print": "A \"federal unit\" (unidade federativa, UF) means one of Brazil's 26 states or the Federal District. A UF counts as \"at alert level or above\" if the bulletin classifies its SRAG incidence over the last two weeks as \"nível de alerta\", \"nível de risco\", or \"alto risco\" (any level above the low/green baseline). If Fiocruz publishes a corrected version of the SE 44 summary before 23:59 UTC on 13 November 2026, the corrected version is used.",
+    "close_time": "2026-11-02 21:25 UTC",
+    "scheduled_resolution_time": "2026-11-12 21:00 UTC"
+  },
+  "research": [
+    "I couldn't find the deciding figure, because the SE 44 summary doesn't exist yet. As of today (2 November 2026) the latest published edition is SE 42, which flagged **5 UFs**. The SE 43 edition comes out on 5 November.\n\n## 1. Resolution source\n- 2026-11-02: The SE 44 file (`Resumo_InfoGripe_2026_44.pdf`) returns HTTP 404, which is expected since it is due 12 November. [Fiocruz](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_44.pdf)\n- 2026-11-02: The SE 43 file (`Resumo_InfoGripe_2026_43.pdf`) also returns 404. It is due Thursday 5 November. [Fiocruz](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_43.pdf)\n- The SE 42 summary PDF is online, but I couldn't extract its text because the PDF streams are compressed. Its figure is confirmed below from Agência Brasil.\n\n## 2. Current status\n- Nothing settles the question yet. The SE 44 edition covers data through 7 November.\n- 2026-10-29 (SE 42): 5 of 27 UFs were at alert or risk with long-term growth: Amapá, Mato Grosso, Mato Grosso do Sul, Sergipe and Maranhão. Roraima and Santa Catarina were at alert, risk or high risk without growth. Nationally the trend was stabilising, with a slight rise in severe COVID-19 cases (MT, MS, SP, RJ). [Agência Brasil / Rádio Nacional](https://agenciabrasil.ebc.com.br/radioagencia-nacional/saude/audio/2026-10/sindrome-respiratoria-aguda-esta-em-nivel-de-alerta-em-cinco-estados)\n\n## 3. Recent news (newest first)\n- 2026-11-02: A Capital News article came up headlined \"12 das 27 UFs em nível de alerta\". Its page metadata says \"590 days ago\", so it is almost certainly a March 2025 story and **should not be read as 2026 data**. [Capital News](https://www.capitalnews.com.br/nacional/infogripe-12-das-27-unidades-federativas-apresentam-incidencia-de-srag-em-nivel-de-alerta/418791)\n- 2026-10-29 (SE 42), from the same Agência Brasil report:\n  - SRAG among children is rising in Aracaju and Cuiabá.\n  - In João Pessoa the rise is mainly among people aged 50 to 64.\n  - In Belém the most affected groups are children aged 2 to 4 and adults aged 50 to 64.\n  - Positivity: influenza A about 4%, influenza B 5.4%, RSV 11.5%, SARS-CoV-2 6.4%.\n  - Almost 170,000 SRAG cases so far in 2026.\n  - [Agência Brasil](https://agenciabrasil.ebc.com.br/radioagencia-nacional/saude/audio/2026-10/sindrome-respiratoria-aguda-esta-em-nivel-de-alerta-em-cinco-estados)\n- 2026-11-02: The Federal District is on a dengue alert as the rainy season starts. This is not SRAG and not directly relevant. [Jornal de Brasília](https://jornaldebrasilia.com.br/brasilia/dengue-no-df-chegada-das-chuvas-acende-alerta-para-risco-de-aumento-dos-casos/)\n\n## 4. Base rates\n- Recent 2026 values (from the question background, with SE 42 checked above):\n\n| Edition | Count | UFs |\n|---|---|---|\n| SE 39 | 3 | AL, RR, SE |\n| SE 40 | 1 | SE |\n| SE 41 | 3 | GO, MT, SE |\n| SE 42 | 5 | AP, MA, MT, MS, SE |\n\n- Week-to-week changes have been -2, +2 and +2, so typical moves are about ±2. The range over these four weeks is 1 to 5.\n- Sergipe has qualified in all four weeks and Mato Grosso in the last two. Roraima and Santa Catarina are elevated without growth, so they could join the count if their trends turn up.\n- Same period in 2025: a Ministry of Health COVID note for SE 44 2025 apparently says 3 UFs (MS, PB, TO) were at alert or above with long-term growth. I didn't open the PDF myself. Its SE 45 2025 note reportedly mentions rising alert-level SRAG driven by influenza A and COVID-19. [MS informe SE 44 2025](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/covid-19/publicacoes-tecnicas/informes/informe-se-44-de-2025.pdf), [SE 45 2025](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/covid-19/atualizacao-de-casos/informe-se-45-de-2025.pdf)\n- Earlier in 2025, for scale:\n  - SE 33 2025: 0 UFs with growth, while 18 were at alert or above. [Resumo SE 33 2025](https://revistacenarium.com.br/wp-content/uploads/2025/08/Resumo_InfoGripe_2025_33.pdf)\n  - SE 20 2025: 20 UFs with growth (peak season).\n  - In 2026 the count ranged from 22 (SE 11) to 11 (SE 22), according to search snippets. [Resumo SE 22 2026](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_22.pdf)\n- I couldn't extract the official Fiocruz figure for SE 44 2025 (the PDF wasn't readable).\n\n## 5. Other forecasts\n- None of the Kalshi or Polymarket markets supplied match this question. They cover Michelin stars, housing, Brazil inflation and so on, not InfoGripe.\n- I found no Manifold or Metaculus market, and no expert forecast, for this metric.\n\n## 6. Upcoming events before resolution\n- **2026-11-05 (Thu):** SE 43 bulletin and summary (data through 31 October). This is the key input: it shows whether the SE 42 count of 5, and the rise in the three-week trend, carried on.\n- **2026-11-12 (Thu):** SE 44 publication, which resolves the question. If it is delayed, the edition is used whenever it appears. A corrected version counts if published before 23:59 UTC on 13 November.\n- Things that could move the count:\n  - Metapneumovirus rising in SP, RJ, ES, MS, PR, AL, BA, PE and SE.\n  - A slight COVID-19 uptick in MT, MS, SP and RJ.\n  - Rising SRAG among children in Aracaju and Cuiabá.\n  - Data backfill: late notifications can revise recent weeks' trend signals.\n\nSources:\n- [Fiocruz Resumo SE 44 2026 (404)](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_44.pdf)\n- [Fiocruz Resumo SE 43 2026 (404)](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_43.pdf)\n- [Agência Brasil, 29 Oct 2026](https://agenciabrasil.ebc.com.br/radioagencia-nacional/saude/audio/2026-10/sindrome-respiratoria-aguda-esta-em-nivel-de-alerta-em-cinco-estados)\n- [Capital News (likely 2025)](https://www.capitalnews.com.br/nacional/infogripe-12-das-27-unidades-federativas-apresentam-incidencia-de-srag-em-nivel-de-alerta/418791)\n- [MS informe SE 44 2025](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/covid-19/publicacoes-tecnicas/informes/informe-se-44-de-2025.pdf)\n- [MS informe SE 45 2025](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/covid-19/atualizacao-de-casos/informe-se-45-de-2025.pdf)\n- [Resumo SE 33 2025](https://revistacenarium.com.br/wp-content/uploads/2025/08/Resumo_InfoGripe_2025_33.pdf)\n- [Resumo SE 22 2026](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_22.pdf)\n- [Jornal de Brasília](https://jornaldebrasilia.com.br/brasilia/dengue-no-df-chegada-das-chuvas-acende-alerta-para-risco-de-aumento-dos-casos/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 18:30 UTC; check each market really matches the question)\n- Kalshi: Which New York City restaurants lose Michelin stars this year? (New York City Lose (2026)). Yes prices: Masa: 0.55; Eleven Madison Park: 0.35; Le Bernardin: 0.51; Per Se: 0.53; Jean-Georges: 0.56; Daniel: 0.51.\n- Kalshi: Grammy Winner: Best Tropical Latin Album (In 2027 | Best Tropical Latin Album). Yes prices: Antes Que El Tiempo Se Vaya: 0.9900; Asuccar: 0.0000; Better Late Than Never: 0.0000; Desde El Corazón: 0.0000; El Último Disco Vol. 1: 0.0000; Íntimo (En Vivo): 0.0000; Más Que Palabras: 0.0000; País Portátil: 0.0000; Tie: 0.0000; Todo Suena Mejor En Cumbia: 0.0000.\n- Kalshi: Which parties will win a seat in Spain's Congress? (On Nov 29, 2026). Yes prices: Adelante Andalucía: 0.77; Se Acabó La Fiesta: 0.21; Coalición Canaria: 0.87; Podemos: 0.46.\n- Kalshi: Housing units authorized in Vermont this year (2026). Yes prices: Above 1,700 units: 0.51; Above 1,600 units: 0.64; Above 1,800 units: 0.24; Above 2,200 units: 0.12; Above 1,900 units: 0.22; Above 2,100 units: 0.14; Above 2,000 units: 0.16; Above 2,400 units: 0.07; Above 2,300 units: 0.07; Above 1,400 units: 0.94.\n- Kalshi: Connecticut multifamily housing permits this year (2026). Yes prices: Above 3,000 units: 0.64; Above 2,500 units: 0.83; Above 3,500 units: 0.18; Above 4,000 units: 0.14; Above 5,000 units: 0.09; Above 4,500 units: 0.09; Above 6,000 units: 0.04; Above 5,500 units: 0.04; Above 6,500 units: 0.04; Above 2,000 units: 0.96.\n- Kalshi: Bozeman-area housing units authorized this year (2026). Yes prices: Above 1,550 units: 0.57; Above 1,700 units: 0.36; Above 1,400 units: 0.86; Above 1,250 units: 0.89; Above 1,100 units: 0.97; Above 950 units: 0.97.\n- Kalshi: Streamer Awards: Rising Star Award (Rising Star Award | 2026). Yes prices: Madi2hottyy: 0.43; Benjy Chavez: 0.19; E11ysa: 0.19; MaxGGs: 0.11; T10Nat: 0.11; Tie: 0.0000.\n- Kalshi: Nicotine product point of sale spend array index in October 2026 (October 2026). Yes prices: Above 135: 0.09; Above 140: 0.01; Above 120: 0.97; Above 115: 0.96; Above 125: 0.96; Above 110: 0.98; Above 145: 0.0100; Above 150: 0.0100; Above 155: 0.0100; Above 160: 0.0100.\n- Kalshi: Brazil inflation rate in October (In Oct 2026). Yes prices: Above 4.80%: 0.38; Above 4.70%: 0.63; Above 4.90%: 0.18; Above 4.60%: 0.83; Above 4.40%: 0.95; Above 4.50%: 0.93; Above 3.90%: 0.98; Above 4.00%: 0.98; Above 4.10%: 0.96; Above 4.20%: 0.96.\n- Polymarket: Will Hawaii reach Coral Bleaching Alert Level 1 by December 31, 2026? (ends 2027-01-12). [Yes, No] prices: Will Hawaii reach Coral Bleaching Alert Level 1 by December 31, 2026?: [\"0.07\", \"0.93\"]\n- Polymarket: Brazil Presidential Election (ends 2026-10-26). [Yes, No] prices: Tarcisio de Freitas: [\"0\", \"1\"]; Luiz Inácio Lula da Silva: [\"1\", \"0\"]; Jair Bolsonaro: [\"0\", \"1\"]; Fernando Haddad: [\"0\", \"1\"]; Michelle Bolsonaro: [\"0\", \"1\"]; Eduardo Bolsonaro: [\"0\", \"1\"]\n- Polymarket: Peak Severe Drought in Minas Gerais during the Coffee Growing Season? (ends 2027-05-01). [Yes, No] prices: Under 5%: [\"0.365\", \"0.635\"]; 5% to 19.99%: [\"0.275\", \"0.725\"]; 20% to 39.99%: [\"0.295\", \"0.705\"]; 40% to 59.99%: [\"0.325\", \"0.675\"]; 60% or more: [\"0.12\", \"0.88\"]",
+    "I couldn't open the SE 44 summary, so I can't give the resolution value: it comes out on 12 November. The latest count I could confirm is **5 UFs at SE 42** (published 29 Oct 2026). The SE 43 summary still returns a 404. That fits today's date: SE 43 is due on Thursday 5 November, so the question background is wrong to say SE 43 is already public.\n\n## 1. Resolution source\n- 2026-11-02: The SE 44 file (`Resumo_InfoGripe_2026_44.pdf`) isn't out yet. The SE 43 file also returns HTTP 404. [SE 43 URL](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_43.pdf)\n- 2026-10-29: The SE 42 summary is online, but the fetch tool couldn't read its text. I took its figures from secondary write-ups. [SE 42 PDF](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_42.pdf)\n\n## 2. Current status\n- Nothing has settled the question yet. The latest confirmed value is 5 UFs, from SE 42:\n- 2026-10-29: Two outlets agree on the SE 42 figure. Five UFs were at alert or risk level with long-term growth: Amapá, Maranhão, Mato Grosso, Mato Grosso do Sul and Sergipe. Roraima and Santa Catarina were at alert, risk or high risk without growth. [BVS](https://saudepublica.bvs.br/2026/10/29/infogripe-cinco-estados-tem-srag-em-nivel-de-alerta-ou-risco-com-sinal-de-crescimento/); [Agência Brasil](https://agenciabrasil.ebc.com.br/radioagencia-nacional/saude/audio/2026-10/sindrome-respiratoria-aguda-esta-em-nivel-de-alerta-em-cinco-estados)\n\n## 3. Recent news (newest first)\n- 2026-10-29 (SE 42, 18-24 Oct), per BVS and Agência Brasil:\n  - **National trend:** stable or oscillating over six weeks, rising over three weeks.\n  - **Viruses nationally:** metapneumovirus is falling, rhinovirus is stable, and severe Covid-19 is rising slightly from a low base.\n  - **What drives each state:**\n    - Mato Grosso: mainly SARS-CoV-2.\n    - Mato Grosso do Sul: rhinovirus plus SARS-CoV-2.\n    - Sergipe: metapneumovirus in young children.\n    - Maranhão and Amapá: not enough lab data to name a virus.\n  - **Covid-19 rising:** Mato Grosso, Mato Grosso do Sul, São Paulo and Rio de Janeiro. Incidence is still very low in São Paulo and Rio de Janeiro.\n  - **Capitals:** five at alert or above with growth (Aracaju, Cuiabá, Belém, João Pessoa, Rio de Janeiro). Brasília and Florianópolis are at alert or above without growth.\n  - **Sources:** [BVS](https://saudepublica.bvs.br/2026/10/29/infogripe-cinco-estados-tem-srag-em-nivel-de-alerta-ou-risco-com-sinal-de-crescimento/); [Agência Brasil](https://agenciabrasil.ebc.com.br/radioagencia-nacional/saude/audio/2026-10/sindrome-respiratoria-aguda-esta-em-nivel-de-alerta-em-cinco-estados)\n- 2026-10-22 (SE 41): 3 UFs (Goiás, Mato Grosso, Sergipe). [Agência Fiocruz search result](https://agencia.fiocruz.br/infogripe-tres-estados-tem-incidencia-de-srag-em-nivel-de-alerta-ou-risco-com-sinal-de-crescimento); [Brasil 61](https://brasil61.com/n/infogripe-tres-estados-tem-incidencia-de-srag-com-sinal-de-crescimento-bras2617030)\n- 2026-10-15 (SE 40): 1 UF (Sergipe), with growth tied to metapneumovirus in children under 2. [Afya](https://portal.afya.com.br/infectologia/srag-no-brasil-mantem-estabilidade-mas-sergipe-segue-em-alerta)\n- 2026-11-02: The Federal District dengue story in the news feed has nothing to do with SRAG. [Jornal de Brasília](https://jornaldebrasilia.com.br/brasilia/dengue-no-df-chegada-das-chuvas-acende-alerta-para-risco-de-aumento-dos-casos/)\n\n## 4. Base rates\n- **Recent weekly series (2026):** SE 33: 3 (Alagoas, Mato Grosso, Roraima), SE 39: 3, SE 40: 1, SE 41: 3, SE 42: 5. Sources: search snippets plus the question background.\n- **Weekly swings:** recent week-to-week changes were -2, +2 and +2. Over two weeks (SE 42 to SE 44), a move of about ±2 to 3 is typical given this history.\n- **Mid-season peaks for comparison:**\n  - SE 22 of 2026: 11 UFs. [Resumo SE 22](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_22.pdf)\n  - June 2025: 21 UFs. [Tribuna do Norte](https://tribunadonorte.com.br/colunas/a-gripe-mata/)\n- **SE 43/44 of 2025:** I could not find the figures. The 2025 SE 44 PDF exists but its text couldn't be read. [2025 SE 44](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2025_44.pdf)\n- **How a state gets flagged:** it needs incidence at alert level or above together with a growth signal over the six-week trend. A state drops out as its trend stabilises, even while it stays in the alert zone, as Roraima and Santa Catarina did at SE 42. [Search summary of InfoGripe methodology]\n\n## 5. Other forecasts\n- None of the Kalshi or Polymarket markets supplied match this question. I found no expert or market forecasts for this metric.\n\n## 6. Upcoming events before resolution\n- **2026-11-05 (Thu):** the SE 43 bulletin (data through 31 Oct) is due. It's the key leading indicator, so watch whether the five SE 42 states keep their growth signal.\n- **2026-11-12 (Thu):** SE 44 is published and the question resolves.\n- **Things to watch:**\n  - SARS-CoV-2 growth in Mato Grosso, Mato Grosso do Sul, São Paulo and Rio de Janeiro.\n  - Metapneumovirus, which was falling nationally but rising in São Paulo, Rio de Janeiro, Bahia, Pernambuco and Sergipe.\n  - Late data entry (backfill) in SIVEP-Gripe, the notification system, which can revise recent weeks.\n\nSources:\n- [Agência Brasil, SE 42](https://agenciabrasil.ebc.com.br/radioagencia-nacional/saude/audio/2026-10/sindrome-respiratoria-aguda-esta-em-nivel-de-alerta-em-cinco-estados)\n- [BVS, SE 42](https://saudepublica.bvs.br/2026/10/29/infogripe-cinco-estados-tem-srag-em-nivel-de-alerta-ou-risco-com-sinal-de-crescimento/)\n- [Agência Fiocruz, three states](https://agencia.fiocruz.br/infogripe-tres-estados-tem-incidencia-de-srag-em-nivel-de-alerta-ou-risco-com-sinal-de-crescimento)\n- [Brasil 61](https://brasil61.com/n/infogripe-tres-estados-tem-incidencia-de-srag-com-sinal-de-crescimento-bras2617030)\n- [Afya, SE 40](https://portal.afya.com.br/infectologia/srag-no-brasil-mantem-estabilidade-mas-sergipe-segue-em-alerta)\n- [Resumo SE 22 2026](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_22.pdf)\n- [Resumo SE 42 2026](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_42.pdf)\n- [Resumo SE 44 2025](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2025_44.pdf)\n- [Tribuna do Norte](https://tribunadonorte.com.br/colunas/a-gripe-mata/)\n- [Capital News](https://www.capitalnews.com.br/nacional/infogripe-12-das-27-unidades-federativas-apresentam-incidencia-de-srag-em-nivel-de-alerta/418791) (headline says 12 UFs, but it is undated and probably old; not relied on)\n- [Jornal de Brasília](https://jornaldebrasilia.com.br/brasilia/dengue-no-df-chegada-das-chuvas-acende-alerta-para-risco-de-aumento-dos-casos/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 18:30 UTC; check each market really matches the question)\n- Kalshi: Which New York City restaurants lose Michelin stars this year? (New York City Lose (2026)). Yes prices: Masa: 0.55; Eleven Madison Park: 0.35; Le Bernardin: 0.51; Per Se: 0.53; Jean-Georges: 0.56; Daniel: 0.51.\n- Kalshi: Grammy Winner: Best Tropical Latin Album (In 2027 | Best Tropical Latin Album). Yes prices: Antes Que El Tiempo Se Vaya: 0.9900; Asuccar: 0.0000; Better Late Than Never: 0.0000; Desde El Corazón: 0.0000; El Último Disco Vol. 1: 0.0000; Íntimo (En Vivo): 0.0000; Más Que Palabras: 0.0000; País Portátil: 0.0000; Tie: 0.0000; Todo Suena Mejor En Cumbia: 0.0000.\n- Kalshi: Which parties will win a seat in Spain's Congress? (On Nov 29, 2026). Yes prices: Adelante Andalucía: 0.77; Se Acabó La Fiesta: 0.21; Coalición Canaria: 0.87; Podemos: 0.46.\n- Kalshi: Housing units authorized in Vermont this year (2026). Yes prices: Above 1,700 units: 0.51; Above 1,600 units: 0.64; Above 1,800 units: 0.24; Above 2,200 units: 0.12; Above 1,900 units: 0.22; Above 2,100 units: 0.14; Above 2,000 units: 0.16; Above 2,400 units: 0.07; Above 2,300 units: 0.07; Above 1,400 units: 0.94.\n- Kalshi: Connecticut multifamily housing permits this year (2026). Yes prices: Above 3,000 units: 0.64; Above 2,500 units: 0.83; Above 3,500 units: 0.18; Above 4,000 units: 0.14; Above 5,000 units: 0.09; Above 4,500 units: 0.09; Above 6,000 units: 0.04; Above 5,500 units: 0.04; Above 6,500 units: 0.04; Above 2,000 units: 0.96.\n- Kalshi: Bozeman-area housing units authorized this year (2026). Yes prices: Above 1,550 units: 0.57; Above 1,700 units: 0.36; Above 1,400 units: 0.86; Above 1,250 units: 0.89; Above 1,100 units: 0.97; Above 950 units: 0.97.\n- Kalshi: Streamer Awards: Rising Star Award (Rising Star Award | 2026). Yes prices: Madi2hottyy: 0.43; Benjy Chavez: 0.19; E11ysa: 0.19; MaxGGs: 0.11; T10Nat: 0.11; Tie: 0.0000.\n- Kalshi: Nicotine product point of sale spend array index in October 2026 (October 2026). Yes prices: Above 135: 0.09; Above 140: 0.01; Above 120: 0.97; Above 115: 0.96; Above 125: 0.96; Above 110: 0.98; Above 145: 0.0100; Above 150: 0.0100; Above 155: 0.0100; Above 160: 0.0100.\n- Kalshi: Brazil inflation rate in October (In Oct 2026). Yes prices: Above 4.80%: 0.38; Above 4.70%: 0.63; Above 4.90%: 0.18; Above 4.60%: 0.83; Above 4.40%: 0.95; Above 4.50%: 0.93; Above 3.90%: 0.98; Above 4.00%: 0.98; Above 4.10%: 0.96; Above 4.20%: 0.96.\n- Polymarket: Will Hawaii reach Coral Bleaching Alert Level 1 by December 31, 2026? (ends 2027-01-12). [Yes, No] prices: Will Hawaii reach Coral Bleaching Alert Level 1 by December 31, 2026?: [\"0.07\", \"0.93\"]\n- Polymarket: Brazil Presidential Election (ends 2026-10-26). [Yes, No] prices: Tarcisio de Freitas: [\"0\", \"1\"]; Luiz Inácio Lula da Silva: [\"1\", \"0\"]; Jair Bolsonaro: [\"0\", \"1\"]; Fernando Haddad: [\"0\", \"1\"]; Michelle Bolsonaro: [\"0\", \"1\"]; Eduardo Bolsonaro: [\"0\", \"1\"]\n- Polymarket: Peak Severe Drought in Minas Gerais during the Coffee Growing Season? (ends 2027-05-01). [Yes, No] prices: Under 5%: [\"0.365\", \"0.635\"]; 5% to 19.99%: [\"0.275\", \"0.725\"]; 20% to 39.99%: [\"0.295\", \"0.705\"]; 40% to 59.99%: [\"0.325\", \"0.675\"]; 60% or more: [\"0.12\", \"0.88\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 2.0,
+        "p25": 3.5,
+        "p50": 5.0,
+        "p75": 7.5,
+        "p90": 10.0
+      },
+      "reasoning": "(a) About 10 days remain. The SE 44 Resumo is expected on Thursday 12 November 2026, and SE 43 is due on 5 November, after forecasts close.\n\n(b) The latest known value is SE 42, published 29 October 2026, with data through 24 October. It flagged 5 UFs: AP, MA, MT, MS and SE.\n\n(c) If nothing changed, the outcome would be 5.\n\n(d) If the trend continued, the count would be about 6 to 7. The last two weeks moved +2 and +2, and the national three-week trend was rising. Several things push upward:\n- metapneumovirus is rising in many UFs;\n- COVID is ticking up in MT, MS, SP and RJ;\n- RR and SC are already elevated and would qualify if growth resumes.\n\n(e) Week-to-week changes have been about ±2. Over two weeks, a spread of roughly ±3 to 4 is plausible. The 2026 off-season range so far is 1 to 5. In 2025 at SE 44 the figure was 3, and the count then rose with influenza A and COVID.\n\n(f) There are no expert forecasts or markets for this metric.\n\n(g) Low and high scenarios:\n- **Low:** the metapneumovirus and rhinovirus wave stabilises, and backfill flattens the long-term trends. The count falls to 0 to 2, possibly with only Sergipe left.\n- **High:** an early influenza A or new COVID wave spreads through the Centre-South and Northeast, as in late 2025. Many UFs would cross alert level with six-week growth, giving 10 to 14.\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 2\nPercentile 20: 3\nPercentile 30: 4\nPercentile 40: 4.6\nPercentile 50: 5\nPercentile 60: 6\nPercentile 70: 7\nPercentile 80: 8\nPercentile 90: 10\nPercentile 95: 12\nPercentile 99: 15"
+    },
+    {
+      "value": {
+        "p10": 2.0,
+        "p25": 3.5,
+        "p50": 5.0,
+        "p75": 7.0,
+        "p90": 9.0
+      },
+      "reasoning": "(a) **Time left:** The SE 44 edition is due on 12 November 2026, about 10 days away. Before then, the SE 43 edition (5 November) will appear, but I cannot see it now.\n\n(b) **Latest known value:** SE 42, published 29 October 2026, flagged 5 UFs: AP, MA, MT, MS and SE.\n\n(c) **If nothing changed:** 5.\n\n(d) **If the current trend continued:** The count has gone 3, 1, 3, 5. Nationally, the three-week trend is rising, and COVID-19 and metapneumovirus are ticking up in several states. Continuing that would give roughly 6 to 8 by SE 44. Recent counts have been unstable, though, so the trend is weak evidence.\n\n(e) **Historical variation:** Week-to-week moves have been about ±2, and this forecast is two editions ahead, so roughly ±3. Over the last four weeks the count ranged from 1 to 5. Off-season counts in 2025 ran between 0 and about 3. Larger values, above 10, come with seasonal waves.\n\n(f) **Experts and markets:** I found no market or expert forecast for this metric. The same week in 2025 reportedly showed 3 UFs, and early spring 2025 had influenza A and COVID-19 rising around SE 45.\n\n(g) **Unexpected scenarios:**\n- *Low:* Rhinovirus waves subside, and Sergipe and Mato Grosso drop to stabilisation, giving 0 to 1.\n- *High:* A COVID-19 wave from a new variant, plus metapneumovirus across the Centre-South, pushes many UFs into alert with six-week growth, giving 10 to 14.\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 2\nPercentile 20: 3\nPercentile 30: 4\nPercentile 40: 4.6\nPercentile 50: 5\nPercentile 60: 5.8\nPercentile 70: 6.5\nPercentile 80: 7.5\nPercentile 90: 9\nPercentile 95: 11\nPercentile 99: 14"
+    },
+    {
+      "value": {
+        "p10": 1.6,
+        "p25": 2.75,
+        "p50": 4.3,
+        "p75": 6.2,
+        "p90": 8.3
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The SE 44 Resumo is expected on Thursday 12 November 2026. The SE 43 edition (5 November) will appear after this forecast closes, so I could not use it.\n\n(b) **Latest known value:** 5 UFs (AP, MA, MT, MS, SE) in the SE 42 edition, published 29 October 2026 with data through 24 October.\n\n(c) **If nothing changed:** about 5 UFs.\n\n(d) **If the current trend continued:** 6 to 7 UFs. The count went 1, 3, 5 over SE 40 to 42. Nationally, the three-week trend was rising, and metapneumovirus and COVID-19 were ticking up in several Centre-South and Northeast states. Roraima and Santa Catarina were already elevated without growth and could join if their trends turn up.\n\n(e) **Historical variation:** week-to-week changes have been about ±2. Two weeks ahead, a typical move is about ±2 to 3, and the recent range is 1 to 5. Late notifications can also flip borderline trend signals. The same week in 2025 (SE 44) had about 3 UFs. Late 2025 later saw influenza A pushing counts up.\n\n(f) **Experts and markets:** no market or expert forecast exists for this metric.\n\n(g) **Unexpected scenarios:**\n- **Low:** the rhinovirus and metapneumovirus waves peak and stabilise, and the six-week trend flattens almost everywhere. Sergipe's long run of growth ends, giving 0 to 1 UFs.\n- **High:** an early influenza A wave or a new SARS-CoV-2 variant spreads across the Centre-South and Northeast, pushing 10 to 13 UFs into alert with long-term growth.\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 1.6\nPercentile 20: 2.4\nPercentile 30: 3.1\nPercentile 40: 3.7\nPercentile 50: 4.3\nPercentile 60: 5\nPercentile 70: 5.7\nPercentile 80: 6.7\nPercentile 90: 8.3\nPercentile 95: 9.7\nPercentile 99: 13"
+    },
+    {
+      "value": {
+        "p10": 1.5,
+        "p25": 2.75,
+        "p50": 4.5,
+        "p75": 6.5,
+        "p90": 8.5
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The SE 44 bulletin is due on Thursday 12 November 2026. The SE 43 edition comes out on 5 November, after forecasts close, so it is not available to me.\n\n(b) **Latest known value:** 5 UFs at SE 42 (Amapá, Maranhão, Mato Grosso, Mato Grosso do Sul, Sergipe), published 29 October 2026.\n\n(c) **If nothing changed:** 5 UFs.\n\n(d) **If the current trend continued:**\n- The count has risen 1 → 3 → 5 over SE 40 to SE 42.\n- Nationally, the three-week trend is rising and SARS-CoV-2 is increasing slightly in MT, MS, SP and RJ.\n- Simple continuation would give about 6 to 8. However, these short runs often reverse when states' six-week trends stabilise, as happened to Roraima and Santa Catarina.\n\n(e) **Historical variation:**\n- Recent weekly changes have been ±2. Over two weeks, a move of ±2 to 3 is typical, with occasional larger swings.\n- The count stayed in the 1 to 5 range from SE 33 through SE 42.\n- A larger, coordinated rise is possible: November Covid waves have happened before, for example in 2022.\n\n(f) **Experts and markets:** I found no forecasts or markets for this metric.\n\n(g) **Unexpected scenarios:**\n- **Low:** metapneumovirus fades in Sergipe, the Covid rise in MT and MS plateaus, and backfill flattens six-week trends. The count drops to 0 or 1.\n- **High:** a new SARS-CoV-2 variant wave spreads across the Centre-West, Southeast and South, while rhinovirus keeps several states in the alert zone. The count reaches 10 to 13.\n\n**Tails:**\n- The 1st percentile (0) corresponds to all growth signals stabilising at once, which is plausible given that SE 40 had only 1.\n- The 99th percentile (about 13) corresponds to a broad Covid wave, comparable to the SE 22 mid-season peak of 11.\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 1.5\nPercentile 20: 2.5\nPercentile 30: 3\nPercentile 40: 4\nPercentile 50: 4.5\nPercentile 60: 5\nPercentile 70: 6\nPercentile 80: 7\nPercentile 90: 8.5\nPercentile 95: 10\nPercentile 99: 13"
+    },
+    {
+      "value": {
+        "p10": 1.5,
+        "p25": 2.5,
+        "p50": 4.5,
+        "p75": 6.5,
+        "p90": 8.5
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The SE 44 Resumo is due Thursday 12 November 2026. SE 43 comes out on 5 November, after forecasts close.\n\n(b) **Latest known value:** 5 UFs at SE 42, published 29 October 2026 (Amapá, Maranhão, Mato Grosso, Mato Grosso do Sul, Sergipe). The background says SE 43 is already public, but the research found its file still returns a 404, so I treat it as unavailable.\n\n(c) **If nothing changed:** 5 UFs.\n\n(d) **If the current trend continued:** The recent sequence is 3, 1, 3, 5, so continuing it would give about 6 to 7. Two things point the same way: the national three-week trend was rising, and SARS-CoV-2 was edging up in MT, MS, SP and RJ. Against that, metapneumovirus was falling nationally, and long-term growth signals tend to lapse within a few weeks, as happened for Roraima and Santa Catarina.\n\n(e) **Historical variation:** Weekly changes of about ±2 are typical. Over two weeks, a move of ±2 to 3 is common, with occasional larger swings. Mid-season peaks reach 11 to 21, but those are unlikely in November.\n\n(f) **Experts and markets:** No forecasts or markets exist for this metric.\n\n(g) **Unexpected scenarios:**\n- **Low:** Growth signals stabilise across the board, Sergipe's metapneumovirus wave finally ends, and late data entry revises recent weeks down. The count falls to 0 to 1.\n- **High:** A new SARS-CoV-2 variant wave spreads through the Centre-West and Southeast, combined with rhinovirus. This pushes 10 or more UFs into alert with six-week growth.\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 1.5\nPercentile 20: 2\nPercentile 30: 3\nPercentile 40: 4\nPercentile 50: 4.5\nPercentile 60: 5\nPercentile 70: 6\nPercentile 80: 7\nPercentile 90: 8.5\nPercentile 95: 10\nPercentile 99: 13"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 2.5,
+        "p50": 4.0,
+        "p75": 6.5,
+        "p90": 8.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The SE 44 bulletin is due Thursday 12 November 2026, two bulletins after the latest confirmed value. Contrary to the question background, SE 43 is not out yet: it is due 5 November and its URL still returns a 404.\n\n(b) **Latest known value:** 5 UFs at SE 42 (Amapá, Maranhão, Mato Grosso, Mato Grosso do Sul and Sergipe), published 29 October 2026. The earlier recent values were SE 39: 3, SE 40: 1, SE 41: 3.\n\n(c) **If nothing changed:** 5.\n\n(d) **If the current trend continued:** The count has risen by about 2 per week since SE 40. Extending that gives roughly 7 to 9. However, several things argue against simply extending it:\n- Nationally the six-week trend is only stable or oscillating.\n- Metapneumovirus is falling nationally and rhinovirus is stable.\n- States tend to drop out once their growth signal fades, as Roraima and Santa Catarina did at SE 42.\n\nOn the other side, the three-week trend is rising, and SARS-CoV-2 is rising in Mato Grosso, Mato Grosso do Sul, São Paulo and Rio de Janeiro.\n\n(e) **Historical variation:** Week-to-week changes have been about ±2. Over two weeks, a move of ±2 to 4 is typical. Earlier in 2026 the count reached 11 (SE 22), and in June 2025 it reached 21. Spring values are usually in the 1 to 5 range.\n\n(f) **Experts and markets:** No market or expert forecast covers this metric. None of the supplied markets match it.\n\n(g) **Unexpected scenarios:**\n- **Low:** The Covid rise in the Centre-West fizzles, Sergipe's metapneumovirus wave ends and Amapá and Maranhão stabilise. The count falls to 0 or 1.\n- **High:** A new SARS-CoV-2 variant wave spreads across the Centre-West and Southeast, together with rhinovirus in the North and Northeast. This pushes 10 to 13 UFs into alert with growth.\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 1\nPercentile 20: 2\nPercentile 30: 3\nPercentile 40: 4\nPercentile 50: 4\nPercentile 60: 5\nPercentile 70: 6\nPercentile 80: 7\nPercentile 90: 8\nPercentile 95: 10\nPercentile 99: 13"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 1.5399,
+    "p25": 2.8093,
+    "p50": 4.5216,
+    "p75": 6.5603,
+    "p90": 8.6734
+  },
+  "usage": [
+    {
+      "question_id": "46643",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 0.00018219999999999998,
+      "input_tokens": 537,
+      "output_tokens": 150,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0003083,
+      "input_tokens": 1375,
+      "output_tokens": 67,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 61.3,
+      "notional_cost_usd": 0.27086469999999996,
+      "input_tokens": 47956,
+      "output_tokens": 4491,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 9.2,
+      "notional_cost_usd": 0.08068,
+      "input_tokens": 7996,
+      "output_tokens": 836,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 9.8,
+      "notional_cost_usd": 0.08068800000000001,
+      "input_tokens": 7997,
+      "output_tokens": 836,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0007661,
+      "input_tokens": 2694,
+      "output_tokens": 455,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.0008133,
+      "input_tokens": 2740,
+      "output_tokens": 531,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.6,
+      "notional_cost_usd": 0.0003112,
+      "input_tokens": 2694,
+      "output_tokens": 442,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.1,
+      "notional_cost_usd": 0.0249218,
+      "input_tokens": 7998,
+      "output_tokens": 1046,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.00025714,
+      "input_tokens": 2738,
+      "output_tokens": 333,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0007181,
+      "input_tokens": 2774,
+      "output_tokens": 327,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00021889,
+      "input_tokens": 2775,
+      "output_tokens": 255,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 106.4,
+      "notional_cost_usd": 0.352829,
+      "input_tokens": 138186,
+      "output_tokens": 5380,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 10.6,
+      "notional_cost_usd": 0.08449999999999999,
+      "input_tokens": 8171,
+      "output_tokens": 957,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.2,
+      "notional_cost_usd": 0.08734800000000001,
+      "input_tokens": 8172,
+      "output_tokens": 1099,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.2,
+      "notional_cost_usd": 0.087744,
+      "input_tokens": 8169,
+      "output_tokens": 1120,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008278000000000001,
+      "input_tokens": 2775,
+      "output_tokens": 546,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.0007782,
+      "input_tokens": 2887,
+      "output_tokens": 402,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0007762000000000001,
+      "input_tokens": 2892,
+      "output_tokens": 396,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.4,
+      "notional_cost_usd": 0.0002987,
+      "input_tokens": 2775,
+      "output_tokens": 415,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.00032164,
+      "input_tokens": 2888,
+      "output_tokens": 459,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46643",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.00037758,
+      "input_tokens": 2894,
+      "output_tokens": 570,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0765
+}
