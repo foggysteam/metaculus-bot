@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-02T18:06:13.196958+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-02T17:59:57.195386+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46238,
+    "post_id": 46014,
+    "url": "https://www.metaculus.com/questions/46014",
+    "type": "DiscreteQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "What will be the ending value of the UST 10Y Yield for these biweekly periods of Q4 2026? (Nov 9 - Nov 20)",
+    "resolution_criteria": "Each subquestion will resolve as the last available daily value of the U.S. Treasury Securities at 10-Year Constant Maturity published on the [FRED website](https://fred.stlouisfed.org/series/DGS10) for the final calendar day (typically the final Friday) of the corresponding biweekly period.",
+    "fine_print": "* If the FRED data is delayed, the value will be taken as soon as published for the relevant date.\n* If the market is closed on the scheduled ending date or if no value for that date is published by FRED for two weeks, the most recent available value from an earlier day in the period will be used.\n* Only the initially published value for each date will be used (no revisions).\n* The value is reported in percentage points.",
+    "close_time": "2026-11-09 04:00 UTC",
+    "scheduled_resolution_time": "2026-11-20 21:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n- The question resolves on FRED DGS10, the 10-year constant maturity yield, using the value for Friday 2026-11-20. That is a normal trading day. Wednesday 2026-11-11 is Veterans Day, so the bond market will be closed and FRED will publish no value for that date (it also showed none for Columbus Day, 2026-10-12). [FRED](https://fred.stlouisfed.org/data/DGS10.txt)\n- The latest FRED value is 4.98 for 2026-10-29. Earlier closes: 10-28: 5.05, 10-27: 4.99, 10-26: 5.00, 10-23: 5.00, 10-22: 4.96, 10-21: 5.13, 10-19: 5.15, 10-14: 5.19, 10-09: 5.24, 10-05: 5.31 (the recent peak), 09-22: 4.96. [FRED](https://fred.stlouisfed.org/data/DGS10.txt)\n\n## 2. Current status\n- Nothing has happened yet that settles the outcome. The ending date is about three weeks away.\n- 2026-11-02: market quotes put the 10-year at about 4.88-4.91% during the day, the lowest since mid-September. The prior close was about 4.93%. [Trading Economics](https://tradingeconomics.com/united-states/government-bond-yield), [TradingView/TE](https://www.tradingview.com/news/te_news:597332:0-us-10-year-treasury-yield-lowest-in-8-weeks/), [CNBC](https://www.cnbc.com/quotes/US10Y)\n- 2026-10-30: about 4.93-4.94%, per a secondary source. FRED had not yet posted this date when I checked. [Vantage](https://www.vantagemarkets.com/market-analysis/why-dollar-index-fell-treasury-yields-usdx-analysis-november-2-6-2026/)\n\n## 3. Recent news (newest first)\n- 2026-11-02: Oil fell sharply: Brent dropped more than 3% to about $109-110, and Trading Economics cites a crude benchmark down about 7.8% to around $96. The drivers were US-Iran diplomacy hopes, Iran saying the Strait of Hormuz would fully reopen if conditions are met, and Rubio saying Trump prefers a diplomatic end to the Iran war. That eased inflation fears and pushed yields lower. [Cumhuriyet](https://www.cumhuriyet.com.tr/ekonomi/brent-petrol-109-dolara-geriledi-hurmuz-bogazi-iyimserligi-piyasalari-nasil-etkiledi-2552399), [Moneycontrol](https://www.moneycontrol.com/news/business/banks/government-bond-yields-log-best-session-since-april-as-crude-prices-slide-14066633.html), [Trading Economics](https://tradingeconomics.com/united-states/government-bond-yield)\n- 2026-11-02: Futures still price about a 75% chance of a 25bp Fed **hike** in December. Other sources give between 60% and 85%. [TradingView/TE](https://www.tradingview.com/news/te_news:597332:0-us-10-year-treasury-yield-lowest-in-8-weeks/), [Avalon](https://avaloncapitalresearch.substack.com/p/weekly-playbook-futures-price-a-72)\n- 2026-11-01: The 10-year fell about 33-36bp during October. [24/7 Wall St](https://247wallst.com/investing/2026/11/01/the-10-year-treasury-yield-fell-33-basis-points-here-are-5-net-lease-reits-to-watch/)\n- Late October: the Fed held rates at its October 28 meeting, with two dissents. Trading Economics gives the fed funds rate as 4.00%, but other reports differ. Recent data: September CPI 3.7% y/y (up from 3.4%), Q3 GDP 3.4% annualized, September PCE prices +0.5% m/m. [Trading Economics](https://tradingeconomics.com/united-states/government-bond-yield)\n- 2026-10-02: September payrolls rose only 29k and unemployment rose to 4.2%. [Invezz](https://invezz.com/en-ae/news/2026/10/02/us-jobs-report-payrolls-rise-just-29000-fed-october-hike-bets-fade/)\n\n## 4. Base rates\n- A code-computed baseline from FRED changes over 15 trading days since 2005, anchored at 4.98 on 10-29, gives: p5 4.66, p10 4.74, p25 4.86, p50 4.99, p75 5.12, p90 5.23, p95 5.31.\n- Starting instead from about 4.89 on 11-02 (13-14 trading days to go), the same spread would shift down about 9bp, giving a median near 4.89-4.90.\n- Recent volatility is high. Swings over 2-3 weeks of 15-35bp have been common lately: 5.31 on 10-05 to 4.96 on 10-22, and 4.96 on 09-22 to 5.29 on 09-30. One-day moves of 7-17bp have also occurred (10-21 to 10-22: -17bp).\n- The trend is down from the 5.31 early-October peak. The yield is still about 0.76pp higher than a year ago.\n\n## 5. Other forecasts\n- Kalshi \"10Y on Nov 2\": about 58% for 4.88% or above, 31% for 4.90% or above. That implies a close of about 4.88-4.89.\n- Kalshi November low (by Nov 30): about 51% for 4.76% or below, 62% for 4.80% or below.\n- Kalshi November high: about 37% for 5.06% or above, 28% for 5.10% or above, 20% for 5.15% or above.\n- Kalshi year-end (Dec 31): 69% for 4.75% or above, 47% for 5.00% or above, 34% for 5.25% or above, 10% for 5.50% or above.\n- Kalshi \"on Nov 3\" and \"on Nov 30\": the listed prices are all 0.00, which looks like empty or illiquid books, so I would not rely on them.\n- Polymarket \"high before 2027\": the 5.5% strike is at 8.8%.\n- Trading Economics model: about 4.89% by end of Q4 and 4.68% in 12 months. [Trading Economics](https://tradingeconomics.com/united-states/government-bond-yield)\n- I could not find a contract that resolves on November 20 specifically.\n\n## 6. Upcoming events before resolution (by 2026-11-20)\n- 2026-11-03: US midterm elections. Commentators link control of Congress to how much room the administration has on Middle East policy and fiscal policy. [AA](https://www.aa.com.tr/tr/ekonomi/kuresel-piyasalar-onemli-gelismelerin-izlenecegi-haftaya-temkinli-basladi/4108294)\n- 2026-11-06: October jobs report. Consensus is about 50-65k payrolls, 4.2% unemployment, and average hourly earnings +0.3% m/m. [Avalon](https://avaloncapitalresearch.substack.com/p/weekly-playbook-futures-price-a-72)\n- 2026-11-10 (aggregator date, not confirmed on bls.gov): October CPI. [thriveinmarkets](https://thriveinmarkets.com/calendar/dates/cpi-2026/)\n- 2026-11-11: Veterans Day, bond market closed.\n- Mid-November: Treasury quarterly refunding auctions of 3-, 10- and 30-year debt, usually in the week of the 10th (I did not confirm the dates), plus PPI and retail sales releases.\n- Ongoing: US-Iran talks over the Strait of Hormuz and the swings in oil prices. These have been the main driver of the inflation premium. Fed officials' comments ahead of the December FOMC will also matter.\n\nSources: [FRED](https://fred.stlouisfed.org/data/DGS10.txt), [Trading Economics](https://tradingeconomics.com/united-states/government-bond-yield), [TradingView](https://www.tradingview.com/news/te_news:597332:0-us-10-year-treasury-yield-lowest-in-8-weeks/), [CNBC](https://www.cnbc.com/quotes/US10Y), [Vantage](https://www.vantagemarkets.com/market-analysis/why-dollar-index-fell-treasury-yields-usdx-analysis-november-2-6-2026/), [Avalon](https://avaloncapitalresearch.substack.com/p/weekly-playbook-futures-price-a-72), [24/7 Wall St](https://247wallst.com/investing/2026/11/01/the-10-year-treasury-yield-fell-33-basis-points-here-are-5-net-lease-reits-to-watch/), [Invezz](https://invezz.com/en-ae/news/2026/10/02/us-jobs-report-payrolls-rise-just-29000-fed-october-hike-bets-fade/), [thriveinmarkets](https://thriveinmarkets.com/calendar/dates/cpi-2026/), [Cumhuriyet](https://www.cumhuriyet.com.tr/ekonomi/brent-petrol-109-dolara-geriledi-hurmuz-bogazi-iyimserligi-piyasalari-nasil-etkiledi-2552399), [Moneycontrol](https://www.moneycontrol.com/news/business/banks/government-bond-yields-log-best-session-since-april-as-crude-prices-slide-14066633.html), [AA](https://www.aa.com.tr/tr/ekonomi/kuresel-piyasalar-onemli-gelismelerin-izlenecegi-haftaya-temkinli-basladi/4108294)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 18:03 UTC; check each market really matches the question)\n- Kalshi: 10Y US Treasury yield today? (On Nov 2, 2026). Yes prices: 4.88% or above: 0.58; 4.9% or above: 0.31; 4.86% or above: 0.85; 4.92% or above: 0.12; 4.96% or above: 0.01; 4.94% or above: 0.03; 5% or above: 0.0100; 5.02% or above: 0.0100; 5.04% or above: 0.0100; 5.06% or above: 0.0100.\n- Kalshi: How low will the 10-year US Treasury yield get by end of month? (By Nov 30, 2026). Yes prices: 4.76% or below: 0.51; 4.77% or below: 0.53; 4.75% or below: 0.43; 4.78% or below: 0.56; 4.79% or below: 0.59; 4.8% or below: 0.62; 4.81% or below: 0.66; 4.82% or below: 0.69; 4.83% or below: 0.72; 4.84% or below: 0.75.\n- Kalshi: How high will the 10-year US Treasury yield get by end of month? (By Nov 30, 2026). Yes prices: 5.06% or above: 0.37; 5.07% or above: 0.34; 5.08% or above: 0.32; 5.09% or above: 0.30; 5.1% or above: 0.28; 5.11% or above: 0.26; 5.12% or above: 0.25; 5.13% or above: 0.23; 5.14% or above: 0.21; 5.15% or above: 0.20.\n- Kalshi: Will the 10Y US Treasury yield hit 5.50% by Oct 31, 2026? (By Oct 31, 2026). Yes prices: 5.50% or higher: 0.0200.\n- Kalshi: 10Y US Treasury yield on Oct 27, 2026? (On Oct 27, 2026). Yes prices: 4.88% or above: 0.9900; 4.96% or above: 0.9900; 4.92% or above: 0.9900; 4.94% or above: 0.9900; 4.86% or above: 0.9900; 4.9% or above: 0.9900; 4.98% or above: 0.9600; 5.12% or above: 0.0100; 5.06% or above: 0.0100; 5.04% or above: 0.0100.\n- Kalshi: 10Y US Treasury yield at year-end? (On Dec 31, 2026). Yes prices: 5% or above: 0.47; 5.1% or above: 0.43; 5.15% or above: 0.43; 5.25% or above: 0.34; 4.75% or above: 0.69; 5.5% or above: 0.10; 6% or above: 0.04; 5.75% or above: 0.04.\n- Kalshi: 10Y US Treasury yield tomorrow? (On Nov 3, 2026). Yes prices: 4.81% or above: 0.0000; 4.83% or above: 0.0000; 4.85% or above: 0.0000; 4.87% or above: 0.0000; 4.89% or above: 0.0000; 4.91% or above: 0.0000; 4.93% or above: 0.0000; 4.95% or above: 0.0000; 4.97% or above: 0.0000; 4.99% or above: 0.0000.\n- Kalshi: 10Y US Treasury yield on Nov 30, 2026? (On Nov 30, 2026). Yes prices: 4.81% or above: 0.0000; 4.83% or above: 0.0000; 4.85% or above: 0.0000; 4.87% or above: 0.0000; 4.89% or above: 0.0000; 4.91% or above: 0.0000; 4.93% or above: 0.0000; 4.95% or above: 0.0000; 4.97% or above: 0.0000; 4.99% or above: 0.0000.\n- Polymarket: How low will 10-year Treasury yield get before 2027? (ends 2027-01-01). [Yes, No] prices: Below 4.0%: [\"1\", \"0\"]; Below 3.5%: [\"0.014\", \"0.986\"]; Below 3.0%: [\"0.0095\", \"0.9905\"]; Below 2.0%: [\"0.0145\", \"0.9855\"]; Below 1.0%: [\"0.021\", \"0.979\"]; Below 3.6%: [\"0.0255\", \"0.9745\"]\n- Polymarket: How high will 10-year Treasury yield go before 2027? (ends 2027-01-01). [Yes, No] prices: 4.5%: [\"1\", \"0\"]; 4.6%: [\"1\", \"0\"]; 4.8%: [\"1\", \"0\"]; 5.0%: [\"1\", \"0\"]; 5.2%: [\"1\", \"0\"]; 5.5%: [\"0.088\", \"0.912\"]\n- Polymarket: How high will 5-year Treasury yield go before 2027? (ends 2026-12-31). [Yes, No] prices: 4.70%: [\"1\", \"0\"]; 4.75%: [\"1\", \"0\"]; 4.80%: [\"1\", \"0\"]; 4.85%: [\"1\", \"0\"]; 4.90%: [\"1\", \"0\"]; 4.95%: [\"1\", \"0\"]\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.115\", \"0.885\"]; $2M: [\"0.038\", \"0.962\"]; $3M: [\"0.053\", \"0.947\"]; $4M: [\"0.0185\", \"0.9815\"]; $5M: [\"0.0225\", \"0.9775\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.18\", \"0.82\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.17\", \"0.83\"]\n\nStatistical baseline:\n\nComputed by code from FRED DGS10 (Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis, Percent, frequency D): latest observation 4.9800 for 2026-10-29.\nThe target period 2026-11-20 is 15 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 15-period changes since 2005 (last 3 years weighted double):\np5: 4.66, p10: 4.74, p25: 4.86, p50: 4.99, p75: 5.12, p90: 5.23, p95: 5.31\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).",
+    "Pulling it together now: the latest FRED value, recent news, the data calendar and market prices.\n\n## 1. Resolution source\n- 2026-10-29: The latest FRED DGS10 value is **4.98**. Readings just before it were 5.05 (10-28), 4.99 (10-27), 5.00 (10-26 and 10-23), 4.96 (10-22) and 5.13 (10-21). [FRED DGS10](https://fred.stlouisfed.org/data/DGS10.txt)\n- The question resolves on the DGS10 value for Friday 2026-11-20, as first published. No US holiday falls on Nov 20. Veterans Day, Wed Nov 11, is a bond-market holiday, so FRED will have no value that day.\n\n## 2. Current status\n- Nothing has settled the question. It is 14 trading days from Nov 2 to Nov 20.\n- 2026-10-30: FRED has not posted a value for this date yet. One undated report put the 10-year at about 4.925% after a tech sell-off. A third-party site shows a Treasury par yield of 4.94 for Oct 30. I could not confirm either figure from a primary source. [Finimize](https://finimize.com/content/techs-ai-spending-jitters-sent-investors-back-to-treasuries), [StockMarketWatch](https://stockmarketwatch.com/bonds/10-year-treasury-yield)\n- 2026-11-02: The 10-year was at about 4.884% intraday, down more than 4bp. The 2-year was about 4.575% and the 30-year 5.253%. [CNBC](https://cnbc.com/2026/11/02/us-treasury-yields-bonds.html)\n\n## 3. Recent news (newest first)\n- 2026-11-02: Oil fell after Secretary of State Rubio said Trump wants to end the Iran war \"diplomatically\". Brent dropped about 3% to roughly $109-110. Iran's foreign minister said the Strait of Hormuz would fully reopen if Washington's conditions are met. Yields were mixed. [CNBC](https://cnbc.com/2026/11/02/us-treasury-yields-bonds.html), [Moneycontrol](https://www.moneycontrol.com/news/business/banks/government-bond-yields-log-best-session-since-april-as-crude-prices-slide-14066633.html)\n- 2026-11-02: CNBC says the close link between oil and yields seen earlier in the year faded in October as attention moved to AI and Big Tech. [CNBC](https://cnbc.com/2026/11/02/us-treasury-yields-bonds.html)\n- 2026-10-30: A sell-off in megacap tech pushed investors into Treasuries, taking yields to about a one-month low. The 10-year was more than 40bp below its Oct 7 high, on track for the biggest monthly drop since December 2023. [The Edge](https://theedgemalaysia.com/node/824025)\n- 2026-10-28: The Fed held rates at 3.75-4.00% on a 10-2 vote, with both dissenters (including Hammack) wanting a hike. CME FedWatch put the odds of a December hike at about 85%. The 10-year was at 5.05%. [CNN](https://www.cnn.com/2026/10/28/business/live-news/federal-reserve-interest-rate-october)\n- Background: September CPI inflation was reported at about 3.7% year on year. This comes from a secondary source (Trading Economics) and I did not verify it. [Trading Economics](https://tradingeconomics.com/united-states/interest-rate)\n\n## 4. Base rates\n- Recent trend: the 10-year rose from about 4.73 (2026-08-28) to a peak of 5.31 (10-05). It then fell to 4.96-5.05 in late October and is around 4.88-4.92 now. [FRED](https://fred.stlouisfed.org/data/DGS10.txt)\n- It has been volatile recently. Daily moves of 10-17bp happened several times, for example 10-21 to 10-22 (-17bp) and 9-22 to 9-23 (+15bp).\n- The provided statistical baseline uses 15-period changes from the 4.98 of Oct 29. Its spread for Nov 20 runs from 4.66 (5th percentile) to 4.99 (median) to 5.31 (95th percentile), with an interquartile range of 4.86-5.12. If you re-center on about 4.89 for Nov 2, the median moves to roughly 4.89-4.90, with the 25th-75th percentile band at roughly ±13bp.\n\n## 5. Other forecasts\n- Kalshi, Nov 2 close: 85% for 4.86% or above, 58% for 4.88% or above, 31% for 4.90% or above. That implies a close of about 4.88-4.89.\n- Kalshi, November monthly low: 51% for touching 4.76% or below, 62% for 4.80% or below, 75% for 4.84% or below.\n- Kalshi, November monthly high: 37% for touching 5.06% or above, 28% for 5.10% or above, 20% for 5.15% or above.\n- Kalshi, year-end: 69% for 4.75% or above, 47% for 5.00% or above, 34% for 5.25% or above, 10% for 5.50% or above.\n- Polymarket, highest level before 2027: 5.2% has already been hit; 5.5% is at 8.8%. The lowest-level market (\"Below 4.0%\" at 100%) is odd and looks unreliable.\n- I found no Kalshi market for exactly Nov 20 and no consensus survey of bank forecasts for mid-November.\n\n## 6. Upcoming events before Nov 20\n- 2026-11-03: US midterm elections and September JOLTS. CNBC says the results matter for how much Congress plans to spend. [CNBC](https://cnbc.com/2026/11/02/us-treasury-yields-bonds.html)\n- 2026-11-04: ADP employment and Treasury's quarterly refunding announcement (sizes of upcoming note and bond auctions). [CNBC](https://cnbc.com/2026/11/02/us-treasury-yields-bonds.html)\n- 2026-11-05: Productivity and jobless claims.\n- 2026-11-06: October jobs report, 8:30 ET. [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm)\n- About 2026-11-09 to 11-12: Likely 3-, 10- and 30-year auctions as part of the refunding (the usual pattern, not yet confirmed). The bond market is closed on Nov 11.\n- 2026-11-10: October CPI, 8:30 ET. This is the key test for the December hike pricing. [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm)\n- 2026-11-13: October PPI. [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm)\n- Ongoing: US-Iran / Strait of Hormuz talks and oil prices (Brent still around $110), Apple and Qualcomm earnings this week and swings in AI/tech stocks driving safe-haven buying, and Fed speakers after the hawkish dissents.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-02 18:03 UTC; check each market really matches the question)\n- Kalshi: 10Y US Treasury yield today? (On Nov 2, 2026). Yes prices: 4.88% or above: 0.58; 4.9% or above: 0.31; 4.86% or above: 0.85; 4.92% or above: 0.12; 4.96% or above: 0.01; 4.94% or above: 0.03; 5% or above: 0.0100; 5.02% or above: 0.0100; 5.04% or above: 0.0100; 5.06% or above: 0.0100.\n- Kalshi: How low will the 10-year US Treasury yield get by end of month? (By Nov 30, 2026). Yes prices: 4.76% or below: 0.51; 4.77% or below: 0.53; 4.75% or below: 0.43; 4.78% or below: 0.56; 4.79% or below: 0.59; 4.8% or below: 0.62; 4.81% or below: 0.66; 4.82% or below: 0.69; 4.83% or below: 0.72; 4.84% or below: 0.75.\n- Kalshi: How high will the 10-year US Treasury yield get by end of month? (By Nov 30, 2026). Yes prices: 5.06% or above: 0.37; 5.07% or above: 0.34; 5.08% or above: 0.32; 5.09% or above: 0.30; 5.1% or above: 0.28; 5.11% or above: 0.26; 5.12% or above: 0.25; 5.13% or above: 0.23; 5.14% or above: 0.21; 5.15% or above: 0.20.\n- Kalshi: Will the 10Y US Treasury yield hit 5.50% by Oct 31, 2026? (By Oct 31, 2026). Yes prices: 5.50% or higher: 0.0200.\n- Kalshi: 10Y US Treasury yield on Oct 27, 2026? (On Oct 27, 2026). Yes prices: 4.88% or above: 0.9900; 4.96% or above: 0.9900; 4.92% or above: 0.9900; 4.94% or above: 0.9900; 4.86% or above: 0.9900; 4.9% or above: 0.9900; 4.98% or above: 0.9600; 5.12% or above: 0.0100; 5.06% or above: 0.0100; 5.04% or above: 0.0100.\n- Kalshi: 10Y US Treasury yield at year-end? (On Dec 31, 2026). Yes prices: 5% or above: 0.47; 5.1% or above: 0.43; 5.15% or above: 0.43; 5.25% or above: 0.34; 4.75% or above: 0.69; 5.5% or above: 0.10; 6% or above: 0.04; 5.75% or above: 0.04.\n- Kalshi: 10Y US Treasury yield tomorrow? (On Nov 3, 2026). Yes prices: 4.81% or above: 0.0000; 4.83% or above: 0.0000; 4.85% or above: 0.0000; 4.87% or above: 0.0000; 4.89% or above: 0.0000; 4.91% or above: 0.0000; 4.93% or above: 0.0000; 4.95% or above: 0.0000; 4.97% or above: 0.0000; 4.99% or above: 0.0000.\n- Kalshi: 10Y US Treasury yield on Nov 30, 2026? (On Nov 30, 2026). Yes prices: 4.81% or above: 0.0000; 4.83% or above: 0.0000; 4.85% or above: 0.0000; 4.87% or above: 0.0000; 4.89% or above: 0.0000; 4.91% or above: 0.0000; 4.93% or above: 0.0000; 4.95% or above: 0.0000; 4.97% or above: 0.0000; 4.99% or above: 0.0000.\n- Polymarket: How low will 10-year Treasury yield get before 2027? (ends 2027-01-01). [Yes, No] prices: Below 4.0%: [\"1\", \"0\"]; Below 3.5%: [\"0.014\", \"0.986\"]; Below 3.0%: [\"0.0095\", \"0.9905\"]; Below 2.0%: [\"0.0145\", \"0.9855\"]; Below 1.0%: [\"0.021\", \"0.979\"]; Below 3.6%: [\"0.0255\", \"0.9745\"]\n- Polymarket: How high will 10-year Treasury yield go before 2027? (ends 2027-01-01). [Yes, No] prices: 4.5%: [\"1\", \"0\"]; 4.6%: [\"1\", \"0\"]; 4.8%: [\"1\", \"0\"]; 5.0%: [\"1\", \"0\"]; 5.2%: [\"1\", \"0\"]; 5.5%: [\"0.088\", \"0.912\"]\n- Polymarket: How high will 5-year Treasury yield go before 2027? (ends 2026-12-31). [Yes, No] prices: 4.70%: [\"1\", \"0\"]; 4.75%: [\"1\", \"0\"]; 4.80%: [\"1\", \"0\"]; 4.85%: [\"1\", \"0\"]; 4.90%: [\"1\", \"0\"]; 4.95%: [\"1\", \"0\"]\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.115\", \"0.885\"]; $2M: [\"0.038\", \"0.962\"]; $3M: [\"0.053\", \"0.947\"]; $4M: [\"0.0185\", \"0.9815\"]; $5M: [\"0.0225\", \"0.9775\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.18\", \"0.82\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.17\", \"0.83\"]\n\nStatistical baseline:\n\nComputed by code from FRED DGS10 (Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis, Percent, frequency D): latest observation 4.9800 for 2026-10-29.\nThe target period 2026-11-20 is 15 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 15-period changes since 2005 (last 3 years weighted double):\np5: 4.66, p10: 4.74, p25: 4.86, p50: 4.99, p75: 5.12, p90: 5.23, p95: 5.31\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units)."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 4.63,
+        "p25": 4.765,
+        "p50": 4.89,
+        "p75": 5.015,
+        "p90": 5.15
+      },
+      "reasoning": "(a) **Time left:** The question resolves on the FRED DGS10 value for Friday 2026-11-20. That is about 18 calendar days, or roughly 14 trading days, from today. Veterans Day (Nov 11) is a market holiday.\n\n(b) **Latest known value:** FRED shows 4.98 for 2026-10-29. Secondary sources put Oct 30 at about 4.93. Intraday on 2026-11-02 the yield was about 4.88-4.91, and Kalshi implies a close near 4.88-4.89.\n\n(c) **If nothing changed:** about 4.89.\n\n(d) **If the trend continued:** The yield fell about 33bp in October from a 5.31 peak, and oil is falling on hopes for US-Iran diplomacy. Continuing that pace for another 2-3 weeks would give roughly 4.70-4.75.\n- Trends in yields do not persist reliably, though.\n- Futures still price a December Fed hike at about 75%, and September CPI was 3.7%, which limits how far yields can fall.\n\n(e) **Historical variation:** The code baseline over 15 trading days gives p10 to p90 of about ±25bp around the start value, with p5 and p95 at about ±33bp. Recent volatility is higher than that baseline:\n- Swings of 15-35bp over 2-3 weeks have been common.\n- One-day moves of 17bp have occurred.\n\nI widen the distribution modestly to reflect this.\n\n(f) **Experts and markets:**\n- Kalshi's November contracts give about a 51% chance the yield touches 4.76 or lower at some point before Nov 30.\n- They give about a 37% chance it touches 5.06 or higher.\n- That is consistent with a center near 4.88-4.90 and a slight downward lean.\n- The Trading Economics model sees about 4.89 at end of Q4.\n\n(g) **Scenarios:**\n- **Low:** A US-Iran deal fully reopens Hormuz and oil collapses toward $80. Payrolls on Nov 6 come in negative and October CPI is soft. Hike pricing evaporates, and the 10-year drops to about 4.45-4.55.\n- **High:** Diplomacy breaks down and oil spikes back above $120. A hot October CPI cements the December hike, and a weak 10-year refunding auction combined with fiscal worries after the midterms pushes the yield back to about 5.30-5.40.\n\nPercentile 1: 4.40\nPercentile 5: 4.55\nPercentile 10: 4.63\nPercentile 20: 4.73\nPercentile 30: 4.80\nPercentile 40: 4.85\nPercentile 50: 4.89\nPercentile 60: 4.93\nPercentile 70: 4.98\nPercentile 80: 5.05\nPercentile 90: 5.15\nPercentile 95: 5.23\nPercentile 99: 5.40"
+    },
+    {
+      "value": {
+        "p10": 4.64,
+        "p25": 4.775,
+        "p50": 4.9,
+        "p75": 5.025,
+        "p90": 5.16
+      },
+      "reasoning": "(a) **Time left:** The outcome is set by the FRED DGS10 close on Friday 2026-11-20. That is about 18 calendar days, or roughly 14 trading days, from now. Forecasts close on Nov 9.\n\n(b) **Latest known value:** FRED shows 4.98 for 2026-10-29. Market quotes put Oct 30 near 4.93 and intraday Nov 2 near 4.88-4.91, the lowest since mid-September.\n\n(c) **If nothing changed:** about 4.89-4.90.\n\n(d) **If the trend continued:** October saw a drop of about 33bp, driven by easing oil and Hormuz diplomacy. Extending that roughly would give about 4.70-4.80 by Nov 20. Against that, a December Fed hike is still about 75% priced and CPI is at 3.7%, which limits how far yields can fall.\n\n(e) **Historical variation:** The baseline 15-day spread is about ±12-13bp at the interquartile range and about ±32bp from p5 to p95. The current regime is more volatile than that: 2-3 week swings of 25-35bp have been common, and single days have moved up to 17bp.\n\n(f) **Experts and markets:**\n- Kalshi's November range markets imply roughly even odds that the yield touches 4.76 or below at some point, and about 37% that it touches 5.06 or above. That is consistent with a center near 4.90 with modest downside skew.\n- Kalshi's year-end market has a median near 5.0.\n- Trading Economics projects about 4.89 for end-Q4.\n\n(g) **Unexpected scenarios:**\n- **Low:** A firm US-Iran deal fully reopens Hormuz, Brent falls toward $85, the October jobs report comes in negative, and CPI is soft. Hike pricing collapses and the 10-year falls to about 4.45-4.55.\n- **High:** Talks break down and oil spikes back above $120, CPI comes in hot at 4%+, and the refunding auctions are sloppy with fiscal worries after the midterms. The 10-year returns to the 5.3-5.45 range.\n\n**Approach:** I center the distribution near 4.90, the current level, with a slight downward lean to reflect the October trend and the Kalshi range markets. I widen the tails beyond the historical baseline to match the current high-volatility regime.\n\nPercentile 1: 4.40\nPercentile 5: 4.56\nPercentile 10: 4.64\nPercentile 20: 4.74\nPercentile 30: 4.81\nPercentile 40: 4.86\nPercentile 50: 4.90\nPercentile 60: 4.94\nPercentile 70: 4.99\nPercentile 80: 5.06\nPercentile 90: 5.16\nPercentile 95: 5.24\nPercentile 99: 5.42"
+    },
+    {
+      "value": {
+        "p10": 4.6,
+        "p25": 4.75,
+        "p50": 4.88,
+        "p75": 5.02,
+        "p90": 5.17
+      },
+      "reasoning": "(a) **Time left:** The resolution value is the FRED DGS10 close for Friday 2026-11-20. That is about 14 trading days away, and the result should be known around Nov 20-23.\n\n(b) **Latest known value:** The latest FRED value is 4.98 for 2026-10-29. Market quotes put the 10-year at about 4.93 on Oct 30 and about 4.88-4.91 intraday on Nov 2.\n\n(c) **If nothing changed:** The yield would close near 4.89.\n\n(d) **If the current trend continued:** October brought a decline of about 33bp, and oil is easing on hopes of US-Iran diplomacy. If that kept going, the yield could reach about 4.75-4.80 by Nov 20. However, sticky inflation (CPI 3.7%) and roughly 75% odds of a Fed hike in December push against a straight-line decline.\n\n(e) **Historical variation:** The empirical 15-day spread from the baseline runs from about -33bp at p5 to +33bp at p95. Recent volatility is higher than usual: 2-3 week swings of 30-35bp and single-day moves of 15bp or more have occurred. Re-centred on about 4.89, the base rates give a 90% range of roughly 4.55 to 5.22.\n\n(f) **Experts and markets:**\n- Kalshi gives about a 51% chance of a November low at or below 4.76, and about 37% of a November high at or above 5.06. This is consistent with a roughly symmetric distribution around 4.88-4.90 with wide swings.\n- Kalshi's year-end market has a median near 5.00.\n- The Trading Economics model expects about 4.89 by the end of Q4.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** An Iran deal reopens the Strait of Hormuz, oil drops below $90, October payrolls come in negative, and December hike odds collapse. The 10-year could fall to 4.45-4.55.\n- **High outcome:** Talks fail and oil spikes again, October CPI is hot (above 0.5% m/m), and a weak 10- or 30-year refunding auction plus post-midterm fiscal worries push the 10-year back above 5.25-5.40.\n\nPercentile 1: 4.38\nPercentile 5: 4.52\nPercentile 10: 4.60\nPercentile 20: 4.71\nPercentile 30: 4.79\nPercentile 40: 4.84\nPercentile 50: 4.88\nPercentile 60: 4.93\nPercentile 70: 4.98\nPercentile 80: 5.06\nPercentile 90: 5.17\nPercentile 95: 5.26\nPercentile 99: 5.45"
+    },
+    {
+      "value": {
+        "p10": 4.61,
+        "p25": 4.745,
+        "p50": 4.88,
+        "p75": 5.015,
+        "p90": 5.15
+      },
+      "reasoning": "(a) **Time left:** The question resolves on the FRED DGS10 value for Friday 2026-11-20. That is about 14 trading days from today, Nov 2. Nov 11, Veterans Day, is a bond-market holiday.\n\n(b) **Latest known value:** The last FRED value is 4.98 on 2026-10-29. Unconfirmed reports put Oct 30 at about 4.92-4.94. On Nov 2 the yield was about 4.88-4.89 intraday, and Kalshi implies a close of about 4.88-4.89.\n\n(c) **If nothing changed:** About 4.89.\n\n(d) **If the current trend continued:** Yields fell more than 40bp from the Oct 7 high. If that decline continued at a slower pace, the yield would be around 4.70-4.80 by Nov 20. The Fed's hawkish lean (85% odds of a December hike) and oil near $110 argue against simply extending the trend.\n\n(e) **Historical variation:** The empirical spread of 15-period changes is roughly ±13bp across the 25th-75th percentiles and about ±32bp across the 5th-95th. Realized volatility is elevated right now, with several 10-17bp daily moves, so the tails should be wider than that.\n\n(f) **Market expectations:** Kalshi's November ranges are:\n- About a 51% chance the yield touches 4.76 or below during the month.\n- About a 37% chance it touches 5.06 or above.\n\nThis points to a slight downward lean from about 4.89. The year-end market has a median near 5.0, which reflects hike risk. No consensus survey covers mid-November.\n\n(g) **Scenarios:**\n- **Low:** The Iran war ends and the Strait of Hormuz reopens, sending oil sharply lower. October CPI comes in soft and the December hike pricing collapses. An AI/tech equity rout adds safe-haven buying. Together these could push the yield to about 4.45-4.55.\n- **High:** October CPI comes in hot, near 4%. The refunding raises coupon sizes, the 10- and 30-year auctions go poorly, and fiscal spending expectations rise after the midterms. Oil spikes again. Together these could push the yield to about 5.30-5.40.\n\nPercentile 1: 4.38\nPercentile 5: 4.53\nPercentile 10: 4.61\nPercentile 20: 4.71\nPercentile 30: 4.78\nPercentile 40: 4.84\nPercentile 50: 4.88\nPercentile 60: 4.92\nPercentile 70: 4.98\nPercentile 80: 5.05\nPercentile 90: 5.15\nPercentile 95: 5.23\nPercentile 99: 5.40"
+    },
+    {
+      "value": {
+        "p10": 4.6,
+        "p25": 4.74,
+        "p50": 4.88,
+        "p75": 5.03,
+        "p90": 5.18
+      },
+      "reasoning": "(a) Time left: the question resolves on the DGS10 value for Friday, Nov 20, 2026. That is about 14 trading days from today (Nov 2), and the result is known around Nov 20-23.\n\n(b) Latest known value: the last FRED value is 4.98 for Oct 29. Unconfirmed reports put Oct 30 at about 4.92-4.94 and Nov 2 intraday at about 4.88. Kalshi implies a Nov 2 close of about 4.88-4.89.\n\n(c) If nothing changed: about 4.88-4.89.\n\n(d) If the current trend continued: the drop from the 5.31 peak on Oct 5 would extend to about 4.70-4.75 by Nov 20. But the Fed is hawkish (about 85% odds of a December hike) and September CPI was about 3.7%, so a full continuation of the trend is not my base case.\n\n(e) Historical variation: the 15-day empirical baseline has an interquartile range of about ±13bp and a 5-95% range of about ±32bp. The current regime is more volatile than usual, with daily moves of 10-17bp happening repeatedly. That argues for slightly wider tails.\n\n(f) Market expectations:\n- Kalshi gives a 51% chance that the November low touches 4.76 or below, and 37% that the high touches 5.06 or above, by Nov 30.\n- This implies a range roughly centered near the current level, with a mild downward lean.\n- Year-end pricing is centered near 5.00, reflecting the hawkish Fed.\n\nOverall I put the median at about 4.88.\n\n(g) Scenarios:\n- Low: an Iran deal fully reopens the Strait of Hormuz, oil falls sharply, CPI on Nov 10 comes in soft and the AI/tech sell-off deepens. December hike odds collapse and the 10-year falls to about 4.35-4.45.\n- High: hot CPI and PPI, a weak refunding auction plus fiscal expansion after the midterms, and renewed oil disruption. Together these push the 10-year back toward 5.30-5.45.\n\nPercentile 1: 4.36\nPercentile 5: 4.51\nPercentile 10: 4.60\nPercentile 20: 4.70\nPercentile 30: 4.78\nPercentile 40: 4.84\nPercentile 50: 4.88\nPercentile 60: 4.93\nPercentile 70: 4.99\nPercentile 80: 5.07\nPercentile 90: 5.18\nPercentile 95: 5.27\nPercentile 99: 5.45"
+    },
+    {
+      "value": {
+        "p10": 4.62,
+        "p25": 4.755,
+        "p50": 4.89,
+        "p75": 5.025,
+        "p90": 5.16
+      },
+      "reasoning": "(a) **Time left:** The question resolves on the FRED DGS10 value for Friday 2026-11-20, about 18 calendar days or 14 trading days away. Veterans Day on Nov 11 is a bond-market holiday.\n\n(b) **Latest known value:** The last official FRED value is 4.98 for 2026-10-29. Unofficial readings put Oct 30 at about 4.93-4.94 and Nov 2 intraday at about 4.88. Kalshi prices imply a Nov 2 close of about 4.88-4.89.\n\n(c) **If nothing changed:** about 4.89.\n\n(d) **If the current trend continued:** The 10-year has fallen more than 40bp from its Oct 7 peak of 5.31. Extending that decline would give roughly 4.70-4.75 by Nov 20. However, the Fed still has a hawkish lean, with 85% odds of a December hike and two dissents in favour of a hike, which limits how far that trend can be extrapolated.\n\n(e) **Historical variation:** The empirical distribution of 15-day changes has an interquartile range of about ±13bp and a 5-95% range of about ±32bp. Volatility is currently elevated, with several daily moves of 10-17bp recently, so I widen the range slightly.\n\n(f) **Expectations of experts and markets:**\n- Kalshi's November range markets are roughly symmetric around 4.90, with a slight downward lean:\n  - 51% chance of touching 4.76 or below.\n  - 37% chance of touching 5.06 or above.\n- The year-end market's median is about 5.00.\n- There is no consensus survey for mid-November.\n- Key events before Nov 20:\n  - Midterm elections (Nov 3)\n  - Treasury refunding announcement (Nov 4)\n  - October jobs report (Nov 6)\n  - October CPI (Nov 10)\n  - 10- and 30-year auctions\n  - PPI (Nov 13)\n  - US-Iran and oil news\n\n(g) **Unexpected scenarios:**\n- **Low:** An Iran peace deal reopens Hormuz, oil collapses toward $80, and a weak jobs report plus soft CPI unwind the December hike pricing. A deepening AI and tech equity crash adds safe-haven demand. The yield could reach 4.40-4.55.\n- **High:** A hot CPI (above 0.5% month on month), a midterm outcome pointing to bigger fiscal spending, a larger refunding and weak auctions, and renewed oil spikes push term premium up. The yield could return to 5.30-5.45.\n\nMy median is about 4.89, close to the Nov 2 level. The distribution has a slightly fatter tail on the upside than the market skew alone suggests, given the inflation and fiscal backdrop.\n\nPercentile 1: 4.36\nPercentile 5: 4.54\nPercentile 10: 4.62\nPercentile 20: 4.72\nPercentile 30: 4.79\nPercentile 40: 4.85\nPercentile 50: 4.89\nPercentile 60: 4.93\nPercentile 70: 4.99\nPercentile 80: 5.06\nPercentile 90: 5.16\nPercentile 95: 5.24\nPercentile 99: 5.42"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 4.6115,
+    "p25": 4.7523,
+    "p50": 4.8864,
+    "p75": 5.0258,
+    "p90": 5.1685
+  },
+  "usage": [
+    {
+      "question_id": "46238",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.7,
+      "notional_cost_usd": 0.0001249,
+      "input_tokens": 518,
+      "output_tokens": 43,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.8,
+      "notional_cost_usd": 0.0004253,
+      "input_tokens": 895,
+      "output_tokens": 493,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 79.1,
+      "notional_cost_usd": 0.24646039999999997,
+      "input_tokens": 52738,
+      "output_tokens": 4389,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.0,
+      "notional_cost_usd": 0.08361199999999999,
+      "input_tokens": 7495,
+      "output_tokens": 1183,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.086108,
+      "input_tokens": 7497,
+      "output_tokens": 1307,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0008737,
+      "input_tokens": 3027,
+      "output_tokens": 537,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.0008075000000000001,
+      "input_tokens": 3051,
+      "output_tokens": 395,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.00027202,
+      "input_tokens": 3026,
+      "output_tokens": 357,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.9,
+      "notional_cost_usd": 0.0281974,
+      "input_tokens": 7498,
+      "output_tokens": 1214,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.5,
+      "notional_cost_usd": 0.00032515,
+      "input_tokens": 3051,
+      "output_tokens": 462,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0008116,
+      "input_tokens": 2984,
+      "output_tokens": 430,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.00043309,
+      "input_tokens": 2983,
+      "output_tokens": 680,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 66.9,
+      "notional_cost_usd": 0.21748910000000005,
+      "input_tokens": 69114,
+      "output_tokens": 3669,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.8,
+      "notional_cost_usd": 0.07664,
+      "input_tokens": 6571,
+      "output_tokens": 1204,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.4,
+      "notional_cost_usd": 0.074004,
+      "input_tokens": 6569,
+      "output_tokens": 1073,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0007823999999999999,
+      "input_tokens": 2988,
+      "output_tokens": 370,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.8,
+      "notional_cost_usd": 0.079692,
+      "input_tokens": 6570,
+      "output_tokens": 1357,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0007884,
+      "input_tokens": 2938,
+      "output_tokens": 402,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00084,
+      "input_tokens": 3161,
+      "output_tokens": 416,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00034562000000000004,
+      "input_tokens": 2936,
+      "output_tokens": 506,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 0.00028462,
+      "input_tokens": 2986,
+      "output_tokens": 383,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46238",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00035086,
+      "input_tokens": 3160,
+      "output_tokens": 512,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8997
+}
