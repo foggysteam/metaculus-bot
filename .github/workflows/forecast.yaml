@@ -51,6 +51,28 @@ jobs:
         run: echo "STARTED=$(date +%s)" >> "$GITHUB_ENV"
       - name: Check out repository
         uses: actions/checkout@v4
+      # The checkout is of the commit when this run was queued, which can be hours old.
+      - name: Get the latest code and logs
+        run: git pull -q --ff-only || echo "Could not update the checkout"
+      # A gap this long can lose questions. Nothing else watches for it: the health check is
+      # daily, sees only questions already missed, and depends on the same cron.
+      - name: Alert if nothing has been polling
+        if: env.MODE == 'tournament' && env.DRY_RUN != 'true'
+        continue-on-error: true
+        run: |
+          last=$(gh run list --workflow forecast.yaml --status completed --limit 10 --json updatedAt,conclusion --jq '[.[] | select(.conclusion != "cancelled")][0].updatedAt')
+          gap=$(( ($(date +%s) - $(date -d "$last" +%s)) / 60 ))
+          echo "Minutes since the last run ended: $gap"
+          if [ "$gap" -ge 60 ]; then
+            {
+              echo "No forecast run was polling for $gap minutes, until $(date -u +%H:%M) UTC. Questions open for about 3 hours, so a gap this long can miss some. Polling has now restarted."
+              echo
+              echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo
+              echo "cc @${{ github.repository_owner }}"
+            } > gap.md
+            gh issue create --title "Forecast polling gap $(date -u +%Y-%m-%d)" --body-file gap.md
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -97,7 +119,14 @@ jobs:
             if [ -n "$(git status --porcelain forecast_logs)" ]; then
               git add forecast_logs
               git commit -q -m "Forecast logs $(date -u +%Y-%m-%dT%H:%MZ)"
-              git pull -q --rebase && git push -q || echo "Log push failed, will retry next pass"
+            fi
+            # Every pass, so a failed push is retried even with nothing new. A failed rebase must
+            # be undone, or every later push fails too and the logs go with the runner (2 Nov).
+            if [ -n "$(git log -1 --format=%h '@{u}..')" ]; then
+              if ! { git pull -q --rebase && git push -q; }; then
+                git rebase --abort 2>/dev/null || true
+                echo "Log push failed, will retry next pass"
+              fi
             fi
             if [ "$MODE" != "tournament" ] || [ $(( $(date +%s) + POLL_SECONDS )) -ge $end ]; then
               break

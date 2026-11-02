@@ -93,8 +93,8 @@ def recent_forecasts(since: datetime) -> tuple[str, float]:
     cost = sum(float(r["notional_cost_usd"] or 0) for r in rows)
     parts = ", ".join(f"{t}: {n}" for t, n in sorted(by_tournament.items())) or "none"
     text = f"{len(ok)} forecasts submitted ({parts}); {len(failed)} attempts failed."
-    for r in failed[:5]:
-        text += f"\n  - failed: {r['url']}"
+    for url in sorted({r["url"] for r in failed}):
+        text += f"\n  - failed: {url}"
     return text, cost
 
 
@@ -146,20 +146,29 @@ def _outcome(post_id: int | None) -> str:
 
 
 def forecasts_table(since: datetime) -> str:
-    rows = []
-    for path in sorted((Path(__file__).parent / "forecast_logs").glob("*/*.json")):
-        entry = json.loads(path.read_text(encoding="utf-8"))
-        if datetime.fromisoformat(entry["started_at"]) < since:
-            continue
+    entries = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((Path(__file__).parent / "forecast_logs").glob("*/*.json"))]
+    entries = [e for e in entries if datetime.fromisoformat(e["started_at"]) >= since]
+    # A question that keeps failing has one log per attempt, but is one question.
+    attempts: dict[str, int] = {}
+    for e in entries:
+        if e["status"] != "ok":
+            attempts[e["question"]["url"]] = attempts.get(e["question"]["url"], 0) + 1
+    rows, listed = [], set()
+    for entry in entries:
         q = entry["question"]
+        if entry["status"] != "ok" and q["url"] in listed:
+            continue
         title = q["text"].replace("|", "/")
         title = title if len(title) <= 90 else title[:87] + "..."
         slugs = " ".join(q.get("tournaments", []))
         tournament = "MiniBench" if "minibench" in slugs else "Market Pulse" if "market-pulse" in slugs else "Main"
         answer = _answer(q["type"], entry.get("final_forecast"), q.get("unit") or "")
+        outcome = None
         if entry["status"] != "ok":
-            answer = f"FAILED: {(entry.get('error') or '')[:60]}"
-        rows.append(f"| [{title}]({q['url']}) | {tournament} | {answer} | {_outcome(q.get('post_id'))} |")
+            listed.add(q["url"])
+            answer = f"FAILED, {attempts[q['url']]} attempt(s): {(entry.get('error') or '')[:60]}"
+            outcome = "no forecast, scores 0"
+        rows.append(f"| [{title}]({q['url']}) | {tournament} | {answer} | {outcome or _outcome(q.get('post_id'))} |")
     if not rows:
         return "No questions this week."
     header = "| Question | Series | KCAP2.0 answer | Outcome |\n|---|---|---|---|"
