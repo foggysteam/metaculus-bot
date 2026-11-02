@@ -1,8 +1,10 @@
 name: Forecast
 
 # Questions open for only 3 hours at random times, and GitHub drops many cron
-# firings. So each run can keep polling for LOOP_MINUTES (repo variable) and
-# runs queue behind each other via the concurrency group.
+# firings. So each run can keep polling for LOOP_MINUTES (repo variable), runs
+# queue behind each other via the concurrency group, and each run queues the next
+# when it ends. Cron only restarts the chain if it breaks. To stop the chain,
+# disable this workflow.
 on:
   workflow_dispatch:
     inputs:
@@ -25,6 +27,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
+  actions: write
   contents: write
   issues: write
 
@@ -44,6 +47,8 @@ jobs:
       URL: ${{ inputs.url || '' }}
       DRY_RUN: ${{ inputs.dry_run || 'false' }}
     steps:
+      - name: Note the start time
+        run: echo "STARTED=$(date +%s)" >> "$GITHUB_ENV"
       - name: Check out repository
         uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -104,3 +109,14 @@ jobs:
             echo "$failures bot pass(es) failed"
             exit 1
           fi
+      # On 2 Nov cron fired nothing for 10 hours, nothing polled for 4h46m, and 5 MiniBench
+      # questions opened and closed unseen. A run that ends within 30 minutes has a broken
+      # setup, so it leaves the restart to cron instead of looping.
+      - name: Queue the next run
+        if: always() && env.MODE == 'tournament' && env.DRY_RUN != 'true'
+        run: |
+          if [ $(( $(date +%s) - STARTED )) -lt 1800 ]; then
+            echo "Run ended too soon to queue another"
+            exit 0
+          fi
+          gh workflow run forecast.yaml -R "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME"
