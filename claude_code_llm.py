@@ -15,6 +15,7 @@ import json
 import logging
 import os
 import shutil
+import signal
 import sys
 import tempfile
 import time
@@ -232,14 +233,14 @@ class ClaudeCodeLlm(GeneralLlm):
                         stderr=asyncio.subprocess.PIPE,
                         cwd=workdir,
                         env=env,
+                        start_new_session=True,  # so a timeout can kill its child processes too
                     )
                     try:
                         stdout, stderr = await asyncio.wait_for(
                             proc.communicate(), timeout=self.timeout
                         )
                     except asyncio.TimeoutError:
-                        proc.kill()
-                        await proc.wait()
+                        await self._kill(proc)
                         self._record(question_id, start, {}, ok=False, error="timeout")
                         raise TimeoutError(
                             f"Claude Code call timed out after {self.timeout}s"
@@ -264,6 +265,19 @@ class ClaudeCodeLlm(GeneralLlm):
 
         self._record(question_id, start, payload, ok=True)
         return remove_long_dashes(result)
+
+    @staticmethod
+    async def _kill(proc: asyncio.subprocess.Process) -> None:
+        """Kills the call and its child processes. wait() only returns once every process holding
+        its output has gone, so it gets a limit too, or the timeout path could itself hang."""
+        try:
+            if hasattr(os, "killpg"):
+                os.killpg(proc.pid, signal.SIGKILL)
+            else:
+                proc.kill()
+            await asyncio.wait_for(proc.wait(), timeout=30)
+        except (ProcessLookupError, asyncio.TimeoutError) as e:
+            logger.warning(f"Could not confirm the Claude Code process ended: {type(e).__name__}")
 
     def _record(
         self, question_id: str, start: float, payload: dict, ok: bool, error: str = ""

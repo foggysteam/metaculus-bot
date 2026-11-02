@@ -1,0 +1,224 @@
+"""
+Checks for one forecast pass: the question closing soonest goes first, and one tournament failing
+does not stop the others. Uses no network or model calls.
+
+Usage: uv run python tests/test_pass.py
+"""
+from __future__ import annotations
+
+import asyncio
+import sys
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from types import SimpleNamespace
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+import dotenv  # noqa: E402
+
+dotenv.load_dotenv(ROOT / ".env")
+
+import forecaster  # noqa: E402
+import run_bot  # noqa: E402
+
+NOW = datetime(2026, 11, 2, 17, 0, tzinfo=timezone.utc)
+
+
+def question(name: str, closes_in: float | None, reveal_in: float | None = None):
+    close = NOW + timedelta(minutes=closes_in) if closes_in is not None else None
+    reveal = NOW + timedelta(minutes=reveal_in) if reveal_in is not None else close
+    return SimpleNamespace(name=name, close_time=close, cp_reveal_time=reveal, open_time=NOW - timedelta(hours=1), already_forecasted=False)
+
+
+def test_soonest_deadline_goes_first() -> None:
+    seen = []
+
+    async def capture(self, questions, return_exceptions=False):
+        seen.extend(q.name for q in questions)
+        return []
+
+    parent = forecaster.FallTemplateBot2026
+    real = parent.forecast_questions
+    parent.forecast_questions = capture
+    try:
+        bot = object.__new__(forecaster.ClaudeForecaster)
+        # In the order the API lists them on 2 Nov, newest first, 46402 last.
+        batch = [question("46408", 170), question("46404", 90), question("no close time", None), question("46402", 22)]
+        asyncio.run(bot.forecast_questions(batch, True))
+    finally:
+        parent.forecast_questions = real
+    assert seen == ["46402", "46404", "46408", "no close time"], seen
+
+
+def test_deadline_is_the_spot_time_when_earlier_than_close() -> None:
+    assert forecaster.spot_time(question("q", 5000, reveal_in=100)) == NOW + timedelta(minutes=100)
+
+
+class FakeBot:
+    skip_previously_forecasted_questions = True
+
+    def __init__(self) -> None:
+        self.batches: list[list[str]] = []
+
+    async def forecast_questions(self, questions, return_exceptions=False):
+        self.batches.append([q.name for q in questions])
+        return [f"report {q.name}" for q in questions]
+
+
+class FakeClient:
+    CURRENT_AI_COMPETITION_ID = "main"
+    CURRENT_MINIBENCH_ID = "mini"
+
+    def __init__(self, failing: set[str] = frozenset()) -> None:
+        self.failing = failing
+
+    def get_all_open_questions_from_tournament(self, tournament):
+        if tournament in self.failing:
+            raise ConnectionError(f"{tournament} is down")
+        return {"main": [question("m1", 100)], "mini": [question("b1", 50)], "market-pulse-26q4": []}[tournament]
+
+
+def test_tournaments_go_in_one_batch() -> None:
+    bot = FakeBot()
+    reports = asyncio.run(run_bot.forecast_tournaments(bot, FakeClient()))
+    assert bot.batches == [["m1", "b1"]] and reports == ["report m1", "report b1"], (bot.batches, reports)
+
+
+def test_one_tournament_failing_does_not_stop_the_others() -> None:
+    bot = FakeBot()
+    reports = asyncio.run(run_bot.forecast_tournaments(bot, FakeClient({"main"})))
+    assert bot.batches == [["b1"]], bot.batches
+    assert "report b1" in reports and any(isinstance(r, ConnectionError) for r in reports)
+
+
+def test_market_pulse_failing_keeps_the_reports_and_marks_the_pass_failed() -> None:
+    bot = FakeBot()
+    reports = asyncio.run(run_bot.forecast_tournaments(bot, FakeClient({"market-pulse-26q4"})))
+    assert reports[:2] == ["report m1", "report b1"] and isinstance(reports[2], ConnectionError)
+    try:
+        forecaster.ClaudeForecaster.log_report_summary(reports[2:])
+    except RuntimeError:
+        return
+    raise AssertionError("a failed tournament must fail the pass, so that it alerts")
+
+
+def forecast_question(post: int, age_minutes: float = 30, forecasts: int = 1, forecast: bool = True):
+    last = datetime.now(timezone.utc) - timedelta(minutes=age_minutes)
+    return SimpleNamespace(
+        id_of_post=post,
+        page_url=f"https://example.org/{post}",
+        already_forecasted=forecast,
+        timestamp_of_my_last_forecast=last if forecast else None,
+        api_json={"question": {"my_forecasts": {"history": [{}] * forecasts}}},
+    )
+
+
+def test_forecast_without_comment_is_forecast_again_once() -> None:
+    now = datetime.now(timezone.utc)
+    no_comment, has_comment = forecast_question(1), forecast_question(2)
+    just_posted, already_retried = forecast_question(3, age_minutes=2), forecast_question(4, forecasts=2)
+    questions = [no_comment, has_comment, just_posted, already_retried]
+    run_bot.unmark_forecasts_without_comment(questions, {2}, now)
+    assert not no_comment.already_forecasted
+    assert has_comment.already_forecasted and just_posted.already_forecasted and already_retried.already_forecasted
+
+
+def test_unreadable_comments_change_nothing() -> None:
+    question = forecast_question(1)
+    run_bot.unmark_forecasts_without_comment([question], None, datetime.now(timezone.utc))
+    run_bot.unmark_forecasts_without_comment([question], set(), datetime.now(timezone.utc))
+    assert question.already_forecasted
+
+
+def options_list(*pairs):
+    return forecaster.PredictedOptionList(
+        predicted_options=[forecaster.PredictedOption(option_name=n, probability=p) for n, p in pairs]
+    )
+
+
+def test_one_bad_option_list_does_not_sink_the_question() -> None:
+    options = ["rounds 1–3", "Decision"]
+    good = options_list(("rounds 1-3", 0.6), ("Decision", 0.4))
+    exact = options_list(("rounds 1–3", 0.5), ("Decision", 0.5))
+    missing_one = options_list(("rounds 1-3", 1.0))
+    renamed = options_list(("rounds 1-3", 0.5), ("A decision", 0.5))
+    usable = forecaster.usable_option_lists([good, missing_one, exact, renamed], options)
+    assert len(usable) == 2
+    assert all({o.option_name for o in p.predicted_options} == set(options) for p in usable)
+
+
+def test_parser_no_longer_refuses_a_decided_question() -> None:
+    bot = object.__new__(forecaster.ClaudeForecaster)
+    assert bot._create_resolved_question_parsing_message() == ""
+
+
+def test_stalled_news_call_fails_within_its_limit() -> None:
+    import evidence
+
+    async def stalled(question):
+        await asyncio.sleep(3600)
+
+    async def no_queries(question):
+        return []
+
+    async def empty(queries):
+        return ""
+
+    real = evidence.asknews_articles, evidence.make_search_queries, evidence.market_and_metaculus_evidence, evidence.ASKNEWS_TIMEOUT_SECONDS
+    evidence.asknews_articles, evidence.make_search_queries, evidence.market_and_metaculus_evidence = stalled, no_queries, empty
+    evidence.ASKNEWS_TIMEOUT_SECONDS = 0.05
+    try:
+        assert asyncio.run(asyncio.wait_for(evidence.gather_evidence(None), 2)) == ("", "")
+    finally:
+        evidence.asknews_articles, evidence.make_search_queries, evidence.market_and_metaculus_evidence, evidence.ASKNEWS_TIMEOUT_SECONDS = real
+
+
+def test_stalled_evidence_does_not_stop_the_research() -> None:
+    async def stalled(question):
+        await asyncio.sleep(3600)
+
+    real = forecaster.gather_evidence, forecaster.EVIDENCE_TIMEOUT_SECONDS
+    forecaster.gather_evidence, forecaster.EVIDENCE_TIMEOUT_SECONDS = stalled, 0.05
+    try:
+        bot = object.__new__(forecaster.ClaudeForecaster)
+        assert asyncio.run(bot._collect_evidence(SimpleNamespace(page_url="x", api_json={}))) == ("", "")
+    finally:
+        forecaster.gather_evidence, forecaster.EVIDENCE_TIMEOUT_SECONDS = real
+
+
+def test_timeout_kills_a_call_and_its_children() -> None:
+    from claude_code_llm import ClaudeCodeLlm
+
+    if sys.platform == "win32":  # the live bot runs on Linux, and Windows has no process groups
+        print("skip test_timeout_kills_a_call_and_its_children on Windows")
+        return
+    # A child process that keeps the output pipes open and outlives its parent is what can hang wait().
+    llm = ClaudeCodeLlm(timeout=1)
+    code = "import subprocess, sys, time; subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(300)']); time.sleep(300)"
+    llm._build_args = lambda system_prompt, model: [sys.executable, "-c", code]
+
+    async def attempt():
+        await asyncio.wait_for(llm._run_once("hello", "system", "opus"), 60)
+
+    started = datetime.now(timezone.utc)
+    try:
+        asyncio.run(attempt())
+    except TimeoutError as e:
+        assert "timed out after 1s" in str(e), e
+    else:
+        raise AssertionError("expected a timeout")
+    assert (datetime.now(timezone.utc) - started).total_seconds() < 45
+
+
+def test_group_post_url_gives_each_subquestion() -> None:
+    client = SimpleNamespace(get_question_by_url=lambda url, group_question_mode: ["a", "b"] if "group" in url else "c")
+    assert run_bot.questions_at(client, ["x/group", "x/single"]) == ["a", "b", "c"]
+
+
+if __name__ == "__main__":
+    tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
+    for test in tests:
+        test()
+        print(f"ok  {test.__name__}")
+    print(f"{len(tests)} passed")

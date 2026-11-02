@@ -1,0 +1,28 @@
+name: Watchdog
+
+# Checks the forecast runs from outside them (watchdog.py). Takes seconds and submits nothing.
+# GitHub drops many cron firings, so it asks every 5 minutes to get as many as possible.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 watchdog.py

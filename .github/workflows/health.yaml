@@ -33,29 +33,40 @@ jobs:
           version: "0.13.1"
           enable-cache: true
       - run: uv sync --locked
-      - run: npm install -g @anthropic-ai/claude-code
+      - run: bash .github/scripts/install_claude.sh
+      - name: Reliability tests
+        id: tests
+        continue-on-error: true
+        run: uv run python tests/test_watchdog.py && uv run python tests/test_pass.py
       - name: Coverage (questions missed since go-live, last 3 days)
         id: coverage
+        continue-on-error: true
         run: |
+          set -o pipefail
           if [ -z "$GO_LIVE_DATE" ]; then echo "Not live yet, skipping"; exit 0; fi
           since=$(python -c "import datetime as d,os; g=d.date.fromisoformat(os.environ['GO_LIVE_DATE']); print(max(g, d.date.today()-d.timedelta(days=3)))")
           uv run python check_coverage.py --since "$since" | tee coverage.txt
           # The 3-day window survives dropped cron firings, but keeps showing old misses, so only
           # a miss that no earlier issue mentions opens a new one. If the lookup fails, it alerts.
           gh issue list --state all --limit 200 --search "health check in:title" --json body --jq '.[].body' > reported.txt || : > reported.txt
-          for url in $(grep "MISSED" coverage.txt | grep -oE "https://www\.metaculus\.com/questions/[0-9]+" || true); do
+          for url in $(grep -E "MISSED|NO COMMENT" coverage.txt | grep -oE "https://www\.metaculus\.com/questions/[0-9]+" || true); do
             if ! grep -qF "$url " reported.txt; then echo "New miss: $url"; echo "missed=true" >> "$GITHUB_OUTPUT"; break; fi
           done
+          if grep -q "NO QUESTIONS" coverage.txt; then echo "missed=true" >> "$GITHUB_OUTPUT"; fi
       - name: Canary forecast on the bot testing area
         id: canary
         continue-on-error: true
         run: uv run python run_bot.py --mode question --url https://www.metaculus.com/questions/43327/
       - name: Open an issue if anything is wrong
-        if: steps.coverage.outputs.missed == 'true' || steps.canary.outcome == 'failure'
+        # failure() is for a failed setup, which would otherwise be silent. A crash in the coverage
+        # check counts too, since it could then be hiding a miss.
+        if: always() && (failure() || steps.tests.outcome == 'failure' || steps.coverage.outcome == 'failure' || steps.coverage.outputs.missed == 'true' || steps.canary.outcome == 'failure')
         run: |
           {
             echo "Health check on $(date -u +%Y-%m-%d) found a problem."
             echo
+            echo "Reliability tests: ${{ steps.tests.outcome }}"
+            echo "Coverage check: ${{ steps.coverage.outcome }}"
             echo "Canary forecast: ${{ steps.canary.outcome }}"
             echo
             echo '```'

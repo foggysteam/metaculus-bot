@@ -36,6 +36,7 @@ from claude_code_llm import USAGE_LEDGER, ClaudeCodeLlm, as_of_date, current_que
 from evidence import gather_evidence
 from numeric_baseline import statistical_baseline
 from main import FallTemplateBot2026
+from market_pulse import spot_time
 
 logger = logging.getLogger(__name__)
 
@@ -69,7 +70,13 @@ RAW_DATA_NOTE = (
 )
 
 
+EVIDENCE_TIMEOUT_SECONDS = 240
+MIN_RESEARCH_CHARS = 500  # the shortest real report so far is over 6,000
+
+
 def build_llms(raw_data: bool = False) -> dict:
+    # Timeouts are about twice the longest of over 1,600 live calls (research 216 seconds, forecast
+    # 97, parser 43), so a stalled call fails while the 3-hour question can still be saved.
     return {
         "default": ClaudeCodeLlm(
             model="opus",
@@ -77,6 +84,7 @@ def build_llms(raw_data: bool = False) -> dict:
             purpose="forecast",
             system_prompt=FORECAST_SYSTEM_PROMPT,
             fallback_models=("sonnet",),
+            timeout=240,
         ),
         "researcher": ClaudeCodeLlm(
             model="opus",
@@ -86,9 +94,10 @@ def build_llms(raw_data: bool = False) -> dict:
             system_prompt=RESEARCH_SYSTEM_PROMPT,
             fallback_models=("sonnet",),
             raw_data=raw_data,
+            timeout=480,
         ),
         "parser": ClaudeCodeLlm(
-            model="haiku", effort=None, purpose="parser", fallback_models=("sonnet",)
+            model="haiku", effort=None, purpose="parser", fallback_models=("sonnet",), timeout=120
         ),
         "summarizer": ClaudeCodeLlm(model="haiku", effort=None, purpose="summary"),
     }
@@ -144,9 +153,22 @@ def _interpolate(points: list[tuple[float, float]], q: float) -> float:
     return round(points[0][1] if q < points[0][0] else points[-1][1], 4)
 
 
+def usable_option_lists(predictions: list[PredictedOptionList], options: list[str]) -> list[PredictedOptionList]:
+    """Each forecast with the question's exact option names, leaving out any that do not cover
+    exactly those options. The library fails the whole question if a single list differs."""
+    wanted = sorted(_option_key(o) for o in options)
+    usable = []
+    for prediction in predictions:
+        fixed = restore_option_names(prediction, options)
+        if sorted(_option_key(o.option_name) for o in fixed.predicted_options) == wanted:
+            usable.append(fixed)
+    return usable or predictions
+
+
 class ClaudeForecaster(FallTemplateBot2026):
-    # Research runs one question at a time; forecasts are capped in claude_code_llm.
-    _max_concurrent_questions = 1
+    # Research runs two questions at a time, so one stalled call cannot hold up every other
+    # question; forecasts are capped in claude_code_llm.
+    _max_concurrent_questions = 2
     # What the numeric (and discrete) prompt asks for. Numeric backtest n1 (backtest/RESULTS.md):
     # percentiles 1 to 99 with this tail rule scored +10 points per question over 10/20/40/60/80/90,
     # because answers just outside a 10-90 range got almost no probability.
@@ -166,6 +188,13 @@ class ClaudeForecaster(FallTemplateBot2026):
         self._research_by_question: dict[str, list] = {}
         self._evidence_by_question: dict[str, asyncio.Future] = {}
 
+    async def forecast_questions(self, questions, return_exceptions: bool = False):
+        # Soonest deadline first. Questions run in list order and the API lists the newest first,
+        # so on 2 Nov question 46402 went last in its batch and finished 1 minute before closing.
+        latest = datetime.max.replace(tzinfo=timezone.utc)
+        ordered = sorted(questions, key=lambda q: spot_time(q) or latest)
+        return await super().forecast_questions(ordered, return_exceptions)
+
     ##################################### LOGGING #####################################
 
     @staticmethod
@@ -184,7 +213,14 @@ class ClaudeForecaster(FallTemplateBot2026):
         self._write_log(question, started, report=report, error=None)
         return report
 
+    def _create_resolved_question_parsing_message(self) -> str:
+        # The template's parser refuses an answer that treats the question as decided, even with
+        # a final forecast in it, which would miss exactly the near-certain questions.
+        return ""
+
     async def _aggregate_predictions(self, predictions, question: MetaculusQuestion):
+        if isinstance(question, MultipleChoiceQuestion):
+            predictions = usable_option_lists(predictions, question.options)
         aggregate = await super()._aggregate_predictions(predictions, question)
         if isinstance(question, BinaryQuestion):
             return shrink_binary(aggregate)  # see calibration.py for the backtest behind this
@@ -306,9 +342,14 @@ class ClaudeForecaster(FallTemplateBot2026):
         )
 
     async def _collect_evidence(self, question: MetaculusQuestion) -> tuple[str, str]:
-        (news, markets), baseline = await asyncio.gather(
-            gather_evidence(question), statistical_baseline(question)
-        )
+        try:
+            (news, markets), baseline = await asyncio.wait_for(
+                asyncio.gather(gather_evidence(question), statistical_baseline(question)),
+                EVIDENCE_TIMEOUT_SECONDS,
+            )
+        except Exception as e:  # noqa: BLE001 - the research call can still search for itself
+            logger.warning(f"Evidence collection failed for {question.page_url}: {type(e).__name__}: {e}")
+            return "", ""
         if baseline:
             markets = f"{markets}\n\nStatistical baseline:\n{baseline}".strip()
         return news, markets
@@ -336,6 +377,8 @@ class ClaudeForecaster(FallTemplateBot2026):
                     f"by code (use them in section 5):\n{markets}"
                 )
             research = await researcher.invoke(prompt)
+            if len(research) < MIN_RESEARCH_CHARS:
+                raise ValueError(f"Research too short to use: {research[:200]}")
             if markets:
                 # Forecasters see the raw prices too, in case the summary drops them.
                 research += f"\n\n## Raw prediction market and Metaculus prices\n{markets}"

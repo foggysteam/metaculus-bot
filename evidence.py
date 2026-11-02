@@ -55,6 +55,9 @@ async def make_search_queries(question: MetaculusQuestion) -> list[str]:
         return [" ".join(words[:6])]
 
 
+ASKNEWS_TIMEOUT_SECONDS = 90  # includes waiting up to 11 seconds for the rate limit
+
+
 async def asknews_articles(question: MetaculusQuestion) -> str:
     if not os.getenv("ASKNEWS_API_KEY") and not os.getenv("ASKNEWS_CLIENT_ID"):
         return ""
@@ -213,7 +216,9 @@ async def gather_evidence(question: MetaculusQuestion) -> tuple[str, str]:
     """Returns (news, markets). Either may be empty."""
     queries = await make_search_queries(question)
     news, markets = await asyncio.gather(
-        asknews_articles(question),
+        # The SDK has no timeout of its own and ignores one passed to it, and a stalled call
+        # would hold the lock above and the research lock, stopping every other question.
+        asyncio.wait_for(asknews_articles(question), ASKNEWS_TIMEOUT_SECONDS),
         market_and_metaculus_evidence(queries),
         return_exceptions=True,
     )

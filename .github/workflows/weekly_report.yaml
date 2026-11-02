@@ -31,7 +31,7 @@ jobs:
           version: "0.13.1"
           enable-cache: true
       - run: uv sync --locked
-      - run: npm install -g @anthropic-ai/claude-code
+      - run: bash .github/scripts/install_claude.sh
       - name: Build report
         run: uv run python weekly_report.py > report.md
       - name: Post report as an issue

@@ -23,7 +23,7 @@ MARKET_PULSE_PROJECT = 33131
 ENTERED = datetime(2026, 10, 28, tzinfo=timezone.utc)  # spot times before this were never ours to miss
 UPDATE_WINDOW = timedelta(hours=30)  # the final update happens in this window before the spot time
 STALE_AFTER = timedelta(hours=48)  # only forecasts older than this at the spot time get updated
-MIN_LEAD = timedelta(minutes=15)  # too close to the spot time to finish a forecast
+MIN_LEAD = timedelta(minutes=30)  # too close to the spot time to finish a forecast (the longest took 22)
 MAX_PER_PASS = 3  # keeps each pass short so FutureEval's 3-hour questions are never kept waiting
 
 

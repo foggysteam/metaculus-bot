@@ -43,7 +43,7 @@ jobs:
           version: "0.13.1"
           enable-cache: true
       - name: Install
-        run: uv sync --locked && npm install -g @anthropic-ai/claude-code && claude --version
+        run: uv sync --locked && bash .github/scripts/install_claude.sh
       - name: Safety checks on the tool
         run: uv run python tests/test_raw_data_server.py
       - name: Restore earlier shadow logs
