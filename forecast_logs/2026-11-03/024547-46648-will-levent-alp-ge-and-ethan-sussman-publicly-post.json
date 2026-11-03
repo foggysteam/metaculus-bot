@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-03T02:49:40.025596+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-03T02:45:47.171623+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46648,
+    "post_id": 46415,
+    "url": "https://www.metaculus.com/questions/46415",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will Levent Alpöge and Ethan Sussman publicly post a manuscript proving four-dimensional Yang–Mills existence by November 13, 2026?",
+    "resolution_criteria": "This question resolves YES if, by November 13, 2026, 23:59 UTC, a manuscript authored by Levent Alpöge (Anthropic) and Ethan Sussman (Northwestern University) that asserts a proof of the existence of four-dimensional pure Yang–Mills theory is publicly accessible as either (i) an arXiv preprint, in any category, listing both as authors (other co-authors permitted), or (ii) a standalone paper-style document on a personal or institutional web page of either author (for example https://ethanwsussman.github.io/, a northwestern.edu page, or an anthropic.com page) with a title, an author list naming both, and an abstract or introduction stating such a theorem. It resolves NO if no such manuscript is publicly accessible by that deadline. Files in code repositories, READMEs, notes, talk slides, social-media posts and news reports do not qualify. Resolution is checked against the arXiv author listings for Alpöge (https://arxiv.org/search/?searchtype=author&query=Alpoge) and Sussman (https://arxiv.org/search/?searchtype=author&query=Sussman%2C+E) and Sussman's website (https://ethanwsussman.github.io/); if those are unavailable or inconclusive, [credible sources](https://www.metaculus.com/faq/#definitions) apply.",
+    "fine_print": "A construction of four-dimensional pure Yang–Mills theory for SU(2) alone suffices; a document that only treats lower-dimensional or finite-volume settings, or only the mass gap, does not qualify. Whether the document labels itself a draft or preprint, or states that its content is unvetted or LLM-assisted, does not affect resolution. \"Publicly accessible\" means viewable without registration, payment, or an invitation. The relevant date is when the manuscript first became publicly viewable (the arXiv submission date shown on the abstract page, or the posting date on the web page), not a later revision or a subsequent public announcement about the work.",
+    "close_time": "2026-11-03 05:43 UTC",
+    "scheduled_resolution_time": "2026-11-13 23:59 UTC"
+  },
+  "research": [
+    "I've checked every resolution source, the repository and the press coverage. As of November 3, 2026, nothing that would resolve this YES has been posted, and the authors' own README says they are rewriting the four-dimensional proof slowly rather than rushing it out.\n\n## 1. Resolution source\n- 2026-11-03: Sussman's arXiv author listing has 19 entries. The newest is \"The asymptotic structure of forward scattering\" (27 Aug 2026). Nothing on Yang-Mills. [arXiv](https://arxiv.org/search/?searchtype=author&query=Sussman%2C+E)\n- 2026-11-03: Alpöge's arXiv listing has 22 entries. The newest is the IPM blow-up paper with Buckmaster and Coiculescu (14 Sep 2026). Nothing on gauge theory. [arXiv](https://arxiv.org/search/?searchtype=author&query=Alpoge)\n- 2026-11-03: Sussman's website lists 16 papers, the newest being arXiv:2608.27815. Its only Yang-Mills mention is a \"[LINK]\" to the GitHub repository under \"Quantum field theory\". There is no manuscript. [ethanwsussman.github.io](https://ethanwsussman.github.io/)\n\n## 2. Current status\n- The question is not settled. No paper-style manuscript qualifies yet.\n- 2026-11-01: A commit to the GitHub repository, \"Update YM4 proof sketch and add matching 505-page PDF\", added a four-dimensional proof sketch. The question's rules exclude files in code repositories, so this does not count unless it is moved to arXiv or a personal or institutional page. [GitHub commits](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/commits/main)\n- The current README (undated \"Update\", around Oct 31) says:\n  - YM4 is \"unfinished\": about 61k pages of total \"slop\", of which about 20k pages are \"closed (refereed and frozen)\".\n  - They are rewriting it \"much more methodically (thus quite slowly!)\", and will first demonstrate the key arguments in the simpler QED3 and YM3 settings.\n  - They explicitly reject rushing out a \"10,000-page slop\".\n  - They want a collaborative rewrite at a \"human pace\", with credit shared the way experimental physics collaborations do it.\n  - They say they are \"not stuck\" and that an open alternative to OpenAI is now more important.\n  - The README mentions no arXiv plans or timeline. [README](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment)\n\n## 3. Recent news (newest first)\n- 2026-11-02: The repository is being actively edited: a new YM3_main manuscript, revised QCD3 proofs, and a refreshed QED3 manuscript (242 pages). Effort is going into the three-dimensional write-ups. [commits](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/commits/main)\n- 2026-11-02: Sam Altman said OpenAI's next-generation GPT will be released \"soon\" (news API, ifeng). Peter Woit's blog criticised the KITP conference organised by OpenAI-affiliated physicists, and calls the Sussman-Alpöge 4D work \"tens of thousands of pages of unchecked slop\". [Woit](https://www.math.columbia.edu/~woit/wordpress/)\n- 2026-10-31: A README update and a merged pull request from an outside contributor (FireflySentinel). [commits](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/commits/main)\n- 2026-10-27: Scientific American (\"Dueling proofs\") reports the pair \"believed they were close to finishing\". It gives no publication plans and notes OpenAI's paper is also unreleased. [SciAm](https://www.scientificamerican.com/article/dueling-proofs-from-openai-and-anthropic-astound-scientists/)\n- 2026-10-27: In a separate Scientific American piece, Sussman says \"we were on the way and maybe even as close as a few weeks away\". [SciAm](https://www.scientificamerican.com/article/openai-just-scooped-human-researchers-on-a-million-dollar-quantum-math-problem/); [quantumresearch.center](https://quantumresearch.center/news/articles/openai-yang-mills-existence/)\n- Third parties have posted related material on GitHub: Aronow and Lopatto on YM3 on the torus, and miaomiao77's checks. None of it is by the pair. [pmaronow](https://github.com/pmaronow/3d-ym-torus); [miaomiao77](https://github.com/miaomiao77/Yang--Mills-LLM-experiment)\n\n## 4. Base rates\n- In the four weeks since the repository went public on October 6, the pair has put all their Yang-Mills material on GitHub and posted none of it to arXiv, including the more polished QED3 and YM3 manuscripts. The 153-page \"zeroth draft\" has not been turned into a preprint either.\n- Both authors do post regularly on arXiv: Alpöge three times between August and September 2026, Sussman about two to four times a year. None of those papers concern this project.\n- There is a precedent for posting fast: Anthropic's ETH paper and Lean proof went up within a day of OpenAI's October 26 announcement. But that was an official Anthropic release, not this personal side project.\n- I found no clear precedent for a two-week turnaround from an unreadable, tens-of-thousands-page draft to an arXiv-ready 4D manuscript.\n\n## 5. Other forecasts\n- Kalshi, \"When will Yang-Mills and the Mass Gap be resolved?\": 0.11 before 2027, 0.21 before 2028. This market concerns the full Clay problem including the mass gap, so it does not match this question.\n- Kalshi, \"Which Millennium Prize Problem will be solved next?\": Yang-Mills at 0.43. Only loosely related.\n- I found no Manifold, Polymarket or Metaculus market on an Alpöge-Sussman posting.\n\n## 6. Upcoming events before November 13\n- OpenAI's physics write-up with David Gross's group could be released. That might push the pair to post a priority claim, for example by moving the 505-page YM4 sketch to arXiv. The stated \"human pace\" plan argues against it.\n- Repository activity is daily. Watch for the YM4 sketch being relabelled as a manuscript and posted on arXiv or Sussman's site, and for any new README note.\n- A new arXiv submission would show up in listings about one business day after it is sent. A submission made before November 13 could still appear just after the deadline, but what counts is the submission date shown on the abstract page.\n\nSources: [arXiv Sussman](https://arxiv.org/search/?searchtype=author&query=Sussman%2C+E), [arXiv Alpoge](https://arxiv.org/search/?searchtype=author&query=Alpoge), [Sussman site](https://ethanwsussman.github.io/), [GitHub repo](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment), [GitHub commits](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/commits/main), [SciAm dueling proofs](https://www.scientificamerican.com/article/dueling-proofs-from-openai-and-anthropic-astound-scientists/), [SciAm scooped](https://www.scientificamerican.com/article/openai-just-scooped-human-researchers-on-a-million-dollar-quantum-math-problem/), [quantumresearch.center](https://quantumresearch.center/news/articles/openai-yang-mills-existence/), [Woit](https://www.math.columbia.edu/~woit/wordpress/), [pmaronow](https://github.com/pmaronow/3d-ym-torus), [miaomiao77](https://github.com/miaomiao77/Yang--Mills-LLM-experiment)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-03 02:46 UTC; check each market really matches the question)\n- Kalshi: When will Yang–Mills and the Mass Gap be resolved? (Before 2032). Yes prices: Before 2031: 0.48; Before 2030: 0.46; Before 2032: 0.56; Before 2029: 0.34; Before 2028: 0.21; Before 2027: 0.1100.\n- Kalshi: Which Millennium Prize Problem will be solved next? (Before 2045). Yes prices: Yang–Mills Existence and Mass Gap Problem: 0.43; Hodge Conjecture: 0.34; Birch and Swinnerton-Dyer Conjecture: 0.17; P versus NP Problem: 0.06; Riemann Hypothesis: 0.03.\n- Kalshi: Ethan Holliday: Debut Date (Ethan Holliday). Yes prices: Before Aug 1, 2029: 0.49; Before May 1, 2029: 0.35; Before Nov 1, 2029: 0.68; Before May 1, 2030: 0.74; Before Nov 1, 2028: 0.24; Before Aug 1, 2030: 0.77; Before Nov 1, 2030: 0.81.\n- Kalshi: Massachusetts Senate margin of victory (On November 3, 2026). Yes prices: Markey, 33+ pts: 0.47; Markey, 31+ pts: 0.57; Markey, 35+ pts: 0.35; Markey, 29+ pts: 0.67; Markey, 37+ pts: 0.28; Markey, 27+ pts: 0.76; Markey, 39+ pts: 0.21; Markey, 25+ pts: 0.82; Markey, 41+ pts: 0.14; Markey, 23+ pts: 0.89.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.1\", \"0.9\"]; $2M: [\"0.038\", \"0.962\"]; $3M: [\"0.053\", \"0.947\"]; $4M: [\"0.0185\", \"0.9815\"]; $5M: [\"0.0225\", \"0.9775\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.18\", \"0.82\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.175\", \"0.825\"]",
+    "As of 2026-11-03, no qualifying manuscript exists: neither author's arXiv listing nor Sussman's website shows a four-dimensional Yang-Mills existence paper. The pair's GitHub repository is very active, but its newest four-dimensional file is a 505-page \"proof sketch\", and repository files don't count under the criteria. The README says the four-dimensional write-up is going \"much more methodically (thus quite slowly!)\" and warns against rushing out \"10,000-page slop\".\n\n### 1. Resolution source\n- 2026-11-03 (checked): Sussman's arXiv listing has 19 results. The newest is \"The asymptotic structure of forward scattering\" (Lohr, Oltman, Sussman, Zou), arXiv:2608.27815, 27 Aug 2026. Nothing is on gauge theory. [arXiv Sussman](https://arxiv.org/search/?searchtype=author&query=Sussman%2C+E)\n- 2026-11-03 (checked): Alpöge's listing has 22 results. The newest is the IPM blow-up paper with Buckmaster and Coiculescu, 14 Sep 2026. Nothing is on Yang-Mills. [arXiv Alpoge](https://arxiv.org/search/?searchtype=author&query=Alpoge)\n- 2026-11-03 (checked): Sussman's website lists 16 papers, the newest being arXiv:2608.27815. Yang-Mills appears only under \"Current topics of interest\", as a \"[LINK]\" to the GitHub repository. There is no Yang-Mills preprint. [ethanwsussman.github.io](https://ethanwsussman.github.io/)\n\n### 2. Current status\n- Nothing has settled the question yet. No qualifying arXiv or web-page manuscript exists as of 2026-11-03.\n- 2026-11-01: a commit titled \"Update YM4 proof sketch and add matching 505-page PDF\" was made. Earlier, on 2026-10-31, the four-dimensional file YM4M1 was renamed \"YM4_sketch_draft\". These are repository files and do not qualify. [commits](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/commits/main)\n- The README describes the state of the four-dimensional work as follows. [README](https://raw.githubusercontent.com/ethanwsussman/Yang--Mills-LLM-experiment/main/README.md)\n  - The four-dimensional manuscript is \"unfinished\", with about 61k pages of total slop and about 20k pages of closed slop.\n  - The argument is \"extremely long and basically not understandable as is\" and \"must be elaborated and checked\".\n  - The work is being written \"much more methodically (thus quite slowly!)\", and the README warns against rushing out \"10,000-page slop\".\n  - The planned order is QED3, then YM3, then YM4.\n  - It does not mention arXiv anywhere.\n\n### 3. Recent news (newest first)\n- 2026-11-02: commits were mostly three-dimensional work: \"Add YM3_main manuscript and TeX source\", revised QCD3 proofs and a refreshed QED3 manuscript. The repository has 85 commits, and activity is heavy from Oct 26 to Nov 2. [commits](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/commits/main)\n- 2026-11-02: at ADIPEC, Sam Altman said the \"next-generation GPT\", which he described as capable of solving Millennium Prize Problems, will be released soon. This comes from the collected news item; I did not verify it. [ifeng](https://tech.ifeng.com/c/8xj7jf0n9ea)\n- 2026-11-02: Tao, Hairer and others at the Royal Society raised concerns about OpenAI and Anthropic controlling access to AI-produced mathematical results. This also comes from the collected news item. [infobae](https://www.infobae.com/tecno/2026/11/02/matematicos-temen-que-openai-y-anthropic-controlen-quien-accede-a-los-hallazgos-de-sus-ia/)\n- 2026-10-30/31: commits added a QCD3 manuscript and a \"YM4_assembly_overview.pdf\", and updated the README. The update says the project will keep working after OpenAI's announcement and pitches itself as an open alternative. [repo](https://github.com/ethanwsussman/Yang--Mills-LLM-experiment)\n- 2026-10-27: Scientific American's \"Dueling proofs\" article says the pair \"believed they were near to finishing the program\". It mentions no preprint by them, only the GitHub repository. [SciAm](https://www.scientificamerican.com/article/dueling-proofs-from-openai-and-anthropic-astound-scientists/)\n- 2026-10-26: Peter Woit's post \"Secret Unified Physics Slop\" calls the four-dimensional claim \"tens of thousands of pages of unchecked slop\". [Woit](https://www.math.columbia.edu/~woit/wordpress/?p=15948)\n  - Sussman commented there that the three-dimensional draft is \"presentable (albeit still unpolished)\". He said its claim is convergence along a subsequence, with the OS axioms claimed.\n  - Another commenter said the posted work covers only a limited class of gauge-invariant observables.\n- Late Oct 2026 (exact date not checked): Alpöge posted on X that Sussman \"has been writing up existence of YM4 publicly via Balaban's approach\". He described the repository as holding QED3, YM3 and \"an old preliminary outline of YM4\". [X](https://x.com/__alpoge__/status/2114838067953770981)\n\n### 4. Base rates\n- I found no direct base rate. Both authors post on arXiv regularly, roughly several papers a year each, but neither has ever posted Yang-Mills or LLM-generated constructive QFT work there.\n- In the four weeks since the repository went public (Oct 6), they have put manuscript material in the repository instead of on arXiv. This holds even for the three-dimensional drafts, which Sussman calls presentable, so the four-dimensional draft, which they call unreadable, seems even less likely to reach arXiv first.\n- Historically, Balaban-style constructions have taken years to write up. The README's stated QED3, then YM3, then YM4 order points to the four-dimensional paper coming after the three-dimensional papers.\n- Possible complication: arXiv moderation of very long LLM-written mathematics could delay or block a submission. This is my own inference; I did not verify arXiv policy.\n\n### 5. Other forecasts\n- I found no market on this specific question on Manifold, Polymarket or Kalshi.\n- Kalshi, \"When will Yang-Mills and the Mass Gap be resolved?\": Before 2027 at 0.11, Before 2028 at 0.21. This needs the full Clay problem, including the mass gap, so it does not match this question.\n- Kalshi, \"Which Millennium Prize Problem will be solved next?\": Yang-Mills at 0.43. This is only loosely related.\n\n### 6. Upcoming events before Nov 13\n- The repository is being updated daily. Possible next steps include turning \"YM4_sketch_draft\" or the assembly overview into a full manuscript, or posting the three-dimensional manuscripts to arXiv. Three-dimensional papers would not count.\n- A posting cut-off note: arXiv shows the date of submission. Submissions before about 14:00 ET on weekdays are announced the next weekday. Posting directly to Sussman's website would avoid that delay. This timing is my inference.\n- OpenAI may release its paper with the group led by David Gross, or the next-generation GPT Altman mentioned. Either could add priority pressure or prompt a rapid response.\n- Watch for further posts by Alpöge on X about priority.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-03 02:46 UTC; check each market really matches the question)\n- Kalshi: When will Yang–Mills and the Mass Gap be resolved? (Before 2032). Yes prices: Before 2031: 0.48; Before 2030: 0.46; Before 2032: 0.56; Before 2029: 0.34; Before 2028: 0.21; Before 2027: 0.1100.\n- Kalshi: Which Millennium Prize Problem will be solved next? (Before 2045). Yes prices: Yang–Mills Existence and Mass Gap Problem: 0.43; Hodge Conjecture: 0.34; Birch and Swinnerton-Dyer Conjecture: 0.17; P versus NP Problem: 0.06; Riemann Hypothesis: 0.03.\n- Kalshi: Ethan Holliday: Debut Date (Ethan Holliday). Yes prices: Before Aug 1, 2029: 0.49; Before May 1, 2029: 0.35; Before Nov 1, 2029: 0.68; Before May 1, 2030: 0.74; Before Nov 1, 2028: 0.24; Before Aug 1, 2030: 0.77; Before Nov 1, 2030: 0.81.\n- Kalshi: Massachusetts Senate margin of victory (On November 3, 2026). Yes prices: Markey, 33+ pts: 0.47; Markey, 31+ pts: 0.57; Markey, 35+ pts: 0.35; Markey, 29+ pts: 0.67; Markey, 37+ pts: 0.28; Markey, 27+ pts: 0.76; Markey, 39+ pts: 0.21; Markey, 25+ pts: 0.82; Markey, 41+ pts: 0.14; Markey, 23+ pts: 0.89.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.1\", \"0.9\"]; $2M: [\"0.038\", \"0.962\"]; $3M: [\"0.053\", \"0.947\"]; $4M: [\"0.0185\", \"0.9815\"]; $5M: [\"0.0225\", \"0.9775\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.18\", \"0.82\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.175\", \"0.825\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.04,
+      "reasoning": "(a) There are about 10 days left, until November 13, 2026, 23:59 UTC. For Yes, a paper-style manuscript by both Alpöge and Sussman asserting existence of 4D (SU(2)) Yang-Mills must become publicly viewable, either on arXiv or as a standalone paper on one of their personal or institutional pages. Files in the GitHub repository do not count.\n\n(b) If nothing changes, the answer is No. As of November 3 there is no qualifying arXiv posting or web-page manuscript. The 4D material exists only as GitHub repository files.\n\n(c) Base rate: researchers who have publicly described a draft as \"extremely long and basically not understandable\" rarely produce a readable, paper-style posting within a two-week window. Even under priority pressure, I would put this at roughly 5-10%. The pair's own behaviour fits that. In four weeks they have posted none of their Yang-Mills material, not even the more polished QED3 and YM3 write-ups, to arXiv.\n\n(d) Evidence:\n- For Yes:\n  - On October 27, Sussman said they were \"maybe even as close as a few weeks away.\"\n  - Priority pressure from OpenAI's October 26 announcement is real.\n  - A 505-page YM4 proof sketch was added to the repository on November 1, and it could be moved to Sussman's site quickly.\n  - Anthropic has shown it can post fast (the ETH paper went up October 27).\n- For No:\n  - The README update around October 31 says YM4 is \"unfinished.\"\n  - It says they are rewriting it \"methodically (thus quite slowly!),\" starting with QED3 and YM3, and want a collaborative rewrite at a \"human pace.\"\n  - It explicitly rejects rushing out \"10,000-page slop\" and mentions no arXiv plans.\n  - Activity on November 2 focused on the 3D manuscripts.\n\n(e) Scenarios:\n- No: they keep polishing QED3 and YM3 in the repository, and the YM4 sketch stays a GitHub file through November 13.\n- Yes: OpenAI and the Gross group release their paper, and the pair responds by posting the 505-page YM4 sketch to arXiv as a priority claim, with a title, authors and an abstract stating the theorem.\n\n(f) I start from a base rate of about 7%. I move down because the authors have explicitly said they will not rush a 4D posting and are working on the lower-dimensional cases first. I keep some probability for a priority-driven reversal, since a 505-page sketch exists and a triggering OpenAI release is plausible. I land at about 4%.\n\nProbability: 4%"
+    },
+    {
+      "value": 0.04,
+      "reasoning": "**(a) Time left and what is needed for Yes.** About 10.5 days remain, until 13 November 2026, 23:59 UTC. Yes requires a paper-style manuscript by Alpöge and Sussman asserting existence of four-dimensional Yang-Mills. It must be posted on arXiv, or as a standalone document on a personal or institutional page with a title, both authors and an abstract stating the theorem. Files in the GitHub repository do not count.\n\n**(b) Status quo.** Nothing qualifying exists as of 3 November. Both arXiv listings and Sussman's website show no such manuscript. The status quo outcome is No.\n\n**(c) Base rate.** The reference class is researchers holding an unfinished, admittedly unreadable proof draft who post a paper-style preprint within two weeks. That rarely happens, even under priority pressure: roughly 5-10%. Here the authors have explicitly said they will not do it, which lowers the base further.\n\n**(d) Strongest evidence.**\n- For Yes:\n  - On 27 October, Sussman told Scientific American they were \"maybe even as close as a few weeks away.\"\n  - On 1 November, a 505-page YM4 proof sketch PDF was committed to the repository, so material exists that could be uploaded.\n  - Anthropic has shown it can release work quickly (ETH paper, 27 October).\n  - A release of OpenAI's write-up could create priority pressure.\n- For No:\n  - The README update of about 31 October says YM4 is \"unfinished.\"\n  - They say they are rewriting \"much more methodically (thus quite slowly!)\" and first want the arguments shown in QED3 and YM3.\n  - They explicitly reject rushing out \"10,000-page slop\" and want a collaborative rewrite at a \"human pace.\"\n  - Activity on 2 November is focused on the three-dimensional manuscripts.\n  - In four weeks they have posted nothing to arXiv, not even the more polished QED3 and YM3 material.\n\n**(e) Scenarios.**\n- No: they keep iterating on GitHub, possibly put QED3 or YM3 on arXiv (which would not qualify), and the 4D work stays in the repository past 13 November.\n- Yes: OpenAI releases its paper with Gross's group, and Alpöge and Sussman respond by posting the 505-page YM4 sketch, or the 153-page zeroth draft, to arXiv as a priority marker before the deadline.\n\n**(f) From base rate to forecast.** I start around 7%. The authors' explicit statement that they are going slowly and will not rush moves me down. The existence of a ready 505-page PDF, plus the possibility of an OpenAI release creating pressure, keeps a small tail. No matching market exists to anchor on. I land at about 4%.\n\nProbability: 4%"
+    },
+    {
+      "value": 0.04,
+      "reasoning": "(a) About 10.5 days remain, until November 13, 2026, 23:59 UTC. For Yes, a paper-style manuscript by Alpöge and Sussman asserting a proof of four-dimensional Yang-Mills existence must become publicly viewable. It must either be on arXiv or be a standalone document on a personal or institutional page, with a title, an author list naming both, and a stated theorem.\n\n(b) The status quo is No. As of November 3 there is nothing on arXiv or Sussman's site. The YM4 material exists only in the GitHub repository, which does not qualify.\n\n(c) Base rate: researchers who have publicly said they are doing a slow, methodical rewrite rarely post a paper-style preprint of that work within two weeks. I put the base rate at roughly 3-5%. The pair also posted none of their more polished QED3 or YM3 Yang-Mills material to arXiv during the four weeks the repository has been public.\n\n(d) Evidence for Yes:\n- Priority pressure after OpenAI's October 26 announcement.\n- Sussman said they were \"maybe even as close as a few weeks away\" (October 27).\n- A 505-page YM4 proof sketch PDF was added on November 1 and could simply be moved to arXiv or Sussman's site.\n- Anthropic has shown it can post formal-math artifacts quickly (October 27).\n\nEvidence for No:\n- The README update around October 31 says YM4 is \"unfinished\".\n- It says they are rewriting \"much more methodically (thus quite slowly!)\", starting with QED3 and YM3 first.\n- It explicitly rejects rushing out \"10,000-page slop\" and favours a collaborative rewrite at \"human pace\".\n- Commits on November 2 focus on the three-dimensional write-ups.\n- Sussman's site only links to the GitHub repository.\n\n(e) No scenario: they keep iterating on GitHub, polish the QED3 and YM3 manuscripts, and leave YM4 as an unfinished repository sketch through mid-November.\n\nYes scenario: OpenAI and the Gross group release their write-up. Alpöge and Sussman respond by posting the YM4 sketch as an arXiv preprint, or as a titled PDF with an abstract on Sussman's website, to stake priority.\n\n(f) I start at about 4%. I move slightly up for the existence of a 505-page YM4 document that could be posted with little effort, and for a possible OpenAI release acting as a trigger. I move back down because the authors' explicit, recent statement says they will not rush. That leaves me at about 4%.\n\nProbability: 4%"
+    },
+    {
+      "value": 0.04,
+      "reasoning": "(a) There are about 10.8 days left, until 2026-11-13 23:59 UTC. For Yes, an arXiv preprint listing both Alpöge and Sussman, or a standalone paper-style document on either author's personal or institutional web page, must become publicly viewable by that time. It must assert a construction of four-dimensional pure Yang-Mills on R^4 (SU(2) is enough). Files in the GitHub repository do not count.\n\n(b) If nothing changes, the answer is No. As of Nov 3 nothing qualifies: neither arXiv listing nor Sussman's website shows such a paper, and the four-dimensional material exists only as files in the repository.\n\n(c) Base rate: researchers rarely post a full paper on a huge, self-described unfinished argument within two weeks, even under pressure to establish priority. In comparable \"scooped, rush to post\" situations a quick preprint does sometimes appear. Here, though, the authors have already secured public priority evidence through the dated repository, which removes much of the incentive to rush. I put the reference rate at roughly 5-10%.\n\n(d) Evidence:\n- **For Yes:**\n  - OpenAI's Oct 26 announcement creates priority pressure.\n  - Alpöge has publicly argued about priority on X.\n  - A 505-page \"YM4 proof sketch\" PDF was committed on Nov 1, so a document exists that could be uploaded quickly.\n  - Repository activity is heavy.\n  - Anthropic has shown it can post artifacts fast (the ETH paper on Oct 27).\n- **For No:**\n  - The README, updated around Oct 30-31, says the four-dimensional write-up is going \"much more methodically (thus quite slowly!)\" and warns against rushing out \"10,000-page slop\".\n  - The planned order is QED3, then YM3, then YM4.\n  - Even the three-dimensional drafts, which Sussman calls presentable, have not gone to arXiv in four weeks.\n  - The Nov 1-2 commits are mostly three-dimensional work.\n  - The four-dimensional document is labelled a \"sketch\".\n  - arXiv moderation of very long LLM-written work could add delay.\n\n(e) Scenarios:\n- **No:** The pair keeps refining YM3 and QCD3 in the repository, perhaps posting YM3 to arXiv, while YM4 stays a repository sketch through mid-November.\n- **Yes:** OpenAI and Gross's group release their paper, or Altman's model launches. Alpöge and Sussman then decide to put the 505-page sketch on arXiv or as a PDF on Sussman's site, with a title, both names, and an abstract claiming YM4 existence, to secure a citable priority date.\n\n(f) I start from about 7%. I move down because of the authors' explicit statement that they are deliberately going slowly, the three-dimensional-first ordering, and the fact that ten days have already passed since the scoop with nothing posted. I move slightly up because a large PDF already exists and there are real priority incentives. There is also some small chance a web-page PDF counts. The net result is about 4%.\n\nProbability: 4%"
+    },
+    {
+      "value": 0.04,
+      "reasoning": "**(a) Time left and what Yes requires**\nAbout 10.5 days remain, until November 13, 2026, 23:59 UTC. For Yes, a paper-style manuscript naming both Alpöge and Sussman must be publicly viewable by then. It must assert a proof of four-dimensional (pure, at least SU(2)) Yang-Mills existence. It counts only if it appears on arXiv or as a standalone paper on either author's personal or institutional web page. Files in the GitHub repository do not count.\n\n**(b) Status quo**\nNo qualifying manuscript exists as of November 3. The four-dimensional material lives only in the repository, as a 505-page \"proof sketch\" and an assembly overview. If nothing changes, the question resolves No.\n\n**(c) Base rate**\nThe reference class is researchers holding an admittedly unreadable, unvetted draft of a major result, who then post a formal preprint within about two weeks of a check date. This rarely happens, perhaps 5-10%, even under priority pressure. Balaban-style constructive QFT write-ups have historically taken years. I start at about 7%.\n\n**(d) Strongest evidence**\n\nFor Yes:\n- OpenAI's announcement on October 26 creates priority pressure.\n- Alpöge is publicly contesting priority on X, in late October.\n- The repository is very active, with heavy commits from October 26 to November 2, including a 505-page YM4 PDF on November 1.\n- Anthropic has shown it can post artifacts quickly (the ETH paper on October 27).\n- Posting to Sussman's website would be trivial and would count, even if labelled a draft.\n\nFor No:\n- The README, updated around October 30-31, says YM4 is being written \"much more methodically (thus quite slowly!)\". It warns against rushing out \"10,000-page slop\".\n- The planned order is QED3, then YM3, then YM4. Even the \"presentable\" three-dimensional drafts have not gone to arXiv.\n- The four-dimensional file was renamed \"sketch_draft\" on October 31, which is the opposite of a finalized paper.\n- They chose to answer the priority question by pointing to the public repository rather than to a preprint.\n- arXiv moderation could slow very long LLM-written mathematics.\n\n**(e) Scenarios**\n- **No:** The pair keeps polishing QED3 and YM3 and perhaps posts those to arXiv. YM4 stays as a sketch in the repository past November 13. This is the most likely path.\n- **Yes:** OpenAI and the Gross group release their paper, or a new model launches. Alpöge and Sussman respond by putting a titled \"draft\" PDF of the YM4 construction, with an abstract, on Sussman's site or on arXiv, citing the 505-page sketch.\n\n**(f) Adjustment**\nI start at about 7%. I move down for the explicit stated intention to go slowly, the YM3-first ordering, and the \"sketch\" relabelling. I move slightly up for the active priority dispute and the low bar of a website posting with draft status allowed. There is no matching market to anchor on. My final estimate is about 4%.\n\nProbability: 4%"
+    },
+    {
+      "value": 0.04,
+      "reasoning": "(a) There are about 10 days left, until 13 Nov 2026 at 23:59 UTC. For Yes, one of two things must appear by then. Either an arXiv preprint listing both Alpöge and Sussman that claims a construction of four-dimensional Yang-Mills, or a standalone paper-style PDF on Sussman's or Alpöge's personal or institutional site, with a title, both names and an abstract stating the theorem. Files in the GitHub repository do not count.\n\n(b) The status quo is No. As of 3 Nov there is no arXiv posting by either author on this, and Sussman's website only links to the repository.\n\n(c) Base rate: when a research group's own README calls a draft \"unfinished\" and \"basically not understandable\", and the authors explicitly favour a slow, methodical write-up, a polished preprint rarely appears within two weeks. I put this at about 3-5%. Constructive QFT results in the Balaban style have historically taken years to write up.\n\n(d) Evidence:\n- **For Yes:**\n  - OpenAI's announcement on 26 Oct puts priority at stake.\n  - Alpöge posted priority claims on X in late October.\n  - The repository is very active, including a 505-page \"YM4 proof sketch\" PDF committed on 1 Nov.\n  - Anthropic has shown it can release artifacts quickly, as with the ETH paper posted on 27 Oct.\n  - Posting a PDF to Sussman's own site would avoid arXiv moderation.\n- **For No:**\n  - The README (updated 30-31 Oct) says the four-dimensional write-up is going \"much more methodically (thus quite slowly!)\" and warns against rushing out \"10,000-page slop\".\n  - The stated order is QED3, then YM3, then YM4.\n  - Even the three-dimensional drafts, which Sussman calls \"presentable\", have not gone to arXiv.\n  - The 1-2 Nov commits are mostly three-dimensional work.\n  - The four-dimensional file was relabelled a \"sketch draft\" on 31 Oct.\n  - The pair are positioning the repository itself as the open alternative, so they have less need to post separately.\n\n(e) Scenarios:\n- **No:** The pair keep refining the YM3 and QCD3 manuscripts and may post those to arXiv. The four-dimensional material stays as a repository \"sketch\" through mid-November.\n- **Yes:** OpenAI releases its Gross-group paper or a new model, which triggers urgency. Sussman then uploads the four-dimensional sketch PDF, with title, authors and abstract, as a standalone document on his website, or submits it to arXiv by 12 Nov.\n\n(f) I start from about 4%. I adjust up slightly for the priority pressure and the existence of a large four-dimensional PDF that could simply be re-hosted. I adjust down for the authors' explicit stated intent to go slowly and their consistent repository-only behaviour, including for the more mature three-dimensional work. These roughly offset, leaving me at about 4%.\n\nProbability: 4%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.0729,
+  "usage": [
+    {
+      "question_id": "46648",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 0.0001356,
+      "input_tokens": 524,
+      "output_tokens": 62,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0002804,
+      "input_tokens": 1243,
+      "output_tokens": 64,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 75.0,
+      "notional_cost_usd": 0.2806503000000001,
+      "input_tokens": 82514,
+      "output_tokens": 4146,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 10.9,
+      "notional_cost_usd": 0.07322000000000001,
+      "input_tokens": 6696,
+      "output_tokens": 983,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.5,
+      "notional_cost_usd": 0.075348,
+      "input_tokens": 6697,
+      "output_tokens": 1089,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0004387000000000001,
+      "input_tokens": 2147,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.0004505,
+      "input_tokens": 2206,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.00012912999999999998,
+      "input_tokens": 2149,
+      "output_tokens": 88,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 9.522e-05,
+      "input_tokens": 2208,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 22.0,
+      "notional_cost_usd": 0.022629400000000004,
+      "input_tokens": 6697,
+      "output_tokens": 944,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00043830000000000003,
+      "input_tokens": 2145,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 1.9,
+      "notional_cost_usd": 9.460999999999999e-05,
+      "input_tokens": 2147,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 107.0,
+      "notional_cost_usd": 0.2690589,
+      "input_tokens": 104844,
+      "output_tokens": 4357,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.9,
+      "notional_cost_usd": 0.076292,
+      "input_tokens": 6620,
+      "output_tokens": 1167,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.0,
+      "notional_cost_usd": 0.07712,
+      "input_tokens": 6621,
+      "output_tokens": 1208,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 1.9,
+      "notional_cost_usd": 0.00046670000000000007,
+      "input_tokens": 2287,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.4,
+      "notional_cost_usd": 0.00047170000000000003,
+      "input_tokens": 2312,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00013981,
+      "input_tokens": 2286,
+      "output_tokens": 107,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 0.00014628,
+      "input_tokens": 2314,
+      "output_tokens": 119,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.1,
+      "notional_cost_usd": 0.074688,
+      "input_tokens": 6622,
+      "output_tokens": 1086,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0004737,
+      "input_tokens": 2322,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46648",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 9.616e-05,
+      "input_tokens": 2321,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9529
+}
