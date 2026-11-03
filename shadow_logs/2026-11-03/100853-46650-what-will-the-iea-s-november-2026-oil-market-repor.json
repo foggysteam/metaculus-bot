@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-03T10:11:53.250468+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-03T10:08:53.472278+00:00",
+  "published": false,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46650,
+    "post_id": 46417,
+    "url": "https://www.metaculus.com/questions/46417",
+    "type": "NumericQuestion",
+    "unit": "mb/d",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will the IEA's November 2026 Oil Market Report say about the change in world oil demand in 2026 (y/y, mb/d)?",
+    "resolution_criteria": "This question resolves to the 2026 year-on-year change in world oil demand as reported in the IEA's [Oil Market Report – November 2026](https://www.iea.org/reports/oil-market-report-november-2026), scheduled for publication at 10:00 Paris time on 13 November 2026. The governing figure is the full-year 2026 annual-average y/y change stated in that report's demand overview/highlights, which the OMR gives in million barrels per day to one decimal place — for example, if it states that world oil demand falls by 2.7 mb/d on average in 2026, the question resolves as -2.7, and a stated rise of 0.4 mb/d resolves as 0.4. If the overview states the figure only in thousands of barrels per day, it is converted by dividing by 1,000 (e.g. -2,650 kb/d resolves as -2.65). The figure as first published in the November 2026 edition governs; later revisions (for example in the December 2026 OMR or in IEA databases) do not affect resolution, and if publication is delayed beyond 13 November 2026 the question resolves once that edition is published.",
+    "fine_print": "The figure refers to the IEA's own global oil demand series for total liquids for calendar year 2026 as a whole (full-year annual average), not to a quarterly figure and not to another institution's estimate. If the IEA's November 2026 report page is unavailable or the figure cannot be read from it, [credible sources](https://www.metaculus.com/faq/#definitions) reporting the figure from the IEA's November 2026 OMR will be used.",
+    "close_time": "2026-11-03 07:14 UTC",
+    "scheduled_resolution_time": "2026-11-13 12:00 UTC"
+  },
+  "research": [
+    "I couldn't find any sign that the November 2026 OMR is out early, so nothing settles the question yet. The latest official figure is the October OMR's 2026 demand change of **-2.6 mb/d**.\n\n### 1. Resolution source\n- 2026-11-03: The November page ([iea.org](https://www.iea.org/reports/oil-market-report-november-2026)) is scheduled for 13 November. My direct fetches of IEA report pages returned HTTP 403. I found no CSV or JSON data file behind the OMR; the IEA's detailed tables are paywalled.\n- 2026-10-14: The October OMR's IEA summary, as quoted in search results, says \"World oil demand is forecast to fall by 2.5 mb/d y-o-y in 4Q26 and 2.6 mb/d on average in 2026.\" It puts demand at 102.4 mb/d, diesel at about 25% of the decline, a 2027 rebound of about 2 mb/d (still 620 kb/d below 2025), and 2026 supply down 5.8 mb/d. [IEA Oct OMR](https://www.iea.org/reports/oil-market-report-october-2026), [forextradingcommunity](https://forextradingcommunity.com/news/iea-oil-market-report-october-2026/), [globaltradingoutlook](https://www.globaltradingoutlook.com/markets/iea-october-oil-market-report-demand-diesel-stock-releases/), [constructionworld](https://www.constructionworld.in/policy-updates-and-economic-news/global-oil-demand-to-fall-2.6-mn-barrels-per-day-in-2026/98972)\n- Some secondary sites give -2.5 for the full year. That is the 4Q26 number; the IEA's own annual figure is -2.6.\n\n### 2. Current status\n- Not settled. No leaks or previews of the November figure turned up.\n\n### 3. Recent news (newest first)\n- 2026-11-03: The IEA's Global Gas Security Review says Gulf LNG losses through Hormuz exceeded 60 bcm between March and October, and EU gas storage is at its lowest since 2013. [infobae](https://www.infobae.com/america/agencias/2026/11/03/aie-alerta-de-que-bajas-reservas-de-gas-en-europa-podrian-prolongar-la-tension-hasta-2027/)\n- 2026-11-03: Hormuz is still nearly shut. Kpler counted 5 commodity vessels on Saturday and none on 1 and 2 November, against a pre-crisis baseline of about 85 transits a day. Iran says it could reopen the strait within two days if the US lifts its naval blockade of Iranian ports; Qatar is mediating. There are unverified Iranian claims of tankers hitting mines, and the US has carried out limited strikes. [Straits brief](https://straits.live/briefs/2026-11-03), [CBS](https://www.cbsnews.com/live-updates/iran-war-donald-trump-qatar-mediators-new-proposal-end-war/), [Fox](https://www.foxnews.com/world/sea-mine-crisis-re-emerges-strait-hormuz-tehran-urges-washington-accept-deal)\n- 2026-11-02: TotalEnergies' annual outlook says the war is speeding up the energy transition and now puts peak oil demand at 2035-2040. [scenarieconomici](https://scenarieconomici.it/benzina-al-capolinea-prima-del-previsto-la-guerra-spinge-la-svolta-elettrica-secondo-totalenergies/)\n- 2026-11-02: The World Bank expects commodity prices to rise 23% in 2026 and energy prices 32%. [ce.cn](http://www.ce.cn/xwzx/gnsz/gdxw/202611/t20261103_3280891.shtml)\n- 2026-11-01: OPEC+ kept December output unchanged. Reuters, as cited by Al-Masry Al-Youm, reports Brent December futures closed at $117.64/bbl, up 2.4%, so prices are similar to September's Dated average of $116.89. [almasryalyoum](https://www.almasryalyoum.com/news/details/4398555)\n- 2026-10-23: Energy Intelligence says high crude and diesel prices will weigh on demand in the last two months of 2026 and into early 2027. [Sinopec/oilprice](https://oilprice.com/Latest-Energy-News/World-News/Sinopec-Sees-China-Oil-Demand-Falling-89-in-2026.html)\n- Undated: Sinopec forecasts China's oil demand down about 8.9% (about 600 kb/d) in 2026, with diesel down about 11.4%. [The Standard](https://www.thestandard.com.hk/finance/article/342300/China-oil-demand-to-fall-89pc-in-2026-Sinopec-research-says)\n- 2026-10-14: Al Jazeera reports Iran stepped up Hormuz surveillance, attacks rose and oil flows fell sharply again. [Al Jazeera](https://www.aljazeera.com/news/2026/10/14/iran-steps-up-hormuz-surveillance-attacks-soar-oil-flows-crash-again)\n- I found no October 2026 monthly demand data for China or India.\n\n### 4. Base rates\nThe 2026 path of the IEA's growth figure, by edition:\n\n| Edition | 2026 demand change |\n|---|---|\n| Jan 2026 | about +0.93 mb/d |\n| May 2026 | -0.42 mb/d (level 104.0) |\n| Jun 2026 | -1.1 mb/d |\n| Jul 2026 | -1.0 mb/d |\n| Aug 2026 | -1.6 mb/d |\n| Sep 2026 | -2.5 mb/d |\n| Oct 2026 | -2.6 mb/d |\n\n- Month-to-month changes were -0.7, +0.1, -0.6, -0.9 and -0.1 mb/d. The biggest cuts came in August and September; October was a small trim.\n- The size of the August cut is reported differently. CNBC says it was 510 kb/d deeper than July, while the question background says 941 kb/d. Sources: [CNBC Aug](https://www.cnbc.com/2026/08/12/iea-oil-demand-hormuz.html), [IEA May PDF](https://iea.blob.core.windows.net/assets/2b89a47b-34a2-40e0-90ff-68f7ccd80715/-13MAY2026__OilMarketReport_publicversion.pdf), [Argus](https://www.argusmedia.com/en/news-and-insights/latest-market-news/2840597-iea-cuts-2026-demand-forecast-sees-huge-2027-surplus)\n- In normal years, revisions are about 0.1-0.3 mb/d per month.\n- With roughly 10 of 12 months already in the data, one month of new data moves the annual average by only about a twelfth of any surprise in that month. That makes very large revisions harder, although the IEA can also revise history.\n- In August the IEA said demand would return to growth by November ([CNBC](https://www.cnbc.com/2026/08/12/iea-oil-demand-hormuz.html)). That view was later dropped: October still has 4Q26 at -2.5 mb/d y/y.\n\n### 5. Other forecasts\n- None of the Polymarket, Kalshi or Manifold markets I was given matches this question. The Kalshi markets supplied cover US GDP and production, not this.\n- For comparison, the October 2026 estimates of 2026 growth were OPEC +0.2 mb/d, EIA -2.0 mb/d and IEA -2.6 mb/d (IEF cross-agency analysis, per the question background).\n- I found no analyst preview of the November OMR.\n\n### 6. Upcoming events before 13 November\n- About 10 November: the EIA's November STEO, an updated read on its -2.0 mb/d estimate.\n- About 11-12 November: OPEC's November MOMR.\n- US-Iran talks through Qatar on the blockade and reopening Hormuz. A deal before about 10 November could make the IEA lean toward recovery in its outlook, but it would barely change the 2026 average.\n- Brent above $113 and diesel availability, including the IEA's accelerated emergency diesel stock releases agreed after the October report.\n- The 4 November US midterms, which CBS coverage links to Trump's Iran stance.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-03 10:09 UTC; check each market really matches the question)\n- Kalshi: Will Orlando hotel room demand increase YoY this year? (2026). Yes prices: Above 34.5 million room nights: 0.67.\n- Kalshi: U.S. oil production per day this year (In 2026). Yes prices: At least 14.10M bpd: 0.28; At least 14.00M bpd: 0.88; At least 14.25M bpd: 0.10; At least 14.40M bpd: 0.05; At least 13.90M bpd: 0.9800; At least 13.75M bpd: 0.9800; At least 13.80M bpd: 0.9800.\n- Kalshi: US real GDP growth in 2026? (2026). Yes prices: 2.1% to 2.5%: 0.78; 1.6% to 2.0%: 0.11; 2.6% to 3.0%: 0.04; 0.1% to 0.5%: 0.0190; 3.1% to 3.5%: 0.0200; 4.6% to 5.0%: 0.0100; 0.6% to 1.0%: 0.0050; 1.1% to 1.5%: 0.0090; 3.6% to 4.0%: 0.0090; 4.1% to 4.5%: 0.0090.\n- Kalshi: Will Oklahoma crude oil production rise YoY? (2026). Yes prices: Above 147.89 million barrels: 0.07.\n- Kalshi: How high will peak electricity demand on the Texas ERCOT grid get this year? (2026). Yes prices: Above 91,500 MW: 0.06; Above 92,000 MW: 0.04; Above 92,500 MW: 0.04; Above 93,000 MW: 0.03; Above 94,000 MW: 0.03; Above 96,000 MW: 0.03; Above 98,000 MW: 0.01.\n- Kalshi: Texas ERCOT peak electricity demand today (November 3, 2026). Yes prices: Above 60,500 MW: 0.57; Above 61,000 MW: 0.38; Above 60,000 MW: 0.70; Above 59,500 MW: 0.80; Above 63,000 MW: 0.04; Above 61,500 MW: 0.18; Above 63,500 MW: 0.0400; Above 56,500 MW: 0.98; Above 57,500 MW: 0.98; Above 64,000 MW: 0.1400.",
+    "Quick note: I've finished searching and am writing up the findings now.\n\n# IEA November 2026 OMR: 2026 world oil demand change (y/y)\n\n## 1. Resolution source\n- 2026-11-03: I couldn't read the IEA site. Both the October 2026 OMR page and the November URL returned HTTP 403 (a Cloudflare challenge page), and I found no data file behind them. The November edition is not out yet; it is due 2026-11-13. [IEA Oct OMR](https://www.iea.org/reports/oil-market-report-october-2026)\n- 2026-10-14: The latest governing-style figure is from the October OMR, as quoted in search snippets of the IEA page: \"World oil demand is forecast to fall by 2.5 mb/d y-o-y in 4Q26 and 2.6 mb/d on average in 2026.\" Demand is 102.4 mb/d. The IEA expects balances to stay in deficit through year-end and middle-distillate tightness to last into 2027. [IEA](https://www.iea.org/reports/oil-market-report-october-2026), [globaltradingoutlook](https://www.globaltradingoutlook.com/markets/iea-october-oil-market-report-demand-diesel-stock-releases/)\n- A secondary source gives the October quarterly path as about -5.0 mb/d in 2Q26, -3.7 in 3Q and -2.5 in 4Q. 2026 supply is put at -5.8 mb/d. 2027 demand rebounds about 2 mb/d but stays 620 kb/d below 2025. [forextradingcommunity](https://forextradingcommunity.com/news/iea-oil-market-report-october-2026/), [Yahoo](https://finance.yahoo.com/energy/articles/iea-global-oil-demand-falling-120521509.html)\n\n## 2. Current status\n- Nothing has settled the question yet.\n- The November edition will have roughly 9 to 10 months of 2026 data already locked into the annual average. That limits how far the full-year figure can move, unless the IEA revises past months or the 2025 baseline.\n- I did not find any leak or preview of the November figures.\n\n## 3. Recent news (newest first)\n- 2026-11-02/03: Iran said a Qatar-brokered plan could reopen Hormuz within two days. Its conditions are a ceasefire on all regional fronts, unfrozen assets and lifted oil sanctions. There is no deal yet. Brent fell about 7.6% to roughly $104.77 after closing at $117.64 on 2026-10-30. [AGBI](https://www.agbi.com/oil-and-gas/2026/11/oil-retreats-as-diplomacy-raises-hopes-for-hormuz-reopening/), [CNBC](https://cnbc.com/2026/11/02/oil-prices-fall-as-iran-us-pursue-diplomacy.html), [Seoul Economic Daily](https://en.sedaily.com/international/2026/11/03/iran-offers-to-reopen-hormuz-in-two-days-oil-plunges-7)\n- 2026-11-03: The IEA's gas security review says Hormuz LNG flows have been practically paralysed. It cut Qatar and UAE gas supply by more than 60 bcm between March and October, and EU storage is at 74.6%. [Infobae](https://www.infobae.com/america/agencias/2026/11/03/aie-alerta-de-que-bajas-reservas-de-gas-en-europa-podrian-prolongar-la-tension-hasta-2027/)\n- 2026-11-01: OPEC+ kept December output unchanged. [Al-Masry](https://www.almasryalyoum.com/news/details/4398555)\n- 2026-10-30, CNBC, citing Kpler and IMO data:\n  - Hormuz crude exports averaged about 11.1 mb/d in October, about 2% below September. Flows were up more than 70% since July but fell to 7.3 mb/d in the last week of October.\n  - At least 30 vessels were hit in October, double September's 15.\n  - Freight rose to about $21/bbl from $6.50.\n  - Brent rose more than 13% in October.\n  - The WSJ reported the US told Gulf states to prepare for a short, intense campaign after the 3 November midterms.\n  \n  [CNBC](https://www.cnbc.com/2026/10/30/tanker-attack-strait-hormuz-iran-war-oil.html)\n- 2026-10-15: The IEA Governing Board agreed to speed up the remaining emergency stock releases, starting with diesel. About 330 mb had been released so far. [globaltradingoutlook](https://www.globaltradingoutlook.com/markets/iea-october-oil-market-report-demand-diesel-stock-releases/)\n- 2026-09-11: In the September OMR, the IEA deferred full recovery of Middle East flows to 2027. [CNBC](https://www.cnbc.com/2026/09/11/iran-war-oil-diesel-iea-hormuz.html)\n\n## 4. Base rates and revision history\nIEA 2026 demand growth by edition (mb/d):\n\n| Edition | 2026 growth | Change from prior edition |\n|---|---|---|\n| June | -1.1 | |\n| July | -1.0 | +0.1 |\n| August | -1.6 | -0.6 (about 510 to 941 kb/d depending on source) |\n| September | -2.5 | -0.9 |\n| October | -2.6 | -0.1 |\n\n- The cuts are getting smaller: from -0.9 in September to -0.1 in October, which suggests the downgrades are levelling off.\n- 4Q26 is the only quarter still mostly forecast. A ±0.5 mb/d change in 4Q moves the annual average by about ±0.13 mb/d.\n- In normal years, November edition revisions to the current year are usually 0.0 to 0.1 mb/d.\n- October data were worse than the IEA may have assumed: tanker attacks doubled, late-October flows fell to 7.3 mb/d, Brent was about $117 and freight costs rose. That argues for a flat or slightly more negative figure. The pull toward a smaller fall would come from IEA revisions to earlier months' data, not from early-November diplomacy.\n\n## 5. Other forecasts\n- 2026-10 (IEF cross-agency comparison, from the question background): OPEC sees 2026 demand at 105.7 mb/d (+0.2 mb/d) and the EIA at 102.4 mb/d (-2.0 mb/d). The IEA is the most bearish at -2.6.\n- 2026-11-02: TotalEnergies' energy outlook now puts peak oil at 2035-2040. It has no near-term figure. [Scenari Economici](https://scenarieconomici.it/benzina-al-capolinea-prima-del-previsto-la-guerra-spinge-la-svolta-elettrica-secondo-totalenergies/)\n- Prediction markets: none of the Kalshi markets supplied matches this question. They cover US oil production, US GDP and ERCOT. I found no Polymarket, Manifold or Metaculus market on the IEA November figure.\n\n## 6. Upcoming events before 13 November\n- 2026-11-03: US midterms. A reported US military campaign afterwards, or a US-Iran deal through Qatar, could swing 4Q assumptions. The OMR data cut-off is usually a few days before publication.\n- About 2026-11-10: the EIA's November STEO.\n- About 2026-11-11 to 12: OPEC's November MOMR.\n- Ongoing: weekly Hormuz transit data from Kpler and Vortexa, tanker attacks, and the IEA's emergency diesel stock releases.\n- 2026-11-13, 10:00 Paris: the IEA November OMR is published.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-03 10:09 UTC; check each market really matches the question)\n- Kalshi: Will Orlando hotel room demand increase YoY this year? (2026). Yes prices: Above 34.5 million room nights: 0.67.\n- Kalshi: U.S. oil production per day this year (In 2026). Yes prices: At least 14.10M bpd: 0.28; At least 14.00M bpd: 0.88; At least 14.25M bpd: 0.10; At least 14.40M bpd: 0.05; At least 13.90M bpd: 0.9800; At least 13.75M bpd: 0.9800; At least 13.80M bpd: 0.9800.\n- Kalshi: US real GDP growth in 2026? (2026). Yes prices: 2.1% to 2.5%: 0.78; 1.6% to 2.0%: 0.11; 2.6% to 3.0%: 0.04; 0.1% to 0.5%: 0.0190; 3.1% to 3.5%: 0.0200; 4.6% to 5.0%: 0.0100; 0.6% to 1.0%: 0.0050; 1.1% to 1.5%: 0.0090; 3.6% to 4.0%: 0.0090; 4.1% to 4.5%: 0.0090.\n- Kalshi: Will Oklahoma crude oil production rise YoY? (2026). Yes prices: Above 147.89 million barrels: 0.07.\n- Kalshi: How high will peak electricity demand on the Texas ERCOT grid get this year? (2026). Yes prices: Above 91,500 MW: 0.06; Above 92,000 MW: 0.04; Above 92,500 MW: 0.04; Above 93,000 MW: 0.03; Above 94,000 MW: 0.03; Above 96,000 MW: 0.03; Above 98,000 MW: 0.01.\n- Kalshi: Texas ERCOT peak electricity demand today (November 3, 2026). Yes prices: Above 60,500 MW: 0.57; Above 61,000 MW: 0.38; Above 60,000 MW: 0.70; Above 59,500 MW: 0.80; Above 63,000 MW: 0.04; Above 61,500 MW: 0.18; Above 63,500 MW: 0.0400; Above 56,500 MW: 0.98; Above 57,500 MW: 0.98; Above 64,000 MW: 0.1400."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -2.9,
+        "p25": -2.775,
+        "p50": -2.65,
+        "p75": -2.575,
+        "p90": -2.45
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The November 2026 OMR is due on 13 November 2026.\n\n(b) **Latest known value:** -2.6 mb/d for 2026 y/y, from the October 2026 OMR published on 14 October 2026. It put demand at 102.4 mb/d and 4Q26 at -2.5 mb/d y/y.\n\n(c) **If nothing changed:** -2.6 mb/d.\n\n(d) **If the trend continued:** -2.7 to -2.8 mb/d. Revisions have all been downward except for July, but October's cut was only 0.1 mb/d. The pressure is still downward: Hormuz remains essentially shut, Brent is about $117, and Sinopec projects China's demand falling about 9%. The new September and October data would need to show further weakness.\n\n(e) **Historical variation:**\n- Month-to-month changes in 2026 were -0.7, +0.1, -0.6, -0.9 and -0.1 mb/d.\n- About 10 months of the year are already in the data, so each new month moves the annual average only modestly.\n- The IEA can still revise baseline history, which could add a few tenths.\n- A typical move now is likely 0 to 0.2 mb/d.\n\n(f) **Expectations of experts and markets:**\n- No matching market exists and I found no analyst preview.\n- The EIA (-2.0 mb/d) and OPEC (+0.2 mb/d) are less bearish than the IEA, which mildly argues against a large further cut.\n- Energy Intelligence expects high prices to weigh on demand through the end of the year, which argues for a modest cut.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** A large historical rebasing, for example weak China or India data for 2Q-3Q, plus a deeper 4Q collapse from diesel rationing and recession could push the figure to -3.0 or below.\n- **High outcome:** Stronger-than-assumed September and October data, or upward revisions to earlier months like those behind the EIA's higher estimate, combined with a Hormuz reopening deal, could lift it to -2.3 or -2.2.\n\nThe resolution figure is usually stated to one decimal, so the outcome will most likely be -2.6 or -2.7. The intermediate values below reflect my uncertainty between those discrete outcomes.\n\nPercentile 1: -3.3\nPercentile 5: -3.0\nPercentile 10: -2.9\nPercentile 20: -2.8\nPercentile 30: -2.75\nPercentile 40: -2.7\nPercentile 50: -2.65\nPercentile 60: -2.62\nPercentile 70: -2.6\nPercentile 80: -2.55\nPercentile 90: -2.45\nPercentile 95: -2.35\nPercentile 99: -2.1"
+    },
+    {
+      "value": {
+        "p10": -3.05,
+        "p25": -2.85,
+        "p50": -2.65,
+        "p75": -2.5,
+        "p90": -2.3
+      },
+      "reasoning": "(a) About 10 days remain. The November 2026 OMR is due on 13 November 2026 at 10:00 Paris time.\n\n(b) The latest value is from the October 2026 OMR, published 14 October 2026. It put the 2026 change at -2.6 mb/d y/y, with demand at 102.4 mb/d and 4Q26 at -2.5 mb/d.\n\n(c) If nothing changed, the answer would be -2.6 mb/d.\n\n(d) If the trend continued, the answer would be about -2.7 to -2.8. The cuts have been persistent but are slowing: -0.9 in September and -0.1 in October. Hormuz is still effectively shut, with near-zero transits in early November. Brent is around $117, so prices have not eased since September. Diesel stress is ongoing. All of this points to a mild further downgrade, with 4Q getting deeper and possible downward revisions to history.\n\n(e) Historical variation over one edition:\n- Normal years: 0.1 to 0.3 mb/d.\n- 2026: up to 0.9 mb/d.\n- About 10 months of data are already in hand, so new monthly data shift the annual average only modestly. Revisions to historical baseline data can still produce moves of 0.2 to 0.4 mb/d.\n\n(f) Expert estimates differ widely. The EIA has -2.0 and OPEC +0.2 for 2026. Neither is likely to move the IEA much. There is no market on this exact figure and no analyst preview.\n\n(g) Unexpected scenarios:\n- Low outcome: Weak September and October data from China, India and the OECD, plus a downward revision of history, could take the figure to -3.0 to -3.3 mb/d.\n- High outcome: The IEA could revise up its 1H or 3Q data, for example because of baseline or data-reconciliation changes or stronger-than-assumed petrochemical demand. A sudden Hormuz deal could also lift the November and December estimates. Either could bring the figure to -2.2 to -2.3 mb/d.\n\nPercentile 1: -3.5\nPercentile 5: -3.2\nPercentile 10: -3.05\nPercentile 20: -2.9\nPercentile 30: -2.8\nPercentile 40: -2.7\nPercentile 50: -2.65\nPercentile 60: -2.6\nPercentile 70: -2.55\nPercentile 80: -2.45\nPercentile 90: -2.3\nPercentile 95: -2.2\nPercentile 99: -1.9"
+    },
+    {
+      "value": {
+        "p10": -3.0,
+        "p25": -2.8,
+        "p50": -2.65,
+        "p75": -2.525,
+        "p90": -2.4
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The November 2026 OMR is due 13 November 2026 at 10:00 Paris time.\n\n(b) **Latest known value:** -2.6 mb/d for 2026 y/y demand change, from the October OMR published 14 October 2026. Demand level is 102.4 mb/d and 4Q26 is -2.5 mb/d y/y.\n\n(c) **If nothing changed:** -2.6 mb/d.\n\n(d) **If the trend continued:** The recent revisions were -0.6, -0.9 and -0.1. The trend points slightly lower, to around -2.7 mb/d. That fits with Hormuz staying almost shut (near-zero transits in early November), Brent near $117 and Sinopec's weak outlook for China. Ten months of the year are already in the data, so new monthly data can only move the annual average by a small amount.\n\n(e) **Historical variation:** In normal years the monthly revision is 0.1 to 0.3 mb/d. In 2026 revisions have been as large as 0.9 mb/d. This late in the year, with most data in, a move of about 0.1 to 0.2 is most likely. Revisions to past months could still add a few tenths.\n\n(f) **Experts and markets:** There is no market on this question. The EIA puts 2026 at -2.0 and OPEC at +0.2, so the IEA is the most bearish of the three agencies and has shown no sign of converging toward the others. Energy Intelligence expects high prices to keep weighing on demand in November, December and early 2027.\n\n(g) **Unexpected scenarios:**\n- *Low:* New September and October data show large demand destruction in Asia and Europe, and diesel rationing goes deeper. The IEA revises the earlier quarters down, giving about -3.2 or worse.\n- *High:* Data for 2Q and 3Q come in stronger than expected, for example less destruction in petchem or LPG or in China. A Qatar-brokered deal to reopen Hormuz prompts the IEA to raise its 4Q figure, giving about -2.2 or better.\n\nPercentile 1: -3.45\nPercentile 5: -3.15\nPercentile 10: -3.0\nPercentile 20: -2.85\nPercentile 30: -2.75\nPercentile 40: -2.7\nPercentile 50: -2.65\nPercentile 60: -2.6\nPercentile 70: -2.55\nPercentile 80: -2.5\nPercentile 90: -2.4\nPercentile 95: -2.3\nPercentile 99: -2.0"
+    },
+    {
+      "value": {
+        "p10": -2.95,
+        "p25": -2.75,
+        "p50": -2.6,
+        "p75": -2.485,
+        "p90": -2.32
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The November 2026 OMR is due 13 November 2026 at 10:00 Paris time.\n\n(b) **Latest known value:** The October 2026 OMR (14 October 2026) puts 2026 world oil demand at 102.4 mb/d, down 2.6 mb/d y/y. The 4Q26 change is -2.5 mb/d.\n\n(c) **If nothing changed:** -2.6.\n\n(d) **If the current trend continued:** The downgrades have been getting smaller: -0.6 in August, -0.9 in September, -0.1 in October. Continuing that suggests a further small cut, to about -2.6 or -2.7. October conditions argue for a flat or slightly more negative figure:\n- Tanker attacks doubled.\n- Hormuz flows fell to 7.3 mb/d in the last week.\n- Brent was around $117 and freight costs rose.\n\nThe early-November diplomacy is unlikely to change 2026 much. Only about 1.5 months of the year remain, and the data cut-off falls around now.\n\n(e) **Historical variation:**\n- Normal-year November revisions to the current year are 0.0 to 0.1 mb/d.\n- In 2026, single-month moves have reached 0.9 mb/d, mostly from revisions to past months' data.\n- With about 10 months of data already in, a ±0.5 mb/d change to 4Q moves the annual figure by only about ±0.13. Larger moves would need revisions to historical data or to the 2025 baseline.\n\n(f) **Experts and markets:** The IEA is the most bearish agency. The EIA has -2.0 and OPEC +0.2, but those are other series and do not govern resolution. There is no prediction market on this figure.\n\n(g) **Unexpected scenarios:**\n- **Low:** Large downward revisions to 3Q data, for example much weaker Asian and emerging-market demand, plus a deeper 4Q cut after the US campaign that followed the midterms. That could push the figure to -3.0 or below.\n- **High:** Upward revisions to earlier months, for example demand proving more resilient in the data, or the 2025 baseline being revised down. Combined with a 4Q bump from the Hormuz reopening, that could give about -2.2 to -2.3.\n\nPercentile 1: -3.4\nPercentile 5: -3.1\nPercentile 10: -2.95\nPercentile 20: -2.8\nPercentile 30: -2.7\nPercentile 40: -2.65\nPercentile 50: -2.6\nPercentile 60: -2.57\nPercentile 70: -2.52\nPercentile 80: -2.45\nPercentile 90: -2.32\nPercentile 95: -2.2\nPercentile 99: -1.9"
+    },
+    {
+      "value": {
+        "p10": -2.85,
+        "p25": -2.69,
+        "p50": -2.6,
+        "p75": -2.52,
+        "p90": -2.42
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The November 2026 OMR is due 13 November 2026 at 10:00 Paris time.\n\n(b) **Latest known value:** the October 2026 OMR (14 October 2026) put 2026 world oil demand at -2.6 mb/d y/y, at 102.4 mb/d, with 4Q26 at -2.5 mb/d y/y.\n\n(c) **If nothing changes:** -2.6 mb/d.\n\n(d) **If the trend continues:** the downgrades have been shrinking (-0.6 in August, -0.9 in September, -0.1 in October). Extrapolating gives about -2.6 to -2.7.\n- October data look somewhat weaker than the IEA likely assumed: Brent near $117, tanker attacks doubled, late-October Hormuz flows fell to 7.3 mb/d and freight rose.\n- With roughly 9 to 10 months of 2026 data already in the annual average, a 4Q revision of ±0.5 mb/d moves the full-year figure by only about ±0.13 mb/d.\n\n(e) **Historical variation:** in normal years, November revisions to current-year growth are 0.0 to 0.1 mb/d. In 2026 single-month revisions have reached 0.9 mb/d, but those came when much of the year was still forecast. Revisions to earlier-month data or to the 2025 baseline could add ±0.1 to 0.2 mb/d.\n\n(f) **Experts and markets:** the EIA is at -2.0 mb/d and OPEC at +0.2 mb/d, so the IEA is the most bearish. There is no prediction market on this figure. Other agencies do not drive IEA revisions much, though the IEA has some history of drifting back toward consensus.\n\n(g) **Unexpected scenarios:**\n- **Low:** the IEA revises 2Q and 3Q demand data sharply lower once delivery data from non-OECD countries arrive, and adds a recession-driven 4Q cut after a post-midterm US military campaign. That could give about -3.0 or below.\n- **High:** a Qatar-brokered reopening of Hormuz lifts the 4Q outlook, combined with upward revisions to 3Q baseline data or a re-based 2025 level. That could give about -2.3 or higher.\n\nPercentile 1: -3.2\nPercentile 5: -2.95\nPercentile 10: -2.85\nPercentile 20: -2.72\nPercentile 30: -2.66\nPercentile 40: -2.62\nPercentile 50: -2.6\nPercentile 60: -2.58\nPercentile 70: -2.54\nPercentile 80: -2.5\nPercentile 90: -2.42\nPercentile 95: -2.33\nPercentile 99: -2.1"
+    },
+    {
+      "value": {
+        "p10": -2.95,
+        "p25": -2.76,
+        "p50": -2.61,
+        "p75": -2.465,
+        "p90": -2.3
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The November 2026 OMR publishes on 13 November 2026 at 10:00 Paris time.\n\n(b) **Latest known value:** the October 2026 OMR (14 October 2026) put the 2026 change at -2.6 mb/d y/y, with 4Q26 at -2.5 mb/d.\n\n(c) **If nothing changed:** -2.6 mb/d.\n\n(d) **If the current trend continued:** downgrades have shrunk from -0.9 (September) to -0.1 (October). A continued small downgrade gives about -2.7 mb/d. October conditions argue mildly for this:\n- Brent closed at about $117.64 on 30 October.\n- Tanker attacks doubled versus September.\n- Hormuz crude flows fell to 7.3 mb/d in the last week of October.\n- Freight costs rose sharply.\n\nEarly-November diplomacy is mostly too late to change the 4Q assumptions much.\n\n(e) **Historical variation:** in normal years, November revisions to the current year are 0.0 to 0.1 mb/d. In 2026, monthly moves have been 0.1 to 0.9 mb/d. With roughly 9 to 10 months of data already in the annual average, a ±0.5 mb/d change in 4Q moves the annual figure by only about ±0.13 mb/d. Bigger moves would need revisions to past months' data or to the 2025 baseline.\n\n(f) **Experts and markets:** the EIA has -2.0 mb/d and OPEC +0.2 mb/d, so the IEA is the most bearish of the three. There is no prediction market on this figure. The IEA's own trajectory is the best anchor.\n\n(g) **Unexpected scenarios:**\n- **Low:** a large downward revision to the 2Q and 3Q demand data (for example from new non-OECD or diesel figures), plus a post-midterm US strike campaign that pushes the 4Q outlook lower, could take the figure to -3.0 or below.\n- **High:** a Hormuz reopening deal before the data cut-off, combined with upward revisions to past months' demand (for example from stronger observed Chinese or US deliveries), could take it toward -2.2 or -2.0.\n\nPercentile 1: -3.4\nPercentile 5: -3.1\nPercentile 10: -2.95\nPercentile 20: -2.8\nPercentile 30: -2.72\nPercentile 40: -2.65\nPercentile 50: -2.61\nPercentile 60: -2.57\nPercentile 70: -2.5\nPercentile 80: -2.43\nPercentile 90: -2.3\nPercentile 95: -2.2\nPercentile 99: -1.9"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -2.9599,
+    "p25": -2.7705,
+    "p50": -2.6276,
+    "p75": -2.5125,
+    "p90": -2.3447
+  },
+  "usage": [
+    {
+      "question_id": "46650",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 1.9,
+      "notional_cost_usd": 0.00026000000000000003,
+      "input_tokens": 1151,
+      "output_tokens": 60,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0001307,
+      "input_tokens": 517,
+      "output_tokens": 55,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 64.9,
+      "notional_cost_usd": 0.24277650000000003,
+      "input_tokens": 57171,
+      "output_tokens": 4049,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.9,
+      "notional_cost_usd": 0.072208,
+      "input_tokens": 6437,
+      "output_tokens": 1036,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.5,
+      "notional_cost_usd": 0.07688400000000001,
+      "input_tokens": 6439,
+      "output_tokens": 1269,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.9,
+      "notional_cost_usd": 0.0007375999999999999,
+      "input_tokens": 2759,
+      "output_tokens": 372,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.8,
+      "notional_cost_usd": 0.0257496,
+      "input_tokens": 6437,
+      "output_tokens": 1103,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.0008493999999999999,
+      "input_tokens": 2858,
+      "output_tokens": 556,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00037604,
+      "input_tokens": 2759,
+      "output_tokens": 570,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0006867,
+      "input_tokens": 2777,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 0.00038884,
+      "input_tokens": 2858,
+      "output_tokens": 594,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00031991,
+      "input_tokens": 2777,
+      "output_tokens": 457,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 80.5,
+      "notional_cost_usd": 0.217173,
+      "input_tokens": 71054,
+      "output_tokens": 4125,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.9,
+      "notional_cost_usd": 0.074504,
+      "input_tokens": 6199,
+      "output_tokens": 1246,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.4,
+      "notional_cost_usd": 0.07472400000000001,
+      "input_tokens": 6199,
+      "output_tokens": 1257,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.9,
+      "notional_cost_usd": 0.076236,
+      "input_tokens": 6198,
+      "output_tokens": 1333,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0008369,
+      "input_tokens": 2843,
+      "output_tokens": 537,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0007945,
+      "input_tokens": 2851,
+      "output_tokens": 449,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.0008176000000000001,
+      "input_tokens": 2829,
+      "output_tokens": 504,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00037939,
+      "input_tokens": 2844,
+      "output_tokens": 575,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00031895999999999997,
+      "input_tokens": 2851,
+      "output_tokens": 454,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46650",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00037743,
+      "input_tokens": 2829,
+      "output_tokens": 571,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8675
+}
