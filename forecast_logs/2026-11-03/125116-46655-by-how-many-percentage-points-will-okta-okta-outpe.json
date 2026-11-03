@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-03T12:54:36.925575+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-03T12:51:16.444440+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46655,
+    "post_id": 46422,
+    "url": "https://www.metaculus.com/questions/46422",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "By how many percentage points will Okta (OKTA) outperform or underperform the software ETF IGV between the October 30 and November 13, 2026 market closes?",
+    "resolution_criteria": "This question resolves from Okta's (ticker OKTA) return minus the return of the iShares Expanded Tech-Software Sector ETF (ticker IGV) over the period from the October 30, 2026 regular-session close to the November 13, 2026 regular-session close, expressed in percentage points. Both returns are computed from the \"Close\" column of the daily historical tables at https://finance.yahoo.com/quote/OKTA/history/ and https://finance.yahoo.com/quote/IGV/history/.\n\nValue = [100 × (OKTA close on Nov 13, 2026 ÷ OKTA close on Oct 30, 2026)] − [100 × (IGV close on Nov 13, 2026 ÷ IGV close on Oct 30, 2026)], i.e. OKTA's percent change minus IGV's percent change. For example, if OKTA rises 5% and IGV rises 2% over the period, the question resolves as 3; if OKTA falls 4% while IGV rises 1%, it resolves as -5.\n\nIf either table has no November 13, 2026 row (for example because the exchange was closed for the whole session), the most recent session before November 14, 2026 that appears in both tables is used for both tickers. If the Yahoo Finance pages are unavailable, the corresponding \"Close\" values at https://stockanalysis.com/stocks/okta/history/ and https://stockanalysis.com/etf/igv/history/ are used; if both sites are unavailable, [credible sources](https://www.metaculus.com/faq/#definitions) will be used.",
+    "fine_print": "Only regular-session closing prices from the two tables are used; pre-market, after-hours and \"Adj Close\" values do not count. Both legs must be computed over the same pair of sessions.",
+    "close_time": "2026-11-03 15:45 UTC",
+    "scheduled_resolution_time": "2026-11-13 22:00 UTC"
+  },
+  "research": [
+    "I've finished researching and am writing up the findings.\n\n**Bottom line:** OKTA is already about **9 pp behind IGV** after one of the ten sessions. From the Oct 30 base, OKTA is down 11.22% and IGV is down 2.29%, so the running value is **-8.93 pp**. Nine sessions remain (Nov 3 to Nov 13).\n\n## 1. Resolution source\n- 2026-11-02: Yahoo's OKTA table shows Oct 30 close $208.24 and Nov 2 close $184.87. [Yahoo OKTA](https://finance.yahoo.com/quote/OKTA/history/)\n- 2026-11-02: The backup source, Stockanalysis's IGV table, shows Oct 30 close $104.29 and Nov 2 close $101.90. Both Oct 30 bases match the question's background. [Stockanalysis IGV](https://stockanalysis.com/etf/igv/history/)\n- Running value: OKTA 184.87/208.24 = -11.22%; IGV 101.90/104.29 = -2.29%; difference about **-8.93 pp**.\n- Recent OKTA closes: Oct 20 $194.02, Oct 21 $208.64, Oct 22 $201.33, Oct 23 $213.05, Oct 27 $226.07. Recent IGV closes: Oct 27 $111.78, Oct 28 $111.91, Oct 29 $107.97.\n- I couldn't find any Nov 3 price yet.\n\n## 2. Current status\n- Nothing settles the question yet, but it starts at about -9 pp. To finish at 0, OKTA would have to beat IGV by about 10% (relative to the Nov 2 level) over the next nine sessions.\n- 2026-11-02: OKTA fell 11.2% to $184.87. Volume was about 5.3M shares, against a 30-day average of about 3.3M. [GuruFocus](https://www.gurufocus.com/news/9163614/okta-inc-okta-shares-fall-112-gf-value-says-still-overvalued), [MarketChameleon](https://marketchameleon.com/Overview/OKTA/Summary/)\n\n## 3. Recent news (newest first)\n- 2026-11-03: MarketBeat reports OKTA closed below its 50-day moving average. [MarketBeat](https://www.marketbeat.com/instant-alerts/price-okta-nasdaq-okta-share-price-crosses-below-50-day-moving-average-time-to-sell-2026-11-03/)\n- 2026-11-02: StockStory says security stocks fell in the morning session: Okta -4.8%, Rapid7 -5.7%, Zscaler -4%, SentinelOne -4%, Qualys -2.7%. It blamed a software selloff: Oracle's $20B debt and equity raise, Alphabet and Amazon capex weighing on free cash flow, Check Point's Q3 miss, and Fortinet's weak bookings. It does not mention DHS. Okta then fell further, to -11% by the close, which looks partly stock-specific. I couldn't find a source that explains the late-day drop. [FinancialContent/StockStory](https://www.financialcontent.com/article/stockstory-2026-11-2-okta-zscaler-qualys-rapid7-and-sentinelone-shares-plummet-what-you-need-to-know)\n- 2026-11-02: Okta confirmed it will report Q3 FY27 results on Dec 1 after the close, which is after this question resolves. [wallstreet-online](https://www.wallstreet-online.de/nachricht/21622344-okta-to-announce-third-quarter-fiscal-year-2027-financial-results-on-december-1-2026)\n- 2026-11-02: OKTA was up 0.36% premarket. GuruFocus expected index-fund buying on Nov 2 and 3, and said the stock was up about 140% year to date. [Yahoo SG/GuruFocus](https://sg.finance.yahoo.com/news/okta-stock-rises-ahead-p-142941316.html)\n- 2026-10-30: S&P Dow Jones Indices said Okta will join the S&P 500 before the open on Nov 4, replacing Kenvue. [Teleborsa](https://www.teleborsa.it/News/2026/11/02/okta-sostituira-kenvue-nell-indice-s-p-500-143.html)\n- 2026-10-28 onward: DDoSecrets published the \"Icepick\" leak of more than 41,000 DHS records, which the \"Department of Peace\" says came from DHS's Okta login system. Okta told Reuters and WIRED it has \"no evidence our data or systems were compromised.\" DHS has only called it a \"potential breach.\" Some coverage notes both claims could be true, since the hacker points to DHS's own Okta setup rather than Okta's systems. I found no new confirmation from DHS or Okta. [Tech Insider](https://tech-insider.org/dhs-okta-data-leak-41000-staff-department-of-peace-2026/), [Slashdot/WIRED](https://tech.slashdot.org/story/26/10/28/2158201/), [Cyber Magazine](https://cybermagazine.com/news/dhs-data-leak-hackers-expose-41000-us-employees), [Daily Security Review](https://dailysecurityreview.com/?p=45127)\n\n## 4. Base rates\n- I didn't find a published history of OKTA's two-week returns relative to IGV. These figures come from the price tables above.\n- OKTA is very volatile right now. Daily moves in late October include +7.5% (Oct 21), -3.5%, +5.8%, +3.3%, -6.1% (Oct 30) and -11.2% (Nov 2), plus a roughly 10% one-day drop earlier in October. IGV's daily moves are usually 0.1 to 3.5%.\n- A rough estimate of my own, not from any source: with OKTA-specific daily swings of about 3 to 4%, the spread over the nine remaining sessions could easily move ±9 to 12 pp (one standard deviation).\n- Past Okta breaches, from my own memory and not verified here: the stock fell about 11.6% on Oct 20, 2023 after the support-system breach, and dropped sharply over several days after the LAPSUS$ disclosure in March 2022. In both cases Okta itself confirmed the intrusion, which hasn't happened this time.\n- Index inclusion: stocks often rise into the effective date and then partly give it back afterwards. Here OKTA fell during the buying window anyway.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on OKTA's return versus IGV.\n- Kalshi has related but non-matching markets on Okta's count of customers with more than $100k in annual contract value. For Q3, \"Above 5325\" is 0.62 and \"Above 5350\" is 0.28. For FY27, \"Above 5400\" is 0.66. These concern fundamentals, not the price spread, and I found no analyst forecasts on the spread.\n\n## 6. Upcoming events before Nov 13\n- 2026-11-03 close: the last session before Okta joins the S&P 500, so index funds will likely buy heavily at this close.\n- 2026-11-04: inclusion takes effect at the open, and any post-inclusion reversal would show up from here.\n- Any confirmation or denial of the DHS breach from DHS, CISA or Okta, or further DDoSecrets releases or reporting.\n- Earnings from other software and security companies during Nov 3 to 13 could move the sector and IGV. I didn't confirm specific dates.\n- Macro: the CPI release, likely around Nov 12 to 13 (date not confirmed), and AI-capex sentiment, which drove the Oct 30 and Nov 2 selloffs.\n- Nothing from Okta's own reporting calendar falls in the window: earnings are on Dec 1.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-03 12:51 UTC; check each market really matches the question)\n- Kalshi: Okta customers with acv over $100k in fiscal 2027 (customers with acv over $100k in 2027). Yes prices: Above 5400: 0.66; Above 5425: 0.34; Above 5450: 0.10; Above 5375: 0.90; Above 5475: 0.05; Above 5500: 0.03; Above 5350: 0.95.\n- Kalshi: Okta customers with acv over $100k in Q3 (customers with acv over $100k in Q3 2027 ). Yes prices: Above 5325: 0.62; Above 5350: 0.28; Above 5300: 0.88; Above 5375: 0.07; Above 5400: 0.04.\n- Kalshi: AFC Championship Matchup (AFC Championship (2026-27)). Yes prices: BUF Bills vs KC Chiefs: 0.19; BUF Bills vs CIN Bengals: 0.14; BUF Bills vs JAC Jaguars: 0.11; BAL Ravens vs KC Chiefs: 0.06; CIN Bengals vs KC Chiefs: 0.04; BUF Bills vs DEN Broncos: 0.07; JAC Jaguars vs KC Chiefs: 0.07; BAL Ravens vs NE Patriots: 0.01; HOU Texans vs NY Jets: 0.01; DEN Broncos vs KC Chiefs: 0.03.\n- Kalshi: US software developer unemployment next year (2027). Yes prices: Above 3.5%: 0.43; Above 3.0%: 0.67; Above 4.0%: 0.25; Above 4.5%: 0.15; Above 2.5%: 0.86; Above 5.0%: 0.09; Above 2.0%: 0.95; Above 6.0%: 0.06; Above 5.5%: 0.07.\n- Kalshi: When will OpenAI release Astra 6.1? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.33; Before Nov 13, 2026: 0.17; Before Nov 6, 2026: 0.07; Before Oct 30, 2026: 0.0100; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100.",
+    "I've finished checking the price tables and recent coverage, and I'm writing up the findings now.\n\n**Bottom line:** After one of the nine resolution sessions (Nov 2), the value stands at about **-8.9 pp**: OKTA is down 11.22% and IGV is down 2.29% from their Oct 30 closes. The source articles I found mention no DHS-specific news on Nov 2. Okta joins the S&P 500 at the open on Nov 4, which is the main known event before resolution.\n\n## 1. Resolution source\n- 2026-11-03: Yahoo Finance was not fetched. I used the stockanalysis.com fallback tables instead. OKTA closes: Oct 30 **$208.24**, Nov 2 **$184.87**. [stockanalysis OKTA](https://stockanalysis.com/stocks/okta/history/)\n- 2026-11-03: IGV closes: Oct 30 **$104.29**, Nov 2 **$101.90**. [stockanalysis IGV](https://stockanalysis.com/etf/igv/history/)\n- My calculation: OKTA -11.22%, IGV -2.29%, so the running value is **about -8.93 pp** after one session.\n- Zacks (via Yahoo) gives the same Nov 2 figures: OKTA closed at $184.87, down 11.22%, with the Nasdaq down 1.07%. It gives no reason for the move. [Yahoo/Zacks](https://sg.finance.yahoo.com/news/okta-okta-registers-bigger-fall-215003203.html)\n- One outlet (JKN) reported a close of $197.47, down 5.17%. That conflicts with the data providers and is probably an intraday figure. [JKN](https://news.jkn.co.kr/editions/english/post/1066154)\n\n## 2. Current status\n- Nothing settles the question yet. Eight sessions remain (Nov 3 to Nov 13), and OKTA is very volatile, so a gap of about -9 pp can still move a lot in either direction.\n- I could not find Nov 3 trading data.\n\n## 3. Recent news (newest first)\n- 2026-11-02: Okta will report Q3 FY2027 results after the close on Dec 1, which is after this question resolves. [wallstreet-online](https://www.wallstreet-online.de/nachricht/21622344-okta-to-announce-third-quarter-fiscal-year-2027-financial-results-on-december-1-2026)\n- 2026-11-02: StockStory says software stocks extended their selloff on worries about AI capital spending and slowing software bookings. Check Point fell after a Q3 sales miss. In the morning session, OKTA was down 4.8%, ZS -4%, RPD -5.7% and S -4%. OKTA then roughly doubled its loss by the close, and the article mentions no DHS news. [FinancialContent/StockStory](https://www.financialcontent.com/article/stockstory-2026-11-2-okta-zscaler-qualys-rapid7-and-sentinelone-shares-plummet-what-you-need-to-know)\n- 2026-11-02: OKTA was up 0.36% premarket because of the S&P 500 news, with index-fund buying expected Monday and Tuesday. [Yahoo](https://sg.finance.yahoo.com/news/okta-stock-rises-ahead-p-142941316.html)\n- 2026-10-30, after the close: S&P Dow Jones Indices announced that Okta replaces Kenvue in the S&P 500 effective before the open on Nov 4, moving up from the MidCap 400. Note that one of the collected news items wrongly says Okta replaces Kimberly-Clark. [S&P DJI announcement](https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20261030-1485650/1485650_kvue-ramp546.pdf), [EconoTimes](https://econotimes.com/Okta-to-Enter-S-P-500-as-Index-Changes-Take-Effect-Nov-4-1767369)\n- Late October: DHS still calls it only a \"potential breach,\" the link to Okta remains an unverified claim by the group, and Okta keeps denying any compromise of its systems. I found no new confirmation as of early November. [Nextgov](https://www.nextgov.com/cybersecurity/2026/10/dhs-personnel-leak-exposes-contact-details-and-sensitive-job-information/416901/), [this week in security](https://this.weekinsecurity.com/this-week-in-security-november-1-2026-edition/), [Tech Insider](https://tech-insider.org/dhs-okta-data-leak-41000-staff-department-of-peace-2026/)\n- Commentary pieces say the DHS headlines raise a \"trust question\" but do not clearly change the near-term business picture. [Simply Wall St](https://simplywall.st/stocks/us/software/nasdaq-okta/okta/news/okta-stock-after-reported-dhs-data-leak-raises-a-bigger-trus), [GuruFocus](https://www.gurufocus.com/news/9158480/data-breach-at-dhs-highlights-okta-okta-security-concerns-amid-overvaluation-debate)\n\n## 4. Base rates and volatility\n- In October 2026, OKTA had several single-day moves of 5 to 10%: -10.2% on Oct 16, +7.5% on Oct 21, -3.5% on Oct 22, +5.8% on Oct 23, -6.1% on Oct 30 and -11.2% on Nov 2. IGV's daily moves were mostly 1 to 4%. [stockanalysis OKTA](https://stockanalysis.com/stocks/okta/history/), [stockanalysis IGV](https://stockanalysis.com/etf/igv/history/)\n- Okta's 30-day implied volatility is about 84%, according to a search summary of Market Chameleon that I did not verify. My rough conversion: that implies about 15 to 17% standard deviation over 8 to 10 sessions. The spread versus IGV is probably somewhat smaller because the two move together.\n- Past two-week examples from the tables:\n  - Oct 16 to Oct 30: OKTA +11.2% vs IGV ±0%, about +11 pp.\n  - Oct 13 to Oct 27: OKTA -0.2% vs IGV +0.7%, about -0.9 pp.\n- Comparable breach: in October 2023, OKTA fell about 11.6% in one day when the support-system breach was disclosed. [Seeking Alpha](https://seekingalpha.com/news/4041020-okta-stock-falls-as-hack-saw-data-of-all-customer-support-users-stolen)\n- I did not find a systematic study of how stocks behave around S&P 500 additions. Generally, a stock tends to rise between the announcement and the effective date and can give some of that back afterward. Unusually, OKTA fell after this announcement.\n\n## 5. Other forecasts\n- None of the prediction markets I checked asks about OKTA's return versus IGV. The Kalshi Okta markets cover counts of customers with over $100k in annual contract value (Q3: \"above 5325\" at 0.62; FY2027: \"above 5400\" at 0.66). They resolve after earnings and are not directly relevant.\n- I did not find any analyst price-target changes tied to the DHS incident.\n\n## 6. Upcoming events before resolution\n- **Nov 3 (today):** last session for index funds to buy before the S&P 500 inclusion, with heavy closing-auction volume expected.\n- **Nov 4:** Okta becomes an S&P 500 member at the open.\n- **Throughout:** any DHS or Okta confirmation, forensic findings, a congressional or CISA statement, or an 8-K filing about the breach.\n- **Software-sector earnings and sentiment:** the AI-capex and software-bookings worries that drove late October and Nov 2 may keep moving both legs.\n- **Nov 11 (Veterans Day):** NYSE and Nasdaq normally stay open, so a Nov 13 close is expected for both tickers.\n- I found no scheduled Okta investor event before Dec 1.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-03 12:51 UTC; check each market really matches the question)\n- Kalshi: Okta customers with acv over $100k in fiscal 2027 (customers with acv over $100k in 2027). Yes prices: Above 5400: 0.66; Above 5425: 0.34; Above 5450: 0.10; Above 5375: 0.90; Above 5475: 0.05; Above 5500: 0.03; Above 5350: 0.95.\n- Kalshi: Okta customers with acv over $100k in Q3 (customers with acv over $100k in Q3 2027 ). Yes prices: Above 5325: 0.62; Above 5350: 0.28; Above 5300: 0.88; Above 5375: 0.07; Above 5400: 0.04.\n- Kalshi: AFC Championship Matchup (AFC Championship (2026-27)). Yes prices: BUF Bills vs KC Chiefs: 0.19; BUF Bills vs CIN Bengals: 0.14; BUF Bills vs JAC Jaguars: 0.11; BAL Ravens vs KC Chiefs: 0.06; CIN Bengals vs KC Chiefs: 0.04; BUF Bills vs DEN Broncos: 0.07; JAC Jaguars vs KC Chiefs: 0.07; BAL Ravens vs NE Patriots: 0.01; HOU Texans vs NY Jets: 0.01; DEN Broncos vs KC Chiefs: 0.03.\n- Kalshi: US software developer unemployment next year (2027). Yes prices: Above 3.5%: 0.43; Above 3.0%: 0.67; Above 4.0%: 0.25; Above 4.5%: 0.15; Above 2.5%: 0.86; Above 5.0%: 0.09; Above 2.0%: 0.95; Above 6.0%: 0.06; Above 5.5%: 0.07.\n- Kalshi: When will OpenAI release Astra 6.1? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.33; Before Nov 13, 2026: 0.17; Before Nov 6, 2026: 0.07; Before Oct 30, 2026: 0.0100; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -19.5,
+        "p25": -13.0,
+        "p50": -7.8,
+        "p75": -2.15,
+        "p90": 4.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. Nine trading sessions remain (Nov 3 to Nov 13), and the question resolves at the Nov 13, 2026 close.\n\n(b) **Latest known value (Nov 2, 2026 close):**\n- OKTA closed at $184.87, down 11.22% from its $208.24 base.\n- IGV closed at $101.90, down 2.29% from its $104.29 base.\n- The running spread is about **-8.9 pp**.\n\n(c) **If nothing changed:** about -8.9 pp.\n\n(d) **If the trend continued:** The Oct 30 to Nov 2 pattern would push the spread down a lot more, toward -20 pp or worse. A one-day move is a poor guide to trend, though.\n- The Nov 3 close is the S&P 500 inclusion buying session, which usually supports the price on that day.\n- Inclusion is followed by a post-effective-date reversal risk from Nov 4.\n- After an 11% one-day drop, some mean reversion is also plausible.\n- Overall I expect roughly a flat drift from here, with a slight tilt in either direction.\n\n(e) **Historical variation:**\n- OKTA's stock-specific daily moves are currently about 3 to 4%. Over 9 sessions that gives a standard deviation of roughly 9 to 11% on the Nov 2 price level.\n- Because OKTA is now about 11% below its base, that converts to roughly 8 to 10 pp of spread.\n- OKTA's beta to IGV is above 1, which widens the range if the software selloff continues or reverses.\n- Tails are fat. Unconfirmed breach news could be confirmed, and OKTA has already had several 6 to 11% single-day moves recently.\n\n(f) **Experts and markets:** There is no market on this spread. The Kalshi markets on customer counts are about fundamentals and are not relevant. Analysts point to sector-wide AI-capex and software weakness, and none attribute the drop to DHS.\n\n(g) **Unexpected scenarios:**\n- **Low:** DHS or CISA confirms the intrusion came through Okta, or a second leak lands, alongside post-inclusion selling. OKTA could then fall another 15 to 20% while IGV stabilizes, giving about -25 to -32 pp.\n- **High:** A sharp oversold bounce, the DHS story fading as a customer-side misconfiguration, and strong index-related demand. OKTA could recover to about $205 to $215 while IGV stays flat, giving about +5 to +15 pp.\n\nPercentile 1: -33\nPercentile 5: -24\nPercentile 10: -19.5\nPercentile 20: -14.5\nPercentile 30: -11.5\nPercentile 40: -9.5\nPercentile 50: -7.8\nPercentile 60: -6\nPercentile 70: -3.8\nPercentile 80: -0.5\nPercentile 90: 4\nPercentile 95: 7.5\nPercentile 99: 14"
+    },
+    {
+      "value": {
+        "p10": -21.0,
+        "p25": -13.75,
+        "p50": -7.5,
+        "p75": -1.25,
+        "p90": 5.5
+      },
+      "reasoning": "(a) **Time left:** Nine trading sessions remain, from Nov 3 to Nov 13. The outcome is known at the Nov 13 close, about 10 days from now.\n\n(b) **Latest value:** At the Nov 2, 2026 close, OKTA was at $184.87, down 11.22% from $208.24. IGV was at $101.90, down 2.29% from $104.29. The running value is about **-8.93 pp**.\n\n(c) **If nothing changed:** about -8.9 pp.\n\n(d) **If the trend continued:** OKTA has lagged sharply for two sessions. Some of that is the sector selloff and some looks stock-specific, possibly DHS-related. Extending it naively would give roughly -15 to -20 pp. Momentum this large tends to fade, though, and the Nov 3 index-inclusion buying could give a partial bounce. Post-inclusion weakness from Nov 4 is a common pattern that pushes the other way.\n\n(e) **Historical variation:** OKTA's stock-specific daily swings are currently about 3 to 4%. Over nine sessions that puts one standard deviation of the spread at roughly 9 to 11 pp, with fat tails.\n\n(f) **Experts and markets:** There are no markets on this spread. The Kalshi markets on Okta's large-customer counts concern fundamentals and say nothing useful about the price spread. Analysts have not commented on it.\n\n(g) **Unexpected scenarios:**\n- **Low:** DHS or CISA confirms that Okta's own systems were compromised, or a further DDoSecrets release shows a broader breach. Index buyers then unwind after inclusion, and OKTA ends 20 to 30% below IGV.\n- **High:** DHS clarifies that the intrusion came from its own misconfiguration rather than Okta, short-covering follows the oversold drop and a rebound in security stocks, and OKTA gains 15% or more relative to IGV.\n\nI keep the median slightly above the current value to allow for a partial rebound after an oversold move. The distribution is wide and skewed a little to the downside to account for breach-confirmation risk.\n\nPercentile 1: -36\nPercentile 5: -26\nPercentile 10: -21\nPercentile 20: -15.5\nPercentile 30: -12\nPercentile 40: -9.5\nPercentile 50: -7.5\nPercentile 60: -5.5\nPercentile 70: -3\nPercentile 80: 0.5\nPercentile 90: 5.5\nPercentile 95: 10\nPercentile 99: 19"
+    },
+    {
+      "value": {
+        "p10": -18.5,
+        "p25": -12.75,
+        "p50": -8.3,
+        "p75": -3.5,
+        "p90": 2.0
+      },
+      "reasoning": "(a) **Time left:** About 9 trading sessions (Nov 3 to Nov 13, 2026). The outcome will be known at the Nov 13 close, around 22:00 UTC.\n\n(b) **Latest known value:** As of the Nov 2, 2026 close, OKTA was at $184.87, down 11.22% from $208.24, and IGV was at $101.90, down 2.29% from $104.29. The running value is about **-8.9 pp**.\n\n(c) **If nothing changed:** The question would resolve at about -8.9 pp.\n\n(d) **If the current trend continued:** OKTA would keep sliding relative to IGV, plausibly reaching -15 to -20 pp. However, one-day collapses like Nov 2 rarely repeat every day. Some partial reversal after a sharp drop, and some reversal after the S&P 500 inclusion takes effect, roughly offset each other.\n\n(e) **Historical variation:** OKTA's stock-specific daily swings are currently about 3% or more, with recent moves of +7.5%, -6.1% and -11.2%. Over 9 sessions that implies a one-standard-deviation spread of roughly ±7 to 10 pp, with fat tails from breach headlines.\n\n(f) **Experts and markets:** There is no market on this spread. The Kalshi markets on customer counts are about fundamentals and not relevant here. Sell-side views on the spread are not available.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** DHS or CISA confirms the intrusion came through Okta, or Okta itself acknowledges a compromise. That could trigger another 15 to 25% drop, putting the value near -30 pp or lower.\n- **High outcome:** DHS attributes the breach to its own misconfiguration, which clears Okta. That, combined with an oversold bounce, buying after the S&P 500 inclusion and a sector rally led by high-beta names, could take the value to about +10 to 15 pp.\n\nPercentile 1: -33\nPercentile 5: -23\nPercentile 10: -18.5\nPercentile 20: -14\nPercentile 30: -11.5\nPercentile 40: -9.7\nPercentile 50: -8.3\nPercentile 60: -6.8\nPercentile 70: -4.8\nPercentile 80: -2.2\nPercentile 90: 2\nPercentile 95: 5.5\nPercentile 99: 13"
+    },
+    {
+      "value": {
+        "p10": -20.5,
+        "p25": -13.4,
+        "p50": -7.8,
+        "p75": -1.7,
+        "p90": 5.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. Eight trading sessions remain, Nov 3 through Nov 13. The question resolves at the Nov 13, 2026 close.\n\n(b) **Latest known value:** As of the Nov 2, 2026 close (stockanalysis fallback tables), OKTA was $184.87, down 11.22% from $208.24, and IGV was $101.90, down 2.29% from $104.29. That puts the spread at about -8.9 pp.\n\n(c) **If nothing changed:** About -8.9 pp.\n\n(d) **If the current trend continued:** OKTA has lagged IGV sharply over the last two sessions. If that continued, the spread would reach roughly -20 pp or lower. Momentum this extreme rarely persists in a straight line, though. Some mean reversion after an 11% one-day drop with no specific news is about as plausible as further decline.\n\n(e) **Historical variation:**\n- OKTA's daily moves recently ran 5-10%, and IGV's ran 1-4%.\n- Implied volatility of about 84% suggests about a 15% standard deviation for OKTA over 8 sessions.\n- Because OKTA moves partly with the sector, its excess move over IGV has a smaller standard deviation of about 10-11%.\n- Since OKTA's starting value is already about 0.89 of the base, that comes to roughly 9-10 pp of standard deviation on the final value, with fat tails.\n- Recent two-week spreads ranged from about -1 to +11 pp.\n\n(f) **Expert and market expectations:** There is no market on this quantity. S&P 500 inclusion takes effect Nov 4. Stocks often give back some gains after inclusion, but OKTA already fell after the announcement, so this effect is ambiguous. Commentators treat the DHS breach as a trust issue without a clear near-term financial impact. Okta continues to deny any compromise.\n\n(g) **Unexpected scenarios:**\n- **Low:** DHS, CISA or forensic findings confirm that Okta's own systems were compromised, possibly with an 8-K filing or federal customer reviews. OKTA could fall another 15-20% while IGV stabilizes, giving about -30 pp.\n- **High:** The breach is attributed to a DHS-side credential compromise, which clears Okta. Combined with a short-covering and oversold bounce after the S&P inclusion, OKTA could rally 15-20% relative to the sector, giving about +10 to +15 pp.\n\nPercentile 1: -35\nPercentile 5: -25\nPercentile 10: -20.5\nPercentile 20: -15\nPercentile 30: -11.8\nPercentile 40: -9.6\nPercentile 50: -7.8\nPercentile 60: -5.8\nPercentile 70: -3.4\nPercentile 80: 0\nPercentile 90: 5\nPercentile 95: 9\nPercentile 99: 17"
+    },
+    {
+      "value": {
+        "p10": -22.0,
+        "p25": -14.0,
+        "p50": -7.5,
+        "p75": -1.25,
+        "p90": 5.5
+      },
+      "reasoning": "**(a) Time left:** Eight trading sessions remain (Nov 3 to Nov 13). Resolution comes at the Nov 13 close, about 10 days from now.\n\n**(b) Latest known value:** The latest closes are from Nov 2, 2026 (stockanalysis fallback). OKTA closed at $184.87 (-11.22%) and IGV at $101.90 (-2.29%). That puts the spread at about **-8.9 pp**.\n\n**(c) If nothing changed:** About -8.9 pp.\n\n**(d) If the trend continued:** OKTA has fallen much more than IGV in this selloff: -6.1% on Oct 30 and -11.2% on Nov 2. If that kept going, the spread could reach -15 to -25 pp. However, OKTA's daily moves in October flipped direction often, so the current trend is a weak signal.\n\n**(e) Historical variation:** OKTA implied volatility is about 84% annualized. Assuming a beta of about 1.2 to 1.4 against IGV, the residual (non-sector) volatility is roughly 55 to 65% annualized. Over 8 sessions, that gives a spread standard deviation of about 10 to 12 pp. Past two-week spreads have ranged from about -1 pp to +11 pp.\n\n**(f) Expert and market expectations:** No market prices this quantity. Two known events pull in opposite directions:\n- The S&P 500 inclusion takes effect Nov 4. Index buying may support the Nov 3 close, but stocks often give back some gains after the effective date.\n- The DHS breach claim is still unconfirmed, and Okta denies it. Commentators frame it as a \"trust question\" with no clear near-term impact on the business.\n\nI expect a slight bounce after the 11% no-news drop, roughly offset by possible weakness after inclusion. I center the median near -7.5 pp, with a fat left tail.\n\n**(g) Scenarios:**\n- **Low:** DHS, CISA or Okta confirms that the Okta environment was compromised, possibly with an 8-K filing or reports of other affected customers. OKTA falls another 15 to 25% while IGV stabilizes, taking the spread to -30 pp or worse.\n- **High:** DHS traces the leak to a non-Okta source, and a high-beta software rebound lifts OKTA 15 to 20% against IGV's +5%. That would take the spread to about +5 to +15 pp.\n\nPercentile 1: -38\nPercentile 5: -27\nPercentile 10: -22\nPercentile 20: -16\nPercentile 30: -12\nPercentile 40: -9.5\nPercentile 50: -7.5\nPercentile 60: -5.5\nPercentile 70: -3\nPercentile 80: 0.5\nPercentile 90: 5.5\nPercentile 95: 10\nPercentile 99: 18"
+    },
+    {
+      "value": {
+        "p10": -21.0,
+        "p25": -13.75,
+        "p50": -7.5,
+        "p75": -1.25,
+        "p90": 5.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. Eight trading sessions remain (Nov 3 to Nov 13), and the question resolves at the Nov 13 close.\n\n(b) **Latest known value:** As of the Nov 2, 2026 close (stockanalysis fallback, confirmed by Zacks), OKTA was at $184.87, down 11.22%, and IGV was at $101.90, down 2.29%. The running value is about **-8.9 pp**.\n\n(c) **If nothing changed:** About -8.9 pp.\n\n(d) **If the current trend continued:** Okta's company-specific weakness on Oct 30 and Nov 2 came on top of a software selloff. If it kept going, the result could reach -15 to -20 pp. Short-term relative moves in OKTA have tended to partly reverse, though, as with the +11 pp swing between Oct 16 and Oct 30. So I give the trend only light weight.\n\n(e) **Historical variation:** OKTA's recent daily moves are about 5%, and IGV's are about 2%, with substantial correlation. That puts the relative daily volatility at roughly 3.5 to 4%. Over 8 sessions that is about 10 to 11 pp standard deviation, slightly dampened because further OKTA moves now apply to a base about 11% lower. Two-week relative moves of plus or minus 11 pp have occurred recently. The tails are fat, because a confirmed breach could repeat the roughly 12% one-day drop seen in 2023.\n\n(f) **Experts and markets:** There is no market on this quantity. Commentators describe the DHS issue as a \"trust question\" without clear business impact. The S&P 500 inclusion takes effect Nov 4. Index buying had been expected to support the price, yet the stock fell anyway. After inclusion, the stock could either drift back up or give back gains, so I treat it as roughly neutral, with a slight rebound bias after an outsized one-day drop.\n\n(g) **Unexpected scenarios:**\n- **Low:** DHS, CISA or Okta confirms that the SSO environment was compromised, or an 8-K or congressional inquiry follows. OKTA falls another 15 to 20% while IGV stabilizes, giving about -25 to -30 pp.\n- **High:** The breach claim is debunked, for example traced to another system. Okta sharply recovers its Nov 2 drop through dip-buying and new index ownership while software stays flat, giving about +5 to +12 pp.\n\nPercentile 1: -33\nPercentile 5: -25\nPercentile 10: -21\nPercentile 20: -15.5\nPercentile 30: -12\nPercentile 40: -9.5\nPercentile 50: -7.5\nPercentile 60: -5.5\nPercentile 70: -3\nPercentile 80: 0.5\nPercentile 90: 5\nPercentile 95: 9\nPercentile 99: 16"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -20.8538,
+    "p25": -13.5768,
+    "p50": -7.6192,
+    "p75": -1.364,
+    "p90": 5.3028
+  },
+  "usage": [
+    {
+      "question_id": "46655",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0001244,
+      "input_tokens": 523,
+      "output_tokens": 40,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0004236,
+      "input_tokens": 1309,
+      "output_tokens": 324,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 77.8,
+      "notional_cost_usd": 0.269264,
+      "input_tokens": 82041,
+      "output_tokens": 4479,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.073264,
+      "input_tokens": 6309,
+      "output_tokens": 1140,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.5,
+      "notional_cost_usd": 0.077492,
+      "input_tokens": 6310,
+      "output_tokens": 1351,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.0007209,
+      "input_tokens": 2778,
+      "output_tokens": 331,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.0007876000000000001,
+      "input_tokens": 2924,
+      "output_tokens": 406,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.8,
+      "notional_cost_usd": 0.027512,
+      "input_tokens": 6310,
+      "output_tokens": 1192,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.3,
+      "notional_cost_usd": 0.00036001999999999996,
+      "input_tokens": 2776,
+      "output_tokens": 538,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.8,
+      "notional_cost_usd": 0.00025048,
+      "input_tokens": 2922,
+      "output_tokens": 316,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.6,
+      "notional_cost_usd": 0.000804,
+      "input_tokens": 2731,
+      "output_tokens": 516,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00021726000000000004,
+      "input_tokens": 2731,
+      "output_tokens": 253,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 78.3,
+      "notional_cost_usd": 0.24728080000000002,
+      "input_tokens": 70590,
+      "output_tokens": 4676,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.8,
+      "notional_cost_usd": 0.077224,
+      "input_tokens": 6379,
+      "output_tokens": 1310,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.077304,
+      "input_tokens": 6379,
+      "output_tokens": 1314,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.3,
+      "notional_cost_usd": 0.08050399999999999,
+      "input_tokens": 6379,
+      "output_tokens": 1474,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.0008617000000000001,
+      "input_tokens": 2892,
+      "output_tokens": 567,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0008343000000000001,
+      "input_tokens": 2880,
+      "output_tokens": 517,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008412000000000001,
+      "input_tokens": 2897,
+      "output_tokens": 524,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00035465999999999997,
+      "input_tokens": 2890,
+      "output_tokens": 525,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00037944,
+      "input_tokens": 2880,
+      "output_tokens": 574,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46655",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00027343,
+      "input_tokens": 2898,
+      "output_tokens": 362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9371
+}
