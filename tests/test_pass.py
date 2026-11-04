@@ -211,6 +211,59 @@ def test_timeout_kills_a_call_and_its_children() -> None:
     assert (datetime.now(timezone.utc) - started).total_seconds() < 45
 
 
+PERCENTILES = (1, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99)
+SWISS_REGIONS = SimpleNamespace(lower_bound=1.5, upper_bound=25.5, open_lower_bound=True, open_upper_bound=True, zero_point=None, cdf_size=25)
+
+
+def combined(values: tuple[float, ...]) -> list[float]:
+    """CDF of two copies of a forecast combined the way the library combines forecasts."""
+    from forecasting_tools import NumericDistribution, Percentile
+    from forecasting_tools.data_models.numeric_report import NumericReport
+
+    raw = [Percentile(percentile=p / 100, value=v) for p, v in zip(PERCENTILES, values)]
+    member = forecaster.keep_values_increasing(NumericDistribution.from_question(raw, SWISS_REGIONS))
+    assert [p.value for p in member.declared_percentiles] == sorted(p.value for p in member.declared_percentiles)
+    final = asyncio.run(NumericReport.aggregate_predictions([member, member], SWISS_REGIONS))
+    return [p.percentile for p in final.get_cdf()]
+
+
+def test_values_beyond_a_bound_stay_in_order() -> None:
+    # One of the forecasts on question 46337 that failed two passes on 4 Nov 2026.
+    cdf = combined((0, 0, 1, 1.5, 2, 2.6, 3, 3.6, 4.5, 6, 8.5, 11, 17))
+    assert abs(cdf[0] - 0.2) < 0.01, cdf[0]  # percentile 20 sits on the lower bound
+    cdf = combined((2, 3, 4, 5, 6, 8, 10, 13, 18, 26, 30, 30, 30))
+    assert abs(cdf[-1] - (0.7 + 0.1 * 7.5 / 8)) < 0.01, cdf[-1]  # 25.5 is 7.5 of the 8 from 18 to 26
+
+
+def test_each_forecast_is_put_in_order_before_combining() -> None:
+    from forecasting_tools import NumericDistribution, Percentile
+
+    raw = [Percentile(percentile=p / 100, value=v) for p, v in zip(PERCENTILES, (0, 0, 1, 1.5, 2, 2.6, 3, 3.6, 4.5, 6, 8.5, 11, 17))]
+    member = NumericDistribution.from_question(raw, SWISS_REGIONS)
+
+    async def make(self, question, research):
+        return forecaster.ReasonedPrediction(prediction_value=member, reasoning="why")
+
+    parent = forecaster.FallTemplateBot2026
+    real = parent._make_prediction
+    parent._make_prediction = make
+    try:
+        bot = object.__new__(forecaster.ClaudeForecaster)
+        result = asyncio.run(bot._make_prediction(None, ""))
+    finally:
+        parent._make_prediction = real
+    values = [p.value for p in result.prediction_value.declared_percentiles]
+    assert values == sorted(values) and result.reasoning == "why", values
+
+
+def test_forecast_already_in_order_is_left_alone() -> None:
+    from forecasting_tools import NumericDistribution, Percentile
+
+    raw = [Percentile(percentile=p / 100, value=v) for p, v in zip(PERCENTILES, (0, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 30))]
+    member = NumericDistribution.from_question(raw, SWISS_REGIONS)
+    assert forecaster.keep_values_increasing(member) is member
+
+
 def test_group_post_url_gives_each_subquestion() -> None:
     client = SimpleNamespace(get_question_by_url=lambda url, group_question_mode: ["a", "b"] if "group" in url else "c")
     assert run_bot.questions_at(client, ["x/group", "x/single"]) == ["a", "b", "c"]

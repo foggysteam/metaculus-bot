@@ -41,7 +41,7 @@ from market_pulse import spot_time
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-10-29.1"
+BOT_VERSION = "2026-11-04.1"
 
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
@@ -165,6 +165,24 @@ def usable_option_lists(predictions: list[PredictedOptionList], options: list[st
     return usable or predictions
 
 
+def keep_values_increasing(distribution: NumericDistribution) -> NumericDistribution:
+    """Puts back in order a forecast the library has scrambled. It moves repeated values at or
+    beyond a bound to just beside the bound but leaves a single one where it is, so on 4 Nov 2026
+    question 46337 (lower bound 1.5) got 0, 0, 1, 1.5 turned into 1.4999999999, 1.4999999999, 1,
+    1.5, and combining the forecasts failed two passes. Only the last value at or below the lower
+    bound and the first at or above the upper bound shape the CDF, so the others are dropped."""
+    points = sorted(distribution.declared_percentiles, key=lambda p: p.percentile)
+    if all(a.value <= b.value for a, b in zip(points, points[1:])):
+        return distribution
+    below = [i for i, p in enumerate(points) if p.value <= distribution.lower_bound]
+    above = [i for i, p in enumerate(points) if p.value >= distribution.upper_bound]
+    dropped = set(below[:-1]) | set(above[1:])
+    kept = [p for i, p in enumerate(points) if i not in dropped]
+    if len(kept) < 2 or any(a.value > b.value for a, b in zip(kept, kept[1:])):
+        return distribution
+    return type(distribution)(**{**distribution.model_dump(), "declared_percentiles": kept})
+
+
 class ClaudeForecaster(FallTemplateBot2026):
     # Research runs two questions at a time, so one stalled call cannot hold up every other
     # question; forecasts are capped in claude_code_llm.
@@ -227,6 +245,13 @@ class ClaudeForecaster(FallTemplateBot2026):
         if isinstance(question, MultipleChoiceQuestion):
             return restore_option_names(floor_options(aggregate), question.options)
         return aggregate
+
+    async def _make_prediction(self, question: MetaculusQuestion, research: str):
+        prediction = await super()._make_prediction(question, research)
+        if isinstance(prediction.prediction_value, NumericDistribution):
+            fixed = keep_values_increasing(prediction.prediction_value)
+            prediction = prediction.model_copy(update={"prediction_value": fixed})
+        return prediction
 
     async def _research_and_make_predictions(self, question: MetaculusQuestion):
         collection = await super()._research_and_make_predictions(question)
