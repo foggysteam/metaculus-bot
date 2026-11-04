@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-04T03:20:06.755939+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-04T03:16:32.779752+00:00",
+  "published": false,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46657,
+    "post_id": 46424,
+    "url": "https://www.metaculus.com/questions/46424",
+    "type": "DiscreteQuestion",
+    "unit": "¢/dozen",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What national wholesale price for graded, loose, white Large shell eggs will the USDA AMS Egg Markets Overview dated November 13, 2026 report? (cents per dozen)",
+    "resolution_criteria": "This question resolves to the single price stated in the USDA AMS \"Egg Markets Overview\" report dated November 13, 2026, in the sentence reporting the \"wholesale prices for national trading of truck lot quantities of graded, loose, white Large shell eggs\" (the sentence typically reads like \"Wholesale prices for national trading of truck lot quantities of graded, loose, white Large shell eggs were $0.01 lower at $0.28 per dozen with a steady undertone\"). The edition is available from the AMS report archive at https://mymarketnews.ams.usda.gov/viewReport/3725 (select the 2026 releases and open the November 13, 2026 PDF) and, on its publication day, at https://www.ams.usda.gov/mnreports/ams_3725.pdf. The value is expressed in cents per dozen: a report stating \"$0.35 per dozen\" resolves as 35, and a report stating \"35 cents per dozen\" also resolves as 35. Only that one price counts; other prices in the same report (New York formula cartoned, Midwest warehouse-delivered, Midwest producer, California benchmarks, breaking stock, egg products) are disregarded.",
+    "fine_print": "If the edition dated November 13, 2026 is not published, or is published without this line, this question resolves to the value for the same line in the next edition of the Egg Markets Overview that reports it. If the report stops publishing this line entirely and no later edition reports it, the question is annulled.",
+    "close_time": "2026-11-03 16:44 UTC",
+    "scheduled_resolution_time": "2026-11-13 22:00 UTC"
+  },
+  "research": [
+    "I found no November 6 or November 13 edition yet. The latest daily data suggests the market is firming, though. The weekly report's line appears to be the Friday value of the USDA's daily 5-day rolling index, rounded: the October 30 edition said $0.35 and the October 30 daily index was 34.90¢. My figures are all from secondary sites (IndexBox, The Scramble) that republish USDA data, not from the USDA files themselves.\n\n## 1. Resolution source\n- 2026-11-04: The live AMS PDF (ams_3725.pdf) loads (status 200), but my tool can't read PDF text, so I couldn't confirm which edition it currently holds. [AMS](https://www.ams.usda.gov/mnreports/ams_3725.pdf)\n- 2026-10-30 edition (latest I could confirm): national loose white Large eggs up 7¢ to 35¢/dozen, steady undertone. Midwest warehouse-delivered steady at 54¢, Midwest producer price 36¢, California benchmark $1.10. [IndexBox](https://www.indexbox.io/blog/usda-egg-markets-overview-wholesale-egg-prices-rise-as-inventories-climb/)\n- The leading daily series is the USDA Daily National Shell Egg Index (AMS 2843), a 5-day weighted average for conventional graded loose white Large eggs. [AMS 2843](https://mymarketnews.ams.usda.gov/viewReport/2843)\n  - 2026-11-02: 35.42¢ (prior 34.90), range 21-54¢, 25,728 cases. Undertone steady to firm, light demand for loose eggs. [IndexBox](https://www.indexbox.io/blog/usda-daily-shell-egg-index-report-national-prices-steady-to-higher-on-2-november-2026/)\n  - 2026-11-03: 39.36¢, up 3.94¢, 36,000 cases. Undertone steady to firm, moderate retail demand, light domestic demand for loose eggs, moderate to good export demand. Supplies moderate to fully adequate, Medium eggs tighter. 6-Area shell egg inventory up 3.9% on the week. A year earlier it was 175.32¢. [IndexBox](https://www.indexbox.io/blog/usda-daily-national-shell-egg-index-report-nov-3-2026/)\n  - Recent sequence per The Scramble: 33.1, then 34.5, 34.9 (Oct 30), 35.4 (Nov 2), 39.4 (Nov 3). That is up 26% week over week but down 14.7% from 46.1¢ a month earlier. [The Scramble](https://the-scramble.com/national/large-white)\n\n## 2. Current status\n- Nothing has settled the question. The November 6 edition had not been published as of this research. The daily index was 39.4¢ on 2026-11-03, already above the 35¢ weekly print and still rising. [The Scramble](https://the-scramble.com/national/large-white)\n\n## 3. Recent news (newest first)\n- 2026-11-03: New York store-door Large white quoted at 79-83¢. The weekly report's New York formula price was 72¢ on Oct 30, but these may be on different bases, so I can't say for sure that New York firmed. [The Scramble](https://the-scramble.com/national/large-white)\n- 2026-11-03: Other sizes moved in different directions. Extra Large rose 38.9% on the week to 41.3¢. Medium was 23.0¢ as of Oct 30, down 18.6%. [The Scramble](https://the-scramble.com/national/large-white)\n- 2026-11-02: National shell egg inventory was 1,653 thousand 30-dozen cases, 15% above the 5-year median. Supply is heavy, which pushes against the price rise. [The Scramble](https://the-scramble.com/)\n- 2026-10-26 week: Midwest, Northeast, Southeast and South Central warehouse-delivered prices were all unchanged. [The Scramble](https://the-scramble.com/national/large-white)\n- HPAI: The Scramble's weekly brief for the week of Oct 19 counted 14 detections and 17.0M layer birds year to date, including the 934,600-bird Illinois flock confirmed Oct 19. I found no confirmed US layer detections dated November 2026, and I couldn't verify the October 28 California detection mentioned in the question background. [The Scramble HPAI](https://the-scramble.com/hpai/layer-flocks)\n\n## 4. Base rates\n- The 2026 weekly series runs from about 24¢ (mid-June) to about 151¢ (March). Recent prints: Sep 4 35, Sep 18 35, Sep 25 39, Oct 2 about 46 (per IndexBox), Oct 9 43, Oct 16 29, Oct 23 28, Oct 30 35. Over the two weeks from Oct 9 to Oct 23 the price fell 15¢. Over the two weeks from Oct 16 to Oct 30 it rose 6¢. [IndexBox](https://www.indexbox.io/blog/usda-egg-markets-overview-wholesale-egg-prices-rise-as-inventories-climb/)\n- Year-earlier comparison: the daily index was about 164-175¢ in early November 2025, and an October 2025 edition printed $1.16. Last year's levels were much higher and HPAI-driven, so they say little about this year's level. I couldn't find the November 14, 2025 edition to check the seasonal direction. [Poultry Times](https://www.poultrytimes.com/?p=17496)\n- Because the daily index is a 5-day rolling average, a jump like Nov 3's reflects higher individual trades that will keep feeding the average through the week.\n\n## 5. Other forecasts\n- No prediction market covers this weekly line.\n- Polymarket \"Price of Dozen Eggs in October\" (this is the BLS retail price, a different measure): $2.20-2.30 at 0.675.\n- Kalshi \"Egg prices up in October\" (CPI): Yes at 0.33.\n- Neither market matches this question; both are retail measures.\n- I found no expert forecasts.\n\n## 6. Upcoming events before resolution\n- 2026-11-06 (Fri): Egg Markets Overview edition, likely to roughly match the Nov 6 daily index.\n- Daily AMS 2843 index every business day through Nov 13; the Nov 13 daily value is probably the best proxy for the answer.\n- Weekly inventory and Shell Egg Demand Indicator updates.\n- Any APHIS-confirmed layer detection, especially a large Midwest one.\n- Pre-Thanksgiving retail feature buying.\n- The NASS Chickens and Eggs report (about Nov 20) and the ERS Outlook (about Nov 17) both come after resolution.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-04 03:16 UTC; check each market really matches the question)\n- Kalshi: McDonald's Egg McMuffin price in November (November 2026). Yes prices: At least $4.82: 0.54; At least $4.83: 0.47; At least $4.81: 0.61; At least $4.80: 0.71; At least $4.79: 0.80; At least $4.78: 0.86; At least $4.77: 0.96.\n- Kalshi: Egg prices up in October? (In Oct 2026). Yes prices: Above 0%: 0.33.\n- Kalshi: Chicken wing · Average US wholesale price in November (November 2026). Yes prices: Above 100¢ per pound: 0.51; Above 105¢ per pound: 0.30; Above 95¢ per pound: 0.73; Above 110¢ per pound: 0.14; Above 90¢ per pound: 0.88; Above 115¢ per pound: 0.06; Above 85¢ per pound: 0.95; Above 130¢ per pound: 0.0000; Above 135¢ per pound: 0.0000; Above 125¢ per pound: 0.0000.\n- Kalshi: US corn yield in the January 2027 USDA report (the 2026/27 marketing year). Yes prices: Below 181.2 bu/acre: 0.54; Above 181.2 bu/acre: 0.43; Exactly 181.2 bu/acre: 0.04.\n- Kalshi: EU beef price by end of next month? (Observation window: Oct 1, 2026 through Dec 31, 2026). Yes prices: 6% or more above base: 0.51; 7% or more above base: 0.48; 8% or more above base: 0.47; 5% or more above base: 0.55; 9% or more above base: 0.39; 4% or more above base: 0.61; 10% or more above base: 0.32; 3% or more above base: 0.69; 11% or more above base: 0.29; 12% or more above base: 0.26.\n- Polymarket: U19 World Cup: Bangladesh Under-19s vs USA Under-19s - More Markets (ends 2026-01-30). [Yes, No] prices: U19 World Cup: Bangladesh Under-19s vs USA Under-19s - Who wins the toss?: [\"1\", \"0\"]; U19 World Cup: Bangladesh Under-19s vs USA Under-19s - Completed match?: [\"1\", \"0\"]\n- Polymarket: Price of Dozen Eggs in October? (ends 2026-11-11). [Yes, No] prices: <$1.90: [\"0.0015\", \"0.9985\"]; $1.90 to $2.00: [\"0.0085\", \"0.9915\"]; $2.00 to $2.10: [\"0.018\", \"0.982\"]; $2.10 to $2.20: [\"0.155\", \"0.845\"]; $2.20 to $2.30: [\"0.675\", \"0.325\"]; $2.30 to $2.40: [\"0.15\", \"0.85\"]",
+    "**Bottom line:** The November 13 report isn't out yet, and neither is the November 6 edition. The latest daily data shows the loose white Large price rising: 34.90¢ on Oct 30, 35.42¢ on Nov 2 and 39.36¢ on Nov 3. The market tone is \"steady to firm\". In the cases I could check, the weekly figure matched the Friday daily figure, rounded.\n\n## 1. Resolution source\n- 2026-11-04: I fetched the current AMS PDF (ams_3725.pdf), but the tool can't read PDFs. Search results show the latest edition is dated October 30, 2026. [AMS](https://www.ams.usda.gov/mnreports/ams_3725.pdf)\n- 2026-10-30 edition: national truck-lot graded loose white Large was up 7¢ at 35¢ per dozen, steady undertone. Retail demand was moderate and loose egg demand light to moderate. Inventory available for marketing was up 7% (national Large up 11%, Midwest Large up 19%). The Shell Egg Demand Indicator was -4.70, down 8.3 points. [IndexBox summary](https://www.indexbox.io/blog/usda-egg-markets-overview-wholesale-egg-prices-rise-as-inventories-climb/)\n- Earlier readings: Oct 23, 28¢; Oct 2, 46¢; Sep 25, 39¢ (up 4¢); Aug 7, 98¢. [Sep 25 PDF](https://mymarketnews.ams.usda.gov/filerepo/sites/default/files/3725/2026-09-25/1354082/ams_3725_00151.pdf), [Aug 7 PDF](https://mymarketnews.ams.usda.gov/filerepo/sites/default/files/3725/2026-08-07/1343191/ams_3725_00144.pdf)\n- **Daily data that leads the weekly number:** the AMS Daily National Shell Egg Index (ams_2843, labelled a 5-day rolling average). Its caged loose white Large weighted average was 34.90¢ on Oct 30, the same day the weekly report said 35¢. That suggests the weekly figure tracks the Friday daily index, rounded. I checked this only for Oct 30, so it is an inference. [AMS 2843](https://www.ams.usda.gov/mnreports/ams_2843.pdf)\n\n## 2. Current status\n- Nothing settles the question yet. The Nov 6 edition is due Friday, and the Nov 13 edition is the one that resolves it.\n- 2026-11-02: daily loose white Large was 35.42¢, up 0.52¢. The range was 21 to 54¢ on 25,728 cases. Undertone was steady to firm, \"lightly tested\"; retail demand moderate, loose demand light; supplies moderate to fully adequate. The year-ago figure was 163.78¢. [IndexBox](https://www.indexbox.io/blog/usda-daily-shell-egg-index-report-national-prices-steady-to-higher-on-2-november-2026/)\n- 2026-11-03: daily loose white Large was 39.36¢, up 3.94¢, on 36,000 cases. Undertone steady to firm; export demand moderate to good; the 6-area inventory was up 3.9% week on week. The year-ago figure was 175.32¢. [IndexBox](https://www.indexbox.io/blog/usda-daily-national-shell-egg-index-report-nov-3-2026/)\n\n## 3. Recent news\n- 2026-11-02: California cage-free Large delivered price rose 5.44¢ to 65.27¢; the California undertone was firm to higher. [IndexBox](https://www.indexbox.io/blog/usda-daily-shell-egg-index-report-national-prices-steady-to-higher-on-2-november-2026/)\n- 2026-10-28: HPAI confirmed in a 1.3 million-hen layer flock in Stanislaus County, California. [WATTPoultry](https://www.wattagnet.com/poultry-meat/diseases-health/avian-influenza/news/16050490/13-million-california-laying-hens-struck-by-avian-flu)\n- Illinois, 934,600 hens: WATTPoultry search results give Oct 9 as the confirmation date, while the question background says Oct 19. I did not resolve which is right. [WATTPoultry](https://www.wattagnet.com/poultry-meat/diseases-health/avian-influenza/news/15838333/aphis-avian-flu-cases-confirmed-in-5-states)\n- I found no new US layer detections for November 2026. One search hit about a 940,000-hen Wright County, MN flock turned out to be from November 2023, so it is not relevant. [Yahoo/WCT](https://www.yahoo.com/news/avian-flu-confirmed-wright-county-233700132.html)\n\n## 4. Base rates\n- The 2026 weekly path, from the question background and the reports above: Sep 4, 35; Sep 18, 35; Sep 25, 39; Oct 2, 46; Oct 9, 43; Oct 16, 29; Oct 23, 28; Oct 30, 35.\n- Weekly changes are usually 1 to 7¢, but there have been several 14 to 37¢ moves this year. Over two weeks (Oct 30 to Nov 13), changes in the autumn readings above ranged from about -17¢ to +11¢.\n- Year-ago comparison: in early November 2025, daily loose Large was about 164 to 175¢. Seasonally, pre-Thanksgiving demand tends to push prices up in early to mid November.\n- The 2026 low was about 24¢ (mid-June) and the high about 151¢ (March).\n\n## 5. Other forecasts\n- I found no market or expert forecast on this specific AMS line.\n- Polymarket \"Price of Dozen Eggs in October?\" is about the BLS retail average, not this wholesale line. It puts the most weight on $2.20 to $2.30 (0.675).\n- Kalshi \"Egg prices up in October?\" (also CPI-based): 0.33 Yes. Neither market matches this question.\n\n## 6. Upcoming events before resolution\n- Daily AMS shell egg index (ams_2843) every business day; the Friday Nov 6 and Nov 13 values are the key ones.\n- Egg Markets Overview, Nov 6 edition.\n- Weekly Shell Egg Demand Indicator and weekly inventory data, both in the Nov 6 and Nov 13 reports.\n- Possible new HPAI layer detections ([APHIS](https://www.aphis.usda.gov/h5n1-hpai)); the autumn migration season is active.\n- Thanksgiving buying in the first two weeks of November.\n- NASS and ERS monthly reports fall after Nov 13.\n\nOther sources: [AMS egg reports index](https://www.ams.usda.gov/market-news/egg-market-news-reports)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-04 03:16 UTC; check each market really matches the question)\n- Kalshi: McDonald's Egg McMuffin price in November (November 2026). Yes prices: At least $4.82: 0.54; At least $4.83: 0.47; At least $4.81: 0.61; At least $4.80: 0.71; At least $4.79: 0.80; At least $4.78: 0.86; At least $4.77: 0.96.\n- Kalshi: Egg prices up in October? (In Oct 2026). Yes prices: Above 0%: 0.33.\n- Kalshi: Chicken wing · Average US wholesale price in November (November 2026). Yes prices: Above 100¢ per pound: 0.51; Above 105¢ per pound: 0.30; Above 95¢ per pound: 0.73; Above 110¢ per pound: 0.14; Above 90¢ per pound: 0.88; Above 115¢ per pound: 0.06; Above 85¢ per pound: 0.95; Above 130¢ per pound: 0.0000; Above 135¢ per pound: 0.0000; Above 125¢ per pound: 0.0000.\n- Kalshi: US corn yield in the January 2027 USDA report (the 2026/27 marketing year). Yes prices: Below 181.2 bu/acre: 0.54; Above 181.2 bu/acre: 0.43; Exactly 181.2 bu/acre: 0.04.\n- Kalshi: EU beef price by end of next month? (Observation window: Oct 1, 2026 through Dec 31, 2026). Yes prices: 6% or more above base: 0.51; 7% or more above base: 0.48; 8% or more above base: 0.47; 5% or more above base: 0.55; 9% or more above base: 0.39; 4% or more above base: 0.61; 10% or more above base: 0.32; 3% or more above base: 0.69; 11% or more above base: 0.29; 12% or more above base: 0.26.\n- Polymarket: U19 World Cup: Bangladesh Under-19s vs USA Under-19s - More Markets (ends 2026-01-30). [Yes, No] prices: U19 World Cup: Bangladesh Under-19s vs USA Under-19s - Who wins the toss?: [\"1\", \"0\"]; U19 World Cup: Bangladesh Under-19s vs USA Under-19s - Completed match?: [\"1\", \"0\"]\n- Polymarket: Price of Dozen Eggs in October? (ends 2026-11-11). [Yes, No] prices: <$1.90: [\"0.0015\", \"0.9985\"]; $1.90 to $2.00: [\"0.0085\", \"0.9915\"]; $2.00 to $2.10: [\"0.018\", \"0.982\"]; $2.10 to $2.20: [\"0.155\", \"0.845\"]; $2.20 to $2.30: [\"0.675\", \"0.325\"]; $2.30 to $2.40: [\"0.15\", \"0.85\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 32.0,
+        "p25": 37.5,
+        "p50": 45.0,
+        "p75": 54.5,
+        "p90": 65.0
+      },
+      "reasoning": "(a) About 10 days. The November 13, 2026 edition publishes Friday afternoon, around 22:00 UTC.\n\n(b) The latest weekly print is 35¢/dozen (Oct 30, 2026, up 7¢). The daily 5-day index, which the weekly line appears to track, was 39.4¢ on Nov 3, up from 34.9¢ on Oct 30. These daily figures come from secondary sites, not the USDA files.\n\n(c) If nothing changed, the outcome would be about 35-39¢.\n\n(d) If the trend continued, the outcome would be about 45-55¢. The index rose 3.9¢ in one day. Because it is a 5-day average, that jump implies current trades in roughly the mid-40s to 50s, which should keep lifting the average. Pre-Thanksgiving buying also usually firms prices in the first half of November.\n\n(e) Over two weeks this line has moved by 6-15¢ recently. Single-week moves of 14-37¢ have happened several times in 2026. A ±15-20¢ two-week swing is plausible.\n\n(f) No market or expert forecast covers this exact line. Seasonal norms and the firming undertone point upward. Heavy supply (inventory 15% above the 5-year median, layer flock up 5%) caps the move.\n\n(g) Scenarios:\n- Low: holiday buying finishes early and inventories keep building. Sellers discount loose eggs, and the price slides back to about 25-30¢, as it did in mid-October.\n- High: a cluster of large HPAI detections in the Midwest, plus strong pre-Thanksgiving feature demand, triggers a short squeeze. The price spikes to 70-90¢, similar to the 37¢ weekly jump in early March.\n\nPercentile 1: 22\nPercentile 5: 28\nPercentile 10: 32\nPercentile 20: 36\nPercentile 30: 39\nPercentile 40: 42\nPercentile 50: 45\nPercentile 60: 48\nPercentile 70: 52\nPercentile 80: 57\nPercentile 90: 65\nPercentile 95: 73\nPercentile 99: 92"
+    },
+    {
+      "value": {
+        "p10": 30.0,
+        "p25": 36.5,
+        "p50": 43.0,
+        "p75": 51.5,
+        "p90": 62.0
+      },
+      "reasoning": "(a) **Time left:** About 9 to 10 days. The November 13, 2026 edition is published Friday afternoon US Central time, roughly 8 trading days from now.\n\n(b) **Latest known value:** The October 30, 2026 edition printed $0.35/dozen, up 7¢. The underlying daily 5-day index has since risen to 35.4¢ on November 2 and 39.4¢ on November 3. The undertone is steady to firm.\n\n(c) **If nothing changed:** About 35 to 39¢, taking the latest weekly print or the latest daily index.\n\n(d) **If the current trend continued:** The firming of roughly 4¢ over two days would push past the high 40s. Two things point to more upside:\n- Pre-Thanksgiving retail feature buying.\n- Supply lost to HPAI depopulations in Illinois and California, which shows up with a lag.\n\nTwo things limit it:\n- Heavy inventory, about 15% above the 5-year median.\n- A large flock, up 5% year over year.\n\nA plausible trend-continuation value is around 45 to 50¢.\n\n(e) **Historical variation:** Over two weeks in 2026, moves of 5 to 15¢ are common and moves of 20 to 37¢ have happened. Recent two-week changes were -15¢ and +6¢.\n\n(f) **Expectations of experts and markets:** There is no market or expert forecast on this exact line. Seasonal norms point to firmer prices into mid-November.\n\n(g) **Unexpected scenarios:**\n- **Low:** Holiday buying finishes early, inventories keep building and the late-October bounce fades, as it did after early October. The price slides back toward 25 to 30¢.\n- **High:** One or more new large Midwest layer HPAI detections, on top of the Illinois and California depopulations, combine with peak holiday demand. Loose-egg trading jumps and the print reaches 70 to 90¢ or more.\n\nPercentile 1: 22\nPercentile 5: 27\nPercentile 10: 30\nPercentile 20: 35\nPercentile 30: 38\nPercentile 40: 41\nPercentile 50: 43\nPercentile 60: 46\nPercentile 70: 49\nPercentile 80: 54\nPercentile 90: 62\nPercentile 95: 70\nPercentile 99: 92"
+    },
+    {
+      "value": {
+        "p10": 34.0,
+        "p25": 40.5,
+        "p50": 48.0,
+        "p75": 57.5,
+        "p90": 69.0
+      },
+      "reasoning": "(a) **Time left:** The outcome will be known in about 10 days, when the November 13, 2026 edition is published, likely on the Friday afternoon (US Central). The November 6 edition will come out before then.\n\n(b) **Latest known value:** The October 30, 2026 edition reported $0.35 per dozen (35¢), up 7¢. The daily 5-day rolling index, which the weekly line appears to track, rose to 39.36¢ on November 3, 2026.\n\n(c) **If nothing changed:** About 35 to 39¢.\n\n(d) **If the trend continued:** The 5-day rolling average jumped almost 4¢ in one day. That implies the newest daily trades were well above the 40s, so the average should keep rising through the week. Pre-Thanksgiving buying and recent HPAI depopulations in Illinois and California add upward pressure. On that path, November 6 lands around 42 to 48¢ and November 13 around 45 to 55¢.\n\n(e) **Historical variation:** Two-week moves of 6 to 15¢ were typical in September and October. Moves of 14 to 37¢ have happened several times in 2026. The loose-egg market can reverse quickly. Inventories are heavy, 15% above the 5-year median and still rising, which limits how far rallies go.\n\n(f) **Experts and markets:** No market or expert forecast covers this line. The retail markets (Polymarket BLS eggs, Kalshi CPI) measure different things.\n\n(g) **Unexpected scenarios:**\n- Low outcome: Holiday buying is completed early and inventories keep building. Loose-egg trading then collapses back toward the 25 to 30¢ June lows.\n- High outcome: Several large layer outbreaks hit the Midwest in early November while holiday demand peaks. That could push loose eggs to 80 to 100¢ or more, like the jumps seen in March.\n\nPercentile 1: 26\nPercentile 5: 31\nPercentile 10: 34\nPercentile 20: 39\nPercentile 30: 42\nPercentile 40: 45\nPercentile 50: 48\nPercentile 60: 51\nPercentile 70: 55\nPercentile 80: 60\nPercentile 90: 69\nPercentile 95: 78\nPercentile 99: 100"
+    },
+    {
+      "value": {
+        "p10": 30.0,
+        "p25": 36.5,
+        "p50": 44.0,
+        "p75": 54.0,
+        "p90": 67.0
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The November 13, 2026 Egg Markets Overview is due Friday afternoon, Nov 13. The Nov 6 edition comes out first.\n\n(b) **Latest value from the resolution source:** 35¢/dozen in the Oct 30, 2026 edition, up 7¢. The daily AMS index for loose white Large, which appears to lead the weekly number, was 34.90¢ on Oct 30, 35.42¢ on Nov 2 and 39.36¢ on Nov 3. Undertone was steady to firm.\n\n(c) **If nothing changed:** about 35 to 39¢. That is 35 from the last weekly report, or 39 if the latest daily level holds.\n\n(d) **If the current trend continued:** the daily index rose about 4.5¢ in two business days, and seasonal pre-Thanksgiving buying is building. Continuing that trend gives the mid-to-high 40s, possibly 50+, by Nov 13.\n\n(e) **Historical variation:** weekly moves of 1 to 7¢ are routine, and moves of 14 to 37¢ happened several times in 2026. Two-week changes this autumn ranged from about -17 to +11¢. The 2026 range is about 24 to 151¢.\n\n(f) **Experts and markets:** I found no forecasts or markets on this line. The available prediction markets track retail CPI prices, not this wholesale price. Seasonal expectations and recent HPAI losses point modestly upward. The large flock (up 5%) and rising inventories (Large up 11%) cap the upside.\n\n(g) **Unexpected scenarios:**\n- **Low:** holiday orders are filled early, inventories keep building, and loose eggs get dumped. The price falls back to the mid-20s, near the June low.\n- **High:** several new large layer detections in early November, during migration season, coincide with peak Thanksgiving buying. That could produce a 20 to 40¢ weekly jump, like the spring spikes, pushing the price to 70 to 100¢+.\n\nPercentile 1: 22\nPercentile 5: 27\nPercentile 10: 30\nPercentile 20: 35\nPercentile 30: 38\nPercentile 40: 41\nPercentile 50: 44\nPercentile 60: 47\nPercentile 70: 51\nPercentile 80: 57\nPercentile 90: 67\nPercentile 95: 78\nPercentile 99: 105"
+    },
+    {
+      "value": {
+        "p10": 32.0,
+        "p25": 37.5,
+        "p50": 45.0,
+        "p75": 55.0,
+        "p90": 68.0
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The resolving report is due Friday, November 13, 2026, in the afternoon US Central time. The November 6 edition comes out before then.\n\n(b) **Latest known value:** the October 30, 2026 Egg Markets Overview reported 35¢/dozen, up 7¢. The daily AMS index for the same line, which is a 5-day rolling average, has since risen to 35.42¢ on Nov 2 and 39.36¢ on Nov 3. Its undertone was steady to firm.\n\n(c) **If nothing changed:** about 35 to 39¢. That is 35 on the last weekly print, or 39 at the latest daily level.\n\n(d) **If the current trend continued:** the short-term rise plus pre-Thanksgiving demand points to roughly 45 to 55¢ by November 13.\n\n(e) **Historical variation:** two-week changes in autumn 2026 ranged from about -17¢ to +11¢. The year has also seen 14 to 37¢ weekly jumps, mostly during the spring HPAI episodes.\n\n(f) **Experts and markets:** I found no forecasts or markets on this exact line. Seasonal patterns support firming into mid-November. On the other side, inventories are heavy (Large up 11% nationally) and the flock is up 5.4% year over year, which limits the upside. The recent HPAI depopulations (Illinois about 0.93M hens, California 1.3M) add a modest upside push.\n\n(g) **Unexpected scenarios:**\n- *Low:* holiday buying wraps up early and inventories keep building, so loose eggs fall back toward the high-20s (24 to 28¢).\n- *High:* several large layer flocks are hit by HPAI in early November, triggering panic buying. That could push the price to 80 to 110¢, similar to the March spike.\n\nPercentile 1: 24\nPercentile 5: 29\nPercentile 10: 32\nPercentile 20: 36\nPercentile 30: 39\nPercentile 40: 42\nPercentile 50: 45\nPercentile 60: 48\nPercentile 70: 52\nPercentile 80: 58\nPercentile 90: 68\nPercentile 95: 79\nPercentile 99: 105"
+    },
+    {
+      "value": {
+        "p10": 31.0,
+        "p25": 37.5,
+        "p50": 44.0,
+        "p75": 52.5,
+        "p90": 63.0
+      },
+      "reasoning": "(a) **Time left:** About 9 to 10 days. The November 13, 2026 Egg Markets Overview is published that Friday afternoon.\n\n(b) **Latest known value:** The October 30, 2026 edition reported 35¢ per dozen, up 7¢. The daily AMS index for loose white Large, which the weekly figure appears to track, rose to 35.42¢ on November 2 and 39.36¢ on November 3. The undertone was steady to firm.\n\n(c) **If nothing changed:** About 35¢, or roughly 39¢ if the latest daily level holds.\n\n(d) **If the current trend continued:** The daily index is climbing about 2 to 4¢ per business day. Pre-Thanksgiving demand is building and retail ads are rising, which points to roughly 45 to 55¢ by November 13. Heavy inventories (up 7%, Midwest Large up 19%) and a flock up 5.4% year over year argue the rise will be dampened.\n\n(e) **Historical variation:** Weekly moves of 1 to 7¢ are routine, and moves of 14 to 37¢ have happened several times in 2026. Over two weeks this autumn the changes ranged from about -17¢ to +11¢. The 2026 range is about 24¢ to 151¢.\n\n(f) **Expert and market expectations:** No market or forecast covers this exact line. The Kalshi and Polymarket egg markets track BLS retail prices and do not apply. Seasonal norms favor firming into mid-November, with a peak typically before Thanksgiving.\n\n(g) **Unexpected scenarios:**\n- **Low:** Holiday buying finishes early and inventories keep swelling (Midwest Large already up 19%). Sellers discount loose eggs and the price falls back to the high 20s or low 20s, as in mid-October and June.\n- **High:** Several large layer flocks are hit by HPAI in early November, on top of the Illinois and California losses, and coincide with peak holiday demand. Buyers scramble and the loose price jumps 30 to 50¢, as in the early March 2026 spike.\n\nPercentile 1: 22\nPercentile 5: 28\nPercentile 10: 31\nPercentile 20: 36\nPercentile 30: 39\nPercentile 40: 42\nPercentile 50: 44\nPercentile 60: 47\nPercentile 70: 50\nPercentile 80: 55\nPercentile 90: 63\nPercentile 95: 72\nPercentile 99: 95"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 31.3123,
+    "p25": 37.5071,
+    "p50": 44.5763,
+    "p75": 54.5267,
+    "p90": 66.9886
+  },
+  "usage": [
+    {
+      "question_id": "46657",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0002773,
+      "input_tokens": 1190,
+      "output_tokens": 79,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.00012930000000000003,
+      "input_tokens": 530,
+      "output_tokens": 47,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 92.6,
+      "notional_cost_usd": 0.37930870000000005,
+      "input_tokens": 157918,
+      "output_tokens": 4622,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.1,
+      "notional_cost_usd": 0.07183200000000001,
+      "input_tokens": 6690,
+      "output_tokens": 916,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.9,
+      "notional_cost_usd": 0.073308,
+      "input_tokens": 6692,
+      "output_tokens": 989,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.4,
+      "notional_cost_usd": 0.00074,
+      "input_tokens": 2721,
+      "output_tokens": 392,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.000723,
+      "input_tokens": 2661,
+      "output_tokens": 382,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.2,
+      "notional_cost_usd": 0.00020935,
+      "input_tokens": 2721,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 27.0,
+      "notional_cost_usd": 0.026328200000000003,
+      "input_tokens": 6691,
+      "output_tokens": 1129,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.000704,
+      "input_tokens": 2706,
+      "output_tokens": 326,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.00028806,
+      "input_tokens": 2661,
+      "output_tokens": 396,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0002452,
+      "input_tokens": 2706,
+      "output_tokens": 309,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 89.3,
+      "notional_cost_usd": 0.208029,
+      "input_tokens": 99753,
+      "output_tokens": 3979,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.4,
+      "notional_cost_usd": 0.075272,
+      "input_tokens": 6730,
+      "output_tokens": 1072,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.6,
+      "notional_cost_usd": 0.07516,
+      "input_tokens": 6731,
+      "output_tokens": 1066,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.6,
+      "notional_cost_usd": 0.07631199999999999,
+      "input_tokens": 6730,
+      "output_tokens": 1124,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0006703000000000001,
+      "input_tokens": 2760,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0007545000000000001,
+      "input_tokens": 2691,
+      "output_tokens": 433,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0007297,
+      "input_tokens": 2777,
+      "output_tokens": 349,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00028336,
+      "input_tokens": 2691,
+      "output_tokens": 386,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00032533,
+      "input_tokens": 2776,
+      "output_tokens": 469,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46657",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.00028656,
+      "input_tokens": 2761,
+      "output_tokens": 391,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9919
+}
