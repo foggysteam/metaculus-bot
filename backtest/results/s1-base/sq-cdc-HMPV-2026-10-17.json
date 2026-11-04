@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-HMPV-2026-10-17",
+  "question": "What percentage of tests will be positive for human metapneumovirus (HMPV) in the United States for the week ending October 17, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for human metapneumovirus (HMPV) in the United States for the week ending 2026-10-17 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 0.82,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-28",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 1.5,
+  "source": "cdc",
+  "series": "rgnm-fkqb:HMPV",
+  "known_value": 0.72,
+  "past_moves": [
+    0.11,
+    0.17,
+    0.07,
+    0.45,
+    1.13
+  ],
+  "baseline": "",
+  "research": "I've finished pulling the CDC data and a news check. Here is the summary.\n\n## 1. Resolution source\n- The question resolves on CDC NREVSS dataset rgnm-fkqb: the National, HMPV, Combined Type row, `percent_pos` field, for the week ending 2026-10-17, as posted 2026-10-30. Fields include tests, detections, percent_pos and percent_pos_3wma. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json?level=National&pathogen=HMPV&$order=mmwrweek_end%20DESC&$limit=400)\n- Caveat: the API only serves the current version of the file. The values below come from that version and are limited to weeks that would have been published by 2026-09-28. Older weeks can be revised a little between postings.\n- 2026-09-19 (week ending): HMPV 0.72% positive (19,795 tests). This is the latest week likely visible as of 2026-09-28. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json?level=National&pathogen=HMPV&$order=mmwrweek_end%20DESC&$limit=400)\n\n## 2. Current status\n- Nothing settles the question yet. The target week has not happened and the data posts on 2026-10-30.\n- 2026 summer and early fall weekly values, % positive (tests):\n  - 06-06: 2.97 (17,915)\n  - 06-27: 1.71\n  - 07-25: 1.03\n  - 08-08: 0.85\n  - 08-15: 0.77\n  - 08-22: 0.67\n  - 08-29: 0.57 (summer low)\n  - 09-05: 0.78\n  - 09-12: 0.63\n  - 09-19: 0.72\n- The long decline after spring has flattened at about 0.6-0.8% since late August. The number of tests is rising, from about 14-15k in July to about 19.8k. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json?level=National&pathogen=HMPV&$order=mmwrweek_end%20DESC&$limit=400)\n\n## 3. Recent news\n- 2026-03 to 2026-04: Media covered a strong 2025-26 HMPV season, including spread across U.S. regions and positivity reportedly about twice the prior year's, while CDC said nothing was out of the ordinary. I found no fall 2026 HMPV news. [California Insider](https://californiainsider.com/california-news/health/cdc-little-known-virus-with-no-vaccine-spreading-in-us-5997067), [AOL](https://www.aol.com/articles/respiratory-virus-spiking-multiple-states-185146538.html), [NTD](https://www.ntd.com/hmpv-respiratory-virus-spreads-across-us-from-connecticut-to-california-in-winter-and-spring_1130493.html)\n- HMPV usually peaks in late winter and spring. October values are normally close to the yearly low but starting to rise. [WSOC](https://www.wsoctv.com/news/trending/what-is-hmpv-is-there-treatment/IGSWK7D5JVBTZDYGAFJ44IQ3BM/)\n\n## 4. Base rates\nNational HMPV % positive in the same weeks of earlier years, all from the same dataset ([data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json?level=National&pathogen=HMPV&$order=mmwrweek_end%20DESC&$limit=400)):\n\n| Year | Week ending about Sept 20 | Week ending about Oct 17-21 | Change |\n|---|---|---|---|\n| 2023 | 0.22% (09-23) | 0.35% (10-21); 10-14: 0.34% | +0.13 pts (about 1.6x) |\n| 2024 | 0.35% (09-21) | 0.57% (10-19); 10-12: 0.45% | +0.22 pts (about 1.6x) |\n| 2025 | 0.42% (09-20) | 0.68% (10-18); 10-11: 0.51% | +0.26 pts (about 1.6x) |\n\n- In each of the last three years, positivity rose from late September to mid-October, by about 0.1-0.26 points.\n- Week-to-week noise in October is about ±0.05-0.15 points. In 2025, for example, the 10-11 week was 0.51% and the 10-18 week was 0.68%.\n- 2026 is running well above earlier years: 0.72% compared with 0.22-0.42% in the same week. This likely reflects the long tail of a big 2025-26 season, and the 2026 series fell until late August instead of bottoming earlier. So it is uncertain whether the usual fall rise applies in the same proportion, or whether the remaining decline cancels part of it.\n- The question's upper bound is 1.5%. The highest mid-October value in recent years was 0.68% (2025).\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets and no expert forecasts on HMPV test positivity.\n\n## 6. Upcoming events before resolution\n- NREVSS posts weekly updates, usually on Thursday or Friday. The values for weeks ending 09-26, 10-03 and 10-10 will come out before the target week.\n- The final value will be posted on 2026-10-30, and earlier weeks may be revised then.\n- Other respiratory viruses rising in the fall (RSV, RV/EV, SARS-CoV-2) increase the number of tests. That can dilute HMPV positivity a little even if detections rise.\n- School-season spread typically starts the HMPV rise in October.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.55
+        ],
+        [
+          0.05,
+          0.65
+        ],
+        [
+          0.1,
+          0.71
+        ],
+        [
+          0.2,
+          0.8
+        ],
+        [
+          0.3,
+          0.87
+        ],
+        [
+          0.4,
+          0.93
+        ],
+        [
+          0.5,
+          0.98
+        ],
+        [
+          0.6,
+          1.03
+        ],
+        [
+          0.7,
+          1.09
+        ],
+        [
+          0.8,
+          1.18
+        ],
+        [
+          0.9,
+          1.31
+        ],
+        [
+          0.95,
+          1.42
+        ],
+        [
+          0.99,
+          1.68
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.45
+        ],
+        [
+          0.05,
+          0.55
+        ],
+        [
+          0.1,
+          0.62
+        ],
+        [
+          0.2,
+          0.71
+        ],
+        [
+          0.3,
+          0.78
+        ],
+        [
+          0.4,
+          0.84
+        ],
+        [
+          0.5,
+          0.89
+        ],
+        [
+          0.6,
+          0.94
+        ],
+        [
+          0.7,
+          1.0
+        ],
+        [
+          0.8,
+          1.08
+        ],
+        [
+          0.9,
+          1.2
+        ],
+        [
+          0.95,
+          1.31
+        ],
+        [
+          0.99,
+          1.55
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.48
+        ],
+        [
+          0.05,
+          0.59
+        ],
+        [
+          0.1,
+          0.65
+        ],
+        [
+          0.2,
+          0.73
+        ],
+        [
+          0.3,
+          0.8
+        ],
+        [
+          0.4,
+          0.86
+        ],
+        [
+          0.5,
+          0.91
+        ],
+        [
+          0.6,
+          0.96
+        ],
+        [
+          0.7,
+          1.02
+        ],
+        [
+          0.8,
+          1.1
+        ],
+        [
+          0.9,
+          1.22
+        ],
+        [
+          0.95,
+          1.32
+        ],
+        [
+          0.99,
+          1.55
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.282
+}

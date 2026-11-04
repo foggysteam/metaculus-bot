@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-RSV-2026-10-10",
+  "question": "What percentage of tests will be positive for respiratory syncytial virus (RSV) in the United States for the week ending October 10, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for respiratory syncytial virus (RSV) in the United States for the week ending 2026-10-10 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 0.73,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-21",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 2.5,
+  "source": "cdc",
+  "series": "rgnm-fkqb:RSV",
+  "known_value": 0.37,
+  "past_moves": [
+    0.32,
+    0.79,
+    2.4,
+    7.28,
+    -0.9
+  ],
+  "baseline": "",
+  "research": "I've pulled the CDC data and am writing up the brief now.\n\n# RSV percent positivity, week ending 2026-10-10: research brief\n\n**Data caveat:** I could only get the dataset as it stands now, not as it looked on 2026-09-21. All values below are for weeks ending on or before 2026-09-19. Some may have been revised slightly since 2026-09-21; past-week revisions are usually small. I left out every week after 2026-09-19.\n\n## 1. Resolution source\n- The question resolves on CDC NREVSS dataset rgnm-fkqb, national level, pathogen RSV, subtype \"Combined Type\", field `percent_pos`, using the version posted 2026-10-30. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- 2026-09-19 (week end): latest week in the allowed window, national RSV positivity **0.45%**. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- The dataset also has 3-week moving averages (`percent_pos_3wma`), but the question uses weekly `percent_pos`.\n\n## 2. Current status\n- Nothing settles the question yet. The target week is three weeks after the latest value. RSV is at its summer low and the seasonal rise is usually starting around now.\n- Last 8 weeks, 2026-07-25 to 2026-09-19: 0.45, 0.42, 0.42, 0.37, 0.49, 0.39, 0.50, 0.37, 0.45. That is flat at about 0.4 to 0.5%, with no clear upturn yet. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n\n## 3. Recent news\n- The CDC Respiratory Illnesses Data Channel expects the 2026-27 season to look like 2025-26, with similar peak hospitalizations from COVID-19, flu and RSV. I could not confirm the exact date of this outlook. [CDC](https://www.cdc.gov/respiratory-viruses/data/)\n- 2026-03-27: In 2025-26, RSV started late and lingered into spring. National positivity peaked at about 8.8% in late February to mid-March 2026 and was still 2.06% on 2026-05-09. [Pharmacy Times](https://www.pharmacytimes.com/view/late-season-rsv-surge-extends-risk-into-spring-challenging-seasonal-expectations-expert-says), [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Summer 2026 positivity (about 0.37 to 0.65%) ran a bit above summer 2025 (about 0.27 to 0.41%), probably because the spring season ran late.\n- I found no September 2026 news on RSV activity.\n\n## 4. Base rates and seasonality\nMid-September value vs. the week nearest October 10, national NREVSS:\n\n| Year | Mid-Sep value | ~1 week before target | Week nearest Oct 10 | Ratio (target / mid-Sep) |\n|---|---|---|---|---|\n| 2025 | 09-20: 0.43 | 10-04: 0.60 | 10-11: **0.72** | 1.67x |\n| 2024 | 09-21: 0.60 | 10-05: 1.11 | 10-12: **1.24** | 2.07x |\n| 2023 | 09-23: 2.11 | 10-07: 3.70 | 10-14: **4.78** | 2.27x (3-week gap) |\n| 2022 | 09-17: 6.18 | 10-01: 10.11 | 10-08: **12.41** | 2.0x (unusual early surge) |\n| 2021 | 09-18: 12.74 | 10-02: 12.47 | 10-09: **12.16** | ~0.95x (off-season surge) |\n| 2020 | 09-19: 0.06 | 10-03: 0.05 | 10-10: **0.11** | pandemic suppression |\n| 2019 | 09-21: 1.86 | 10-05: 3.07 | 10-12: **3.11** | 1.67x |\n\n- In normal years (2019, 2023, 2024, 2025), positivity went up 1.67x to 2.3x over these three weeks.\n- Applying those ratios to 0.45% gives roughly 0.75% to 1.0%. Starting from a flatter base (about 0.42%, the recent average) gives about 0.70% to 0.95%.\n- 2026 is running at almost the same level as 2025 (0.45 vs 0.43 at the same week) and below 2024 (0.60). Years before 2024 were much higher, partly because NREVSS test volumes and mix have changed.\n- 2025 path, 09-13 to 10-11: 0.34, 0.43, 0.49, 0.60, 0.72. Each week rose by about 0.06 to 0.12 points.\n- One difference from 2025: in 2025, positivity had already turned up by mid-September (0.28 rising to 0.43). In 2026 there is no clear rise yet (0.37 to 0.50, bouncing week to week). This could point to a slightly later or slower start.\n- Week-to-week noise at these low levels is about ±0.05 to 0.1 points.\n- The question's range is 0 to 2.5%. Every post-pandemic year except 2021 to 2023 fell well inside it.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this.\n- CDC's seasonal outlook projects a season similar to last year's. It gives no week-level positivity forecast.\n\n## 6. Upcoming events before resolution\n- CDC will post weekly NREVSS updates for the weeks ending 09-26, 10-03 and 10-10. The resolving value comes from the 2026-10-30 posting, so it may include late-reported tests that revise earlier figures.\n- The usual autumn drivers are about to kick in: schools are back, which typically drives the RSV rise in the South and Southeast. Infant nirsevimab and clesrovimab and the maternal and older-adult vaccines also start being given in October, but they mainly reduce severe disease, not test positivity, in the short term.\n- Weather is not a main driver at this time scale. I did not look up a seasonal weather outlook.\n\nSources:\n- [CDC NREVSS dataset rgnm-fkqb (data.cdc.gov)](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- [CDC Respiratory Illnesses Data Channel](https://www.cdc.gov/respiratory-viruses/data/)\n- [Pharmacy Times, 2026-03-27](https://www.pharmacytimes.com/view/late-season-rsv-surge-extends-risk-into-spring-challenging-seasonal-expectations-expert-says)\n- [Becker's Hospital Review](https://www.beckershospitalreview.com/quality/public-health/rsv-lingers-in-parts-of-us-even-as-flu-and-covid-19-recede/)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.39
+        ],
+        [
+          0.05,
+          0.47
+        ],
+        [
+          0.1,
+          0.52
+        ],
+        [
+          0.2,
+          0.58
+        ],
+        [
+          0.3,
+          0.63
+        ],
+        [
+          0.4,
+          0.67
+        ],
+        [
+          0.5,
+          0.71
+        ],
+        [
+          0.6,
+          0.75
+        ],
+        [
+          0.7,
+          0.8
+        ],
+        [
+          0.8,
+          0.87
+        ],
+        [
+          0.9,
+          0.98
+        ],
+        [
+          0.95,
+          1.08
+        ],
+        [
+          0.99,
+          1.32
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.36
+        ],
+        [
+          0.05,
+          0.43
+        ],
+        [
+          0.1,
+          0.48
+        ],
+        [
+          0.2,
+          0.55
+        ],
+        [
+          0.3,
+          0.61
+        ],
+        [
+          0.4,
+          0.66
+        ],
+        [
+          0.5,
+          0.7
+        ],
+        [
+          0.6,
+          0.75
+        ],
+        [
+          0.7,
+          0.81
+        ],
+        [
+          0.8,
+          0.89
+        ],
+        [
+          0.9,
+          1.01
+        ],
+        [
+          0.95,
+          1.12
+        ],
+        [
+          0.99,
+          1.38
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.37
+        ],
+        [
+          0.05,
+          0.44
+        ],
+        [
+          0.1,
+          0.48
+        ],
+        [
+          0.2,
+          0.54
+        ],
+        [
+          0.3,
+          0.59
+        ],
+        [
+          0.4,
+          0.64
+        ],
+        [
+          0.5,
+          0.68
+        ],
+        [
+          0.6,
+          0.72
+        ],
+        [
+          0.7,
+          0.77
+        ],
+        [
+          0.8,
+          0.84
+        ],
+        [
+          0.9,
+          0.96
+        ],
+        [
+          0.95,
+          1.07
+        ],
+        [
+          0.99,
+          1.35
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3432
+}
