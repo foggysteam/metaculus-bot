@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-ADENO-2026-09-26",
+  "question": "What percentage of tests will be positive for adenovirus in the United States for the week ending September 26, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for adenovirus in the United States for the week ending 2026-09-26 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 2.64,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-14",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 1.5,
+  "upper_bound": 3.0,
+  "source": "cdc",
+  "series": "rgnm-fkqb:ADENO",
+  "known_value": 2.38,
+  "past_moves": [
+    0.0,
+    -0.01,
+    0.41,
+    0.73,
+    0.15
+  ],
+  "baseline": "",
+  "research": "# Research brief: CDC NREVSS adenovirus percent positivity, US, week ending 2026-09-26\n\n## 1. Resolution source\n- The question resolves on CDC NREVSS dataset rgnm-fkqb. I queried it through the Socrata API. The relevant series is level=National, pathogen=Adenovirus, and the field is `percent_pos`. The dataset also has `tests`, `detections` and 3-week moving averages. [data.cdc.gov API](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- The dataset holds only the most recent posting, so it is replaced with each update. I could not get the version that existed on or before 2026-09-14, because the Wayback Machine is blocked for me. The figures below cover weeks through 2026-08-29. Those weeks should have been posted before 2026-09-14, but numbers are revised in later postings, so the first-posted values may differ slightly.\n- Recent national values, in percent:\n  - 2026-08-29: 1.93 (15,975 tests)\n  - 2026-08-22: 2.31\n  - 2026-08-15: 2.43\n  - 2026-08-08: 2.20\n  - 2026-08-01: 2.56\n  - 2026-07-25: 2.62\n  - 2026-07-18: 2.64\n  - 2026-07-11: 2.57\n  - 2026-07-04: 3.04\n  [data.cdc.gov API](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Week ending 2026-09-05 was probably posted around 2026-09-11. I could not confirm what was shown as of 2026-09-14.\n\n## 2. Current status\n- Nothing has settled the question. The target week (2026-09-20 to 2026-09-26) is still in the future. The value that counts is the one in the 2026-10-30 posting, which will include revisions.\n- 2026 levels have run higher than 2025. From May to early June 2026 positivity was about 2.8 to 3.4%, compared with 2.4 to 2.9% in 2025. From July to August 2026 it was about 2.2 to 2.6%, compared with 1.8 to 2.3% in 2025. The 1.93 reading for 2026-08-29 is a drop from the readings just before it. Testing volume is low in late August, so that drop may be noise. [data.cdc.gov API](https://data.cdc.gov/resource/rgnm-fkqb.json)\n\n## 3. Recent news\n- 2026-07-15/22: Vietnam's National Children's Hospital reported about three times as many adenovirus cases as the year before. This is not US data. [Tuoi Tre](https://news.tuoitre.vn/vietnams-children-hospital-sees-three-fold-increase-in-adenovirus-cases-103260714203654168.htm), [DTiNews](https://dtinews.dantri.com.vn/print/20260722151333288.htm)\n- I found no US news reports of an unusual adenovirus surge in 2026.\n- CDC's archived page says untyped respiratory adenovirus \"does not typically demonstrate discernible seasonal circulation patterns.\" The data moved to the NREVSS dashboard in May 2024. [CDC archive](https://archive.cdc.gov/www_cdc_gov/surveillance/nrevss/adeno/natl-trend.html), [CDC surveillance](https://www.cdc.gov/adenovirus/php/surveillance/)\n- bioMérieux publishes BioFire syndromic trend reports that cover adenovirus. The latest one I saw covers 2026-05-31 to 2026-07-04. [bioMérieux](https://www.biomerieux.com/content/dam/biomerieux-com/medical-affairs/10-syndromic-trends-reports/trends-reports/2026/33--USMA-TRENDS-Insights-Report-31MAY26-4JULY26.pdf)\n\n## 4. Base rates\nIn each of the last three years, positivity rose from the end of August to late September as schools reopened and testing increased. Values are from the current vintage of the same dataset:\n- **2025:** 1.90 (08-30) → 2.03 (09-06) → 1.64 (09-13) → 1.90 (09-20) → **2.06 (09-27)**. Change of +0.16 over four weeks.\n- **2024:** 1.85 (08-31) → 1.93 (09-07) → 1.95 (09-14) → 1.84 (09-21) → **2.18 (09-28)**. Change of +0.33.\n- **2023:** 2.96 (09-02) → 2.75 → 3.18 → 3.37 → **3.27 (09-30)**. Change of +0.31. Background levels were higher in 2023 because that year followed the 2022-23 surge, when positivity was above 7%.\n- Taking each year's late-September value relative to its July-August average:\n  - 2025: about 2.0 average, 2.06 in late September\n  - 2024: about 1.9 average, 2.18 in late September\n  - 2026: about 2.4 average for July-August\n- Week-to-week noise is often ±0.2 to 0.4 points. For example, 2025 went 2.03 → 1.64 → 1.90 in consecutive weeks. Single-week dips like 2026-08-29 have tended to reverse.\n- Over the last 52 weeks available before the cutoff, the range was about 1.6 to 3.4%. The question's range of 1.5 to 3.0 covers most of that.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets, and no expert forecasts, on US adenovirus percent positivity.\n\n## 6. Upcoming events before resolution\n- Weekly NREVSS postings, normally on Fridays, will update recent weeks before the deciding 2026-10-30 posting. Late-reporting labs can move values by about 0.1 point or more.\n- The return to school in September usually brings more pediatric respiratory testing and a modest rise in adenovirus positivity.\n- Total testing volume rises as respiratory virus season starts, with more influenza, RSV and COVID panels. That can lower the adenovirus positivity percentage even if the number of positive tests stays the same.\n- I know of no planned CDC changes to NREVSS methods before resolution. HHS/CDC staffing or funding disruptions could delay postings.\n\nSources: [data.cdc.gov rgnm-fkqb API](https://data.cdc.gov/resource/rgnm-fkqb.json); [CDC archive adeno trends](https://archive.cdc.gov/www_cdc_gov/surveillance/nrevss/adeno/natl-trend.html); [CDC adenovirus surveillance](https://www.cdc.gov/adenovirus/php/surveillance/); [Tuoi Tre](https://news.tuoitre.vn/vietnams-children-hospital-sees-three-fold-increase-in-adenovirus-cases-103260714203654168.htm); [DTiNews](https://dtinews.dantri.com.vn/print/20260722151333288.htm); [bioMérieux TRENDS](https://www.biomerieux.com/content/dam/biomerieux-com/medical-affairs/10-syndromic-trends-reports/trends-reports/2026/33--USMA-TRENDS-Insights-Report-31MAY26-4JULY26.pdf)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1.4
+        ],
+        [
+          0.05,
+          1.62
+        ],
+        [
+          0.1,
+          1.75
+        ],
+        [
+          0.2,
+          1.91
+        ],
+        [
+          0.3,
+          2.03
+        ],
+        [
+          0.4,
+          2.13
+        ],
+        [
+          0.5,
+          2.22
+        ],
+        [
+          0.6,
+          2.31
+        ],
+        [
+          0.7,
+          2.41
+        ],
+        [
+          0.8,
+          2.54
+        ],
+        [
+          0.9,
+          2.74
+        ],
+        [
+          0.95,
+          2.92
+        ],
+        [
+          0.99,
+          3.4
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.45
+        ],
+        [
+          0.05,
+          1.65
+        ],
+        [
+          0.1,
+          1.77
+        ],
+        [
+          0.2,
+          1.93
+        ],
+        [
+          0.3,
+          2.05
+        ],
+        [
+          0.4,
+          2.15
+        ],
+        [
+          0.5,
+          2.24
+        ],
+        [
+          0.6,
+          2.32
+        ],
+        [
+          0.7,
+          2.42
+        ],
+        [
+          0.8,
+          2.55
+        ],
+        [
+          0.9,
+          2.74
+        ],
+        [
+          0.95,
+          2.9
+        ],
+        [
+          0.99,
+          3.25
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.45
+        ],
+        [
+          0.05,
+          1.65
+        ],
+        [
+          0.1,
+          1.78
+        ],
+        [
+          0.2,
+          1.95
+        ],
+        [
+          0.3,
+          2.07
+        ],
+        [
+          0.4,
+          2.17
+        ],
+        [
+          0.5,
+          2.25
+        ],
+        [
+          0.6,
+          2.33
+        ],
+        [
+          0.7,
+          2.43
+        ],
+        [
+          0.8,
+          2.56
+        ],
+        [
+          0.9,
+          2.75
+        ],
+        [
+          0.95,
+          2.9
+        ],
+        [
+          0.99,
+          3.25
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.354
+}

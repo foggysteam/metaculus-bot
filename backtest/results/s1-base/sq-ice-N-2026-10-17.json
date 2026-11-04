@@ -1,0 +1,194 @@
+{
+  "id": "sq-ice-N-2026-10-17",
+  "question": "What will the Arctic sea ice extent be on October 17, 2026, according to the NSIDC Sea Ice Index?",
+  "resolution_criteria": "Resolves to the daily Arctic sea ice extent for 2026-10-17 in the NSIDC Sea Ice Index version 4 daily file (N_seaice_extent_daily_v4.0.csv), in millions of square kilometers.",
+  "unit": "million square kilometers",
+  "outcome": 6.717,
+  "outcome_date": "2026-10-18",
+  "as_of": "2026-09-12",
+  "resolve_date": "2026-10-18",
+  "lower_bound": 0.5,
+  "upper_bound": 9.5,
+  "source": "nsidc",
+  "series": "N",
+  "known_value": 4.6,
+  "past_moves": [
+    1.458,
+    1.463,
+    2.082,
+    1.911,
+    2.021
+  ],
+  "baseline": "",
+  "research": "I have enough data now and am writing up the summary.\n\n# Arctic sea ice extent on 2026-10-17 (NSIDC Sea Ice Index v4): research notes\n\n## 1. Resolution source\n- The question resolves on the 2026-10-17 row of the NSIDC daily file [N_seaice_extent_daily_v4.0.csv](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv). The data runs about one day behind, and recent rows are near-real-time values that NSIDC may revise slightly.\n- Latest values I could read, in million km²:\n  - 2026-08-31: 4.838\n  - 2026-09-05: 4.668\n  - 2026-09-08: 4.590\n  - 2026-09-09: 4.615\n  - 2026-09-10: 4.609\n  - 2026-09-11: 4.600 (the latest value available by the 2026-09-12 cutoff) [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n- 2026-08-01: extent was 6.495. It fell about 1.66 over August, but the decline has flattened to about 4.59-4.62 since 2026-09-07. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n\n## 2. Current status\n- Nothing has settled the question yet. Ice is at or near its seasonal minimum, about 4.6 as of 2026-09-11, and the outcome depends on how fast it refreezes over the next 5 weeks.\n- 2026's September level is close to 2025 (4.671 on 2025-09-11) and higher than 2019, 2020, 2023 and 2024. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n\n## 3. Recent news\n- 2026 so far: early-spring extent was low, around 14.0-14.35 from mid-March into early April, and it ran through about 13.5 in mid-April. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n- 2026-08-16 to 08-19: there was a short pause or slight rebound in mid-August (5.33 rose to 5.41), then decline resumed. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n- The Met Office has published monthly briefings during 2026, for example the [August briefing](https://www.metoffice.gov.uk/research/approach/monitoring/sea-ice/2026/briefing-on-arctic--antarctic-sea-ice---august-2026). I found no NSIDC analysis post dated before the cutoff that adds anything beyond the data.\n\n## 4. Base rates\nSeptember 11 and October 17 values from the same NSIDC file, with the gain between them (all in million km²):\n\n| Year | Sep 11 | Oct 17 | Gain |\n|---|---|---|---|\n| 2017 | 4.684 | 6.851 | +2.17 |\n| 2018 | 4.763 | 5.961 | +1.20 |\n| 2019 | 4.319 | 5.445 | +1.13 |\n| 2020 | 3.849 | 5.328 | +1.48 |\n| 2021 | 4.821 | 6.842 | +2.02 |\n| 2022 | 4.821* | 6.732 | +1.91 |\n| 2023 | 4.258 | 6.340 | +2.08 |\n| 2024 | 4.250 | 5.713 | +1.46 |\n| 2025 | 4.671 | 6.129 | +1.46 |\n\n\\*The 2022 September 11 value came back identical to 2021's, so it may be an extraction error.\n\n- Across 2017-2025 the gain from September 11 to October 17 averages about +1.66, ranging from +1.13 to +2.17 (standard deviation about 0.38).\n- Adding those gains to 4.600 gives about 5.73-6.77, centred near 6.26. This is my arithmetic only, not a forecast.\n- Refreeze speed in October varies a lot from year to year. 2025 shows how steep it can be: October 10 to 20 went 5.803, 5.868, 5.946, 5.963, 5.886, 5.961, 6.060, 6.129, 6.213, 6.272, 6.398, which is roughly 0.06 per day with day-to-day noise. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n- October monthly means (October 17 sits near mid-month, so these are close to the daily value):\n\n| Year | Oct mean |\n|---|---|\n| 2016 | 6.08 |\n| 2017 | 6.77 |\n| 2018 | 6.13 |\n| 2019 | 5.73 |\n| 2020 | 5.33 |\n| 2021 | 6.82 |\n| 2022 | 6.66 |\n| 2023 | 6.41 |\n| 2024 | 5.93 |\n| 2025 | 6.32 |\n\n  [NSIDC monthly](https://noaadata.apps.nsidc.org/NOAA/G02135/north/monthly/data/N_10_extent_v4.0.csv)\n\n## 5. Other forecasts\n- I found no prediction market or expert forecast for the October 17 daily value.\n- Related market: Polymarket's \"minimum Arctic sea ice extent this summer\" also resolves on NSIDC data. Aggregator snapshots I found are old, for example 48% for \"under 4m\" on 2026-06-03 per [ClearMarket](https://clearmarket-1dg.pages.dev/events/min-arctic-sea-ice-extent-this-summer/), and others at [frenzycap](https://www.frenzycap.com/predictions/polymarket/0x71893b06b5e12945bbd8723ab419be96957314e596ed9e971551a4a93165d994) and [orrery](https://www.orrery.me/markets/will-the-minimum-arctic-sea-ice-extent-this-summer-be-between-4pt2m-4pt4m-square-kilometers). The observed values make \"under 4m\" essentially impossible now.\n- A Manifold page mentions a related Kalshi event, but I could not find a live Kalshi page or prices. [Manifold](https://manifold.markets/event/which-arctic-sea-ice-minimum-thresh)\n\n## 6. Upcoming events before resolution\n- Mid to late September: NSIDC usually announces the seasonal minimum once extent has clearly turned upward. As of 2026-09-11 the minimum has not been confirmed, since values were still edging down.\n- Late September to mid-October: the speed of freeze-up in the Beaufort, Chukchi, East Siberian and Laptev seas drives the October 17 value. Late refreeze along the Siberian coast held back 2020 (Oct 17: 5.33), while fast freeze-up gave 2017 and 2021 values around 6.85.\n- Early October: NSIDC's monthly September analysis and the Met Office's end-of-season report are due.\n- Storms or wind patterns that compact or spread the ice can move daily values by ±0.1 within a few days.\n- Near-real-time rows may be reprocessed later. The question resolves on the value in the file around 2026-10-18.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          5.15
+        ],
+        [
+          0.05,
+          5.48
+        ],
+        [
+          0.1,
+          5.66
+        ],
+        [
+          0.2,
+          5.89
+        ],
+        [
+          0.3,
+          6.04
+        ],
+        [
+          0.4,
+          6.16
+        ],
+        [
+          0.5,
+          6.25
+        ],
+        [
+          0.6,
+          6.34
+        ],
+        [
+          0.7,
+          6.45
+        ],
+        [
+          0.8,
+          6.59
+        ],
+        [
+          0.9,
+          6.77
+        ],
+        [
+          0.95,
+          6.89
+        ],
+        [
+          0.99,
+          7.15
+        ]
+      ],
+      [
+        [
+          0.01,
+          5.3
+        ],
+        [
+          0.05,
+          5.55
+        ],
+        [
+          0.1,
+          5.7
+        ],
+        [
+          0.2,
+          5.88
+        ],
+        [
+          0.3,
+          6.01
+        ],
+        [
+          0.4,
+          6.12
+        ],
+        [
+          0.5,
+          6.21
+        ],
+        [
+          0.6,
+          6.3
+        ],
+        [
+          0.7,
+          6.4
+        ],
+        [
+          0.8,
+          6.53
+        ],
+        [
+          0.9,
+          6.7
+        ],
+        [
+          0.95,
+          6.83
+        ],
+        [
+          0.99,
+          7.05
+        ]
+      ],
+      [
+        [
+          0.01,
+          5.15
+        ],
+        [
+          0.05,
+          5.48
+        ],
+        [
+          0.1,
+          5.65
+        ],
+        [
+          0.2,
+          5.88
+        ],
+        [
+          0.3,
+          6.03
+        ],
+        [
+          0.4,
+          6.15
+        ],
+        [
+          0.5,
+          6.25
+        ],
+        [
+          0.6,
+          6.35
+        ],
+        [
+          0.7,
+          6.46
+        ],
+        [
+          0.8,
+          6.6
+        ],
+        [
+          0.9,
+          6.78
+        ],
+        [
+          0.95,
+          6.9
+        ],
+        [
+          0.99,
+          7.15
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.5947
+}

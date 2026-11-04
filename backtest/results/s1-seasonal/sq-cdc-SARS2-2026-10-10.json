@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-SARS2-2026-10-10",
+  "question": "What percentage of tests will be positive for SARS-CoV-2 in the United States for the week ending October 10, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for SARS-CoV-2 in the United States for the week ending 2026-10-10 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 4.05,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-14",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 15.0,
+  "source": "cdc",
+  "series": "rgnm-fkqb:SARS2",
+  "known_value": 5.9,
+  "past_moves": [
+    -6.06,
+    -8.86,
+    -4.04,
+    -4.07,
+    -2.96
+  ],
+  "baseline": "",
+  "research": "# US SARS-CoV-2 test positivity (CDC NREVSS), week ending 2026-10-10: research notes\n\n**Main finding:** national positivity was about 5.9% for the week ending September 5. The late-summer wave looked like it was levelling off near 6%, a much lower peak than 2023 to 2025, and it peaked later. Nothing published by September 14 settles the question.\n\n## 1. Resolution source\n- I queried the national SARS-CoV-2 rows of data.cdc.gov dataset rgnm-fkqb (the pathogen code is \"SARS-COV-2\"). Recent weekly values, with test counts:\n  - 07-04: 1.35%\n  - 07-18: 2.14%\n  - 08-01: 3.27%\n  - 08-08: 3.93%\n  - 08-15: 4.69%\n  - 08-22: 5.73%\n  - 08-29: 5.98%\n  - 09-05: 5.90% (46,373 tests)\n  [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Caveat: the dataset shows only its current version, so these numbers may include later revisions. The values available on September 14 may differ slightly. I report nothing for weeks after September 5.\n- Discrepancy: The Sick Times, citing CDC's PCR testing network, gave 4.4% (week ending 08-15) and 4.6% (week ending 08-22). The dataset shows 4.69% and 5.73% for those weeks. The cause could be revisions after first posting or a different CDC data product, and late upward revisions of about 1 point are possible. [The Sick Times](https://thesicktimes.org/2026/09/01/national-covid-19-trends-september-1/)\n- The resolution value is whatever the dataset shows on 2026-10-30, so it will include about 3 weeks of revisions to the week ending 10-10.\n\n## 2. Current status\n- Nothing settles the question. The target week is 4 to 5 weeks after the latest data available as of September 14.\n- 2026-09-05: positivity was flat to slightly down (5.98% to 5.90%) while test volume kept rising. That suggests the wave was at or near its peak. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n\n## 3. Recent news (newest first)\n- 2026-09-01: The Sick Times rated test positivity \"moderate\" and slightly increasing:\n  - WastewaterSCAN national level was \"high\" (up 15% from 08-12 to 08-19).\n  - CDC's national wastewater level was \"very low\" but up 31%.\n  - Texas wastewater was \"very high\", and the South and West had the highest positivity.\n  - CDC estimated cases were \"growing\" in most states as of 08-26.\n  - The updated FDA vaccines target XFG. [The Sick Times](https://thesicktimes.org/2026/09/01/national-covid-19-trends-september-1/)\n- 2026-08-20: news outlets reported a summer wave building across the US. [NBC Palm Springs](https://www.nbcpalmsprings.com/2026/08/20/covid-cases-are-rising-across-the-us-as-summer-wave-builds)\n- Mid-August 2026: positivity for the week ending 08-08 went above 3% for the first time since March. An IBTimes piece said two strains were driving the wave. [IBTimes](https://www.ibtimes.sg/summer-covid-surge-2026-where-cases-are-rising-symptoms-variants-what-cdc-data-shows-92206)\n- 2026-08-04: the August 4 Sick Times report found no clear variant of concern driving the wave. [The Sick Times](https://thesicktimes.org/2026/08/04/national-covid-19-trends-august-4/)\n\n## 4. Base rates and seasonality\nSame dataset, change from early September to the week nearest October 10 (5 weeks):\n\n| Year | Peak (week) | Early Sept | ~Oct 10 | Ratio |\n|---|---|---|---|---|\n| 2025 | 12.00 (08-23) | 11.31 (09-06) | 4.23 (10-11) | 0.37 |\n| 2024 | 17.87 (08-10) | 14.53 (09-07) | 6.32 (10-12) | 0.43 |\n| 2023 | 14.55 (08-26) | 14.08 (09-02) | 10.04 (10-07) | 0.71 |\n| 2022 | 13.87 (early Aug, falling) | 10.99 (09-03) | 6.92 (10-08) | 0.63 |\n| 2021 | 11.24 (08-21) | 10.06 (09-04) | 7.10 (10-09) | 0.71 |\n| 2020 | n/a | 5.47 (09-05) | 6.79 (10-10) | 1.24 (autumn rise) |\n\n[data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n\n- Every year from 2021 to 2025 fell from early September to mid October, with ratios of 0.37 to 0.71. In those years the peak came in mid to late August, and early September was already 1 to 4 weeks past it.\n- 2026 is running well below all those years: 5.90% versus 11 to 14.5% in early September. It also peaked later, with no clear decline yet as of 09-05.\n- Applying the historical ratios to 5.9% gives roughly 2.2 to 4.2%. Because 2026 is closer to its peak, a slower decline is plausible.\n- The pre-wave baseline in June 2026 was about 0.8 to 1.0%. In late October 2025 the value was about 3.0%.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market, and no published expert forecast, for this series.\n- CDC's growth-rate estimates (Rt-based) showed growth in most states as of late August. [The Sick Times](https://thesicktimes.org/2026/09/01/national-covid-19-trends-september-1/)\n\n## 6. Upcoming events before resolution\n- CDC posts NREVSS updates weekly. The week ending 10-10 should first appear around 10-16 and be revised by the 10-30 posting.\n- Factors that could move the number:\n  - school reopening effects through September\n  - uptake of the autumn XFG-targeted vaccines\n  - any new variant that replaces the current ones\n  - continued high activity in Texas and the South\n  - test volume rising as other respiratory viruses pick up in October, which can push down the share of tests that are positive.\n- Weather is not a direct factor.",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1.8
+        ],
+        [
+          0.05,
+          2.4
+        ],
+        [
+          0.1,
+          2.8
+        ],
+        [
+          0.2,
+          3.3
+        ],
+        [
+          0.3,
+          3.7
+        ],
+        [
+          0.4,
+          4.0
+        ],
+        [
+          0.5,
+          4.3
+        ],
+        [
+          0.6,
+          4.7
+        ],
+        [
+          0.7,
+          5.1
+        ],
+        [
+          0.8,
+          5.6
+        ],
+        [
+          0.9,
+          6.5
+        ],
+        [
+          0.95,
+          7.3
+        ],
+        [
+          0.99,
+          9.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.8
+        ],
+        [
+          0.05,
+          2.4
+        ],
+        [
+          0.1,
+          2.8
+        ],
+        [
+          0.2,
+          3.3
+        ],
+        [
+          0.3,
+          3.7
+        ],
+        [
+          0.4,
+          4.0
+        ],
+        [
+          0.5,
+          4.3
+        ],
+        [
+          0.6,
+          4.6
+        ],
+        [
+          0.7,
+          5.0
+        ],
+        [
+          0.8,
+          5.5
+        ],
+        [
+          0.9,
+          6.3
+        ],
+        [
+          0.95,
+          6.9
+        ],
+        [
+          0.99,
+          8.2
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.7
+        ],
+        [
+          0.05,
+          2.2
+        ],
+        [
+          0.1,
+          2.6
+        ],
+        [
+          0.2,
+          3.1
+        ],
+        [
+          0.3,
+          3.5
+        ],
+        [
+          0.4,
+          3.8
+        ],
+        [
+          0.5,
+          4.1
+        ],
+        [
+          0.6,
+          4.4
+        ],
+        [
+          0.7,
+          4.8
+        ],
+        [
+          0.8,
+          5.3
+        ],
+        [
+          0.9,
+          6.1
+        ],
+        [
+          0.95,
+          6.8
+        ],
+        [
+          0.99,
+          8.3
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3306
+}

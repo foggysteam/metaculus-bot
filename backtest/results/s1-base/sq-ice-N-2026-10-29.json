@@ -1,0 +1,194 @@
+{
+  "id": "sq-ice-N-2026-10-29",
+  "question": "What will the Arctic sea ice extent be on October 29, 2026, according to the NSIDC Sea Ice Index?",
+  "resolution_criteria": "Resolves to the daily Arctic sea ice extent for 2026-10-29 in the NSIDC Sea Ice Index version 4 daily file (N_seaice_extent_daily_v4.0.csv), in millions of square kilometers.",
+  "unit": "million square kilometers",
+  "outcome": 7.743,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-10-08",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 10.0,
+  "source": "nsidc",
+  "series": "N",
+  "known_value": 6.007,
+  "past_moves": [
+    1.934,
+    2.64,
+    3.048,
+    2.71,
+    2.564
+  ],
+  "baseline": "",
+  "research": "I have the data I need and am writing up the summary.\n\n# Arctic sea ice extent on 2026-10-29 (NSIDC Sea Ice Index v4): research summary\n\n## 1. Resolution source\n- The question resolves on the file N_seaice_extent_daily_v4.0.csv. I fetched it, and the most recent rows up to the cutoff are below. [NSIDC](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n  - 2026-10-08: 6.073 M km² (the latest value allowed; it may only have been posted after 18:00 UTC on Oct 8).\n  - 2026-10-07: 6.007. 2026-10-06: 5.959. 2026-10-05: 5.860. 2026-10-01: 5.650.\n  - 2026-09-30: 5.478. 2026-09-24: 4.993.\n- Over the last 7 days (Oct 1 to Oct 8) extent grew by about 0.42 M km², roughly 0.06 per day. Late September grew faster, about 0.07 to 0.10 per day.\n- The file I fetched was larger than one page, so I read it in chunks with a small model reporting the values. I did not check each number by hand.\n\n## 2. Current status\n- Nothing has settled the question yet. The 2026 minimum has passed and the ice is in its autumn regrowth phase.\n- 2026-09-12: the lowest daily value in the file is 4.574 M km². NASA/NSIDC call it a minimum of about 4.6 M km², tied for 10th lowest on record. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv), [NASA Earth Observatory](https://science.nasa.gov/earth/earth-observatory/arctic-sea-ice-shrinks-to-its-2026-minimum/)\n- Extent on Oct 8, 2026 (6.073) is above the Oct 8 values for every year from 2016 to 2025. That means the regrowth season starts from a fairly high level compared with recent years.\n\n## 3. Recent news (newest first)\n- 2026-09-23: NASA released its \"Arctic Sea Ice Minimum 2026\" visualization. It says the minimum was likely reached on Sept 12. [NASA SVS](https://svs.gsfc.nasa.gov/5677)\n- September 2026: NASA/NSIDC said the 20 lowest minimums on record all happened between 2007 and 2026. [NASA](https://science.nasa.gov/science-research/earth-science/climate-science/sea-ice/arctic-sea-ice-2026-min/)\n- August 2026: Copernicus ranked August Arctic extent 12th lowest for the month. [Copernicus](https://climate.copernicus.eu/sea-ice-cover-august-2026)\n- March 2026: the winter maximum was 14.29 M km² on March 15, effectively tied with 2025 for the lowest on record. [CIRES](https://cires.colorado.edu/news/arctic-sea-ice-record-low-maximum-strikes-again), [USNIC](https://usicecenter.gov/PressRelease/ArcticMinimumMaximum2025_2026)\n\n## 4. Base rates\nAll values are from the NSIDC v4 daily file, in M km². \"Gain\" is the change from Oct 8 to Oct 29.\n\n| Year | Oct 8 | Oct 29 | Gain |\n|---|---|---|---|\n| 2016 | 5.413 | 7.125 | +1.71 |\n| 2017 | 5.910 | 8.061 | +2.15 |\n| 2018 | 5.161 | 7.705 | +2.54 |\n| 2019 | 4.963 | 7.427 | +2.46 |\n| 2020 | 4.721 | 6.526 | +1.81 |\n| 2021 | 5.802 | 8.301 | +2.50 |\n| 2022 | 5.659 | 8.305 | +2.65 |\n| 2023 | 5.296 | 8.216 | +2.92 |\n| 2024 | 4.917 | 7.563 | +2.65 |\n| 2025 | 5.728 | 7.629 | +1.90 |\n\n- Over these 10 years the 21-day gain averaged about 2.33 M km², ranging from 1.71 to 2.92, with a standard deviation of about 0.4.\n- Adding those gains to 6.073 gives a simple range of about 7.78 to 8.99, with the average gain landing near 8.40.\n- Oct 29 values in 2016-2025 ranged from 6.53 to 8.31. The highest recent values were 8.31 (2022) and 8.30 (2021). An Oct 29 value above about 8.3 would be the highest of this 10-year span.\n- 2025 shows how the gain can stall and then jump. Extent was 5.728 on Oct 8, levelled off in mid-October (5.886 on Oct 14), then rose quickly to 7.629 on Oct 29. Daily values also swing by up to about ±0.1 because of noise.\n- One caveat: years with a high Oct 8 extent (2017, 2025) did not always see large gains. Ice that has already formed on the Atlantic and Siberian side leaves less open water close to the ice edge to freeze. I did not test this relationship statistically.\n\n## 5. Other forecasts\n- I found no prediction market or expert forecast for Oct 29, 2026 extent.\n- Related markets exist but are about other dates:\n  - Manifold and Polymarket markets on the 2026 summer minimum, which is already settled. [Manifold](https://manifold.markets/prismatic/which-arctic-sea-ice-minimum-thresh), [Polymarket](https://polymarket.com/event/min-arctic-sea-ice-extent-this-summer)\n  - A Manifold market on NSIDC extent for Nov 20, 2026. I did not check its price as of Oct 8. [Manifold](https://manifold.markets/Terminator2/arctic-sea-ice-extent-on-nov-20-202)\n\n## 6. Upcoming events before resolution\n- NSIDC posts daily updates, usually one day behind. The Oct 29 value should appear around Oct 30. Recent days' values can be revised slightly before the final number is fixed.\n- Weather will drive the outcome. The main areas to watch:\n  - When the Chukchi, Beaufort, East Siberian and Laptev seas freeze over.\n  - Whether the Kara/Barents region and Hudson Bay begin freezing in late October.\n  - Warm southerly winds or storms, which could slow growth as happened in mid-October 2025.\n- NSIDC Arctic Sea Ice News: its early-October post about the September minimum and the start of the regrowth season might add context. I did not find it on NSIDC's own site.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          7.2
+        ],
+        [
+          0.05,
+          7.5
+        ],
+        [
+          0.1,
+          7.68
+        ],
+        [
+          0.2,
+          7.9
+        ],
+        [
+          0.3,
+          8.04
+        ],
+        [
+          0.4,
+          8.15
+        ],
+        [
+          0.5,
+          8.25
+        ],
+        [
+          0.6,
+          8.35
+        ],
+        [
+          0.7,
+          8.46
+        ],
+        [
+          0.8,
+          8.6
+        ],
+        [
+          0.9,
+          8.78
+        ],
+        [
+          0.95,
+          8.92
+        ],
+        [
+          0.99,
+          9.15
+        ]
+      ],
+      [
+        [
+          0.01,
+          7.2
+        ],
+        [
+          0.05,
+          7.55
+        ],
+        [
+          0.1,
+          7.72
+        ],
+        [
+          0.2,
+          7.93
+        ],
+        [
+          0.3,
+          8.07
+        ],
+        [
+          0.4,
+          8.18
+        ],
+        [
+          0.5,
+          8.27
+        ],
+        [
+          0.6,
+          8.36
+        ],
+        [
+          0.7,
+          8.46
+        ],
+        [
+          0.8,
+          8.58
+        ],
+        [
+          0.9,
+          8.75
+        ],
+        [
+          0.95,
+          8.88
+        ],
+        [
+          0.99,
+          9.1
+        ]
+      ],
+      [
+        [
+          0.01,
+          7.2
+        ],
+        [
+          0.05,
+          7.55
+        ],
+        [
+          0.1,
+          7.75
+        ],
+        [
+          0.2,
+          7.97
+        ],
+        [
+          0.3,
+          8.1
+        ],
+        [
+          0.4,
+          8.19
+        ],
+        [
+          0.5,
+          8.27
+        ],
+        [
+          0.6,
+          8.35
+        ],
+        [
+          0.7,
+          8.44
+        ],
+        [
+          0.8,
+          8.55
+        ],
+        [
+          0.9,
+          8.7
+        ],
+        [
+          0.95,
+          8.82
+        ],
+        [
+          0.99,
+          9.05
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4947
+}

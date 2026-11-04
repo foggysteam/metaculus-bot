@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-RSV-R1-2026-09-26",
+  "question": "What percentage of tests will be positive for respiratory syncytial virus (RSV) in HHS Region 1 (New England) for the week ending September 26, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for respiratory syncytial virus (RSV) in HHS Region 1 (New England) for the week ending 2026-09-26 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 0.08,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-07",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 2.5,
+  "source": "cdc",
+  "series": "rgnm-fkqb:RSV-R1",
+  "known_value": 0.4,
+  "past_moves": [
+    0.34,
+    -0.01,
+    0.71,
+    2.35,
+    -4.62
+  ],
+  "baseline": "",
+  "research": "# RSV test positivity in HHS Region 1 (New England), week ending 2026-09-26\n\n## 1. Resolution source\n- The question resolves on CDC NREVSS dataset rgnm-fkqb (field `percent_pos`, `level='Region 1'`, `pathogen='RSV'`), as posted on 2026-10-30. I queried it through the Socrata API. [data.cdc.gov API](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- 2026-08-29 (latest week I'm reporting): RSV was 0.40% positive, 7 detections out of 1,748 tests. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Two caveats about my data pull:\n  - I ran the query today, so the values reflect any revisions made since early September.\n  - I left out rows for weeks published after 2026-09-07.\n- Precision is limited: with about 1,500 to 1,750 tests a week, each extra positive test moves the rate by about 0.06 percentage points. Some weeks hide their counts (shown as \"*\").\n\n## 2. Current status\n- Nothing has settled the question yet. The target week had not happened as of 2026-09-07.\n- RSV in New England is at summer lows, under 1%, though somewhat above the levels of past summers.\n- 2026-09-03: a British Columbia report said US RSV activity was \"very low in most areas of the country.\" [BCCDC](https://www.bccdc.ca/Health-Info-Site/Documents/Respiratory_data/respiratory_surveillance_2026-09-03.pdf)\n\n## 3. Recent news (newest first)\n- 2026-09-03: BCCDC said US RSV activity was very low in most areas. [BCCDC](https://www.bccdc.ca/Health-Info-Site/Documents/Respiratory_data/respiratory_surveillance_2026-09-03.pdf)\n- 2026-03 to 2026-04: the 2025-26 season peaked late and ran long.\n  - Region 1 peaked at 10.29% (week ending 2026-01-31) and 10.20% (week ending 2026-02-14).\n  - Positivity stayed above 1% until the week ending 2026-06-06.\n  - Maine extended its RSV season through April 2026. [Maine CDC advisory](https://www.maine.gov/dhhs/mecdc/sites/maine.gov.dhhs.mecdc/files/health-professionals/advisories/2026-03-Create%20Health%20Advisories/2026PHADV005RSVCirculation.pdf), [Pharmacy Times](https://www.pharmacytimes.com/view/late-season-rsv-surge-extends-risk-into-spring-challenging-seasonal-expectations-expert-says)\n- An undated Becker's piece said CDC modeling showed RSV \"likely growing in Maine.\" I could not confirm when it was published. [Becker's](https://www.beckershospitalreview.com/quality/public-health/rsv-lingers-in-parts-of-us-even-as-flu-and-covid-19-recede/)\n\n## 4. Base rates (Region 1 RSV % positive, current dataset)\n\n**2026 summer, weekly:**\n- July: 0.45, 0.45, 0.80, 0.44\n- August: 0.31, 0.92, 0.63, 0.23, 0.40\n- Mean is about 0.5, range 0.23 to 0.92.\n\n**Same weeks in earlier years (late August, then September):**\n\n| Season | Late Aug | Sep wk 1 | Sep wk 2 | Sep wk 3 | Last Sep week | Early Oct |\n|---|---|---|---|---|---|---|\n| 2025 | 0.46 (08-30) | 0.23 (09-06) | 0.31 (09-13) | 0.43 (09-20) | **0.39 (09-27)** | 0.44 (10-04) |\n| 2024 | 0.25 (08-31) | 0.21 (09-07) | 0.03 (09-14) | 0.27 (09-21) | **0.48 (09-28)** | 0.73 (10-05) |\n| 2023 | 1.01 (08-26) | 0.99 (09-02) | 1.48 (09-09) | 0.68 (09-16), 1.72 (09-23) | **2.59 (09-30)** | 2.47 (10-07) |\n\n- 2023 was an early, large season, and it is the only recent year where late-September positivity came close to the 2.5 ceiling of the question's range.\n- Change over four weeks, from late August to the last week of September:\n  - 2025: -0.07 points\n  - 2024: +0.23 points\n  - 2023: +1.58 points\n- In the last week of September, positivity is usually flat or starting a slow rise.\n- Week-to-week noise is roughly ±0.2 to 0.4 points at these levels. For example, 2024 went 0.21, 0.03, 0.27 in consecutive weeks.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on this series.\n- I found no expert forecast specific to Region 1.\n- CDC publishes national RSV growth estimates (Rt), but I did not find a Region 1 value from before 2026-09-07.\n\n## 6. Upcoming events before resolution\n- Weekly NREVSS updates will add the weeks ending 09-05 through 09-26. Earlier weeks can be revised, and the 2026-10-30 posting is the one that counts.\n- New England schools reopen in late August and early September, which typically drives the start of RSV's autumn rise. Regional RSV onset usually comes in October or later.\n- Fall immunization campaigns start around this time: nirsevimab/clesrovimab for infants, maternal vaccine, and older-adult vaccines. They are unlikely to change late-September positivity much.\n- 2026-09-10: the American Lung Association published a release saying respiratory virus season starts in October. This is after the cutoff date and is context only. [press release](https://digital-release.wowktv.com/business/press-releases/cision/20260910DC44273/how-new-englanders-can-protect-their-health-during-respiratory-virus-season)\n\nSources:\n- [data.cdc.gov rgnm-fkqb API](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- [BCCDC 2026-09-03](https://www.bccdc.ca/Health-Info-Site/Documents/Respiratory_data/respiratory_surveillance_2026-09-03.pdf)\n- [Maine CDC advisory](https://www.maine.gov/dhhs/mecdc/sites/maine.gov.dhhs.mecdc/files/health-professionals/advisories/2026-03-Create%20Health%20Advisories/2026PHADV005RSVCirculation.pdf)\n- [Pharmacy Times](https://www.pharmacytimes.com/view/late-season-rsv-surge-extends-risk-into-spring-challenging-seasonal-expectations-expert-says)\n- [Becker's](https://www.beckershospitalreview.com/quality/public-health/rsv-lingers-in-parts-of-us-even-as-flu-and-covid-19-recede/)\n- [CDC archived division trends](https://archive.cdc.gov/www_cdc_gov/surveillance/nrevss/rsv/division.html)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.08
+        ],
+        [
+          0.05,
+          0.17
+        ],
+        [
+          0.1,
+          0.24
+        ],
+        [
+          0.2,
+          0.34
+        ],
+        [
+          0.3,
+          0.42
+        ],
+        [
+          0.4,
+          0.5
+        ],
+        [
+          0.5,
+          0.57
+        ],
+        [
+          0.6,
+          0.65
+        ],
+        [
+          0.7,
+          0.75
+        ],
+        [
+          0.8,
+          0.9
+        ],
+        [
+          0.9,
+          1.15
+        ],
+        [
+          0.95,
+          1.42
+        ],
+        [
+          0.99,
+          2.1
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.08
+        ],
+        [
+          0.05,
+          0.18
+        ],
+        [
+          0.1,
+          0.25
+        ],
+        [
+          0.2,
+          0.35
+        ],
+        [
+          0.3,
+          0.43
+        ],
+        [
+          0.4,
+          0.5
+        ],
+        [
+          0.5,
+          0.57
+        ],
+        [
+          0.6,
+          0.65
+        ],
+        [
+          0.7,
+          0.75
+        ],
+        [
+          0.8,
+          0.9
+        ],
+        [
+          0.9,
+          1.18
+        ],
+        [
+          0.95,
+          1.5
+        ],
+        [
+          0.99,
+          2.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.12
+        ],
+        [
+          0.05,
+          0.21
+        ],
+        [
+          0.1,
+          0.28
+        ],
+        [
+          0.2,
+          0.37
+        ],
+        [
+          0.3,
+          0.45
+        ],
+        [
+          0.4,
+          0.52
+        ],
+        [
+          0.5,
+          0.59
+        ],
+        [
+          0.6,
+          0.67
+        ],
+        [
+          0.7,
+          0.77
+        ],
+        [
+          0.8,
+          0.92
+        ],
+        [
+          0.9,
+          1.18
+        ],
+        [
+          0.95,
+          1.5
+        ],
+        [
+          0.99,
+          2.3
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3059
+}

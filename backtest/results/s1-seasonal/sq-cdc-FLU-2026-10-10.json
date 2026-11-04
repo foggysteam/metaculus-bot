@@ -1,0 +1,192 @@
+{
+  "id": "sq-cdc-FLU-2026-10-10",
+  "question": "What percentage of tests will be positive for influenza in the United States for the week ending October 10, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for influenza in the United States for the week ending 2026-10-10 in CDC's Percent of Tests Positive for Viral Respiratory Pathogens (data.cdc.gov dataset seuz-s2cv), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 4.7,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-08-31",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 1.5,
+  "source": "cdc",
+  "series": "seuz-s2cv:FLU",
+  "known_value": 0.8,
+  "past_moves": [
+    0.2,
+    0.2,
+    0.2
+  ],
+  "baseline": "",
+  "research": "## 1. Resolution source\n- The question resolves on CDC's data.cdc.gov dataset seuz-s2cv. It has three fields: week_end, pathogen (COVID-19, Influenza, RSV) and percent_test_positivity. The national series starts with the week ending 2022-10-01. [data.cdc.gov](https://data.cdc.gov/resource/seuz-s2cv.json?$limit=5)\n- 2026-08-28: The latest value published by today is for the week ending 2026-08-22: influenza 0.8% positive. This matches FluView Week 33, where clinical labs reported 200 positives out of 24,572 specimens (0.8%). [FluView Wk33](https://www.cdc.gov/fluview/surveillance/2026-week-33.html)\n- The value used for resolution is the one posted on 2026-10-30. Recent weeks can be revised slightly after first release.\n\n## 2. Current status\n- Nothing has happened yet that settles the question. The target week (ending 2026-10-10) is about six weeks away.\n- 2026-08-28: CDC says \"Seasonal influenza activity is low.\" Of positive tests, 91% were influenza A. Among subtyped A viruses at public health labs that week, 9 were H3N2 and 7 were H1N1. Outpatient visits for influenza-like illness (ILI) were 1.1%, and every jurisdiction was at Minimal or Low. [FluView Wk33](https://www.cdc.gov/fluview/surveillance/2026-week-33.html)\n\n## 3. Recent news (newest first)\n- 2026-08-28: The FluView for the week ending Aug 22 gives no trend statement. It shows one core-based statistical area (a metro or micro area, \"CBSA\") at High ILI activity, up from zero the week before. [FluView Wk33](https://www.cdc.gov/fluview/surveillance/2026-week-33.html)\n- 2026-07: FluView put clinical lab positivity at about 0.6% to 0.9% in June and early July 2026. [FluView Wk27](https://www.cdc.gov/fluview/surveillance/2026-week-27.html), [Wk24](https://www.cdc.gov/fluview/surveillance/2026-week-24.html)\n- I found no news from before Aug 31 reporting an early US flu season in 2026.\n\n## 4. Base rates and seasonality\nThese are the values currently shown in dataset seuz-s2cv. [data.cdc.gov](https://data.cdc.gov/resource/seuz-s2cv.json?pathogen=Influenza)\n\n2026 summer path: 0.4% (Aug 1), 0.5 (Aug 8), 0.7 (Aug 15), 0.8 (Aug 22). Positivity doubled over three weeks. In prior years August was flat or falling.\n\n| Season | Late-Aug value | Early-Oct values | Change |\n|---|---|---|---|\n| 2022 | n/a (series starts Oct) | 2.7 (Oct 8) | early season (H3N2) |\n| 2023 | 0.8 (Aug 26) | 1.1 (Oct 7), 1.3 (Oct 14) | +0.3 to +0.5 |\n| 2024 | 0.4 (Aug 24) | 0.7 (Oct 5), 0.7 (Oct 12) | +0.3 |\n| 2025 | 0.4 (Aug 23) | 0.5 (Oct 4), 0.5 (Oct 11) | +0.1 |\n\n- Path in each year from late August to the target week:\n  - 2023: dipped to 0.7 in early September, then rose to 1.1 to 1.3.\n  - 2024: flat at 0.4 to 0.5 through September, then 0.7.\n  - 2025: 0.4 to 0.6 throughout.\n- 2026 compared with past years: the late-August level is the same as 2023 (0.8) and double 2024 and 2025 (0.4). Unlike those years, it is already trending up in August.\n- Applying past ratios (target week divided by late August, roughly 1.25x to 1.75x) to 0.8 gives about 1.0% to 1.4%. That calculation assumes 2026 follows a normal pattern. In an early season like 2022, the value could go above the question's 1.5% ceiling: 2022 was 2.0% on Oct 1.\n- Typical noise from week to week is ±0.1 to 0.2 points when activity is low.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on this series.\n- CDC's FluSight ensemble forecasts hospitalizations, not test positivity. I found none covering early October that were published before Aug 31.\n\n## 6. Upcoming events before resolution\n- Weekly FluView and dataset updates come out on Fridays: Sep 4, 11, 18 and 25, Oct 2, 9, 16, 23 and 30. The first value for the week ending Oct 10 should appear around Oct 16. It may be revised before the Oct 30 posting.\n- 2026-27 season surveillance starts with MMWR week 40 (week ending about Oct 3). Fall vaccination campaigns and schools reopening in late August and September usually come before positivity rises.\n- Things to watch: the H3N2 share and any new antigenic variant, and the West Coast and Southern US regions, where early rises often show first.\n- Weather is a minor factor. I did not pull a NOAA outlook, because respiratory spread in early autumn depends more on school terms and which strains are circulating.\n\n**Caveat:** Several search results surfaced pages dated after 2026-08-31. I left them out on purpose, as instructed.\n\nSources: [data.cdc.gov seuz-s2cv](https://data.cdc.gov/resource/seuz-s2cv.json?pathogen=Influenza), [FluView Wk33 2026](https://www.cdc.gov/fluview/surveillance/2026-week-33.html), [FluView Wk27 2026](https://www.cdc.gov/fluview/surveillance/2026-week-27.html), [FluView Wk24 2026](https://www.cdc.gov/fluview/surveillance/2026-week-24.html), [CDC 2022 early activity](https://www.cdc.gov/flu/spotlights/2022-2023/early-flu-activity.htm)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.45
+        ],
+        [
+          0.05,
+          0.6
+        ],
+        [
+          0.1,
+          0.7
+        ],
+        [
+          0.2,
+          0.85
+        ],
+        [
+          0.3,
+          0.95
+        ],
+        [
+          0.4,
+          1.05
+        ],
+        [
+          0.5,
+          1.12
+        ],
+        [
+          0.6,
+          1.2
+        ],
+        [
+          0.7,
+          1.35
+        ],
+        [
+          0.8,
+          1.5
+        ],
+        [
+          0.9,
+          1.85
+        ],
+        [
+          0.95,
+          2.2
+        ],
+        [
+          0.99,
+          3.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.5
+        ],
+        [
+          0.05,
+          0.65
+        ],
+        [
+          0.1,
+          0.75
+        ],
+        [
+          0.2,
+          0.9
+        ],
+        [
+          0.3,
+          1.0
+        ],
+        [
+          0.4,
+          1.1
+        ],
+        [
+          0.5,
+          1.2
+        ],
+        [
+          0.6,
+          1.3
+        ],
+        [
+          0.7,
+          1.45
+        ],
+        [
+          0.8,
+          1.65
+        ],
+        [
+          0.9,
+          2.0
+        ],
+        [
+          0.95,
+          2.5
+        ],
+        [
+          0.99,
+          3.6
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.5
+        ],
+        [
+          0.05,
+          0.65
+        ],
+        [
+          0.1,
+          0.75
+        ],
+        [
+          0.2,
+          0.9
+        ],
+        [
+          0.3,
+          1.0
+        ],
+        [
+          0.4,
+          1.1
+        ],
+        [
+          0.5,
+          1.2
+        ],
+        [
+          0.6,
+          1.3
+        ],
+        [
+          0.7,
+          1.45
+        ],
+        [
+          0.8,
+          1.65
+        ],
+        [
+          0.9,
+          2.0
+        ],
+        [
+          0.95,
+          2.5
+        ],
+        [
+          0.99,
+          3.6
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3052
+}

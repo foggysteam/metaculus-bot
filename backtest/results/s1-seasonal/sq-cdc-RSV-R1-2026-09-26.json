@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-RSV-R1-2026-09-26",
+  "question": "What percentage of tests will be positive for respiratory syncytial virus (RSV) in HHS Region 1 (New England) for the week ending September 26, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for respiratory syncytial virus (RSV) in HHS Region 1 (New England) for the week ending 2026-09-26 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 0.08,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-07",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 2.5,
+  "source": "cdc",
+  "series": "rgnm-fkqb:RSV-R1",
+  "known_value": 0.4,
+  "past_moves": [
+    0.34,
+    -0.01,
+    0.71,
+    2.35,
+    -4.62
+  ],
+  "baseline": "",
+  "research": "I could not get a version of the dataset frozen at 2026-09-07. The CDC dataset is overwritten every week. So I took the summer 2026 rows below from the current version and left out all rows dated after the cutoff. Values for recent weeks may have been revised a little since they were first posted.\n\n## 1. Resolution source\n- The question resolves on the CDC NREVSS dataset rgnm-fkqb, filtered to level \"Region 1\" and pathogen \"RSV\", using the field percent_pos for week ending 2026-09-26, as posted 2026-10-30. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json?level=Region%201&pathogen=RSV&$order=mmwrweek_end%20DESC&$limit=200)\n- 2026-08-29: the latest week likely public by 2026-09-07 shows 0.40% positive (1,748 tests). [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json?level=Region%201&pathogen=RSV&$order=mmwrweek_end%20DESC&$limit=200)\n- 2026-09-05: the dataset now shows 0.16%, with the test count suppressed (shown as \"*\"). This week was probably not public yet on 2026-09-07. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json?level=Region%201&pathogen=RSV&$order=mmwrweek_end%20DESC&$limit=200)\n- Weeks with very few positive tests have their counts suppressed but still show a percent.\n\n## 2. Current status\n- Nothing has settled the question yet. RSV in New England is at its usual low point between seasons. Each week has about 1,500 to 1,800 tests, so a handful of positives can move the rate by several tenths of a point.\n\n## 3. Recent news\n- 2026-09-03: a summary of CDC briefings says RSV activity is low in most of the US. [IZ Summit Partners](https://www.izsummitpartners.org/wp-content/uploads/2026_09_03_swu_summary.pdf)\n- 2026-09-03: the BC CDC monthly report for 2026-08-02 to 2026-08-29 describes US RSV as very low in most areas. [BCCDC](https://www.bccdc.ca/Health-Info-Site/Documents/Respiratory_data/respiratory_surveillance_2026-09-03.pdf)\n- 2026-05-08: the 2025-26 RSV season was unusually late. It peaked in February, and in Region 1 it was still at 1-2% in May. [Drug Topics](https://www.drugtopics.com/view/unusual-rsv-rates-increased-in-early-2026-decreasing-in-may)\n- CDC's 2026-27 season outlook expects the combined peak hospitalization rate for COVID-19, flu and RSV to be within 20% of last season's peak (low to moderate confidence). It also notes that the national RSV peak usually comes in late December or early January. [CDC](https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/season-outlook26-27.html)\n\n## 4. Base rates\nSummer 2026 in Region 1 is running higher than summer 2024 or 2025:\n- July to August 2026: weekly values ran from 0.23% to 0.92%. Recent weeks: 0.31 (08-01), 0.92 (08-08), 0.63 (08-15), 0.23 (08-22), 0.40 (08-29).\n- July to August 2025: mostly 0.05% to 0.46%.\n- July to August 2024: 0.11% to 0.44%.\n\nChange from early September to the last week of September in past years:\n\n| Year | Late Aug / early Sep | Week nearest Sep 26 | Change |\n|---|---|---|---|\n| 2025 | 0.46 (08-30), 0.23 (09-06) | 0.39 (09-27); 0.43 (09-20) | about flat to slightly up |\n| 2024 | 0.25 (08-31), 0.21 (09-07) | 0.48 (09-28); 0.27 (09-21); 0.03 (09-14) | up about 0.2 to 0.3 |\n| 2023 | 0.99 (09-02), 1.48 (09-09) | 2.59 (09-30); 1.72 (09-23) | up about 1 to 1.5 (early season) |\n| 2022 | not in the rows I retrieved (they start 2022-12-31) | - | - |\n\n- Typical pattern: late September is about level with, or 0.1 to 0.3 points above, late August. The exception is an early season like 2023, which pushed late September to around 2 to 2.6%. That is at or above the question's 2.5% ceiling.\n- Noise: from one week to the next, the rate moves by about ±0.2 to 0.5 points at these levels. For example, it went 0.31 to 0.92 to 0.63 to 0.23 in August 2026.\n- 2025 for comparison: 0.31 on 09-13, 0.43 on 09-20, 0.39 on 09-27, then 0.44 to 0.65 in October. The 2025-26 season started late.\n- 2026 so far is running above 2024 and 2025 for the same weeks but well below 2023.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on this series.\n- The only related expert view I found is CDC's qualitative outlook for the 2026-27 season (section 3). I found no quantitative regional forecast.\n\n## 6. Upcoming events before resolution\n- CDC posts NREVSS updates weekly. Week ending 09-12 should appear around 09-18, week ending 09-19 around 09-25, and week ending 09-26 around 10-02. Later postings, through the 10-30 version that decides the question, may revise the number slightly.\n- Schools reopening in late August and September usually brings RSV back gradually, so watch whether early September rises above about 0.5%.\n- The weather has little direct effect over a three-week window. I did not look up a seasonal outlook.\n- New England states (Massachusetts, Connecticut and others) publish their own weekly respiratory dashboards, which could give early signals.",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.07
+        ],
+        [
+          0.05,
+          0.14
+        ],
+        [
+          0.1,
+          0.2
+        ],
+        [
+          0.2,
+          0.28
+        ],
+        [
+          0.3,
+          0.35
+        ],
+        [
+          0.4,
+          0.42
+        ],
+        [
+          0.5,
+          0.49
+        ],
+        [
+          0.6,
+          0.56
+        ],
+        [
+          0.7,
+          0.65
+        ],
+        [
+          0.8,
+          0.79
+        ],
+        [
+          0.9,
+          1.03
+        ],
+        [
+          0.95,
+          1.3
+        ],
+        [
+          0.99,
+          2.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.07
+        ],
+        [
+          0.05,
+          0.14
+        ],
+        [
+          0.1,
+          0.19
+        ],
+        [
+          0.2,
+          0.27
+        ],
+        [
+          0.3,
+          0.34
+        ],
+        [
+          0.4,
+          0.41
+        ],
+        [
+          0.5,
+          0.48
+        ],
+        [
+          0.6,
+          0.55
+        ],
+        [
+          0.7,
+          0.64
+        ],
+        [
+          0.8,
+          0.78
+        ],
+        [
+          0.9,
+          1.02
+        ],
+        [
+          0.95,
+          1.3
+        ],
+        [
+          0.99,
+          2.05
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.07
+        ],
+        [
+          0.05,
+          0.16
+        ],
+        [
+          0.1,
+          0.22
+        ],
+        [
+          0.2,
+          0.32
+        ],
+        [
+          0.3,
+          0.4
+        ],
+        [
+          0.4,
+          0.47
+        ],
+        [
+          0.5,
+          0.54
+        ],
+        [
+          0.6,
+          0.62
+        ],
+        [
+          0.7,
+          0.72
+        ],
+        [
+          0.8,
+          0.87
+        ],
+        [
+          0.9,
+          1.12
+        ],
+        [
+          0.95,
+          1.4
+        ],
+        [
+          0.99,
+          2.2
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2988
+}

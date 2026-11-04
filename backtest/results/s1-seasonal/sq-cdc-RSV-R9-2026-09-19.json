@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-RSV-R9-2026-09-19",
+  "question": "What percentage of tests will be positive for respiratory syncytial virus (RSV) in HHS Region 9 (the Southwest and Pacific) for the week ending September 19, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for respiratory syncytial virus (RSV) in HHS Region 9 (the Southwest and Pacific) for the week ending 2026-09-19 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 0.72,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-08-24",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 4.0,
+  "source": "cdc",
+  "series": "rgnm-fkqb:RSV-R9",
+  "known_value": 0.45,
+  "past_moves": [
+    -0.11,
+    0.57,
+    1.27,
+    2.5,
+    3.87
+  ],
+  "baseline": "",
+  "research": "I've pulled the CDC data and am writing up the summary now. All values below come from the current version of the dataset. I left out every week after 2026-08-15, because that is about the latest week CDC would have posted by 2026-08-24.\n\n## 1. Resolution source\n- The question resolves on the RSV \"percent_pos\" value for \"Region 9\" for the week ending 2026-09-19 in data.cdc.gov dataset rgnm-fkqb, as posted on 2026-10-30. Each week's test counts there are about 2,800 to 4,500. [dataset](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- 2026-08-15: the latest Region 9 RSV value available by 2026-08-24 was 0.45%, from 3,086 tests. The week before (ending 08-08) was 0.76%, and the week ending 08-01 was 0.76%. [dataset](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- These numbers can change slightly between postings, so the 2026-10-30 posting is what counts.\n\n## 2. Current status\n- Nothing settles the question yet. The target week ends 2026-09-19, about four weeks after today.\n- RSV in Region 9 is at its summer low point, under 1%. 2026 summer values in the dataset:\n  - 06-20: 2.24%\n  - 06-27: 1.25%\n  - 07-04: 1.00%\n  - 07-11: 1.55%\n  - 07-18: 0.85%\n  - 07-25: 0.51%\n  - 08-01: 0.76%\n  - 08-08: 0.76%\n  - 08-15: 0.45%\n- The 2025-26 season ran late. Positivity was still 4.28% on 04-04 and 2.07% on 05-09, and stayed around 1.6% through mid-June. [dataset](https://data.cdc.gov/resource/rgnm-fkqb.json)\n\n## 3. Recent news\n- 2026-08-06: British Columbia (Canada, nearby but not part of Region 9) reported low RSV activity. [BCCDC](https://www.bccdc.ca/Health-Info-Site/Documents/Respiratory_data/respiratory_surveillance_2026-08-06.pdf)\n- 2026-03-24 and earlier: California's health department (CDPH) said the 2025-26 RSV season started later than earlier seasons and was still elevated in March. [CDPH](https://www.cdph.ca.gov/Programs/OPA/Pages/CAHAN/CDPH-Recommends-Immunizing-Infants-with-RSV-Monoclonal-Antibodies-through-April-2026.aspx), [Cal epi brief](https://v4v6.github.io/Cal_epi_newsletter/editions/2026-03-24.html)\n- I found no California-specific RSV news from August 2026. CDPH's dashboard is updated most Fridays. [CDPH](https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/RespiratoryVirusReport.aspx)\n\n## 4. Base rates (Region 9, same dataset)\nHow the value moved from about the week ending 08-15/08-24 to the week ending about 09-19/09-21 in past years:\n\n| Year | Mid/late Aug | Sep 19-21 week | Change |\n|---|---|---|---|\n| 2025 | 08-16: 0.57%, 08-23: 0.39% | 09-20: 0.77% | +0.2 to +0.4 points |\n| 2024 | 08-17: 0.38%, 08-24: 0.49% | 09-21: 0.83% (09-14: 0.99%) | +0.3 to +0.45 points |\n| 2023 | 08-19: 1.16%, 08-26: 1.35% | 09-16: 2.69%, 09-23: 2.75% | roughly doubled |\n| 2022 | 08-20: 1.79% | 09-17: 4.25% | +2.5 points (early season, after COVID) |\n| 2021 | 08-21: 9.23% | 09-18: 12.53% | unusual summer surge after COVID |\n| 2019 | 08-17: 0.67%, 08-24: 1.19% | 09-21: 1.26% | about +0.1 to +0.6 points |\n| 2020 | 0.0 to 0.3% | 09-19: 0.00% | pandemic, almost no RSV |\n\n- Pattern: in every year except 2020, positivity rose from mid-August to mid-September. In typical recent years (2024, 2025) it went from about 0.4-0.5% to about 0.8%. In 2023 it rose from about 1.2% to about 2.7%.\n- Week-to-week noise at these low levels is about ±0.2 to 0.3 points, for example 2024's 0.49, 0.15, 0.33, 0.99, 0.83. [dataset](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Compared with past years: 2026's early-August values (0.76%) are above 2024 and 2025 at the same point (about 0.33-0.57%) and well below 2022 and 2023. The latest week (0.45%) is in line with 2024 and 2025. Test volumes are similar to 2024-25.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on this, and no published expert forecast for Region 9 RSV positivity. CDC publishes RSV hospitalization forecasts, but I found none covering this specific test-positivity measure.\n\n## 6. Upcoming events before resolution\n- Four more weekly CDC NREVSS releases (weeks ending 08-22 through 09-19) are due before the target week's data first appears, around late September. The value used for resolution is the one posted on 2026-10-30, after any revisions.\n- Schools reopening in August and September usually come before the autumn rise in RSV. Region 9 seasons usually start between October and December, but 2022 and 2023 started earlier.\n- Infant RSV antibody shots (nirsevimab, clesrovimab) and adult vaccine campaigns usually start in late September or October. They are unlikely to affect the 09-19 week.\n- I did not find a weather outlook that matters here. This series is driven by the season, not short-term weather.\n\nSources:\n- [CDC NREVSS dataset rgnm-fkqb](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- [BCCDC 2026-08-06](https://www.bccdc.ca/Health-Info-Site/Documents/Respiratory_data/respiratory_surveillance_2026-08-06.pdf)\n- [CDPH CAHAN](https://www.cdph.ca.gov/Programs/OPA/Pages/CAHAN/CDPH-Recommends-Immunizing-Infants-with-RSV-Monoclonal-Antibodies-through-April-2026.aspx)\n- [CDPH Respiratory Virus Report](https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/RespiratoryVirusReport.aspx)\n- [Cal epi brief 2026-03-24](https://v4v6.github.io/Cal_epi_newsletter/editions/2026-03-24.html)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.25
+        ],
+        [
+          0.05,
+          0.37
+        ],
+        [
+          0.1,
+          0.46
+        ],
+        [
+          0.2,
+          0.59
+        ],
+        [
+          0.3,
+          0.69
+        ],
+        [
+          0.4,
+          0.78
+        ],
+        [
+          0.5,
+          0.87
+        ],
+        [
+          0.6,
+          0.97
+        ],
+        [
+          0.7,
+          1.09
+        ],
+        [
+          0.8,
+          1.28
+        ],
+        [
+          0.9,
+          1.62
+        ],
+        [
+          0.95,
+          2.0
+        ],
+        [
+          0.99,
+          2.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.22
+        ],
+        [
+          0.05,
+          0.36
+        ],
+        [
+          0.1,
+          0.45
+        ],
+        [
+          0.2,
+          0.57
+        ],
+        [
+          0.3,
+          0.67
+        ],
+        [
+          0.4,
+          0.76
+        ],
+        [
+          0.5,
+          0.85
+        ],
+        [
+          0.6,
+          0.95
+        ],
+        [
+          0.7,
+          1.07
+        ],
+        [
+          0.8,
+          1.26
+        ],
+        [
+          0.9,
+          1.6
+        ],
+        [
+          0.95,
+          1.95
+        ],
+        [
+          0.99,
+          2.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.22
+        ],
+        [
+          0.05,
+          0.36
+        ],
+        [
+          0.1,
+          0.45
+        ],
+        [
+          0.2,
+          0.58
+        ],
+        [
+          0.3,
+          0.68
+        ],
+        [
+          0.4,
+          0.77
+        ],
+        [
+          0.5,
+          0.85
+        ],
+        [
+          0.6,
+          0.94
+        ],
+        [
+          0.7,
+          1.06
+        ],
+        [
+          0.8,
+          1.25
+        ],
+        [
+          0.9,
+          1.6
+        ],
+        [
+          0.95,
+          1.95
+        ],
+        [
+          0.99,
+          2.9
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2818
+}

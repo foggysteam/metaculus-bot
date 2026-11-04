@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-ADENO-2026-09-26",
+  "question": "What percentage of tests will be positive for adenovirus in the United States for the week ending September 26, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for adenovirus in the United States for the week ending 2026-09-26 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 2.64,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-14",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 1.5,
+  "upper_bound": 3.0,
+  "source": "cdc",
+  "series": "rgnm-fkqb:ADENO",
+  "known_value": 2.38,
+  "past_moves": [
+    0.0,
+    -0.01,
+    0.41,
+    0.73,
+    0.15
+  ],
+  "baseline": "",
+  "research": "I've pulled the CDC data and past seasons. Here is the summary.\n\n## 1. Resolution source\n- The question resolves on CDC NREVSS dataset rgnm-fkqb (national level, Adenovirus, \"Combined Type\"), as the data stood on 2026-10-30. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Latest weeks on or before the cutoff, as the dataset shows them now:\n  - Week ending 2026-09-12: **2.53%**\n  - Week ending 2026-09-05: 2.38%\n  - Week ending 2026-08-29: 1.93%\n  - Week ending 2026-08-22: 2.31%\n  - Week ending 2026-08-15: 2.43%\n  [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Two caveats:\n  - The dataset is updated weekly and usually runs about a week behind. The 2026-09-12 figure may not have been public on 2026-09-14.\n  - Recent weeks can be revised later. The numbers above are the current versions, which may differ a little from what was shown in mid-September.\n- CDC's dashboard charts use a centered 3-week moving average. The dataset gives raw weekly values. [Goswitz NREVSS 2025](https://higherlogicdownload.s3.amazonaws.com/APIC/8e3ef514-80f1-403b-9f26-49e6233ef652/UploadedImages/Goswitz_NREVSS_2025.pdf), [CDC archive](https://archive.cdc.gov/www_cdc_gov/surveillance/nrevss/adeno/natl-trend.html)\n\n## 2. Current status\n- Nothing settles the question yet. The week ending 2026-09-26 had not happened as of 2026-09-14.\n- The latest value (2.53%) sits in the middle of the question's 1.5 to 3.0 range.\n- The series has gone up two weeks in a row since the 1.93% low (week ending 08-29).\n\n## 3. Recent news\n- 2026-08-26: ACL Laboratories published a respiratory pathogens report with an adenovirus column, but I could not see any values in it. [ACL](https://acl-web2.live.imagescape.com/media/files/ACL_Respiratory_Pathogens_Data_Aug_22_2026.pdf)\n- I found no news on unusual US adenovirus activity, outbreaks or CDC reporting changes in August or September 2026.\n\n## 4. Base rates and seasonality\n2026 so far (weekly values):\n- Spring peak: about 3.0 to 3.4% (high of 3.37% on 05-02).\n- July: 2.6 to 3.0%.\n- August: 1.9 to 2.6%.\n- Early September: 2.38% and 2.53%.\n\nChange from mid-September to the week ending about September 26 in past years (current data versions):\n\n| Year | Wk ending ~Sep 5 | Wk ending ~Sep 12 | Wk ending ~Sep 19 | Wk ending ~Sep 26 | Change, Sep 12 to Sep 26 |\n|---|---|---|---|---|---|\n| 2025 | 2.03 (09-06) | 1.64 (09-13) | 1.90 | 2.06 (09-27) | +0.42 |\n| 2024 | 1.93 (09-07) | 1.95 (09-14) | 1.84 | 2.18 (09-28) | +0.23 |\n| 2023 | 2.96 (09-02) | 2.75 (09-09) | 3.18 (09-16) | 3.37 (09-23) / 3.27 (09-30) | about +0.5 to +0.6 |\n| 2022 | 3.29 (09-03) | 3.44 (09-10) | 3.68 | 4.02 (09-24) | +0.58 |\n| 2021 | 2.57 (09-04) | 2.64 (09-11) | 2.67 | 2.72 (09-25) | +0.08 |\n\n- Over two weeks, the series went up in all five years, by about +0.1 to +0.6 points (average about +0.35). Fall gains continue into October and November.\n- Week-to-week noise is about ±0.2 to 0.4 points. For example, 2026 went 2.31 → 1.93 → 2.38, and 2025 went 2.03 → 1.64 → 1.90.\n- 2026 compared with past years: in early September, 2026 is running **above** 2024 (about 1.95) and 2025 (about 1.64 to 2.03), and below 2021 to 2023. If the usual two-week rise holds from 2.53, the result would be about 2.6 to 3.1. That is near or above the top of the question's range (3.0), but noise could also bring it down.\n- Earlier years for context: 2022 to 2023 levels were much higher (5 to 8%) after the pandemic. 2024 and 2025 were roughly 1.6 to 3.3% all year.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets, and no expert forecasts, for NREVSS adenovirus positivity.\n\n## 6. Upcoming events before resolution\n- CDC data updates come out weekly (usually Fridays). The week ending 09-19 data should appear around 09-25, and the week ending 09-26 data around 10-02. Later weeks may revise these figures before the 2026-10-30 snapshot.\n- School reopening in late August and September usually drives the fall rise in respiratory viruses. RV/EV positivity was 28.03% for the week ending 09-12, a sign that school-season respiratory activity is high. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Weather is only a minor factor here, so I did not look up a weather outlook.\n- Some changes could move the number regardless of virus activity: shifts in the mix of reporting labs, testing volume, or federal reporting (for example a government shutdown delaying CDC updates).\n\nSources: [data.cdc.gov rgnm-fkqb](https://data.cdc.gov/resource/rgnm-fkqb.json), [CDC archive adenovirus trends](https://archive.cdc.gov/www_cdc_gov/surveillance/nrevss/adeno/natl-trend.html), [CDC adenovirus surveillance](https://www.cdc.gov/adenovirus/php/surveillance/), [Goswitz NREVSS 2025](https://higherlogicdownload.s3.amazonaws.com/APIC/8e3ef514-80f1-403b-9f26-49e6233ef652/UploadedImages/Goswitz_NREVSS_2025.pdf), [ACL report](https://acl-web2.live.imagescape.com/media/files/ACL_Respiratory_Pathogens_Data_Aug_22_2026.pdf)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1.75
+        ],
+        [
+          0.05,
+          2.05
+        ],
+        [
+          0.1,
+          2.2
+        ],
+        [
+          0.2,
+          2.4
+        ],
+        [
+          0.3,
+          2.54
+        ],
+        [
+          0.4,
+          2.65
+        ],
+        [
+          0.5,
+          2.75
+        ],
+        [
+          0.6,
+          2.85
+        ],
+        [
+          0.7,
+          2.96
+        ],
+        [
+          0.8,
+          3.1
+        ],
+        [
+          0.9,
+          3.3
+        ],
+        [
+          0.95,
+          3.47
+        ],
+        [
+          0.99,
+          3.85
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.85
+        ],
+        [
+          0.05,
+          2.12
+        ],
+        [
+          0.1,
+          2.27
+        ],
+        [
+          0.2,
+          2.44
+        ],
+        [
+          0.3,
+          2.56
+        ],
+        [
+          0.4,
+          2.65
+        ],
+        [
+          0.5,
+          2.73
+        ],
+        [
+          0.6,
+          2.81
+        ],
+        [
+          0.7,
+          2.91
+        ],
+        [
+          0.8,
+          3.04
+        ],
+        [
+          0.9,
+          3.24
+        ],
+        [
+          0.95,
+          3.4
+        ],
+        [
+          0.99,
+          3.75
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.8
+        ],
+        [
+          0.05,
+          2.05
+        ],
+        [
+          0.1,
+          2.22
+        ],
+        [
+          0.2,
+          2.42
+        ],
+        [
+          0.3,
+          2.56
+        ],
+        [
+          0.4,
+          2.67
+        ],
+        [
+          0.5,
+          2.76
+        ],
+        [
+          0.6,
+          2.85
+        ],
+        [
+          0.7,
+          2.95
+        ],
+        [
+          0.8,
+          3.08
+        ],
+        [
+          0.9,
+          3.27
+        ],
+        [
+          0.95,
+          3.43
+        ],
+        [
+          0.99,
+          3.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2678
+}

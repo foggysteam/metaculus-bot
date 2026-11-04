@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-HCOV-2026-10-24",
+  "question": "What percentage of tests will be positive for seasonal human coronaviruses (all types) in the United States for the week ending October 24, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for seasonal human coronaviruses (all types) in the United States for the week ending 2026-10-24 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 0.86,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-10-05",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 1.5,
+  "source": "cdc",
+  "series": "rgnm-fkqb:HCOV",
+  "known_value": 0.68,
+  "past_moves": [
+    -0.02,
+    0.38,
+    -0.08,
+    0.14,
+    -0.15
+  ],
+  "baseline": "",
+  "research": "I pulled the weekly national numbers straight from the resolution dataset through the SODA API. One caveat: the copy I could read was refreshed after the cutoff. I used only weeks that would have been published by 2026-10-05, ending with the week of 2026-09-26. Those values may have been revised slightly since they first appeared. I left out the week ending 10-03 and the target week.\n\n## 1. Resolution source\n- The dataset is data.cdc.gov rgnm-fkqb (NREVSS percent positivity), filtered to level = National, pathogen = HCOV, subtype = \"Combined Type\". The question resolves on the week ending 2026-10-24, as posted 2026-10-30. [dataset](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- 2026-09-26: this is the latest week that would have been available by the cutoff. National HCOV percent positive was **0.68%**, from 19,649 tests. [dataset](https://data.cdc.gov/resource/rgnm-fkqb.json?$where=level='National'%20AND%20pathogen='HCOV')\n- Recent national weekly values for 2026 (testing volume is rising, which is normal in autumn):\n  - 08-01: 0.44\n  - 08-08: 0.66\n  - 08-15: 0.50\n  - 08-22: 0.59\n  - 08-29: 0.67\n  - 09-05: 0.63\n  - 09-12: 0.54\n  - 09-19: 0.65\n  - 09-26: 0.68\n\n  [dataset](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Earlier in 2026: the spring season was declining in May (1.99% on 05-02) and reached a summer floor of about 0.44 to 0.62% in late June to early August. [dataset](https://data.cdc.gov/resource/rgnm-fkqb.json)\n\n## 2. Current status\n- Nothing settles the question yet. The target week ends 2026-10-24, and its data are not posted until about 2026-10-30.\n- Summer and early autumn 2026 levels (about 0.55 to 0.68%) are roughly twice the same weeks in 2025 (about 0.27 to 0.36%). They are below 2024 (0.75 to 0.92%) and similar to 2023 (0.41 to 0.57%).\n\n## 3. Recent news\n- I found no news coverage of seasonal (non-SARS-CoV-2) coronaviruses for autumn 2026. CDC's routine NREVSS updates appear to be the only relevant signal. I did not find any reporting disruption or methods change announced before 2026-10-05.\n\n## 4. Base rates (national HCOV Combined, from the same dataset)\nLate-September value compared with the late-October week about 4 weeks later:\n\n| Season | Late-Sept value | Late-Oct value | Change | Ratio |\n|---|---|---|---|---|\n| 2020 | 09-26: 0.16 | 10-24: 0.21 | +0.05 | ×1.3 |\n| 2021 | 09-25: 0.73 | 10-23: 0.58 | -0.15 | ×0.79 |\n| 2022 | 09-24: 0.28 | 10-22: 0.42 | +0.14 | ×1.5 |\n| 2023 | 09-23: 0.52 | 10-21: 0.44 | -0.08 | ×0.85 |\n| 2024 | 09-28: 0.75 | 10-26: 1.53 | +0.78 | ×2.0 |\n| 2025 | 09-27: 0.27 | 10-25: 0.33 | +0.06 | ×1.2 |\n\n- Late-October values in past years:\n  - 2021: 0.58\n  - 2022: 0.42\n  - 2023: 0.44 (10-21), then 0.66 (10-28)\n  - 2024: 1.14 (10-19), then 1.53 (10-26)\n  - 2025: 0.30 (10-18), then 0.33 (10-25)\n- Pattern: October is usually the trough, or the very start of the winter rise. In most years the 4-week ratio is between 0.8 and 1.5. 2024 was the outlier: an early, strong season that doubled the value in 4 weeks.\n- Week-to-week noise at these levels is about ±0.1 percentage point. Examples: 2025-08-16 to 08-23 went 0.31 to 0.56 to 0.35, and 2026-08-01 to 08-08 went 0.44 to 0.66.\n- 2026 is running higher than 2025. If you apply the historical ratios to 0.68, you get a range of about 0.55 to 1.0, and up to about 1.4 in a 2024-type early season.\n- Revisions: values are reposted every week. Recent weeks can shift by a few hundredths as late reports come in.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or expert forecasts for NREVSS seasonal coronavirus positivity.\n\n## 6. Upcoming events before resolution\n- CDC posts NREVSS updates weekly, around Thursday or Friday. The updates on about 10-09, 10-16 and 10-23 will show the weeks ending 10-03, 10-10 and 10-17. The resolving post is expected about 2026-10-30.\n- The usual seasonal start of the winter coronavirus rise falls in late October to November. Rising test volumes, which are normal in autumn, can push positivity in either direction.\n- Watch for possible federal reporting disruptions, such as a government shutdown or a change to CDC data operations. I found no specific reports of one before the cutoff.\n\nSources:\n- [CDC data.cdc.gov rgnm-fkqb (NREVSS percent positivity)](https://data.cdc.gov/resource/rgnm-fkqb.json)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.45
+        ],
+        [
+          0.05,
+          0.54
+        ],
+        [
+          0.1,
+          0.59
+        ],
+        [
+          0.2,
+          0.66
+        ],
+        [
+          0.3,
+          0.71
+        ],
+        [
+          0.4,
+          0.76
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          0.85
+        ],
+        [
+          0.7,
+          0.91
+        ],
+        [
+          0.8,
+          0.99
+        ],
+        [
+          0.9,
+          1.13
+        ],
+        [
+          0.95,
+          1.28
+        ],
+        [
+          0.99,
+          1.62
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.42
+        ],
+        [
+          0.05,
+          0.5
+        ],
+        [
+          0.1,
+          0.55
+        ],
+        [
+          0.2,
+          0.63
+        ],
+        [
+          0.3,
+          0.69
+        ],
+        [
+          0.4,
+          0.75
+        ],
+        [
+          0.5,
+          0.8
+        ],
+        [
+          0.6,
+          0.86
+        ],
+        [
+          0.7,
+          0.93
+        ],
+        [
+          0.8,
+          1.03
+        ],
+        [
+          0.9,
+          1.2
+        ],
+        [
+          0.95,
+          1.35
+        ],
+        [
+          0.99,
+          1.7
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.44
+        ],
+        [
+          0.05,
+          0.52
+        ],
+        [
+          0.1,
+          0.57
+        ],
+        [
+          0.2,
+          0.65
+        ],
+        [
+          0.3,
+          0.7
+        ],
+        [
+          0.4,
+          0.75
+        ],
+        [
+          0.5,
+          0.79
+        ],
+        [
+          0.6,
+          0.84
+        ],
+        [
+          0.7,
+          0.9
+        ],
+        [
+          0.8,
+          0.99
+        ],
+        [
+          0.9,
+          1.13
+        ],
+        [
+          0.95,
+          1.28
+        ],
+        [
+          0.99,
+          1.6
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3119
+}
