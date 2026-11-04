@@ -16,6 +16,12 @@ Where Yahoo and FRED are blocked (Claude cloud sessions), fetch the as-of baseli
 machine that can reach them, commit the file, then rerun on an earlier run's research:
   uv run python backtest/run_numeric_backtest.py --save-baselines backtest/data/numeric_baselines.json
   uv run python backtest/run_numeric_backtest.py --run n2 --reuse-research n1 --baselines backtest/data/numeric_baselines.json
+
+Seasonal history in the research (run s1), each arm researched separately on the same questions:
+  uv run python backtest/run_numeric_backtest.py --data backtest/data/seasonal_questions.jsonl --save-baselines backtest/data/seasonal_baselines.json
+  uv run python backtest/run_numeric_backtest.py --run s1-base --data backtest/data/seasonal_questions.jsonl --baselines backtest/data/seasonal_baselines.json --variants thirteen --predictions 3
+  uv run python backtest/run_numeric_backtest.py --run s1-seasonal --research-note seasonal (and the same options)
+  uv run python backtest/score_numeric_two_reports.py --a s1-base --b s1-seasonal
 """
 from __future__ import annotations
 
@@ -52,6 +58,21 @@ DATA = ROOT / "data" / "numeric_questions.jsonl"
 VARIANTS = {
     "six": {"numeric_percentiles": (10, 20, 40, 60, 80, 90), "numeric_tail_rule": ""},  # live until 2026-10-27
     "thirteen": {},  # live from 2026-10-28 (forecaster.py defaults)
+}
+
+# Added to the research prompt with --research-note, the way the live bot adds research_note.
+RESEARCH_NOTES = {
+    # Run s1 (4 Nov 2026), on backtest/data/seasonal_questions.jsonl: on question 46337 (Swiss
+    # drought regions) the research found weather outlooks but no earlier years.
+    "seasonal": (
+        "\n\nSeasons and the calendar: if the quantity rises and falls with the time of year (weather, "
+        "disease, energy use, travel, farming, school or holiday cycles, reporting periods), add under "
+        "heading 4 how it moved from this date to the resolution date in each of the last 3 to 5 years, "
+        "with the values, and whether this year is running above or below those years. If the outcome "
+        "depends on the weather, add under heading 6 the latest official forecast or seasonal outlook "
+        "covering the time to resolution. If the series is too new to have earlier years, use the longest "
+        "related record you can find, such as the measurements it is built from."
+    ),
 }
 
 
@@ -118,7 +139,7 @@ async def run_question(
             research = reused["research"].split("\n\n## Raw prediction market and Metaculus prices\n")[0]
             leaked = reused["leaked"]
         else:
-            prompt = HISTORICAL_RULES.format(as_of=row["as_of"]) + any_bot._get_research_prompt(question, researcher)
+            prompt = HISTORICAL_RULES.format(as_of=row["as_of"]) + any_bot._get_research_prompt(question, researcher) + any_bot.research_note
             if baseline:
                 prompt += f"\n\nPrices and data already collected by code (use them):\nStatistical baseline:\n{baseline}"
             raw_research = await researcher.invoke(prompt)
@@ -143,6 +164,7 @@ async def run_question(
         **row,
         "baseline": baseline,
         "research": research,
+        "research_note": next((k for k, v in RESEARCH_NOTES.items() if v and v == any_bot.research_note), ""),
         "leaked": leaked,
         "forecasts": forecasts,
         "errors": [repr(r) for r in results if isinstance(r, BaseException)],
@@ -168,9 +190,11 @@ async def main() -> None:
     parser.add_argument("--reuse-research", help="Run whose saved research to reuse instead of researching again")
     parser.add_argument("--baselines", help="JSON file of as-of baselines from --save-baselines, used instead of fetching")
     parser.add_argument("--save-baselines", help="Only fetch each question's as-of baseline and save them to this JSON file")
+    parser.add_argument("--data", default=str(DATA), help="Question file (default: numeric_questions.jsonl)")
+    parser.add_argument("--research-note", choices=sorted(RESEARCH_NOTES), help="Add this note to the research prompt")
     args = parser.parse_args()
 
-    rows = [json.loads(line) for line in DATA.open(encoding="utf-8")][args.offset : args.offset + args.limit]
+    rows = [json.loads(line) for line in Path(args.data).open(encoding="utf-8")][args.offset : args.offset + args.limit]
     if args.save_baselines:
         await save_baselines(rows, Path(args.save_baselines))
         return
@@ -185,6 +209,8 @@ async def main() -> None:
         bot = ClaudeForecaster(llms=build_llms(), publish_reports_to_metaculus=False)
         for attr, value in VARIANTS[name].items():
             setattr(bot, attr, value)
+        if args.research_note:
+            bot.research_note = RESEARCH_NOTES[args.research_note]
         bots[name] = bot
     gate = asyncio.Semaphore(args.parallel)
 

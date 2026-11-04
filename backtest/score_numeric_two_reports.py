@@ -75,6 +75,14 @@ def main() -> None:
             f"| {name} | {statistics.fmean(x for x, _ in pairs):.3f} | {statistics.fmean(diff):+.1f} | "
             f"{lo:+.1f} to {hi:+.1f} | {sum(d > 0 for d in diff)} | {sum(d < 0 for d in diff)} |"
         )
+    by_source: dict[str, list[float]] = {}
+    for i, b_score, a_score in zip(ids, scores["3 from B"], base):
+        if b_score is not None and a_score is not None:
+            by_source.setdefault(a_runs[i].get("source", "?"), []).append(50 * (b_score - a_score))
+    lines.append("")
+    lines.append("3 from B against 3 from A, by source: " + ", ".join(
+        f"{s} {statistics.fmean(d):+.1f} over {len(d)}" for s, d in sorted(by_source.items())
+    ))
     lines.append("")
     report = "\n".join(lines)
     print(report)
