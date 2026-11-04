@@ -1,0 +1,358 @@
+{
+  "logged_at": "2026-11-04T18:07:36.314490+00:00",
+  "bot_version": "2026-10-29.1",
+  "started_at": "2026-11-04T18:02:00.370327+00:00",
+  "published": false,
+  "status": "failed",
+  "error": "ValidationError: 1 validation error for NumericDistribution\n  Value error, Percentiles must be in strictly increasing order [type=value_error, input_value={'declared_percentiles': ...'standardize_cdf': True}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+  "question": {
+    "id": 46570,
+    "post_id": 46337,
+    "url": "https://www.metaculus.com/questions/46337",
+    "type": "DiscreteQuestion",
+    "unit": "regions",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How many Swiss regions will be classified as \"Extremely Dry\" according to the Swiss drought platform on December 1, 2026?",
+    "resolution_criteria": "This question resolves as the number of Swiss drought regions classified as \"Extremely dry\" according to the Swiss [National drought platform](https://www.trockenheit.admin.ch/en) when accessed by Metaculus on or after December 1, 2026.",
+    "fine_print": "",
+    "close_time": "2026-11-04 21:00 UTC",
+    "scheduled_resolution_time": "2026-12-01 00:00 UTC"
+  },
+  "research": [
+    "**Bottom line:** As of 1 November 2026, a news report says **3 regions** are \"Extremely dry\" on the platform: the Lake Zurich region, the Glarus Alps and the Rhine valley. I could not check this against the platform's own list, because the map and list views don't come through in fetched text. Nothing settles the question yet. Rain in October eased the drought, but early November is expected to stay dry.\n\n## 1. Resolution source\n- 2026-11-02: The platform shows \"Situation bis 01.11.2026, Aktualisiert am 02.11.2026\". The bulletin headline is \"Die Trockenheitssituation hält an\" (the drought continues). It says recent rain eased the drought in some regions for now, but the overall situation stays tense. The legend has five classes: not dry, slightly dry, dry, very dry, extremely dry. The regional assignments are only in the interactive map and list view, so I could not count them myself. [trockenheit.admin.ch/de](https://www.trockenheit.admin.ch/de), [EN](https://www.trockenheit.admin.ch/en)\n- 2026-11-02: Bote der Urschweiz, citing the federal drought platform: **3 regions** are in extreme drought (Lake Zurich region, Glarus Alps, Rhine valley). Ticino is the only canton where the drought has ended. This is the best available latest value. [bote.ch](https://www.bote.ch/nachrichten/schweizundwelt/wetter-schweiz-winter-wird-wohl-nass-und-mild-art-1729932)\n- A search summary suggested most of the Plateau (Mittelland) and the Alps are \"dry or very dry\". I could not confirm that wording on the page.\n- 2026-10-18: The platform's modelled soil-moisture layer (WaSim model) was last updated on this date and showed \"extrem trocken\" somewhere. I don't know how many regions that covered. [platform soil page](https://www.trockenheit.admin.ch/de/faktoren/boden/modellierte-bodenfeuchte)\n- I could not find out how many drought regions the platform has in total. The question's range (up to 25.5) suggests it is at least about 25.\n\n## 2. Current status\n- Nothing settles the outcome. The count fell from widespread extreme drought in the summer to about 3 regions by 1 November. Updates appear roughly weekly (updated 02.11 for the situation to 01.11), so several more updates will come before 1 December.\n\n## 3. Recent news (newest first)\n- 2026-11-04: MeteoSwiss says it is a dry day across Switzerland, with fog over the Plateau and sun in Valais. [tdg.ch](https://www.tdg.ch/meteo-soleil-en-valais-grisaille-sur-le-plateau-ce-mercredi-197978571446)\n- 2026-11-02: Graubünden moved about 5,000 fish; most river basins hit historic low water levels this summer. [swissinfo](https://www.swissinfo.ch/eng/emissions-reduction/gr-around-5000-fish-have-been-relocated-due-to-the-drought/92314947)\n- 2026-11-02: Rain has done little for the Rhine, Lake Zurich and Lake Constance, and lake and river levels are still exceptionally low. [bote.ch](https://www.bote.ch/nachrichten/schweizundwelt/wetter-schweiz-winter-wird-wohl-nass-und-mild-art-1729932)\n- 2026-11-02: The mushroom season was poor after the hot, dry summer. [bluewin](https://www.bluewin.ch/en/news/switzerland/a-bad-season-for-mushroom-pickers-li.3658361)\n- About 2026-10/11: Tages-Anzeiger describes the summer half-year as the driest in about 160 years, with the second-warmest September since 1864 (taken from a search summary; I could not fetch the page). [Tages-Anzeiger](https://www.tagesanzeiger.ch/wetter-schweiz-kommt-im-november-endlich-regen-966057637491)\n- 2026-08-26: WSL says that, according to the platform, most of Switzerland was affected by extreme drought. [WSL FAQ](https://www.wsl.ch/de/metanavigation/im-fokus/trockenheit-2026-haeufige-fragen-und-antworten/)\n- 2026-08-01: The second-highest drought danger level applied in all Swiss regions. [20 Minuten](https://www.20min.ch/story/historische-hitzewellen-schweiz-trockenheit-duerrejahre-103610162)\n- 2026-04-21: MeteoNews said large parts of the Plateau, northwestern Switzerland and parts of Valais were already extremely dry in spring. [MeteoNews](https://meteonews.ch/de/News/N16444/Trockenheit-immer-noch-recht-ausgepr%C3%A4gt)\n\n## 4. Base rates\n- 2026 path: extreme drought from spring, covering most of the country in summer (August), then rain in October cut the count to about 3 by 1 November.\n- I found no data on past December values. Swiss droughts usually ease in late autumn and winter, when evaporation is low, but low lakes and rivers can keep hydrological drought going (for example, the low Rhine and lakes now).\n- I could not find monthly change statistics for the platform's region counts. The October drop shows that big swings within a month are possible.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on this. None of the markets you supplied match: they cover the SNB, referendums, the Federal Council and the NY Jets.\n- 2026-11-02: Meteorologist Klaus Marquardt (MeteoNews) expects almost no precipitation in the first 10 days of November, just fog and at most drizzle. He says the current El Niño could possibly bring a mild, wet winter. [bote.ch](https://www.bote.ch/nachrichten/schweizundwelt/wetter-schweiz-winter-wird-wohl-nass-und-mild-art-1729932)\n- About 2026-10-30: A search summary said wetter.ch cites NOAA's model as forecasting a drier-than-normal November, especially in the south and east. I could not verify this. [wetter.ch](https://www.wetter.ch/)\n\n## 6. Upcoming events before resolution\n- About 4 weekly platform updates (around 9, 16, 23 and 30 November).\n- Weather in mid to late November: a dry first ten days could make things worse again or stop recovery, while frontal rain or snow later in the month could cut the count. Snow adds less to soil and river flows right away.\n- Possible further low-water reports on the Rhine and the lakes. These hydrological factors feed into the platform's classification.\n\nSources: [trockenheit.admin.ch/de](https://www.trockenheit.admin.ch/de), [trockenheit.admin.ch/en](https://www.trockenheit.admin.ch/en), [bote.ch](https://www.bote.ch/nachrichten/schweizundwelt/wetter-schweiz-winter-wird-wohl-nass-und-mild-art-1729932), [WSL](https://www.wsl.ch/de/metanavigation/im-fokus/trockenheit-2026-haeufige-fragen-und-antworten/), [20min](https://www.20min.ch/story/historische-hitzewellen-schweiz-trockenheit-duerrejahre-103610162), [MeteoNews](https://meteonews.ch/de/News/N16444/Trockenheit-immer-noch-recht-ausgepr%C3%A4gt), [Tages-Anzeiger](https://www.tagesanzeiger.ch/wetter-schweiz-kommt-im-november-endlich-regen-966057637491), [wetter.ch](https://www.wetter.ch/), [swissinfo](https://www.swissinfo.ch/eng/emissions-reduction/gr-around-5000-fish-have-been-relocated-due-to-the-drought/92314947), [bluewin](https://www.bluewin.ch/en/news/switzerland/a-bad-season-for-mushroom-pickers-li.3658361), [tdg.ch](https://www.tdg.ch/meteo-soleil-en-valais-grisaille-sur-le-plateau-ce-mercredi-197978571446), [platform soil page](https://www.trockenheit.admin.ch/de/faktoren/boden/modellierte-bodenfeuchte)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-04 18:02 UTC; check each market really matches the question)\n- Kalshi: NY Jets: To Break Playoff Drought (New York J). Yes prices: 2027-28 season: 0.20; 2028-29 season: 0.36; 2026-27 season: 0.05; 2029-30 season: 0.35; 2030-31 season: 0.35.\n- Kalshi: Which November Swiss referendums will pass? (In 2026). Yes prices: War Materiel Act amendment: 0.39; Fireworks Initiative: 0.70; Fair taxes for married couples: 0.28; AHV VAT financing: 0.23.\n- Kalshi: Swiss Federal Council by-election winner? (in 2026). Yes prices: Céline Amaudruz: 0.20; Jean-Pierre Gallati: 0.12; Thomas Aeschi: 0.10; Natalie Rickli: 0.08; André Rüegsegger: 0.07; Pascal Schmid: 0.06; Michael Götte: 0.03; Thomas Matter: 0.03; Franz Grüter: 0.04; Mike Egger: 0.04.\n- Kalshi: Swiss National Bank rate decision in December (Dec 10, 2026 meeting). Yes prices: Maintain current rate: 0.86; Hike 1-25bps: 0.12; Cut more than 25bps: 0.0200; Cut 1-25bps: 0.0300; Hike more than 25bps: 0.0200.\n- Kalshi: When will xAI release Grok 5? (Grok 5). Yes prices: Before 2027: 0.17; Before December: 0.04; Before October: 0.0100; Before July: 0.0500; Before April: 0.0300; Before September: 0.0400; Before November: 0.0500.\n- Kalshi: Will the Fed publish a dot plot in December? (In December 2026). Yes prices: In December 2026: 0.95.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Polymarket: Swiss National Bank Decision in March? (ends 2027-03-18). [Yes, No] prices: 50+ bps decrease: [\"0.053\", \"0.947\"]; 25 bps decrease: [\"0.0155\", \"0.9845\"]; No Change: [\"0.46\", \"0.54\"]; 25 bps increase: [\"0.445\", \"0.555\"]; 50+ bps increase: [\"0.031\", \"0.969\"]\n- Polymarket: Swiss National Bank Decision in June? (ends 2027-06-24). [Yes, No] prices: 50+ bps decrease: [\"0.045\", \"0.955\"]; 25 bps decrease: [\"0.23\", \"0.77\"]; No Change: [\"0.325\", \"0.675\"]; 25 bps increase: [\"0.315\", \"0.685\"]; 50+ bps increase: [\"0.1345\", \"0.8655\"]\n- Polymarket: Swiss Federal Council By-Election Winner (ends 2026-12-10). [Yes, No] prices: Thomas Aeschi: [\"0.08\", \"0.92\"]; Céline Amaudruz: [\"0.385\", \"0.615\"]; Marco Chiesa: [\"0.26\", \"0.74\"]; Jean-Pierre Gallati: [\"0.085\", \"0.915\"]; Michael Graber: [\"0.215\", \"0.785\"]; Franz Ruppen: [\"0.255\", \"0.745\"]\n- Polymarket: Switzerland’s November Referendum: What will pass? (ends 2026-11-29). [Yes, No] prices: VAT federal decree: [\"0.235\", \"0.765\"]; Fireworks restriction initiative: [\"0.68\", \"0.32\"]; Marriage taxation initiative: [\"0.34\", \"0.66\"]; War Material amendment: [\"0.38\", \"0.62\"]",
+    "I couldn't get an exact count of \"extremely dry\" regions from the resolution page, because the map can't be read as text. Here is what I found.\n\n## 1. Resolution source\n- 2026-11-02: The National Drought Platform was updated on 02.11.2026, showing the situation as of 01.11.2026. The headline reads \"Die Trockenheitssituation hält an\" (the drought continues): recent rain eased things locally, but the overall situation remains tense. It uses five classes: not dry, slightly dry, dry, very dry, extremely dry. Region-by-region classes appear only in the interactive map and the \"Display list\" view, which my tools could not read. **So I could not get the exact current number of \"extremely dry\" regions.** [source](https://www.trockenheit.admin.ch/en)\n- 2026-08-01: The platform has **38 regions**. On that date there were 20 extremely dry, 13 very dry, 2 dry and 3 slightly dry, citing BAFU (the Federal Office for the Environment). [Blick](https://www.blick.ch/sonntagsblick/wegen-anhaltender-trockenheit-geht-uns-das-trinkwasser-aus-id22151220.html)\n\n## 2. Current status\n- 2026-11-02: Citing the federal platform, Bote/CH Media reports that the Lake Zurich area, the Glarus Alps and the Rhine Valley are in extreme drought. Large parts of the Mittelland (the central plateau) and the Alps are dry or very dry. Ticino is the only canton fully out of drought. Reading these as platform regions suggests **at least about 3 regions are \"extremely dry\" now**; I could not confirm the exact number. [Bote](https://www.bote.ch/nachrichten/schweizundwelt/wetter-schweiz-winter-wird-wohl-nass-und-mild-art-1729932)\n- 2026-10-29: The official bulletin says soil-moisture deficits north of the Alps and in the Mittelland are \"considerable to extreme\". 90-day rainfall deficits are moderate to large almost everywhere, at 50-70% in the Uri and Glarus Alps, Surselva and northern Graubünden. Several river stations show flows that occur only every 10-30 years or less often. Lake Constance, Lake Zurich, Lake Walen and the Jura lakes are well below normal. [Bulletin](https://www.trockenheit.admin.ch/de/trockenheit/trockenheitsbulletin)\n- Nothing has settled the question yet.\n\n## 3. Recent news (newest first)\n- 2026-11-04: MeteoSwiss forecasts a dry day nationwide, with fog over the Plateau. [TdG](https://www.tdg.ch/meteo-soleil-en-valais-grisaille-sur-le-plateau-ce-mercredi-197978571446)\n- 2026-11-02: Graubünden says water levels in most river basins hit historic lows this summer, and about 5,000 fish were relocated. [swissinfo](https://www.swissinfo.ch/eng/emissions-reduction/gr-around-5000-fish-have-been-relocated-due-to-the-drought/92314947)\n- 2026-11-02: Klaus Marquardt (Meteo News) expects little rain in the first ten days of November, at most drizzle and fog. He says the strong El Niño may bring a mild, wet winter, but this is uncertain. [Bote](https://www.bote.ch/nachrichten/schweizundwelt/wetter-schweiz-winter-wird-wohl-nass-und-mild-art-1729932)\n- 2026-10 (month-end): MeteoSwiss says October was 1.4 °C warmer than normal, with rainfall mostly below average (44-155% of the norm) until shortly before month-end. [bluewin](https://www.bluewin.ch/en/news/the-weather-in-october-was-a-little-too-warm-and-lacked-precipitation-li.3655138)\n- 2026-10-16: BAFU says flow deficits are considerable to extreme across much of the country, and several lakes are at extremely low levels for the season. [BAFU](https://www.bafu.admin.ch/de/sommer-2026-trockenheit-und-hohe-wassertemperaturen)\n- 2026-10-04: NZZ reports the highest warning level again in large parts of Switzerland. April-September 2026 was the driest summer half-year since records began in 1864, with 56% of normal rainfall. [NZZ](https://www.nzz.ch/wissenschaft/duerre-in-der-schweiz-die-pegel-an-zuerichsee-und-bodensee-sinken-so-tief-wie-noch-nie-ld.10025887) (paywalled; claims taken from search snippets)\n- 2026-10-01: SRF says the 2025/26 hydrological year was too dry in all regions, at about 60% of normal rainfall in German-speaking Switzerland. [SRF](https://www.srf.ch/meteo/meteo-stories/ende-des-hydrologischen-jahres-wasser-ist-mangelware)\n\n## 4. Base rates\n- The platform has only been running since May 2025, so there is very little history.\n- 2026-08-01: 20 of 38 regions were extremely dry. [Blick](https://www.blick.ch/sonntagsblick/wegen-anhaltender-trockenheit-geht-uns-das-trinkwasser-aus-id22151220.html)\n- Late August 2026: most of Switzerland was \"extremely dry\" on the platform. [WSL FAQ](https://www.wsl.ch/de/metanavigation/im-fokus/trockenheit-2026-haeufige-fragen-und-antworten/)\n- Early November 2026: about 3 named areas were extremely dry, after late-October rain. The trend since late summer is down, but deficits persist.\n- Summer 2025: SRF reported the Rhine Valley at the highest level, described as a 20-30-year event. [SRF](https://www.srf.ch/meteo/meteo-news/trockenheit-in-gewissen-regionen-seit-monaten-zu-wenig-regen)\n- Classes can move a lot in a month: from 20 regions in August to a handful in early November. I found no counts for September or October.\n\n## 5. Other forecasts\n- None of the supplied Kalshi or Polymarket markets (Jets, SNB rates, Swiss referendums, Federal Council election, and others) relate to this question. I found no prediction market or expert forecast on the number of drought regions.\n\n## 6. Upcoming events before resolution\n- 2026-11-05: next drought bulletin. After that bulletins are roughly weekly, on Thursdays. [Bulletin](https://www.trockenheit.admin.ch/de/trockenheit/trockenheitsbulletin)\n- Early November: high pressure keeps conditions dry, and the bulletin says soil-moisture deficits will grow without rain. Later, more frequent westerly rain is expected, roughly normal north of the Alps and below normal in the south. 30- and 90-day deficits are expected to stay as they are, and no lasting groundwater recovery is expected.\n- The NOAA monthly model, cited by wetter.com, has November drier than normal, especially in the south and east. This comes from secondary sources and is low reliability. [wetter.com](https://ch.wetter.com/magazin/wetterprognose-und-vorhersage-november_aid_5b55da5238f788063f13ced2.html)\n- A strong El Niño might mean a wetter winter; this is uncertain.\n- Snow at altitude instead of rain would not ease deficits right away.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-04 18:02 UTC; check each market really matches the question)\n- Kalshi: NY Jets: To Break Playoff Drought (New York J). Yes prices: 2027-28 season: 0.20; 2028-29 season: 0.36; 2026-27 season: 0.05; 2029-30 season: 0.35; 2030-31 season: 0.35.\n- Kalshi: Which November Swiss referendums will pass? (In 2026). Yes prices: War Materiel Act amendment: 0.39; Fireworks Initiative: 0.70; Fair taxes for married couples: 0.28; AHV VAT financing: 0.23.\n- Kalshi: Swiss Federal Council by-election winner? (in 2026). Yes prices: Céline Amaudruz: 0.20; Jean-Pierre Gallati: 0.12; Thomas Aeschi: 0.10; Natalie Rickli: 0.08; André Rüegsegger: 0.07; Pascal Schmid: 0.06; Michael Götte: 0.03; Thomas Matter: 0.03; Franz Grüter: 0.04; Mike Egger: 0.04.\n- Kalshi: Swiss National Bank rate decision in December (Dec 10, 2026 meeting). Yes prices: Maintain current rate: 0.86; Hike 1-25bps: 0.12; Cut more than 25bps: 0.0200; Cut 1-25bps: 0.0300; Hike more than 25bps: 0.0200.\n- Kalshi: When will xAI release Grok 5? (Grok 5). Yes prices: Before 2027: 0.17; Before December: 0.04; Before October: 0.0100; Before July: 0.0500; Before April: 0.0300; Before September: 0.0400; Before November: 0.0500.\n- Kalshi: Will the Fed publish a dot plot in December? (In December 2026). Yes prices: In December 2026: 0.95.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Polymarket: Swiss National Bank Decision in March? (ends 2027-03-18). [Yes, No] prices: 50+ bps decrease: [\"0.053\", \"0.947\"]; 25 bps decrease: [\"0.0155\", \"0.9845\"]; No Change: [\"0.46\", \"0.54\"]; 25 bps increase: [\"0.445\", \"0.555\"]; 50+ bps increase: [\"0.031\", \"0.969\"]\n- Polymarket: Swiss National Bank Decision in June? (ends 2027-06-24). [Yes, No] prices: 50+ bps decrease: [\"0.045\", \"0.955\"]; 25 bps decrease: [\"0.23\", \"0.77\"]; No Change: [\"0.325\", \"0.675\"]; 25 bps increase: [\"0.315\", \"0.685\"]; 50+ bps increase: [\"0.1345\", \"0.8655\"]\n- Polymarket: Swiss Federal Council By-Election Winner (ends 2026-12-10). [Yes, No] prices: Thomas Aeschi: [\"0.08\", \"0.92\"]; Céline Amaudruz: [\"0.385\", \"0.615\"]; Marco Chiesa: [\"0.26\", \"0.74\"]; Jean-Pierre Gallati: [\"0.085\", \"0.915\"]; Michael Graber: [\"0.215\", \"0.785\"]; Franz Ruppen: [\"0.255\", \"0.745\"]\n- Polymarket: Switzerland’s November Referendum: What will pass? (ends 2026-11-29). [Yes, No] prices: VAT federal decree: [\"0.235\", \"0.765\"]; Fireworks restriction initiative: [\"0.68\", \"0.32\"]; Marriage taxation initiative: [\"0.34\", \"0.66\"]; War Material amendment: [\"0.38\", \"0.62\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 1.75,
+        "p50": 3.0,
+        "p75": 5.25,
+        "p90": 8.5
+      },
+      "reasoning": "**(a) Time left:** About 27 days until resolution on December 1, 2026. About four more weekly platform updates are expected before then.\n\n**(b) Latest known value:** 3 regions classified \"Extremely dry\" (Lake Zurich region, Glarus Alps, Rhine valley), for the situation up to November 1, 2026. This comes from a news report citing the platform, published November 2, 2026. I could not check it against the platform's own map.\n\n**(c) If nothing changed:** 3 regions.\n\n**(d) If the trend continued:** The count fell sharply from most of the country in August to 3 by November 1, so a continued decline points to about 0 to 2. However, early November is forecast to be dry and the platform describes the situation as continuing. Lake and river levels, which change slowly, may keep these regions extreme, so the decline could stall at around 2 to 4.\n\n**(e) Historical variation:** Month-to-month swings can be large: October brought the count down from widespread extreme drought to 3. In November evaporation is low, so soil-based indices worsen only slowly without rain. Long-window rainfall deficits and low lake and river levels persist even after rain. A plausible range over one month is roughly 0 to about 8, with a tail higher if the dry spell lasts.\n\n**(f) Experts and markets:** No markets exist. MeteoNews expects almost no rain in the first 10 days of November and possibly a wet, mild winter linked to El Niño. A NOAA-based outlook (unverified) suggested a drier-than-normal November in the east and south. The question creator puts the likely range at 2 to 25.\n\n**(g) Unexpected scenarios:**\n- **Low:** Strong frontal systems in mid to late November bring heavy rain across the northeast, lifting the Rhine and the lakes. The platform downgrades every region, giving 0.\n- **High:** November stays dry with persistent high pressure and fog, the long-window deficits deepen, and the platform's indicators push the Plateau and the eastern regions (Lake Constance, Thurgau, St. Gallen, Zurich) back into extreme. That gives 10 to 18.\n\nPercentile 1: 0\nPercentile 5: 0\nPercentile 10: 1\nPercentile 20: 1.5\nPercentile 30: 2\nPercentile 40: 2.6\nPercentile 50: 3\nPercentile 60: 3.6\nPercentile 70: 4.5\nPercentile 80: 6\nPercentile 90: 8.5\nPercentile 95: 11\nPercentile 99: 17"
+    },
+    {
+      "value": {
+        "p10": 0.7,
+        "p25": 1.8,
+        "p50": 3.1,
+        "p75": 5.15,
+        "p90": 8.0
+      },
+      "reasoning": "(a) **Time left:** About 27 days. The question resolves on December 1, 2026, which is about four weekly platform updates from now.\n\n(b) **Latest known value:** 3 regions were \"Extremely dry\" for the situation up to 01.11.2026, with the platform updated 02.11.2026. The regions were the Lake Zurich region, the Glarus Alps and the Rhine valley. This figure comes from a news report citing the platform, not from a direct count of the platform's list.\n\n(c) **If nothing changed:** 3 regions.\n\n(d) **If the current trend continued:**\n- The count fell steeply from widespread extreme drought in August to 3 by November 1, after October rain.\n- Continuing that easing would mean 0 to 2 regions.\n- However, the first 10 days of November are forecast to be dry, which may stall the easing or reverse it slightly.\n- Lake and river levels remain very low.\n\n(e) **Historical variation:** Month-to-month swings are large. The count dropped from most of the country to 3 within roughly two months. Low evaporation in winter slows the drying of soils, but long-window precipitation deficits and low water levels can keep regions classified as extreme. Over a month, a change of plus or minus 3 to 5 regions is plausible.\n\n(f) **Experts and markets:**\n- There is no market on this question.\n- MeteoNews expects almost no precipitation through about November 10.\n- NOAA reportedly forecasts a drier-than-normal November, especially in the east, where the 3 regions are. I could not verify this.\n- El Niño may bring a wet, mild winter, but probably mostly after November.\n\n(g) **Unexpected scenarios:**\n- **Low:** Several Atlantic fronts in mid to late November bring heavy rain to the northeast, refilling soils and raising river levels, so all regions drop out of \"extremely dry\". The result would be 0.\n- **High:** November stays persistently dry under high pressure and fog, the long-window deficits deepen, and the Plateau and eastern regions slip back into extreme drought. The result would be 10 to 15 regions.\n\nPercentile 1: 0\nPercentile 5: 0.2\nPercentile 10: 0.7\nPercentile 20: 1.5\nPercentile 30: 2.1\nPercentile 40: 2.6\nPercentile 50: 3.1\nPercentile 60: 3.7\nPercentile 70: 4.5\nPercentile 80: 5.8\nPercentile 90: 8\nPercentile 95: 10\nPercentile 99: 15"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 1.9,
+        "p50": 3.2,
+        "p75": 5.5,
+        "p90": 9.0
+      },
+      "reasoning": "(a) **Time left:** About 27 days. The platform is updated roughly weekly, so the 30 November update for the situation to about 29 November will probably be the one seen on 1 December.\n\n(b) **Latest known value:** 3 regions classified \"Extremely dry\" (Lake Zurich region, Glarus Alps, Rhine valley). This is the situation to 1 November 2026, updated 2 November, as reported by Bote der Urschweiz citing the platform.\n\n(c) **If nothing changed:** 3 regions.\n\n(d) **If the trend continued:** The count fell from most of the country in August to 3 by 1 November, so an extrapolated trend points to 0 to 2. However, the first 10 days of November are forecast to be almost dry, and NOAA reportedly forecasts a drier-than-normal November. That would slow or reverse the improvement. Lake, river and groundwater levels are still exceptionally low, which keeps hydrological indicators in the extreme range.\n\n(e) **Historical variation:** Within one month the count can move a lot. October went from many regions to 3 after rain. In November evaporation is low, so soil-moisture indicators change more slowly. Lake and river levels respond to sustained rain or to snowmelt rather than quickly. A move of plus or minus 3 regions within a month is plausible, and larger swings are possible.\n\n(f) **Experts and markets:**\n- No market covers this question.\n- MeteoNews expects a dry early November, and the El Niño might bring a mild, wet winter later.\n- NOAA reportedly expects a dry November, especially in the south and east.\n- The question creator thinks the result is likely between 2 and 25.\n\n(g) **Unexpected scenarios:**\n- **Low:** Strong frontal rain in mid to late November, with high snowlines, refills the lakes and the Rhine. All regions drop below \"extremely dry\" and the count is 0.\n- **High:** November stays persistently dry with fog and high pressure, so precipitation deficits grow. Indicators such as the precipitation-based index and low flows push much of the Plateau and northeastern Switzerland back to \"extremely dry\", giving 10 to 15 or more regions.\n\nPercentile 1: 0\nPercentile 5: 0\nPercentile 10: 1\nPercentile 20: 1.6\nPercentile 30: 2.2\nPercentile 40: 2.8\nPercentile 50: 3.2\nPercentile 60: 3.8\nPercentile 70: 4.8\nPercentile 80: 6.2\nPercentile 90: 9\nPercentile 95: 12\nPercentile 99: 18"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 2.5,
+        "p50": 5.0,
+        "p75": 9.0,
+        "p90": 14.0
+      },
+      "reasoning": "(a) **Time left:** about 27 days. The question resolves on the platform state on or after December 1, 2026.\n\n(b) **Latest known value:** The platform was updated on 02.11.2026, showing data as of 01.11.2026, but I have no exact count. Media citing it name the Lake Zurich area, the Glarus Alps and the Rhine Valley as extremely dry. That suggests at least about 3 of 38 regions, possibly a few more that the summary did not name. On 2026-08-01 the count was 20 of 38.\n\n(c) **If nothing changed:** about 3 to 6 regions.\n\n(d) **If the trend continued:** The trend since late summer is down, from 20 or more regions to a handful, helped by rain in late October. Two things pull in different directions:\n- The first ten days of November look dry under high pressure, so soil deficits will grow. The NOAA monthly model hints November will be drier than normal.\n- Later westerly rain is expected to be roughly normal north of the Alps.\n- Long-term deficits in lakes, groundwater and 90-day rainfall persist, which keeps some regions in the top class.\n\nTaken together, this gives roughly 2 to 8 regions.\n\n(e) **Historical variation:** Classes moved a lot within a month. The count fell from 20 to about 3 between August and early November. A swing of plus or minus 5 to 10 regions over 4 weeks is plausible.\n\n(f) **Experts and markets:** There are no markets on this. Experts expect continued deficits in the short term and a possibly wet, mild winter linked to El Niño, which is uncertain. The question creator's range of 2 to 25 suggests a current value in the low to middle single digits or somewhat higher.\n\n(g) **Unexpected scenarios:**\n- **Low:** Strong westerly storms in mid to late November bring heavy rain north of the Alps, and the count drops to 0 or 1.\n- **High:** A persistent anticyclone and a dry November (the NOAA scenario) let deficits grow again. More than 15 regions slip back to \"extremely dry,\" especially in the east and south.\n\nPercentile 1: 0\nPercentile 5: 0\nPercentile 10: 1\nPercentile 20: 2\nPercentile 30: 3\nPercentile 40: 4\nPercentile 50: 5\nPercentile 60: 6\nPercentile 70: 8\nPercentile 80: 10\nPercentile 90: 14\nPercentile 95: 17\nPercentile 99: 23"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 2.3,
+        "p50": 4.0,
+        "p75": 7.0,
+        "p90": 11.0
+      },
+      "reasoning": "(a) **Time left:** About 27 days. The question resolves when Metaculus reads the platform on or after December 1, 2026.\n\n(b) **Latest known value:** The platform was updated on 02.11.2026 with data as of 01.11.2026, but no exact count was retrievable. CH Media, citing the platform, named the Lake Zurich area, the Glarus Alps and the Rhine Valley as extremely dry. That points to roughly 3 regions, and the true figure could plausibly be anywhere from 3 to 8 of the 38 regions. On 1 August 2026 the count was 20 of 38.\n\n(c) **If nothing changed:** About 3 to 5 regions.\n\n(d) **If the trend continued:** The count fell from 20 in August, and from \"most of Switzerland\" in late August, to a handful after the late-October rain. Continuing that decline would give 0 to 2 by December. However, early November is forecast to be dry under high pressure, and the bulletin warns that soil-moisture deficits will grow. River flows, lake levels and groundwater in the northeast remain at extreme levels and recover slowly. Evaporation is low in November, so normal westerly rain later in the month would ease the soil indicators. On balance, flat to slightly down is the most likely path.\n\n(e) **Historical variation:** The platform only started in May 2025, so there is little history. Classes clearly move a lot: from 20 regions in August to about 3 in early November. Over a month, a shift of plus or minus 5 to 10 regions is plausible.\n\n(f) **Experts and markets:** There are no markets on this question. MeteoSwiss and the bulletin expect deficits to persist with no lasting groundwater recovery. The NOAA monthly model shows a dry November. A strong El Niño hints at a wetter winter, but that is uncertain. The question creator's range is 2 to 25.\n\n(g) **Unexpected scenarios:**\n- Low: a wet second half of November with persistent westerly fronts saturates soils and lifts river flows, leaving 0 extremely dry regions.\n- High: November stays dominated by high pressure with fog and no rain, deficits deepen, and the lake and low-flow indicators push much of the Mittelland and the eastern Alps back to extreme, giving 12 to 20 regions.\n\nPercentile 1: 0\nPercentile 5: 0.5\nPercentile 10: 1\nPercentile 20: 2\nPercentile 30: 2.6\nPercentile 40: 3.3\nPercentile 50: 4\nPercentile 60: 5\nPercentile 70: 6\nPercentile 80: 8\nPercentile 90: 11\nPercentile 95: 14\nPercentile 99: 20"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 2.5,
+        "p50": 4.0,
+        "p75": 7.0,
+        "p90": 11.0
+      },
+      "reasoning": "(a) **Time left:** About 27 days. The question resolves on or after December 1, 2026.\n\n(b) **Latest known value:** The platform was updated 02.11.2026, showing the situation as of 01.11.2026. I could not read an exact count. News citing the platform names three areas as extremely dry: the Lake Zurich area, the Glarus Alps and the Rhine Valley. That suggests roughly 3 regions, possibly a few more. On 01.08.2026 it was 20 of 38.\n\n(c) **If nothing changed:** About 3 regions, with plausible readings of 3 to 5.\n\n(d) **If the trend continued:** The trend since late summer is strongly downward, from about 20 regions to about 3 after the late-October rain. Two things push the other way:\n- The first ten days of November are forecast dry, and soil-moisture deficits are expected to grow.\n- Long-term deficits in lakes, groundwater and discharge persist, which tends to keep the hardest-hit regions at the top class.\n\nWesterly rain later in November could ease conditions further. On balance this points to roughly 2 to 6.\n\n(e) **Historical variation:** The platform has a short history, but classes move a lot within a month. The count fell from 20 to about 3 over roughly three months, with much of the drop likely tied to the late-October rain. A swing of plus or minus 5 or more regions in a month is plausible.\n\n(f) **Experts and markets:** There are no markets on this question. Experts expect:\n- Early November dry.\n- Later, near-normal westerly precipitation north of the Alps.\n- No lasting recovery of groundwater.\n- NOAA leans dry for November.\n- El Niño hints at a wet winter, which is uncertain.\n\n(g) **Unexpected scenarios:**\n- **Low outcome (0 regions):** Persistent Atlantic fronts from mid-November bring well-above-normal rain to the northern Alps and the Mittelland. That clears the extreme class everywhere.\n- **High outcome (15 or more regions):** A blocking high persists all November with fog and no precipitation, or precipitation falls as snow at altitude. Soil-moisture and discharge indices then deteriorate again across the Mittelland and northern Alps, pushing many regions back into the extreme class.\n\nPercentile 1: 0\nPercentile 5: 0\nPercentile 10: 1\nPercentile 20: 2\nPercentile 30: 3\nPercentile 40: 3\nPercentile 50: 4\nPercentile 60: 5\nPercentile 70: 6\nPercentile 80: 8\nPercentile 90: 11\nPercentile 95: 14\nPercentile 99: 20"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": null,
+  "usage": [
+    {
+      "question_id": "46570",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0001776,
+      "input_tokens": 869,
+      "output_tokens": 8,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 7.329999999999999e-05,
+      "input_tokens": 513,
+      "output_tokens": 44,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 123.0,
+      "notional_cost_usd": 0.2996794,
+      "input_tokens": 86996,
+      "output_tokens": 4858,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.071584,
+      "input_tokens": 5809,
+      "output_tokens": 1256,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.07164000000000001,
+      "input_tokens": 5811,
+      "output_tokens": 1258,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.7,
+      "notional_cost_usd": 0.0008259000000000001,
+      "input_tokens": 2758,
+      "output_tokens": 549,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 11.3,
+      "notional_cost_usd": 0.0007905000000000001,
+      "input_tokens": 2761,
+      "output_tokens": 477,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.0,
+      "notional_cost_usd": 0.0273642,
+      "input_tokens": 5810,
+      "output_tokens": 1190,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.5,
+      "notional_cost_usd": 0.00027202000000000004,
+      "input_tokens": 2757,
+      "output_tokens": 362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.2,
+      "notional_cost_usd": 0.00032527,
+      "input_tokens": 2763,
+      "output_tokens": 468,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.000788,
+      "input_tokens": 2781,
+      "output_tokens": 464,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.6,
+      "notional_cost_usd": 0.00029195999999999996,
+      "input_tokens": 2782,
+      "output_tokens": 401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 167.2,
+      "notional_cost_usd": 0.3751841,
+      "input_tokens": 140117,
+      "output_tokens": 5238,
+      "web_searches": 8,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.1,
+      "notional_cost_usd": 0.06865199999999999,
+      "input_tokens": 5495,
+      "output_tokens": 1235,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.6,
+      "notional_cost_usd": 0.070164,
+      "input_tokens": 5494,
+      "output_tokens": 1311,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.7,
+      "notional_cost_usd": 0.072912,
+      "input_tokens": 5495,
+      "output_tokens": 1448,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.2,
+      "notional_cost_usd": 0.0008157,
+      "input_tokens": 2802,
+      "output_tokens": 511,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.0,
+      "notional_cost_usd": 0.0007886,
+      "input_tokens": 2814,
+      "output_tokens": 452,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.0008002,
+      "input_tokens": 2742,
+      "output_tokens": 504,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.00033027,
+      "input_tokens": 2801,
+      "output_tokens": 478,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00033367,
+      "input_tokens": 2741,
+      "output_tokens": 486,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46570",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00029328,
+      "input_tokens": 2814,
+      "output_tokens": 403,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0641
+}
