@@ -76,7 +76,7 @@ class FakeClient:
     def get_all_open_questions_from_tournament(self, tournament):
         if tournament in self.failing:
             raise ConnectionError(f"{tournament} is down")
-        return {"main": [question("m1", 100)], "mini": [question("b1", 50)], "market-pulse-26q4": []}[tournament]
+        return {"main": [question("m1", 100)], "mini": [question("b1", 50)], "market-pulse-26q4": [], 33016: []}[tournament]
 
 
 def test_tournaments_go_in_one_batch() -> None:
@@ -101,6 +101,69 @@ def test_market_pulse_failing_keeps_the_reports_and_marks_the_pass_failed() -> N
     except RuntimeError:
         return
     raise AssertionError("a failed tournament must fail the pass, so that it alerts")
+
+
+def animal_question(name: str, days_since_forecast: float | None, now: datetime | None = None):
+    now = now or datetime.now(timezone.utc)
+    last = None if days_since_forecast is None else now - timedelta(days=days_since_forecast)
+    return SimpleNamespace(name=name, already_forecasted=last is not None, timestamp_of_my_last_forecast=last,
+                           open_time=now - timedelta(days=150), page_url=f"https://www.metaculus.com/questions/{name} ",
+                           question_text=name, tournament_slugs=["None"])
+
+
+class AnimalFuturesClient(FakeClient):
+    def __init__(self, questions) -> None:
+        super().__init__()
+        self.questions = questions
+
+    def get_all_open_questions_from_tournament(self, tournament):
+        return self.questions if tournament == 33016 else []
+
+
+def test_animal_futures_new_questions_first_then_the_stalest() -> None:
+    import animal_futures
+
+    batch = [animal_question("fresh", 2), animal_question("new1", None), animal_question("week", 8),
+             animal_question("older", 10), animal_question("new2", None)]
+    bot = FakeBot()
+    reports = asyncio.run(animal_futures.forecast_animal_futures(bot, AnimalFuturesClient(batch)))
+    assert bot.batches == [["new1", "new2", "older"]], bot.batches  # 3 a pass; "week" waits, "fresh" is not due
+    assert reports == ["report new1", "report new2", "report older"]
+    assert bot.skip_previously_forecasted_questions, "the skip setting must be put back"
+    assert batch[1].tournament_slugs == ["animal-futures"] and batch[0].tournament_slugs == ["None"]
+
+
+def test_animal_futures_failing_does_not_stop_the_others() -> None:
+    bot = FakeBot()
+    reports = asyncio.run(run_bot.forecast_tournaments(bot, FakeClient({33016})))
+    assert reports[:2] == ["report m1", "report b1"] and isinstance(reports[2], ConnectionError), reports
+
+
+def test_health_check_reports_animal_futures_gaps() -> None:
+    import check_coverage
+
+    now = check_coverage.ANIMAL_FUTURES_ENTERED + timedelta(days=30)
+    never, fresh, stale = (animal_question("never", None, now), animal_question("fresh", 6, now), animal_question("stale", 11, now))
+    missing, old = check_coverage.animal_futures_gaps([never, fresh, stale], now)
+    assert [q.name for q in missing] == ["never"] and [q.name for q in old] == ["stale"], (missing, old)
+    # No alarm in the first day after entering, while the first forecasts are still going in.
+    missing, _ = check_coverage.animal_futures_gaps([never], check_coverage.ANIMAL_FUTURES_ENTERED + timedelta(hours=12))
+    assert missing == []
+
+
+def test_weekly_report_lists_tournaments_open_to_bots_that_we_are_not_in() -> None:
+    import weekly_report
+
+    now = datetime(2026, 11, 4, 21, 0, tzinfo=timezone.utc)
+    rows = [
+        {"id": 33016, "name": "Animal Futures", "bot_leaderboard_status": "include", "prize_pool": "3400.00", "forecasting_end_date": "2027-07-01T00:00:00Z"},
+        {"id": 1, "name": "Market Pulse 27Q1", "bot_leaderboard_status": "include", "prize_pool": "7500.00", "close_date": "2027-04-01T00:00:00Z"},
+        {"id": 2, "name": "Humans only", "bot_leaderboard_status": "exclude_and_show", "prize_pool": "10000.00", "close_date": "2027-04-01T00:00:00Z"},
+        {"id": 3, "name": "Summer FutureEval", "bot_leaderboard_status": "bots_only", "prize_pool": "50000.00", "forecasting_end_date": "2026-09-28T00:00:00Z", "close_date": "2026-11-05T00:00:00Z"},
+        {"id": 4, "name": "No prize", "bot_leaderboard_status": "include", "prize_pool": None, "close_date": "2027-04-01T00:00:00Z"},
+    ]
+    found = weekly_report.tournaments_open_to_bots(rows, now, weekly_report.ENTERED_PROJECTS)
+    assert [t["name"] for t in found] == ["Market Pulse 27Q1"], found
 
 
 def forecast_question(post: int, age_minutes: float = 30, forecasts: int = 1, forecast: bool = True):

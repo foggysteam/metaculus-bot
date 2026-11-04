@@ -26,10 +26,13 @@ dotenv.load_dotenv()
 from check_coverage import find_missed, find_missed_spot  # noqa: E402
 from claude_code_llm import ClaudeCodeLlm  # noqa: E402
 from forecaster import BOT_VERSION  # noqa: E402
+from animal_futures import ANIMAL_FUTURES_PROJECT  # noqa: E402
 from market_pulse import ENTERED, MARKET_PULSE_ID, MARKET_PULSE_PROJECT  # noqa: E402
 
 BOT_USERNAME = "KCAP2.0"
 MAIN_PROJECT = 33121  # Fall 2026 FutureEval
+MINIBENCH_SERIES = 33135
+ENTERED_PROJECTS = {MAIN_PROJECT, MINIBENCH_SERIES, MARKET_PULSE_PROJECT, ANIMAL_FUTURES_PROJECT}
 API = "https://www.metaculus.com/api"
 DAYS = 7
 
@@ -211,6 +214,38 @@ async def missed_questions(since: datetime) -> str:
     return "\n".join(lines)
 
 
+def _prize(tournament: dict) -> float:
+    try:
+        return float(tournament.get("prize_pool") or 0)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def tournaments_open_to_bots(tournaments: list[dict], now: datetime, entered: set[int]) -> list[dict]:
+    """Tournaments still taking forecasts, with prize money that bots can win, that we are not in.
+    On 27 Oct 2026 a search by name missed Animal Futures, open to bots since June, so every
+    tournament is checked each week. Also flags the next Market Pulse quarter."""
+    return [
+        t for t in tournaments
+        if t.get("bot_leaderboard_status") in ("include", "bots_only") and _prize(t) > 0
+        and (t.get("forecasting_end_date") or t.get("close_date") or "") > now.isoformat()
+        and t.get("id") not in entered
+    ]
+
+
+def tournaments_not_entered(now: datetime) -> str:
+    data = _metaculus("projects/tournaments/")
+    rows = data if isinstance(data, list) else data.get("results", [])
+    missing = tournaments_open_to_bots(rows, now, ENTERED_PROJECTS)
+    if not missing:
+        return "None: the bot is in every live tournament where bots can win prizes."
+    return "\n".join(
+        f"  - NOT ENTERED: {t.get('name')} (id {t.get('id')}, slug {t.get('slug')}), ${_prize(t):,.0f}, "
+        f"bots {t.get('bot_leaderboard_status')}, forecasting ends {(t.get('forecasting_end_date') or t.get('close_date') or '')[:10]}"
+        for t in missing
+    )
+
+
 async def build_report() -> str:
     now = datetime.now(timezone.utc)
     since = now - timedelta(days=DAYS)
@@ -224,6 +259,8 @@ async def build_report() -> str:
             leaderboard(mb) if (mb := current_minibench_id()) else "No active MiniBench round found."
         ),
         "Market Pulse 26Q4 leaderboard (humans and bots)": leaderboard(MARKET_PULSE_PROJECT),
+        "Animal Futures leaderboard (humans and bots, time-averaged)": leaderboard(ANIMAL_FUTURES_PROJECT),
+        "Tournaments open to bots that we are not in": tournaments_not_entered(now),
         "Workflow health": failed_runs(since),
         "Usage": f"Notional model usage ${cost:.2f} on the Max plan (not billed). Own-key spend: GBP 0.",
     }

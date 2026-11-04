@@ -1,8 +1,9 @@
 """
 Coverage check: which tournament questions opened after we went live but closed
 without a forecast from our bot? For Market Pulse, where questions stay open for weeks,
-it is the questions whose spot scoring time passed without a forecast.
-Read-only; never submits anything.
+it is the questions whose spot scoring time passed without a forecast. For Animal Futures,
+scored on time-averaged scores, it is any open question without our forecast, or not updated
+by the weekly refresh. Read-only; never submits anything.
 
 Usage: uv run python check_coverage.py [--since 2026-10-26]
 """
@@ -25,9 +26,12 @@ dotenv.load_dotenv()
 from forecasting_tools import MetaculusClient, MetaculusQuestion  # noqa: E402
 from forecasting_tools.helpers.metaculus_client import ApiFilter  # noqa: E402
 
+from animal_futures import ANIMAL_FUTURES_PROJECT, REFRESH_AFTER  # noqa: E402
+from animal_futures import ENTERED as ANIMAL_FUTURES_ENTERED  # noqa: E402
 from market_pulse import ENTERED, MARKET_PULSE_ID, spot_time  # noqa: E402
 
 BOT_USER_ID = 311181
+STALE_AFTER = REFRESH_AFTER + timedelta(days=3)
 
 
 async def find_missed(
@@ -124,6 +128,30 @@ async def coverage(tournament: str | int, since: datetime, commented: set[int] |
     return len(questions)
 
 
+def animal_futures_gaps(questions: list[MetaculusQuestion], now: datetime) -> tuple[list, list]:
+    """(open questions with no forecast from us a day after we could first have made one,
+    forecasts the weekly refresh has not updated). Each day without a forecast scores zero."""
+    missing = [
+        q for q in questions
+        if not q.already_forecasted and now - max(ANIMAL_FUTURES_ENTERED, q.open_time or ANIMAL_FUTURES_ENTERED) > timedelta(days=1)
+    ]
+    stale = [
+        q for q in questions
+        if q.already_forecasted and q.timestamp_of_my_last_forecast and now - q.timestamp_of_my_last_forecast > STALE_AFTER
+    ]
+    return missing, stale
+
+
+def animal_futures_coverage() -> None:
+    questions = MetaculusClient().get_all_open_questions_from_tournament(ANIMAL_FUTURES_PROJECT)
+    missing, stale = animal_futures_gaps(questions, datetime.now(timezone.utc))
+    print(f"animal-futures: {len(questions)} open, {len(missing)} without our forecast, {len(stale)} not updated in {STALE_AFTER.days} days")
+    for q in missing:
+        print(f"  MISSED (no forecast yet) {q.page_url} {q.question_text[:80]}")
+    for q in stale:
+        print(f"  STALE since {q.timestamp_of_my_last_forecast:%Y-%m-%d} {q.page_url} {q.question_text[:80]}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--since", default="2026-10-26", help="Go-live date (UTC)")
@@ -135,6 +163,7 @@ def main() -> None:
     for tournament in (client.CURRENT_AI_COMPETITION_ID, client.CURRENT_MINIBENCH_ID):
         opened += asyncio.run(coverage(tournament, since, commented))
     asyncio.run(coverage(MARKET_PULSE_ID, since, commented))
+    animal_futures_coverage()
     # About 60 a week open normally, so none means the season changed or we have lost access.
     if not opened and datetime.now(timezone.utc) - since >= timedelta(hours=48):
         print(f"  NO QUESTIONS opened in FutureEval or MiniBench since {since.date()}: check the tournament ids")

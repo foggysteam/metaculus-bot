@@ -1,7 +1,7 @@
 """
 Entry point for our bot (see forecaster.py). Modes:
   tournament      forecast new questions in the Fall 2026 tournament and MiniBench, and
-                  due questions in Market Pulse 26Q4 (publishes)
+                  due questions in Market Pulse 26Q4 and Animal Futures (publishes)
   test_questions  forecast the unscored bot-testing-area questions (publishes, safe to repeat)
   question        forecast specific questions by URL (use --dry-run to avoid publishing)
   rescue          like question, but skips any already forecast (started by watchdog.py)
@@ -29,6 +29,7 @@ from forecasting_tools import MetaculusClient  # noqa: E402
 
 from claude_code_llm import USAGE_LEDGER, find_claude_binary  # noqa: E402
 from forecaster import LOG_DIR, TEST_LOG_DIR, ClaudeForecaster, build_llms  # noqa: E402
+from animal_futures import forecast_animal_futures  # noqa: E402
 from market_pulse import forecast_market_pulse  # noqa: E402
 
 logger = logging.getLogger(__name__)
@@ -94,11 +95,12 @@ async def forecast_tournaments(bot, client: MetaculusClient) -> list:
     if any(q.already_forecasted for q in questions):
         unmark_forecasts_without_comment(questions, recently_commented_posts(), datetime.now(timezone.utc))
     reports = await bot.forecast_questions(questions, return_exceptions=True)
-    try:
-        reports += await forecast_market_pulse(bot, client)
-    except Exception as e:  # noqa: BLE001
-        logger.error(f"Market Pulse failed: {e}")
-        errors.append(e)
+    for name, forecast_extra in (("Market Pulse", forecast_market_pulse), ("Animal Futures", forecast_animal_futures)):
+        try:
+            reports += await forecast_extra(bot, client)
+        except Exception as e:  # noqa: BLE001
+            logger.error(f"{name} failed: {e}")
+            errors.append(e)
     return [*reports, *errors]
 
 

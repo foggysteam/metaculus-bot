@@ -49,7 +49,7 @@ jobs:
           # The 3-day window survives dropped cron firings, but keeps showing old misses, so only
           # a miss that no earlier issue mentions opens a new one. If the lookup fails, it alerts.
           gh issue list --state all --limit 200 --search "health check in:title" --json body --jq '.[].body' > reported.txt || : > reported.txt
-          for url in $(grep -E "MISSED|NO COMMENT" coverage.txt | grep -oE "https://www\.metaculus\.com/questions/[0-9]+" || true); do
+          for url in $(grep -E "MISSED|NO COMMENT|STALE" coverage.txt | grep -oE "https://www\.metaculus\.com/questions/[0-9]+" || true); do
             if ! grep -qF "$url " reported.txt; then echo "New miss: $url"; echo "missed=true" >> "$GITHUB_OUTPUT"; break; fi
           done
           if grep -q "NO QUESTIONS" coverage.txt; then echo "missed=true" >> "$GITHUB_OUTPUT"; fi
