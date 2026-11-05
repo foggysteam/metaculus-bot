@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Moscow-2026-10-12",
+  "question": "What will be the average daily mean temperature in Moscow over the 7 days ending October 12, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-06 to 2026-10-12 at latitude 55.76, longitude 37.62 (Moscow), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 10.93,
+  "outcome_date": "2026-10-18",
+  "as_of": "2026-09-14",
+  "resolve_date": "2026-10-18",
+  "lower_bound": -5.0,
+  "upper_bound": 35.0,
+  "source": "open-meteo",
+  "series": "Moscow",
+  "known_value": 13.214286,
+  "past_moves": [
+    -5.242857,
+    -9.285714,
+    -7.4,
+    -0.814286,
+    -9.828571
+  ],
+  "baseline": "",
+  "research": "Moscow's 7-day mean for Oct 6 to 12 (ERA5 via Open-Meteo) averaged about 7.4°C over 2015 to 2025, with a year-to-year standard deviation of about 2.8°C and a range of 2.5 to 12.1°C. Nothing settles the question yet: the window starts 22 to 28 days from now. Skillful daily forecasts don't reach that far, so climatology plus seasonal outlooks are the main inputs.\n\n## 1. Resolution source\n- I queried the Open-Meteo archive API (ERA5 `temperature_2m_mean`, lat 55.76, lon 37.62, Europe/Moscow timezone). The API snaps to grid point 55.78N, 37.58E, elevation 161 m. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2026-09-01&end_date=2026-09-14&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- Latest values shown, Sep 1 to 14, 2026 (°C): 19.0, 18.1, 16.2, 16.7, 15.5, 13.4, 11.0, 10.5, 13.5, 18.0, 14.7, 12.9, 12.1, 13.7. The last day or two may be preliminary.\n- The question uses Europe/Moscow day boundaries only if the resolver sets that timezone. If it uses the GMT default, daily means can shift slightly.\n\n## 2. Current status\n- 2026-09-14: The window (Oct 6 to 12) has not started and no data for it exists. Nothing settles or nearly settles the question.\n- 2026-09-01 to 09-14: Early September has been mild, cooling from about 19°C to 11 to 14°C. This says little about early October.\n\n## 3. Recent news\n- 2026-08-27: An e1.ru autumn outlook citing Yandex Weather said Moscow temperatures would be above normal this autumn, but it singled out September and November. It gave no specific October temperature forecast for Moscow, only that October rainfall should be near normal. For nearby Tula and Voronezh, October is expected \"close to the norm, cooler than recent years\". [e1.ru](https://www.e1.ru/text/autumn/2026/08/27/76609230/)\n- Undated: A Snob/TASS piece quotes Roman Vilfand (scientific director of Russia's Hydrometcenter) saying early October in Moscow will be cold and sunny, about 2°C below normal. I could not confirm its publication date, so it may refer to an earlier year. [Snob](https://snob.ru/news/vilfand-nachalo-oktiabria-v-moskve-budet-kholodnym-i-solnechnym/)\n- Several search results were dated after 2026-09-14 and I left them out.\n\n## 4. Base rates (Open-Meteo ERA5, mean of Oct 6 to 12, °C)\n- 2025: 10.21 (daily 11.1, 10.9, 11.1, 11.1, 10.0, 10.1, 7.2) [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2025-10-06&end_date=2025-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2024: 10.01 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2024-10-06&end_date=2024-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2023: 5.13 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2023-10-06&end_date=2023-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2022: 8.34 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2022-10-06&end_date=2022-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2021: 5.03 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2021-10-06&end_date=2021-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2020: 12.07 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2020-10-06&end_date=2020-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2019: 5.01 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2019-10-06&end_date=2019-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2018: 8.71 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2018-10-06&end_date=2018-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2017: 7.66 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2017-10-06&end_date=2017-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2016: 6.81 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2016-10-06&end_date=2016-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n- 2015: 2.50 [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2015-10-06&end_date=2015-10-12&daily=temperature_2m_mean&timezone=Europe/Moscow)\n\n**Summary (my calculation):**\n\n| | Value |\n|---|---|\n| 11-year mean | about 7.4°C |\n| Median | 7.7°C |\n| Sample standard deviation | about 2.8°C |\n| Range | 2.5 to 12.1°C |\n| Last 5 years (2021 to 2025) mean | about 7.7°C |\n| Years below 5°C | 1 of 11 |\n| Years above 10°C | 3 of 11 |\n\n- **Trend:** There is a mild warming trend (2024 and 2025 were both about 10°C), but noise dominates.\n- **Daily swings:** In this window, daily means can move 4 to 6°C within a few days as cold air arrives (for example 2016 and 2022). That is why the spread between years is large.\n- **Seasonal cooling:** Climatologically, Moscow cools about 0.2°C per day in early October.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question.\n- Expert outlooks are thin and mixed:\n  - Yandex, via e1.ru: autumn warmer than normal overall, with October not singled out.\n  - Regional outlook for Tula and Voronezh: October near normal, cooler than recent years.\n  - The Vilfand \"about 2°C below normal\" quote has an unconfirmed date.\n- I did not get numeric ECMWF or Hydrometcenter monthly anomaly maps for Oct 6 to 12.\n\n## 6. Upcoming events before resolution\n- Late September to early October: ECMWF extended-range runs (twice weekly) and Hydrometcenter's monthly October outlook, usually issued in late September, will give the first meaningful signal for the week.\n- About Sep 26 to 30 onward: Deterministic and ensemble forecasts start covering Oct 6 to 12. Skill improves a lot inside about 10 days, from about Sep 26 to Oct 2.\n- Oct 6 to 12: The window itself. ERA5 data on Open-Meteo usually lags by about 5 days, which fits a resolution date around Oct 18.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1.0
+        ],
+        [
+          0.05,
+          2.8
+        ],
+        [
+          0.1,
+          3.9
+        ],
+        [
+          0.2,
+          5.2
+        ],
+        [
+          0.3,
+          6.2
+        ],
+        [
+          0.4,
+          7.0
+        ],
+        [
+          0.5,
+          7.6
+        ],
+        [
+          0.6,
+          8.2
+        ],
+        [
+          0.7,
+          9.0
+        ],
+        [
+          0.8,
+          10.0
+        ],
+        [
+          0.9,
+          11.2
+        ],
+        [
+          0.95,
+          12.2
+        ],
+        [
+          0.99,
+          14.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.6
+        ],
+        [
+          0.05,
+          2.8
+        ],
+        [
+          0.1,
+          3.9
+        ],
+        [
+          0.2,
+          5.3
+        ],
+        [
+          0.3,
+          6.3
+        ],
+        [
+          0.4,
+          7.0
+        ],
+        [
+          0.5,
+          7.6
+        ],
+        [
+          0.6,
+          8.2
+        ],
+        [
+          0.7,
+          8.9
+        ],
+        [
+          0.8,
+          9.9
+        ],
+        [
+          0.9,
+          11.2
+        ],
+        [
+          0.95,
+          12.1
+        ],
+        [
+          0.99,
+          13.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.0
+        ],
+        [
+          0.05,
+          2.9
+        ],
+        [
+          0.1,
+          3.9
+        ],
+        [
+          0.2,
+          5.3
+        ],
+        [
+          0.3,
+          6.3
+        ],
+        [
+          0.4,
+          7.0
+        ],
+        [
+          0.5,
+          7.6
+        ],
+        [
+          0.6,
+          8.2
+        ],
+        [
+          0.7,
+          8.9
+        ],
+        [
+          0.8,
+          9.8
+        ],
+        [
+          0.9,
+          11.0
+        ],
+        [
+          0.95,
+          11.9
+        ],
+        [
+          0.99,
+          13.6
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3578
+}

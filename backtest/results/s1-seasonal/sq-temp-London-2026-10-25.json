@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-London-2026-10-25",
+  "question": "What will be the average daily mean temperature in London over the 7 days ending October 25, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-19 to 2026-10-25 at latitude 51.51, longitude -0.13 (London), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 10.76,
+  "outcome_date": "2026-10-31",
+  "as_of": "2026-10-11",
+  "resolve_date": "2026-10-31",
+  "lower_bound": 10.5,
+  "upper_bound": 17.5,
+  "source": "open-meteo",
+  "series": "London",
+  "known_value": 14.214286,
+  "past_moves": [
+    -2.214286,
+    0.285714,
+    -4.1,
+    1.042857,
+    -1.5
+  ],
+  "baseline": "",
+  "research": "I couldn't find any forecast that directly covers 19 to 25 October, and no prediction markets either. The main evidence is the past data. In the last five years, Open-Meteo's ERA5 data for London over these seven days averaged between 11.17 and 14.27°C, with a mean of 12.40°C. Early October 2026 ran well above those years.\n\n## 1. Resolution source\n- The archive-api.open-meteo.com query for 51.51, -0.13 snaps to the grid cell at 51.49, -0.16 (Greenwich/Chelsea area). [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2026-09-25&end_date=2026-10-11&daily=temperature_2m_mean)\n- Daily means in °C:\n\n| Dates (2026) | Values |\n|---|---|\n| 25 to 30 Sep | 17.9, 16.3, 17.1, 16.1, 20.4, 20.3 |\n| 1 to 6 Oct | 16.1, 15.9, 15.5, 16.0, 16.5, 16.0 (about 16.0 on average) |\n| 7 to 11 Oct | 13.1, 10.7, 15.5, 11.7, 11.3 |\n\n- ERA5 runs about 5 days behind, so the 9 to 11 October values were probably still preliminary or model-filled on 11 October. Same source as above.\n\n## 2. Current status\n- 2026-10-11: Nothing settles the question yet. The window (19 to 25 October) starts 8 days after the forecast close. After a warm late September and early October, temperatures had just dropped to about 11 to 12°C.\n\n## 3. Recent news\n- I couldn't find an official Met Office or BBC day-by-day forecast for 19 to 25 October published on or before 11 October. Search results kept returning older years or items dated after 11 October, which I ignored.\n- 2026-09-23: YourWeather (Meteored) said temperatures for 6 to 20 October were \"expected to remain generally above average overall, although cooler interludes are possible\". It said nothing about 21 to 25 October. [YourWeather](https://www.yourweather.co.uk/news/forecasts/the-uk-weather-forecast-for-october-2026-what-can-we-expect-as-autumn-gets-underway.html)\n- A blog (not checked against the Met Office) says the Met Office 3-month outlook was issued on 1 September 2026, and its 15 September long-range text was \"warmer, and settled first\". [Drawpie](https://drawpie.com/blog/uk-heat-wave-predictions/)\n\n## 4. Base rates (Open-Meteo ERA5, same point)\n\n| Year | 11 to 17 Oct mean | 19 to 25 Oct mean (resolution window) | Change |\n|---|---|---|---|\n| 2021 | 11.71 | 11.86 | +0.15 |\n| 2022 | 12.53 | 14.27 | +1.74 |\n| 2023 | 12.11 | 11.97 | -0.14 |\n| 2024 | 11.59 | 12.71 | +1.12 |\n| 2025 | 12.39 | 11.17 | -1.22 |\n\nSources: [2021](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2021-10-11&end_date=2021-10-25&daily=temperature_2m_mean), [2022](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2022-10-11&end_date=2022-10-25&daily=temperature_2m_mean), [2023](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2023-10-11&end_date=2023-10-25&daily=temperature_2m_mean), [2024](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2024-10-11&end_date=2024-10-25&daily=temperature_2m_mean), [2025](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2025-10-11&end_date=2025-10-25&daily=temperature_2m_mean)\n\n- **Typical level:** the 5-year mean for the window is 12.40°C. The range is 11.17 (2025) to 14.27 (2022), a spread of about 3.1°C. There is no clear trend.\n- **Seasonal move:** from mid-October to the window, the change ranged from -1.2 to +1.7°C, with a mean of about +0.3. There is no consistent cooling over this short a gap.\n- **Day-to-day swings within the window are large:**\n  - 2021: from 17.9 down to 8.2\n  - 2023: from 15.7 down to 9.9\n  - 2025: from 13.6 down to 8.7\n\n  A single warm southerly spell or cold northerly spell can move the 7-day mean by 1 to 2°C.\n- **This year vs. earlier years:** 1 to 6 October 2026 averaged about 16.0°C. That is roughly 3 to 4°C above the 11 to 17 October means of the prior years (11.6 to 12.5). By 7 to 11 October it had fallen to about 12.5, in line with those years.\n- **Climatology:** I didn't find an official longer-term 1991-2020 ERA5 normal for 19 to 25 October at this point. From these five years, about 12°C looks typical.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on London's mean temperature for this week.\n- 2026-07: TheWeatherOutlook's summary of the seasonal models said the Met Office model favoured above-average temperatures and above-average rain around the UK for September to November 2026. [TheWeatherOutlook](https://www.theweatheroutlook.com/weather-news/7962/autumn-2026-outlook)\n- I found no expert numeric forecast for 19 to 25 October dated on or before 11 October.\n\n## 6. Upcoming events before resolution\n- On 11 October the window was 8 to 14 days away. ECMWF and GFS forecast skill at that range is limited. Updates to the Met Office 6 to 30 day text and the ECMWF extended runs (issued daily, and Monday/Thursday) between 11 and 19 October would be the main new information.\n- **Latest outlook I found:**\n  - Seasonal guidance leaned above average for autumn.\n  - Meteored on 23 September said \"generally above average\" through 20 October, with cooler interludes possible.\n  - I could not get the Met Office long-range page as it stood on 11 October. Two TheWeatherOutlook articles from that period returned HTTP 403 errors.\n- The pattern to watch is persistent high pressure, which in late October tends to bring cooler, foggy days with near or below average means, versus mild south-westerly air, which brings 13 to 15°C means as in 2022.",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          7.8
+        ],
+        [
+          0.05,
+          9.2
+        ],
+        [
+          0.1,
+          9.9
+        ],
+        [
+          0.2,
+          10.9
+        ],
+        [
+          0.3,
+          11.6
+        ],
+        [
+          0.4,
+          12.1
+        ],
+        [
+          0.5,
+          12.4
+        ],
+        [
+          0.6,
+          12.8
+        ],
+        [
+          0.7,
+          13.3
+        ],
+        [
+          0.8,
+          13.9
+        ],
+        [
+          0.9,
+          14.7
+        ],
+        [
+          0.95,
+          15.3
+        ],
+        [
+          0.99,
+          16.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          8.3
+        ],
+        [
+          0.05,
+          9.6
+        ],
+        [
+          0.1,
+          10.3
+        ],
+        [
+          0.2,
+          11.1
+        ],
+        [
+          0.3,
+          11.7
+        ],
+        [
+          0.4,
+          12.1
+        ],
+        [
+          0.5,
+          12.4
+        ],
+        [
+          0.6,
+          12.8
+        ],
+        [
+          0.7,
+          13.2
+        ],
+        [
+          0.8,
+          13.8
+        ],
+        [
+          0.9,
+          14.6
+        ],
+        [
+          0.95,
+          15.2
+        ],
+        [
+          0.99,
+          16.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          8.3
+        ],
+        [
+          0.05,
+          9.6
+        ],
+        [
+          0.1,
+          10.3
+        ],
+        [
+          0.2,
+          11.1
+        ],
+        [
+          0.3,
+          11.7
+        ],
+        [
+          0.4,
+          12.1
+        ],
+        [
+          0.5,
+          12.5
+        ],
+        [
+          0.6,
+          12.9
+        ],
+        [
+          0.7,
+          13.3
+        ],
+        [
+          0.8,
+          13.9
+        ],
+        [
+          0.9,
+          14.6
+        ],
+        [
+          0.95,
+          15.2
+        ],
+        [
+          0.99,
+          16.3
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4192
+}

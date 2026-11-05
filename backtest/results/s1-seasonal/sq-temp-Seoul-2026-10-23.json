@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Seoul-2026-10-23",
+  "question": "What will be the average daily mean temperature in Seoul over the 7 days ending October 23, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-17 to 2026-10-23 at latitude 37.57, longitude 126.98 (Seoul), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 14.26,
+  "outcome_date": "2026-10-29",
+  "as_of": "2026-09-25",
+  "resolve_date": "2026-10-29",
+  "lower_bound": 0.0,
+  "upper_bound": 40.0,
+  "source": "open-meteo",
+  "series": "Seoul",
+  "known_value": 23.728571,
+  "past_moves": [
+    -7.214286,
+    -7.5,
+    -8.328571,
+    -8.942857,
+    -13.114286
+  ],
+  "baseline": "",
+  "research": "I have all the data I need now and am writing up the findings.\n\n## 1. Resolution source\n- The question resolves on the Open-Meteo ERA5 archive (archive-api.open-meteo.com), daily `temperature_2m_mean` at 37.57, 126.98. I pulled the data in Asia/Seoul local time. If the resolver uses GMT day boundaries, the values could differ slightly.\n- 2026-09-24: this is the latest value I pulled from the archive, 22.7 °C. The 2026-09-01 to 09-24 mean was 22.69 °C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2026-09-01&end_date=2026-09-24&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n- 2026-09-18 to 09-24: daily values were 23.5, 24.0, 23.6, 24.2, 24.1, 23.9 and 22.7, a mean of about 23.7 °C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2026-09-01&end_date=2026-09-24&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n\n## 2. Current status\n- Nothing has settled the question. The target window (Oct 17-23) is 3 to 4 weeks away, beyond the range of skilful deterministic forecasts.\n\n## 3. Recent news\n- 2026-09-23: KMA's 3-month outlook (Oct-Dec) says a strong El Niño (SST anomaly of +1.5 °C or more) is likely to persist through Oct-Dec. Under 1991-2020 normals, October averages about 3 days each of extreme heat and extreme cold. The national/Seoul PDF would not load (outage page), so I could not read the October probabilities for Seoul/Gyeonggi. [KMA 3-month outlook](https://www.weather.go.kr/w/repositary/xml/fct/mon/fct_mon3_108_20260923.pdf)\n- 2026-09-23: in the regional versions of the same outlook, Gangwon Yeongseo has a 50% chance of an above-normal October (normal range 11.1-12.3 °C), attributed to warm, moist inflow from a high-pressure circulation that warm western Indian Ocean waters are strengthening. Jeju also has a 50% chance of above normal. [KMA Gangwon](https://www.weather.go.kr/w/repositary/xml/fct/mon/fct_mon3_101_20260923.pdf), [KMA Jeju](https://www.weather.go.kr/w/repositary/xml/fct/mon/fct_mon3_184_20260923.pdf)\n- 2026-08-24: KMA's earlier commentary reportedly gave October the highest chance of above-normal temperatures, about 87% on the ensemble mean. I only saw this in a search summary and did not verify it. [KMA Aug outlook](https://www.weather.go.kr/w/repositary/xml/fct/mon/fct_mon3_101_20260824.pdf)\n\n## 4. Base rates\n7-day Oct 17-23 means from the Open-Meteo ERA5 archive, in °C:\n- 2016: 15.51, 2017: 13.26, 2018: 10.54, 2019: 14.63, 2020: 11.53 [archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2016-10-17&end_date=2020-10-23&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n- 2021: 7.83, the lowest of the 10 years because of a record cold snap (4.4 on Oct 17). [archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2021-10-17&end_date=2021-10-23&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n- 2022: 9.77 [archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2022-10-17&end_date=2022-10-23&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n- 2023: 11.80 [archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2023-10-17&end_date=2023-10-23&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n- 2024: 14.23 [archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2024-10-17&end_date=2024-10-23&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n- 2025: 13.03. Daily values swung from 18.5 down to 8.5 within the week. [archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2025-10-17&end_date=2025-10-23&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n- Summary (my calculation): the 10-year mean is about 12.2 °C, with a standard deviation of about 2.4 °C and a range of 7.8 to 15.5. There is no clear trend within the decade. In single years, daily values within the week often swing by 5 to 10 °C.\n\nHow the temperature moved from late September to the target week, comparing the Sep 18-24 mean with the Oct 17-23 mean:\n- 2021: 21.00 to 7.83 (-13.2)\n- 2022: 18.87 to 9.77 (-9.1)\n- 2023: 20.33 to 11.80 (-8.5)\n- 2024: 20.17 to 14.23 (-5.9)\n- 2025: 20.03 to 13.03 (-7.0)\n- Average drop: about 8.7 °C, range 5.9 to 13.2. [archive](https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2021-09-01&end_date=2025-09-24&daily=temperature_2m_mean&timezone=Asia%2FSeoul)\n\nThis year compared with the last five:\n- 2026 is running warm. The Sep 18-24 mean of 23.7 °C is about 3.6 to 4.8 °C above each of 2021-2025 (18.9-21.0).\n- The Sep 1-24 mean of 22.69 °C falls in the upper middle of 2021-2025 (21.03, 21.40, 22.48, 22.78, 23.63). It is second only to 2024's 23.63, which went on to 14.23 °C in the target week.\n- How much a warm late September persists into mid-to-late October is uncertain.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question or a close equivalent.\n- The only expert guidance I found is KMA's probabilistic outlook (section 3), which leans warm for October in the regions I could read. I found no Seoul-specific numbers.\n\n## 6. Upcoming events and the weather outlook\n- KMA's 1-month outlooks, issued every Thursday, will cover the Oct 17-23 window starting with the early-October issues. KMA's 10-day forecasts will reach the window around Oct 7-13.\n- Things that could move the outcome: the timing of the first strong outbreak of Siberian high cold air in mid-to-late October (as in 2021 and Oct 20-21, 2025), and any late typhoon or warm southwesterly flow. Both can shift a 7-day mean by several degrees.\n- Latest official outlook (2026-09-23): October is likely above normal in the regions I could check, and strong El Niño conditions are expected to persist. [KMA](https://www.weather.go.kr/w/repositary/xml/fct/mon/fct_mon3_101_20260923.pdf)\n- For reference, the 1991-2020 normal October monthly mean for Seoul is roughly 15 °C. I did not verify this in a source. The Oct 17-23 window sits below the monthly mean because temperatures are falling quickly through October.",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          7.0
+        ],
+        [
+          0.05,
+          9.0
+        ],
+        [
+          0.1,
+          10.0
+        ],
+        [
+          0.2,
+          11.2
+        ],
+        [
+          0.3,
+          12.0
+        ],
+        [
+          0.4,
+          12.6
+        ],
+        [
+          0.5,
+          13.0
+        ],
+        [
+          0.6,
+          13.5
+        ],
+        [
+          0.7,
+          14.1
+        ],
+        [
+          0.8,
+          14.8
+        ],
+        [
+          0.9,
+          15.8
+        ],
+        [
+          0.95,
+          16.6
+        ],
+        [
+          0.99,
+          18.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          7.0
+        ],
+        [
+          0.05,
+          8.9
+        ],
+        [
+          0.1,
+          9.8
+        ],
+        [
+          0.2,
+          11.0
+        ],
+        [
+          0.3,
+          11.9
+        ],
+        [
+          0.4,
+          12.5
+        ],
+        [
+          0.5,
+          13.0
+        ],
+        [
+          0.6,
+          13.5
+        ],
+        [
+          0.7,
+          14.1
+        ],
+        [
+          0.8,
+          14.9
+        ],
+        [
+          0.9,
+          16.0
+        ],
+        [
+          0.95,
+          16.8
+        ],
+        [
+          0.99,
+          18.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          6.8
+        ],
+        [
+          0.05,
+          8.6
+        ],
+        [
+          0.1,
+          9.6
+        ],
+        [
+          0.2,
+          10.9
+        ],
+        [
+          0.3,
+          11.8
+        ],
+        [
+          0.4,
+          12.4
+        ],
+        [
+          0.5,
+          12.9
+        ],
+        [
+          0.6,
+          13.4
+        ],
+        [
+          0.7,
+          14.0
+        ],
+        [
+          0.8,
+          14.8
+        ],
+        [
+          0.9,
+          15.9
+        ],
+        [
+          0.95,
+          16.8
+        ],
+        [
+          0.99,
+          18.3
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.415
+}

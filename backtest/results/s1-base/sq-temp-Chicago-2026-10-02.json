@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Chicago-2026-10-02",
+  "question": "What will be the average daily mean temperature in Chicago over the 7 days ending October 2, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-09-26 to 2026-10-02 at latitude 41.88, longitude -87.63 (Chicago), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 16.99,
+  "outcome_date": "2026-10-08",
+  "as_of": "2026-09-11",
+  "resolve_date": "2026-10-08",
+  "lower_bound": 15.0,
+  "upper_bound": 30.0,
+  "source": "open-meteo",
+  "series": "Chicago",
+  "known_value": 23.328571,
+  "past_moves": [
+    4.557143,
+    -1.142857,
+    -3.214286,
+    -8.214286,
+    -0.457143
+  ],
+  "baseline": "",
+  "research": "Note: I've left out every search result dated after 2026-09-11.\n\n## 1. Resolution source\n- 2026-09-11: The question resolves on the Open-Meteo archive API (ERA5), daily `temperature_2m_mean` at 41.88, -87.63. I used timezone GMT. I could not confirm which timezone the resolver uses, and this can shift daily means slightly. Open-Meteo snaps the request to a grid point at 41.86N, 87.65W. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2026-08-25&end_date=2026-09-10&daily=temperature_2m_mean&timezone=GMT)\n- Latest values available, in °C: Aug 31 24.9, Sep 1 26.9, Sep 2 28.6, Sep 3 27.2, Sep 4 26.6, Sep 5 24.2, Sep 6 22.5, Sep 7 22.2, Sep 8 22.2, Sep 9 23.6, Sep 10 22.0. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2026-08-25&end_date=2026-09-10&daily=temperature_2m_mean&timezone=GMT)\n\n## 2. Current status\n- 2026-09-11: Nothing settles the question yet. The window (Sep 26 to Oct 2) starts 15 days from now, which is past the range of skillful deterministic forecasts. Chicago has been running warm, with daily means of 22 to 29°C in early September, but that has little bearing on temperatures two to three weeks out.\n\n## 3. Recent news (newest first)\n- 2026-09-10: KTTC (Rochester, MN) cited the Climate Prediction Center (CPC). It expects typical temperatures in the third week of September, then a \"warm and generally dry stretch\" from late September into early October, with highs in the upper 60s to 70s °F. This is for the upper Midwest, not Chicago. [KTTC](https://www.kttc.com/2026/09/10/seasonal-temperatures-rainfall-trends-are-ahead-this-month/?outputType=amp)\n- 2026-09-02: University of Nebraska said the CPC 8-14 day outlook favored above-normal temperatures in the Plains and Midwest through mid-September. [UNL NSCO](https://nsco.unl.edu/news/heat-continue-while/)\n- 2026-09-01: The Chicago Sun-Times reported the early-September heat wave was running about 10°F above normal. [Sun-Times](https://chicago.suntimes.com/weather/2026/09/01/september-october-chicago-heat-wave-is-this-normal)\n- WGN reported Chicago's hottest back-to-back September days in 43 years. I could not verify the exact date. [WGN](https://wgntv.com/weather/chicago-experiences-hottest-back-to-back-september-days-in-43-years/)\n- A drought.gov Midwest quarterly outlook for September 2026 exists, but I did not read its content. [drought.gov](https://www.drought.gov/documents/quarterly-climate-impacts-and-outlook-midwest-region-september-2026)\n\n## 4. Base rates (same window, Sep 26 to Oct 2, Open-Meteo ERA5, GMT)\n- 2025: 20.8°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2025-09-26&end_date=2025-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2024: 18.0°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2024-09-26&end_date=2024-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2023: 19.0°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2023-09-26&end_date=2023-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2022: 13.1°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2022-09-26&end_date=2022-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2021: 20.3°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2021-09-26&end_date=2021-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2020: 15.1°C. It fell from about 22°C to 9.7°C within the week. [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2020-09-26&end_date=2020-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2019: 20.0°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2019-09-26&end_date=2019-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2018: 15.1°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2018-09-26&end_date=2018-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2017: 19.0°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2017-09-26&end_date=2017-10-02&daily=temperature_2m_mean&timezone=GMT)\n- 2016: 15.7°C [source](https://archive-api.open-meteo.com/v1/archive?latitude=41.88&longitude=-87.63&start_date=2016-09-26&end_date=2016-10-02&daily=temperature_2m_mean&timezone=GMT)\n- Summary for these 10 years:\n  - Mean is about 17.6°C, standard deviation about 2.6°C, range 13.1 to 20.8°C.\n  - The median is about 18.5°C. The years split into two groups: six warm years at 18 to 21°C and four cool years at 13 to 16°C.\n  - One year (2022) fell below the question's 15.0 floor, and two more (2018, 2020) came in just above it at 15.1. None came near the 30.0 ceiling.\n  - The last five years (2021 to 2025) averaged about 18.2°C.\n- Seasonal cooling: climatology drops about 0.2°C per day at this time of year. Single days within a week can swing 10°C or more when a front passes, as in 2020 and 2017.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question.\n- The only expert guidance I found is the CPC-based \"warm and generally dry\" signal for late September and early October, reported by KTTC for the upper Midwest on 2026-09-10. [KTTC](https://www.kttc.com/2026/09/10/seasonal-temperatures-rainfall-trends-are-ahead-this-month/?outputType=amp)\n- I could not get the CPC week 3-4 outlook issued around 2026-09-11 (valid about Sep 26 to Oct 9). It would be the most relevant primary source. [CPC 8-14 day](https://cpc.ncep.noaa.gov/products/predictions/814day/)\n\n## 6. Upcoming events before resolution\n- CPC 6-10 and 8-14 day outlooks are issued daily. The 8-14 day outlook starts covering Sep 26 to Oct 2 from about Sep 12 to 18. The CPC week 3-4 outlook is updated every Friday, including Sep 11 and Sep 18.\n- The ECMWF and GFS ensembles will cover the full window from about Sep 16 onward.\n- The main risk to the outcome is a strong cold front, like those in 2018, 2020 and 2022, against the possibility that the current warm pattern continues.\n- Open-Meteo's preliminary ERA5 data usually appear with a lag of about 5 days, so the final values should be available around Oct 7 to 8.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          11.0
+        ],
+        [
+          0.05,
+          12.9
+        ],
+        [
+          0.1,
+          14.0
+        ],
+        [
+          0.2,
+          15.6
+        ],
+        [
+          0.3,
+          16.8
+        ],
+        [
+          0.4,
+          17.6
+        ],
+        [
+          0.5,
+          18.3
+        ],
+        [
+          0.6,
+          19.0
+        ],
+        [
+          0.7,
+          19.8
+        ],
+        [
+          0.8,
+          20.8
+        ],
+        [
+          0.9,
+          22.2
+        ],
+        [
+          0.95,
+          23.2
+        ],
+        [
+          0.99,
+          25.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          11.0
+        ],
+        [
+          0.05,
+          13.3
+        ],
+        [
+          0.1,
+          14.6
+        ],
+        [
+          0.2,
+          16.1
+        ],
+        [
+          0.3,
+          17.2
+        ],
+        [
+          0.4,
+          17.9
+        ],
+        [
+          0.5,
+          18.5
+        ],
+        [
+          0.6,
+          19.1
+        ],
+        [
+          0.7,
+          19.8
+        ],
+        [
+          0.8,
+          20.8
+        ],
+        [
+          0.9,
+          22.1
+        ],
+        [
+          0.95,
+          23.0
+        ],
+        [
+          0.99,
+          24.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          11.5
+        ],
+        [
+          0.05,
+          13.3
+        ],
+        [
+          0.1,
+          14.4
+        ],
+        [
+          0.2,
+          15.9
+        ],
+        [
+          0.3,
+          17.0
+        ],
+        [
+          0.4,
+          17.9
+        ],
+        [
+          0.5,
+          18.6
+        ],
+        [
+          0.6,
+          19.3
+        ],
+        [
+          0.7,
+          20.1
+        ],
+        [
+          0.8,
+          21.0
+        ],
+        [
+          0.9,
+          22.4
+        ],
+        [
+          0.95,
+          23.4
+        ],
+        [
+          0.99,
+          25.2
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3407
+}

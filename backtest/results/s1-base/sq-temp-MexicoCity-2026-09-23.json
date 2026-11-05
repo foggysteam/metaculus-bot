@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-MexicoCity-2026-09-23",
+  "question": "What will be the average daily mean temperature in Mexico City over the 7 days ending September 23, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-09-17 to 2026-09-23 at latitude 19.43, longitude -99.13 (Mexico City), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 18.04,
+  "outcome_date": "2026-09-29",
+  "as_of": "2026-09-09",
+  "resolve_date": "2026-09-29",
+  "lower_bound": 16.0,
+  "upper_bound": 18.5,
+  "source": "open-meteo",
+  "series": "Mexico City",
+  "known_value": 17.271429,
+  "past_moves": [
+    0.614286,
+    0.485714,
+    -0.1,
+    -0.485714,
+    0.228571
+  ],
+  "baseline": "",
+  "research": "I've pulled the ERA5 numbers and checked each year's figures, so here is the write-up.\n\n# Mexico City, average daily mean temperature for Sept 17-23, 2026 (ERA5 via Open-Meteo)\n\n## 1. Resolution source\n- The question resolves on the Open-Meteo archive API: `archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&daily=temperature_2m_mean`. I queried it directly. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2026-08-20&end_date=2026-09-09&daily=temperature_2m_mean&timezone=auto)\n- 2026-09-09: the latest values shown for the grid point are Sep 3: 17.9, Sep 4: 18.5, Sep 5: 17.8, Sep 6: 16.5, Sep 7: 16.3, Sep 8: 16.9, Sep 9: 16.7 °C. That makes the 7-day mean for Sep 3-9 about 17.2 °C. One caveat: ERA5 normally runs about 5 days behind, so on Sep 9 itself the last few days may not yet have been final.\n- 2026-08-20 to 09-09: the 21-day mean is about 16.97 °C. Daily values ranged from 15.5 (Aug 24) to 18.5 (Sep 4). [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2026-08-20&end_date=2026-09-09&daily=temperature_2m_mean&timezone=auto)\n\n## 2. Current status\n- 2026-09-09: nothing is settled yet. The resolution window (Sep 17-23) starts 8 days after forecasts close.\n- I could not get an archived Open-Meteo forecast issued around Sep 9. The live forecast endpoint only returns current output, which doesn't apply here.\n\n## 3. Recent news (newest first)\n- 2026-09-09: Grupo Animal reported rain and cloudy skies for CDMX and Edomex. [Grupo Animal](https://grupoanimal.mx/sociedad/clima-septiembre-lluvias-nublado-cdmx-edomex)\n- 2026-09-08: Grupo Animal reported light rain and cloudy skies in CDMX. [Grupo Animal](https://grupoanimal.mx/sociedad/pronostico-del-clima-en-cdmx-martes-8-de-septiembre)\n- 2026-09-07: rain alert for CDMX, with a forecast low of 13-15 °C and high of 22-24 °C. [Grupo Animal](https://grupoanimal.mx/sociedad/pronostico-del-clima-en-cdmx-lunes-7-de-septiembre)\n- 2026-09-06 to 09: the SIAP/SMN agrometeorological bulletin forecast heavy to very heavy rain, including in the Valle de México. It linked the rain to tropical waves 26 and 27. [SIAP PDF](https://www.gob.mx/cms/uploads/attachment/file/854888/SIAP-PronosticoAgrometeorologico.pdf)\n- Early Sep 2026: the SMN said September would be the peak of the 2026 cyclone season. It added that a developing El Niño could favour Pacific activity. [Milenio](https://www.milenio.com/el-clima/en-que-mes-habra-mas-ciclones-tropicales-huracanes-en-mexico-este-2026); [Azteca Jalisco](https://www.aztecajalisco.com/clima/septiembre-llega-con-alerta-cuantos-ciclones-podrian-formarse-este-mes/)\n\n## 4. Base rates (same source and grid point, Sep 17-23 means)\nI fetched each year separately. An earlier bulk download misaligned some years, so I discarded it.\n- 2015: 16.26 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2015-09-17&end_date=2015-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2016: 16.00 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2016-09-17&end_date=2016-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2017: 17.87 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2017-09-17&end_date=2017-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2018: 17.00 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2018-09-17&end_date=2018-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2019: 17.50 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2019-09-17&end_date=2019-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2020: 16.59 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2020-09-17&end_date=2020-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2021: 16.57 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2021-09-17&end_date=2021-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2022: 16.26 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2022-09-17&end_date=2022-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2023: 17.54 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2023-09-17&end_date=2023-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2024: 17.66 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2024-09-17&end_date=2024-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2025: 17.37 [src](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2025-09-17&end_date=2025-09-23&daily=temperature_2m_mean&timezone=auto)\n\nSummary of those 11 years:\n- **Average and spread:** the mean is about 16.97 °C, with a standard deviation of about 0.65 °C. The range is 16.00 (2016) to 17.87 (2017).\n- **Last 5 years (2021-2025):** the mean is about 17.08 °C, with no clear trend. Three of the last three years came in at 17.37 or higher.\n- **Day-to-day swings:** individual days in this window vary by roughly ±1.5 °C. Rainy spells (for example 2016 and 2024 dips to about 14.6-14.9) pull the weekly mean down, and drier stretches push it up (for example 2023 late-window days of 18-19).\n- **Recent 2026 conditions:** the Sep 3-9 mean of about 17.2 and the late-August-to-early-September mean of about 17.0 are both close to the climatology.\n- **Range check:** the question's 16.0-18.5 range covers every year from 2015 to 2025.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question.\n- I found no quantitative expert forecast for Sep 17-23, 2026 published by Sep 9. Media forecasts around Sep 7-9 gave typical CDMX highs of 22-25 °C and lows of 13-15 °C. Those imply daily means of roughly 17-19 °C at the station level, but ERA5 grid values tend to come in lower.\n\n## 6. Upcoming events before resolution\n- The rainy season is still active and tropical waves keep arriving. Persistent cloud and rain, or a tropical cyclone remnant near central Mexico, would cool daily means. Drier breaks would warm them.\n- Mid-to-late September is around when the first cold fronts and the seasonal decline in rain begin.\n- The window ends Sep 23. ERA5 data for it should be in the archive about 5 days later, near the Sep 29 resolution date.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          15.3
+        ],
+        [
+          0.05,
+          15.9
+        ],
+        [
+          0.1,
+          16.2
+        ],
+        [
+          0.2,
+          16.5
+        ],
+        [
+          0.3,
+          16.8
+        ],
+        [
+          0.4,
+          17.0
+        ],
+        [
+          0.5,
+          17.1
+        ],
+        [
+          0.6,
+          17.3
+        ],
+        [
+          0.7,
+          17.5
+        ],
+        [
+          0.8,
+          17.7
+        ],
+        [
+          0.9,
+          18.0
+        ],
+        [
+          0.95,
+          18.3
+        ],
+        [
+          0.99,
+          18.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.3
+        ],
+        [
+          0.05,
+          15.8
+        ],
+        [
+          0.1,
+          16.1
+        ],
+        [
+          0.2,
+          16.5
+        ],
+        [
+          0.3,
+          16.8
+        ],
+        [
+          0.4,
+          17.0
+        ],
+        [
+          0.5,
+          17.1
+        ],
+        [
+          0.6,
+          17.3
+        ],
+        [
+          0.7,
+          17.5
+        ],
+        [
+          0.8,
+          17.75
+        ],
+        [
+          0.9,
+          18.1
+        ],
+        [
+          0.95,
+          18.4
+        ],
+        [
+          0.99,
+          18.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.3
+        ],
+        [
+          0.05,
+          15.85
+        ],
+        [
+          0.1,
+          16.15
+        ],
+        [
+          0.2,
+          16.5
+        ],
+        [
+          0.3,
+          16.78
+        ],
+        [
+          0.4,
+          16.98
+        ],
+        [
+          0.5,
+          17.13
+        ],
+        [
+          0.6,
+          17.3
+        ],
+        [
+          0.7,
+          17.48
+        ],
+        [
+          0.8,
+          17.72
+        ],
+        [
+          0.9,
+          18.05
+        ],
+        [
+          0.95,
+          18.32
+        ],
+        [
+          0.99,
+          18.85
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4806
+}

@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Paris-2026-10-13",
+  "question": "What will be the average daily mean temperature in Paris over the 7 days ending October 13, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-07 to 2026-10-13 at latitude 48.86, longitude 2.35 (Paris), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 14.41,
+  "outcome_date": "2026-10-19",
+  "as_of": "2026-09-29",
+  "resolve_date": "2026-10-19",
+  "lower_bound": 15.5,
+  "upper_bound": 22.5,
+  "source": "open-meteo",
+  "series": "Paris",
+  "known_value": 19.057143,
+  "past_moves": [
+    1.528571,
+    -1.442857,
+    2.114286,
+    -0.585714,
+    -3.971429
+  ],
+  "baseline": "",
+  "research": "Note on dates: my system date is later than the exercise date, so some search results were published after 2026-09-29. I left those out, except that I name the selectra.info article, dated 2026-10-01, which reports a Météo-France forecast issued on 2026-09-29. I flag it where it appears.\n\n## 1. Resolution source\n- The question resolves on the Open-Meteo ERA5 archive, daily `temperature_2m_mean`, at 48.86N, 2.35E. I queried the archive API directly. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2026-09-01&end_date=2026-09-29&daily=temperature_2m_mean&timezone=Europe%2FParis)\n- 2026-09-29: the latest value shown is 21.3 °C. The archive normally runs about 5 days behind, so values from about Sep 24 onward may have been added after Sep 29. [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2026-09-01&end_date=2026-09-29&daily=temperature_2m_mean&timezone=Europe%2FParis)\n- September 2026 daily means ranged from 15.8 to 24.0 °C. The Sep 23-29 values were 19.2, 17.9, 20.2, 18.7, 20.2, 19.3 and 21.3, an average of about 19.5 °C.\n\n## 2. Current status\n- Nothing has settled the question yet. The 7-day window (Oct 7-13) had not started when forecasts closed.\n- Late September 2026 was very warm for the season. The Sep 23-29 average of about 19.5 °C compares with 16.0 °C in 2017 and 13.6 °C in 2018.\n\n## 3. Recent news (newest first)\n- 2026-09-29, 14:22: Météo-France's trend for the week of Oct 5-11 said: \"temperatures are still above seasonal norms but are gradually getting closer to them\", with mostly dry weather except near the Mediterranean. This was relayed in later coverage. [selectra.info](https://selectra.info/energie/actualites/marche/meteo-octobre-2026-douceur-jusqu-a-quand)\n- 2026-09-29: the same Météo-France forecast, reported by selectra.info in an article dated 2026-10-01, gave these figures for Paris:\n  - Oct 1-6: highs of about 21-22 °C, lows of 12-14 °C.\n  - Oct 9-13: highs of 18-19 °C, with a low of about 11.5 °C around Oct 10.\n  - That implies station daily means of roughly 15 °C for Oct 9-13. The article warns that anything beyond 5 days is a trend that may change. [selectra.info](https://selectra.info/energie/actualites/marche/meteo-octobre-2026-douceur-jusqu-a-quand)\n\n## 4. Base rates\nOct 7-13 means from the same Open-Meteo ERA5 series, in °C. I took the daily values from the archive and averaged them myself. [2025](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2025-09-29&end_date=2025-10-13&daily=temperature_2m_mean&timezone=Europe%2FParis), [2024](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2024-09-29&end_date=2024-10-13&daily=temperature_2m_mean&timezone=Europe%2FParis), [2023](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2023-09-29&end_date=2023-10-13&daily=temperature_2m_mean&timezone=Europe%2FParis), [2022](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2022-09-29&end_date=2022-10-13&daily=temperature_2m_mean&timezone=Europe%2FParis), [2021](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2021-10-07&end_date=2021-10-13&daily=temperature_2m_mean&timezone=Europe%2FParis), [2020](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2020-09-29&end_date=2020-10-13&daily=temperature_2m_mean&timezone=Europe%2FParis), [2019](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2019-09-29&end_date=2019-10-13&daily=temperature_2m_mean&timezone=Europe%2FParis), [2016-2018](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2016-09-29&end_date=2025-10-13&daily=temperature_2m_mean&timezone=Europe%2FParis)\n\n| Year | Oct 7-13 mean | Sep 29 value |\n|---|---|---|\n| 2025 | 13.3 | 13.9 |\n| 2024 | 13.0 | 9.8 |\n| 2023 | 17.9 | 18.4 |\n| 2022 | 12.4 | 10.9 |\n| 2021 | 11.5 | not fetched |\n| 2020 | 12.3 | 15.5 |\n| 2019 | 14.8 | 16.7 |\n| 2018 | 16.7 | 12.3 |\n| 2017 | 14.5 | 18.7 |\n| 2016 | 10.3 | 17.5 |\n\n- **10-year average:** 13.7 °C. The standard deviation is about 2.3 °C and the range is 10.3 to 17.9 °C.\n- **How often the window reached the question's range:** only 2 of 10 years were at or above 15.5 °C (2018 and 2023). None came close to 22.5 °C.\n- **Seasonal decline:** from Sep 29 to Oct 7-13, the series usually falls by about 1 to 4 °C. The comparable years:\n  - 2023: 18.4 to 17.9 (warm spell held)\n  - 2019: 16.7 to 14.8\n  - 2020: 15.5 to 12.3\n  - 2017: 18.7 to 14.5\n  - 2018: 12.3 to 16.7 (rose)\n- **How warm the window can get:** in 2023 it averaged 17.9 °C, with Oct 13 reaching 20.7 °C. That shows a warm anticyclonic setup can keep the 7-day mean in the high teens.\n- **This year:** 2026 is running well above all of the last 10 years at this date. Sep 29 was 21.3 °C, against 9.8 to 18.7 °C in the comparison years.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on this question or anything closely related.\n- The only expert guidance I found dated on or before Sep 29 is the Météo-France forecast in section 3: still above normal, but trending back toward normal by Oct 9-13. The Paris normal for that week is roughly 13-14 °C, which matches the ERA5 average above.\n\n## 6. Upcoming events before resolution\n- The Météo-France forecast issued on Sep 29 is the latest official one I found:\n  - Highs of about 21-22 °C through Oct 6.\n  - Then a gradual cooling, with highs of 18-19 °C and lows of about 11-12 °C from Oct 9 to 13.\n  - Dry weather is expected in the north and showers or storms near the Mediterranean. [selectra.info](https://selectra.info/energie/actualites/marche/meteo-octobre-2026-douceur-jusqu-a-quand)\n- **What moves the outcome:** how fast the cooling arrives and how strong it is. An Atlantic trough or oceanic flow would pull the mean toward 13-15 °C. A lingering ridge, as in 2023, would keep it at 16-18 °C or higher.\n- **A gap to keep in mind:** ERA5 gridded daily means can differ from station-based forecasts. For example, Météo-France's highs and lows correspond to a daily mean of about 15 °C, but the grid cell could come out somewhat different.\n- I found no seasonal outlook specific to Paris and dated on or before Sep 29.",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          10.6
+        ],
+        [
+          0.05,
+          12.0
+        ],
+        [
+          0.1,
+          12.8
+        ],
+        [
+          0.2,
+          13.8
+        ],
+        [
+          0.3,
+          14.6
+        ],
+        [
+          0.4,
+          15.2
+        ],
+        [
+          0.5,
+          15.7
+        ],
+        [
+          0.6,
+          16.2
+        ],
+        [
+          0.7,
+          16.8
+        ],
+        [
+          0.8,
+          17.6
+        ],
+        [
+          0.9,
+          18.7
+        ],
+        [
+          0.95,
+          19.5
+        ],
+        [
+          0.99,
+          21.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          10.3
+        ],
+        [
+          0.05,
+          11.8
+        ],
+        [
+          0.1,
+          12.6
+        ],
+        [
+          0.2,
+          13.6
+        ],
+        [
+          0.3,
+          14.3
+        ],
+        [
+          0.4,
+          14.8
+        ],
+        [
+          0.5,
+          15.3
+        ],
+        [
+          0.6,
+          15.8
+        ],
+        [
+          0.7,
+          16.3
+        ],
+        [
+          0.8,
+          17.0
+        ],
+        [
+          0.9,
+          17.9
+        ],
+        [
+          0.95,
+          18.6
+        ],
+        [
+          0.99,
+          19.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          10.5
+        ],
+        [
+          0.05,
+          12.0
+        ],
+        [
+          0.1,
+          12.8
+        ],
+        [
+          0.2,
+          13.8
+        ],
+        [
+          0.3,
+          14.6
+        ],
+        [
+          0.4,
+          15.2
+        ],
+        [
+          0.5,
+          15.6
+        ],
+        [
+          0.6,
+          16.1
+        ],
+        [
+          0.7,
+          16.7
+        ],
+        [
+          0.8,
+          17.5
+        ],
+        [
+          0.9,
+          18.6
+        ],
+        [
+          0.95,
+          19.4
+        ],
+        [
+          0.99,
+          20.9
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3831
+}

@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Beijing-2026-09-07",
+  "question": "What will be the average daily mean temperature in Beijing over the 7 days ending September 7, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-09-01 to 2026-09-07 at latitude 39.9, longitude 116.4 (Beijing), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 26.26,
+  "outcome_date": "2026-09-13",
+  "as_of": "2026-08-24",
+  "resolve_date": "2026-09-13",
+  "lower_bound": 23.5,
+  "upper_bound": 33.0,
+  "source": "open-meteo",
+  "series": "Beijing",
+  "known_value": 27.557143,
+  "past_moves": [
+    -1.371429,
+    -2.814286,
+    -1.128571,
+    -3.271429,
+    -2.071429
+  ],
+  "baseline": "",
+  "research": "Between 2016 and 2025, the Sept 1-7 mean at this point in ERA5 averaged about 23.6°C. Late August 2026 is running clearly warmer than the last five years, so the starting point is high. I found no forecast issued before the cutoff that covers Sept 1-7.\n\n### 1. Resolution source\n- 2026-08-24: The Open-Meteo archive (ERA5) shows these daily means for Beijing at 39.9N, 116.4E: Aug 18: 27.4, Aug 19: 27.3, Aug 20: 27.4, Aug 21: 28.7, Aug 22: 27.1, Aug 23: 27.9, Aug 24: 27.1. That averages 27.6°C over Aug 18-24. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=39.9&longitude=116.4&start_date=2026-08-01&end_date=2026-08-24&daily=temperature_2m_mean&timezone=Asia%2FShanghai)\n- ERA5 normally runs about 5 days behind, so the values for about Aug 20-24 may not have existed yet on Aug 24.\n- Early August 2026 was very hot, with daily means of 29.5-33.2 on Aug 1-7. A cooler spell followed on Aug 12-16 (24.5-26.4).\n- I used Asia/Shanghai day boundaries. The question does not say which timezone the resolver uses, and a GMT default could shift daily means slightly.\n\n### 2. Current status\n- Nothing settles the question yet. The window (Sept 1-7) starts 8 days after the cutoff.\n\n### 3. Recent news\n- 2026-08-23: The Beijing Meteorological Observatory forecast thunderstorms, a high of 32°C and a low of 24°C. It said highs of 32-33°C would continue for the next three days and it would feel muggy. [GMW](https://m.gmw.cn/2026-08/23/content_1304552320.htm)\n- 2026-08-23: A China Meteorological Administration (CMA) analyst said cold air would become active the following week. Northern North China and the Northeast would begin the summer-to-autumn transition. This was not specific to Beijing city. [Yangtse Evening Post](https://www.yzwb.net/news/yw/202608/t20260823_385424.html)\n- 2026-08-06: Beijing had a heatwave with highs up to 36°C. [GMW](https://m.gmw.cn/2026-08/06/content_1304543938.htm)\n\n### 4. Base rates (Open-Meteo ERA5, same point, Sept 1-7 mean °C)\n- 2016: 23.1; 2017: 22.8; 2018: 23.7; 2019: 26.6; 2020: 23.5. [archive](https://archive-api.open-meteo.com/v1/archive?latitude=39.9&longitude=116.4&start_date=2016-09-01&end_date=2020-09-07&daily=temperature_2m_mean&timezone=Asia%2FShanghai)\n- 2021: 21.8; 2022: 21.7; 2023: 24.9; 2024: 22.9; 2025: 25.2.\n- Over these 10 years:\n  - The mean is about 23.6°C, with a standard deviation of about 1.5°C.\n  - The range runs from 21.7 to 26.6.\n  - There is no clear trend.\n  - Only 2019 went above 26.\n  - The question's lower bound (23.5) sits near the climate average.\n\n**Seasonal change from this date to the window (Aug 18-24 mean, then Sept 1-7 mean):**\n\n| Year | Aug 18-24 | Sept 1-7 | Change |\n|---|---|---|---|\n| 2021 | 23.7 | 21.8 | -1.9 |\n| 2022 | 24.5 | 21.7 | -2.8 |\n| 2023 | 25.4 | 24.9 | -0.5 |\n| 2024 | 25.6 | 22.9 | -2.7 |\n| 2025 | 26.2 | 25.2 | -1.1 |\n\nSources: [2021](https://archive-api.open-meteo.com/v1/archive?latitude=39.9&longitude=116.4&start_date=2021-08-18&end_date=2021-09-07&daily=temperature_2m_mean&timezone=Asia%2FShanghai), [2022](https://archive-api.open-meteo.com/v1/archive?latitude=39.9&longitude=116.4&start_date=2022-08-18&end_date=2022-09-07&daily=temperature_2m_mean&timezone=Asia%2FShanghai), [2023](https://archive-api.open-meteo.com/v1/archive?latitude=39.9&longitude=116.4&start_date=2023-08-18&end_date=2023-09-07&daily=temperature_2m_mean&timezone=Asia%2FShanghai), [2024](https://archive-api.open-meteo.com/v1/archive?latitude=39.9&longitude=116.4&start_date=2024-08-18&end_date=2024-09-07&daily=temperature_2m_mean&timezone=Asia%2FShanghai), [2025](https://archive-api.open-meteo.com/v1/archive?latitude=39.9&longitude=116.4&start_date=2025-08-18&end_date=2025-09-07&daily=temperature_2m_mean&timezone=Asia%2FShanghai)\n\n- On average the week cools by about 1.8°C between these two periods, with a range of -0.5 to -2.8.\n- 2026 is running warm. Its Aug 18-24 mean of 27.6 is 1.4 to 3.9°C above each of the last five years.\n- Taken alone, applying the past drops to 27.6 would give about 24.8-27.1. That is simple arithmetic, not a forecast.\n- How long a heat anomaly lasts over 1-2 weeks is uncertain. In 2024 and 2022, single cold-air outbreaks cut the weekly mean by about 3°C within 10 days.\n- Day-to-day swings inside early September are about ±2-3°C. For example, 2024 fell from 25.8 to 20.8 within the week.\n\n### 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question or a closely related one.\n- I found no expert forecast that covers Sept 1-7, 2026.\n\n### 6. Upcoming events and outlook\n- 2026-08-23: The official forecast called for hot, thundery weather through about Aug 26, with highs of 32-33°C. [GMW](https://m.gmw.cn/2026-08/23/content_1304552320.htm)\n- 2026-08-23: CMA expected cold air to become more active in the week of Aug 24-30, starting the seasonal transition in northern North China. [Yangtse Evening Post](https://www.yzwb.net/news/yw/202608/t20260823_385424.html)\n- I could not find a 10-day forecast or an official extended outlook issued on or before Aug 24 that covers Sept 1-7. The live Open-Meteo forecast endpoint now only shows dates after the cutoff, so I did not use it.\n- Beijing's climatological start of autumn (when daily means fall below 22°C) is around Sept 13. A cold surge in the first week of September would pull the mean toward 22-23°C. Persistent subtropical high influence would keep it around 25-27°C.",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          20.3
+        ],
+        [
+          0.05,
+          21.6
+        ],
+        [
+          0.1,
+          22.3
+        ],
+        [
+          0.2,
+          23.0
+        ],
+        [
+          0.3,
+          23.6
+        ],
+        [
+          0.4,
+          24.0
+        ],
+        [
+          0.5,
+          24.4
+        ],
+        [
+          0.6,
+          24.8
+        ],
+        [
+          0.7,
+          25.3
+        ],
+        [
+          0.8,
+          25.9
+        ],
+        [
+          0.9,
+          26.7
+        ],
+        [
+          0.95,
+          27.3
+        ],
+        [
+          0.99,
+          28.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          20.3
+        ],
+        [
+          0.05,
+          21.8
+        ],
+        [
+          0.1,
+          22.5
+        ],
+        [
+          0.2,
+          23.3
+        ],
+        [
+          0.3,
+          23.9
+        ],
+        [
+          0.4,
+          24.3
+        ],
+        [
+          0.5,
+          24.7
+        ],
+        [
+          0.6,
+          25.1
+        ],
+        [
+          0.7,
+          25.5
+        ],
+        [
+          0.8,
+          26.1
+        ],
+        [
+          0.9,
+          26.9
+        ],
+        [
+          0.95,
+          27.5
+        ],
+        [
+          0.99,
+          28.6
+        ]
+      ],
+      [
+        [
+          0.01,
+          20.6
+        ],
+        [
+          0.05,
+          21.7
+        ],
+        [
+          0.1,
+          22.3
+        ],
+        [
+          0.2,
+          23.1
+        ],
+        [
+          0.3,
+          23.7
+        ],
+        [
+          0.4,
+          24.2
+        ],
+        [
+          0.5,
+          24.6
+        ],
+        [
+          0.6,
+          25.0
+        ],
+        [
+          0.7,
+          25.5
+        ],
+        [
+          0.8,
+          26.0
+        ],
+        [
+          0.9,
+          26.8
+        ],
+        [
+          0.95,
+          27.4
+        ],
+        [
+          0.99,
+          28.4
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4399
+}

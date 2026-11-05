@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Toronto-2026-10-13",
+  "question": "What will be the average daily mean temperature in Toronto over the 7 days ending October 13, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-07 to 2026-10-13 at latitude 43.65, longitude -79.38 (Toronto), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 15.13,
+  "outcome_date": "2026-10-19",
+  "as_of": "2026-09-15",
+  "resolve_date": "2026-10-19",
+  "lower_bound": 5.0,
+  "upper_bound": 30.0,
+  "source": "open-meteo",
+  "series": "Toronto",
+  "known_value": 20.128571,
+  "past_moves": [
+    -4.185714,
+    -6.057143,
+    -7.471429,
+    -8.185714,
+    -1.128571
+  ],
+  "baseline": "",
+  "research": "I couldn't find anything that settles or nearly settles this question. The forecast window (Oct 7 to 13) starts 3 to 4 weeks after today, which is beyond reliable day-to-day forecasting. Over 2015-2025, the same 7-day window in this ERA5 series averaged about **13.7 °C**, with a typical spread of about 2.4 °C and a range of 10.3 to 18.3 °C. Seasonal outlooks lean somewhat warm.\n\n## 1. Resolution source\n- 2026-09-15: I queried the Open-Meteo archive API (ERA5) for 43.65, -79.38 in Toronto local time. It already has daily mean values through 2026-09-15 (19.0 °C). Early-September daily means were 16.7 to 22.5 °C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2026-09-01&end_date=2026-09-15&daily=temperature_2m_mean&timezone=America/Toronto)\n- I used the America/Toronto timezone. If resolution uses UTC days, the result could differ slightly.\n\n## 2. Current status\n- 2026-09-15: Nothing has happened that settles the question. No data exists yet for the window.\n\n## 3. Recent news (newest first)\n- 2026-09-10: NOAA's Climate Prediction Center ENSO discussion keeps an \"El Niño Advisory\" in place. A news report on it says El Niño is strengthening, with a greater than 90% chance of a very strong event through northern fall and winter 2026-27. [CPC Sep 2026](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_sep2026/ensodisc.shtml), [elmundo.sv](https://diario.elmundo.sv/nacionales/noaa-eleva-al-75-la-probabilidad-de-que-el-fenomeno-de-el-nino-alcance-un-record-historico-a-finales-de-2026)\n- Around September 2026 (I couldn't confirm the exact date): The Weather Network's Ontario fall forecast says fall as a whole leans above seasonal, linked to El Niño. But it says \"we may actually run surprisingly close to seasonal for a large chunk of mid-September through mid-October,\" which covers the question window. [TWN](https://www.theweathernetwork.com/en/news/weather/seasonal/ontario-2026-fall-forecast)\n- 2026-08-13: CPC said there was a greater than 90% chance of a very strong El Niño this fall and winter. [CPC Aug 2026](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_aug2026/ensodisc.shtml)\n- The Old Farmer's Almanac calls for October near or slightly below normal, about 11 °C for southern Ontario. This is a low-reliability source. [Almanac](https://www.almanac.com/weather/longrange/region/ca/3)\n\n## 4. Base rates (Oct 7 to 13 mean, same API and point)\n- 2015: 14.4\n- 2016: 14.2\n- 2017: 16.4\n- 2018: 15.2\n- 2019: 12.9\n- 2020: 13.1\n- 2021: 18.3\n- 2022: 11.4\n- 2023: 10.3\n- 2024: 11.1\n- 2025: 13.4\n\n([2025 query](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2025-10-07&end_date=2025-10-13&daily=temperature_2m_mean&timezone=America/Toronto); I pulled the other years the same way.)\n\n- Over the 11 years the mean is about 13.7 °C, the standard deviation about 2.4 °C, and the median 13.4 °C. The last four years (2022 to 2025) ran cooler, averaging about 11.6 °C, but no clear long-term trend shows over this short sample.\n- Within a single week, daily means swing widely, often 8 to 22 °C. For example, 2018 ran from 22.0 down to 7.0 °C. One frontal passage can move the weekly mean by 2 to 3 °C.\n- A blogTO piece citing Weather Network data says that in past strong El Niño falls, Toronto's October averaged 1.3 °C below normal. That piece was published on 2026-10-01, after today, so I'm only noting that this historical claim exists. Treat it with caution.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question.\n- The Environment Canada (ECCC) seasonal outlook favours above-normal temperatures for southern Ontario in fall. I could only find the details in articles dated after 2026-09-15, so I've left them out.\n- I couldn't access ECCC's monthly October outlook or NOAA CPC's outlooks for the week-3 to week-4 period. CPC's 3 to 4 week outlook issued around Sept 18 to 25, and its October monthly update, would be the most relevant expert guidance, but both come after the forecast closes.\n\n## 6. Upcoming events before resolution\n- Late September to early October: extended-range model runs (ECMWF weeklies, CPC week 3 to 4) will begin to cover Oct 7 to 13.\n- 2026-10-08: next CPC ENSO discussion.\n- Oct 7 to 13: the actual weather. The main uncertainty is whether a cold front or a warm spell dominates that week.\n- Around 2026-10-19: resolution. ERA5 data typically lags by about 5 days.\n\nSources:\n- [Open-Meteo archive API](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2026-09-01&end_date=2026-09-15&daily=temperature_2m_mean&timezone=America/Toronto)\n- [CPC ENSO discussion, Sep 2026](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_sep2026/ensodisc.shtml)\n- [CPC ENSO discussion, Aug 2026](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_aug2026/ensodisc.shtml)\n- [The Weather Network Ontario fall forecast](https://www.theweathernetwork.com/en/news/weather/seasonal/ontario-2026-fall-forecast)\n- [Old Farmer's Almanac](https://www.almanac.com/weather/longrange/region/ca/3)\n- [elmundo.sv](https://diario.elmundo.sv/nacionales/noaa-eleva-al-75-la-probabilidad-de-que-el-fenomeno-de-el-nino-alcance-un-record-historico-a-finales-de-2026)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          8.0
+        ],
+        [
+          0.05,
+          9.6
+        ],
+        [
+          0.1,
+          10.5
+        ],
+        [
+          0.2,
+          11.7
+        ],
+        [
+          0.3,
+          12.5
+        ],
+        [
+          0.4,
+          13.2
+        ],
+        [
+          0.5,
+          13.7
+        ],
+        [
+          0.6,
+          14.3
+        ],
+        [
+          0.7,
+          15.0
+        ],
+        [
+          0.8,
+          15.9
+        ],
+        [
+          0.9,
+          17.1
+        ],
+        [
+          0.95,
+          18.0
+        ],
+        [
+          0.99,
+          19.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          7.8
+        ],
+        [
+          0.05,
+          9.4
+        ],
+        [
+          0.1,
+          10.3
+        ],
+        [
+          0.2,
+          11.5
+        ],
+        [
+          0.3,
+          12.4
+        ],
+        [
+          0.4,
+          13.0
+        ],
+        [
+          0.5,
+          13.6
+        ],
+        [
+          0.6,
+          14.2
+        ],
+        [
+          0.7,
+          14.9
+        ],
+        [
+          0.8,
+          15.8
+        ],
+        [
+          0.9,
+          17.1
+        ],
+        [
+          0.95,
+          18.1
+        ],
+        [
+          0.99,
+          19.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          8.0
+        ],
+        [
+          0.05,
+          9.6
+        ],
+        [
+          0.1,
+          10.4
+        ],
+        [
+          0.2,
+          11.6
+        ],
+        [
+          0.3,
+          12.5
+        ],
+        [
+          0.4,
+          13.2
+        ],
+        [
+          0.5,
+          13.8
+        ],
+        [
+          0.6,
+          14.4
+        ],
+        [
+          0.7,
+          15.1
+        ],
+        [
+          0.8,
+          16.0
+        ],
+        [
+          0.9,
+          17.3
+        ],
+        [
+          0.95,
+          18.3
+        ],
+        [
+          0.99,
+          20.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4037
+}

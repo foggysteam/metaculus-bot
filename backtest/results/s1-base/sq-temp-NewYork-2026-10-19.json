@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-NewYork-2026-10-19",
+  "question": "What will be the average daily mean temperature in New York over the 7 days ending October 19, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-13 to 2026-10-19 at latitude 40.71, longitude -74.01 (New York), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 14.86,
+  "outcome_date": "2026-10-25",
+  "as_of": "2026-09-21",
+  "resolve_date": "2026-10-25",
+  "lower_bound": 5.0,
+  "upper_bound": 40.0,
+  "source": "open-meteo",
+  "series": "New York",
+  "known_value": 20.9,
+  "past_moves": [
+    -8.042857,
+    -8.828571,
+    -6.585714,
+    -7.442857,
+    -5.185714
+  ],
+  "baseline": "",
+  "research": "I found no forecast that covers October 13-19, 2026. It is 22 to 28 days out, and nothing before resolution settles it. The historical baseline is about 13.5°C (range 11.0 to 16.8°C), with a modest seasonal lean toward warm.\n\n## 1. Resolution source\n- The source is the Open-Meteo ERA5 archive, daily `temperature_2m_mean` at 40.71, -74.01. I queried it directly.\n- 2026-09-21: Latest value 18.8°C. Values for Sep 1-21, 2026 ranged from 17.4°C (Sep 15) to 26.2°C (Sep 10), with no gaps. Sep 19 was 20.1°C and Sep 20 was 19.1°C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2026-09-01&end_date=2026-09-21&daily=temperature_2m_mean)\n- Caveat: the question does not give a timezone. I pulled the past-year data below using America/New_York. The API default is GMT, which can shift daily means slightly, usually by a few tenths of a degree.\n\n## 2. Current status\n- Nothing has happened yet that settles or nearly settles the question. The window is 22 to 28 days away, beyond reliable deterministic forecast range.\n\n## 3. Recent news\n- 2026-09-17: CPC's long-lead outlook has the Northeast \"leaning above-normal\" for temperature in October-December 2026 (via an Almanac summary). That page gave no October-only map value for New York. [homealmanac.us](https://homealmanac.us/outlook/northeast/)\n- 2026-09-16: The weekly Niño 3.4 index reached about +3.0°C, a very strong El Niño. IRI says it could rank among the strongest on record. [IRI](https://iri.columbia.edu/?p=31779)\n- 2026-09-10: CPC ENSO discussion: El Niño Advisory in effect. The August discussion gave a >90% chance of a very strong event in fall/winter 2026-27. [CPC Sep 2026](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_sep2026/ensodisc.shtml), [CPC Aug 2026](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_aug2026/ensodisc.shtml)\n- Background: El Niño's effect on Northeast temperatures in mid-October is weak. Most of its US influence shows up in winter.\n\n## 4. Base rates\nThese are 7-day means for Oct 13-19 from the same Open-Meteo ERA5 point, using America/New_York days:\n\n| Year | Mean (°C) |\n|---|---|\n| 2015 | 11.0 |\n| 2016 | 16.5 |\n| 2017 | 15.4 |\n| 2018 | 11.1 |\n| 2019 | 13.2 |\n| 2020 | 13.9 |\n| 2021 | 16.8 |\n| 2022 | 13.1 |\n| 2023 | 12.0 |\n| 2024 | 12.1 |\n| 2025 | 13.3 |\n\n- 2015-2025 summary: mean about 13.5°C, median 13.2°C, standard deviation about 2.0°C, range 11.0 to 16.8°C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2017-10-13&end_date=2017-10-19&daily=temperature_2m_mean&timezone=America/New_York)\n- Within the window, single days ranged from 5.5°C to 22.0°C. Big swings happen because of frontal passages, for example 2015 dropped from 16.7 to 5.5, and 2016 rose from 11.8 to 22.0.\n- Climatology is cooling about 0.2°C per day through mid-October. That means early-October warmth does not carry over much.\n- None of the 11 years came near either end of the question's 5-40°C range.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market for this question or a closely related one.\n- I could not retrieve CPC's October 2026 monthly outlook map for New York as issued Sep 17. The only CPC guidance I found is the seasonal \"leaning above-normal\" for the Northeast in OND (see section 3).\n- CPC's week 3-4 outlook would cover early-to-mid October around this date, but I did not retrieve it.\n\n## 6. Upcoming events before resolution\n- 2026-09-30: CPC updates its October monthly outlook (last day of the month).\n- About 2026-10-01 to 10-05: CPC 8-14 day and week 3-4 outlooks start to cover Oct 13-19. Deterministic models reach the window around Oct 3-6.\n- 2026-10-08: CPC ENSO update.\n- Tropical systems or strong fronts in mid-October could swing the weekly mean by several degrees.\n- About 2026-10-20 to 10-25: ERA5 data for the window appears in the archive, with a delay of a few days.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          9.0
+        ],
+        [
+          0.05,
+          10.4
+        ],
+        [
+          0.1,
+          11.1
+        ],
+        [
+          0.2,
+          12.1
+        ],
+        [
+          0.3,
+          12.8
+        ],
+        [
+          0.4,
+          13.4
+        ],
+        [
+          0.5,
+          13.9
+        ],
+        [
+          0.6,
+          14.4
+        ],
+        [
+          0.7,
+          15.0
+        ],
+        [
+          0.8,
+          15.7
+        ],
+        [
+          0.9,
+          16.7
+        ],
+        [
+          0.95,
+          17.4
+        ],
+        [
+          0.99,
+          18.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          9.0
+        ],
+        [
+          0.05,
+          10.3
+        ],
+        [
+          0.1,
+          11.1
+        ],
+        [
+          0.2,
+          12.1
+        ],
+        [
+          0.3,
+          12.8
+        ],
+        [
+          0.4,
+          13.3
+        ],
+        [
+          0.5,
+          13.8
+        ],
+        [
+          0.6,
+          14.3
+        ],
+        [
+          0.7,
+          14.8
+        ],
+        [
+          0.8,
+          15.6
+        ],
+        [
+          0.9,
+          16.6
+        ],
+        [
+          0.95,
+          17.4
+        ],
+        [
+          0.99,
+          18.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          8.8
+        ],
+        [
+          0.05,
+          10.3
+        ],
+        [
+          0.1,
+          11.1
+        ],
+        [
+          0.2,
+          12.1
+        ],
+        [
+          0.3,
+          12.9
+        ],
+        [
+          0.4,
+          13.4
+        ],
+        [
+          0.5,
+          13.9
+        ],
+        [
+          0.6,
+          14.4
+        ],
+        [
+          0.7,
+          14.9
+        ],
+        [
+          0.8,
+          15.7
+        ],
+        [
+          0.9,
+          16.7
+        ],
+        [
+          0.95,
+          17.4
+        ],
+        [
+          0.99,
+          18.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3203
+}

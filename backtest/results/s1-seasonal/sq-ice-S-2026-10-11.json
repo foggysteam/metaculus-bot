@@ -1,0 +1,194 @@
+{
+  "id": "sq-ice-S-2026-10-11",
+  "question": "What will the Antarctic sea ice extent be on October 11, 2026, according to the NSIDC Sea Ice Index?",
+  "resolution_criteria": "Resolves to the daily Antarctic sea ice extent for 2026-10-11 in the NSIDC Sea Ice Index version 4 daily file (S_seaice_extent_daily_v4.0.csv), in millions of square kilometers.",
+  "unit": "million square kilometers",
+  "outcome": 16.526,
+  "outcome_date": "2026-10-12",
+  "as_of": "2026-09-20",
+  "resolve_date": "2026-10-12",
+  "lower_bound": 16.5,
+  "upper_bound": 18.5,
+  "source": "nsidc",
+  "series": "S",
+  "known_value": 17.342,
+  "past_moves": [
+    -0.374,
+    -0.375,
+    -0.537,
+    -0.308,
+    -0.541
+  ],
+  "baseline": "",
+  "research": "I couldn't confirm any forecast or news published by 2026-09-20 that is relevant here. The NSIDC daily file puts extent at **17.366 M km² on 2026-09-20**, about 0.25 below the season-to-date peak of 17.619 on 2026-09-11. Over 2018 to 2025, extent fell between Sep 20 and Oct 11 in every year, by an average of about 0.31.\n\n## 1. Resolution source\n- The source is the NSIDC Sea Ice Index v4 daily file, [S_seaice_extent_daily_v4.0.csv](https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv). I read it in chunks and copied the values below from it. Recent days are near-real-time and may be revised slightly. On 2026-09-20 itself, that day's value may not yet have been published, since the file usually runs about a day behind.\n- 2026-09-20: 17.366. Prior days: Sep 19: 17.342, Sep 18: 17.303, Sep 17: 17.344, Sep 16: 17.382, Sep 15: 17.480, Sep 14: 17.613, Sep 11: 17.619 (highest so far), Sep 1: 17.415, Aug 20: 16.490. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv)\n- The file's source column shows that in 2025 the near-real-time input switched from NSIDC-0051 to NSIDC-0803 (AMSR2). Values before and after that switch may not be perfectly comparable.\n\n## 2. Current status\n- Nothing settles the question yet; the answer depends on 21 more days of change. The seasonal maximum looks likely to have passed around Sep 11-14, at roughly 17.6. Ice has been flat to slightly rising since Sep 18.\n- 2026-09-20: the value of 17.366 sits inside the question's range of 16.5 to 18.5.\n\n## 3. Recent news (newest first)\n- 2026-09-20: I found no NSIDC \"Sea Ice Today\" post or other news about the Antarctic maximum dated on or before Sep 20.\n- A Met Office briefing and NASA and other coverage exist, but they were published after the cutoff, so I have left them out.\n\n## 4. Base rates and seasonal comparison\nFrom the same file:\n\n| Year | Sep 20 | Oct 11 | Change |\n|---|---|---|---|\n| 2018 | 18.175 | 18.045 | -0.130 |\n| 2019 | 18.232 | 18.225 | -0.007 |\n| 2020 | 18.870 | 18.628 | -0.242 |\n| 2021 | 18.429 | 17.830 | -0.599 |\n| 2022 | 18.177 | 17.927 | -0.250 |\n| 2023 | 16.841 | 16.377 | -0.464 |\n| 2024 | 17.197 | 16.809 | -0.388 |\n| 2025 | 17.671 | 17.274 | -0.397 |\n\n- In all 8 years, extent fell between Sep 20 and Oct 11. The average fall was about -0.31, ranging from -0.01 to -0.60. The last three years (2023-2025) fell by more: -0.39 to -0.46.\n- If you apply that historical range of changes to 17.366, you get roughly 16.77 to 17.36. The average change gives about 17.06; the 2023-2025 changes give about 16.90 to 16.98. This is simple arithmetic, not a forecast.\n- 2026 is running above 2023 (16.841) and 2024 (17.197) for Sep 20, but below 2025 (17.671) and every year from 2018 to 2022. In practice that makes it third-lowest for this date in the recent record.\n- Peaks for comparison: 2023 peaked at 17.109 on Sep 7 in this file (NSIDC's official record-low maximum is 16.96 M km², on 10 Sep 2023). 2024 peaked at 17.283 on Sep 15 and 2025 at 17.854 on Sep 15. 2026's highest so far is 17.619 on Sep 11.\n- How the path to Oct 11 varied:\n  - 2023 rose slightly to 16.867 on Sep 30, then fell fast in October.\n  - 2024 went back up to 17.275 on Sep 30, then dropped about 0.47 in 11 days.\n  - Late-September rebounds of 0.1-0.3 have happened (2019, 2020, 2024).\n  - In early October, extent typically falls about 0.03-0.05 per day.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question, and no expert forecast of Antarctic extent for Oct 11, 2026.\n\n## 6. Upcoming events before resolution\n- NSIDC usually announces the Antarctic maximum in late September or early October. A late-September rebound could, in principle, push the season's peak above the Sep 11 value.\n- Weather: the main drivers are Southern Ocean winds and storms, especially the Southern Annular Mode, which pushes ice outward or packs it together. I found no official sea-ice outlook covering the period up to Oct 11, 2026.\n- Near-real-time values can be revised slightly, and the Oct 11 value should appear in the file around Oct 12.\n\nSources:\n- [NSIDC S_seaice_extent_daily_v4.0.csv](https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          16.45
+        ],
+        [
+          0.05,
+          16.62
+        ],
+        [
+          0.1,
+          16.72
+        ],
+        [
+          0.2,
+          16.85
+        ],
+        [
+          0.3,
+          16.94
+        ],
+        [
+          0.4,
+          17.01
+        ],
+        [
+          0.5,
+          17.06
+        ],
+        [
+          0.6,
+          17.11
+        ],
+        [
+          0.7,
+          17.18
+        ],
+        [
+          0.8,
+          17.26
+        ],
+        [
+          0.9,
+          17.37
+        ],
+        [
+          0.95,
+          17.46
+        ],
+        [
+          0.99,
+          17.62
+        ]
+      ],
+      [
+        [
+          0.01,
+          16.45
+        ],
+        [
+          0.05,
+          16.65
+        ],
+        [
+          0.1,
+          16.75
+        ],
+        [
+          0.2,
+          16.88
+        ],
+        [
+          0.3,
+          16.96
+        ],
+        [
+          0.4,
+          17.02
+        ],
+        [
+          0.5,
+          17.07
+        ],
+        [
+          0.6,
+          17.12
+        ],
+        [
+          0.7,
+          17.18
+        ],
+        [
+          0.8,
+          17.26
+        ],
+        [
+          0.9,
+          17.37
+        ],
+        [
+          0.95,
+          17.46
+        ],
+        [
+          0.99,
+          17.65
+        ]
+      ],
+      [
+        [
+          0.01,
+          16.45
+        ],
+        [
+          0.05,
+          16.62
+        ],
+        [
+          0.1,
+          16.72
+        ],
+        [
+          0.2,
+          16.85
+        ],
+        [
+          0.3,
+          16.95
+        ],
+        [
+          0.4,
+          17.02
+        ],
+        [
+          0.5,
+          17.08
+        ],
+        [
+          0.6,
+          17.14
+        ],
+        [
+          0.7,
+          17.21
+        ],
+        [
+          0.8,
+          17.3
+        ],
+        [
+          0.9,
+          17.42
+        ],
+        [
+          0.95,
+          17.52
+        ],
+        [
+          0.99,
+          17.72
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3745
+}

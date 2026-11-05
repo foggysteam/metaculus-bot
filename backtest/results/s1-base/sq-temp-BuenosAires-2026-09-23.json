@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-BuenosAires-2026-09-23",
+  "question": "What will be the average daily mean temperature in Buenos Aires over the 7 days ending September 23, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-09-17 to 2026-09-23 at latitude -34.6, longitude -58.38 (Buenos Aires), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 14.76,
+  "outcome_date": "2026-09-29",
+  "as_of": "2026-08-19",
+  "resolve_date": "2026-09-29",
+  "lower_bound": 0.0,
+  "upper_bound": 20.0,
+  "source": "open-meteo",
+  "series": "Buenos Aires",
+  "known_value": 11.757143,
+  "past_moves": [
+    5.071429,
+    7.1,
+    1.014286,
+    1.971429,
+    3.957143
+  ],
+  "baseline": "",
+  "research": "# Buenos Aires mean temperature, 17-23 Sep 2026: research notes\n\n## 1. Resolution source\n- The question resolves on Open-Meteo's ERA5 archive API (archive-api.open-meteo.com), variable `temperature_2m_mean`, at -34.6, -58.38, averaged over 2026-09-17 to 2026-09-23. I queried that same endpoint myself. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2026-07-20&end_date=2026-08-18&daily=temperature_2m_mean&timezone=auto)\n- 2026-08-18: the latest value available was 10.0 °C. The last few days may be preliminary ERA5T data.\n- Recent daily means:\n  - 2026-08-14 to 08-17: 11.8, 13.8, 15.2 and 12.9 °C.\n  - 2026-08-07 to 08-13 was a cold spell: 7.3 to 9.7 °C.\n  - 2026-07-20 to 08-18: the 30-day average was 11.87 °C.\n\n## 2. Current status\n- Nothing has settled the question yet. The resolution window starts about four weeks after the 2026-08-19 cutoff, which is beyond the range of useful deterministic weather forecasts.\n\n## 3. Recent news (newest first, cutoff 2026-08-19)\n- 2026-08-14: a summary of NOAA CPC's 2026-08-13 ENSO discussion says an El Niño Advisory is in effect. July Niño-3.4 was +1.4 °C and Niño-1+2 was +2.9 °C. A very strong event is favoured for late 2026. [Coyote Gulch](https://coyotegulch.blog/2026/08/14/the-august-13-2026-el-nino-southern-oscillation-enso-diagnostic-discussion-is-hot-off-the-presses-from-the-climate-prediction-center/); [CPC Aug 2026](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_aug2026/ensodisc.shtml)\n- 2026-07-09: CPC's July discussion gave an 81% chance of a very strong El Niño in October-December. [Coyote Gulch](https://coyotegulch.blog/2026/07/11/the-july-9-2026-enso-diagnostic-discussion-is-hot-off-the-presses-from-the-climate-prediction-center-elnino/)\n- I could not find SMN's September-November outlook published before the cutoff. SMN normally issues it at the end of August. The press coverage I found about it is dated after the cutoff, and I have left it out.\n\n## 4. Base rates\nAll values below come from the same Open-Meteo endpoint and coordinates, as the 7-day mean for 17-23 September:\n\n| Year | Mean (°C) | Daily range (°C) |\n|---|---|---|\n| 2015 | 13.86 | 12.9-14.6 |\n| 2016 | 15.06 | 11.6-18.9 |\n| 2017 | 15.01 | 11.7-19.8 |\n| 2018 | 17.69 | 15.3-20.8 |\n| 2019 | 13.64 | 12.1-14.6 |\n| 2020 | 13.47 | 10.0-16.4 |\n| 2021 | 14.84 | 11.1-16.4 |\n| 2022 | 14.90 | 12.0-18.8 |\n| 2023 | 14.66 | 12.9-17.6 |\n| 2024 | 18.03 | 14.9-19.9 |\n| 2025 | 16.74 | 13.8-19.1 |\n\n- 2015-2025 summary (my calculation): average about 15.3 °C, median 14.9 °C, standard deviation about 1.6 °C. The range was 13.5 (2020) to 18.0 (2024).\n- Trend: two of the last three years (2024 and 2025) were above 16.5 °C, so there is a mild warm tilt recently. Ten years of data is too few to call it a real trend.\n- Within a single week, daily means often swing 5-8 °C as fronts pass, for example 16.4 down to 10.0 in 2020 and 19.8 down to 11.7 in 2017. One cold or warm front can move the weekly mean by 1-2 °C.\n- El Niño analogues: in 2015 (strong El Niño) the week averaged 13.86 °C, and in 2023 (El Niño) it averaged 14.66 °C. Neither was warm, so I found no clear El Niño warm signal for Buenos Aires in mid-September. In this region El Niño mainly makes spring wetter.\n- Seasonal context: mid-to-late September is early spring, and temperatures are rising about 0.1 °C per day. Late-August daily means of about 10-15 °C fit with roughly 15 °C by the third week of September.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on this question or on similar Buenos Aires temperature questions.\n- I found no expert forecast specific to this week that was published before the cutoff. The only relevant guidance would be seasonal and sub-seasonal products (SMN quarterly outlook, ECMWF/C3S, NOAA CFS weeks 3-4), and I could not retrieve any version of those dated before the cutoff.\n\n## 6. Upcoming events before resolution\n- Late August 2026: SMN's September-November outlook is due. It will show whether Buenos Aires province is tilted above or below normal.\n- 2026-09-10 (approx.): the next CPC ENSO update. El Niño is strengthening.\n- About 2026-09-03 onward: the 17-23 September window comes into range of ECMWF and GFS extended forecasts (about 2 weeks ahead), with more reliable deterministic forecasts from about 2026-09-10.\n- About 2026-09-24 to 09-29: Open-Meteo/ERA5 data for the window becomes available. The question resolves around 2026-09-29.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          11.3
+        ],
+        [
+          0.05,
+          12.5
+        ],
+        [
+          0.1,
+          13.2
+        ],
+        [
+          0.2,
+          14.0
+        ],
+        [
+          0.3,
+          14.6
+        ],
+        [
+          0.4,
+          15.1
+        ],
+        [
+          0.5,
+          15.5
+        ],
+        [
+          0.6,
+          15.9
+        ],
+        [
+          0.7,
+          16.4
+        ],
+        [
+          0.8,
+          17.1
+        ],
+        [
+          0.9,
+          18.0
+        ],
+        [
+          0.95,
+          18.7
+        ],
+        [
+          0.99,
+          19.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          11.3
+        ],
+        [
+          0.05,
+          12.5
+        ],
+        [
+          0.1,
+          13.2
+        ],
+        [
+          0.2,
+          14.0
+        ],
+        [
+          0.3,
+          14.6
+        ],
+        [
+          0.4,
+          15.1
+        ],
+        [
+          0.5,
+          15.5
+        ],
+        [
+          0.6,
+          15.9
+        ],
+        [
+          0.7,
+          16.4
+        ],
+        [
+          0.8,
+          17.1
+        ],
+        [
+          0.9,
+          18.0
+        ],
+        [
+          0.95,
+          18.7
+        ],
+        [
+          0.99,
+          19.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          11.3
+        ],
+        [
+          0.05,
+          12.6
+        ],
+        [
+          0.1,
+          13.2
+        ],
+        [
+          0.2,
+          14.0
+        ],
+        [
+          0.3,
+          14.6
+        ],
+        [
+          0.4,
+          15.1
+        ],
+        [
+          0.5,
+          15.5
+        ],
+        [
+          0.6,
+          15.9
+        ],
+        [
+          0.7,
+          16.4
+        ],
+        [
+          0.8,
+          17.1
+        ],
+        [
+          0.9,
+          18.0
+        ],
+        [
+          0.95,
+          18.7
+        ],
+        [
+          0.99,
+          20.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3871
+}

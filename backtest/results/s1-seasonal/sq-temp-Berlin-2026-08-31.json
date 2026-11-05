@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Berlin-2026-08-31",
+  "question": "What will be the average daily mean temperature in Berlin over the 7 days ending August 31, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-08-25 to 2026-08-31 at latitude 52.52, longitude 13.4 (Berlin), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 20.73,
+  "outcome_date": "2026-09-06",
+  "as_of": "2026-08-03",
+  "resolve_date": "2026-09-06",
+  "lower_bound": 19.5,
+  "upper_bound": 24.0,
+  "source": "open-meteo",
+  "series": "Berlin",
+  "known_value": 21.5,
+  "past_moves": [
+    0.428571,
+    1.985714,
+    -0.457143,
+    -1.014286,
+    -5.228571
+  ],
+  "baseline": "",
+  "research": "I couldn't find any official forecast that covers 25 to 31 August. Here is what the data and sources show as of 2026-08-03.\n\n## 1. Resolution source\n- The question uses the Open-Meteo ERA5 archive for 52.52, 13.4. The API snaps to the nearest grid cell, which it reports as 52.55°N, 13.41°E. I pulled daily `temperature_2m_mean` in GMT. Settlement may use a different timezone setting, which could shift values slightly. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.4&start_date=2026-07-01&end_date=2026-08-03&daily=temperature_2m_mean&timezone=GMT)\n- 2026-08-03: the latest value is 21.7°C. The prior days were 18.8 (Aug 1) and 18.7 (Aug 2). Late July ran 23.1 (Jul 29), 28.9 (Jul 30) and 24.9 (Jul 31). [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.4&start_date=2026-07-01&end_date=2026-08-03&daily=temperature_2m_mean&timezone=GMT)\n- From those daily values, July 2026 averaged about 20.0°C (my calculation).\n\n## 2. Current status\n- Nothing settles the question yet. The window (Aug 25-31) starts in about three weeks, which is beyond reliable deterministic forecast range.\n\n## 3. Recent news (newest first)\n- 2026-08-01: Leinetal24 says ECMWF and CFS both expect an August about 2°C above the long-term mean. They show a warm first week from Aug 3, mostly dry, with the strongest anomaly in the south. The article gives no specific forecast for late August. A late \"heat finale\" depends on an uncertain Omega block, and alternating heat, storms and short cool spells is called more likely. [leinetal24](https://www.leinetal24.de/welt/grosses-hitze-finale-im-august-ecmwf-und-cfs-liefern-den-trend-und-dann-die-45-grad-frage-zr-94424502.html)\n- 2026-07-27: daswetter.com reports ECMWF at about +2°C for August and NOAA at +1 to +2°C against 1991-2020. Most meteorologists do not expect continuous heat like 2018 or 2022. The 46°C headlines came from single GFS runs. [daswetter](https://www.daswetter.com/nachrichten/vorhersage/wetter-hammer-im-august-kommt-der-monster-heatdome-mit-bis-zu-46-grad-rekord-wackelt.html)\n- Undated: a search summary cited the DWD seasonal outlook as giving 81% probability that August to October will be warmer than 1991-2020. I could not confirm the date or the primary source. [t-online](https://www.t-online.de/nachrichten/panorama/wetter/id_101371932/wetter-im-august-prognose-fuer-deutschland-hitze-und-gewitter.html)\n- Late July: the DWD expected 32 to 39°C widely on Jul 30. Germany is in drought.\n\n## 4. Base rates\nAug 25-31 average, ERA5 via Open-Meteo, same point (my retrievals):\n- 2015: 21.0 · 2016: 22.5 · 2017: 19.3 · 2018: 17.2 · 2019: 25.0 · 2020: 17.4 · 2021: 14.8 · 2022: 19.2 · 2023: 17.7 · 2024: 22.0 · 2025: 18.0\n- Over 2015-2025 the mean is about 19.5°C and the standard deviation about 2.9°C. The range is 14.8 to 25.0, so a single week can swing a lot.\n- 4 of 11 years reached at least 19.5°C (2015, 2016, 2019, 2024). Two more fell just short: 2017 at 19.3 and 2022 at 19.2. Only 2019 went above 24.0.\n- The question's range (19.5 to 24.0) starts right at the 11-year mean, so about half of past years would have fallen below it.\n\nSeasonal path, comparing the Jul 28-Aug 3 average with Aug 25-31:\n- 2021: 19.3 → 14.8\n- 2022: 21.6 → 19.2 (this 2022 figure may be off by a day because of how it was extracted)\n- 2025: 17.1 → 18.0\n- 2026: Jul 28-Aug 3 is about 22.0 (my calculation), which is warmer than 2021, 2022 and 2025 at the same point.\n- I could not pull clean values for 2023 and 2024 for this early window.\n- Climatologically, temperatures usually fall by roughly 1 to 2°C from early to late August. Early-period warmth has little power to predict the late-August week, as 2021 and 2022 show.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on Berlin's late-August temperature.\n- The expert guidance available is monthly anomaly products: ECMWF about +2°C for August and NOAA +1 to +2°C (see section 3). None of them isolates the last week.\n\n## 6. Upcoming events and weather outlook\n- From early August, ECMWF extended-range runs (weeks 3 and 4) and the weekly updates to DWD's monthly outlook will start to cover Aug 25-31. The ECMWF extended run is updated daily, and its weekly anomaly charts are the main thing to watch.\n- The latest outlooks before Aug 3 call for a warmer than normal, dry August with variable heat and short cool breaks. None gives a reliable signal for Aug 25-31.\n- The question resolves around 2026-09-06, after the ERA5 data (about 5 days delay) covers Aug 31.\n\nI left out several pages I found because they were published or updated after 2026-08-03.\n\nSources:\n- [Open-Meteo archive API](https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.4&start_date=2026-07-01&end_date=2026-08-03&daily=temperature_2m_mean&timezone=GMT)\n- [leinetal24](https://www.leinetal24.de/welt/grosses-hitze-finale-im-august-ecmwf-und-cfs-liefern-den-trend-und-dann-die-45-grad-frage-zr-94424502.html)\n- [daswetter.com](https://www.daswetter.com/nachrichten/vorhersage/wetter-hammer-im-august-kommt-der-monster-heatdome-mit-bis-zu-46-grad-rekord-wackelt.html)\n- [t-online August outlook](https://www.t-online.de/nachrichten/panorama/wetter/id_101371932/wetter-im-august-prognose-fuer-deutschland-hitze-und-gewitter.html)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          13.8
+        ],
+        [
+          0.05,
+          15.3
+        ],
+        [
+          0.1,
+          16.3
+        ],
+        [
+          0.2,
+          17.6
+        ],
+        [
+          0.3,
+          18.6
+        ],
+        [
+          0.4,
+          19.3
+        ],
+        [
+          0.5,
+          19.9
+        ],
+        [
+          0.6,
+          20.5
+        ],
+        [
+          0.7,
+          21.3
+        ],
+        [
+          0.8,
+          22.3
+        ],
+        [
+          0.9,
+          23.6
+        ],
+        [
+          0.95,
+          24.6
+        ],
+        [
+          0.99,
+          26.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          13.8
+        ],
+        [
+          0.05,
+          15.4
+        ],
+        [
+          0.1,
+          16.3
+        ],
+        [
+          0.2,
+          17.6
+        ],
+        [
+          0.3,
+          18.6
+        ],
+        [
+          0.4,
+          19.3
+        ],
+        [
+          0.5,
+          19.9
+        ],
+        [
+          0.6,
+          20.5
+        ],
+        [
+          0.7,
+          21.3
+        ],
+        [
+          0.8,
+          22.3
+        ],
+        [
+          0.9,
+          23.6
+        ],
+        [
+          0.95,
+          24.6
+        ],
+        [
+          0.99,
+          26.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          14.0
+        ],
+        [
+          0.05,
+          15.6
+        ],
+        [
+          0.1,
+          16.5
+        ],
+        [
+          0.2,
+          17.7
+        ],
+        [
+          0.3,
+          18.6
+        ],
+        [
+          0.4,
+          19.3
+        ],
+        [
+          0.5,
+          19.9
+        ],
+        [
+          0.6,
+          20.5
+        ],
+        [
+          0.7,
+          21.3
+        ],
+        [
+          0.8,
+          22.3
+        ],
+        [
+          0.9,
+          23.6
+        ],
+        [
+          0.95,
+          24.5
+        ],
+        [
+          0.99,
+          26.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4741
+}

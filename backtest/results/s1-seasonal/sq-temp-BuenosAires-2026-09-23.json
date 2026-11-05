@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-BuenosAires-2026-09-23",
+  "question": "What will be the average daily mean temperature in Buenos Aires over the 7 days ending September 23, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-09-17 to 2026-09-23 at latitude -34.6, longitude -58.38 (Buenos Aires), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 14.76,
+  "outcome_date": "2026-09-29",
+  "as_of": "2026-08-19",
+  "resolve_date": "2026-09-29",
+  "lower_bound": 0.0,
+  "upper_bound": 20.0,
+  "source": "open-meteo",
+  "series": "Buenos Aires",
+  "known_value": 11.757143,
+  "past_moves": [
+    5.071429,
+    7.1,
+    1.014286,
+    1.971429,
+    3.957143
+  ],
+  "baseline": "",
+  "research": "I couldn't find any forecast for this exact quantity. Over the last 10 years, the ERA5 average for Sept 17-23 at this point ranged from 13.4 to 18.1°C, averaging about 15.4°C. The latest official outlook calls for near-normal temperatures in Buenos Aires.\n\n### 1. Resolution source\n- The data comes from the Open-Meteo ERA5 archive (archive-api.open-meteo.com), daily `temperature_2m_mean` at -34.6, -58.38. My past-year requests used the API's default time zone (GMT). The 2021 and 2026 requests used Buenos Aires local time, so those days may differ by about 0.1-0.3°C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2026-07-20&end_date=2026-08-18&daily=temperature_2m_mean&timezone=America/Argentina/Buenos_Aires)\n- 2026-08-18: the latest value served was 10.0°C. The days before it were 12.9 (Aug 17), 15.2 (Aug 16) and 13.8 (Aug 15). [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2026-07-20&end_date=2026-08-18&daily=temperature_2m_mean&timezone=America/Argentina/Buenos_Aires)\n\n### 2. Current status\n- Nothing is settled yet. The window starts 2026-09-17, about a month after the forecast close, which is beyond useful weather-forecast range.\n- 2026-08-01 to 08-18: the daily mean averaged about 11.5°C. There was a cold spell on Aug 7-13 (7.3 to 9.7°C), followed by a recovery to 15.2°C on Aug 16. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2026-07-20&end_date=2026-08-18&daily=temperature_2m_mean&timezone=America/Argentina/Buenos_Aires)\n\n### 3. Recent news\n- 2026-08-19: an Argentine agency presentation reportedly describes El Niño at moderate strength. I only saw this in search results and did not open the document. [ICAA](https://icaa.gov.ar/wp-content/uploads/2026/08/20-8-26-Perspectivas-climaticas.pdf)\n- 2026-08-04: the national weather service (SMN) outlook for Aug-Oct 2026 puts Buenos Aires among areas expected to be **close to the historical average**. Above-normal temperatures are most likely in the north and centre of the country. It forecasts normal or above-normal rain for eastern Buenos Aires and says El Niño will keep developing, with a probability near 100%. [Agrolatam](https://www.agrolatam.com/clima/el-nino-pronostico-climatico-agosto-septiembre-octubre-2026/)\n- 2026-07-13: the SMN outlook for Jul-Sep expected eastern and southern Buenos Aires province to be close to usual averages. [TodoJujuy](https://www.todojujuy.com/el-invierno-terminara-temperaturas-superiores-lo-normal-jujuy-y-gran-parte-del-pais-n293050)\n\n### 4. Base rates\n7-day averages for Sept 17-23 in the same Open-Meteo ERA5 series:\n\n| Year | Avg (°C) | Daily range (°C) |\n|---|---|---|\n| 2016 | 14.7 | 11.4-18.9 |\n| 2017 | 15.07 | 11.7-20.1 |\n| 2018 | 17.67 | 15.1-20.7 |\n| 2019 | 13.57 | 11.9-15.5 |\n| 2020 | 13.41 | 10.0-17.0 |\n| 2021 | 14.84 (local time) | 11.1-16.4 |\n| 2022 | 14.97 | 11.8-18.7 |\n| 2023 | 14.7 | 12.4-17.5 |\n| 2024 | 18.06 | 15.0-20.6 |\n| 2025 | 16.76 | 14.1-19.0 |\n\nSources: [2016](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2016-09-17&end_date=2016-09-23&daily=temperature_2m_mean), [2017](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2017-09-17&end_date=2017-09-23&daily=temperature_2m_mean), [2018](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2018-09-17&end_date=2018-09-23&daily=temperature_2m_mean), [2019](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2019-09-17&end_date=2019-09-23&daily=temperature_2m_mean), [2020](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2020-09-17&end_date=2020-09-23&daily=temperature_2m_mean), [2021](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2021-09-10&end_date=2021-09-30&daily=temperature_2m_mean&timezone=America/Argentina/Buenos_Aires), [2022](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2022-09-17&end_date=2022-09-23&daily=temperature_2m_mean), [2023](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2023-09-17&end_date=2023-09-23&daily=temperature_2m_mean), [2024](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2024-09-17&end_date=2024-09-23&daily=temperature_2m_mean), [2025](https://archive-api.open-meteo.com/v1/archive?latitude=-34.6&longitude=-58.38&start_date=2025-09-17&end_date=2025-09-23&daily=temperature_2m_mean)\n\n- **Summary:** the 10-year mean is about 15.4°C with a standard deviation of about 1.6°C. Seven of ten years fell between 13.4 and 15.1°C, and three warm years landed between 16.8 and 18.1°C. The last three years (14.7, 18.1, 16.8) average about 16.5°C.\n- **Within-week spread:** single days swing from about 10 to 21°C, and cold fronts often drop the mean by 4-5°C in a day.\n- **Seasonal climb:** the series warms strongly from mid-August to late September. Aug 1-18, 2026 averaged about 11.5°C, against about 15.4°C for the late-September climatology. I did not pull Aug 19 values for earlier years, so I can't say whether this August is running above or below those years.\n\n### 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market, and no expert forecast, for this exact quantity.\n\n### 6. Upcoming events before resolution\n- The SMN normally releases its Sep-Nov outlook around the end of August, after the forecast close. As of 2026-08-19, the latest official guidance is the Aug-Oct outlook: near-normal temperatures and normal or above-normal rain for eastern Buenos Aires. [Agrolatam](https://www.agrolatam.com/clima/el-nino-pronostico-climatico-agosto-septiembre-octubre-2026/)\n- El Niño is building, with SMN putting persistence near 100%. In spring it tends to bring wetter conditions to the Pampas region around Buenos Aires, but its effect on temperature there is weak.\n- Day-to-day weather forecasts won't cover Sept 17-23 until about Sept 7-10. Until then, climatology and seasonal outlooks are all there is.\n- The question resolves around 2026-09-29, once the ERA5 data for Sept 23 is published (usually about 5 days later).",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          11.9
+        ],
+        [
+          0.05,
+          12.9
+        ],
+        [
+          0.1,
+          13.5
+        ],
+        [
+          0.2,
+          14.3
+        ],
+        [
+          0.3,
+          14.9
+        ],
+        [
+          0.4,
+          15.3
+        ],
+        [
+          0.5,
+          15.7
+        ],
+        [
+          0.6,
+          16.1
+        ],
+        [
+          0.7,
+          16.6
+        ],
+        [
+          0.8,
+          17.2
+        ],
+        [
+          0.9,
+          18.0
+        ],
+        [
+          0.95,
+          18.6
+        ],
+        [
+          0.99,
+          19.7
+        ]
+      ],
+      [
+        [
+          0.01,
+          11.5
+        ],
+        [
+          0.05,
+          12.6
+        ],
+        [
+          0.1,
+          13.2
+        ],
+        [
+          0.2,
+          14.0
+        ],
+        [
+          0.3,
+          14.6
+        ],
+        [
+          0.4,
+          15.1
+        ],
+        [
+          0.5,
+          15.5
+        ],
+        [
+          0.6,
+          15.9
+        ],
+        [
+          0.7,
+          16.4
+        ],
+        [
+          0.8,
+          17.0
+        ],
+        [
+          0.9,
+          17.9
+        ],
+        [
+          0.95,
+          18.5
+        ],
+        [
+          0.99,
+          19.6
+        ]
+      ],
+      [
+        [
+          0.01,
+          11.6
+        ],
+        [
+          0.05,
+          12.8
+        ],
+        [
+          0.1,
+          13.4
+        ],
+        [
+          0.2,
+          14.2
+        ],
+        [
+          0.3,
+          14.8
+        ],
+        [
+          0.4,
+          15.2
+        ],
+        [
+          0.5,
+          15.6
+        ],
+        [
+          0.6,
+          16.0
+        ],
+        [
+          0.7,
+          16.5
+        ],
+        [
+          0.8,
+          17.1
+        ],
+        [
+          0.9,
+          17.9
+        ],
+        [
+          0.95,
+          18.5
+        ],
+        [
+          0.99,
+          19.6
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4515
+}

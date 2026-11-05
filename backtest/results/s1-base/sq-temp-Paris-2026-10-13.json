@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Paris-2026-10-13",
+  "question": "What will be the average daily mean temperature in Paris over the 7 days ending October 13, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-07 to 2026-10-13 at latitude 48.86, longitude 2.35 (Paris), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 14.41,
+  "outcome_date": "2026-10-19",
+  "as_of": "2026-09-29",
+  "resolve_date": "2026-10-19",
+  "lower_bound": 15.5,
+  "upper_bound": 22.5,
+  "source": "open-meteo",
+  "series": "Paris",
+  "known_value": 19.057143,
+  "past_moves": [
+    1.528571,
+    -1.442857,
+    2.114286,
+    -0.585714,
+    -3.971429
+  ],
+  "baseline": "",
+  "research": "I couldn't find any forecast published on or before 2026-09-29 that covers October 7-13 specifically. The past data puts a typical value for this window around 13.7°C, which is below the question's range of 15.5-22.5.\n\n## 1. Resolution source\n- The Open-Meteo ERA5 archive (daily `temperature_2m_mean`, 48.86N, 2.35E) has data through 2026-09-29. Late September 2026 was warm: 09-25: 20.4, 09-26: 18.6, 09-27: 20.3, 09-28: 19.2, 09-29: 21.5 °C. The most recent day may still be preliminary. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2026-09-01&end_date=2026-09-29&daily=temperature_2m_mean&timezone=GMT)\n- 2026-09-01 to 09-29: daily means ran from 15.9 °C (09-10) to 24.0 °C (09-07). Most days were between 17 and 21 °C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2026-09-01&end_date=2026-09-29&daily=temperature_2m_mean&timezone=GMT)\n\n## 2. Current status\n- Nothing is settled yet. The window (Oct 7-13) starts 8 days after the question closes, so it is mostly beyond reliable day-by-day forecasting.\n\n## 3. Recent news (only items dated on or before 2026-09-29)\n- I couldn't find a Paris forecast for Oct 7-13 published by 2026-09-29. Several articles quote Météo-France's 29 September forecasts, but they were published on or after October 1, so I left them out as instructed.\n- 2026-09-29: A secondary summary says Météo-France recorded about 27 °C in Paris that day. The original was not verified. [meteo-paris.com](https://www.meteo-paris.com/actualites/la-chaleur-peut-elle-encore-revenir-avant-le-15-octobre)\n- Summer 2026: Météo-France's three-month outlook for August-October put the chance of a warmer-than-normal period at 60% across mainland France. It warns that these outlooks can't predict week-by-week detail. [tameteo](https://www.tameteo.com/actualites/previsions/tendance-meteo-a-trois-mois-d-aout-a-octobre-un-scenario-plus-chaud-que-la-normale-privilegie-par-meteo-france.html), [journaldeleconomie](https://www.journaldeleconomie.fr/meteo-france-anticipe-trois-mois-de-chaleur-jusqua-octobre-2026/), [DRAAF Grand Est PDF](https://draaf.grand-est.agriculture.gouv.fr/IMG/pdf/tendances-a-3-mois_aout-oct-2026.pdf)\n\n## 4. Base rates (same source, Oct 7-13 mean, °C)\n- 2025: 13.33. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2025-10-07&end_date=2025-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2024: 12.93. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2024-10-07&end_date=2024-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2023: 17.97, a late warm spell with days from 16.0 rising to 20.7. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2023-10-07&end_date=2023-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2022: 12.39. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2022-10-07&end_date=2022-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2021: 11.49. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2021-10-07&end_date=2021-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2020: 12.24. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2020-10-07&end_date=2020-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2019: 14.87. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2019-10-07&end_date=2019-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2018: 16.71. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2018-10-07&end_date=2018-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2017: 14.5. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2017-10-07&end_date=2017-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2016: 10.3. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2016-10-07&end_date=2016-10-13&daily=temperature_2m_mean&timezone=GMT)\n- 2010-2012: 14.2, 14.6, 13.1. I skipped 2013-2015 to save time. [link](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2010-10-07&end_date=2025-10-13&daily=temperature_2m_mean&timezone=GMT)\n- Summary of the 13 years I checked:\n  - **Spread:** mean about 13.7 °C, ranging from 10.3 to 18.0, with a standard deviation of roughly 2 °C.\n  - **Inside the question's range:** only 2 of 13 years were 15.5 or above (2018 and 2023), and none reached 22.5.\n  - **Within the week:** temperatures often swing 4-6 °C over the 7 days, as fronts bring sharp drops (2010, 2020) or warm surges (2018, 2023).\n  - **September vs. October:** late September 2026 averaged about 19-20 °C. That is roughly 5-6 °C above the typical value for the target week. Mid-October normally runs a few degrees cooler than late September anyway.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question or a close equivalent.\n- I found no expert or model forecast for Oct 7-13 published by 2026-09-29. Checking the 2026-09-29 runs of ECMWF, GFS or ensemble models (for example through Open-Meteo's ensemble API or Météo-France's 15-day trend) would be the most useful extra input, but I couldn't get them from sources dated on or before the cutoff.\n\n## 6. Upcoming events before resolution\n- Model runs between Sep 30 and Oct 6 will show whether the warm pattern lasts into the second week of October or a cold front arrives first. Fronts in early-to-mid October can cut daily means by 5-10 °C within a couple of days.\n- ERA5 data for Oct 13 should be in the archive within about 5 days, which fits the resolution around Oct 19. The most recent days can be slightly revised.\n\nSources:\n- [Open-Meteo archive API](https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2026-09-01&end_date=2026-09-29&daily=temperature_2m_mean&timezone=GMT)\n- [tameteo: three-month outlook](https://www.tameteo.com/actualites/previsions/tendance-meteo-a-trois-mois-d-aout-a-octobre-un-scenario-plus-chaud-que-la-normale-privilegie-par-meteo-france.html)\n- [journaldeleconomie](https://www.journaldeleconomie.fr/meteo-france-anticipe-trois-mois-de-chaleur-jusqua-octobre-2026/)\n- [DRAAF Grand Est PDF](https://draaf.grand-est.agriculture.gouv.fr/IMG/pdf/tendances-a-3-mois_aout-oct-2026.pdf)\n- [meteo-paris.com](https://www.meteo-paris.com/actualites/la-chaleur-peut-elle-encore-revenir-avant-le-15-octobre)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          9.8
+        ],
+        [
+          0.05,
+          11.3
+        ],
+        [
+          0.1,
+          12.2
+        ],
+        [
+          0.2,
+          13.3
+        ],
+        [
+          0.3,
+          14.1
+        ],
+        [
+          0.4,
+          14.7
+        ],
+        [
+          0.5,
+          15.3
+        ],
+        [
+          0.6,
+          15.9
+        ],
+        [
+          0.7,
+          16.6
+        ],
+        [
+          0.8,
+          17.4
+        ],
+        [
+          0.9,
+          18.6
+        ],
+        [
+          0.95,
+          19.5
+        ],
+        [
+          0.99,
+          21.2
+        ]
+      ],
+      [
+        [
+          0.01,
+          9.8
+        ],
+        [
+          0.05,
+          11.3
+        ],
+        [
+          0.1,
+          12.2
+        ],
+        [
+          0.2,
+          13.3
+        ],
+        [
+          0.3,
+          14.1
+        ],
+        [
+          0.4,
+          14.7
+        ],
+        [
+          0.5,
+          15.2
+        ],
+        [
+          0.6,
+          15.8
+        ],
+        [
+          0.7,
+          16.4
+        ],
+        [
+          0.8,
+          17.2
+        ],
+        [
+          0.9,
+          18.3
+        ],
+        [
+          0.95,
+          19.2
+        ],
+        [
+          0.99,
+          20.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          9.6
+        ],
+        [
+          0.05,
+          10.9
+        ],
+        [
+          0.1,
+          11.7
+        ],
+        [
+          0.2,
+          12.8
+        ],
+        [
+          0.3,
+          13.6
+        ],
+        [
+          0.4,
+          14.2
+        ],
+        [
+          0.5,
+          14.7
+        ],
+        [
+          0.6,
+          15.3
+        ],
+        [
+          0.7,
+          16.0
+        ],
+        [
+          0.8,
+          16.9
+        ],
+        [
+          0.9,
+          18.1
+        ],
+        [
+          0.95,
+          19.1
+        ],
+        [
+          0.99,
+          20.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.42
+}

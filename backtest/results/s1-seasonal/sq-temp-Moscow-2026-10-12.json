@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Moscow-2026-10-12",
+  "question": "What will be the average daily mean temperature in Moscow over the 7 days ending October 12, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-06 to 2026-10-12 at latitude 55.76, longitude 37.62 (Moscow), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 10.93,
+  "outcome_date": "2026-10-18",
+  "as_of": "2026-09-14",
+  "resolve_date": "2026-10-18",
+  "lower_bound": -5.0,
+  "upper_bound": 35.0,
+  "source": "open-meteo",
+  "series": "Moscow",
+  "known_value": 13.214286,
+  "past_moves": [
+    -5.242857,
+    -9.285714,
+    -7.4,
+    -0.814286,
+    -9.828571
+  ],
+  "baseline": "",
+  "research": "I've finished pulling the archive data and am writing it up now. Everything below uses only material published on or before 2026-09-14.\n\n## 1. Resolution source\n- 2026-09-14: The Open-Meteo archive API at 55.76N, 37.62E (it snaps to the 55.78N, 37.58E grid cell) shows recent daily means. Sep 1-14: 19.0, 18.1, 16.2, 16.7, 15.5, 13.4, 11.0, 10.5, 13.5, 18.0, 14.7, 12.9, 12.1, 13.7 C. The 14-day mean is about 14.7 C. The last few days may be preliminary, since ERA5 has a lag of about 5 days. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2026-08-25&end_date=2026-09-14&daily=temperature_2m_mean&timezone=auto)\n- No data for Oct 6-12, 2026 exists yet.\n\n## 2. Current status\n- 2026-09-14: Nothing settles the question. The target window starts about 3 weeks out, beyond the range where daily forecasts have skill.\n\n## 3. Recent news\n- 2026-08-27: Yandex Weather's \"Meteum\" AI outlook, reported by e1.ru/MSK1.RU, expects autumn 2026 to be warmer than the climate norm across Russia, with September the most anomalous month. For Moscow it gives no October temperature figure; it says October rainfall will be near normal and about 1.5 times drier than October 2025. For Tula and Voronezh it says October will be near normal and cooler than recent years. [e1.ru](https://www.e1.ru/text/autumn/2026/08/27/76609230/)\n- A Snob piece quotes Vilfand (Hydrometcenter) saying early October in Moscow would be \"cold and sunny, about 2 degrees below norm\". I could not confirm its publication date, so treat it with caution and possibly disregard it. [snob.ru](https://snob.ru/news/vilfand-nachalo-oktiabria-v-moskve-budet-kholodnym-i-solnechnym/)\n- I found no official Hydrometcenter monthly outlook for October that was clearly dated on or before Sep 14.\n\n## 4. Base rates (Open-Meteo ERA5, Oct 6-12 mean, same point)\n- 2025: 10.2 C (daily 11.1 down to 7.2). [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2025-10-06&end_date=2025-10-12&daily=temperature_2m_mean&timezone=auto)\n- 2024: 10.0 C. [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2024-10-06&end_date=2024-10-12&daily=temperature_2m_mean&timezone=auto)\n- 2023: 5.1 C. [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2023-10-06&end_date=2023-10-12&daily=temperature_2m_mean&timezone=auto)\n- 2022: 8.3 C. [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2022-10-06&end_date=2022-10-12&daily=temperature_2m_mean&timezone=auto)\n- 2021: 5.0 C. [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2021-10-06&end_date=2021-10-12&daily=temperature_2m_mean&timezone=auto)\n- 2020: 12.1 C. [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2020-10-06&end_date=2020-10-12&daily=temperature_2m_mean&timezone=auto)\n- 2019: 5.0 C. [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2019-10-06&end_date=2019-10-12&daily=temperature_2m_mean&timezone=auto)\n- 2016-2018: about 6.8, 7.7 and 8.7 C. These came from a less reliable multi-year read, and 2018 is the least certain. [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2016-10-06&end_date=2024-10-12&daily=temperature_2m_mean&timezone=auto)\n- Summary for 2019-2025: mean about 8.0 C, standard deviation about 2.8 C, range 5.0 to 12.1 C. The years split into two groups: three near 5 C and four at 8-12 C. Single days in the window ranged from 2.3 to 14.0 C.\n- Seasonal drop from Sep 1-14 to Oct 6-12:\n  - 2025: 15.5 to 10.2 C (-5.3). [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2025-09-01&end_date=2025-09-14&daily=temperature_2m_mean&timezone=auto)\n  - 2024: 18.8 to 10.0 C (-8.8). [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2024-09-01&end_date=2024-09-14&daily=temperature_2m_mean&timezone=auto)\n  - 2023: 14.6 to 5.1 C (-9.4). [source](https://archive-api.open-meteo.com/v1/archive?latitude=55.76&longitude=37.62&start_date=2023-09-01&end_date=2023-09-14&daily=temperature_2m_mean&timezone=auto)\n  - 2026 so far: 14.7 C, about the same as 2023 and slightly below 2025, well below 2024. Applying the three-year drops of -5.3 to -9.4 gives roughly 5 to 9 C. Early-September anomalies carry little information about mid-October.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question.\n- The only expert outlook found is Yandex Meteum's warm-autumn call, which says October will be closer to normal (see heading 3).\n\n## 6. Upcoming events and forecast\n- Late September to early October 2026: deterministic forecasts (ECMWF, GFS, Hydrometcenter) begin to cover Oct 6-12 from around Sep 22 to 26 onward. Extended-range runs (ECMWF weeklies) update twice a week.\n- The Hydrometcenter usually publishes its October monthly outlook in late September. I had not found it as of Sep 14.\n- The main driver will be whether a blocking anticyclone brings warm southern air, which would favour the 10-12 C outcome, or a cold northern outbreak, which would favour about 5 C or lower.\n\nSources: the Open-Meteo archive API URLs linked above; [e1.ru](https://www.e1.ru/text/autumn/2026/08/27/76609230/); [snob.ru](https://snob.ru/news/vilfand-nachalo-oktiabria-v-moskve-budet-kholodnym-i-solnechnym/)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1.5
+        ],
+        [
+          0.05,
+          3.2
+        ],
+        [
+          0.1,
+          4.2
+        ],
+        [
+          0.2,
+          5.5
+        ],
+        [
+          0.3,
+          6.5
+        ],
+        [
+          0.4,
+          7.2
+        ],
+        [
+          0.5,
+          7.9
+        ],
+        [
+          0.6,
+          8.5
+        ],
+        [
+          0.7,
+          9.3
+        ],
+        [
+          0.8,
+          10.3
+        ],
+        [
+          0.9,
+          11.5
+        ],
+        [
+          0.95,
+          12.4
+        ],
+        [
+          0.99,
+          14.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.0
+        ],
+        [
+          0.05,
+          3.2
+        ],
+        [
+          0.1,
+          4.3
+        ],
+        [
+          0.2,
+          5.5
+        ],
+        [
+          0.3,
+          6.5
+        ],
+        [
+          0.4,
+          7.3
+        ],
+        [
+          0.5,
+          7.9
+        ],
+        [
+          0.6,
+          8.6
+        ],
+        [
+          0.7,
+          9.4
+        ],
+        [
+          0.8,
+          10.4
+        ],
+        [
+          0.9,
+          11.6
+        ],
+        [
+          0.95,
+          12.5
+        ],
+        [
+          0.99,
+          14.2
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.5
+        ],
+        [
+          0.05,
+          3.2
+        ],
+        [
+          0.1,
+          4.3
+        ],
+        [
+          0.2,
+          5.6
+        ],
+        [
+          0.3,
+          6.5
+        ],
+        [
+          0.4,
+          7.3
+        ],
+        [
+          0.5,
+          7.9
+        ],
+        [
+          0.6,
+          8.6
+        ],
+        [
+          0.7,
+          9.3
+        ],
+        [
+          0.8,
+          10.2
+        ],
+        [
+          0.9,
+          11.4
+        ],
+        [
+          0.95,
+          12.3
+        ],
+        [
+          0.99,
+          14.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3474
+}
