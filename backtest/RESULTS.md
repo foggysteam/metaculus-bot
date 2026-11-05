@@ -292,3 +292,15 @@ Nothing changes on the live bot. One of the 48 questions was left out because 3 
 - Blending with the market beats live on this set (in sample): 75% ours +3.7 (CI +0.5 to +7.1), 50% +6.3 (CI +0.4 to +12.8), 25% +7.8 (CI -1.3 to +17.1). There is nothing to build from this yet: none of the 6 live questions had a market matching its options, and the calibration rules already tell the forecasters to anchor on a market that covers the same question.
 - Notional usage was $26 against the $70 estimated from local runs, in line with the shadow runs costing less on GitHub than locally.
 
+## Two research reports, numeric: `s1-base` + `s1-seasonal`
+
+43 questions (leaked in either run excluded). Thirteen percentiles, straight-line CDF, median CDF.
+
+| Forecasts | Log score | vs 3 from A (points per question) | 95% CI | Better on | Worse on |
+|---|---|---|---|---|---|
+| 3 from A | -4.361 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from A + 3 from B (live) | -4.317 | +2.2 | -1.3 to +5.9 | 22 | 14 |
+| 3 from B | -4.250 | +5.5 | +0.5 to +10.6 | 25 | 11 |
+
+3 from B against 3 from A, by source: cdc +10.0 over 11, fred +13.3 over 10, nsidc -3.2 over 7, open-meteo +1.2 over 15
+

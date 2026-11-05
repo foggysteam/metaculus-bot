@@ -1,0 +1,194 @@
+{
+  "id": "sq-fred-IPG2211A2N-2026-07-01",
+  "question": "What will be the US industrial production index for electric and gas utilities, not seasonally adjusted (Federal Reserve) for July 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of the US industrial production index for electric and gas utilities, not seasonally adjusted (Federal Reserve) for July 2026 (FRED series IPG2211A2N). Later revisions are ignored.",
+  "unit": "index (2017 = 100)",
+  "outcome": 124.3069,
+  "outcome_date": "2026-08-18",
+  "as_of": "2026-08-04",
+  "resolve_date": "2026-08-18",
+  "lower_bound": 80.0,
+  "upper_bound": 140.0,
+  "source": "fred",
+  "series": "IPG2211A2N",
+  "known_value": 110.5951,
+  "past_moves": [
+    13.4924,
+    10.6436,
+    16.1896,
+    10.9903,
+    8.3176
+  ],
+  "baseline": "\nComputed by code from FRED IPG2211A2N (Industrial Production: Utilities: Electric and Gas Utilities (NAICS = 2211,2), Index 2017=100, frequency M): latest observation 110.5951 for 2026-06-01.\nThe target period 2026-07-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 96.756, p10: 98.1186, p25: 101.2823, p50: 111.1595, p75: 120.6739, p90: 126.3651, p95: 128.3509\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "## Research brief: Fed industrial production index for electric and gas utilities (NSA), July 2026\n\nThe question is not settled yet. The first July figure was not out as of 2026-08-04. In the seven years from 2019 to 2025, the index rose 8% to 16% from June to July. Applied to the June 2026 value, that implies roughly 119 to 128, with a midpoint around 124. July 2026 was very hot in the US, which points to the upper half of that range. The code-generated percentiles (median 111.2) look poorly suited here because they use changes from all months and ignore the seasonal June-to-July jump.\n\n### 1. Resolution source\n- The question resolves on FRED series IPG2211A2N, which comes from the Fed's G.17 release (index 2017=100, not seasonally adjusted). The first July value appears in the G.17 release scheduled for about 2026-08-18. [FRED](https://fred.stlouisfed.org/series/IPG2211A2N)\n- As of 2026-08-04, the latest observation is June 2026 at 110.5951 NSA, from the code-supplied baseline. That value can be revised when July is published.\n- 2026-07-17: the G.17 release for June reported seasonally adjusted utilities output up 0.4% in June, after a 0.7% drop in May. Electric rose and natural gas utilities fell. The seasonally adjusted utilities index was 109.6, up 0.3% from a year earlier. Q2 utilities output fell at a 2.8% annual rate. [Fed G.17](https://www.federalreserve.gov/releases/g17/20260717/g17.txt)\n\n### 2. Current status\n- Nothing settles the question yet. The July figure is unpublished as of 2026-08-04.\n- The outcome depends on July electricity and gas demand, which is mostly driven by cooling. Weather data so far points to a very hot month (section 3).\n\n### 3. Recent news (newest first)\n- 2026-08-03: EIA reported a record ERCOT (Texas) hourly peak load of 91.1 GW on July 22, 2026. That was about 6% above the August 2023 record of 85.5 GW. [EIA](https://www.eia.gov/todayinenergy/detail.php?id=67906)\n- 2026-07-30: meteorologist Brettschneider said July 2026 was more likely than not to be the hottest month on record for the contiguous US. This was a forecast-stage claim, not a final ranking. [inkl](https://www.inkl.com/news/july-2026-is-likely-americas-hottest-month-ever-new-dome-hits-west-today)\n- About 2026-07-26/27: a third major heat dome in a month covered the Plains, Midwest and Mississippi Valley. [Bloomberg](https://news.bloomberglaw.com/insurance/us-sizzles-under-wilting-heat-that-may-shift-west-this-week), [SEJ](https://www.m.sej.org/headlines/us-heatwave-hit-70-million-people-third-heat-dome-month)\n- 2026-07-20: Arizona Public Service (APS), the Phoenix utility, set a record load of 8,193 MW, about 7% above its 2020 record. [KJZZ](https://kjzz.org/content/1853667/phoenix-heat-wave-broke-record-electricity-demand-again-and-again-and-again)\n- Early July 2026: a heat dome over the Central and Eastern US arrived around July 4. In PJM, the grid covering much of the Mid-Atlantic and Midwest, gas-fired output rose about 26% week over week. [EPRINC](https://eprinc.org/first-summer-2026-heat-wave-how-pjms-fuel-mix-responded/)\n- 2026-07-09: the American Gas Association, citing Rystad Energy, said power-sector gas demand was 45.6 Bcf/d for the week ending July 7. June's power-burn average was the highest on record for June. [AGA](https://www.aga.org/research-policy/resource-library/natural-gas-market-indicators-june-9-2026/)\n\n### 4. Base rates and seasonality\nFRED NSA values for June and July, current vintage (earlier years may include revisions):\n\n| Year | June | July | July/June |\n|---|---|---|---|\n| 2019 | 99.69 | 113.92 | 1.143 |\n| 2020 | 99.80 | 115.22 | 1.155 |\n| 2021 | 104.23 | 112.55 | 1.080 |\n| 2022 | 105.05 | 116.04 | 1.105 |\n| 2023 | 101.28 | 117.47 | 1.160 |\n| 2024 | 109.54 | 120.18 | 1.097 |\n| 2025 | 109.24 | 122.73 | 1.124 |\n\n[FRED data](https://fred.stlouisfed.org/data/IPG2211A2N.txt)\n\n- **Ratio method:** each year's June-to-July ratio applied to June 2026 (110.60) gives 126.4, 127.7, 119.4, 122.2, 128.3, 121.3 and 124.3. The mean is about 124.2 and the range is 119.4 to 128.3.\n- **Trend in July values:** 117.5 (2023), 120.2 (2024), 122.7 (2025), rising about 2.5 points a year. Extending that line gives roughly 125 for July 2026.\n- **This year versus prior years:** January to June 2026 has mostly run above the same months of 2025. June 2026 at 110.6 compares with 109.2 in June 2025 and 109.5 in June 2024. The very hot July points to an above-average June-to-July jump, like 2019, 2020 and 2023, but this is not confirmed.\n\n### 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market and no published expert forecast for this series.\n- The code baseline (p50 111.2, p5 to p95 96.8 to 128.4) pools changes from all months, so it does not capture the June-to-July seasonal jump.\n\n### 6. Upcoming events before resolution\n- About 2026-08-18: the G.17 release for July. It will give the first July value and may also revise June.\n- Around 2026-08-07/08: NOAA's national climate report for July is expected to confirm whether July 2026 ranked among the hottest on record. July's weather is already over, so no forecast is relevant. The remaining uncertainty is how the Fed's estimate turns that heat into utility output, plus any June revision.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED IPG2211A2N (Industrial Production: Utilities: Electric and Gas Utilities (NAICS = 2211,2), Index 2017=100, frequency M): latest observation 110.5951 for 2026-06-01.\nThe target period 2026-07-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 96.756, p10: 98.1186, p25: 101.2823, p50: 111.1595, p75: 120.6739, p90: 126.3651, p95: 128.3509\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          115.5
+        ],
+        [
+          0.05,
+          118.5
+        ],
+        [
+          0.1,
+          120.3
+        ],
+        [
+          0.2,
+          122.4
+        ],
+        [
+          0.3,
+          123.7
+        ],
+        [
+          0.4,
+          124.7
+        ],
+        [
+          0.5,
+          125.5
+        ],
+        [
+          0.6,
+          126.3
+        ],
+        [
+          0.7,
+          127.2
+        ],
+        [
+          0.8,
+          128.3
+        ],
+        [
+          0.9,
+          129.8
+        ],
+        [
+          0.95,
+          131.0
+        ],
+        [
+          0.99,
+          133.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          115.5
+        ],
+        [
+          0.05,
+          119.0
+        ],
+        [
+          0.1,
+          120.8
+        ],
+        [
+          0.2,
+          122.7
+        ],
+        [
+          0.3,
+          123.9
+        ],
+        [
+          0.4,
+          124.8
+        ],
+        [
+          0.5,
+          125.5
+        ],
+        [
+          0.6,
+          126.2
+        ],
+        [
+          0.7,
+          127.0
+        ],
+        [
+          0.8,
+          128.0
+        ],
+        [
+          0.9,
+          129.5
+        ],
+        [
+          0.95,
+          130.8
+        ],
+        [
+          0.99,
+          133.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          115.5
+        ],
+        [
+          0.05,
+          118.8
+        ],
+        [
+          0.1,
+          120.6
+        ],
+        [
+          0.2,
+          122.6
+        ],
+        [
+          0.3,
+          124.0
+        ],
+        [
+          0.4,
+          125.0
+        ],
+        [
+          0.5,
+          125.9
+        ],
+        [
+          0.6,
+          126.7
+        ],
+        [
+          0.7,
+          127.6
+        ],
+        [
+          0.8,
+          128.6
+        ],
+        [
+          0.9,
+          130.1
+        ],
+        [
+          0.95,
+          131.3
+        ],
+        [
+          0.99,
+          133.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2927
+}

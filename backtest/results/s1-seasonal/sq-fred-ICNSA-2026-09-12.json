@@ -1,0 +1,194 @@
+{
+  "id": "sq-fred-ICNSA-2026-09-12",
+  "question": "What will be US initial jobless claims, not seasonally adjusted (Department of Labor) for the week ending September 12, 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of US initial jobless claims, not seasonally adjusted (Department of Labor) for the week ending September 12, 2026 (FRED series ICNSA). Later revisions are ignored.",
+  "unit": "claims",
+  "outcome": 152286.0,
+  "outcome_date": "2026-09-17",
+  "as_of": "2026-09-10",
+  "resolve_date": "2026-09-17",
+  "lower_bound": 120000.0,
+  "upper_bound": 210000.0,
+  "source": "fred",
+  "series": "ICNSA",
+  "known_value": 170626.0,
+  "past_moves": [
+    13654.0,
+    -14057.0,
+    -17847.0,
+    -21723.0,
+    -26040.0
+  ],
+  "baseline": "\nComputed by code from FRED ICNSA (Initial Claims, Number, frequency W): latest observation 170626.0000 for 2026-08-29.\nThe target period 2026-09-12 is 2 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 2-period changes since 2005 (last 3 years weighted double):\np5: 132932.187, p10: 144476.9399, p25: 156746.0311, p50: 170462.4047, p75: 184431.0358, p90: 200783.2768, p95: 212054.9582\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I couldn't find the advance unadjusted figure as first printed for the week ending Sept 5. The current FRED value for that week is 177,695. A few search results and the current FRED file also contain data from after 2026-09-10. I ignored all of it.\n\n## 1. Resolution source\n- The question resolves on FRED series ICNSA (DOL initial claims, not seasonally adjusted), using the first value printed in the DOL release of Thursday 2026-09-17. [FRED](https://fred.stlouisfed.org/series/ICNSA)\n- 2026-09-10: DOL's latest release covers the week ending Sept 5. Seasonally adjusted (SA) initial claims were 206,000, down 1,000 from a revised 207,000. The 4-week average was 206,000. [DOL bulletin](https://content.govdelivery.com/accounts/USDOL/bulletins/4299777)\n- Current FRED ICNSA values: Sept 5 is 177,695; Aug 29 is 171,403 after revision (the code's baseline used 170,626); Aug 22 is 170,596; Aug 15 is 173,017. Implied seasonal factor for Sept 5 is about 177.7k / 206k ≈ 0.86. [FRED data](https://fred.stlouisfed.org/data/ICNSA.txt)\n\n## 2. Current status\n- Nothing settles the question yet. The value will first be published on 2026-09-17.\n- **Calendar point:** Labor Day was Monday, Sept 7, 2026, so it falls inside the target week (ending Sept 12). In past years, unadjusted claims have usually dropped in the week that contains Labor Day.\n\n## 3. Recent news (newest first)\n- 2026-09-10: Claims for the week ending Sept 5 were 206k SA, against a Bloomberg median forecast of 205k. Layoffs remain low. [BGOV](https://news.bgov.com/daily-labor-report/us-weekly-jobless-claims-rise-2k-to-206k-est-205k), [Verified Investing](https://verifiedinvesting.com/blogs/us-economic-metrics/jobless-claims-week-ending-september-5-2026)\n- 2026-09-10: Continuing claims were about 1.77M SA for the week ending Aug 29. [Verified Investing](https://verifiedinvesting.com/blogs/us-economic-metrics/jobless-claims-week-ending-september-5-2026)\n- Summer 2026: SA claims stayed roughly in the 200k-210k range, with no sign of a jump in layoffs.\n\n## 4. Base rates and seasonality\nUnadjusted claims from FRED (current values) for the week before Labor Day week and for Labor Day week:\n\n| Year | Labor Day | Week before | Labor Day week | Change |\n|---|---|---|---|---|\n| 2021 | Sep 6 | 285,683 (w/e Sep 4) | 265,902 (w/e Sep 11) | -6.9% |\n| 2022 | Sep 5 | 172,835 (Sep 3) | 152,144 (Sep 10) | -12.0% |\n| 2023 | Sep 4 | 191,353 (Sep 2) | 175,594 (Sep 9) | -8.2% |\n| 2024 | Sep 2 | 190,623 (Aug 31) | 178,682 (Sep 7) | -6.3% |\n| 2025 | Sep 1 | 196,712 (Aug 30) | 204,862 (Sep 6) | +4.1%* |\n\n*In 2025 the jump came from fraudulent Texas filings, so that year is unusual. In the week after (Sep 13) claims fell to 195,433. [FRED data](https://fred.stlouisfed.org/data/ICNSA.txt)\n\n- **What this implies:** Excluding 2025, the Labor Day week has fallen 6% to 12% from the prior week. Applied to Sept 5's 177.7k, that gives roughly 156k-167k.\n- **Seasonal factors (rough, from memory and not checked against sources):** First-print SA values for past Labor Day weeks suggest factors of about 0.71-0.81. At 205k SA, that implies roughly 146k-167k unadjusted.\n- **This year versus earlier years:** Late-August 2026 levels (about 170k-178k) are below 2023-2025 (about 190k-197k) and close to 2022 (about 173k).\n- **Code baseline:** median about 170k, with a 10th-90th percentile range of 144k-201k. That baseline ignores the holiday effect, which should pull the value lower.\n- **Revisions:** The difference between the first print and later revisions is usually a few hundred to about 1.5k (for example, Aug 29 went from 170,626 to 171,403).\n\n## 5. Other forecasts\n- I found no Kalshi, Polymarket or Manifold market on the unadjusted number. Kalshi markets usually cover SA claims.\n- Economist consensus for SA claims in the week ending Sept 12 was not available to me as of 2026-09-10. The prior week's consensus was 205k. [Investing.com](https://www.investing.com/economic-calendar/initial-jobless-claims-294)\n\n## 6. Upcoming events before resolution\n- 2026-09-17, 8:30 ET: DOL releases the advance figure for the week ending Sept 12. That is the value that resolves the question. [financecalendar](https://www.financecalendar.com/event/us-initial-jobless-claims-september-17-2026/)\n- **Possible surprises:**\n  - Late or held-back state reports around the holiday.\n  - Fraudulent filings in individual states (as in Texas in 2025).\n  - Any weather disaster in a big state; it is hurricane season, and I found no specific storm threat.\n\nSources:\n- [DOL bulletin 2026-09-10](https://content.govdelivery.com/accounts/USDOL/bulletins/4299777)\n- [FRED ICNSA](https://fred.stlouisfed.org/series/ICNSA)\n- [FRED ICNSA data](https://fred.stlouisfed.org/data/ICNSA.txt)\n- [BGOV](https://news.bgov.com/daily-labor-report/us-weekly-jobless-claims-rise-2k-to-206k-est-205k)\n- [Verified Investing](https://verifiedinvesting.com/blogs/us-economic-metrics/jobless-claims-week-ending-september-5-2026)\n- [Investing.com](https://www.investing.com/economic-calendar/initial-jobless-claims-294)\n- [financecalendar](https://www.financecalendar.com/event/us-initial-jobless-claims-september-17-2026/)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED ICNSA (Initial Claims, Number, frequency W): latest observation 170626.0000 for 2026-08-29.\nThe target period 2026-09-12 is 2 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 2-period changes since 2005 (last 3 years weighted double):\np5: 132932.187, p10: 144476.9399, p25: 156746.0311, p50: 170462.4047, p75: 184431.0358, p90: 200783.2768, p95: 212054.9582\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          145000.0
+        ],
+        [
+          0.05,
+          151500.0
+        ],
+        [
+          0.1,
+          154500.0
+        ],
+        [
+          0.2,
+          158500.0
+        ],
+        [
+          0.3,
+          161200.0
+        ],
+        [
+          0.4,
+          163300.0
+        ],
+        [
+          0.5,
+          165000.0
+        ],
+        [
+          0.6,
+          166700.0
+        ],
+        [
+          0.7,
+          168700.0
+        ],
+        [
+          0.8,
+          171500.0
+        ],
+        [
+          0.9,
+          175500.0
+        ],
+        [
+          0.95,
+          179500.0
+        ],
+        [
+          0.99,
+          190000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          140000.0
+        ],
+        [
+          0.05,
+          148000.0
+        ],
+        [
+          0.1,
+          152000.0
+        ],
+        [
+          0.2,
+          156500.0
+        ],
+        [
+          0.3,
+          159500.0
+        ],
+        [
+          0.4,
+          161800.0
+        ],
+        [
+          0.5,
+          163800.0
+        ],
+        [
+          0.6,
+          165800.0
+        ],
+        [
+          0.7,
+          168200.0
+        ],
+        [
+          0.8,
+          171500.0
+        ],
+        [
+          0.9,
+          177000.0
+        ],
+        [
+          0.95,
+          183000.0
+        ],
+        [
+          0.99,
+          197000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          136000.0
+        ],
+        [
+          0.05,
+          145000.0
+        ],
+        [
+          0.1,
+          149500.0
+        ],
+        [
+          0.2,
+          154500.0
+        ],
+        [
+          0.3,
+          158000.0
+        ],
+        [
+          0.4,
+          160800.0
+        ],
+        [
+          0.5,
+          163200.0
+        ],
+        [
+          0.6,
+          165700.0
+        ],
+        [
+          0.7,
+          168500.0
+        ],
+        [
+          0.8,
+          172500.0
+        ],
+        [
+          0.9,
+          178500.0
+        ],
+        [
+          0.95,
+          184500.0
+        ],
+        [
+          0.99,
+          198000.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3978
+}

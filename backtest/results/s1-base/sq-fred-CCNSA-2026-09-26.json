@@ -1,0 +1,194 @@
+{
+  "id": "sq-fred-CCNSA-2026-09-26",
+  "question": "What will be US continued jobless claims, not seasonally adjusted (Department of Labor) for the week ending September 26, 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of US continued jobless claims, not seasonally adjusted (Department of Labor) for the week ending September 26, 2026 (FRED series CCNSA). Later revisions are ignored.",
+  "unit": "claims",
+  "outcome": 1504800.0,
+  "outcome_date": "2026-10-08",
+  "as_of": "2026-10-01",
+  "resolve_date": "2026-10-08",
+  "lower_bound": 1400000.0,
+  "upper_bound": 1750000.0,
+  "source": "fred",
+  "series": "CCNSA",
+  "known_value": 1552283.0,
+  "past_moves": [
+    -63861.0,
+    -58118.0,
+    -60650.0,
+    -46509.0,
+    -109864.0
+  ],
+  "baseline": "\nComputed by code from FRED CCNSA (Continued Claims (Insured Unemployment), Number, frequency W): latest observation 1552283.0000 for 2026-09-12.\nThe target period 2026-09-26 is 2 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 2-period changes since 2005 (last 3 years weighted double):\np5: 1438215.6945, p10: 1459606.062, p25: 1493365.4885, p50: 1531574.2852, p75: 1582294.0371, p90: 1654155.0832, p95: 1744003.3004\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I found the most recent number that counts: the Department of Labor release on 2026-10-01 put not-seasonally-adjusted continued claims for the week ending September 19 at about **1.498 million**. Nothing published by October 1 settles the question. The value for the week ending September 26 comes out in the October 8 release. In the six usable past years, this same one-week step changed the number by between -3.0% and +1.3%.\n\n### 1. Resolution source\n- Resolution is FRED series CCNSA (regular state continued claims, not seasonally adjusted), first print. The week ending September 26 should appear in the DOL weekly claims release on Thursday 2026-10-08 (8:30 am ET), since continued claims run one week behind initial claims. [FRED](https://fred.stlouisfed.org/graph/?g=r8M5)\n- 2026-09-24 release: week ending September 12 = 1,552,283 (the code baseline's latest observation). [DOL release PDF](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20261535.pdf)\n- 2026-10-01 release: week ending September 19 = **1.498 million**, down 47,267. The prior week was revised to about 1.545 million (down from 1.552 million). The not-seasonally-adjusted insured unemployment rate was 1.0%, compared with 1.1% a year earlier. [MarketReview](https://www.marketreview.com/news/us-jobless-claims-197000-continuing-claims/)\n- I couldn't read the DOL PDFs directly (compressed text), so the 1.498 million figure comes from press coverage of the release.\n\n### 2. Current status\n- Nothing published by 2026-10-01 settles the question. The best anchor is the September 19 value of about 1.498 million, one week before the target.\n\n### 3. Recent news (newest first)\n- 2026-10-01: Seasonally adjusted initial claims for the week ending September 26 were 197,000, down 1,000. The 4-week average was 200,000. Unadjusted initial claims were 156,738, down 4.8%, while seasonal factors expected a 4.1% drop. Seasonally adjusted continuing claims were 1.701 million (week ending September 19), compared with 1.921 million a year earlier. [MarketReview](https://www.marketreview.com/news/us-jobless-claims-197000-continuing-claims/), [Quartz](https://qz.com/us-jobless-claims-197000-lowest-mid-july-100126)\n- 2026-09-24: Seasonally adjusted initial claims were 197,000, described as near a 57-year low. Unadjusted initial claims were 163,811, compared with 180,992 a year earlier. [Yahoo/Reuters](https://finance.yahoo.com/economy/articles/u-jobless-claims-fall-197-112500927.html), [Quartz](https://qz.com/us-jobless-claims-197000-57-year-low-092526)\n- Overall, layoffs are low and continuing claims are running roughly 10 to 12% below year-ago levels.\n\n### 4. Base rates\nChange in CCNSA from the week ending around September 19-22 to the next week (current FRED values, which may include revisions): [FRED](https://fred.stlouisfed.org/graph/fredgraph.csv?id=CCNSA&cosd=2018-09-01)\n\n| Year | From | To | Change |\n|---|---|---|---|\n| 2018 | 1,395,338 | 1,369,317 | -1.9% |\n| 2019 | 1,383,346 | 1,392,109 | +0.6% |\n| 2021 | 2,469,313 | 2,395,401 | -3.0% (pandemic run-off) |\n| 2022 | 1,217,825 | 1,233,270 | +1.3% |\n| 2023 | 1,585,277 | 1,555,172 | -1.9% |\n| 2024 | 1,613,719 | 1,614,385 | +0.04% |\n| 2025 | 1,696,023 | 1,683,703 | -0.7% |\n\n- Leaving out 2020, the median change is about -0.7%, and the range is -3.0% to +1.3%. Applied to 1.498 million, that gives a central value of about 1.487 million and a range of about 1.453 to 1.517 million.\n- Seasonal pattern: the series usually keeps edging down through late September and early October, then rises in mid-October.\n- The code's two-step distribution (median about 1.53 million) starts from the September 12 value of 1.552 million. It doesn't account for the already-known 47,000 drop to September 19, so it is biased high. A one-step distribution centered near 1.49 to 1.50 million fits the data better.\n- The September 19 drop of 3.1% was large compared with past years' moves for that week (-1.4% in 2025, -0.9% in 2024). Some partial bounce-back is possible, as happened in 2019 and 2022.\n\n### 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market, and no economist consensus, for not-seasonally-adjusted continued claims. Consensus forecasts normally cover only the seasonally adjusted figures.\n\n### 6. Upcoming events before resolution\n- 2026-10-08, 8:30 am ET: DOL weekly claims release, which gives the first print for the week ending September 26.\n- Low recent initial claims (unadjusted 156,738 for the week ending September 26) mean fewer new people entering continued claims, which points slightly lower.\n- Quarter-end effects (the target week ends September 26) haven't historically caused big jumps in this particular week. I found no scheduled disruptions such as a government shutdown or reporting changes that would delay the October 8 release.\n\nSources:\n- [DOL release PDF 20261535](https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20261535.pdf)\n- [MarketReview](https://www.marketreview.com/news/us-jobless-claims-197000-continuing-claims/)\n- [Quartz (Oct 1)](https://qz.com/us-jobless-claims-197000-lowest-mid-july-100126)\n- [Quartz (Sep 24)](https://qz.com/us-jobless-claims-197000-57-year-low-092526)\n- [Yahoo Finance](https://finance.yahoo.com/economy/articles/u-jobless-claims-fall-197-112500927.html)\n- [Newkerala](https://www.newkerala.com/news/a/us-weekly-jobless-claims-fall-197000-pointing-continued-314.htm)\n- [FRED graph](https://fred.stlouisfed.org/graph/?g=r8M5)\n- [FRED CCNSA csv](https://fred.stlouisfed.org/graph/fredgraph.csv?id=CCNSA&cosd=2018-09-01)\n- [Verified Investing](https://verifiedinvesting.com/blogs/us-economic-metrics/jobless-claims-week-ending-september-19-2026): reported 1.719 million continuing claims, which contradicts the other sources, so I didn't use it.\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED CCNSA (Continued Claims (Insured Unemployment), Number, frequency W): latest observation 1552283.0000 for 2026-09-12.\nThe target period 2026-09-26 is 2 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 2-period changes since 2005 (last 3 years weighted double):\np5: 1438215.6945, p10: 1459606.062, p25: 1493365.4885, p50: 1531574.2852, p75: 1582294.0371, p90: 1654155.0832, p95: 1744003.3004\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1425000.0
+        ],
+        [
+          0.05,
+          1450000.0
+        ],
+        [
+          0.1,
+          1462000.0
+        ],
+        [
+          0.2,
+          1474000.0
+        ],
+        [
+          0.3,
+          1482000.0
+        ],
+        [
+          0.4,
+          1488000.0
+        ],
+        [
+          0.5,
+          1492000.0
+        ],
+        [
+          0.6,
+          1497000.0
+        ],
+        [
+          0.7,
+          1503000.0
+        ],
+        [
+          0.8,
+          1511000.0
+        ],
+        [
+          0.9,
+          1524000.0
+        ],
+        [
+          0.95,
+          1537000.0
+        ],
+        [
+          0.99,
+          1570000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          1435000.0
+        ],
+        [
+          0.05,
+          1455000.0
+        ],
+        [
+          0.1,
+          1465000.0
+        ],
+        [
+          0.2,
+          1476000.0
+        ],
+        [
+          0.3,
+          1483000.0
+        ],
+        [
+          0.4,
+          1488000.0
+        ],
+        [
+          0.5,
+          1492000.0
+        ],
+        [
+          0.6,
+          1496000.0
+        ],
+        [
+          0.7,
+          1501000.0
+        ],
+        [
+          0.8,
+          1508000.0
+        ],
+        [
+          0.9,
+          1520000.0
+        ],
+        [
+          0.95,
+          1532000.0
+        ],
+        [
+          0.99,
+          1565000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          1430000.0
+        ],
+        [
+          0.05,
+          1453000.0
+        ],
+        [
+          0.1,
+          1463000.0
+        ],
+        [
+          0.2,
+          1474000.0
+        ],
+        [
+          0.3,
+          1482000.0
+        ],
+        [
+          0.4,
+          1488000.0
+        ],
+        [
+          0.5,
+          1492000.0
+        ],
+        [
+          0.6,
+          1497000.0
+        ],
+        [
+          0.7,
+          1503000.0
+        ],
+        [
+          0.8,
+          1511000.0
+        ],
+        [
+          0.9,
+          1523000.0
+        ],
+        [
+          0.95,
+          1535000.0
+        ],
+        [
+          0.99,
+          1568000.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3589
+}

@@ -1,0 +1,194 @@
+{
+  "id": "sq-fred-HOUSTNSA-2026-09-01",
+  "question": "What will be US housing starts, not seasonally adjusted (Census Bureau) for September 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of US housing starts, not seasonally adjusted (Census Bureau) for September 2026 (FRED series HOUSTNSA). Later revisions are ignored.",
+  "unit": "thousands of units",
+  "outcome": 103.8,
+  "outcome_date": "2026-10-20",
+  "as_of": "2026-10-10",
+  "resolve_date": "2026-10-20",
+  "lower_bound": 100.0,
+  "upper_bound": 120.0,
+  "source": "fred",
+  "series": "HOUSTNSA",
+  "known_value": 110.5,
+  "past_moves": [
+    1.9,
+    -5.7,
+    1.2,
+    -7.0,
+    -4.8
+  ],
+  "baseline": "\nComputed by code from FRED HOUSTNSA (New Privately-Owned Housing Units Started: Total Units, Thousands of Units, frequency M): latest observation 110.5000 for 2026-08-01.\nThe target period 2026-09-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 92.5506, p10: 95.2779, p25: 102.5967, p50: 109.5, p75: 119.4678, p90: 127.7903, p95: 133.914\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I only used information published on or before 2026-10-10. Some pages I fetched (FRED, the Census \"current\" page, financial news) already showed releases dated after that, including the September 2026 figure and revised August numbers. I left all of that out.\n\n## 1. Resolution source\n- The question resolves on Census Bureau New Residential Construction, total housing starts not seasonally adjusted (NSA), in thousands, as first published (FRED series HOUSTNSA). [FRED](https://fred.stlouisfed.org/data/HOUSTNSA.txt)\n- 2026-09-17: The August 2026 report was released. Starts ran at a seasonally adjusted annual rate (SAAR) of 1,275,000, down 2.6% from July and 1.2% below August 2025. The first-published NSA figure for August was 110.5 thousand (from the code-supplied baseline). Permits were 1,394,000 and completions 1,128,000. [Census Aug 2026 PDF](https://www.census.gov/construction/nrc/pdf/newresconst_202608.pdf)\n- Single-family starts in August were about 918,000 SAAR, up 7.6% from July. [JM Financial](https://www.jmfinancialservices.in/market-news-and-insights/1732835)\n- The September 2026 data comes out around 2026-10-19/20, after this exercise's cutoff.\n\n## 2. Current status\n- As of 2026-10-10, nothing settles the question. The September figure has not been published.\n\n## 3. Recent news (newest first)\n- 2026-09-17: August starts came in at 1.275M SAAR, below Moody's Analytics' forecast of 1.283M. RTTNews headlined that starts \"slump much more than expected.\" [financecalendar](https://www.financecalendar.com/event/us-new-residential-construction-housing-starts-september-2026/), [RTTNews](https://www.rttnews.com/2694454/u-s-housing-starts-slump-much-more-than-expected-in-august.aspx)\n- Q3 2026: Forisk published a \"U.S. Housing Starts Outlook Q3 2026 update.\" I did not read its details. [Forisk](https://forisk.com/u-s-housing-starts-outlook-q3-2026-update/)\n\n## 4. Base rates\nNSA values in thousands (current vintage, from FRED):\n\n| Year | Aug | Sep | Sep/Aug |\n|---|---|---|---|\n| 2022 | 134.5 | 127.5 | 0.948 |\n| 2023 | 115.8 | 117.0 | 1.010 |\n| 2024 | 121.8 | 116.1 | 0.953 |\n| 2025 | 112.2 | 114.1 | 1.017 |\n\n- Over these four years, the September to August ratio averaged about 0.98 and ranged from 0.95 to 1.02. Applied to August 2026's first print of 110.5, that gives roughly 104.7 to 112.4, with a midpoint of about 108.5.\n- Recent 2026 NSA path (current vintage): Jan 97.6, Feb 97.7, Mar 128.6, Apr 128.7, May 107.8, Jun 135.3, Jul 125.7, Aug about 110.5 (first print). Year-to-date levels are roughly in line with or slightly below 2025.\n- The code-supplied unconditional distribution for September is p5 92.6, p25 102.6, p50 109.5, p75 119.5, p95 133.9. It ignores seasonality, so the narrower seasonal-ratio range above is probably the more useful reference.\n- The first print for a month is usually revised by about ±1 to 3 thousand NSA in the next release. Monthly SAAR changes often move ±5 to 10%, which works out to roughly ±5 to 10 thousand NSA.\n- Rough SAAR-to-NSA mapping: in August, NSA was about 1.04 × SAAR/12. September seasonal factors are similar to or slightly lower than August's. On that basis, a SAAR near 1.27M would mean about 106 to 110 thousand NSA. This is my own estimate from the seasonal pattern, not an official conversion.\n\n## 5. Other forecasts\n- I found no Kalshi, Polymarket or Manifold prices, and no economist consensus for September starts, published on or before 2026-10-10. Consensus surveys for this release usually come out in the week before it.\n- For August, Moody's had forecast 1.283M SAAR. [financecalendar](https://www.financecalendar.com/event/us-new-residential-construction-housing-starts-september-2026/)\n- Forisk's Q3 2026 outlook exists, but I did not get its figures. [Forisk](https://forisk.com/u-s-housing-starts-outlook-q3-2026-update/)\n\n## 6. Upcoming events before resolution\n- Mid-October 2026: the NAHB/Wells Fargo Housing Market Index for October, a sentiment indicator for builders.\n- Around 2026-10-19/20, 8:30 ET: Census/HUD release September 2026 New Residential Construction. That release resolves the question and will also revise August.\n- Mortgage rate moves and weather in September (for example hurricanes in the South, which accounts for most starts) could affect the figure. I found no specific reports of disruptions on or before the cutoff.\n\nSources:\n- [FRED HOUSTNSA](https://fred.stlouisfed.org/data/HOUSTNSA.txt)\n- [Census Aug 2026 PDF](https://www.census.gov/construction/nrc/pdf/newresconst_202608.pdf)\n- [JM Financial](https://www.jmfinancialservices.in/market-news-and-insights/1732835)\n- [RTTNews](https://www.rttnews.com/2694454/u-s-housing-starts-slump-much-more-than-expected-in-august.aspx)\n- [financecalendar](https://www.financecalendar.com/event/us-new-residential-construction-housing-starts-september-2026/)\n- [Forisk Q3 2026 outlook](https://forisk.com/u-s-housing-starts-outlook-q3-2026-update/)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED HOUSTNSA (New Privately-Owned Housing Units Started: Total Units, Thousands of Units, frequency M): latest observation 110.5000 for 2026-08-01.\nThe target period 2026-09-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 92.5506, p10: 95.2779, p25: 102.5967, p50: 109.5, p75: 119.4678, p90: 127.7903, p95: 133.914\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          92.0
+        ],
+        [
+          0.05,
+          98.0
+        ],
+        [
+          0.1,
+          101.0
+        ],
+        [
+          0.2,
+          104.5
+        ],
+        [
+          0.3,
+          107.0
+        ],
+        [
+          0.4,
+          108.8
+        ],
+        [
+          0.5,
+          110.3
+        ],
+        [
+          0.6,
+          111.8
+        ],
+        [
+          0.7,
+          113.6
+        ],
+        [
+          0.8,
+          116.0
+        ],
+        [
+          0.9,
+          119.5
+        ],
+        [
+          0.95,
+          122.5
+        ],
+        [
+          0.99,
+          128.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          92.0
+        ],
+        [
+          0.05,
+          97.0
+        ],
+        [
+          0.1,
+          100.0
+        ],
+        [
+          0.2,
+          103.5
+        ],
+        [
+          0.3,
+          105.8
+        ],
+        [
+          0.4,
+          107.6
+        ],
+        [
+          0.5,
+          109.2
+        ],
+        [
+          0.6,
+          110.8
+        ],
+        [
+          0.7,
+          112.6
+        ],
+        [
+          0.8,
+          115.0
+        ],
+        [
+          0.9,
+          118.5
+        ],
+        [
+          0.95,
+          121.5
+        ],
+        [
+          0.99,
+          127.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          91.0
+        ],
+        [
+          0.05,
+          96.0
+        ],
+        [
+          0.1,
+          99.0
+        ],
+        [
+          0.2,
+          102.5
+        ],
+        [
+          0.3,
+          105.0
+        ],
+        [
+          0.4,
+          107.2
+        ],
+        [
+          0.5,
+          109.0
+        ],
+        [
+          0.6,
+          110.8
+        ],
+        [
+          0.7,
+          112.8
+        ],
+        [
+          0.8,
+          115.3
+        ],
+        [
+          0.9,
+          119.0
+        ],
+        [
+          0.95,
+          122.0
+        ],
+        [
+          0.99,
+          128.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2918
+}

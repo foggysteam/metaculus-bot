@@ -1,0 +1,194 @@
+{
+  "id": "sq-fred-IPG2211A2N-2026-07-01",
+  "question": "What will be the US industrial production index for electric and gas utilities, not seasonally adjusted (Federal Reserve) for July 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of the US industrial production index for electric and gas utilities, not seasonally adjusted (Federal Reserve) for July 2026 (FRED series IPG2211A2N). Later revisions are ignored.",
+  "unit": "index (2017 = 100)",
+  "outcome": 124.3069,
+  "outcome_date": "2026-08-18",
+  "as_of": "2026-08-04",
+  "resolve_date": "2026-08-18",
+  "lower_bound": 80.0,
+  "upper_bound": 140.0,
+  "source": "fred",
+  "series": "IPG2211A2N",
+  "known_value": 110.5951,
+  "past_moves": [
+    13.4924,
+    10.6436,
+    16.1896,
+    10.9903,
+    8.3176
+  ],
+  "baseline": "\nComputed by code from FRED IPG2211A2N (Industrial Production: Utilities: Electric and Gas Utilities (NAICS = 2211,2), Index 2017=100, frequency M): latest observation 110.5951 for 2026-06-01.\nThe target period 2026-07-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 96.756, p10: 98.1186, p25: 101.2823, p50: 111.1595, p75: 120.6739, p90: 126.3651, p95: 128.3509\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "### 1. Resolution source\n- The question resolves on FRED series IPG2211A2N: Electric and Gas Utilities, not seasonally adjusted (NSA), index 2017=100. The value comes from the Fed's G.17 release. [FRED](https://fred.stlouisfed.org/series/IPG2211A2N)\n- 2026-07-17: The G.17 release for June 2026 first published the June value at 110.5951. That is the latest value as of 2026-08-04, and it matches the code baseline. [Fed G.17](https://www.federalreserve.gov/releases/g17/20260717/)\n- The July 2026 value should first appear in the mid-August G.17 release, about 2026-08-14 to 2026-08-18.\n- The Fed plans its annual revision, including a rebase to 2022=100, for autumn 2026. That is after the first print, so it should not affect resolution. [Fed G.17](https://www.federalreserve.gov/releases/g17/20260717/)\n\n### 2. Current status\n- Nothing settles the question yet. The July figure is unpublished.\n- This is an NSA series, so the seasonal pattern dominates. July is one of the two yearly peaks, set by cooling demand, alongside January.\n- The code's percentile baseline pools all one-month changes regardless of season. That makes it misleading here: its median of about 111 is far below every recent July.\n\n### 3. Recent news (newest first)\n- 2026-08-03: EIA reported that ERCOT's hourly peak load hit a record 91.1 GW on July 22, 2026, about 6% above the August 2023 record. SPP also set a record, 57.9 GW on July 27. [EIA](https://www.eia.gov/todayinenergy/detail.php?id=67906)\n- Early July 2026: Reports described a heat dome over the July 4 period and a PJM forecast peak of about 166 GW, which would beat its 2006 record. These were forecasts, and I could not confirm the actual peaks. [Eastern Herald](https://easternherald.com/2026/07/03/us-heat-dome-july-4-2026-grid-emergency-200-million/), [Generator Source](https://generatorsource.com/backup-power/record-heat-record-power-demand-what-this-weeks-grid-strain-means-for-your-operations/)\n- 2026-07-17: Seasonally adjusted utilities output rose 0.4% in June, with electric up and natural gas down. Utilities fell at a 2.8% annual rate in Q2. Secondary reports put June utilities output about 3% above a year earlier. [Fed G.17](https://www.federalreserve.gov/releases/g17/20260717/), [RTTNews](https://www.rttnews.com/3668117/u-s-industrial-production-inches-up-0-1-in-june-slightly-less-than-expected.aspx?type=bn)\n- I found no national July 2026 cooling degree day data from NOAA or EIA.\n\n### 4. Base rates\nCurrent-vintage FRED values for June and July:\n\n| Year | Jun | Jul | Jul/Jun |\n|---|---|---|---|\n| 2019 | 99.69 | 113.92 | 1.143 |\n| 2020 | 99.80 | 115.22 | 1.155 |\n| 2021 | 104.23 | 112.55 | 1.080 |\n| 2022 | 105.05 | 116.04 | 1.105 |\n| 2023 | 101.28 | 117.47 | 1.160 |\n| 2024 | 109.54 | 120.18 | 1.097 |\n| 2025 | 109.24 | 122.73 | 1.124 |\n\n- The July-to-June ratio ranged from 1.08 to 1.16, averaging about 1.12. Applied to June 2026's 110.60, that implies roughly 119.4 to 128.3, with a central value near 124.\n- The July level has risen steadily, by about 2.5 to 2.7 points a year from 2023 to 2025, as load growth from data centers and electrification adds to the trend.\n- Recent years' year-on-year growth was about 2 to 3%. Applied to July 2025's 122.73, that gives about 125 to 126.5.\n- Caveat: these are revised values. First prints can differ by up to about 1 point.\n- Hot Julys produced high ratios, such as 2023 and 2020. Milder Julys produced low ones, such as 2021. The record ERCOT and SPP peaks and the early-July heat dome point to a hotter-than-normal July 2026 in the South and Central regions.\n\n### 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets, and no expert forecasts, for this series.\n- Consensus forecasts for headline industrial production usually come out in the week before the release. I did not find any for July 2026.\n\n### 6. Upcoming events before resolution\n- About 2026-08-14 to 2026-08-18: the G.17 release for July 2026 publishes the value that resolves the question.\n- Before that, EIA's Electric Power Monthly, its weekly natural gas storage reports and NOAA's July climate summary (due in early August) could show how much July cooling demand was above normal.\n\nSources:\n- [FRED IPG2211A2N](https://fred.stlouisfed.org/series/IPG2211A2N)\n- [Fed G.17, 2026-07-17](https://www.federalreserve.gov/releases/g17/20260717/)\n- [Fed G.17 PDF](https://www.federalreserve.gov/releases/g17/20260717/g17.pdf)\n- [EIA Today in Energy, 2026-08-03](https://www.eia.gov/todayinenergy/detail.php?id=67906)\n- [RTTNews](https://www.rttnews.com/3668117/u-s-industrial-production-inches-up-0-1-in-june-slightly-less-than-expected.aspx?type=bn)\n- [Eastern Herald](https://easternherald.com/2026/07/03/us-heat-dome-july-4-2026-grid-emergency-200-million/)\n- [Generator Source](https://generatorsource.com/backup-power/record-heat-record-power-demand-what-this-weeks-grid-strain-means-for-your-operations/)\n- [APPA](https://www.publicpower.org/periodical/article/hourly-peak-load-ercot-reached-record-911-gw-july-22)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED IPG2211A2N (Industrial Production: Utilities: Electric and Gas Utilities (NAICS = 2211,2), Index 2017=100, frequency M): latest observation 110.5951 for 2026-06-01.\nThe target period 2026-07-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 96.756, p10: 98.1186, p25: 101.2823, p50: 111.1595, p75: 120.6739, p90: 126.3651, p95: 128.3509\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          117.5
+        ],
+        [
+          0.05,
+          119.8
+        ],
+        [
+          0.1,
+          121.0
+        ],
+        [
+          0.2,
+          122.7
+        ],
+        [
+          0.3,
+          123.8
+        ],
+        [
+          0.4,
+          124.6
+        ],
+        [
+          0.5,
+          125.3
+        ],
+        [
+          0.6,
+          126.0
+        ],
+        [
+          0.7,
+          126.8
+        ],
+        [
+          0.8,
+          127.8
+        ],
+        [
+          0.9,
+          129.2
+        ],
+        [
+          0.95,
+          130.3
+        ],
+        [
+          0.99,
+          132.6
+        ]
+      ],
+      [
+        [
+          0.01,
+          116.5
+        ],
+        [
+          0.05,
+          119.3
+        ],
+        [
+          0.1,
+          120.8
+        ],
+        [
+          0.2,
+          122.6
+        ],
+        [
+          0.3,
+          123.7
+        ],
+        [
+          0.4,
+          124.6
+        ],
+        [
+          0.5,
+          125.3
+        ],
+        [
+          0.6,
+          126.0
+        ],
+        [
+          0.7,
+          126.8
+        ],
+        [
+          0.8,
+          127.8
+        ],
+        [
+          0.9,
+          129.2
+        ],
+        [
+          0.95,
+          130.4
+        ],
+        [
+          0.99,
+          132.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          117.5
+        ],
+        [
+          0.05,
+          119.8
+        ],
+        [
+          0.1,
+          121.0
+        ],
+        [
+          0.2,
+          122.6
+        ],
+        [
+          0.3,
+          123.6
+        ],
+        [
+          0.4,
+          124.4
+        ],
+        [
+          0.5,
+          125.1
+        ],
+        [
+          0.6,
+          125.8
+        ],
+        [
+          0.7,
+          126.6
+        ],
+        [
+          0.8,
+          127.5
+        ],
+        [
+          0.9,
+          128.8
+        ],
+        [
+          0.95,
+          129.8
+        ],
+        [
+          0.99,
+          131.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2556
+}
