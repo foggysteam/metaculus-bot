@@ -7,6 +7,7 @@ Usage: uv run python tests/test_pass.py
 from __future__ import annotations
 
 import asyncio
+import json
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -164,6 +165,77 @@ def test_weekly_report_lists_tournaments_open_to_bots_that_we_are_not_in() -> No
     ]
     found = weekly_report.tournaments_open_to_bots(rows, now, weekly_report.ENTERED_PROJECTS)
     assert [t["name"] for t in found] == ["Market Pulse 27Q1"], found
+
+
+def resolved_question(qid: int, resolution, resolved_at: str | None, spot: float | None = None, peer: float | None = None) -> dict:
+    scores = {k: v for k, v in (("spot_peer_score", spot), ("peer_score", peer)) if v is not None}
+    return {"id": qid, "resolution": resolution, "actual_resolve_time": resolved_at, "my_forecasts": {"score_data": scores}}
+
+
+def weekly_log(folder: Path, qid: int, post: int, tournament: str, due: str) -> None:
+    entry = {
+        "status": "ok", "published": True, "started_at": "2026-10-28T01:53:00+00:00",
+        "final_forecast": {"p10": 1.1, "p25": 1.3, "p50": 1.42, "p75": 1.6, "p90": 1.86},
+        "question": {"id": qid, "post_id": post, "url": f"https://www.metaculus.com/questions/{post}", "type": "NumericQuestion",
+                     "unit": "$", "tournaments": [tournament], "text": f"Question {qid}", "scheduled_resolution_time": due},
+    }
+    (folder / "2026-10-28").mkdir(parents=True, exist_ok=True)
+    (folder / "2026-10-28" / f"{qid}.json").write_text(json.dumps(entry), encoding="utf-8")
+
+
+def test_weekly_report_reads_outcome_and_score_of_group_subquestions() -> None:
+    import weekly_report
+
+    # Market Pulse company questions are one group post (45995) with a sub-question per company.
+    group = {"id": 45995, "group_of_questions": {"questions": [
+        resolved_question(46176, "2.1", "2026-11-02T22:07:00Z", spot=54.5),
+        resolved_question(46179, "1.46", "2026-11-04T14:17:00Z", spot=49.5),
+        resolved_question(46199, None, None),
+    ]}}
+    assert weekly_report.describe_outcome(weekly_report._find_question(group, 46179)) == "resolved: 1.46, peer score +49.5"
+    assert weekly_report.describe_outcome(weekly_report._find_question(group, 46199)) == "pending"
+    single = {"id": 46229, "question": resolved_question(46458, "8.8", "2026-11-04T11:39:00Z", spot=19.3, peer=18.9)}
+    assert weekly_report.describe_outcome(weekly_report._find_question(single, 46458)) == "resolved: 8.80, peer score +19.3"
+    assert weekly_report.describe_outcome(resolved_question(1, "yes", "x", spot=10, peer=-5), time_averaged=True) == "resolved: yes, peer score -5.0"
+    assert weekly_report.describe_outcome(resolved_question(1, "annulled", "x")) == "annulled, not scored"
+    long = "What will the first reported earnings per share after September 2026 be for the following companies? (AMD)"
+    assert weekly_report._title(long).endswith("... (AMD)") and len(weekly_report._title(long)) == 90
+
+
+def test_weekly_report_lists_what_resolved_this_week_however_long_ago_it_was_forecast() -> None:
+    import tempfile
+    import weekly_report
+
+    now = datetime(2026, 11, 9, 21, 0, tzinfo=timezone.utc)
+    posts = {
+        45995: {"id": 45995, "group_of_questions": {"questions": [
+            resolved_question(46179, "1.46", "2026-11-04T14:17:00Z", spot=49.5),  # this week
+            resolved_question(46183, "2.0", "2026-10-20T20:31:00Z", spot=1.0),  # earlier, and not ours
+            resolved_question(46176, "2.1", "2026-10-30T22:07:00Z", spot=54.5),  # ours, but last week
+        ]}},
+        46228: {"id": 46228, "question": resolved_question(46457, "56.5", "2026-11-04T11:39:00Z", spot=14.8)},
+        46010: {"id": 46010, "group_of_questions": {"questions": [resolved_question(46214, "annulled", "2026-11-05T09:00:00Z")]}},
+        46300: {"id": 46300, "question": resolved_question(46500, None, None)},  # due, not resolved yet
+    }
+    real = weekly_report._post, weekly_report._metaculus, weekly_report.time.sleep
+    weekly_report._post = posts.get
+    # The early-resolution list: post 46010 resolved before its scheduled date.
+    weekly_report._metaculus = lambda path, **params: {"results": [{"id": 46010, "actual_resolve_time": None}]}
+    weekly_report.time.sleep = lambda seconds: None
+    try:
+        with tempfile.TemporaryDirectory() as folder:
+            folder = Path(folder)
+            weekly_log(folder, 46179, 45995, "market-pulse-26q4", "2026-11-04 00:00 UTC")
+            weekly_log(folder, 46176, 45995, "market-pulse-26q4", "2026-10-30 00:00 UTC")
+            weekly_log(folder, 46457, 46228, "fall-futureeval-2026", "2026-11-04 00:00 UTC")
+            weekly_log(folder, 46214, 46010, "market-pulse-26q4", "2026-11-20 00:00 UTC")
+            weekly_log(folder, 46500, 46300, "minibench", "2026-11-08 00:00 UTC")
+            text = weekly_report.resolved_since(now - timedelta(days=7), now, log_dir=folder)
+    finally:
+        weekly_report._post, weekly_report._metaculus, weekly_report.time.sleep = real
+    assert text.startswith("3 resolved; 2 scored, peer scores add up to +64.3, 2 positive"), text
+    assert "resolved: 1.46, peer score +49.5" in text and "resolved: 56.5, peer score +14.8" in text, text
+    assert "annulled, not scored" in text and "46176" not in text and "46183" not in text and "46500" not in text, text
 
 
 def forecast_question(post: int, age_minutes: float = 30, forecasts: int = 1, forecast: bool = True):

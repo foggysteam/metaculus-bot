@@ -11,6 +11,7 @@ import asyncio
 import csv
 import json
 import os
+import re
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -129,27 +130,167 @@ def _answer(question_type: str, final, unit: str = "") -> str:
     return str(final)
 
 
-def _outcome(post_id: int | None) -> str:
+LOG_DIR = Path(__file__).parent / "forecast_logs"
+# How long after its scheduled date a question is still checked for a late resolution.
+LATE_RESOLUTION = timedelta(days=30)
+_posts: dict[int, dict] = {}
+
+
+def _post(post_id: int) -> dict | None:
+    """One post with its questions, fetched once per report (a Market Pulse group holds several of ours)."""
+    if post_id not in _posts:
+        for wait in (3, 15):  # Metaculus rate-limits bursts of requests (HTTP 429)
+            time.sleep(wait)
+            try:
+                _posts[post_id] = _metaculus(f"posts/{post_id}/")
+                break
+            except Exception:  # noqa: BLE001 - outcome is optional
+                continue
+    return _posts.get(post_id)
+
+
+def _questions(post: dict) -> list[dict]:
+    """The post's own question, or a group's sub-questions."""
+    if post.get("question"):
+        return [post["question"]]
+    return (post.get("group_of_questions") or {}).get("questions") or []
+
+
+def _find_question(post: dict, question_id: int | None) -> dict:
+    questions = _questions(post)
+    found = next((q for q in questions if q.get("id") == question_id), None)
+    return found or (questions[0] if len(questions) == 1 else {})
+
+
+def _resolution_text(resolution) -> str:
+    if isinstance(resolution, str) and len(resolution) >= 10 and resolution[4] == "-":
+        return resolution[:10]  # a date question
+    try:
+        return _num(float(resolution))
+    except (TypeError, ValueError):
+        return str(resolution)
+
+
+def _peer_score(question: dict, time_averaged: bool) -> float | None:
+    """Our peer score: spot (FutureEval, MiniBench, Market Pulse) or time-averaged (Animal Futures).
+    Positive means better than the average forecaster on the question."""
+    scores = (question.get("my_forecasts") or {}).get("score_data") or {}
+    return scores.get("peer_score" if time_averaged else "spot_peer_score")
+
+
+def describe_outcome(question: dict, time_averaged: bool = False) -> str:
+    resolution = question.get("resolution")
+    if resolution in (None, ""):
+        return "pending"
+    if resolution in ("annulled", "ambiguous"):
+        return f"{resolution}, not scored"
+    score = _peer_score(question, time_averaged)
+    scored = f", peer score {score:+.1f}" if score is not None else ", no score shown"
+    return f"resolved: {_resolution_text(resolution)}{scored}"
+
+
+def _outcome(post_id: int | None, question_id: int | None = None, time_averaged: bool = False) -> str:
     if not post_id:
         return ""
-    question = None
-    for wait in (1, 15):  # Metaculus rate-limits bursts of requests (HTTP 429)
-        time.sleep(wait)
-        try:
-            question = _metaculus(f"posts/{post_id}/").get("question") or {}
-            break
-        except Exception:  # noqa: BLE001 - outcome is optional
-            continue
-    if question is None:
+    post = _post(post_id)
+    if post is None:
         return "?"
-    resolution = question.get("resolution")
-    if resolution not in (None, ""):
-        return f"resolved: {resolution}"
-    return "pending"
+    return describe_outcome(_find_question(post, question_id), time_averaged)
+
+
+def _series(slugs: str) -> str:
+    if "minibench" in slugs:
+        return "MiniBench"
+    if "market-pulse" in slugs:
+        return "Market Pulse"
+    if "animal-futures" in slugs:
+        return "Animal Futures"
+    return "Main"
+
+
+def _log_time(text: str | None) -> datetime | None:
+    try:
+        return datetime.strptime(text or "", "%Y-%m-%d %H:%M UTC").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
+def _title(text: str, limit: int = 90) -> str:
+    """Shortened question text. A group's sub-question ends with its label, such as "(AMD)", which is kept."""
+    text = text.replace("|", "/")
+    if len(text) <= limit:
+        return text
+    label = re.search(r" \([^()]{1,40}\)$", text)
+    tail = label.group(0) if label else ""
+    return text[: limit - 3 - len(tail)] + "..." + tail
+
+
+def resolved_since(since: datetime, now: datetime, log_dir: Path = LOG_DIR) -> str:
+    """Every question of ours that resolved in the window, with the outcome and our peer score.
+    A question forecast weeks ago can resolve this week, so this reads all the logs, not just
+    this week's: those due to resolve in the window (or up to LATE_RESOLUTION before it), plus
+    any each tournament lists as resolved, for questions that resolve early."""
+    latest: dict[int, dict] = {}
+    for path in sorted(log_dir.glob("*/*.json")):
+        entry = json.loads(path.read_text(encoding="utf-8"))
+        if entry["status"] == "ok" and entry.get("published"):
+            latest[entry["question"]["id"]] = entry
+    by_post: dict[int, list[dict]] = {}
+    for entry in latest.values():
+        by_post.setdefault(entry["question"]["post_id"], []).append(entry)
+    candidates = set()
+    for post_id, entries in by_post.items():
+        due = [_log_time(e["question"].get("scheduled_resolution_time")) for e in entries]
+        if any(t and since - LATE_RESOLUTION <= t <= now for t in due):
+            candidates.add(post_id)
+    for tournament in (MAIN_PROJECT, "minibench", MARKET_PULSE_PROJECT, ANIMAL_FUTURES_PROJECT):
+        time.sleep(3)
+        try:
+            listed = _metaculus(
+                "posts/", tournaments=tournament, statuses="resolved", order_by="-actual_resolve_time", limit=100
+            )["results"]
+        except Exception:  # noqa: BLE001 - the scheduled dates still cover most questions
+            continue
+        for post in listed:
+            resolved_at = post.get("actual_resolve_time")  # None on a group post
+            if post["id"] in by_post and (resolved_at is None or resolved_at >= since.isoformat()):
+                candidates.add(post["id"])
+    rows, scores = [], []
+    for post_id in sorted(candidates):
+        post = _post(post_id)
+        if post is None:
+            rows.append(f"| post {post_id} | | | could not be read | |")
+            continue
+        for entry in by_post[post_id]:
+            q = entry["question"]
+            question = _find_question(post, q["id"])
+            resolved_at = question.get("actual_resolve_time") or ""
+            if question.get("resolution") in (None, "") or resolved_at < since.isoformat():
+                continue
+            slugs = " ".join(q.get("tournaments", []))
+            time_averaged = "animal-futures" in slugs
+            score = _peer_score(question, time_averaged)
+            if score is not None and question.get("resolution") not in ("annulled", "ambiguous"):
+                scores.append(score)
+            answer = _answer(q["type"], entry.get("final_forecast"), q.get("unit") or "")
+            rows.append(
+                f"| [{_title(q['text'])}]({q['url']}) | {_series(slugs)} | {answer} "
+                f"| {describe_outcome(question, time_averaged)} | {resolved_at[:10]} |"
+            )
+    if not rows:
+        return "None of our questions resolved in the last 7 days."
+    summary = f"{len(rows)} resolved"
+    if scores:
+        summary += (
+            f"; {len(scores)} scored, peer scores add up to {sum(scores):+.1f}, "
+            f"{sum(s > 0 for s in scores)} positive (positive beats the average forecaster)"
+        )
+    header = "| Question | Series | KCAP2.0 answer | Outcome | Resolved |\n|---|---|---|---|---|"
+    return summary + ".\n\n" + header + "\n" + "\n".join(rows)
 
 
 def forecasts_table(since: datetime) -> str:
-    entries = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((Path(__file__).parent / "forecast_logs").glob("*/*.json"))]
+    entries = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(LOG_DIR.glob("*/*.json"))]
     entries = [e for e in entries if datetime.fromisoformat(e["started_at"]) >= since]
     # A question that keeps failing has one log per attempt, but is one question.
     attempts: dict[str, int] = {}
@@ -161,17 +302,16 @@ def forecasts_table(since: datetime) -> str:
         q = entry["question"]
         if entry["status"] != "ok" and q["url"] in listed:
             continue
-        title = q["text"].replace("|", "/")
-        title = title if len(title) <= 90 else title[:87] + "..."
+        title = _title(q["text"])
         slugs = " ".join(q.get("tournaments", []))
-        tournament = "MiniBench" if "minibench" in slugs else "Market Pulse" if "market-pulse" in slugs else "Main"
+        tournament = _series(slugs)
         answer = _answer(q["type"], entry.get("final_forecast"), q.get("unit") or "")
         outcome = None
         if entry["status"] != "ok":
             listed.add(q["url"])
             answer = f"FAILED, {attempts[q['url']]} attempt(s): {(entry.get('error') or '')[:60]}"
             outcome = "no forecast, scores 0"
-        rows.append(f"| [{title}]({q['url']}) | {tournament} | {answer} | {outcome or _outcome(q.get('post_id'))} |")
+        rows.append(f"| [{title}]({q['url']}) | {tournament} | {answer} | {outcome or _outcome(q.get('post_id'), q.get('id'), 'animal-futures' in slugs)} |")
     if not rows:
         return "No questions this week."
     header = "| Question | Series | KCAP2.0 answer | Outcome |\n|---|---|---|---|"
@@ -253,6 +393,7 @@ async def build_report() -> str:
     sections = {
         "Forecasts (last 7 days)": forecasts,
         "Questions and answers (last 7 days)": forecasts_table(since),
+        "Resolved (last 7 days)": resolved_since(since, now),
         "Missed questions": await missed_questions(since),
         "Main season leaderboard": leaderboard(MAIN_PROJECT),
         "Current MiniBench leaderboard": (
