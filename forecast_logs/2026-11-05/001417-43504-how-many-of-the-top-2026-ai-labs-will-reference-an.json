@@ -1,0 +1,373 @@
+{
+  "logged_at": "2026-11-05T00:17:59.429339+00:00",
+  "bot_version": "2026-11-04.1",
+  "started_at": "2026-11-05T00:14:17.346724+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43504,
+    "post_id": 43498,
+    "url": "https://www.metaculus.com/questions/43498",
+    "type": "MultipleChoiceQuestion",
+    "unit": "",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "How many of the top 2026 AI labs will reference animal welfare in their models' guidelines at the end of 2034?",
+    "resolution_criteria": "This question will resolve as the number of companies from the following list that, as of December 31, 2034, explicitly state in their LLM fine-tuning instructions that animal welfare is a consideration: Alibaba, Anthropic, DeepSeek, Google, Meta, OpenAI, xAI.\n\nIf different instructions are used for different models from the same company, then the corresponding company will be counted if at least one set of currently used instructions mentions animal welfare.",
+    "fine_print": "For the purposes of this question, \"fine-tuning instructions\" include any document or guidelines that are either directly used in the training of the LLM (e.g., [Anthropic's Constitution](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)) or provided to human raters whose output is used to train the LLM (e.g., OpenAI's [ModelSpec](https://model-spec.openai.com/)).\n\n*Given the Animal Futures Tournament timeframe, scores from this question will not be included in the tournament leaderboard. However participants are required to predict on at least two of the three long-term questions, as per the tournament rules.*",
+    "close_time": "2034-12-31 23:59 UTC",
+    "scheduled_resolution_time": "2035-01-01 12:00 UTC"
+  },
+  "research": [
+    "Two companies already appear to qualify: Anthropic clearly, and OpenAI probably. That is up from one in the question's May 2026 background. I found no animal-welfare language from Alibaba, DeepSeek, Google, Meta or xAI, but my searches for their guidelines were thin, so treat that as \"not found\" rather than \"confirmed absent.\"\n\n## 1. Resolution source\nNo single source decides this. Resolution depends on each company's published fine-tuning documents.\n- Undated page (current version published 2026-01-21/22): Claude's Constitution lists \"Welfare of animals and of all sentient beings\" among the values Claude weighs. It also names harms to \"non-human beings\" as costs. I read only the first half of the page. [Anthropic](https://www.anthropic.com/constitution); [TechCrunch](https://techcrunch.com/2026/01/21/anthropic-revises-claudes-constitution-and-hints-at-chatbot-consciousness)\n- 2026-10-29: OpenAI's latest Model Spec is the version dated 2026-10-29. In the first 100k of 123k characters I found no animal-welfare text, only incidental animal mentions. My attempt to read the remainder failed with a tool error. [Model Spec](https://model-spec.openai.com/2026-10-29.html)\n\n## 2. Current status\n- Anthropic qualifies today.\n- OpenAI very likely qualifies since 2026-10-29, based on secondary sources:\n  - 2026-10-30: one commentary says the new spec lists \"Effects on other people, animals, or the environment\" among side effects. It also describes two new examples where the assistant raises animal welfare, including wild animals, without being asked. It calls these the first positive mentions in any public version; the earlier spec mentioned animals once, negatively. [Sandcastles](https://sandcastlesblog.substack.com/p/openai-model-spec-animal-welfare)\n  - 2026-11-03: Zvi Mowshowitz quotes a new Scottish Fold breeder example noting bans \"on animal-welfare grounds\" in the Netherlands and Austria. He reports, using a count by Claude Opus, that the spec mentions animal welfare 7 times. [Zvi](https://thezvi.substack.com/p/openai-updates-its-model-spec)\n  - One caveat: whether examples and a side-effects list count as \"explicitly stating animal welfare is a consideration\" is a judgment call for resolvers. I could not confirm the exact wording myself.\n- Alibaba, DeepSeek, Google, Meta, xAI: none found. One essay says Google's AI principles lack comparable language about non-human welfare. [byaiforai](https://byaiforai.github.io/en/living-values-animal-welfare)\n\n## 3. Recent news (newest first)\n- 2026-11-03: Zvi's post on the OpenAI spec update, as above. [Zvi](https://thezvi.substack.com/p/openai-updates-its-model-spec)\n- 2026-10-30: commentary frames the update as OpenAI joining Anthropic in teaching models to consider animal welfare. [Sandcastles](https://sandcastlesblog.substack.com/p/openai-model-spec-animal-welfare)\n- 2026-10-29: OpenAI publishes the updated Model Spec, organized around five values including harm minimization and care. [YourStory](https://yourstory.com/ai-story/openai-model-spec-ai-behaviour-guidelines)\n- 2026 (exact date not found): a benchmark of 7 models (Claude Opus 4.7, GPT-5.5, DeepSeek V4, Llama 3.3 70B, Grok 4.3, Gemini 3.1 Flash Lite, Mistral) scored how they handle animal welfare. A small Gemini model dropped to last when pushed back on. [arXiv 2605.16301](https://arxiv.org/html/2605.16301)\n- 2026: a second benchmark found one welfare-aware line in the system prompt changed Claude's and GPT-5.5's behavior much more than DeepSeek's or Gemini's. [HF](https://huggingface.co/papers/2606.18142.md)\n- 2026-01-21/22: Anthropic publishes its revised constitution, about 23-25k words, under a Creative Commons license. [The Register](https://www.theregister.com/2026/01/22/anthropic_claude_constitution/)\n- Undated: advocacy work aimed at labs includes NYU's Center for Mind, Ethics, and Policy brief \"Animal Welfare and AI Welfare: Candidate Commitments for Model Specs and Constitutions.\" There are also AI x animals grants. [EA Forum](https://forum.effectivealtruism.org/posts/5Rh4Qf6bfexHrdzEu/how-can-we-increase-consideration-for-animal-welfare-in-ai); [LessWrong](https://www.lesswrong.com/posts/ZpEjYDrbZx8hooLkK/fast-grants-for-ai-x-animals)\n\n## 4. Base rates\n- Anthropic's 2023 constitutional AI principles had no animal-welfare line as far as I know; I did not check this. The line appeared in the January 2026 constitution.\n- OpenAI first published its Model Spec in May 2024 and has updated it several times. The October 2026 version is the first to treat animal welfare positively.\n- That is roughly 0 companies before 2026, then 1 in January 2026, then likely 2 by October 2026: about one new adopter per year among the 7.\n- Only Anthropic and OpenAI publish detailed public behavior specs. The other five have not, which makes \"explicit statement\" hard to verify for them. This is a structural limit on the count, not just a lack of willingness. Labs can also drop wording: the OpenAI spec's earlier animal mention was negative.\n\n## 5. Other forecasts\n- I found no Manifold, Polymarket, Kalshi or Metaculus market on this question or a close variant.\n- The markets collected by code do not match. They cover which lab will have the top model, such as Kalshi \"top AI model before 2030\": Meta 0.61, xAI 0.41, DeepSeek 0.46, Alibaba 0.30. These are relevant only to how prominent each lab will be.\n\n## 6. Upcoming events before resolution\n- Further revisions of OpenAI's Model Spec and Anthropic's constitution. Both are dated, versioned documents, and wording could be strengthened or removed.\n- Possible first public specs or constitutions from Google DeepMind, Meta, xAI, Alibaba or DeepSeek, which could happen through 2034.\n- Advocacy campaigns like the NYU brief, and new animal-welfare benchmarks that could put pressure on labs.\n- Regulation such as the EU AI Act codes of practice or Chinese model rules, which could require labs to publish behavior specs.\n- Changes in who the companies are: mergers, exits, or the end of Llama or Grok development, which would change what \"currently used instructions\" means by 2034-12-31.\n\nI could not find: the exact OpenAI wording verified at the source, any published behavior guidelines from Google, Meta, xAI, Alibaba or DeepSeek, or any prediction market on this question.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-05 00:14 UTC; check each market really matches the question)\n- Kalshi: Which country will have the best LLM at the end of the decade? (Dec 31, 2029 at 10:00 AM ET). Yes prices: United States: 0.66; China: 0.29; South Korea: 0.03; United Arab Emirates: 0.03; France: 0.04.\n- Kalshi: When will an AI lab solve another Millennium Prize Problem? (Before 2028). Yes prices: Before Jul 1, 2027: 0.60; Before 2027: 0.32; Before 2028: 0.71; Before Dec 1, 2026: 0.23; Before Oct 1, 2026: 0.0100; Before Nov 1, 2026: 0.0600.\n- Kalshi: What will Rocket Lab say during their next earnings call? (On Nov 9, 2026). Yes prices: Cryogenic: 0.43; Human: 0.41; Virginia: 0.58; Japan: 0.34; SpaceX: 0.30; Mars: 0.73; Momentum: 0.80; Tariff: 0.21; Golden Dome: 0.78; NASA: 0.78.\n- Kalshi: Best AI this week (On Nov 16, 2026). Yes prices: Qwen: 0.0000; Amazon Nova: 0.0000; Claude: 0.0000; Dola: 0.0000; Gemini: 0.0000; MUSE: 0.0000; Kimi: 0.0000; ChatGPT: 0.0000; Grok: 0.0000.\n- Kalshi: Which companies will have the top AI model before 2030? (Before Jan 1, 2030). Yes prices: MiniMax: 0.46; DeepSeek: 0.46; Moonshot: 0.46; Z AI: 0.46; Tencent: 0.56; xAI: 0.41; Baidu: 0.60; Xiaomi: 0.60; Meta: 0.61; Alibaba: 0.30.\n- Kalshi: Most popular AI this week (On Nov 2, 2026). Yes prices: DeepSeek: 0.94; Anthropic: 0.0000; Google: 0.0000; OpenAI: 0.0000; Tencent: 0.0000; Xiaomi: 0.0000; Z.ai: 0.0000.\n- Kalshi: Which companies will have a top-ranked AI model this year? (In 2026). Yes prices: OpenAI: 0.15; Meta: 0.08; xAI: 0.07; ByteDance: 0.04; Baidu: 0.04; Z.ai: 0.03; Mistral: 0.03; Nvidia: 0.03; Deepseek: 0.04; Alibaba: 0.01.\n- Kalshi: Which AI companies will have a Pareto efficient model at the end of 2026? (On Dec 31, 2026). Yes prices: Google: 0.54; Xiaomi: 0.57; Moonshot AI: 0.41; Z AI: 0.27; Meta: 0.20; Alibaba: 0.17; xAI: 0.17; OpenAI: 0.83; DeepSeek: 0.15; Tencent: 0.15.\n- Polymarket: Will a Chinese company have a top ___ AI model by December 31? (ends 2027-01-01). [Yes, No] prices: #3: [\"0.15\", \"0.85\"]; #5: [\"1\", \"0\"]; #10: [\"1\", \"0\"]; #1: [\"0.055\", \"0.945\"]\n- Polymarket: Will a dLLM be the top AI model before 2027? (ends 2027-01-01). [Yes, No] prices: Will a dLLM be the top AI model before 2027?: [\"0.0195\", \"0.9805\"]\n- Polymarket: Next Fable Model (5.2+): Text Arena Rank Debut? (ends 2027-07-01). [Yes, No] prices: Top 1: [\"0.285\", \"0.715\"]; Top 3: [\"0.835\", \"0.165\"]; Top 5: [\"0.875\", \"0.125\"]; Top 10: [\"0.9125\", \"0.0875\"]\n- Polymarket: Which companies will have a #1 AI model by December 31? (ends 2027-01-01). [Yes, No] prices: Google: [\"1\", \"0\"]; OpenAI: [\"0.145\", \"0.855\"]; Alibaba: [\"0.034\", \"0.966\"]; xAI: [\"0.05\", \"0.95\"]; ByteDance: [\"0.019\", \"0.981\"]; Baidu: [\"0.03\", \"0.97\"]\n- Polymarket: Who will be added to Chinese Military Companies list by June 30, 2027? (ends 2027-07-01). [Yes, No] prices: DeepSeek: [\"0.255\", \"0.745\"]; ByteDance: [\"0.085\", \"0.915\"]; Xiaomi: [\"0.125\", \"0.875\"]; Moonshot AI: [\"0.185\", \"0.815\"]\n- Polymarket: Which companies will be acquired before 2027? (ends 2027-01-01). [Yes, No] prices: Brown-Forman: [\"0.06\", \"0.94\"]; MGM Resorts: [\"0.0685\", \"0.9315\"]; Snapchat: [\"0.044\", \"0.956\"]; Warner Bros. Discovery: [\"1\", \"0\"]; iRobot: [\"1\", \"0\"]; Zoom Video Communications: [\"0.0535\", \"0.9465\"]",
+    "I found no prediction market or published forecast on this question. As of today the count appears to be 1 for sure (Anthropic) and plausibly 2, if OpenAI's new October 2026 Model Spec counts. I couldn't fully verify the OpenAI wording myself, and whether it meets the \"explicitly state that animal welfare is a consideration\" bar is a judgment call.\n\n### 1. Resolution source\n- No single data series decides this. Resolution depends on whatever public guidelines each of the 7 labs has on 2034-12-31.\n- Undated (fetched 2026-11-05): Anthropic's constitution lists \"Welfare of animals and of all sentient beings\" among the values Claude must weigh. It also lists harms to \"non-human beings.\" I only read the first half of the page, and no version date is shown on it. [Anthropic](https://www.anthropic.com/constitution)\n- 2026-10-29: OpenAI's current Model Spec is this version (model-spec.openai.com now redirects to it). [OpenAI Model Spec](https://model-spec.openai.com/2026-10-29.html)\n  - In the part of the page I could read, I found no mention of animals. The fetch of the rest of the page was blocked.\n  - Secondary sources (below) say animal language was added.\n\n### 2. Current status\n- Anthropic: counts. This is explicit and has been in place since the constitution was published.\n- 2026-10-30: An animal-advocacy blog reports that OpenAI's new spec lists \"Effects on other people, animals, or the environment\" among the consequences the model should weigh. [Sandcastles](https://sandcastlesblog.substack.com/p/openai-model-spec-animal-welfare)\n  - The same post says two new example dialogues were added, including one where the assistant raises animal welfare concerns, wild animals included, without being asked.\n  - It reproduces those dialogues only as images, so I couldn't check them.\n- 2026-11-03: Zvi Mowshowitz says a spec example about breeding Scottish Fold cats notes bans on \"animal-welfare grounds.\" He also says the model treats an omitted animal-welfare warning as relevant, and that \"animal welfare is considered seven times\" in the example's text. [Zvi](https://thezvi.substack.com/p/openai-updates-its-model-spec)\n- This means the question's background (\"As at May 2026, other big LLMs do not mention animal welfare\") is now arguably out of date for OpenAI.\n- I found no public behavior guidelines that mention animal welfare from Google, Meta, xAI, DeepSeek or Alibaba. For Google, Meta and xAI I found no public model spec at all, and none at all for DeepSeek or Alibaba.\n\n### 3. Recent news (newest first)\n- 2026-11-03: Zvi's analysis of the OpenAI spec, as above. [Zvi](https://thezvi.substack.com/p/openai-updates-its-model-spec)\n- 2026-10-30: The Sandcastles post frames OpenAI as joining Anthropic in teaching models to consider animal welfare. [Sandcastles](https://sandcastlesblog.substack.com/p/openai-model-spec-animal-welfare)\n- 2026-10-29: OpenAI restructured the spec around five core values, one of which is minimizing harm. One analysis says the headings fell from 81 to 70. [OpenAI blog](https://openai.com/index/updated-model-spec/), [FourWeekMBA](https://fourweekmba.com/ai-openai-rebuilds-model-spec-around-5-values-cuts-11-headings/)\n- 2026-08-18: An earlier OpenAI spec update (classed as minor) had no animal content. [Midas Project](https://www.themidasproject.com/watchtower/openai-08182026)\n- 2026: Anima International published a critique arguing that animals barely feature in the Anthropic and OpenAI documents. It says an OpenAI example criticizes ChatGPT for an \"overly moralistic tone\" when it advocates for animals. The page returned 403 to me, so I couldn't read it. [Anima](https://animainternational.org/blog/ai-alignment-animal-welfare/)\n- 2026: Advocacy efforts are under way:\n  - NYU's Center for Mind, Ethics, and Policy has a Welfare Alignment Project with a brief proposing model-spec commitments on animal and AI welfare. I only saw this in search summaries.\n  - AnimalHarmBench 2.0 and related benchmarks test Gemini, Grok and DeepSeek on animal-welfare reasoning. [EA Forum](https://forum.effectivealtruism.org/posts/nBnRKpQ8rzHgFSJz9/animalharmbench-2-0-evaluating-llms-on-reasoning-about), [arXiv](https://arxiv.org/html/2605.16301)\n\n### 4. Base rates\n- OpenAI's spec timeline:\n  - May 2024: first published.\n  - Then revised in 2025-04, 2025-10, 2026-08 and 2026-10.\n  - Animal language first appears, by these reports, in the October 2026 version, about 2.5 years after the first.\n- So among the 7 labs, roughly 1 to 2 adopted this in about 3 years.\n- For Google, Meta, xAI, DeepSeek and Alibaba, I found no published spec of the Model Spec or constitution kind, which makes it harder for them to qualify at all.\n- Things could also move backwards: specs get rewritten often (OpenAI cut 11 headings in October 2026), and a company could drop wording or stop publishing.\n- Corporate continuity over 8 years is uncertain. That includes mergers and the possibility that any of the 7 labs stops making LLMs.\n\n### 5. Other forecasts\n- I found no Manifold, Metaculus, Polymarket or Kalshi market on this question.\n- The markets supplied with this task are about which lab leads on capability. None of them matches this question:\n  - Kalshi \"Which companies will have the top AI model before 2030\": Meta 0.61, DeepSeek 0.46, xAI 0.41, Alibaba 0.30.\n  - Polymarket \"#1 AI model by Dec 31, 2026\": Google 1.0, OpenAI 0.145.\n  - These are useful at most as a rough sense of which labs will stay relevant.\n\n### 6. Upcoming events before resolution\n- Further OpenAI spec revisions: they come out several times a year, and each could add to or remove the animal language.\n- Revisions to Anthropic's constitution.\n- Any first-time publication of a constitution or spec by Google DeepMind, Meta, xAI, DeepSeek or Alibaba.\n- Continued advocacy work: NYU's Welfare Alignment Project, Anima International, benchmark groups.\n- Regulation that might push labs to publish their specs, such as transparency rules under the EU AI Act. This is speculative, and I found no concrete measure that requires it.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-05 00:14 UTC; check each market really matches the question)\n- Kalshi: Which country will have the best LLM at the end of the decade? (Dec 31, 2029 at 10:00 AM ET). Yes prices: United States: 0.66; China: 0.29; South Korea: 0.03; United Arab Emirates: 0.03; France: 0.04.\n- Kalshi: When will an AI lab solve another Millennium Prize Problem? (Before 2028). Yes prices: Before Jul 1, 2027: 0.60; Before 2027: 0.32; Before 2028: 0.71; Before Dec 1, 2026: 0.23; Before Oct 1, 2026: 0.0100; Before Nov 1, 2026: 0.0600.\n- Kalshi: What will Rocket Lab say during their next earnings call? (On Nov 9, 2026). Yes prices: Cryogenic: 0.43; Human: 0.41; Virginia: 0.58; Japan: 0.34; SpaceX: 0.30; Mars: 0.73; Momentum: 0.80; Tariff: 0.21; Golden Dome: 0.78; NASA: 0.78.\n- Kalshi: Best AI this week (On Nov 16, 2026). Yes prices: Qwen: 0.0000; Amazon Nova: 0.0000; Claude: 0.0000; Dola: 0.0000; Gemini: 0.0000; MUSE: 0.0000; Kimi: 0.0000; ChatGPT: 0.0000; Grok: 0.0000.\n- Kalshi: Which companies will have the top AI model before 2030? (Before Jan 1, 2030). Yes prices: MiniMax: 0.46; DeepSeek: 0.46; Moonshot: 0.46; Z AI: 0.46; Tencent: 0.56; xAI: 0.41; Baidu: 0.60; Xiaomi: 0.60; Meta: 0.61; Alibaba: 0.30.\n- Kalshi: Most popular AI this week (On Nov 2, 2026). Yes prices: DeepSeek: 0.94; Anthropic: 0.0000; Google: 0.0000; OpenAI: 0.0000; Tencent: 0.0000; Xiaomi: 0.0000; Z.ai: 0.0000.\n- Kalshi: Which companies will have a top-ranked AI model this year? (In 2026). Yes prices: OpenAI: 0.15; Meta: 0.08; xAI: 0.07; ByteDance: 0.04; Baidu: 0.04; Z.ai: 0.03; Mistral: 0.03; Nvidia: 0.03; Deepseek: 0.04; Alibaba: 0.01.\n- Kalshi: Which AI companies will have a Pareto efficient model at the end of 2026? (On Dec 31, 2026). Yes prices: Google: 0.54; Xiaomi: 0.57; Moonshot AI: 0.41; Z AI: 0.27; Meta: 0.20; Alibaba: 0.17; xAI: 0.17; OpenAI: 0.83; DeepSeek: 0.15; Tencent: 0.15.\n- Polymarket: Will a Chinese company have a top ___ AI model by December 31? (ends 2027-01-01). [Yes, No] prices: #3: [\"0.15\", \"0.85\"]; #5: [\"1\", \"0\"]; #10: [\"1\", \"0\"]; #1: [\"0.055\", \"0.945\"]\n- Polymarket: Will a dLLM be the top AI model before 2027? (ends 2027-01-01). [Yes, No] prices: Will a dLLM be the top AI model before 2027?: [\"0.0195\", \"0.9805\"]\n- Polymarket: Next Fable Model (5.2+): Text Arena Rank Debut? (ends 2027-07-01). [Yes, No] prices: Top 1: [\"0.285\", \"0.715\"]; Top 3: [\"0.835\", \"0.165\"]; Top 5: [\"0.875\", \"0.125\"]; Top 10: [\"0.9125\", \"0.0875\"]\n- Polymarket: Which companies will have a #1 AI model by December 31? (ends 2027-01-01). [Yes, No] prices: Google: [\"1\", \"0\"]; OpenAI: [\"0.145\", \"0.855\"]; Alibaba: [\"0.034\", \"0.966\"]; xAI: [\"0.05\", \"0.95\"]; ByteDance: [\"0.019\", \"0.981\"]; Baidu: [\"0.03\", \"0.97\"]\n- Polymarket: Who will be added to Chinese Military Companies list by June 30, 2027? (ends 2027-07-01). [Yes, No] prices: DeepSeek: [\"0.255\", \"0.745\"]; ByteDance: [\"0.085\", \"0.915\"]; Xiaomi: [\"0.125\", \"0.875\"]; Moonshot AI: [\"0.185\", \"0.815\"]\n- Polymarket: Which companies will be acquired before 2027? (ends 2027-01-01). [Yes, No] prices: Brown-Forman: [\"0.06\", \"0.94\"]; MGM Resorts: [\"0.0685\", \"0.9315\"]; Snapchat: [\"0.044\", \"0.956\"]; Warner Bros. Discovery: [\"1\", \"0\"]; iRobot: [\"1\", \"0\"]; Zoom Video Communications: [\"0.0535\", \"0.9465\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "0": 0.04,
+        "1": 0.16,
+        "2": 0.33,
+        "3": 0.25,
+        "4": 0.13,
+        "5": 0.06,
+        "6": 0.02,
+        "7": 0.01
+      },
+      "reasoning": "(a) **Time left.** About 8 years and 2 months. The question resolves on 2034-12-31, and the count is checked around 2035-01-01.\n\n(b) **Status quo.** If nothing changed, the answer would be 2. Anthropic's January 2026 constitution names \"Welfare of animals and of all sentient beings\" explicitly. OpenAI's 2026-10-29 Model Spec reportedly lists effects on animals among side effects and includes animal-welfare examples. The OpenAI wording was not verified at the source, and whether it counts as \"explicit\" is a judgment call for resolvers.\n\n(c) **Base rates.**\n- Adoption has gone from 0 labs before 2026, to 1 in January 2026, to probably 2 by October 2026. That is roughly one new adopter per year, but both adopters are the only two labs that publish detailed behavior specs.\n- The other five labs publish no comparable public fine-tuning document. That is a structural barrier: a lab cannot count unless it publishes guidelines that resolvers can check.\n- Over 8 years, wording can also be dropped, documents rewritten, and companies merged or exited.\n\n(d) **Strongest evidence.**\n- 2026-01-21/22: Anthropic's revised constitution includes animal welfare explicitly.\n- 2026-10-29: OpenAI publishes its updated Model Spec.\n- 2026-10-30 and 2026-11-03: Sandcastles and Zvi report about 7 animal-welfare mentions in that spec, including a Scottish Fold breeding example citing bans \"on animal-welfare grounds.\"\n- Advocacy is growing. Examples include the NYU brief proposing candidate commitments for model specs and constitutions, AI x animals grants, and welfare benchmarks.\n- I found no published guidelines from Google, Meta, xAI, Alibaba or DeepSeek.\n\n**Rough probability that each lab counts in 2034:**\n\n| Lab | Probability |\n|---|---|\n| Anthropic | about 85% |\n| OpenAI | about 70% |\n| Google | about 35% (it might publish a spec, possibly copying the industry norm) |\n| Meta | about 15% |\n| xAI | about 13% |\n| Alibaba | about 10% |\n| DeepSeek | about 8% |\n\nThese sum to an expected count of about 2.3.\n\n(e) **Unexpected-outcome scenarios.**\n- **High count:** Regulation, such as EU AI Act codes of practice, forces all major labs to publish behavior specs. Industry convergence on Anthropic- or OpenAI-style templates then leads 4 to 6 labs to include animal or sentient-being welfare.\n- **Low count:** A political backlash against \"woke AI\", plus document restructuring, leads OpenAI to drop the language and Anthropic to rewrite its constitution more narrowly. The count falls to 0 or 1.\n\nI started from the status quo of 2. I moved some weight upward because of the long horizon and the visible adoption trend. I kept substantial weight on 1 and below because of reversals, the strictness of the \"explicit\" test, and the fact that most of these labs do not publish specs.\n\nOption_A: 0.04\nOption_B: 0.16\nOption_C: 0.33\nOption_D: 0.25\nOption_E: 0.13\nOption_F: 0.06\nOption_G: 0.02\nOption_H: 0.01"
+    },
+    {
+      "value": {
+        "0": 0.05,
+        "1": 0.17,
+        "2": 0.32,
+        "3": 0.24,
+        "4": 0.12,
+        "5": 0.06,
+        "6": 0.03,
+        "7": 0.01
+      },
+      "reasoning": "**(a) Time left:** About 8 years and 2 months (to 2034-12-31). That is a very long horizon for AI-lab policies.\n\n**(b) Status quo:** 2. Anthropic qualifies clearly. OpenAI very likely qualifies since its 2026-10-29 Model Spec, which reportedly lists effects on animals as a side effect and has about 7 mentions of animal welfare, including examples where the assistant raises it unprompted.\n\n**(c) Base rates:**\n- Diffusion so far is roughly one new adopter per year: 0 before 2026, 1 in January 2026, then 2 by October 2026.\n- Only 2 of the 7 labs publish detailed behavior specs. That limits verifiable \"explicit statements\" for the others.\n- Policies can be reversed. Wording can be dropped, and companies can merge, exit or stop developing a model line.\n- Norms set by leaders tend to spread over time. They spread less to Chinese labs and to labs with different cultures, like xAI and Meta.\n\n**(d) Strongest evidence:**\n- 2026-01-21/22: Anthropic's constitution explicitly lists \"Welfare of animals and of all sentient beings.\"\n- 2026-10-29/30 and 2026-11-03: OpenAI's Model Spec update adds animal-welfare examples and side-effect language, according to the Sandcastles and Zvi commentaries. The exact wording was not verified at the source.\n- Advocacy aimed at labs: the NYU Center for Mind, Ethics, and Policy model-spec brief, AI x animals grants, and new animal-welfare benchmarks.\n- No published guidelines found from Google, Meta, xAI, Alibaba or DeepSeek.\n\n**(e) Unexpected scenarios:**\n- Higher count: regulation such as EU codes of practice requires published behavior specs. Google DeepMind and Meta then publish constitution-style documents that copy Anthropic and OpenAI language, reaching 4 to 5.\n- Lower count: political backlash against \"woke AI\" leads OpenAI to strip value-laden examples. Anthropic restructures its constitution around narrower principles. The count falls to 0 or 1.\n\n**Reasoning:** I start from the status quo of 2. My rough chances of each lab qualifying in 2034:\n- Anthropic keeps the language: about 85%.\n- OpenAI keeps it: about 70%.\n- Google adopts: about 35%. It is the most likely new adopter because of its safety culture and the chance it publishes a spec.\n- Meta: about 15%.\n- xAI: about 12%.\n- Alibaba: about 10%.\n- DeepSeek: about 8%.\n\nThat gives an expected count of roughly 2.3 to 2.5. I moved slightly upward from the status quo for diffusion and advocacy pressure. I kept wide tails because of the 8-year horizon, the chance of policy reversals, and uncertainty about how resolvers will verify unpublished documents.\n\nOption_A: 0.05\nOption_B: 0.17\nOption_C: 0.32\nOption_D: 0.24\nOption_E: 0.12\nOption_F: 0.06\nOption_G: 0.03\nOption_H: 0.01"
+    },
+    {
+      "value": {
+        "0": 0.07,
+        "1": 0.2,
+        "2": 0.29,
+        "3": 0.22,
+        "4": 0.12,
+        "5": 0.06,
+        "6": 0.03,
+        "7": 0.01
+      },
+      "reasoning": "(a) **Time left:** About 8 years and 2 months. The question resolves around 2035-01-01, based on documents in use on 2034-12-31.\n\n(b) **Status quo:** The count is 2. Anthropic clearly qualifies through its January 2026 constitution. OpenAI very likely qualifies through its 2026-10-29 Model Spec, which lists effects on animals as a side-effect consideration and gives animal-welfare examples.\n\n(c) **Base rates:**\n- Before 2026, no company qualified. Anthropic was added in January 2026 and OpenAI in October 2026, which is roughly one new adopter per year among the 7 companies.\n- Over 8 years both drift and reversal are plausible. Documents get rewritten, companies merge or exit, and only labs that publish detailed specs can verifiably qualify.\n- Historically, voluntary norms that start with one or two Western labs, such as safety frameworks and model cards, have spread to Google DeepMind and partly to Meta. They have spread much less to xAI and the Chinese labs.\n\n(d) **Strongest evidence:**\n- **Anthropic, 2026-01-21:** the constitution explicitly lists \"Welfare of animals and of all sentient beings\" among the values Claude weighs.\n- **OpenAI, 2026-10-29:** the Model Spec reportedly mentions animal welfare about 7 times and lists effects on animals among side effects (Sandcastles 2026-10-30, Zvi 2026-11-03). I could not verify the exact wording, so OpenAI's status carries some resolver uncertainty.\n- **Other five labs:** none has published a detailed behavior spec. Advocacy (the NYU brief, AI x animals grants) is targeting exactly this kind of commitment.\n\nMy estimates of each company qualifying at end of 2034:\n\n| Company | Probability |\n|---|---|\n| Anthropic | about 80% |\n| OpenAI | about 65% |\n| Google | about 35% |\n| Meta | about 15% |\n| xAI | about 12% |\n| Alibaba | about 12% |\n| DeepSeek | about 10% |\n\nThese sum to an expected value of about 2.3. I have widened the spread because outcomes are correlated: industry norms, regulation that mandates published specs, or political backlash would move several labs together.\n\n(e) **Unexpected-outcome scenarios:**\n- **High count (5 to 7):** regulation such as the EU AI Act codes of practice pushes all major labs to publish full constitutions. These converge on Anthropic-style value lists that include animal or sentient welfare, and Chinese labs copy Western templates.\n- **Low count (0 or 1):** political backlash against \"woke AI\" leads OpenAI and even Anthropic to trim value lists. Alternatively, Anthropic is acquired or restructured, or labs stop publishing training documents.\n\nI moved only slightly up from the status quo of 2, reflecting the trend of diffusion plus the long horizon. I kept substantial mass on 1, because one of the current two could drop or be judged not to qualify.\n\nOption_A: 0.07\nOption_B: 0.2\nOption_C: 0.29\nOption_D: 0.22\nOption_E: 0.12\nOption_F: 0.06\nOption_G: 0.03\nOption_H: 0.01"
+    },
+    {
+      "value": {
+        "0": 0.08,
+        "1": 0.24,
+        "2": 0.27,
+        "3": 0.18,
+        "4": 0.11,
+        "5": 0.06,
+        "6": 0.04,
+        "7": 0.02
+      },
+      "reasoning": "(a) **Time left:** about 8 years and 2 months. The outcome is known at the end of 2034, with resolution around 2035-01-01.\n\n(b) **Status quo:** Anthropic counts for certain. OpenAI's October 2026 Model Spec reportedly lists \"Effects on other people, animals, or the environment\" and includes animal-welfare example dialogues, so it likely counts too. If nothing changed, the answer would be 2, or 1 under a strict reading of \"explicitly state.\"\n\n(c) **Base rates:** Specs get revised often, so wording can be both added and dropped.\n- In about 2.5 years, 1 to 2 of the 7 labs adopted animal-welfare language.\n- Only 2 of the 7 publish a spec or constitution of this kind at all.\n- Google, Meta, xAI, DeepSeek and Alibaba have no public spec. They would first need to publish one, and then include animal language.\n- Rough per-lab chances of qualifying in 2034:\n\n| Lab | Chance |\n|---|---|\n| Anthropic | ~80% (risk: rewrite, restructuring or a strict reading) |\n| OpenAI | ~60% |\n| Google | ~30% |\n| Meta | ~15% |\n| xAI | ~15% |\n| DeepSeek | ~10% |\n| Alibaba | ~10% |\n\nThese sum to an expected count of about 2.2.\n\n(d) **Strongest evidence:**\n- Anthropic's constitution explicitly lists \"Welfare of animals and of all sentient beings\" (fetched 2026-11).\n- OpenAI's 2026-10-29 Model Spec reportedly added animal language and examples (Sandcastles, 2026-10-30; Zvi, 2026-11-03), which shows the practice spreading.\n- Advocacy is active and gaining momentum: NYU's Welfare Alignment Project and AnimalHarmBench 2.0.\n- Pulling the other way, there is a critique that animals barely feature in these documents, and five labs have no public spec.\n\n(e) **Unexpected scenarios:**\n- **High count:** EU AI Act transparency rules or industry norms push every major lab to publish a constitution-style spec. Animal welfare then spreads as boilerplate, as in \"harms to people, animals, environment,\" giving 5 to 7.\n- **Low count (0):** Anthropic restructures its constitution, a merger occurs, or it shifts to non-public training documents. OpenAI also drops the line in a rewrite.\n\n**Adjustment:** I started from the status quo of 2 and widened the distribution for 8 years of change. I shifted it slightly upward for the adoption trend and active advocacy, and kept mass at 1 and 0 for strict interpretation and the risk of losing the wording.\n\nOption_A: 0.08\nOption_B: 0.24\nOption_C: 0.27\nOption_D: 0.18\nOption_E: 0.11\nOption_F: 0.06\nOption_G: 0.04\nOption_H: 0.02"
+    },
+    {
+      "value": {
+        "0": 0.05,
+        "1": 0.15,
+        "2": 0.28,
+        "3": 0.22,
+        "4": 0.14,
+        "5": 0.09,
+        "6": 0.05,
+        "7": 0.02
+      },
+      "reasoning": "**(a) Time left:** about 8 years and 2 months, until 2034-12-31, with resolution around 2035-01-01.\n\n**(b) Status quo:** Anthropic clearly counts. OpenAI's October 2026 Model Spec reportedly lists \"Effects on other people, animals, or the environment\" and includes animal-welfare examples, so it probably counts too. If nothing changed, the answer would be 2, or 1 under a strict reading.\n\n**(c) Base rates:**\n- From about 2023 to 2026, roughly 1 to 2 of these 7 labs adopted animal-welfare language. OpenAI took about 2.5 years from its first spec.\n- Five labs (Google, Meta, xAI, DeepSeek, Alibaba) have no public spec at all. They would first need to start publishing, which makes qualifying hard.\n- Specs are rewritten often, so language can also be removed, and over 8 years labs may merge, stop publishing or leave the market.\n- Over long horizons, adoption of norms like this tends to spread gradually, particularly among Western labs under advocacy and regulatory transparency pressure. Chinese labs are less likely to publish public value documents.\n\n**(d) Strongest evidence:**\n- Anthropic's constitution explicitly lists \"Welfare of animals and of all sentient beings\" (fetched 2026-11-05).\n- OpenAI's Model Spec of 2026-10-29 reportedly adds animals among the consequences to weigh, plus examples that raise animal welfare (Sandcastles 2026-10-30, Zvi 2026-11-03).\n- Advocacy is active: NYU's Welfare Alignment Project, Anima International and AnimalHarmBench 2.0 (2026).\n- No public spec exists from the other five labs.\n- There is ambiguity about whether content policies that ban \"animal cruelty\" content count. A lenient resolver could count Google or Meta through safety guidelines.\n\n**(e) Unexpected scenarios:**\n- *Low:* AI policy fragments, labs stop publishing training documents or specs become terse legal-style documents, and even Anthropic's wording is reorganized so it no longer mentions animals. This gives 0 or 1.\n- *High:* EU AI Act transparency rules push every major lab to publish model specs. Industry convergence on \"sentient beings\" language, perhaps tied to AI-welfare discussions, spreads to Google, Meta and xAI, and even Alibaba publishes a values document. This gives 5 to 7.\n\n**Reasoning:** I start from the status quo of 2 and allow for gradual diffusion over 8 years, which shifts the distribution upward toward 3 or 4. I keep meaningful weight on reversal or non-publication and on strict interpretation, which pushes toward 1. The mode stays at 2 with a right skew.\n\nOption_A: 0.05\nOption_B: 0.15\nOption_C: 0.28\nOption_D: 0.22\nOption_E: 0.14\nOption_F: 0.09\nOption_G: 0.05\nOption_H: 0.02"
+    },
+    {
+      "value": {
+        "0": 0.05,
+        "1": 0.2,
+        "2": 0.31,
+        "3": 0.22,
+        "4": 0.12,
+        "5": 0.06,
+        "6": 0.03,
+        "7": 0.01
+      },
+      "reasoning": "**(a) Time left:** About 8 years and 2 months. The question resolves on 2034-12-31.\n\n**(b) Status quo:** Anthropic clearly counts. OpenAI arguably counts after its October 2026 Model Spec, which reportedly lists effects on \"animals\" among the consequences to weigh and includes animal-welfare example dialogues. If nothing changed, the answer would be 1 or 2, more likely 2.\n\n**(c) Base rates:**\n- Adoption so far: 1 to 2 of 7 labs in roughly 3 years of public specs.\n- Specs churn often, so wording can be added or removed.\n- Labs without any public spec (Google, Meta, xAI, DeepSeek, Alibaba) need two steps to qualify: publish a spec, then include animal language. That makes each of them unlikely individually.\n- Over 8 years, publishing specs may become the norm, through regulation, norm diffusion or copying of the Anthropic and OpenAI formats. Diffusion processes like this tend to be slow but cumulative.\n\n**(d) Strongest evidence:**\n- Anthropic's constitution explicitly lists \"Welfare of animals and of all sentient beings\" (fetched 2026-11-05).\n- OpenAI's Model Spec of 2026-10-29 reportedly adds animal content. This is reported by Sandcastles (2026-10-30) and Zvi Mowshowitz (2026-11-03), who says animal welfare is mentioned seven times in one example.\n- Advocacy work is under way: NYU's Welfare Alignment Project and AnimalHarmBench 2.0 (2026).\n- No other lab has a public spec with animal language.\n- The 2026 Anima critique notes the animal content is thin, and that an OpenAI example criticizes advocacy for animals as \"overly moralistic.\" So the mentions are fragile.\n\n**(e) Unexpected scenarios:**\n- Downward: Anthropic restructures or stops publishing its constitution, OpenAI trims the examples, and the count falls to 0 or 1.\n- Upward: EU AI Act transparency rules or industry standards push all labs to publish specs. Sentience language spreads by copying Anthropic's template, including among Chinese labs, giving 4 to 6.\n- Other: mergers or exits among the 7 labs could also change the count.\n\n**Rough per-lab probabilities for 2034:**\n\n| Lab | Probability |\n|---|---|\n| Anthropic | ~85% |\n| OpenAI | ~60% |\n| Google | ~30% |\n| Meta | ~20% |\n| xAI | ~15% |\n| DeepSeek | ~10% |\n| Alibaba | ~10% |\n\nThese sum to an expected count of about 2.3, and the outcomes are positively correlated (regulation, norms, a lenient resolver). I started from a status quo of 1 to 2 and shifted modestly upward to reflect diffusion over 8 years. I kept wide tails because of the correlation and possible regression.\n\nOption_A: 0.05\nOption_B: 0.20\nOption_C: 0.31\nOption_D: 0.22\nOption_E: 0.12\nOption_F: 0.06\nOption_G: 0.03\nOption_H: 0.01"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "0": 0.0567,
+    "1": 0.1867,
+    "2": 0.3,
+    "3": 0.2217,
+    "4": 0.1233,
+    "5": 0.065,
+    "6": 0.0333,
+    "7": 0.0133
+  },
+  "usage": [
+    {
+      "question_id": "43504",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.1,
+      "notional_cost_usd": 7.14e-05,
+      "input_tokens": 509,
+      "output_tokens": 41,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 88.4,
+      "notional_cost_usd": 0.2950853,
+      "input_tokens": 78681,
+      "output_tokens": 4282,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.6,
+      "notional_cost_usd": 0.076304,
+      "input_tokens": 6019,
+      "output_tokens": 1408,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.4,
+      "notional_cost_usd": 0.080348,
+      "input_tokens": 6017,
+      "output_tokens": 1611,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.0,
+      "notional_cost_usd": 0.0007092,
+      "input_tokens": 2612,
+      "output_tokens": 374,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.0007195000000000001,
+      "input_tokens": 2666,
+      "output_tokens": 373,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.9,
+      "notional_cost_usd": 0.00031737,
+      "input_tokens": 2611,
+      "output_tokens": 456,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.9,
+      "notional_cost_usd": 0.0344338,
+      "input_tokens": 6019,
+      "output_tokens": 1541,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.9,
+      "notional_cost_usd": 0.00028581,
+      "input_tokens": 2667,
+      "output_tokens": 391,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0007502,
+      "input_tokens": 2637,
+      "output_tokens": 446,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00017201,
+      "input_tokens": 2637,
+      "output_tokens": 164,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 86.5,
+      "notional_cost_usd": 0.2767644,
+      "input_tokens": 84228,
+      "output_tokens": 4522,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.075048,
+      "input_tokens": 5912,
+      "output_tokens": 1388,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.3,
+      "notional_cost_usd": 0.07516800000000001,
+      "input_tokens": 5912,
+      "output_tokens": 1394,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.6,
+      "notional_cost_usd": 0.078376,
+      "input_tokens": 5913,
+      "output_tokens": 1554,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0007638,
+      "input_tokens": 2615,
+      "output_tokens": 482,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.000781,
+      "input_tokens": 2536,
+      "output_tokens": 548,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0005932000000000001,
+      "input_tokens": 2557,
+      "output_tokens": 164,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00029759,
+      "input_tokens": 2614,
+      "output_tokens": 416,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00025013,
+      "input_tokens": 2556,
+      "output_tokens": 323,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43504",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.00033482,
+      "input_tokens": 2537,
+      "output_tokens": 492,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9976
+}
