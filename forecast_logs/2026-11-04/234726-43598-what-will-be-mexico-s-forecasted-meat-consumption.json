@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-04T23:59:27.733620+00:00",
+  "bot_version": "2026-11-04.1",
+  "started_at": "2026-11-04T23:47:26.261018+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43598,
+    "post_id": 43601,
+    "url": "https://www.metaculus.com/questions/43601",
+    "type": "NumericQuestion",
+    "unit": "1000 MT CWE",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "What will be Mexico's forecasted meat consumption for 2027?",
+    "resolution_criteria": "This question will resolve as the forecasted combined domestic consumption of meat (beef and veal, chicken, and swine) for Mexico in 2027 (measured in 1,000 metric tonnes carcass-weight equivalent), according to USDA Foreign Agricultural Service's [market and trade data](https://apps.fas.usda.gov/psdonline/app/index.html#/app/advQuery).",
+    "fine_print": "To get the resolution value:\n\n* Select all of \"Meat, Beaf and Veal\", \"Meat, Chicken\", and \"Meat, Swine\" from *Commodities*\n* Click *Summarize* below\n* Select \"Domestic Consumption\" from *Attributes*\n* Select \"Mexico\" from *Countries*\n* Select \"2027\" from *Market Years*\n* Click *Run Query*\n\nThe question will resolve according to the first available forecast for 2027.\n\nIf the USDA Foreign Agricultural Service ceases to record data on Mexico's forecasted meat consumption, another suitable credible source may be used to resolve this question.",
+    "close_time": "2026-12-31 23:59 UTC",
+    "scheduled_resolution_time": "2027-05-01 11:00 UTC"
+  },
+  "research": [
+    "# Mexico's 2027 meat consumption forecast (USDA FAS): research notes\n\n**Bottom line:** USDA probably already published its first 2027 forecast for Mexico in the PSD database around October 9, 2026, alongside its October circular. If so, the question is effectively settled, but I could not read the number. The PSD query app runs on JavaScript, the circular and GAIN reports came back as unreadable binary PDFs, and the fas.usda.gov report pages returned 403 errors. The pieces I could find point to a total of about 10.8 million tonnes (calculation in section 4).\n\n## 1. Resolution source\n- PSD Online is a JavaScript app, so I could not run the query myself. [PSD](https://apps.fas.usda.gov/psdonline/app/index.html#/app/advQuery)\n- 2026-10-09 (the PDF's creation date): the October 2026 \"Livestock and Poultry: World Markets and Trade\" circular includes 2027 forecasts. The October edition is normally the first to carry next-year numbers, and PSD is updated at the same time. [circular](https://apps.fas.usda.gov/psdonline/circulars/livestock_poultry.pdf)\n- A search snippet of that circular shows a Mexico \"Total Dom. Consumption\" row running from 2,538 to 3,005 (thousand tonnes). 2,538 matches the 2022 pork value in the question's table, so 3,005 is likely the 2027 pork forecast. I could not confirm the year labels. [circular](https://apps.fas.usda.gov/psdonline/circulars/livestock_poultry.pdf)\n\n## 2. Current status\n- The first 2027 forecast very likely already exists in PSD (since about October 9, 2026), which would nearly settle the question. I could not see the beef or chicken values, or verify the pork value.\n\n## 3. Recent news (newest first)\n- 2026-11-04: Mexico's government is reviewing its 2027 rules for zero-tariff beef and pork import quotas (the PACIC anti-inflation package). The screwworm outbreak has left a surplus of cattle at home. [El Imparcial](https://www.elimparcial.com/dinero/2026/11/04/ante-la-sobreoferta-interna-provocada-por-el-gusano-barrenador-y-la-persistente-necesidad-de-importacion-de-carne-el-gobierno-de-claudia-sheinbaum-busca-redefinir-el-mercado-para-blindar-el-poder-adquisitivo-del-consumidor-frente-a-las-demandas-de-la-industria/)\n- 2026-11-02: the Mexican Meat Council (CoMeCarne) expects national meat consumption to grow 3.5% in 2027. For January to August 2026 versus a year earlier, it reports chicken up 3%, pork up 2.9% and beef down 2.5%. The beef/pork and chicken import schemes end December 31, 2026. Its 2025 total of 11,271 thousand tonnes uses a different method from USDA's. [Publimetro](https://www.publimetro.com.mx/noticias/2026/11/02/mexico-desabasto-de-carne-precios-importaciones-2027/)\n- 2026-10-14: coverage of USDA's October report says Mexico's 2027 beef exports rise 7.5% and pork exports rise 9.1% to 240,000 tonnes. Another snippet says Mexico's beef imports are forecast 5% lower in 2027 as import demand weakens. [Meatingplace](https://meatingplace.com/daily-livestock-report-usda-forecasts-higher-global-chicken-production-flat-beef-and-pork-markets/)\n- 2026-09: USDA's economic outlook (ERS) says Mexican pork imports are forecast to rise in both 2026 and 2027. [ERS LDP-M-387](https://www.ers.usda.gov/media/29662/ldp-m-387.pdf?v=54460)\n- 2026-08-24: the USDA Mexico City office's annual livestock report (GAIN MX2026-0040) forecasts flat beef production in 2027 and a 3% rise in commercial pig slaughter. [GAIN page](https://www.fas.usda.gov/data/gain/2026/08/mexico-livestock-and-products-annual)\n- 2026-08-17: per the poultry annual (MX2026-0041), 2027 chicken consumption is 5.5 million tonnes (up 3%), production 4.4 (up 2%) and imports 1.1 (up 4%). This is the attaché's own estimate, not the official USDA figure. [enAlimentos](https://enalimentos.lat/noticias/13010-produccion-de-pollo-en-mexico-crecera-2-en-2027-usda.html)\n\n## 4. Base rates\n- USDA PSD totals from the question's table (thousand tonnes): 8,471 (2020), 8,826, 9,147, 9,544, 9,850, 10,185, 10,601 (2026).\n- Yearly increases: +355, +321, +397, +306, +335, +416. The average is about +355 (+3.5 to 4.2%), and the total rose every year.\n- Plain arithmetic, not a forecast:\n  - Last increase applied to 2026: 10,601 + ~355 ≈ 10,950.\n  - Component pieces: chicken about 5,500 (attaché) + pork 3,005 (unverified) + beef near its 2026 level of 2,320 ≈ 10,800.\n- Beef is the weak component. Production is flat, imports are forecast down 5%, exports up and January to August consumption down 2.5%.\n- Official numbers often differ from the attaché's figures by tens of thousands of tonnes.\n\n## 5. Other forecasts\n- I found no prediction market on this question. The markets provided (Mexico GDP, tariffs, Banxico, elections) don't match it.\n- Expert views:\n  - CoMeCarne: +3.5% in 2027.\n  - USDA long-term projections: per-person consumption keeps rising toward 82.5 kg by 2033. [ERS](https://www.ers.usda.gov/amber-waves/2024/august/meat-consumption-in-mexico-led-by-poultry-will-continue-rising-over-next-decade-usda-projections-show)\n  - Private forecasters expect Mexico's GDP to grow about 1.83 to 1.86% in 2027 (Banxico October survey). [La Jornada](https://www.jornada.com.mx/2026/11/04/economia/021n1eco)\n\n## 6. Upcoming events before resolution\n- Monthly WASDE reports and PSD updates: November 10 and December 2026, then January, February, March and April 2027. These could revise the numbers, but the question resolves on the first 2027 forecast, which was probably the October 2026 release.\n- Mexico's decision on 2027 import quotas and tariffs (by December 31, 2026).\n- Phased reopening of US imports of Mexican cattle (started August 2026), which affects beef supply in Mexico.\n- Possible US tariffs on Mexican goods on January 1, 2027 (Kalshi gives 83% to a rate of 10% or more).\n- USDA Mexico semi-annual reports (about February to March 2027) and the April 2027 circular.\n\n**Recommendation:** run the PSD query linked in the question directly. If it shows 2027 values dated October 2026, that is very likely the resolution value.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-04 23:51 UTC; check each market really matches the question)\n- Kalshi: Mexico Nominal GDP in 2026 (Mexico 2026). Yes prices: Above $2.1 trillion: 0.51; Above $2.3 trillion: 0.04; Above $2.4 trillion: 0.04; Above $2.2 trillion: 0.04; Above $2.0 trillion: 0.95; Above $2.5 trillion: 0.0100; Above $2.7 trillion: 0.0200; Above $2.6 trillion: 0.0300; Above $1.9 trillion: 0.97; Above $1.8 trillion: 0.97.\n- Kalshi: What will the tariff rate on Mexican imports be on Jan 1, 2027? (Jan 1, 2027). Yes prices: 10% or above: 0.83; 20% or above: 0.10; 30% or above: 0.06.\n- Kalshi: Bristol Bay sockeye run forecast for 2027 (2027 season). Yes prices: Between 43 and 48.99 million: 0.48; Between 37 and 42.99 million: 0.30; Between 49 and 55 million: 0.11; Above 55 million: 0.04; Between 29 and 36.99 million: 0.04; Below 29 million: 0.0200.\n- Kalshi: MacAskill–Moll AI growth challenge · Who will win? (Q3 2026 through Q4 2033). Yes prices: Below 15%: 0.85; At least 15%: 0.15.\n- Kalshi: Rhode Island commercial quahog landings this year (2026). Yes prices: Above 250,000 meat pounds: 0.49; Above 280,000 meat pounds: 0.47; Above 310,000 meat pounds: 0.28; Above 220,000 meat pounds: 0.78; Above 340,000 meat pounds: 0.17; Above 190,000 meat pounds: 0.91.\n- Kalshi: Chicken wing · Average US wholesale price in November (November 2026). Yes prices: Above 100¢ per pound: 0.56; Above 105¢ per pound: 0.33; Above 95¢ per pound: 0.76; Above 110¢ per pound: 0.15; Above 90¢ per pound: 0.90; Above 115¢ per pound: 0.07; Above 130¢ per pound: 0.0000; Above 135¢ per pound: 0.0000; Above 125¢ per pound: 0.0000; Above 120¢ per pound: 0.0000.\n- Kalshi: FAO Food Price Index for October (October 2026). Yes prices: Above 134.0: 0.54; Above 135.0: 0.26; Above 133.0: 0.80; Above 136.0: 0.10; Above 132.0: 0.94; Above 131.0: 0.96; Above 139.0: 0.0100; Above 140.0: 0.1200; Above 137.0: 0.1400; Above 138.0: 0.0000.\n- Kalshi: Will Orlando hotel room demand increase YoY this year? (2026). Yes prices: Above 34.5 million room nights: 0.67.\n- Polymarket: Mexico Legislative Election Winner (ends 2027-06-07). [Yes, No] prices: PAN: [\"0.051\", \"0.949\"]; PRI: [\"0.023\", \"0.977\"]; PT: [\"0.0015\", \"0.9985\"]; PVEM: [\"0.003\", \"0.997\"]; MC: [\"0.022\", \"0.978\"]; Morena: [\"0.8845\", \"0.1155\"]\n- Polymarket: Mexico Legislative Election: 2nd Place? (ends 2027-06-07). [Yes, No] prices: PAN: [\"0.735\", \"0.265\"]; PRI: [\"0.1415\", \"0.8585\"]; PT: [\"0.006\", \"0.994\"]; PVEM: [\"0.11\", \"0.89\"]; MC: [\"0.0455\", \"0.9545\"]; Morena: [\"0.0685\", \"0.9315\"]\n- Polymarket: Mexico City Congress Election Winner (ends 2027-06-07). [Yes, No] prices: Morena: [\"0.7\", \"0.3\"]; PAN: [\"0.126\", \"0.874\"]; PRI: [\"0.1045\", \"0.8955\"]; PVEM: [\"0.0235\", \"0.9765\"]; PT: [\"0.011\", \"0.989\"]; MC: [\"0.065\", \"0.935\"]\n- Polymarket: Bank of Mexico Decision in November? (ends 2026-11-05). [Yes, No] prices: 50+ bps decrease: [\"0.0005\", \"0.9995\"]; 25 bps decrease: [\"0.245\", \"0.755\"]; No change: [\"0.75\", \"0.25\"]; 25 bps increase: [\"0.0005\", \"0.9995\"]; 50+ bps increase: [\"0.0005\", \"0.9995\"]\n- Polymarket: Highest temperature in Mexico City on November 4? (ends 2026-11-04). [Yes, No] prices: 17°C or below: [\"0.0005\", \"0.9995\"]; 18°C: [\"0.0005\", \"0.9995\"]; 19°C: [\"0.0005\", \"0.9995\"]; 20°C: [\"0.0005\", \"0.9995\"]; 21°C: [\"0.0005\", \"0.9995\"]; 22°C: [\"0.0005\", \"0.9995\"]\n- Polymarket: Highest temperature in Mexico City on November 5? (ends 2026-11-05). [Yes, No] prices: 18°C or below: [\"0.0005\", \"0.9995\"]; 19°C: [\"0.0005\", \"0.9995\"]; 20°C: [\"0.0005\", \"0.9995\"]; 21°C: [\"0.0005\", \"0.9995\"]; 22°C: [\"0.0015\", \"0.9985\"]; 23°C: [\"0.0055\", \"0.9945\"]",
+    "# Mexico 2027 meat consumption (USDA PSD): research brief\n\n**In short:** USDA's first official 2027 forecast for Mexico has already been published. It came out on 2026-10-09 in the \"Livestock and Poultry: World Markets and Trade\" report, so the resolution value most likely already exists in PSD Online. I could not read that value directly. The report's PDF would not parse, and the PSD query tool needs JavaScript. What I could confirm is the official pork forecast, plus partial clues for beef and chicken.\n\n## 1. Resolution source\n- 2026-10-09: The USDA FAS report (23 pages, PDF metadata dated 2026-10-09) contains 2027 forecasts for each country. I could not extract its tables. [FAS circular](https://apps.fas.usda.gov/psdonline/circulars/livestock_poultry.pdf)\n- 2026-10-13/23: Pork figures for Mexico in 2027, as quoted from that report: production 1.49 MMT (+3.1%), imports 1.76 MMT (+3.5%), exports 240,000 t (+9.1%). Production plus imports minus exports gives about 3,010 thousand tonnes consumed, assuming stocks barely change. That figure is my arithmetic, not a published number. [3tres3](https://www.3tres3.com/es-mx/ultima-hora/porcicultura-mundial-primeras-estimaciones-del-usda-para-2027_17781/)\n- 2026-10-22: Beef: the same report projects Mexican beef production rising in 2027. Search snippets of the report say Mexico's beef imports are forecast 5% lower in 2027, but I could not verify this in the PDF. [Beef Magazine](https://www.beefmagazine.com/market-news/global-beef-trade-update)\n- 2026-10-15: Beef: Mexico's exports are forecast up about 30,000 t (+8%). [APEA](https://www.apea.org.ar/para-2027-habra-menos-produccion-mundial-y-menos-exportaciones-de-carne/)\n- I found no official October numbers for Mexico's 2027 beef or chicken consumption.\n\n## 2. Current status\n- The first forecast already exists, as of 2026-10-09. The open questions are its exact value and whether resolution will use that first figure or a later revision (USDA updates these in January and April). The question says \"first available forecast\", which points to the October 2026 figure.\n- Other forecasts for 2027:\n  - 2026-08: The USDA attaché in Mexico City (a post estimate, not official USDA data) forecasts chicken consumption up 3% to 5.5 MMT in 2027, production up 2% to 4.4 MMT, and imports up 4% to 1.1 MMT. [APEDA copy of GAIN](https://agriexchange.apeda.gov.in/MarketReport/0925904062026821113922831.pdf)\n  - 2026-08-24: The attaché's livestock report (MX2026-0040) forecasts flat beef production in 2027, and a 3% rise in commercial hog slaughter. [FAS GAIN](https://www.fas.usda.gov/data/gain/2026/08/mexico-livestock-and-products-annual)\n- Adding pork (about 3,010), chicken (about 5,450 to 5,500) and beef (about 2,300 to 2,350, if consumption is near the 2026 level of 2,320) gives roughly 10,750 to 10,850. This rests on partly unverified pieces, so treat it as unconfirmed.\n\n## 3. Recent news\n- 2026-11-04: Mexico's government is reviewing the 2027 rules for zero-tariff beef and pork import quotas under its anti-inflation package (PACIC). Ranchers and meat processors disagree, and the screwworm outbreak has left a domestic cattle surplus. [El Imparcial](https://www.elimparcial.com/dinero/2026/11/04/ante-la-sobreoferta-interna-provocada-por-el-gusano-barrenador-y-la-persistente-necesidad-de-importacion-de-carne-el-gobierno-de-claudia-sheinbaum-busca-redefinir-el-mercado-para-blindar-el-poder-adquisitivo-del-consumidor-frente-a-las-demandas-de-la-industria/)\n- 2026-11-02: CoMeCarne, the Mexican meat council, warns that import permits and the zero-tariff schemes expire on 2026-12-31.\n  - It expects national meat consumption to grow 3.5% in 2027.\n  - From January to August 2026, chicken consumption rose 3%, pork 2.9%, and beef fell 2.5%.\n  - CoMeCarne's own figures are much higher than USDA's (for example, pork at 3.75 MMT in 2025). [Publimetro](https://www.publimetro.com.mx/noticias/2026/11/02/mexico-desabasto-de-carne-precios-importaciones-2027/)\n- 2026-11-03: Rabobank reports weak North American pork demand in Q3 2026. [National Hog Farmer](https://www.nationalhogfarmer.com/market-news/soft-demand-export-volatility-cloud-2027-global-pork-outlook)\n- 2026-10-26: The US-Mexico border partly reopened to cattle in August and September 2026, which could reduce Mexico's domestic beef supply. [farmdoc daily](https://farmdocdaily.illinois.edu/2026/10/us-mexico-cattle-trade-and-beef-markets.html)\n- 2026-11-04: Mexico's GDP grew 3.2% year on year in Q3 2026. Private-sector economists forecast about 1.8% growth for 2027. [Jornada](https://www.jornada.com.mx/2026/11/04/economia/021n1eco)\n\n## 4. Base rates\n- Year-on-year changes in the totals from the question's table: +355 (2021), +321, +397, +306, +335, +416 (2026). The average is about +355 per year (about 3.6%), and every year rose.\n- Adding the average to the 2026 total of 10,601 gives about 10,956. Adding the smallest and largest increases gives 10,907 to 11,017. These are simple extrapolations, not forecasts.\n- USDA's first forecast for the coming year tends to differ from later estimates by tens of thousands of tonnes per commodity. The 2026 figures in the table may themselves have been revised in October.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on this question. The markets collected (Mexico GDP, tariffs, Banxico, elections) are only loosely related.\n- Expert views:\n  - The attaché expects chicken at 5.5 MMT.\n  - CoMeCarne expects total consumption up 3.5% in 2027.\n  - USDA's long-term projections (made in 2024, running to 2033) see continued per-person growth, led by poultry. [ERS](https://www.ers.usda.gov/amber-waves/2024/august/meat-consumption-in-mexico-led-by-poultry-will-continue-rising-over-next-decade-usda-projections-show)\n\n## 6. Upcoming events\n- About 2026-12-10: the December WASDE report (usually small changes to foreign meat figures).\n- By 2026-12-31: Mexico decides on 2027 import quotas and tariffs, while the zero-tariff schemes expire.\n- About 2027-01-12: the January Livestock and Poultry: World Markets and Trade report, with revisions.\n- Around February to March 2027: the attaché's semi-annual livestock and poultry reports for Mexico.\n- About 2027-04-09: the April World Markets and Trade report, the last revision before the question resolves (around 2027-05-01).\n- Also: the pace of cattle exports to the US as the border reopens, screwworm developments, and US tariffs on Mexico (Kalshi puts 83% on a rate of 10% or more on 2027-01-01).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-04 23:51 UTC; check each market really matches the question)\n- Kalshi: Mexico Nominal GDP in 2026 (Mexico 2026). Yes prices: Above $2.1 trillion: 0.51; Above $2.3 trillion: 0.04; Above $2.4 trillion: 0.04; Above $2.2 trillion: 0.04; Above $2.0 trillion: 0.95; Above $2.5 trillion: 0.0100; Above $2.7 trillion: 0.0200; Above $2.6 trillion: 0.0300; Above $1.9 trillion: 0.97; Above $1.8 trillion: 0.97.\n- Kalshi: What will the tariff rate on Mexican imports be on Jan 1, 2027? (Jan 1, 2027). Yes prices: 10% or above: 0.83; 20% or above: 0.10; 30% or above: 0.06.\n- Kalshi: Bristol Bay sockeye run forecast for 2027 (2027 season). Yes prices: Between 43 and 48.99 million: 0.48; Between 37 and 42.99 million: 0.30; Between 49 and 55 million: 0.11; Above 55 million: 0.04; Between 29 and 36.99 million: 0.04; Below 29 million: 0.0200.\n- Kalshi: MacAskill–Moll AI growth challenge · Who will win? (Q3 2026 through Q4 2033). Yes prices: Below 15%: 0.85; At least 15%: 0.15.\n- Kalshi: Rhode Island commercial quahog landings this year (2026). Yes prices: Above 250,000 meat pounds: 0.49; Above 280,000 meat pounds: 0.47; Above 310,000 meat pounds: 0.28; Above 220,000 meat pounds: 0.78; Above 340,000 meat pounds: 0.17; Above 190,000 meat pounds: 0.91.\n- Kalshi: Chicken wing · Average US wholesale price in November (November 2026). Yes prices: Above 100¢ per pound: 0.56; Above 105¢ per pound: 0.33; Above 95¢ per pound: 0.76; Above 110¢ per pound: 0.15; Above 90¢ per pound: 0.90; Above 115¢ per pound: 0.07; Above 130¢ per pound: 0.0000; Above 135¢ per pound: 0.0000; Above 125¢ per pound: 0.0000; Above 120¢ per pound: 0.0000.\n- Kalshi: FAO Food Price Index for October (October 2026). Yes prices: Above 134.0: 0.54; Above 135.0: 0.26; Above 133.0: 0.80; Above 136.0: 0.10; Above 132.0: 0.94; Above 131.0: 0.96; Above 139.0: 0.0100; Above 140.0: 0.1200; Above 137.0: 0.1400; Above 138.0: 0.0000.\n- Kalshi: Will Orlando hotel room demand increase YoY this year? (2026). Yes prices: Above 34.5 million room nights: 0.67.\n- Polymarket: Mexico Legislative Election Winner (ends 2027-06-07). [Yes, No] prices: PAN: [\"0.051\", \"0.949\"]; PRI: [\"0.023\", \"0.977\"]; PT: [\"0.0015\", \"0.9985\"]; PVEM: [\"0.003\", \"0.997\"]; MC: [\"0.022\", \"0.978\"]; Morena: [\"0.8845\", \"0.1155\"]\n- Polymarket: Mexico Legislative Election: 2nd Place? (ends 2027-06-07). [Yes, No] prices: PAN: [\"0.735\", \"0.265\"]; PRI: [\"0.1415\", \"0.8585\"]; PT: [\"0.006\", \"0.994\"]; PVEM: [\"0.11\", \"0.89\"]; MC: [\"0.0455\", \"0.9545\"]; Morena: [\"0.0685\", \"0.9315\"]\n- Polymarket: Mexico City Congress Election Winner (ends 2027-06-07). [Yes, No] prices: Morena: [\"0.7\", \"0.3\"]; PAN: [\"0.126\", \"0.874\"]; PRI: [\"0.1045\", \"0.8955\"]; PVEM: [\"0.0235\", \"0.9765\"]; PT: [\"0.011\", \"0.989\"]; MC: [\"0.065\", \"0.935\"]\n- Polymarket: Bank of Mexico Decision in November? (ends 2026-11-05). [Yes, No] prices: 50+ bps decrease: [\"0.0005\", \"0.9995\"]; 25 bps decrease: [\"0.245\", \"0.755\"]; No change: [\"0.75\", \"0.25\"]; 25 bps increase: [\"0.0005\", \"0.9995\"]; 50+ bps increase: [\"0.0005\", \"0.9995\"]\n- Polymarket: Highest temperature in Mexico City on November 4? (ends 2026-11-04). [Yes, No] prices: 17°C or below: [\"0.0005\", \"0.9995\"]; 18°C: [\"0.0005\", \"0.9995\"]; 19°C: [\"0.0005\", \"0.9995\"]; 20°C: [\"0.0005\", \"0.9995\"]; 21°C: [\"0.0005\", \"0.9995\"]; 22°C: [\"0.0005\", \"0.9995\"]\n- Polymarket: Highest temperature in Mexico City on November 5? (ends 2026-11-05). [Yes, No] prices: 18°C or below: [\"0.0005\", \"0.9995\"]; 19°C: [\"0.0005\", \"0.9995\"]; 20°C: [\"0.0005\", \"0.9995\"]; 21°C: [\"0.0005\", \"0.9995\"]; 22°C: [\"0.0015\", \"0.9985\"]; 23°C: [\"0.0055\", \"0.9945\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 10580.0,
+        "p25": 10695.0,
+        "p50": 10790.0,
+        "p75": 10885.0,
+        "p90": 10990.0
+      },
+      "reasoning": "(a) **Time left:** The question resolves on the first published 2027 forecast. That was very likely released in PSD around October 9, 2026, alongside the October circular. Formal resolution is about 2027-05-01.\n\n(b) **Latest known value:** The 2026 forecast is 10,601 thousand MT. It comes from the question's table and may have been revised since. A circular snippet suggests 2027 pork is about 3,005, but I could not verify this.\n\n(c) **If nothing changed:** About 10,601.\n\n(d) **If the trend continued:** The average annual increase is about +355, giving roughly 10,950. A component build gives a lower figure:\n- Chicken about 5,450 to 5,500 (the attaché's 5.5 million, adjusted)\n- Pork about 3,005\n- Beef about 2,250 to 2,320 (flat production, imports down 5%, exports up, consumption year to date down 2.5%)\n\nThis sums to about 10,750 to 10,800.\n\n(e) **Historical variation:** Annual changes ranged from +306 to +416, so roughly ±60 around the trend. Uncertainty here also comes from the unverified pork figure and from the gap between attaché and official estimates, which is often tens of thousands of tonnes.\n\n(f) **Experts:**\n- CoMeCarne expects +3.5%, which would give about 10,970 on the USDA base.\n- The attaché's chicken figure is 5.5 million.\n- The USDA long-term projections show continued growth.\n- No prediction market covers this question.\n\n(g) **Unexpected scenarios:**\n- Low: USDA cut beef sharply because of the screwworm outbreak and trade disruption, revised the 2026 base down, and set chicken near 5,400. The total would be about 10,450.\n- High: the official chicken figure is 5,550 or more, beef holds at 2,350 and pork about 3,060. The total would be about 11,000 or more.\n\nI centre the forecast on the component build, about 10,780. The 1st and 99th percentiles allow for misreading which release counts as \"first\" or a large methodological revision.\n\nPercentile 1: 10350\nPercentile 5: 10500\nPercentile 10: 10580\nPercentile 20: 10670\nPercentile 30: 10720\nPercentile 40: 10760\nPercentile 50: 10790\nPercentile 60: 10820\nPercentile 70: 10860\nPercentile 80: 10910\nPercentile 90: 10990\nPercentile 95: 11060\nPercentile 99: 11220"
+    },
+    {
+      "value": {
+        "p10": 10540.0,
+        "p25": 10675.0,
+        "p50": 10800.0,
+        "p75": 10920.0,
+        "p90": 11050.0
+      },
+      "reasoning": "(a) About 1 day until the outcome is effectively known. The first 2027 forecast was very likely published in PSD around October 9, 2026, with the October circular. Formal resolution is around May 1, 2027.\n\n(b) The latest known value is the 2026 total of 10,601 thousand tonnes, from the PSD table in the question. Unverified pieces of the October 2026 release point to 2027 pork at about 3,005, and the attaché's 2027 chicken estimate is about 5,500.\n\n(c) If nothing changed from 2026, the outcome would be about 10,600.\n\n(d) If the trend continued (about +355 per year), the outcome would be about 10,950. Adding up the components gives a lower figure:\n- Chicken: about 5,450 to 5,500.\n- Pork: about 3,005.\n- Beef: about 2,250 to 2,320. Beef is weak: production is flat, imports are forecast down 5%, exports are up and consumption fell 2.5% in January to August.\n- Total: about 10,700 to 10,830.\n\n(e) Year-on-year changes have ranged from +306 to +416. Since the October figure has probably already been published, the remaining uncertainty is mostly my ignorance of the exact number, about ±150.\n\n(f) Expert views:\n- CoMeCarne expects consumption to grow 3.5% in 2027, which would give about 10,970 on USDA's base.\n- USDA's long-term projections show steady growth.\n- No prediction market matches this question.\n\n(g) Scenarios:\n- Low: USDA cut beef sharply (screwworm, weak imports) and revised the 2026 levels down, giving about 10,400.\n- High: chicken came in at 5,600 or more and beef held at 2,400, giving about 11,100 or more.\n- Before setting the extremes, I checked how they could happen. Percentile 1 (10,250) would mean the October release revised 2026 down and cut 2027 beef and chicken. Percentile 99 (11,300) would mean strong chicken and beef with the pork snippet understated.\n\nPercentile 1: 10250\nPercentile 5: 10450\nPercentile 10: 10540\nPercentile 20: 10640\nPercentile 30: 10710\nPercentile 40: 10760\nPercentile 50: 10800\nPercentile 60: 10840\nPercentile 70: 10890\nPercentile 80: 10950\nPercentile 90: 11050\nPercentile 95: 11130\nPercentile 99: 11300"
+    },
+    {
+      "value": {
+        "p10": 10590.0,
+        "p25": 10695.0,
+        "p50": 10790.0,
+        "p75": 10885.0,
+        "p90": 10990.0
+      },
+      "reasoning": "(a) The resolution value is the first USDA 2027 forecast. It was probably already published in PSD around October 9, 2026, so the uncertainty is mainly about what that release says. The question formally resolves around May 1, 2027, roughly 6 months from now.\n\n(b) The latest known values are USDA PSD totals from the question's table: 10,601 for 2026 and 10,185 for 2025. The October 2026 circular snippet suggests 3,005 for Mexico's 2027 pork consumption. That figure is unverified.\n\n(c) If nothing changed from 2026 levels, the total would be about 10,600.\n\n(d) If the trend continued, average growth of about +355 per year gives roughly 10,950. A component build gives about 10,750 to 10,800:\n- chicken about 5,450 to 5,500\n- pork about 3,005\n- beef about 2,250 to 2,300, likely down because production is flat, imports fall 5% and exports rise 7.5%\n\n(e) Historical variation: yearly increases have ranged from +306 to +416. Revisions between USDA editions are typically tens of thousands of tonnes per commodity.\n\n(f) Expert expectations:\n- The Mexican Meat Council (CoMeCarne) expects about +3.5% growth, which would give about 10,970.\n- The USDA attaché expects chicken consumption of 5.5 million tonnes, up 3%.\n- USDA's long-term projections show steady growth.\n- No market covers this question.\n\n(g) Unexpected scenarios:\n- Low: the pork snippet is mislabeled, and beef consumption is cut sharply because of screwworm disruptions and weak imports, leading to about 10,500.\n- High: USDA revises 2026 levels upward and forecasts strong chicken growth (about 5,600) plus stable beef, leading to about 11,100.\n\nPercentile 1: 10380\nPercentile 5: 10520\nPercentile 10: 10590\nPercentile 20: 10670\nPercentile 30: 10720\nPercentile 40: 10760\nPercentile 50: 10790\nPercentile 60: 10820\nPercentile 70: 10860\nPercentile 80: 10910\nPercentile 90: 10990\nPercentile 95: 11060\nPercentile 99: 11220"
+    },
+    {
+      "value": {
+        "p10": 10640.0,
+        "p25": 10745.0,
+        "p50": 10840.0,
+        "p75": 10942.5,
+        "p90": 11050.0
+      },
+      "reasoning": "(a) **Time left:** USDA appears to have published its first 2027 forecast on 2026-10-09, so the resolution value probably already exists. Resolution is around 2027-05-01. The January and April 2027 reports could revise it if the resolver uses a later figure.\n\n(b) **Latest known value:** In the question's table, the 2026 total is 10,601 thousand MT, made up of beef 2,320, chicken 5,326 and pork 2,955. Reported pieces of the October 2026 forecast for Mexico pork in 2027 are production 1.49 MMT, imports 1.76 MMT and exports 0.24 MMT. That implies pork consumption of about 3,010. This is my own arithmetic, not a published figure.\n\n(c) **No change:** If each meat stays at its 2026 level, the total is about 10,600.\n\n(d) **Trend continued:** Adding the average annual increase of about +355 gives about 10,956, within a range of 10,907 to 11,017. A component build from the October data is lower:\n- Pork: about 3,010\n- Chicken: about 5,450 to 5,500 (the attaché forecasts 5.5 MMT, up 3%)\n- Beef: about 2,300 to 2,350 (production up, imports down 5%, exports up 8%, and the border reopening to cattle)\n\nThat build totals about 10,780 to 10,860.\n\n(e) **Historical variation:** Annual increases ranged from +306 to +416. The uncertainty in my component estimates is roughly ±80 for beef and chicken and ±30 for pork. Revisions between the first and later forecasts are usually tens of thousands of tonnes per commodity.\n\n(f) **Experts:**\n- The USDA attaché expects chicken at about 5.5 MMT and flat beef production.\n- CoMeCarne, the Mexican meat council, expects total consumption up 3.5%. Applied to 10,601, that gives about 10,970, though its own base figures differ from USDA's.\n- I found no relevant markets.\n\n(g) **Unexpected scenarios:**\n- **Low:** USDA cuts beef sharply because cattle exports to the US resume and imports drop, while chicken growth is modest. The total could fall to about 10,500.\n- **High:** USDA's 2026 baseline is revised upward and the chicken and pork forecasts are stronger than reported. The total could reach about 11,200 or more.\n\nPercentile 1: 10450\nPercentile 5: 10580\nPercentile 10: 10640\nPercentile 20: 10720\nPercentile 30: 10770\nPercentile 40: 10810\nPercentile 50: 10840\nPercentile 60: 10875\nPercentile 70: 10915\nPercentile 80: 10970\nPercentile 90: 11050\nPercentile 95: 11120\nPercentile 99: 11280"
+    },
+    {
+      "value": {
+        "p10": 10590.0,
+        "p25": 10697.5,
+        "p50": 10790.0,
+        "p75": 10885.0,
+        "p90": 10990.0
+      },
+      "reasoning": "(a) **Time left:** The question resolves around 2027-05-01, about six months away. USDA's first 2027 forecast was most likely already published on 2026-10-09, so the value probably already exists. I could not read it, so my uncertainty is about what was published, not about future events.\n\n(b) **Latest known value:** The 2026 total in the question's table is 10,601 thousand MT CWE (beef 2,320, chicken 5,326, pork 2,955). This is the pre-October vintage and may have been revised since.\n\n(c) **If nothing changed:** The 2027 total would equal 2026, about 10,600.\n\n(d) **If the trend continued:** The average annual gain is about +355, which gives about 10,956 (range 10,907 to 11,017). The component evidence points lower:\n- **Pork:** The reported official 2027 figures imply about 3,010 (production + imports - exports, my arithmetic).\n- **Chicken:** The attaché expects about 5.5 MMT. The official USDA figure is likely 5,430 to 5,520.\n- **Beef:** Production is expected flat, imports down about 5% and exports up about 8%. That implies consumption slightly below 2026, about 2,260 to 2,310.\n- **Sum:** About 10,700 to 10,840, centered near 10,780.\n\n(e) **Historical variation:** Yearly increases have ranged from +306 to +416. First forecasts differ by tens of thousands of tonnes per commodity, and the beef estimate has swung by more than 100 recently.\n\n(f) **Experts and markets:** CoMeCarne expects total consumption to grow 3.5% in 2027, but its baseline differs from USDA's. The attaché's chicken figure is 5.5 MMT. There are no prediction markets on this question.\n\n(g) **Unexpected scenarios:**\n- **Low:** The October report sharply cut the 2026 beef estimate and projected 2027 beef consumption below 2,200, as the border reopening drains cattle. Chicken came in near 5,400. Or resolution uses a revised, lower figure. Total around 10,450.\n- **High:** USDA projected strong chicken growth (about 5,600) and kept beef high because of the screwworm-driven cattle surplus. Total around 11,050 or more.\n\nPercentile 1: 10380\nPercentile 5: 10510\nPercentile 10: 10590\nPercentile 20: 10670\nPercentile 30: 10725\nPercentile 40: 10760\nPercentile 50: 10790\nPercentile 60: 10820\nPercentile 70: 10860\nPercentile 80: 10910\nPercentile 90: 10990\nPercentile 95: 11060\nPercentile 99: 11200"
+    },
+    {
+      "value": {
+        "p10": 10640.0,
+        "p25": 10750.0,
+        "p50": 10855.0,
+        "p75": 10952.5,
+        "p90": 11060.0
+      },
+      "reasoning": "(a) **Time left:** USDA has almost certainly already published the first official 2027 forecast, in the \"Livestock and Poultry: World Markets and Trade\" report of 2026-10-09. The resolution value probably already exists. The question resolves around 2027-05-01, about 6 months away. The January and April revisions should not matter if \"first available forecast\" is applied strictly, but the resolver could instead read whatever PSD shows at resolution.\n\n(b) **Latest known value:** The 2026 total is 10,601 thousand MT, per the table in the question (PSD, before October). Parts of the 2027 forecast are known. For pork, production of 1.49 MMT plus imports of 1.76 MMT minus exports of 0.24 MMT implies about 3,010 consumed (my arithmetic). For beef, the report says production rises, imports fall about 5% and exports rise about 8%. No official chicken number was found.\n\n(c) **If nothing changed:** The total would stay at 10,601.\n\n(d) **If the trend continued:** Adding the average increase of about 355 per year gives about 10,956. Building the total from components gives a lower figure:\n- pork about 3,010\n- chicken about 5,450 to 5,500 (the attaché expects 5.5 MMT, and the trend is about +3%)\n- beef about 2,300 to 2,370\n\nThat sums to about 10,780 to 10,880.\n\n(e) **Historical variation:** Yearly increases have ranged from 306 to 416. Component-level uncertainty around my bottom-up estimate is roughly ±100 to 150, plus some possible revision of the 2026 base.\n\n(f) **Expert and market expectations:**\n- The USDA attaché expects chicken at 5.5 MMT and flat beef production.\n- CoMeCarne expects total consumption up 3.5%, which applied to 10,601 would give about 10,970.\n- There are no prediction markets on this quantity.\n\n(g) **Unexpected scenarios:**\n- **Low:** The October report cut the 2026 base and forecast weak beef consumption, as the border reopening sends cattle to the US and imports drop. Chicken would also come in more conservatively, near 5,400. The total would be about 10,550.\n- **High:** The report forecast strong chicken imports (5,550 or more) and beef consumption above 2,450 because of the screwworm-driven cattle surplus. Or the resolver uses a later upward revision. The total would be about 11,150 or more.\n\nPercentile 1: 10450\nPercentile 5: 10570\nPercentile 10: 10640\nPercentile 20: 10720\nPercentile 30: 10780\nPercentile 40: 10825\nPercentile 50: 10855\nPercentile 60: 10885\nPercentile 70: 10925\nPercentile 80: 10980\nPercentile 90: 11060\nPercentile 95: 11130\nPercentile 99: 11260"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 10585.8746,
+    "p25": 10695.4074,
+    "p50": 10794.642,
+    "p75": 10902.8335,
+    "p90": 11030.488
+  },
+  "usage": [
+    {
+      "question_id": "43598",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 7.390000000000001e-05,
+      "input_tokens": 494,
+      "output_tokens": 49,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.0002054,
+      "input_tokens": 898,
+      "output_tokens": 52,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 213.3,
+      "notional_cost_usd": 0.7219571000000001,
+      "input_tokens": 367844,
+      "output_tokens": 7760,
+      "web_searches": 13,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.5,
+      "notional_cost_usd": 0.08162,
+      "input_tokens": 6861,
+      "output_tokens": 1337,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.7,
+      "notional_cost_usd": 0.08212,
+      "input_tokens": 6861,
+      "output_tokens": 1362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.000822,
+      "input_tokens": 2756,
+      "output_tokens": 542,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.1,
+      "notional_cost_usd": 0.0008735000000000001,
+      "input_tokens": 2741,
+      "output_tokens": 651,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.00029319999999999997,
+      "input_tokens": 2756,
+      "output_tokens": 404,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 29.3,
+      "notional_cost_usd": 0.032334,
+      "input_tokens": 6859,
+      "output_tokens": 1428,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.00028186000000000004,
+      "input_tokens": 2741,
+      "output_tokens": 382,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0007317000000000001,
+      "input_tokens": 2672,
+      "output_tokens": 395,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00030246,
+      "input_tokens": 2670,
+      "output_tokens": 425,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 221.9,
+      "notional_cost_usd": 0.6742378,
+      "input_tokens": 373669,
+      "output_tokens": 7749,
+      "web_searches": 14,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.1,
+      "notional_cost_usd": 0.088208,
+      "input_tokens": 7057,
+      "output_tokens": 1588,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.5,
+      "notional_cost_usd": 0.08848,
+      "input_tokens": 7056,
+      "output_tokens": 1602,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.6,
+      "notional_cost_usd": 0.092028,
+      "input_tokens": 7057,
+      "output_tokens": 1779,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.0007994,
+      "input_tokens": 2858,
+      "output_tokens": 456,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.0008022000000000001,
+      "input_tokens": 2817,
+      "output_tokens": 478,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.0007942,
+      "input_tokens": 2877,
+      "output_tokens": 438,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00032473,
+      "input_tokens": 2859,
+      "output_tokens": 465,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.00030312,
+      "input_tokens": 2817,
+      "output_tokens": 423,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43598",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.00032523,
+      "input_tokens": 2878,
+      "output_tokens": 466,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.8679
+}
