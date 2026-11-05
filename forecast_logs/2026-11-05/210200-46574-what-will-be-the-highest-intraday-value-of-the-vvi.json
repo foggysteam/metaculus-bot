@@ -1,0 +1,352 @@
+{
+  "logged_at": "2026-11-05T21:06:09.401598+00:00",
+  "bot_version": "2026-11-05.1",
+  "started_at": "2026-11-05T21:02:00.342929+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46574,
+    "post_id": 46341,
+    "url": "https://www.metaculus.com/questions/46341",
+    "type": "MultipleChoiceQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "What will be the highest intraday value of the VVIX for the two-week period through November 27, 2026?",
+    "resolution_criteria": "This question resolves as the maximum intraday value of the VVIX recorded from the market open on November 16, 2026 through November 27, 2026 (inclusive), according to the CBOE VVIX [Index Dashboard](https://www.cboe.com/us/indices/dashboard/VVIX)",
+    "fine_print": "If the resolution source delays or ceases its reporting of these data, Metaculus might use alternative credible sources to resolve this question.",
+    "close_time": "2026-11-06 00:00 UTC",
+    "scheduled_resolution_time": "2026-12-01 00:00 UTC"
+  },
+  "research": [
+    "I'm writing up what I found. The key fact: the VVIX jumped from about 90 to about 132 on Nov 5, 2026, during a sharp selloff, a week and a half before the window opens.\n\n## 1. Resolution source\n- 2026-11-05: Fetched pages from the Cboe VVIX Dashboard and from CNBC contained no numbers, so I could not read a live value from the official source. [Cboe](https://www.cboe.com/us/indices/dashboard/VVIX) [CNBC](https://www.cnbc.com/quotes/.VVIX)\n- 2026-11-04: A search summary of the Cboe/CNBC pages gave a VVIX close of 90.41, a change of -16.99 (which fits the 107.40 close on Nov 3), and a 52-week range of 81.51 to 140.99. I did not see these pages directly. [Cboe](https://www.cboe.com/us/indices/dashboard/vvix/)\n- 2026-11-05: Yahoo ^VVIX history: open 92.20, high **132.11**, low 92.20, close **130.64**. Yahoo showed an error banner on the page, so these figures need checking. [Yahoo](https://finance.yahoo.com/quote/%5EVVIX/history/)\n\n## 2. Current status\n- Nothing is settled yet. The window starts at the open on 2026-11-16 and has about 9 trading sessions:\n  - Nov 16-20 and Nov 23-25\n  - Nov 26 (Thanksgiving) should be closed and Nov 27 a half day. That is the normal US calendar; I did not confirm it for 2026.\n- 2026-11-05: The VVIX closed around 130.6, which is in the top bucket (≥120). How fast it falls back over the next 7 trading days is the main question.\n\n## 3. Recent news (newest first)\n- 2026-11-05:\n  - Big selloff. The Dow fell about 3.4% (roughly 1,800 points), the S&P 500 about 4.3% and the Nasdaq about 5.5%, putting the Nasdaq in correction territory. Chip stocks (SOX index) fell more than 10%.\n  - The VIX closed at 26.55 (+60%) after an intraday high of about 27.45 to 28.09 (sources differ). Yahoo called it the biggest one-day VIX jump in over two years.\n  - Causes cited: an unwind of the crowded AI trade, fear that the new Democratic Congress will slow AI data-center buildouts, the biggest retail selling day since March 2020 (Vanda Research), and oil rising on uncertainty over a US-Iran deal. [Yahoo](https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html) [Reuters/Investing](https://investing.com/news/stock-market-news/wall-street-fear-gauge-jumps-most-since-liberation-day-as-ai-trade-stumbles-5005364)\n- 2026-11-04: Stocks rallied after Democrats swept Congress. The Dow rose about 3%, oil fell about 7-8%, and the VIX dropped about 20% to 16.61. [Benzinga](https://www.benzinga.com/markets/equities/26/11/62886507/trump-celebrates-stock-rally-fueled-by-his-own-partys-midterm-defeat) [JournalArta](https://journalarta.com/en/2026/11/05/wall-street-close-dow-surges-3-03-as-brent-falls-8-22-and-vix-drops/)\n- 2026-11-02: CNBC said the VIX's reaction to the worst stock week since June had been \"muted\" (closing at 19.4 on Oct 30), pointing to managers cutting exposure rather than buying hedges. [CNBC](https://www.cnbc.com/2026/11/02/wall-streets-fear-index-is-doing-something-strange-heres-what-it-means-for-stocks.html)\n\n## 4. Base rates (Yahoo daily data) [Yahoo](https://finance.yahoo.com/quote/%5EVVIX/history/)\n- Aug 5 to Oct 13, 2026: a calm stretch.\n  - Daily highs were mostly 85-97, with only one above 100 (103.24 on Sep 10).\n  - Two-week maximums were roughly 90-103.\n- Oct 14 to Nov 5, 2026: a stressed stretch with repeated spikes:\n  - 121.17 on Oct 16 and 118.17 on Oct 23\n  - 124.06 on Oct 30 and 111.85 on Nov 2\n  - 132.11 on Nov 5\n- Two-week maximums since mid-October have all been 110 or higher.\n- Lows in between fell back to the high 80s or 90s within days, for example 88.38 on Nov 4 after a 111 high on Nov 3. Day-to-day swings of 10-40 points have been common recently.\n- Long-run context from the search summary (not verified): the 2006-2026 average is about 94 and the range is 36-208. [Cboe](https://www.cboe.com/us/indices/dashboard/vvix/)\n- Commentary claims (not verified with data):\n  - VIX tends to fall after elections, and one trader cited a November average of about -4%. [IBTimes](https://www.ibtimes.com/wall-street-getting-nervous-about-whats-next-investors-hedge-against-negative-risk-trinity-3807361)\n  - J.P. Morgan said volatility often peaks before the vote. [Webull](https://www.webull.com/news/15656884897776640)\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the VVIX. None of the pre-collected markets match this question.\n- The closest is Kalshi's Fear & Greed Index for Nov 6: Extreme Fear 0.48, Fear 0.47. That suggests stress is expected to carry into the next day.\n- I found no expert VVIX forecasts.\n\n## 6. Upcoming events before or during the window\n- 2026-11-06: October jobs report (named as the next major data point). [Yahoo](https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html)\n- 2026-11-17, after the close: Nvidia's fiscal Q3 2027 earnings, with the call at 5pm ET. CME says Nvidia confirmed the date on Oct 28; some calendars still list Nov 18. Given the AI-led selloff, this is likely the biggest catalyst inside the window. [CME](https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date-fiscal-q3-2027-report-time-guidance-and-expected-move/?nocache=1)\n- 2026-11-18: November VIX futures and options expiry. [Macroption](https://www.macroption.com/vix-expiration-calendar/)\n- Around 2026-11-20: monthly equity options expiration (standard third Friday, not verified).\n- Thanksgiving week (Nov 26 closed, Nov 27 half day) usually has thin trading.\n- Other risks: US-Iran and oil headlines, and AI regulation talk after the midterms. The next FOMC meeting is probably in December, after the window; I did not confirm the date.\n\n## Sources\n- [Cboe VVIX dashboard](https://www.cboe.com/us/indices/dashboard/VVIX)\n- [CNBC .VVIX quote](https://www.cnbc.com/quotes/.VVIX)\n- [Yahoo ^VVIX history](https://finance.yahoo.com/quote/%5EVVIX/history/)\n- [Yahoo live blog, Nov 5](https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html)\n- [Reuters via Investing.com](https://investing.com/news/stock-market-news/wall-street-fear-gauge-jumps-most-since-liberation-day-as-ai-trade-stumbles-5005364)\n- [Benzinga](https://www.benzinga.com/markets/equities/26/11/62886507/trump-celebrates-stock-rally-fueled-by-his-own-partys-midterm-defeat)\n- [JournalArta](https://journalarta.com/en/2026/11/05/wall-street-close-dow-surges-3-03-as-brent-falls-8-22-and-vix-drops/)\n- [CNBC, Nov 2](https://www.cnbc.com/2026/11/02/wall-streets-fear-index-is-doing-something-strange-heres-what-it-means-for-stocks.html)\n- [IBTimes](https://www.ibtimes.com/wall-street-getting-nervous-about-whats-next-investors-hedge-against-negative-risk-trinity-3807361)\n- [Webull/J.P. Morgan](https://www.webull.com/news/15656884897776640)\n- [CME on Nvidia earnings](https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date-fiscal-q3-2027-report-time-guidance-and-expected-move/?nocache=1)\n- [Macroption VIX calendar](https://www.macroption.com/vix-expiration-calendar/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-05 21:02 UTC; check each market really matches the question)\n- Kalshi: How high will the Nasdaq-100 price get this year? (On Dec 31, 2026 at 4pm EST). Yes prices: 31,400 or above: 0.06; 32,000 or above: 0.04; 31,600 or above: 0.05; 31,800 or above: 0.04; 30,000 or above: 0.9980; 30,600 or above: 0.9900; 30,800 or above: 0.9900; 26,200 or above: 0.99; 31,000 or above: 0.9900; 31,200 or above: 0.9900.\n- Kalshi: Fear & Greed Index tomorrow? (On Nov 6, 2026). Yes prices: Extreme Fear: 0.48; Fear: 0.47; Neutral: 0.01; Greed: 0.0100; Extreme Greed: 0.0100.\n- Kalshi: Kanye West: Highest daily view count (November 2026) (Kanye West: November 2026). Yes prices: Above 5.5M: 0.50; Above 6M: 0.48; Above 8M: 0.20; Above 5M: 0.64; Above 6.5M: 0.26; Above 7M: 0.27; Above 7.5M: 0.27; Above 4.5M: 0.98; Above 4M: 0.99.\n- Kalshi: How high will the IBOVESPA get this year? (2026). Yes prices: At least R$235,000: 0.0400; At least R$220,000: 0.0500; At least R$230,000: 0.0600; At least R$225,000: 0.0700; At least R$215,000: 0.1100; At least R$210,000: 0.4400; At least R$170,500: 0.9900; At least R$171,000: 0.9900; At least R$171,500: 0.9900; At least R$200,000: 0.9900.\n- Kalshi: Paper price index in November 2026 (November 2026). Yes prices: Above 285: 0.60; Above 275: 0.94; Above 280: 0.91; Above 300: 0.03; Above 295: 0.04; Above 290: 0.46; Above 305: 0.0100.\n- Kalshi: DOGE price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $0.0600 - $0.0899: 0.65; $0.0300 - $0.0599: 0.19; $0.0900 - $0.1199: 0.16; $0.1200 - $0.1499: 0.07; $0.1500 - $0.1799: 0.1100; $0.1800 - $0.2099: 0.0000; $0.2100 - $0.2399: 0.0200; $0.2400 - $0.2699: 0.0000; $0.2700 - $0.2999: 0.0000; $0.3000 - $0.3299: 0.1000.\n- Kalshi: HYPE price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $90.0000 - $94.9999: 0.12; $100 or above: 0.13; $70.0000 - $74.9999: 0.13; $95.0000 - $99.9999: 0.09; $60.0000 - $64.9999: 0.10; $85.0000 - $89.9999: 0.10; $80.0000 - $84.9999: 0.12; $65.0000 - $69.9999: 0.12; $75.0000 - $79.9999: 0.12; $10.0000 - $14.9999: 0.0000.\n- Kalshi: Marco Rubio announces departure as Secretary of State? (Before Jan 2029). Yes prices: Before Jan 1, 2027: 0.41; Before Apr 1, 2027: 0.62; Before Jul 1, 2027: 0.69; Before Oct 1, 2027: 0.76; Before Jan 1, 2028: 0.81; Before Jul 1, 2028: 0.89; Before Jan 1, 2029: 0.97.\n- Polymarket: Steam Weekly #1 Seller (November 3 - November 10) (ends 2026-11-11). [Yes, No] prices: Call of Duty®: Modern Warfare® 4: [\"0.48\", \"0.52\"]; Godzilla: Destroy All Monsters Melee Remastered: [\"0.03\", \"0.97\"]; Loftia: [\"0.0265\", \"0.9735\"]; Apex Legends™: [\"0.0295\", \"0.9705\"]; Phantom Blade Zero: [\"0.5\", \"0.5\"]; AION 2: [\"0.015\", \"0.985\"]\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.07\", \"0.93\"]; $2M: [\"0.0345\", \"0.9655\"]; $3M: [\"0.0475\", \"0.9525\"]; $4M: [\"0.012\", \"0.988\"]; $5M: [\"0.0235\", \"0.9765\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.08\", \"0.92\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.175\", \"0.825\"]",
+    "Today (Nov 5) the VVIX reached an intraday high of about 132 during a sharp selloff. It is still 7 trading days before the window opens on Nov 16, so this does not count toward resolution.\n\n## 1. Resolution source\n- The Cboe VVIX dashboard named in the criteria ([cboe.com](https://www.cboe.com/us/indices/dashboard/VVIX)) showed no numbers when fetched; the page apparently loads its data separately.\n- 2026-11-05: Cboe's delayed-quote feed for the same index shows VVIX at 131.19 (open 92.20, high 132.11, low 92.20, previous close 90.41). Last trade was 15:48 ET. [Cboe delayed quote JSON](https://cdn-api.cboe.com/api/global/delayed_quotes/quotes/_VVIX.json)\n- 2026-11-05: VIX in the same feed was at 26.69, high 28.09, previous close 16.61. [Cboe VIX JSON](https://cdn-api.cboe.com/api/global/delayed_quotes/quotes/_VIX.json)\n- Cboe's history file has closing values only, so intraday highs will be at or above the closes below. [Cboe VVIX_History.csv](https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VVIX_History.csv)\n\n## 2. Current status\n- Nothing is settled. The window (Nov 16-27) has not started.\n- Volatility has jumped sharply: VVIX went from a 90.41 close on Nov 4 to about 131-132 intraday on Nov 5. That level is already inside the \"≥120\" bucket.\n\n## 3. Recent news (newest first)\n- 2026-11-05: S&P 500 closed -4.36% at 7,353.73, Nasdaq -5.52% (now in correction), Dow -1,833 points. VIX closed 27.05 (+63.5%). [Yahoo Finance](https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html)\n  - Causes cited: a selloff in AI and chip stocks (Yahoo says the semiconductor index fell about 12%; earlier reports said about 7%), hedge funds locking in gains, worries about regulation of AI data centers under a Democratic Congress, and retail investors' heaviest net selling since March 2020.\n  - Oil rose on uncertainty over a US-Iran deal.\n- 2026-11-05: Seeking Alpha says the VIX hit a seven-month high and was on pace for its biggest one-day rise since February 2018. [Seeking Alpha](https://seekingalpha.com/news/4666745-vix-on-pace-for-biggest-daily-rise-since-february-2018), [GuruFocus](https://www.gurufocus.com/news/9175483/vix-surges-70-spy-drops-amid-market-volatility-on-november-5-2026)\n- 2026-11-04: Stocks rallied after Democrats swept Congress in the midterms (Dow +2.9%); oil fell about 7-8%. VIX closed at 16.61. [Benzinga](https://www.benzinga.com/markets/equities/26/11/62886507/trump-celebrates-stock-rally-fueled-by-his-own-partys-midterm-defeat), [FRED](https://fred.stlouisfed.org/series/VIXCLS)\n\n## 4. Base rates (VVIX closes, Cboe CSV)\n- Range since 2006 is about 36 to 208, average about 94. [Cboe](https://www.cboe.com/us/indices/dashboard/vvix/)\n- 2026 peaks:\n  - March (Middle East war stress): closes from 110 to 140, with a high of 140.44 on 03-06.\n  - January: 117.05. February: 117.07.\n  - April to mid-October: mostly 83-100, with spikes to 108.16 (06-10), 109.47 (07-29) and 102.66 (09-10).\n- Since mid-October the level has been higher:\n  - 10-16: 109.91; 10-22: 107.94; 10-23: 109.70; 10-30: 106.43; 11-02: 110.47; 11-03: 107.40; 11-04: 90.41.\n  - 11-05: about 131 intraday.\n- Highest close in recent two-week windows:\n  - Quiet stretches (Aug to mid-Oct 2026): about 87-103.\n  - Stressed stretches: about 110-140.\n- Intraday highs usually run a few points to 10+ points above the close on spike days.\n- Comparable period: Nov 18-22, 2024 closes ranged 93.8-102.2.\n- The VVIX tends to fall back quickly after spikes. For example, it closed at 140 on 2026-03-06 and was back at 95-105 within about 5-6 weeks. In December 2024 it went from 136 to 91 in 3 sessions.\n- This round of stress began only today, and the window opens 7 trading days from now.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or expert forecast on the VVIX.\n- 2026-11-05: Kalshi's \"Fear & Greed Index tomorrow\" market prices Extreme Fear at 0.48 and Fear at 0.47, which signals sentiment stress. This is not a VVIX market. (Price data supplied with the question.)\n- 2026-11-04: The front-month VIX future (November) was 17.74, before today's selloff. [Macroption](https://www.macroption.com/vix-expiration-calendar/)\n\n## 6. Upcoming events before or during the window\n- 2026-11-06: US October jobs report, described as \"key\" after the selloff. [Yahoo](https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html)\n- 2026-11-17 (Tue, after the close): Nvidia's fiscal Q3 2027 results. Several sources give this date, but some calendars say Nov 18, and I could not confirm it on Nvidia's own site. This matters a lot given the chip-led selloff. [CME Group](https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date-fiscal-q3-2027-report-time-guidance-and-expected-move/?nocache=1), [eciks](https://eciks.org/29651-nvidia-fiscal-2027-q3-results)\n- 2026-11-17 / 11-18: Last trading day for November VIX options (Nov 17), then November VIX expiration (Nov 18). [Macroption](https://www.macroption.com/vix-expiration-calendar/)\n- 2026-11-26: Markets closed for Thanksgiving. 11-27 is a half day. Volume is typically thin.\n- Ongoing: news on the US-Iran deal and the Middle East war (this drove the March VVIX peak), plus policy fallout from the Democratic Congress for AI and data centers.\n- No FOMC meeting falls in the window; I believe the next is in December, but I did not verify this.\n\nSources: [Cboe VVIX dashboard](https://www.cboe.com/us/indices/dashboard/VVIX), [Cboe VVIX quote](https://cdn-api.cboe.com/api/global/delayed_quotes/quotes/_VVIX.json), [Cboe VIX quote](https://cdn-api.cboe.com/api/global/delayed_quotes/quotes/_VIX.json), [Cboe VVIX history](https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VVIX_History.csv), [Yahoo Finance](https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html), [Seeking Alpha](https://seekingalpha.com/news/4666745-vix-on-pace-for-biggest-daily-rise-since-february-2018), [GuruFocus](https://www.gurufocus.com/news/9175483/vix-surges-70-spy-drops-amid-market-volatility-on-november-5-2026), [FRED](https://fred.stlouisfed.org/series/VIXCLS), [Macroption](https://www.macroption.com/vix-expiration-calendar/), [Benzinga](https://www.benzinga.com/markets/equities/26/11/62886507/trump-celebrates-stock-rally-fueled-by-his-own-partys-midterm-defeat), [CME Group](https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date-fiscal-q3-2027-report-time-guidance-and-expected-move/?nocache=1), [eciks](https://eciks.org/29651-nvidia-fiscal-2027-q3-results)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-05 21:02 UTC; check each market really matches the question)\n- Kalshi: How high will the Nasdaq-100 price get this year? (On Dec 31, 2026 at 4pm EST). Yes prices: 31,400 or above: 0.06; 32,000 or above: 0.04; 31,600 or above: 0.05; 31,800 or above: 0.04; 30,000 or above: 0.9980; 30,600 or above: 0.9900; 30,800 or above: 0.9900; 26,200 or above: 0.99; 31,000 or above: 0.9900; 31,200 or above: 0.9900.\n- Kalshi: Fear & Greed Index tomorrow? (On Nov 6, 2026). Yes prices: Extreme Fear: 0.48; Fear: 0.47; Neutral: 0.01; Greed: 0.0100; Extreme Greed: 0.0100.\n- Kalshi: Kanye West: Highest daily view count (November 2026) (Kanye West: November 2026). Yes prices: Above 5.5M: 0.50; Above 6M: 0.48; Above 8M: 0.20; Above 5M: 0.64; Above 6.5M: 0.26; Above 7M: 0.27; Above 7.5M: 0.27; Above 4.5M: 0.98; Above 4M: 0.99.\n- Kalshi: How high will the IBOVESPA get this year? (2026). Yes prices: At least R$235,000: 0.0400; At least R$220,000: 0.0500; At least R$230,000: 0.0600; At least R$225,000: 0.0700; At least R$215,000: 0.1100; At least R$210,000: 0.4400; At least R$170,500: 0.9900; At least R$171,000: 0.9900; At least R$171,500: 0.9900; At least R$200,000: 0.9900.\n- Kalshi: Paper price index in November 2026 (November 2026). Yes prices: Above 285: 0.60; Above 275: 0.94; Above 280: 0.91; Above 300: 0.03; Above 295: 0.04; Above 290: 0.46; Above 305: 0.0100.\n- Kalshi: DOGE price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $0.0600 - $0.0899: 0.65; $0.0300 - $0.0599: 0.19; $0.0900 - $0.1199: 0.16; $0.1200 - $0.1499: 0.07; $0.1500 - $0.1799: 0.1100; $0.1800 - $0.2099: 0.0000; $0.2100 - $0.2399: 0.0200; $0.2400 - $0.2699: 0.0000; $0.2700 - $0.2999: 0.0000; $0.3000 - $0.3299: 0.1000.\n- Kalshi: HYPE price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $90.0000 - $94.9999: 0.12; $100 or above: 0.13; $70.0000 - $74.9999: 0.13; $95.0000 - $99.9999: 0.09; $60.0000 - $64.9999: 0.10; $85.0000 - $89.9999: 0.10; $80.0000 - $84.9999: 0.12; $65.0000 - $69.9999: 0.12; $75.0000 - $79.9999: 0.12; $10.0000 - $14.9999: 0.0000.\n- Kalshi: Marco Rubio announces departure as Secretary of State? (Before Jan 2029). Yes prices: Before Jan 1, 2027: 0.41; Before Apr 1, 2027: 0.62; Before Jul 1, 2027: 0.69; Before Oct 1, 2027: 0.76; Before Jan 1, 2028: 0.81; Before Jul 1, 2028: 0.89; Before Jan 1, 2029: 0.97.\n- Polymarket: Steam Weekly #1 Seller (November 3 - November 10) (ends 2026-11-11). [Yes, No] prices: Call of Duty®: Modern Warfare® 4: [\"0.48\", \"0.52\"]; Godzilla: Destroy All Monsters Melee Remastered: [\"0.03\", \"0.97\"]; Loftia: [\"0.0265\", \"0.9735\"]; Apex Legends™: [\"0.0295\", \"0.9705\"]; Phantom Blade Zero: [\"0.5\", \"0.5\"]; AION 2: [\"0.015\", \"0.985\"]\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.07\", \"0.93\"]; $2M: [\"0.0345\", \"0.9655\"]; $3M: [\"0.0475\", \"0.9525\"]; $4M: [\"0.012\", \"0.988\"]; $5M: [\"0.0235\", \"0.9765\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.08\", \"0.92\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.175\", \"0.825\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "Below 90": 0.05,
+        "≥90 and <100": 0.21,
+        "≥100 and <110": 0.3,
+        "≥110 and <120": 0.23,
+        "≥120": 0.21
+      },
+      "reasoning": "(a) **Time left:** The window opens at the market open on Nov 16, 2026, 11 days from now. It runs through the half-day session on Nov 27, about 8.5 trading sessions. The outcome will be known on Nov 27, with resolution around Dec 1.\n\n(b) **Status quo:** The VVIX closed around 130.6 on Nov 5 after an intraday high of 132.11, which is in the ≥120 bucket. If stress simply persisted, the window maximum would land at 120 or above. However, VVIX spikes usually fade within days. On Nov 4 it fell from 107 to the high 80s overnight, so the level now says little about the level 7 trading days ahead.\n\n(c) **Base rates:**\n- In the calm regime (Aug to mid-Oct 2026), two-week maximums ran about 90-103. That mostly falls in the 90-100 bucket, sometimes 100-110.\n- In the stressed regime since mid-October, every two-week maximum was 110 or higher (121, 124, 132).\n- The long-run VVIX average is about 94. A two-week maximum below 90 is uncommon even in calm periods, because intraday highs sit several points above closes.\n- Past shocks give some guide to what happens 1.5 to 3.5 weeks after a spike:\n  - After the Aug 2024 spike, late-month maximums were roughly 100-110.\n  - After the April 2025 spike, maximums two weeks later were roughly 110-120.\n\n(d) **Strongest evidence:**\n- Nov 5, 2026: VVIX hit 132.11 intraday, the S&P 500 fell 4.3%, the Nasdaq entered a correction, the SOX fell more than 10%, and the VIX jumped 60%. This was the fourth VVIX spike above 110 in three weeks, so the high volatility-of-volatility regime is persisting.\n- Nov 17 (after the close): Nvidia earnings fall inside the window, in the middle of an AI-trade unwind. That is a clear catalyst for a VVIX jump on Nov 18.\n- Nov 18 and around Nov 20: VIX expiry and monthly equity options expiration.\n- Mitigating factors:\n  - Thanksgiving week is thin and usually calmer.\n  - VVIX troughs in this regime have repeatedly fallen back to the high 80s or 90s within days.\n\n(e) **Unexpected outcome scenarios:**\n- Downside: the selloff stabilizes quickly, Nvidia beats and calms the AI trade, and Thanksgiving dampens activity. The VVIX then drifts in the 85-95 range, so the maximum is below 100, possibly even below 90.\n- Upside: a renewed AI or chip crash after Nvidia, or a US-Iran oil shock, pushes the VVIX to 140 or more.\n\n**Adjustment:** Starting from a mix of the calm and stressed regime base rates, I moved toward higher buckets because of the persistent stress and the Nvidia catalyst. I kept substantial weight on 90-110 because spikes mean-revert and the window starts 7 sessions after the shock.\n\nOption_A: 0.05\nOption_B: 0.21\nOption_C: 0.30\nOption_D: 0.23\nOption_E: 0.21"
+    },
+    {
+      "value": {
+        "Below 90": 0.03,
+        "≥90 and <100": 0.19,
+        "≥100 and <110": 0.3,
+        "≥110 and <120": 0.25,
+        "≥120": 0.23
+      },
+      "reasoning": "(a) **Time left:** The window opens at the market open on Nov 16, 2026, about 7 trading days from now. It covers about 8.5 sessions: Nov 16-20, Nov 23-25, and the Nov 27 half day. The result will be known after the close on Nov 27, and the question resolves around Dec 1.\n\n(b) **Status quo:** The VVIX closed at about 130.6 on Nov 5, in the ≥120 bucket. VVIX mean-reverts quickly, though. After the Nov 3 high of 111, it was back near 88-90 by Nov 4. If stress fades, the typical level is around 90-100. If the recent spiky pattern continues, two-week maximums are 110 or higher.\n\n(c) **Base rates:**\n- **Calm regime, Aug to mid-Oct 2026:** two-week intraday maximums were about 90-103, mostly in the 90-100 bucket, with an occasional 100-110.\n- **Stressed regime, mid-Oct to Nov 5:** every two-week maximum was at least 110, and three of five spikes were above 120.\n- **Past cases two weeks after a large spike:** after Aug 2024, Dec 2024 and Apr 2025, the following two-week maximums usually landed around 100-120, with renewed spikes fairly common.\n- **Below 90:** a nine-session maximum under 90 would be rare in any regime, since the long-run average is about 94.\n\n(d) **Strongest evidence:**\n- **Nov 5, 2026:** VVIX intraday high of 132.11 and VIX up 60%, the biggest VIX jump since Liberation Day. The Nasdaq is in correction territory, chip stocks fell more than 10%, and retail selling was the heaviest since March 2020. Volatility tends to cluster.\n- **Oct 14 to Nov 5:** five spikes between 111 and 132 in three weeks, so the stressed regime has persisted.\n- **Nov 17, after the close:** Nvidia earnings fall inside the window and sit at the center of the AI-unwind theme. The Nov 18 reaction coincides with VIX expiration on the same day.\n- **Pulling the other way:** Thanksgiving week trading is thin. Volatility after elections and in November historically tends to decline. VVIX has dropped back to the high 80s within days after recent spikes.\n\n(e) **Unexpected-outcome scenarios:**\n- **Higher:** the AI unwind deepens and Nvidia guides cautiously. VIX jumps above 30 and VVIX prints 140 or more.\n- **Lower:** the selloff reverses quickly on a strong jobs report and calm Nvidia results. VIX settles in the mid-teens and VVIX stays in the high 80s to low 90s for the whole window, so even \"Below 90\" is possible.\n\n**Moving from base rate to forecast:** I started from a mix of the calm and stressed regimes, roughly centered on 100-110. I shifted upward because the regime is clearly still stressed and Nvidia earnings fall inside the window. I kept substantial weight on 90-110 because VVIX mean-reverts quickly and Thanksgiving week tends to be quiet. No matching prediction market exists to anchor on.\n\nOption_A: 0.03\nOption_B: 0.19\nOption_C: 0.30\nOption_D: 0.25\nOption_E: 0.23"
+    },
+    {
+      "value": {
+        "Below 90": 0.05,
+        "≥90 and <100": 0.17,
+        "≥100 and <110": 0.28,
+        "≥110 and <120": 0.24,
+        "≥120": 0.26
+      },
+      "reasoning": "(a) **Time left:** The window opens at the market open on Nov 16, 2026, which is 7 trading days from now. It runs through Nov 27, about 9 sessions in total (Nov 26 closed, Nov 27 a half day). The result will be known around Nov 27 to Dec 1.\n\n(b) **Status quo:** The VVIX closed around 130.6 on Nov 5, after an intraday high of 132.11, during a sharp AI-led selloff. If the current stress level simply persisted, the answer would be \"≥120\". However, the VVIX mean-reverts quickly after spikes. Within days it has repeatedly fallen back to the high 80s or 90s. A \"stress persists but cools\" status quo points to a window maximum of roughly 105 to 120.\n\n(c) **Base rates (2026 data):**\n- In the calm regime (Aug to mid-Oct), two-week maximums were about 90 to 103. That mostly falls in the 90-100 bucket, with some 100-110.\n- In the stressed regime (mid-Oct to now), every two-week maximum has been ≥110, and most have been ≥118.\n- The long-run VVIX average is about 94.\n- Historically, about 2 weeks after a large VIX shock (Aug 2024, Apr 2025), the VVIX was typically still around 100 to 115, with intraday spikes above that.\n- Opening-print highs on the index add some upward skew to intraday maximums.\n\n(d) **Strongest evidence:**\n- Nov 5: the VIX rose 60% to 26.55, the S&P fell 4.3%, the Nasdaq entered a correction, and the VVIX intraday high was 132.11.\n- Oct 14 to Nov 5: repeated VVIX spikes of 121, 118, 124, 112 and 132, showing a clustered high-volatility-of-volatility regime.\n- Nov 17, after the close: Nvidia earnings fall inside the window. This is the central catalyst for the AI trade that is driving the selloff.\n- Nov 18 is VIX expiry, and around Nov 20 is monthly options expiration.\n- Thanksgiving week is thin, which reduces the effective number of active sessions.\n\n(e) **Unexpected outcomes:**\n- Upside: the AI unwind deepens or Nvidia disappoints, and the VVIX revisits 125 to 140+.\n- Downside: a quick V-shaped recovery like the post-election \"vol crush\" leaves the VIX at 16 to 18 by mid-November. A calm Nvidia reaction then keeps the VVIX in the high 80s or 90s for the whole window, so the result is \"Below 90\" or \"90-100\".\n\n**How I moved from the base rate:** I started from a blend of the calm-regime rate (centered on 90-110) and the stressed-regime rate (≥110). Volatility clustering, the very recent shock and an in-window Nvidia catalyst push the median up to around 108 to 112. Rapid mean reversion, the 7-session gap and a thin holiday week keep meaningful weight in the lower buckets.\n\nOption_A: 0.05\nOption_B: 0.17\nOption_C: 0.28\nOption_D: 0.24\nOption_E: 0.26"
+    },
+    {
+      "value": {
+        "Below 90": 0.04,
+        "≥90 and <100": 0.17,
+        "≥100 and <110": 0.3,
+        "≥110 and <120": 0.27,
+        "≥120": 0.22
+      },
+      "reasoning": "(a) **Time left:** The window opens Monday Nov 16, 7 trading days from now. It covers about 8.5 trading sessions: Nov 16-25, plus a half day on Nov 27, with markets closed on Nov 26. The result is known Nov 27, and the question resolves around Dec 1.\n\n(b) **Status quo:** VVIX traded around 131-132 intraday today (Nov 5). If that level held, the answer would be \"≥120.\" Historically, though, VVIX falls back sharply within 1-2 weeks of a one-day spike. The pre-spike baseline in late October and early November was about 105-110 closes, with intraday highs a few points above that.\n\n(c) **Base rates:**\n- In quiet 2026 two-week windows, the maximum close was about 87-103. Intraday maxima run roughly 3-8 points higher.\n- In stressed windows (January to March and late October), the maximum was about 110-140.\n- After comparable spikes, the window starting 1-2 weeks later usually peaks in the high 90s to about 120:\n  - August 2024: about 95-105 intraday in the following weeks.\n  - April 2025: about 110-125 roughly two weeks after.\n  - December 2024: 136 fell to 91 within days.\n  - March 2026: stress persisted, with closes of 110-140 for weeks.\n\n(d) **Strongest evidence:**\n- **Nov 5:** VVIX hit 132.11 intraday and VIX closed at 27 (+63%), the biggest VIX jump since 2018. S&P fell 4.4% and the Nasdaq entered a correction on an AI and chip selloff.\n- **Late October to Nov 3:** VVIX closes were already elevated, at 106-110.\n- **Inside the window:** Nvidia earnings fall on Nov 17 or 18, and November VIX expiration is Nov 18. Both are vol catalysts directly tied to the source of this selloff.\n- **Against a high reading:** Thanksgiving week is usually calm, with thin volume and decaying vol of vol.\n\n(e) **Unexpected scenarios:**\n- The AI selloff deepens into a multi-week correction, or an Iran or Middle East flare-up hits, and Nvidia guidance disappoints. VVIX then re-spikes above 130.\n- The reverse: a rapid V-shaped recovery, like after August 2024, leaves VIX near 16 by mid-November. VVIX then sits in the high 80s or low 90s through a sleepy holiday week.\n\n**How I moved from the base rate:** The base rate for a 2-week maximum-intraday window centers around 100-110. I shifted upward because the regime was already elevated before today, a fresh shock just occurred, and Nvidia earnings sit inside the window. I did not shift all the way to the status quo of 120+, because VVIX mean-reverts fast and the window starts more than a week out.\n\nOption_A: 0.04\nOption_B: 0.17\nOption_C: 0.30\nOption_D: 0.27\nOption_E: 0.22"
+    },
+    {
+      "value": {
+        "Below 90": 0.03,
+        "≥90 and <100": 0.12,
+        "≥100 and <110": 0.27,
+        "≥110 and <120": 0.29,
+        "≥120": 0.29
+      },
+      "reasoning": "(a) **Time left:** The window runs from Nov 16 to Nov 27, 2026, which starts 7 trading days from now and lasts about 9.5 sessions. The outcome will be known on Nov 27, with resolution around Dec 1.\n\n(b) **Status quo:** On Nov 5 the VVIX spiked to about 132 intraday after closing at 90.41 on Nov 4. Before that, from mid-October to Nov 3, it was closing at about 106-110, so intraday highs were probably 110-115. If the recent regime simply carried on, the window's maximum would most likely fall in the 105-120 range.\n\n(c) **Base rates:**\n- Quiet two-week windows in 2026 had maximum closes of about 87-103, which means intraday highs of roughly 90-108.\n- Stressed windows reached about 110-140.\n- After a large spike the VVIX usually decays quickly. Two weeks after the August 2024 and April 2025 spikes it was in the 90s to about 115.\n- It does not always decay. In March 2026 it stayed between 110 and 140 for weeks.\n\n(d) **Strongest evidence:**\n- **Nov 5 selloff:** The VVIX hit about 132 intraday, the VIX jumped from 16.6 to 27 (its biggest one-day rise since 2018), the S&P fell 4.4% and the Nasdaq fell 5.5% into correction. Retail investors sold more heavily than at any time since March 2020. A stress episode starting today usually leaves volatility elevated for weeks.\n- **Elevated baseline:** The VVIX was already around 106-110 from mid-October to early November, even with the VIX at modest levels.\n- **Catalysts in the window:** Nvidia earnings fall on Nov 17 or 18, right in the middle of an AI/chip-led selloff. The November VIX options also expire on Nov 18.\n- **Calming factor:** The Thanksgiving week is thin, which tends to keep volatility of volatility down late in the window.\n\n(e) **Unexpected outcomes:**\n- *Low side:* The selloff reverses quickly, as in December 2024 when the VVIX fell from 136 to 91 in 3 sessions. Nvidia then beats expectations, implied volatility collapses, and the window's maximum stays below 100.\n- *High side:* The AI unwind deepens, Nvidia disappoints, or the Middle East and Iran news escalates. The VVIX then re-spikes above 120.\n\n**How I moved:** I started from a quiet-regime base centred on the 100-110 bucket. I shifted upward by roughly one bucket because of the elevated October baseline, the fresh shock today and the Nvidia catalyst. Decay over the 7 trading days before the window keeps substantial weight off the \"≥120\" bucket being dominant.\n\nOption_A: 0.03\nOption_B: 0.12\nOption_C: 0.27\nOption_D: 0.29\nOption_E: 0.29"
+    },
+    {
+      "value": {
+        "Below 90": 0.03,
+        "≥90 and <100": 0.13,
+        "≥100 and <110": 0.29,
+        "≥110 and <120": 0.29,
+        "≥120": 0.26
+      },
+      "reasoning": "**(a) Time left:** The window runs from Nov 16 to Nov 27, 2026, which is 9 trading days. Nov 26 is closed for Thanksgiving and Nov 27 is a half day. The window opens 7 trading days from today, and the outcome will be known about 22 days from now.\n\n**(b) Status quo:** Today the VVIX hit about 132 intraday, but that does not count. If the recent regime simply persisted, the window maximum would sit around 105 to 115. Mid-October to early November closes ran 106 to 110, and intraday highs are usually a few points above the closes.\n\n**(c) Base rates:**\n- In quiet stretches during 2026, the highest close in a two-week window was about 87 to 103. Adding a few points for intraday highs suggests about 92 to 108.\n- In stressed stretches, two-week maximums were 110 to 140.\n- After large spikes, the VVIX usually decays over 1 to 3 weeks but stays elevated:\n  - After the August 2024 spike, it was around the 100s two weeks later.\n  - After the April 2025 spike, it was about 110 to 125 two weeks later.\n  - After the December 2024 spike, it fell from 136 to 91 in three sessions.\n- Below 90 is rare as a two-week intraday maximum when volatility is clustering.\n\n**(d) Strongest evidence:**\n- Nov 5: The S&P fell 4.4%, the Nasdaq entered a correction, the VIX closed at 27 (up 63%), and the VVIX intraday high was about 132. Retail selling was the heaviest since March 2020.\n- Mid-October to early November: the VVIX was already elevated, with closes of 106 to 110.\n- Nov 17 or 18: Nvidia earnings fall inside the window, and the selloff was led by chip stocks.\n- Nov 18: November VIX expiration.\n- Against an elevated reading: the VVIX mean-reverts fast, the window starts 7 trading days after the shock, and Thanksgiving week is usually quiet.\n\n**(e) Unexpected scenario:**\n- Lower than expected: the selloff stabilises quickly on a good jobs report, Nvidia beats expectations, and the VVIX drifts to the low 90s with a quiet holiday week. This would resolve Below 90 or 90 to 100.\n- Higher than expected: the AI and chip correction deepens, a weak Nvidia reaction or an Iran escalation follows, and the VVIX revisits 120 to 140.\n\n**How far I moved:** I started from a quiet-regime base, where the most likely outcome is 95 to 105. I shifted upward by about 10 points in the median, to roughly 110 to 112, because of volatility clustering after a historic one-day VIX jump, the already elevated October regime, and Nvidia earnings falling inside the window. I kept a wide spread because how fast spikes decay varies a lot.\n\nOption_A: 0.03\nOption_B: 0.13\nOption_C: 0.29\nOption_D: 0.29\nOption_E: 0.26"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "Below 90": 0.0383,
+    "≥90 and <100": 0.165,
+    "≥100 and <110": 0.29,
+    "≥110 and <120": 0.2617,
+    "≥120": 0.245
+  },
+  "usage": [
+    {
+      "question_id": "46574",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 7.23e-05,
+      "input_tokens": 503,
+      "output_tokens": 44,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 91.4,
+      "notional_cost_usd": 0.3251735,
+      "input_tokens": 74590,
+      "output_tokens": 5117,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.2,
+      "notional_cost_usd": 0.08228400000000001,
+      "input_tokens": 6409,
+      "output_tokens": 1551,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.0,
+      "notional_cost_usd": 0.088116,
+      "input_tokens": 6408,
+      "output_tokens": 1843,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.0007962,
+      "input_tokens": 2637,
+      "output_tokens": 538,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.000698,
+      "input_tokens": 2676,
+      "output_tokens": 326,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.00026832,
+      "input_tokens": 2637,
+      "output_tokens": 357,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00023291999999999999,
+      "input_tokens": 2678,
+      "output_tokens": 285,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 35.8,
+      "notional_cost_usd": 0.038380000000000004,
+      "input_tokens": 6411,
+      "output_tokens": 1734,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0007928,
+      "input_tokens": 2620,
+      "output_tokens": 538,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.00031584,
+      "input_tokens": 2620,
+      "output_tokens": 452,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 108.2,
+      "notional_cost_usd": 0.2701678,
+      "input_tokens": 99431,
+      "output_tokens": 5224,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.5,
+      "notional_cost_usd": 0.083612,
+      "input_tokens": 6245,
+      "output_tokens": 1683,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 19.2,
+      "notional_cost_usd": 0.085444,
+      "input_tokens": 6244,
+      "output_tokens": 1775,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 19.4,
+      "notional_cost_usd": 0.08638799999999999,
+      "input_tokens": 6247,
+      "output_tokens": 1821,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0006717000000000001,
+      "input_tokens": 2557,
+      "output_tokens": 321,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 0.0005721999999999999,
+      "input_tokens": 2537,
+      "output_tokens": 130,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.00026420999999999997,
+      "input_tokens": 2557,
+      "output_tokens": 350,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0007926,
+      "input_tokens": 2564,
+      "output_tokens": 560,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.00042482999999999996,
+      "input_tokens": 2538,
+      "output_tokens": 672,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46574",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00030409,
+      "input_tokens": 2564,
+      "output_tokens": 430,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0658
+}
