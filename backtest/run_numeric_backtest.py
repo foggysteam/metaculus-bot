@@ -17,9 +17,10 @@ machine that can reach them, commit the file, then rerun on an earlier run's res
   uv run python backtest/run_numeric_backtest.py --save-baselines backtest/data/numeric_baselines.json
   uv run python backtest/run_numeric_backtest.py --run n2 --reuse-research n1 --baselines backtest/data/numeric_baselines.json
 
-Seasonal history in the research (run s1), each arm researched separately on the same questions:
+Seasonal history in the research (run s1), each arm researched separately on the same questions
+(the seasonal note is live from 2026-11-05, so s1-base now needs --research-note none):
   uv run python backtest/run_numeric_backtest.py --data backtest/data/seasonal_questions.jsonl --save-baselines backtest/data/seasonal_baselines.json
-  uv run python backtest/run_numeric_backtest.py --run s1-base --data backtest/data/seasonal_questions.jsonl --baselines backtest/data/seasonal_baselines.json --variants thirteen --predictions 3
+  uv run python backtest/run_numeric_backtest.py --run s1-base --research-note none --data backtest/data/seasonal_questions.jsonl --baselines backtest/data/seasonal_baselines.json --variants thirteen --predictions 3
   uv run python backtest/run_numeric_backtest.py --run s1-seasonal --research-note seasonal (and the same options)
   uv run python backtest/score_numeric_two_reports.py --a s1-base --b s1-seasonal
 """
@@ -47,7 +48,7 @@ dotenv.load_dotenv()
 from forecasting_tools import NumericQuestion  # noqa: E402
 
 from claude_code_llm import USAGE_LEDGER, current_question_id  # noqa: E402
-from forecaster import ClaudeForecaster, as_of_date, build_llms  # noqa: E402
+from forecaster import SEASONAL_NOTE, ClaudeForecaster, as_of_date, build_llms  # noqa: E402
 from numeric_baseline import statistical_baseline  # noqa: E402
 from run_backtest import HISTORICAL_RULES, leak_check, remove_later_facts  # noqa: E402
 
@@ -60,19 +61,10 @@ VARIANTS = {
     "thirteen": {},  # live from 2026-10-28 (forecaster.py defaults)
 }
 
-# Added to the research prompt with --research-note, the way the live bot adds research_note.
+# The numeric research note to use, by name, with --research-note. Without it the research is as live.
 RESEARCH_NOTES = {
-    # Run s1 (4 Nov 2026), on backtest/data/seasonal_questions.jsonl: on question 46337 (Swiss
-    # drought regions) the research found weather outlooks but no earlier years.
-    "seasonal": (
-        "\n\nSeasons and the calendar: if the quantity rises and falls with the time of year (weather, "
-        "disease, energy use, travel, farming, school or holiday cycles, reporting periods), add under "
-        "heading 4 how it moved from this date to the resolution date in each of the last 3 to 5 years, "
-        "with the values, and whether this year is running above or below those years. If the outcome "
-        "depends on the weather, add under heading 6 the latest official forecast or seasonal outlook "
-        "covering the time to resolution. If the series is too new to have earlier years, use the longest "
-        "related record you can find, such as the measurements it is built from."
-    ),
+    "none": "",  # live until 2026-11-04 (run s1-base)
+    "seasonal": SEASONAL_NOTE,  # live from 2026-11-05 (run s1-seasonal)
 }
 
 
@@ -139,7 +131,7 @@ async def run_question(
             research = reused["research"].split("\n\n## Raw prediction market and Metaculus prices\n")[0]
             leaked = reused["leaked"]
         else:
-            prompt = HISTORICAL_RULES.format(as_of=row["as_of"]) + any_bot._get_research_prompt(question, researcher) + any_bot.research_note
+            prompt = HISTORICAL_RULES.format(as_of=row["as_of"]) + any_bot._get_research_prompt(question, researcher) + any_bot.research_notes(question)
             if baseline:
                 prompt += f"\n\nPrices and data already collected by code (use them):\nStatistical baseline:\n{baseline}"
             raw_research = await researcher.invoke(prompt)
@@ -164,7 +156,7 @@ async def run_question(
         **row,
         "baseline": baseline,
         "research": research,
-        "research_note": next((k for k, v in RESEARCH_NOTES.items() if v and v == any_bot.research_note), ""),
+        "research_note": next((k for k, v in RESEARCH_NOTES.items() if v == any_bot.numeric_research_note), "custom"),
         "leaked": leaked,
         "forecasts": forecasts,
         "errors": [repr(r) for r in results if isinstance(r, BaseException)],
@@ -191,7 +183,7 @@ async def main() -> None:
     parser.add_argument("--baselines", help="JSON file of as-of baselines from --save-baselines, used instead of fetching")
     parser.add_argument("--save-baselines", help="Only fetch each question's as-of baseline and save them to this JSON file")
     parser.add_argument("--data", default=str(DATA), help="Question file (default: numeric_questions.jsonl)")
-    parser.add_argument("--research-note", choices=sorted(RESEARCH_NOTES), help="Add this note to the research prompt")
+    parser.add_argument("--research-note", choices=sorted(RESEARCH_NOTES), help="Use this numeric research note instead of the live one")
     args = parser.parse_args()
 
     rows = [json.loads(line) for line in Path(args.data).open(encoding="utf-8")][args.offset : args.offset + args.limit]
@@ -210,7 +202,7 @@ async def main() -> None:
         for attr, value in VARIANTS[name].items():
             setattr(bot, attr, value)
         if args.research_note:
-            bot.research_note = RESEARCH_NOTES[args.research_note]
+            bot.numeric_research_note = RESEARCH_NOTES[args.research_note]
         bots[name] = bot
     gate = asyncio.Semaphore(args.parallel)
 

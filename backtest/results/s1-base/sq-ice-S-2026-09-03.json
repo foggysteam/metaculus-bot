@@ -1,0 +1,194 @@
+{
+  "id": "sq-ice-S-2026-09-03",
+  "question": "What will the Antarctic sea ice extent be on September 3, 2026, according to the NSIDC Sea Ice Index?",
+  "resolution_criteria": "Resolves to the daily Antarctic sea ice extent for 2026-09-03 in the NSIDC Sea Ice Index version 4 daily file (S_seaice_extent_daily_v4.0.csv), in millions of square kilometers.",
+  "unit": "million square kilometers",
+  "outcome": 17.357,
+  "outcome_date": "2026-09-04",
+  "as_of": "2026-08-13",
+  "resolve_date": "2026-09-04",
+  "lower_bound": 13.5,
+  "upper_bound": 18.5,
+  "source": "nsidc",
+  "series": "S",
+  "known_value": 15.971,
+  "past_moves": [
+    1.35,
+    0.546,
+    1.746,
+    0.924,
+    0.671
+  ],
+  "baseline": "",
+  "research": "# Antarctic sea ice extent on 2026-09-03 (NSIDC Sea Ice Index v4): research brief\n\n## 1. Resolution source\n- The question resolves on the NSIDC daily file [S_seaice_extent_daily_v4.0.csv](https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv). I read it directly and used only rows dated on or before 2026-08-13.\n- 2026-08-13: 16.030 M km² was the latest row available within the cutoff. NSIDC data usually runs about a day behind, so this value may not have been posted by 18:00 UTC on the close date. [NSIDC](https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv)\n- 2026-08-12: 15.971 M km².\n- Recent path from the same file:\n  - 07-31: 16.009\n  - 08-01: 16.222\n  - 08-04: 16.369, a local peak\n  - 08-07: 16.341\n  - 08-08: 16.292\n  - 08-09: 16.085\n  - 08-10: 15.975\n  - 08-11: 15.955\n  - 08-12: 15.971\n  - 08-13: 16.030\n- So extent fell by about 0.41 M km² between 08-04 and 08-11, then began to recover. [NSIDC](https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv)\n\n## 2. Current status\n- Nothing has settled the question yet. Antarctic ice is still in its seasonal growth phase, and the annual maximum usually comes between mid-September and early October.\n- 2026 is running low. On Aug 12, only 2023 (15.106) was lower among the years 2017 to 2026 that I checked.\n\n## 3. Recent news (newest first)\n- 2026-08 (around 08-11/12): a forum post said extent rose to about 16.37 M km² on Aug 4, then dropped to about 15.96 M km² by Aug 11, reaching a temporary record low for the date in Zack Labe's graphics. This is a secondary source, and its page would not load for me (502 error), but the figures match the NSIDC file. [lemmy](https://lemmy.manganiello.tech/post/531651/681939)\n- Early August 2026: the Met Office put extent on Aug 2 at 16.65 M km², the 4th lowest for the time of year. The record low for that date was 15.22 M km² in 2023. Its numbers may come from a different dataset, and I could not confirm when the page was published. [Met Office](https://www.metoffice.gov.uk/research/approach/monitoring/sea-ice/2026/briefing-on-arctic--antarctic-sea-ice---august-2026)\n- Early August 2026: Copernicus reported the July 2026 Antarctic average at 15.4 M km². That is 1.0 M km² (6.4%) below the 1991-2020 average and the 5th lowest July on record. [Copernicus](https://climate.copernicus.eu/sea-ice-cover-july-2026)\n- 2026-06-10 to 07-31: the NSIDC file shows steady growth, from 11.69 to 16.01 M km².\n\n## 4. Base rates\nAll values below come from the NSIDC v4 daily file and are in M km².\n\n| Year | Aug 12 | Sep 3 | Change |\n|---|---|---|---|\n| 2017 | 16.997 | 17.679 | +0.682 |\n| 2018 | 17.113 | 17.971 | +0.858 |\n| 2019 | 17.406 | 18.356 | +0.950 |\n| 2020 | 17.614 | 18.591 | +0.977 |\n| 2021 | 17.941 | 18.612 | +0.671 |\n| 2022 | 16.855 | 17.779 | +0.924 |\n| 2023 | 15.106 | 16.852 | +1.746 |\n| 2024 | 16.488 | 17.034 | +0.546 |\n| 2025 | 16.180 | 17.530 | +1.350 |\n\n- Over these nine years, the change from Aug 12 to Sep 3 averaged +0.97, with a median of +0.92 and a range of +0.55 to +1.75. The spread is about 1.2 M km².\n- Applying those changes to the 2026 Aug 12 value of 15.971 gives this range:\n  - smallest change: about 16.52\n  - median change: about 16.90\n  - mean change: about 16.94\n  - largest change: about 17.72\n- The two largest gains (2023 and 2025) both came in low years, which suggests some catch-up after a low start. But 2024 was also a low year and had the smallest gain.\n- Sep 3 values over 2017-2025 ran from 16.85 to 18.61. Since 2023 the level has been lower: 16.85, 17.03 and 17.53.\n- Day-to-day noise is around ±0.1 to 0.2, and swings of about 0.4 in a week are possible. Both the Aug 4-11 drop and the Aug 1 jump in 2026 are examples.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on Antarctic extent for 2026. The markets I found cover only the Arctic. [orrery](https://orrery.me/markets/will-the-minimum-arctic-sea-ice-extent-this-summer-be-less-than-4m-square-kilometers), [predictmarketcap](https://predictmarketcap.com/events/max-arctic-sea-ice-extent-this-winter)\n- I found no published expert forecast for this specific date.\n\n## 6. Upcoming events before resolution\n- NSIDC will publish daily updates through Sep 3. Its Sea Ice Today post on August conditions usually comes out in early September, likely around the resolution date.\n- Copernicus will publish its August 2026 bulletin in early September.\n- What will move the number:\n  - Wind patterns: storms around the Southern Annular Mode can compress or spread the ice edge.\n  - Ocean heat in the Indian Ocean and Amundsen sectors, which have been running low.\n  - Whether the early-August stall reverses. Growth from mid-August to early September typically runs about 0.03 to 0.05 M km² per day.\n- NSIDC sometimes revises recent days, but changes are usually small, a few thousandths of a M km².\n\nSources: [NSIDC daily file](https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv), [Copernicus July 2026](https://climate.copernicus.eu/sea-ice-cover-july-2026), [Met Office](https://www.metoffice.gov.uk/research/approach/monitoring/sea-ice/2026/briefing-on-arctic--antarctic-sea-ice---august-2026), [lemmy post](https://lemmy.manganiello.tech/post/531651/681939), [Zack Labe](https://zacklabe.com/antarctic-sea-ice-extentconcentration/), [orrery](https://orrery.me/markets/will-the-minimum-arctic-sea-ice-extent-this-summer-be-less-than-4m-square-kilometers)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          16.0
+        ],
+        [
+          0.05,
+          16.28
+        ],
+        [
+          0.1,
+          16.42
+        ],
+        [
+          0.2,
+          16.6
+        ],
+        [
+          0.3,
+          16.72
+        ],
+        [
+          0.4,
+          16.82
+        ],
+        [
+          0.5,
+          16.9
+        ],
+        [
+          0.6,
+          16.98
+        ],
+        [
+          0.7,
+          17.07
+        ],
+        [
+          0.8,
+          17.2
+        ],
+        [
+          0.9,
+          17.38
+        ],
+        [
+          0.95,
+          17.52
+        ],
+        [
+          0.99,
+          17.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.95
+        ],
+        [
+          0.05,
+          16.25
+        ],
+        [
+          0.1,
+          16.42
+        ],
+        [
+          0.2,
+          16.62
+        ],
+        [
+          0.3,
+          16.77
+        ],
+        [
+          0.4,
+          16.88
+        ],
+        [
+          0.5,
+          16.97
+        ],
+        [
+          0.6,
+          17.06
+        ],
+        [
+          0.7,
+          17.17
+        ],
+        [
+          0.8,
+          17.32
+        ],
+        [
+          0.9,
+          17.52
+        ],
+        [
+          0.95,
+          17.67
+        ],
+        [
+          0.99,
+          17.95
+        ]
+      ],
+      [
+        [
+          0.01,
+          16.1
+        ],
+        [
+          0.05,
+          16.38
+        ],
+        [
+          0.1,
+          16.52
+        ],
+        [
+          0.2,
+          16.69
+        ],
+        [
+          0.3,
+          16.81
+        ],
+        [
+          0.4,
+          16.9
+        ],
+        [
+          0.5,
+          16.97
+        ],
+        [
+          0.6,
+          17.05
+        ],
+        [
+          0.7,
+          17.14
+        ],
+        [
+          0.8,
+          17.27
+        ],
+        [
+          0.9,
+          17.45
+        ],
+        [
+          0.95,
+          17.6
+        ],
+        [
+          0.99,
+          17.9
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.5427
+}

@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-CapeTown-2026-10-14",
+  "question": "What will be the average daily mean temperature in Cape Town over the 7 days ending October 14, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-08 to 2026-10-14 at latitude -33.92, longitude 18.42 (Cape Town), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 15.94,
+  "outcome_date": "2026-10-20",
+  "as_of": "2026-09-16",
+  "resolve_date": "2026-10-20",
+  "lower_bound": 10.0,
+  "upper_bound": 25.0,
+  "source": "open-meteo",
+  "series": "Cape Town",
+  "known_value": 16.371429,
+  "past_moves": [
+    2.1,
+    2.714286,
+    4.057143,
+    2.885714,
+    2.557143
+  ],
+  "baseline": "",
+  "research": "The ERA5 value for 8 to 14 October 2026 is not in yet, since the window opens on 8 October, so nothing has settled the question. Over 2019 to 2025 that same week averaged about 15.2 to 18.0 °C, mean about 16.6 °C. September 2026 has been running warmer than the last four years so far.\n\n### 1. Resolution source\n- The Open-Meteo archive API, asked for latitude -33.92 and longitude 18.42, returns data for the nearest grid cell at **-33.99, 18.43**. That cell sits slightly south of the city centre and is affected by the sea. I queried it with GMT timezone, which is the default; the question does not say which timezone to use. [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2026-08-15&end_date=2026-09-15&daily=temperature_2m_mean&timezone=GMT)\n- 2026-09-15: the latest value shown is a daily mean of **14.4 °C**. From 9 to 15 September the values were 17.4, 16.8, 17.2, 16.4, 17.6, 14.8 and 14.4 °C. [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2026-08-15&end_date=2026-09-15&daily=temperature_2m_mean&timezone=GMT)\n\n### 2. Current status\n- Nothing settles the question yet. The resolution window starts in about 3 weeks, beyond the useful range of daily weather forecasts.\n- 2026-09-01 to 09-15: the mean was **16.8 °C**. A warm spell peaked on 7 September at 22.1 °C, with daily values of 20.6, 22.1 and 20.5 °C from 6 to 8 September. [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2026-08-15&end_date=2026-09-15&daily=temperature_2m_mean&timezone=GMT)\n\n### 3. Recent news\n- 2026-09-13/14: the South African Weather Service (SAWS) issued a Yellow Level 4 warning for disruptive rain from a cut-off low in parts of the Western Cape and Northern Cape. The ERA5 daily means then fell to about 14.4 to 14.8 °C. [SAnews](https://www.sanews.gov.za/node/84268)\n- 2026-09-09: Citizen forecast: \"cool to warm\" weather with fire danger in the Western Cape. [Citizen](https://citizen.co.za/news/south-africa/weather/weather-forecast-9-september-2026)\n- 2026-09-02: a SAWS seasonal outlook for September 2026 to January 2027, as reported in the press, points to a hotter-than-normal summer and a strengthening El Niño. The coverage gave nothing specific to the Western Cape. [ATC News](https://atcnews.org/travelcomments-com-south-africas-summer-weather-outlook-hotter-and-drier-conditions-expected/)\n- 2026-04-08: forecasts were leaning drier for the winter-rainfall region. [Daily Maverick](https://www.dailymaverick.co.za/article/2026-04-08-latest-forecast-for-sas-winter-rainfall-regions-shifts-to-drier-gear-)\n\n### 4. Base rates\nThe figures below are the 8 to 14 October means from the same API and grid cell, which I calculated from the daily values:\n\n| Year | Mean, 8 to 14 Oct (°C) | Daily range (°C) |\n|---|---|---|\n| 2019 | 16.57 | 14.0 to 19.8 |\n| 2020 | 15.21 | 13.3 to 17.8 |\n| 2021 | 16.73 | 13.9 to 19.8 |\n| 2022 | 18.00 | 16.4 to 22.1 |\n| 2023 | 16.49 | 14.3 to 19.2 |\n| 2024 | 16.06 | 14.3 to 19.0 |\n| 2025 | 17.34 | 15.5 to 19.3 |\n\n- Across these 7 years the mean is about **16.6 °C** and the spread is about ±0.9 °C (1 SD), with a full range of 15.2 to 18.0 °C. There is no clear trend.\n- Individual days in early to mid October can reach 19 to 24 °C during berg-wind (hot offshore wind) events. For example, 4 October 2024 hit 24.4 °C. These spikes can push a 7-day mean up by about 1 °C.\n\n**How the season moves from mid-September to mid-October:**\n\n| Year | Mean, 10 to 15 Sep (°C) | Mean, 8 to 14 Oct (°C) | Change (°C) |\n|---|---|---|---|\n| 2022 | 15.07 | 18.00 | +2.9 |\n| 2023 | 12.2 | 16.49 | +4.3 |\n| 2024 | 13.3 | 16.06 | +2.8 |\n| 2025 | 15.1 | 17.34 | +2.2 |\n| 2026 | **16.2** | ? | ? |\n\n- 2026 is running about 1 to 4 °C above the same September dates in 2022 to 2025. Over 2022 to 2025, a year's mid-September level did not reliably predict its October value: 2023 was the coldest in September but sat mid-pack in October.\n- Sources: [2022](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2022-09-10&end_date=2022-10-14&daily=temperature_2m_mean&timezone=GMT), [2023](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2023-09-10&end_date=2023-10-14&daily=temperature_2m_mean&timezone=GMT), [2024](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2024-09-10&end_date=2024-10-14&daily=temperature_2m_mean&timezone=GMT), [2025](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2025-09-10&end_date=2025-10-14&daily=temperature_2m_mean&timezone=GMT), [2021](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2021-10-01&end_date=2021-10-20&daily=temperature_2m_mean&timezone=GMT), [2020](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2020-10-08&end_date=2020-10-14&daily=temperature_2m_mean&timezone=GMT), [2019](https://archive-api.open-meteo.com/v1/archive?latitude=-33.92&longitude=18.42&start_date=2019-10-08&end_date=2019-10-14&daily=temperature_2m_mean&timezone=GMT)\n\n### 5. Other forecasts\n- I could not find any Polymarket, Kalshi or Manifold market, or any expert forecast, on this question or a close variant.\n\n### 6. Upcoming events and outlook\n- 8 to 14 October will only come within the range of deterministic and ensemble forecasts in late September and early October. Nothing reliable is available as of today.\n- 2026-09-02: SAWS's September 2026 to January 2027 outlook, as reported, leans hotter than normal nationally, with El Niño strengthening. I could not find a temperature outlook specific to the Western Cape or Cape Town; the official Seasonal Climate Watch PDF on the SAWS site would be the place to check. [ATC News](https://atcnews.org/travelcomments-com-south-africas-summer-weather-outlook-hotter-and-drier-conditions-expected/)\n- Two weather patterns matter most for the outcome: berg-wind events, which raise temperatures, and cold fronts or cut-off lows, which lower them.",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          13.7
+        ],
+        [
+          0.05,
+          14.6
+        ],
+        [
+          0.1,
+          15.1
+        ],
+        [
+          0.2,
+          15.8
+        ],
+        [
+          0.3,
+          16.3
+        ],
+        [
+          0.4,
+          16.6
+        ],
+        [
+          0.5,
+          16.9
+        ],
+        [
+          0.6,
+          17.2
+        ],
+        [
+          0.7,
+          17.6
+        ],
+        [
+          0.8,
+          18.1
+        ],
+        [
+          0.9,
+          18.8
+        ],
+        [
+          0.95,
+          19.4
+        ],
+        [
+          0.99,
+          20.6
+        ]
+      ],
+      [
+        [
+          0.01,
+          13.9
+        ],
+        [
+          0.05,
+          14.9
+        ],
+        [
+          0.1,
+          15.4
+        ],
+        [
+          0.2,
+          15.9
+        ],
+        [
+          0.3,
+          16.3
+        ],
+        [
+          0.4,
+          16.6
+        ],
+        [
+          0.5,
+          16.85
+        ],
+        [
+          0.6,
+          17.1
+        ],
+        [
+          0.7,
+          17.45
+        ],
+        [
+          0.8,
+          17.85
+        ],
+        [
+          0.9,
+          18.4
+        ],
+        [
+          0.95,
+          18.9
+        ],
+        [
+          0.99,
+          19.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          13.8
+        ],
+        [
+          0.05,
+          14.8
+        ],
+        [
+          0.1,
+          15.3
+        ],
+        [
+          0.2,
+          15.9
+        ],
+        [
+          0.3,
+          16.3
+        ],
+        [
+          0.4,
+          16.6
+        ],
+        [
+          0.5,
+          16.9
+        ],
+        [
+          0.6,
+          17.2
+        ],
+        [
+          0.7,
+          17.5
+        ],
+        [
+          0.8,
+          17.9
+        ],
+        [
+          0.9,
+          18.5
+        ],
+        [
+          0.95,
+          19.0
+        ],
+        [
+          0.99,
+          20.1
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.356
+}

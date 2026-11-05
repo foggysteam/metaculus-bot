@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-RVEV-2026-10-24",
+  "question": "What percentage of tests will be positive for rhinovirus/enterovirus in the United States for the week ending October 24, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for rhinovirus/enterovirus in the United States for the week ending 2026-10-24 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 25.35,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-14",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 20.0,
+  "upper_bound": 35.0,
+  "source": "cdc",
+  "series": "rgnm-fkqb:RVEV",
+  "known_value": 28.07,
+  "past_moves": [
+    -3.46,
+    2.27,
+    -2.89,
+    -7.01,
+    1.72
+  ],
+  "baseline": "",
+  "research": "I didn't run any news or market searches. The CDC dataset answered most of the questions, so items 3 and 5 below are limited.\n\n**Note on what I used:** The dataset (data.cdc.gov, rgnm-fkqb) only shows its latest release, and that release is dated after 2026-09-14. To stay within the cutoff, I use only weeks that would have been published by 2026-09-14. That means 2026 weeks through the week ending 2026-09-05 (released around 2026-09-11), plus earlier years. I ignore any later weeks or values. Recent weeks can be revised slightly between releases.\n\n## 1. Resolution source\n- The question resolves on the national rhinovirus/enterovirus (RV/EV) \"percent_pos\" value for the week ending 2026-10-24, in the release dated 2026-10-30. Each row has the week-ending date, the number of tests and detections, the percent positive, and the release date. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Latest week available by the cutoff: the week ending 2026-09-05, at **28.07%** positive (16,874 tests). [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n\n## 2. Current status\n- Nothing settles the question yet. The target week is about 7 weeks after the latest available data.\n- 2026 is in its usual late-summer rise as schools reopen. Percent positive by week ending:\n  - 2026-08-08: 14.70%\n  - 2026-08-15: 16.94%\n  - 2026-08-22: 21.03%\n  - 2026-08-29: 24.83%\n  - 2026-09-05: 28.07%\n\n  [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Spring 2026 had its own peak of 26.07% (week ending 2026-05-09), then a summer low of about 13.75% (week ending 2026-07-18).\n\n## 3. Recent news\n- I didn't search news outlets. I found no unusual RV/EV development (such as an EV-D68 outbreak) in the data I reviewed. Rising test volumes (about 13,100 in early August to 16,900 by 2026-09-05) fit the normal back-to-school pattern.\n\n## 4. Base rates and seasonality\nThe usual pattern: positivity rises fast from mid-August, peaks around 29 to 32% in mid-to-late September, then falls slowly through October.\n\nValues from about this week of the year to about the target week ([data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)):\n\n| Year | Early Sept | Peak | Late Oct (target week) | Change |\n|---|---|---|---|---|\n| 2021 | 24.21% (09-04) | 27.82% (10-09) | 25.93% (10-23) | +1.7 pts |\n| 2022 | 31.73% (09-03) | 32.46% (09-24) | 24.72% (10-22) | -7.0 pts |\n| 2023 | 27.40% (09-02) | 29.61% (09-23) | 24.51% (10-21) | -2.9 pts |\n| 2024 | 25.84% (09-07); 30.26% (09-14) | 30.63% (09-21) | 25.82% (10-26) | 0 pts (-4.4 from 09-14) |\n| 2025 | 29.51% (09-06) | 30.66% (09-20) | 24.58% (10-25) | -4.9 pts |\n\n- Around the target week (late October) in 2021 to 2025, values fell between 24.5% and 25.9%. That is a narrow band of about 1.4 points.\n- The change from early September to late October ranged from +1.7 to -7.0 points. The median was about -3 points.\n- 2026 compared with past years:\n  - At 28.07% in the week ending 2026-09-05, 2026 is a little below 2025 (29.51%) and 2022 (31.73%).\n  - It is above 2021 (24.21%), 2023 (27.40%) and 2024 (25.84%).\n  - The rise started a little later than in 2025. In 2026 it reached 21% in the week ending 08-22, against 24.26% in 2025's week ending 08-23.\n- Early-September values can dip around the Labor Day week, as in 2023 when it went from 27.40% to 26.08%.\n- Test volume (about 17,000 a week) is a bit lower than in fall 2025 (about 19,000 to 20,000).\n\n## 5. Other forecasts\n- I didn't search Polymarket, Kalshi or Manifold, and I don't know of any market on this series. CDC does not publish forecasts for RV/EV positivity.\n\n## 6. Upcoming events before resolution\n- Weekly data releases on Fridays from 2026-09-18 to 2026-10-30. Each one will show whether 2026 peaks in mid-to-late September as usual.\n- Possible risks:\n  - An EV-D68 surge (these have tended to come in even years, but did not appear clearly in 2022 or 2024).\n  - Competition from other viruses: rising flu, RSV or COVID positivity in October can coincide with lower RV/EV positivity.\n  - Changes in testing volume or which labs report.\n  - Revisions to recent weeks between releases.\n- Weather: rhinovirus is driven mainly by schools reopening rather than weather, so I didn't look up a seasonal weather outlook.\n\nSources:\n- [CDC NREVSS percent positivity dataset rgnm-fkqb (data.cdc.gov)](https://data.cdc.gov/resource/rgnm-fkqb.json)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          20.5
+        ],
+        [
+          0.05,
+          22.2
+        ],
+        [
+          0.1,
+          23.0
+        ],
+        [
+          0.2,
+          23.9
+        ],
+        [
+          0.3,
+          24.5
+        ],
+        [
+          0.4,
+          24.9
+        ],
+        [
+          0.5,
+          25.3
+        ],
+        [
+          0.6,
+          25.7
+        ],
+        [
+          0.7,
+          26.1
+        ],
+        [
+          0.8,
+          26.7
+        ],
+        [
+          0.9,
+          27.6
+        ],
+        [
+          0.95,
+          28.4
+        ],
+        [
+          0.99,
+          30.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          20.8
+        ],
+        [
+          0.05,
+          22.0
+        ],
+        [
+          0.1,
+          22.7
+        ],
+        [
+          0.2,
+          23.6
+        ],
+        [
+          0.3,
+          24.3
+        ],
+        [
+          0.4,
+          24.8
+        ],
+        [
+          0.5,
+          25.2
+        ],
+        [
+          0.6,
+          25.6
+        ],
+        [
+          0.7,
+          26.1
+        ],
+        [
+          0.8,
+          26.8
+        ],
+        [
+          0.9,
+          27.8
+        ],
+        [
+          0.95,
+          28.7
+        ],
+        [
+          0.99,
+          30.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          20.5
+        ],
+        [
+          0.05,
+          22.0
+        ],
+        [
+          0.1,
+          22.9
+        ],
+        [
+          0.2,
+          23.8
+        ],
+        [
+          0.3,
+          24.4
+        ],
+        [
+          0.4,
+          24.9
+        ],
+        [
+          0.5,
+          25.3
+        ],
+        [
+          0.6,
+          25.7
+        ],
+        [
+          0.7,
+          26.2
+        ],
+        [
+          0.8,
+          26.8
+        ],
+        [
+          0.9,
+          27.8
+        ],
+        [
+          0.95,
+          28.7
+        ],
+        [
+          0.99,
+          30.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2589
+}

@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-NewYork-2026-10-19",
+  "question": "What will be the average daily mean temperature in New York over the 7 days ending October 19, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-13 to 2026-10-19 at latitude 40.71, longitude -74.01 (New York), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 14.86,
+  "outcome_date": "2026-10-25",
+  "as_of": "2026-09-21",
+  "resolve_date": "2026-10-25",
+  "lower_bound": 5.0,
+  "upper_bound": 40.0,
+  "source": "open-meteo",
+  "series": "New York",
+  "known_value": 20.9,
+  "past_moves": [
+    -8.042857,
+    -8.828571,
+    -6.585714,
+    -7.442857,
+    -5.185714
+  ],
+  "baseline": "",
+  "research": "## 1. Resolution source\n- The question resolves on the Open-Meteo archive API (ERA5) at 40.71, -74.01, using daily `temperature_2m_mean`. The API snaps to a grid point near 40.74N, 74.04W. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2026-09-01&end_date=2026-09-21&daily=temperature_2m_mean)\n- 2026-09-21: The newest value shown is 18.8°C for 2026-09-21, and every day back to 2026-09-01 has a value. Caveat: final ERA5 normally lags by about 5 days, so the last few days may be preliminary or model-filled and could be revised.\n- Timezone caveat: I pulled the 2021-2025 data in America/New_York time and the 2016-2020 data in the API default (GMT). The resolution query probably uses the default, so daily values may differ slightly from the ones below.\n\n## 2. Current status\n- Nothing has settled the question yet. The resolution window (Oct 13-19) is 22 to 28 days away, beyond the range of a reliable deterministic forecast.\n- 2026-09-01 to 09-21: These 21 days averaged 22.05°C. That is warmer than the same stretch in each of 2021-2025, which ranged from 20.05 to 21.96°C. [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2021-09-01&end_date=2025-09-21&daily=temperature_2m_mean)\n- 2026-09-15 to 09-21: Daily means ranged from 17.4 to 24.3°C, and the last three days were 20.1, 19.1 and 18.8°C.\n\n## 3. Recent news\n- 2026-09-17 (reported): NOAA's Climate Prediction Center (CPC) issued its October 2026 outlook, which favors above-normal temperatures across the central and eastern U.S. I saw only secondary coverage of this, not NOAA's own map. [SnowBrains](https://snowbrains.com/october-2026-mountain-weather-outlook/), [Newsweek](https://www.newsweek.com/old-farmers-almanac-predicts-october-weather-each-state-12499490)\n- September 2026: Forecasters put a 98% chance on a very strong El Niño peaking October to December. NOAA declared El Niño on 2026-06-11. [SnowBrains](https://snowbrains.com/october-2026-mountain-weather-outlook/)\n- The Old Farmer's Almanac calls for a cooler-than-average October in the East. This is a low-credibility source. [Newsweek](https://www.newsweek.com/old-farmers-almanac-predicts-october-weather-each-state-12499490)\n- 2026-07: NOAA's August to October outlook favored above-normal temperatures in the Northeast, among other regions. [Unofficial Networks](https://unofficialnetworks.com/2026/07/24/noaa-fall-outlook-coast-to-coast-heat/)\n\n## 4. Base rates\nOct 13-19 seven-day mean of ERA5 daily means at this grid point (Open-Meteo):\n- 2016: 16.4 · 2017: 15.4 · 2018: 11.1 · 2019: 13.3 · 2020: 13.8 [source](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2016-10-13&end_date=2020-10-19&daily=temperature_2m_mean)\n- 2021: 16.8 [source](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2021-10-13&end_date=2021-10-19&daily=temperature_2m_mean)\n- 2022: 13.1 [source](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2022-10-13&end_date=2022-10-19&daily=temperature_2m_mean)\n- 2023: 12.0 [source](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2023-10-13&end_date=2023-10-19&daily=temperature_2m_mean)\n- 2024: 12.1 [source](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2024-10-13&end_date=2024-10-19&daily=temperature_2m_mean)\n- 2025: 13.3 [source](https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2025-10-13&end_date=2025-10-19&daily=temperature_2m_mean)\n\nSummary of the 10 years (my calculation):\n- Mean about 13.7°C, median about 13.3°C, range 11.1 to 16.8°C, standard deviation about 1.9°C.\n- There is no clear trend. The last three years (12.0 to 13.3) sit at or below the 10-year mean.\n- Daily values within a single week swing a lot: 8.1 to 22.3°C across the sample.\n\nSeasonal drop from late September to mid-October:\n| Year | Sep 1-21 mean (°C) | Oct 13-19 mean (°C) | Drop (°C) |\n|---|---|---|---|\n| 2021 | 21.4 | 16.8 | 4.6 |\n| 2022 | 21.6 | 13.1 | 8.5 |\n| 2023 | 22.0 | 12.0 | 10.0 |\n| 2024 | 20.1 | 12.1 | 8.0 |\n| 2025 | 20.5 | 13.3 | 7.2 |\n\n- The drop ranged from about 4.6 to 10°C, averaging about 7.7°C.\n- 2026 is running warmer than all of those years so far (22.05°C for Sep 1-21). Applying the average drop would give roughly 14.4°C. That is a simple arithmetic illustration, not a forecast.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this ERA5 metric. Kalshi runs daily NYC high-temperature markets, but nothing listed this far out.\n- CPC's October outlook (above) favors above-normal temperatures for the East, but I could not get the exact probabilities for New York.\n- The search also turned up AccuWeather's Boston October normals (average high 62°F, low 50°F), which give only rough regional context. [AccuWeather](https://www.accuweather.com/en/us/boston/02108/october-weather/348735)\n\n## 6. Upcoming events before resolution\n- CPC 8-14 day and week 3-4 outlooks: the week 3-4 product issued around early October will first cover Oct 13-19. The 8-14 day outlooks issued around Oct 1-5 onward will become informative. [CPC](https://www.cpc.ncep.noaa.gov/)\n- CPC updates its October outlook on about 2026-09-30.\n- Main drivers: the timing of cold fronts and troughs in mid-October, plus warm Atlantic coastal waters. The strong El Niño has a weak link to Northeast temperatures in October.\n- Data note: ERA5 for Oct 13-19 should be on the archive by about Oct 24-25, matching the resolution date.\n\n**Sources:** [Open-Meteo archive](https://archive-api.open-meteo.com/), [SnowBrains](https://snowbrains.com/october-2026-mountain-weather-outlook/), [Newsweek](https://www.newsweek.com/old-farmers-almanac-predicts-october-weather-each-state-12499490), [Unofficial Networks](https://unofficialnetworks.com/2026/07/24/noaa-fall-outlook-coast-to-coast-heat/), [CPC POE index](https://www.cpc.ncep.noaa.gov/products/predictions/long_range/poe_index.php?lead=1&var=t), [AccuWeather](https://www.accuweather.com/en/us/boston/02108/october-weather/348735)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          9.0
+        ],
+        [
+          0.05,
+          10.5
+        ],
+        [
+          0.1,
+          11.3
+        ],
+        [
+          0.2,
+          12.4
+        ],
+        [
+          0.3,
+          13.2
+        ],
+        [
+          0.4,
+          13.7
+        ],
+        [
+          0.5,
+          14.2
+        ],
+        [
+          0.6,
+          14.7
+        ],
+        [
+          0.7,
+          15.3
+        ],
+        [
+          0.8,
+          16.1
+        ],
+        [
+          0.9,
+          17.2
+        ],
+        [
+          0.95,
+          18.0
+        ],
+        [
+          0.99,
+          19.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          9.3
+        ],
+        [
+          0.05,
+          10.7
+        ],
+        [
+          0.1,
+          11.5
+        ],
+        [
+          0.2,
+          12.5
+        ],
+        [
+          0.3,
+          13.2
+        ],
+        [
+          0.4,
+          13.8
+        ],
+        [
+          0.5,
+          14.2
+        ],
+        [
+          0.6,
+          14.7
+        ],
+        [
+          0.7,
+          15.3
+        ],
+        [
+          0.8,
+          16.0
+        ],
+        [
+          0.9,
+          17.1
+        ],
+        [
+          0.95,
+          17.9
+        ],
+        [
+          0.99,
+          19.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          9.3
+        ],
+        [
+          0.05,
+          10.7
+        ],
+        [
+          0.1,
+          11.4
+        ],
+        [
+          0.2,
+          12.3
+        ],
+        [
+          0.3,
+          13.0
+        ],
+        [
+          0.4,
+          13.6
+        ],
+        [
+          0.5,
+          14.0
+        ],
+        [
+          0.6,
+          14.5
+        ],
+        [
+          0.7,
+          15.1
+        ],
+        [
+          0.8,
+          15.9
+        ],
+        [
+          0.9,
+          16.9
+        ],
+        [
+          0.95,
+          17.7
+        ],
+        [
+          0.99,
+          19.2
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3604
+}

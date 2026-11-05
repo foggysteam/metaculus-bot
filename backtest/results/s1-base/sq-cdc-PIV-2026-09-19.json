@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-PIV-2026-09-19",
+  "question": "What percentage of tests will be positive for parainfluenza viruses (all types) in the United States for the week ending September 19, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for parainfluenza viruses (all types) in the United States for the week ending 2026-09-19 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 2.44,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-08-17",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 1.5,
+  "upper_bound": 5.5,
+  "source": "cdc",
+  "series": "rgnm-fkqb:PIV",
+  "known_value": 3.23,
+  "past_moves": [
+    -0.39,
+    0.04,
+    -0.76,
+    0.94,
+    -3.19
+  ],
+  "baseline": "",
+  "research": "## 1. Resolution source\n- The question resolves on the national \"Combined Type\" PIV row for the week ending 2026-09-19 in data.cdc.gov dataset rgnm-fkqb, using the 2026-10-30 posting. I queried the dataset's API directly: [rgnm-fkqb](https://data.cdc.gov/resource/rgnm-fkqb.json?level=National&subtype=Combined%20Type&pathogen=PIV)\n- 2026-08-15 (week ending), the latest week on or before the cutoff: 2.73% positive (16,098 tests). [CDC data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json?level=National&subtype=Combined%20Type&pathogen=PIV)\n- Caveat: the copy I could reach is a later version of the dataset, not a snapshot from before the cutoff. Values for earlier weeks may have been revised a little since 2026-08-17.\n\n## 2. Current status\n- Nothing has settled the question yet. The target week is five weeks after the latest data point.\n- 2026 summer trend, falling steadily from the late-spring peak: 6.09% (06-13), 5.48% (06-20), 5.19% (06-27), 4.79% (07-04), 4.26% (07-11), 4.24% (07-18), 3.79% (07-25), 3.36% (08-01), 3.23% (08-08), 2.73% (08-15). [CDC](https://data.cdc.gov/resource/rgnm-fkqb.json?level=National&subtype=Combined%20Type&pathogen=PIV)\n- Weekly test volume is about 15,000 to 17,000.\n\n## 3. Recent news\n- I found no national news on parainfluenza activity in summer 2026. Searches turned up only local hospital reports, such as Akron Children's for early August, which are not NREVSS data. [Akron Children's](https://www.akronchildrens.org/files/2090399/file/viro-epi-report-aug-2-8.pdf)\n- CDC's older NREVSS page describes the method: labs report weekly PIV tests and positives. [CDC archive](https://archive.cdc.gov/www_cdc_gov/surveillance/nrevss/human-paraflu/natl-trend.html)\n\n## 4. Base rates (same dataset)\nPIV usually hits its lowest point in mid to late August, then rises in the fall, mainly from PIV-1 and PIV-4. Values from mid-August to the week ending around September 19:\n- 2025: 2.50% (08-16), low 2.50%, then 2.62 (09-06), 2.76 (09-13), **3.11 (09-20)**. Change: +0.61.\n- 2024: 1.67% (08-17), low 1.57 (08-24), then 1.73 (09-07), 1.99 (09-14), **2.26 (09-21)**. Change: +0.59.\n- 2023: 2.60% (08-19), low 2.11 (08-26), then 2.61 (09-09), 2.43 (09-16), **2.63 (09-23)**. Change: +0.03.\n- 2022: 2.51% (08-13), low 2.20 (08-27), then 3.26 (09-10), **3.72 (09-17)**, then 5.57 (09-24). Change: +1.21.\n- 2021: 5.93% (08-14), **3.76 (09-18)**. Change: -2.17. This was an unusual year, with a post-COVID summer surge that was fading.\n- 2020: about 0.1 to 0.3%, suppressed by COVID measures.\n- 2019: 2.41% (08-17), low 2.20 (08-31), **3.61 (09-21)**. Change: +1.20.\n- In normal years (2019, 2022 to 2025), the change over these five weeks ranged from about 0 to +1.2 points, with a median of about +0.6. Week-to-week noise is roughly ±0.3 to 0.5 points. Applied to 2.73%, past changes would give about 2.7 to 3.9%.\n- One difference this year: 2026 was still falling quickly at mid-August (down 0.5 points in the week to 08-15). In earlier years the low arrived in late August. If 2026 keeps falling for another week or two before turning, the rise by 09-19 could be smaller.\n- The 2026 spring/summer peak (6.09%) was lower than 2025 (8.60%) and 2024 (7.89%).\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets, and no expert forecasts, for PIV percent positivity.\n\n## 6. Upcoming events before resolution\n- CDC posts NREVSS updates weekly. Data for weeks ending 08-22 through 09-19 will show where the low falls and how fast the fall rise starts.\n- Schools reopen from mid-August to early September, which has historically come before the fall PIV rise.\n- Late-reported tests can revise recent weeks, so the 2026-10-30 posting may differ slightly from the first value posted for the week ending 09-19.\n- Lab reporting could shift around the Labor Day holiday (2026-09-07), when test volumes may dip.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          1.85
+        ],
+        [
+          0.05,
+          2.1
+        ],
+        [
+          0.1,
+          2.25
+        ],
+        [
+          0.2,
+          2.45
+        ],
+        [
+          0.3,
+          2.62
+        ],
+        [
+          0.4,
+          2.76
+        ],
+        [
+          0.5,
+          2.88
+        ],
+        [
+          0.6,
+          3.01
+        ],
+        [
+          0.7,
+          3.17
+        ],
+        [
+          0.8,
+          3.38
+        ],
+        [
+          0.9,
+          3.72
+        ],
+        [
+          0.95,
+          4.0
+        ],
+        [
+          0.99,
+          4.7
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.7
+        ],
+        [
+          0.05,
+          2.05
+        ],
+        [
+          0.1,
+          2.25
+        ],
+        [
+          0.2,
+          2.5
+        ],
+        [
+          0.3,
+          2.7
+        ],
+        [
+          0.4,
+          2.85
+        ],
+        [
+          0.5,
+          3.0
+        ],
+        [
+          0.6,
+          3.15
+        ],
+        [
+          0.7,
+          3.33
+        ],
+        [
+          0.8,
+          3.6
+        ],
+        [
+          0.9,
+          4.0
+        ],
+        [
+          0.95,
+          4.4
+        ],
+        [
+          0.99,
+          5.2
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.55
+        ],
+        [
+          0.05,
+          1.9
+        ],
+        [
+          0.1,
+          2.1
+        ],
+        [
+          0.2,
+          2.4
+        ],
+        [
+          0.3,
+          2.6
+        ],
+        [
+          0.4,
+          2.75
+        ],
+        [
+          0.5,
+          2.9
+        ],
+        [
+          0.6,
+          3.05
+        ],
+        [
+          0.7,
+          3.2
+        ],
+        [
+          0.8,
+          3.45
+        ],
+        [
+          0.9,
+          3.85
+        ],
+        [
+          0.95,
+          4.2
+        ],
+        [
+          0.99,
+          5.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3046
+}

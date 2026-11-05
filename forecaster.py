@@ -41,11 +41,24 @@ from market_pulse import spot_time
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-11-04.1"
+BOT_VERSION = "2026-11-05.1"
 
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
 TEST_LOG_DIR = Path(__file__).parent / "test_logs"
+
+# Added to the research prompt for numeric and discrete questions. Backtest s1 (backtest/RESULTS.md):
+# +5.5 points per question (CI +0.5 to +10.6) over the research without it. Question 46337 (Swiss
+# drought regions) had prompted it: the research found weather outlooks but no earlier years.
+SEASONAL_NOTE = (
+    "\n\nSeasons and the calendar: if the quantity rises and falls with the time of year (weather, "
+    "disease, energy use, travel, farming, school or holiday cycles, reporting periods), add under "
+    "heading 4 how it moved from this date to the resolution date in each of the last 3 to 5 years, "
+    "with the values, and whether this year is running above or below those years. If the outcome "
+    "depends on the weather, add under heading 6 the latest official forecast or seasonal outlook "
+    "covering the time to resolution. If the series is too new to have earlier years, use the longest "
+    "related record you can find, such as the measurements it is built from."
+)
 
 RESEARCH_SYSTEM_PROMPT = (
     "You are a meticulous research assistant to a professional forecaster. "
@@ -197,7 +210,9 @@ class ClaudeForecaster(FallTemplateBot2026):
         "the middle of your distribution."
     )
 
-    # Added to the research prompt in shadow runs of the raw-data tool (shadow.py).
+    # Added to the research prompt for numeric and discrete questions (live from 2026-11-05).
+    numeric_research_note: str = SEASONAL_NOTE
+    # Added to every research prompt in shadow runs of the raw-data tool (shadow.py).
     research_note: str = ""
 
     def __init__(self, *args, log_dir: Path = LOG_DIR, **kwargs) -> None:
@@ -379,6 +394,10 @@ class ClaudeForecaster(FallTemplateBot2026):
             markets = f"{markets}\n\nStatistical baseline:\n{baseline}".strip()
         return news, markets
 
+    def research_notes(self, question: MetaculusQuestion) -> str:
+        numeric = self.numeric_research_note if isinstance(question, NumericQuestion) else ""
+        return numeric + self.research_note
+
     async def run_research(self, question: MetaculusQuestion) -> str:
         async with self._concurrency_limiter:
             # With several research reports per question, the news, prices and baseline that
@@ -390,7 +409,7 @@ class ClaudeForecaster(FallTemplateBot2026):
                 )
             news, markets = await self._evidence_by_question[key]
             researcher = self.get_llm("researcher", "llm")
-            prompt = self._get_research_prompt(question, researcher) + self.research_note
+            prompt = self._get_research_prompt(question, researcher) + self.research_notes(question)
             if news:
                 prompt += (
                     "\n\nNews articles already collected by a news API "

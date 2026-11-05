@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-MexicoCity-2026-09-23",
+  "question": "What will be the average daily mean temperature in Mexico City over the 7 days ending September 23, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-09-17 to 2026-09-23 at latitude 19.43, longitude -99.13 (Mexico City), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 18.04,
+  "outcome_date": "2026-09-29",
+  "as_of": "2026-09-09",
+  "resolve_date": "2026-09-29",
+  "lower_bound": 16.0,
+  "upper_bound": 18.5,
+  "source": "open-meteo",
+  "series": "Mexico City",
+  "known_value": 17.271429,
+  "past_moves": [
+    0.614286,
+    0.485714,
+    -0.1,
+    -0.485714,
+    0.228571
+  ],
+  "baseline": "",
+  "research": "Here are the findings, using only information published on or before 2026-09-09. Since 2019, the Sept 17-23 average at this grid point has ranged from 16.26 to 17.66°C, and early September 2026 is running mid-range. All the averages below are my own calculations from the Open-Meteo daily values.\n\n## 1. Resolution source\n- Source: Open-Meteo ERA5 archive, daily `temperature_2m_mean`, at 19.43, -99.13. The API snaps this to the grid cell at about 19.44N, 99.11W. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2026-08-01&end_date=2026-09-08&daily=temperature_2m_mean&timezone=auto)\n- 2026-09-08: the latest value available is 16.9°C. Daily values for Sept 1-8 were 16.2, 17.1, 17.9, 18.5, 17.8, 16.5, 16.3 and 16.9, which average 17.15°C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2026-08-01&end_date=2026-09-08&daily=temperature_2m_mean&timezone=auto)\n- August 2026: daily values ranged from 15.5 (Aug 24) to 20.4 (Aug 4), and the second half of the month mostly sat between 16 and 18°C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2026-08-01&end_date=2026-09-08&daily=temperature_2m_mean&timezone=auto)\n\n## 2. Current status\n- Nothing has settled the question. The window (Sept 17-23) starts 8 days after the forecast deadline.\n\n## 3. Recent news\n- 2026-09-08: the SMN-based forecast for CDMX on Sept 9 gave a high of 24-26°C, a low of 13-15°C, cloudy skies and afternoon showers. Tropical wave 37 was active and wave 38 was approaching Yucatán. The north of Mexico had heat waves. [Grupo Animal](https://grupoanimal.mx/sociedad/clima-septiembre-lluvias-nublado-cdmx-edomex)\n- 2026-09-07 and 09-08: forecasts called for light to strong rain and cloudy skies in CDMX, which is typical of the rainy season. [Grupo Animal 8 Sep](https://grupoanimal.mx/sociedad/pronostico-del-clima-en-cdmx-martes-8-de-septiembre), [Grupo Animal 7 Sep](https://grupoanimal.mx/sociedad/pronostico-del-clima-en-cdmx-lunes-7-de-septiembre)\n- 2026-08-13: the CPC put out an El Niño Advisory. A repost of the discussion says El Niño is strengthening, with a \"greater than 90% chance of a very strong event\" in fall and winter 2026-27. I couldn't check that wording against the original text, so treat it with some caution. [CPC](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_aug2026/ensodisc.shtml), [Coyote Gulch](https://coyotegulch.blog/2026/08/14/the-august-13-2026-el-nino-southern-oscillation-enso-diagnostic-discussion-is-hot-off-the-presses-from-the-climate-prediction-center/)\n\n## 4. Base rates\nSept 17-23 average of daily means, same grid point (Open-Meteo/ERA5):\n- 2025: 17.37 (daily 16.1 to 18.6). [2025](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2025-09-01&end_date=2025-09-30&daily=temperature_2m_mean&timezone=auto)\n- 2024: 17.66 (16.9 to 18.6). [2024](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2024-09-01&end_date=2024-09-30&daily=temperature_2m_mean&timezone=auto)\n- 2023 (El Niño year): 17.54 (16.5 to 18.5). [2023](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2023-09-01&end_date=2023-09-30&daily=temperature_2m_mean&timezone=auto)\n- 2022: 16.26 (16.0 to 16.5). [2022](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2022-09-01&end_date=2022-09-30&daily=temperature_2m_mean&timezone=auto)\n- 2021: 16.57 (15.2 to 17.6). [2021](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2021-09-01&end_date=2021-09-30&daily=temperature_2m_mean&timezone=auto)\n- 2020: 16.59. [2020](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2020-09-17&end_date=2020-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2019: 17.50. [2019](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2019-09-17&end_date=2019-09-23&daily=temperature_2m_mean&timezone=auto)\n- 2015 (strong El Niño): 16.26. [2015](https://archive-api.open-meteo.com/v1/archive?latitude=19.43&longitude=-99.13&start_date=2015-09-17&end_date=2015-09-23&daily=temperature_2m_mean&timezone=auto)\n- Across 2019-2025 the mean is about 17.07 and the standard deviation about 0.55. Results split into a cooler group (16.3 to 16.6) and a warmer group (17.4 to 17.7). The last three years were all warm.\n- The two El Niño analogs disagree: 2023 was warm and 2015 was cool.\n\nHow the Sept 1-8 average compares with the Sept 17-23 average:\n- 2021: 16.34, then 16.57 (+0.23)\n- 2022: 16.81, then 16.26 (-0.55)\n- 2023: 17.55, then 17.54 (0.0)\n- 2024: 17.15, then 17.66 (+0.51)\n- 2025: 16.73, then 17.37 (+0.64)\n- 2026: 17.15, then unknown. This ties 2024 and sits mid-to-upper among recent years, above 2021, 2022 and 2025 and below 2023.\n- In these five years the change from early September to the window ranged from -0.55 to +0.64, with no consistent seasonal drift.\n- Single days in the window can swing by 1 to 2°C, mainly from cloud cover and rain. Cold fronts arriving in late September can drop daily means to around 14-15°C, as happened in late September of 2022 and 2024.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question, and no expert numeric forecast for this window.\n\n## 6. Upcoming events before resolution\n- I couldn't find an official SMN outlook covering Sept 17-23 that was published by Sept 9. Only daily forecasts were available.\n- The main things that could move the result:\n  - Rain and cloud from tropical waves, and possibly tropical cyclones, would cool the days.\n  - Any early cold front (\"frente frío\") would push the average down.\n  - A drier pattern under El Niño would allow warmer afternoons.\n- El Niño is strengthening (CPC, 2026-08-13). It is often linked with less rain over central Mexico late in the rainy season, though the 2015 and 2023 analogs pointed in opposite directions. [CPC](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_aug2026/ensodisc.shtml)\n- The next CPC ENSO discussion is due 2026-10-08, after resolution. [CPC](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          15.6
+        ],
+        [
+          0.05,
+          16.1
+        ],
+        [
+          0.1,
+          16.4
+        ],
+        [
+          0.2,
+          16.7
+        ],
+        [
+          0.3,
+          16.95
+        ],
+        [
+          0.4,
+          17.1
+        ],
+        [
+          0.5,
+          17.25
+        ],
+        [
+          0.6,
+          17.4
+        ],
+        [
+          0.7,
+          17.55
+        ],
+        [
+          0.8,
+          17.75
+        ],
+        [
+          0.9,
+          18.05
+        ],
+        [
+          0.95,
+          18.3
+        ],
+        [
+          0.99,
+          18.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.5
+        ],
+        [
+          0.05,
+          16.0
+        ],
+        [
+          0.1,
+          16.25
+        ],
+        [
+          0.2,
+          16.6
+        ],
+        [
+          0.3,
+          16.85
+        ],
+        [
+          0.4,
+          17.05
+        ],
+        [
+          0.5,
+          17.2
+        ],
+        [
+          0.6,
+          17.35
+        ],
+        [
+          0.7,
+          17.5
+        ],
+        [
+          0.8,
+          17.7
+        ],
+        [
+          0.9,
+          18.0
+        ],
+        [
+          0.95,
+          18.25
+        ],
+        [
+          0.99,
+          18.7
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.5
+        ],
+        [
+          0.05,
+          16.0
+        ],
+        [
+          0.1,
+          16.3
+        ],
+        [
+          0.2,
+          16.6
+        ],
+        [
+          0.3,
+          16.85
+        ],
+        [
+          0.4,
+          17.05
+        ],
+        [
+          0.5,
+          17.2
+        ],
+        [
+          0.6,
+          17.35
+        ],
+        [
+          0.7,
+          17.5
+        ],
+        [
+          0.8,
+          17.7
+        ],
+        [
+          0.9,
+          18.0
+        ],
+        [
+          0.95,
+          18.25
+        ],
+        [
+          0.99,
+          18.7
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4348
+}

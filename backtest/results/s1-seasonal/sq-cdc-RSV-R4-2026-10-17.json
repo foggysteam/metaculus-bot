@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-RSV-R4-2026-10-17",
+  "question": "What percentage of tests will be positive for respiratory syncytial virus (RSV) in HHS Region 4 (the Southeast) for the week ending October 17, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for respiratory syncytial virus (RSV) in HHS Region 4 (the Southeast) for the week ending 2026-10-17 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 1.89,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-07",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 5.0,
+  "source": "cdc",
+  "series": "rgnm-fkqb:RSV-R4",
+  "known_value": 0.67,
+  "past_moves": [
+    0.95,
+    1.31,
+    8.35,
+    7.17,
+    -2.69
+  ],
+  "baseline": "",
+  "research": "## RSV test positivity, HHS Region 4: research notes as of 2026-09-07\n\nThe latest value available by the cutoff is **0.67% for the week ending 2026-08-29**, almost the same as the same week of 2025 (0.61%). In 2025 the comparable mid-October week reached 2.01%.\n\n### 1. Resolution source\n- The question is decided by CDC NREVSS dataset rgnm-fkqb, filtered to level \"Region 4\", the RSV percent-positive value for the week ending 2026-10-17, as posted on 2026-10-30. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Region 4 values for 2026, as currently shown in the dataset (later revisions are possible):\n  - 06-13: 1.02%\n  - 06-20: 0.81%\n  - 06-27: 0.74%\n  - 07-04: 0.84%\n  - 07-11: 0.84%\n  - 07-18: 0.83%\n  - 07-25: 0.60%\n  - 08-01: 0.69%\n  - 08-08: 0.68%\n  - 08-15: 0.57%\n  - 08-22: 1.01%\n  - 08-29: 0.67%\n  - [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Positivity has stayed flat at about 0.6 to 1.0% all summer. There is no sustained rise yet.\n\n### 2. Current status\n- Nothing has settled the question. The target week is about 7 weeks after the latest data. Region 4 is usually where the US RSV season starts, so a rise through September and October is the normal pattern.\n\n### 3. Recent news (newest first)\n- 2026-09 (early): The Florida DOH weekly RSV review for week 34 (Aug 23 to 29, 2026) reports that RSV emergency department visits rose in Florida's southeast region. Florida treats its southeast region as in RSV season all year. The PDF text could not be extracted, so I could not check the numbers. [FL DOH wk34](https://www.floridahealth.gov/wp-content/uploads/2026/09/fl-rsv-review-week-34-2026.pdf), [wk31](https://www.floridahealth.gov/wp-content/uploads/2026/08/fl-rsv-review-week-31-2026.pdf)\n- I found no CDC Health Alert Network (HAN) notice or press release about an early 2026 Southeast RSV rise. The widely covered CDC warning about RSV rising in the Southeast dates from September 2023. [ABC11](https://abc11.com/cdc-issues-warning-rsv-is-on-the-rise-in-young-children-in-southeas/13752474/)\n\n### 4. Base rates and seasonality (Region 4, same dataset)\n\n| Year | ~Aug 30 | ~Sep 13 | ~Sep 27 | ~Oct 11 | **~Oct 17 (target week)** | ~Oct 24 |\n|---|---|---|---|---|---|---|\n| 2025 | 0.61 | 0.71 | 1.45 | 1.83 | **2.01 (10-18)** | 2.84 |\n| 2024 | 0.13 | 0.82 | 1.22 | 2.01 | **4.88 (10-19)** | n/a |\n| 2023 | 1.49 (09-02) | 2.25 | 7.98 | 9.83 (10-07) | **10.72 (10-14)** | 12.27 |\n| 2022 | 7.66 (09-03) | 11.78 | 15.54 | 15.80 | **13.59 (10-15)** | 12.87 |\n\n- In every year shown, positivity was higher in mid-October than in late August:\n  - 2025: up about 1.4 points, a 3.3x increase\n  - 2024: up about 4.75 points, from a very low base; the series was noisy (3.07, then 2.01, then 4.88 in October)\n  - 2023: up about 9 points\n  - 2022: up about 6 points, an unusual post-pandemic early season\n- **2026 compared with earlier years:** the late-August level (0.67%) is about the same as 2025 (0.61%). It is above 2024 (0.13%) and far below 2023 and 2022. The flat summer looks most like 2025 and 2024.\n- Week-to-week noise at low levels is roughly ±0.3 to 0.5 points, and up to about ±1.5 to 3 points once activity starts rising (2024 is an example).\n- The question range is capped at 5.0%. Three of the four prior years were at or near that cap by mid-October (2022 and 2023 well above it, 2024 at 4.88). Only 2025 stayed well below it.\n- Possible reasons the last two seasons were milder: wider use of nirsevimab and clesrovimab for infants and maternal and older-adult vaccines since 2023 to 2024. This is context, not a measured effect.\n\n### 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on this series.\n- I did not find a CDC RSV season outlook for 2026 to 2027 specific to Region 4 in this search.\n\n### 6. Upcoming events before resolution\n- Weekly NREVSS updates, usually posted on Fridays, will add the weeks ending Sep 5 through Oct 17. The value posted on 2026-10-30 is what counts, and recent weeks can be revised.\n- School reopening (August in the Southeast) usually comes before the RSV rise in September and October.\n- The Florida DOH weekly RSV reviews give an early regional signal.\n- Weather has only an indirect effect. I did not look up a NOAA outlook.\n\nSources:\n- [CDC data.cdc.gov rgnm-fkqb](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- [FL DOH RSV review wk34 2026](https://www.floridahealth.gov/wp-content/uploads/2026/09/fl-rsv-review-week-34-2026.pdf)\n- [FL DOH RSV review wk31 2026](https://www.floridahealth.gov/wp-content/uploads/2026/08/fl-rsv-review-week-31-2026.pdf)\n- [ABC11 (2023 CDC warning)](https://abc11.com/cdc-issues-warning-rsv-is-on-the-rise-in-young-children-in-southeas/13752474/)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          0.05,
+          1.1
+        ],
+        [
+          0.1,
+          1.35
+        ],
+        [
+          0.2,
+          1.7
+        ],
+        [
+          0.3,
+          2.0
+        ],
+        [
+          0.4,
+          2.25
+        ],
+        [
+          0.5,
+          2.5
+        ],
+        [
+          0.6,
+          2.8
+        ],
+        [
+          0.7,
+          3.2
+        ],
+        [
+          0.8,
+          3.8
+        ],
+        [
+          0.9,
+          4.8
+        ],
+        [
+          0.95,
+          5.7
+        ],
+        [
+          0.99,
+          7.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.75
+        ],
+        [
+          0.05,
+          1.05
+        ],
+        [
+          0.1,
+          1.3
+        ],
+        [
+          0.2,
+          1.65
+        ],
+        [
+          0.3,
+          1.95
+        ],
+        [
+          0.4,
+          2.2
+        ],
+        [
+          0.5,
+          2.45
+        ],
+        [
+          0.6,
+          2.75
+        ],
+        [
+          0.7,
+          3.1
+        ],
+        [
+          0.8,
+          3.65
+        ],
+        [
+          0.9,
+          4.5
+        ],
+        [
+          0.95,
+          5.3
+        ],
+        [
+          0.99,
+          7.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          0.05,
+          1.1
+        ],
+        [
+          0.1,
+          1.3
+        ],
+        [
+          0.2,
+          1.65
+        ],
+        [
+          0.3,
+          1.95
+        ],
+        [
+          0.4,
+          2.2
+        ],
+        [
+          0.5,
+          2.45
+        ],
+        [
+          0.6,
+          2.75
+        ],
+        [
+          0.7,
+          3.1
+        ],
+        [
+          0.8,
+          3.6
+        ],
+        [
+          0.9,
+          4.4
+        ],
+        [
+          0.95,
+          5.1
+        ],
+        [
+          0.99,
+          6.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3327
+}

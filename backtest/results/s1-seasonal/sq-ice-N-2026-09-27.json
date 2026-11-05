@@ -1,0 +1,194 @@
+{
+  "id": "sq-ice-N-2026-09-27",
+  "question": "What will the Arctic sea ice extent be on September 27, 2026, according to the NSIDC Sea Ice Index?",
+  "resolution_criteria": "Resolves to the daily Arctic sea ice extent for 2026-09-27 in the NSIDC Sea Ice Index version 4 daily file (N_seaice_extent_daily_v4.0.csv), in millions of square kilometers.",
+  "unit": "million square kilometers",
+  "outcome": 5.228,
+  "outcome_date": "2026-09-28",
+  "as_of": "2026-08-30",
+  "resolve_date": "2026-09-28",
+  "lower_bound": 4.7,
+  "upper_bound": 5.2,
+  "source": "nsidc",
+  "series": "N",
+  "known_value": 4.911,
+  "past_moves": [
+    0.091,
+    0.104,
+    -0.179,
+    -0.147,
+    0.034
+  ],
+  "baseline": "",
+  "research": "I couldn't find any source dated on or before 2026-08-30 that settles this. The latest resolution-file value I used is **4.960 M km² on 2026-08-28**, inside the 4.7 to 5.2 range. That is about 0.15 above the same date in 2025 and higher than every year from 2019 to 2025 except 2021-22. Adding each recent year's late-season change to that figure puts 27 September between about 4.75 and 5.10.\n\n## 1. Resolution source\n- The source is the NSIDC Sea Ice Index v4 daily Arctic file, which is near-real-time and can get small revisions. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n- 2026-08-28: 4.960 M km², the latest row I used. I couldn't load the 29 and 30 August rows. Recent values from the same file:\n  - 2026-08-20: 5.303\n  - 2026-08-22: 5.117\n  - 2026-08-25: 4.998\n  - 2026-08-26: 4.983\n  - 2026-08-27: 5.028\n- 2026-08-01: 6.495, and 2026-08-15: 5.354. That is roughly 1.5 M km² lost in August, with a quick drop from 10 to 15 August and a short rise from 16 to 19 August. [NSIDC CSV](https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv)\n\n## 2. Current status\n- Nothing settles it yet. In 2019 to 2025 the yearly minimum fell between 10 and 18 September. By 27 September, extent had usually recovered from the low but was not always back above its late-August level.\n\n## 3. Recent news (newest first)\n- I couldn't find an NSIDC Sea Ice Today post dated on or before 2026-08-30. [NSIDC](https://nsidc.org/sea-ice-today)\n- August 2026: Copernicus, using a different dataset (OSI SAF), reports the August average at about 6.1 M km², 12th lowest for the month. That page may have been published after the cutoff. [Copernicus](https://climate.copernicus.eu/sea-ice-cover-august-2026)\n- 2026-08-03: The Met Office reported 7.02 M km² on 2 August, 9th lowest for the date. The July average was 8.29 M km², joint 5th lowest. [Met Office](https://www.metoffice.gov.uk/research/approach/monitoring/sea-ice/2026/briefing-on-arctic--antarctic-sea-ice---august-2026)\n- March 2026: The winter maximum was about 14.29 M km² on 15 March, essentially tied with 2025's record low. [Denver7](https://www.denver7.com/news/environment/arctic-snow-ice-ties-for-lowest-maximum-extent-on-record-in-2026-boulder-research-center-finds)\n\n## 4. Base rates\nAll values are from the NSIDC v4 daily file, in M km². \"Implied 2026\" adds each year's 28 Aug to 27 Sep change to this year's 4.960.\n\n| Year | 28 Aug | Sep min (date) | 27 Sep | Change, 28 Aug to 27 Sep | Implied 2026 |\n|---|---|---|---|---|---|\n| 2019 | 4.632 | 4.166 (18 Sep) | 4.563 | -0.069 | 4.891 |\n| 2020 | 4.354 | 3.793 (13 Sep) | 4.272 | -0.082 | 4.878 |\n| 2021 | 5.226 | 4.757 (14 Sep) | 5.171 | -0.055 | 4.905 |\n| 2022 | 5.223 | 4.692 (15 Sep) | 5.079 | -0.144 | 4.816 |\n| 2023 | 4.678 | 4.244 (17 Sep) | 4.463 | -0.215 | 4.745 |\n| 2024 | 4.405 | 4.245 (10 Sep) | 4.544 | +0.139 | 5.099 |\n| 2025 | 4.809 | ~4.54 (8 Sep) | 4.919 | +0.110 | 5.070 |\n\n- The mean change is about -0.045, with a range of -0.215 to +0.139. The implied 2026 values average about 4.92 and run from 4.75 to 5.10.\n- 2026 is running higher than 2019, 2020, 2023, 2024 and 2025 for this date, and slightly lower than 2021 and 2022.\n- Day-to-day noise in this series is often 0.05 to 0.09 (for example, 2025-08-29 to 08-30 rose 0.088, and 2025-09-23 to 09-24 fell 0.085).\n\n## 5. Other forecasts\n- 2026-08-03: The Met Office gave these ranges for September 2026:\n  - Detrended correlation method: 4.05 to 5.39\n  - Melt-trajectory method: 3.98 to 5.45\n  - Post-2007 range: 3.99 to 5.68\n\n  It said a middle value is more likely than either end. These cover the September minimum or monthly average, not 27 September. [Met Office](https://www.metoffice.gov.uk/research/approach/monitoring/sea-ice/2026/briefing-on-arctic--antarctic-sea-ice---august-2026)\n- July 2026: The June SIPN outlook median was 4.83, with submissions from 4.22 to 5.18. [Met Office July](https://www.metoffice.gov.uk/research/approach/monitoring/sea-ice/2026/briefing-on-arctic-and-antarctic-sea-ice-july-2026)\n- I couldn't load the July or August 2026 SIPN reports from the official site (404). Later secondary sources quote a July median of about 4.45, which I couldn't verify.\n- Polymarket ran markets on the 2026 Arctic minimum, resolving on NSIDC data. I couldn't find prices dated near 2026-08-30. [frenzycap](https://www.frenzycap.com/predictions/event/polymarket/min-arctic-sea-ice-extent-this-summer), [Manifold](https://manifold.markets/prismatic/which-arctic-sea-ice-minimum-thresh)\n- I found no market on the exact 27 September daily value.\n\n## 6. Upcoming events before resolution\n- Mid-September: the expected seasonal minimum. Recent years bottomed out between 8 and 18 September.\n- Late September: freeze-up timing. In 2025, extent rose about 0.3 between the minimum and 27 September. In 2022 and 2023, ice was still near its low point around 20 September.\n- Weather such as storms, winds pushing ice together or spreading it out, and warm air arriving after August decides late-season moves. I couldn't find an official weather outlook for the Arctic in September 2026 published before the cutoff.\n- The data may get small near-real-time revisions. The question resolves on whatever value the file shows for 27 September.",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          4.5
+        ],
+        [
+          0.05,
+          4.63
+        ],
+        [
+          0.1,
+          4.7
+        ],
+        [
+          0.2,
+          4.79
+        ],
+        [
+          0.3,
+          4.86
+        ],
+        [
+          0.4,
+          4.9
+        ],
+        [
+          0.5,
+          4.94
+        ],
+        [
+          0.6,
+          4.98
+        ],
+        [
+          0.7,
+          5.02
+        ],
+        [
+          0.8,
+          5.08
+        ],
+        [
+          0.9,
+          5.16
+        ],
+        [
+          0.95,
+          5.22
+        ],
+        [
+          0.99,
+          5.35
+        ]
+      ],
+      [
+        [
+          0.01,
+          4.45
+        ],
+        [
+          0.05,
+          4.59
+        ],
+        [
+          0.1,
+          4.67
+        ],
+        [
+          0.2,
+          4.77
+        ],
+        [
+          0.3,
+          4.84
+        ],
+        [
+          0.4,
+          4.89
+        ],
+        [
+          0.5,
+          4.93
+        ],
+        [
+          0.6,
+          4.97
+        ],
+        [
+          0.7,
+          5.02
+        ],
+        [
+          0.8,
+          5.08
+        ],
+        [
+          0.9,
+          5.17
+        ],
+        [
+          0.95,
+          5.24
+        ],
+        [
+          0.99,
+          5.38
+        ]
+      ],
+      [
+        [
+          0.01,
+          4.5
+        ],
+        [
+          0.05,
+          4.63
+        ],
+        [
+          0.1,
+          4.7
+        ],
+        [
+          0.2,
+          4.79
+        ],
+        [
+          0.3,
+          4.85
+        ],
+        [
+          0.4,
+          4.9
+        ],
+        [
+          0.5,
+          4.93
+        ],
+        [
+          0.6,
+          4.97
+        ],
+        [
+          0.7,
+          5.01
+        ],
+        [
+          0.8,
+          5.07
+        ],
+        [
+          0.9,
+          5.15
+        ],
+        [
+          0.95,
+          5.21
+        ],
+        [
+          0.99,
+          5.34
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.6071
+}

@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Madrid-2026-09-22",
+  "question": "What will be the average daily mean temperature in Madrid over the 7 days ending September 22, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-09-16 to 2026-09-22 at latitude 40.42, longitude -3.7 (Madrid), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 23.09,
+  "outcome_date": "2026-09-28",
+  "as_of": "2026-09-01",
+  "resolve_date": "2026-09-28",
+  "lower_bound": 10.0,
+  "upper_bound": 35.0,
+  "source": "open-meteo",
+  "series": "Madrid",
+  "known_value": 22.642857,
+  "past_moves": [
+    -1.357143,
+    -6.271429,
+    -7.242857,
+    -5.085714,
+    -7.914286
+  ],
+  "baseline": "",
+  "research": "I've finished collecting the data and am now writing up the findings.\n\n# Madrid, 7-day mean temperature for 16-22 Sep 2026 (ERA5 via Open-Meteo): research notes as of 2026-09-01\n\n## 1. Resolution source\n- The question resolves on the Open-Meteo archive API (ERA5): the `temperature_2m_mean` daily values at 40.42, -3.7, averaged over 2026-09-16 to 2026-09-22. I queried it directly with the Europe/Madrid timezone. Open-Meteo's default timezone is GMT, which can change daily means slightly.\n- Latest values I pulled, from late August 2026 (°C): 08-24 23.8, 08-25 22.8, 08-26 23.7, 08-27 18.6, 08-28 19.0, 08-29 22.5, 08-30 25.2, 08-31 26.5. Mid-August was hotter: 08-17 29.6, 08-18 31.1, 08-19 30.3. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2026-08-15&end_date=2026-08-31&daily=temperature_2m_mean&timezone=Europe%2FMadrid)\n\n## 2. Current status\n- Nothing has happened yet that settles the question. The window starts 15 days after the forecast deadline, beyond reliable deterministic forecast range.\n\n## 3. Recent news (newest first)\n- 2026-09-01: Madridinforma reports AEMET's forecast for Madrid city: highs of 34°C on Sep 1, 36°C on Sep 2, 37°C on Sep 3 and 38°C on Sep 4 (lows of about 20-22°C). Clouds and possible rain are expected around Sep 5-6, with highs of about 20-31°C on Sep 6. AEMET warned the heat would increase. The article only covers the first week of September. [madridinforma](https://madridinforma.es/?p=61294)\n- 2026-08-31 (approx.): Madrid reached 33°C, and AEMET expected more heat at the start of September. [madridinforma](https://madridinforma.eldiario.es/?p=61247)\n- Overall, the start of the season is warm: daily means in mid-to-late August 2026 were mostly 23-31°C, apart from a cooler 27-28 Aug.\n- I could not find any AEMET or ECMWF extended outlook covering 16-22 Sep that was published by 2026-09-01. Search results dated after 2026-09-01 were ignored.\n\n## 4. Base rates (same source, same 16-22 Sep window, timezone Europe/Madrid)\n- 2016: 18.6 | 2017: 18.8 | 2018: 24.2 | 2019: 19.4 | 2020: 18.9 | 2021: 17.9 | 2022: 21.4 | 2023: 16.9 | 2024: 19.4 | 2025: 24.4 (°C). Sources: [2016-2025 query](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2016-09-16&end_date=2025-09-22&daily=temperature_2m_mean&timezone=Europe%2FMadrid), plus single-year queries for 2020-2024 (e.g. [2023](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2023-09-16&end_date=2023-09-22&daily=temperature_2m_mean&timezone=Europe%2FMadrid)).\n- 10-year statistics: mean about 20.0°C, median about 19.2°C, standard deviation about 2.5°C, range 16.9 to 24.4°C. The distribution is right-skewed: 7 of 10 years fell between 17.9 and 19.4°C, and 2 years were warm outliers above 24°C (2018 and 2025).\n- Daily swings inside the window can be large. In 2025 the daily mean went 26.6, 26.9, 27.5, 27.3, 25.6, 21.3, 15.8, with a front arriving on the last days. In 2020 it went from 23.3 down to about 17.7.\n- Seasonal trend: mid-September in Madrid usually cools by roughly 1-2°C a week. Late August 2026 values (around 19-26°C) suggest that window would land a few degrees lower without anomalous heat.\n- Background warming: recent years include two strong warm outliers, but there is no clean trend in this small sample.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this specific question or a close variant.\n- I found no published expert or seasonal forecast giving a figure for Madrid on 16-22 Sep 2026 by 2026-09-01. Sources that could be checked before close: ECMWF extended-range weekly anomalies (weeks 3), AEMET's monthly/seasonal outlook, and the Open-Meteo ensemble/seasonal APIs.\n\n## 6. Upcoming events before resolution\n- Heat in early September (highs forecast at 36-38°C on Sep 2-4) and a possible change around Sep 5-6 will shape the pattern. However, persistence from early September to the 16-22 window is weak.\n- Week-2 to week-3 ECMWF/GFS ensemble guidance updated between Sep 1 and Sep 15 will be the main signal. The key questions are whether a ridge or Iberian thermal low persists (pointing to the 2018/2025-type outcome of about 24°C) or an Atlantic trough or DANA arrives (the 2021/2023-type outcome of about 17°C).\n- The question resolves from ERA5 data around 2026-09-28. Open-Meteo's ERA5 has about a 5-day lag. Early data may come from ERA5T or preliminary sources and could be revised slightly.\n\nSources:\n- [Open-Meteo archive, Aug 2026](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2026-08-15&end_date=2026-08-31&daily=temperature_2m_mean&timezone=Europe%2FMadrid)\n- [Open-Meteo archive, 2016-2025](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2016-09-16&end_date=2025-09-22&daily=temperature_2m_mean&timezone=Europe%2FMadrid)\n- [madridinforma, 2026-09-01](https://madridinforma.es/?p=61294)\n- [madridinforma, ~2026-08-31](https://madridinforma.eldiario.es/?p=61247)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          14.8
+        ],
+        [
+          0.05,
+          16.4
+        ],
+        [
+          0.1,
+          17.2
+        ],
+        [
+          0.2,
+          18.2
+        ],
+        [
+          0.3,
+          19.0
+        ],
+        [
+          0.4,
+          19.6
+        ],
+        [
+          0.5,
+          20.2
+        ],
+        [
+          0.6,
+          20.8
+        ],
+        [
+          0.7,
+          21.5
+        ],
+        [
+          0.8,
+          22.5
+        ],
+        [
+          0.9,
+          23.8
+        ],
+        [
+          0.95,
+          24.7
+        ],
+        [
+          0.99,
+          26.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          14.6
+        ],
+        [
+          0.05,
+          16.2
+        ],
+        [
+          0.1,
+          17.0
+        ],
+        [
+          0.2,
+          18.1
+        ],
+        [
+          0.3,
+          18.9
+        ],
+        [
+          0.4,
+          19.6
+        ],
+        [
+          0.5,
+          20.2
+        ],
+        [
+          0.6,
+          20.9
+        ],
+        [
+          0.7,
+          21.7
+        ],
+        [
+          0.8,
+          22.8
+        ],
+        [
+          0.9,
+          24.1
+        ],
+        [
+          0.95,
+          25.1
+        ],
+        [
+          0.99,
+          26.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.0
+        ],
+        [
+          0.05,
+          16.3
+        ],
+        [
+          0.1,
+          17.0
+        ],
+        [
+          0.2,
+          18.0
+        ],
+        [
+          0.3,
+          18.8
+        ],
+        [
+          0.4,
+          19.5
+        ],
+        [
+          0.5,
+          20.1
+        ],
+        [
+          0.6,
+          20.8
+        ],
+        [
+          0.7,
+          21.6
+        ],
+        [
+          0.8,
+          22.6
+        ],
+        [
+          0.9,
+          23.9
+        ],
+        [
+          0.95,
+          24.8
+        ],
+        [
+          0.99,
+          26.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3163
+}

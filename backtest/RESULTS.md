@@ -292,3 +292,23 @@ Nothing changes on the live bot. One of the 48 questions was left out because 3 
 - Blending with the market beats live on this set (in sample): 75% ours +3.7 (CI +0.5 to +7.1), 50% +6.3 (CI +0.4 to +12.8), 25% +7.8 (CI -1.3 to +17.1). There is nothing to build from this yet: none of the 6 live questions had a market matching its options, and the calibration rules already tell the forecasters to anchor on a market that covers the same question.
 - Notional usage was $26 against the $70 estimated from local runs, in line with the shadow runs costing less on GitHub than locally.
 
+## Two research reports, numeric: `s1-base` + `s1-seasonal`
+
+43 questions (leaked in either run excluded). Thirteen percentiles, straight-line CDF, median CDF.
+
+| Forecasts | Log score | vs 3 from A (points per question) | 95% CI | Better on | Worse on |
+|---|---|---|---|---|---|
+| 3 from A | -4.361 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from A + 3 from B (live) | -4.317 | +2.2 | -1.3 to +5.9 | 22 | 14 |
+| 3 from B | -4.250 | +5.5 | +0.5 to +10.6 | 25 | 11 |
+
+3 from B against 3 from A, by source: cdc +10.0 over 11, fred +13.3 over 10, nsidc -3.2 over 7, open-meteo +1.2 over 15
+
+### What s1 showed (5 Nov)
+
+A is the research as live, B the research with the seasonal note (forecaster.SEASONAL_NOTE): the same calendar window in each of the last 3 to 5 years, and the weather or seasonal outlook where the outcome depends on it. 46 questions from public data (backtest/build_seasonal_dataset.py), each researched once per arm, 3 forecasts per research. "3 from A + 3 from B" is labelled live by the scorer because live combines two research reports; from now on both get the note.
+
+- Change made: the note goes into the research for numeric and discrete questions, bot version 2026-11-05.1. Yes/no, multiple choice and date questions are unchanged, since this tested numeric questions only.
+- The gain came from disease (CDC) and economic (FRED) series. Temperatures barely moved (+1.2) and sea ice was slightly worse (-3.2 over 7), so the earlier years' records helped more than weather outlooks.
+- Hindsight leaks: 3 in A, none in B; all 3 questions were dropped from both.
+- Notional usage $17.69 (A) and $18.16 (B); median research length about 5,500 characters in both.

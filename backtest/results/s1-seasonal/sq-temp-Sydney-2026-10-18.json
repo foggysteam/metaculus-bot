@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Sydney-2026-10-18",
+  "question": "What will be the average daily mean temperature in Sydney over the 7 days ending October 18, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-12 to 2026-10-18 at latitude -33.87, longitude 151.21 (Sydney), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 17.16,
+  "outcome_date": "2026-10-24",
+  "as_of": "2026-10-04",
+  "resolve_date": "2026-10-24",
+  "lower_bound": 14.5,
+  "upper_bound": 21.0,
+  "source": "open-meteo",
+  "series": "Sydney",
+  "known_value": 17.471429,
+  "past_moves": [
+    0.714286,
+    1.414286,
+    -2.442857,
+    2.371429,
+    -0.514286
+  ],
+  "baseline": "",
+  "research": "I couldn't get any forecast or market specific to 12-18 October 2026. The best evidence is past ERA5 values for the same week, which have run from about 15.9 to 20.3°C in recent years, and an official outlook favouring above-average spring temperatures.\n\n## 1. Resolution source\n- I queried the Open-Meteo ERA5 archive (archive-api.open-meteo.com) for -33.87, 151.21, daily `temperature_2m_mean`. For 2022-2026 I left the timezone at its default (GMT); the 2021 query used Australia/Sydney time. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2026-09-01&end_date=2026-10-04&daily=temperature_2m_mean)\n- 2026-10-04: the latest value shown is 17.6°C. The days before it: 1 Oct 21.4, 2 Oct 19.8, 3 Oct 17.4. Values from the last few days may be preliminary and could be revised.\n- The question doesn't say which timezone it uses. The choice can move a daily mean by a few tenths of a degree.\n\n## 2. Current status\n- Nothing is settled. The 12-18 October window hasn't started, and no part of it is known yet.\n\n## 3. Recent news\n- 2026-10-01 and 2026-09-24: the Bureau of Meteorology (BoM) issued outlooks for October to January. Both pages returned HTTP 403, so I couldn't read them. [BoM 1 Oct](https://www.bom.gov.au/climate/ahead/outlooks/archive/20261001-outlook.shtml), [BoM 24 Sep](https://www.bom.gov.au/climate/ahead/outlooks/archive/20260924-outlook.shtml)\n- 2026-09-17: the BoM outlook for October to January (as summarised in search results) says above-average temperatures are likely across much of Australia for the rest of 2026. It also warns that El Niño is only one factor. [BoM](https://www.bom.gov.au/climate/ahead/outlooks/archive/20260917-outlook.shtml)\n- 2026-08-27: BoM's spring long-range forecast says above-average temperatures are likely across most of Australia, with a higher risk of early-season heat, and El Niño expected to strengthen and persist. [BoM](https://www.bom.gov.au/news-and-media/the-bureau-issues-long-range-forecast-for-spring)\n- 2026 (June): El Niño was declared to be underway. For Sydney, forecasts pointed to below-average rain and above-average temperatures. [Time Out](https://www.timeout.com/sydney/news/el-nino-is-officially-underway-heres-what-that-means-for-sydneys-weather-forecast-061826)\n\n## 4. Base rates\nERA5 means for 12-18 October, from the Open-Meteo archive:\n- 2021: 15.9°C (Sydney time). Daily range 14.8-17.8. [2021](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2021-10-01&end_date=2021-10-20&daily=temperature_2m_mean&timezone=Australia/Sydney)\n- 2022: 16.8°C. Daily range 15.6-17.7. [2022](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2022-09-20&end_date=2022-10-20&daily=temperature_2m_mean)\n- 2023: 17.8°C. Daily range 15.9-21.2. This was an El Niño year. [2023](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2023-09-20&end_date=2023-10-20&daily=temperature_2m_mean)\n- 2024: 16.7°C. Daily range 13.8-20.7. [2024](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2024-09-20&end_date=2024-10-20&daily=temperature_2m_mean)\n- 2025: 20.3°C. Daily range 17.0-23.8. [2025](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2025-09-20&end_date=2025-10-20&daily=temperature_2m_mean)\n- The 5-year mean is about 17.5°C, and 17.9°C for 2022-2025 only. The spread is roughly 15.9-20.3, a standard deviation of about 1.6°C. Single days in this window range from 13.8 to 23.8°C.\n\n**Seasonal path, 1-4 Oct mean compared with 12-18 Oct mean:**\n- 2022: 14.1 → 16.8 (+2.7)\n- 2023: 22.1 → 17.8 (-4.3)\n- 2024: 15.9 → 16.7 (+0.8)\n- 2025: 17.9 → 20.3 (+2.4)\n- 2026: 1-4 October averages 19.1°C. That is above 2022, 2024 and 2025 but below 2023, so this year is running warm. The early-October value has not reliably predicted the mid-October week.\n- September 2026 averaged about 17.3°C, with frequent swings between 12.8 and 24.6°C.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets, and no expert forecast specific to this week or quantity.\n\n## 6. Upcoming events and forecasts\n- The latest official guidance I could find favours above-average spring temperatures in an El Niño year: BoM's 17 September summary and the August spring outlook. I couldn't read the BoM outlooks dated 24 September and 1 October (403 errors).\n- I couldn't get a 7-16 day forecast for 12-18 October issued on or before 4 October. The data I saw for that period came from after the cutoff, so I ignored it.\n- Things that could move the outcome include warm north-westerly days ahead of fronts (2025 had several days around 24°C) and cool southerly changes or onshore patterns (single days of 13-15°C).\n\nSources:\n- [Open-Meteo archive 2026](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2026-09-01&end_date=2026-10-04&daily=temperature_2m_mean)\n- [Open-Meteo archive 2021](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2021-10-01&end_date=2021-10-20&daily=temperature_2m_mean&timezone=Australia/Sydney)\n- [Open-Meteo archive 2022](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2022-09-20&end_date=2022-10-20&daily=temperature_2m_mean)\n- [Open-Meteo archive 2023](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2023-09-20&end_date=2023-10-20&daily=temperature_2m_mean)\n- [Open-Meteo archive 2024](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2024-09-20&end_date=2024-10-20&daily=temperature_2m_mean)\n- [Open-Meteo archive 2025](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2025-09-20&end_date=2025-10-20&daily=temperature_2m_mean)\n- [BoM outlook 17 Sep 2026](https://www.bom.gov.au/climate/ahead/outlooks/archive/20260917-outlook.shtml)\n- [BoM outlook 24 Sep 2026](https://www.bom.gov.au/climate/ahead/outlooks/archive/20260924-outlook.shtml)\n- [BoM outlook 1 Oct 2026](https://www.bom.gov.au/climate/ahead/outlooks/archive/20261001-outlook.shtml)\n- [BoM spring long-range forecast](https://www.bom.gov.au/news-and-media/the-bureau-issues-long-range-forecast-for-spring)\n- [Time Out Sydney](https://www.timeout.com/sydney/news/el-nino-is-officially-underway-heres-what-that-means-for-sydneys-weather-forecast-061826)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          14.6
+        ],
+        [
+          0.05,
+          15.4
+        ],
+        [
+          0.1,
+          15.9
+        ],
+        [
+          0.2,
+          16.6
+        ],
+        [
+          0.3,
+          17.1
+        ],
+        [
+          0.4,
+          17.5
+        ],
+        [
+          0.5,
+          17.9
+        ],
+        [
+          0.6,
+          18.3
+        ],
+        [
+          0.7,
+          18.7
+        ],
+        [
+          0.8,
+          19.3
+        ],
+        [
+          0.9,
+          20.1
+        ],
+        [
+          0.95,
+          20.7
+        ],
+        [
+          0.99,
+          21.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          14.6
+        ],
+        [
+          0.05,
+          15.5
+        ],
+        [
+          0.1,
+          16.0
+        ],
+        [
+          0.2,
+          16.7
+        ],
+        [
+          0.3,
+          17.2
+        ],
+        [
+          0.4,
+          17.6
+        ],
+        [
+          0.5,
+          17.9
+        ],
+        [
+          0.6,
+          18.3
+        ],
+        [
+          0.7,
+          18.7
+        ],
+        [
+          0.8,
+          19.3
+        ],
+        [
+          0.9,
+          20.1
+        ],
+        [
+          0.95,
+          20.7
+        ],
+        [
+          0.99,
+          21.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          14.8
+        ],
+        [
+          0.05,
+          15.6
+        ],
+        [
+          0.1,
+          16.1
+        ],
+        [
+          0.2,
+          16.8
+        ],
+        [
+          0.3,
+          17.3
+        ],
+        [
+          0.4,
+          17.7
+        ],
+        [
+          0.5,
+          18.0
+        ],
+        [
+          0.6,
+          18.3
+        ],
+        [
+          0.7,
+          18.8
+        ],
+        [
+          0.8,
+          19.3
+        ],
+        [
+          0.9,
+          20.0
+        ],
+        [
+          0.95,
+          20.6
+        ],
+        [
+          0.99,
+          21.6
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.418
+}

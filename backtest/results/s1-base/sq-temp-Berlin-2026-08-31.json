@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Berlin-2026-08-31",
+  "question": "What will be the average daily mean temperature in Berlin over the 7 days ending August 31, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-08-25 to 2026-08-31 at latitude 52.52, longitude 13.4 (Berlin), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 20.73,
+  "outcome_date": "2026-09-06",
+  "as_of": "2026-08-03",
+  "resolve_date": "2026-09-06",
+  "lower_bound": 19.5,
+  "upper_bound": 24.0,
+  "source": "open-meteo",
+  "series": "Berlin",
+  "known_value": 21.5,
+  "past_moves": [
+    0.428571,
+    1.985714,
+    -0.457143,
+    -1.014286,
+    -5.228571
+  ],
+  "baseline": "",
+  "research": "I've put together what was available up to August 3, 2026. It's mostly the resolution data and 16 years of history for these dates. No source dated by August 3 gives a forecast specific to Aug 25-31.\n\n## 1. Resolution source\n- The question is decided by the Open-Meteo ERA5 archive, daily `temperature_2m_mean` at 52.52N, 13.4E. Recent values (UTC days): Jul 29 23.1, Jul 30 28.9, Jul 31 24.9, Aug 1 18.8, Aug 2 18.7, Aug 3 21.7 °C. The latest value is for 2026-08-03, which is probably a preliminary or partial-day figure. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.4&start_date=2026-07-01&end_date=2026-08-03&daily=temperature_2m_mean&timezone=GMT)\n- July 2026 in Berlin went back and forth: 15.4 to 24.6 °C for most of the month, with a peak of 28.9 on Jul 30. Across Jul 1 to Aug 3, the daily mean was above 19.5 °C on about 15 of 34 days. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.4&start_date=2026-07-01&end_date=2026-08-03&daily=temperature_2m_mean&timezone=GMT)\n\n## 2. Current status\n- Nothing has settled the question. The window (Aug 25-31) starts 22 days after the forecasts close, which is beyond the range where day-to-day forecasts are useful.\n\n## 3. Recent news (newest first, only items dated by Aug 3)\n- 2026-08-01: A wetterprognose-wettervorhersage.de blog post (not an official weather service) said Aug 2-6 would be hot and stormy across Germany, with highs of 30-35 °C. It expected a brief cooler dip around Aug 8-9 and the heat to return Aug 10-13. About 78% of ECMWF ensemble runs kept a blocking high and heat into mid-August, while GFS favoured a cooler westerly pattern. It gave no forecast for late August and called the end of the high-summer pattern \"uncertain.\" It also mentions a worsening drought in Germany. [wetterprognose-wettervorhersage.de](https://www.wetterprognose-wettervorhersage.de/wetter-jahreszeiten/sommer/wetter-sommer-2026/13731-hochsommer-mit-erhaltungsneigung-wetterwechsel-bleibt-unsicher-duerre-verschaerft-sich-weiter.html)\n- I also found other outlook articles (wetter.com, more posts on the same blog), but they were dated after Aug 3, so I left them out.\n- I could not find a DWD or ECMWF monthly or extended outlook dated by Aug 3 that covers Aug 25-31.\n\n## 4. Base rates (Aug 25-31 mean from the same Open-Meteo ERA5 series)\n- 2010 14.8, 2011 17.9, 2012 18.3, 2013 18.6, 2014 15.4, 2015 21.0, 2016 22.5, 2017 19.3, 2018 17.2, 2019 25.0, 2020 17.4, 2021 14.8, 2022 19.2, 2023 18.2, 2024 22.0, 2025 18.0. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.4&start_date=2010-08-25&end_date=2025-08-31&daily=temperature_2m_mean&timezone=GMT)\n  - I checked 2019, 2024 and 2025 by fetching each year on its own. The bulk fetch had given 2024 as 21.9, and the single-year daily values give 22.0. The other years come from multi-year fetches read by a helper model, so treat them as approximate (about ±0.1 °C).\n- Summary for 2010-2025:\n  - Average about 18.7 °C, standard deviation about 2.9 °C, range 14.8 to 25.0.\n  - The median is about 18.3, which is below the question's lower bound of 19.5.\n  - Only 4 of 16 years were 19.5 °C or warmer: 2015, 2016, 2019, 2024. Two more were just under: 2017 at 19.3 and 2022 at 19.2.\n  - Only 2019 reached 24.0 or higher.\n  - The last 10 years (2016-2025) averaged about 19.4 °C, so there is a slight warming trend.\n- Within a single year the week can swing a lot. In 2024, for example, the daily mean went from 19.0 to 27.4 °C during the window. One heat event can lift the 7-day mean by 3-4 °C.\n- The question's range (19.5-24.0) sits mostly above the historical median. Only about 25-30% of past years fell inside it, and some years fell below it.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on Berlin temperatures for late August 2026.\n- I found no expert forecast dated by Aug 3 that is specific to Aug 25-31. The only relevant context is the blog's description of blocked or hot conditions persisting into mid-August, with an uncertain end, and a mention of drought (dry soils tend to make heat stronger).\n\n## 6. Upcoming events before resolution\n- ECMWF extended-range forecasts (issued twice weekly) and the DWD weekly or monthly outlooks will start to cover Aug 25-31 from about Aug 4-11 onwards. They become reasonably skilful within about 10 days, around Aug 15-21.\n- The main thing to watch is whether the Central European blocking high and heat last into late August, or whether Atlantic troughs move in.\n- Open-Meteo ERA5 data for Aug 25-31 should be complete within about 5 days, by around Sep 5-6.\n\nSources:\n- [Open-Meteo archive, Jul-Aug 2026](https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.4&start_date=2026-07-01&end_date=2026-08-03&daily=temperature_2m_mean&timezone=GMT)\n- [Open-Meteo archive, 2010-2025](https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.4&start_date=2010-08-25&end_date=2025-08-31&daily=temperature_2m_mean&timezone=GMT)\n- [wetterprognose-wettervorhersage.de, 2026-08-01](https://www.wetterprognose-wettervorhersage.de/wetter-jahreszeiten/sommer/wetter-sommer-2026/13731-hochsommer-mit-erhaltungsneigung-wetterwechsel-bleibt-unsicher-duerre-verschaerft-sich-weiter.html)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          13.8
+        ],
+        [
+          0.05,
+          15.0
+        ],
+        [
+          0.1,
+          15.8
+        ],
+        [
+          0.2,
+          17.0
+        ],
+        [
+          0.3,
+          18.0
+        ],
+        [
+          0.4,
+          18.7
+        ],
+        [
+          0.5,
+          19.3
+        ],
+        [
+          0.6,
+          19.9
+        ],
+        [
+          0.7,
+          20.7
+        ],
+        [
+          0.8,
+          21.7
+        ],
+        [
+          0.9,
+          23.0
+        ],
+        [
+          0.95,
+          24.0
+        ],
+        [
+          0.99,
+          26.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          13.0
+        ],
+        [
+          0.05,
+          14.6
+        ],
+        [
+          0.1,
+          15.5
+        ],
+        [
+          0.2,
+          16.8
+        ],
+        [
+          0.3,
+          17.8
+        ],
+        [
+          0.4,
+          18.6
+        ],
+        [
+          0.5,
+          19.3
+        ],
+        [
+          0.6,
+          20.0
+        ],
+        [
+          0.7,
+          20.9
+        ],
+        [
+          0.8,
+          22.0
+        ],
+        [
+          0.9,
+          23.5
+        ],
+        [
+          0.95,
+          24.6
+        ],
+        [
+          0.99,
+          26.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          13.5
+        ],
+        [
+          0.05,
+          14.8
+        ],
+        [
+          0.1,
+          15.7
+        ],
+        [
+          0.2,
+          17.0
+        ],
+        [
+          0.3,
+          18.0
+        ],
+        [
+          0.4,
+          18.7
+        ],
+        [
+          0.5,
+          19.3
+        ],
+        [
+          0.6,
+          19.9
+        ],
+        [
+          0.7,
+          20.7
+        ],
+        [
+          0.8,
+          21.7
+        ],
+        [
+          0.9,
+          23.1
+        ],
+        [
+          0.95,
+          24.1
+        ],
+        [
+          0.99,
+          26.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4038
+}

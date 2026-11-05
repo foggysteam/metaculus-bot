@@ -327,6 +327,18 @@ def test_forecast_already_in_order_is_left_alone() -> None:
     assert forecaster.keep_values_increasing(member) is member
 
 
+def test_seasonal_note_goes_to_numeric_research_only() -> None:
+    from forecasting_tools import BinaryQuestion, DiscreteQuestion, MultipleChoiceQuestion, NumericQuestion
+
+    bot = object.__new__(forecaster.ClaudeForecaster)
+    for kind in (NumericQuestion, DiscreteQuestion):
+        assert bot.research_notes(object.__new__(kind)) == forecaster.SEASONAL_NOTE
+    for kind in (BinaryQuestion, MultipleChoiceQuestion):
+        assert bot.research_notes(object.__new__(kind)) == ""
+    bot.research_note = "\n\nShadow note."  # shadow runs keep the live note and add their own
+    assert bot.research_notes(object.__new__(NumericQuestion)) == forecaster.SEASONAL_NOTE + "\n\nShadow note."
+
+
 def test_group_post_url_gives_each_subquestion() -> None:
     client = SimpleNamespace(get_question_by_url=lambda url, group_question_mode: ["a", "b"] if "group" in url else "c")
     assert run_bot.questions_at(client, ["x/group", "x/single"]) == ["a", "b", "c"]

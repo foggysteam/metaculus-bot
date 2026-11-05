@@ -1,0 +1,194 @@
+{
+  "id": "sq-fred-ICNSA-2026-09-19",
+  "question": "What will be US initial jobless claims, not seasonally adjusted (Department of Labor) for the week ending September 19, 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of US initial jobless claims, not seasonally adjusted (Department of Labor) for the week ending September 19, 2026 (FRED series ICNSA). Later revisions are ignored.",
+  "unit": "claims",
+  "outcome": 163811.0,
+  "outcome_date": "2026-09-24",
+  "as_of": "2026-09-14",
+  "resolve_date": "2026-09-24",
+  "lower_bound": 170000.0,
+  "upper_bound": 185000.0,
+  "source": "fred",
+  "series": "ICNSA",
+  "known_value": 176567.0,
+  "past_moves": [
+    -1279.0,
+    -3791.0,
+    -14767.0,
+    -4133.0,
+    20898.0
+  ],
+  "baseline": "\nComputed by code from FRED ICNSA (Initial Claims, Number, frequency W): latest observation 176567.0000 for 2026-09-05.\nThe target period 2026-09-19 is 2 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 2-period changes since 2005 (last 3 years weighted double):\np5: 137565.44, p10: 149518.6718, p25: 162257.3829, p50: 176446.3482, p75: 190821.5587, p90: 207765.9453, p95: 219431.4895\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I could not find the official 2026 seasonal factors or a consensus forecast for the September 19 week, so the estimates in section 4 are rough calculations of my own.\n\n## 1. Resolution source\n- The question settles on the first published value of FRED series ICNSA, which comes from the DOL weekly claims report. The figure for the week ending 2026-09-19 is due in the report of Thursday 2026-09-24, 8:30 ET.\n- 2026-09-10: the latest report covered the week ending September 5. Seasonally adjusted (SA) initial claims were 206,000, down 1,000 from a revised 207,000. The 4-week average was 206,000. [DOL/govdelivery](https://content.govdelivery.com/accounts/USDOL/bulletins/4299777)\n- 2026-09-10: the not seasonally adjusted (NSA) figure for the week ending September 5 was **176,567** according to the code-supplied FRED data. A search-engine summary of a DOL table gave 176,916, against 171,403 for August 29. I could not open the DOL release text: the DOL page returned 403 and the PDF could not be read. Treat roughly 176.6k as the starting level. [DOL PDF](https://oui.doleta.gov/press/2026/091026.pdf)\n- The SA figure was 1,000 above the Bloomberg median of 205,000. [financecalendar](https://www.financecalendar.com/event/us-initial-jobless-claims-september-10-2026/)\n\n## 2. Current status\n- Nothing settles the question yet. The value is first published on 2026-09-24. Before that, the 2026-09-17 report (week ending September 12, which includes Labor Day) will update the trend.\n\n## 3. Recent news (newest first)\n- 2026-09-10: SA claims held at 206k, with continuing claims at 1.774M for the week ending August 29. The NSA insured unemployment rate was 1.0%. The largest state increases were Michigan (+2,075, manufacturing layoffs) and California (+1,967). [verifiedinvesting](https://verifiedinvesting.com/blogs/us-economic-metrics/jobless-claims-week-ending-september-5-2026), [search summary of DOL](https://www.dol.gov/ui/data.pdf)\n- Summer 2026: claims stayed historically low, with the 4-week average near 204k in mid-August. [financecalendar](https://www.financecalendar.com/weekly-jobless-claims/)\n- Recent NSA weeks in 2026: July 25: 176,535; August 1: 172,472; August 8: 189,203; August 15: 173,017; August 22: 170,596; August 29: 171,403. These are current, possibly revised, FRED values. [FRED](https://fred.stlouisfed.org/series/ICNSA)\n\n## 4. Base rates and seasonality\nMid-September is near the seasonal low for NSA claims. Labor Day falls on September 7 in 2026, so:\n- the week ending September 12 contains the holiday;\n- the target week ending September 19 is the week after the holiday week.\n\nNSA values in past years, lined up by the holiday (\"pre-holiday week\" to \"week after the holiday week\"):\n\n| Year | Labor Day | Pre-holiday week | Week after holiday week | Change |\n|---|---|---|---|---|\n| 2025 | Sept 1 | Aug 30: 196,712 | Sept 13: 195,433 | -0.6% |\n| 2024 | Sept 2 | Aug 31: 190,623 | Sept 14: 186,832 | -2.0% |\n| 2023 | Sept 4 | Sept 2: 191,353 | Sept 16: 176,586 | -7.7% |\n| 2022 | Sept 5 | Sept 3: 172,835 | Sept 17: 168,702 | -2.4% |\n| 2021 | Sept 6 | Sept 4: 285,683 | Sept 18: 306,581 | +7.3% (pandemic noise) |\n\n[FRED ICNSA](https://fred.stlouisfed.org/data/ICNSA.txt). The 2025 figures were inflated by fraudulent claims in Texas.\n\n- **Applying the 2022-2025 changes to 176,567** gives about 163.0k to 175.5k, with a median near 172-173k.\n- **Lining up by calendar date** (the week ending near September 6-10 to two weeks later) instead gives:\n  - 2025: -11.7%\n  - 2024: -1.7%\n  - 2023: 0.0%\n  - 2022: +0.8%\n- **Implied seasonal factors** (my own calculation, NSA divided by first-print SA):\n  - Week ending September 5, 2026: about 0.857.\n  - Week after the holiday week: about 0.846 in 2025 and 0.853 in 2024.\n  - Late-September weeks: about 0.83 in 2024 and 2025.\n  - If SA claims stay near 206k, factors of 0.83-0.85 imply roughly **171k-175k** NSA.\n- **Year-over-year**: 2026 is running well below 2024-2025 (about 177k versus 196-205k in the comparable early-September weeks) and close to 2023 levels.\n- **Statistical baseline** (from your code, not seasonal): p25 162k, p50 176k, p75 191k. That spread is wider than the seasonal patterns above suggest.\n- **Typical noise**: week-to-week NSA moves of ±5-10k are common in August and September (for example, 2026 NSA went 172k, then 189k, then 173k in early August).\n\n## 5. Other forecasts\n- I found no Kalshi, Polymarket or Manifold market and no economist consensus for the NSA figure for the week ending September 19.\n- SA consensus forecasts usually come out in the week of release. The most recent was 205k for the week ending September 5.\n\n## 6. Upcoming events before resolution\n- 2026-09-17: the DOL report for the week ending September 12 (the Labor Day week). It is usually low NSA because of the holiday, and it will also revise the September 5 figure.\n- 2026-09-24: the DOL report that publishes the value this question resolves on.\n- Possible shocks:\n  - State layoffs: Michigan manufacturing was flagged in the latest report.\n  - Hurricane season: storms in the Gulf or Southeast could push claims up in affected states. I did not check the current tropical outlook.\n  - Fraud spikes like the Texas episode in 2025.\n  - Any federal funding or shutdown developments around the end of the fiscal year on September 30.\n\nSources:\n- [DOL/govdelivery release, Sept 10 2026](https://content.govdelivery.com/accounts/USDOL/bulletins/4299777)\n- [DOL PDF](https://oui.doleta.gov/press/2026/091026.pdf)\n- [DOL data.pdf](https://www.dol.gov/ui/data.pdf)\n- [FRED ICNSA](https://fred.stlouisfed.org/series/ICNSA)\n- [FRED ICNSA data](https://fred.stlouisfed.org/data/ICNSA.txt)\n- [verifiedinvesting](https://verifiedinvesting.com/blogs/us-economic-metrics/jobless-claims-week-ending-september-5-2026)\n- [financecalendar event](https://www.financecalendar.com/event/us-initial-jobless-claims-september-10-2026/)\n- [financecalendar](https://www.financecalendar.com/weekly-jobless-claims/)\n- [trade.gov.tr](https://trade.gov.tr/news/us-weekly-initial-claims-was-206-000)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED ICNSA (Initial Claims, Number, frequency W): latest observation 176567.0000 for 2026-09-05.\nThe target period 2026-09-19 is 2 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 2-period changes since 2005 (last 3 years weighted double):\np5: 137565.44, p10: 149518.6718, p25: 162257.3829, p50: 176446.3482, p75: 190821.5587, p90: 207765.9453, p95: 219431.4895\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          152000.0
+        ],
+        [
+          0.05,
+          160000.0
+        ],
+        [
+          0.1,
+          164000.0
+        ],
+        [
+          0.2,
+          168500.0
+        ],
+        [
+          0.3,
+          171300.0
+        ],
+        [
+          0.4,
+          173000.0
+        ],
+        [
+          0.5,
+          174600.0
+        ],
+        [
+          0.6,
+          176300.0
+        ],
+        [
+          0.7,
+          178300.0
+        ],
+        [
+          0.8,
+          181500.0
+        ],
+        [
+          0.9,
+          186500.0
+        ],
+        [
+          0.95,
+          192000.0
+        ],
+        [
+          0.99,
+          206000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          155000.0
+        ],
+        [
+          0.05,
+          161000.0
+        ],
+        [
+          0.1,
+          164500.0
+        ],
+        [
+          0.2,
+          168500.0
+        ],
+        [
+          0.3,
+          171000.0
+        ],
+        [
+          0.4,
+          173000.0
+        ],
+        [
+          0.5,
+          174500.0
+        ],
+        [
+          0.6,
+          176000.0
+        ],
+        [
+          0.7,
+          178000.0
+        ],
+        [
+          0.8,
+          181000.0
+        ],
+        [
+          0.9,
+          185500.0
+        ],
+        [
+          0.95,
+          190000.0
+        ],
+        [
+          0.99,
+          202000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          154000.0
+        ],
+        [
+          0.05,
+          160000.0
+        ],
+        [
+          0.1,
+          163500.0
+        ],
+        [
+          0.2,
+          167500.0
+        ],
+        [
+          0.3,
+          170200.0
+        ],
+        [
+          0.4,
+          172200.0
+        ],
+        [
+          0.5,
+          174000.0
+        ],
+        [
+          0.6,
+          175800.0
+        ],
+        [
+          0.7,
+          177800.0
+        ],
+        [
+          0.8,
+          180500.0
+        ],
+        [
+          0.9,
+          185000.0
+        ],
+        [
+          0.95,
+          190000.0
+        ],
+        [
+          0.99,
+          203000.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4108
+}

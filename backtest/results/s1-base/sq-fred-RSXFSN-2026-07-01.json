@@ -1,0 +1,194 @@
+{
+  "id": "sq-fred-RSXFSN-2026-07-01",
+  "question": "What will be US retail sales excluding food services, not seasonally adjusted (Census Bureau) for July 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of US retail sales excluding food services, not seasonally adjusted (Census Bureau) for July 2026 (FRED series RSXFSN). Later revisions are ignored.",
+  "unit": "millions of dollars",
+  "outcome": 677431.0,
+  "outcome_date": "2026-08-14",
+  "as_of": "2026-08-04",
+  "resolve_date": "2026-08-14",
+  "lower_bound": 645000.0,
+  "upper_bound": 700000.0,
+  "source": "fred",
+  "series": "RSXFSN",
+  "known_value": 672368.0,
+  "past_moves": [
+    26477.0,
+    24359.0,
+    -7469.0,
+    -10315.0,
+    -4990.0
+  ],
+  "baseline": "\nComputed by code from FRED RSXFSN (Advance Retail Sales: Retail Trade, Millions of Dollars, frequency M): latest observation 672368.0000 for 2026-06-01.\nThe target period 2026-07-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 545306.0338, p10: 615120.1843, p25: 652234.5912, p50: 677054.8363, p75: 704581.6713, p90: 761615.5649, p95: 779145.0478\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "I couldn't find any July 2026 forecast or market published before the cutoff. The question is still open as of 2026-08-04. Comparing past July/June patterns with the year-over-year trend puts July 2026 at about 665k to 703k, and most of that range overlaps the question's 645k to 700k.\n\n## 1. Resolution source\n- The question resolves on FRED series RSXFSN: Census advance retail trade excluding food services, not seasonally adjusted, in millions of dollars.\n- 2026-08-01 (ALFRED snapshot): the latest observation is June 2026 at **672,368**. That matches the baseline your code computed. Recent values in that snapshot: [ALFRED vintage](https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=RSXFSN&vintage_date=2026-08-01&cosd=2023-01-01)\n\n| Month | 2023 | 2024 | 2025 | 2026 |\n|---|---|---|---|---|\n| Mar | 589,560 | 597,695 | 624,954 | 657,586 |\n| Apr | 574,331 | 593,774 | 623,756 | 654,070 |\n| May | 615,939 | 631,832 | 647,306 | 685,407 |\n| Jun | 597,476 | 592,999 | 616,031 | 672,368 |\n| Jul | 591,150 | 618,432 | 644,493 | ? |\n\n- Census plans an annual revision based on its Annual Integrated Economic Survey, and it was scheduled for late September 2026, after the July advance report. So the first July print should be on the same basis as the June figure above. [Census benchmark intro](https://www.census.gov/retail/mrts/www/benchmark/2026/pdf/Introduction.pdf), [Census retail](https://www.census.gov/retail/)\n\n## 2. Current status\n- 2026-08-04: nothing has settled the question. The July advance report comes out around 2026-08-14, 8:30 ET. [financecalendar](https://www.financecalendar.com/event/us-retail-sales-july-2026/)\n\n## 3. Recent news\n- 2026-07-16/17: The June advance estimate put total retail and food services at $768.6B seasonally adjusted. That was up 0.2% from May (±0.4%) and up 6.7% from June 2025 (±0.5%). For April to June, sales were up 6.4% year over year. [trade.gov.tr](https://trade.gov.tr/news/u-s-retail-sales-up-6-7-yoy-in-june-2026), [metalsmine](https://www.metalsmine.com/news/1408974-us-retail-sales-grow-02-in-june)\n- June 2026: May retail sales rose 0.9%, nearly double what was expected. [selfemployed.com](https://www.selfemployed.com/?p=102856)\n- July 2026: Coresight's outlook projects about 5% year-over-year growth for the rest of the summer, helped by promotions and early back-to-school shopping. [Coresight](https://coresight.com/research/july-2026-us-retail-sales-outlook-promotional-activity-and-early-back-to-school-shopping-drive-sales-growth/)\n\n## 4. Base rates\nThese are my own calculations from the August 2026 snapshot.\n- **July/June ratio, not seasonally adjusted:** 2023 was 0.989, 2024 was 1.043 and 2025 was 1.046. Applied to 672,368, that gives 665.0k, 701.2k and 703.4k. The 2023 dip probably reflects calendar effects. June 2023 had five Thursdays and Fridays, while June 2024 had five Saturdays and Sundays and June 2025 five Sundays and Mondays.\n- **Year-over-year on July 2025 (644,493):**\n  - 5% gives 676.7k\n  - 6% gives 683.2k\n  - 6.7% gives 687.7k\n  - 7% gives 689.6k\n- **Recent not-seasonally-adjusted year-over-year growth:**\n  - March: +5.2%\n  - April: +4.9%\n  - May: +5.9%\n  - June: +9.1%\n\n  June looks unusually strong compared with the 6.7% seasonally adjusted total. That gap matters, because the ratio method carries any June strength forward.\n- **Calendar:** July 2026 has five Wednesdays, Thursdays and Fridays. July 2025 had five Tuesdays, Wednesdays and Thursdays, so 2026 gains a Friday in place of a Tuesday, which helps slightly. July 2026 has 23 weekdays, versus 22 in June 2026.\n- **The code's baseline is too wide:** its percentiles (p5 545k to p95 779k) mix in December and January seasonal swings. A typical July/June swing is only about ±3%.\n\n## 5. Other forecasts\n- I found no Polymarket or Kalshi market on this exact series. Manifold has user markets on other months' advance retail sales (June and August 2026), but I didn't find one for July or any prices. [Manifold June](https://manifold.markets/CalibratedGhosts/will-june-2026-us-advance-retail-sa)\n- I found no economists' consensus for the July report dated on or before 2026-08-04. Calendars said it would be published the week before release. [forexfundamentals](https://forexfundamentals.com/economic-calendar/us-retail-sales/2026-08-14)\n\n## 6. Upcoming events before resolution\n- Early August: a weekly chain-store index, the CNBC/NRF Retail Monitor and July auto sales could hint at the number. I didn't retrieve any of these.\n- Around 2026-08-13: the July CPI report, which will show whether prices (gasoline especially) are pushing sales up or down.\n- Around 2026-08-14: the Census July advance release, which resolves the question. The June figure may be revised in the same release, but only the July first print counts.\n\nSources:\n- [ALFRED RSXFSN vintage 2026-08-01](https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=RSXFSN&vintage_date=2026-08-01&cosd=2023-01-01)\n- [trade.gov.tr June 2026](https://trade.gov.tr/news/u-s-retail-sales-up-6-7-yoy-in-june-2026)\n- [metalsmine](https://www.metalsmine.com/news/1408974-us-retail-sales-grow-02-in-june)\n- [selfemployed.com](https://www.selfemployed.com/?p=102856)\n- [Coresight July outlook](https://coresight.com/research/july-2026-us-retail-sales-outlook-promotional-activity-and-early-back-to-school-shopping-drive-sales-growth/)\n- [Census benchmark intro](https://www.census.gov/retail/mrts/www/benchmark/2026/pdf/Introduction.pdf)\n- [Census retail](https://www.census.gov/retail/)\n- [financecalendar](https://www.financecalendar.com/event/us-retail-sales-july-2026/)\n- [forexfundamentals](https://forexfundamentals.com/economic-calendar/us-retail-sales/2026-08-14)\n- [Manifold](https://manifold.markets/CalibratedGhosts/will-june-2026-us-advance-retail-sa)\n- [Fed Prime Rate June 2026 PDF](https://fedprimerate.com/docs/Retail-Sales/Fed-Prime-Rate--RETAIL--SALES--JUNE--2026.pdf)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED RSXFSN (Advance Retail Sales: Retail Trade, Millions of Dollars, frequency M): latest observation 672368.0000 for 2026-06-01.\nThe target period 2026-07-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 545306.0338, p10: 615120.1843, p25: 652234.5912, p50: 677054.8363, p75: 704581.6713, p90: 761615.5649, p95: 779145.0478\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          662000.0
+        ],
+        [
+          0.05,
+          673000.0
+        ],
+        [
+          0.1,
+          678500.0
+        ],
+        [
+          0.2,
+          684500.0
+        ],
+        [
+          0.3,
+          688500.0
+        ],
+        [
+          0.4,
+          691800.0
+        ],
+        [
+          0.5,
+          694500.0
+        ],
+        [
+          0.6,
+          697200.0
+        ],
+        [
+          0.7,
+          700200.0
+        ],
+        [
+          0.8,
+          704000.0
+        ],
+        [
+          0.9,
+          709000.0
+        ],
+        [
+          0.95,
+          713000.0
+        ],
+        [
+          0.99,
+          722000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          662000.0
+        ],
+        [
+          0.05,
+          671000.0
+        ],
+        [
+          0.1,
+          676000.0
+        ],
+        [
+          0.2,
+          682000.0
+        ],
+        [
+          0.3,
+          686000.0
+        ],
+        [
+          0.4,
+          689000.0
+        ],
+        [
+          0.5,
+          691500.0
+        ],
+        [
+          0.6,
+          694000.0
+        ],
+        [
+          0.7,
+          697000.0
+        ],
+        [
+          0.8,
+          700500.0
+        ],
+        [
+          0.9,
+          705500.0
+        ],
+        [
+          0.95,
+          710000.0
+        ],
+        [
+          0.99,
+          719000.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          664000.0
+        ],
+        [
+          0.05,
+          671500.0
+        ],
+        [
+          0.1,
+          676000.0
+        ],
+        [
+          0.2,
+          681500.0
+        ],
+        [
+          0.3,
+          685500.0
+        ],
+        [
+          0.4,
+          688500.0
+        ],
+        [
+          0.5,
+          691000.0
+        ],
+        [
+          0.6,
+          693500.0
+        ],
+        [
+          0.7,
+          696500.0
+        ],
+        [
+          0.8,
+          700000.0
+        ],
+        [
+          0.9,
+          704500.0
+        ],
+        [
+          0.95,
+          708000.0
+        ],
+        [
+          0.99,
+          714500.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.4867
+}

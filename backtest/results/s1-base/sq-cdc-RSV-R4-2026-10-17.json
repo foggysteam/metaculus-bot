@@ -1,0 +1,194 @@
+{
+  "id": "sq-cdc-RSV-R4-2026-10-17",
+  "question": "What percentage of tests will be positive for respiratory syncytial virus (RSV) in HHS Region 4 (the Southeast) for the week ending October 17, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for respiratory syncytial virus (RSV) in HHS Region 4 (the Southeast) for the week ending 2026-10-17 in CDC's the National Respiratory and Enteric Virus Surveillance System (NREVSS) percent positivity data (data.cdc.gov dataset rgnm-fkqb), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 1.89,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-09-07",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 5.0,
+  "source": "cdc",
+  "series": "rgnm-fkqb:RSV-R4",
+  "known_value": 0.67,
+  "past_moves": [
+    0.95,
+    1.31,
+    8.35,
+    7.17,
+    -2.69
+  ],
+  "baseline": "",
+  "research": "I've pulled the CDC dataset and searched for news, so here is the report.\n\n# RSV percent positivity, HHS Region 4, week ending 2026-10-17\n\n## 1. Resolution source\n- The deciding data is CDC NREVSS dataset rgnm-fkqb, Region 4, pathogen RSV, value as posted on 2026-10-30. I queried it through the Socrata API. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- Latest values in the current file for weeks ending on or before 2026-09-05 (week ending: percent positive, number of tests):\n  - 2026-09-05: 1.04% (5,020)\n  - 2026-08-29: 0.67% (3,752)\n  - 2026-08-22: 1.01% (4,372)\n  - 2026-08-15: 0.57% (3,715)\n  - 2026-08-08: 0.68% (3,509)\n  - 2026-08-01: 0.69% (3,328)\n  - 2026-07-25: 0.60% (3,344)\n- Caveats:\n  - The CDC usually posts each week's data several days after the week ends. As of 2026-09-07, the 2026-09-05 week may not have been public yet, so the latest visible point was probably 2026-08-29 at 0.67%.\n  - The values I pulled are the current posted versions. Recent weeks can be revised.\n\n## 2. Current status\n- Nothing settles the question yet. The target week is about 6 weeks after the latest data.\n- Region 4 RSV positivity has stayed between roughly 0.6% and 1.0% since mid-June 2026. The most recent week (1.04%, if it was public) hints at an early-season rise.\n- The question's range tops out at 5.0%.\n\n## 3. Recent news\n- I found no dated CDC alert about RSV in the Southeast from August or September 2026, published by 2026-09-07. The Fox News and AJC \"Southeast RSV rising\" articles in my search results are undated or from earlier seasons. [Fox](https://www.foxnews.com/health/cdc-warns-increased-rsv-activity-southeastern-us.amp)\n- Florida DOH publishes weekly RSV reviews. The week 34 report (Aug 23-29) came out in September 2026, but I couldn't read the PDF. Reports for later weeks were published after 2026-09-07, so I ignored them. [FL week 34](https://www.floridahealth.gov/wp-content/uploads/2026/09/fl-rsv-review-week-34-2026.pdf)\n- The 2025-26 Region 4 season peaked at 8.19% (week ending 2026-01-31). It fell below 2% by early May 2026. [data.cdc.gov](https://data.cdc.gov/resource/rgnm-fkqb.json)\n\n## 4. Base rates\nSame dataset, Region 4, comparing early September with mid-October in past seasons:\n\n| Season | Early Sept | Week matching Oct 17 | Rough multiplier |\n|---|---|---|---|\n| 2025 | 0.73% (09-06), 0.61% (08-30) | 2.01% (10-18); 1.83% (10-11), 2.84% (10-25) | about 2.7x |\n| 2024 | 0.40% (09-07), 0.13% (08-31) | 4.88% (10-19); 2.01% (10-12), 3.78% (10-26) | large; week-to-week swings of 1-3 points |\n| 2023 | 1.86% (09-09) | 10.72% (10-14) | about 6x |\n| 2022 | 10.31% (09-10) | 13.59% (10-15) | unusual post-COVID early season |\n\n- The 2025 path: 0.73 (09-06), 0.71, 1.04, 1.45, 1.38, 1.83, 2.01 (10-18).\n- The 2024 path: 0.40 (09-07), 0.82, 1.80, 1.22, 3.07, 2.01, 4.88 (10-19).\n- The two most recent seasons both started from about 0.4-0.7% in early September. They reached about 2% and about 4.9% in the matching mid-October week.\n- 2026 starts in a similar place, at 0.67-1.04%.\n- 2022 and 2023 had much earlier and larger fall seasons, partly because of post-pandemic timing.\n- Since 2023, RSV prevention for infants (nirsevimab, maternal vaccine) and the RSV vaccines for older adults may have damped and delayed rises in positivity.\n- Noise: in 2024, a single week moved by up to about 2.9 points in October. In 2025, weekly changes were about 0.1-0.8 points.\n\n## 5. Other forecasts\n- I didn't find any Polymarket, Kalshi or Manifold markets on this series.\n- I didn't search specifically for CDC's RSV season outlook or other modeling, and none turned up in my results.\n\n## 6. Upcoming events before resolution\n- The CDC posts NREVSS updates weekly, so there will be about 6 more data points (weeks ending 09-12 through 10-10) before the target week.\n- The target-week value will first appear around 2026-10-23. The question resolves on the version posted 2026-10-30, which may include revisions.\n- Things that could move the number:\n  - Whether the Southeast season starts as early as usual (Florida and Georgia typically lead the country).\n  - How many infants get nirsevimab, clesrovimab or the maternal vaccine during 2026-27.\n  - Changes in the number of tests, since more testing of mildly ill people could lower positivity.\n\nSources:\n- [CDC data.cdc.gov dataset rgnm-fkqb](https://data.cdc.gov/resource/rgnm-fkqb.json)\n- [Florida DOH RSV review week 34 2026](https://www.floridahealth.gov/wp-content/uploads/2026/09/fl-rsv-review-week-34-2026.pdf)\n- [Fox News: CDC warns of increased RSV activity in southeastern US (undated)](https://www.foxnews.com/health/cdc-warns-increased-rsv-activity-southeastern-us.amp)\n- [AJC: Georgia leads the Southeast in rising RSV cases (undated)](https://ajc.com/news/health-news/georgia-leads-the-southeast-in-rising-rsv-cases/6K7EHXPKE5H3VGH6MN3Y7WNDRA)",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          0.75
+        ],
+        [
+          0.05,
+          1.05
+        ],
+        [
+          0.1,
+          1.3
+        ],
+        [
+          0.2,
+          1.65
+        ],
+        [
+          0.3,
+          1.95
+        ],
+        [
+          0.4,
+          2.2
+        ],
+        [
+          0.5,
+          2.45
+        ],
+        [
+          0.6,
+          2.75
+        ],
+        [
+          0.7,
+          3.1
+        ],
+        [
+          0.8,
+          3.65
+        ],
+        [
+          0.9,
+          4.5
+        ],
+        [
+          0.95,
+          5.3
+        ],
+        [
+          0.99,
+          7.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.7
+        ],
+        [
+          0.05,
+          0.95
+        ],
+        [
+          0.1,
+          1.15
+        ],
+        [
+          0.2,
+          1.5
+        ],
+        [
+          0.3,
+          1.8
+        ],
+        [
+          0.4,
+          2.05
+        ],
+        [
+          0.5,
+          2.3
+        ],
+        [
+          0.6,
+          2.6
+        ],
+        [
+          0.7,
+          2.95
+        ],
+        [
+          0.8,
+          3.45
+        ],
+        [
+          0.9,
+          4.3
+        ],
+        [
+          0.95,
+          5.0
+        ],
+        [
+          0.99,
+          6.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          0.05,
+          1.1
+        ],
+        [
+          0.1,
+          1.35
+        ],
+        [
+          0.2,
+          1.7
+        ],
+        [
+          0.3,
+          2.0
+        ],
+        [
+          0.4,
+          2.25
+        ],
+        [
+          0.5,
+          2.5
+        ],
+        [
+          0.6,
+          2.8
+        ],
+        [
+          0.7,
+          3.15
+        ],
+        [
+          0.8,
+          3.6
+        ],
+        [
+          0.9,
+          4.4
+        ],
+        [
+          0.95,
+          5.1
+        ],
+        [
+          0.99,
+          6.8
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2897
+}

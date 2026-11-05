@@ -1,0 +1,194 @@
+{
+  "id": "sq-fred-UNRATENSA-2026-07-01",
+  "question": "What will be the US unemployment rate, not seasonally adjusted (BLS) for July 2026, as first published?",
+  "resolution_criteria": "Resolves to the first published value of the US unemployment rate, not seasonally adjusted (BLS) for July 2026 (FRED series UNRATENSA). Later revisions are ignored.",
+  "unit": "percent",
+  "outcome": 4.4,
+  "outcome_date": "2026-08-07",
+  "as_of": "2026-07-28",
+  "resolve_date": "2026-08-07",
+  "lower_bound": 4.0,
+  "upper_bound": 5.0,
+  "source": "fred",
+  "series": "UNRATENSA",
+  "known_value": 4.4,
+  "past_moves": [
+    0.2,
+    0.2,
+    0.0,
+    0.0,
+    -0.4
+  ],
+  "baseline": "\nComputed by code from FRED UNRATENSA (Unemployment Rate, Percent, frequency M): latest observation 4.4000 for 2026-06-01.\nThe target period 2026-07-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 3.9, p10: 4.0, p25: 4.1, p50: 4.3, p75: 4.6, p90: 4.9, p95: 5.0\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research": "# July 2026 US unemployment rate, not seasonally adjusted (UNRATENSA): research brief\n\n## 1. Resolution source\n- The question settles on FRED series UNRATENSA, which is the not-seasonally-adjusted (NSA) rate from BLS Table A-1. The July 2026 Employment Situation report is scheduled for 2026-08-07 at 8:30 a.m. ET.\n- 2026-07-02: The BLS June release reports the NSA rate at **4.4%** for June 2026, up from 4.1% in May 2026. June 2025 was also 4.4%. The seasonally adjusted (SA) rate was 4.2% in June 2026, down from 4.3% in May. The NSA participation rate was 61.9% in June, against 61.7% in May. [BLS](https://www.bls.gov/news.release/archives/empsit_07022026.htm)\n- The FRED latest value supplied by code is 4.4 for 2026-06. This matches BLS.\n\n## 2. Current status\n- Nothing settles the question yet. The July figure is published after the question closes.\n- The key structural point is that July's NSA rate normally sits above the SA rate, because young people enter the summer job market. The July 2026 NSA print will be roughly the SA rate plus the July seasonal gap, which has recently been about +0.2 to +0.4 percentage points (see section 4).\n\n## 3. Recent news (newest first)\n- July 2026, weekly jobless claims: initial claims were 215K for the week ending July 4 and about 187K to 188K for the week ending July 11. Continuing claims were about 1.78M to 1.79M in mid-July, which is low and stable and does not point to a jump in unemployment. Sources differ slightly on the exact continuing-claims figures. [bgov](https://news.bgov.com/bgov-labor/us-weekly-jobless-claims-rise-9k-to-197k-est-200k), [trade.gov.tr](https://trade.gov.tr/news/the-us-weekly-initial-claims-was-215-000)\n- 2026-07-02: June payrolls rose 57K against an expected 110K, and April and May were revised down by a combined 74K. The SA unemployment rate fell to 4.2% after three months at 4.3%. U-6 was 7.9%. Part of the drop came from lower participation: SA participation fell from 61.8% to 61.5%. [Fox Business](https://www.foxbusiness.com/economy/us-jobs-report-june-2026), [NBC Palm Springs](https://www.nbcpalmsprings.com/2026/07/02/us-job-growth-slows-sharply-in-june-with-only-57000-jobs-added-missing-forecasts), [Kiplinger](https://kiplinger.com/investing/economy/jobs-report-june-2026-what-to-expect)\n\n## 4. Base rates\nNSA versus SA in July, and the change from June to July in the NSA rate. These figures are from my recollection of FRED data and should be checked.\n\n| Year | June NSA | July NSA | July SA | July gap (NSA minus SA) |\n|---|---|---|---|---|\n| 2025 | 4.4 | 4.6 | 4.2 | +0.4 |\n| 2024 | 4.3 | 4.5 | 4.3 | +0.2 |\n| 2023 | 3.8 | 3.8 | 3.5 | +0.3 |\n| 2022 | 3.8 | 3.8 | 3.5 | +0.3 |\n| 2019 | 3.8 | 4.0 | 3.7 | +0.3 |\n\n- From June to July, the NSA rate usually stays the same or rises by 0.1 to 0.2 points. Since the late 2010s it has rarely fallen outside the pandemic years.\n- The June 2026 gap (NSA 4.4 minus SA 4.2) was +0.2, a little smaller than June 2025's +0.3.\n- What the arithmetic implies:\n  - If the SA rate is 4.2%, July NSA is likely around 4.4 to 4.6.\n  - If SA is 4.3%, July NSA is likely around 4.5 to 4.7.\n  - If SA falls to 4.1%, July NSA is likely around 4.3 to 4.5.\n- Month-to-month SA changes are usually 0 or ±0.1, and the standard error of the change is about ±0.2 points.\n- The code-generated percentiles (p50 of 4.3, p5 to p95 of 3.9 to 5.0) mix all calendar months together. They ignore the July seasonal rise, so they probably understate the typical July NSA level compared with June.\n\n## 5. Other forecasts\n- Consensus before the release, as reported by Morningstar citing FactSet: payrolls of about +100K and an SA unemployment rate unchanged at 4.2%. UBS expected payrolls of +70K and an SA rate of 4.3%. I could not fetch the article directly (it returned a 403 error), so these numbers come from a search snippet. [Morningstar](https://www.morningstar.com/economy/july-jobs-report-show-moderate-hiring-bounce)\n- I could not find any Kalshi, Polymarket or Manifold market on the NSA rate specifically. Kalshi and Coinbase list markets on the SA headline rate, but I could not see their prices. [Coinbase predictions](https://www.coinbase.com/predictions/economics/Jobs%20&%20Economy)\n\n## 6. Upcoming events before resolution\n- Late July: more weekly jobless claims releases on Thursdays.\n- About 2026-08-05: the ADP July private payrolls report.\n- 2026-08-07: the BLS July Employment Situation report, which is the resolution event. The NSA figure appears in Table A-1. Things to watch:\n  - whether the SA rate holds at 4.2% or changes by a tick\n  - the size of the July seasonal gap, which depends on youth summer labor-force entry\n  - participation, which has been falling and has been pushing the unemployment rate down\n\n**Sources:** [BLS June 2026 release](https://www.bls.gov/news.release/archives/empsit_07022026.htm), [Fox Business](https://www.foxbusiness.com/economy/us-jobs-report-june-2026), [NBC Palm Springs](https://www.nbcpalmsprings.com/2026/07/02/us-job-growth-slows-sharply-in-june-with-only-57000-jobs-added-missing-forecasts), [Kiplinger](https://kiplinger.com/investing/economy/jobs-report-june-2026-what-to-expect), [Morningstar](https://www.morningstar.com/economy/july-jobs-report-show-moderate-hiring-bounce), [bgov](https://news.bgov.com/bgov-labor/us-weekly-jobless-claims-rise-9k-to-197k-est-200k), [trade.gov.tr](https://trade.gov.tr/news/the-us-weekly-initial-claims-was-215-000), [Coinbase predictions](https://www.coinbase.com/predictions/economics/Jobs%20&%20Economy)\n\n## Raw prediction market and Metaculus prices\nStatistical baseline:\n\nComputed by code from FRED UNRATENSA (Unemployment Rate, Percent, frequency M): latest observation 4.4000 for 2026-06-01.\nThe target period 2026-07-01 is 1 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 1-period changes since 2005 (last 3 years weighted double):\np5: 3.9, p10: 4.0, p25: 4.1, p50: 4.3, p75: 4.6, p90: 4.9, p95: 5.0\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).\n",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          4.1
+        ],
+        [
+          0.05,
+          4.25
+        ],
+        [
+          0.1,
+          4.3
+        ],
+        [
+          0.2,
+          4.38
+        ],
+        [
+          0.3,
+          4.44
+        ],
+        [
+          0.4,
+          4.48
+        ],
+        [
+          0.5,
+          4.52
+        ],
+        [
+          0.6,
+          4.56
+        ],
+        [
+          0.7,
+          4.6
+        ],
+        [
+          0.8,
+          4.65
+        ],
+        [
+          0.9,
+          4.74
+        ],
+        [
+          0.95,
+          4.8
+        ],
+        [
+          0.99,
+          4.98
+        ]
+      ],
+      [
+        [
+          0.01,
+          4.1
+        ],
+        [
+          0.05,
+          4.2
+        ],
+        [
+          0.1,
+          4.3
+        ],
+        [
+          0.2,
+          4.4
+        ],
+        [
+          0.3,
+          4.45
+        ],
+        [
+          0.4,
+          4.4999994
+        ],
+        [
+          0.5,
+          4.4999995
+        ],
+        [
+          0.6,
+          4.55
+        ],
+        [
+          0.7,
+          4.6
+        ],
+        [
+          0.8,
+          4.65
+        ],
+        [
+          0.9,
+          4.7
+        ],
+        [
+          0.95,
+          4.8
+        ],
+        [
+          0.99,
+          5.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          4.1
+        ],
+        [
+          0.05,
+          4.25
+        ],
+        [
+          0.1,
+          4.3
+        ],
+        [
+          0.2,
+          4.4
+        ],
+        [
+          0.3,
+          4.45
+        ],
+        [
+          0.4,
+          4.5
+        ],
+        [
+          0.5,
+          4.52
+        ],
+        [
+          0.6,
+          4.56
+        ],
+        [
+          0.7,
+          4.6
+        ],
+        [
+          0.8,
+          4.66
+        ],
+        [
+          0.9,
+          4.75
+        ],
+        [
+          0.95,
+          4.84
+        ],
+        [
+          0.99,
+          5.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3507
+}

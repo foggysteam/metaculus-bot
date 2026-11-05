@@ -1,0 +1,192 @@
+{
+  "id": "sq-cdc-COVID-2026-10-10",
+  "question": "What percentage of tests will be positive for COVID-19 in the United States for the week ending October 10, 2026, in CDC data?",
+  "resolution_criteria": "Resolves to the percent of tests positive for COVID-19 in the United States for the week ending 2026-10-10 in CDC's Percent of Tests Positive for Viral Respiratory Pathogens (data.cdc.gov dataset seuz-s2cv), as posted on 2026-10-30.",
+  "unit": "percent",
+  "outcome": 4.1,
+  "outcome_date": "2026-10-30",
+  "as_of": "2026-08-31",
+  "resolve_date": "2026-10-30",
+  "lower_bound": 0.0,
+  "upper_bound": 20.0,
+  "source": "cdc",
+  "series": "seuz-s2cv:COVID",
+  "known_value": 5.7,
+  "past_moves": [
+    -5.4,
+    -10.3,
+    -3.3
+  ],
+  "baseline": "",
+  "research": "# US COVID-19 test positivity, week ending 2026-10-10 (CDC dataset seuz-s2cv): research brief\n\n## 1. Resolution source\n- The data come from the CDC dataset seuz-s2cv on data.cdc.gov (\"Percent of Tests Positive for Viral Respiratory Pathogens\"). The columns are week_end, pathogen and percent_test_positivity, and the series starts with the week ending 2022-10-01. [data.cdc.gov](https://data.cdc.gov/resource/seuz-s2cv.json?$limit=5)\n- 2026-08-22: 5.7% COVID positivity. This is the latest week that would have been published by 2026-08-31, since CDC posts on Fridays. Caveat: I took all values from the current version of the dataset, so earlier weeks may have been revised since they first appeared. [data.cdc.gov](https://data.cdc.gov/resource/seuz-s2cv.json?pathogen=COVID-19&$order=week_end%20DESC&$limit=60)\n- Recent weekly values in 2026:\n  - Jul 4: 1.4\n  - Jul 11: 1.7\n  - Jul 18: 2.1\n  - Jul 25: 2.5\n  - Aug 1: 3.3\n  - Aug 8: 3.9\n  - Aug 15: 4.7\n  - Aug 22: 5.7\n  - Positivity rose for 8 weeks in a row, and the weekly rise got bigger in August (+0.8, then +1.0).\n- Earlier in 2026, the winter peak was 5.4% (Jan 24) and the spring low was 0.8 to 0.9% (May to June). Both are well below the same points in 2024 and 2025. [data.cdc.gov](https://data.cdc.gov/resource/seuz-s2cv.json?pathogen=COVID-19&$order=week_end%20DESC&$limit=60)\n\n## 2. Current status\n- Nothing settles the question yet. The target week is 7 weeks after the last published week. As of late August the summer wave was still growing and had not clearly peaked.\n\n## 3. Recent news (newest first)\n- 2026-08-25: The Sick Times published a national COVID trends update. [The Sick Times](https://thesicktimes.org/2026/08/25/national-covid-19-trends-august-25/)\n- 2026-08-23: CDC wastewater showed COVID detected in all 50 states, but CDC's wastewater baseline labeled the level \"very low.\" Stanford's WastewaterSCAN rated it \"high.\" [Tech Times](https://www.techtimes.com/articles/325248/20260823/covid-hits-all-50-states-cdcs-wastewater-baseline-makes-rising-wave-look-routine.htm)\n- 2026-08-20: CNN reported COVID climbing before the usual respiratory season. CDC estimated infections were growing or likely growing in 47 states as of Aug 19. Variants mentioned: NB.1.8.1 (\"Nimbus\") and BA.3.2 (\"Cicada\", about 15% of cases). [CNN](https://www.cnn.com/2026/08/20/health/covid-summer-wave)\n- August 2026: Positivity passed 3% for the first time since March and was near 5% in mid-August, compared with above 9% at the same point in 2025. The article also notes widening surveillance gaps. [Medical Daily](https://www.medicaldaily.com/covid-test-positivity-three-percent-surveillance-gaps-august-2026-477601)\n- Other coverage: [NBC Bay Area](https://www.nbcbayarea.com/news/health/summer-covid-cases-rising-every-state-symptoms-2026/4129843/), [Today](https://www.today.com/health/coronavirus/summer-covid-surge-symptoms-guidelines-2026-covid-vaccine-test-rcna592549).\n\n## 4. Base rates and seasonality\nEach year's change from late August to the week closest to Oct 10, taken from the same dataset ([data.cdc.gov](https://data.cdc.gov/resource/seuz-s2cv.json?pathogen=COVID-19&$order=week_end%20ASC&$limit=160)):\n\n| Year | Late August | Peak | Early October | Change from late August |\n|---|---|---|---|---|\n| 2022 | before series start | n/a | 6.9% (Oct 8) | n/a; flat near 7% through October |\n| 2023 | 14.6% (Aug 26) | 14.6% (Aug 26) | 10.0% (Oct 7), 9.2% (Oct 14) | about -32% |\n| 2024 | 16.7% (Aug 24) | 17.9% (Aug 10) | 7.4% (Oct 5), 6.3% (Oct 12) | about -62% |\n| 2025 | 12.0% (Aug 23) | 12.0% (Aug 23) | 5.4% (Oct 4), 4.2% (Oct 11) | about -65% |\n\n- In 2023 to 2025 the summer wave peaked between mid-August and early September, then fell by 1 to 2 points a week through September.\n- 2026 compared with past years:\n  - The level is much lower (5.7% vs 12 to 17% in late August).\n  - The wave is later: it was still climbing on Aug 22, while earlier years had peaked or were peaking by then.\n  - The 2026 baseline is also lower overall: the spring low was about 0.9% vs about 2.8 to 3.1% in 2024 and 2025. That may reflect changes in testing or in the mix of labs reporting.\n- Typical swing: over 7 weeks around this time of year, past values moved 4.6 to 10 points, which was roughly 30 to 65% of the late-August level.\n- Week to week: values usually change by 0.3 to 1.9 points a week, and October values are sometimes revised slightly.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this series.\n- I found no published CDC or expert forecast of national test positivity. CDC publishes estimates of whether infections are growing in each state (Rt), not forecasts of positivity.\n\n## 6. Upcoming events before resolution\n- Weekly CDC updates come out on Fridays. The week ending Oct 10 should first appear around Oct 16, and the version that counts is the one posted on 2026-10-30, which may include revisions.\n- When the summer wave peaks matters most. Past peaks fell in mid-August to early September.\n- The spread of the BA.3.2 and NB.1.8.1 variants could keep positivity higher or make it last longer.\n- School reopening in late August and September usually adds to respiratory transmission.\n- The rollout of 2026-27 COVID vaccines in September and October could matter, as could reported surveillance gaps (changes in which labs report).\n- The weather outlook is not directly relevant to this question.\n\nSources: [data.cdc.gov dataset](https://data.cdc.gov/resource/seuz-s2cv.json?pathogen=COVID-19&$order=week_end%20ASC&$limit=160), [CNN](https://www.cnn.com/2026/08/20/health/covid-summer-wave), [Medical Daily](https://www.medicaldaily.com/covid-test-positivity-three-percent-surveillance-gaps-august-2026-477601), [Tech Times](https://www.techtimes.com/articles/325248/20260823/covid-hits-all-50-states-cdcs-wastewater-baseline-makes-rising-wave-look-routine.htm), [The Sick Times](https://thesicktimes.org/2026/08/25/national-covid-19-trends-august-25/), [NBC Bay Area](https://www.nbcbayarea.com/news/health/summer-covid-cases-rising-every-state-symptoms-2026/4129843/), [Today](https://www.today.com/health/coronavirus/summer-covid-surge-symptoms-guidelines-2026-covid-vaccine-test-rcna592549), [GMA](https://goodmorningamerica.com/news/story/covid-cases-increasing-us-amid-summer-bump-111770385), [CIDRAP](https://www.cidrap.umn.edu/covid-19/covid-activity-continues-brisk-pace-across-much-us)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          2.1
+        ],
+        [
+          0.05,
+          2.9
+        ],
+        [
+          0.1,
+          3.5
+        ],
+        [
+          0.2,
+          4.3
+        ],
+        [
+          0.3,
+          4.9
+        ],
+        [
+          0.4,
+          5.4
+        ],
+        [
+          0.5,
+          5.9
+        ],
+        [
+          0.6,
+          6.4
+        ],
+        [
+          0.7,
+          7.0
+        ],
+        [
+          0.8,
+          7.9
+        ],
+        [
+          0.9,
+          9.3
+        ],
+        [
+          0.95,
+          10.6
+        ],
+        [
+          0.99,
+          13.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          1.9
+        ],
+        [
+          0.05,
+          2.6
+        ],
+        [
+          0.1,
+          3.1
+        ],
+        [
+          0.2,
+          3.8
+        ],
+        [
+          0.3,
+          4.4
+        ],
+        [
+          0.4,
+          5.0
+        ],
+        [
+          0.5,
+          5.5
+        ],
+        [
+          0.6,
+          6.1
+        ],
+        [
+          0.7,
+          6.8
+        ],
+        [
+          0.8,
+          7.8
+        ],
+        [
+          0.9,
+          9.3
+        ],
+        [
+          0.95,
+          10.6
+        ],
+        [
+          0.99,
+          13.5
+        ]
+      ],
+      [
+        [
+          0.01,
+          2.0
+        ],
+        [
+          0.05,
+          2.8
+        ],
+        [
+          0.1,
+          3.4
+        ],
+        [
+          0.2,
+          4.1
+        ],
+        [
+          0.3,
+          4.7
+        ],
+        [
+          0.4,
+          5.2
+        ],
+        [
+          0.5,
+          5.7
+        ],
+        [
+          0.6,
+          6.2
+        ],
+        [
+          0.7,
+          6.8
+        ],
+        [
+          0.8,
+          7.6
+        ],
+        [
+          0.9,
+          8.9
+        ],
+        [
+          0.95,
+          10.0
+        ],
+        [
+          0.99,
+          12.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3427
+}

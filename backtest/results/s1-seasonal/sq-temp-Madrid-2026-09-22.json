@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Madrid-2026-09-22",
+  "question": "What will be the average daily mean temperature in Madrid over the 7 days ending September 22, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-09-16 to 2026-09-22 at latitude 40.42, longitude -3.7 (Madrid), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 23.09,
+  "outcome_date": "2026-09-28",
+  "as_of": "2026-09-01",
+  "resolve_date": "2026-09-28",
+  "lower_bound": 10.0,
+  "upper_bound": 35.0,
+  "source": "open-meteo",
+  "series": "Madrid",
+  "known_value": 22.642857,
+  "past_moves": [
+    -1.357143,
+    -6.271429,
+    -7.242857,
+    -5.085714,
+    -7.914286
+  ],
+  "baseline": "",
+  "research": "I've pulled the historical data from Open-Meteo, and I'm writing up the findings now.\n\n# Madrid (40.42, -3.70): average daily mean temperature, Sep 16-22, 2026\n\n## 1. Resolution source\n- The outcome is decided by the Open-Meteo archive API (archive-api.open-meteo.com), daily `temperature_2m_mean`, averaged over Sep 16-22, 2026. ERA5 data arrives with a delay of about 5 days. The most recent days may be filled from preliminary data or model output, so values can still change slightly until resolution. The question doesn't say which time zone the days are counted in. I used the API default (GMT).\n- 2026-08-31: this is the latest value I could get from the archive, **26.6 °C**. Recent daily means:\n  - Aug 10-19: between 26.2 and 32.0 °C\n  - Aug 20-26: 22.9 to 26.9 °C\n  - Aug 27: 18.5 °C\n  - Aug 28: 19.1 °C\n  - Aug 29: 22.7 °C\n  - Aug 30: 25.2 °C\n  - Aug 31: 26.6 °C\n\n  [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2026-08-10&end_date=2026-08-31&daily=temperature_2m_mean)\n- The average for Aug 25-31, 2026 is about **22.6 °C**. That is similar to or slightly above the Sep 1-7 averages of recent years (21.0 to 23.3 °C).\n\n## 2. Current status\n- Nothing has settled the question yet. The window starts 15 days from now, which is past the range where daily weather forecasts are reliable.\n\n## 3. Recent news\n- 2026 (exact publication date not confirmed): secondary outlets report that AEMET called summer 2026 the warmest in Spain since at least 1869. They also report that AEMET's seasonal outlook favors a warmer than normal autumn, with secondary sources putting the chance at about 60-70% versus about 10% for a cold one. I couldn't confirm that these were published before Sep 1 or open AEMET's original release, so treat this as unverified. [motor16](https://www.motor16.com/las-ultimas-noticias/prevision-otono-2026-aemet-moto-lluvia/), [motor16 warm autumn](https://www.motor16.com/las-ultimas-noticias/otono-calido-espana-aemet-moto/)\n- Several other search results were dated after 2026-09-01, so I ignored them.\n\n## 4. Base rates\nSep 16-22 average of the daily means, same source and grid point ([2011-2020](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2011-09-16&end_date=2020-09-22&daily=temperature_2m_mean&timezone=GMT), [2021-2025](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2021-09-01&end_date=2025-09-30&daily=temperature_2m_mean&timezone=GMT)):\n\n| Year | Sep 16-22 | Year | Sep 16-22 | Year | Sep 16-22 |\n|---|---|---|---|---|---|\n| 2011 | 21.66 | 2016 | 18.64 | 2021 | 17.91 |\n| 2012 | 23.64 | 2017 | 18.84 | 2022 | 21.36 |\n| 2013 | 22.34 | 2018 | 24.20 | 2023 | 16.86 |\n| 2014 | 18.73 | 2019 | 19.41 | 2024 | 19.40 |\n| 2015 | 17.61 | 2020 | 18.89 | 2025 | 24.34 |\n\n- Across 2011-2025 the mean is **about 20.3 °C** and the median is 19.4 °C. Values ranged from 16.9 to 24.3 °C, with a standard deviation of about 2.4 °C. There is no clear trend in this window. The years vary a lot, depending mainly on whether a trough or a late heat episode happens to fall in that week.\n- I ran the 2011-2020 query separately, and the per-day values were transcribed from a long list, so small slips are possible.\n\nHow temperatures moved from early September to the window (Sep 1-7 average, then Sep 16-22 average, then the change):\n- 2021: 22.6, then 17.9 (-4.7)\n- 2022: 22.8, then 21.4 (-1.4)\n- 2023: 21.0, then 16.9 (-4.2)\n- 2024: 21.8, then 19.4 (-2.4)\n- 2025: 23.3, then 24.3 (+1.1)\n\nThe typical change is a cooling of about 2-4 °C over the two weeks. 2026 is coming in from an extremely hot August, and the late-August temperatures are at or slightly above the level of recent early Septembers.\n\nWithin the week itself, temperatures can swing a lot. In 2025, for example, the daily mean went from 27.6 °C on Sep 18 to 15.8 °C on Sep 22.\n\n## 5. Other forecasts\n- I couldn't find any Polymarket, Kalshi or Manifold market on this question or a closely related one.\n- The only expert forecast I found is AEMET's seasonal outlook (warm tilt for autumn), as reported secondhand in section 3.\n\n## 6. Upcoming events and forecasts\n- Updates to ECMWF's extended-range (weekly) forecast should come in early September. Those will be the first forecasts covering Sep 16-22. I couldn't find a pre-Sep-1 extended forecast covering that week.\n- The seasonal signal (as reported secondhand, see section 3) leans toward warmer than normal for Sep-Nov in Spain, but it says little about any single week.\n- Things that could move the outcome: whether a cut-off low or Atlantic trough arrives (as in 2021 and 2023, about 17-18 °C), or whether a late heat ridge sets in (as in 2018 and 2025, about 24 °C).\n\nSources:\n- [Open-Meteo archive, Aug 2026](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2026-08-10&end_date=2026-08-31&daily=temperature_2m_mean)\n- [Open-Meteo archive, 2011-2020](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2011-09-16&end_date=2020-09-22&daily=temperature_2m_mean&timezone=GMT)\n- [Open-Meteo archive, 2021-2025](https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2021-09-01&end_date=2025-09-30&daily=temperature_2m_mean&timezone=GMT)\n- [motor16 autumn outlook](https://www.motor16.com/las-ultimas-noticias/prevision-otono-2026-aemet-moto-lluvia/)\n- [motor16 warm autumn](https://www.motor16.com/las-ultimas-noticias/otono-calido-espana-aemet-moto/)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          15.0
+        ],
+        [
+          0.05,
+          16.6
+        ],
+        [
+          0.1,
+          17.4
+        ],
+        [
+          0.2,
+          18.5
+        ],
+        [
+          0.3,
+          19.4
+        ],
+        [
+          0.4,
+          20.1
+        ],
+        [
+          0.5,
+          20.7
+        ],
+        [
+          0.6,
+          21.3
+        ],
+        [
+          0.7,
+          22.0
+        ],
+        [
+          0.8,
+          23.0
+        ],
+        [
+          0.9,
+          24.2
+        ],
+        [
+          0.95,
+          25.1
+        ],
+        [
+          0.99,
+          26.6
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.3
+        ],
+        [
+          0.05,
+          16.6
+        ],
+        [
+          0.1,
+          17.4
+        ],
+        [
+          0.2,
+          18.5
+        ],
+        [
+          0.3,
+          19.4
+        ],
+        [
+          0.4,
+          20.1
+        ],
+        [
+          0.5,
+          20.7
+        ],
+        [
+          0.6,
+          21.3
+        ],
+        [
+          0.7,
+          22.0
+        ],
+        [
+          0.8,
+          22.9
+        ],
+        [
+          0.9,
+          24.0
+        ],
+        [
+          0.95,
+          24.8
+        ],
+        [
+          0.99,
+          26.2
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.3
+        ],
+        [
+          0.05,
+          16.8
+        ],
+        [
+          0.1,
+          17.6
+        ],
+        [
+          0.2,
+          18.7
+        ],
+        [
+          0.3,
+          19.6
+        ],
+        [
+          0.4,
+          20.2
+        ],
+        [
+          0.5,
+          20.8
+        ],
+        [
+          0.6,
+          21.4
+        ],
+        [
+          0.7,
+          22.1
+        ],
+        [
+          0.8,
+          23.0
+        ],
+        [
+          0.9,
+          24.2
+        ],
+        [
+          0.95,
+          25.0
+        ],
+        [
+          0.99,
+          26.5
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.352
+}

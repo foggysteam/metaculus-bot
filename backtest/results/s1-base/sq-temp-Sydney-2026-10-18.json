@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Sydney-2026-10-18",
+  "question": "What will be the average daily mean temperature in Sydney over the 7 days ending October 18, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-12 to 2026-10-18 at latitude -33.87, longitude 151.21 (Sydney), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 17.16,
+  "outcome_date": "2026-10-24",
+  "as_of": "2026-10-04",
+  "resolve_date": "2026-10-24",
+  "lower_bound": 14.5,
+  "upper_bound": 21.0,
+  "source": "open-meteo",
+  "series": "Sydney",
+  "known_value": 17.471429,
+  "past_moves": [
+    0.714286,
+    1.414286,
+    -2.442857,
+    2.371429,
+    -0.514286
+  ],
+  "baseline": "",
+  "research": "# Sydney 7-day mean temperature, 12 to 18 October 2026: research notes\n\nThe outcome isn't known yet. The data I could use from before the cutoff covers years up to 2025 and Sydney up to 4 October 2026. Two caveats:\n- My tool environment showed a system date after the cutoff. One forecast query I ran returned data dated November 2026, so I have ignored and excluded it.\n- I did not query the archive for 12 to 18 October 2026.\n\n## 1. Resolution source\n- The question resolves on the Open-Meteo ERA5 archive (archive-api.open-meteo.com), daily `temperature_2m_mean` at -33.87, 151.21. I queried it directly. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2026-09-01&end_date=2026-10-04&daily=temperature_2m_mean&timezone=Australia%2FSydney)\n- 2026-10-04: the latest value is 17.6 °C (Sydney timezone). Values for 1 to 3 October were 20.7, 19.6 and 18.9 °C. The 1 to 4 October average is about 19.2 °C.\n- 2026-09: Sydney's September 2026 daily means averaged about 17.2 °C (my sum of the 30 values). The daily range was 13.5 to 22.9 °C, with big swings of 5 to 7 °C over a few days, for example 22.9 on 20 September and 15.4 on 22 September.\n- Timezone caveat: the question doesn't say which timezone is used. The API defaults to GMT/UTC, which can shift daily means slightly compared with Sydney local days.\n\n## 2. Current status\n- Nothing settles the question yet. The window (12 to 18 October) starts 8 days after the forecast close, so it is past reliable deterministic forecast skill and mostly within the range where climatology and ensemble forecasts dominate.\n\n## 3. Recent news (newest first)\n- 2026-10-01: the Bureau of Meteorology (BoM) published an October to December 2026 long-range forecast video. The page returned 403 to my fetch, so I couldn't read the temperature details. [BoM](https://www.bom.gov.au/video/long-range-forecast-october-to-december-2026)\n- 2026-06-25: BoM confirmed El Niño earlier in June 2026 and expected above-average temperatures in most areas through winter and spring. A positive Indian Ocean Dipole may also be developing, and El Niño is expected to last well into the second half of 2026. [Time Out](https://www.timeout.com/sydney/news/el-nino-is-officially-underway-heres-what-that-means-for-sydneys-weather-forecast-061826)\n- 2026-06-04: BoM's June to August outlook gave a high likelihood of above-median temperatures for most of NSW. [DPIRD NSW outlook](https://dpird-web.matrix.squiz.cloud/climate_applications/state-seasonal-update/climate-outlook-and-drivers/climate-outlook/nsw-outlook); [The Nightly](https://thenightly.com.au/australia/australia-winter-weather-forecast-2026-bureau-predicts-below-average-rainfall-and-above-average-temperatures-c-22366359)\n- I found no BoM text specifically about October temperatures for Sydney.\n\n## 4. Base rates (same source, 12 to 18 October, 7-day mean in °C)\n- 2015: 19.7 | 2016: 17.0 | 2017: 18.7 | 2018: 17.8 | 2019: 16.4 | 2020: 18.6 | 2021: 15.9 | 2022: 16.6. These came from one multi-year query that the fetch tool split up by counting day offsets, so there is a small chance a year is misaligned. [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2015-10-12&end_date=2025-10-18&daily=temperature_2m_mean&timezone=Australia%2FSydney)\n- 2023: 17.8 (daily values 21.2, 17.0, 20.1, 18.0, 15.9, 16.4, 16.0). [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2023-10-12&end_date=2023-10-18&daily=temperature_2m_mean)\n- 2024: 16.7 (15.2, 16.3, 17.6, 15.0, 13.8, 18.4, 20.7). [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2024-10-12&end_date=2024-10-18&daily=temperature_2m_mean)\n- 2025: 20.3 (20.8, 17.0, 19.9, 19.9, 23.8, 21.9, 18.6). [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=-33.87&longitude=151.21&start_date=2025-10-12&end_date=2025-10-18&daily=temperature_2m_mean)\n- Summary for 2015 to 2025:\n  - Mean is about 17.8 °C.\n  - Standard deviation is about 1.4 °C.\n  - Range is 15.9 (2021) to 20.3 (2025).\n  - There is no clear trend, though the warmest two years are 2025 and 2015, both El Niño or warm-leaning years.\n- Seasonal context: mid-October is warming by about 0.1 °C per day, and single days within the window often vary by 3 to 6 °C.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold markets on this or a closely related question.\n- I found no published point forecast for 12 to 18 October made on or before 4 October 2026. The forecaster may want to check ensemble guidance, such as the Open-Meteo ensemble or ECMWF extended range, as of 4 October.\n\n## 6. Upcoming events before resolution\n- Updates from BoM and ECMWF weekly or extended-range forecasts in the days before 12 October.\n- Synoptic drivers that typically swing Sydney's mid-spring means:\n  - Hot northwesterly days ahead of fronts, which push daily means above 22 °C.\n  - Southerly changes or onshore flow, which bring daily means of 14 to 16 °C.\n- The El Niño background and the possible positive Indian Ocean Dipole both lean warm and dry.\n- Resolution data should appear in the ERA5 archive with about a 5-day lag, around 23 to 24 October.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          14.6
+        ],
+        [
+          0.05,
+          15.7
+        ],
+        [
+          0.1,
+          16.3
+        ],
+        [
+          0.2,
+          17.0
+        ],
+        [
+          0.3,
+          17.5
+        ],
+        [
+          0.4,
+          17.9
+        ],
+        [
+          0.5,
+          18.2
+        ],
+        [
+          0.6,
+          18.6
+        ],
+        [
+          0.7,
+          19.0
+        ],
+        [
+          0.8,
+          19.5
+        ],
+        [
+          0.9,
+          20.2
+        ],
+        [
+          0.95,
+          20.8
+        ],
+        [
+          0.99,
+          21.9
+        ]
+      ],
+      [
+        [
+          0.01,
+          14.8
+        ],
+        [
+          0.05,
+          15.8
+        ],
+        [
+          0.1,
+          16.3
+        ],
+        [
+          0.2,
+          17.0
+        ],
+        [
+          0.3,
+          17.5
+        ],
+        [
+          0.4,
+          17.9
+        ],
+        [
+          0.5,
+          18.2
+        ],
+        [
+          0.6,
+          18.6
+        ],
+        [
+          0.7,
+          19.0
+        ],
+        [
+          0.8,
+          19.5
+        ],
+        [
+          0.9,
+          20.2
+        ],
+        [
+          0.95,
+          20.8
+        ],
+        [
+          0.99,
+          21.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.0
+        ],
+        [
+          0.05,
+          15.7
+        ],
+        [
+          0.1,
+          16.2
+        ],
+        [
+          0.2,
+          16.9
+        ],
+        [
+          0.3,
+          17.4
+        ],
+        [
+          0.4,
+          17.8
+        ],
+        [
+          0.5,
+          18.15
+        ],
+        [
+          0.6,
+          18.5
+        ],
+        [
+          0.7,
+          18.95
+        ],
+        [
+          0.8,
+          19.5
+        ],
+        [
+          0.9,
+          20.3
+        ],
+        [
+          0.95,
+          20.9
+        ],
+        [
+          0.99,
+          22.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3177
+}

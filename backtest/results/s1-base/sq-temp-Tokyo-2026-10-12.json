@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Tokyo-2026-10-12",
+  "question": "What will be the average daily mean temperature in Tokyo over the 7 days ending October 12, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-06 to 2026-10-12 at latitude 35.68, longitude 139.69 (Tokyo), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 20.51,
+  "outcome_date": "2026-10-18",
+  "as_of": "2026-09-07",
+  "resolve_date": "2026-10-18",
+  "lower_bound": 5.0,
+  "upper_bound": 45.0,
+  "source": "open-meteo",
+  "series": "Tokyo",
+  "known_value": 24.271429,
+  "past_moves": [
+    -8.085714,
+    -7.014286,
+    -10.485714,
+    -9.228571,
+    0.442857
+  ],
+  "baseline": "",
+  "research": "## 1. Resolution source\n- The question resolves on ERA5 daily mean 2 m temperature (`temperature_2m_mean`) at 35.68N, 139.69E, taken from the Open-Meteo archive API. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=35.68&longitude=139.69&start_date=2026-08-20&end_date=2026-09-07&daily=temperature_2m_mean)\n- 2026-09-07: When I queried it, the API returned values through 2026-09-07 (22.9 °C), with no gaps. Recent days: 9/1 25.7, 9/2 27.5, 9/3 26.1, 9/4 22.5, 9/5 22.4, 9/6 21.6. The mean from 8/20 to 9/7 was about 26.0 °C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=35.68&longitude=139.69&start_date=2026-08-20&end_date=2026-09-07&daily=temperature_2m_mean)\n- Caveat: I pulled the historical figures below with `timezone=Asia/Tokyo`. The criteria don't name a timezone, and the API defaults to GMT, so the official values could differ slightly (probably by a few tenths of a degree).\n\n## 2. Current status\n- Nothing has settled the question. The window (Oct 6-12) starts about a month after the forecast close, which is well beyond useful deterministic forecast range.\n\n## 3. Recent news\n- 2026-08 (about Aug 25 issue, not verified): tenki.jp shows a JMA 3-month outlook for Sep-Nov. It gives a 60% chance of above-normal average temperature for northern and eastern Japan, which includes Kanto/Tokyo, and 50% for western Japan. It also says the weather in northern and eastern Japan will change on a cycle of a few days. I could not confirm the exact issue date. [tenki.jp](https://tenki.jp/long/three_month/)\n- 2026-07-21: The JMA outlook for Aug-Oct had temperatures normal or above normal for northern to western Japan. For Kanto-Koshin in October it gave 20% below normal, 40% normal and 40% above normal. [kumanichi](https://kumanichi.com/articles/2015984), [tenki.jp](https://tenki.jp/long/three_month/10300/)\n- 2026-08-29 onward: The archive data show early-September cooling. Daily means dropped from about 28-31 °C in late August to about 21-23 °C by Sep 4-7. [Open-Meteo](https://archive-api.open-meteo.com/v1/archive?latitude=35.68&longitude=139.69&start_date=2026-08-20&end_date=2026-09-07&daily=temperature_2m_mean)\n\n## 4. Base rates\nOct 6-12 mean of the daily means at this grid point, from Open-Meteo ERA5 (Asia/Tokyo days). Each figure comes from the Open-Meteo archive query for that year, for example [2025](https://archive-api.open-meteo.com/v1/archive?latitude=35.68&longitude=139.69&start_date=2025-10-06&end_date=2025-10-12&daily=temperature_2m_mean&timezone=Asia/Tokyo):\n- 2015: 17.11\n- 2016: 19.84\n- 2017: 19.6\n- 2018: 21.5\n- 2019: 20.34\n- 2020: 17.81\n- 2021: 21.64\n- 2022: 16.69\n- 2023: 18.01\n- 2024: 19.33\n- 2025: 20.97 (daily values 23.8, 21.4, 23.2, 21.4, 19.9, 17.6, 19.5)\n\nSummary statistics (my calculations from the values above):\n- 2016-2025: mean about 19.6 °C, standard deviation about 1.65 °C, range 16.7 to 21.6.\n- 2015-2025 mean: about 19.4 °C.\n- I see no clear trend over the decade. The cool years (2020, 2022, 2023) came from early-October cold-air outbreaks with rain. The warm years (2018, 2021, 2025) had lingering summer-like air.\n- Daily values within the window swing a lot, from about 12 to 25.6 °C, and the mean usually drops about 0.15-0.2 °C per day through early October.\n- My rough calculation says climate change plus a JMA outlook favouring above-normal temperatures would put the climatological centre at about 19.5-20 °C, with a 1-sigma spread of roughly ±1.6 °C.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question.\n- The only expert guidance I found is the JMA probabilistic outlook in section 3: tilted toward above normal (40-60%) for eastern Japan in autumn and October.\n- I did not find the JMA 1-month forecast covering early October. It would only be issued after the forecast close.\n\n## 6. Upcoming events before resolution\n- Weekly JMA 1-month forecasts (Thursdays) and the next 3-month outlook (around late September) could update the expected temperature anomaly.\n- Typhoons are possible. Early October is still typhoon season near Kanto, and a typhoon could bring warm, humid air or a cool, rainy spell.\n- Timing of the first autumn cold-air outbreaks: how fast the seasonal cooling arrives is the main source of spread (about 3 to 5 °C between years).\n- ERA5 data for Oct 6-12 should appear in the archive with roughly a 5-day lag, before the resolution date of about Oct 18.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          15.2
+        ],
+        [
+          0.05,
+          16.6
+        ],
+        [
+          0.1,
+          17.4
+        ],
+        [
+          0.2,
+          18.4
+        ],
+        [
+          0.3,
+          19.0
+        ],
+        [
+          0.4,
+          19.5
+        ],
+        [
+          0.5,
+          19.9
+        ],
+        [
+          0.6,
+          20.3
+        ],
+        [
+          0.7,
+          20.8
+        ],
+        [
+          0.8,
+          21.3
+        ],
+        [
+          0.9,
+          22.1
+        ],
+        [
+          0.95,
+          22.7
+        ],
+        [
+          0.99,
+          23.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          14.8
+        ],
+        [
+          0.05,
+          16.6
+        ],
+        [
+          0.1,
+          17.5
+        ],
+        [
+          0.2,
+          18.4
+        ],
+        [
+          0.3,
+          19.0
+        ],
+        [
+          0.4,
+          19.5
+        ],
+        [
+          0.5,
+          19.9
+        ],
+        [
+          0.6,
+          20.3
+        ],
+        [
+          0.7,
+          20.8
+        ],
+        [
+          0.8,
+          21.4
+        ],
+        [
+          0.9,
+          22.2
+        ],
+        [
+          0.95,
+          22.8
+        ],
+        [
+          0.99,
+          24.0
+        ]
+      ],
+      [
+        [
+          0.01,
+          15.6
+        ],
+        [
+          0.05,
+          16.8
+        ],
+        [
+          0.1,
+          17.5
+        ],
+        [
+          0.2,
+          18.4
+        ],
+        [
+          0.3,
+          19.0
+        ],
+        [
+          0.4,
+          19.5
+        ],
+        [
+          0.5,
+          19.9
+        ],
+        [
+          0.6,
+          20.3
+        ],
+        [
+          0.7,
+          20.8
+        ],
+        [
+          0.8,
+          21.4
+        ],
+        [
+          0.9,
+          22.2
+        ],
+        [
+          0.95,
+          22.8
+        ],
+        [
+          0.99,
+          23.9
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.2842
+}

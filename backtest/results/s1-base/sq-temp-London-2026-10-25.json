@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-London-2026-10-25",
+  "question": "What will be the average daily mean temperature in London over the 7 days ending October 25, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-19 to 2026-10-25 at latitude 51.51, longitude -0.13 (London), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 10.76,
+  "outcome_date": "2026-10-31",
+  "as_of": "2026-10-11",
+  "resolve_date": "2026-10-31",
+  "lower_bound": 10.5,
+  "upper_bound": 17.5,
+  "source": "open-meteo",
+  "series": "London",
+  "known_value": 14.214286,
+  "past_moves": [
+    -2.214286,
+    0.285714,
+    -4.1,
+    1.042857,
+    -1.5
+  ],
+  "baseline": "",
+  "research": "I've done the research but can't settle the question. All seven target days (October 19-25) fall after the October 11 cutoff, and I found no 2026 forecast that covers that week. The best guides are the 10-year history for this week, about 11.9°C on average with a 10.0 to 14.3°C range, and a Met Office outlook that ran only to about October 18.\n\n## 1. Resolution source\n- The answer comes from the Open-Meteo ERA5 archive (archive-api.open-meteo.com) at 51.51, -0.13, field `temperature_2m_mean`. It will be the average of the 7 daily values from October 19 to 25, 2026. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2026-09-25&end_date=2026-10-11&daily=temperature_2m_mean&timezone=GMT)\n- ERA5 usually runs about 5 days behind real time. On October 11 the newest final values would have been for roughly October 6, so the figures below for October 7 to 11 may not yet have been published then.\n- Recent daily means from the archive:\n  - September 25-30: 17.9, 16.3, 17.1, 16.1, 20.4, 20.3°C.\n  - October 1-6: 16.1, 15.9, 15.5, 16.0, 16.5, 16.0°C (a warm spell).\n  - October 7-11: 13.1, 10.7, 15.5, 11.7, 11.3°C (a cooler turn). [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2026-09-25&end_date=2026-10-11&daily=temperature_2m_mean&timezone=GMT)\n\n## 2. Current status\n- Nothing has settled the question. The target week begins 8 days after the cutoff, so none of its data exists yet. It is too far out for a reliable day-by-day forecast and close enough that the medium-range trend matters somewhat.\n- I left out a current Open-Meteo forecast I pulled because it covers November, after the cutoff.\n\n## 3. Recent news (newest first)\n- 2026-10-08: The Met Office 10-day trend (running to about October 18) said temperatures should stay \"close to or slightly above average.\" It expected highs in the mid to high teens, possibly the low 20s in the south-east early the following week, then easing gradually later. It saw \"no strong signals for any significant cold conditions.\" It gave nothing specific for October 19-25. [Met Office](https://www.metoffice.gov.uk/blog/2026/10-day-trend-unsettled-at-times-but-staying-relatively-mild)\n- I found several pieces on the late-October outlook, but all were published after October 11, so I set them aside.\n\n## 4. Base rates\nSame source and 7-day window (October 19-25) in past years:\n\n| Year | 7-day mean (°C) |\n|---|---|\n| 2025 | 11.17 |\n| 2024 | 12.71 |\n| 2023 | 11.97 |\n| 2022 | 14.27 |\n| 2021 | 11.86 |\n| 2020 | 12.59 |\n| 2019 | 10.24 |\n| 2018 | 10.14 |\n| 2017 | 13.67 |\n| 2016 | 9.99 |\n| 2010 | about 6.7 |\n\n- Sources: [2025](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2025-10-19&end_date=2025-10-25&daily=temperature_2m_mean&timezone=GMT), [2024](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2024-10-19&end_date=2024-10-25&daily=temperature_2m_mean&timezone=GMT), [2023](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2023-10-19&end_date=2023-10-25&daily=temperature_2m_mean&timezone=GMT), [2022](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2022-10-19&end_date=2022-10-25&daily=temperature_2m_mean&timezone=GMT), [2021](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2021-10-19&end_date=2021-10-25&daily=temperature_2m_mean&timezone=GMT), [2020](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2020-10-19&end_date=2020-10-25&daily=temperature_2m_mean&timezone=GMT), [2019](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2019-10-19&end_date=2019-10-25&daily=temperature_2m_mean&timezone=GMT), [2018](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2018-10-19&end_date=2018-10-25&daily=temperature_2m_mean&timezone=GMT), [2017](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2017-10-19&end_date=2017-10-25&daily=temperature_2m_mean&timezone=GMT), [2016](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2016-10-19&end_date=2016-10-25&daily=temperature_2m_mean&timezone=GMT), [2010](https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2010-10-19&end_date=2010-10-25&daily=temperature_2m_mean&timezone=GMT).\n- Over 2016-2025 the average is about 11.9°C and the spread (standard deviation) is about 1.4°C.\n  - The range is 10.0 to 14.3°C.\n  - 4 of those 10 years came in below 10.5°C or close to it (2016, 2018, 2019), and none came above 14.3°C.\n  - The question's range is 10.5 to 17.5°C, so the bottom of the range is a real possibility.\n- There is no clear trend over the decade. Year-to-year noise dominates.\n- Daily means within one week can swing 5 to 9°C, as in 2021 (17.9 down to 8.2).\n- Late October usually runs about 0.1 to 0.15°C per day cooler as the season progresses.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on London's temperature for this week.\n- The only expert guidance from before the cutoff is the October 8 Met Office trend in section 3. I could not find a Met Office long-range text from about October 9-11 that specifically covers October 19-25.\n\n## 6. Upcoming events before resolution\n- Between October 11 and 19 there will be ECMWF and GFS model runs, Met Office 10-day trends (usually Thursdays, so about October 15) and daily updates to the Met Office long-range text. These will sharpen the outlook.\n- The key uncertainty is the weather pattern. Atlantic westerly or south-westerly flow would favour readings near or above normal (about 12 to 14°C). A northerly flow or settled high pressure with clear nights would favour about 9 to 11°C.\n- ERA5 data for October 25 should appear in the archive around October 30 or 31, which matches the resolution date.",
+  "research_note": "",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          7.8
+        ],
+        [
+          0.05,
+          9.3
+        ],
+        [
+          0.1,
+          10.0
+        ],
+        [
+          0.2,
+          10.9
+        ],
+        [
+          0.3,
+          11.5
+        ],
+        [
+          0.4,
+          11.9
+        ],
+        [
+          0.5,
+          12.3
+        ],
+        [
+          0.6,
+          12.7
+        ],
+        [
+          0.7,
+          13.1
+        ],
+        [
+          0.8,
+          13.7
+        ],
+        [
+          0.9,
+          14.5
+        ],
+        [
+          0.95,
+          15.1
+        ],
+        [
+          0.99,
+          16.2
+        ]
+      ],
+      [
+        [
+          0.01,
+          8.3
+        ],
+        [
+          0.05,
+          9.6
+        ],
+        [
+          0.1,
+          10.2
+        ],
+        [
+          0.2,
+          11.0
+        ],
+        [
+          0.3,
+          11.6
+        ],
+        [
+          0.4,
+          12.0
+        ],
+        [
+          0.5,
+          12.3
+        ],
+        [
+          0.6,
+          12.7
+        ],
+        [
+          0.7,
+          13.1
+        ],
+        [
+          0.8,
+          13.6
+        ],
+        [
+          0.9,
+          14.3
+        ],
+        [
+          0.95,
+          14.8
+        ],
+        [
+          0.99,
+          15.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          7.8
+        ],
+        [
+          0.05,
+          9.3
+        ],
+        [
+          0.1,
+          10.0
+        ],
+        [
+          0.2,
+          10.8
+        ],
+        [
+          0.3,
+          11.4
+        ],
+        [
+          0.4,
+          11.8
+        ],
+        [
+          0.5,
+          12.1
+        ],
+        [
+          0.6,
+          12.5
+        ],
+        [
+          0.7,
+          12.9
+        ],
+        [
+          0.8,
+          13.5
+        ],
+        [
+          0.9,
+          14.3
+        ],
+        [
+          0.95,
+          14.9
+        ],
+        [
+          0.99,
+          16.0
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3594
+}

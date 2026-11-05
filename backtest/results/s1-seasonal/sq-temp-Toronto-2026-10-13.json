@@ -1,0 +1,194 @@
+{
+  "id": "sq-temp-Toronto-2026-10-13",
+  "question": "What will be the average daily mean temperature in Toronto over the 7 days ending October 13, 2026, in degrees Celsius?",
+  "resolution_criteria": "Resolves to the mean of the daily mean 2-metre air temperatures from 2026-10-07 to 2026-10-13 at latitude 43.65, longitude -79.38 (Toronto), from the ERA5 reanalysis as served by the Open-Meteo historical weather API (archive-api.open-meteo.com), in degrees Celsius.",
+  "unit": "degrees Celsius",
+  "outcome": 15.13,
+  "outcome_date": "2026-10-19",
+  "as_of": "2026-09-15",
+  "resolve_date": "2026-10-19",
+  "lower_bound": 5.0,
+  "upper_bound": 30.0,
+  "source": "open-meteo",
+  "series": "Toronto",
+  "known_value": 20.128571,
+  "past_moves": [
+    -4.185714,
+    -6.057143,
+    -7.471429,
+    -8.185714,
+    -1.128571
+  ],
+  "baseline": "",
+  "research": "## 1. Resolution source\n- The question settles on the Open-Meteo ERA5 archive (daily `temperature_2m_mean`), averaged over 2026-10-07 to 2026-10-13. Open-Meteo snaps the request to the nearest grid cell, 43.69N, 79.41W. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2026-08-25&end_date=2026-09-14&daily=temperature_2m_mean&timezone=America/Toronto)\n- 2026-09-14: latest value I pulled was 16.7 C. Recent daily means: 09-11 17.6, 09-12 20.8, 09-13 22.4. The 2026-09-01 to 09-14 average is about 20.4 C. [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2026-08-25&end_date=2026-09-14&daily=temperature_2m_mean&timezone=America/Toronto)\n- Note: I requested data in the America/Toronto timezone. If the question uses GMT day boundaries, values could shift slightly.\n\n## 2. Current status\n- The window starts in about three weeks, so no data for it exists yet and nothing settles the question. Early-to-mid September 2026 was warm, with daily means mostly 17 to 22 C. Weather that far ahead is mostly unpredictable.\n\n## 3. Recent news\n- 2026-09 (exact date unclear): The Weather Network's Ontario fall outlook leans warmer than normal for the season overall. It says temperatures may run \"surprisingly close to seasonal\" from mid-September through mid-October, and the stronger warm signal comes in late fall. It also expects fewer fall storms and drier-than-normal conditions, and points to El Niño as a key driver. [TWN](https://www.theweathernetwork.com/en/news/weather/seasonal/ontario-2026-fall-forecast)\n- 2026 (summer release): The Old Farmer's Almanac calls for a cool, wet Ontario autumn, with October rebounding to about 11 C (near normal). One write-up mentions a chilly start to October. The Almanac has little proven skill. [Narcity](https://www.narcity.com/fall-forecast-ontario-2026-chilly-temperatures-snow-showers), [Curiocity](https://curiocity.com/fall-forecast-ontario-2026/)\n- Toronto's normal October daily average is about 11.2 C (station normal, not ERA5). [Streets of Toronto](https://streetsoftoronto.com/?p=217934)\n\n## 4. Base rates\nSame window (Oct 7-13), same Open-Meteo ERA5 series:\n- 2016-10: 14.2 C\n- 2017-10: 16.4 C\n- 2018-10: 15.2 C\n- 2019-10: 12.9 C\n- 2020-10: 13.1 C\n- 2021-10: 18.3 C (every day 17.2 to 19.3) [archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2021-10-01&end_date=2021-10-20&daily=temperature_2m_mean&timezone=America/Toronto)\n- 2022-10: 11.4 C [archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2022-10-07&end_date=2022-10-13&daily=temperature_2m_mean&timezone=America/Toronto)\n- 2023-10: 10.3 C [archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2023-10-07&end_date=2023-10-13&daily=temperature_2m_mean&timezone=America/Toronto)\n- 2024-10: 11.1 C [archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2024-10-07&end_date=2024-10-13&daily=temperature_2m_mean&timezone=America/Toronto)\n- 2025-10: 13.4 C [archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2025-10-07&end_date=2025-10-13&daily=temperature_2m_mean&timezone=America/Toronto)\n\nSummary of those 10 years:\n- Mean about 13.6 C, median about 13.2 C, standard deviation about 2.5 C, range 10.3 to 18.3 C.\n- About 7 of 10 years fell between 11 and 16 C.\n- There is no clear warming trend: 2022-2024 were cool and 2016-2018 and 2021 were warm.\n- Single days within the window swing a lot, from 7.0 C (2018-10-13) to 22.0 C (2018-10-10).\n\nSeasonal drop:\n- Normally the temperature falls about 6 to 8 C between mid-September (roughly 18 to 20 C) and mid-October (roughly 11 to 13 C), so the window comes during a fast cooling phase.\n- 2026 so far: the Sept 1-14 average of about 20.4 C looks warm compared with typical early-September ERA5 values, though I did not pull exact September figures for earlier years.\n- How warm early September was tells you little about one week in mid-October.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question or a closely related one.\n- Expert outlooks:\n  - The Weather Network expects near-seasonal temperatures through mid-October, leaning warm overall. [TWN](https://www.theweathernetwork.com/en/news/weather/seasonal/ontario-2026-fall-forecast)\n  - Environment and Climate Change Canada's (ECCC) three-month outlook is reported as leaning above normal for Ontario. [TWN](https://www.theweathernetwork.com/en/news/weather/seasonal/ontario-2026-fall-forecast)\n  - The Old Farmer's Almanac puts October near normal. [Narcity](https://www.narcity.com/fall-forecast-ontario-2026-chilly-temperatures-snow-showers)\n\n## 6. Upcoming events before resolution\n- Late September and early October: the ECCC monthly and three-month outlooks and the NOAA CPC 8-14 day and week 3-4 outlooks will update. The 8-14 day outlook only reaches the Oct 7-13 window around Sept 23 to 29.\n- The El Niño state is cited as the main seasonal driver (TWN). Skill at 3 to 4 weeks out is low.\n- Latest official outlook covering the window: TWN says near seasonal to mild for mid-September to mid-October, and ECCC's three-month outlook leans above normal. I could not open the ECCC page directly, and some search results were dated after 2026-09-15, so I ignored them.\n\nSources: [Open-Meteo archive](https://archive-api.open-meteo.com/v1/archive?latitude=43.65&longitude=-79.38&start_date=2026-08-25&end_date=2026-09-14&daily=temperature_2m_mean&timezone=America/Toronto), [TWN fall forecast](https://www.theweathernetwork.com/en/news/weather/seasonal/ontario-2026-fall-forecast), [Narcity](https://www.narcity.com/fall-forecast-ontario-2026-chilly-temperatures-snow-showers), [Curiocity](https://curiocity.com/fall-forecast-ontario-2026/), [Streets of Toronto](https://streetsoftoronto.com/?p=217934), [BlogTO](https://www.blogto.com/city/2026/09/ontario-fall-forecast-2026/)",
+  "research_note": "seasonal",
+  "leaked": false,
+  "forecasts": {
+    "thirteen": [
+      [
+        [
+          0.01,
+          7.8
+        ],
+        [
+          0.05,
+          9.3
+        ],
+        [
+          0.1,
+          10.2
+        ],
+        [
+          0.2,
+          11.4
+        ],
+        [
+          0.3,
+          12.2
+        ],
+        [
+          0.4,
+          12.8
+        ],
+        [
+          0.5,
+          13.3
+        ],
+        [
+          0.6,
+          13.9
+        ],
+        [
+          0.7,
+          14.6
+        ],
+        [
+          0.8,
+          15.5
+        ],
+        [
+          0.9,
+          16.8
+        ],
+        [
+          0.95,
+          17.7
+        ],
+        [
+          0.99,
+          19.3
+        ]
+      ],
+      [
+        [
+          0.01,
+          8.0
+        ],
+        [
+          0.05,
+          9.6
+        ],
+        [
+          0.1,
+          10.5
+        ],
+        [
+          0.2,
+          11.7
+        ],
+        [
+          0.3,
+          12.6
+        ],
+        [
+          0.4,
+          13.2
+        ],
+        [
+          0.5,
+          13.8
+        ],
+        [
+          0.6,
+          14.4
+        ],
+        [
+          0.7,
+          15.1
+        ],
+        [
+          0.8,
+          16.0
+        ],
+        [
+          0.9,
+          17.3
+        ],
+        [
+          0.95,
+          18.2
+        ],
+        [
+          0.99,
+          19.8
+        ]
+      ],
+      [
+        [
+          0.01,
+          7.0
+        ],
+        [
+          0.05,
+          8.9
+        ],
+        [
+          0.1,
+          9.9
+        ],
+        [
+          0.2,
+          11.2
+        ],
+        [
+          0.3,
+          12.1
+        ],
+        [
+          0.4,
+          12.8
+        ],
+        [
+          0.5,
+          13.4
+        ],
+        [
+          0.6,
+          14.0
+        ],
+        [
+          0.7,
+          14.7
+        ],
+        [
+          0.8,
+          15.6
+        ],
+        [
+          0.9,
+          16.9
+        ],
+        [
+          0.95,
+          17.9
+        ],
+        [
+          0.99,
+          19.7
+        ]
+      ]
+    ]
+  },
+  "errors": [],
+  "notional_cost_usd": 0.3383
+}
