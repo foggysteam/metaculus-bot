@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-05T11:11:17.676831+00:00",
+  "bot_version": "2026-11-04.1",
+  "started_at": "2026-11-05T11:04:32.011683+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46226,
+    "post_id": 46012,
+    "url": "https://www.metaculus.com/questions/46012",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "How much will Nvidia's stock price returns exceed Apple's in these biweekly periods of Q4 2026? (Nov 9 - Nov 20)",
+    "resolution_criteria": "Each subquestion will resolve as the difference between the percent stock price return of [NVDA](https://finance.yahoo.com/quote/NVDA/history/) and that of [AAPL](https://finance.yahoo.com/quote/AAPL/history/) for the corresponding biweekly period, according to Yahoo Finance data.\n\nSpecifically, each subquestion will resolve as NVDA\\_return - AAPL\\_return.\n\nReturns will be calculated as follows: If P₀ is the Adj Close price of a company stock on the last trading day or half-day *before* the start of the period and P₁ is the Adj Close price of the stock on the last trading day *of* the designated period, the percentage return will be calculated as:\n\n$$\n \\text{return} = 100 \\times \\frac{P1 - P0}{P0}\n$$",
+    "fine_print": "* If Apple outperforms Nvidia, the corresponding subquestion will resolve as a negative number.\n* If Yahoo Finance delays or ceases reporting these data or if it reports them in error, Metaculus might use alternative credible sources to resolve this question.\n* Resolutions are based on the prices at the market close on the last trading day of the designated period. Further adjustments to Adj Close prices after that will not cause subquestions to re-resolve.\n\n***\n\nFor example, for the period Jun 9, 2025 - Jun 20, 2025, the subquestion would have resolved based on the following calculations, based on the prices as they appeared on June 20, 2025:\n\nNVDA\\_P₀ \\= 141.71 (the Adj Close price on Jun 6)\n\nNVDA\\_P₁ \\= 143.85 (the Close price on Jun 20)\n\nNVDA\\_return \\= 100 × (143.85 - 141.71) / 141.71 \\= 1.510\n\nAAPL\\_P₀ \\= 203.92 (the Adj Close price on Jun 6)\n\nAAPL\\_P₁ \\= 201.00 (the Close price on Jun 20)\n\nAAPL\\_return \\= 100 × (201.00 - 203.92) / 203.92 \\= -1.4319\n\nAnd the resolution would be 1.510 - (-1.4319) \\= **2.9419** percentage points (pp).",
+    "close_time": "2026-11-09 04:00 UTC",
+    "scheduled_resolution_time": "2026-11-20 21:00 UTC"
+  },
+  "research": [
+    "I couldn't find any fact yet that settles this question. P₀ is the Nov 6, 2026 Adj Close, which isn't available until Friday's close. Nvidia's earnings report (expected Nov 17, after the close) falls inside the window.\n\n## 1. Resolution source\n- 2026-11-04: Yahoo NVDA history, newest rows: Nov 4 at 200.13, Nov 3 at 206.69, Nov 2 at 202.06, Oct 30 at 204.64, Oct 29 at 213.66. Close and Adj Close are equal. [Yahoo NVDA](https://finance.yahoo.com/quote/NVDA/history/)\n- 2026-11-04: Yahoo AAPL history, newest rows: Nov 4 at 349.51, Nov 3 at 331.90, Nov 2 at 338.32, Oct 30 at 344.63, Oct 29 at 348.91. [Yahoo AAPL](https://finance.yahoo.com/quote/AAPL/history/)\n- P₀ for both stocks will be the Nov 6 Adj Close. P₁ will be the Nov 20 Adj Close.\n- No Apple ex-dividend date should fall in the window: Apple's usual pattern is early-to-mid November, and I did not verify the exact date. Nvidia's dividend is tiny, so adjustments should be negligible either way.\n\n## 2. Current status\n- Nothing settles the question yet. The period hasn't started.\n- For context, from Yahoo closes: between Oct 22 and Nov 4, NVDA fell about 5.7% (212.21 to 200.13) and AAPL rose about 0.4% (348.22 to 349.51). That works out to roughly -6.1 pp of Nvidia underperformance, my own calculation.\n\n## 3. Recent news (newest first)\n- 2026-11-05: A Motley Fool piece is skeptical of Apple, citing fears of gross-margin compression and slowing services growth. [Fool](https://fool.com/investing/2026/11/05/is-apple-a-buy-on-the-dip-or-are-mounting-headwind)\n- 2026-11-04: After Democrats won Congress, NVDA closed down 3.17% and AAPL closed up 5.31%, with an intraday record of $354.33. AI stocks sold off on fears of closer scrutiny from Congress. CNBC, as cited by the article, said Apple could gain because slower data-center building would ease pressure on memory prices. Apple passed Nvidia in market cap, about $5.12T vs $4.87T. [StockTitan](https://stocktitan.net/articles/stock-market-today-live-november-4-2026), [Boursorama](https://www.boursorama.com/bourse/actualites/apple-depasse-nvidia-en-termes-de-capitalisation-boursiere-et-prend-la-tete-du-classement-3ae2528f2eb05f3e9208ecefe3412619)\n- 2026-11-03: Apple guided December-quarter gross margin to 45-46%, below the 46.3% consensus, because of rising memory costs, and the stock fell about 1.9%. NVDA rose about 2.3% and passed Apple. [Benzinga](https://www.benzinga.com/markets/equities/26/11/62832505/stock-market-today-nvidia-overtakes-apple-chip-rally-nasdaq-jolts-yields), [247WallSt](https://247wallst.com/investing/2026/11/04/nvidia-took-back-the-worlds-biggest-company-title-from-apple-on-election-day/)\n- The news API dated the 247WallSt item Nov 4 and called it \"Election Day\". It actually describes the Nov 3 session.\n- Late Oct 2026: NVDA was about 13.6% below its record close of $239.24. [Yahoo/247WallSt](https://finance.yahoo.com/markets/stocks/articles/nvidia-took-back-world-biggest-123723546.html)\n\n## 4. Base rates\n- I couldn't open the Metaculus spreadsheet of past fortnightly returns.\n- My own rough estimate, not a sourced statistic: with NVDA implied volatility around 45-55% a year (about 9-10% per two weeks), AAPL around 25-30% (about 5-6%), and correlation around 0.5, the spread NVDA minus AAPL has a standard deviation of roughly 7-9 pp per fortnight. Earnings fortnights tend to be wider.\n- Recent two-week examples:\n  - Question's own example (Jun 9-20, 2025): +2.94 pp.\n  - Oct 22 to Nov 4, 2026: about -6.1 pp.\n  - The two-day swing on Nov 3-4 alone: about -7 pp for the Nov 4 session by itself, from roughly +4 pp on Nov 3.\n- Past NVDA next-day moves after earnings, from memory and not re-verified: Feb 2025 about -8.5%, May 2025 about +3%, Aug 2025 about -1%, Nov 2025 about -3%. NVDA has often fallen after beating estimates.\n\n## 5. Other forecasts\n- Polymarket, \"Largest company end of November 2026\": NVIDIA Yes 0.365. Apple isn't listed in the feed, so it presumably holds most of the remaining roughly 0.63. In the \"2nd largest\" market, NVIDIA is at 0.595 and Apple at 0.36. These prices imply the market sees Apple as more likely to end November ahead of Nvidia. The market is related but doesn't match this question.\n- Kalshi \"NVIDIA earnings call mentions\" is dated Nov 18. It has no bearing on returns.\n- I found no direct market on the NVDA vs AAPL two-week return spread.\n\n## 6. Upcoming events before resolution\n- 2026-11-05: Weekly jobless claims and productivity data. [StockTitan](https://stocktitan.net/articles/stock-market-today-live-november-4-2026)\n- 2026-11-06: October jobs report. This day's close sets P₀.\n- Ongoing: Final House and Senate seat counts, and how markets keep reacting to AI and data-center policy under a Democratic Congress.\n- Mid-November: October CPI, probably around Nov 10-13 (date not verified).\n- 2026-11-17 (Tue, after close): Nvidia's fiscal Q3 2027 results, with the call at 5 p.m. ET. Third-party calendars say Nvidia confirmed the date on Oct 28. Some older calendars list Nov 18 as an estimate. I couldn't find Nvidia's own press release. Prior guidance was about $108B in Q3 revenue. [CME Elite](https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date-fiscal-q3-2027-report-time-guidance-and-expected-move/?nocache=1), [eciks](https://eciks.org/29651-nvidia-fiscal-2027-q3-results), [Webull](https://www.webull.com/blog/304-Nvidia-Q2-FY2027-Earnings-Beats-Revenue-EPS-Estimates-Guides-Q3-to-108B)\n- 2026-11-20 (Fri): Monthly options expiration and the end of the period.\n- Apple has no scheduled earnings in the window. Memory-price headlines are the main Apple-specific risk.\n\nSources: [Yahoo NVDA](https://finance.yahoo.com/quote/NVDA/history/), [Yahoo AAPL](https://finance.yahoo.com/quote/AAPL/history/), [StockTitan](https://stocktitan.net/articles/stock-market-today-live-november-4-2026), [Benzinga](https://www.benzinga.com/markets/equities/26/11/62832505/stock-market-today-nvidia-overtakes-apple-chip-rally-nasdaq-jolts-yields), [Yahoo/247WallSt](https://finance.yahoo.com/markets/stocks/articles/nvidia-took-back-world-biggest-123723546.html), [Fool](https://fool.com/investing/2026/11/05/is-apple-a-buy-on-the-dip-or-are-mounting-headwind), [CME Elite](https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date-fiscal-q3-2027-report-time-guidance-and-expected-move/?nocache=1), [eciks](https://eciks.org/29651-nvidia-fiscal-2027-q3-results), [Webull](https://www.webull.com/blog/304-Nvidia-Q2-FY2027-Earnings-Beats-Revenue-EPS-Estimates-Guides-Q3-to-108B), [Boursorama](https://www.boursorama.com/bourse/actualites/apple-depasse-nvidia-en-termes-de-capitalisation-boursiere-et-prend-la-tete-du-classement-3ae2528f2eb05f3e9208ecefe3412619)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-05 11:08 UTC; check each market really matches the question)\n- Kalshi: Which member of Congress will have the biggest returns in 2025? (In 2025). Yes prices: Roger Williams: 0.43; Ron Wyden: 0.17; Nancy Pelosi: 0.04; Debbie Wasserman-Schultz: 0.39; David Kustoff: 0.02; Larry Bucshon: 0.02; Susan Collins: 0.06; Pete Sessions: 0.16; Morgan McGarvey: 0.21; David Rouzer: 0.35.\n- Kalshi: Nvidia headcount in fiscal 2027 (in 2027). Yes prices: Above 52000: 0.37; Above 54000: 0.30; Above 50000: 0.77; Above 48000: 0.79; Above 56000: 0.20; Above 46000: 0.96.\n- Kalshi: What will NVIDIA say during their next earnings call? (On Nov 18, 2026). Yes prices: Taiwan: 0.52; Isaac: 0.52; Gaming: 0.56; Humanoid: 0.40; Self Driving: 0.40; Dividend (2+ times): 0.31; DSX: 0.68; Rent / Renting: 0.70; Omniverse: 0.73; Cosmos: 0.73.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0500; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Apple headcount next year (total full-time equivalent employees in 2027). Yes prices: Above 162000: 0.50; Above 166000: 0.50; Above 167000: 0.50; Above 168000: 0.50; Above 169000: 0.50; Above 170000: 0.50; Above 174000: 0.50.\n- Polymarket: Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: Alphabet: [\"0.0015\", \"0.9985\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]; Broadcom: [\"0.0005\", \"0.9995\"]; NVIDIA: [\"0.365\", \"0.635\"]; Microsoft: [\"0.0045\", \"0.9955\"]\n- Polymarket: 2nd Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: NVIDIA: [\"0.595\", \"0.405\"]; Microsoft: [\"0.0315\", \"0.9685\"]; Apple: [\"0.36\", \"0.64\"]; Alphabet: [\"0.0025\", \"0.9975\"]; Tesla: [\"0.0055\", \"0.9945\"]; Saudi Aramco: [\"0.0055\", \"0.9945\"]\n- Polymarket: 3rd Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: NVIDIA: [\"0.016\", \"0.984\"]; Microsoft: [\"0.915\", \"0.085\"]; Apple: [\"0.008\", \"0.992\"]; Alphabet: [\"0.077\", \"0.923\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0015\", \"0.9985\"]\n- Polymarket: Which Mag 7 Stock Has the Biggest Single-Day Move in 2026? (ends 2027-01-01). [Yes, No] prices: Apple (AAPL): [\"0.455\", \"0.545\"]; Microsoft (MSFT): [\"0.405\", \"0.595\"]; Alphabet (GOOGL): [\"0.455\", \"0.545\"]; Amazon (AMZN): [\"0.41\", \"0.59\"]; NVIDIA (NVDA): [\"0.405\", \"0.595\"]; Meta (META): [\"0.405\", \"0.595\"]",
+    "I couldn't find anything that settles this question yet. The period's starting price is Friday Nov 6's Adj Close, which doesn't exist yet. The biggest scheduled event is Nvidia's earnings after the close on Nov 17, inside the window.\n\n### 1. Resolution source\n- 2026-11-05: Yahoo Finance [NVDA history](https://finance.yahoo.com/quote/NVDA/history/): latest closes are Nov 4: 200.13, Nov 3: 206.69, Nov 2: 202.06, Oct 30: 204.64, Oct 29: 213.66, Oct 23: 210.96. Adj Close equals Close.\n- 2026-11-05: Yahoo Finance [AAPL history](https://finance.yahoo.com/quote/AAPL/history/): Nov 4: 349.51 (a record close), Nov 3: 331.90, Nov 2: 338.32, Oct 30: 344.63, Oct 23: 347.73.\n- The starting price (P0) is the Nov 6 Adj Close and the ending price (P1) is the Nov 20 Close.\n- Yahoo shows an announced AAPL dividend of $0.27, going ex-dividend on 2026-11-12, inside the period. Yahoo will adjust the Nov 6 AAPL Adj Close down by about 0.08%, which adds roughly +0.08pp to Apple's return. That slightly lowers the NVDA minus AAPL result. I found no NVDA ex-dividend date in the window.\n\n### 2. Current status\n- Nothing has settled the outcome.\n- For context, recent relative moves:\n  - From Oct 23 to Nov 4, NVDA fell about 5.1% and AAPL rose about 0.5%, a gap of about -5.6pp.\n  - On Nov 4 alone the gap was about -8.5pp (NVDA -3.17%, AAPL +5.31%), all calculated from the Yahoo rows above.\n- 2026-11-05: NVDA traded roughly $199.66 to $208.39 intraday, according to a [Robinhood](https://robinhood.com/us/en/stocks/NVDA/) snapshot. I could not confirm a Nov 5 close.\n\n### 3. Recent news (newest first)\n- 2026-11-04: Democrats won both the House and Senate (AP projections), and Democrat Gina Hinojosa won the Texas governor race.\n  - NVDA closed down 3.17% because investors sold AI and data-center names on worries about regulation and data-center limits.\n  - AAPL closed up 5.31% and hit a record $354.33 intraday. CNBC said slower data-center building could ease memory-chip price pressure, which helps Apple. [StockTitan](https://stocktitan.net/articles/stock-market-today-live-november-4-2026), [CNBC](https://cnbc.com/2026/11/04/ai-stocks-texas-governor-data-centers.html), [MacDailyNews](https://macdailynews.com/2026/11/04/apple-shares-hit-new-all-time-intraday-and-closing-highs-94)\n- 2026-11-04: Apple took back the top market-cap spot, about $5.08T against Nvidia's about $4.83T. [MacDailyNews](https://macdailynews.com/2026/11/04/apple-shares-hit-new-all-time-intraday-and-closing-highs-94), [Boursorama](https://www.boursorama.com/bourse/actualites/apple-depasse-nvidia-en-termes-de-capitalisation-boursiere-et-prend-la-tete-du-classement-3ae2528f2eb05f3e9208ecefe3412619)\n- 2026-11-03: Apple guided December-quarter gross margin to 45-46%, below the 46.3% consensus, because of memory costs. AAPL fell 1.9% and NVDA rose 2.3%, so Nvidia briefly became the most valuable company. [Benzinga](https://www.benzinga.com/markets/equities/26/11/62832505/stock-market-today-nvidia-overtakes-apple-chip-rally-nasdaq-jolts-yields), [Yahoo/247wallst](https://finance.yahoo.com/markets/stocks/articles/nvidia-took-back-world-biggest-123723546.html)\n- Note: some news-API items mislabel Nov 3 as \"Election Day\". Treat Nov 3 as the Apple margin-warning day and Nov 4 as the day markets reacted to the election.\n\n### 4. Base rates\n- I could not get the Metaculus spreadsheet of past two-week returns, so I have no direct historical gaps for this pair.\n- Earnings fall inside the window: Nvidia reports fiscal Q3 FY27 on 2026-11-17 after the close (results about 4:20pm ET, call at 5pm ET). [NVIDIA IR](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx), [NVIDIA newsroom](https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873)\n  - Guidance is $108B ±2% revenue and 74% gross margin.\n  - Consensus is about $108.8B revenue and $2.47 EPS, per an aggregator I did not verify. [eciks](https://eciks.org/29651-nvidia-fiscal-2027-q3-results)\n- Past earnings reactions:\n  - 2026-08-27: NVDA jumped about 8.7% the day after Q2 results. Before that, the stock had reportedly fallen after each of its previous four earnings reports. [Fool AU](https://www.fool.com.au/2026/08/27/nvidia-shares-jump-after-earnings-report-heres-what-has-investors-excited/), [XTB](https://www.xtbofficial.com/en/market-analysis/nvidia-shares-react-to-solid-earnings-report-and-stonger-guidance-what-s-next-for-the-ai-giant)\n  - From my own memory, not checked in this session: post-earnings day moves in 2025 ran from about -8.5% (Feb 2025) to about +3% (May 2025).\n- Rough volatility, my approximation and not a sourced figure:\n  - NVDA two-week standard deviation is about 8-10% and AAPL's about 5%, with a moderate correlation between them.\n  - That puts the typical spread of the NVDA minus AAPL gap at roughly 7-9pp over two weeks, probably higher with earnings in the window.\n  - Single days of 5-8pp gaps have just happened (Nov 3 and Nov 4).\n\n### 5. Other forecasts\n- Polymarket \"Largest company end of November 2026\": NVIDIA Yes at 0.365, which implies about 63% that Apple or another company is on top on Nov 30. \"2nd largest\": NVIDIA 0.595, Apple 0.36. These were fetched 2026-11-05 and are only loosely related, since they measure market-cap rank, not two-week returns.\n- Kalshi Nvidia earnings-call word markets (Nov 18 listing) are not useful here.\n- I found no market or expert forecast on the NVDA minus AAPL return gap for Nov 9-20.\n\n### 6. Upcoming events before resolution\n- 2026-11-06 (Fri): this close sets P0. Election aftermath trading continues.\n- 2026-11-12: AAPL ex-dividend ($0.27).\n- 2026-11-17 (Tue, after the close): Nvidia Q3 FY27 earnings, so Nov 18-20 trading reflects them.\n- Ongoing:\n  - Policy signals from the new Democratic Congress on AI and data centers.\n  - The Texas data-center outlook.\n  - Memory-chip pricing news, which helped Apple and hurt AI stocks this week.\n  - AI-capex comments from other companies.\n- I did not check the Nov 9-20 calendar for macro data such as CPI timing or Fed speakers.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-05 11:08 UTC; check each market really matches the question)\n- Kalshi: Which member of Congress will have the biggest returns in 2025? (In 2025). Yes prices: Roger Williams: 0.43; Ron Wyden: 0.17; Nancy Pelosi: 0.04; Debbie Wasserman-Schultz: 0.39; David Kustoff: 0.02; Larry Bucshon: 0.02; Susan Collins: 0.06; Pete Sessions: 0.16; Morgan McGarvey: 0.21; David Rouzer: 0.35.\n- Kalshi: Nvidia headcount in fiscal 2027 (in 2027). Yes prices: Above 52000: 0.37; Above 54000: 0.30; Above 50000: 0.77; Above 48000: 0.79; Above 56000: 0.20; Above 46000: 0.96.\n- Kalshi: What will NVIDIA say during their next earnings call? (On Nov 18, 2026). Yes prices: Taiwan: 0.52; Isaac: 0.52; Gaming: 0.56; Humanoid: 0.40; Self Driving: 0.40; Dividend (2+ times): 0.31; DSX: 0.68; Rent / Renting: 0.70; Omniverse: 0.73; Cosmos: 0.73.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0500; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Apple headcount next year (total full-time equivalent employees in 2027). Yes prices: Above 162000: 0.50; Above 166000: 0.50; Above 167000: 0.50; Above 168000: 0.50; Above 169000: 0.50; Above 170000: 0.50; Above 174000: 0.50.\n- Polymarket: Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: Alphabet: [\"0.0015\", \"0.9985\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]; Broadcom: [\"0.0005\", \"0.9995\"]; NVIDIA: [\"0.365\", \"0.635\"]; Microsoft: [\"0.0045\", \"0.9955\"]\n- Polymarket: 2nd Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: NVIDIA: [\"0.595\", \"0.405\"]; Microsoft: [\"0.0315\", \"0.9685\"]; Apple: [\"0.36\", \"0.64\"]; Alphabet: [\"0.0025\", \"0.9975\"]; Tesla: [\"0.0055\", \"0.9945\"]; Saudi Aramco: [\"0.0055\", \"0.9945\"]\n- Polymarket: 3rd Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: NVIDIA: [\"0.016\", \"0.984\"]; Microsoft: [\"0.915\", \"0.085\"]; Apple: [\"0.008\", \"0.992\"]; Alphabet: [\"0.077\", \"0.923\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0015\", \"0.9985\"]\n- Polymarket: Which Mag 7 Stock Has the Biggest Single-Day Move in 2026? (ends 2027-01-01). [Yes, No] prices: Apple (AAPL): [\"0.455\", \"0.545\"]; Microsoft (MSFT): [\"0.405\", \"0.595\"]; Alphabet (GOOGL): [\"0.455\", \"0.545\"]; Amazon (AMZN): [\"0.41\", \"0.59\"]; NVIDIA (NVDA): [\"0.405\", \"0.595\"]; Meta (META): [\"0.405\", \"0.595\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -10.5,
+        "p25": -5.2,
+        "p50": 0.1,
+        "p75": 5.6,
+        "p90": 11.0
+      },
+      "reasoning": "(a) **Time left:** The period has not started. P₀ is the Nov 6, 2026 Adj Close and P₁ is the Nov 20, 2026 Adj Close, so the outcome is known in about 15 days, after the Nov 20 close.\n\n(b) **Latest values from Yahoo (Nov 4, 2026):** NVDA closed at 200.13 and AAPL at 349.51. Over Oct 22 to Nov 4, the spread was about -6.1 pp in Apple's favour.\n\n(c) **If nothing changed:** If both prices stayed flat from Nov 6 to Nov 20, the result would be 0 pp.\n\n(d) **If the current trend continued:** The recent momentum is Nvidia underperforming. That comes from AI-policy fears after the Democratic wins in Congress, set against Apple's memory-cost margin worries. Extending it would give roughly -3 to -6 pp. Two-week momentum in this spread is weak and tends to reverse, so I give it only a small weight.\n\n(e) **Historical variation:** NVDA moves about 9-10% in two weeks (one standard deviation) and AAPL about 5-6%, with a correlation around 0.5. That puts the standard deviation of the spread at about 7-9 pp. This window contains Nvidia's earnings (Nov 17 after the close, with the reaction on Nov 18-20). That widens the distribution: the usual implied earnings move is about ±6-8%. Tails are fat.\n\n(f) **Experts and markets:** There is no direct market on this spread. Polymarket has Apple about 63% likely to be the largest company at the end of November. That points to a slight lean toward Apple holding its lead, but the signal is weak. Nvidia has often fallen after beating estimates. Analysts expect strong Q3 results against guidance of about $108B in revenue. Overall I take a roughly neutral median with a tiny negative tilt.\n\n(g) **Tail scenarios:**\n- **Low:** Nvidia's guidance disappoints, or there are headlines about export controls or Congressional AI scrutiny. NVDA falls 12-15% after earnings while AAPL rises as memory prices ease, giving about -20 pp.\n- **High:** Nvidia posts a blowout quarter and raises guidance. The AI trade rebounds sharply from oversold levels, NVDA gains about 15%, and AAPL slips on margin worries, giving about +20 pp.\n\nPercentile 1: -22\nPercentile 5: -14.5\nPercentile 10: -10.5\nPercentile 20: -6.5\nPercentile 30: -3.9\nPercentile 40: -1.7\nPercentile 50: 0.1\nPercentile 60: 2\nPercentile 70: 4.2\nPercentile 80: 7\nPercentile 90: 11\nPercentile 95: 14.5\nPercentile 99: 22"
+    },
+    {
+      "value": {
+        "p10": -11.0,
+        "p25": -5.4,
+        "p50": 0.3,
+        "p75": 6.0,
+        "p90": 11.5
+      },
+      "reasoning": "(a) **Time left:** The window runs from Nov 9 to Nov 20, 2026. P₀ is set at the Nov 6 close, and the outcome is known at the Nov 20 close, about 15 days from now.\n\n(b) **Latest values (Yahoo, Nov 4, 2026):** NVDA closed at 200.13 and AAPL at 349.51. The period has not started, and P₀ will be the Nov 6 Adj Close.\n\n(c) **If nothing changed:** Both returns would be 0, so the result would be 0 pp.\n\n(d) **If the current trend continued:** Over the last two weeks Nvidia underperformed Apple by about 6 pp. This came from the post-election AI selloff and the view that Apple benefits from slower data-center building. Short-horizon relative momentum like this is weak and often reverses. Nvidia's earnings report (Nov 17, after the close) will dominate the window, so I give the trend only a small weight.\n\n(e) **Historical variation:** I estimate NVDA's two-week volatility at about 9-10% in normal periods, and about 11% in a fortnight that includes earnings. The implied earnings move is roughly 6-7%. I put AAPL at about 5% and the correlation at about 0.4-0.5. That gives a spread standard deviation of about 8-10 pp, with fat tails because of the earnings gap.\n\n(f) **Markets and experts:** No market covers this spread directly. Polymarket's \"largest company at end of November\" market slightly favours Apple, at about 63% for Apple versus 36.5% for Nvidia. That reflects Apple's current market-cap lead more than an expected return gap. Nvidia's next-day reaction to earnings has historically been mixed to negative even after beats. Nvidia has the higher long-run drift. Overall I set the median near 0, slightly positive.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** Nvidia's guidance disappoints or hyperscaler capex cuts emerge, while the new Democratic Congress adds AI or chip-export scrutiny. NVDA would fall 15-20% while Apple rallies on easing memory costs, giving about -22 to -25 pp.\n- **High outcome:** Nvidia posts a blowout quarter with a strong next-quarter guide and AI policy fears fade, so NVDA rises about 15%. Meanwhile Apple slides on worsening memory-cost and margin headlines, giving about +20 to +23 pp.\n\nPercentile 1: -24\nPercentile 5: -15\nPercentile 10: -11\nPercentile 20: -6.8\nPercentile 30: -4\nPercentile 40: -1.7\nPercentile 50: 0.3\nPercentile 60: 2.3\nPercentile 70: 4.6\nPercentile 80: 7.4\nPercentile 90: 11.5\nPercentile 95: 15\nPercentile 99: 23"
+    },
+    {
+      "value": {
+        "p10": -10.3,
+        "p25": -5.0,
+        "p50": 0.2,
+        "p75": 5.5,
+        "p90": 10.8
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 9 to Nov 20, 2026. P₀ is set at the Nov 6 close, and the outcome will be known at the Nov 20 close, about 15 days from now.\n\n(b) **Latest known value:** There is none for this period yet. As context, the Yahoo closes on Nov 4, 2026 were NVDA 200.13 and AAPL 349.51. From Oct 22 to Nov 4, the spread was about -6.1 pp (NVDA underperforming).\n\n(c) **If nothing changed:** The outcome would be 0 pp, since the period has not started.\n\n(d) **If the current trend continued:** Nvidia has recently underperformed. The drivers were the AI sell-off after the Democratic congressional win, and Apple's rally on hopes of easing memory-cost pressure. Extending this trend would give roughly -3 to -6 pp. However, short-horizon relative momentum is weak, and some of the move may reverse.\n\n(e) **Historical variation:** With NVDA two-week volatility of about 9-10%, AAPL about 5-6%, and correlation around 0.5, the spread's standard deviation is about 7-9 pp. This window includes Nvidia's earnings (Nov 17, after the close), which typically move the stock 3-8% the next day. That widens the distribution and fattens the tails.\n\n(f) **Experts and markets:** There is no direct market on this spread. Polymarket prices slightly favour Apple finishing November as the largest company (about 0.63 vs 0.37). That is only weakly informative about the expected relative return. I take the expected spread to be near zero, perhaps slightly negative given the policy overhang, offset by a modest chance of a post-earnings rebound.\n\n(g) **Scenarios:**\n- **Low:** Nvidia beats but guides cautiously, and Congress signals data-center or export scrutiny. NVDA falls about 15% while AAPL rises on easing memory-cost headlines, giving roughly -20 pp.\n- **High:** A blowout quarter with guidance well above $120B sparks an AI rebound. NVDA rises about 15-18% while AAPL drifts lower on margin worries, giving roughly +20 pp.\n\nPercentile 1: -22\nPercentile 5: -14\nPercentile 10: -10.3\nPercentile 20: -6.3\nPercentile 30: -3.7\nPercentile 40: -1.5\nPercentile 50: 0.2\nPercentile 60: 1.9\nPercentile 70: 4.1\nPercentile 80: 6.9\nPercentile 90: 10.8\nPercentile 95: 14.3\nPercentile 99: 21.5"
+    },
+    {
+      "value": {
+        "p10": -11.0,
+        "p25": -5.0,
+        "p50": 0.3,
+        "p75": 5.8,
+        "p90": 11.5
+      },
+      "reasoning": "(a) **Time left:** The window opens with P0 at the Nov 6 close and ends with P1 at the Nov 20 close. That is about 15 days from now, and the result will be known on Nov 20 around 21:00 UTC.\n\n(b) **Latest known values (Yahoo, Nov 4, 2026):**\n- NVDA closed at 200.13 and AAPL at 349.51, a record close for Apple.\n- From Oct 23 to Nov 4, the gap was about -5.6pp in Apple's favour.\n- The Nov 4 session alone produced about -8.5pp.\n- P0 for this window is not set yet.\n\n(c) **If nothing changed:** The result would be about -0.1pp. Both prices would be flat, and Apple's $0.27 ex-dividend adjustment adds about +0.08pp to Apple's return.\n\n(d) **If the current trend continued:** Rotation out of AI and data-center names after the election would keep Apple ahead, giving roughly -3 to -6pp. Two-week relative momentum between mega-caps is weak, though, and Nvidia's earnings on Nov 17 will probably dominate.\n\n(e) **Historical variation:**\n- My rough estimates (not sourced figures) are a two-week standard deviation of about 8-10% for NVDA and about 5% for AAPL, with moderate correlation. That gives a standard deviation of roughly 7-9pp for the gap.\n- With earnings in the window, the spread is wider, about 9-10pp, with fat tails.\n- Nvidia's post-earnings day moves have recently ranged from about -8.5% to +8.7%.\n\n(f) **Experts and markets:** No market prices this gap directly. Polymarket's market-cap rank markets roughly split between Apple and Nvidia for top spot at end of November, which suggests no strong directional view. Consensus expects Nvidia to beat its own guidance modestly (about $108.8B against $108B), which is typical and largely priced in.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia disappoints or guides cautiously on Nov 17, while new Democratic regulatory signals on AI and data centers deepen the AI selloff. Meanwhile Apple keeps rallying as memory-cost fears ease. NVDA falls 15% and AAPL rises 5%, for about -20pp.\n- **High:** The post-election selloff reverses quickly and Nvidia posts a big beat with strong FY28 commentary. NVDA rises 15% while AAPL gives back its election-day spike and falls 4%, for about +19pp.\n\nPercentile 1: -24\nPercentile 5: -15\nPercentile 10: -11\nPercentile 20: -6.5\nPercentile 30: -3.5\nPercentile 40: -1.2\nPercentile 50: 0.3\nPercentile 60: 2\nPercentile 70: 4.3\nPercentile 80: 7.3\nPercentile 90: 11.5\nPercentile 95: 15\nPercentile 99: 23"
+    },
+    {
+      "value": {
+        "p10": -9.5,
+        "p25": -4.55,
+        "p50": 0.2,
+        "p75": 5.05,
+        "p90": 10.0
+      },
+      "reasoning": "(a) **Time left:** The forecast closes Nov 9. P0 is set by the Nov 6 close, and the outcome is known at the Nov 20 close, about 15 days from now.\n\n(b) **Latest known value:** The period has not started, so there is no resolution value yet. The latest closes on Nov 4 were NVDA 200.13 and AAPL 349.51. From Oct 23 to Nov 4 the gap was about -5.6pp, driven by a -8.5pp day on Nov 4 after the election and memory-cost news.\n\n(c) **If nothing changed:** About 0pp, minus roughly 0.08pp because the AAPL dividend goes ex inside the window and adds to Apple's return.\n\n(d) **If the current trend continued:** If Apple's recent relative strength kept going, the result would be modestly negative, around -3 to -5pp. Two-week relative momentum between these two stocks is weak and noisy, so I give it little weight.\n\n(e) **Historical variation:** I estimate NVDA's two-week volatility at about 7-9% normally, higher with earnings inside the window. Nvidia reports on Nov 17, and its next-day moves have run from about -8.5% to +8.7%. AAPL's two-week volatility is about 4-5%. With a correlation of about 0.4-0.5, the spread's standard deviation comes out at roughly 7-9pp, with fat tails.\n\n(f) **Experts and markets:** No market prices this spread directly. The Polymarket largest-company market leans slightly toward Apple being the most valuable company at end of November (Nvidia Yes at 0.365), which is only weak evidence on the two-week return gap. The question creator's range of -15 to +15pp is consistent with the spread estimate above.\n\n(g) **Unexpected scenarios:**\n- *Low outcome:* Nvidia misses or guides cautiously, and the new Congress signals curbs on data centers. NVDA falls 15% while AAPL rallies on easing memory costs, giving about -20pp.\n- *High outcome:* Nvidia beats strongly with big guidance, rebounding 15-18% from the post-election selloff, while AAPL slips on margin worries, giving about +20pp.\n\nI centre the distribution near zero, slightly negative for the dividend, with a spread standard deviation of about 8pp and fat tails.\n\nPercentile 1: -20\nPercentile 5: -13\nPercentile 10: -9.5\nPercentile 20: -5.8\nPercentile 30: -3.3\nPercentile 40: -1.3\nPercentile 50: 0.2\nPercentile 60: 1.8\nPercentile 70: 3.8\nPercentile 80: 6.3\nPercentile 90: 10\nPercentile 95: 13.5\nPercentile 99: 20.5"
+    },
+    {
+      "value": {
+        "p10": -10.0,
+        "p25": -5.05,
+        "p50": 0.0,
+        "p75": 5.25,
+        "p90": 10.3
+      },
+      "reasoning": "(a) **Time left:** The window runs Nov 9 to Nov 20, 2026. P0 is the Nov 6 close, which has not happened yet. The outcome will be known at the Nov 20 close, about 15 days from now.\n\n(b) **Latest known values (Yahoo, Nov 4, 2026):** NVDA closed at 200.13 and AAPL at 349.51. No part of the measured period has started.\n\n(c) **If nothing changed:** The result would be about 0pp. AAPL's ex-dividend date (Nov 12) adds about +0.08pp to Apple's return, so the base case is about -0.1pp.\n\n(d) **If the current trend continued:** Apple has outperformed by about 5.6pp from Oct 23 to Nov 4, driven by the post-election rotation away from AI and data-center names. Two-week relative momentum persists only weakly, and Nvidia's earnings on Nov 17 will likely dominate the window. A trend continuation would imply roughly -2 to -5pp. I give it little weight and shade the median only slightly.\n\n(e) **Historical variation:** Over two weeks, NVDA's volatility is about 7-9% and AAPL's about 4-5%, with moderate correlation. That gives a standard deviation for the gap of about 6-7pp without earnings. Nvidia's post-earnings moves typically run ±3-9%, which raises the spread to about 8-9pp. The tails are fat, as single-day gaps of 5-8pp occurred on Nov 3 and Nov 4.\n\n(f) **Experts and markets:** No market covers this exact quantity. Polymarket's market-cap ranking for end of November gives Nvidia about a 37% chance of being largest, which slightly favours Apple holding its lead. That is only loosely informative. Nvidia's earnings consensus is roughly in line with guidance, and its reaction history is mixed: an 8.7% jump in August after four post-earnings declines.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** Nvidia misses or guides cautiously, combined with a Democratic Congress signalling restrictions on data centers or AI. NVDA falls 12-15% while AAPL rises on easing memory-cost relief, giving about -20pp.\n- **High outcome:** Nvidia posts a large beat and raise with strong guidance, the AI-regulation fears fade, and the rotation reverses. Meanwhile AAPL slips on margin concerns. NVDA gains 15% and AAPL falls 3%, giving about +18 to +20pp.\n\nPercentile 1: -21\nPercentile 5: -13.5\nPercentile 10: -10\nPercentile 20: -6.3\nPercentile 30: -3.8\nPercentile 40: -1.7\nPercentile 50: 0\nPercentile 60: 1.8\nPercentile 70: 3.9\nPercentile 80: 6.6\nPercentile 90: 10.3\nPercentile 95: 13.5\nPercentile 99: 21"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -10.4982,
+    "p25": -5.0643,
+    "p50": 0.2,
+    "p75": 5.5823,
+    "p90": 10.9937
+  },
+  "usage": [
+    {
+      "question_id": "46226",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.0001322,
+      "input_tokens": 522,
+      "output_tokens": 56,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.7,
+      "notional_cost_usd": 0.0004789000000000001,
+      "input_tokens": 1063,
+      "output_tokens": 533,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 61.3,
+      "notional_cost_usd": 0.1963356,
+      "input_tokens": 36089,
+      "output_tokens": 4061,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.2,
+      "notional_cost_usd": 0.07766,
+      "input_tokens": 6716,
+      "output_tokens": 1197,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.08222,
+      "input_tokens": 6716,
+      "output_tokens": 1425,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.0008609000000000002,
+      "input_tokens": 2963,
+      "output_tokens": 537,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.2,
+      "notional_cost_usd": 0.0007998,
+      "input_tokens": 2975,
+      "output_tokens": 410,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.6,
+      "notional_cost_usd": 0.028053,
+      "input_tokens": 6715,
+      "output_tokens": 1215,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.00036558,
+      "input_tokens": 2963,
+      "output_tokens": 545,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.7,
+      "notional_cost_usd": 0.0002185,
+      "input_tokens": 2974,
+      "output_tokens": 251,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.0008396,
+      "input_tokens": 2894,
+      "output_tokens": 522,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0003905,
+      "input_tokens": 2893,
+      "output_tokens": 597,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 97.9,
+      "notional_cost_usd": 0.29619889999999993,
+      "input_tokens": 89674,
+      "output_tokens": 4911,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.3,
+      "notional_cost_usd": 0.075232,
+      "input_tokens": 6385,
+      "output_tokens": 1208,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.6,
+      "notional_cost_usd": 0.076436,
+      "input_tokens": 6383,
+      "output_tokens": 1269,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.7,
+      "notional_cost_usd": 0.076872,
+      "input_tokens": 6385,
+      "output_tokens": 1290,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.0008829,
+      "input_tokens": 3008,
+      "output_tokens": 563,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.9,
+      "notional_cost_usd": 0.0007838000000000001,
+      "input_tokens": 2930,
+      "output_tokens": 396,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.3,
+      "notional_cost_usd": 0.0008626,
+      "input_tokens": 3004,
+      "output_tokens": 524,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00022106000000000003,
+      "input_tokens": 2930,
+      "output_tokens": 257,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.6,
+      "notional_cost_usd": 0.00031603999999999996,
+      "input_tokens": 3009,
+      "output_tokens": 445,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46226",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.0002212,
+      "input_tokens": 3006,
+      "output_tokens": 255,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9164
+}
