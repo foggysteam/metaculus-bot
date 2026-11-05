@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-05T07:10:54.186834+00:00",
+  "bot_version": "2026-11-04.1",
+  "started_at": "2026-11-05T07:07:33.174788+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46709,
+    "post_id": 46010,
+    "url": "https://www.metaculus.com/questions/46010",
+    "type": "DiscreteQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "What will be the ending value of the ICE BofA US High Yield Option-Adjusted Spread for these biweekly periods of Q4 2026? (Nov 9-20 (wider range))",
+    "resolution_criteria": "Each subquestion will resolve as the last available daily value of the ICE BofA US High Yield OAS published on the [FRED website](https://fred.stlouisfed.org/series/BAMLH0A0HYM2) for the final calendar day (typically the final Friday) of the corresponding biweekly period.",
+    "fine_print": "* If the FRED data is delayed, the value will be taken as soon as published for the relevant date.\n* If the market is closed on the scheduled ending date or if no value for that date is published by FRED for two weeks, the most recent available value from an earlier day in the period will be used.\n* Only the initially published value for each date will be used (no revisions).\n* The value is reported in percentage points.",
+    "close_time": "2026-11-09 04:00 UTC",
+    "scheduled_resolution_time": "2026-11-20 21:00 UTC"
+  },
+  "research": [
+    "I'm writing up the findings now, using the FRED data and the recent news I found.\n\n# HY OAS (BAMLH0A0HYM2): research for the Nov 9-20, 2026 period\n\nThe value that counts is FRED's first published print for **Friday, Nov 20, 2026**. The latest value is **3.40 pp on Nov 3**. Nothing has settled the question yet.\n\n## 1. Resolution source\n- 2026-11-03: Latest FRED value is 3.40, after 3.43 on Nov 2 and 3.44 on Oct 30. [FRED](https://fred.stlouisfed.org/data/BAMLH0A0HYM2.txt)\n- Path over the last two months [FRED](https://fred.stlouisfed.org/data/BAMLH0A0HYM2.txt):\n  - Sep 11: 2.65, the low of the period I looked at.\n  - Sep 30: 3.12.\n  - Oct 1: 3.24.\n  - Oct 6: 3.03.\n  - Oct 22: 3.40.\n  - Oct 28: 3.14.\n  - Oct 30: 3.44, the high of the period.\n- The question's range of 1.745 to 4.255 is centred near 3.0, which suggests it was set before the latest widening.\n\n## 2. Current status\n- The resolving date is Nov 20, about 12 trading days away. Nothing is settled yet.\n- 2026-11-04: Risk-on day, so a tighter print for Nov 4 is likely, but FRED has not published it yet. Reported moves:\n  - S&P 500 up about 1.6% to 7,688.62, its best day in three months.\n  - Dow up about 3%.\n  - Treasury yields and oil both fell. [Gulf News](https://gulfnews.com/business/markets/wall-street-roars-dow-rockets-1500-points-as-democrats-sweep-congress-1.500736418), [Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/dow-soars-1-200-points-185644839.html)\n\n## 3. Recent news (newest first)\n- 2026-11-05: European markets rose after Democrats swept the House and Senate. MUFG said the result triggered an unwind of geopolitical risk premiums. [MarketScreener](https://www.marketscreener.com/news/emea-morning-briefing-markets-await-boe-rate-decision-ce785fdcd88df224)\n- 2026-11-04: CNN reported that the Dow had its best post-midterm day in 44 years. Traders were weighing whether a Democratic Congress could help end the war with Iran. Nvidia fell 3.1%, the biggest drag on the S&P 500. [CNN](https://www.cnn.com/2026/11/04/investing/us-markets-midterm-elections), [Gulf News](https://gulfnews.com/business/markets/wall-street-roars-dow-rockets-1500-points-as-democrats-sweep-congress-1.500736418)\n- 2026-11-04: RIA (Lebowitz), using data as of Oct 28, found the stress is concentrated in CCC bonds:\n  - CCC OAS was 1,307 bps, up more than 500 bps since early September, after peaking at 1,356 bps on Oct 23, its highest in three years.\n  - BB was 184 bps and BBB 107 bps, both still around the 8th to 9th percentile of their 20-year ranges.\n  - The author says the stress \"is not spreading up the ratings ladder.\" [RIA](https://realinvestmentadvice.com/resources/blog/credit-spreads-calm-on-the-surface-concern-at-the-bottom/)\n- 2026-11 (exact date unclear): A Naked Capitalism post says the junk market is cracking because of AI-related debt and that \"all spreads are widening.\" It is an opinion piece; I could not open it (HTTP 403) and only saw it in search results. [Naked Capitalism](https://www.nakedcapitalism.com/2026/11/junk-bond-market-starts-to-crack-in-further-sign-ai-end-game-is-nearing.html)\n- 2026-11-03: Large US tech companies are selling heavy amounts of AI-related debt, including in euros, which is adding supply pressure. [Economic Times](https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-tech-giants-ai-borrowing-could-push-up-europes-bond-yields/articleshow/135484738.cms)\n- 2026-10-29: Bloomberg reported that the gap between the best- and worst-rated European junk bonds is the widest since 2009. [Bloomberg](https://www.bloomberg.com/news/articles/2026-10-29/junk-market-splits-as-european-spreads-hit-widest-since-2009)\n- 2026-10-09: CNBC said junk bonds were \"flashing yellow.\" [CNBC](https://www.cnbc.com/2026/10/09/junk-bonds-are-flashing-yellow-watch-these-warning-signs.html)\n- May 2026: HY spreads were reportedly near 20-year lows. [Pulse](https://www.pulse.bot/bonds/news/junkbond-rally-drives-spreads-to-20year-lows-sparking-complacency-fears-940dca95-2efe-4b64-a5f2-085fa2733349/)\n\n## 4. Base rates and volatility\n- The statistical baseline you supplied (12-day changes since 2005, starting from 3.40) gives these levels for Nov 20:\n\n  | Percentile | Value |\n  |---|---|\n  | p5 | 3.04 |\n  | p10 | 3.14 |\n  | p25 | 3.27 |\n  | p50 | 3.38 |\n  | p75 | 3.50 |\n  | p90 | 3.64 |\n  | p95 | 3.77 |\n\n- Recent volatility is high compared with that history:\n  - Sep 23 to Oct 8 (11 trading days): +0.42 (2.73 to 3.15).\n  - Oct 26 to Oct 28: -0.16 in two days.\n  - Oct 28 to Oct 30: +0.30 in two days.\n- The trend since mid-September is wider, but over the last two weeks the series has swung between 3.14 and 3.44.\n- Even after the widening, the overall index (about 3.4) is still well below the April 7, 2025 tariff-shock peak of 4.61. [Lead-Lag Report](https://www.leadlagreport.com/junk-bonds-split-in-two-ccc-spreads-are-wider-than-april-2025/)\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on HY OAS.\n- The Treasury-yield markets you collected (prices as of Nov 5) are related but not direct:\n  - Kalshi and Polymarket put about 0.35 to 0.40 on the 10-year yield reaching 5.06% to 5.09% in November.\n  - Polymarket's 10-year market for the rest of 2026 shows 5.2% as already reached and prices 5.5% at about 0.08.\n  - Higher rates add to the background stress, but OAS is a spread over Treasuries, not a yield level.\n- 2026-11-02: BofA Research's podcast covered the midterms, AI earnings and credit, and said gridlock has historically been favourable for markets. I found no specific HY spread target from them. [BofA podcast](https://mcdn.podbean.com/mf/web/26mad4kz6mr65g3g/Must_Read_Research_2_Nov9a1bh.mp3)\n\n## 6. Upcoming events before Nov 20\n- 2026-11-06: October jobs report at 8:30 ET. [Thrive in Markets](https://thriveinmarkets.com/calendar/dates/nfp-2026/), [Simian X](https://www.simianx.ai/stories/us-economic-calendar-this-month-in-your-time-zone)\n- About Nov 10 to 13: October CPI. One source says Nov 10; I could not confirm it. [Simian X calendar](https://www.simianx.ai/stories/us-economic-calendar-this-month-in-your-time-zone)\n- Mid to late November: Nvidia earnings, typically around Nov 18 to 20. I did not find a confirmed date. This matters because AI-debt worries and the Nov 4 drop in Nvidia are both live themes.\n- Ongoing:\n  - Iran war and oil headlines.\n  - Whether the CCC stress spreads into B and BB bonds.\n  - Heavy AI-related bond supply.\n- I found no FOMC meeting scheduled between Nov 9 and 20; the next one is likely in December (unconfirmed).\n- FRED usually posts with about a one-day lag, so the Nov 20 value should appear around Nov 23.\n\nSources:\n- [FRED BAMLH0A0HYM2 data](https://fred.stlouisfed.org/data/BAMLH0A0HYM2.txt)\n- [FRED series page](https://fred.stlouisfed.org/series/bamlh0a0hym2)\n- [RIA: Credit Spreads, Calm on the Surface](https://realinvestmentadvice.com/resources/blog/credit-spreads-calm-on-the-surface-concern-at-the-bottom/)\n- [Investing.com version of the RIA article](https://www.investing.com/analysis/credit-spreads-calm-on-the-surface-concern-at-the-bottom-200690842)\n- [Naked Capitalism](https://www.nakedcapitalism.com/2026/11/junk-bond-market-starts-to-crack-in-further-sign-ai-end-game-is-nearing.html)\n- [Bloomberg, Oct 29](https://www.bloomberg.com/news/articles/2026-10-29/junk-market-splits-as-european-spreads-hit-widest-since-2009)\n- [CNBC, Oct 9](https://www.cnbc.com/2026/10/09/junk-bonds-are-flashing-yellow-watch-these-warning-signs.html)\n- [Lead-Lag Report](https://www.leadlagreport.com/junk-bonds-split-in-two-ccc-spreads-are-wider-than-april-2025/)\n- [ECM Source](https://ecmsource.com/junk-bond-credit-spreads-2026-corporate-debt/)\n- [CNN, Nov 4](https://www.cnn.com/2026/11/04/investing/us-markets-midterm-elections)\n- [Gulf News](https://gulfnews.com/business/markets/wall-street-roars-dow-rockets-1500-points-as-democrats-sweep-congress-1.500736418)\n- [Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/dow-soars-1-200-points-185644839.html)\n- [Fox Business](https://www.foxbusiness.com/markets/us-stock-futures-mixed-democrats-score-key-midterm-election-wins)\n- [MarketScreener](https://www.marketscreener.com/news/emea-morning-briefing-markets-await-boe-rate-decision-ce785fdcd88df224)\n- [Economic Times](https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-tech-giants-ai-borrowing-could-push-up-europes-bond-yields/articleshow/135484738.cms)\n- [Pulse](https://www.pulse.bot/bonds/news/junkbond-rally-drives-spreads-to-20year-lows-sparking-complacency-fears-940dca95-2efe-4b64-a5f2-085fa2733349/)\n- [Thrive in Markets NFP calendar](https://thriveinmarkets.com/calendar/dates/nfp-2026/)\n- [Simian X calendar](https://www.simianx.ai/stories/us-economic-calendar-this-month-in-your-time-zone)\n- [BofA podcast](https://mcdn.podbean.com/mf/web/26mad4kz6mr65g3g/Must_Read_Research_2_Nov9a1bh.mp3)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-05 07:07 UTC; check each market really matches the question)\n- Kalshi: How high will the 2-year US Treasury yield get this month? (In Nov 2026). Yes prices: 4.7% or above: 0.51; 4.69% or above: 0.53; 4.71% or above: 0.48; 4.68% or above: 0.55; 4.72% or above: 0.47; 4.73% or above: 0.45; 4.74% or above: 0.42; 4.75% or above: 0.41; 4.76% or above: 0.39; 4.77% or above: 0.37.\n- Kalshi: How high will the 5-year US Treasury yield get this month? (In Nov 2026). Yes prices: 4.87% or above: 0.33; 4.86% or above: 0.34; 4.88% or above: 0.31; 4.89% or above: 0.29; 4.9% or above: 0.28; 4.91% or above: 0.27; 4.92% or above: 0.26; 4.93% or above: 0.24; 4.95% or above: 0.21; 4.94% or above: 0.23.\n- Kalshi: How high will the 10-year US Treasury yield get by end of month? (By Nov 30, 2026). Yes prices: 5.06% or above: 0.39; 5.09% or above: 0.35; 5.07% or above: 0.37; 5.08% or above: 0.35; 5.1% or above: 0.31; 5.12% or above: 0.29; 5.13% or above: 0.29; 5.11% or above: 0.29; 5.14% or above: 0.22; 5.17% or above: 0.20.\n- Kalshi: How high will the 7-year US Treasury yield get this month? (In Nov 2026). Yes prices: 4.96% or above: 0.30; 4.97% or above: 0.28; 4.98% or above: 0.28; 4.99% or above: 0.26; 5% or above: 0.24; 5.01% or above: 0.23; 5.02% or above: 0.21; 5.03% or above: 0.20; 5.05% or above: 0.18; 5.04% or above: 0.19.\n- Polymarket: How high will 10-year Treasury yield go in November? (ends 2026-12-01). [Yes, No] prices: 5.06%: [\"0.4\", \"0.6\"]; 5.09%: [\"0.4\", \"0.6\"]; 5.13%: [\"0.3\", \"0.7\"]; 5.17%: [\"0.24\", \"0.76\"]; 5.21%: [\"0.175\", \"0.825\"]; 5.25%: [\"0.16\", \"0.84\"]\n- Polymarket: How high will 30-year Treasury yield go in November? (ends 2026-12-01). [Yes, No] prices: 5.42%: [\"0.455\", \"0.545\"]; 5.45%: [\"0.38\", \"0.62\"]; 5.49%: [\"0.3\", \"0.7\"]; 5.53%: [\"0.25\", \"0.75\"]; 5.57%: [\"0.21\", \"0.79\"]; 5.61%: [\"0.155\", \"0.845\"]\n- Polymarket: How high will 5-year Treasury yield go in November? (ends 2026-12-01). [Yes, No] prices: 4.83%: [\"0.47\", \"0.53\"]; 4.87%: [\"0.43\", \"0.57\"]; 4.91%: [\"0.33\", \"0.67\"]; 4.95%: [\"0.28\", \"0.72\"]; 4.99%: [\"0.225\", \"0.775\"]; 5.03%: [\"0.16\", \"0.84\"]\n- Polymarket: How high will 10-year Treasury yield go before 2027? (ends 2027-01-01). [Yes, No] prices: 4.5%: [\"1\", \"0\"]; 4.6%: [\"1\", \"0\"]; 4.8%: [\"1\", \"0\"]; 5.0%: [\"1\", \"0\"]; 5.2%: [\"1\", \"0\"]; 5.5%: [\"0.0765\", \"0.9235\"]\n\nStatistical baseline:\n\nComputed by code from FRED BAMLH0A0HYM2 (ICE BofA US High Yield Index Option-Adjusted Spread, Percent, frequency D): latest observation 3.4000 for 2026-11-03.\nThe target period 2026-11-20 is 12 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 12-period changes since 2005 (last 3 years weighted double):\np5: 3.04, p10: 3.14, p25: 3.27, p50: 3.38, p75: 3.5, p90: 3.64, p95: 3.77\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units).",
+    "I found nothing that settles this yet. The latest FRED reading is **3.40 on 2026-11-03**, about 75 bp wider than mid-September.\n\n## 1. Resolution source\n- 2026-11-03: The FRED BAMLH0A0HYM2 text file shows 3.40 as its latest value. FRED has not published a value for Nov 4 yet. [FRED](https://fred.stlouisfed.org/data/BAMLH0A0HYM2.txt)\n- Recent daily path from the same file:\n  - 09-11: 2.65 (low)\n  - 09-25: 2.93\n  - 10-01: 3.24\n  - 10-06: 3.03\n  - 10-16: 3.31\n  - 10-22: 3.40\n  - 10-28: 3.14\n  - 10-29: 3.26\n  - 10-30: 3.44 (recent high)\n  - 11-02: 3.43\n  - 11-03: 3.40\n- The question resolves on the value for Friday 2026-11-20. Only the first published value counts.\n\n## 2. Current status\n- Nothing is settled. The target date is 11 trading days after the last print. The spread is in the middle of the question's range (1.745 to 4.255).\n- From September to now the spread jumped sharply, and daily moves of 10 to 18 bp have been common (for example 10-29 to 10-30: +18 bp; 10-26 to 10-27: -12 bp).\n\n## 3. Recent news (newest first)\n- 2026-11-05: European markets rose after Democrats won both the House and Senate. MUFG's Lloyd Chan said the result unwound geopolitical risk premiums. [MarketScreener](https://www.marketscreener.com/news/emea-morning-briefing-markets-await-boe-rate-decision-ce785fdcd88df224)\n- 2026-11-04: The Dow rose about 3% (+1,569 points), its best day since April 2025, and the S&P 500 gained 1.6% to 7,689. Treasury yields fell. AI and chip stocks lagged: Nvidia fell 3% and an AI-infrastructure ETF dropped 9%. CoreWeave's 5-year CDS widened to about 1,140. A strong equity rally usually means tighter HY spreads on Nov 4, but I could not confirm this because FRED hasn't posted the value. [CNN](https://www.cnn.com/2026/11/04/investing/us-markets-midterm-elections), [CBS](https://cbsnews.com/news/stock-market-soar-democrats-take-control-of-congress)\n- 2026-11-04: A TalkMarkets piece described credit as \"calm on the surface, concern at the bottom\", meaning stress is concentrated in lower-rated debt. The page returned 403, so I could not read it. [TalkMarkets](https://talkmarkets.com/article/credit-spreads-calm-on-the-surface-concern-at-the-bottom)\n- 2026-10-26: A report described a \"total meltdown in riskiest debt\". [The Star](https://www.thestar.com.my/business/business-news/2026/10/26/total-meltdown-in-riskiest-debt-jolts-market)\n- Late October: CCC spreads were reported at 13.56% on Oct 23, wider than the April 2025 peak. BB spreads had barely moved. [LeadLag](https://www.leadlagreport.com/junk-bonds-split-in-two-ccc-spreads-are-wider-than-april-2025/), [Seeking Alpha](https://seekingalpha.com/news/4650575-u-s-high-yield-credit-stress-mounts-as-ccc-spreads-hit-4-year-highs)\n- 2026-10-28: The Fed held rates at 3.75% to 4.00%. Markets put the odds of a December hike at about 83 to 85%. [Norada](https://www.noradarealestate.com/blog/interest-rates-hike-odds-december-2026-jump-85-after-feds-recent-decision/), [DeFiRate](https://defirate.com/odds/fed-decision/snapshot/2026-10-27T2013/)\n- 2026-10-09: CNBC said junk bonds were \"flashing yellow\", with spreads around 315 bp, below the March 2026 high of 346 bp. [CNBC](https://www.cnbc.com/2026/10/09/junk-bonds-are-flashing-yellow-watch-these-warning-signs.html)\n- 2026-10-02: Bloomberg reported that jumbo bond deals, rising yields and inflation fears were weighing on credit. [Bloomberg](https://www.bloomberg.com/news/articles/2026-10-02/global-credit-market-starts-to-sputter-as-jumbo-deals-drag)\n- Earlier in 2026: Spreads were near 20-year lows around May. [Pulse](https://www.pulse.bot/bonds/news/junkbond-rally-drives-spreads-to-20year-lows-sparking-complacency-fears-940dca95-2efe-4b64-a5f2-085fa2733349/)\n\n## 4. Base rates\n- The statistical baseline you supplied covers 12-trading-day changes since 2005, starting from 3.40, with the last 3 years weighted double. Its percentiles for the target date are:\n  - p5: 3.04\n  - p10: 3.14\n  - p25: 3.27\n  - p50: 3.38\n  - p75: 3.50\n  - p90: 3.64\n  - p95: 3.77\n- Over the last 6 weeks, the same 12-day window has produced moves of -20 to +40 bp. For example, Sept 23 to Oct 9 went from 2.73 to 3.11 (+38 bp), and Oct 16 to Oct 30 went from 3.31 to 3.44 (+13 bp). Volatility right now is above the long-run average.\n- The 2026 high reported for March was about 3.46. The current level of about 3.40 is close to it.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the HY OAS itself.\n- The related Treasury-yield markets you collected put the 10-year reaching 5.06% or above in November at about 40% on Polymarket and 39% on Kalshi. They put 5.25% or above at about 16% on Polymarket. Sharply higher yields have come with the recent credit widening.\n- Fed: markets price a December hike at about 83 to 85%, as of late October.\n- I found no published strategist forecast for HY OAS at mid-November.\n\n## 6. Upcoming events before Nov 20\n- The first FRED prints after the election rally (Nov 4 and 5) should come out in the next few days. They will show whether spreads tightened.\n- The US jobs report is expected around Nov 6, based on the FXStreet note about \"ahead of US NFP\". I did not confirm the exact date. A strong report could raise hike odds and yields. [FXStreet](https://www.fxstreet.com/news/japanese-yen-remains-on-the-front-foot-vs-weak-usd-after-hawkish-boj-minutes-202611050155)\n- October CPI is likely in mid-November. I could not confirm the date.\n- Nvidia's earnings are typically around Nov 18 to 19 (I did not confirm the date). AI-related credit, such as CoreWeave and data-center financing, is a live stress point.\n- Also worth watching: big AI-related bond deals, HY fund flows, CCC defaults or distress, and Treasury moves toward 5.1% or higher on the 10-year.\n- The next FOMC meeting is Dec 8 to 9, after the resolution date.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-05 07:07 UTC; check each market really matches the question)\n- Kalshi: How high will the 2-year US Treasury yield get this month? (In Nov 2026). Yes prices: 4.7% or above: 0.51; 4.69% or above: 0.53; 4.71% or above: 0.48; 4.68% or above: 0.55; 4.72% or above: 0.47; 4.73% or above: 0.45; 4.74% or above: 0.42; 4.75% or above: 0.41; 4.76% or above: 0.39; 4.77% or above: 0.37.\n- Kalshi: How high will the 5-year US Treasury yield get this month? (In Nov 2026). Yes prices: 4.87% or above: 0.33; 4.86% or above: 0.34; 4.88% or above: 0.31; 4.89% or above: 0.29; 4.9% or above: 0.28; 4.91% or above: 0.27; 4.92% or above: 0.26; 4.93% or above: 0.24; 4.95% or above: 0.21; 4.94% or above: 0.23.\n- Kalshi: How high will the 10-year US Treasury yield get by end of month? (By Nov 30, 2026). Yes prices: 5.06% or above: 0.39; 5.09% or above: 0.35; 5.07% or above: 0.37; 5.08% or above: 0.35; 5.1% or above: 0.31; 5.12% or above: 0.29; 5.13% or above: 0.29; 5.11% or above: 0.29; 5.14% or above: 0.22; 5.17% or above: 0.20.\n- Kalshi: How high will the 7-year US Treasury yield get this month? (In Nov 2026). Yes prices: 4.96% or above: 0.30; 4.97% or above: 0.28; 4.98% or above: 0.28; 4.99% or above: 0.26; 5% or above: 0.24; 5.01% or above: 0.23; 5.02% or above: 0.21; 5.03% or above: 0.20; 5.05% or above: 0.18; 5.04% or above: 0.19.\n- Polymarket: How high will 10-year Treasury yield go in November? (ends 2026-12-01). [Yes, No] prices: 5.06%: [\"0.4\", \"0.6\"]; 5.09%: [\"0.4\", \"0.6\"]; 5.13%: [\"0.3\", \"0.7\"]; 5.17%: [\"0.24\", \"0.76\"]; 5.21%: [\"0.175\", \"0.825\"]; 5.25%: [\"0.16\", \"0.84\"]\n- Polymarket: How high will 30-year Treasury yield go in November? (ends 2026-12-01). [Yes, No] prices: 5.42%: [\"0.455\", \"0.545\"]; 5.45%: [\"0.38\", \"0.62\"]; 5.49%: [\"0.3\", \"0.7\"]; 5.53%: [\"0.25\", \"0.75\"]; 5.57%: [\"0.21\", \"0.79\"]; 5.61%: [\"0.155\", \"0.845\"]\n- Polymarket: How high will 5-year Treasury yield go in November? (ends 2026-12-01). [Yes, No] prices: 4.83%: [\"0.47\", \"0.53\"]; 4.87%: [\"0.43\", \"0.57\"]; 4.91%: [\"0.33\", \"0.67\"]; 4.95%: [\"0.28\", \"0.72\"]; 4.99%: [\"0.225\", \"0.775\"]; 5.03%: [\"0.16\", \"0.84\"]\n- Polymarket: How high will 10-year Treasury yield go before 2027? (ends 2027-01-01). [Yes, No] prices: 4.5%: [\"1\", \"0\"]; 4.6%: [\"1\", \"0\"]; 4.8%: [\"1\", \"0\"]; 5.0%: [\"1\", \"0\"]; 5.2%: [\"1\", \"0\"]; 5.5%: [\"0.0765\", \"0.9235\"]\n\nStatistical baseline:\n\nComputed by code from FRED BAMLH0A0HYM2 (ICE BofA US High Yield Index Option-Adjusted Spread, Percent, frequency D): latest observation 3.4000 for 2026-11-03.\nThe target period 2026-11-20 is 12 observation(s) ahead. Percentiles for the target period from the\nempirical distribution of 12-period changes since 2005 (last 3 years weighted double):\np5: 3.04, p10: 3.14, p25: 3.27, p50: 3.38, p75: 3.5, p90: 3.64, p95: 3.77\nThis ignores news, consensus forecasts and known events; adjust for them. Check the series and transform match\nthe resolution source exactly (seasonal adjustment, revisions, units)."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 3.04,
+        "p25": 3.19,
+        "p50": 3.34,
+        "p75": 3.52,
+        "p90": 3.73
+      },
+      "reasoning": "(a) **Time left:** The resolving value is FRED's first print for Friday, Nov 20, 2026. That is about 11 to 12 trading days after the last known value. It should be published around Nov 23.\n\n(b) **Latest known value:** 3.40 pp on Nov 3, 2026. The prior prints were 3.43 on Nov 2 and 3.44 on Oct 30.\n\n(c) **If nothing changed:** 3.40. However, Nov 4 was a strong risk-on day (Dow up about 3%, S&P up 1.6%, and geopolitical risk premia unwinding after the Democratic sweep). The Nov 4 print is therefore likely around 3.25 to 3.32. The effective starting point is probably about 3.30.\n\n(d) **If the current trend continued:** The widening trend since mid-September (2.65 to about 3.40) works out to about +0.1 to +0.15 pp per two weeks. Continuing it from about 3.30 gives roughly 3.40 to 3.45. The very latest move, the post-election rally, points tighter instead, to about 3.15 to 3.25. So the trend signals are mixed.\n\n(e) **Historical variation:** The historical 12-day changes give a p5 to p95 range of about -0.36 to +0.37 around 3.40. Recent realized volatility is well above that norm. The series swung 0.30 in two days in late October and moved +0.42 over 11 days from late September to early October. The tails should be wider than the baseline, especially on the upside, because spread distributions are right-skewed.\n\n(f) **Experts and markets:** There is no direct market on this spread. Treasury yield markets price elevated rates, around 5.1% for the 10-year. Commentary is split:\n- RIA says the stress is confined to CCC bonds, with BB and BBB still tight.\n- Bloomberg and Naked Capitalism warn of cracks driven by AI debt and heavy supply.\n- BofA notes that gridlock is historically favorable for markets.\n\nOn balance the expectation is mildly tighter from 3.40 in the near term, with fat upside tail risk.\n\n(g) **Unexpected scenarios:**\n- **Low:** The Iran war de-escalates quickly with an oil collapse, CPI comes in soft, and Nvidia earnings are strong. CCC bonds rally hard and the index retraces toward the September levels of about 2.85 to 2.95.\n- **High:** Nvidia or AI-capex disappointment and a hot CPI push the 10-year above 5.3%. A large AI-related or CCC default spreads stress into single-B and BB bonds. The index gaps toward 4.0 to 4.3, approaching the April 2025 peak of 4.61.\n\nPercentile 1: 2.80\nPercentile 5: 2.95\nPercentile 10: 3.04\nPercentile 20: 3.15\nPercentile 30: 3.23\nPercentile 40: 3.29\nPercentile 50: 3.34\nPercentile 60: 3.40\nPercentile 70: 3.47\nPercentile 80: 3.57\nPercentile 90: 3.73\nPercentile 95: 3.88\nPercentile 99: 4.25"
+    },
+    {
+      "value": {
+        "p10": 3.03,
+        "p25": 3.165,
+        "p50": 3.31,
+        "p75": 3.49,
+        "p90": 3.7
+      },
+      "reasoning": "(a) **Time left:** The resolving value is FRED's first print for Friday, Nov 20, 2026. That is about 11 to 12 trading days from the last known observation. It should be published around Nov 23.\n\n(b) **Latest known value:** 3.40 pp on Nov 3, 2026. Before that it was 3.43 on Nov 2 and 3.44 on Oct 30.\n\n(c) **If nothing changed:** about 3.40. But Nov 4 was a strong risk-on day (Dow up about 3%, best post-midterm day in decades, geopolitical risk premium unwinding). The Nov 4 print is therefore probably 10 to 20 bps tighter, putting the effective starting point near 3.25 to 3.30.\n\n(d) **If the trend continued:** The trend since mid-September is wider, from 2.65 to roughly 3.4, which is about +0.75 in two months. Extending that would give around 3.55 to 3.6. Over the past two weeks, though, the series has mostly chopped between 3.14 and 3.44, and the post-election rally works against the trend.\n\n(e) **Historical variation:** The empirical 12-day distribution from 3.40 runs from 3.04 (p5) to 3.77 (p95), so roughly ±0.36. Recent volatility is clearly higher than that history: there were two-day moves of -0.16 and +0.30 in late October. I widen the distribution by about 1.2 to 1.3x and keep a right skew, since spreads widen faster than they tighten.\n\n(f) **Expert and market expectations:** There is no direct market on HY OAS.\n- The Treasury yield markets point to yields that are elevated but not crisis-level.\n- Commentators see the stress concentrated in CCC bonds, with BB and BBB still tight.\n- Heavy AI-related debt supply and the Iran war are ongoing headwinds.\n- A Democratic sweep, an unwind of risk premiums, and a strong equity rally argue for some tightening in the near term.\n- Nvidia earnings around Nov 18 to 20 could move the resolving print in either direction.\n\n(g) **Scenarios:**\n- **Low:** Progress toward ending the Iran war pulls oil and yields down. Benign CPI and strong Nvidia earnings follow. The CCC rally drags the index back toward 2.9 to 3.0.\n- **High:** A major AI-related default or a weak Nvidia report hits. CCC stress spreads into single-B bonds, or yields jump past 5.2%. The index then gaps toward 3.9 to 4.2.\n\nPercentile 1: 2.80\nPercentile 5: 2.95\nPercentile 10: 3.03\nPercentile 20: 3.13\nPercentile 30: 3.20\nPercentile 40: 3.26\nPercentile 50: 3.31\nPercentile 60: 3.37\nPercentile 70: 3.44\nPercentile 80: 3.54\nPercentile 90: 3.70\nPercentile 95: 3.85\nPercentile 99: 4.20"
+    },
+    {
+      "value": {
+        "p10": 3.03,
+        "p25": 3.18,
+        "p50": 3.33,
+        "p75": 3.51,
+        "p90": 3.72
+      },
+      "reasoning": "(a) **Time left:** The resolving value is FRED's first print for Fri Nov 20, 2026. That is about 11 trading days from today, and it should be published around Nov 23.\n\n(b) **Latest known value:** 3.40 pp on Nov 3, 2026 (3.43 on Nov 2, 3.44 on Oct 30). On Nov 4 there was a strong risk-on rally: the Dow rose about 3%, it was the best post-midterm day in 44 years, and Treasury yields and oil both fell. The Nov 4 print is therefore probably tighter, perhaps around 3.25 to 3.32.\n\n(c) **If nothing changed:** about 3.40, or about 3.28 to 3.30 if the Nov 4 tightening holds.\n\n(d) **If the trend continued:** The trend since mid-September is clearly wider, from 2.65 to about 3.4, with stress concentrated in CCC bonds. Extending it would give roughly 3.5 to 3.7. However, the last two weeks have chopped between 3.14 and 3.44, and the election rally pushed in the other direction.\n\n(e) **Historical variation:**\n- The 12-day empirical baseline gives p5 to p95 of 3.04 to 3.77, with a median of 3.38.\n- Recent realised volatility is well above normal, with two-day moves of 0.16 to 0.30. I widen the baseline by about 25 to 30%.\n\n(f) **Expectations of experts and markets:**\n- There is no direct market on HY OAS.\n- Commentators are split. Some say the stress is confined to CCCs and BB/BBB spreads remain tight. Others warn about AI-debt supply and cracking in the junk market.\n- Rate markets point to elevated Treasury yields, which add background stress.\n- BofA notes that political gridlock has historically been benign for markets.\n\n(g) **Unexpected scenarios:**\n- **Low:** The election relief rally extends, an Iran de-escalation drives oil lower, CPI comes in soft, and CCC buyers return. The OAS would compress back toward 2.9 to 3.0.\n- **High:** Nvidia earnings or AI-debt fears hit hard, CCC stress spreads into single-B bonds, the oil or war situation escalates, or a large default occurs. The OAS would spike to 3.9 to 4.2 or higher.\n\nPercentile 1: 2.80\nPercentile 5: 2.95\nPercentile 10: 3.03\nPercentile 20: 3.14\nPercentile 30: 3.22\nPercentile 40: 3.28\nPercentile 50: 3.33\nPercentile 60: 3.39\nPercentile 70: 3.46\nPercentile 80: 3.56\nPercentile 90: 3.72\nPercentile 95: 3.86\nPercentile 99: 4.20"
+    },
+    {
+      "value": {
+        "p10": 3.03,
+        "p25": 3.18,
+        "p50": 3.33,
+        "p75": 3.51,
+        "p90": 3.72
+      },
+      "reasoning": "(a) **Time left:** The target date is Friday 2026-11-20. That is about 11 to 12 trading days after the last print. FRED will publish the value around Nov 21 to 23.\n\n(b) **Latest known value:** 3.40 on 2026-11-03.\n\n(c) **If nothing changed:** 3.40.\n\n(d) **If the trend continued:** From the September low of 2.65, spreads widened in a choppy pattern to 3.44 on Oct 30. Since then they have flattened at about 3.40.\n- The Nov 4 post-election rally (Dow +3%, Treasury yields lower) probably tightened spreads by about 8 to 15 bp, though FRED has not posted that value yet. That would put spreads near 3.25 to 3.32.\n- Extending the earlier widening trend would give about 3.5 to 3.6. The latest news points the other way.\n\n(e) **Historical variation:** The empirical 12-day change distribution from 3.40 gives:\n- p5 to p95: 3.04 to 3.77\n- p50: 3.38\n\nCurrent volatility is above the long-run average. Daily moves of 10 to 18 bp are common, and 12-day swings have ranged from -20 to +40 bp. Stress is concentrated in CCC bonds and in AI-related credit.\n\n(f) **Experts and markets:** There is no market on the HY OAS itself. Treasury markets imply roughly 40% odds that the 10-year yield reaches 5.06% or higher in November, a mild widening risk for spreads. Markets price a December Fed hike at 83 to 85%. Commentary describes a split market: CCC bonds are distressed while BB bonds are stable. The election result reportedly removed some risk premium.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** The relief rally carries through, a benign CPI print and soft payrolls pull hike odds down, and AI credit fears fade after Nvidia's earnings. Spreads would fall back to about 2.9 to 3.0.\n- **High outcome:** The 10-year yield breaks above 5.2%, Nvidia disappoints or an AI-infrastructure issuer (such as CoreWeave) has a credit event, and CCC defaults spill into the broader index. Spreads would push above 3.8 and could approach 4.1 or higher.\n\nI center slightly below the latest print, at about 3.33, to account for the likely Nov 4 tightening. I widen the tails relative to the baseline because volatility is elevated, and I keep a right skew.\n\nPercentile 1: 2.80\nPercentile 5: 2.95\nPercentile 10: 3.03\nPercentile 20: 3.14\nPercentile 30: 3.22\nPercentile 40: 3.28\nPercentile 50: 3.33\nPercentile 60: 3.39\nPercentile 70: 3.46\nPercentile 80: 3.56\nPercentile 90: 3.72\nPercentile 95: 3.86\nPercentile 99: 4.15"
+    },
+    {
+      "value": {
+        "p10": 3.05,
+        "p25": 3.19,
+        "p50": 3.34,
+        "p75": 3.495,
+        "p90": 3.68
+      },
+      "reasoning": "(a) **Time left:** The question resolves on the FRED value for Friday 2026-11-20. That is about 11 trading days after the last print, and the answer will be known around Nov 20 to 23.\n\n(b) **Latest known value:** 3.40 pp on 2026-11-03. The recent high was 3.44 on Oct 30, and the September low was 2.65.\n\n(c) **If nothing changed:** about 3.40. However, the Nov 4 post-election rally (Dow +3%, S&P +1.6%, lower Treasury yields, removal of a risk premium) probably tightened spreads by roughly 8 to 15 bp. That would put the effective starting point around 3.28 to 3.32, though stress in AI and CCC credit may limit the tightening in the index.\n\n(d) **If the trend continued:** The September to October widening trend (+75 bp in 7 weeks) would point to 3.50 to 3.60. Since late October, though, the trend has been flat to choppy, and the election rally works against it.\n\n(e) **Historical variation:** The empirical 12-day changes give a 5 to 95 range of about -36 to +37 bp around the current level. Recent realized volatility is above average, with daily moves of 10 to 18 bp.\n\n(f) **Experts and markets:** There is no direct market on HY OAS. Treasury markets give roughly a 40% chance that the 10-year yield reaches 5.06% or more in November, and a December Fed hike is about 85% priced. Both are headwinds. Equities are strong and CCC stress is high while BB spreads are calm.\n\n(g) **Scenarios:**\n- Low: the election-driven risk-on rally continues, yields fall, Nvidia earnings reassure, and spreads fall back to about 2.9 to 3.0.\n- High: an AI-credit event (for example CoreWeave or data-center financing), a hot CPI that pushes the 10-year above 5.2%, or a CCC default cluster pushes the OAS to 3.9 to 4.2, above the 2026 highs.\n\nI centered the distribution near 3.32, slightly below the code baseline because of the Nov 4 rally, and widened it for the elevated volatility.\n\nPercentile 1: 2.80\nPercentile 5: 2.97\nPercentile 10: 3.05\nPercentile 20: 3.15\nPercentile 30: 3.23\nPercentile 40: 3.29\nPercentile 50: 3.34\nPercentile 60: 3.39\nPercentile 70: 3.45\nPercentile 80: 3.54\nPercentile 90: 3.68\nPercentile 95: 3.80\nPercentile 99: 4.10"
+    },
+    {
+      "value": {
+        "p10": 3.03,
+        "p25": 3.18,
+        "p50": 3.33,
+        "p75": 3.505,
+        "p90": 3.69
+      },
+      "reasoning": "(a) **Time left:** The target date is Friday 2026-11-20, about 11 trading days after the last print. The value should be known around Nov 21-23.\n\n(b) **Latest known value:** 3.40 pp on 2026-11-03.\n\n(c) **If nothing changed:** 3.40.\n\n(d) **If the trend continued:** Spreads have widened from 2.65 (Sep 11) to about 3.40-3.44, roughly +75 bp in under two months. Continuing that pace gives about 3.6-3.7. However, the Nov 4 post-election rally (Dow +3%, S&P +1.6%, lower Treasury yields) probably tightened spreads by 5-15 bp on Nov 4-5. The near-term momentum is therefore likely toward tightening, from a starting point near 3.28-3.35.\n\n(e) **Historical variation:** The 12-day empirical baseline centered on 3.40 has p5/p95 of 3.04/3.77, about ±35 bp. Volatility is currently elevated, with 10-18 bp daily moves and recent 12-day swings of -20 to +40 bp, so the distribution should be somewhat wider than the baseline.\n\n(f) **Expectations of experts and markets:** There is no market or consensus forecast on HY OAS itself. Treasury markets put about a 40% chance on the 10-year reaching 5.06%+ in November, and a December Fed hike is priced at about 83-85%. Both point to rate pressure that tends to coincide with widening. Credit commentary describes stress concentrated in CCCs and AI-related issuers, with \"calm on the surface\" in BBs.\n\n(g) **Scenarios:**\n- **Low:** The election relief rally extends, yields fall, CPI is soft, hike odds drop, and inflows return. HY OAS falls back toward 2.9-3.0.\n- **High:** Nvidia earnings or AI-infrastructure credit (for example CoreWeave) blows up, a hot CPI pushes the 10-year above 5.2%, and CCC distress spreads to the broader index. OAS reaches 3.9-4.2.\n\nMy median is about 3.32: a small tightening from the rally, offset by persistent stress. The tails are wider than the baseline because of current volatility, with a right skew.\n\nPercentile 1: 2.80\nPercentile 5: 2.95\nPercentile 10: 3.03\nPercentile 20: 3.14\nPercentile 30: 3.22\nPercentile 40: 3.28\nPercentile 50: 3.33\nPercentile 60: 3.39\nPercentile 70: 3.46\nPercentile 80: 3.55\nPercentile 90: 3.69\nPercentile 95: 3.82\nPercentile 99: 4.10"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 3.0221,
+    "p25": 3.177,
+    "p50": 3.3297,
+    "p75": 3.5083,
+    "p90": 3.7175
+  },
+  "usage": [
+    {
+      "question_id": "46709",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0001254,
+      "input_tokens": 533,
+      "output_tokens": 38,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.0,
+      "notional_cost_usd": 0.0004345,
+      "input_tokens": 906,
+      "output_tokens": 507,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 88.9,
+      "notional_cost_usd": 0.30367510000000003,
+      "input_tokens": 83776,
+      "output_tokens": 5570,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.7,
+      "notional_cost_usd": 0.08578,
+      "input_tokens": 7456,
+      "output_tokens": 1307,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.1,
+      "notional_cost_usd": 0.0302492,
+      "input_tokens": 7457,
+      "output_tokens": 1317,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.0008825,
+      "input_tokens": 3071,
+      "output_tokens": 537,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.8,
+      "notional_cost_usd": 0.0008048,
+      "input_tokens": 3025,
+      "output_tokens": 400,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.9,
+      "notional_cost_usd": 0.028429199999999998,
+      "input_tokens": 7457,
+      "output_tokens": 1226,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 10.1,
+      "notional_cost_usd": 0.00039357,
+      "input_tokens": 3069,
+      "output_tokens": 600,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.8,
+      "notional_cost_usd": 0.00030080000000000005,
+      "input_tokens": 3023,
+      "output_tokens": 415,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0008134,
+      "input_tokens": 2958,
+      "output_tokens": 444,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00022432000000000002,
+      "input_tokens": 2956,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 70.6,
+      "notional_cost_usd": 0.1956131,
+      "input_tokens": 54125,
+      "output_tokens": 3557,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.3,
+      "notional_cost_usd": 0.068176,
+      "input_tokens": 5913,
+      "output_tokens": 1044,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.3,
+      "notional_cost_usd": 0.067796,
+      "input_tokens": 5913,
+      "output_tokens": 1025,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.2,
+      "notional_cost_usd": 0.072464,
+      "input_tokens": 5914,
+      "output_tokens": 1258,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0007982,
+      "input_tokens": 2927,
+      "output_tokens": 426,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.0008078,
+      "input_tokens": 2890,
+      "output_tokens": 460,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0007829000000000001,
+      "input_tokens": 3008,
+      "output_tokens": 363,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00036002,
+      "input_tokens": 2926,
+      "output_tokens": 535,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00027723,
+      "input_tokens": 3009,
+      "output_tokens": 367,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46709",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00031236,
+      "input_tokens": 2891,
+      "output_tokens": 440,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8595
+}
