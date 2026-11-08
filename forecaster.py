@@ -29,7 +29,7 @@ from forecasting_tools import (
     ReasonedPrediction,
     clean_indents,
 )
-from forecasting_tools.data_models.forecast_report import ForecastReport
+from forecasting_tools.data_models.forecast_report import ForecastReport, ResearchWithPredictions
 
 from calibration import floor_options, shrink_binary
 from claude_code_llm import USAGE_LEDGER, ClaudeCodeLlm, as_of_date, current_question_id
@@ -41,7 +41,7 @@ from market_pulse import spot_time
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-11-05.1"
+BOT_VERSION = "2026-11-08.1"
 
 LOG_DIR = Path(__file__).parent / "forecast_logs"
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
@@ -197,9 +197,9 @@ def keep_values_increasing(distribution: NumericDistribution) -> NumericDistribu
 
 
 def combine_research_reports(first: str, second: str) -> str:
-    """Both research reports as one text, for forecasts that read both (backtest nb1/vb1; not
-    live). On 46337 (4 Nov) one report found the resolution source's count and the other guessed
-    from older figures, and each forecast saw only one of them."""
+    """Both research reports as one text, for forecasts that read both. On 46337 (4 Nov) one
+    report found the resolution source's count and the other guessed from older figures, and each
+    forecast saw only one of them. Live for yes/no questions from 2026-11-08 (backtest vb1)."""
     return (
         f"# Research report 1 of 2\n\n{first.strip()}\n\n"
         f"# Research report 2 of 2 (written independently)\n\n{second.strip()}"
@@ -230,6 +230,7 @@ class ClaudeForecaster(FallTemplateBot2026):
         self.log_dir = log_dir
         self._research_by_question: dict[str, list] = {}
         self._evidence_by_question: dict[str, asyncio.Future] = {}
+        self._reports_by_question: dict[str, list[asyncio.Future]] = {}
 
     async def forecast_questions(self, questions, return_exceptions: bool = False):
         # Soonest deadline first. Questions run in list order and the API lists the newest first,
@@ -279,11 +280,52 @@ class ClaudeForecaster(FallTemplateBot2026):
         return prediction
 
     async def _research_and_make_predictions(self, question: MetaculusQuestion):
-        collection = await super()._research_and_make_predictions(question)
+        if isinstance(question, BinaryQuestion) and self.research_reports_per_question == 2:
+            collection = await self._predict_from_both_reports(question)
+        else:
+            collection = await super()._research_and_make_predictions(question)
         self._research_by_question.setdefault(self._question_key(question), []).append(
             collection
         )
         return collection
+
+    async def _predict_from_both_reports(self, question: MetaculusQuestion) -> ResearchWithPredictions:
+        """Yes/no questions: the two research tasks each write their report as before, then wait
+        for each other, and every forecast reads both reports. Backtest vb1 (backtest/RESULTS.md):
+        +1.2 (x100) per question over 3 forecasts on each report, better on 43 of 75, worse on 26.
+        (Numeric questions showed no gain, -0.2, so they keep one report per forecast.) If one
+        report fails, the other task's forecasts read their own report alone."""
+        key = self._question_key(question)
+        loop = asyncio.get_running_loop()
+        reports = self._reports_by_question.setdefault(key, [])
+        slot = len(reports)
+        reports.append(loop.create_future())
+        notepad = await self._get_notepad(question)
+        notepad.total_research_reports_attempted += 1
+        research = None
+        try:
+            research = await self.run_research(question)
+        finally:
+            if not reports[slot].done():
+                reports[slot].set_result(research)  # None when this report failed
+        for _ in range(600):  # the library starts both tasks together; this only covers a slow start
+            if len(reports) >= 2:
+                break
+            await asyncio.sleep(0.1)
+        texts = [t for t in await asyncio.gather(*reports[:2]) if t]
+        research_to_use = combine_research_reports(*texts) if len(texts) == 2 else research
+        summary_report = await self.summarize_research(question, research)
+        valid_predictions, errors, exception_group = await self._gather_results_and_exceptions(
+            [self._make_prediction(question, research_to_use) for _ in range(self.predictions_per_research_report)]
+        )
+        if errors:
+            logger.warning(f"Encountered errors while predicting: {errors}")
+        if not valid_predictions:
+            assert exception_group, "Exception group should not be None"
+            self._reraise_exception_with_prepended_message(exception_group, "Error while running research and predictions")
+        return ResearchWithPredictions(
+            research_report=research, summary_report=summary_report, errors=errors, predictions=valid_predictions
+        )
 
     def _write_log(
         self,
@@ -295,6 +337,7 @@ class ClaudeForecaster(FallTemplateBot2026):
         key = self._question_key(question)
         collections = self._research_by_question.pop(key, [])
         self._evidence_by_question.pop(key, None)
+        self._reports_by_question.pop(key, None)
         usage = USAGE_LEDGER.for_question(key)
         notional_cost = round(sum(u["notional_cost_usd"] for u in usage), 4)
         entry = {

@@ -399,6 +399,88 @@ def test_forecast_already_in_order_is_left_alone() -> None:
     assert forecaster.keep_values_increasing(member) is member
 
 
+def both_reports_bot(research_for, seen: list):
+    """A bot whose research and forecasts are stubs, to test how the two reports are shared."""
+    bot = object.__new__(forecaster.ClaudeForecaster)
+    bot.research_reports_per_question, bot.predictions_per_research_report = 2, 3
+    bot._research_by_question, bot._reports_by_question = {}, {}
+    calls = iter(research_for)
+
+    async def run_research(question):
+        delay, text = next(calls)
+        await asyncio.sleep(delay)
+        if text is None:
+            raise ValueError("Research too short to use")
+        return text
+
+    async def make_prediction(question, research):
+        seen.append(research)
+        return forecaster.ReasonedPrediction(prediction_value=0.4, reasoning="why")
+
+    async def notepad(question):
+        return SimpleNamespace(total_research_reports_attempted=0, total_predictions_attempted=0)
+
+    async def no_summary(question, research):
+        return ""
+
+    bot.run_research, bot._make_prediction, bot._get_notepad, bot.summarize_research = run_research, make_prediction, notepad, no_summary
+    return bot
+
+
+def test_yes_no_forecasts_each_read_both_research_reports() -> None:
+    from forecasting_tools import BinaryQuestion
+
+    question = BinaryQuestion(question_text="Will it?", id_of_question=7, page_url="https://example.org/7")
+    seen: list[str] = []
+    bot = both_reports_bot([(0.05, "Report A: 13 regions."), (0.0, "Report B: the source shows 0.")], seen)
+
+    async def both():
+        return await asyncio.gather(*[bot._research_and_make_predictions(question) for _ in range(2)])
+
+    collections = asyncio.run(both())
+    assert len(seen) == 6 and len(set(seen)) == 1, seen
+    assert "Report A" in seen[0] and "Report B" in seen[0] and "2 of 2" in seen[0], seen[0]
+    assert sorted(c.research_report for c in collections) == ["Report A: 13 regions.", "Report B: the source shows 0."]
+    assert len(bot._research_by_question["7"]) == 2
+
+
+def test_one_failed_report_leaves_the_other_forecasting_on_its_own() -> None:
+    from forecasting_tools import BinaryQuestion
+
+    question = BinaryQuestion(question_text="Will it?", id_of_question=8, page_url="https://example.org/8")
+    seen: list[str] = []
+    bot = both_reports_bot([(0.0, None), (0.05, "Report B: the source shows 0.")], seen)
+
+    async def both():
+        return await asyncio.gather(*[bot._research_and_make_predictions(question) for _ in range(2)], return_exceptions=True)
+
+    first, second = asyncio.run(both())
+    assert isinstance(first, ValueError), first
+    assert seen == ["Report B: the source shows 0."] * 3, seen
+
+
+def test_numeric_forecasts_still_read_one_report_each() -> None:
+    from forecasting_tools import NumericQuestion
+
+    calls = []
+    parent = forecaster.FallTemplateBot2026
+    real = parent._research_and_make_predictions
+
+    async def one_report(self, question):
+        calls.append(question)
+        return SimpleNamespace(research_report="one")
+
+    parent._research_and_make_predictions = one_report
+    try:
+        bot = both_reports_bot([], [])
+        numeric = object.__new__(NumericQuestion)
+        object.__setattr__(numeric, "__dict__", {"id_of_question": 9, "id_of_post": None, "page_url": "x"})
+        asyncio.run(bot._research_and_make_predictions(numeric))
+    finally:
+        parent._research_and_make_predictions = real
+    assert len(calls) == 1 and bot._reports_by_question == {}
+
+
 def test_both_reports_backtest_reads_each_report_once_and_keeps_any_leak() -> None:
     sys.path.insert(0, str(ROOT / "backtest"))
     import run_numeric_backtest
