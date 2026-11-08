@@ -1,0 +1,95 @@
+name: Backtest both reports
+
+# Does every forecast reading both research reports beat the live setup (3 forecasts on each
+# report)? Forecasts only, on research saved by earlier runs: numeric n2 + n3 (run nb1), then
+# yes/no v1 + v1-r2 (run vb1), 3 forecasts per question. Billed to Ahmad's free API credit
+# (secret BACKTEST_ANTHROPIC_API_KEY, expires 17 Nov 2026), not the Max plan: this job has no
+# CLAUDE_CODE_OAUTH_TOKEN, and KCAP_API_BILLING=1 lets the Claude CLI use the key. Both runs
+# stop starting questions once they have used BUDGET_USD between them. Results go to branch
+# backtest-both; when both runs are done it scores them and opens an issue. Delete this file
+# afterwards.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Questions per run (blank = all; 1 for a smoke test)"
+        default: ""
+
+concurrency:
+  group: backtest-both
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.BACKTEST_ANTHROPIC_API_KEY }}
+      KCAP_API_BILLING: "1"
+      GH_TOKEN: ${{ github.token }}
+      BRANCH: backtest-both
+      BUDGET_USD: "24"
+      LIMIT: ${{ inputs.limit || '1000' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Branch
+        run: |
+          git config user.name "forecast-bot"
+          git config user.email "forecast-bot@users.noreply.github.com"
+          # The branch keeps the code as it was when the run started, plus the results so far.
+          if git ls-remote --exit-code --heads origin "$BRANCH" > /dev/null; then
+            git checkout -q -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout -q -b "$BRANCH"
+          fi
+          mkdir -p backtest/results/nb1 backtest/results/vb1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v10.3.0
+        with:
+          version: "0.13.1"
+          enable-cache: true
+      - name: Install
+        run: bash .github/scripts/retry.sh uv sync --locked && bash .github/scripts/install_claude.sh
+      - name: Run
+        run: |
+          budget="--budget-usd $BUDGET_USD --budget-runs nb1,vb1 --limit $LIMIT --parallel 2"
+          uv run python backtest/run_numeric_backtest.py --run nb1 --reuse-research n2 --reuse-research-b n3 \
+            --baselines backtest/data/numeric_baselines.json --variants thirteen --predictions 3 $budget 2>&1 | tee -a run.log || true
+          uv run python backtest/run_backtest.py --run vb1 --reuse-research v1 --reuse-research-b v1-r2 \
+            --predictions 3 --market-predictions 0 $budget 2>&1 | tee -a run.log || true
+      - name: Save results, and score when both runs are done
+        if: always()
+        run: |
+          nb=$(find backtest/results/nb1 -maxdepth 1 -name '*.json' | wc -l)
+          vb=$(find backtest/results/vb1 -maxdepth 1 -name '*.json' | wc -l)
+          spent=$(uv run python -c "import sys; sys.path.insert(0, 'backtest'); from budget import saved_cost; print(f'{saved_cost([\"nb1\", \"vb1\"]):.2f}')" 2>/dev/null || echo "?")
+          echo "Saved $nb numeric and $vb yes/no; spent \$$spent"
+          if [ "$LIMIT" -ge 1000 ]; then
+            uv run python backtest/score_numeric_two_reports.py --a n2 --b n3 --both nb1 > score.md 2>&1 || true
+            uv run python backtest/score_two_reports.py --a v1 --b v1-r2 --both vb1 >> score.md 2>&1 || true
+            {
+              echo "Both-reports backtest finished: $nb numeric questions (of 64) and $vb yes/no (of 87), API spend \$$spent of the \$$BUDGET_USD budget, on branch $BRANCH."
+              echo
+              echo "A and B are two independent research reports per question. The test is the line \"3 reading both against live (3 from A + 3 from B)\" in each section."
+              echo
+              grep -E "STOPPED|Done:" run.log || true
+              echo
+              cat score.md
+              echo
+              echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo
+              echo "cc @${{ github.repository_owner }}"
+            } > notice.md
+            gh issue create --title "Backtest both reports finished" --body-file notice.md || echo "Could not open an issue"
+          fi
+          git add backtest/results/nb1 backtest/results/vb1 backtest/RESULTS.md
+          git commit -q -m "Backtest both reports: $nb numeric, $vb yes/no, \$$spent" || true
+          git push -q origin "$BRANCH"

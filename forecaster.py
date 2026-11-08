@@ -196,6 +196,16 @@ def keep_values_increasing(distribution: NumericDistribution) -> NumericDistribu
     return type(distribution)(**{**distribution.model_dump(), "declared_percentiles": kept})
 
 
+def combine_research_reports(first: str, second: str) -> str:
+    """Both research reports as one text, for forecasts that read both (backtest nb1/vb1; not
+    live). On 46337 (4 Nov) one report found the resolution source's count and the other guessed
+    from older figures, and each forecast saw only one of them."""
+    return (
+        f"# Research report 1 of 2\n\n{first.strip()}\n\n"
+        f"# Research report 2 of 2 (written independently)\n\n{second.strip()}"
+    )
+
+
 class ClaudeForecaster(FallTemplateBot2026):
     # Research runs two questions at a time, so one stalled call cannot hold up every other
     # question; forecasts are capped in claude_code_llm.

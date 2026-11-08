@@ -399,6 +399,44 @@ def test_forecast_already_in_order_is_left_alone() -> None:
     assert forecaster.keep_values_increasing(member) is member
 
 
+def test_both_reports_backtest_reads_each_report_once_and_keeps_any_leak() -> None:
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import run_numeric_backtest
+
+    raw = run_numeric_backtest.RAW_SECTION + "Statistical baseline:\nP50 4.2"
+    a = {"research": "Report A says 13 regions." + raw, "leaked": False}
+    b = {"research": "Report B read the source: 0 regions." + raw, "leaked": True}
+    both = run_numeric_backtest.reused_both(a, b)
+    text = both["research"]
+    assert text.index("Report A") < text.index("Report B") and "2 of 2 (written independently)" in text, text
+    assert "Statistical baseline" not in text, text  # the runner adds the baseline back once
+    assert both["leaked"] is True
+
+
+def test_backtest_budget_counts_saved_runs_and_this_process() -> None:
+    import tempfile
+
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import budget
+
+    with tempfile.TemporaryDirectory() as folder:
+        results = Path(folder)
+        for run, costs in (("nb1", (5.0, 6.5)), ("vb1", (4.0,)), ("other", (100.0,))):
+            (results / run).mkdir()
+            for i, cost in enumerate(costs):
+                (results / run / f"q{i}.json").write_text(json.dumps({"notional_cost_usd": cost}), encoding="utf-8")
+        real = budget.USAGE_LEDGER
+        budget.USAGE_LEDGER = SimpleNamespace(total_cost=lambda: 8.0)
+        try:
+            spent = budget.Budget(24, ["nb1", "vb1"], results)
+            assert spent.spent() == 23.5 and not spent.exhausted()
+            budget.USAGE_LEDGER = SimpleNamespace(total_cost=lambda: 8.6)
+            assert spent.exhausted()
+            assert not budget.Budget(None, ["nb1"], results).exhausted()  # no limit, no stop
+        finally:
+            budget.USAGE_LEDGER = real
+
+
 def test_seasonal_note_goes_to_numeric_research_only() -> None:
     from forecasting_tools import BinaryQuestion, DiscreteQuestion, MultipleChoiceQuestion, NumericQuestion
 

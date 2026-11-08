@@ -23,6 +23,11 @@ Seasonal history in the research (run s1), each arm researched separately on the
   uv run python backtest/run_numeric_backtest.py --run s1-base --research-note none --data backtest/data/seasonal_questions.jsonl --baselines backtest/data/seasonal_baselines.json --variants thirteen --predictions 3
   uv run python backtest/run_numeric_backtest.py --run s1-seasonal --research-note seasonal (and the same options)
   uv run python backtest/score_numeric_two_reports.py --a s1-base --b s1-seasonal
+
+Every forecast reading both research reports (run nb1, on Ahmad's free API credit with a
+spending stop): the research of n2 (report A) and n3 (report B), 3 forecasts each:
+  uv run python backtest/run_numeric_backtest.py --run nb1 --reuse-research n2 --reuse-research-b n3 --baselines backtest/data/numeric_baselines.json --variants thirteen --predictions 3 --budget-usd 24 --budget-runs nb1,vb1
+  uv run python backtest/score_numeric_two_reports.py --a n2 --b n3 --both nb1
 """
 from __future__ import annotations
 
@@ -48,7 +53,8 @@ dotenv.load_dotenv()
 from forecasting_tools import NumericQuestion  # noqa: E402
 
 from claude_code_llm import USAGE_LEDGER, current_question_id  # noqa: E402
-from forecaster import SEASONAL_NOTE, ClaudeForecaster, as_of_date, build_llms  # noqa: E402
+from budget import Budget  # noqa: E402
+from forecaster import SEASONAL_NOTE, ClaudeForecaster, as_of_date, build_llms, combine_research_reports  # noqa: E402
 from numeric_baseline import statistical_baseline  # noqa: E402
 from run_backtest import HISTORICAL_RULES, leak_check, remove_later_facts  # noqa: E402
 
@@ -99,6 +105,15 @@ async def save_baselines(rows: list[dict], path: Path) -> None:
     print(f"Saved {sum(bool(b) for b in baselines.values())} of {len(rows)} baselines to {path}")
 
 
+RAW_SECTION = "\n\n## Raw prediction market and Metaculus prices\n"
+
+
+def reused_both(a: dict, b: dict) -> dict:
+    """Two runs' research on one question as one report pair, for forecasts that read both."""
+    research = combine_research_reports(a["research"].split(RAW_SECTION)[0], b["research"].split(RAW_SECTION)[0])
+    return {"research": research, "leaked": a["leaked"] or b["leaked"]}
+
+
 async def run_question(
     bots: dict[str, ClaudeForecaster],
     row: dict,
@@ -106,6 +121,7 @@ async def run_question(
     n: int,
     reuse_dir: Path | None = None,
     baselines: dict[str, str] | None = None,
+    reuse_dir_b: Path | None = None,
 ) -> None:
     path = out_dir / f"{row['id']}.json"
     if path.exists():
@@ -116,6 +132,11 @@ async def run_question(
         if not source.exists():
             return
         reused = json.loads(source.read_text(encoding="utf-8"))
+    if reuse_dir_b and reused:
+        source_b = reuse_dir_b / f"{row['id']}.json"
+        if not source_b.exists():
+            return
+        reused = reused_both(reused, json.loads(source_b.read_text(encoding="utf-8")))
     as_of_date.set(row["as_of"])
     current_question_id.set(row["id"])
     question = make_question(row)
@@ -184,6 +205,9 @@ async def main() -> None:
     parser.add_argument("--save-baselines", help="Only fetch each question's as-of baseline and save them to this JSON file")
     parser.add_argument("--data", default=str(DATA), help="Question file (default: numeric_questions.jsonl)")
     parser.add_argument("--research-note", choices=sorted(RESEARCH_NOTES), help="Use this numeric research note instead of the live one")
+    parser.add_argument("--reuse-research-b", help="With --reuse-research: a second run's research; every forecast reads both")
+    parser.add_argument("--budget-usd", type=float, help="Stop starting questions once these runs have used this much (API billing)")
+    parser.add_argument("--budget-runs", help="Comma-separated runs that share the budget (default: this run)")
     args = parser.parse_args()
 
     rows = [json.loads(line) for line in Path(args.data).open(encoding="utf-8")][args.offset : args.offset + args.limit]
@@ -193,6 +217,8 @@ async def main() -> None:
     if not args.run:
         parser.error("--run is required")
     reuse_dir = ROOT / "results" / args.reuse_research if args.reuse_research else None
+    reuse_dir_b = ROOT / "results" / args.reuse_research_b if args.reuse_research_b else None
+    budget = Budget(args.budget_usd, (args.budget_runs or args.run).split(","))
     baselines = json.loads(Path(args.baselines).read_text(encoding="utf-8")) if args.baselines else None
     out_dir = ROOT / "results" / args.run
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -208,10 +234,13 @@ async def main() -> None:
 
     async def guarded(row: dict) -> None:
         async with gate:
-            await run_question(bots, row, out_dir, args.predictions, reuse_dir, baselines)
+            if budget.exhausted():
+                return
+            await run_question(bots, row, out_dir, args.predictions, reuse_dir, baselines, reuse_dir_b)
 
     await asyncio.gather(*[guarded(row) for row in rows])
-    print(f"Done: {len(list(out_dir.glob('*.json')))} questions in {out_dir}; notional usage ${USAGE_LEDGER.total_cost():.2f}")
+    stopped = f"; STOPPED at the ${args.budget_usd:.0f} budget (${budget.spent():.2f} used)" if budget.exhausted() else ""
+    print(f"Done: {len(list(out_dir.glob('*.json')))} questions in {out_dir}; notional usage ${USAGE_LEDGER.total_cost():.2f}{stopped}")
 
 
 if __name__ == "__main__":

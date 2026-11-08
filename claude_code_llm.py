@@ -214,8 +214,10 @@ class ClaudeCodeLlm(GeneralLlm):
 
     async def _run_once(self, prompt: str, system_prompt: str, model: str) -> str:
         env = dict(os.environ)
-        # Never fall back to pay-as-you-go API billing.
-        env.pop("ANTHROPIC_API_KEY", None)
+        # Never fall back to pay-as-you-go API billing, except in a backtest run on purpose on
+        # Ahmad's free API credit (KCAP_API_BILLING=1 in backtest-both.yaml, which has a spending stop).
+        if os.getenv("KCAP_API_BILLING") != "1":
+            env.pop("ANTHROPIC_API_KEY", None)
         question_id = current_question_id.get()
         start = time.time()
         async with _PROCESS_LIMIT:

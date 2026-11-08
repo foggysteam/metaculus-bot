@@ -14,6 +14,11 @@ forecasting step changes and the two runs compare question by question:
   uv run python backtest/run_backtest.py --run v1-no-status-quo --reuse-research v1 --variant no-status-quo --market-predictions 0
   uv run python backtest/score_backtest.py --run v1-no-status-quo --baseline v1
 
+Every forecast reading both research reports (run vb1, on Ahmad's free API credit with a
+spending stop): the research of v1 (report A) and v1-r2 (report B), 3 forecasts each:
+  uv run python backtest/run_backtest.py --run vb1 --reuse-research v1 --reuse-research-b v1-r2 --predictions 3 --market-predictions 0 --budget-usd 24 --budget-runs nb1,vb1
+  uv run python backtest/score_two_reports.py --a v1 --b v1-r2 --both vb1
+
 Usage:
   uv run python backtest/run_backtest.py --run v1 --limit 100
   uv run python backtest/score_backtest.py --run v1
@@ -34,6 +39,7 @@ import dotenv
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from bot_helpers import silence_noisy_dependencies  # noqa: E402
 
@@ -43,7 +49,8 @@ dotenv.load_dotenv()
 from forecasting_tools import BinaryQuestion  # noqa: E402
 
 from claude_code_llm import USAGE_LEDGER, ClaudeCodeLlm, current_question_id  # noqa: E402
-from forecaster import ClaudeForecaster, as_of_date, build_llms  # noqa: E402
+from budget import Budget  # noqa: E402
+from forecaster import ClaudeForecaster, as_of_date, build_llms, combine_research_reports  # noqa: E402
 
 logger = logging.getLogger(__name__)
 ROOT = Path(__file__).parent
@@ -101,7 +108,13 @@ async def leak_check(question: str, research: str, as_of: str) -> bool:
 
 
 async def run_question(
-    bot: ClaudeForecaster, row: dict, out_dir: Path, n: int, n_market: int, reuse_dir: Path | None = None
+    bot: ClaudeForecaster,
+    row: dict,
+    out_dir: Path,
+    n: int,
+    n_market: int,
+    reuse_dir: Path | None = None,
+    reuse_dir_b: Path | None = None,
 ) -> None:
     path = out_dir / f"{row['id']}.json"
     if path.exists():
@@ -112,6 +125,12 @@ async def run_question(
         if not source.exists():
             return
         reused = json.loads(source.read_text(encoding="utf-8"))
+    if reuse_dir_b and reused:
+        source_b = reuse_dir_b / f"{row['id']}.json"
+        if not source_b.exists():
+            return
+        b = json.loads(source_b.read_text(encoding="utf-8"))
+        reused = {"research": combine_research_reports(reused["research"], b["research"]), "leaked": reused["leaked"] or b["leaked"]}
     as_of = datetime.fromisoformat(row["as_of"])
     as_of_str = as_of.date().isoformat()
     as_of_date.set(as_of_str)
@@ -186,6 +205,9 @@ async def main() -> None:
     parser.add_argument("--parallel", type=int, default=3, help="Questions in flight at once")
     parser.add_argument("--reuse-research", help="Run whose saved research to reuse instead of researching again")
     parser.add_argument("--variant", help="Experiment to apply: no-status-quo or xhigh")
+    parser.add_argument("--reuse-research-b", help="With --reuse-research: a second run's research; every forecast reads both")
+    parser.add_argument("--budget-usd", type=float, help="Stop starting questions once these runs have used this much (API billing)")
+    parser.add_argument("--budget-runs", help="Comma-separated runs that share the budget (default: this run)")
     args = parser.parse_args()
 
     rows = [json.loads(line) for line in DATA.open(encoding="utf-8")][args.offset : args.offset + args.limit]
@@ -194,15 +216,20 @@ async def main() -> None:
     bot = ClaudeForecaster(llms=build_llms(), publish_reports_to_metaculus=False)
     apply_variant(bot, args.variant)
     reuse_dir = ROOT / "results" / args.reuse_research if args.reuse_research else None
+    reuse_dir_b = ROOT / "results" / args.reuse_research_b if args.reuse_research_b else None
+    budget = Budget(args.budget_usd, (args.budget_runs or args.run).split(","))
     gate = asyncio.Semaphore(args.parallel)
 
     async def guarded(row: dict) -> None:
         async with gate:
-            await run_question(bot, row, out_dir, args.predictions, args.market_predictions, reuse_dir)
+            if budget.exhausted():
+                return
+            await run_question(bot, row, out_dir, args.predictions, args.market_predictions, reuse_dir, reuse_dir_b)
 
     await asyncio.gather(*[guarded(row) for row in rows])
     done = len(list(out_dir.glob("*.json")))
-    print(f"Done: {done} questions saved in {out_dir}; notional usage ${USAGE_LEDGER.total_cost():.2f}")
+    stopped = f"; STOPPED at the ${args.budget_usd:.0f} budget (${budget.spent():.2f} used)" if budget.exhausted() else ""
+    print(f"Done: {done} questions saved in {out_dir}; notional usage ${USAGE_LEDGER.total_cost():.2f}{stopped}")
 
 
 if __name__ == "__main__":
