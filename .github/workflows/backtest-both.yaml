@@ -42,9 +42,10 @@ jobs:
         run: |
           git config user.name "forecast-bot"
           git config user.email "forecast-bot@users.noreply.github.com"
-          # The branch keeps the code as it was when the run started, plus the results so far.
+          # The branch holds the results so far; the latest code from main is merged in on each run.
           if git ls-remote --exit-code --heads origin "$BRANCH" > /dev/null; then
             git checkout -q -B "$BRANCH" "origin/$BRANCH"
+            git merge -q --no-edit origin/main
           else
             git checkout -q -b "$BRANCH"
           fi
