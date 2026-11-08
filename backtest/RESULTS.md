@@ -312,3 +312,34 @@ A is the research as live, B the research with the seasonal note (forecaster.SEA
 - The gain came from disease (CDC) and economic (FRED) series. Temperatures barely moved (+1.2) and sea ice was slightly worse (-3.2 over 7), so the earlier years' records helped more than weather outlooks.
 - Hindsight leaks: 3 in A, none in B; all 3 questions were dropped from both.
 - Notional usage $17.69 (A) and $18.16 (B); median research length about 5,500 characters in both.
+## Two research reports, numeric: `n2` + `n3`, both read by `nb1`
+
+1 questions (leaked in any run excluded). Thirteen percentiles, straight-line CDF, median CDF.
+
+| Forecasts | Log score | vs 3 from A (points per question) | 95% CI | Better on | Worse on |
+|---|---|---|---|---|---|
+| 3 from A | -3.709 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from A + 3 from B (live) | -3.709 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from B | -3.709 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 reading both | -3.709 | -0.0 | -0.0 to -0.0 | 0 | 1 |
+
+3 reading both against live (3 from A + 3 from B): -0.0 points per question (95% CI -0.0 to -0.0), better on 0, worse on 1.
+
+3 from B against 3 from A, by source: yahoo +0.0 over 1
+
+## Two research reports: `v1` + `v1-r2`, both read by `vb1`
+
+1 questions (leaked in either run excluded). Median, then the live x0.8 shrink.
+
+| Forecasts | vs market (x100) | vs 5 from A (x100) | 95% CI | Better on | Worse on |
+|---|---|---|---|---|---|
+| 5 from A (live) | -13.6 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from A + 3 from B | -15.7 | -2.1 | -2.1 to -2.1 | 0 | 1 |
+| 5 from A + 5 from B | -15.0 | -1.4 | -1.4 to -1.4 | 0 | 1 |
+| 5 from B | -19.3 | -5.7 | -5.7 to -5.7 | 0 | 1 |
+| 3 reading both | -13.6 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+
+3 reading both against live (3 from A + 3 from B): +2.1 (x100, 95% CI +2.1 to +2.1), better on 1, worse on 0.
+
+Spread of the 5 forecasts on one report: 0.008 (standard deviation, averaged). Gap between the two reports' medians: 0.040 (averaged).
+
