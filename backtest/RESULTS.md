@@ -312,3 +312,41 @@ A is the research as live, B the research with the seasonal note (forecaster.SEA
 - The gain came from disease (CDC) and economic (FRED) series. Temperatures barely moved (+1.2) and sea ice was slightly worse (-3.2 over 7), so the earlier years' records helped more than weather outlooks.
 - Hindsight leaks: 3 in A, none in B; all 3 questions were dropped from both.
 - Notional usage $17.69 (A) and $18.16 (B); median research length about 5,500 characters in both.
+
+## Every forecast reading both research reports: `nb1` (numeric) and `vb1` (yes/no)
+
+Forecasts only, on research saved by earlier runs: numeric n2 (report A) and n3 (report B), yes/no v1 (A) and v1-r2 (B). Each question got 3 forecasts that read both reports (forecaster.combine_research_reports), against the live setup of 3 forecasts on A plus 3 on B. Questions whose research leaked in either run were skipped. Paid from Ahmad's free API credit (8 Nov, run 42485089327): $17.05 for 59 numeric and 76 yes/no questions, about $0.13 a question.
+
+### Numeric (`n2` + `n3`, both read by `nb1`)
+
+59 questions (leaked in any run excluded). Thirteen percentiles, straight-line CDF, median CDF.
+
+| Forecasts | Log score | vs 3 from A (points per question) | 95% CI | Better on | Worse on |
+|---|---|---|---|---|---|
+| 3 from A | -4.460 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from A + 3 from B (live) | -4.437 | +1.1 | -0.4 to +2.7 | 26 | 20 |
+| 3 from B | -4.443 | +0.9 | -1.6 to +3.3 | 27 | 20 |
+| 3 reading both | -4.441 | +0.9 | -1.0 to +3.0 | 24 | 23 |
+
+3 reading both against live (3 from A + 3 from B): -0.2 points per question (95% CI -1.9 to +1.5), better on 24, worse on 24.
+
+### Yes/no (`v1` + `v1-r2`, both read by `vb1`)
+
+75 questions (leaked in either run excluded). Median, then the live x0.8 shrink.
+
+| Forecasts | vs market (x100) | vs 5 from A (x100) | 95% CI | Better on | Worse on |
+|---|---|---|---|---|---|
+| 5 from A | -2.0 | +0.0 | +0.0 to +0.0 | 0 | 0 |
+| 3 from A + 3 from B (live) | -0.5 | +1.5 | -4.3 to +6.9 | 32 | 34 |
+| 5 from A + 5 from B | -0.5 | +1.5 | -4.2 to +6.8 | 32 | 32 |
+| 5 from B | +1.0 | +3.0 | -4.2 to +10.6 | 33 | 32 |
+| 3 reading both | +0.6 | +2.7 | -2.9 to +9.0 | 36 | 28 |
+
+3 reading both against live (3 from A + 3 from B): +1.2 (x100, 95% CI -1.0 to +3.4), better on 43, worse on 26.
+
+### What it showed (8 Nov)
+
+- Yes/no: reading both reports beat live by +1.2 (better on 43 questions, worse on 26) and was the first setup here to score above the market price (+0.6). Shipped: on yes/no questions all 6 forecasts now read both reports (ClaudeForecaster._predict_from_both_reports), bot version 2026-11-08.1. If one report fails, the other's forecasts read it alone.
+- Numeric: no gain (-0.2, better on 24, worse on 24), so numeric forecasts keep one report each. Multiple choice was not tested and is unchanged.
+- The forecasting prompts were unchanged since A and B were made, so their saved forecasts are a fair comparison; the new forecasts ran on a newer Claude Code CLI.
+- The results push to branch backtest-both was refused (merging main brought a workflow-file change, which the Actions token may not push). The yes/no records in backtest/results/vb1 were rebuilt from the run log (probabilities only, no reasoning) and re-score to the same +1.2; the numeric percentiles were not in the log, so nb1 has only this summary.
