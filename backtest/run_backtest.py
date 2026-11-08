@@ -131,6 +131,8 @@ async def run_question(
             return
         b = json.loads(source_b.read_text(encoding="utf-8"))
         reused = {"research": combine_research_reports(reused["research"], b["research"]), "leaked": reused["leaked"] or b["leaked"]}
+        if reused["leaked"]:
+            return  # scoring leaves it out anyway, so do not spend on it
     as_of = datetime.fromisoformat(row["as_of"])
     as_of_str = as_of.date().isoformat()
     as_of_date.set(as_of_str)

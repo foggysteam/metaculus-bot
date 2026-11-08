@@ -137,6 +137,8 @@ async def run_question(
         if not source_b.exists():
             return
         reused = reused_both(reused, json.loads(source_b.read_text(encoding="utf-8")))
+        if reused["leaked"]:
+            return  # scoring leaves it out anyway, so do not spend on it
     as_of_date.set(row["as_of"])
     current_question_id.set(row["id"])
     question = make_question(row)
