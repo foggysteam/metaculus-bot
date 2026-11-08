@@ -1,0 +1,401 @@
+{
+  "logged_at": "2026-11-08T00:08:55.652725+00:00",
+  "bot_version": "2026-11-05.1",
+  "started_at": "2026-11-08T00:06:05.819921+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46579,
+    "post_id": 46346,
+    "url": "https://www.metaculus.com/questions/46346",
+    "type": "MultipleChoiceQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "What color will the 2027 Pantone Color of the Year be?",
+    "resolution_criteria": "This question will resolve based on Pantone's Color Of The Year for 2027. Specifically, the color's hex code will be converted to the Oklch Color Space and the question will resolve based on the following criteria:\n\nIf Chroma is ≤0.007, then\nBlack if Lightness is ≤0.15.\nGray if Lightness is >0.15 and \\<0.85.\nWhite if Lightness is ≥0.85.\n\nif Chroma is >0.007, then\nBrown if Lightness is \\<0.65, Chroma is ≤0.12 and Hue is ≥25 and \\<80.\n\nif the above isn't met, then\nPink if Lightness is ≥0.55 and (Hue is ≥340 or Hue is \\<30).\n\nif the above criteria aren't met, then:\nRed if Hue is ≥10 and \\<30\nOrange if Hue is ≥30 and \\<80.\nYellow if Hue is ≥80 and \\<110.\nGreen if Hue is ≥110 and \\<175.\nCyan if Hue is ≥175 and \\<230.\nBlue if Hue is ≥230 and \\<270.\nPurple if Hue is ≥270 or \\<10",
+    "fine_print": "If Pantone releases multiple Colors Of The Year for 2027, the one used for resolution will be the first color named in their announcement. In 2016, this was Rose Quartz, and in 2021 this was Ultimate Gray.\nIf Pantone does not announce a Color of the Year during 2026, this question will be annulled.",
+    "close_time": "2026-11-08 03:00 UTC",
+    "scheduled_resolution_time": "2026-12-03 00:00 UTC"
+  },
+  "research": [
+    "Pantone has not yet announced its 2027 Color of the Year. The reveal looks set for about December 3, 2026, at a Pantone event in Miami.\n\n## 1. Resolution source\n- 2026-11-08: Pantone's Color of the Year page still shows only the 2026 color, PANTONE 11-4201 Cloud Dancer, and gives no hex code there. [Pantone 2026](https://www.pantone.com/color-of-the-year/2026)\n- 2026-11-08: The main Color of the Year page has a 2027 section headed \"Four cities. One unforgettable moment.\" It lists events in Miami (December 3, Art Basel), Shanghai (December 9), Seoul (December 11) and Mumbai (December 15). No color is named yet. [Pantone COTY](https://www.pantone.com/na/en-us/color-of-the-year)\n- The question converts Pantone's published hex code to Oklch. Note that the Manifold market resolves on a different basis, Pantone's own color code, so the two are not exactly the same question.\n\n## 2. Current status\n- Nothing settles the question yet, and I found no credible leak.\n- 2026-07-28: Laurie Pressman of Pantone declined to give hints. Pantone usually picks the next year's color around April or May, starts partner talks in May or June, and announces in December. So the color is already chosen and partners know it. [Marketing Brew](https://www.marketingbrew.com/stories/pantone-color-of-the-year-tech-pushback)\n- Recent announcement dates: December 4, 2025 (Cloud Dancer) and December 5, 2024 (Mocha Mousse). [paletadecolores](https://paletadecolores.org/en/color-of-the-year-2027.html)\n\n## 3. Recent news (newest first)\n- 2026-11-07: Hot Wheels showed four 2027 models in its Pantone Silver Series, one of them blue. This is not a Color of the Year signal. [autoevolution](https://www.autoevolution.com/news/4-new-hot-wheels-coming-to-the-pantone-series-soon-278104.html)\n- 2026-11-05/06: Broader trend coverage:\n  - Houzz sees a move toward warm beiges and earthy exteriors. [House Beautiful](https://www.housebeautiful.com/design-inspiration/a74346205/curb-appeal-trends-2027/)\n  - Interior design is moving away from neutrals toward intense colors. [El Adelantado](https://eladelantado.com/provincia/2026/11/06/las-paredes-recuperan-el-color-los-tonos-intensos-transforman-la-decoracion/)\n  - Nail trends include dark chocolate shades. [Zoe Report](https://www.thezoereport.com/beauty/winter-2027-nail-trends)\n- Mid-October 2026: Other brands' 2027 Colors of the Year, with the hex codes the site gives:\n  - WGSN/Coloro Luminous Blue #5B8DEF\n  - Sherwin-Williams Celery #CBC48C\n  - Behr Grounded #6A6943\n  - Valspar Cottage Door #A9C1D9\n  - Benjamin Moore Webster Green #5E7A62\n  - Glidden Artifact #4E7D86\n  - Dutch Boy Deep Rooted #A9572F\n  - Dulux Soulful Sage #A3AD97\n  - Graham & Brown Rose Earth #B67F72\n  - Clark+Kensington Vantage Point #9DB3CF\n  - California Paints Quiet Peace #3E4E68\n  - Minwax Pickled Oak #D9CDB8\n\n  Overall they lean toward greens, blues and earthy tones. [paletadecolores](https://paletadecolores.org/en/color-of-the-year-2027.html)\n- 2026-03-11/12: At The Inspired Home Show, Pantone's Leatrice Eiseman presented the Pantone View Home + Interiors 2027 forecast, themed \"Sense-Abilities\" and framed around \"calm joy.\" Named palettes include Delight (muted summer-meadow tones), Hush (muted midtones) and Honest (browns, reds, oranges). [Housewares.org](https://housewares.org/show-press-releases/2027-home-color-forecast/)\n- Designer predictions mention olive green, jewel-toned greens, dusty pinks and Chocolate Plum. [Homes & Gardens](https://www.homesandgardens.com/decor/paint/pantone-color-of-the-year-2027-predictions)\n\n## 4. Base rates\nI classified past winners under the question's rules from memory, using the commonly cited hex codes and estimating their Oklch values. These are not computed, so check the borderline ones.\n- 2026 Cloud Dancer #F0EEE9: White. Chroma is near the 0.007 cutoff, so this could be wrong.\n- 2025 Mocha Mousse #A47864: Brown.\n- 2024 Peach Fuzz #FFBE98: Orange.\n- 2023 Viva Magenta #BB2649: Red, with hue near 10, close to the Purple boundary.\n- 2022 Very Peri #6667AB: Purple.\n- 2021 Ultimate Gray: Gray, since it was named first.\n- 2020 Classic Blue #0F4C81: Blue.\n- 2019 Living Coral #FF6F61: Pink, because lightness is at least 0.55 and hue is below 30.\n- 2018 Ultra Violet: Purple.\n- 2017 Greenery: Green.\n- 2016 Rose Quartz: Pink.\n- 2015 Marsala: Red.\n- 2014 Radiant Orchid: Purple.\n- 2013 Emerald: Green.\n- 2012 Tangerine Tango: Orange.\n- 2011 Honeysuckle: Pink.\n- 2010 Turquoise: Cyan.\n\nTally for 2010 to 2026 (17 years): Purple 3, Pink 3, Red 2, Orange 2, Green 2, and one each for Blue, Cyan, Gray, Brown and White. Yellow has won only once, in 2021 as the second color (Illuminating), which doesn't count here. Black has never won. Pantone rarely repeats a color family in consecutive years. The last two picks were muted or neutral (Brown, then White).\n\n## 5. Other forecasts\n- 2026-11-08: Manifold, \"What color will Pantone Color of The Year 2027 be closest to?\": Blue 44%, Sandy 6%, Other 6%, Olive 5%, Cyan 5%, White, Pink, Brown and Gray 4% each, Black, Orange, Yellow, Green, Purple and Red 3% each. Its categories and method (Pantone code) differ from this question. [Manifold](https://manifold.markets/jknowak/what-color-will-pantone-color-of-th)\n- I found no Polymarket or Kalshi market on this. None of the Kalshi markets supplied with the question are relevant.\n- WGSN/Coloro's Luminous Blue is a separate forecast, not Pantone's.\n\n## 6. Upcoming events\n- About 2026-12-03: The expected reveal, likely tied to the Miami Art Basel event. Pantone has sometimes announced a day or two before its events.\n- 2026-12-09 to 12-15: Pantone's Shanghai, Seoul and Mumbai events.\n- Before the reveal, watch for leaks through brand partners or retailer listings. I found none so far.\n\nSources: [Pantone 2026](https://www.pantone.com/color-of-the-year/2026), [Pantone COTY](https://www.pantone.com/na/en-us/color-of-the-year), [Marketing Brew](https://www.marketingbrew.com/stories/pantone-color-of-the-year-tech-pushback), [paletadecolores](https://paletadecolores.org/en/color-of-the-year-2027.html), [Homes & Gardens](https://www.homesandgardens.com/decor/paint/pantone-color-of-the-year-2027-predictions), [Housewares.org](https://housewares.org/show-press-releases/2027-home-color-forecast/), [Manifold](https://manifold.markets/jknowak/what-color-will-pantone-color-of-th), [colorcombinations.org](https://colorcombinations.org/trends/color-trends-2027/), [Coloracci](https://coloracci.ai/blog/pantone-color-of-the-year-history)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-08 00:06 UTC; check each market really matches the question)\n- Kalshi: ZEC price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $1,000 or above: 0.66; $650.0000 - $699.9999: 0.07; $700.0000 - $749.9999: 0.07; $750.0000 - $799.9999: 0.07; $800.0000 - $849.9999: 0.07; $850.0000 - $899.9999: 0.08; $950.0000 - $999.9999: 0.08; $300.0000 - $349.9999: 0.1000; $350.0000 - $399.9999: 0.0000; $400.0000 - $449.9999: 0.0000.\n- Kalshi: DOGE price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $0.0600 - $0.0899: 0.65; $0.0300 - $0.0599: 0.21; $0.0900 - $0.1199: 0.14; $0.1200 - $0.1499: 0.07; $0.1500 - $0.1799: 0.1100; $0.1800 - $0.2099: 0.0000; $0.2100 - $0.2399: 0.0200; $0.2400 - $0.2699: 0.0000; $0.2700 - $0.2999: 0.0000; $0.3000 - $0.3299: 0.1000.\n- Kalshi: PFA Player of the Year Winner 2027 (PFA Player of the Year 2027). Yes prices: Declan Rice: 0.30; Cole Palmer: 0.49; David Raya: 0.48; Alexander Isak: 0.0000; Antoine Semenyo: 0.0000; Bradley Barcola: 0.0000; Bruno Fernandes: 0.0000; Bruno Guimaraes: 0.0000; Bryan Mbeumo: 0.0000; Bukayo Saka: 0.0000.\n- Kalshi: Executive of the Year Winner? (2026-27 season). Yes prices: Ryan Poles: 0.47; John Lynch: 0.10; Joe Schoen: 0.09; Brandon Beane: 0.06; Andrew Berry: 0.14; Les Snead: 0.04; George Paton: 0.03; John Schneider: 0.03; James Gladstone: 0.07; Ian Cunningham: 0.01.\n- Kalshi: Men's Naismith Player of the Year Winner (Naismith Player of the Year (2026-27)). Yes prices: Tyler Tanner: 0.1500; Amari Allen: 0.0000; Alijah Arenas: 0.0000; Alex Condon: 0.0000; Amani Hansberry: 0.0000; Aden Holloway: 0.0000; Acaden Lewis: 0.0000; Aiden Sherrell: 0.0000; Andrej Stojakovic: 0.0000; Bruce Branch III: 0.0000.\n- Kalshi: Coach of the Year Winner? (2026-2027 season). Yes prices: John Harbaugh: 0.28; Ben Johnson: 0.20; Todd Monken: 0.15; Kyle Shanahan: 0.14; Klint Kubiak: 0.04; Kevin O'Connell: 0.04; Mike McCarthy: 0.04; Dan Campbell: 0.03; Joe Brady: 0.03; Liam Coen: 0.03.\n- Kalshi: HYPE price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $100 or above: 0.14; $90.0000 - $94.9999: 0.10; $70.0000 - $74.9999: 0.14; $60.0000 - $64.9999: 0.10; $85.0000 - $89.9999: 0.10; $80.0000 - $84.9999: 0.12; $65.0000 - $69.9999: 0.12; $75.0000 - $79.9999: 0.12; $95.0000 - $99.9999: 0.07; $55.0000 - $59.9999: 0.08.\n- Manifold: What color will Pantone Color of The Year 2027 be closest to? (MULTIPLE_CHOICE) https://manifold.markets/jknowak/what-color-will-pantone-color-of-th",
+    "I found nothing showing that Pantone has announced its 2027 Color of the Year. Pantone's own forecast and the main forecasting markets do not settle the question either.\n\n## 1. Resolution source\n- 2026-11-08: The official Pantone 2026 page still shows **Cloud Dancer, PANTONE 11-4201**, the 2026 color, with no hex code and no mention of 2027. Resolution will depend on the 2027 color's hex code once it is published. [Pantone](https://www.pantone.com/color-of-the-year/2026)\n- 2025-12-04: Cloud Dancer was announced on this date. That points to a 2027 reveal in the first week of December 2026, about December 3. [Coloracci](https://coloracci.ai/blog/pantone-color-of-the-year-history), [paletadecolores](https://paletadecolores.org/en/color-of-the-year-2027.html)\n\n## 2. Current status\n- 2026-11-08: No announcement has been made and nothing has leaked that I could find. Prediction articles from September and October 2026 confirm the color has not been revealed. Pantone has published a Spring/Summer 2027 fashion forecast, but that is not the Color of the Year. [Homes & Gardens](https://www.homesandgardens.com/decor/paint/pantone-color-of-the-year-2027-predictions), [colorcombinations.org](https://colorcombinations.org/trends/color-trends-2027/)\n- The \"Hot Wheels Pantone Series 2027\" article in your news set (2026-11-07) is about toy cars, not the Color of the Year. [autoevolution](https://www.autoevolution.com/news/4-new-hot-wheels-coming-to-the-pantone-series-soon-278104.html)\n\n## 3. Recent news (newest first)\n- 2026-11-05/06: Trend coverage describes a move away from white, gray and beige toward strong colors and warm earthy tones. H&M's Summer 2027 collection uses papaya, mango, kiwi and mandarin. [El Adelantado](https://eladelantado.com/provincia/2026/11/06/las-paredes-recuperan-el-color-los-tonos-intensos-transforman-la-decoracion/), [House Beautiful](https://www.housebeautiful.com/design-inspiration/a74346205/curb-appeal-trends-2027/), [wapa.pe](https://wapa.pe/moda-y-belleza/2026/11/05/estampados-inspirados-en-panuelos-tonos-atardecer-temporada-verano-2027-466585)\n- Autumn 2026: Other brands' 2027 picks, all hex codes from a third-party site, not verified with each brand: [paletadecolores](https://paletadecolores.org/en/color-of-the-year-2027.html)\n  - **Blues:** WGSN × Coloro Luminous Blue #5B8DEF, Valspar Cottage Door #A9C1D9, Clark+Kensington Vantage Point #9DB3CF, California Paints Quiet Peace #3E4E68.\n  - **Greens and green-grays:** Sherwin-Williams Celery #CBC48C, Behr Grounded #6A6943 (olive), Benjamin Moore Webster Green #5E7A62, Dulux Soulful Sage #A3AD97.\n  - **Teal:** Glidden Artifact #4E7D86.\n  - **Warm earth tones:** Dutch Boy Deep Rooted #A9572F, Graham & Brown Rose Earth #B67F72, Minwax Pickled Oak #D9CDB8.\n- Pundit guesses for Pantone include a luminous blue, sage, a warm orange, a vivid pink, Chocolate Plum, olive and emerald. [Homes & Gardens](https://www.homesandgardens.com/decor/paint/pantone-color-of-the-year-2027-predictions), [colorcombinations.org](https://colorcombinations.org/trends/color-trends-2027/)\n\n## 4. Base rates\nI classified past colors myself, using the published hex values I remember and rough estimates of where each falls in the Oklch color space. I did not run a converter, so treat this as approximate. Colors near a cutoff are flagged with \"?\".\n- **2000-2026 (27 years), approximate counts:**\n  - Pink about 5: Fuchsia Rose, Honeysuckle, Rose Quartz, Living Coral?, Viva Magenta?\n  - Purple 4: Blue Iris, Radiant Orchid, Ultra Violet, Very Peri\n  - Cyan 3: Aqua Sky, Blue Turquoise, Turquoise\n  - Red 3: True Red, Chili Pepper, Marsala?\n  - Orange 4: Tigerlily?, Sand Dollar?, Tangerine Tango, Peach Fuzz\n  - Blue 2: Cerulean, Classic Blue\n  - Green 2: Emerald, Greenery\n  - Yellow 1: Mimosa\n  - Gray 1: Ultimate Gray\n  - Brown 1: Mocha Mousse\n  - White 1: Cloud Dancer (chroma looks just under 0.007, so this is borderline)\n- **Borderline cases:**\n  - Living Coral (hue about 27 to 30) could be Pink or Orange.\n  - Viva Magenta (hue about 10) could be Pink or Purple.\n  - Sand Dollar could count as Orange or Brown.\n  - Marsala could be Red or Brown, depending on whether its hue is above or below 25.\n- **Recent pattern:** The last three picks were muted and warm or neutral (Peach Fuzz, Mocha Mousse, Cloud Dancer). Pantone has not repeated a category in consecutive years except a few times, and the last blue was 2020.\n\n## 5. Other forecasts\n- 2026-11-08: Manifold, \"What color will Pantone Color of The Year 2027 be closest to?\" It is thin, with about 10 holders and 55 trades. Its categories differ a little from this question, since it adds Sandy, Olive and Other. [Manifold](https://manifold.markets/jknowak/what-color-will-pantone-color-of-th)\n\n| Option | Probability |\n|---|---|\n| Blue | 44% |\n| Sandy | 6% |\n| Other | 6% |\n| Olive | 5% |\n| Cyan | 5% |\n| White | 4% |\n| Pink | 4% |\n| Brown | 4% |\n| Gray | 4% |\n| Black | 3% |\n| Orange | 3% |\n| Yellow | 3% |\n| Green | 3% |\n| Purple | 3% |\n| Red | 3% |\n\n- I found no Polymarket or Kalshi market on this question. The Kalshi prices supplied with the brief cover crypto prices and sports awards, so they are not relevant.\n- **Expert consensus:** WGSN and Coloro picked Luminous Blue. Several paint brands also chose blues (Valspar, Clark+Kensington, California Paints), and others chose sage or olive greens. That is the main reason markets and pundits lean toward blue.\n\n## 6. Upcoming events\n- About 2026-12-03 to 12-05: Pantone's reveal, usually in the first week of December, possibly preceded by a press embargo or leak. Once it is out, convert the official hex to Oklch. Watch colors near the cutoffs:\n  - Teal-blues near hue 230 (Cyan or Blue)\n  - Blue-violets near 270 (Blue or Purple)\n  - Light warm tones, where chroma decides between White, Orange and Brown\n  - Coral and pinks near hue 30\n- No forecast is offered here.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-08 00:06 UTC; check each market really matches the question)\n- Kalshi: ZEC price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $1,000 or above: 0.66; $650.0000 - $699.9999: 0.07; $700.0000 - $749.9999: 0.07; $750.0000 - $799.9999: 0.07; $800.0000 - $849.9999: 0.07; $850.0000 - $899.9999: 0.08; $950.0000 - $999.9999: 0.08; $300.0000 - $349.9999: 0.1000; $350.0000 - $399.9999: 0.0000; $400.0000 - $449.9999: 0.0000.\n- Kalshi: DOGE price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $0.0600 - $0.0899: 0.65; $0.0300 - $0.0599: 0.21; $0.0900 - $0.1199: 0.14; $0.1200 - $0.1499: 0.07; $0.1500 - $0.1799: 0.1100; $0.1800 - $0.2099: 0.0000; $0.2100 - $0.2399: 0.0200; $0.2400 - $0.2699: 0.0000; $0.2700 - $0.2999: 0.0000; $0.3000 - $0.3299: 0.1000.\n- Kalshi: PFA Player of the Year Winner 2027 (PFA Player of the Year 2027). Yes prices: Declan Rice: 0.30; Cole Palmer: 0.49; David Raya: 0.48; Alexander Isak: 0.0000; Antoine Semenyo: 0.0000; Bradley Barcola: 0.0000; Bruno Fernandes: 0.0000; Bruno Guimaraes: 0.0000; Bryan Mbeumo: 0.0000; Bukayo Saka: 0.0000.\n- Kalshi: Executive of the Year Winner? (2026-27 season). Yes prices: Ryan Poles: 0.47; John Lynch: 0.10; Joe Schoen: 0.09; Brandon Beane: 0.06; Andrew Berry: 0.14; Les Snead: 0.04; George Paton: 0.03; John Schneider: 0.03; James Gladstone: 0.07; Ian Cunningham: 0.01.\n- Kalshi: Men's Naismith Player of the Year Winner (Naismith Player of the Year (2026-27)). Yes prices: Tyler Tanner: 0.1500; Amari Allen: 0.0000; Alijah Arenas: 0.0000; Alex Condon: 0.0000; Amani Hansberry: 0.0000; Aden Holloway: 0.0000; Acaden Lewis: 0.0000; Aiden Sherrell: 0.0000; Andrej Stojakovic: 0.0000; Bruce Branch III: 0.0000.\n- Kalshi: Coach of the Year Winner? (2026-2027 season). Yes prices: John Harbaugh: 0.28; Ben Johnson: 0.20; Todd Monken: 0.15; Kyle Shanahan: 0.14; Klint Kubiak: 0.04; Kevin O'Connell: 0.04; Mike McCarthy: 0.04; Dan Campbell: 0.03; Joe Brady: 0.03; Liam Coen: 0.03.\n- Kalshi: HYPE price at the end of the year?  (On Jan 1, 2027 at 12am EST). Yes prices: $100 or above: 0.14; $90.0000 - $94.9999: 0.10; $70.0000 - $74.9999: 0.14; $60.0000 - $64.9999: 0.10; $85.0000 - $89.9999: 0.10; $80.0000 - $84.9999: 0.12; $65.0000 - $69.9999: 0.12; $75.0000 - $79.9999: 0.12; $95.0000 - $99.9999: 0.07; $55.0000 - $59.9999: 0.08.\n- Manifold: What color will Pantone Color of The Year 2027 be closest to? (MULTIPLE_CHOICE) https://manifold.markets/jknowak/what-color-will-pantone-color-of-th"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "Blue": 0.26,
+        "Cyan": 0.09,
+        "Yellow": 0.05,
+        "Green": 0.14,
+        "Red": 0.07,
+        "Gray": 0.03,
+        "Purple": 0.11,
+        "Pink": 0.1,
+        "Brown": 0.04,
+        "Black": 0.02,
+        "Orange": 0.07,
+        "White": 0.02
+      },
+      "reasoning": "(a) **Time left:** The reveal is expected around December 3, 2026, about 25 days away. Pantone has almost certainly chosen the color already, and partners know it, but nothing has leaked.\n\n(b) **Status quo:** No color has been announced. The default is the base-rate distribution. Pantone rarely repeats a family in consecutive years, so White (2026) and Brown (2025) are unlikely.\n\n(c) **Base rates (2010-2026, 17 years, by this question's Oklch rules):**\n- Purple 3, Pink 3.\n- Red 2, Orange 2, Green 2.\n- Blue 1, Cyan 1, Gray 1, Brown 1, White 1.\n- Yellow 0 as a first-named color, Black 0.\n\nRecent picks have been muted. After two neutrals in a row, a shift toward a more saturated or \"joyful\" color seems plausible.\n\n(d) **Strongest evidence:**\n- Mid-October 2026: other brands' 2027 colors lean blue and green, including WGSN/Coloro Luminous Blue, Valspar and Clark+Kensington light blues, and Webster Green.\n- March 2026: Pantone's own 2027 home forecast was framed around \"calm joy,\" with muted meadow tones, midtones and an earthy \"Honest\" palette.\n- November 8: Manifold has Blue at 44%. Its categories differ, it is thinly traded, and it has no leak behind it, so it is only a weak anchor.\n- Blue has not been picked since 2020, which makes it \"due.\"\n- Designer predictions mention olive, jewel greens and dusty pinks.\n\n**Classification caveats:**\n- Teal or turquoise shades land in Cyan.\n- Some olives fall into Yellow (hue below 110).\n- Dusty pinks or mauves with hue below 30 and lightness of at least 0.55 count as Pink.\n- Darker ones fall into Red or Brown.\n\n**How far I moved:** I raised Blue well above its base rate of about 6% to about 26%, but kept it far below Manifold's 44%. Green moves up modestly. White and Brown move down because Pantone avoids repeats.\n\n(e) **Unexpected scenario:** Pantone picks a lavender-lilac, which counts as Purple. Or it picks a warm, joyful coral-pink that reads as Pink or Orange, rejecting the blue consensus. Another possibility is a muted olive with hue just under 110, which would resolve Yellow.\n\nBlue: 0.26\nCyan: 0.09\nYellow: 0.05\nGreen: 0.14\nRed: 0.07\nGray: 0.03\nPurple: 0.11\nPink: 0.10\nBrown: 0.04\nBlack: 0.02\nOrange: 0.07\nWhite: 0.02"
+    },
+    {
+      "value": {
+        "Blue": 0.33,
+        "Cyan": 0.08,
+        "Yellow": 0.05,
+        "Green": 0.12,
+        "Red": 0.06,
+        "Gray": 0.03,
+        "Purple": 0.07,
+        "Pink": 0.08,
+        "Brown": 0.06,
+        "Black": 0.02,
+        "Orange": 0.07,
+        "White": 0.03
+      },
+      "reasoning": "(a) **Time left:** About 25 days. The reveal is expected around December 3, 2026, at Pantone's Miami Art Basel event, possibly a day or two earlier.\n\n(b) **Status quo:** The color is already chosen, but nobody outside Pantone and its partners knows it. There is no leak. With no announcement, the best \"status quo\" guide is consensus and market lean, which points toward blue (Manifold 44%). Repeating last year's White (Cloud Dancer) is unlikely, since Pantone rarely repeats a color family in consecutive years.\n\n(c) **Base rates (2010 to 2026, 17 years, under this question's rules):**\n- Purple: 3\n- Pink: 3\n- Red: 2\n- Orange: 2\n- Green: 2\n- Blue: 1\n- Cyan: 1\n- Gray: 1\n- Brown: 1\n- White: 1\n- Yellow: 0 as a first-named color\n- Black: 0\n\nSo no family dominates. Blue's base rate is only about 6%, but blue has not won since 2020.\n\n(d) **Strongest evidence:**\n- **Manifold, 2026-11-08:** Blue 44%, Cyan 5%, others 3 to 6% each. This is thin and uses different categories and a different method (Pantone code rather than hex to Oklch), but it is the only market.\n- **Other brands' 2027 picks, mid-October 2026:** They lean toward blues and greens. WGSN/Coloro chose Luminous Blue, Valspar a light blue, Clark+Kensington a blue, Benjamin Moore and Behr greens, and Sherwin-Williams Celery.\n- **Pantone's own 2027 home forecast, March 2026:** It is themed \"calm joy\" and includes muted meadow tones, muted midtones, and browns, reds and oranges.\n- **After two muted or neutral picks (Brown, then White):** A move toward a more saturated or \"joyful\" color seems plausible.\n- **Classification edge cases:** A light blue lands in Blue (hue around 250). A periwinkle could fall into Purple (hue 270 or above), and a teal into Cyan, so the \"blue\" mass gets split somewhat.\n\n(e) **Unexpected scenario:** Pantone goes for a warm, joyful color, such as a sunny yellow, a coral, or a soft pink, to break with calm neutrals. Or it picks a sage or olive green that matches the paint-brand consensus. In that case the blue favorites lose.\n\n**Reasoning:** I started from a roughly 6 to 10% base rate per family. I moved Blue up substantially, to about 33%, because of the Manifold anchor and the consensus across other brands. I stayed below Manifold's 44% because that market is thin, its categories differ, and some blue-looking colors would resolve as Cyan or Purple under the Oklch rules. Green gets a moderate bump from the paint-brand picks. I trimmed White and Brown because of Pantone's no-repeat pattern.\n\nBlue: 0.33\nCyan: 0.08\nYellow: 0.05\nGreen: 0.12\nRed: 0.06\nGray: 0.03\nPurple: 0.07\nPink: 0.08\nBrown: 0.06\nBlack: 0.02\nOrange: 0.07\nWhite: 0.03"
+    },
+    {
+      "value": {
+        "Blue": 0.3,
+        "Cyan": 0.1,
+        "Yellow": 0.05,
+        "Green": 0.14,
+        "Red": 0.06,
+        "Gray": 0.03,
+        "Purple": 0.09,
+        "Pink": 0.08,
+        "Brown": 0.05,
+        "Black": 0.02,
+        "Orange": 0.06,
+        "White": 0.02
+      },
+      "reasoning": "(a) Time left: Pantone is expected to reveal the color around December 3, 2026, at its Miami Art Basel event. That is about 3.5 weeks away. The color was likely chosen in spring 2026 and is already known to partners, but there is no public leak.\n\n(b) Status quo: Nothing is announced yet. The most recent pick, Cloud Dancer, classifies as White. Pantone almost never repeats a family in consecutive years, so here the status quo is weak evidence against White rather than for it.\n\n(c) Base rates, 2010 to 2026 (17 years):\n- Purple 3, Pink 3\n- Red 2, Orange 2, Green 2\n- Blue, Cyan, Gray, Brown and White 1 each\n- Yellow 0 as the first-named color, Black 0\n\nTwo points about the resolution rule:\n- Periwinkle-type blues can land in Purple, because their Oklch hue is above 270.\n- Coral and peach tones can land in Pink or Orange.\n\n(d) Strongest evidence:\n- **Manifold, Nov 8, 2026:** Blue 44%. This is a thin market with different categories and a different method, but it is the only direct forecast.\n- **Mid-October 2026:** Other brands' 2027 colors cluster on blues and greens:\n  - WGSN/Coloro Luminous Blue #5B8DEF, a clean Blue in Oklch.\n  - Valspar and Clark+Kensington picked light blues.\n  - Benjamin Moore and Dulux picked greens.\n  - Glidden picked a teal, which would be Cyan.\n- **March 2026:** Pantone's own Home + Interiors 2027 forecast, \"calm joy\", includes muted meadow tones and browns, reds and oranges.\n- **Pantone's recent pattern:** after two muted neutrals (Brown, then White), a return to a more chromatic hue seems likely.\n- **Blue's timing:** it has not appeared since Classic Blue in 2020.\n\n(e) Unexpected scenario: Pantone picks a muted olive or celery. Its hue of about 95 to 105 would resolve as Yellow, and a dark olive could even fall into Brown. Alternatively, a soft periwinkle or lavender expresses \"calm joy\", but its hue above 270 makes it resolve Purple despite reading as blue.\n\nI started from the base rate, which gives roughly 8 to 18% per common family. I moved Blue up substantially, to about 30%, because of the market and the industry's blue and green convergence. I stayed well below Manifold's 44%, since that market is thin and some \"blues\" would classify as Purple or Cyan under this question's rule. I raised Green and Cyan modestly, and lowered White and Brown because Pantone rarely repeats a family in consecutive years.\n\nBlue: 0.30\nCyan: 0.10\nYellow: 0.05\nGreen: 0.14\nRed: 0.06\nGray: 0.03\nPurple: 0.09\nPink: 0.08\nBrown: 0.05\nBlack: 0.02\nOrange: 0.06\nWhite: 0.02"
+    },
+    {
+      "value": {
+        "Blue": 0.3,
+        "Cyan": 0.08,
+        "Yellow": 0.05,
+        "Green": 0.12,
+        "Red": 0.06,
+        "Gray": 0.03,
+        "Purple": 0.08,
+        "Pink": 0.08,
+        "Brown": 0.06,
+        "Black": 0.02,
+        "Orange": 0.09,
+        "White": 0.03
+      },
+      "reasoning": "**(a) Time left:** About 3.5 to 4 weeks. The reveal is expected around December 3 to 5, 2026, based on the December 4, 2025 announcement of Cloud Dancer.\n\n**(b) Status quo:** Nothing has been announced. Pantone rarely repeats a category in consecutive years, so 2026's White (Cloud Dancer, which sits on the chroma borderline) is unlikely to repeat. The \"status quo\" is really the trend consensus, which points to blue.\n\n**(c) Base rates (2000-2026, approximate, borderline cases split):**\n- Pink about 5\n- Purple 4\n- Orange 4\n- Cyan 3\n- Red 3\n- Blue 2\n- Green 2\n- Yellow, Gray, Brown and White 1 each\n\nRoughly, any single hue category has a 4-18% base rate. The last three picks (Peach Fuzz, Mocha Mousse, Cloud Dancer) were muted, warm or neutral, which argues for a swing toward a stronger chromatic color.\n\n**(d) Strongest evidence:**\n- **Autumn 2026, WGSN × Coloro:** Luminous Blue (#5B8DEF, hue about 262 in Oklch, inside the Blue band). WGSN often foreshadows mood.\n- **Autumn 2026, paint brands:** several chose blues (Valspar, Clark+Kensington, California Paints). Others chose sage or olive greens (Sherwin-Williams, Behr, Benjamin Moore, Dulux) and one chose teal (Glidden).\n- **Blue gap:** the last blue was 2020 Classic Blue, so a blue is \"overdue\" in narrative terms.\n- **Manifold, November 8, 2026:** Blue at 44%. The market is thin (about 10 holders) with different categories, so it is a weak anchor.\n- **November 2026 trend pieces:** they describe a move toward intense and warm colors (papaya, mango, mandarin), which supports Orange, Pink and Red.\n\n**Adjustment:** I moved Blue from a base rate of about 8% up to 30%. I stopped short of the Manifold figure for three reasons:\n- The market is illiquid.\n- Pantone often diverges from WGSN and the paint brands.\n- Teal-leaning blues can fall into Cyan (hue below 230), and periwinkles can fall into Purple (hue above 270).\n\n**(e) Unexpected scenario:** Pantone reacts against the quiet neutral of Cloud Dancer with an energetic warm color, such as a vivid coral-orange or a hot pink. A coral near hue 30 could land in Pink or Orange depending on small hex differences. Alternatively, a sage or olive green could win, and if it is dark and warm it might even classify as Brown.\n\nBlue: 0.30\nCyan: 0.08\nYellow: 0.05\nGreen: 0.12\nRed: 0.06\nGray: 0.03\nPurple: 0.08\nPink: 0.08\nBrown: 0.06\nBlack: 0.02\nOrange: 0.09\nWhite: 0.03"
+    },
+    {
+      "value": {
+        "Blue": 0.3,
+        "Cyan": 0.1,
+        "Yellow": 0.05,
+        "Green": 0.13,
+        "Red": 0.06,
+        "Gray": 0.02,
+        "Purple": 0.08,
+        "Pink": 0.08,
+        "Brown": 0.06,
+        "Black": 0.02,
+        "Orange": 0.08,
+        "White": 0.02
+      },
+      "reasoning": "**(a) Time left:** About 25 days. Pantone usually reveals its color in the first week of December, so expect it around December 3 to 5, 2026.\n\n**(b) Status quo:** Nothing has been announced. The 2026 color, Cloud Dancer, is white or borderline white. Pantone almost never repeats a category in consecutive years, so the status quo carries little weight here.\n\n**(c) Base rates (2000-2026, approximate):**\n\n| Category | Approx. count | Share |\n|---|---|---|\n| Pink | 5 | ~18% |\n| Orange | 4 | ~15% |\n| Purple | 4 | ~15% |\n| Cyan | 3 | ~11% |\n| Red | 3 | ~11% |\n| Blue | 2 | ~7% |\n| Green | 2 | ~7% |\n| Yellow | 1 | ~4% |\n| Gray | 1 | ~4% |\n| Brown | 1 | ~4% |\n| White | 1 | ~4% |\n| Black | 0 | 0% |\n\n**(d) Strongest evidence:**\n- **Autumn 2026, trend picks:** WGSN × Coloro chose Luminous Blue. Several paint brands (Valspar, Clark+Kensington, California Paints) also chose blues, so there is a strong industry lean toward blue. Sage and olive greens are the second cluster, with picks from Sherwin-Williams, Behr, Benjamin Moore and Dulux.\n- **2026-11-08, Manifold:** Blue is at 44%. The market is thin (about 10 holders) and uses slightly different categories, so it is only a modest anchor.\n- **2026-11-05/06, trend coverage:** Commentary describes a move from neutrals toward saturated and warm colors (papaya, mango), which supports Orange, Pink or Red.\n- **Recent pattern:** The last three picks were muted (Peach Fuzz, Mocha Mousse, Cloud Dancer). The last blue was 2020, so a blue would be a plausible \"renewal\" color.\n\n**(e) Unexpected scenario:** Pantone could pick a periwinkle or blue-violet with Oklch hue of 270 or more, which would resolve Purple. It could pick a teal with hue below 230, which would resolve Cyan. Or it could break from the industry consensus with a vivid coral or pink that matches the \"warm saturated\" trend.\n\n**Reasoning:** I start from the base rate, which puts Blue at about 7%. The blue consensus from WGSN and the paint brands, plus the Manifold price, moves Blue up to about 30%. I stay below Manifold's 44% because:\n- the market is thin;\n- Pantone often diverges from WGSN;\n- some \"blues\" will fall into Cyan or Purple under these Oklch cutoffs.\n\nI raise Green on the sage and olive cluster. Note that a dark, low-chroma olive could resolve Brown, since the Brown rule covers hues up to 80. I keep meaningful weight on the warm categories (Pink, Orange, Red) to reflect the trend coverage and their historical frequency.\n\nBlue: 0.30\nCyan: 0.10\nYellow: 0.05\nGreen: 0.13\nRed: 0.06\nGray: 0.02\nPurple: 0.08\nPink: 0.08\nBrown: 0.06\nBlack: 0.02\nOrange: 0.08\nWhite: 0.02"
+    },
+    {
+      "value": {
+        "Blue": 0.28,
+        "Cyan": 0.09,
+        "Yellow": 0.05,
+        "Green": 0.12,
+        "Red": 0.05,
+        "Gray": 0.03,
+        "Purple": 0.08,
+        "Pink": 0.09,
+        "Brown": 0.06,
+        "Black": 0.02,
+        "Orange": 0.1,
+        "White": 0.03
+      },
+      "reasoning": "(a) **Time left:** About 25 days. Pantone usually reveals in the first week of December, likely around December 3 to 5, 2026.\n\n(b) **Status quo:** No 2027 color has been announced. If Pantone simply carried over the 2026 color, Cloud Dancer, it would resolve White, though borderline. Pantone almost never repeats a color, so the status quo matters little here.\n\n(c) **Base rates (2000-2026, about 27 years, approximate classification):**\n- Pink about 5, Orange about 4, Purple 4\n- Cyan 3, Red 3\n- Blue 2, Green 2\n- Yellow 1, Gray 1, Brown 1, White 1\n- Black 0\n\nSaturated chromatic colors dominate. Neutrals (White, Gray, Black) are rare, and having just picked Cloud Dancer makes another neutral less likely.\n\n(d) **Strongest evidence:**\n- **Autumn 2026, trend forecasters:** WGSN and Coloro picked \"Luminous Blue\" (#5B8DEF) as their 2027 color.\n- **Autumn 2026, paint brands:** Several chose blues (Valspar, Clark+Kensington, California Paints). Others chose sage or olive greens (Sherwin-Williams, Behr, Benjamin Moore, Dulux), and some chose warm earth tones (Dutch Boy, Graham & Brown).\n- **November 5-6, 2026:** Trend coverage describes a move away from white, gray and beige toward strong colors, including H&M's citrus palette for Summer 2027.\n- **November 8, 2026:** The Manifold market has Blue at 44%. It is thin, about 10 holders, and uses slightly different categories (\"closest to,\" plus Sandy, Olive and Other).\n- **Timing pattern:** The last Pantone blue was 2020's Classic Blue, so a blue pick would not repeat anything recent.\n\n(e) **Unexpected scenario:** Pantone picks a vivid citrus orange or a fuchsia to signal optimism after Cloud Dancer. Alternatively, its \"blue\" turns out to be a teal (hue under 230, so Cyan) or a periwinkle (hue of 270 or more, so Purple). Either way the Blue bucket loses despite the blue consensus.\n\n**Adjustment:** I start from the historical base rates and move Blue up substantially, from roughly 8% to about 28%. The reasons are the WGSN blue pick, the several paint-brand blues, the long gap since the last Pantone blue, and the Manifold anchor. I stay well below Manifold's 44% because that market is thin and Pantone often diverges from WGSN. Some probability goes to the neighboring Cyan and Purple buckets in case Pantone's blue lands on either side of the hue cutoffs. Green gets a boost from the sage and olive consensus among paint brands. Orange gets a boost from the warm and citrus trend signals. Neutrals stay low.\n\nBlue: 0.28\nCyan: 0.09\nYellow: 0.05\nGreen: 0.12\nRed: 0.05\nGray: 0.03\nPurple: 0.08\nPink: 0.09\nBrown: 0.06\nBlack: 0.02\nOrange: 0.10\nWhite: 0.03"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "Blue": 0.295,
+    "Cyan": 0.09,
+    "Yellow": 0.05,
+    "Green": 0.1283,
+    "Red": 0.06,
+    "Gray": 0.0283,
+    "Purple": 0.085,
+    "Pink": 0.085,
+    "Brown": 0.055,
+    "Black": 0.02,
+    "Orange": 0.0783,
+    "White": 0.025
+  },
+  "usage": [
+    {
+      "question_id": "46579",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 7.099999999999999e-05,
+      "input_tokens": 490,
+      "output_tokens": 44,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 73.7,
+      "notional_cost_usd": 0.2610017,
+      "input_tokens": 61680,
+      "output_tokens": 4770,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.1,
+      "notional_cost_usd": 0.077748,
+      "input_tokens": 6047,
+      "output_tokens": 1469,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.4,
+      "notional_cost_usd": 0.07918,
+      "input_tokens": 6046,
+      "output_tokens": 1541,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0007389,
+      "input_tokens": 2508,
+      "output_tokens": 475,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.8,
+      "notional_cost_usd": 0.0006665,
+      "input_tokens": 2681,
+      "output_tokens": 261,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.0,
+      "notional_cost_usd": 0.00035973,
+      "input_tokens": 2509,
+      "output_tokens": 542,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.00038528,
+      "input_tokens": 2683,
+      "output_tokens": 590,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 31.5,
+      "notional_cost_usd": 0.0322834,
+      "input_tokens": 6045,
+      "output_tokens": 1434,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0007991000000000001,
+      "input_tokens": 2609,
+      "output_tokens": 555,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00031273,
+      "input_tokens": 2609,
+      "output_tokens": 446,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 49.9,
+      "notional_cost_usd": 0.1235014,
+      "input_tokens": 23116,
+      "output_tokens": 4099,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.7,
+      "notional_cost_usd": 0.07609199999999999,
+      "input_tokens": 5765,
+      "output_tokens": 1499,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.7,
+      "notional_cost_usd": 0.07698,
+      "input_tokens": 5766,
+      "output_tokens": 1543,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.2,
+      "notional_cost_usd": 0.07922,
+      "input_tokens": 5766,
+      "output_tokens": 1655,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0007897000000000002,
+      "input_tokens": 2722,
+      "output_tokens": 491,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0007677000000000001,
+      "input_tokens": 2682,
+      "output_tokens": 463,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0007848,
+      "input_tokens": 2620,
+      "output_tokens": 522,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.4,
+      "notional_cost_usd": 0.00022056000000000002,
+      "input_tokens": 2680,
+      "output_tokens": 261,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00033548,
+      "input_tokens": 2722,
+      "output_tokens": 490,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46579",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00022015,
+      "input_tokens": 2620,
+      "output_tokens": 261,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8125
+}
