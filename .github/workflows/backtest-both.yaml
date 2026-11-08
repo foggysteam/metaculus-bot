@@ -60,6 +60,7 @@ jobs:
       - name: Install
         run: bash .github/scripts/retry.sh uv sync --locked && bash .github/scripts/install_claude.sh
       - name: Run
+        id: run
         run: |
           budget="--budget-usd $BUDGET_USD --budget-runs nb1,vb1 --limit $LIMIT --parallel 2"
           uv run python backtest/run_numeric_backtest.py --run nb1 --reuse-research n2 --reuse-research-b n3 \
@@ -73,7 +74,9 @@ jobs:
           vb=$(find backtest/results/vb1 -maxdepth 1 -name '*.json' | wc -l)
           spent=$(uv run python -c "import sys; sys.path.insert(0, 'backtest'); from budget import saved_cost; print(f'{saved_cost([\"nb1\", \"vb1\"]):.2f}')" 2>/dev/null || echo "?")
           echo "Saved $nb numeric and $vb yes/no; spent \$$spent"
-          if [ "$LIMIT" -ge 1000 ]; then
+          # Only a full run that ended by itself is scored: a cancelled or timed-out one opened a
+          # false "finished" issue (#13, 8 Nov), since this step runs whatever happens.
+          if [ "$LIMIT" -ge 1000 ] && [ "${{ steps.run.outcome }}" = "success" ]; then
             uv run python backtest/score_numeric_two_reports.py --a n2 --b n3 --both nb1 > score.md 2>&1 || true
             uv run python backtest/score_two_reports.py --a v1 --b v1-r2 --both vb1 >> score.md 2>&1 || true
             {
