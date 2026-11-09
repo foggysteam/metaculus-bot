@@ -136,6 +136,53 @@ def test_group_and_conditional_posts_are_read() -> None:
     assert w.questions_of({}) == []
 
 
+def backup_reason(runs, late=()) -> str | None:
+    """backup.reason_to_run with the GitHub and Metaculus reads replaced."""
+    import backup
+
+    saved = (w.list_runs, w.late_questions)
+    if isinstance(runs, Exception):
+        def list_runs():
+            raise runs
+    else:
+        def list_runs():
+            return runs
+    w.list_runs, w.late_questions = list_runs, lambda now: list(late)
+    try:
+        return backup.reason_to_run(NOW)
+    finally:
+        w.list_runs, w.late_questions = saved
+
+
+def test_pc_backup_forecasts_only_when_github_is_not_covering_the_questions() -> None:
+    url = "https://www.metaculus.com/questions/46500"
+    assert backup_reason([run("in_progress")]) is None
+    assert "no live forecast run" in backup_reason([run("completed", "success", started=400, ended=20)])
+    assert backup_reason([run("completed", "success", started=400, ended=20), run("queued", created=3)]) is None
+    assert "cannot read the GitHub runs" in backup_reason(RuntimeError("Actions is down"))
+    # GitHub shows a run going, but a question has waited 75 minutes: the run may have stopped.
+    assert url in backup_reason([run("in_progress")], [("rescue", url, {})])
+    assert backup_reason([run("in_progress")], [("alert", url, {})]) is None
+
+
+def test_pc_backup_passes_only_the_max_plan_token_to_the_cli() -> None:
+    import os
+
+    import backup
+
+    host = {"ANTHROPIC_BASE_URL": "http://localhost:1", "ANTHROPIC_API_KEY": "x", "CLAUDECODE": "1", "CLAUDE_CODE_SESSION_ID": "s", "CLAUDE_EFFORT": "low"}
+    keep = {"CLAUDE_CODE_OAUTH_TOKEN": "t", "CLAUDE_BIN": "claude.exe", "METACULUS_TOKEN": "m"}
+    saved = dict(os.environ)
+    os.environ.update({**host, **keep})
+    try:
+        env = backup.bot_environment()
+    finally:
+        os.environ.clear()
+        os.environ.update(saved)
+    assert not set(host) & set(env)
+    assert all(env[k] == v for k, v in keep.items())
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for test in tests:
