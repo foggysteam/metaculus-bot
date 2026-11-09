@@ -183,6 +183,27 @@ def weekly_log(folder: Path, qid: int, post: int, tournament: str, due: str) -> 
     (folder / "2026-10-28" / f"{qid}.json").write_text(json.dumps(entry), encoding="utf-8")
 
 
+def test_model_swap_backtest_uses_only_the_new_model() -> None:
+    bot = forecaster.ClaudeForecaster(llms=forecaster.build_llms(), publish_reports_to_metaculus=False)
+    assert bot.get_llm("default", "llm").fallback_models  # live: Opus, then Sonnet if it fails
+    bot.use_forecast_model("claude-fable-5-2")
+    llm = bot.get_llm("default", "llm")
+    assert (llm.cli_model, llm.fallback_models) == ("claude-fable-5-2", ())
+    assert bot.get_llm("researcher", "llm").cli_model == "opus"  # research is reused, not redone
+
+
+def test_memory_probe_reads_what_the_model_remembers() -> None:
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import probe_memory as probe
+
+    assert probe.parse("REMEMBER: YES", "yesno") == 1.0
+    assert probe.parse("I think...\nREMEMBER: NO", "yesno") == 0.0
+    assert probe.parse("DONT_KNOW", "yesno") is None
+    assert probe.parse("REMEMBER: 7,773.95 points", "numeric") == 7773.95
+    assert probe.correct(7800, 7773.95, "numeric") and not probe.correct(8200, 7773.95, "numeric")
+    assert not probe.correct(None, 1.0, "yesno")
+
+
 def test_weekly_report_says_which_failures_need_nothing_done() -> None:
     import weekly_report
 

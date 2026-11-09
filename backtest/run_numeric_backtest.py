@@ -184,6 +184,8 @@ async def run_question(
         "forecasts": forecasts,
         "errors": [repr(r) for r in results if isinstance(r, BaseException)],
         "notional_cost_usd": round(sum(u["notional_cost_usd"] for u in usage), 4),
+        # The models that actually wrote the forecasts (a model swap backtest must not mix in a fallback).
+        "forecast_models": sorted({m for u in usage if u["purpose"] == "forecast" for m in u["model"].split(",") if m}),
     }
     path.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
     print(
@@ -210,6 +212,7 @@ async def main() -> None:
     parser.add_argument("--reuse-research-b", help="With --reuse-research: a second run's research; every forecast reads both")
     parser.add_argument("--budget-usd", type=float, help="Stop starting questions once these runs have used this much (API billing)")
     parser.add_argument("--budget-runs", help="Comma-separated runs that share the budget (default: this run)")
+    parser.add_argument("--forecast-model", help="Claude model for the forecasts instead of the live one, e.g. claude-fable-5-2")
     args = parser.parse_args()
 
     rows = [json.loads(line) for line in Path(args.data).open(encoding="utf-8")][args.offset : args.offset + args.limit]
@@ -231,6 +234,8 @@ async def main() -> None:
             setattr(bot, attr, value)
         if args.research_note:
             bot.numeric_research_note = RESEARCH_NOTES[args.research_note]
+        if args.forecast_model:
+            bot.use_forecast_model(args.forecast_model)
         bots[name] = bot
     gate = asyncio.Semaphore(args.parallel)
 

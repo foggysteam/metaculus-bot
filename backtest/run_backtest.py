@@ -187,6 +187,8 @@ async def run_question(
         "forecasts_with_market": market_forecasts,
         "errors": errors,
         "notional_cost_usd": round(sum(u["notional_cost_usd"] for u in usage), 4),
+        # The models that actually wrote the forecasts (a model swap backtest must not mix in a fallback).
+        "forecast_models": sorted({m for u in usage if u["purpose"] == "forecast" for m in u["model"].split(",") if m}),
     }
     path.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
     print(
@@ -210,6 +212,7 @@ async def main() -> None:
     parser.add_argument("--reuse-research-b", help="With --reuse-research: a second run's research; every forecast reads both")
     parser.add_argument("--budget-usd", type=float, help="Stop starting questions once these runs have used this much (API billing)")
     parser.add_argument("--budget-runs", help="Comma-separated runs that share the budget (default: this run)")
+    parser.add_argument("--forecast-model", help="Claude model for the forecasts instead of the live one, e.g. claude-fable-5-2")
     args = parser.parse_args()
 
     rows = [json.loads(line) for line in DATA.open(encoding="utf-8")][args.offset : args.offset + args.limit]
@@ -217,6 +220,8 @@ async def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     bot = ClaudeForecaster(llms=build_llms(), publish_reports_to_metaculus=False)
     apply_variant(bot, args.variant)
+    if args.forecast_model:
+        bot.use_forecast_model(args.forecast_model)
     reuse_dir = ROOT / "results" / args.reuse_research if args.reuse_research else None
     reuse_dir_b = ROOT / "results" / args.reuse_research_b if args.reuse_research_b else None
     budget = Budget(args.budget_usd, (args.budget_runs or args.run).split(","))

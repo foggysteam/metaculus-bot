@@ -451,6 +451,12 @@ class ClaudeForecaster(FallTemplateBot2026):
         numeric = self.numeric_research_note if isinstance(question, NumericQuestion) else ""
         return numeric + self.research_note
 
+    def use_forecast_model(self, model: str) -> None:
+        """Backtests of another forecasting model (Fable 5.2 against Opus 5.5, 9 Nov 2026). No
+        fallback, so a failed call is not quietly replaced by another model's forecast."""
+        llm = self.get_llm("default", "llm")
+        llm.cli_model, llm.fallback_models = model, ()
+
     async def run_research(self, question: MetaculusQuestion) -> str:
         async with self._concurrency_limiter:
             # With several research reports per question, the news, prices and baseline that
