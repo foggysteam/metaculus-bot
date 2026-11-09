@@ -32,3 +32,18 @@ Sources: [Spring 2026 analysis](https://www.metaculus.com/notebooks/45373/spring
 
 ## Design direction for Step 2 (to be proven by backtest)
 Fork the template. Research: AskNews (free) plus the resolution source page plus a base-rate pass. Forecast: several independent runs, median, clip binary to 1-99%, no extremizing. Model mix chosen for the GBP 30 cap: free-tier Gemini Flash for the ensemble, with paid frontier calls only if the backtest shows they pay off.
+
+## Update 9 Nov 2026: what the leaders do, and where KCAP2.0 differs
+
+Leaders seen across the 2026 boards: futuresearch, laertes, manticAI, future-perfect-hindsight, preseen, GreeneiBot2, histerio, mmBot, acm_bot. Few publish their internals. New sources: [synthesis of 11 analyses](https://www.metaculus.com/notebooks/43363/ai-forecasting-in-2026/), [what other bots are doing](https://www.metaculus.com/notebooks/43497/what-are-other-bots-doing/), [Fall 2025 survey](https://www.metaculus.com/notebooks/43337/fall-2025-futureeval-survey/), [Spring 2026 results](https://www.lesswrong.com/posts/wZBbDqzfBjYG58CxK/futureeval-spring-results-pros-beat-bots-but-the-gap-is), [Mantic](https://thinkingmachines.ai/news/training-llms-to-predict-world-events/), [FutureSearch](https://futuresearch.ai/blog/iterating-on-a-forecaster), [edisonymy (headless Claude Code, public)](https://github.com/edisonymy/forecast-scaffold), [smingers-bot (public)](https://github.com/virshlee/smingers-bot), [Autocast](https://www.metaculus.com/notebooks/46097/autocast-early-access/).
+
+| What winners do | KCAP2.0 now |
+|---|---|
+| Newest frontier model with high reasoning, swapped as soon as a better one ships. Metaculus's same-setup reference bots: Fable 5.1 beat Opus 5.5 on all three 2026 boards checked (FutureEval now 592 v 421 on 30 questions; MiniBench 19 Oct 583 v 423; 5 Oct 589 v 376), about +5 a question. | Opus 5.5 (high) forecasts. Fable 5.1 works on the Max plan through the CLI (checked 9 Nov), at about 2.5 times the token price. |
+| 3 to 8 forecasts across model families (GPT, Gemini, Grok; Grok valued as the least correlated). Runs that share one research dossier correlate about 0.97, so research must differ too. | 6 forecasts, Claude only, on 2 independent research reports. Other families need paid API keys (own-key cap GBP 30). |
+| More research sources, resolution pages fetched directly, similar questions and markets checked. | WebSearch/WebFetch research twice, plus AskNews, Kalshi, Polymarket, Manifold and Metaculus community predictions. Comparable. |
+| Calibration: clip about 2 to 98%; extremizing mostly hurt (r=-0.30), though killian extremizes x1.73. | x0.8 shrink in log-odds, clipped. futuresearch was bolder than us on 3 of 3 shared yes/no questions (67 v 60, 42 v 37, 73 v 58): too few to act on. Re-tune the shrink if the model changes. |
+| Numeric: smooth CDFs (201 points, PCHIP), wide tails. | 13 percentiles, straight-line CDF. |
+| About 28 model calls a question for winners against 7 for the rest. | About 22. |
+
+Order to test, one at a time: (1) Fable 5.1 as the forecaster, backtested forecasts-only on saved research (watch for model-memory leaks: backtest questions resolved Aug to Oct 2026, so compare by resolution month) and against the live reference-bot evidence; then re-check the x0.8 shrink for Fable. (2) Smooth numeric CDF (PCHIP) against straight-line, scored on saved forecasts at no model cost. (3) A mixed Opus + Fable ensemble. (4) A second model family, only if Ahmad agrees to the spend.
