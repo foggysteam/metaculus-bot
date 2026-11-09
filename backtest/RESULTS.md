@@ -350,3 +350,20 @@ Forecasts only, on research saved by earlier runs: numeric n2 (report A) and n3 
 - Numeric: no gain (-0.2, better on 24, worse on 24), so numeric forecasts keep one report each. Multiple choice was not tested and is unchanged.
 - The forecasting prompts were unchanged since A and B were made, so their saved forecasts are a fair comparison; the new forecasts ran on a newer Claude Code CLI.
 - The results push to branch backtest-both was refused (merging main brought a workflow-file change, which the Actions token may not push). The yes/no records in backtest/results/vb1 were rebuilt from the run log (probabilities only, no reasoning) and re-score to the same +1.2; the numeric percentiles were not in the log, so nb1 has only this summary.
+
+## Fable 5.2 against Opus 5.5 (live), and the resolution date hint: `vf1`, `nf2` + `nf3` (9 Nov)
+
+Forecasts only, on saved research, with only the forecasting model changed and no fallback model (.github/workflows/backtest-fable.yaml, since replaced). Yes/no: 3 forecasts reading both reports (v1 + v1-r2) against vb1. Numeric: 3 forecasts on report A (n2) and 3 on report B (n3) against the live forecasts in n2 + n3. Max plan, notional $15.41, plus $5.01 for the memory probes. Issue #16.
+
+| | Fable 5.2 minus Opus 5.5 | 95% CI | Better on | Worse on |
+|---|---|---|---|---|
+| Yes/no (x100 log score, 75 questions) | +4.5 | -0.5 to +9.8 | 37 | 24 |
+| Numeric (points, 59 questions) | +0.4 | -2.0 to +2.5 | 29 | 26 |
+
+Memory probe (backtest/probe_memory.py, no research, no tools): neither model said it remembered any of the 140 outcomes (all DONT_KNOW).
+
+**The yes/no gain came from a flaw in the backtest, not from better forecasting.** Every yes/no backtest so far gave the researcher and the forecaster the real resolution date ("the question resolves around 2026-08-13"), and a date earlier than the question's deadline gives away a Yes. Fable 5.2 used it openly ("early settlements are usually Yes"; "the early resolution date hints at a quick Yes"). Its two biggest wins were +130 (Minecraft challenge, Opus 11%, Fable 60%) and +102 (GPT 6 by 15 Sep). On the 26 questions where Fable's reasoning mentions the resolution timing it gained +13.5 (CI +1.1 to +28.3); on the other 49 it was -0.2 (CI -3.7 to +2.4). Leaving out the top 3 gains also takes the mean to +0.9. Numeric questions never had the hint (their date is the scheduled measurement date), and there Fable was even with Opus.
+
+Outcome: the live forecaster stays Opus 5.5. Ahmad also asked on 9 Nov that Fable not be used on the Max plan, so the clean re-run of Fable was not done; ClaudeCodeLlm now refuses a Fable model unless an API key is set.
+
+Harness fix (9 Nov): run_backtest.py and run_mc_backtest.py no longer pass the resolution date (the prompt says "unknown"), and remove_resolution_date drops research lines that give the real date or the day before (US time zones), in ISO and written forms. On the saved research of v1 + v1-r2 that removes 389 of 7,046 lines (5.5%), some of them legitimate scheduled-event dates, so a clean run slightly understates the research. Every earlier yes/no result (the x0.8 shrink, reading both reports, +1.2) was measured with the hint in both arms; an Opus-only re-run on the cleaned research (`vb2`, .github/workflows/backtest-clean.yaml, about $10 notional) would show how much it flattered them.

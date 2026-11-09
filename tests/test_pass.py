@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -190,6 +191,16 @@ def test_model_swap_backtest_uses_only_the_new_model() -> None:
     llm = bot.get_llm("default", "llm")
     assert (llm.cli_model, llm.fallback_models) == ("claude-fable-5-2", ())
     assert bot.get_llm("researcher", "llm").cli_model == "opus"  # research is reused, not redone
+    # Ahmad, 9 Nov 2026: no Fable on the Max plan, only on an API key.
+    saved = os.environ.pop("ANTHROPIC_API_KEY", None)
+    try:
+        asyncio.run(llm.invoke("hi"))
+        raise AssertionError("Fable ran without an API key")
+    except ValueError as e:
+        assert "Max plan" in str(e)
+    finally:
+        if saved is not None:
+            os.environ["ANTHROPIC_API_KEY"] = saved
 
 
 def test_memory_probe_reads_what_the_model_remembers() -> None:
@@ -202,6 +213,24 @@ def test_memory_probe_reads_what_the_model_remembers() -> None:
     assert probe.parse("REMEMBER: 7,773.95 points", "numeric") == 7773.95
     assert probe.correct(7800, 7773.95, "numeric") and not probe.correct(8200, 7773.95, "numeric")
     assert not probe.correct(None, 1.0, "yesno")
+
+
+def test_backtest_does_not_give_away_the_real_resolution_date() -> None:
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import run_backtest
+
+    research = "\n".join([
+        "- 2026-08-10: still 0% progress",
+        "- The listed resolution time (Aug 12, 8:09 PM ET) is before the deadline",  # day before in UTC
+        "- Resolution date is about 2026-08-13",
+        "- 13 August: resolves",
+        "- Aug 1: started the run",
+        "- In 2013 August was quiet",
+    ])
+    kept = run_backtest.remove_resolution_date(research, datetime(2026, 8, 13, 0, 9, tzinfo=timezone.utc))
+    assert kept.splitlines() == ["- 2026-08-10: still 0% progress", "- Aug 1: started the run", "- In 2013 August was quiet"]
+    source = (ROOT / "backtest" / "run_backtest.py").read_text(encoding="utf-8")
+    assert 'scheduled_resolution_time=datetime.fromisoformat(row["resolved_at"])' not in source
 
 
 def test_weekly_report_says_which_failures_need_nothing_done() -> None:

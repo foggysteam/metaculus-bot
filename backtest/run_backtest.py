@@ -31,7 +31,7 @@ import hashlib
 import json
 import logging
 import re
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import dotenv
@@ -96,6 +96,23 @@ def remove_later_facts(research: str, as_of: date) -> str:
     return "\n".join(kept)
 
 
+_MONTHS = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
+
+def remove_resolution_date(research: str, resolved_at: datetime) -> str:
+    """Drop lines that give the real resolution date. Until 9 Nov 2026 the backtest told the
+    researcher and the forecaster when each question actually resolved, and a date earlier than
+    the question's deadline gives away a Yes (Fable 5.2 used it openly). The day before counts
+    too, since US time zones put an early-morning UTC resolution on the previous day."""
+    forms = []
+    for d in (resolved_at.date(), resolved_at.date() - timedelta(days=1)):
+        month = _MONTHS[d.month - 1]
+        names = {month, month[:3], month[:3] + ".", "Sept", "Sept."} if d.month == 9 else {month, month[:3], month[:3] + "."}
+        forms += [d.isoformat(), f"{d.month}/{d.day}"] + [f"{n} {d.day}" for n in names] + [f"{d.day} {n}" for n in names]
+    pattern = re.compile(r"(?<![\w/.])(?:" + "|".join(map(re.escape, forms)) + r")(?!\d)", re.IGNORECASE)
+    return "\n".join(line for line in research.splitlines() if not pattern.search(line))
+
+
 async def leak_check(question: str, research: str, as_of: str) -> bool:
     llm = ClaudeCodeLlm(model="haiku", effort=None, purpose="leak_check")
     verdict = await llm.invoke(
@@ -135,6 +152,7 @@ async def run_question(
             return  # scoring leaves it out anyway, so do not spend on it
     as_of = datetime.fromisoformat(row["as_of"])
     as_of_str = as_of.date().isoformat()
+    resolved_at = datetime.fromisoformat(row["resolved_at"])
     as_of_date.set(as_of_str)
     current_question_id.set(row["id"])
     question = BinaryQuestion(
@@ -145,17 +163,18 @@ async def run_question(
         id_of_question=int(hashlib.md5(row["id"].encode()).hexdigest()[:8], 16),
         page_url=row["id"],
         close_time=as_of,
-        scheduled_resolution_time=datetime.fromisoformat(row["resolved_at"]),
+        scheduled_resolution_time=None,  # the real date gives away early Yes resolutions
     )
     researcher = bot.get_llm("researcher", "llm")
     prompt = HISTORICAL_RULES.format(as_of=as_of_str) + bot._get_research_prompt(question, researcher)
     try:
         if reused:
-            raw_research = research = reused["research"]
+            raw_research = reused["research"]
+            research = remove_resolution_date(raw_research, resolved_at)
             leaked = reused["leaked"]
         else:
             raw_research = await researcher.invoke(prompt)
-            research = remove_later_facts(raw_research, as_of.date())
+            research = remove_resolution_date(remove_later_facts(raw_research, as_of.date()), resolved_at)
             leaked = await leak_check(row["question"], research, as_of_str)
 
         async def sample(text: str) -> dict:

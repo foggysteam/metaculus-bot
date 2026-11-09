@@ -154,6 +154,8 @@ class ClaudeCodeLlm(GeneralLlm):
     async def invoke(self, prompt, system_prompt: str | None = None) -> str:  # type: ignore[override]
         if not isinstance(prompt, str):
             raise TypeError("ClaudeCodeLlm only accepts plain string prompts")
+        if not os.getenv("ANTHROPIC_API_KEY") and any("fable" in m.lower() for m in (self.cli_model, *self.fallback_models)):
+            raise ValueError("Fable models are not to be used on the Max plan (Ahmad, 9 Nov 2026)")
         # A weaker forecast beats a missed question, so try each model in turn.
         last_error: Exception | None = None
         for model in (self.cli_model, *self.fallback_models):

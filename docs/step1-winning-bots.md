@@ -47,3 +47,5 @@ Leaders seen across the 2026 boards: futuresearch, laertes, manticAI, future-per
 | About 28 model calls a question for winners against 7 for the rest. | About 22. |
 
 Order to test, one at a time: (1) Fable 5.1 as the forecaster, backtested forecasts-only on saved research (watch for model-memory leaks: backtest questions resolved Aug to Oct 2026, so compare by resolution month) and against the live reference-bot evidence; then re-check the x0.8 shrink for Fable. (2) Smooth numeric CDF (PCHIP) against straight-line, scored on saved forecasts at no model cost. (3) A mixed Opus + Fable ensemble. (4) A second model family, only if Ahmad agrees to the spend.
+
+Update later on 9 Nov: Fable 5.2 was backtested first (backtest/RESULTS.md). Once a backtest flaw is allowed for (the models were told the real resolution date, which Fable used), it was even with Opus 5.5 on yes/no and numeric. Ahmad asked that Fable not be used on the Max plan, so steps (1) and (3) are off unless it runs on an API key with his OK on spend. Next is (2), smooth numeric CDFs, at no model cost.

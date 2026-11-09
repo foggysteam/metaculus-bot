@@ -34,7 +34,7 @@ from forecasting_tools import MultipleChoiceQuestion  # noqa: E402
 
 from claude_code_llm import USAGE_LEDGER, current_question_id  # noqa: E402
 from forecaster import ClaudeForecaster, _option_key, as_of_date, build_llms  # noqa: E402
-from run_backtest import HISTORICAL_RULES, leak_check, remove_later_facts  # noqa: E402
+from run_backtest import HISTORICAL_RULES, leak_check, remove_later_facts, remove_resolution_date  # noqa: E402
 
 logger = logging.getLogger(__name__)
 ROOT = Path(__file__).parent
@@ -52,7 +52,7 @@ def make_question(row: dict) -> MultipleChoiceQuestion:
         id_of_question=int(hashlib.md5(row["id"].encode()).hexdigest()[:8], 16),
         page_url=row["id"],
         close_time=as_of,
-        scheduled_resolution_time=datetime.fromisoformat(row["resolved_at"]),
+        scheduled_resolution_time=None,  # the real date gives away early resolutions
     )
 
 
@@ -81,13 +81,15 @@ async def run_question(bot: ClaudeForecaster, row: dict, out_dir: Path, n: int, 
     question = make_question(row)
     researcher = bot.get_llm("researcher", "llm")
     try:
+        resolved_at = datetime.fromisoformat(row["resolved_at"])
         if reused:
-            raw_research = research = reused["research"]
+            raw_research = reused["research"]
+            research = remove_resolution_date(raw_research, resolved_at)
             leaked = reused["leaked"]
         else:
             prompt = HISTORICAL_RULES.format(as_of=as_of_str) + bot._get_research_prompt(question, researcher)
             raw_research = await researcher.invoke(prompt)
-            research = remove_later_facts(raw_research, as_of.date())
+            research = remove_resolution_date(remove_later_facts(raw_research, as_of.date()), resolved_at)
             leaked = await leak_check(row["question"], research, as_of_str)
 
         async def sample() -> dict:
