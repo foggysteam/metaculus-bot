@@ -183,6 +183,20 @@ def weekly_log(folder: Path, qid: int, post: int, tournament: str, due: str) -> 
     (folder / "2026-10-28" / f"{qid}.json").write_text(json.dumps(entry), encoding="utf-8")
 
 
+def test_weekly_report_says_which_failures_need_nothing_done() -> None:
+    import weekly_report
+
+    run = lambda i, name: {"id": i, "name": name, "event": "schedule", "created_at": "2026-11-09T18:10:32Z", "html_url": f"u/{i}"}  # noqa: E731
+    text = weekly_report.describe_failed_runs([run(1, "Watchdog"), run(2, "Forecast"), run(3, "Health")], {1: 0, 2: 1, 3: None})
+    assert text.splitlines()[0] == "3 failed run(s), 1 of them never started a job (a GitHub outage, nothing to fix):"
+    assert "Watchdog (schedule) started 2026-11-09T18:10:32Z, never started a job: u/1" in text
+    assert "Forecast (schedule) started 2026-11-09T18:10:32Z: u/2" in text
+    assert weekly_report.describe_failed_runs([run(2, "Forecast")], {2: 1}).startswith("1 failed run(s):")
+    # 46337 failed twice on 4 Nov, then went in at 18:26 (forecast_logs/index.csv).
+    text, _ = weekly_report.recent_forecasts(datetime(2026, 11, 4, tzinfo=timezone.utc))
+    assert "failed: https://www.metaculus.com/questions/46337, went in on a later try (2026-11-04 18:26 UTC)" in text
+
+
 def test_weekly_report_reads_outcome_and_score_of_group_subquestions() -> None:
     import weekly_report
 

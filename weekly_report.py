@@ -97,8 +97,12 @@ def recent_forecasts(since: datetime) -> tuple[str, float]:
     cost = sum(float(r["notional_cost_usd"] or 0) for r in rows)
     parts = ", ".join(f"{t}: {n}" for t, n in sorted(by_tournament.items())) or "none"
     text = f"{len(ok)} forecasts submitted ({parts}); {len(failed)} attempts failed."
-    for url in sorted({r["url"] for r in failed}):
-        text += f"\n  - failed: {url}"
+    for question_id, url in sorted({(r["question_id"], r["url"]) for r in failed}, key=lambda x: x[1]):
+        last_failure = max(r["started_at"] for r in failed if r["question_id"] == question_id)
+        later = [r["started_at"] for r in ok if r["question_id"] == question_id and r["started_at"] > last_failure]
+        # A failure that a later try made up for is not a missed question (46337 on 4 Nov).
+        outcome = f"went in on a later try ({min(later)[:16].replace('T', ' ')} UTC)" if later else "no forecast went in"
+        text += f"\n  - failed: {url}, {outcome}"
     return text, cost
 
 
@@ -329,12 +333,29 @@ def failed_runs(since: datetime) -> str:
         timeout=30,
     )
     r.raise_for_status()
-    runs = r.json().get("workflow_runs", [])
+    runs = r.json().get("workflow_runs", [])[:10]
+    jobs = {}
+    for run in runs:
+        try:
+            got = requests.get(run["jobs_url"], headers={"Authorization": f"Bearer {token}"}, timeout=30)
+            jobs[run["id"]] = got.json().get("total_count")
+        except Exception:  # noqa: BLE001 - the label is optional
+            jobs[run["id"]] = None
+    return describe_failed_runs(runs, jobs)
+
+
+def describe_failed_runs(runs: list[dict], jobs: dict[int, int | None]) -> str:
+    """A run that failed without starting a job was GitHub's problem, not ours: on 9 Nov an
+    Actions outage failed 6 runs that way, and the summary asked Ahmad to fix their cause."""
     if not runs:
         return "No failed workflow runs."
-    lines = [f"{len(runs)} failed run(s):"]
-    for run in runs[:10]:
-        lines.append(f"  - {run['name']} ({run['event']}) started {run['created_at']}: {run['html_url']}")
+    never_started = [run for run in runs if jobs.get(run["id"]) == 0]
+    lines = [f"{len(runs)} failed run(s)" + (
+        f", {len(never_started)} of them never started a job (a GitHub outage, nothing to fix):" if never_started else ":"
+    )]
+    for run in runs:
+        note = ", never started a job" if run in never_started else ""
+        lines.append(f"  - {run['name']} ({run['event']}) started {run['created_at']}{note}: {run['html_url']}")
     return "\n".join(lines)
 
 
@@ -411,7 +432,10 @@ async def build_report() -> str:
             "You write a weekly status note for the owner of a Metaculus forecasting bot. "
             "In at most 5 short plain-English lines: say whether the bot is healthy, how it is doing, "
             "and up to 3 concrete actions if anything needs attention (or say nothing is needed). "
-            "Remember the leaderboard is noisy until many questions resolve. Never use em dashes.\n\n" + body
+            "Remember the leaderboard is noisy until many questions resolve. "
+            "Runs that never started a job were GitHub outages and need no action. A forecast that failed "
+            "but went in on a later try was not missed and needs no action unless it keeps happening. "
+            "Never use em dashes.\n\n" + body
         )
     except Exception as e:  # noqa: BLE001 - the summary is optional
         summary = f"(Summary unavailable: {e})"
