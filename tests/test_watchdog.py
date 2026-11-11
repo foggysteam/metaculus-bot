@@ -183,6 +183,29 @@ def test_pc_backup_passes_only_the_max_plan_token_to_the_cli() -> None:
     assert all(env[k] == v for k, v in keep.items())
 
 
+def test_pc_backup_runs_only_one_copy() -> None:
+    """The logon task restarts it every 10 minutes, and a terminal copy may be open too:
+    two copies would run two passes at once."""
+    import tempfile
+
+    import backup
+
+    saved = backup.LOCK_FILE
+    with tempfile.TemporaryDirectory() as folder:
+        backup.LOCK_FILE = Path(folder) / "backup.lock"
+        try:
+            first = backup.hold_single_instance_lock()
+            assert first is not None
+            assert backup.hold_single_instance_lock() is None
+            first.close()  # the process ending frees it the same way
+            again = backup.hold_single_instance_lock()
+            assert again is not None
+            again.close()
+        finally:
+            backup.LOCK_FILE = saved
+    assert Path(backup.console_python()).name.lower() != "pythonw.exe"
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for test in tests:
