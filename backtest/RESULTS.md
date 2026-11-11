@@ -367,3 +367,12 @@ Memory probe (backtest/probe_memory.py, no research, no tools): neither model sa
 Outcome: the live forecaster stays Opus 5.5. Ahmad also asked on 9 Nov that Fable not be used on the Max plan, so the clean re-run of Fable was not done; ClaudeCodeLlm now refuses a Fable model unless an API key is set.
 
 Harness fix (9 Nov): run_backtest.py and run_mc_backtest.py no longer pass the resolution date (the prompt says "unknown"), and remove_resolution_date drops research lines that give the real date or the day before (US time zones), in ISO and written forms. On the saved research of v1 + v1-r2 that removes 389 of 7,046 lines (5.5%), some of them legitimate scheduled-event dates, so a clean run slightly understates the research. Every earlier yes/no result (the x0.8 shrink, reading both reports, +1.2) was measured with the hint in both arms; an Opus-only re-run on the cleaned research (`vb2`, .github/workflows/backtest-clean.yaml, about $10 notional) would show how much it flattered them.
+
+### Opus 5.5 without the date hint: `vb2` (11 Nov)
+
+The same 76 yes/no questions as vb1, research of v1 + v1-r2 with the resolution date hidden and the lines that repeated it dropped (320 lines), 3 forecasts each reading both reports, Opus 5.5 with no fallback (all 76 written by claude-opus-5-5, no errors). Max plan, notional $12.64. Issue #17.
+
+- Without the hint against with it: +0.3 (x100, 95% CI -1.2 to +1.8), better on 31, worse on 23. By month: Aug +0.9 on 12, Sep +1.0 on 39, Oct -1.3 on 24. Opus was not using the hint, so the earlier yes/no results (reading both reports, the x0.8 shrink) stand.
+- Against the market price: +0.9 (vb1 was +0.6).
+- Shrink, mean log score (x100): x0.6 -56.5, x0.7 -56.1, x0.8 -56.0, x0.9 -56.3, x1.0 -56.7, x1.2 -58.3. The live x0.8 is still the best.
+- vb2 is the yes/no baseline for later backtests (no hint in it).
