@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-11T21:12:16.954192+00:00",
+  "bot_version": "2026-11-08.1",
+  "started_at": "2026-11-11T21:08:00.737968+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46721,
+    "post_id": 46465,
+    "url": "https://www.metaculus.com/questions/46465",
+    "type": "NumericQuestion",
+    "unit": "million miles",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How many miles driven autonomously will Tesla Robotaxi have driven as of December 1, 2026?",
+    "resolution_criteria": "This question resolves as Tesla's live estimate for millions of autonomous miles driven by its Robotaxi, as presented by [Robotaxi Stats](https://www.robotaxistats.com/) on its latest snapshot timestamped on December 1, 2026 (PST) (i.e., before midnight on December 2, 2026).",
+    "fine_print": "In case of any issues with the main resolution source not presenting a snapshot for that date, Metaculus may check the main [Tesla page](https://www.tesla.com/robotaxi) and resolve based on the number presented there. \n\nOther credible sources may also be used.",
+    "close_time": "2026-11-12 00:00 UTC",
+    "scheduled_resolution_time": "2026-12-01 00:00 UTC"
+  },
+  "research": [
+    "I couldn't find any source that settles this yet. The latest snapshot shows 4.81M miles, below the question's 5.0M floor, and it will pass that floor in a few days. The counter looks like a straight-line projection of about 80,000 miles a day from Tesla's last report. If it stays on that line, it reaches about 6.6-6.7M by the end of Dec 1 (my calculation). A new Tesla report could raise the rate.\n\n## 1. Resolution source\n- 2026-11-09 (about 03:20 PT): Robotaxi Stats shows \"Tesla's live estimate\" at **4.81M driverless miles** (counter 4,806,465). The site labels this an estimate, not a measured total. This is the most recent snapshot I could reach. [robotaxistats](https://www.robotaxistats.com/)\n- The same page shows the confirmed figure: 3.1M miles through 2026-10-18, from Tesla's Robotaxi Safety Report, covering Jan 22 to Oct 18. By city: Austin 2.12M, Dallas 608K, Houston 226K, Orlando 61K, Tampa 53K, Miami 46K. [robotaxistats](https://www.robotaxistats.com/)\n- tesla.com/robotaxi returned HTTP 403, so I could not check the fallback source.\n\n## 2. Current status\n- Nothing settles the question yet.\n- The counter readings fit a fixed-rate projection: 3.1M on Oct 18, past 3.3M on Oct 21, about 4.0-4.1M on Oct 30-31, and 4.81M on Nov 9. That works out to roughly 78-81K miles a day. It matches the \"80,600 miles/day\" figure Sawyer Merritt posted on 2026-10-21. My inference is that the counter projects forward from the last report at a fixed pace and resets when Tesla publishes new data. [basenor](https://www.basenor.com/blogs/news/tesla-robotaxi-hits-80-600-miles-per-day-launches-first-responder-training-site), [notateslaapp](https://notateslaapp.com/news/4860/tesla-names-next-robotaxi-cities-shares-miles-driven-safety-data)\n- My projection: 4.806M + about 22.9 days × 80.6K ≈ **6.65M** at the end of Dec 1 PST, if the rate doesn't change.\n\n## 3. Recent news (newest first)\n- 2026-11-11: TSLA rose 1.8% after Tesla extended its Austin geofence on Nov 9. [247wallst](https://247wallst.com/investing/2026/11/11/how-much-is-teslas-robotaxi-actually-worth/)\n- 2026-11-10: A reviewer reports the Cybercab is running in Austin, with a Dallas rollout planned for late November. [T3](https://www.t3.com/auto/i-rode-in-cybercab-and-now-think-waymos-days-could-be-numbered-why-teslas-latest-marks-the-end-of-cybertruck-poses-questions-to-uber)\n- 2026-11-09: Tesla launched in San Antonio with a zone of about 275 sq mi, its 8th city. Jacksonville, Las Vegas and Phoenix are listed as \"coming soon.\" [Statesman](https://www.statesman.com/business/article/tesla-robotaxi-san-antonio-launch-austin-expansion-22520721.php), [Mashable](https://mashable.com/tech/tesla-robotaxi-san-antonio)\n- 2026-10-31: NextBigFuture claims about 700K unsupervised miles a week, up from 558K in the week of Oct 12-18, with 17-20% weekly growth. It projects about 2M miles a week by late November and says 300 Cybercabs each are planned for Dallas and Houston in November. It also cites 4.0-4.1M cumulative on Oct 30-31. These are blogger estimates. [NBF](https://www.nextbigfuture.com/2026/10/tesla-robotaxi-ramp-in-texas-and-florida-tracking-to-pass-waymo-by-end-of-2026.html)\n- 2026-10-27: Electrek reports Tesla's best week at 558K miles, of which Austin was 438K (up 30% week over week), Dallas 95K, and the four smaller markets about 25K combined. Waymo drives about 7x more. [Electrek](https://electrek.co/2026/10/27/musk-robotaxi-victory-waymo-austin-miles/)\n- 2026-10-21: Tesla published its first Robotaxi Safety Report: 3.11M miles through Oct 18. [driveteslacanada](https://driveteslacanada.ca/?p=126145)\n\n## 4. Base rates and trend\n- Cumulative driverless miles over time:\n  - Late July (Q2 report): about 0.38M\n  - 2026-09-03: 1.0M. About 620K of that came in the prior six weeks, roughly 15K a day. [Electrek](https://electrek.co/2026/09/03/tesla-announces-1-million-unsupervised-miles-driven-by-robotaxi/)\n  - 2026-10-18: 3.1M, about 45K a day since Sep 3, with the latest week at about 80K a day.\n  - 2026-11-09: 4.81M on the counter.\n- Actual weekly miles have grown fast, roughly 20-30% a week in October.\n- Implied range for Dec 1 (my calculation):\n  - Flat counter rate: about 6.6-6.7M.\n  - If actual miles grew about 15% a week from 100K a day in early November: roughly 7.5-8.5M, but the counter only shows this if Tesla publishes updated data that resets it.\n- This is not seasonal. The series is too new to have earlier years for comparison.\n\n## 5. Other forecasts\n- I found no market on robotaxi miles.\n- Related Kalshi markets for Tesla robotaxi states offered in 2026: Florida 0.90, Nevada 0.62, Arizona 0.47.\n- Polymarket puts a California launch by Dec 31 at 0.03.\n\n## 6. Upcoming events before resolution\n- A second Safety Report. I couldn't find its schedule. If it is monthly, Tesla could publish around Nov 18-25 with data through about Nov 15. That would probably raise the counter's rate given the weekly growth.\n- Cybercab rollout in Dallas in late November, plus about 300 vehicles each planned for Dallas and Houston.\n- Ramp-up in San Antonio and the expanded Austin geofence, and possible launches in Jacksonville, Las Vegas and Phoenix.\n- Holiday travel around Thanksgiving (Nov 26).\n- Risk: if Robotaxi Stats has no Dec 1 snapshot, resolution falls back to tesla.com, which blocked automated access.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-11 21:08 UTC; check each market really matches the question)\n- Kalshi: What will Tesla say during the Cybercab Launch? (any Tesla representative - Cybercab Launch Event originally scheduled for September 3, 2026). Yes prices: Event does not qualify: 0.9700; Per-mile: 0.0100; 30,000 / 30k / $30,000: 0.0100; Butterfly door: 0.0400; Las Vegas / Nevada: 0.0100; Unsupervised: 0.0500; Full Self-Driving / FSD: 0.0500; Optimus: 0.0100; Safety monitor / Safety driver: 0.0100; Subscriber / Subscription: 0.0300.\n- Kalshi: Which states will robotaxi be offered to this year? (Before Jan 1, 2027). Yes prices: Arizona: 0.47; Nevada: 0.62; Georgia: 0.12; California: 0.01; Florida: 0.9000.\n- Kalshi: Will D.C. legalize robotaxis? (Before Jan 1, 2028). Yes prices: Yes: 0.15.\n- Kalshi: How much will Tesla deliveries grow this year? (Before 2027). Yes prices: Above 500000 in a single quarter: 0.42; Above 2000000 in a single quarter: 0.02; Above 750000 in a single quarter: 0.02; Above 1000000 in a single quarter: 0.03; Above 1500000 in a single quarter: 0.0100.\n- Kalshi: Tesla headcount this year (in 2026). Yes prices: Above 140000: 0.39; Above 135000: 0.67; Above 130000: 0.85; Above 145000: 0.12; Above 125000: 0.94; Above 120000: 0.96.\n- Kalshi: Tesla total production this year (in 2026). Yes prices: Above 1.85 million: 0.36; Above 1.8 million: 0.79; Above 1.75 million: 0.82; Above 1.9 million: 0.18; Above 1.7 million: 0.88; Above 1.65 million: 0.89; Above 1.6 million: 0.91; Above 1.55 million: 0.96; Above 1.5 million: 0.96.\n- Kalshi: Tesla total deliveries this year (in 2026). Yes prices: Above 1.8 million: 0.47; Above 1.85 million: 0.16; Above 1.75 million: 0.89; Above 1.9 million: 0.12; Above 1.7 million: 0.89; Above 1.65 million: 0.91; Above 1.5 million: 0.94; Above 1.55 million: 0.95; Above 1.6 million: 0.94.\n- Kalshi: Tesla Roadster delivery (In 2026). Yes prices: Before 2029: 0.49; Before July, 2028: 0.34; Before 2028: 0.10; Before July, 2027: 0.03; Before 2027: 0.0200.\n- Polymarket: Will Tesla launch robotaxis in California by December 31? (ends 2027-01-01). [Yes, No] prices: Will Tesla launch robotaxis in California by December 31?: [\"0.0305\", \"0.9695\"]",
+    "I could not find anything that settles this question yet. The latest reading on Robotaxi Stats is **4.81M miles (Nov 9)**, which is below the 5.0M bottom of the question's range. At recent rates, the Dec 1 reading would most likely land around 6.5M to 9M. Those are my own extrapolations, not forecasts.\n\n### 1. Resolution source\n- 2026-11-09, about 3:20 AM PT: Robotaxi Stats shows \"Tesla's live estimate\" at **4.81M (4,806,465)** driverless miles. The site describes Tesla's counter as an \"estimate at fleet's current pace\". It also shows Tesla's confirmed figure of 3.1M through Oct 18, as a range of \"3.1M-4.81M\". The page header says \"as of Nov 10 PT\" and the footer says \"Data updated Nov 8, 11:05 PM PT\", so the site does not refresh the counter often. [robotaxistats](https://www.robotaxistats.com/)\n- The site has no archive of past counter readings. tracker.json holds only the Nov 9 reading, and the changelog's only Tesla mileage entry is the Oct 21 safety report showing 3.1M. The methodology page does not say how often the counter is read. [tracker.json](https://www.robotaxistats.com/data/tracker.json), [changelog](https://www.robotaxistats.com/changelog/), [methodology](https://www.robotaxistats.com/methodology/)\n- Confirmed miles by city through Oct 18: Austin 2.118M, Dallas 0.608M, Houston 0.226M, Orlando 61K, Tampa 53K, Miami 46K. These add up to about 3.11M. [robotaxistats](https://www.robotaxistats.com/)\n- I could not read tesla.com/robotaxi or tesla.com/robotaxi/safety, which is the fallback source; both returned HTTP 403.\n\n### 2. Current status\n- Nothing settles the question yet.\n- If Robotaxi Stats publishes no new counter reading by Dec 1, the stale 4.81M figure could in theory be what decides it. That is below the question's range.\n\n### 3. Recent news (newest first)\n- 2026-11-10 and 11: Robotaxi now runs in 8 cities. Jacksonville, Las Vegas and Phoenix are listed as \"coming soon\". [Mashable](https://mashable.com/tech/tesla-robotaxi-san-antonio)\n- 2026-11-10: A phased Cybercab rollout to Dallas is reported for late November. [T3](https://www.t3.com/auto/i-rode-in-cybercab-and-now-think-waymos-days-could-be-numbered-why-teslas-latest-marks-the-end-of-cybertruck-poses-questions-to-uber)\n- 2026-11-09: San Antonio launched with a geofence of about 274 to 275 sq mi. A tracker says the Austin geofence grew by about 62.5% on the same day. [Electrek](https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence/), [TeslaNorth](https://teslanorth.com/2026/11/09/tesla-austin-robotaxi-area-expansion-442/)\n- 2026-11-08: The Texas DMV lists 1,282 registered Tesla robotaxi vehicles, rising to 1,302 by Nov 10 (671 Model Y, 573 Cybercab). That count was 858 on Oct 22. [robotaxistats changelog](https://www.robotaxistats.com/changelog/)\n- About 2026-10-31: NextBigFuture, a blog citing a community tracker, says the total was about 4.1M miles, adding roughly 700K per week (up from 550K in the week of Oct 12 to 18) and growing 17 to 20% a week. It projects about 2M miles per week by the last week of November, with roughly 600 more Cybercabs in Dallas and Houston. [NBF](https://www.nextbigfuture.com/2026/10/tesla-robotaxi-ramp-in-texas-and-florida-tracking-to-pass-waymo-by-end-of-2026.html)\n- 2026-10-21: Tesla's first safety report shows 3.1M driverless miles through Oct 18. Some outlets report 3.3M. [selfdrivenews](https://selfdrivenews.com/tesla-robotaxi-safety-report-driverless-miles/), [tao.media](https://www.tao.media/tesla-publishes-robotaxi-safety-data-for-3-3-million-driverless-miles/)\n\n### 4. Base rates and trend\nHow cumulative unsupervised miles have grown:\n- About 2026-07-22 (Q2 call): about 0.38M. [NotATeslaApp](https://www.notateslaapp.com/news/4486/tesla-robotaxi-hits-380k-unsupervised-miles-names-next-markets)\n- 2026-09-03: 1M, about 15K per day since July. [Electrek](https://electrek.co/2026/09/03/tesla-announces-1-million-unsupervised-miles-driven-by-robotaxi/)\n- 2026-09-30: nearly 2M, about 37K per day. [TokenPost](https://www.tokenpost.com/news/business/37705)\n- 2026-10-18: 3.1M, about 61K per day.\n- About 2026-10-31: about 4.1M (blog figure), about 77K per day.\n- 2026-11-09: 4.81M (live estimate), about 78K per day over 22 days.\n\nMy extrapolation over the 22 days from Nov 9 to Dec 1:\n- At a flat 78K per day: about 6.5M.\n- At 100K per day: about 7.0M.\n- With weekly miles growing about 15 to 20% a week: about 7.3 to 7.6M.\n- On NBF's aggressive path, 2M miles per week by late November: around 8 to 9M.\n\nTwo caveats:\n- The counter is Tesla's own extrapolation, so it may move in steps when Tesla re-bases it.\n- The series is only about 4 months old, so there is no seasonal history. A Thanksgiving dip in late November is possible.\n\n### 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on Robotaxi miles.\n- Related markets:\n  - Kalshi, robotaxi offered in a state by end of 2026: Florida 0.90, Nevada 0.62, Arizona 0.47.\n  - Polymarket, Tesla robotaxi in California by Dec 31: 0.03.\n- NextBigFuture is the only expert-style projection I found, and it is bullish (see section 3).\n\n### 6. Upcoming events before resolution\n- Late November: the Cybercab rollout in Dallas, and possibly about 300 Cybercabs each for Dallas and Houston, per NBF.\n- The new San Antonio service and the larger Austin geofence should add miles.\n- Possible launches in Las Vegas, Phoenix or Jacksonville.\n- Tesla may publish a safety report update that re-bases the counter.\n- How often Robotaxi Stats refreshes is a key risk: a stale reading would make the number lower.\n- Tesla's Q4 earnings come in late January, after resolution.\n\nSources: [robotaxistats](https://www.robotaxistats.com/), [tracker.json](https://www.robotaxistats.com/data/tracker.json), [changelog](https://www.robotaxistats.com/changelog/), [methodology](https://www.robotaxistats.com/methodology/), [NextBigFuture](https://www.nextbigfuture.com/2026/10/tesla-robotaxi-ramp-in-texas-and-florida-tracking-to-pass-waymo-by-end-of-2026.html), [Electrek 1M](https://electrek.co/2026/09/03/tesla-announces-1-million-unsupervised-miles-driven-by-robotaxi/), [TokenPost](https://www.tokenpost.com/news/business/37705), [selfdrivenews](https://selfdrivenews.com/tesla-robotaxi-safety-report-driverless-miles/), [tao.media](https://www.tao.media/tesla-publishes-robotaxi-safety-data-for-3-3-million-driverless-miles/), [NotATeslaApp](https://www.notateslaapp.com/news/4486/tesla-robotaxi-hits-380k-unsupervised-miles-names-next-markets), [Electrek San Antonio](https://electrek.co/2026/11/09/tesla-robotaxi-san-antonio-launch-geofence/), [TeslaNorth](https://teslanorth.com/2026/11/09/tesla-austin-robotaxi-area-expansion-442/), [Mashable](https://mashable.com/tech/tesla-robotaxi-san-antonio), [T3](https://www.t3.com/auto/i-rode-in-cybercab-and-now-think-waymos-days-could-be-numbered-why-teslas-latest-marks-the-end-of-cybertruck-poses-questions-to-uber)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-11 21:08 UTC; check each market really matches the question)\n- Kalshi: What will Tesla say during the Cybercab Launch? (any Tesla representative - Cybercab Launch Event originally scheduled for September 3, 2026). Yes prices: Event does not qualify: 0.9700; Per-mile: 0.0100; 30,000 / 30k / $30,000: 0.0100; Butterfly door: 0.0400; Las Vegas / Nevada: 0.0100; Unsupervised: 0.0500; Full Self-Driving / FSD: 0.0500; Optimus: 0.0100; Safety monitor / Safety driver: 0.0100; Subscriber / Subscription: 0.0300.\n- Kalshi: Which states will robotaxi be offered to this year? (Before Jan 1, 2027). Yes prices: Arizona: 0.47; Nevada: 0.62; Georgia: 0.12; California: 0.01; Florida: 0.9000.\n- Kalshi: Will D.C. legalize robotaxis? (Before Jan 1, 2028). Yes prices: Yes: 0.15.\n- Kalshi: How much will Tesla deliveries grow this year? (Before 2027). Yes prices: Above 500000 in a single quarter: 0.42; Above 2000000 in a single quarter: 0.02; Above 750000 in a single quarter: 0.02; Above 1000000 in a single quarter: 0.03; Above 1500000 in a single quarter: 0.0100.\n- Kalshi: Tesla headcount this year (in 2026). Yes prices: Above 140000: 0.39; Above 135000: 0.67; Above 130000: 0.85; Above 145000: 0.12; Above 125000: 0.94; Above 120000: 0.96.\n- Kalshi: Tesla total production this year (in 2026). Yes prices: Above 1.85 million: 0.36; Above 1.8 million: 0.79; Above 1.75 million: 0.82; Above 1.9 million: 0.18; Above 1.7 million: 0.88; Above 1.65 million: 0.89; Above 1.6 million: 0.91; Above 1.55 million: 0.96; Above 1.5 million: 0.96.\n- Kalshi: Tesla total deliveries this year (in 2026). Yes prices: Above 1.8 million: 0.47; Above 1.85 million: 0.16; Above 1.75 million: 0.89; Above 1.9 million: 0.12; Above 1.7 million: 0.89; Above 1.65 million: 0.91; Above 1.5 million: 0.94; Above 1.55 million: 0.95; Above 1.6 million: 0.94.\n- Kalshi: Tesla Roadster delivery (In 2026). Yes prices: Before 2029: 0.49; Before July, 2028: 0.34; Before 2028: 0.10; Before July, 2027: 0.03; Before 2027: 0.0200.\n- Polymarket: Will Tesla launch robotaxis in California by December 31? (ends 2027-01-01). [Yes, No] prices: Will Tesla launch robotaxis in California by December 31?: [\"0.0305\", \"0.9695\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 6.5,
+        "p25": 6.6,
+        "p50": 6.72,
+        "p75": 7.375,
+        "p90": 8.2
+      },
+      "reasoning": "(a) **Time left:** About 20 days. Resolution uses the last Robotaxi Stats snapshot timestamped December 1, 2026 (PST).\n\n(b) **Latest known value:** 4.81M miles (counter 4,806,465) on Robotaxi Stats, around 03:20 PT on 2026-11-09. The confirmed figure is 3.1M miles through Oct 18, from Tesla's Safety Report.\n\n(c) **If nothing changed:** The counter is a fixed-rate projection of about 80.6K miles a day from Tesla's last report. Left as is, it reaches about 6.6-6.65M by late Dec 1 PST. The exact figure depends on when in the day the snapshot is taken. A frozen counter at about 4.8M is very unlikely.\n\n(d) **If the trend continued:**\n- With no new report, the counter is about 6.65M.\n- Actual weekly miles grew 10-20% a week in October. If Tesla publishes a new report around mid-to-late November, the counter would reset to a higher base and a faster rate. That gives roughly 7.5-8.5M by Dec 1, assuming growth continued.\n- If growth stalled, a reset would leave the figure near 6.6M, or even slightly below it.\n\n(e) **Historical variation:**\n- Cumulative miles went from 1.0M (Sep 3) to 3.1M (Oct 18) to 4.8M (Nov 9, projected).\n- Over a 3-week window, the counter moves about 1.7-1.85M at the current rate.\n- Real growth has been fast, with weekly miles up 20-30% in October.\n\n(f) **Experts and markets:**\n- No market exists on this quantity.\n- NextBigFuture, a blogger, projects about 2M miles a week by late November, which would be well above the counter.\n- The question creator's range is 5-15M.\n\n(g) **Unexpected scenarios:**\n- *Low:* A Tesla update that reveals slower actual miles, or a safety incident or pause. Either would reset the counter lower or slow its rate, for about 6.0M.\n- *High:* A report showing 1M+ miles a week, with the Cybercab fleet in Dallas and Houston and the San Antonio and Austin expansions. The reset rate could then exceed 150K a day, for about 9-10M.\n\nPercentile 1: 5.9\nPercentile 5: 6.35\nPercentile 10: 6.5\nPercentile 20: 6.58\nPercentile 30: 6.62\nPercentile 40: 6.66\nPercentile 50: 6.72\nPercentile 60: 6.88\nPercentile 70: 7.15\nPercentile 80: 7.6\nPercentile 90: 8.2\nPercentile 95: 8.8\nPercentile 99: 10.0"
+    },
+    {
+      "value": {
+        "p10": 6.45,
+        "p25": 6.615,
+        "p50": 6.9,
+        "p75": 7.6,
+        "p90": 8.4
+      },
+      "reasoning": "(a) **Time left:** About 20 days. Resolution uses the last Robotaxi Stats snapshot on December 1, 2026 (PST).\n\n(b) **Latest known value:** 4.81M miles (counter 4,806,465), Tesla's live estimate on Robotaxi Stats, on 2026-11-09 at about 03:20 PT. The last confirmed figure is 3.1M miles through 2026-10-18.\n\n(c) **If nothing changed:** The counter is itself a projection, so \"nothing changing\" means it keeps its fixed rate of about 78-80K miles a day. That puts it at roughly 6.6-6.65M by the end of Dec 1.\n\n(d) **If the current trend continued:** Actual miles grew 20-30% a week in October, so a new Tesla report would likely reset the counter to a higher base and a faster rate.\n- Moderate growth (about 8% a week) gives about 7.5M.\n- Faster growth (about 15% a week) gives about 8.5M.\n- It is uncertain whether Tesla publishes a new report or milestone before Dec 1. The first report's cadence is unknown and could be quarterly. I put roughly a 40-50% chance on an update.\n\n(e) **Historical variation:**\n- Cumulative miles were 1.0M on Sep 3, 3.1M on Oct 18, and 4.81M on the Nov 9 estimate.\n- The counter adds about 1.8M over 23 days at its current rate.\n- Rate resets could add another 0.5-2M.\n\n(f) **Expectations of experts and markets:**\n- There is no market on this quantity.\n- NextBigFuture projects about 2M miles a week by late November, which looks optimistic.\n- Electrek reports 558K miles in the best week (Oct 12-18).\n- The question creator expects 5-15M.\n\n(g) **Unexpected scenarios:**\n- **Low:** Tesla publishes data showing actual miles below the projection, or a safety incident pauses operations, and the counter resets downward to about 6.0M or less.\n- **High:** Tesla publishes a late-November update with weekly miles above 1M thanks to the Cybercab and the San Antonio and Dallas ramps, and the counter jumps to about 9-10M.\n\n**How I set the tails:**\n- **Percentile 1:** A downward correction or a stale snapshot would put the result near 5.8M.\n- **Percentile 99:** An aggressive reset driven by fleet expansion would put it near 10.5M.\n\nPercentile 1: 5.8\nPercentile 5: 6.25\nPercentile 10: 6.45\nPercentile 20: 6.58\nPercentile 30: 6.65\nPercentile 40: 6.75\nPercentile 50: 6.9\nPercentile 60: 7.1\nPercentile 70: 7.4\nPercentile 80: 7.8\nPercentile 90: 8.4\nPercentile 95: 9.0\nPercentile 99: 10.5"
+    },
+    {
+      "value": {
+        "p10": 6.4,
+        "p25": 6.6,
+        "p50": 6.85,
+        "p75": 7.425,
+        "p90": 8.2
+      },
+      "reasoning": "(a) **Time left:** About 20 days. The question resolves on the Robotaxi Stats snapshot for December 1, 2026 (PST).\n\n(b) **Latest known value:** Tesla's live estimate on Robotaxi Stats read 4.81M miles (4,806,465) on 2026-11-09 at about 03:20 PT. The last confirmed figure is 3.1M miles through Oct 18, from the Tesla Safety Report.\n\n(c) **If nothing changed:** If the counter froze, the answer would be about 4.8M. That is unrealistic, because the counter advances automatically.\n\n(d) **If the current trend continued:** The counter adds about 78-81K miles a day. From Nov 9 03:20 PT to Dec 1 PST is about 22-23 days. That adds about 1.8M miles, giving about 6.6-6.7M depending on the snapshot time. If Tesla publishes a new safety report before Dec 1, the counter would likely reset to a higher rate. Actual weekly miles were growing 15-30% a week in October (558K to about 700K+ a week). With that reset, the total could reach about 7.5-8.5M.\n\n(e) **Historical variation:** The daily rate roughly tripled between September and mid-October, from about 15K to 45K and then 80K a day. Over a three-week window, the main uncertainty is whether the extrapolation rate gets revised, not the mechanical drift of the counter.\n\n(f) **Experts and markets:** There is no market on this quantity. NextBigFuture, a blog, projects about 2M miles a week by late November, which is aggressive. The question creator puts the likely range at 5-15M.\n\n(g) **Unexpected scenarios:**\n- **Low:** Robotaxi Stats stops updating, or Tesla revises its estimate down after a report showing slower actual growth. A fleet pause after an incident would have a similar effect. Any of these would leave the count near 5.5-6.0M.\n- **High:** Tesla publishes a new report showing about 1-1.5M miles a week by mid-November, with a Cybercab ramp in Dallas and Houston plus the San Antonio launch. The counter would then jump and accelerate, toward 9-11M.\n\nPercentile 1: 5.6\nPercentile 5: 6.15\nPercentile 10: 6.4\nPercentile 20: 6.55\nPercentile 30: 6.65\nPercentile 40: 6.75\nPercentile 50: 6.85\nPercentile 60: 7.0\nPercentile 70: 7.25\nPercentile 80: 7.6\nPercentile 90: 8.2\nPercentile 95: 8.8\nPercentile 99: 10.5"
+    },
+    {
+      "value": {
+        "p10": 6.3,
+        "p25": 6.725,
+        "p50": 7.25,
+        "p75": 7.875,
+        "p90": 8.6
+      },
+      "reasoning": "(a) About 20 days remain. Resolution uses the Robotaxi Stats snapshot timestamped December 1, 2026 (PST).\n\n(b) The latest value is 4.81M miles (4,806,465), Tesla's live estimate as shown on Robotaxi Stats around Nov 9, 2026. Tesla's last confirmed figure was 3.1M through Oct 18.\n\n(c) If nothing changed, meaning the counter stayed stale, the answer would be about 4.8M. That is unlikely, since the counter is a running estimate and the site does refresh.\n\n(d) If the trend continued:\n- At the recent pace of about 78K miles per day, Dec 1 lands near 6.5M.\n- The fleet is growing fast: Texas registrations went from 858 to 1,302 between Oct 22 and Nov 10. San Antonio launched, the Austin geofence expanded, and Cybercabs are going to Dallas. These point to a daily rate climbing toward 110 to 150K by late November.\n- That implies roughly 7.0 to 7.5M.\n- One caveat: the counter appears to extrapolate at a set pace that Tesla periodically re-bases. Recent readings show surprisingly flat daily rates of about 77 to 79K per day, which favors the lower end unless Tesla re-bases.\n\n(e) Over the past roughly 20-day windows, the cumulative total rose by about 1.0 to 1.7M, and the daily rate roughly doubled every month. Over 22 days I expect an increase of about 1.6 to 3M.\n\n(f) NextBigFuture (bullish) projects about 2M miles per week by late November, which implies about 8 to 9M. There are no markets on this quantity, and the question creator's range is 5 to 15M.\n\n(g) Low scenario: Robotaxi Stats fails to refresh, or Tesla pauses or freezes the counter after an incident or safety review, and the resolution reads about 5 to 5.5M. High scenario: Tesla re-bases the counter upward with a new safety report that reflects the much larger Cybercab fleet, pushing it to about 9 to 10M or more.\n\nPercentile 1: 5.0\nPercentile 5: 5.9\nPercentile 10: 6.3\nPercentile 20: 6.6\nPercentile 30: 6.85\nPercentile 40: 7.05\nPercentile 50: 7.25\nPercentile 60: 7.45\nPercentile 70: 7.7\nPercentile 80: 8.05\nPercentile 90: 8.6\nPercentile 95: 9.2\nPercentile 99: 10.6"
+    },
+    {
+      "value": {
+        "p10": 6.0,
+        "p25": 6.55,
+        "p50": 7.1,
+        "p75": 7.8,
+        "p90": 8.6
+      },
+      "reasoning": "(a) **Time left:** about 20 days. Resolution uses the Robotaxi Stats snapshot timestamped December 1, 2026 (PST).\n\n(b) **Latest known value:** 4.81M miles (4,806,465), Tesla's live estimate as shown on Robotaxi Stats around Nov 9, 2026. Tesla's last confirmed figure was 3.1M through Oct 18.\n\n(c) **If nothing changed:** if the site's counter were never refreshed, the answer would be about 4.81M. That is unlikely, because the site appears to update by script and the Tesla page is the fallback.\n\n(d) **If the current trend continued:**\n- At a flat 78K miles per day: about 6.5M.\n- The fleet is growing fast: Texas registrations rose from 858 to 1,302 in three weeks. San Antonio has launched, the Austin geofence grew, and Cybercabs are coming to Dallas. With those, the daily pace plausibly rises from about 85K to about 130K per day by late November.\n- That implies about 2.1M to 2.5M more miles, for a total of roughly 6.9M to 7.3M.\n\n(e) **Historical variation:** the daily pace has roughly doubled every month (15K → 37K → 61K → 78K per day). Over the last 22 days the total rose by about 1.7M. Tesla re-basing its estimate could cause step changes of several hundred thousand miles.\n\n(f) **Expectations:**\n- No market covers this quantity.\n- NextBigFuture is bullish and projects about 2M miles per week by late November, which implies 8M to 9M.\n- The research assistant's extrapolations range from 6.5M to 7.6M.\n\n(g) **Scenarios:**\n- **Low:** the Robotaxi Stats counter stays stale or refreshes only partially, or a safety incident or pause cuts operations. The result would be about 5M to 5.8M.\n- **High:** Cybercab deployments in Dallas and Houston plus the San Antonio and Austin expansions sharply raise the pace, or Tesla re-bases its counter upward. The result would be 9M to 11M.\n\nPercentile 1: 4.9\nPercentile 5: 5.6\nPercentile 10: 6.0\nPercentile 20: 6.4\nPercentile 30: 6.7\nPercentile 40: 6.9\nPercentile 50: 7.1\nPercentile 60: 7.3\nPercentile 70: 7.6\nPercentile 80: 8.0\nPercentile 90: 8.6\nPercentile 95: 9.2\nPercentile 99: 10.8"
+    },
+    {
+      "value": {
+        "p10": 6.4,
+        "p25": 6.55,
+        "p50": 7.1,
+        "p75": 8.15,
+        "p90": 9.2
+      },
+      "reasoning": "(a) **Time left:** About 20 days. Resolution uses the latest Robotaxi Stats snapshot timestamped December 1, 2026 (PST).\n\n(b) **Latest known value:** 4.81M miles (4,806,465), Tesla's live estimate on Robotaxi Stats as of Nov 9, 2026. Tesla's last confirmed figure was 3.1M through Oct 18.\n\n(c) **If nothing changed:** Tesla's counter is an extrapolation \"at fleet's current pace,\" so it keeps rising even without new data.\n- From Oct 18 to Nov 9 it rose 1.71M in 22 days, about 78K per day.\n- That matches the 550K-per-week pace Tesla reported for Oct 12-18 almost exactly.\n- So the counter appears to run at a fixed rate from the last report.\n- With no re-base, Dec 1 would read about 4.81 + 22 × 0.0786 ≈ 6.5M.\n- A truly frozen snapshot would give 4.81M, but that is unlikely by Dec 1.\n\n(d) **If the current trend continued:** The fleet roughly grew 50% between Oct 22 and Nov 10 (858 to 1,302 Texas registrations). San Antonio launched and the Austin geofence expanded. Actual miles are therefore likely running well above 78K per day.\n- If Tesla re-bases with a new safety report or counter update (for example, data through mid-November), actual miles could be about 6 to 6.2M by Nov 15.\n- The new pace would then be about 120-140K per day, giving roughly 7.8-8.6M by Dec 1.\n- NBF's \"4.1M at Oct 31\" matches the fixed-rate counter, so its claim of 17-20% weekly growth is speculative.\n\n(e) **Historical variation:** Over recent 3-week windows the cumulative total rose 1 to 1.7M, with the daily rate roughly doubling each month from July to October. A re-base could add a jump of about 0.5-1.5M on top of that.\n\n(f) **Experts and markets:** There is no market on this number. NBF is bullish, projecting about 2M miles per week by late November, which would imply 8-9M+. The question creator's range is 5-15M.\n\n(g) **Unexpected scenarios:**\n- Low: Robotaxi Stats stops refreshing, so the Dec 1 snapshot shows a late-November reading. Or Tesla re-bases downward after a Thanksgiving dip or an incident-driven pause. Result: about 5.5-6.2M.\n- High: Tesla re-bases with strong growth, with Cybercab deployments in Dallas and Houston adding many vehicles, and the pace jumps to 200K+ per day. Result: 10-12M.\n\nI treat the outcome as two scenarios: about a 50% chance of no re-base (a tight cluster near 6.5M) and a spread from 7 to 10M if Tesla re-bases.\n\nPercentile 1: 5.6\nPercentile 5: 6.2\nPercentile 10: 6.4\nPercentile 20: 6.5\nPercentile 30: 6.6\nPercentile 40: 6.8\nPercentile 50: 7.1\nPercentile 60: 7.5\nPercentile 70: 7.9\nPercentile 80: 8.4\nPercentile 90: 9.2\nPercentile 95: 9.9\nPercentile 99: 11.5"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 6.3946,
+    "p25": 6.6004,
+    "p50": 6.9873,
+    "p75": 7.7214,
+    "p90": 8.5837
+  },
+  "usage": [
+    {
+      "question_id": "46721",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.0,
+      "notional_cost_usd": 7.800000000000001e-05,
+      "input_tokens": 505,
+      "output_tokens": 55,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 0.0002126,
+      "input_tokens": 889,
+      "output_tokens": 70,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 89.9,
+      "notional_cost_usd": 0.3048367,
+      "input_tokens": 81755,
+      "output_tokens": 4642,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 19.4,
+      "notional_cost_usd": 0.078476,
+      "input_tokens": 5028,
+      "output_tokens": 1913,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.6,
+      "notional_cost_usd": 0.07949600000000001,
+      "input_tokens": 5028,
+      "output_tokens": 1964,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0007464,
+      "input_tokens": 2838,
+      "output_tokens": 358,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.2,
+      "notional_cost_usd": 0.0007911999999999999,
+      "input_tokens": 2897,
+      "output_tokens": 424,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.00031304,
+      "input_tokens": 2840,
+      "output_tokens": 442,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.8,
+      "notional_cost_usd": 0.00038994,
+      "input_tokens": 2899,
+      "output_tokens": 595,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 35.9,
+      "notional_cost_usd": 0.0338038,
+      "input_tokens": 5030,
+      "output_tokens": 1519,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0008450999999999999,
+      "input_tokens": 2804,
+      "output_tokens": 569,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0002947,
+      "input_tokens": 2806,
+      "output_tokens": 406,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 114.2,
+      "notional_cost_usd": 0.2442544,
+      "input_tokens": 84410,
+      "output_tokens": 5261,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.074408,
+      "input_tokens": 5802,
+      "output_tokens": 1400,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.07514799999999999,
+      "input_tokens": 5802,
+      "output_tokens": 1437,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.0007455,
+      "input_tokens": 2781,
+      "output_tokens": 379,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008151,
+      "input_tokens": 2779,
+      "output_tokens": 519,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.00038476,
+      "input_tokens": 2781,
+      "output_tokens": 587,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00037643999999999997,
+      "input_tokens": 2780,
+      "output_tokens": 570,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.0,
+      "notional_cost_usd": 0.094428,
+      "input_tokens": 5802,
+      "output_tokens": 2401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0008768000000000001,
+      "input_tokens": 3055,
+      "output_tokens": 532,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46721",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00041451,
+      "input_tokens": 3056,
+      "output_tokens": 641,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9921
+}
