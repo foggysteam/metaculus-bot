@@ -175,7 +175,12 @@ def late_questions(now: datetime) -> list[tuple[str, str, dict]]:
 
 
 def _gh(*args: str) -> str:
-    return subprocess.run(["gh", *args], check=True, capture_output=True, text=True, timeout=60).stdout
+    # CREATE_NO_WINDOW: the PC backup runs with no window (pythonw), and gh would flash one up
+    # every 5 minutes. 0 on Linux.
+    no_window = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+    return subprocess.run(
+        ["gh", *args], check=True, capture_output=True, text=True, timeout=60, creationflags=no_window
+    ).stdout
 
 
 def list_runs() -> list[dict]:

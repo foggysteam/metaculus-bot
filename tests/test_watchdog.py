@@ -206,6 +206,30 @@ def test_pc_backup_runs_only_one_copy() -> None:
     assert Path(backup.console_python()).name.lower() != "pythonw.exe"
 
 
+def test_pc_backup_starts_no_windows() -> None:
+    """It runs with no window, so every console program it starts (gh, git, the pass) must ask for
+    none, or a window flashes up every 5 minutes (11 Nov 2026)."""
+    import subprocess
+
+    import backup
+
+    seen = []
+
+    def fake_run(args, **kwargs):
+        seen.append((args[0], kwargs.get("creationflags")))
+        return subprocess.CompletedProcess(args, 0, stdout="[]", stderr="")
+
+    saved = subprocess.run
+    subprocess.run = fake_run
+    try:
+        w._gh("run", "list")
+        backup.git("status")
+    finally:
+        subprocess.run = saved
+    assert [name for name, _ in seen] == ["gh", "git"]
+    assert all(flags == getattr(subprocess, "CREATE_NO_WINDOW", 0) for _, flags in seen)
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for test in tests:
