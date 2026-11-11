@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-11T06:05:03.917933+00:00",
+  "bot_version": "2026-11-08.1",
+  "started_at": "2026-11-11T06:01:15.873741+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46587,
+    "post_id": 46354,
+    "url": "https://www.metaculus.com/questions/46354",
+    "type": "DiscreteQuestion",
+    "unit": "Mw",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "What will be the highest earthquake magnitude recorded during December 2026?",
+    "resolution_criteria": "This question will resolve as the moment magnitude (Mw) of the [highest magnitude](https://en.wikipedia.org/wiki/Moment_magnitude_scale) earthquake that is recorded during December 2026.",
+    "fine_print": "The primary source for this question will be the [U.S. Geological Survey](https://earthquake.usgs.gov/earthquakes/search/) but Metaculus may consider other sources if USGS becomes unavailable or unreliable.",
+    "close_time": "2026-11-11 09:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 00:00 UTC"
+  },
+  "research": [
+    "Nothing that settles December 2026 can be known yet. Based on USGS data for the last ten Decembers, the largest quake has typically been somewhere between M6.5 and M7.9, with a median of about M7.2. Six of those ten Decembers had at least one M7.0+ event.\n\n## 1. Resolution source\n- The question resolves on the USGS catalog (earthquake.usgs.gov). I queried its event API (fdsnws) directly. Wikipedia's 2026 list also takes its magnitudes from USGS.\n- 2026-11-11: The latest M6.3+ events in USGS between Oct 15 and Nov 11 2026 are M6.4 Solomon Islands (Nov 9), M6.4 southeast of Easter Island (Oct 29), M6.5 Bonin Islands (Oct 25), M6.8 Vanuatu (Oct 24), M7.0 Nagqu, Tibet (Oct 22) and M6.9 off Kamchatka (Oct 16). [USGS API](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2026-10-15&endtime=2026-11-12&minmagnitude=6.3&orderby=time)\n- USGS often revises magnitudes by about 0.1 in the days after an event, and early automatic magnitudes can change more.\n\n## 2. Current status\n- No December 2026 data exists yet, so nothing is settled. The resolution window runs from Dec 1 to Dec 31 2026, presumably in UTC.\n- 2026 so far: Wikipedia counts 13 events of M7.0-7.9 and none of M8+. The largest are M7.8 Mindanao (Jun 7) and M7.8 Flores Sea (Aug 14), followed by M7.7 Panama (Oct 9). [Wikipedia](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2026), [DisasterAWARE](https://www.disasteraware.com/news-event/biggest-earthquakes-2026)\n\n## 3. Recent news (newest first)\n- 2026-11-10: More than 20 quakes of M5.0+ hit the Pacific Ring of Fire between Nov 2 and Nov 8, including two M6.1 events near Japan and Fiji. [Primicia](https://primicia.com.ve/mas/ciencia-y-tecnologia/mas-de-20-terremotos-cinturon-fuego-pacifico-noviembre-2026/)\n- 2026-11-09: M6.4 near Lata, Solomon Islands (USGS).\n- 2026-11-08: A quake in Shizuoka, Japan injured 24 people. JMA rated it M5.7 and USGS rated it M5.5. [Beinsure](https://beinsure.com/news/japan-earthquake-2026-magnitude-5-7-quake-injures-24-in-shizuoka)\n- 2026-10-22: M7.0 in Tibet killed 16 people. 2026-10-09: M7.7 in Panama. [Wikipedia](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2026)\n- None of the news articles supplied with the question describes anything relevant to December.\n\n## 4. Base rates\nLargest December earthquake each year, from the USGS API:\n- 2025: M7.6 Aomori, Japan (Dec 8). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2025-12-01&endtime=2026-01-01&minmagnitude=6.5&orderby=magnitude)\n- 2024: M7.3 Port-Vila, Vanuatu (Dec 17). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2024-12-01&endtime=2025-01-01&minmagnitude=6.5&orderby=magnitude)\n- 2023: M7.6 Mindanao, Philippines (Dec 2). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2023-12-01&endtime=2024-01-01&minmagnitude=6.5&orderby=magnitude)\n- 2022: M6.8 Tonga (Dec 4). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2022-12-01&endtime=2023-01-01&minmagnitude=6.2&orderby=magnitude)\n- 2021: M7.3, twice: Flores Sea (Dec 14) and Timor-Leste (Dec 29). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2021-12-01&endtime=2022-01-01&minmagnitude=6.5&orderby=magnitude)\n- 2020: M6.7 off Chile (Dec 27). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2020-12-01&endtime=2021-01-01&minmagnitude=6.5&orderby=magnitude)\n- 2019: M6.8 Philippines (Dec 15). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-12-01&endtime=2020-01-01&minmagnitude=6.5&orderby=magnitude)\n- 2018: M7.5 New Caledonia (Dec 5). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2018-12-01&endtime=2019-01-01&minmagnitude=6.5&orderby=magnitude)\n- 2017: M6.5, twice: Bouvet Island region and Java. [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2017-12-01&endtime=2018-01-01&minmagnitude=6.5&orderby=magnitude)\n- 2016: M7.9 Papua New Guinea (Dec 17). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2016-12-01&endtime=2017-01-01&minmagnitude=6.5&orderby=magnitude)\n\nWhat the ten years show:\n- Six of ten Decembers had an M7.0+ event.\n- None of the ten reached M8.0, and none fell below M6.5.\n- The median is about M7.2, the spread is roughly 0.5 magnitude units, and the values bunch at 6.5-6.8 and 7.3-7.6.\n- That split suggests the outcome is roughly two-sided: either there is an M7+ quake or the month tops out in the high 6s.\n- Background I did not re-check this session: the world averages about 15 M7+ quakes a year, or about 1.25 a month. That implies roughly a 70% chance of at least one M7+ in a given month, which fits the six of ten above.\n- 2026 had about 13 M7+ events by late October, which is close to normal.\n- Seasonality: earthquakes have no meaningful seasonal cycle, so December should behave like any other month.\n\n## 5. Other forecasts\n- Kalshi, \"Strongest earthquake magnitude in November 2026\" (prices as of 2026-11-11, worldwide): ≥6.6: 83%, ≥6.8: 69%, ≥7.0: 52%, ≥7.2: 38%, ≥7.4: 26%, ≥7.6: 17%, ≥7.8: 12%, ≥8.0: 8%.\n  - This is the closest analog, but it covers November, not December. It also has 11 days of November already behind it with a maximum of only M6.4, which pulls its prices down compared with a full month.\n  - The ≥8.2 price (9%) is higher than the ≥8.0 price (8%), which is inconsistent, so the thin tail is probably noisy.\n- Polymarket, \"Highest earthquake magnitude in 2026\": 7.9 or below: 84.5%, 8.0-8.1: 7%. This implies about a 15% chance of an M8+ quake in the rest of 2026, roughly 7 weeks.\n- I found no Kalshi or Polymarket market specifically on December 2026, and no expert forecast.\n\n## 6. Upcoming events before resolution\n- Earthquakes can't be predicted, so no scheduled event can move this.\n- Things worth watching through December:\n  - aftershocks of the M7.7 Panama and M7.0 Tibet quakes, which are unlikely to be larger than the main shocks;\n  - repeated M6.3-6.8 activity near Vanuatu (Oct 20 and Oct 24);\n  - a large late-November quake whose aftershock sequence carries into December. For example, the Dec 2025 M7.6 Aomori quake was followed by an M6.7 four days later.\n- No weather dependence.\n\nSources: [USGS](https://earthquake.usgs.gov/earthquakes/search/), [Wikipedia 2026 list](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2026), [DisasterAWARE](https://www.disasteraware.com/news-event/biggest-earthquakes-2026), [Primicia](https://primicia.com.ve/mas/ciencia-y-tecnologia/mas-de-20-terremotos-cinturon-fuego-pacifico-noviembre-2026/), [Beinsure](https://beinsure.com/news/japan-earthquake-2026-magnitude-5-7-quake-injures-24-in-shizuoka), [Wikipedia 2020 list](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2020), [Wikipedia 2022 list](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2022)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-11 06:01 UTC; check each market really matches the question)\n- Kalshi: 8.0 magnitude earthquake in Japan before 2030? (Before 2030). Yes prices: Before 2030: 0.34.\n- Kalshi: Will there be an at least 8.0 magnitude earthquake in California before 2028? (Before 2028). Yes prices: Before 2028: 0.10.\n- Kalshi: Will there be an at least 8.0 magnitude earthquake in California before 2035? (Before 2035). Yes prices: Before 2035: 0.19.\n- Kalshi: Strongest earthquake magnitude in November 2026 (Worldwide in November 2026 (UTC)). Yes prices: Magnitude of at least 7.0: 0.52; Magnitude of at least 7.2: 0.38; Magnitude of at least 6.8: 0.69; Magnitude of at least 7.4: 0.26; Magnitude of at least 7.6: 0.17; Magnitude of at least 6.6: 0.83; Magnitude of at least 7.8: 0.12; Magnitude of at least 8.0: 0.08; Magnitude of at least 8.2: 0.0900.\n- Kalshi: When will xAI release Grok 5? (Grok 5). Yes prices: Before 2027: 0.11; Before December: 0.0300; Before October: 0.0100; Before July: 0.0500; Before April: 0.0300; Before September: 0.0400; Before November: 0.0500.\n- Kalshi: Will the Fed publish a dot plot in December? (In December 2026). Yes prices: In December 2026: 0.95.\n- Polymarket: Highest earthquake magnitude in 2026? (ends 2027-01-07). [Yes, No] prices: 7.9 or below: [\"0.845\", \"0.155\"]; 8.0 – 8.1: [\"0.07\", \"0.93\"]; 8.2 – 8.3: [\"0.0655\", \"0.9345\"]; 8.4 – 8.5: [\"0.051\", \"0.949\"]; 8.6 – 8.7: [\"0.033\", \"0.967\"]; 8.8 – 8.9: [\"0.0165\", \"0.9835\"]\n- Polymarket: Will California experience a 7.0 or above magnitude earthquake in 2026? (ends 2026-12-31). [Yes, No] prices: Will California experience a 7.0 or above magnitude earthquake in 2026?: [\"0.104\", \"0.896\"]\n- Polymarket: Where will a 6.0+ magnitude earthquake occur by end of November? (ends 2026-12-04). [Yes, No] prices: Indonesia: [\"0.625\", \"0.375\"]; Japan: [\"0.9655\", \"0.0345\"]; Chile: [\"0.5\", \"0.5\"]; Mexico: [\"0.32\", \"0.68\"]; United States: [\"0.525\", \"0.475\"]; Philippines: [\"0.355\", \"0.645\"]\n- Polymarket: Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.14\", \"0.86\"]; Microsoft: [\"0.011\", \"0.989\"]; Apple: [\"0.8275\", \"0.1725\"]; Alphabet: [\"0.0045\", \"0.9955\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: 2nd Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.45\", \"0.55\"]; Microsoft: [\"0.2995\", \"0.7005\"]; Apple: [\"0.16\", \"0.84\"]; Alphabet: [\"0.07\", \"0.93\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: 3rd Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.302\", \"0.698\"]; Microsoft: [\"0.48\", \"0.52\"]; Apple: [\"0.037\", \"0.963\"]; Alphabet: [\"0.18\", \"0.82\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]",
+    "## 1. Resolution source\n- 2026-11-11: The question resolves on the USGS earthquake catalog. I queried the USGS FDSN service for 1 to 12 November 2026, M6.0 and up. The largest event so far this month is Mww 6.4, 30 km WSW of Lata, Solomon Islands, on 2026-11-09. The others are M6.1 Fiji region (11-05), M6.1 SE of Hasaki, Japan (11-06) and M6.0 near Port-Olry, Vanuatu (11-01). [USGS query](https://earthquake.usgs.gov/fdsnws/event/1/query?format=text&starttime=2026-11-01&endtime=2026-11-12&minmagnitude=6.0&orderby=magnitude)\n- There is no December 2026 data yet. The question covers 1 to 31 December. The question doesn't say whether it uses UTC days, but the USGS catalog lists times in UTC.\n\n## 2. Current status\n- Nothing has happened that settles the question, because the month has not started. Magnitudes for events near the end of the month can also change after USGS review.\n\n## 3. Recent news (newest first)\n- 2026-11-10: More than 20 M5+ earthquakes hit the Pacific Ring of Fire on 2 to 8 November, including two M6.1 events near Japan and Fiji. This matches USGS. [Primicia](https://primicia.com.ve/mas/ciencia-y-tecnologia/mas-de-20-terremotos-cinturon-fuego-pacifico-noviembre-2026/)\n- 2026-10-22: M7.0, Tibet. This is the most recent M7+ in Wikipedia's 2026 list. [Wikipedia](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2026)\n- 2026-10-09: M7.7, Panama, the third-largest event of 2026. [DisasterAWARE](https://www.disasteraware.com/news-event/biggest-earthquakes-2026)\n- Largest of 2026 so far: two Mww 7.8 events, Mindanao on 06-07 and Flores on 08-14. Wikipedia counts 13 M7.0+ events this year, which is close to the long-run average of about 12 to 15 a year. [Wikipedia](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2026), [Mindanao](https://en.wikipedia.org/wiki/2026_Mindanao_earthquake), [Al Jazeera](https://www.aljazeera.com/news/2026/8/17/is-the-world-experiencing-more-earthquakes-now-than-before)\n\n## 4. Base rates\nLargest USGS magnitude in each December, from my catalog queries:\n- Dec 2025: 7.6, Aomori, Japan (12-08). There was also a 7.0 at Hubbard Glacier. [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=text&starttime=2025-12-01&endtime=2026-01-01&minmagnitude=6.5&orderby=magnitude)\n- Dec 2024: 7.3, Vanuatu (12-17). Also a 7.0 off Cape Mendocino. [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=text&starttime=2024-12-01&endtime=2025-01-01&minmagnitude=6.5&orderby=magnitude)\n- Dec 2023: 7.6, Mindanao (12-02). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=text&starttime=2023-12-01&endtime=2024-01-01&minmagnitude=6.5&orderby=magnitude)\n- Dec 2022: 6.8, Tonga (12-04). [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=text&starttime=2022-12-01&endtime=2023-01-01&minmagnitude=6.3&orderby=magnitude)\n- Dec 2021: 7.3, two events: Flores Sea and Timor Leste. [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=text&starttime=2021-12-01&endtime=2022-01-01&minmagnitude=6.5&orderby=magnitude)\n- Dec 2020: 6.7, off Chile. [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=text&starttime=2020-12-01&endtime=2021-01-01&minmagnitude=6.3&orderby=magnitude)\n- Dec 2019: 6.8, Mindanao. Dec 2018: 7.5, New Caledonia. Dec 2017: below 6.8 (no event of 6.8 or more in the catalog). Dec 2016: 7.9, Papua New Guinea. [USGS](https://earthquake.usgs.gov/fdsnws/event/1/query?format=text&starttime=2016-12-01&endtime=2020-01-01&minmagnitude=6.8&orderby=time)\n- Summary for the 10 Decembers: the median is about 7.3 and the range runs from below 6.8 to 7.9. 6 of 10 had an M7.0+ event, 4 of 10 reached 7.5 or more, and none reached 8.0. Earthquakes have no real seasonal cycle, so December is just a typical month. One month in 2026 so far (November, partway through) has a maximum of 6.4.\n\n## 5. Other forecasts\n- Kalshi, \"Strongest earthquake magnitude in November 2026\" (worldwide, UTC), as of 2026-11-11. This is a closely related market for the previous month, not December itself. It shows the chance of at least each magnitude as: 6.6: 83%, 6.8: 69%, 7.0: 52%, 7.2: 38%, 7.4: 26%, 7.6: 17%, 7.8: 12%, 8.0: 8%. The November market still has about 19 days left, so a full month would price a little higher.\n- Polymarket, \"Highest earthquake magnitude in 2026\": 7.9 or below at 84.5%, 8.0 to 8.1 at 7%. This puts roughly 15% or more on an M8+ somewhere in the rest of 2026, which looks rich compared with the historical rate of about 1 M8+ per year.\n- I found no December 2026 market or expert forecast.\n\n## 6. Upcoming events before resolution\n- Large earthquakes cannot be predicted, and there are no scheduled catalysts. Weather is not relevant.\n- Aftershock sequences after recent large events (Panama M7.7 in October, Tibet M7.0) slightly raise local chances of M6+ events, but rarely of anything larger than the main shock.\n- To resolve, check the USGS catalog for December 2026 sorted by magnitude in early January, and allow for revisions to Mww values.\n\nSources: [USGS search](https://earthquake.usgs.gov/earthquakes/search/), [Wikipedia 2026 list](https://en.wikipedia.org/wiki/List_of_earthquakes_in_2026), [DisasterAWARE](https://www.disasteraware.com/news-event/biggest-earthquakes-2026), [Al Jazeera](https://www.aljazeera.com/news/2026/8/17/is-the-world-experiencing-more-earthquakes-now-than-before), [2026 Mindanao earthquake](https://en.wikipedia.org/wiki/2026_Mindanao_earthquake), [Primicia](https://primicia.com.ve/mas/ciencia-y-tecnologia/mas-de-20-terremotos-cinturon-fuego-pacifico-noviembre-2026/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-11 06:01 UTC; check each market really matches the question)\n- Kalshi: 8.0 magnitude earthquake in Japan before 2030? (Before 2030). Yes prices: Before 2030: 0.34.\n- Kalshi: Will there be an at least 8.0 magnitude earthquake in California before 2028? (Before 2028). Yes prices: Before 2028: 0.10.\n- Kalshi: Will there be an at least 8.0 magnitude earthquake in California before 2035? (Before 2035). Yes prices: Before 2035: 0.19.\n- Kalshi: Strongest earthquake magnitude in November 2026 (Worldwide in November 2026 (UTC)). Yes prices: Magnitude of at least 7.0: 0.52; Magnitude of at least 7.2: 0.38; Magnitude of at least 6.8: 0.69; Magnitude of at least 7.4: 0.26; Magnitude of at least 7.6: 0.17; Magnitude of at least 6.6: 0.83; Magnitude of at least 7.8: 0.12; Magnitude of at least 8.0: 0.08; Magnitude of at least 8.2: 0.0900.\n- Kalshi: When will xAI release Grok 5? (Grok 5). Yes prices: Before 2027: 0.11; Before December: 0.0300; Before October: 0.0100; Before July: 0.0500; Before April: 0.0300; Before September: 0.0400; Before November: 0.0500.\n- Kalshi: Will the Fed publish a dot plot in December? (In December 2026). Yes prices: In December 2026: 0.95.\n- Polymarket: Highest earthquake magnitude in 2026? (ends 2027-01-07). [Yes, No] prices: 7.9 or below: [\"0.845\", \"0.155\"]; 8.0 – 8.1: [\"0.07\", \"0.93\"]; 8.2 – 8.3: [\"0.0655\", \"0.9345\"]; 8.4 – 8.5: [\"0.051\", \"0.949\"]; 8.6 – 8.7: [\"0.033\", \"0.967\"]; 8.8 – 8.9: [\"0.0165\", \"0.9835\"]\n- Polymarket: Will California experience a 7.0 or above magnitude earthquake in 2026? (ends 2026-12-31). [Yes, No] prices: Will California experience a 7.0 or above magnitude earthquake in 2026?: [\"0.104\", \"0.896\"]\n- Polymarket: Where will a 6.0+ magnitude earthquake occur by end of November? (ends 2026-12-04). [Yes, No] prices: Indonesia: [\"0.625\", \"0.375\"]; Japan: [\"0.9655\", \"0.0345\"]; Chile: [\"0.5\", \"0.5\"]; Mexico: [\"0.32\", \"0.68\"]; United States: [\"0.525\", \"0.475\"]; Philippines: [\"0.355\", \"0.645\"]\n- Polymarket: Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.14\", \"0.86\"]; Microsoft: [\"0.011\", \"0.989\"]; Apple: [\"0.8275\", \"0.1725\"]; Alphabet: [\"0.0045\", \"0.9955\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: 2nd Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.45\", \"0.55\"]; Microsoft: [\"0.2995\", \"0.7005\"]; Apple: [\"0.16\", \"0.84\"]; Alphabet: [\"0.07\", \"0.93\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: 3rd Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.302\", \"0.698\"]; Microsoft: [\"0.48\", \"0.52\"]; Apple: [\"0.037\", \"0.963\"]; Alphabet: [\"0.18\", \"0.82\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 6.67,
+        "p25": 6.885,
+        "p50": 7.18,
+        "p75": 7.53,
+        "p90": 7.88
+      },
+      "reasoning": "(a) About 7 weeks remain until the outcome is known: the window is Dec 1 to 31, 2026, and the question resolves around Jan 1, 2027.\n\n(b) No December 2026 data exists yet. The largest recent events are M7.0 Tibet (Oct 22, 2026) and M6.4 Solomon Islands (Nov 9). The largest event of 2026 so far is M7.8 (Jun 7 and Aug 14).\n\n(c) If nothing changed, there is no \"current value\" to carry forward. Each month is an independent draw. The climatological median for a monthly maximum is about M7.1 to 7.2.\n\n(d) Trend: 2026 has had about 13 M7+ events by late October, which is a normal rate. That gives roughly 1.1 to 1.25 M7+ events per month, or about a 67 to 71% chance of at least one M7+ in December.\n\n(e) Historical variation: over the last 10 Decembers, the largest event ranged from M6.5 to M7.9, with a median of about 7.2. Applying the Gutenberg-Richter law with b=1 to the monthly maximum gives:\n- about 98% for ≥6.5\n- about 86% for ≥6.8\n- about 70% for ≥7.0\n- about 55% for ≥7.2\n- about 38% for ≥7.4\n- about 25% for ≥7.6\n- about 9 to 12% for ≥8.0\n\n(f) Markets:\n- Kalshi's November 2026 market prices ≥7.0 at 52% and ≥8.0 at 8%. These prices are depressed because 11 days have already passed with a maximum of only 6.4. A full-month equivalent would be about 65 to 70% for ≥7.0.\n- Polymarket implies about a 15% chance of an M8+ quake in the remaining roughly 7 weeks of 2026, which is about 8 to 10% per month.\n\n(g) Scenarios:\n- Low: a quiet month in which the largest event is an M6.4 to 6.5 intraslab or oceanic-ridge quake, as in December 2017 (M6.5).\n- High: a great subduction megathrust rupture, for example in Japan, Kuril-Kamchatka, Chile or Indonesia, reaching M8.3 to 8.8.\n\nTail percentiles:\n- Percentile 1 at about 6.35 would be an unusually quiet month with only M6.3 to 6.4 events.\n- Percentile 99 at about 8.6 would be a great megathrust event.\n\nPercentile 1: 6.35\nPercentile 5: 6.55\nPercentile 10: 6.67\nPercentile 20: 6.82\nPercentile 30: 6.95\nPercentile 40: 7.07\nPercentile 50: 7.18\nPercentile 60: 7.3\nPercentile 70: 7.44\nPercentile 80: 7.62\nPercentile 90: 7.88\nPercentile 95: 8.1\nPercentile 99: 8.6"
+    },
+    {
+      "value": {
+        "p10": 6.6,
+        "p25": 6.875,
+        "p50": 7.15,
+        "p75": 7.5,
+        "p90": 7.85
+      },
+      "reasoning": "(a) Time left: December 2026 starts in about 20 days and ends about 50 days from now. The outcome will be known around 2027-01-01, allowing for possible USGS revisions of about 0.1.\n\n(b) Latest known value: there is no December 2026 data yet. The most recent large events in the USGS catalog are M6.4 Solomon Islands (2026-11-09) and M7.0 Tibet (2026-10-22). The largest event of 2026 so far is M7.8.\n\n(c) If nothing changed: this does not apply, because every December has some maximum. The base-rate median is about M7.1-7.2.\n\n(d) If the current trend continued: 2026 has a normal M7+ rate (about 13 by late October), which suggests a typical month with a median around M7.1.\n\n(e) Historical variation: the largest December quake in 2016-2025 ranged from M6.5 to M7.9, with a median of about M7.2. Gutenberg-Richter, at about 1.2-1.25 M7+ events per month, gives these probabilities for the month's largest quake:\n- At least M6.8: about 85%.\n- At least M7.0: about 70%.\n- At least M7.4: about 38%.\n- At least M7.8: about 17%.\n\nM8+ is closer to 8% per month, based on roughly 1 such event per year.\n\n(f) Markets and experts: Kalshi's November market, which is depressed by a quiet first 11 days, prices at least M7.0 at 52% and at least M8.0 at 8%. Polymarket implies about a 15% chance of an M8+ event in the remaining 7 weeks of 2026, which is consistent with roughly 8% per month.\n\n(g) Unexpected scenarios:\n- Low: a seismically quiet month in which the largest event is an M6.3-6.4, as can happen in a calm month. 2017 topped out at M6.5.\n- High: a great subduction megathrust rupture of M8.3-8.8, for example in Kamchatka, the Kurils, Chile or Indonesia, which happens a few times per decade.\n\nPercentile 1: 6.3\nPercentile 5: 6.5\nPercentile 10: 6.6\nPercentile 20: 6.8\nPercentile 30: 6.95\nPercentile 40: 7.05\nPercentile 50: 7.15\nPercentile 60: 7.25\nPercentile 70: 7.4\nPercentile 80: 7.6\nPercentile 90: 7.85\nPercentile 95: 8.05\nPercentile 99: 8.5"
+    },
+    {
+      "value": {
+        "p10": 6.7,
+        "p25": 6.95,
+        "p50": 7.25,
+        "p75": 7.65,
+        "p90": 7.95
+      },
+      "reasoning": "(a) **Time left:** The resolution window is December 1 to 31, 2026, about 3 to 7 weeks away. The outcome will be known around January 1, 2027, subject to minor USGS revisions.\n\n(b) **Latest known value:** There is no December 2026 data yet. The most recent large events in USGS are an M6.4 in the Solomon Islands (Nov 9, 2026), an M7.0 in Tibet (Oct 22) and an M7.7 in Panama (Oct 9).\n\n(c) **If nothing changed:** This does not apply, because the value is set entirely by December seismicity. The base-rate median is about M7.2.\n\n(d) **If the current trend continued:** 2026 is running at a roughly normal M7+ rate (about 13 to 15 per year). That implies a typical December maximum near M7.1 to 7.3.\n\n(e) **Historical variation:** The largest December quakes from 2016 to 2025 ranged from M6.5 to M7.9, with a median of about M7.2. Six of those ten Decembers had an M7.0+ event. I also used a Gutenberg-Richter model with about 1.25 M7+ quakes per month. It gives P(max ≥ 7.0) of about 71%, ≥7.5 about 33%, and ≥8.0 about 8 to 10%. The ≥8.0 figure reflects M8+ occurring about once a year.\n\n(f) **Experts and markets:** I found no December market. Kalshi's November market (with 11 quiet days already elapsed) prices ≥7.0 at 52% and ≥8.0 at 8%. A full month would be priced somewhat higher, which is consistent with the base-rate model.\n\n(g) **Unexpected scenarios:**\n- **Low:** An unusually quiet month in which the largest event is only about M6.4 to 6.5. This happened in December 2017, when the maximum was M6.5.\n- **High:** A great subduction megathrust rupture of M8.5 or more, for example off Japan, Kamchatka, Chile or Indonesia. Such events happen roughly once every few years.\n\nPercentile 1: 6.4\nPercentile 5: 6.6\nPercentile 10: 6.7\nPercentile 20: 6.9\nPercentile 30: 7.0\nPercentile 40: 7.1\nPercentile 50: 7.25\nPercentile 60: 7.35\nPercentile 70: 7.55\nPercentile 80: 7.75\nPercentile 90: 7.95\nPercentile 95: 8.1\nPercentile 99: 8.6"
+    },
+    {
+      "value": {
+        "p10": 6.6,
+        "p25": 6.875,
+        "p50": 7.2,
+        "p75": 7.55,
+        "p90": 7.9
+      },
+      "reasoning": "(a) Time left: December 2026 starts in about 20 days. The outcome will be known shortly after 31 December 2026 (UTC), with possible small USGS Mww revisions in early January 2027.\n\n(b) Latest known value: there is no December data yet. The latest comparable reading is November 2026 to date (1 to 11 November), where the maximum is Mww 6.4 (Solomon Islands, 2026-11-09). The most recent M7+ event was the M7.0 in Tibet on 2026-10-22.\n\n(c) If nothing changed: this does not apply cleanly because the month has not started. A quiet month would land around 6.4 to 6.7.\n\n(d) If the current trend continued: 2026 is running at a roughly normal M7+ rate (13 so far). That implies a typical month, with a monthly maximum median near 7.1 to 7.2.\n\n(e) Historical variation:\n- The last 10 Decembers ranged from below 6.8 to 7.9, with a median of about 7.3.\n- 6 of 10 reached M7.0 or more, and none reached 8.0.\n- A Gutenberg-Richter model with about 1.1 M7+ events per month gives these chances of reaching each magnitude:\n\n| Magnitude | Chance of reaching it |\n|---|---|\n| 6.8 or more | about 82% |\n| 7.0 or more | about 67% |\n| 7.2 or more | about 50% |\n| 7.4 or more | about 35% |\n| 7.6 or more | about 24% |\n| 7.8 or more | about 16% |\n| 8.0 or more | about 8 to 10% |\n\n(f) Markets: the Kalshi November 2026 market (partial month) prices these chances: 6.8 or more at 69%, 7.0 or more at 52%, 7.4 or more at 26%, and 8.0 or more at 8%. A full month should price slightly higher. This is consistent with the base-rate model.\n\n(g) Unexpected scenarios:\n- Low: an unusually quiet month where the largest event is only about M6.3 to 6.4, similar to November so far. This happens a few percent of the time.\n- High: a great subduction megathrust event (for example Kuril-Kamchatka, Chile, Sumatra or Japan Trench) reaching M8.3 to 8.8. This is roughly a 1 to 3% chance in any given month.\n\nPercentile 1: 6.3\nPercentile 5: 6.5\nPercentile 10: 6.6\nPercentile 20: 6.8\nPercentile 30: 6.95\nPercentile 40: 7.1\nPercentile 50: 7.2\nPercentile 60: 7.3\nPercentile 70: 7.45\nPercentile 80: 7.65\nPercentile 90: 7.9\nPercentile 95: 8.1\nPercentile 99: 8.5"
+    },
+    {
+      "value": {
+        "p10": 6.7,
+        "p25": 6.915,
+        "p50": 7.18,
+        "p75": 7.515,
+        "p90": 7.85
+      },
+      "reasoning": "(a) Time left: December 2026 has not started. The window runs 1 to 31 December 2026 (UTC), and the outcome will be known in early January 2027, with possible small Mww revisions.\n\n(b) Latest known value: there is no December data yet. For context, the largest event in November 2026 so far (1 to 11 November) is Mww 6.4 in the Solomon Islands on 2026-11-09. The most recent M7+ was Tibet M7.0 on 2026-10-22.\n\n(c) If nothing changed: the question needs December data, so this does not apply directly. A quiet month would land somewhere around 6.5 to 6.8.\n\n(d) If the current trend continued: 2026 is tracking the long-run average, with about 13 M7+ events so far. That implies roughly a 60 to 70% chance of at least one M7+ in a given month.\n\n(e) Historical variation:\n- Over the last 10 Decembers the maximum ranged from below 6.8 to 7.9, with a median of about 7.3.\n- 6 of 10 had an M7+ event, 4 of 10 reached 7.5 or more, and none reached 8.0.\n- A Gutenberg-Richter model with about 1.2 M7+ events per month gives a median near 7.2, a 10th percentile near 6.7 and a 90th percentile near 8.0. That upper value is probably a little high, because the distribution tapers at large magnitudes.\n\n(f) Markets: Kalshi's November market, which still has about 19 days left, gives P(≥7.0) = 52%, P(≥7.6) = 17% and P(≥8.0) = 8%. A full month would price slightly higher, with a median around 7.1 to 7.2. There are no expert forecasts, because earthquakes cannot be predicted.\n\n(g) Unexpected scenarios:\n- Low: a globally quiet month with only moderate subduction events, so the largest is about M6.3 to 6.5. This happens perhaps once or twice per decade of months.\n- High: a great megathrust rupture, for example in Japan, Kamchatka, Chile or Indonesia, producing M8.3 to 8.8. This happens roughly once every few years.\n\nPercentile 1: 6.3\nPercentile 5: 6.55\nPercentile 10: 6.7\nPercentile 20: 6.85\nPercentile 30: 6.98\nPercentile 40: 7.08\nPercentile 50: 7.18\nPercentile 60: 7.3\nPercentile 70: 7.43\nPercentile 80: 7.6\nPercentile 90: 7.85\nPercentile 95: 8.05\nPercentile 99: 8.5"
+    },
+    {
+      "value": {
+        "p10": 6.65,
+        "p25": 6.85,
+        "p50": 7.1,
+        "p75": 7.475,
+        "p90": 7.8
+      },
+      "reasoning": "(a) **Time left:** The outcome window is 1 to 31 December 2026 (UTC). It resolves around 1 January 2027, about 7 weeks from now. USGS may revise late-month magnitudes slightly after that.\n\n(b) **Latest known value:** There is no December 2026 data yet. The most recent reference point is the largest event of November so far (1 to 11 November): Mww 6.4, Solomon Islands, on 2026-11-09. The latest M7+ event was M7.0 in Tibet on 2026-10-22.\n\n(c) **If nothing changed:** This doesn't apply, because December has not started. A \"quiet\" month would typically still produce a maximum near M6.5 to 6.8.\n\n(d) **If the current trend continued:** 2026 has had 13 M7+ events by early November, about 1.3 per month, which is a normal rate. That implies roughly a 65 to 70% chance of at least one M7+ event in December. A Gutenberg-Richter model with b of about 1 puts the median monthly maximum near M7.1 to 7.2.\n\n(e) **Historical variation:** Over the last 10 Decembers, the monthly maximum ranged from below 6.8 to 7.9, with a median of about 7.3.\n- 6 of 10 had an M7+ event.\n- 4 of 10 reached M7.5 or more.\n- None reached M8.\n\nM8+ events occur about once a year, so roughly 7 to 8% per month.\n\n(f) **Experts and markets:**\n- **Kalshi November 2026 market:** 52% for M7.0+ with 19 days left. That implies about 65 to 70% for a full month, and about 8% for M8+.\n- **Polymarket 2026 annual market:** this slightly overprices M8+ for the rest of the year.\n- **Overall:** Markets are consistent with the base rate.\n\n(g) **Unexpected scenarios:**\n- **Low:** an unusually quiet month like December 2017, where the largest event is only about M6.4 to 6.6. This happens in only a few percent of months.\n- **High:** a great megathrust rupture, for example in Japan, Kamchatka, Chile or Indonesia, giving M8.3 to 8.8. That has about a 1 to 2% chance in any given month.\n\nPercentile 1: 6.3\nPercentile 5: 6.55\nPercentile 10: 6.65\nPercentile 20: 6.8\nPercentile 30: 6.9\nPercentile 40: 7.0\nPercentile 50: 7.1\nPercentile 60: 7.25\nPercentile 70: 7.4\nPercentile 80: 7.55\nPercentile 90: 7.8\nPercentile 95: 8.0\nPercentile 99: 8.4"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 6.6515,
+    "p25": 6.877,
+    "p50": 7.1819,
+    "p75": 7.5232,
+    "p90": 7.8745
+  },
+  "usage": [
+    {
+      "question_id": "46587",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.0,
+      "notional_cost_usd": 0.000172,
+      "input_tokens": 841,
+      "output_tokens": 8,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 7.21e-05,
+      "input_tokens": 496,
+      "output_tokens": 45,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 108.0,
+      "notional_cost_usd": 0.3792837,
+      "input_tokens": 84745,
+      "output_tokens": 7284,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.6,
+      "notional_cost_usd": 0.080328,
+      "input_tokens": 6352,
+      "output_tokens": 1476,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.7,
+      "notional_cost_usd": 0.083004,
+      "input_tokens": 6354,
+      "output_tokens": 1609,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.000762,
+      "input_tokens": 2736,
+      "output_tokens": 430,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.2,
+      "notional_cost_usd": 0.0008253000000000001,
+      "input_tokens": 2890,
+      "output_tokens": 495,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.2,
+      "notional_cost_usd": 0.00022251,
+      "input_tokens": 2737,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00028315,
+      "input_tokens": 2889,
+      "output_tokens": 382,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 33.2,
+      "notional_cost_usd": 0.0365928,
+      "input_tokens": 6353,
+      "output_tokens": 1646,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.0008411,
+      "input_tokens": 2749,
+      "output_tokens": 583,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00025926000000000004,
+      "input_tokens": 2750,
+      "output_tokens": 337,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 68.6,
+      "notional_cost_usd": 0.1832392,
+      "input_tokens": 39170,
+      "output_tokens": 4916,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.1,
+      "notional_cost_usd": 0.07731199999999999,
+      "input_tokens": 5635,
+      "output_tokens": 1612,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.0,
+      "notional_cost_usd": 0.077324,
+      "input_tokens": 5634,
+      "output_tokens": 1613,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.0008239,
+      "input_tokens": 2838,
+      "output_tokens": 513,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0007423,
+      "input_tokens": 2775,
+      "output_tokens": 375,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 22.9,
+      "notional_cost_usd": 0.086648,
+      "input_tokens": 5632,
+      "output_tokens": 2080,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.00029635,
+      "input_tokens": 2840,
+      "output_tokens": 409,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00030721,
+      "input_tokens": 2776,
+      "output_tokens": 432,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0008107000000000001,
+      "input_tokens": 2807,
+      "output_tokens": 499,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46587",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00036052999999999997,
+      "input_tokens": 2808,
+      "output_tokens": 538,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0105
+}
