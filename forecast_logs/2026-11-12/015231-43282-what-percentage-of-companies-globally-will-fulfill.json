@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-12T02:02:21.978964+00:00",
+  "bot_version": "2026-11-08.1",
+  "started_at": "2026-11-12T01:52:31.765921+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43282,
+    "post_id": 43277,
+    "url": "https://www.metaculus.com/questions/43277",
+    "type": "DiscreteQuestion",
+    "unit": "%",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "What percentage of companies globally will fulfill their pre-2026 cage-free commitments in 2026 and 2027?",
+    "resolution_criteria": "This question will resolve as the percentage of global companies reporting in 2026 or 2027 that they have fulfilled the cage-free commitments they made before 2026 according to [Chicken Watch](https://chickenwatch.org/progress-tracker) when accessed by Metaculus on January 1, 2028.",
+    "fine_print": "Specifically, the denominator will be obtained by selecting the \"Cage-Free\" issue on the [Chicken Watch](https://chickenwatch.org/progress-tracker?filterK=Cage-free) progress tracker, a \"Victory Date\" of 1990 to 2025, and a \"Timeline\" of 2026 and after. The numerator will then be obtained by *additionally* selecting the \"Reporting Fulfilled\" status.\n\nIf Chicken Watch ceases reporting or significantly changes its criteria such that previous reporting is not comparable, this question will be **annulled**.",
+    "close_time": "2027-06-30 23:00 UTC",
+    "scheduled_resolution_time": "2028-01-01 00:00 UTC"
+  },
+  "research": [
+    "I couldn't get the number this question resolves on. The Chicken Watch progress tracker loads its data with JavaScript, and every fetch came back with no counts, filters or statuses. A guessed data address (/api/commitments) returned a 404. I found no published current figure for cage-free commitments made before 2026 with a deadline of 2026 or later that show \"Reporting Fulfilled\". To get it, open the tracker in a normal browser and set the filters as the fine print describes.\n\n## 1. Resolution source\n- 2026-11-12: The tracker page shows only navigation and the \"© Chicken Watch 2026\" footer as text, with no counts. The /cage-free page says only \"over 1,000 companies\" have pledged to remove cages from their egg supply chains. [Chicken Watch tracker](https://chickenwatch.org/progress-tracker?filterK=Cage-free), [Chicken Watch cage-free](https://chickenwatch.org/cage-free)\n- Note: the numerator counts any commitment due 2026 or later that is already marked \"Reporting Fulfilled\", including ones fulfilled before 2026. It is a running total that only grows as companies report, and the denominator is fixed to commitments made from 1990 to 2025. The question's range of 3.56% to 30.19% suggests the question writer saw a low starting value, but I could not confirm that.\n\n## 2. Current status\n- Nothing settles the question yet. The value can still change until Metaculus checks the tracker on 2028-01-01.\n- Some companies with 2026 deadlines have fulfilled early. Caffè Nero met its goal ahead of its 2026 deadline (Fair and Fowl 2026). Chick-fil-A has said its 2026 cage-free commitment is in doubt, citing bird flu. [EIN Presswire](https://www.einpresswire.com/article/944933228/fair-and-fowl-2026-finds-cage-free-sourcing-is-now-standard-practice-as-corporate-holdouts-dwindle), [Fox News](https://www.foxnews.com/food-drink/chick-fil-a-retreats-decade-old-egg-pledge-bird-flu-hits-supply)\n\n## 3. Recent news (newest first)\n- 2026-11-10: The Humane League's 2026 Eggsposé covers about 100 US restaurant and convenience chains. Subway, McDonald's, Starbucks and Dairy Queen are fulfilled, but there is still a \"significant accountability gap\". The report projects that half of US hens will be cage-free by 2027. [PR Newswire](https://www.prnewswire.com/news-releases/new-report-reveals-major-cage-free-progress-across-us-restaurant-chains-but-some-big-brands-still-fall-short-302933673.html)\n- 2026-09-29: The Open Wing Alliance's Fair and Fowl 2026 report found 118 of 171 global companies (about 69%) fulfilled or making progress. More than 2,800 companies worldwide have made cage-free pledges, and 2025 was the biggest deadline year. [EIN Presswire](https://www.einpresswire.com/article/944933228/fair-and-fowl-2026-finds-cage-free-sourcing-is-now-standard-practice-as-corporate-holdouts-dwindle)\n- 2026 (undated): Compassion in World Farming's EggTrack puts the average cage-free transition at 85% (75% in 2023), and 50 businesses have withdrawn their pledges. BBFAW 2026 found 96 companies with cage-free targets, of which only 17 (18%) report 100% cage-free eggs. [The Grocer](https://www.thegrocer.co.uk/news/global-cage-free-egg-transition-is-gaining-pace-compassion-in-world-farming-says/721037.article), [Food and Drink Technology](https://www.foodanddrinktechnology.com/news/66693/bbfaw-global-food-falling-short-on-higher-welfare-commitments/)\n- 2026-03-06: Lagardère Travel Retail reported global 100% cage-free fulfillment, using egg credits. [DFNI](https://www.dfnionline.com/latest-news/retail/open-wing-alliance-welcomes-lagardere-travel-retails-global-100-cage-free-egg-sourcing-06-03-2026/)\n- 2026-01-13: The OWA's \"Rotten Eggs\" release named global restaurant chains that missed their 2025 deadlines. [EIN Presswire](https://www.einpresswire.com/article/882544308/the-open-wing-alliance-names-global-restaurant-giants-for-missing-cage-free-deadlines)\n\n## 4. Base rates\n- 2026-02-02 (Chicken Watch data, cited by Faunalytics):\n  - 64% of global cage-free commitments due in 2025 or earlier were fulfilled, against 93% of those due in 2024.\n  - By region: Europe 70%, Africa 62%, Asia 58%, Latin America 50%.\n  - The chart covering commitments due 2026 and later is only an image, so I could not read it.\n  - [Faunalytics](https://faunalytics.org/tactics-in-practice-the-data-behind-corporate-outreach/)\n- Earlier headline fulfillment rates for commitments already due:\n  - 2024-05: 89%. [Food Industry Executive](https://foodindustryexecutive.com/2024/05/new-data-shows-89-of-cage-free-egg-commitments-are-fulfilled-by-food-corporations/)\n  - Later: 92%. [Food Processing](https://www.foodprocessing.com/ingredients/dairy-cheese-eggs/news/55307812/92-of-global-cage-free-egg-commitments-fulfilled)\n- What this implies: companies that report fulfillment early, before their deadline year, are a much smaller group than those reporting once a deadline has passed. A rate in single digits or the teens fits the question's range, but I could not confirm it.\n- Seasonality: none in the usual sense. Updates tend to cluster around reporting cycles: corporate sustainability reports (mostly Q1 to Q2), the OWA Fair and Fowl report (around September), the Eggsposé (around November) and the Rotten Eggs release (around January). I found no year-by-year history of this exact filter.\n\n## 5. Other forecasts\n- I found no Metaculus community forecast, Polymarket market or Manifold market for this question.\n- Kalshi prices 73% Yes that Cal-Maine will say \"Cage-Free\" on its 2027-01-06 earnings call. That is related but tells you almost nothing about this question.\n- Related Metaculus question: the forecast date for 5,000 companies having pledged to go cage-free is around 2033 to 2034. [Metaculus](https://www.metaculus.com/questions/3381/date-of-5000-egg-companies-cage-free)\n- The question appears to come from proposals for an animal-focused Metaculus tournament. [Forum post](https://forum.nunosempere.com/posts/pxYdSh3hjSCEMk68z/call-for-questions-on-animal-focused-forecasting-tournament)\n\n## 6. Upcoming events before resolution\n- January 2027: the 2027 \"Rotten Eggs\" release is likely, along with year-end updates for commitments due in 2026.\n- 2027-01-06: Cal-Maine earnings call, a signal for US cage-free supply.\n- Q1 to Q2 2027: corporate sustainability and ESG reports, the main way new \"Reporting Fulfilled\" statuses get added.\n- Around September 2027: OWA Fair and Fowl 2027. Around November 2027: Eggsposé 2027. Also the 2027 EggTrack and BBFAW reports.\n- Ongoing risks:\n  - Bird flu outbreaks driving up costs (Chick-fil-A precedent).\n  - Companies withdrawing pledges, which could shrink the denominator.\n  - Chicken Watch changing its methodology or filters, which would annul the question.\n  - Lags in how fast Chicken Watch logs new reports.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-12 01:57 UTC; check each market really matches the question)\n- Kalshi: What will Cal-Maine Foods say during their next earnings call? (On Jan 6, 2027). Yes prices: Creighton: 0.50; Avian Influenza / HPAI: 0.52; GLP-1: 0.41; Buyback / Buy Back: 0.36; Cage-Free: 0.73; Oversupply: 0.23; Crepini: 0.78; Echo Lake: 0.81; Eggland's Best: 0.18; Dividend: 0.84.\n- Kalshi: US meets its climate goals? (2025/2030 goals). Yes prices: By 2030: 0.17; By 2025: 0.07.\n- Kalshi: Will Trump make IVF free? (Before his term ends). Yes prices: Before Jan 20, 2029: 0.10.\n- Kalshi: Which companies will be added to the Pentagon’s Chinese military companies list? (Before Jul 1, 2027). Yes prices: DeepSeek: 0.30; Moonshot AI: 0.27; Gotion High-Tech: 0.24; Xiaomi: 0.17; WuXi Biologics: 0.18; ByteDance: 0.10.\n- Kalshi: Which companies will official announce an IPO before 2028? (Before 2028). Yes prices: Kraken: 0.48; DeepSeek: 0.56; Plaid: 0.36; OpenAI: 0.59; Databricks: 0.38; Oura: 0.67; Ramp: 0.32; Deel: 0.28; Discord: 0.23; Skims: 0.21.\n- Kalshi: Tarik Skubal Next Team (Tarik Skubal (2027)). Yes prices: New York M: 0.46; Los Angeles D: 0.28; San Diego: 0.07; Los Angeles A: 0.07; Retires / No Team: 0.06; Chicago C: 0.04; Toronto: 0.03; Baltimore: 0.01; Boston: 0.01; Chicago WS: 0.01.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 31.2%: 0.58; Above 31.7%: 0.32; Above 30.8%: 0.71; Above 32.4%: 0.20; Above 30.3%: 0.86; Above 29.9%: 0.92; Above 29.2%: 0.94; Above 33.8%: 0.04; Above 27.8%: 0.99.",
+    "I couldn't load the live Chicken Watch tracker, so I'm writing up what I found from secondary sources.\n\n## 1. Resolution source\n- 2026-11-12: I fetched chickenwatch.org/progress-tracker and /progress-tracker?filterK=Cage-free. Both pages are rendered by JavaScript, and the text I got back had no counts, statuses or filters. **I could not get the current numerator or denominator** (Victory Date 1990-2025, Timeline 2026+, with and without \"Reporting Fulfilled\"). [Chicken Watch](https://chickenwatch.org/progress-tracker?filterK=Cage-free)\n- How the criteria read: the denominator is pre-2026 pledges with deadlines in 2026 or later, and the numerator is those marked \"Reporting Fulfilled\" on 2028-01-01. That number is cumulative, so pledges already fulfilled early count too. Since 2026 is not yet over, 2026-deadline pledges that are still in progress are also in the denominator.\n- 2026: the Chicken Watch cage-free page says more than 1,000 companies have pledged, but gives no fulfillment breakdown. [Chicken Watch](https://chickenwatch.org/cage-free)\n\n## 2. Current status\n- Nothing settles the question yet. Resolution depends on how status updates pile up through end-2027.\n- 2026-11-09: Metaculus question 43277 (Animal Futures series) is still pending. A bot (KCAP2.0) forecast a median of 16.4%, with an 80% range of 7.24% to 29.3%. [GitHub report](https://github.com/foggysteam/metaculus-bot/issues/15)\n- The question range (3.56% to 30.19%) suggests that when it opened, the current share was probably low, in single digits or low teens. That is my inference; I could not confirm it.\n\n## 3. Recent news (newest first)\n- 2026-11-10: The Humane League's 2026 Eggsposé (U.S. restaurants) lists as fulfilled: Subway, McDonald's, Starbucks, Taco Bell, Dairy Queen, Applebee's, IHOP, Cheesecake Factory, Papa John's and others. RBI, Chili's, Red Robin and Yum (KFC) are reporting progress. Chick-fil-A and Cracker Barrel **removed their 2026 deadlines**. Dunkin' and P.F. Chang's missed 2025. Removing deadlines could take pledges out of the \"2026+\" timeline group or change their status. [PR Newswire](https://www.prnewswire.com/news-releases/new-report-reveals-major-cage-free-progress-across-us-restaurant-chains-but-some-big-brands-still-fall-short-302933673.html); [Fox News](https://www.foxnews.com/food-drink/chick-fil-a-retreats-decade-old-egg-pledge-bird-flu-hits-supply.amp)\n- 2026-09-29: In the Open Wing Alliance's Fair and Fowl 2026 report, 118 of 171 global companies had fulfilled or were making progress. More than 2,800 companies have pledged. The Cheesecake Factory finished six years early, and Viking Cruises complied within a year of committing. [EIN Presswire](https://www.einpresswire.com/article/944933228/fair-and-fowl-2026-finds-cage-free-sourcing-is-now-standard-practice-as-corporate-holdouts-dwindle)\n- 2026 (Humane League manufacturers Eggsposé): 92% of commitments with deadlines of 2024 or earlier are reported as fulfilled. [THL](https://thehumaneleague.org/article/2026-cage-free-eggspose-manufacturers)\n- 2026-03-06: Lagardère Travel Retail reported 100% global cage-free, partly by using egg credits (38% in Asia). [DFNI](https://www.dfnionline.com/latest-news/retail/open-wing-alliance-welcomes-lagardere-travel-retails-global-100-cage-free-egg-sourcing-06-03-2026/)\n- 2026-01-13: OWA's \"Rotten Eggs\" report named restaurant giants that missed 2025 deadlines and flagged later-deadline companies that have not reported. [EIN Presswire](https://www.einpresswire.com/article/882544308/the-open-wing-alliance-names-global-restaurant-giants-for-missing-cage-free-deadlines)\n\n## 4. Base rates\n- 2026-02-02: Chicken Watch data via Faunalytics shows 64% of global cage-free pledges with deadlines of 2025 or earlier were fulfilled, against 93% for 2024 deadlines. More than 1,000 pledges (about 40% of all) had 2025 deadlines. By region: Europe 70%, Asia 58%, Latin America 50%. [Faunalytics](https://faunalytics.org/tactics-in-practice-the-data-behind-corporate-outreach/)\n- So fulfillment for a deadline group keeps rising for years after the deadline as reports come in: 2024 deadlines were at 93% versus 2025 at roughly 64% or lower. For pledges whose deadlines are still ahead, the share already \"Reporting Fulfilled\" should be much lower, which fits the 3.5% to 30% range.\n- OWA's global rate for deadlines up to a given year: 88-89% (2023 report), 89% (2024), 92% (2025). [THL](https://thehumaneleague.org/article/cage-free-policy-fulfillment-rate-2024?ms=c_blog)\n- 2019-02: Rethink Priorities noted that 1,007 of 1,672 Chicken Watch pledges fell due between 2020 and 2026. [Rethink Priorities](https://www.rethinkpriorities.org/publications/will-companies-meet-their-animal-welfare-commitments)\n- Seasonality: updates tend to cluster around advocacy report cycles (OWA in January and September, THL Eggsposé in October-November) and companies' annual ESG reports (often Q1-Q2). I found no year-by-year history of this filtered percentage.\n\n## 5. Other forecasts\n- KCAP2.0 bot on Metaculus 43277: median 16.4%, 80% range 7.24% to 29.3% (as of 2026-11-09). [GitHub](https://github.com/foggysteam/metaculus-bot/issues/15)\n- I could not see the Metaculus community prediction (page returned 403).\n- I found no Polymarket, Kalshi or Manifold market on this. The Kalshi Cal-Maine \"Cage-Free\" mention market (0.73, earnings call 2027-01-06) is not relevant to how this resolves.\n\n## 6. Upcoming events before resolution (2028-01-01)\n- January 2027 and January 2028: likely OWA \"Rotten Eggs\" or fulfillment updates covering 2026 deadlines.\n- 2027 H1: corporate ESG and annual reports, the main source of new \"Reporting Fulfilled\" entries.\n- Around September 2027: OWA Fair and Fowl 2027. Around October-November 2027: THL Eggsposé 2027.\n- Risks: deadline removals or extensions (as Chick-fil-A and Cracker Barrel did), bird-flu supply shocks pushing pledges back, and egg-credit accounting being counted as fulfillment. If Chicken Watch changes its criteria, the question is annulled.\n- No weather forecast applies here.\n\nMain gap: I could not see the live tracker counts. The forecaster should open the filtered tracker by hand to get the current baseline.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-12 01:57 UTC; check each market really matches the question)\n- Kalshi: What will Cal-Maine Foods say during their next earnings call? (On Jan 6, 2027). Yes prices: Creighton: 0.50; Avian Influenza / HPAI: 0.52; GLP-1: 0.41; Buyback / Buy Back: 0.36; Cage-Free: 0.73; Oversupply: 0.23; Crepini: 0.78; Echo Lake: 0.81; Eggland's Best: 0.18; Dividend: 0.84.\n- Kalshi: US meets its climate goals? (2025/2030 goals). Yes prices: By 2030: 0.17; By 2025: 0.07.\n- Kalshi: Will Trump make IVF free? (Before his term ends). Yes prices: Before Jan 20, 2029: 0.10.\n- Kalshi: Which companies will be added to the Pentagon’s Chinese military companies list? (Before Jul 1, 2027). Yes prices: DeepSeek: 0.30; Moonshot AI: 0.27; Gotion High-Tech: 0.24; Xiaomi: 0.17; WuXi Biologics: 0.18; ByteDance: 0.10.\n- Kalshi: Which companies will official announce an IPO before 2028? (Before 2028). Yes prices: Kraken: 0.48; DeepSeek: 0.56; Plaid: 0.36; OpenAI: 0.59; Databricks: 0.38; Oura: 0.67; Ramp: 0.32; Deel: 0.28; Discord: 0.23; Skims: 0.21.\n- Kalshi: Tarik Skubal Next Team (Tarik Skubal (2027)). Yes prices: New York M: 0.46; Los Angeles D: 0.28; San Diego: 0.07; Los Angeles A: 0.07; Retires / No Team: 0.06; Chicago C: 0.04; Toronto: 0.03; Baltimore: 0.01; Boston: 0.01; Chicago WS: 0.01.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 31.2%: 0.58; Above 31.7%: 0.32; Above 30.8%: 0.71; Above 32.4%: 0.20; Above 30.3%: 0.86; Above 29.9%: 0.92; Above 29.2%: 0.94; Above 33.8%: 0.04; Above 27.8%: 0.99."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 6.2,
+        "p25": 9.3,
+        "p50": 14.3,
+        "p75": 20.75,
+        "p90": 28.0
+      },
+      "reasoning": "(a) About 13.5 months until Metaculus reads the tracker on 2028-01-01. Forecasts close 2027-06-30.\n\n(b) I have no confirmed current reading. The question bounds work out to exact fractions of 323: 12/323 = 3.715% and 97/323 = 30.03%. That suggests that when the question was written, about 12 of roughly 323 commitments made before 2026 with deadlines of 2026 or later showed \"Reporting Fulfilled\", about 3.7%. The writing date is probably 2025 or early 2026. The research assistant could not load the live tracker.\n\n(c) If nothing changed, the result would be about 4 to 6%, allowing for some early fulfillments already logged during 2026 (Caffè Nero, Lagardère and others).\n\n(d) If the current trend continued, the value would rise as follows:\n- Chicken Watch seems to update quickly after each deadline year. Faunalytics published 2025-deadline fulfillment (64%) in February 2026.\n- The early-2027 update should therefore assess the 2026-deadline cohort, which is likely a large share (perhaps 30 to 45%) of the denominator.\n- If about 50% of that cohort reports fulfillment, plus 5 to 10% early fulfillment among the 2027 to 2030 deadlines, the total is roughly 15 to 25%.\n- Lags in reporting and in Chicken Watch logging reports pull this down somewhat.\n\n(e) Historically the numerator grows in steps at annual tracker updates. A move from about 4% to the mid-teens over two years is plausible. Fulfillment rates for already-due cohorts have ranged from 64% to 93%.\n\n(f) I found no market or community forecast. The question creator's upper guide of about 30% implies they expect meaningful growth. Fair and Fowl 2026 found about 69% of global companies fulfilled or making progress. BBFAW found only 18% of companies with cage-free targets reporting 100% cage-free.\n\n(g) Scenarios:\n- Low: Chicken Watch delays its update until after January 2028, or bird flu leads to withdrawals and missed deadlines. The value stays at about 5%.\n- High: a large 2026 cohort reports en masse, egg credits are counted, and withdrawn pledges shrink the denominator. The value exceeds 35%.\n\nPercentile 1: 4\nPercentile 5: 5\nPercentile 10: 6.2\nPercentile 20: 8.3\nPercentile 30: 10.3\nPercentile 40: 12.3\nPercentile 50: 14.3\nPercentile 60: 16.5\nPercentile 70: 19\nPercentile 80: 22.5\nPercentile 90: 28\nPercentile 95: 33\nPercentile 99: 42"
+    },
+    {
+      "value": {
+        "p10": 6.8,
+        "p25": 9.9,
+        "p50": 14.3,
+        "p75": 19.8,
+        "p90": 25.8
+      },
+      "reasoning": "(a) **Time left:** The question resolves when the tracker is checked on 2028-01-01, about 13.5 months from now. Forecasts close on 2027-06-30.\n\n(b) **Latest known value:** I have no direct reading from the tracker. The question's stated bounds decode cleanly as fractions of 323: the floor of 3.715% is 12/323 and the \"likely not higher\" cap of 30.03% is 97/323. So when the question was written (probably 2025), about 12 of 323 commitments due in 2026 or later were marked \"Reporting Fulfilled\". Faunalytics (February 2026) cited a chart for commitments due 2026 and later, but I could not read it. My guess is that the value in late 2026 is somewhere around 5 to 10%.\n\n(c) **If nothing changed:** The result would be about 3.7 to 8%.\n\n(d) **If the current trend continued:** The numerator only grows, while the denominator stays roughly fixed, apart from withdrawals or additions.\n- By January 2028, Chicken Watch should have logged 2026 progress reports, so commitments due in 2026 that were met should show as fulfilled.\n- The fulfillment rate for the most recent deadline year was 64% for 2025 commitments, and 2026 deadlines include harder US laggards such as Chick-fil-A. I assume about 45 to 60% of 2026-due commitments will be marked fulfilled.\n- If 2026-due commitments are roughly a quarter to a third of the 323, plus some early fulfillment among the 2027 to 2030 commitments, the total comes to roughly 12 to 20%.\n\n(e) **Historical variation:** The quantity moved from about 3.7% to perhaps high single digits over roughly a year. Over the next 13 months it could plausibly rise by 5 to 15 percentage points, with steps clustered around Chicken Watch data updates and corporate reporting cycles.\n\n(f) **Experts and markets:** There is no market on this quantity. The question creator's range of 3.7 to 30% implies they expect a value well below 30%. Industry reports are positive about direction (Fair and Fowl: 69% of companies fulfilled or making progress), but they also note an accountability gap and bird flu headwinds.\n\n(g) **Scenarios:**\n- **Low:** Chicken Watch lags in updating statuses, or bird flu derails 2026 deadlines. Companies report \"progress\" rather than \"fulfilled\", and the result stays around 5 to 6%.\n- **High:** A batch update after the 2027 progress report marks many multinational global commitments as fulfilled, helped by egg credits as in the Lagardère case. Some laggard commitments are removed from the denominator. The result could pass 30%.\n\nPercentile 1: 4.4\nPercentile 5: 5.6\nPercentile 10: 6.8\nPercentile 20: 9\nPercentile 30: 10.8\nPercentile 40: 12.6\nPercentile 50: 14.3\nPercentile 60: 16.1\nPercentile 70: 18.3\nPercentile 80: 21.3\nPercentile 90: 25.8\nPercentile 95: 29.5\nPercentile 99: 37"
+    },
+    {
+      "value": {
+        "p10": 7.0,
+        "p25": 10.65,
+        "p50": 15.8,
+        "p75": 21.9,
+        "p90": 28.0
+      },
+      "reasoning": "(a) Time left: the question resolves when Metaculus checks Chicken Watch on 2028-01-01, about 13.5 months from now (2026-11-12). Forecasts close 2027-06-30.\n\n(b) Latest known value: I could not observe a current value from the tracker. The question's bounds imply a starting point. The floor of 3.71517% equals 12/323, and the soft ceiling of 30.03% equals 97/323. That suggests about 323 qualifying commitments (made 1990 to 2025, deadline 2026 or later), of which 12 were \"Reporting Fulfilled\" when the question was created, probably in 2025 or early 2026. The figure today is likely higher, roughly 5 to 12%, but it is unconfirmed.\n\n(c) If nothing changed: about 3.7%, or whatever the current value is. That is the floor.\n\n(d) If the current trend continued:\n- Commitments due in 2026 should be reported during 2027. Commitments due in 2027 will mostly be reported in 2028, after resolution.\n- I assume roughly 80 to 110 of the 323 are due in 2026, and that about 45 to 60% of those are marked fulfilled in time, given Chicken Watch's logging lag.\n- Adding the 12 early fulfillers plus about 10 to 20 early fulfillers with later deadlines gives roughly 60 to 90 out of 323, or about 18 to 28%.\n- Logging lag and weaker reporting in Asia and Latin America pull this down. Recent figures show a 64% fulfillment rate for commitments due by 2025, and many later deadlines are in 2028 to 2030.\n- My central estimate is about 15 to 18%.\n\n(e) Historical variation: the numerator only grows, and the denominator is roughly fixed, apart from withdrawals or retroactive additions. A typical annual update cycle could move the figure by 5 to 15 points. Big jumps come from batch data updates, usually around the Fair and Fowl report in September.\n\n(f) Experts and markets: there are no markets on this question. The creator's range of about 3.7 to 30% implies a mid-teens expectation. Sector reports such as Fair and Fowl, EggTrack and the Eggsposé show steady progress but also notable holdouts and withdrawals, partly driven by bird flu.\n\n(g) Unexpected scenarios:\n- Low: Chicken Watch barely updates the tracker in 2027, or bird flu drives widespread delays and withdrawals, leaving the value near 5 to 7%.\n- High: a large data refresh in late 2027 logs many 2026 fulfillments plus early reporting on 2027 and 2030 commitments, pushing the value above 30%.\n\nPercentile 1: 4.3\nPercentile 5: 5.6\nPercentile 10: 7\nPercentile 20: 9.5\nPercentile 30: 11.8\nPercentile 40: 13.8\nPercentile 50: 15.8\nPercentile 60: 17.9\nPercentile 70: 20.3\nPercentile 80: 23.5\nPercentile 90: 28\nPercentile 95: 32\nPercentile 99: 40"
+    },
+    {
+      "value": {
+        "p10": 7.0,
+        "p25": 10.75,
+        "p50": 16.0,
+        "p75": 22.75,
+        "p90": 30.0
+      },
+      "reasoning": "(a) **Time left:** The question resolves on 2028-01-01, about 13.5 months from now. Forecasts close on 2027-06-30.\n\n(b) **Latest known value:** I could not see the live tracker. The question bounds decode neatly: 3.715% is 12/323 and 30.03% is 97/323. That suggests the value at question creation (around late 2025 or early 2026) was about 12 fulfilled out of 323 pledges, or 3.7%. The current value in November 2026 is unknown, but it is probably higher, as some 2026-deadline pledges and early fulfillers get updated.\n\n(c) **If nothing changed:** about 3.7%, or somewhat higher if updates during 2026 have already been logged.\n\n(d) **If the current trend continued:** Fulfillment for a deadline group keeps rising after the deadline. 2024 deadlines reached about 93% fulfilled roughly 13 months later, and 2025 deadlines were at about 64% one month after.\n- If roughly 25-35% of the 323 pledges have 2026 deadlines and 10-15% have 2027 deadlines, the share by January 2028 could be around 20-30%.\n- Two things pull this down:\n  - Chicken Watch updates lag for companies outside the big advocacy reports.\n  - Many pledges have 2028-2030 timelines, especially dual-region global ones.\n- A central estimate of about 15-20% seems reasonable.\n\n(e) **Historical variation:** Over about 2 years, a deadline group goes from near 0% to 60-90% fulfilled. This mixed group, which mostly has future deadlines, would move much less. A rise from about 4% to 10-30% is plausible.\n\n(f) **Experts and markets:** A KCAP2.0 bot gives a median of 16.4%, with an 80% interval of 7.2% to 29.3%. The question creator considers anything above about 30% unlikely. There are no markets on this question.\n\n(g) **Unexpected scenarios:**\n- Low: Chicken Watch barely updates its tracker, as staff turn to OWA reports instead, and bird-flu supply shocks lead firms to drop or extend 2026 deadlines. The value would stay around 4-7%.\n- High: A large batch of 2026-deadline pledges gets marked fulfilled after the January 2027 and September 2027 OWA reports, and the denominator is weighted more heavily toward 2026 deadlines than I assume. The value would reach 35-45%.\n\nPercentile 1: 4.1\nPercentile 5: 5.5\nPercentile 10: 7\nPercentile 20: 9.5\nPercentile 30: 12\nPercentile 40: 14\nPercentile 50: 16\nPercentile 60: 18.5\nPercentile 70: 21\nPercentile 80: 24.5\nPercentile 90: 30\nPercentile 95: 34\nPercentile 99: 42"
+    },
+    {
+      "value": {
+        "p10": 7.0,
+        "p25": 10.1,
+        "p50": 14.3,
+        "p75": 19.4,
+        "p90": 25.0
+      },
+      "reasoning": "(a) Time left: the question resolves on 2028-01-01, about 13.5 months from now. Forecasts close on 2027-06-30.\n\n(b) Latest known value: I have no direct reading of the tracker. The question's bounds look like simple fractions. The lower bound, 3.71517028%, equals 12/323, and the upper bound, 30.030959735%, equals 97/323. So when the question was created (around early to mid 2026), the filtered tracker probably showed 12 of 323 pledges as \"Reporting Fulfilled,\" about 3.7%. This is an inference from the arithmetic, not a confirmed reading. Since then, early fulfillments such as Cheesecake Factory and Viking Cruises suggest the value may now be somewhat higher, perhaps 5-8%.\n\n(c) If nothing changed: about 3.7-6%.\n\n(d) If the current trend continued: 2026-deadline pledges will be one year past due at resolution, and 2027-deadline pledges will only just be due.\n- Past cohorts: 2024 deadlines reached about 93% fulfilled after more than a year, and 2025 deadlines were about 64% fulfilled one month after the deadline.\n- Applying a lower rate to 2026 deadlines (around 50-60%, since they include holdouts and Chicken Watch is slow to update), plus small shares from 2027 and later deadlines, gives a central estimate of roughly 12-20%.\n- Deadline removals, like Chick-fil-A and Cracker Barrel dropping their 2026 dates, and slow tracker updates pull the estimate down.\n\n(e) Historical variation: fulfillment for a deadline cohort typically rises by tens of percentage points in the 1-2 years around its deadline. This mixed-deadline group should rise less, perhaps 5-20 points over this period.\n\n(f) Experts and markets: the KCAP2.0 bot gives a median of 16.4%, with an 80% range of 7.2% to 29.3%. The question creator's upper bound is about 30%. No markets cover this.\n\n(g) Unexpected scenarios:\n- Low: Chicken Watch barely updates statuses, new pre-2026 pledges are added to the denominator, and companies remove deadlines. The result would stay at about 5%.\n- High: a bulk Chicken Watch update after the OWA reports marks many 2026 and 2027 deadline pledges as fulfilled, possibly helped by egg-credit accounting. The result could exceed 30%.\n\nPercentile 1: 4.2\nPercentile 5: 5.5\nPercentile 10: 7\nPercentile 20: 9.2\nPercentile 30: 11\nPercentile 40: 12.7\nPercentile 50: 14.3\nPercentile 60: 16\nPercentile 70: 18\nPercentile 80: 20.8\nPercentile 90: 25\nPercentile 95: 28.5\nPercentile 99: 36"
+    },
+    {
+      "value": {
+        "p10": 6.0,
+        "p25": 9.0,
+        "p50": 13.5,
+        "p75": 19.5,
+        "p90": 26.0
+      },
+      "reasoning": "(a) **Time left:** The outcome will be known about 13.5 months from now, when Metaculus reads the tracker on 1 January 2028. Forecasts close on 30 June 2027.\n\n(b) **Latest known value:** I have no direct reading of the tracker. The question bounds look like fractions with a denominator of 323: the floor of 3.71517% equals 12/323, and the creator's soft upper bound of 30.031% equals 97/323. Because the numerator is cumulative and the Victory Date filter fixes the denominator, the floor is probably the value when the question was created, sometime in 2026. That means about 12 of roughly 323 pledges with a 2026+ timeline were marked \"Reporting Fulfilled\", or about 3.7%.\n\n(c) **If nothing changed:** about 3.7%.\n\n(d) **If the current trend continued:**\n- Pledges due in 2026 make up perhaps 25-35% of the group. They should increasingly get \"Reporting Fulfilled\" entries through 2027, as companies file ESG reports and advocacy groups (OWA in January and September, THL in the autumn) publish their updates.\n- Base rates from the tracker data reported by Faunalytics:\n  - 64% of pledges due in 2025 or earlier were fulfilled by February 2026.\n  - 93% of 2024-deadline pledges were fulfilled.\n- Later-deadline pledges (2027, 2028, 2030) will mostly not be fulfilled yet.\n- The very low current share shows that Chicken Watch is slow to record early fulfillment.\n- A rough weighting is 0.3 × 50% + 0.1 × 25% + 0.6 × 8%, which comes to about 20%. Discounting for update lag and for deadline removals (as Chick-fil-A and Cracker Barrel did) gives a central estimate of about 13-15%.\n\n(e) **Historical variation:** Fulfillment for a deadline group typically climbs tens of percentage points in the year or two after its deadline. For a mixed group where only part falls due within the window, a rise of 5-25 points over 18 months is plausible.\n\n(f) **Experts and markets:** The KCAP2.0 bot on Metaculus has a median of 16.4%, with an 80% range of 7.2-29.3%. The creator's soft maximum is about 30%. There is no relevant market.\n\n(g) **Unexpected scenarios:**\n- **Low:** Chicken Watch stops making updates, or bird-flu disruption leads many 2026-deadline companies to postpone their pledges. The value stays near 4-5%.\n- **High:** A bulk data refresh after the OWA and THL reports marks many large companies as fulfilled at once, and the group turns out to be heavily weighted toward 2026 deadlines. The value goes above 30%.\n\nPercentile 1: 4.0\nPercentile 5: 5.0\nPercentile 10: 6.0\nPercentile 20: 8.0\nPercentile 30: 10.0\nPercentile 40: 12.0\nPercentile 50: 13.5\nPercentile 60: 15.5\nPercentile 70: 18.0\nPercentile 80: 21.0\nPercentile 90: 26.0\nPercentile 95: 30.0\nPercentile 99: 38.0"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 6.8789,
+    "p25": 10.006,
+    "p50": 14.3373,
+    "p75": 20.3026,
+    "p90": 27.2512
+  },
+  "usage": [
+    {
+      "question_id": "43282",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.2,
+      "notional_cost_usd": 7.19e-05,
+      "input_tokens": 509,
+      "output_tokens": 42,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 18.6,
+      "notional_cost_usd": 0.0001806,
+      "input_tokens": 884,
+      "output_tokens": 8,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 90.5,
+      "notional_cost_usd": 0.3159917,
+      "input_tokens": 86164,
+      "output_tokens": 4957,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 22.6,
+      "notional_cost_usd": 0.08184,
+      "input_tokens": 5291,
+      "output_tokens": 1976,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.3,
+      "notional_cost_usd": 0.09284800000000001,
+      "input_tokens": 5292,
+      "output_tokens": 2526,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 10.2,
+      "notional_cost_usd": 0.0007623,
+      "input_tokens": 2845,
+      "output_tokens": 387,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.0,
+      "notional_cost_usd": 0.0008733,
+      "input_tokens": 2980,
+      "output_tokens": 555,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.00037259,
+      "input_tokens": 2845,
+      "output_tokens": 561,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.6,
+      "notional_cost_usd": 0.00038005,
+      "input_tokens": 2979,
+      "output_tokens": 574,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 45.4,
+      "notional_cost_usd": 0.04594820000000001,
+      "input_tokens": 5291,
+      "output_tokens": 2124,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.0008519,
+      "input_tokens": 2968,
+      "output_tokens": 517,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.00030763000000000003,
+      "input_tokens": 2968,
+      "output_tokens": 429,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 131.2,
+      "notional_cost_usd": 0.351673,
+      "input_tokens": 179384,
+      "output_tokens": 5763,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.4,
+      "notional_cost_usd": 0.085588,
+      "input_tokens": 5157,
+      "output_tokens": 2217,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.7,
+      "notional_cost_usd": 0.08963199999999999,
+      "input_tokens": 5155,
+      "output_tokens": 2420,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0008914,
+      "input_tokens": 2893,
+      "output_tokens": 626,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0008817,
+      "input_tokens": 3007,
+      "output_tokens": 561,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 31.9,
+      "notional_cost_usd": 0.10161200000000001,
+      "input_tokens": 5155,
+      "output_tokens": 3019,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00030518,
+      "input_tokens": 2892,
+      "output_tokens": 426,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.00041073,
+      "input_tokens": 3009,
+      "output_tokens": 634,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0008064000000000001,
+      "input_tokens": 2883,
+      "output_tokens": 460,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43282",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00028608,
+      "input_tokens": 2882,
+      "output_tokens": 388,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1725
+}
