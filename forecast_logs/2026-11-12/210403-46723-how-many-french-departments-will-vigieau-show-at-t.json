@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-12T21:10:09.620427+00:00",
+  "bot_version": "2026-11-08.1",
+  "started_at": "2026-11-12T21:04:03.896439+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46723,
+    "post_id": 46467,
+    "url": "https://www.metaculus.com/questions/46467",
+    "type": "DiscreteQuestion",
+    "unit": "departments",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How many French departments will VigiEau show at the \"Crise\" drought level on December 4, 2026?",
+    "resolution_criteria": "This question resolves as the number of departments listed under a severity level of \"Crise\" in the [Situation de la sécheresse en France](https://vigieau.gouv.fr/donnees/carte-historique) database for December 4, 2026 (before December 5, 2026).",
+    "fine_print": "Please note that the value may be checked on or after that date. If the page is unavailable, the count may be derived from the official government [dataset](https://www.data.gouv.fr/datasets/donnee-secheresse-vigieau) or from [credible sources](https://www.metaculus.com/faq/#definitions)",
+    "close_time": "2026-11-13 00:00 UTC",
+    "scheduled_resolution_time": "2026-12-04 00:00 UTC"
+  },
+  "research": [
+    "I've finished the research and am writing up the findings.\n\n# VigiEau \"Crise\" departments on 2026-12-04: research notes\n\n## 1. Resolution source\n- 2026-11-12: The page cited in the criteria (vigieau.gouv.fr/donnees/carte-historique) is built with JavaScript, and the fetch tool got nothing back but the page title. [VigiEau](https://vigieau.gouv.fr/donnees/carte-historique/)\n- 2026-11-12: VigiEau's live API lists each department's highest severity level. Today it shows **43 departments at \"crise\"**, 20 at alerte renforcée, 13 at alerte, 6 at vigilance and 19 with no level. Its timestamps run up to 2026-11-12. The 43 are Ain, Aisne, Ardennes, Ariège, Aube, Aude, Aveyron, Charente, Charente-Maritime, Cher, Côte-d'Or, Côtes-d'Armor, Doubs, Eure-et-Loir, Finistère, Haute-Garonne, Gers, Gironde, Hérault, Ille-et-Vilaine, Indre, Indre-et-Loire, Jura, Landes, Loire-Atlantique, Loiret, Lot, Lot-et-Garonne, Maine-et-Loire, Morbihan, Nièvre, Puy-de-Dôme, Hautes-Pyrénées, Pyrénées-Orientales, Rhône, Haute-Saône, Saône-et-Loire, Tarn, Tarn-et-Garonne, Vendée, Yonne, Territoire de Belfort and La Réunion. [API](https://api.vigieau.gouv.fr/api/departements)\n- 2026-11-12: The data.gouv.fr dataset was last updated today. It is the fallback source if the page is down. [data.gouv](https://www.data.gouv.fr/datasets/donnee-secheresse-vigieau)\n- Caveat: I am assuming the historical map counts departments the same way the API does (a department counts if any zone in it is at crise). I could not check this directly.\n\n## 2. Current status\n- Nothing has settled the question yet. The count is falling quickly: 79 on Oct 5, 72 on Oct 26, 48 on Nov 2, 44 on Nov 9 and 43 on Nov 12.\n- The question range is 9.5 to 75.5, and the count is currently near the middle of it.\n\n## 3. Recent news (newest first)\n- 2026-11-12: Groundwater on Nov 1: 64% of monitoring points were below normal, against 32% a year earlier. Recharge had started at only 27% of points, against a 2023-2025 average of 50%. BRGM (the national geological survey) expects slow-reacting aquifers to keep falling until late autumn. The article gives 44 departments in crise on Nov 9. [actu-alt-plus](https://actu-alt-plus.com/nature-science-planete/nappes-phreatiques-france-novembre-2026-recharge-brgm/42253)\n- 2026-11-12: Corrèze was downgraded from crise to alerte on Nov 7. [aquitaineonline](https://www.aquitaineonline.com/actualites-en-aquitaine/limousin/13702-secheresse-correze-nappes-recoltes-2026.html)\n- 2026-11-10: Côtes-d'Armor has been in crise since Aug 14, and cuts to water pressure are being extended to more towns. [Ouest-France](https://www.ouest-france.fr/meteo/secheresse/la-secheresse-continue-les-baisses-de-pression-deau-etendues-a-trois-nouvelles-communes-de-lagglo-de-saint-brieuc-3288f95a-dd25-11f1-86b6-0a2fbb1d8ed9)\n- 2026-11-08: Rainfall in October was normal on average but very uneven. The Atlantic coast and southern Occitanie were still 40 to 50% short. Counts of departments in crise: 42 on Jul 10, 79 at the peak on Aug 25, 78 on Sep 28, 72 on Oct 26 and 48 on Nov 2. Alerte renforcée rose from 14 to 21 departments. [actu-alt-plus](https://www.actu-alt-plus.com/nature-science-planete/secheresse-france-2026-fin-pluie-octobre-nappes-restrictions/41569/)\n- Some prefectural orders run until fixed end dates, for example Côte-d'Or until Nov 15 and Loir-et-Cher and Loiret until Nov 30. Those dates are possible points for downgrades. [search summary, Réussir/selectra; not verified]\n\n## 4. Base rates and seasonality\nThis year is far above recent years, with a deep drought that ran late into the season. National hydrological bulletins (OIEau/eaufrance) show this mid-November to early-December pattern:\n- **2025:** 10 departments in crise on Nov 14, down to 3 on about Dec 12, a 70% drop. [BSH 12/2025](https://www.oieau.fr/eaudoc/system/files/bsh_12_2025_0.pdf), [BSH 11/2025](https://www.eaufrance.fr/sites/default/files/documents/bsh_11_2025_vf.pdf)\n- **2023:** 13 in crise on Nov 13. By early December, 8 departments had any restrictions, so the crise count was at most 8. [BSH 11/2023](https://www.eaufrance.fr/sites/default/files/2023-11/bsh_11_2023.pdf)\n- **2022** (the closest comparable drought year): 49 departments had restrictions above vigilance on Nov 13, falling to 28 on Dec 9, roughly a 43% drop. I could not find crise-only counts for those dates. [BSH 12/2022](https://www.eaufrance.fr/sites/default/files/2022-12/bsh_12_2022_v3.pdf)\n- **2024** (a wet year): very few restrictions. I found no exact figure.\n- **2019:** 30 departments had restriction orders on Nov 5. [Terre-net, via search]\n- In every year I found, the count fell over this three-week window, typically by 40 to 70%. This year the count fell 24 between Oct 26 and Nov 2, but only 5 between Nov 2 and Nov 12, so the decline has slowed.\n- Low groundwater (64% of points below normal) argues for crisis levels lasting longer than usual in departments where groundwater triggers the restrictions. These include Brittany, the Centre and Charente.\n\n## 5. Other forecasts\n- I found no prediction market or expert forecast on this question. None of the markets provided (Kalshi, Polymarket) is relevant.\n\n## 6. Upcoming events before resolution\n- Météo-France's outlook for Nov 2026 to Jan 2027 favours above-normal rain over the northern three-quarters of France, with no scenario favoured for the Southeast and temperatures above normal everywhere. [actu-alt-plus](https://actu-alt-plus.com/nature-science-planete/nappes-phreatiques-france-novembre-2026-recharge-brgm/42253), [CNews](https://www.cnews.fr/france/2026-10-05/meteo-voici-le-temps-quil-devrait-faire-en-octobre-novembre-et-decembre-selon)\n- ECMWF-based commentary expects a southwesterly flow bringing rain from Spain and a mild second half of November, about +2 to +3°C. [Tameteo](https://www.tameteo.com/actualites/previsions/tendance-meteo-pour-novembre-et-decembre-en-france-le-modele-europeen-mise-tout-sur-le-rouge-previsions-hiver-automne.html)\n- Prefectural water committees will meet, and orders will expire on Nov 15 and Nov 30, so downgrades could come in batches.\n- The next BRGM groundwater bulletin is due around Dec 10, after the resolution date.\n- I could not find an official Météo-France short-range forecast covering Nov 20 to Dec 4.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-12 21:04 UTC; check each market really matches the question)\n- Kalshi: NY Jets: To Break Playoff Drought (New York J). Yes prices: 2027-28 season: 0.15; 2028-29 season: 0.35; 2030-31 season: 0.33; 2029-30 season: 0.35; 2026-27 season: 0.0100.\n- Kalshi: UEFA Nations League: Group A1 Winner (Group A1). Yes prices: France: 0.59; Italy: 0.07; Turkiye: 0.07; Belgium: 0.16.\n- Kalshi: UEFA Nations League: Group A1 Qualifiers (Group A1). Yes prices: Belgium: 0.50; France: 0.63; Italy: 0.0000; Turkiye: 0.0000.\n- Kalshi: Italy vs France (ITA vs FRA (Nov 12)). Yes prices: France: 0.47; Tie: 0.34; Italy: 0.17.\n- Kalshi: FC Vesoul vs Fleury (VES vs FLE (Nov 14)). Yes prices: Tie: 0.50; Fleury: 0.41; FC Vesoul: 0.48.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Kalshi: Will Ontario lift its U.S. alcohol restrictions? (Ontario ends its broad restrictions on U.S.-produced beverage alcohol by putting into effect a policy authorizing the LCBO to generally resume purchasing and supplying those products for ordinary commercial sale in the province). Yes prices: Before Jul 1, 2027: 0.42; Before Jan 1, 2027: 0.10.\n- Polymarket: Lecornu out as French PM by...? (ends 2026-10-11). [Yes, No] prices: July 31, 2026: [\"0\", \"1\"]; September 30, 2026: [\"0\", \"1\"]; August 31, 2026: [\"0\", \"1\"]; December 31, 2025: [\"0\", \"1\"]; October 31: [\"0\", \"1\"]; November 30: [\"0\", \"1\"]\n- Polymarket: French election called by...? (ends 2027-01-01). [Yes, No] prices: July 31, 2026: [\"0\", \"1\"]; December 31, 2025: [\"0\", \"1\"]; September 15: [\"0\", \"1\"]; December 31, 2026: [\"0.0155\", \"0.9845\"]; October 31, 2025: [\"0\", \"1\"]; October 10: [\"0\", \"1\"]\n- Polymarket: Will France pass a national budget by December 31? (ends 2026-12-31). [Yes, No] prices: Will France pass a national budget by December 31?: [\"0.42\", \"0.58\"]",
+    "# VigiEau \"Crise\" departments on 2026-12-04: research brief\n\n## 1. Resolution source\n- 2026-11-12: I could not read the counts on the VigiEau carte-historique page. It loads with JavaScript and the fetch returned only the title \"VigiEau\". [VigiEau](https://vigieau.gouv.fr/donnees/carte-historique/)\n- 2026-11-12: A search-engine snapshot of the same page showed \"Crise 44 départements\", along with recent decrees: Haute-Garonne, Hérault and Ariège in crise, and Corrèze moved down to alerte on 7 Nov. The header date in that snapshot (11/10/2026, or \"97 days old\") does not match, so treat the 44 as approximate. [VigiEau](https://vigieau.gouv.fr/donnees/carte-historique/)\n- 2026-11-12: On data.gouv, the GeoJSON and PMTiles files of zones under restriction are updated daily (latest today). The arrêtés CSV was last updated 15 Sep. [data.gouv](https://www.data.gouv.fr/datasets/donnee-secheresse-vigieau)\n\n## 2. Current status\n- Nothing has settled the question yet. The count is falling fast, but about 44 departments were still in crise around 9 Nov, far above any recent December.\n- 2026-11-09: 44 departments had at least one zone in crise. [actu-alt-plus](https://actu-alt-plus.com/nature-science-planete/nappes-phreatiques-france-novembre-2026-recharge-brgm/42253)\n- Earlier counts from the AAP observatory: 79 (5 Oct), 72 (26 Oct), 48 (2 Nov). The summer peak was 79 on 25 Aug. [actu-alt-plus](https://www.actu-alt-plus.com/nature-science-planete/secheresse-france-2026-fin-pluie-octobre-nappes-restrictions/41569/)\n- Departments named in crise around 2 Nov: Réunion, Charente, Charente-Maritime, Vendée, four Breton departments, Gironde, Landes, Haute-Garonne, Tarn, and a northeast band from Ardennes to Jura (including Meuse, Côte-d'Or and Doubs). [actu-alt-plus](https://www.actu-alt-plus.com/nature-science-planete/secheresse-france-2026-fin-pluie-octobre-nappes-restrictions/41569/)\n\n## 3. Recent news (newest first)\n- 2026-11-12: Corrèze moved from crise to alerte on 7 Nov, even though groundwater is critically low. [aquitaineonline](https://www.aquitaineonline.com/actualites-en-aquitaine/limousin/13702-secheresse-correze-nappes-recoltes-2026.html)\n- 2026-11-11: Calvados lifted its last restrictions after heavy rain on 23-24 Oct. [laclepublique](https://laclepublique.fr/calvados/articles/2026/2026-11-11-fin-restrictions-eau-calvados/)\n- 2026-11-10: Côtes-d'Armor has been in crise since 14 Aug, and water-pressure cuts are being extended around Saint-Brieuc. [Ouest-France](https://www.ouest-france.fr/meteo/secheresse/la-secheresse-continue-les-baisses-de-pression-deau-etendues-a-trois-nouvelles-communes-de-lagglo-de-saint-brieuc-3288f95a-dd25-11f1-86b6-0a2fbb1d8ed9)\n- Early Nov: Ille-et-Vilaine extended its crise decree to the end of November. [lesiffs](https://lesiffs.fr/arrete-crise-secheresse-prolonge-jusqua-la-fin-novembre-2026/) Loire-Atlantique extended measures to 30 Nov, with drinking water still in crise on the Loire axis. [Loire-Atlantique prefecture](https://www.loire-atlantique.gouv.fr/Actions-de-l-Etat/Environnement/Secheresse/Secheresse-Des-mesures-prolongees-jusqu-au-30-novembre) Saône-et-Loire kept the Grosne and Saône zones in crise until 15 Nov. [Saône-et-Loire prefecture](https://www.saone-et-loire.gouv.fr/Actualites/Salle-de-presse/20262/OCTOBRE/COMMUNIQUES-DE-PRESSE/CP-Secheresse-en-Saone-et-Loire-arrete-de-prolongation-des-restrictions) Haute-Loire lifted restrictions from 3 Nov. [Haute-Loire prefecture](https://www.haute-loire.gouv.fr/Actions-de-l-Etat/Secheresse-et-politique-de-l-eau/Secheresse-et-restrictions-en-vigueur)\n- 2026-11-01 (BRGM groundwater): 64% of monitoring points are below normal, against 32% a year earlier. Recharge has started at only 27% of points, against a 2023-2025 average of 50%. BRGM calls the situation \"very worrying\", worse than 2022 and 2023, and expects slow-reacting aquifers to keep falling until late autumn. [actu-alt-plus](https://actu-alt-plus.com/nature-science-planete/nappes-phreatiques-france-novembre-2026-recharge-brgm/42253)\n\n## 4. Base rates and seasonality\nThese mid-November to early-December counts come from the national hydrological bulletins (BSH). Their counting may differ slightly from VigiEau's carte-historique.\n- **2025:** 10 departments in crise on 14 Nov, then 3 on 12 Dec (a 70% drop). [BSH Dec 2025](https://www.oieau.fr/eaudoc/system/files/bsh_12_2025_0.pdf)\n- **2024:** 4 in crise on 15 Nov, then 3 on 11 Dec. [BSH Dec 2024](https://www.eaufrance.fr/sites/default/files/documents/bsh_12_2024_vf.pdf)\n- **2023:** 13 in crise on 13 Nov. By December, only 8 departments had any restriction, so 8 or fewer were in crise. I could not find the exact December crise count. [BSH Nov 2023](https://www.eaufrance.fr/sites/default/files/2023-11/bsh_11_2023.pdf)\n- **2022** (the closest analogue year): 49 departments had restrictions above vigilance in mid-November and 28 on 9 Dec (a 43% drop). I could not find the 2022 crise-only count.\n- **Earlier Decembers**, restrictions above vigilance: 1 in 2021, 3 in 2020, 10 in 2019. [search summary of BSH Dec 2022](https://www.eaufrance.fr/sites/default/files/2022-12/bsh_12_2022_v3.pdf)\n- **2026 trend:** down about 35 departments over 5 weeks (79 to 44), with most of the fall in the last two weeks of October.\n- **Comparison:** 2026 is running far above every year from 2019 to 2025 for this date, and above 2022 as well. Applying the 2022 drop (about 43%) to 44 would give about 25. Applying the 2025 drop (about 70%) would give about 13. These are illustrations, not forecasts.\n- **What slows the decline:** prefectures often extend decrees until month-end (30 Nov). Groundwater-driven crises in Brittany, the northeast and Poitou may persist.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on this question. None of the markets collected by code match it: they cover the Jets, football, French politics and the budget.\n- The question's range (9.5 to 75.5) hints at what the question setters expected, but it is not a forecast.\n\n## 6. Upcoming events before resolution\n- **Météo-France 3-month outlook (Nov 2026 to Jan 2027), cited 29 Oct:** above-normal rainfall likely over the northern three-quarters of France, no favoured scenario for the Southeast, temperatures above normal everywhere. [actu-alt-plus](https://actu-alt-plus.com/nature-science-planete/nappes-phreatiques-france-novembre-2026-recharge-brgm/42253), [letribunaldunet](https://www.letribunaldunet.fr/meteo/meteo-france-tendances-novembre-janvier-depressions-douceur.html)\n- **Météo Paris, updated 6 Nov:** unsettled weather 9-15 Nov, with more than a month's rain possible in the Southeast. The Southwest may stay drier. [Météo Paris](https://www.meteo-paris.com/actualites/un-mois-de-pluie-dans-les-7-prochains-jours-des-inondations-sont-a-craindre)\n- **Météo Paris, longer range:** frequent, heavy rain likely 16-22 Nov, wettest in the north, the west and the eastern mountains. Disturbed weather could last to late November or December. [Météo Paris](https://www.meteo-paris.com/actualites/faut-il-craindre-le-retour-des-tempetes-sur-la-france-d-ici-debut-decembre)\n- **Decree expiries:** many expire 15 Nov, 20 Nov (Haute-Savoie) and 30 Nov (Loire-Atlantique, Ille-et-Vilaine), so a wave of renewals or lifts is likely around 30 Nov to 1 Dec. [argonay.fr](https://www.argonay.fr/secheresse-en-haute-savoie-des-restrictions-maintenues-en-novembre-2026-et-ajustees/)\n- **Bulletins:** the next national BSH, around 12-15 Nov, should give an official crise count. The BRGM bulletin on the situation at 1 Dec is expected around 10 Dec, after resolution.\n\nSources: the links above, plus [widemedia](https://widemedia.fr/ecologie-climat/3741/restrictions-eau-france-secheresse-2026-departements-crise/), [VigiEau carte](https://vigieau.gouv.fr/carte/) and [Le Monde](https://www.lemonde.fr/en/environment/article/2026/10/05/persistent-drought-puts-pressure-on-france-s-drinking-water-networks_6758251_114.html).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-12 21:04 UTC; check each market really matches the question)\n- Kalshi: NY Jets: To Break Playoff Drought (New York J). Yes prices: 2027-28 season: 0.15; 2028-29 season: 0.35; 2030-31 season: 0.33; 2029-30 season: 0.35; 2026-27 season: 0.0100.\n- Kalshi: UEFA Nations League: Group A1 Winner (Group A1). Yes prices: France: 0.59; Italy: 0.07; Turkiye: 0.07; Belgium: 0.16.\n- Kalshi: UEFA Nations League: Group A1 Qualifiers (Group A1). Yes prices: Belgium: 0.50; France: 0.63; Italy: 0.0000; Turkiye: 0.0000.\n- Kalshi: Italy vs France (ITA vs FRA (Nov 12)). Yes prices: France: 0.47; Tie: 0.34; Italy: 0.17.\n- Kalshi: FC Vesoul vs Fleury (VES vs FLE (Nov 14)). Yes prices: Tie: 0.50; Fleury: 0.41; FC Vesoul: 0.48.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Kalshi: Will Ontario lift its U.S. alcohol restrictions? (Ontario ends its broad restrictions on U.S.-produced beverage alcohol by putting into effect a policy authorizing the LCBO to generally resume purchasing and supplying those products for ordinary commercial sale in the province). Yes prices: Before Jul 1, 2027: 0.42; Before Jan 1, 2027: 0.10.\n- Polymarket: Lecornu out as French PM by...? (ends 2026-10-11). [Yes, No] prices: July 31, 2026: [\"0\", \"1\"]; September 30, 2026: [\"0\", \"1\"]; August 31, 2026: [\"0\", \"1\"]; December 31, 2025: [\"0\", \"1\"]; October 31: [\"0\", \"1\"]; November 30: [\"0\", \"1\"]\n- Polymarket: French election called by...? (ends 2027-01-01). [Yes, No] prices: July 31, 2026: [\"0\", \"1\"]; December 31, 2025: [\"0\", \"1\"]; September 15: [\"0\", \"1\"]; December 31, 2026: [\"0.0155\", \"0.9845\"]; October 31, 2025: [\"0\", \"1\"]; October 10: [\"0\", \"1\"]\n- Polymarket: Will France pass a national budget by December 31? (ends 2026-12-31). [Yes, No] prices: Will France pass a national budget by December 31?: [\"0.42\", \"0.58\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 16.0,
+        "p25": 22.0,
+        "p50": 29.0,
+        "p75": 35.5,
+        "p90": 41.0
+      },
+      "reasoning": "(a) About 3 weeks remain: forecasts close Nov 13, and the outcome is the VigiEau count for December 4, 2026.\n\n(b) The latest known value is 43 departments at \"crise\", from the VigiEau API on 2026-11-12.\n\n(c) If nothing changed, the outcome would be 43.\n\n(d) The trend runs 79 (Oct 5), 72 (Oct 26), 48 (Nov 2), 44 (Nov 9), 43 (Nov 12). The drop has slowed sharply, to about 0.5 per day lately. Extrapolating that slow pace gives roughly 33 to 38. Batch expirations around Nov 15 and Nov 30, plus late-autumn rain, could push the count lower.\n\n(e) In every year found, the count fell over the mid-November to early-December window, typically by 40 to 70%. In 2025 crise fell 70%. In 2022, the closest drought analogue, restrictions above vigilance fell about 43%. Applied to 43, that range gives roughly 13 to 26. This year groundwater is very low, with 64% of points below normal, which argues for a slower decline in aquifer-driven departments such as Brittany, Centre and Charente.\n\n(f) No expert or market forecasts exist. Météo-France leans toward above-normal rain over the northern three-quarters of France, with mild temperatures. La Réunion is still in its dry season and likely stays in crise.\n\n(g)\n- **Low scenario:** A wet second half of November, followed by prefects letting orders lapse en masse on Nov 30 rather than renewing them. That could leave about 10 to 15 departments.\n- **High scenario:** A dry, mild late November in which prefects renew crise orders because aquifers keep falling. The count could stay near 40 to 45.\n\nWeighing the historical decline rates against this year's slower recent decline and very low groundwater, I put the median at about 29.\n\nPercentile 1: 9\nPercentile 5: 13\nPercentile 10: 16\nPercentile 20: 20\nPercentile 30: 24\nPercentile 40: 27\nPercentile 50: 29\nPercentile 60: 32\nPercentile 70: 34\nPercentile 80: 37\nPercentile 90: 41\nPercentile 95: 44\nPercentile 99: 50"
+    },
+    {
+      "value": {
+        "p10": 14.0,
+        "p25": 21.0,
+        "p50": 29.0,
+        "p75": 35.5,
+        "p90": 41.0
+      },
+      "reasoning": "(a) About 3 weeks remain: forecasts close on 2026-11-13, and the question resolves on the value for 2026-12-04.\n\n(b) The latest known value is 43 departments at \"Crise\" on 2026-11-12, from the VigiEau API.\n\n(c) If nothing changed, the outcome would be 43.\n\n(d) The count fell 24 in one week, from 72 on Oct 26 to 48 on Nov 2. It then slowed to about 0.5 per day (48 to 43 over Nov 2 to Nov 12). At that slower pace, Dec 4 would land around 32 to 35. A steeper fall is likely, because orders expire on Nov 15 and Nov 30 and above-normal rain is expected in the north.\n\n(e) Over this mid-November to early-December window, counts typically drop by 40 to 70%:\n- 2025: 10 to 3.\n- 2022, a comparable drought year: restrictions above vigilance went from 49 to 28, a drop of about 43%.\n\nApplied to 43, that range gives roughly 13 to 26. However, this year groundwater is very low (64% of monitoring points below normal) and recharge is delayed. Groundwater-triggered crises in Brittany, the Centre and Charente may therefore persist, which argues for a smaller drop.\n\n(f) No expert forecasts or markets exist for this question. Météo-France favours above-normal rain over the northern three-quarters of France, with a mild, wet southwesterly flow. BRGM expects slow-reacting aquifers to keep falling until late autumn.\n\n(g) Scenarios outside the central range:\n- Low outcome: heavy late-November rain, combined with many prefectural orders lapsing on Nov 30 without renewal, collapses the count to around 8 to 12.\n- High outcome: a dry, blocked late November means prefects renew orders across the board. Combined with the slow aquifers, the count stays at around 40 to 45, or ticks up slightly if downgraded departments are re-escalated.\n\nPercentile 1: 7\nPercentile 5: 11\nPercentile 10: 14\nPercentile 20: 19\nPercentile 30: 23\nPercentile 40: 26\nPercentile 50: 29\nPercentile 60: 31\nPercentile 70: 34\nPercentile 80: 37\nPercentile 90: 41\nPercentile 95: 43\nPercentile 99: 48"
+    },
+    {
+      "value": {
+        "p10": 16.0,
+        "p25": 22.0,
+        "p50": 29.0,
+        "p75": 35.5,
+        "p90": 40.0
+      },
+      "reasoning": "(a) About 22 days remain: the question resolves on the VigiEau state for December 4, 2026.\n\n(b) The latest known value is 43 departments at \"crise\", from the VigiEau API on 2026-11-12. The count has been falling: 79 on Oct 5, 72 on Oct 26, 48 on Nov 2, 44 on Nov 9 and 43 on Nov 12.\n\n(c) If nothing changed, the answer would be 43.\n\n(d) If the current trend continued:\n- At the recent slow pace (about 1 department every 2 days), the count would be about 32 to 35.\n- Applying the typical seasonal decline seen in past years, it would be about 15 to 25.\n\n(e) Historical variation: over a mid-November to early-December window, crise counts typically fall by 40 to 70%.\n- In 2025 the drop was 70% (10 to 3).\n- In 2022, the closest comparable drought year, restrictions above vigilance fell 43%.\n\nThis year, two things argue for a slower decline:\n- Groundwater is very low and late to recharge, with 64% of monitoring points below normal. This keeps groundwater-triggered crise orders in place in Brittany, the Centre and Charente.\n- La Réunion is in its dry season and is likely to stay at crise.\n\nOn the other side, orders expiring on Nov 15 and Nov 30, together with forecast above-normal rain in the north, favour batches of downgrades.\n\n(f) No markets or expert forecasts on this question exist. Météo-France's seasonal outlook favours wetter than normal conditions in the northern three-quarters of France.\n\n(g) Unexpected scenarios:\n- **Low:** A very wet second half of November, with repeated Atlantic fronts, leads prefectures to drop crise orders en masse at the Nov 30 expiries, leaving about 10 to 12 departments.\n- **High:** November stays dry and mild under a blocking pattern. Groundwater keeps falling, prefectures extend orders unchanged, and a few departments are re-escalated, leaving about 43 to 47.\n\nThe median sits around 28, a decline of about a third, which is slightly less than the historical average because of the groundwater deficit.\n\nPercentile 1: 10\nPercentile 5: 13\nPercentile 10: 16\nPercentile 20: 20\nPercentile 30: 24\nPercentile 40: 27\nPercentile 50: 29\nPercentile 60: 31\nPercentile 70: 34\nPercentile 80: 37\nPercentile 90: 40\nPercentile 95: 42\nPercentile 99: 47"
+    },
+    {
+      "value": {
+        "p10": 11.0,
+        "p25": 16.5,
+        "p50": 23.0,
+        "p75": 31.0,
+        "p90": 38.0
+      },
+      "reasoning": "(a) About 3 weeks remain: the question resolves on the VigiEau data for 4 December 2026, 22 days from now.\n\n(b) The latest known value is about 44 departments in \"Crise\" around 9 November 2026. This comes from the AAP observatory and a VigiEau snapshot whose date is unclear, so treat it as approximate.\n\n(c) If nothing changed, the answer would be about 44.\n\n(d) The count went 79 (5 Oct), 72 (26 Oct), 48 (2 Nov), 44 (9 Nov). A straight-line continuation of the recent pace (roughly -4 to -10 per week) gives about 15 to 30 by 4 December. The forecast heavy rain from 9 to 22 November could speed up lifts, especially in the north and west.\n\n(e) Historical variation:\n- **2025:** the crise count fell from 10 to 3 between mid-November and mid-December, a 70% drop.\n- **2024:** it fell from 4 to 3.\n- **2022:** departments with restrictions above vigilance fell 43% over the same period (49 to 28).\n- **Ratio range:** relative falls of 40% to 70% are typical. Two forces hold the count up this year. Groundwater is extremely low, and BRGM says it is worse than 2022. Prefectures also tend to extend decrees to month-end (30 November), with renewal-or-lift decisions coming right around 1 December.\n\n(f) No market exists on this question.\n- Météo-France expects above-normal rain over the northern three-quarters of France.\n- BRGM expects slow-reacting aquifers to keep falling until late autumn, which argues for stickiness in the northeast and Poitou.\n- The question creator's range of 10 to 75 points to a lower part of that range being plausible.\n\n(g) Unexpected scenarios:\n- **Low:** a very wet second half of November triggers broad lifting at the 30 November expiries, and only a handful of groundwater-crisis departments (Réunion, parts of the northeast) remain, giving about 6 to 8.\n- **High:** rain disappoints in the Southwest and the northeast. Prefectures cite critically low aquifers and drinking-water strain and renew crise decrees en masse until mid or late December, so the count stays at 35 to 42.\n\nPercentile 1: 6\nPercentile 5: 9\nPercentile 10: 11\nPercentile 20: 15\nPercentile 30: 18\nPercentile 40: 21\nPercentile 50: 23\nPercentile 60: 26\nPercentile 70: 29\nPercentile 80: 33\nPercentile 90: 38\nPercentile 95: 42\nPercentile 99: 50"
+    },
+    {
+      "value": {
+        "p10": 12.0,
+        "p25": 18.0,
+        "p50": 25.0,
+        "p75": 33.0,
+        "p90": 40.0
+      },
+      "reasoning": "(a) About 22 days remain until resolution on December 4, 2026. The value can be checked on or after that date.\n\n(b) The latest known value is about 44 departments in \"Crise\" around November 9-10, 2026. This comes from the AAP observatory and a search-engine snapshot of VigiEau, and the snapshot's header date is inconsistent. Corrèze has since dropped to alerte (November 7).\n\n(c) If nothing changed, the count would stay at about 44.\n\n(d) The count went from 79 (Oct 5) to 72 (Oct 26), 48 (Nov 2) and 44 (Nov 9). The decline is slowing but continuing. If it continues, add the heavy rain forecast for mid to late November and the wave of decree expiries on November 15 and 30, and the count would be roughly 20-30 by December 4.\n\n(e) Historical variation over similar mid-November to early-December windows:\n- 2025: 10 to 3 (-70%).\n- 2024: 4 to 3.\n- 2022: 49 to 28 above vigilance (-43%), the closest analogue.\n- Applied to 44, these drops give roughly 13 to 25.\n- Groundwater in 2026 is worse than in 2022, and BRGM expects slow-reacting aquifers to keep falling. That argues for crise decrees on drinking water persisting in Brittany, the Poitou area and the northeast.\n\n(f) No markets cover this question. Météo-France expects above-normal rainfall over the northern three-quarters of France from November to January. Météo Paris expects frequent heavy rain from November 9-22, possibly continuing into December. The question creator's range of 10 to 75 implies a central expectation somewhere in the 20s-30s.\n\n(g) Low scenario: very heavy late-November rain across the west, north and northeast. Prefectures then decline to renew most decrees expiring November 30, and the count falls to about 5-8, with Réunion and a few southwest departments remaining.\nHigh scenario: the rain underdelivers, especially in the Southwest. Prefectures cautiously extend crise decrees into December because aquifers are still falling, and the count stays at about 40-50.\n\nPercentile 1: 5\nPercentile 5: 9\nPercentile 10: 12\nPercentile 20: 16\nPercentile 30: 20\nPercentile 40: 23\nPercentile 50: 25\nPercentile 60: 28\nPercentile 70: 31\nPercentile 80: 35\nPercentile 90: 40\nPercentile 95: 44\nPercentile 99: 52"
+    },
+    {
+      "value": {
+        "p10": 9.0,
+        "p25": 14.5,
+        "p50": 21.0,
+        "p75": 28.0,
+        "p90": 35.0
+      },
+      "reasoning": "(a) About 22 days remain: the question resolves on the VigiEau state for December 4, 2026, and today is November 12.\n\n(b) The latest known value is about 44 departments in \"Crise\" around November 9-10, 2026. This comes from a VigiEau snapshot and the AAP observatory; the snapshot's header date did not match, so the figure is approximate. Earlier counts were 79 (Oct 5), 72 (Oct 26) and 48 (Nov 2).\n\n(c) If nothing changed, the answer would be about 44. That is unlikely, because many decrees expire on November 15, 20 and 30.\n\n(d) If the current trend continued, the count would fall by roughly 5 to 10 per week, which gives about 15 to 30 by December 4. The decline should slow as the remaining cases become groundwater-driven drinking-water crises, as in Brittany, Poitou-Charentes and the northeast.\n\n(e) Historical variation over the same mid-November to early-December window:\n- 2025: 10 fell to 3, about a 70% drop.\n- 2024: 4 fell to 3.\n- 2022 (restrictions above vigilance): 49 fell to 28, about a 43% drop. Crise-only counts fell faster.\n- Applied to 44, these drops give roughly 13 to 25.\n\n(f) There are no markets on this question. Météo-France and Météo Paris expect above-normal rain across northern and western France from mid to late November, which favours lifting restrictions. BRGM says groundwater is worse than in 2022 and recharge is lagging, which favours keeping drinking-water crise zones in place. The question setters' range of 10 to 75 points to a likely low tens outcome.\n\n(g) Unexpected scenarios:\n- Low: very heavy late-November rain plus the November 30 expiry wave lead most prefectures to let decrees lapse. Only a handful remain (Réunion, a couple of Breton departments, the Charentes), giving about 5.\n- High: rain disappoints, especially in the Southwest, and slow aquifers keep falling. Prefectures roll crise decrees forward to mid or late December almost wholesale, keeping about 40.\n\nMy median is about 20. The upper tail is wider than the lower one, because extended decrees can keep the count high even after rain.\n\nPercentile 1: 4\nPercentile 5: 7\nPercentile 10: 9\nPercentile 20: 13\nPercentile 30: 16\nPercentile 40: 18\nPercentile 50: 21\nPercentile 60: 23\nPercentile 70: 26\nPercentile 80: 30\nPercentile 90: 35\nPercentile 95: 39\nPercentile 99: 47"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 12.7855,
+    "p25": 19.518,
+    "p50": 27.071,
+    "p75": 34.5777,
+    "p90": 40.3158
+  },
+  "usage": [
+    {
+      "question_id": "46723",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.1,
+      "notional_cost_usd": 0.0002078,
+      "input_tokens": 860,
+      "output_tokens": 72,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 7.219999999999999e-05,
+      "input_tokens": 502,
+      "output_tokens": 44,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 162.6,
+      "notional_cost_usd": 0.5441035999999999,
+      "input_tokens": 232516,
+      "output_tokens": 5960,
+      "web_searches": 9,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.1,
+      "notional_cost_usd": 0.06423999999999999,
+      "input_tokens": 5391,
+      "output_tokens": 1056,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.4,
+      "notional_cost_usd": 0.0643,
+      "input_tokens": 5391,
+      "output_tokens": 1059,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0006579,
+      "input_tokens": 2698,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.0006523,
+      "input_tokens": 2670,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.00032215,
+      "input_tokens": 2701,
+      "output_tokens": 463,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.2,
+      "notional_cost_usd": 0.026556199999999995,
+      "input_tokens": 5392,
+      "output_tokens": 1153,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.00028514,
+      "input_tokens": 2669,
+      "output_tokens": 390,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.0007716,
+      "input_tokens": 2759,
+      "output_tokens": 440,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00037423999999999997,
+      "input_tokens": 2760,
+      "output_tokens": 566,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 161.6,
+      "notional_cost_usd": 0.5411443000000001,
+      "input_tokens": 183840,
+      "output_tokens": 7292,
+      "web_searches": 9,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.5,
+      "notional_cost_usd": 0.077636,
+      "input_tokens": 6223,
+      "output_tokens": 1393,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.6,
+      "notional_cost_usd": 0.077108,
+      "input_tokens": 6222,
+      "output_tokens": 1367,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.8,
+      "notional_cost_usd": 0.076116,
+      "input_tokens": 6223,
+      "output_tokens": 1317,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0007437,
+      "input_tokens": 2792,
+      "output_tokens": 371,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0007207,
+      "input_tokens": 2752,
+      "output_tokens": 341,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0007415,
+      "input_tokens": 2791,
+      "output_tokens": 367,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00029776,
+      "input_tokens": 2750,
+      "output_tokens": 414,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00031057000000000003,
+      "input_tokens": 2793,
+      "output_tokens": 438,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46723",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00039636,
+      "input_tokens": 2791,
+      "output_tokens": 610,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.4778
+}
