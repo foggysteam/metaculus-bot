@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-13T18:10:09.165396+00:00",
+  "bot_version": "2026-11-08.1",
+  "started_at": "2026-11-13T18:05:28.620318+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46727,
+    "post_id": 46471,
+    "url": "https://www.metaculus.com/questions/46471",
+    "type": "DiscreteQuestion",
+    "unit": "°C",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "What will the September-November 2026 El Niño index be?",
+    "resolution_criteria": "This question resolves as the SON °C anomaly entry for 2026 at NOAA's [Relative Oceanic Niño Index data](https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt) when accessed by Metaculus on or after December 6, 2026.",
+    "fine_print": "",
+    "close_time": "2026-11-13 21:00 UTC",
+    "scheduled_resolution_time": "2026-12-06 00:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n- 2026-11-13: I fetched NOAA CPC's RONI.ascii.txt. The SON 2026 row is not there yet. The latest seasons are JJA 2026 1.36, JAS 1.69 and **ASO 1.97**. Earlier 2026 values: MAM -0.04, AMJ 0.49, MJJ 0.97. [RONI](https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt)\n- For comparison, the traditional ONI in the same period: JJA 1.80, JAS 2.16, ASO 2.46. RONI has been running at about 0.76 to 0.80 times ONI (JJA 0.76, JAS 0.78, ASO 0.80). [ONI](https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt)\n- SON is the average of the September, October and November monthly values. September and October are already observed. Only November, plus any revisions to the ERSST data, is still open. CPC's monthly ERSST file looked stale when I read it (it ends in June 2026), so I could not get official monthly RONI values for September or October.\n\n## 2. Current status\n- Nothing settles the question yet. The math works like this: SON = ASO + (Nov - Aug)/3, so SON comes in above 1.97 only if the November monthly value beats August's.\n- My own back-calculation from the seasonal ONI values (an estimate, not an official figure) gives monthly ONI of about Aug 2.13, Sep 2.52 and Oct 2.73. If November ERSST Niño-3.4 lands near 2.8 and the RONI/ONI ratio stays around 0.8, RONI SON works out to roughly 2.1 to 2.25. That is near the bottom of the question's 1.905 to 3.495 range.\n- 2026-11-12: CPC's weekly OISST Niño-3.4 anomalies: Sep 2 +2.8, Sep 16 +3.0, Sep 30 +3.2, Oct 14 +3.2, Oct 21 +3.4, Oct 28 +3.4, **Nov 4 +3.3** (first dip after a steady rise). OISST weekly readings run about 0.5 to 0.6 °C above the monthly ERSST values. [weekly](https://www.cpc.ncep.noaa.gov/data/indices/wksst9120.for)\n\n## 3. Recent news\n- 2026-11-12: CPC's November discussion puts Niño-3.4 at +2.5°C, Niño-3 at +3.6 and Niño-1+2 at +4.4. It gives a greater than 79% chance of strong-to-very-strong El Niño through JFM 2027. It gives about 60% odds of RONI ≥ +2.5 for OND and NDJ, with no SON probability stated, and says El Niño \"will continue to strengthen\" before weakening in early 2027. [CPC](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml)\n- 2026-11-12: A Taiwanese meteorologist reported the ASO Niño-3.4 three-month average at 2.0. That matches RONI ASO 1.97. [Mirror Media](https://www.mirrormedia.mg/story/20261112edi011)\n- 2026-10-08: CPC's October discussion had Niño-3.4 at +2.1 and gave **54% for SON RONI ≥ 2.5**, 83% for OND and 70% for NDJ. Now that ASO is published at 1.97, SON ≥ 2.5 would need November to beat August by about 1.6 °C, which looks arithmetically very hard. [CPC Oct](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_oct2026/ensodisc.shtml)\n- 2026-11: Yale Climate Connections reported October 2026 as Earth's warmest October on record. A warm tropical mean pulls RONI down relative to ONI. [Yale](https://yaleclimateconnections.org/2026/11/october-2026-earths-warmest-october-on-record/)\n- Mid-October 2026: all 27 models in the CCSR/IRI plume forecast Niño-3.4 ≥ 2.0 for OND through DJF. [CCSR/IRI](https://forecast.ccsr.columbia.edu/discussions/ccsriri-enso-forecast-issued-september-2026)\n\n## 4. Base rates\nChange in RONI from ASO to SON in comparable El Niño years ([RONI](https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt)):\n\n| Year | ASO | SON | Change |\n|------|-----|-----|--------|\n| 1972 | 1.64 | 1.82 | +0.18 |\n| 1982 | 1.64 | 2.03 | +0.39 |\n| 1987 | 1.34 | 1.20 | -0.14 |\n| 1997 | 2.07 | 2.22 | +0.15 |\n| 2009 | 0.53 | 0.86 | +0.33 |\n| 2015 | 1.80 | 2.03 | +0.23 |\n| 2023 | 1.04 | 1.30 | +0.26 |\n\n- The median change is about +0.23. The range is -0.14 to +0.39, and 6 of 7 years rose. Added to 1.97, that gives a historical-analog range of about 1.83 to 2.36, centred near 2.2.\n- 2026's ASO (1.97) is the second highest on record after 1997 (2.07). The 2026 rise from JAS to ASO (+0.28) is similar to 2015 (+0.26) and 2023 (+0.25).\n- 2026-11-13: none of the past SON RONI values I checked reaches 2.5. The highest are 1997 at 2.22, and 1982 and 2015 at 2.03.\n\n## 5. Other forecasts\n- 2026-11-13: Kalshi, \"peak RONI 2026-27\" (MJJ 2026 to MAM 2027): 2.5 to 2.9 at 57%, 2.0 to 2.4 at 41%, ≥3.0 at 4%. This is about the peak season, not SON.\n- 2026-11-13: Kalshi, NDJ 2026-27 RONI: ≥2.5 at 65%, 2.0 to 2.4 at 25%, 1.5 to 1.9 at 7%. This is a later season, not SON.\n- I found no market or Metaculus price specifically on SON RONI.\n- CPC's ~60% chance of OND RONI ≥ 2.5 would imply very fast November-December warming. You may want to weigh that against the arithmetic in section 2.\n\n## 6. Upcoming events before resolution\n- Weekly CPC SST updates on Nov 16, 23 and 30, which show November's trend. The latest weekly value, Nov 4 at +3.3, was flat to slightly down.\n- Early December 2026: ERSSTv5 November data come out, and RONI.ascii.txt is updated with SON. September and October values may also be slightly revised.\n- 2026-12-10 (approximately): next CPC ENSO discussion. This comes after the 2026-12-06 resolution access, so it does not matter for resolution.\n- Outlook: CPC expects El Niño to keep strengthening into early winter. Model plumes peak in OND or NDJ.\n\nSources: [RONI](https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt), [ONI](https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt), [CPC weekly](https://www.cpc.ncep.noaa.gov/data/indices/wksst9120.for), [CPC Nov discussion](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml), [CPC Oct discussion](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_oct2026/ensodisc.shtml), [CCSR/IRI](https://forecast.ccsr.columbia.edu/discussions/ccsriri-enso-forecast-issued-september-2026), [Yale Climate Connections](https://yaleclimateconnections.org/2026/11/october-2026-earths-warmest-october-on-record/), [Mirror Media](https://www.mirrormedia.mg/story/20261112edi011)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-13 18:05 UTC; check each market really matches the question)\n- Kalshi: What will the peak RONI value be during the 2026-27 El Niño season? (MJJ 2026 through MAM 2027). Yes prices: 2.5°C to 2.9°C: 0.57; 2.0°C to 2.4°C: 0.41; At least 3.0°C: 0.04; 1.5°C to 1.9°C: 0.0100; Below 1.5°C: 0.0100.\n- Kalshi: Bristol Bay sockeye run forecast for 2027 (2027 season). Yes prices: Between 49 and 55 million: 0.72; Between 29 and 36.99 million: 0.0100; Below 29 million: 0.0200; Between 37 and 42.99 million: 0.0100; Between 43 and 48.99 million: 0.0100; Above 55 million: 0.0700.\n- Kalshi: Rain in Providence this month? (In Nov 2026). Yes prices: Above 5 inches: 0.63; Above 6 inches: 0.34; Above 7 inches: 0.14; Above 4 inches: 0.92; Above 2 inches: 0.9900; Above 1 inch: 0.9900; Above 3 inches: 0.9900.\n- Kalshi: What will the peak RONI value for El Niño be during the NDJ 2026-27 season? (NDJ 2026-27 seasonal RONI). Yes prices: At least 2.5°C: 0.65; 2.0°C to 2.4°C: 0.25; Below 0.5°C: 0.0100; 0.5°C to 0.9°C: 0.0500; 1.5°C to 1.9°C: 0.0700; 1.0°C to 1.4°C: 0.0900.\n- Kalshi: Fear & Greed Index on Dec 4, 2026? (On Dec 4, 2026). Yes prices: Fear: 0.38; Extreme Fear: 0.21; Greed: 0.20; Neutral: 0.17; Extreme Greed: 0.04.\n- Kalshi: CPI-U index in November (November 2026). Yes prices: Above 336.400: 0.46; Above 336.300: 0.55; Above 336.500: 0.38; Above 336.200: 0.63; Above 336.600: 0.30; Above 336.100: 0.71; Above 336.000: 0.77; Above 336.700: 0.23; Above 335.900: 0.83; Above 336.800: 0.17.\n- Kalshi: Fear & Greed Index on Nov 27, 2026? (On Nov 27, 2026). Yes prices: Fear: 0.40; Extreme Fear: 0.19; Greed: 0.18; Neutral: 0.18; Extreme Greed: 0.01.\n- Kalshi: Peak Strait of Hormuz traffic day? (11/9 - 11/15) (11/9 - 11/15). Yes prices: November 15: 0.20; November 14: 0.17; November 13: 0.16; November 11: 0.17; November 9: 0.09; November 12: 0.06; November 10: 0.04.",
+    "Here is the research summary. Nothing settles the question yet. Two of the three months are in, and with ASO at 1.97°C, my rough estimate puts SON near 2.1°C. That estimate is my own arithmetic, not a forecast.\n\n## 1. Resolution source\n- 2026-11-13: The CPC RONI file's latest 2026 entry is **ASO = 1.97°C**. Earlier 2026 entries: JJA 1.36, JAS 1.69. **SON is not posted yet.** [RONI.ascii](https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt)\n- 2026-11-13: The traditional ONI in the same period: JJA 1.80, JAS 2.16, ASO 2.46. RONI has been running below ONI by 0.44, 0.47 and 0.49, so the gap is widening slowly. [ONI](https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt)\n- 2026-11-13: Monthly Niño-3.4 anomalies (CPC detrended file): Jul 1.78, Aug 2.17, **Sep 2.55, Oct 2.68**. November is not out yet. [detrend.nino34](https://www.cpc.ncep.noaa.gov/data/indices/detrend.nino34.ascii.txt)\n- I checked the ERSST monthly file (ersst5.nino.mth.91-20), but it only runs to June 2026.\n\n## 2. Current status\n- Not settled. September and October are fixed. November ERSST data will be released in early December.\n- My arithmetic:\n  - SON minus ASO equals (Nov RONI minus Aug RONI) divided by 3.\n  - Since June, a 1°C change in monthly ONI has moved RONI by about 0.92°C.\n  - If November's traditional anomaly is about 2.5, 2.7 or 2.9, SON RONI comes out at about **2.07, 2.13 or 2.19**.\n  - Using the ONI-minus-RONI gap gives the same answer: SON ONI near 2.64 minus a gap of about 0.51 is about 2.13.\n- To reach the question's floor of 1.905, November would have to fall well below August's level, which looks very unlikely. Getting to 2.5 or more would need a November monthly anomaly far above anything seen so far.\n- Small revisions to past RONI values are possible when ERSST updates.\n\n## 3. Recent news (newest first)\n- 2026-11-13: Clarín reports 4,547 people evacuated in Argentina. Argentina's weather service expects a strong or very strong event. [Clarín](https://www.clarin.com/sociedad/super-nino-2026-argentina-vivo-llegara-pico-lluvias-provincias-afectadas_0_5BeWh8qVPy.html)\n- 2026-11-12: CPC's ENSO discussion:\n  - Niño-3.4 \"reached +2.5°C\".\n  - A strong to very strong event is likely through JFM 2027, with over 79% chance.\n  - The chance of a historic event (3-month RONI of 2.5 or more) is about 60% for OND and NDJ. That is down from 83% for OND and 70% for NDJ on Oct 8. [CPC](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml), [watchers](https://watchers.news/2026/11/10/el-nino-2026-roni-2-0-behind-1997-record-forecast/)\n- 2026-11-10: Watchers.news, citing CPC's Nov 9 weekly update:\n  - Weekly RONI Niño-3.4 is +2.3°C, and the traditional weekly value is +3.3°C (week of Nov 4).\n  - ASO is 0.10 behind 1997.\n  - If the event gains what 1997 gained after ASO, it peaks near 2.18. With 2015's gain it reaches about 2.42, and with 1982's about 2.73. [watchers](https://watchers.news/2026/11/10/el-nino-2026-roni-2-0-behind-1997-record-forecast/)\n- 2026-11-04: CPC weekly OISST Niño-3.4 values:\n  - September weeks: 2.8, 2.8, 3.0, 3.1, 3.2.\n  - October weeks: 3.2, 3.2, 3.4, 3.4.\n  - Nov 4: 3.3, the first dip.\n  - OISST has been about 0.6 above the monthly ERSST values in Sep and Oct. [wksst9120](https://www.cpc.ncep.noaa.gov/data/indices/wksst9120.for)\n- 2026-11-12: Taiwanese media confirm ASO Niño-3.4 at about 2.0 (RONI). [Mirror Media](https://www.mirrormedia.mg/story/20261112edi011)\n\n## 4. Base rates\n- Change from ASO to SON in RONI for strong events [RONI](https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt):\n\n| Year | ASO | SON | Change |\n|---|---|---|---|\n| 1965 | 1.76 | 1.86 | +0.10 |\n| 1972 | 1.64 | 1.82 | +0.18 |\n| 1982 | 1.64 | 2.03 | +0.39 |\n| 1987 | 1.34 | 1.20 | -0.14 |\n| 1991 | 1.01 | 1.20 | +0.19 |\n| 1997 | 2.07 | 2.22 | +0.15 |\n| 2002 | 0.97 | 1.18 | +0.21 |\n| 2009 | 0.53 | 0.86 | +0.33 |\n| 2015 | 1.80 | 2.03 | +0.23 |\n| 2023 | 1.04 | 1.30 | +0.26 |\n\n- The typical change is +0.15 to +0.26. The full range is -0.14 to +0.39.\n- Applied to 1.97, that gives roughly 1.83 to 2.36, centered near 2.15 to 2.2.\n- The record SON is 2.22, set in 1997.\n- Recent years for the seasonal comparison, ASO to SON: 2023 +0.26, 2024 -0.09 (from -0.67 to -0.76), 2025 -0.15 (from -0.78 to -0.93). The 2024 and 2025 years were La Niña or neutral, so they are not really comparable.\n- This year is running ahead of 2015 and 2023 at the same point, and slightly behind 1997 in RONI.\n- The weekly peak may already be flattening (3.4 to 3.3), which argues for a smaller gain than 1982's.\n\n## 5. Other forecasts\n- 2026-11-13, Kalshi, \"peak RONI 2026-27\" (not the same as SON): 2.5 to 2.9: 57%; 2.0 to 2.4: 41%; 3.0 or more: 4%.\n- Kalshi, \"NDJ 2026-27 RONI\": 2.5 or more: 65%; 2.0 to 2.4: 25%.\n  - Both markets point to a peak after SON, so they are only an upper-bound guide for SON.\n- WMO puts the NDJ Niño-3.4 anomaly at about +3.8°C, traditional index, with the peak around December. [WMO](https://wmo.int/node/39136)\n- ECMWF shows a peak near 4°C in Nov to Dec, also traditional. [theweather.net](https://www.theweather.net/news/trending/el-nino-2026-2027-could-reach-a-record-breaking-peak-here-s-when.html)\n- I found no Metaculus community figure or Polymarket or Manifold market for SON RONI.\n\n## 6. Upcoming events before resolution\n- Weekly CPC ENSO updates on about Nov 16, 23 and 30. These show the trend in weekly OISST and RONI.\n- Early December: November ERSSTv5 is released, and CPC computes SON. Watch the CPC ENSO discussion on about 2026-12-10. The RONI file usually updates around the start of the month, before Dec 6.\n- The main thing that will decide the result is November's monthly Niño-3.4 anomaly against the tropical-mean warming. Late-October weekly values of 3.3 to 3.4 OISST suggest November will be similar to October or slightly higher (about 2.6 to 2.9 ERSST).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-13 18:05 UTC; check each market really matches the question)\n- Kalshi: What will the peak RONI value be during the 2026-27 El Niño season? (MJJ 2026 through MAM 2027). Yes prices: 2.5°C to 2.9°C: 0.57; 2.0°C to 2.4°C: 0.41; At least 3.0°C: 0.04; 1.5°C to 1.9°C: 0.0100; Below 1.5°C: 0.0100.\n- Kalshi: Bristol Bay sockeye run forecast for 2027 (2027 season). Yes prices: Between 49 and 55 million: 0.72; Between 29 and 36.99 million: 0.0100; Below 29 million: 0.0200; Between 37 and 42.99 million: 0.0100; Between 43 and 48.99 million: 0.0100; Above 55 million: 0.0700.\n- Kalshi: Rain in Providence this month? (In Nov 2026). Yes prices: Above 5 inches: 0.63; Above 6 inches: 0.34; Above 7 inches: 0.14; Above 4 inches: 0.92; Above 2 inches: 0.9900; Above 1 inch: 0.9900; Above 3 inches: 0.9900.\n- Kalshi: What will the peak RONI value for El Niño be during the NDJ 2026-27 season? (NDJ 2026-27 seasonal RONI). Yes prices: At least 2.5°C: 0.65; 2.0°C to 2.4°C: 0.25; Below 0.5°C: 0.0100; 0.5°C to 0.9°C: 0.0500; 1.5°C to 1.9°C: 0.0700; 1.0°C to 1.4°C: 0.0900.\n- Kalshi: Fear & Greed Index on Dec 4, 2026? (On Dec 4, 2026). Yes prices: Fear: 0.38; Extreme Fear: 0.21; Greed: 0.20; Neutral: 0.17; Extreme Greed: 0.04.\n- Kalshi: CPI-U index in November (November 2026). Yes prices: Above 336.400: 0.46; Above 336.300: 0.55; Above 336.500: 0.38; Above 336.200: 0.63; Above 336.600: 0.30; Above 336.100: 0.71; Above 336.000: 0.77; Above 336.700: 0.23; Above 335.900: 0.83; Above 336.800: 0.17.\n- Kalshi: Fear & Greed Index on Nov 27, 2026? (On Nov 27, 2026). Yes prices: Fear: 0.40; Extreme Fear: 0.19; Greed: 0.18; Neutral: 0.18; Extreme Greed: 0.01.\n- Kalshi: Peak Strait of Hormuz traffic day? (11/9 - 11/15) (11/9 - 11/15). Yes prices: November 15: 0.20; November 14: 0.17; November 13: 0.16; November 11: 0.17; November 9: 0.09; November 12: 0.06; November 10: 0.04."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 2.06,
+        "p25": 2.115,
+        "p50": 2.18,
+        "p75": 2.245,
+        "p90": 2.31
+      },
+      "reasoning": "(a) Time left: the outcome becomes known about 3 weeks from now, when CPC adds the SON row to RONI.ascii.txt in early December 2026. Resolution access is on or after December 6.\n\n(b) Latest known value: the RONI file accessed on 2026-11-13 shows ASO 2026 at 1.97, JAS at 1.69 and JJA at 1.36.\n\n(c) If nothing changed: SON = ASO + (Nov - Aug)/3. If November equalled August, SON would be 1.97. I estimate monthly RONI at about Aug 1.66, Sep 2.02 and Oct 2.23. If November simply held October's level (about 2.23), SON would be about 2.16.\n\n(d) If the trend continued: weekly OISST Niño-3.4 has plateaued near +3.3 to +3.4, which implies ERSST November near 2.7 to 2.9 (ONI basis). At a RONI/ONI ratio of about 0.8 to 0.82, that gives a November RONI of about 2.2 to 2.4 and an SON of about 2.15 to 2.22. A November RONI of 2.6 would give about 2.29.\n\n(e) Historical variation: from ASO to SON in strong El Niño years, RONI changed by -0.14 to +0.39, with a median of +0.23. Here two of the three months are already observed, so the residual spread is narrower. November uncertainty of ±0.3 maps to ±0.1 in SON. Revisions and uncertainty in my monthly decomposition add a few hundredths more.\n\n(f) Experts and markets: CPC expects El Niño to keep strengthening. CPC's earlier 54% chance of SON RONI ≥ 2.5 is now arithmetically very unlikely. Kalshi prices the NDJ season at 65% for ≥ 2.5, which is consistent with continued growth but implies little directly for SON beyond a modestly rising November. The historical maximum SON RONI is 2.22 (1997).\n\n(g) Unexpected scenarios:\n- Low: November Niño-3.4 cools sharply, for example from a wind reversal, while the tropical-mean SST stays at record warmth, pushing the ratio down. November RONI near 1.8 would give an SON of about 2.0.\n- High: a strong westerly wind burst drives a November surge to about 3.2 ONI with a ratio of 0.85, giving a November RONI near 2.7, plus upward revisions to September and October. SON would then be about 2.35 to 2.45.\n\nPercentile 1: 1.97\nPercentile 5: 2.03\nPercentile 10: 2.06\nPercentile 20: 2.10\nPercentile 30: 2.13\nPercentile 40: 2.16\nPercentile 50: 2.18\nPercentile 60: 2.20\nPercentile 70: 2.23\nPercentile 80: 2.26\nPercentile 90: 2.31\nPercentile 95: 2.35\nPercentile 99: 2.45"
+    },
+    {
+      "value": {
+        "p10": 2.08,
+        "p25": 2.135,
+        "p50": 2.18,
+        "p75": 2.235,
+        "p90": 2.29
+      },
+      "reasoning": "(a) **Time left:** About 3 weeks. The SON 2026 RONI value should post in early December 2026, when November ERSST data come out, and Metaculus reads the file on or after December 6.\n\n(b) **Latest known value:** RONI ASO 2026 is 1.97 °C, read from RONI.ascii.txt on 2026-11-13. Earlier seasons were JAS 1.69 and JJA 1.36.\n\n(c) **If nothing changed:** If November's monthly RONI equalled October's, SON would be about 2.15. SON = ASO + (Nov - Aug)/3. My back-calculated monthly RONI is about Aug 1.66, Sep 2.02 and Oct 2.22. These are estimates, not official figures.\n\n(d) **If the trend continued:**\n- Weekly OISST Niño-3.4 has levelled off near +3.3 to +3.4 since mid-October.\n- November ERSST is then likely about 2.75 to 2.9, giving a November RONI of about 2.25 to 2.35 at a ratio near 0.81.\n- That puts SON at about 2.17 to 2.20.\n\n(e) **Historical variation:**\n- In past El Niño years, the change from ASO to SON ranged from -0.14 to +0.39, with a median of +0.23.\n- Two of the three months are already observed, so the remaining uncertainty is mostly November, plus ERSST revisions of a few hundredths.\n- A 0.3 °C November surprise moves SON by only 0.1.\n\n(f) **Experts and markets:**\n- CPC expects the event to keep strengthening and gives about 60% odds of OND RONI ≥ 2.5. That would require very rapid warming and is hard to square with the arithmetic.\n- Kalshi prices are for peak and NDJ seasons, which are later than SON.\n- The question creator's range starts at 1.91, which is consistent with a value just above 2.\n\n(g) **Unexpected scenarios:**\n- **Low:** November cools sharply, for example from a westerly wind burst reversal or tropical-mean warming that pulls the relative index down, and Sep/Oct are revised down. November RONI near 1.8 would put SON near 2.0.\n- **High:** A November surge, with ERSST Niño-3.4 above 3.2 and a rising RONI/ONI ratio, plus upward revisions. November RONI near 2.7 would put SON near 2.32 to 2.40.\n\nPercentile 1: 1.98\nPercentile 5: 2.04\nPercentile 10: 2.08\nPercentile 20: 2.12\nPercentile 30: 2.15\nPercentile 40: 2.17\nPercentile 50: 2.18\nPercentile 60: 2.20\nPercentile 70: 2.22\nPercentile 80: 2.25\nPercentile 90: 2.29\nPercentile 95: 2.33\nPercentile 99: 2.42"
+    },
+    {
+      "value": {
+        "p10": 2.07,
+        "p25": 2.125,
+        "p50": 2.19,
+        "p75": 2.245,
+        "p90": 2.3
+      },
+      "reasoning": "(a) Time left: about 3 weeks. NOAA should post the SON 2026 RONI in early December, and Metaculus reads it on or after 2026-12-06.\n\n(b) Latest known value: RONI ASO 2026 = 1.97, from the file fetched 2026-11-13. Earlier seasons: JAS 1.69, JJA 1.36.\n\n(c) If nothing changed: SON = ASO + (Nov − Aug)/3. If November simply equalled August, SON would stay at 1.97. That is not realistic, because November will clearly be warmer than August.\n\n(d) If the current trend continued: I split the seasonal sums into rough monthly RONI values using the ratio of about 0.8 between RONI and ONI.\n- August is about 1.68, September about 2.0 and October about 2.23.\n- Weekly OISST readings have levelled off near +3.3 to +3.4 in late October and early November. That suggests November ERSST Niño-3.4 near 2.8, which is a November RONI of roughly 2.25 to 2.3.\n- That gives SON of about (2.0 + 2.23 + 2.27)/3 ≈ 2.17 to 2.2.\n- Uncertainty in how the seasonal sum splits into months, and in November itself (RONI about 2.0 to 2.6), maps to roughly ±0.1 on SON.\n\n(e) Historical variation: from ASO to SON in strong El Niño years, RONI changed by between −0.14 and +0.39, with a median of +0.23. Added to 1.97, that gives about 1.83 to 2.36, centred near 2.2. No past SON value has exceeded 2.22, the 1997 value. Two of the three months are already observed, which narrows the range further.\n\n(f) Experts and markets:\n- CPC's October discussion gave 54% for SON RONI ≥ 2.5. That is arithmetically nearly impossible now that ASO is published at 1.97.\n- Kalshi prices NDJ RONI ≥ 2.5 at 65%, which implies continued strengthening into December and January. This does not fit well with a November RONI near 2.3.\n- I weight the arithmetic most heavily, with a modest upward tilt in case November warms more than the weekly data show.\n\n(g) Unexpected scenarios:\n- Low: November cools, for example from a westerly wind reversal or a trade-wind surge. Combined with a downward ERSST revision of September and October, or a rising tropical mean that lowers RONI relative to ONI, SON could land near 2.0.\n- High: late November warms sharply, with weekly readings above 3.6. Together with an upward revision of September and October, November RONI could reach about 2.7 and SON about 2.35 to 2.4.\n\nPercentile 1: 1.97\nPercentile 5: 2.03\nPercentile 10: 2.07\nPercentile 20: 2.11\nPercentile 30: 2.14\nPercentile 40: 2.17\nPercentile 50: 2.19\nPercentile 60: 2.21\nPercentile 70: 2.23\nPercentile 80: 2.26\nPercentile 90: 2.30\nPercentile 95: 2.34\nPercentile 99: 2.43"
+    },
+    {
+      "value": {
+        "p10": 2.05,
+        "p25": 2.1,
+        "p50": 2.15,
+        "p75": 2.2,
+        "p90": 2.25
+      },
+      "reasoning": "(a) About 3 weeks. November ERSSTv5 data and the SON RONI value should post in early December, before the December 6 resolution access.\n\n(b) The latest RONI value is ASO 2026 = 1.97°C (posted by November 13, 2026). The traditional monthly anomalies are Aug 2.17, Sep 2.55 and Oct 2.68.\n\n(c) If November simply matched August's level, SON would equal ASO, about 1.97. If November matched October, SON would be about 2.10.\n\n(d) September and October are already fixed. SON minus ASO equals (Nov RONI minus Aug RONI) divided by 3.\n- August RONI is about 1.69.\n- Early-November weekly OISST is 3.3 to 3.4. Subtracting OISST's usual 0.6 lead over ERSST gives a November traditional value of about 2.7 to 2.9.\n- Subtracting the RONI gap of about 0.5 gives a November RONI of about 2.2 to 2.4.\n- That puts SON near 2.14 to 2.21.\n\n(e) Historically, ASO to SON has changed by between -0.14 and +0.39 in strong events. Two thirds of the window is already locked in, so the spread here is much narrower. November's monthly value is the only real uncertainty, plus small ERSST revisions of about ±0.03.\n\n(f) Experts and markets:\n- CPC expects a strong to very strong event, peaking in OND or NDJ, with about a 60% chance that OND or NDJ RONI reaches 2.5 or more.\n- WMO and ECMWF expect a peak around December.\n- Kalshi gives 65% to NDJ RONI of 2.5 or more.\n- All of these point to November being at least as warm as October.\n\n(g) Unexpected scenarios:\n- Low: a sharp November cooling, for example from a strong easterly burst, could drop the monthly traditional anomaly to about 2.2. A downward ERSST revision or a widened tropical-mean gap would add to that. SON would land around 1.97 to 2.0.\n- High: a November surge to a monthly traditional anomaly of about 3.3, plus an upward revision, could push SON to about 2.33.\n\nPercentile 1: 1.97\nPercentile 5: 2.02\nPercentile 10: 2.05\nPercentile 20: 2.09\nPercentile 30: 2.11\nPercentile 40: 2.13\nPercentile 50: 2.15\nPercentile 60: 2.17\nPercentile 70: 2.19\nPercentile 80: 2.21\nPercentile 90: 2.25\nPercentile 95: 2.28\nPercentile 99: 2.35"
+    },
+    {
+      "value": {
+        "p10": 2.06,
+        "p25": 2.105,
+        "p50": 2.15,
+        "p75": 2.19,
+        "p90": 2.23
+      },
+      "reasoning": "(a) **Time left:** about 3 weeks. November ERSSTv5 comes out in early December, and the RONI file should show SON by about December 6, 2026.\n\n(b) **Latest known value:** RONI ASO 2026 = 1.97°C, posted in the CPC RONI file as of 2026-11-13. Monthly traditional Niño-3.4 readings were Aug 2.17, Sep 2.55 and Oct 2.68.\n\n(c) **If nothing changed:** SON minus ASO equals (Nov RONI minus Aug RONI) divided by 3.\n- August monthly RONI is about 1.70, which is 2.17 minus a gap of about 0.47.\n- If November stayed at October's level (about 2.68 traditional, or about 2.17 RONI), SON would be about 1.97 + 0.16 = **2.13**.\n\n(d) **If the current trend continued:** Early November weekly OISST is 3.3 to 3.4. Taking off the roughly 0.6 OISST-ERSST offset gives about 2.7 to 2.8 for November ERSST, or about 2.2 to 2.3 RONI. That puts SON near **2.15 to 2.17**.\n\n(e) **Historical variation:** In strong events the ASO-to-SON change has ranged from -0.14 to +0.39, typically +0.15 to +0.26. Here two of the three months are already fixed, so the uncertainty is much smaller. A ±0.3 surprise in November's monthly value moves SON by only about ±0.1. Revisions to earlier months could add about ±0.03.\n\n(f) **Experts and markets:** CPC expects a strong to very strong event and gives about 60% to an OND or NDJ RONI of 2.5 or more. The Kalshi peak-RONI market leans toward 2.5 to 2.9, but the peak comes after SON. WMO and ECMWF expect the traditional-index peak around November to December. All of this fits November being at or above October.\n\n(g) **Unexpected scenarios:**\n- Low: a sharp November cooling, with the weekly dip continuing to about 2.3 traditional, combined with a larger tropical-mean adjustment and downward revisions. SON would come in near 2.0.\n- High: November surges to about 3.1 or more ERSST as ECMWF's peak arrives early, plus upward revisions. SON would reach about 2.28 to 2.32.\n\nPercentile 1: 1.97\nPercentile 5: 2.03\nPercentile 10: 2.06\nPercentile 20: 2.09\nPercentile 30: 2.12\nPercentile 40: 2.13\nPercentile 50: 2.15\nPercentile 60: 2.16\nPercentile 70: 2.18\nPercentile 80: 2.20\nPercentile 90: 2.23\nPercentile 95: 2.26\nPercentile 99: 2.32"
+    },
+    {
+      "value": {
+        "p10": 2.04,
+        "p25": 2.09,
+        "p50": 2.135,
+        "p75": 2.18,
+        "p90": 2.23
+      },
+      "reasoning": "(a) **Time left:** about 3 weeks. November ERSSTv5 data and the SON RONI entry should post in early December, before Metaculus checks on December 6, 2026.\n\n(b) **Latest known value:** RONI ASO 2026 = 1.97°C, as of 2026-11-13. Monthly traditional Niño-3.4 values are Aug 2.17, Sep 2.55 and Oct 2.68. The RONI-ONI gap is about 0.49 and widening slowly.\n\n(c) **If nothing changed:** Two of the three SON months are fixed. SON equals ASO plus (November minus August, in RONI terms) divided by 3. If November held at October's level (about 2.68 traditional, about 2.16 RONI), SON would be about 1.97 + (2.16 - 1.69)/3 ≈ 2.13°C.\n\n(d) **If the trend continued:** Weekly OISST rose through October and then dipped from 3.4 to 3.3. That suggests a November ERSST of about 2.6 to 2.9, which gives SON of about 2.10 to 2.20. A continued rise to about 3.0 would give about 2.23.\n\n(e) **Historical variation:** In strong events the ASO-to-SON change ranges from -0.14 to +0.39, typically +0.15 to +0.26. This year the ASO-to-SON step depends on only one unknown month, so the realistic spread is much narrower. A monthly November uncertainty of about ±0.2 moves SON by only about ±0.07. ERSST revisions to past months add perhaps ±0.03.\n\n(f) **Experts and markets:**\n- CPC expects a strong to very strong event, with about a 60% chance that OND or NDJ RONI reaches 2.5 or more.\n- ECMWF and WMO put the peak in Nov-Dec, near 4°C on the traditional index.\n- Kalshi's NDJ market puts about 65% on 2.5 or more.\n- All of these imply November at or above October, which supports SON of about 2.1 to 2.2.\n\n(g) **Unexpected scenarios:**\n- **Low:** A sharp November collapse in Niño-3.4 (traditional around 2.2) combined with downward ERSST revisions to Sep and Oct would give SON of about 1.95.\n- **High:** A November surge to about 3.2 traditional (the ECMWF-style rapid peak), plus upward revisions, would give SON of about 2.30. That would exceed 1997's record of 2.22.\n\nPercentile 1: 1.93\nPercentile 5: 2.00\nPercentile 10: 2.04\nPercentile 20: 2.08\nPercentile 30: 2.10\nPercentile 40: 2.12\nPercentile 50: 2.135\nPercentile 60: 2.15\nPercentile 70: 2.17\nPercentile 80: 2.19\nPercentile 90: 2.23\nPercentile 95: 2.26\nPercentile 99: 2.33"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 2.0583,
+    "p25": 2.1102,
+    "p50": 2.1657,
+    "p75": 2.2187,
+    "p90": 2.278
+  },
+  "usage": [
+    {
+      "question_id": "46727",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.0,
+      "notional_cost_usd": 0.0002035,
+      "input_tokens": 861,
+      "output_tokens": 63,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0002043,
+      "input_tokens": 488,
+      "output_tokens": 311,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 118.8,
+      "notional_cost_usd": 0.3350535,
+      "input_tokens": 95298,
+      "output_tokens": 7380,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.8,
+      "notional_cost_usd": 0.081788,
+      "input_tokens": 5487,
+      "output_tokens": 1895,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.9,
+      "notional_cost_usd": 0.082744,
+      "input_tokens": 5489,
+      "output_tokens": 1942,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0007799,
+      "input_tokens": 2888,
+      "output_tokens": 405,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.0008267000000000001,
+      "input_tokens": 2862,
+      "output_tokens": 509,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00028523999999999997,
+      "input_tokens": 2886,
+      "output_tokens": 387,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.0,
+      "notional_cost_usd": 0.00035287,
+      "input_tokens": 2861,
+      "output_tokens": 522,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 37.4,
+      "notional_cost_usd": 0.0422678,
+      "input_tokens": 5489,
+      "output_tokens": 1938,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0007980000000000001,
+      "input_tokens": 2956,
+      "output_tokens": 414,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0002677,
+      "input_tokens": 2956,
+      "output_tokens": 349,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 118.1,
+      "notional_cost_usd": 0.2642988,
+      "input_tokens": 111453,
+      "output_tokens": 6626,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.6,
+      "notional_cost_usd": 0.069404,
+      "input_tokens": 5444,
+      "output_tokens": 1293,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.07317599999999999,
+      "input_tokens": 5443,
+      "output_tokens": 1482,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008494,
+      "input_tokens": 2848,
+      "output_tokens": 560,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.2,
+      "notional_cost_usd": 0.078124,
+      "input_tokens": 5444,
+      "output_tokens": 1729,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0007601000000000001,
+      "input_tokens": 2779,
+      "output_tokens": 409,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00028713999999999996,
+      "input_tokens": 2850,
+      "output_tokens": 390,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0007727000000000001,
+      "input_tokens": 2882,
+      "output_tokens": 393,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00027494,
+      "input_tokens": 2780,
+      "output_tokens": 367,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46727",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00033528,
+      "input_tokens": 2883,
+      "output_tokens": 486,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0339
+}
