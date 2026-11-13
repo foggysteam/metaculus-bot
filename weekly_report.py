@@ -57,6 +57,14 @@ def current_minibench_id() -> int | None:
     return None
 
 
+def leaderboard_position(entries: list[dict], ours: dict) -> tuple[int, str]:
+    """Our place counting every forecaster with a higher score, and which half that is. Metaculus's
+    rank counts tied scores once (Main, 13 Nov 2026: rank 212 but 263 forecasters ahead of us out
+    of 490), so comparing that rank with the number of forecasters made a bottom half look like a top half."""
+    position = 1 + sum(e["score"] > ours["score"] for e in entries)
+    return position, "TOP half" if position <= len(entries) / 2 else "BOTTOM half"
+
+
 def leaderboard(project_id: int) -> str:
     data = _metaculus(f"leaderboards/project/{project_id}/")
     board = data[0] if isinstance(data, list) else data
@@ -69,11 +77,11 @@ def leaderboard(project_id: int) -> str:
         lines.append(f"Leader: {(top.get('user') or {}).get('username')} with {top['score']:.1f}.")
     if ours:
         e = ours[0]
-        half = "TOP half" if e["rank"] <= len(entries) / 2 else "BOTTOM half"
+        position, half = leaderboard_position(entries, e)
         prize = f", prize now ${e['prize']:.0f}" if e.get("prize") else ""
         lines.append(
-            f"KCAP2.0: rank {e['rank']} of {len(entries)} ({half}), score {e['score']:.1f} "
-            f"on {e.get('contribution_count')} scored questions{prize}."
+            f"KCAP2.0: {position} of {len(entries)} ({half}; Metaculus shows rank {e['rank']}, which counts tied "
+            f"scores once), score {e['score']:.1f} on {e.get('contribution_count')} scored questions{prize}."
         )
     else:
         lines.append("KCAP2.0: not on the leaderboard yet (none of its questions have resolved).")

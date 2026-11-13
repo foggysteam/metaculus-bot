@@ -600,6 +600,19 @@ def test_group_post_url_gives_each_subquestion() -> None:
     assert run_bot.questions_at(client, ["x/group", "x/single"]) == ["a", "b", "c"]
 
 
+def test_weekly_report_judges_the_half_by_place_not_by_metaculus_rank() -> None:
+    """Metaculus's rank counts tied scores once, so it runs well short of the number of forecasters
+    (Main on 13 Nov 2026: rank 212 with 263 ahead of us out of 490, bottom half)."""
+    import weekly_report
+
+    # 6 forecasters, two pairs tied: ranks 1, 2, 2, 3, 3, 4. Ours is rank 3 but 3 forecasters are ahead.
+    entries = [{"score": s, "rank": r} for s, r in ((90, 1), (50, 2), (50, 2), (20, 3), (20, 3), (5, 4))]
+    ours = entries[3]
+    assert weekly_report.leaderboard_position(entries, ours) == (4, "BOTTOM half")
+    assert weekly_report.leaderboard_position(entries, entries[1]) == (2, "TOP half")
+    assert weekly_report.leaderboard_position(entries, entries[0]) == (1, "TOP half")
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for test in tests:
