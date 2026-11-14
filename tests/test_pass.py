@@ -600,6 +600,17 @@ def test_group_post_url_gives_each_subquestion() -> None:
     assert run_bot.questions_at(client, ["x/group", "x/single"]) == ["a", "b", "c"]
 
 
+def test_live_researcher_has_the_raw_data_tool() -> None:
+    import forecaster
+
+    for mode, publish in (("tournament", True), ("rescue", True), ("question", False)):
+        bot = run_bot.make_bot(mode, publish)
+        researcher = bot.get_llm("researcher", "llm")
+        assert researcher.raw_data and bot.research_note == forecaster.RAW_DATA_NOTE
+        assert "--mcp-config" in researcher._build_args("system", "opus")
+        assert not bot.get_llm("default", "llm").raw_data  # forecasters only read the research
+
+
 def test_binary_framings_are_off_live_and_rotate_per_question_when_on() -> None:
     import forecaster
 

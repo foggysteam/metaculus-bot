@@ -28,7 +28,7 @@ dotenv.load_dotenv()
 from forecasting_tools import MetaculusClient  # noqa: E402
 
 from claude_code_llm import USAGE_LEDGER, find_claude_binary  # noqa: E402
-from forecaster import LOG_DIR, TEST_LOG_DIR, ClaudeForecaster, build_llms  # noqa: E402
+from forecaster import LOG_DIR, RAW_DATA_NOTE, TEST_LOG_DIR, ClaudeForecaster, build_llms  # noqa: E402
 from animal_futures import forecast_animal_futures  # noqa: E402
 from market_pulse import forecast_market_pulse  # noqa: E402
 
@@ -113,7 +113,7 @@ def questions_at(client: MetaculusClient, urls: list[str]) -> list:
     return found
 
 
-async def run(mode: str, publish: bool, urls: list[str]):
+def make_bot(mode: str, publish: bool) -> ClaudeForecaster:
     bot = ClaudeForecaster(
         # Two independent research reports, 3 forecasts each: backtest v1 + v1-r2 in
         # backtest/RESULTS.md (+1.5 per question vs one report with 5, not significant).
@@ -126,9 +126,18 @@ async def run(mode: str, publish: bool, urls: list[str]):
         folder_to_save_reports_to=None,
         skip_previously_forecasted_questions=(mode in ("tournament", "rescue")),
         extra_metadata_in_explanation=True,
-        llms=build_llms(),
+        # The researcher's raw-data tool (raw_data_server.py), live from 14 Nov 2026. Shadow runs on 30
+        # closed questions (shadow.py): on the 18 resolved it beat live on 16, lost on 1, +7.0 points
+        # per question, with no longer research and about 6% more usage.
+        llms=build_llms(raw_data=True),
         log_dir=LOG_DIR if (mode in ("tournament", "rescue") and publish) else TEST_LOG_DIR,
     )
+    bot.research_note = RAW_DATA_NOTE
+    return bot
+
+
+async def run(mode: str, publish: bool, urls: list[str]):
+    bot = make_bot(mode, publish)
     client = MetaculusClient()
     if mode == "tournament":
         reports = await forecast_tournaments(bot, client)
