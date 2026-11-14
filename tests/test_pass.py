@@ -600,6 +600,20 @@ def test_group_post_url_gives_each_subquestion() -> None:
     assert run_bot.questions_at(client, ["x/group", "x/single"]) == ["a", "b", "c"]
 
 
+def test_binary_framings_are_off_live_and_rotate_per_question_when_on() -> None:
+    import forecaster
+
+    bot = forecaster.ClaudeForecaster(llms=forecaster.build_llms(), publish_reports_to_metaculus=False)
+    a = SimpleNamespace(id_of_question=1, id_of_post=None, page_url="a")
+    b = SimpleNamespace(id_of_question=2, id_of_post=None, page_url="b")
+    assert bot._next_binary_framing(a) == ""  # live: the prompt is unchanged
+    bot.binary_framings = forecaster.BINARY_FRAMINGS
+    first = [bot._next_binary_framing(a) for _ in range(4)]
+    assert ["outside view" in first[0], "inside view" in first[1], "devil's advocate" in first[2]] == [True, True, True]
+    assert first[3] == first[0]
+    assert "outside view" in bot._next_binary_framing(b)  # each question starts from the first
+
+
 def test_weekly_report_judges_the_half_by_place_not_by_metaculus_rank() -> None:
     """Metaculus's rank counts tied scores once, so it runs well short of the number of forecasters
     (Main on 13 Nov 2026: rank 212 with 263 ahead of us out of 490, bottom half)."""

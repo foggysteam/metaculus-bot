@@ -206,6 +206,19 @@ def combine_research_reports(first: str, second: str) -> str:
     )
 
 
+BINARY_FRAMINGS = (
+    "Approach for this forecast: outside view. Choose the reference class with care and get its base "
+    "rate right first. Stay close to it unless the research gives specific, strong evidence that this "
+    "case differs.",
+    "Approach for this forecast: inside view. Work from the specifics of this case: where things stand "
+    "today, what exactly has to happen before the deadline, who decides, and what is scheduled. Then "
+    "check your number against the base rate.",
+    "Approach for this forecast: devil's advocate. Note which way you lean, then make the strongest case "
+    "for the opposite outcome, including ways the question could resolve that a quick reading misses. "
+    "Give your probability only after weighing that case.",
+)
+
+
 class ClaudeForecaster(FallTemplateBot2026):
     # Research runs two questions at a time, so one stalled call cannot hold up every other
     # question; forecasts are capped in claude_code_llm.
@@ -224,6 +237,10 @@ class ClaudeForecaster(FallTemplateBot2026):
     numeric_research_note: str = SEASONAL_NOTE
     # Added to every research prompt in shadow runs of the raw-data tool (shadow.py).
     research_note: str = ""
+    # Yes/no forecasts on one question come out nearly identical (they read the same research), so
+    # the ensemble adds little. When set, each forecast on a question gets the next of these, in turn.
+    # Off live; backtest vfr1 tests it (Ahmad's go-ahead, 14 Nov 2026).
+    binary_framings: tuple[str, ...] = ()
 
     def __init__(self, *args, log_dir: Path = LOG_DIR, **kwargs) -> None:
         super().__init__(*args, **kwargs)
@@ -231,6 +248,7 @@ class ClaudeForecaster(FallTemplateBot2026):
         self._research_by_question: dict[str, list] = {}
         self._evidence_by_question: dict[str, asyncio.Future] = {}
         self._reports_by_question: dict[str, list[asyncio.Future]] = {}
+        self._framing_turn: dict[str, int] = {}
 
     async def forecast_questions(self, questions, return_exceptions: bool = False):
         # Soonest deadline first. Questions run in list order and the API lists the newest first,
@@ -503,6 +521,14 @@ class ClaudeForecaster(FallTemplateBot2026):
             """
         )
 
+    def _next_binary_framing(self, question: MetaculusQuestion) -> str:
+        if not self.binary_framings:
+            return ""
+        key = self._question_key(question)
+        turn = self._framing_turn.get(key, 0)
+        self._framing_turn[key] = turn + 1
+        return "\n" + self.binary_framings[turn % len(self.binary_framings)] + "\n"
+
     async def _run_forecast_on_binary(
         self, question: BinaryQuestion, research: str
     ) -> ReasonedPrediction[float]:
@@ -533,7 +559,7 @@ class ClaudeForecaster(FallTemplateBot2026):
             (d) The strongest evidence for Yes and for No from the research, with dates.
             (e) A brief scenario that results in No, and one that results in Yes.
             (f) How you move from the base rate to your final probability.
-
+            {self._next_binary_framing(question)}
             {self._calibration_rules()}
             {self._get_conditional_disclaimer_if_necessary(question)}
 

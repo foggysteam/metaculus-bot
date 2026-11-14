@@ -50,7 +50,7 @@ from forecasting_tools import BinaryQuestion  # noqa: E402
 
 from claude_code_llm import USAGE_LEDGER, ClaudeCodeLlm, current_question_id  # noqa: E402
 from budget import Budget  # noqa: E402
-from forecaster import ClaudeForecaster, as_of_date, build_llms, combine_research_reports  # noqa: E402
+from forecaster import BINARY_FRAMINGS, ClaudeForecaster, as_of_date, build_llms, combine_research_reports  # noqa: E402
 
 logger = logging.getLogger(__name__)
 ROOT = Path(__file__).parent
@@ -76,6 +76,8 @@ def apply_variant(bot: ClaudeForecaster, variant: str | None) -> None:
         bot._calibration_rules = lambda: rules.replace(_STATUS_QUO_RULE, "")
     elif variant == "xhigh":
         bot.get_llm("default", "llm").effort = "xhigh"
+    elif variant == "framings":  # each forecast on a question takes a different approach (BINARY_FRAMINGS)
+        bot.binary_framings = BINARY_FRAMINGS
     else:
         raise ValueError(f"Unknown variant {variant}")
 
@@ -227,7 +229,7 @@ async def main() -> None:
     parser.add_argument("--market-predictions", type=int, default=3)
     parser.add_argument("--parallel", type=int, default=3, help="Questions in flight at once")
     parser.add_argument("--reuse-research", help="Run whose saved research to reuse instead of researching again")
-    parser.add_argument("--variant", help="Experiment to apply: no-status-quo or xhigh")
+    parser.add_argument("--variant", help="Experiment to apply: no-status-quo, xhigh or framings")
     parser.add_argument("--reuse-research-b", help="With --reuse-research: a second run's research; every forecast reads both")
     parser.add_argument("--budget-usd", type=float, help="Stop starting questions once these runs have used this much (API billing)")
     parser.add_argument("--budget-runs", help="Comma-separated runs that share the budget (default: this run)")
