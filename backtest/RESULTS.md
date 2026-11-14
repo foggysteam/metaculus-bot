@@ -376,3 +376,23 @@ The same 76 yes/no questions as vb1, research of v1 + v1-r2 with the resolution 
 - Against the market price: +0.9 (vb1 was +0.6).
 - Shrink, mean log score (x100): x0.6 -56.5, x0.7 -56.1, x0.8 -56.0, x0.9 -56.3, x1.0 -56.7, x1.2 -58.3. The live x0.8 is still the best.
 - vb2 is the yes/no baseline for later backtests (no hint in it).
+
+## Different framings per yes/no forecast: `vfr1` against `vb2` (14 Nov)
+
+Forecasts only, on the saved research of v1 + v1-r2, Opus 5.5 with no fallback, 3 forecasts per question each reading both reports. The only change from vb2: each forecast got a different approach added to the prompt (forecaster.BINARY_FRAMINGS: outside view, inside view, devil's advocate). Max plan, notional $17.52 for 76 questions (issue #18, Ahmad's go-ahead).
+
+| | x100 log score per question | 95% CI | Better on | Worse on |
+|---|---|---|---|---|
+| vfr1 against vb2 (median of 3, x0.8) | -0.9 | -2.2 to +0.2 | 16 | 35 |
+
+Each framing alone, one forecast shrunk x0.8, against an average single vb2 forecast (-56.3):
+
+| Framing | Score | Difference |
+|---|---|---|
+| Outside view | -56.3 | +0.0 |
+| Inside view | -57.9 | -1.5 |
+| Devil's advocate | -57.2 | -0.8 |
+
+- The framings did not make the forecasts differ: the spread of the 3 forecasts was 0.015, against 0.016 without them. The research sets the number; the approach asked for changes the write-up, not the probability.
+- Not shipped. x0.8 is still the best shrink for both runs.
+- binary_framings stays in forecaster.py, off, so a single rule for every forecast can be tested the same way.
