@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T20:14:04.413337+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T20:09:39.239381+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46858,
+    "post_id": 46598,
+    "url": "https://www.metaculus.com/questions/46598",
+    "type": "DiscreteQuestion",
+    "unit": "%",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will France's provisional year-on-year CPI inflation be for November 2026?",
+    "resolution_criteria": "Resolves to the year-on-year change in the French national consumer price index (IPC, \"ensemble des ménages\", France entière) for November 2026, as stated in the headline of INSEE's provisional estimate release \"Consumer price index – provisional results – November 2026\" (Informations rapides), scheduled for publication on insee.fr on 27 November 2026 at 08:45 CET (the preceding October 2026 provisional release, which announces that publication date, is at https://www.insee.fr/en/statistiques/9107975). The value is the year-on-year percentage figure given in that release's title — e.g., a headline reading \"In November 2026, consumer prices should increase by 3.6% year on year\" resolves as 3.6. The figure as first published governs; INSEE's later revision in its definitive November release (scheduled for 11 December 2026) does not change the resolution. If the provisional release is unavailable, the same INSEE figure as reported by [credible sources](https://www.metaculus.com/faq/#definitions) will be used.",
+    "fine_print": "The resolved figure is the IPC (\"ensemble\") year-on-year change, not the harmonised index (IPCH) year-on-year change and not the month-on-month change, both of which are reported in the same release.",
+    "close_time": "2026-11-16 23:07 UTC",
+    "scheduled_resolution_time": "2026-11-27 12:00 UTC"
+  },
+  "research": [
+    "I have the data I need and am now writing up the findings.\n\n## 1. Resolution source\n- 2026-10-30: INSEE's provisional October release (the URL given in the question) shows CPI at +3.4% year on year, after +3.1% in September, and +0.4% month on month. HICP was +3.8% year on year. By component: energy +24.1%, services +2.7%, food +1.2% (fresh food +8.0%), manufactured goods −0.2%, tobacco +3.3%. It confirms the provisional November release for **27 Nov 2026, 08:45**. [INSEE](https://www.insee.fr/en/statistiques/9107975)\n- The same release shows the November 2025 base: CPI was **−0.2% month on month** (definitive) and +0.9% year on year. Rough arithmetic: if November 2026 is flat month on month, the year-on-year rate rises to about 3.6%. Each 0.1 pt of monthly change shifts it by about 0.1 pt. [INSEE](https://www.insee.fr/en/statistiques/9107975)\n- 2026-11-13: The definitive October figure was 3.4%, matching the provisional one (per news reports). The French INSEE page I fetched still showed the provisional text. [cbnews](https://www.cbnews.fr/etudes/inflation-bien-atteint-34-an-octobre-insee)\n\n## 2. Current status\n- Nothing settles the question yet. The figure comes out on 27 November.\n\n## 3. Recent news (newest first)\n- 2026-11-16: Fuel prices tracked by a private site, 1-16 November average compared with October average:\n  - diesel €2.214/L vs €2.370 (**−6.6%**)\n  - SP95-E10 €2.048 vs €2.155 (**−5.0%**)\n  - SP95 €2.118 vs €2.214 (−4.3%)\n  - SP98 €2.165 vs €2.266 (−4.5%)\n\n  [mon-carburant](https://mon-carburant.com/prix-moyen-carburant-france/)\n- 2026-11-13: Diesel averaged €2.172/L, still falling. 519 stations reported running out of diesel (798 on 9 November). [prix-du-carburant](https://prix-du-carburant.com/actualites/prix-carburants-13-novembre-2026/)\n- 2026-11-11: A weekly bulletin put the 30-day trend at diesel −13.5 c/L and SP95 −9.4 c/L. [carburantiq](https://carburantiq.fr/actualites/barometre-prix-carburant-2026-s46) (the page itself returned a 503 error; this figure comes from the search snippet)\n- 2026-11-15: Michel-Édouard Leclerc (E.Leclerc) expects inflation of about 4% by early 2027 but stable supermarket prices over Christmas. [capital](https://www.capital.fr/conso/prix-des-courses-michel-edouard-leclerc-annonce-une-mauvaise-nouvelle-pour-2027-mais-une-bonne-pour-noel-1531864)\n- 2026-11-01: The regulated benchmark gas price rose 6.6% month on month. The next rise (+5.8%) comes on 1 December, after the November reference period. [service-public](https://www.service-public.gouv.fr/particuliers/actualites/A17956?lang=en)\n- How these might add up (my rough calculation, not INSEE's): petroleum products are about 4% of the CPI basket, so a ~5% fall would take roughly −0.2 pt off the monthly change. The gas rise might add about +0.05 to +0.1 pt.\n\n## 4. Base rates\n- Recent prints: Jan +0.3, Feb +0.9, Mar +1.7, Aug +2.4, Sep +3.0p / 3.1d, Oct +3.4 (p and d). The year-on-year rate rose 0.3-0.4 pt a month from August to October. [INSEE](https://www.insee.fr/fr/statistiques/9107965)\n- November is seasonally weak, and month-on-month changes have usually been at or below zero:\n  - Nov 2025: −0.1 provisional, −0.2 definitive; services fell (transport, communications); energy year on year improved from −5.6% to −4.6%, which suggests energy rose month on month. [INSEE](https://www.insee.fr/fr/statistiques/8672062)\n  - Nov 2024: about −0.1 (1.3% year on year)\n  - Nov 2023: −0.2 (3.5%)\n  - Nov 2022: +0.2 (6.2%)\n  - Nov 2021: +0.4 (2.8%)\n  - The 2021-2024 figures are from my memory, not checked against INSEE.\n- What this means:\n  - November 2026 fuel prices are falling while they seem to have risen in November 2025, so the base works against energy inflation this month. The opposite was true in August-October.\n  - If November 2026 shows the usual seasonal drop of about −0.2 plus the fuel effect, the year-on-year rate would be flat to slightly lower than October's 3.4%.\n  - If the monthly change is about 0.0, the rate would be about 3.6%.\n- Provisional vs definitive gaps in 2025-26 have been 0 to 0.1 pt.\n\n## 5. Other forecasts\n- **The Kalshi \"CPI YoY in November\" markets in the brief appear to be US CPI, not French.** They sit alongside US \"CPI-U index\" and \"Core CPI\" series, and Kalshi labels its French contracts \"France inflation rate YoY\". They should not be used for this question. [search](https://kalshi.com/markets/kxcpindex/cpiu-index-in-month/kxcpindex-26oct14)\n- I found no French November 2026 market on Kalshi, Polymarket or Manifold.\n- 2026-09-10: INSEE's last Note de conjoncture forecast 2.9% year on year for December 2026 (2026 average 2.1%). Actual inflation has already gone past that path. [INSEE](https://www.insee.fr/fr/statistiques/9050743)\n- September 2026: the Banque de France cut its 2026 average forecast to 2.3% because oil was cheaper than expected. [toutsurmesfinances](https://www.toutsurmesfinances.com/actualites/?p=1943)\n- I found no consensus forecast from economists for November.\n\n## 6. Upcoming events before resolution\n- Late November: fuel price moves in the second half of the month. The flash estimate is based on partial price collection plus imputation, so late-month prices matter less.\n- The diesel shortages and Middle East/Hormuz tensions could turn fuel prices back up.\n- Possible INSEE Note de conjoncture in mid-December: after resolution.\n- 2026-11-27, 08:45 CET: INSEE provisional November release (the resolution event).\n- No weather dependence beyond the usual heating-energy effects. The regulated gas price for November is already fixed.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 20:09 UTC; check each market really matches the question)\n- Kalshi: CPI in November (In Nov 2026). Yes prices: Above -0.1%: 0.54; Above 0.0%: 0.20; Above -0.2%: 0.86; Above 0.1%: 0.03; Above 0.2%: 0.01; Above 0.4%: 0.0100; Above 0.5%: 0.0100; Above 0.3%: 0.0200; Above -0.3%: 0.99.\n- Kalshi: CPI YoY in November (In Nov 2026). Yes prices: Above 3.7%: 0.45; Above 3.6%: 0.81; Above 3.8%: 0.13; Above 3.5%: 0.97; Above 4.1%: 0.01; Above 4.2%: 0.01; Above 3.9%: 0.02; Above 3.3%: 0.98; Above 3.4%: 0.98; Above 4.0%: 0.0100.\n- Kalshi: CPI YoY in November (exact value) (In Nov 2026). Yes prices: Exactly 3.8%: 0.39; Exactly 3.7%: 0.33; Exactly 3.9%: 0.11; Exactly 3.6%: 0.11; Exactly 3.5%: 0.02; Exactly 3.4%: 0.03; Exactly 4.0%: 0.03; Exactly 4.2%: 0.0100; Exactly 4.3%: 0.0100; Exactly 4.4%: 0.0100.\n- Kalshi: France GDP growth rate QoQ for Q1 2026 (Q1 2026). Yes prices: Above -0.7%: 0.9900; Above -0.5%: 0.9800; Above -0.6%: 0.9900; Above -0.4%: 0.9900; Above -0.2%: 0.9900; Above -0.3%: 0.9900; Above 0.7%: 0.0100; Above 0.6%: 0.0100; Above 0.5%: 0.0100; Above 0.4%: 0.0100.\n- Kalshi: France inflation rate YoY for April 2026 (April 2026). Yes prices: Above 1.8%: 0.9900; Above 1.6%: 0.9900; Above 1.7%: 0.9900; Above 1.5%: 0.9900; Above 2.0%: 0.9300; Above 1.9%: 0.9800; Above 2.1%: 0.7900; Above 2.5%: 0.0600; Above 2.6%: 0.0100; Above 2.7%: 0.0100.\n- Kalshi: Will Japan’s inflation rate be above Singapore’s in October? (October 2026). Yes prices: Japan higher?: 0.55.\n- Kalshi: Core CPI in November (In Nov 2026). Yes prices: Above 0.2%: 0.45; Above 0.3%: 0.12; Above 0.1%: 0.87; Above 0.0%: 0.97; Above 0.4%: 0.0100; Above 0.5%: 0.0100; Above 0.6%: 0.0100; Above 0.7%: 0.0100; Above 0.8%: 0.0100; Above 0.9%: 0.0100.\n- Kalshi: CPI-U index in November (November 2026). Yes prices: Above 336.300: 0.54; Above 336.400: 0.40; Above 336.200: 0.64; Above 336.500: 0.29; Above 336.100: 0.74; Above 336.000: 0.81; Above 336.600: 0.19; Above 335.900: 0.87; Above 336.700: 0.10; Above 335.800: 0.91.\n- Polymarket: Moody's or S&P downgrades France by...? (ends 2026-12-01). [Yes, No] prices: October 31: [\"0\", \"1\"]; November 30: [\"0.175\", \"0.825\"]\n- Polymarket: France declares state of siege (martial law) by...? (ends 2027-01-01). [Yes, No] prices: October 31: [\"0\", \"1\"]; November 15: [\"0\", \"1\"]; December 31: [\"0.0165\", \"0.9835\"]\n- Polymarket: EU emergency diesel stocks end of November 2026? (ends 2026-12-01). [Yes, No] prices: 30M+: [\"0.915\", \"0.085\"]; 31M+: [\"0.88\", \"0.12\"]; 32M+: [\"0.82\", \"0.18\"]; 33M+: [\"0.705\", \"0.295\"]; 34M+: [\"0.685\", \"0.315\"]; 35M+: [\"0.68\", \"0.32\"]\n- Polymarket: France Elite 2: 2027 Champion (ends 2027-06-30). [Yes, No] prices: ADA Blois: [\"0.5\", \"0.5\"]; Aix-Maurienne: [\"0.5\", \"0.5\"]; Alliance Sport Alsace: [\"0.5\", \"0.5\"]; ALM Evreux: [\"0.5\", \"0.5\"]; Antibes Sharks: [\"0.5\", \"0.5\"]; Beliers de Kemper: [\"0.5\", \"0.5\"]\n- Polymarket: What will US Dollar Index (DXY) hit in November 2026? (ends 2026-11-30). [Yes, No] prices: ↑ 105.00: [\"0.145\", \"0.855\"]; ↑ 104.50: [\"0.27\", \"0.73\"]; ↑ 104.00: [\"0.54\", \"0.46\"]; ↑ 103.50: [\"1\", \"0\"]; ↑ 103.00: [\"1\", \"0\"]; ↑ 102.50: [\"1\", \"0\"]\n- Polymarket: What will US Dollar Index (DXY) hit Week of November 16 2026? (ends 2026-11-20). [Yes, No] prices: ↑ 104.80: [\"0.5\", \"0.5\"]; ↑ 104.60: [\"0.115\", \"0.885\"]; ↑ 104.40: [\"0.15\", \"0.85\"]; ↑ 104.20: [\"0.255\", \"0.745\"]; ↑ 104.00: [\"0.425\", \"0.575\"]; ↑ 103.80: [\"0.65\", \"0.35\"]",
+    "I could not find anything that settles this question yet. Two things matter most:\n\n- **Base effect:** November 2025's month-on-month change was **−0.2%**. So a November 2026 monthly change of −0.2% would keep the year-on-year rate at about **3.4%**. Every 0.1 point above or below that moves the annual rate by about the same amount (rounding aside).\n- **Fuel versus gas:** pump prices so far in November are clearly below October's average, which pushes down. The +6.6% regulated gas reference price on 1 November pushes up.\n\nOne warning on market prices: the Kalshi \"CPI YoY in November\" markets look like **US CPI**, not French. Don't use them as a guide for this question.\n\n## 1. Resolution source\n- 2026-10-30: INSEE's October provisional release is headlined \"In October 2026, consumer prices should increase by 3.4% year on year\". Month on month was +0.4% and HICP was 3.8%. It confirms the November provisional release for **27 November 2026, 08:45**. [INSEE EN](https://www.insee.fr/en/statistiques/9107975)\n- Monthly CPI changes from INSEE:\n\n| Month | Year on year | Month on month |\n|---|---|---|\n| Oct 2025 | 0.9% | +0.1% |\n| Nov 2025 | 0.9% | **−0.2%** |\n| Dec 2025 | 0.8% | +0.1% |\n| Jan 2026 | 0.3% | |\n| Feb 2026 | 0.9% | |\n| Mar 2026 | 1.7% | |\n| Apr 2026 | 2.2% | |\n| May 2026 | 2.4% | |\n| Jun 2026 | 1.8% | |\n| Jul 2026 | 2.1% | |\n| Aug 2026 | 2.4% | +0.7% |\n| Sep 2026 | 3.1% | −0.3% |\n| Oct 2026 | 3.4% | +0.4% |\n\n  [INSEE FR](https://www.insee.fr/fr/statistiques/9107965)\n- October components, year on year: energy +24.1%, services +2.7%, food +1.2% (fresh food +8.0%), manufactured goods −0.2%, tobacco +3.3%. [INSEE FR](https://www.insee.fr/fr/statistiques/9107965)\n- 2026-11-13: the definitive October figure stayed at 3.4%. [cbnews](https://www.cbnews.fr/etudes/inflation-bien-atteint-34-an-octobre-insee)\n\n## 2. Current status\n- Nothing settles the question yet. No November price data has been published.\n\n## 3. Recent news (newest first)\n- 2026-11-16: Diesel averages €2.164/L, SP95-E10 €2.004/L and SP98 €2.118/L. Prices were stable over 24 hours. [prix-du-carburant](https://prix-du-carburant.com/actualites/prix-carburants-16-novembre-2026/)\n- 2026-11-15: E.Leclerc's head says holiday prices will be stable, but inflation will be about 4% in early 2027. [Capital](https://www.capital.fr/conso/prix-des-courses-michel-edouard-leclerc-annonce-une-mauvaise-nouvelle-pour-2027-mais-une-bonne-pour-noel-1531864)\n- 2026-11-13: Diesel was €2.172/L. 519 stations reported running out of diesel. [prix-du-carburant](https://prix-du-carburant.com/actualites/prix-carburants-13-novembre-2026/)\n- 2026-11-05: Diesel was €2.226/L, down 5.8% from €2.363 a week earlier. E10 was €2.059/L, down 1.5%. [prix-carburant.eu](https://prix-carburant.eu/article/prix-carburants-2026-11-05)\n- October 2026 monthly averages: diesel €2.342/L and E10 €2.116/L. So mid-November diesel is about 7% below October's average and E10 about 5% below. [baromètre](https://prix-carburant.eu/barometre-mensuel-2026-10)\n- 2026-10-24: A decree lets the state's strategic diesel and heating-oil stocks (held by Sagess) be sold at cost from 1 November. The government expects diesel to fall by 12 to 18 cents per litre. [jechange](https://www.jechange.fr/energie/electricite/news/gazole-baisse-12-18-centimes-decret-stocks-5-pourcent-consommation-31-janvier)\n- 2026-11-01: The regulated gas reference price rose 6.6% to €194.90/MWh. This counts in November's index. [service-public](https://www.service-public.gouv.fr/particuliers/actualites/A17956?lang=en)\n\n## 4. Base rates and seasonality\n- **INSEE's own forecast is out of date.** Its September 2026 Note de conjoncture forecast 2.9% inflation by end-2026, and October's actual 3.4% already beats it. [lafinancepourtous](https://www.lafinancepourtous.com/2026/09/15/leconomie-francaise-decroche-baisse-de-la-croissance-inflation-en-hausse-et-retour-du-chomage/)\n- **November month-on-month in recent years** (from memory, not re-checked):\n\n| Year | Nov MoM | Nov YoY |\n|---|---|---|\n| 2025 | −0.2% | 0.9% |\n| 2024 | about −0.1% | 1.3% |\n| 2023 | −0.2% | 3.4% provisional, 3.5% definitive |\n| 2022 | +0.2 to +0.3% | 6.2% |\n| 2021 | +0.4% | 2.8% |\n\n  November is usually flat to slightly negative because of seasonal drops in services and transport. The positive Novembers came in energy-shock years.\n- **2026 so far:** month-on-month swings have been large, between −0.3% and +1.0%.\n- **Provisional vs definitive:** they typically differ by 0 to 0.1 point. This happened in September 2026 (3.0% then 3.1%) and November 2023.\n\n## 5. Other forecasts\n- **Kalshi:** the \"CPI YoY in November\" markets (most likely value 3.8% at 0.39, 3.7% at 0.33) sit alongside a \"CPI-U index\" market, and CPI-U is a US measure. They almost certainly track **US** CPI, so I treat them as not relevant here.\n- **Kalshi's France markets:** only April 2026 and Q1 GDP markets appeared, with no November 2026 one.\n- **Analysts:** I found no consensus forecast for French CPI in November 2026.\n\n## 6. Upcoming events before resolution\n- Fuel prices from 17 to 27 November, which depend on how far the Sagess stock release passes through and on supply shortages.\n- Brent and diesel crack spreads, driven by the Middle East and the Strait of Hormuz.\n- INSEE publishes the provisional figure on 27 November at 08:45 CET.\n- The next gas price rise (+5.8% on 1 December) falls outside November's reference period.\n- Weather does not drive this question directly.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 20:09 UTC; check each market really matches the question)\n- Kalshi: CPI in November (In Nov 2026). Yes prices: Above -0.1%: 0.54; Above 0.0%: 0.20; Above -0.2%: 0.86; Above 0.1%: 0.03; Above 0.2%: 0.01; Above 0.4%: 0.0100; Above 0.5%: 0.0100; Above 0.3%: 0.0200; Above -0.3%: 0.99.\n- Kalshi: CPI YoY in November (In Nov 2026). Yes prices: Above 3.7%: 0.45; Above 3.6%: 0.81; Above 3.8%: 0.13; Above 3.5%: 0.97; Above 4.1%: 0.01; Above 4.2%: 0.01; Above 3.9%: 0.02; Above 3.3%: 0.98; Above 3.4%: 0.98; Above 4.0%: 0.0100.\n- Kalshi: CPI YoY in November (exact value) (In Nov 2026). Yes prices: Exactly 3.8%: 0.39; Exactly 3.7%: 0.33; Exactly 3.9%: 0.11; Exactly 3.6%: 0.11; Exactly 3.5%: 0.02; Exactly 3.4%: 0.03; Exactly 4.0%: 0.03; Exactly 4.2%: 0.0100; Exactly 4.3%: 0.0100; Exactly 4.4%: 0.0100.\n- Kalshi: France GDP growth rate QoQ for Q1 2026 (Q1 2026). Yes prices: Above -0.7%: 0.9900; Above -0.5%: 0.9800; Above -0.6%: 0.9900; Above -0.4%: 0.9900; Above -0.2%: 0.9900; Above -0.3%: 0.9900; Above 0.7%: 0.0100; Above 0.6%: 0.0100; Above 0.5%: 0.0100; Above 0.4%: 0.0100.\n- Kalshi: France inflation rate YoY for April 2026 (April 2026). Yes prices: Above 1.8%: 0.9900; Above 1.6%: 0.9900; Above 1.7%: 0.9900; Above 1.5%: 0.9900; Above 2.0%: 0.9300; Above 1.9%: 0.9800; Above 2.1%: 0.7900; Above 2.5%: 0.0600; Above 2.6%: 0.0100; Above 2.7%: 0.0100.\n- Kalshi: Will Japan’s inflation rate be above Singapore’s in October? (October 2026). Yes prices: Japan higher?: 0.55.\n- Kalshi: Core CPI in November (In Nov 2026). Yes prices: Above 0.2%: 0.45; Above 0.3%: 0.12; Above 0.1%: 0.87; Above 0.0%: 0.97; Above 0.4%: 0.0100; Above 0.5%: 0.0100; Above 0.6%: 0.0100; Above 0.7%: 0.0100; Above 0.8%: 0.0100; Above 0.9%: 0.0100.\n- Kalshi: CPI-U index in November (November 2026). Yes prices: Above 336.300: 0.54; Above 336.400: 0.40; Above 336.200: 0.64; Above 336.500: 0.29; Above 336.100: 0.74; Above 336.000: 0.81; Above 336.600: 0.19; Above 335.900: 0.87; Above 336.700: 0.10; Above 335.800: 0.91.\n- Polymarket: Moody's or S&P downgrades France by...? (ends 2026-12-01). [Yes, No] prices: October 31: [\"0\", \"1\"]; November 30: [\"0.175\", \"0.825\"]\n- Polymarket: France declares state of siege (martial law) by...? (ends 2027-01-01). [Yes, No] prices: October 31: [\"0\", \"1\"]; November 15: [\"0\", \"1\"]; December 31: [\"0.0165\", \"0.9835\"]\n- Polymarket: EU emergency diesel stocks end of November 2026? (ends 2026-12-01). [Yes, No] prices: 30M+: [\"0.915\", \"0.085\"]; 31M+: [\"0.88\", \"0.12\"]; 32M+: [\"0.82\", \"0.18\"]; 33M+: [\"0.705\", \"0.295\"]; 34M+: [\"0.685\", \"0.315\"]; 35M+: [\"0.68\", \"0.32\"]\n- Polymarket: France Elite 2: 2027 Champion (ends 2027-06-30). [Yes, No] prices: ADA Blois: [\"0.5\", \"0.5\"]; Aix-Maurienne: [\"0.5\", \"0.5\"]; Alliance Sport Alsace: [\"0.5\", \"0.5\"]; ALM Evreux: [\"0.5\", \"0.5\"]; Antibes Sharks: [\"0.5\", \"0.5\"]; Beliers de Kemper: [\"0.5\", \"0.5\"]\n- Polymarket: What will US Dollar Index (DXY) hit in November 2026? (ends 2026-11-30). [Yes, No] prices: ↑ 105.00: [\"0.145\", \"0.855\"]; ↑ 104.50: [\"0.27\", \"0.73\"]; ↑ 104.00: [\"0.54\", \"0.46\"]; ↑ 103.50: [\"1\", \"0\"]; ↑ 103.00: [\"1\", \"0\"]; ↑ 102.50: [\"1\", \"0\"]\n- Polymarket: What will US Dollar Index (DXY) hit Week of November 16 2026? (ends 2026-11-20). [Yes, No] prices: ↑ 104.80: [\"0.5\", \"0.5\"]; ↑ 104.60: [\"0.115\", \"0.885\"]; ↑ 104.40: [\"0.15\", \"0.85\"]; ↑ 104.20: [\"0.255\", \"0.745\"]; ↑ 104.00: [\"0.425\", \"0.575\"]; ↑ 103.80: [\"0.65\", \"0.35\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 3.05,
+        "p25": 3.175,
+        "p50": 3.35,
+        "p75": 3.5,
+        "p90": 3.65
+      },
+      "reasoning": "(a) About 11 days remain. INSEE publishes the provisional November 2026 estimate on 27 November 2026 at 08:45 CET.\n\n(b) The latest value is October 2026 at +3.4% year on year, provisional on 30 October and confirmed in the definitive release on 13 November. Month on month it was +0.4%.\n\n(c) If prices stay flat month on month in November 2026, the year-on-year rate rises to about 3.6%. This is because the November 2025 base fell 0.2% month on month.\n\n(d) Continuing the August to October trend of +0.3 to +0.4 pt a month gives about 3.7 to 3.8%. That trend was driven by fuel prices rising in each month, and fuel is now falling clearly in November:\n- Average pump prices for 1-16 November are 4 to 7% below October's average.\n- Mid-month prices are below that half-month average, so the full-month fall may be closer to 6 to 8%.\n- With petroleum products at roughly 4 to 4.5% of the basket, that takes about 0.2 to 0.3 pt off the monthly change.\n- The 6.6% rise in the regulated benchmark gas price on 1 November adds about +0.1 pt.\n- Seasonal November weakness outside energy, mainly services, has typically been about -0.1 to -0.2 pt. Some pass-through of the energy shock into food and services prices may partly offset it.\n\nNet, I expect the monthly change to be around -0.3%, which puts year-on-year inflation at about 3.3%. The range from -0.5% to 0.0% month on month maps to roughly 3.1 to 3.6%. Rounding adds about ±0.1 pt of noise.\n\n(e) Year-on-year inflation has moved 0.3 to 0.6 pt a month recently. November monthly changes historically run from -0.2 to +0.4. Gaps between provisional and definitive figures have been 0 to 0.1 pt.\n\n(f) I found no French November forecast or market:\n- The Kalshi \"CPI YoY in November\" markets, centred on 3.7 to 3.8%, appear to be US CPI and are not usable here.\n- INSEE's September forecast of 2.9% for December has already been overtaken by actual inflation.\n- The head of E.Leclerc expects about 4% inflation by early 2027.\n\n(g) Low scenario: fuel prices collapse further in the second half of the month as diesel shortages ease. Combined with a sharp seasonal fall in services and fresh food, the monthly change could reach -0.6%, giving about 2.9 to 3.0%.\n\nHigh scenario: a Hormuz flare-up reverses fuel prices and second-round effects lift services and food strongly. The monthly change would then be about +0.1 to +0.2%, giving 3.7 to 3.9%.\n\nPercentile 1: 2.8\nPercentile 5: 2.95\nPercentile 10: 3.05\nPercentile 20: 3.15\nPercentile 30: 3.2\nPercentile 40: 3.3\nPercentile 50: 3.35\nPercentile 60: 3.4\nPercentile 70: 3.45\nPercentile 80: 3.55\nPercentile 90: 3.65\nPercentile 95: 3.75\nPercentile 99: 3.95"
+    },
+    {
+      "value": {
+        "p10": 3.1,
+        "p25": 3.225,
+        "p50": 3.35,
+        "p75": 3.475,
+        "p90": 3.6
+      },
+      "reasoning": "(a) **Time left:** about 11 days. INSEE publishes the provisional November figure on 27 Nov 2026 at 08:45 CET.\n\n(b) **Latest value:** CPI was +3.4% year on year for October 2026. That was the provisional figure on 30 Oct and was confirmed in the definitive release on 13 Nov. The month-on-month change was +0.4%.\n\n(c) **If nothing changed:** if the index stayed flat in November (0.0% month on month), the November 2025 base of -0.2% month on month would mechanically lift the rate to about 3.6%. If the monthly change matched last November's -0.2%, the rate would stay at about 3.4%.\n\n(d) **If the current trend continued:**\n- Simply extrapolating the August to October pace (+0.3 to 0.4 pt per month) gives about 3.7 to 3.8%.\n- That trend is breaking, though. Fuel prices averaged 5 to 7% below October in the first half of November and kept falling. With petroleum products at about 4% of the basket, that takes roughly -0.25 pt off the monthly change.\n- The regulated gas price rise of +6.6% on 1 November adds about +0.08 pt.\n- November is seasonally weak outside energy, typically -0.1 to -0.2 for services such as transport and communications. Food and manufactured-goods pass-through this year may soften that drop.\n- Overall I expect November month on month at about -0.3 to -0.1, giving a year-on-year rate of about 3.3 to 3.5%. My central estimate is about 3.35%.\n\n(e) **Historical variation:**\n- November month-on-month changes have ranged from about -0.2 to +0.4 in recent years.\n- The year-on-year rate typically moves 0.1 to 0.4 pt in a month, and moved 0.3 to 0.4 pt a month during this shock.\n- Rounding to 0.1 adds discreteness, and the flash estimate rests on partial price collection.\n\n(f) **Experts and markets:**\n- There is no French November market. The Kalshi \"CPI YoY\" contracts (3.7 to 3.8% favoured) are US CPI and do not apply here.\n- INSEE's September forecast of 2.9% for December is already outdated by the actual prints.\n- Leclerc talks of about 4% by early 2027, which points to further rises later, after December's gas increase.\n- There is no consensus forecast for November.\n\n(g) **Unexpected scenarios:**\n- *Low:* fuel prices collapse further in late November, and a large seasonal drop in services such as air fares and package holidays pushes the month to about -0.5. The rate would come in near 3.0 to 3.1%.\n- *High:* the diesel shortages drive a fuel rebound, with imputation capturing higher prices. Strong pass-through into food and services pushes the month to about +0.2. The rate would reach about 3.8 to 3.9%.\n\nPercentile 1: 2.85\nPercentile 5: 3.0\nPercentile 10: 3.1\nPercentile 20: 3.2\nPercentile 30: 3.25\nPercentile 40: 3.3\nPercentile 50: 3.35\nPercentile 60: 3.4\nPercentile 70: 3.45\nPercentile 80: 3.5\nPercentile 90: 3.6\nPercentile 95: 3.7\nPercentile 99: 3.9"
+    },
+    {
+      "value": {
+        "p10": 3.0,
+        "p25": 3.15,
+        "p50": 3.3,
+        "p75": 3.475,
+        "p90": 3.6
+      },
+      "reasoning": "(a) The provisional estimate comes out on 27 November 2026 at 08:45 CET, about 11 days from now.\n\n(b) The latest value is +3.4% year on year for October 2026 (provisional 30 October, confirmed in the definitive release of 13 November). October was +0.4% month on month.\n\n(c) If the November index were flat month on month, the rate would be about 3.6%. This is because November 2025 fell 0.2% month on month (definitive), so the base drops out favourably.\n\n(d) If the August-October trend continued (+0.3 to +0.4 pt a month), the rate would be about 3.7-3.8%. That ignores November's fuel reversal, so I give it little weight.\n\nMy bottom-up estimate of November's month-on-month change:\n- **Petroleum products:** they are about 4.3% of the basket, and fuel prices so far are 5-7% below the October average (diesel even more by mid-month). That takes about 0.2-0.25 pt off.\n- **Gas:** the regulated gas price rose 6.6% (gas is about 1.2% of the basket), adding about 0.08 pt.\n- **Services:** the usual November drop in services (transport, accommodation) takes off about 0.15-0.2 pt.\n- **Food:** roughly flat to slightly positive.\n\nThat gives a month-on-month change of about -0.3, so the year-on-year rate would be about 3.2-3.4%.\n\n(e) Historically, November month-on-month changes have ranged from -0.2 to +0.4 (my recollection, not checked against INSEE). Year-on-year moves in this regime have been 0.3-0.6 pt a month. Provisional and definitive figures have differed by 0 to 0.1 pt. Rounding adds about ±0.05.\n\n(f) There is no French market or consensus. The Kalshi \"CPI YoY November\" markets (centred on 3.7-3.8) are US CPI and do not apply. INSEE's September forecast path (2.9% in December) has already been overtaken. Michel-Édouard Leclerc talks of about 4% by early 2027.\n\n(g) **Low scenario:** fuel keeps sliding into late November, and air fares and package holidays fall sharply. Month on month comes in at -0.6 or lower, giving about 2.9-3.0%.\n**High scenario:** energy costs pass through strongly into transport services and food, and the flash imputation captures less of the fuel decline. Month on month is about 0 or positive, giving 3.6-3.8%.\n\nPercentile 1: 2.8\nPercentile 5: 2.95\nPercentile 10: 3.0\nPercentile 20: 3.1\nPercentile 30: 3.2\nPercentile 40: 3.3\nPercentile 50: 3.3\nPercentile 60: 3.4\nPercentile 70: 3.45\nPercentile 80: 3.5\nPercentile 90: 3.6\nPercentile 95: 3.7\nPercentile 99: 3.9"
+    },
+    {
+      "value": {
+        "p10": 3.0,
+        "p25": 3.15,
+        "p50": 3.3,
+        "p75": 3.45,
+        "p90": 3.6
+      },
+      "reasoning": "(a) The provisional estimate comes out on 27 November 2026, about 11 days from now. Roughly half of November's prices are already observed, mainly fuel.\n\n(b) The latest value is +3.4% year on year for October 2026: provisional on 30 Oct, confirmed definitive on 13 Nov. Month on month it was +0.4%.\n\n(c) If nothing changed, the base effect is the key: November 2025 was −0.2% month on month. A November 2026 month-on-month change of −0.2% would leave the annual rate at about 3.4%.\n\n(d) If the current trend continued:\n- **Fuel:** pump prices in the first half of November average about 6 to 7% below October for diesel and about 4 to 5% below for E10. The Sagess strategic stock release supports this. Heating oil is also falling.\n- **Gas:** the regulated gas reference price rose 6.6% on 1 November.\n- **Energy contribution:** I estimate about −0.26 pp from fuel, −0.05 pp from heating oil and +0.1 pp from gas, so roughly −0.2 pp in total.\n- **Everything else:** the usual seasonal November softness, mainly in services and transport, is roughly −0.05 to −0.1 pp, partly offset by underlying pass-through.\n- **Result:** a monthly change of about −0.25 to −0.3% against a −0.2% base. That implies about 3.2 to 3.3% year on year. The unrounded October figure, somewhere between 3.35 and 3.45, adds rounding noise.\n\n(e) The year-on-year rate has moved by between 0.3 and 0.7 point per month during this 2026 shock. Monthly changes this year have ranged from −0.3% to +1.0%. Provisional and definitive figures differ by 0 to 0.1 point.\n\n(f) There is no analyst consensus for French November CPI. INSEE's year-end forecast of 2.9% is already outdated. The Kalshi \"CPI YoY\" markets (centred on 3.7 to 3.8) measure US CPI, so I ignore them. The head of E.Leclerc expects inflation of about 4% in early 2027, which reflects a longer horizon.\n\n(g) Two surprise scenarios:\n- **Low (about 2.9 to 3.0):** fuel keeps falling sharply in late November, fresh food reverses its +8% jump, and services fall more than usual seasonally.\n- **High (about 3.7 to 3.8):** diesel shortages trigger a late-month price spike, food and services pass-through speeds up, and imputation quirks in the flash estimate push the figure up.\n\nPercentile 1: 2.8\nPercentile 5: 2.95\nPercentile 10: 3.0\nPercentile 20: 3.1\nPercentile 30: 3.2\nPercentile 40: 3.25\nPercentile 50: 3.3\nPercentile 60: 3.35\nPercentile 70: 3.4\nPercentile 80: 3.5\nPercentile 90: 3.6\nPercentile 95: 3.7\nPercentile 99: 3.9"
+    },
+    {
+      "value": {
+        "p10": 3.05,
+        "p25": 3.2,
+        "p50": 3.35,
+        "p75": 3.55,
+        "p90": 3.7
+      },
+      "reasoning": "(a) **Time left:** About 11 days. INSEE publishes the provisional figure on 27 November 2026 at 08:45 CET.\n\n(b) **Latest known value:** October 2026 IPC was +3.4% year on year, both provisional (30 October) and definitive (13 November). Month on month was +0.4%.\n\n(c) **If nothing changed:** The November 2025 base month was -0.2% month on month. So if November 2026 also comes in at -0.2%, the annual rate stays at about 3.4%.\n\n(d) **If the current trend continued:** Month-on-month estimate, built bottom up:\n- **Fuel:** Pump prices so far in November are well below October's average, helped by the release of strategic diesel stocks. Diesel is about 7% lower and E10 about 5% lower. With petroleum products at roughly 4% weight, that is about -0.2 to -0.25 points.\n- **Gas:** The +6.6% regulated gas price on roughly 1% weight adds about +0.07 points.\n- **Rest of the index:** The usual seasonal November dip in services, mainly transport and accommodation, is about -0.1 to -0.15 points. This is partly offset by firmer underlying inflation.\n- **Total:** These add up to roughly -0.25 to -0.3% month on month. That gives an annual rate of about 3.3%, so the four-month acceleration probably pauses or slightly reverses.\n\n(e) **Historical variation:** One-month changes in the annual rate have been about ±0.3 to 0.7 points during 2026. Monthly changes have ranged from -0.3% to +1.0%. A typical forecast error at this stage is about ±0.25 points. Provisional and definitive figures usually differ by 0 to 0.1 point.\n\n(f) **Experts and markets:** There is no consensus forecast for this month. The Kalshi \"CPI YoY in November\" markets are for US CPI, so I do not use them. INSEE's September outlook (2.9% at end-2026) has already been overtaken by actual data. Leclerc's head expects about 4% inflation in early 2027, which is a longer horizon than this question.\n\n(g) **Unexpected scenarios:**\n- **Low:** Diesel keeps falling as strategic stocks flow, and services and fresh food prices drop sharply. Month on month comes in at -0.6% and the annual rate at about 2.9-3.0%.\n- **High:** Fuel shortages push pump prices back up in late November, and airfares, transport services and food pass-through surprise to the upside. Month on month is about +0.2% and the annual rate about 3.8-4.0%.\n\nPercentile 1: 2.8\nPercentile 5: 2.95\nPercentile 10: 3.05\nPercentile 20: 3.15\nPercentile 30: 3.25\nPercentile 40: 3.3\nPercentile 50: 3.35\nPercentile 60: 3.4\nPercentile 70: 3.5\nPercentile 80: 3.6\nPercentile 90: 3.7\nPercentile 95: 3.8\nPercentile 99: 4.0"
+    },
+    {
+      "value": {
+        "p10": 3.1,
+        "p25": 3.25,
+        "p50": 3.38,
+        "p75": 3.515,
+        "p90": 3.65
+      },
+      "reasoning": "(a) **Time left:** about 11 days. INSEE publishes the provisional November estimate on 27 November 2026 at 08:45 CET.\n\n(b) **Latest known value:** October 2026 CPI was +3.4% year on year, provisional on 30 October and confirmed in the definitive release of 13 November 2026. The index rose 0.4% month on month.\n\n(c) **If nothing changed:** November 2025's month-on-month change was −0.2%. If November 2026 also comes in at −0.2% month on month, the annual rate stays at about 3.4%.\n\n(d) **If the current trend continued:**\n- **Fuel:** pump prices in November are averaging roughly 5-7% below October's average. The state diesel stock release, sold at cost from 1 November, is pushing prices down. Petroleum products are about 4% of the index, so this subtracts about 0.2 percentage points from the monthly change.\n- **Gas:** the +6.6% rise in the regulated gas reference price adds about 0.07 points.\n- **Other items:** the usual November seasonal fall in services adds about −0.1 point. Gradual pass-through of energy costs into food and services adds maybe +0.05.\n- **Net:** November 2026 month on month comes out around −0.2% to −0.3%. Energy inflation likely eases slightly from 24.1%, so the annual rate lands around 3.3-3.4%. The accelerating trend of recent months reverses or pauses because fuel prices have fallen.\n\n(e) **Historical variation:** month-to-month changes in the annual rate have been 0.3-0.7 points during 2026, driven by large energy swings. The provisional and definitive figures usually differ by 0 to 0.1 point. A one-month move of ±0.3 points is plausible.\n\n(f) **Experts and markets:**\n- The Kalshi \"CPI YoY\" markets track US CPI, so they are not relevant.\n- No analyst consensus is available for France.\n- INSEE's September forecast of 2.9% at end-2026 is already out of date.\n- Leclerc's chief executive expects inflation of about 4% in early 2027, which points to continued upward pressure in core components.\n\n(g) **Unexpected scenarios:**\n- **Low:** fuel keeps falling sharply in late November as the stock release passes through fully, and services and fresh food fall more than usual. Month on month reaches −0.5% and the annual rate is about 3.0%.\n- **High:** diesel shortages or a new Hormuz escalation make pump prices rebound in the last ten days. Energy costs pass faster into food and services. Month on month is +0.1% or more and the annual rate is about 3.7-3.8%.\n\nPercentile 1: 2.9\nPercentile 5: 3.05\nPercentile 10: 3.1\nPercentile 20: 3.2\nPercentile 30: 3.3\nPercentile 40: 3.33\nPercentile 50: 3.38\nPercentile 60: 3.42\nPercentile 70: 3.48\nPercentile 80: 3.55\nPercentile 90: 3.65\nPercentile 95: 3.72\nPercentile 99: 3.9"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 3.0492,
+    "p25": 3.1904,
+    "p50": 3.3513,
+    "p75": 3.4937,
+    "p90": 3.642
+  },
+  "usage": [
+    {
+      "question_id": "46858",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 6.93e-05,
+      "input_tokens": 498,
+      "output_tokens": 39,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 10.5,
+      "notional_cost_usd": 0.000497,
+      "input_tokens": 1101,
+      "output_tokens": 554,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 99.6,
+      "notional_cost_usd": 0.32922769999999996,
+      "input_tokens": 87654,
+      "output_tokens": 4514,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.3,
+      "notional_cost_usd": 0.10569999999999999,
+      "input_tokens": 6911,
+      "output_tokens": 2521,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 27.3,
+      "notional_cost_usd": 0.10744400000000001,
+      "input_tokens": 6909,
+      "output_tokens": 2609,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.0007359,
+      "input_tokens": 3023,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.2,
+      "notional_cost_usd": 0.0008851,
+      "input_tokens": 2984,
+      "output_tokens": 577,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.6,
+      "notional_cost_usd": 0.00022517000000000001,
+      "input_tokens": 3022,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.00027599,
+      "input_tokens": 2985,
+      "output_tokens": 365,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 52.6,
+      "notional_cost_usd": 0.051500000000000004,
+      "input_tokens": 6911,
+      "output_tokens": 2385,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.0008182,
+      "input_tokens": 2877,
+      "output_tokens": 486,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.00034424,
+      "input_tokens": 2879,
+      "output_tokens": 504,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 108.4,
+      "notional_cost_usd": 0.2853635,
+      "input_tokens": 102354,
+      "output_tokens": 5016,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 22.8,
+      "notional_cost_usd": 0.099516,
+      "input_tokens": 7003,
+      "output_tokens": 2175,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.2,
+      "notional_cost_usd": 0.103068,
+      "input_tokens": 7002,
+      "output_tokens": 2353,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.9,
+      "notional_cost_usd": 0.107668,
+      "input_tokens": 7002,
+      "output_tokens": 2583,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0008266,
+      "input_tokens": 2924,
+      "output_tokens": 484,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0007806000000000001,
+      "input_tokens": 2939,
+      "output_tokens": 386,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00026499,
+      "input_tokens": 2923,
+      "output_tokens": 345,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0008465,
+      "input_tokens": 2921,
+      "output_tokens": 525,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.00028056,
+      "input_tokens": 2942,
+      "output_tokens": 375,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46858",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00028985999999999997,
+      "input_tokens": 2922,
+      "output_tokens": 394,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1966
+}
