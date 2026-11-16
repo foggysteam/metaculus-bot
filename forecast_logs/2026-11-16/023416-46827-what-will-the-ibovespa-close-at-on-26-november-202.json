@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T02:40:50.667167+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T02:34:16.861434+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46827,
+    "post_id": 46567,
+    "url": "https://www.metaculus.com/questions/46567",
+    "type": "NumericQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will the Ibovespa close at on 26 November 2026?",
+    "resolution_criteria": "This question resolves to the closing level of the Ibovespa (B3's benchmark index, ticker ^BVSP) for the trading session of Thursday, 26 November 2026, in index points, taken from the 'Close' column of the row dated Nov 26, 2026 in the Yahoo Finance historical prices table at https://finance.yahoo.com/quote/%5EBVSP/history/ (use 'Close', not 'Adj Close'). Values are entered in index points, e.g. a reported close of 173,845.55 points is entered as 173845.55. If that table does not yet show the 26 November 2026 value when checked, resolution waits until it does. If the Yahoo Finance page is unavailable or has no row for that session, the closing level reported for that date by [credible sources](https://www.metaculus.com/faq/#definitions) will be used.",
+    "fine_print": "A shortened session, trading halt or circuit breaker on 26 November 2026 does not affect resolution; the closing value reported for that session is used as described above.",
+    "close_time": "2026-11-16 05:29 UTC",
+    "scheduled_resolution_time": "2026-11-26 23:00 UTC"
+  },
+  "research": [
+    "I've finished pulling the Yahoo data and the news, so here is the summary. One thing to flag first: the question's background puts the 13 Nov close at 172,013.72, but Yahoo's own data says **172,457.77**. That is the real starting point.\n\n## 1. Resolution source\n- 2026-11-13: Yahoo's ^BVSP chart data (the data behind the history page) shows the last close at 172,457.77, up 0.66% on the day. The 52-week high is 209,714. [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?range=1mo&interval=1d)\n- Recent daily closes from Yahoo, rounded:\n\n| Date | Close |\n|---|---|\n| 23 Oct | 205,083 |\n| 26 Oct | 176,608 |\n| 27 Oct | 175,710 |\n| 28 Oct | 171,006 |\n| 29 Oct | 169,186 |\n| 30 Oct | 167,922 |\n| 3 Nov | 165,529 (post-election low) |\n| 4 Nov | 167,564 |\n| 5 Nov | 166,192 |\n| 6 Nov | 168,499 |\n| 9 Nov | 172,236 |\n| 10 Nov | 171,337 |\n| 11 Nov | 172,060 |\n| 12 Nov | 171,324 |\n| 13 Nov | 172,458 |\n\n- InfoMoney and Money Times also report 172,457.76 for 13 Nov, which confirms the Yahoo figure. [InfoMoney](https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-13112026/), [Money Times](https://www.moneytimes.com.br/magazine-luiza-mglu3-lidera-ganhos-com-alta-de-mais-de-39-enquanto-csn-csna3-e-a-pior-acao-da-semana-veja-o-que-rolou-no-ibovespa-davs/)\n\n## 2. Current status\n- Nothing has settled the question. Nine sessions are left (16 to 26 Nov, with 20 Nov a B3 holiday). No session has taken place since 13 Nov.\n\n## 3. Recent news (newest first)\n- 2026-11-13: The index rose 2.35% for the week, its second positive week in a row. It is up 2.70% in November and 7.03% for the year, but down 7.45% in Q4. Daily trading volume was R$27.6 billion. [InfoMoney](https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-13112026/)\n- 2026-11-13: The dollar ended at R$5.655, up 2.63% for the week. DI futures (interest-rate futures) fell along the curve: DI1F29 at 14.685%, DI1F35 at 15.15%. [InfoMoney](https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-13112026/)\n- 2026-11-13: The market sees the Senate-approved fiscal package as not enough to stabilise the debt. JPMorgan puts its impact at R$45.1-56.1 billion (0.35-0.45% of GDP). UBS downgraded Brazil within emerging-market equities. Minister Bruno Moretti said further measures would come if needed. [InfoMoney](https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-13112026/)\n- 2026-11-13: Nvidia CEO Jensen Huang resigned and CFO Colette Kress is interim chief. Nvidia shares are about 30% below their October high. [Empiricus](https://www.empiricus.com.br/artigos/investimentos/ibovespa-hoje-renuncia-na-nvidia-nvdc34-bitcoin-btc-em-queda-e-pacote-fiscal-aprovado-no-senado-veja-destaques-desta-sexta-13-jdnm/)\n- 2026-11-13: CME FedWatch shows about 87% odds of a 25 bp US rate hike on 9 Dec. [InfoMoney](https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-13112026/)\n- Week of 9-13 Nov, by stock:\n  - Banco do Brasil fell 11.85% after a weak Q3. [Money Times](https://www.moneytimes.com.br/magazine-luiza-mglu3-lidera-ganhos-com-alta-de-mais-de-39-enquanto-csn-csna3-e-a-pior-acao-da-semana-veja-o-que-rolou-no-ibovespa-davs/)\n  - CSN fell 15.65%. [Money Times](https://www.moneytimes.com.br/magazine-luiza-mglu3-lidera-ganhos-com-alta-de-mais-de-39-enquanto-csn-csna3-e-a-pior-acao-da-semana-veja-o-que-rolou-no-ibovespa-davs/)\n  - Magazine Luiza rose 39%. [Money Times](https://www.moneytimes.com.br/magazine-luiza-mglu3-lidera-ganhos-com-alta-de-mais-de-39-enquanto-csn-csna3-e-a-pior-acao-da-semana-veja-o-que-rolou-no-ibovespa-davs/)\n- Copom minutes show the Selic held at 13.75%, with the central bank expecting rates to stay high. [Money Times](https://www.moneytimes.com.br/magazine-luiza-mglu3-lidera-ganhos-com-alta-de-mais-de-39-enquanto-csn-csna3-e-a-pior-acao-da-semana-veja-o-que-rolou-no-ibovespa-davs/)\n- 2026-11-14: Domestic-focused indices are down 12-14% for the year: small caps (SMLL), real estate (IMOB) and consumer (ICON). [Circuito MT](https://circuitomt.com.br/indices-de-consumo-imoveis-e-small-caps-tombam-ate-14-em-2026-e-mercado-cobra-sinalizacao-fiscal-de-lula/)\n\n## 4. Base rates\n- The statistical baseline you supplied (9-session returns over 3 years, applied to 172,458):\n\n| Percentile | Level |\n|---|---|\n| p5 | 163,787 |\n| p25 | 169,592 |\n| p50 | 173,288 |\n| p75 | 177,144 |\n| p95 | 184,844 |\n\n  It does not account for the elevated volatility after the election.\n- Daily moves since 30 Oct have mostly been 0.4% to 2.2%. Over these sessions the index has ranged from 165,529 to 172,458.\n- Same window in past years, from Yahoo data:\n  - 2025: from 157,162 on 13 Nov to 158,555 on 26 Nov, up 0.9%. The low in between was 154,770 on 21 Nov. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?period1=1762992000&period2=1764288000&interval=1d)\n  - 2024: from 127,734 on 13 Nov to 129,922 on 26 Nov, up 1.7%. It then fell to 127,669 on 27 Nov, the day of the fiscal package announcement. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?period1=1731456000&period2=1732752000&interval=1d)\n  - 2023: from 120,376 on 13 Nov to 125,542 on 24 Nov, up 4.3%. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?period1=1699833600&period2=1701129600&interval=1d)\n  - The index rose over this window in each of the last 3 years, but that is a very small sample.\n\n## 5. Other forecasts\n- Kalshi \"How high will the IBOVESPA get this year?\" does not match this question. It is about the 2026 maximum, which already reached about 209,714 in October. Its \"at least 210,000\" contract trades at 0.44 and the levels above at 0.03-0.11.\n- Polymarket on Brazil's March 2027 central bank decision: no change 0.57, 25 bp hike 0.17, 50 bp or more hike 0.145. This points to a hawkish rates backdrop.\n- I found no prediction market or published expert target for the index's level in late November.\n\n## 6. Upcoming events before resolution\n- 2026-11-16: Fed Chair Kevin Warsh speaks at a public forum in San Francisco, and Lula is due in Madrid. [InfoMoney](https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-13112026/)\n- 2026-11-17: The Senate votes on the remaining amendments to the fiscal package. The bill then goes to the Chamber of Deputies; I found no date for that vote. [InfoMoney](https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-13112026/)\n- 2026-11-17: Nvidia reports earnings after the US close. Also this week: Fed minutes and a planned Anthropic IPO on Nasdaq. [KuCoin](https://www.kucoin.com/news/flash/this-week-s-macro-focus-nvidia-earnings-anthropic-ipo-and-fed-minutes), [Webitcoin](https://webitcoin.com.br/nvidia-divulga-balanco-em-semana-decisiva-em-wall-street/)\n- 2026-11-20: B3 is closed (Consciência Negra holiday).\n- 2026-11-26: US markets are closed for Thanksgiving, so flows will be thin. The next Copom decision is 9 Dec, after resolution.\n- Other possible movers: news on the Chamber's handling of the fiscal package, Brazil's November mid-month inflation reading (IPCA-15, likely around 25-26 Nov; I couldn't confirm the date), and US rate expectations.\n\nSources not linked above: [Paraná Shop](https://www.paranashop.com.br/post/bolsa-da-semana-09-11-2026), [XP](https://conteudos.xpi.com.br/morning-call/nvidia-em-queda-proposta-de-ajuste-fiscal-no-brasil-e-ipca-no-radar-dos-investidores/), [Seu Dinheiro](https://www.seudinheiro.com/2026/economia/magazine-luiza-mglu3-vira-foguete-enquanto-csn-csna3-derrete-veja-o-que-rolou-no-ibovespa-davs/), [Brasil61](https://brasil61.com/n/ibovespa-sobe-e-interrompe-sequencia-de-quedas-bras2617432.amp)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 02:37 UTC; check each market really matches the question)\n- Kalshi: How high will the IBOVESPA get this year? (2026). Yes prices: At least R$230,000: 0.0300; At least R$235,000: 0.0400; At least R$220,000: 0.0500; At least R$225,000: 0.0700; At least R$215,000: 0.1100; At least R$210,000: 0.4400; At least R$170,500: 0.9900; At least R$171,000: 0.9900; At least R$171,500: 0.9900; At least R$200,000: 0.9900.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: Silver price on Nov 30, 2026 at 5:00 PM EST? (Nov 30, 2026 at 5:00 PM EST). Yes prices: Above $47.99: 0.49; Above $46.99: 0.59; Above $48.99: 0.38; Above $49.99: 0.30; Above $45.99: 0.68; Above $44.99: 0.76; Above $50.99: 0.20; Above $43.99: 0.82; Above $51.99: 0.14; Above $53.99: 0.09. Settles on the Pyth feed Metal.Index.SILVER/USD, which can differ from exchange settlement prices.\n- Kalshi: Paper price index in November 2026 (November 2026). Yes prices: Above 285: 0.48; Above 280: 0.90; Above 275: 0.95; Above 300: 0.03; Above 295: 0.04; Above 290: 0.46; Above 305: 0.0100.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: How high will Brazil inflation get this year? (Before 2027). Yes prices: Above 4.75%: 0.77; Above 5.00%: 0.24; Above 5.25%: 0.06; Above 5.50%: 0.06; Above 6.50%: 0.01; Above 6.75%: 0.0100; Above 7.00%: 0.0200; Above 5.75%: 0.0300; Above 6.00%: 0.0700; Above 6.25%: 0.1100.\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.0355\", \"0.9645\"]\n- Polymarket: Which company has the best Text-to-Image AI end of November? (ends 2026-12-01). [Yes, No] prices: OpenAI: [\"0.895\", \"0.105\"]; Reve: [\"0.005\", \"0.995\"]; Meta: [\"0.0025\", \"0.9975\"]; Google: [\"0.0095\", \"0.9905\"]; Microsoft AI: [\"0.0225\", \"0.9775\"]; ByteDance: [\"0.004\", \"0.996\"]\n- Polymarket: Which company has the best Text-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: Google: [\"0.9105\", \"0.0895\"]; ByteDance: [\"0.0115\", \"0.9885\"]; Meta: [\"0.026\", \"0.974\"]; Alibaba/Alibaba-ATH: [\"0.01\", \"0.99\"]; OpenAI: [\"0.019\", \"0.981\"]; SpaceXAI: [\"0.0025\", \"0.9975\"]\n- Polymarket: Which company has the best Image-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: MiniMax: [\"0.11\", \"0.89\"]; Google: [\"0.8025\", \"0.1975\"]; Alibaba/Alibaba-ATH: [\"0.0075\", \"0.9925\"]; ByteDance: [\"0.0125\", \"0.9875\"]; SpaceXAI: [\"0.0275\", \"0.9725\"]; Black Forest Labs: [\"0.0005\", \"0.9995\"]\n- Polymarket: Brazil Presidential Election (ends 2026-10-26). [Yes, No] prices: Tarcisio de Freitas: [\"0\", \"1\"]; Luiz Inácio Lula da Silva: [\"1\", \"0\"]; Jair Bolsonaro: [\"0\", \"1\"]; Fernando Haddad: [\"0\", \"1\"]; Michelle Bolsonaro: [\"0\", \"1\"]; Eduardo Bolsonaro: [\"0\", \"1\"]\n- Polymarket: Bank of Brazil Decision in March? (ends 2027-03-17). [Yes, No] prices: 50+ bps decrease: [\"0.027\", \"0.973\"]; 25 bps decrease: [\"0.0615\", \"0.9385\"]; No Change: [\"0.57\", \"0.43\"]; 25 bps increase: [\"0.17\", \"0.83\"]; 50+ bps increase: [\"0.145\", \"0.855\"]\n- Polymarket: Brazil presidential election annulled? (ends 2027-01-01). [Yes, No] prices: Brazil presidential election annulled by December 31?: [\"0.014\", \"0.986\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^BVSP: latest close 172458.0000 on 2026-11-13.\nTarget date 2026-11-26 is 9 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 9-observation returns over the last 3 years (last year weighted double):\np5: 163786.8392, p10: 165798.794, p25: 169591.6172, p50: 173287.7292, p75: 177144.2812, p90: 181225.5576, p95: 184844.3647\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).",
+    "## 1. Resolution source\n- 2026-11-13: Yahoo Finance's chart API for ^BVSP, which feeds the history table, shows the last close as **172,457.77** (+0.66% on the day). The run of daily closes is: 23 Oct 205,083; 26 Oct 176,608; 27 Oct 175,710; 28 Oct 171,006; 29 Oct 169,186; 30 Oct 167,922; 3 Nov 165,529; 4 Nov 167,564; 5 Nov 166,192; 6 Nov 168,499; 9 Nov 172,236; 10 Nov 171,337; 11 Nov 172,060; 12 Nov 171,324; 13 Nov 172,458. The 52-week high is 209,714. [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?range=1mo&interval=1d)\n- **Discrepancy:** the question background gives the 13 Nov close as 172,013.72. Yahoo and Money Times both show 172,457.76/77, so the background figure looks wrong.\n\n## 2. Current status\n- Nothing settles the question yet. Eight sessions remain (16-26 Nov, skipping the 20 Nov holiday). The index is about 16% below its pre-runoff level, about 4% above the 3 Nov low (165,529), and inside the question range (150k-195k).\n\n## 3. Recent news (newest first)\n- 2026-11-14: Week of 9-13 Nov: Ibovespa +2.35% to 172,457.76, dollar +2.66% to R$5.655. Other items:\n  - Selic held at 13.75%. The Copom minutes say the economy is slowing fast, but inflation expectations call for high rates for longer.\n  - October IPCA was +0.14%, above expectations.\n  - Nvidia CEO Jensen Huang resigned amid a scandal, and US tech stocks fell.\n  - US CPI came in hot. CME FedWatch reportedly priced an 85.5% chance of a Fed hike to 4.00-4.25%.\n  - Movers: Banco do Brasil -11.85% on a weak quarter, CSN -15.65%, Magazine Luiza +39%. [Money Times](https://www.moneytimes.com.br/magazine-luiza-mglu3-lidera-ganhos-com-alta-de-mais-de-39-enquanto-csn-csna3-e-a-pior-acao-da-semana-veja-o-que-rolou-no-ibovespa-davs/)\n- 2026-11-14: Domestic-focused indices (small caps, real estate, consumer) are down 12-14% in 2026, while the Ibovespa is up about 7% year to date. [Circuito MT](https://circuitomt.com.br/indices-de-consumo-imoveis-e-small-caps-tombam-ate-14-em-2026-e-mercado-cobra-sinalizacao-fiscal-de-lula/)\n- 2026-11-13: The Ibovespa returned to 172k after the Senate approved the fiscal package, helped by retail sales that beat expectations. Analysts remain sceptical: they call the package insufficient and question whether the measures are permanent and big enough to stabilise the debt. [NC News](https://ncnews.com.br/2026/11/13/ibovespa-volta-aos-172-mil-pontos-apos-aprovacao-de-ajuste-fiscal-no-senado/), [InvestNews](https://investnews.com.br/investimentos/ibovespa-pacote-fiscal-nao-anima/), [SpaceMoney](https://www.spacemoney.com.br/investimentos/mercado-ve-ajuste-fiscal-insuficiente)\n- 2026-11-12: The Senate approved the base text of PLP 299/2026 by 45-31, with an estimated 2027 primary-balance gain of R$45.1-56.1bn. Votes on separate amendments (\"destaques\") are set for 17 Nov, after which the bill goes to the Chamber. I found no Chamber schedule. [BPMoney](https://bpmoney.com.br/economia/ibovespa-sobe-aos-1715-mil-pontos-apos-aprovacao-de-ajuste-fiscal-b3-cai/)\n\n## 4. Base rates\n- Code-computed baseline (9-session returns over the last 3 years, from 172,458): p5 163.8k, p10 165.8k, p25 169.6k, p50 173.3k, p75 177.1k, p90 181.2k, p95 184.8k. This probably understates volatility now: since the runoff, daily moves have often been 1-2%, including a -13.88% day.\n- Since 9 Nov the index has traded in a narrow 171.3k-172.5k band at the close. Between 23 Oct and 3 Nov it fell from 205k to 165.5k.\n- Same window in past years (Yahoo closes):\n  - 2025: 14 Nov 157,739 to 26 Nov 158,555 (+0.5%), with a dip to 154,770 on 21 Nov in between. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?period1=1762992000&period2=1764288000&interval=1d)\n  - 2024: 14 Nov 127,792 to 26 Nov 129,922 (+1.7%). [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?period1=1731456000&period2=1732752000&interval=1d)\n  - 2023: 14 Nov 123,328 to 24 Nov 125,542 (+1.8%; 26 Nov was a Sunday). [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EBVSP?period1=1699833600&period2=1701129600&interval=1d)\n- So the last three years all rose modestly over this window, but there is no strong seasonal pattern. This year the level is depressed by the election shock rather than following a seasonal trend.\n\n## 5. Other forecasts\n- Kalshi \"How high will the IBOVESPA get this year? (2026)\": \"at least 210,000\" at 44%, 215,000 at 11%, 220,000 at 5%. These prices show the market sees only a small chance of a return to pre-election highs by year end, but they do not price a 26 Nov level directly. The 99% prices at lower strikes are thresholds the index has already hit.\n- Polymarket on Brazil's central bank decision in March 2027: no change 57%, 25 bp hike 17%, 50+ bp hike 14.5%, which leans hawkish. Polymarket \"election annulled by 31 Dec\": 1.4%.\n- I could not find any market or analyst forecast for the Ibovespa level on a specific date in late November.\n\n## 6. Upcoming events before resolution\n- 2026-11-17: Senate votes on the PLP 299 amendments. After that the bill goes to the Chamber, and timing there is a key domestic risk. [SpaceMoney](https://www.spacemoney.com.br/investimentos/acoes/ibovespa-hoje/ibovespa-futuro-ajuste-fiscal-senado-galipolo)\n- Week of 16-20 Nov: Money Times flags \"GDP preview and Fed minutes\" as the week's highlights. The GDP preview is likely the IBC-Br and the Fed minutes likely the FOMC minutes, but I could not confirm the dates.\n- 2026-11-20: B3 holiday (Black Consciousness Day).\n- Probably the week of 23 Nov: Brazil's mid-month inflation reading (IPCA-15). Not confirmed.\n- Ongoing: US rate repricing after the hot CPI, fallout from the Nvidia leadership scandal, and the USD/BRL rate (R$5.65, the weakest since June 2025).\n- 2026-11-26: US markets are closed for Thanksgiving, so liquidity will be thin. The B3 session runs normally.\n- After resolution: Copom decision on 9 Dec.\n\nSources: the links above, plus the [Investing.com BR preview](https://br.investing.com/news/stock-market-news/ibovespa-e-dolar-hoje-pacote-fiscal-varejo-e-inflacao-dos-eua-no-radar-2126420).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 02:37 UTC; check each market really matches the question)\n- Kalshi: How high will the IBOVESPA get this year? (2026). Yes prices: At least R$230,000: 0.0300; At least R$235,000: 0.0400; At least R$220,000: 0.0500; At least R$225,000: 0.0700; At least R$215,000: 0.1100; At least R$210,000: 0.4400; At least R$170,500: 0.9900; At least R$171,000: 0.9900; At least R$171,500: 0.9900; At least R$200,000: 0.9900.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: Silver price on Nov 30, 2026 at 5:00 PM EST? (Nov 30, 2026 at 5:00 PM EST). Yes prices: Above $47.99: 0.49; Above $46.99: 0.59; Above $48.99: 0.38; Above $49.99: 0.30; Above $45.99: 0.68; Above $44.99: 0.76; Above $50.99: 0.20; Above $43.99: 0.82; Above $51.99: 0.14; Above $53.99: 0.09. Settles on the Pyth feed Metal.Index.SILVER/USD, which can differ from exchange settlement prices.\n- Kalshi: Paper price index in November 2026 (November 2026). Yes prices: Above 285: 0.48; Above 280: 0.90; Above 275: 0.95; Above 300: 0.03; Above 295: 0.04; Above 290: 0.46; Above 305: 0.0100.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: How high will Brazil inflation get this year? (Before 2027). Yes prices: Above 4.75%: 0.77; Above 5.00%: 0.24; Above 5.25%: 0.06; Above 5.50%: 0.06; Above 6.50%: 0.01; Above 6.75%: 0.0100; Above 7.00%: 0.0200; Above 5.75%: 0.0300; Above 6.00%: 0.0700; Above 6.25%: 0.1100.\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.0355\", \"0.9645\"]\n- Polymarket: Which company has the best Text-to-Image AI end of November? (ends 2026-12-01). [Yes, No] prices: OpenAI: [\"0.895\", \"0.105\"]; Reve: [\"0.005\", \"0.995\"]; Meta: [\"0.0025\", \"0.9975\"]; Google: [\"0.0095\", \"0.9905\"]; Microsoft AI: [\"0.0225\", \"0.9775\"]; ByteDance: [\"0.004\", \"0.996\"]\n- Polymarket: Which company has the best Text-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: Google: [\"0.9105\", \"0.0895\"]; ByteDance: [\"0.0115\", \"0.9885\"]; Meta: [\"0.026\", \"0.974\"]; Alibaba/Alibaba-ATH: [\"0.01\", \"0.99\"]; OpenAI: [\"0.019\", \"0.981\"]; SpaceXAI: [\"0.0025\", \"0.9975\"]\n- Polymarket: Which company has the best Image-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: MiniMax: [\"0.11\", \"0.89\"]; Google: [\"0.8025\", \"0.1975\"]; Alibaba/Alibaba-ATH: [\"0.0075\", \"0.9925\"]; ByteDance: [\"0.0125\", \"0.9875\"]; SpaceXAI: [\"0.0275\", \"0.9725\"]; Black Forest Labs: [\"0.0005\", \"0.9995\"]\n- Polymarket: Brazil Presidential Election (ends 2026-10-26). [Yes, No] prices: Tarcisio de Freitas: [\"0\", \"1\"]; Luiz Inácio Lula da Silva: [\"1\", \"0\"]; Jair Bolsonaro: [\"0\", \"1\"]; Fernando Haddad: [\"0\", \"1\"]; Michelle Bolsonaro: [\"0\", \"1\"]; Eduardo Bolsonaro: [\"0\", \"1\"]\n- Polymarket: Bank of Brazil Decision in March? (ends 2027-03-17). [Yes, No] prices: 50+ bps decrease: [\"0.027\", \"0.973\"]; 25 bps decrease: [\"0.0615\", \"0.9385\"]; No Change: [\"0.57\", \"0.43\"]; 25 bps increase: [\"0.17\", \"0.83\"]; 50+ bps increase: [\"0.145\", \"0.855\"]\n- Polymarket: Brazil presidential election annulled? (ends 2027-01-01). [Yes, No] prices: Brazil presidential election annulled by December 31?: [\"0.014\", \"0.986\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^BVSP: latest close 172458.0000 on 2026-11-13.\nTarget date 2026-11-26 is 9 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 9-observation returns over the last 3 years (last year weighted double):\np5: 163786.8392, p10: 165798.794, p25: 169591.6172, p50: 173287.7292, p75: 177144.2812, p90: 181225.5576, p95: 184844.3647\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 163500.0,
+        "p25": 168550.0,
+        "p50": 173000.0,
+        "p75": 177400.0,
+        "p90": 182300.0
+      },
+      "reasoning": "(a) **Time left:** about 10.5 days. That covers 9 B3 sessions (16 to 26 November, with 20 November a holiday), and the close is known around 18:00 BRT on 26 November.\n\n(b) **Latest known value:** 172,457.77 on 13 November 2026, per Yahoo, InfoMoney and Money Times. The 172,013.72 figure in the question background appears to be wrong.\n\n(c) **If nothing changed:** about 172,458.\n\n(d) **If the current trend continued:** the index has rebounded from 165,529 on 3 November, a gain of about 0.5% per session over the last two weeks. Carrying that forward gives roughly 175,000 to 178,000. The rebound has stalled near 172,000 for five sessions, though, so I only partly weight the trend.\n\n(e) **Historical variation:**\n- The empirical 9-session spread from the baseline is about -5% to +7% (5th to 95th percentile).\n- Post-election volatility is higher, with daily moves of 1 to 2%. That implies a 9-day standard deviation of about 4 to 4.5%, or roughly 7,000 to 8,000 points.\n- The same window in each of the last three years rose 1 to 4%, but three years is too small a sample to lean on.\n\n(f) **Expectations of experts and markets:** there is no market or expert forecast for this exact quantity.\n- The sentiment is cautious. UBS downgraded Brazil within emerging-market equities, and the market sees the fiscal package as insufficient to stabilise the debt.\n- US conditions are hawkish, with about 87% odds of a 25 bp Fed hike on 9 December.\n- Against that, the index is cheap after a 16% drawdown, and the rebound has momentum.\n\n(g) **Unexpected scenarios:**\n- **Low:** the Senate or Chamber waters down the fiscal package, or Lula signals more spending. Nvidia's earnings could also trigger a global risk-off move and push the real past R$5.90. In that case the index could retest and break 165,000 and fall toward 155,000 to 158,000.\n- **High:** the Chamber fast-tracks the package and the government announces extra fiscal measures. A short-covering rally in the oversold banks and state-owned companies could then lift the index to 183,000 to 190,000.\n\nI start from the statistical baseline (median about 173,300) and widen the tails for the elevated post-election volatility.\n\nPercentile 1: 152500\nPercentile 5: 160000\nPercentile 10: 163500\nPercentile 20: 167300\nPercentile 30: 169800\nPercentile 40: 171600\nPercentile 50: 173000\nPercentile 60: 174400\nPercentile 70: 176200\nPercentile 80: 178600\nPercentile 90: 182300\nPercentile 95: 185500\nPercentile 99: 192000"
+    },
+    {
+      "value": {
+        "p10": 163300.0,
+        "p25": 167650.0,
+        "p50": 172700.0,
+        "p75": 177700.0,
+        "p90": 182600.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. There are nine B3 sessions from 16 to 26 November (20 November is a holiday), and the close is known after 18:00 BRT on 26 November.\n\n(b) **Latest value:** 172,457.77 on 13 November 2026, from Yahoo's ^BVSP data, confirmed by InfoMoney. This is not the 172,013.72 given in the background.\n\n(c) **If nothing changed:** About 172,458.\n\n(d) **If the trend continued:** The index has risen about 4% from its 3 November low of 165,529, roughly 0.5% per session, with momentum slowing in the last week. Extending that partly gives about 175,000 to 177,000. Fiscal scepticism, a UBS downgrade and a weak real argue against extrapolating it fully.\n\n(e) **Historical variation:**\n- The code baseline for 9-session returns spans about -5% (p5) to +7% (p95), with a median of +0.5%.\n- Post-election volatility is higher, with daily moves of 0.4% to 2.2%. I put the 9-session standard deviation at about 4.3%, with fat tails, so I widen the baseline somewhat.\n\n(f) **Experts and markets:** No market or published target covers the late-November level. The backdrop is mixed:\n- **Negative:** The fiscal package is seen as insufficient, UBS has downgraded Brazil, the Fed looks likely to hike, and the Selic is expected to stay high.\n- **Positive:** Valuations are depressed after the selloff, and the index has posted two positive weeks in a row.\n- **Net:** I place the median around 172,700, a slight upward drift.\n\n(g) **Scenarios:**\n- **Low:** The Chamber stalls or waters down the fiscal package, the real breaks past R$5.90, Nvidia earnings trigger a global risk-off selloff, and a hot IPCA-15 adds to the pressure. The index retests and breaks the 165,000 low, reaching about 152,000 to 158,000.\n- **High:** The government announces extra spending cuts, the Chamber passes the package quickly, and the dollar retreats below R$5.40. Foreign bargain-hunting then lifts the index toward 185,000 to 192,000.\n\nPercentile 1: 152000\nPercentile 5: 160300\nPercentile 10: 163300\nPercentile 20: 166400\nPercentile 30: 168900\nPercentile 40: 171000\nPercentile 50: 172700\nPercentile 60: 174400\nPercentile 70: 176400\nPercentile 80: 179000\nPercentile 90: 182600\nPercentile 95: 185500\nPercentile 99: 192000"
+    },
+    {
+      "value": {
+        "p10": 163500.0,
+        "p25": 168000.0,
+        "p50": 172800.0,
+        "p75": 177550.0,
+        "p90": 182500.0
+      },
+      "reasoning": "(a) Time left: the outcome is known after the B3 close on Thursday 26 November 2026, about 10.5 days from now. That leaves nine trading sessions (16-19 and 23-26 November, with 20 November a B3 holiday).\n\n(b) Latest known value: 172,457.77 on 13 November 2026 (Yahoo ^BVSP, confirmed by InfoMoney). The question background's figure of 172,013.72 is slightly off.\n\n(c) If nothing changed: about 172,458.\n\n(d) If the current trend continued: the index has recovered from its 3 November low of 165,529 and gained about 2.35% last week. Extending that pace gives roughly 175,000-177,000. However, recent sessions have been choppy around 171,000-172,500, so momentum is weak.\n\n(e) Historical variation:\n- The code baseline for 9-session returns spans about -5% (p5) to +7% (p95).\n- Post-election volatility is higher, with daily moves of about 0.4% to 2.2%. That implies a 9-session standard deviation of roughly 4-4.5%, or about 7,000-7,500 points.\n- I widen the baseline tails accordingly.\n\n(f) Experts and markets:\n- There is no market on this level and date.\n- Sentiment is cautious:\n  - UBS downgraded Brazil within emerging-market equities.\n  - The fiscal package is seen as insufficient.\n  - The Fed may hike in December.\n  - The Selic stays at 13.75%.\n- Offsetting this is a valuation rebound potential after an 18% crash.\n- I put the median roughly flat, slightly above the latest close.\n\n(g) Unexpected scenarios:\n- **Low:** The Chamber stalls or waters down PLP 299, the real breaks R$6, a hawkish Fed or Nvidia earnings trigger a global risk-off move, and the index retests and breaks the 3 November low, to around 152,000-158,000.\n- **High:** The Chamber fast-tracks the package, the government signals extra fiscal measures, and foreign bargain-hunting drives a short-covering rally toward 185,000-192,000.\n\nPercentile 1: 152000\nPercentile 5: 160500\nPercentile 10: 163500\nPercentile 20: 166800\nPercentile 30: 169200\nPercentile 40: 171200\nPercentile 50: 172800\nPercentile 60: 174400\nPercentile 70: 176300\nPercentile 80: 178800\nPercentile 90: 182500\nPercentile 95: 185500\nPercentile 99: 192000"
+    },
+    {
+      "value": {
+        "p10": 164000.0,
+        "p25": 168850.0,
+        "p50": 173000.0,
+        "p75": 177300.0,
+        "p90": 182500.0
+      },
+      "reasoning": "(a) About 10 days, or 8 B3 sessions (16-19 and 23-26 November, with 20 November a holiday). The result will be known after the 18:00 BRT close on 26 November 2026.\n\n(b) Yahoo Finance shows 172,457.77 on 13 November 2026. The question background says 172,013.72, but Yahoo is the resolution source and two sources agree on about 172,458, so I use that figure.\n\n(c) If nothing changed, the index would close at about 172,458.\n\n(d) Trend: after the post-runoff crash to 165.5k on 3 November, the index recovered and has held a flat 171.3k-172.5k band since 9 November. Extending that flat-to-slightly-up drift gives roughly 172k-175k.\n\n(e) Historical variation: the 3-year empirical baseline for 9 sessions gives p5 to p95 of 163.8k to 184.8k, about ±6%. Post-election volatility is elevated, with daily moves of 0.4-2.2%, so a standard deviation of about 4.5% over 8 sessions (roughly ±7.5k points) is plausible, with fat tails. In the same window over the last three years the index rose 0.5-1.8%, but there is no reliable seasonal pattern.\n\n(f) Expectations of experts and markets: there is no direct market on the 26 November level. Kalshi's year-high market puts a return above 210k at 44%, but that reflects path and year-end highs, not this date. Analysts see the fiscal package as insufficient. The main risks are:\n* the Senate vote on amendments on 17 November and the Chamber timing;\n* a hawkish Fed after the hot US CPI;\n* the BRL at R$5.65;\n* the Nvidia leadership scandal weighing on global risk appetite.\n\n(g) Scenarios:\n* Low: the fiscal package is watered down or stalls in the Chamber, the real weakens past R$5.90, and a hawkish Fed or US tech selloff adds pressure. The index retests and breaks the 165k low, falling toward 152-158k.\n* High: the Chamber passes the package quickly with stronger measures, global risk appetite rebounds, and foreign bargain-hunting closes part of the election gap. The index rallies toward 185-193k.\n\nPercentile 1: 152000\nPercentile 5: 160500\nPercentile 10: 164000\nPercentile 20: 167600\nPercentile 30: 170100\nPercentile 40: 171900\nPercentile 50: 173000\nPercentile 60: 174300\nPercentile 70: 176000\nPercentile 80: 178600\nPercentile 90: 182500\nPercentile 95: 186000\nPercentile 99: 193000"
+    },
+    {
+      "value": {
+        "p10": 164000.0,
+        "p25": 168750.0,
+        "p50": 173000.0,
+        "p75": 177250.0,
+        "p90": 182000.0
+      },
+      "reasoning": "(a) **Time left:** It is 16 Nov 2026 and the outcome is known after the 26 Nov close, about 10 days away. That leaves 8 trading sessions (16-19 and 23-26 Nov, with 20 Nov a B3 holiday).\n\n(b) **Latest known value:** Yahoo Finance ^BVSP closed at 172,457.77 on 13 Nov 2026. The question background says 172,013.72, but Yahoo and Money Times both show about 172,458, so I use that.\n\n(c) **If nothing changed:** about 172,458.\n\n(d) **If the trend continued:** Since 9 Nov the index has moved sideways in a 171.3k-172.5k band, after rebounding from the 3 Nov low of 165.5k. A mild upward drift would put it around 173k-175k. The longer post-runoff trend is down, but it appears to have stabilised.\n\n(e) **Historical variation:** The code baseline for 9-session returns gives p5-p95 of roughly 163.8k-184.8k, about ±6%. Volatility is higher than that sample implies: daily moves have been 1-2%, so the standard deviation over 8 sessions is plausibly 4-4.5%. In the last three years this window rose by 0.5% to 1.8%.\n\n(f) **Expectations of experts and markets:**\n- No market prices the 26 Nov level directly.\n- Kalshi gives 44% to a year-high of at least 210k, but this market is hard to interpret given the pre-election levels.\n- Analysts are sceptical of the fiscal package.\n- US conditions lean hawkish after the hot CPI, and the real is weak, which weighs on Brazilian stocks.\n- Fiscal progress in the Senate and the Chamber could support the index.\n\n(g) **Unexpected scenarios:**\n- Low: the Senate amendment votes on 17 Nov dilute the package, or the Chamber stalls it. The real could then weaken past R$5.90, with a global risk-off from US rate-hike pricing and tech-sector turmoil. The index could fall back below the 3 Nov low to around 155-160k.\n- High: the Chamber fast-tracks a strengthened package, and the government makes a credible fiscal commitment such as a respected economy-team appointment. The real recovers, foreign buyers return to deeply discounted Brazilian assets, and the index retraces toward 185-190k.\n\nPercentile 1: 152000\nPercentile 5: 160500\nPercentile 10: 164000\nPercentile 20: 167500\nPercentile 30: 170000\nPercentile 40: 171700\nPercentile 50: 173000\nPercentile 60: 174300\nPercentile 70: 176000\nPercentile 80: 178500\nPercentile 90: 182000\nPercentile 95: 185000\nPercentile 99: 191000"
+    },
+    {
+      "value": {
+        "p10": 162500.0,
+        "p25": 168200.0,
+        "p50": 173000.0,
+        "p75": 177700.0,
+        "p90": 183000.0
+      },
+      "reasoning": "(a) **Time left:** The 26 November 2026 close will be known about 10 days from now. That is 8 trading sessions after the 13 November close (16 to 26 November, skipping the 20 November holiday).\n\n(b) **Latest known value:** 172,457.77 on 13 November 2026, from the Yahoo chart API that feeds the resolution table. The question background's figure of 172,013.72 appears to be wrong.\n\n(c) **If nothing changed:** about 172,458.\n\n(d) **If the current trend continued:** The index has moved sideways since 9 November, in a band of about 171.3k to 172.5k at the close. Before that it had recovered slowly from the 165.5k low on 3 November. Continuing that drift gives roughly 173k to 175k.\n\n(e) **Historical variation:** The code baseline from 9-session returns runs from about -5% (p5) to +7% (p95). Post-election volatility is higher than that history, so I widen it to roughly ±6% for the 10th to 90th percentile range, with fat tails.\n\n(f) **Experts and markets:**\n- Analysts view the fiscal package as insufficient.\n- Polymarket leans hawkish on Brazil's central bank decision in March 2027.\n- Kalshi gives only a small chance of a return to the 210k-plus highs this year, which means it does not expect a full recovery.\n- No market prices the 26 November level directly.\n\n(g) **Scenarios:**\n- **Low:** The Chamber stalls or waters down PLP 299. The real breaks R$6, a Fed hike scare hits emerging markets, and Nvidia-led tech weakness adds to the selloff. The index retests 155k to 160k.\n- **High:** The Chamber passes the package quickly with credible measures, and foreign money buys cheap Brazilian equities on a short-covering rally. The index reaches 185k to 190k.\n\nPercentile 1: 151000\nPercentile 5: 158500\nPercentile 10: 162500\nPercentile 20: 166800\nPercentile 30: 169600\nPercentile 40: 171500\nPercentile 50: 173000\nPercentile 60: 174500\nPercentile 70: 176400\nPercentile 80: 179000\nPercentile 90: 183000\nPercentile 95: 186500\nPercentile 99: 193000"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 163319.5027,
+    "p25": 168329.4763,
+    "p50": 172994.4464,
+    "p75": 177520.1786,
+    "p90": 182666.1721
+  },
+  "usage": [
+    {
+      "question_id": "46827",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 7.57e-05,
+      "input_tokens": 492,
+      "output_tokens": 53,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00029180000000000005,
+      "input_tokens": 1040,
+      "output_tokens": 168,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 107.4,
+      "notional_cost_usd": 0.348803,
+      "input_tokens": 99048,
+      "output_tokens": 5822,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.0,
+      "notional_cost_usd": 0.090712,
+      "input_tokens": 8435,
+      "output_tokens": 1162,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.2,
+      "notional_cost_usd": 0.09186,
+      "input_tokens": 8436,
+      "output_tokens": 1219,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0007451000000000001,
+      "input_tokens": 2844,
+      "output_tokens": 353,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.0007647000000000001,
+      "input_tokens": 2787,
+      "output_tokens": 415,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.0002729,
+      "input_tokens": 2845,
+      "output_tokens": 362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.1,
+      "notional_cost_usd": 0.0273292,
+      "input_tokens": 8435,
+      "output_tokens": 1162,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.00033963,
+      "input_tokens": 2787,
+      "output_tokens": 497,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0006866,
+      "input_tokens": 2744,
+      "output_tokens": 276,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00022888999999999999,
+      "input_tokens": 2744,
+      "output_tokens": 276,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 71.3,
+      "notional_cost_usd": 0.23932789999999998,
+      "input_tokens": 75048,
+      "output_tokens": 4199,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.8,
+      "notional_cost_usd": 0.079768,
+      "input_tokens": 7467,
+      "output_tokens": 1002,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.2,
+      "notional_cost_usd": 0.083104,
+      "input_tokens": 7469,
+      "output_tokens": 1168,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.0,
+      "notional_cost_usd": 0.082864,
+      "input_tokens": 7469,
+      "output_tokens": 1156,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0007458,
+      "input_tokens": 2660,
+      "output_tokens": 428,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.000715,
+      "input_tokens": 2791,
+      "output_tokens": 314,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.000748,
+      "input_tokens": 2836,
+      "output_tokens": 362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.00030704,
+      "input_tokens": 2659,
+      "output_tokens": 434,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00023001,
+      "input_tokens": 2837,
+      "output_tokens": 276,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46827",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00027295,
+      "input_tokens": 2788,
+      "output_tokens": 364,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0502
+}

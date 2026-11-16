@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-16T02:38:05.197234+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T02:34:16.861294+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46826,
+    "post_id": 46566,
+    "url": "https://www.metaculus.com/questions/46566",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will Alibaba make a non-preview Qwen4 model available on a pay-as-you-go API basis before November 28, 2026?",
+    "resolution_criteria": "This question resolves Yes if, as of 23:59 UTC on November 27, 2026, Alibaba Cloud Model Studio's model inference pricing documentation lists at least one Qwen4 model with standard pay-as-you-go input and output prices, either on the international documentation (https://www.alibabacloud.com/help/en/model-studio/model-pricing) or on the China documentation (https://help.aliyun.com/en/model-studio/model-pricing). A \"Qwen4 model\" is a Qwen4-series model whose model ID does not contain the string \"preview\" (for example qwen4-max, qwen4-plus, qwen4-flash, or qwen-4-max); a model whose ID contains \"preview\" never counts, even if prices are published for it. Access restricted to the Token Plan subscription, to an invite-only or waitlist scheme, or to the consumer Qwen app does not count as pay-as-you-go API availability. The question resolves No if no such model is listed, unless [credible sources](https://www.metaculus.com/faq/#definitions) report that Alibaba made a non-preview Qwen4 model available on a standard pay-as-you-go API basis before November 28, 2026, in which case it resolves Yes.",
+    "fine_print": "Only Alibaba's own published model IDs count; listings on third-party aggregators or resellers (for example OpenRouter or AIHubMix) do not. A listing in any region or deployment scope counts (for example Singapore, US (Virginia), or China (Beijing)), and the currency in which prices are published (USD or CNY) is irrelevant. A new preview model, an extension of the Qwen4-Max-Preview period, or a dated snapshot of a preview model ID does not count, nor does publication of open weights without a corresponding pay-as-you-go model listing.",
+    "close_time": "2026-11-16 05:22 UTC",
+    "scheduled_resolution_time": "2026-11-28 00:00 UTC"
+  },
+  "research": [
+    "On the evidence found, this question already looks settled as Yes, well before the November 27 deadline. As of November 16, 2026, both pricing pages named in the resolution criteria list a non-preview **qwen4-max** model with standard pay-as-you-go input and output prices.\n\n## 1. Resolution source\n- 2026-11-16: The international pricing page (\"Last Updated: Nov 16, 2026\") now has **qwen4-max** as the first row of the Qwen-Max table. In Singapore (International scope, thinking and non-thinking modes, up to 1M tokens) it costs **$1.5 per million input tokens and $4.5 per million output tokens**, with a free quota of 1 million tokens. In China (Beijing) it costs $1.413 / $4.24. There are also cache prices (write $1.875 or $3, read $0.075) and a batch price row. qwen3.8-max is still listed at $2 / $6. [Alibaba Cloud pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing)\n- 2026-11-16: The China pricing page lists **qwen4-max** in China (Beijing) at **CNY 10 input / CNY 30 output** per million tokens, with a free quota of 1 million tokens. qwen3.8-max is CNY 12 / 36. [help.aliyun.com pricing](https://help.aliyun.com/en/model-studio/model-pricing)\n- The model ID \"qwen4-max\" does not contain \"preview\", so it is a non-preview Qwen4 model under the criteria.\n\n## 2. Current status\n- 2026-11-16: The page I fetched gave no sign that qwen4-max is limited to Token Plan, invite-only or \"coming soon\". I searched the pricing page for those notes and found none.\n- 2026-11-16: A dedicated model page, \"Qwen4-Max\" (\"Last Updated: Nov 16, 2026\"), lists China (Beijing) and Singapore deployments, the OpenAI, Anthropic and DashScope APIs, and links to the pricing page for prices. [qwen4-max doc](https://www.alibabacloud.com/help/en/model-studio/qwen4-max)\n- 2026-11-16: The \"Recommended models\" page (\"Last Updated: Nov 16, 2026\") now shows qwen4-max first for text generation and visual understanding. [Models](https://www.alibabacloud.com/help/en/model-studio/models)\n- The qwen4-max-preview page still says Token Plan only, no pay-as-you-go, retired after Nov 25. That rule covers only the preview ID. [preview doc](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview)\n- One caveat: I could not test API calls. The only thing that could undo this is Alibaba removing the listing before Nov 27, 23:59 UTC.\n\n## 3. Recent news (newest first)\n- 2026-11-16: ChainCatcher reports that Alibaba released Qwen4-Max with cut API prices. Citing The Defiant, it says Singapore list prices are 25% below Qwen3.8-Max (consistent with $1.5 vs $2), that access now goes beyond the subscription preview, and that a smaller open-weight model is planned. [ChainCatcher](https://www.chaincatcher.com/en/article/2305037)\n- 2026-11-16: RuntimeWire reports the launch of Qwen4-Max with a 1M-token context window and $1.50 input pricing. [RuntimeWire](https://runtimewire.com/article/alibaba-qwen4-max-launch-1m-context-pricing)\n- 2026-11-16: A DEV Community post claims Qwen4-Max is a 2.4-trillion-parameter sparse mixture-of-experts model. This is unverified. [DEV](https://dev.to/ton_thnhthy_ba110cce85/qwen4-max-is-here-a-24t-parameter-teammate-that-cuts-your-agent-bill-by-62-with-a-catch-3ek1)\n- 2026-11-12: Tech Times reported that the preview had no benchmarks, model card or price. [Tech Times](https://www.techtimes.com/articles/330536/20261112/alibaba-qwen4-max-preview-retires-november-25-no-benchmarks-model-card-price.htm)\n- 2026-11-11: Alibaba posted \"Qwen4 is coming\" on X and opened the preview on Token Plan. [X](https://x.com/Alibaba_Qwen/status/2120335993643684315)\n- I did not find an official Alibaba press release or X post for the Nov 16 general availability. The evidence is the documentation itself plus secondary press.\n\n## 4. Base rates\n- Earlier Max models went from preview to a priced pay-as-you-go listing quickly. qwen3.7-max-preview had published prices ($2.5 / $7.5) alongside qwen3.7-max-2026-05-20, which suggests days to weeks between the two. [pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing)\n- Once Alibaba lists a model on its pricing pages, it rarely removes it within weeks. Older snapshots such as qwen3.7-max-2026-05-17 are still listed.\n\n## 5. Other forecasts\n- Polymarket, \"Next Qwen Max (4.1+) released by...\": Jan 31 at 0.40 and Mar 31 at 0.845. This market is about a later version, not Qwen4, so it does not match the question.\n- Kalshi, \"Top Chinese AI Company week of Nov 16\": Alibaba 0.11. \"Alibaba vs Xiaomi Arena score end of 2026\": Alibaba 0.49. Neither is directly relevant.\n- I found no market on Qwen4 pay-as-you-go availability itself.\n\n## 6. Upcoming events before resolution\n- 2026-11-19: Alibaba reports September-quarter earnings. Qwen4-Max will likely be mentioned. [aktiencheck](https://aktiencheck.de/artikel/alibaba-aktie-quartalszahlen-q2-kann-die-ki-cloud-die-milliardenverluste)\n- 2026-11-25, 16:00 UTC: The preview ends. Qwen4-Plus, Flash or 27B listings may also appear around then.\n- The main remaining risk is that Alibaba takes down or restricts the qwen4-max listing before Nov 27. Nothing suggests that is happening.\n\nSources: [Alibaba Cloud pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [help.aliyun.com pricing](https://help.aliyun.com/en/model-studio/model-pricing), [qwen4-max doc](https://www.alibabacloud.com/help/en/model-studio/qwen4-max), [Models](https://www.alibabacloud.com/help/en/model-studio/models), [preview doc](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview), [ChainCatcher](https://www.chaincatcher.com/en/article/2305037), [RuntimeWire](https://runtimewire.com/article/alibaba-qwen4-max-launch-1m-context-pricing), [DEV](https://dev.to/ton_thnhthy_ba110cce85/qwen4-max-is-here-a-24t-parameter-teammate-that-cuts-your-agent-bill-by-62-with-a-catch-3ek1), [Tech Times](https://www.techtimes.com/articles/330536/20261112/alibaba-qwen4-max-preview-retires-november-25-no-benchmarks-model-card-price.htm), [X](https://x.com/Alibaba_Qwen/status/2120335993643684315), [eesel](https://www.eesel.ai/blog/qwen-4-max-pricing), [aktiencheck](https://aktiencheck.de/artikel/alibaba-aktie-quartalszahlen-q2-kann-die-ki-cloud-die-milliardenverluste)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 02:34 UTC; check each market really matches the question)\n- Kalshi: Will a court block paid early access to Trump's Truth Social posts? (Before Apr 1, 2027). Yes prices: Before Apr 1, 2027: 0.32; Before Jan 1, 2027: 0.17; Before Dec 1, 2026: 0.10.\n- Kalshi: Will the U.S. announce a new SPR release before 2027? (Before Jan 1, 2027). Yes prices: New SPR release announced?: 0.88.\n- Kalshi: GTA VI · In-game radio artist(s) at launch (GTA VI). Yes prices: Tyler, The Creator: 0.54; Kendrick Lamar: 0.62; Sabrina Carpenter: 0.28; SZA: 0.75; Billie Eilish: 0.26; Drake: 0.79; JENNIE: 0.80; Bruno Mars: 0.20; Taylor Swift: 0.18; Ariana Grande: 0.18.\n- Kalshi: Alibaba vs Xiaomi: Highest Arena Score at the end of 2026 (On Dec 31, 2026). Yes prices: Xiaomi: 0.52; Alibaba: 0.49.\n- Kalshi: Top Chinese AI Company week of November 16th (On Nov 23, 2026). Yes prices: Xiaomi: 0.83; Alibaba: 0.11; Baidu: 0.0000; ByteDance: 0.0000; DeepSeek: 0.0000; Meituan: 0.0000; MiniMax: 0.0000; Moonshot: 0.0000; Tencent: 0.0000; Z.ai: 0.0000.\n- Kalshi: Dollar General same-store sales growth in fiscal 2026 (same-store sales growth in 2026). Yes prices: Above 2.5%: 0.51; Above 2%: 0.75; Above 3%: 0.20; Above 1.5%: 0.92; Above 3.5%: 0.05; Above 4%: 0.04; Above 1%: 0.95.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 32.4%: 0.0100; Above 33.8%: 0.0100; Above 27.8%: 0.99; Above 29.2%: 0.99; Above 29.9%: 0.99; Above 30.3%: 0.99; Above 30.8%: 0.99; Above 31.2%: 0.99; Above 31.7%: 0.99.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Kalshi: EV market share in 2030? (In Jan 2030). Yes prices: Above 30%: 0.44; Above 20%: 0.61; Above 50%: 0.23; Above 10%: 0.85.\n- Polymarket: Next Alibaba Qwen Plus (3.8+) released by...? (ends 2027-01-01). [Yes, No] prices: August 31: [\"0\", \"1\"]; September 30: [\"0\", \"1\"]; September 15: [\"0\", \"1\"]; December 31: [\"0.606\", \"0.394\"]; October 31: [\"0\", \"1\"]; October 7: [\"0\", \"1\"]\n- Polymarket: Next Qwen Max (4.1+) released by...? (ends 2027-04-01). [Yes, No] prices: January 31: [\"0.4\", \"0.6\"]; March 31: [\"0.845\", \"0.155\"]\n- Polymarket: Next Qwen Flash (3.9+) released by...? (ends 2026-12-31). [Yes, No] prices: October 31: [\"0\", \"1\"]; December 31: [\"0.9535\", \"0.0465\"]\n- Polymarket: #1 AI lab by OpenRouter market share week of November 9? (ends 2026-11-17). [Yes, No] prices: DeepSeek: [\"0.996\", \"0.004\"]; Tencent: [\"0.0005\", \"0.9995\"]; OpenAI: [\"0.0005\", \"0.9995\"]; Z.ai: [\"0.0005\", \"0.9995\"]; Xiaomi: [\"0.0005\", \"0.9995\"]; Nvidia: [\"0.0005\", \"0.9995\"]\n- Polymarket: #3 AI lab by OpenRouter market share week of November 9? (ends 2026-11-17). [Yes, No] prices: DeepSeek: [\"0.0005\", \"0.9995\"]; Tencent: [\"0.0005\", \"0.9995\"]; OpenAI: [\"0.0005\", \"0.9995\"]; Z.ai: [\"0.0005\", \"0.9995\"]; Xiaomi: [\"0.0005\", \"0.9995\"]; Nvidia: [\"0.0005\", \"0.9995\"]\n- Polymarket: #2 AI lab by OpenRouter market share week of November 9? (ends 2026-11-17). [Yes, No] prices: DeepSeek: [\"0.0005\", \"0.9995\"]; Tencent: [\"0.0005\", \"0.9995\"]; OpenAI: [\"0.996\", \"0.004\"]; Z.ai: [\"0.0005\", \"0.9995\"]; Xiaomi: [\"0.0005\", \"0.9995\"]; Nvidia: [\"0.0005\", \"0.9995\"]",
+    "I've checked both pricing pages. The question looks effectively settled: both resolution pages now list a non-preview qwen4-max model with standard pay-as-you-go input and output prices, ahead of the November 25 date in the question's background.\n\n## 1. Resolution source\n- 2026-11-16: The international page, [Model inference pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), says \"Last Updated: Nov 16, 2026\" and opens with \"Model API calls are billed on a pay-as-you-go basis by default.\" The first entry in the Qwen-Max table is **qwen4-max**:\n  - Singapore, international scope, Non-Thinking and Thinking modes: **$1.5 input / $4.5 output** per million tokens, with a 1M-token free quota.\n  - China (Beijing) section of the same page: $1.413 / $4.24.\n  - Cache prices: $1.875 for a 5-minute write, $3 for a 1-hour write, $0.075 for a read. A batch price row is also listed.\n  - For comparison, qwen3.8-max is still listed at $2 / $6.\n- 2026-11-16: The China page, [help.aliyun.com](https://help.aliyun.com/en/model-studio/model-pricing), lists **qwen4-max** for China (Beijing) at **CNY 10 input / CNY 30 output** per million tokens, with a free quota (qwen3.8-max is CNY 12 / 36). It also has qwen4-max cache and batch price rows.\n- The model ID \"qwen4-max\" does not contain \"preview\". I did not see any \"coming soon\" or future-availability note near the entry, but I only checked the qwen4 lines, not every line of the pages.\n- 2026-11-16: The [qwen4-max-preview doc](https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview) still says the preview is Token Plan only, pay-as-you-go is not supported, and the preview runs until 24:00 on November 25 (UTC+8). The preview page has not been changed, but the pricing pages now list the separate non-preview ID.\n\n## 2. Current status\n- The Yes condition appears to be met already. The only way it could fail is if Alibaba removes the qwen4-max listing from both pages before 23:59 UTC on November 27. I found no sign of that.\n- I could not confirm independently whether calls to qwen4-max with a normal pay-as-you-go key succeed right now. The question only asks about the pricing-page listing, though.\n\n## 3. Recent news (newest first)\n- 2026-11-16 (02:01 UTC): [AlphaSignal](https://alphasignal.ai/news/alibaba-s-qwen4-max-slashes-agent-task-costs-62-with-1m-token-context) reports that Qwen4-Max is \"Live now on QwenCloud API\". It gives the model ID `qwen4-max` at $1.50 / $4.50 with a $0.075 implicit cache price, down from Qwen3.8-Max's $2 / $6 / $0.25, and calls this the full release following the preview that began November 11.\n- About 2026-11-16: The official @Alibaba_Qwen post \"Meet Qwen4-Max...\" describes a new MoE architecture with native vision and 1M context, and says it \"outperforms Qwen3.8-Max with up to ~50% fewer tokens, average cost per task drops over 60%.\" I saw this only in a search snippet because the page returned HTTP 402, so I could not read the full text or confirm the date. [X post](https://x.com/Alibaba_Qwen/status/2122148127520289151)\n- 2026-11-11: The preview opened as Token Plan only. Coverage at the time said there was no per-token price, and the article noted Qwen Code repo references to \"qwen4-max\", \"qwen4-plus\" and \"qwen4-coder-plus\". [AlphaSignal](https://alphasignal.ai/news/alibaba-launches-qwen4-max-with-agent-first-coding-and-1m-token-support), [aifirstlook](https://aifirstlook.com/qwen-4/)\n- Many third-party explainers (for example [1min.ai](https://1min.ai/qwen-4-release-date-models), [teamorouter](https://teamorouter.com/blogs/qwen4)) still say there is no pay-as-you-go option. They are older than the November 16 changes.\n- 2026-11-19: Alibaba reports its September-quarter earnings. [aktiencheck](https://aktiencheck.de/artikel/alibaba-aktie-quartalszahlen-q2-kann-die-ki-cloud-die-milliardenverluste)\n\n## 4. Base rates\n- Earlier pattern: qwen3.7-max-preview stayed on the pricing page alongside dated GA snapshots (qwen3.7-max-2026-05-17, -05-20, -06-08), so preview and GA IDs have been listed side by side before.\n- I am not aware of Alibaba removing a priced model from these pages within days of listing it. Shutdowns usually come with months of notice.\n- This launch broke from the question's expectation of a release after November 25: GA pricing was published while the preview still had time left.\n\n## 5. Other forecasts\n- None of the markets match this question exactly.\n- Polymarket \"Next Qwen Max (4.1+) released by...?\": Jan 31 at 0.40, Mar 31 at 0.845. This is about the *next* Max after Qwen4, so it fits with Qwen4-Max already counting as released.\n- Polymarket \"Next Qwen Plus (3.8+)\" by Dec 31: 0.606. \"Next Qwen Flash (3.9+)\" by Dec 31: 0.9535.\n- Kalshi \"Top Chinese AI company, week of Nov 16\": Xiaomi 0.83, Alibaba 0.11. \"Alibaba vs Xiaomi, highest Arena score at end of 2026\": Alibaba 0.49.\n- I found no Metaculus or Manifold prices for this question.\n\n## 6. Upcoming events before resolution\n- 2026-11-19: Alibaba earnings, which may come with Qwen4 commercial announcements.\n- 2026-11-25, 16:00 UTC: the preview ends and qwen4-max-preview is retired. That should not affect the qwen4-max listing.\n- Possible releases of qwen4-plus, qwen4-flash or qwen4-27B (leaked names) would be further ways for the question to resolve Yes.\n- Main risk to watch: the qwen4-max entry being pulled or edited on both pages before November 27, 23:59 UTC. It would be worth checking the pages again close to resolution.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 02:34 UTC; check each market really matches the question)\n- Kalshi: Will a court block paid early access to Trump's Truth Social posts? (Before Apr 1, 2027). Yes prices: Before Apr 1, 2027: 0.32; Before Jan 1, 2027: 0.17; Before Dec 1, 2026: 0.10.\n- Kalshi: Will the U.S. announce a new SPR release before 2027? (Before Jan 1, 2027). Yes prices: New SPR release announced?: 0.88.\n- Kalshi: GTA VI · In-game radio artist(s) at launch (GTA VI). Yes prices: Tyler, The Creator: 0.54; Kendrick Lamar: 0.62; Sabrina Carpenter: 0.28; SZA: 0.75; Billie Eilish: 0.26; Drake: 0.79; JENNIE: 0.80; Bruno Mars: 0.20; Taylor Swift: 0.18; Ariana Grande: 0.18.\n- Kalshi: Alibaba vs Xiaomi: Highest Arena Score at the end of 2026 (On Dec 31, 2026). Yes prices: Xiaomi: 0.52; Alibaba: 0.49.\n- Kalshi: Top Chinese AI Company week of November 16th (On Nov 23, 2026). Yes prices: Xiaomi: 0.83; Alibaba: 0.11; Baidu: 0.0000; ByteDance: 0.0000; DeepSeek: 0.0000; Meituan: 0.0000; MiniMax: 0.0000; Moonshot: 0.0000; Tencent: 0.0000; Z.ai: 0.0000.\n- Kalshi: Dollar General same-store sales growth in fiscal 2026 (same-store sales growth in 2026). Yes prices: Above 2.5%: 0.51; Above 2%: 0.75; Above 3%: 0.20; Above 1.5%: 0.92; Above 3.5%: 0.05; Above 4%: 0.04; Above 1%: 0.95.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 32.4%: 0.0100; Above 33.8%: 0.0100; Above 27.8%: 0.99; Above 29.2%: 0.99; Above 29.9%: 0.99; Above 30.3%: 0.99; Above 30.8%: 0.99; Above 31.2%: 0.99; Above 31.7%: 0.99.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Kalshi: EV market share in 2030? (In Jan 2030). Yes prices: Above 30%: 0.44; Above 20%: 0.61; Above 50%: 0.23; Above 10%: 0.85.\n- Polymarket: Next Alibaba Qwen Plus (3.8+) released by...? (ends 2027-01-01). [Yes, No] prices: August 31: [\"0\", \"1\"]; September 30: [\"0\", \"1\"]; September 15: [\"0\", \"1\"]; December 31: [\"0.606\", \"0.394\"]; October 31: [\"0\", \"1\"]; October 7: [\"0\", \"1\"]\n- Polymarket: Next Qwen Max (4.1+) released by...? (ends 2027-04-01). [Yes, No] prices: January 31: [\"0.4\", \"0.6\"]; March 31: [\"0.845\", \"0.155\"]\n- Polymarket: Next Qwen Flash (3.9+) released by...? (ends 2026-12-31). [Yes, No] prices: October 31: [\"0\", \"1\"]; December 31: [\"0.9535\", \"0.0465\"]\n- Polymarket: #1 AI lab by OpenRouter market share week of November 9? (ends 2026-11-17). [Yes, No] prices: DeepSeek: [\"0.996\", \"0.004\"]; Tencent: [\"0.0005\", \"0.9995\"]; OpenAI: [\"0.0005\", \"0.9995\"]; Z.ai: [\"0.0005\", \"0.9995\"]; Xiaomi: [\"0.0005\", \"0.9995\"]; Nvidia: [\"0.0005\", \"0.9995\"]\n- Polymarket: #3 AI lab by OpenRouter market share week of November 9? (ends 2026-11-17). [Yes, No] prices: DeepSeek: [\"0.0005\", \"0.9995\"]; Tencent: [\"0.0005\", \"0.9995\"]; OpenAI: [\"0.0005\", \"0.9995\"]; Z.ai: [\"0.0005\", \"0.9995\"]; Xiaomi: [\"0.0005\", \"0.9995\"]; Nvidia: [\"0.0005\", \"0.9995\"]\n- Polymarket: #2 AI lab by OpenRouter market share week of November 9? (ends 2026-11-17). [Yes, No] prices: DeepSeek: [\"0.0005\", \"0.9995\"]; Tencent: [\"0.0005\", \"0.9995\"]; OpenAI: [\"0.996\", \"0.004\"]; Z.ai: [\"0.0005\", \"0.9995\"]; Xiaomi: [\"0.0005\", \"0.9995\"]; Nvidia: [\"0.0005\", \"0.9995\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.97,
+      "reasoning": "**(a) Time left and what Yes requires.** About 11.5 days remain, until 23:59 UTC on November 27, 2026. Yes requires that at least one Qwen4 model, with an ID not containing \"preview\", is listed with standard pay-as-you-go input and output prices on either Model Studio pricing page at that time.\n\n**(b) Status quo.** Both independent research reports say both pricing pages already list **qwen4-max**, updated November 16, 2026:\n- International page: $1.5 / $4.5 per million tokens in Singapore, $1.413 / $4.24 in Beijing.\n- China page: CNY 10 / 30.\n- Both pages also carry cache and batch rows.\n\nIf nothing changes, the question resolves Yes.\n\n**(c) Base rate.** The reference class is priced Model Studio listings that get removed within about two weeks of first appearing. That is extremely rare. Alibaba keeps old snapshots such as qwen3.7-max-2026-05-17 listed for months, and shutdowns come with months of notice. Given that a listing exists, persistence over 11 days is about 98-99%.\n\n**(d) Strongest evidence.**\n- For Yes:\n  - Two independently written reports dated November 16 confirm the qwen4-max listing on both resolution pages, with consistent detailed prices.\n  - There is a dedicated qwen4-max doc page and a \"Recommended models\" entry, both dated November 16.\n  - Secondary coverage the same day (AlphaSignal, ChainCatcher, RuntimeWire) says the model is \"live now\" at $1.50 / $4.50.\n  - An official @Alibaba_Qwen \"Meet Qwen4-Max\" post was seen in a search snippet.\n- For No:\n  - Neither report could test actual API calls.\n  - No full official press release was read.\n  - There is a remote chance the listing is pulled or edited, or that a hidden Token Plan-only restriction exists. Report 2 checked only the qwen4 lines; Report 1 searched the page for such notes and found none.\n\n**(e) Scenarios.**\n- No: Alibaba discovers the pricing rows were published prematurely, removes qwen4-max from both pages, and reverts to the preview-only status until a December GA. A resolver sees nothing on November 27.\n- Yes: The listing simply persists, and qwen4-plus or qwen4-flash rows may be added after November 25.\n\n**(f) From base rate to final probability.** I start from about 98% persistence given the listing exists. I shade slightly for the residual risk that the research misread the pages and for a resolver-interpretation edge case. Since the outcome is essentially already decided, going above 97% is justified, but I hold at about 97% for log-score safety.\n\nProbability: 97%"
+    },
+    {
+      "value": 0.97,
+      "reasoning": "(a) About 11.5 days remain, until 23:59 UTC on November 27, 2026. For Yes, either Model Studio pricing page (international or China) must, at that time, list a Qwen4 model whose ID lacks \"preview\" with standard pay-as-you-go input and output prices. Alternatively, credible sources must report that such a model was available on a pay-as-you-go basis before November 28.\n\n(b) If nothing changes, the outcome is Yes. Both research reports independently say that as of November 16, 2026 both pricing pages list qwen4-max:\n- International page: $1.5 input / $4.5 output per million tokens in Singapore, and $1.413 / $4.24 in China (Beijing).\n- China page: CNY 10 / CNY 30 per million tokens.\n- Both pages also carry cache and batch rows for the model.\n\n(c) Base rate: once Alibaba lists a priced model on these pages, it is very rarely pulled within two weeks. Older snapshots such as qwen3.7-max-2026-05-17 are still listed. I estimate about 98% or more of priced listings survive for two weeks.\n\n(d) Evidence:\n- **For Yes:**\n  - On November 16, 2026, both pricing pages (updated November 16) list qwen4-max with pay-as-you-go prices.\n  - A dedicated qwen4-max documentation page lists Singapore and Beijing deployments.\n  - The Recommended models page puts qwen4-max first.\n  - AlphaSignal reports it is \"Live now on QwenCloud API\".\n  - ChainCatcher and RuntimeWire report the launch with the same $1.50 price.\n  - An official @Alibaba_Qwen \"Meet Qwen4-Max\" post appeared, though only a search snippet was readable.\n- **For No:**\n  - The preview page still says Token Plan only, but that applies only to the preview ID.\n  - Neither report could test live API calls.\n  - There is a small chance the research misread the pages, or that Alibaba pulls or restricts the listing.\n\n(e) Scenarios:\n- **No:** Alibaba pulls the qwen4-max rows after a premature documentation push, or relabels them as Token Plan only, and both pages stay that way through November 27. Alternatively, the reports are mistaken.\n- **Yes:** The listing simply stays up. More Qwen4 models, such as Plus or Flash, may also be added after the preview ends on November 25.\n\n(f) I start from a base rate of about 98% that the status quo persists. Two independent reports give matching specific figures, and secondary press corroborates them, which makes misreading unlikely. I shade down slightly for the risk of an accidental early documentation publication being reverted, and for the small chance of research error. That leaves my estimate at about 97 to 98%.\n\nProbability: 97%"
+    },
+    {
+      "value": 0.97,
+      "reasoning": "(a) About 11.5 days remain until 23:59 UTC on November 27, 2026. Yes requires either Alibaba Cloud Model Studio pricing page (international or China) to list a Qwen4 model whose ID lacks \"preview\", with standard pay-as-you-go input and output prices. Credible reports of such availability before November 28 would also count.\n\n(b) The status quo is already Yes. As of November 16, both pricing pages list qwen4-max with pay-as-you-go prices:\n- International page: $1.5 input / $4.5 output per million tokens in Singapore.\n- China page: CNY 10 / CNY 30 in Beijing.\nIf nothing changes, the question resolves Yes.\n\n(c) The reference class is a model newly listed with prices on a major cloud provider's pricing page that stays listed for at least the next ~11 days. Removal within days is very rare, well under 2%. Alibaba keeps old snapshots such as qwen3.7-max-2026-05-17 listed for months. The base rate is about 98% or higher that the listing persists.\n\n(d) Evidence for Yes (all dated November 16, 2026):\n- Two independent research reports found qwen4-max on both resolution pages (\"Last Updated: Nov 16, 2026\") with consistent prices.\n- They also agree on the cache prices ($1.875, $3 and $0.075 read) and that batch price rows exist.\n- A dedicated qwen4-max documentation page exists, and qwen4-max is listed first on the Recommended models page.\n- Secondary press (AlphaSignal, ChainCatcher, RuntimeWire) reports \"Live now\" at $1.50 / $4.50.\n- The official @Alibaba_Qwen post \"Meet Qwen4-Max\" appeared, though it was seen only as a snippet.\n\nEvidence for No:\n- No official press release was found.\n- Neither report could test API calls.\n- The preview page still says Token Plan only, but that applies only to the preview ID.\n- There is a small theoretical risk that the listing is pulled or relabeled as restricted, or that the page states a hidden subscription restriction.\n\n(e) No scenario: Alibaba discovers the listing went up prematurely and removes qwen4-max from both pages before November 27, or adds a \"Token Plan only\" note, and no credible source reports pay-as-you-go access. This is very unlikely given the coordinated launch across docs, the official post and press coverage.\n\nYes scenario: the listing simply stays in place, and qwen4-plus or qwen4-flash may be added after the preview ends on November 25.\n\n(f) I start from the roughly 98% persistence base rate. The outcome is effectively already decided. Two independent confirmations and multiple outlets reporting live pay-as-you-go access leave only small residual risks: removal, misreading of the criteria, or an error in the research. I keep the forecast slightly below certainty to account for those.\n\nProbability: 97%"
+    },
+    {
+      "value": 0.96,
+      "reasoning": "**(a) Time left and what Yes requires.** About 11.5 days remain, until 23:59 UTC on Nov 27, 2026. Yes requires that, at that time, either Model Studio pricing page lists a Qwen4 model whose ID lacks \"preview\" with standard pay-as-you-go input and output prices. Alternatively, credible sources could report pay-as-you-go availability before Nov 28.\n\n**(b) Status quo.** Both research reports independently found qwen4-max already listed on Nov 16 with full prices on both pages:\n- International page: $1.5 input / $4.5 output per million tokens (Singapore), and $1.413 / $4.24 (Beijing).\n- China page: CNY 10 / CNY 30.\n\nIf nothing changes, the question resolves Yes.\n\n**(c) Base rate.** Alibaba very rarely removes a priced model listing from these pages within about 10 days. Older snapshots like qwen3.7-max-2026-05-17 are still listed. Once a model is listed, it stays through a two-week window well over 97% of the time.\n\n**(d) Evidence.**\n- **For Yes:**\n  - Both pricing pages show \"Last Updated Nov 16, 2026\" with a qwen4-max row that includes cache and batch prices.\n  - A dedicated qwen4-max doc page and the Recommended models page were also updated on Nov 16.\n  - Secondary press on Nov 16 corroborates the launch at the same prices: AlphaSignal (\"Live now on QwenCloud API\"), ChainCatcher/The Defiant and RuntimeWire.\n  - An official @Alibaba_Qwen \"Meet Qwen4-Max\" post was seen, though only as a search snippet.\n- **For No:**\n  - Neither researcher could test API calls.\n  - There is no official press release.\n  - The preview doc still says no pay-as-you-go, but that applies only to the preview ID.\n  - A residual risk remains that the listing is pulled or that the reports misread the pages.\n\n**(e) Scenarios.**\n- **No:** Alibaba pulls the qwen4-max rows, for example to relaunch on Nov 26 after the preview ends, or relabels the rows as Token Plan only, and no credible report of pay-as-you-go access exists. This seems very unlikely given the press coverage of a live API.\n- **Yes:** The listing stays in place, and qwen4-plus or qwen4-flash may be added later.\n\n**(f) From base rate to final probability.** I start from the near-certain persistence of an existing listing, about 98%. I shade down slightly for the possibility that the research misread the pages and for the small chance of removal or restriction. Two independent, detailed and consistent reports make a misreading unlikely, so I land around 96 to 97%.\n\nProbability: 96%"
+    },
+    {
+      "value": 0.97,
+      "reasoning": "**(a) Time left and what Yes requires.** About 11.5 days remain, until 23:59 UTC on November 27, 2026. Yes requires at least one Qwen4 model whose ID lacks \"preview\" to be listed with standard pay-as-you-go input and output prices on either Model Studio pricing page at that time. Separately, credible reports that such pay-as-you-go access existed before November 28 would also resolve Yes.\n\n**(b) Status quo.** Both reports say the condition is already met. As of November 16, 2026:\n- The international page lists qwen4-max at $1.5 / $4.5 per million input / output tokens (Singapore) and $1.413 / $4.24 (Beijing).\n- The China page lists qwen4-max at CNY 10 / CNY 30.\n\nIf nothing changes, the question resolves Yes.\n\n**(c) Base rate.** The reference class is models Alibaba has listed with prices on these pages. Removal within about 10 days of listing is extremely rare, likely under 2%. Shutdowns usually come with months of notice, and older snapshots such as qwen3.7-max-2026-05-17 remain listed. That implies roughly a 98% or higher chance that a listed model stays listed.\n\n**(d) Evidence.**\n- For Yes, as of November 16:\n  - Two independent reports describe the pricing pages with matching details: prices, cache rates, batch rows, and \"Last Updated: Nov 16, 2026\".\n  - A dedicated qwen4-max documentation page exists.\n  - The recommended models page now shows qwen4-max first.\n  - Press coverage (AlphaSignal, ChainCatcher, RuntimeWire) says it is \"Live now on QwenCloud API\".\n  - An official @Alibaba_Qwen \"Meet Qwen4-Max\" post appeared in a search snippet.\n- For No:\n  - The preview page still says pay-as-you-go is not supported, though that applies only to the preview ID.\n  - Neither report could test actual API calls.\n  - There is a small chance the listing was published in error and gets pulled or relabeled before November 27.\n\n**(e) Scenarios.**\n- No: Alibaba says the listing went up early by mistake, removes the qwen4-max rows from both pages, and relists them in December. No credible source reports pay-as-you-go access in the meantime.\n- Yes (the default path): the listing stays, the preview retires on November 25, and Qwen4-Plus or Flash may be added.\n\n**(f) From base rate to final probability.** I start from a roughly 98% chance that an already-listed model stays listed. I trim slightly for:\n- possible errors in the research reports, mitigated because two independent reports agree in detail;\n- a remote chance that the listing is restricted, for example to Token Plan.\n\nEven if the listing were pulled, the credible-sources fallback likely still gives Yes, since press already reports live API access. The outcome is effectively decided, which justifies going above 97%.\n\nProbability: 97%"
+    },
+    {
+      "value": 0.97,
+      "reasoning": "(a) About 11.5 days remain, until 23:59 UTC on November 27, 2026. For Yes, at least one Qwen4 model ID without \"preview\" must be listed with standard pay-as-you-go input and output prices on either Model Studio pricing page at that time. Failing that, credible reports that such API availability existed before November 28 would also resolve Yes.\n\n(b) Status quo: per both research reports, qwen4-max is already listed on both pricing pages as of November 16:\n- International page: $1.5 / $4.5 per million tokens in Singapore.\n- China page: CNY 10 / 30 in Beijing.\n\nThe ID qwen4-max contains no \"preview\", and neither report found a Token Plan-only or \"coming soon\" restriction. If nothing changes, the question resolves Yes.\n\n(c) Base rate: priced pay-as-you-go listings on Alibaba's pricing pages rarely disappear within about 10 days of publication. Older snapshots such as qwen3.7-max-2026-05-17 remain listed, and retirements usually come with months of notice. For \"a listing already present stays through resolution 11 days later,\" the reference class gives roughly 97-99% Yes.\n\n(d) Evidence:\n- **For Yes (2026-11-16):**\n  - Both independent reports confirm the qwen4-max rows on both pages, with matching details: prices, cache rates, a batch row, and \"Last Updated: Nov 16, 2026.\"\n  - A dedicated qwen4-max documentation page lists the OpenAI, Anthropic and DashScope APIs.\n  - The international pricing page states that billing is pay-as-you-go by default.\n  - Secondary press (AlphaSignal, ChainCatcher, RuntimeWire) reports the model as \"live now on API.\"\n  - An official @Alibaba_Qwen \"Meet Qwen4-Max\" post was seen in a search snippet.\n- **For No:**\n  - Neither report could make a test API call.\n  - The preview page still says pay-as-you-go is not supported, but that applies only to the preview ID.\n  - Report 2 checked only the qwen4 lines, not every footnote.\n  - A theoretical risk remains that the listing was posted early by mistake and gets pulled.\n\n(e) Scenarios:\n- **No:** Alibaba realizes the pricing rows went up prematurely, removes qwen4-max from both pages pending the Nov 25 preview end, and does not relist before Nov 27. Alternatively, a footnote surfaces that limits it to Token Plan. Both seem unlikely given the press coverage and the dedicated model page.\n- **Yes:** The listing simply stays, possibly joined by qwen4-plus or qwen4-flash around Nov 25.\n\n(f) I start from about 98% for a listing persisting, given that it is already present. There is no matching prediction market to anchor on. I shade down slightly for residual risks: an accidental early publication, an unseen restriction note, or reading or verification errors. The credible-sources fallback offsets some of that risk. I end at about 97%.\n\nProbability: 97%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.9416,
+  "usage": [
+    {
+      "question_id": "46826",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.4,
+      "notional_cost_usd": 0.0001248,
+      "input_tokens": 515,
+      "output_tokens": 44,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0002843,
+      "input_tokens": 1190,
+      "output_tokens": 93,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 89.4,
+      "notional_cost_usd": 0.3707187,
+      "input_tokens": 148121,
+      "output_tokens": 5148,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 79.1,
+      "notional_cost_usd": 0.2567378,
+      "input_tokens": 118246,
+      "output_tokens": 3998,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.6,
+      "notional_cost_usd": 0.114484,
+      "input_tokens": 11714,
+      "output_tokens": 1039,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.2,
+      "notional_cost_usd": 0.025713000000000007,
+      "input_tokens": 11715,
+      "output_tokens": 1048,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.026605000000000004,
+      "input_tokens": 11714,
+      "output_tokens": 1093,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.9,
+      "notional_cost_usd": 0.026740999999999997,
+      "input_tokens": 11716,
+      "output_tokens": 1099,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.6,
+      "notional_cost_usd": 0.027165,
+      "input_tokens": 11714,
+      "output_tokens": 1121,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.8,
+      "notional_cost_usd": 0.027160999999999994,
+      "input_tokens": 11716,
+      "output_tokens": 1120,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.3,
+      "notional_cost_usd": 0.00044730000000000003,
+      "input_tokens": 2190,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.0,
+      "notional_cost_usd": 0.00045950000000000006,
+      "input_tokens": 2251,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.1,
+      "notional_cost_usd": 0.0004885,
+      "input_tokens": 2206,
+      "output_tokens": 95,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.0004505,
+      "input_tokens": 2206,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.00046210000000000006,
+      "input_tokens": 2264,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 9.507e-05,
+      "input_tokens": 2193,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.0004683,
+      "input_tokens": 2295,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 9.522e-05,
+      "input_tokens": 2208,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 9.507000000000001e-05,
+      "input_tokens": 2250,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 9.501e-05,
+      "input_tokens": 2206,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.6,
+      "notional_cost_usd": 0.00015409,
+      "input_tokens": 2264,
+      "output_tokens": 136,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46826",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 9.592000000000002e-05,
+      "input_tokens": 2297,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8791
+}
