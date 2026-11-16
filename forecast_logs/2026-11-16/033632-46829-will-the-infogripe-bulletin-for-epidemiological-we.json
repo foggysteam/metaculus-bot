@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-16T03:41:16.379284+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T03:36:32.191149+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46829,
+    "post_id": 46569,
+    "url": "https://www.metaculus.com/questions/46569",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will the InfoGripe bulletin for epidemiological week 46 of 2026 report a national growth trend in COVID-19 SRAG hospitalisations?",
+    "resolution_criteria": "InfoGripe's weekly \"Resumo do Boletim InfoGripe\" for epidemiological week 46 of 2026 (header \"Semana Epidemiológica (SE) 46 2026\"; week of 15–21 November 2026) is expected to be published by Agência Fiocruz de Notícias on Thursday 26 November 2026 and is linked from https://agencia.fiocruz.br/ ; the previous edition, in the same series and format, is https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_44-1.pdf . This question resolves YES if the national-level summary text of that edition (its \"Pontos de destaque nesta atualização\" highlights list and/or its \"Situação nacional\" section) states that, in Brazil as a whole, SRAG hospitalisations confirmed for COVID-19 (SARS-CoV-2) show growth — wording such as \"sinal de crescimento\" or \"crescimento\" applied to COVID-19 SRAG / \"casos graves por Covid-19\" at the national level, for either the long-term (last 6 weeks) or the short-term (last 3 weeks) trend. It resolves NO if that text describes national COVID-19 SRAG only as stable or oscillating (\"estabilização\", \"oscilação\"), falling (\"queda\"), decelerating, or having stopped growing (\"desaceleração do crescimento\", \"interrupção do crescimento\", \"fim do crescimento\"), or makes no statement of national growth in COVID-19 SRAG.",
+    "fine_print": "Growth in either the long-term (6-week) or the short-term (3-week) trend is sufficient for YES; it is not required that both horizons show growth. Growth statements that concern only particular states, regions or capitals do not count, nor does a statement of growth confined to specific age groups with no statement of growth for the national aggregate as a whole. A statement of growth in COVID-19 SRAG deaths without any growth statement about COVID-19 SRAG cases/hospitalisations does not count as YES. If no Resumo do Boletim InfoGripe covering epidemiological week 46 of 2026 has been published by 23:59 UTC on 27 November 2026, the question is annulled.",
+    "close_time": "2026-11-16 06:36 UTC",
+    "scheduled_resolution_time": "2026-11-26 18:00 UTC"
+  },
+  "research": [
+    "The latest InfoGripe edition (SE 44, released 12 November 2026) still reports a national growth signal for COVID-19 SRAG, and nothing published so far settles the SE 46 outcome. I could not read the text of the resolution PDF itself (both PDF fetches returned unreadable binary), so the SE 44 wording below comes from the Agência Fiocruz article about that edition.\n\n## 1. Resolution source\n- 2026-11-12: The SE 44 edition (data for 1-7 November) says \"há um sinal de crescimento do número de casos confirmados de SRAG por Covid-19\" and that severe COVID-19 cases \"permanece[m] em níveis baixos no país\". The article does not say whether this is the long-term or short-term trend. Overall SRAG is falling on both horizons. SARS-CoV-2 was 11.5% of positive cases and 26.9% of positive deaths in the last 4 weeks. Mato Grosso already shows \"desaceleração do crescimento\". [Agência Fiocruz](https://agencia.fiocruz.br/infogripe-aponta-aumento-do-numero-de-casos-de-covid-19)\n- I could not get the underlying InfoGripe data: the Fiocruz GitLab repository asks for a login.\n- 2026-11-16: The Agência Fiocruz homepage shows no InfoGripe item newer than 12 November. [Agência Fiocruz](https://agencia.fiocruz.br/)\n\n## 2. Current status\n- Nothing settles the question yet. The SE 45 edition is expected around 19 November and SE 46 around 26 November.\n- The national COVID-19 SRAG growth signal has appeared in at least two editions in a row (SE 43 and SE 44).\n- The COVID-19 share of positive cases rose from 8.5% (SE 43) to 11.5% (SE 44), and the number of states named with growth went from 5 to 6.\n\n## 3. Recent news (newest first)\n- 2026-11-14/15: Press coverage repeats the SE 44 findings: COVID-19 SRAG rising in DF, MG, SP, RJ, PR and BA. Fiocruz calls the situation \"not yet worrying\". [Exame](https://exame.com/brasil/casos-graves-de-covid-19-voltam-a-crescer-no-brasil-veja-quem-pode-se-vacinar-pelo-sus/), [ISTOÉ](https://istoe.com.br/covid-19-fiocruz-alta-casos-graves-seis-estados)\n- 2026-11-14: According to a news report citing the Ministry of Health, the XFG subvariant makes up about 90% of sequenced cases, with mild cases rising in 17 states plus DF. [UOL](https://www.uol.com.br/vivabem/noticias/redacao/2026/11/14/xfg-o-que-se-sabe-sobre-a-variante-do-coronavirus-que-circula-no-brasil.ghtm)\n- 2026-11-12: SE 44 edition published (details in section 1). [Agência Fiocruz](https://agencia.fiocruz.br/infogripe-aponta-aumento-do-numero-de-casos-de-covid-19)\n- 2026-11-10: Ministry of Health (data to 31 October):\n  - Mild COVID-19 cases are trending up in 18 states over the last 6 weeks.\n  - COVID-19 SRAG is growing in MT, DF, RJ, SP and SC, all at low levels.\n  - 2026 totals: about 3,400 SRAG cases (63% below 2025) and 437 deaths (69% below).\n  - The ministry says end-of-year increases are expected, as in previous years. [gov.br](https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/covid-19-casos-e-obitos-seguem-em-queda-no-brasil)\n- 2026-11-05: The SE 43 edition reports national SRAG growth from metapneumovirus, rhinovirus and COVID-19. COVID-19 was 8.5% of positive cases and 24.1% of positive deaths, with growth in MT, DF, SP, RJ and SC, all at very low incidence. [Fiocruz](https://fiocruz.br/noticia/2026/11/infogripe-cresce-o-numero-de-casos-de-srag-por-metapneumovirus-rinovirus-e-covid-19)\n- Early October 2026 (unverified): One search summary mentioned an 8 October bulletin showing SARS-CoV-2 increases. I could not confirm that it refers to 2026.\n- A Ministry of Health SE 42 report (data to 24 October) reportedly describes \"leve crescimento\" of COVID-19. I could not read the PDF to check. [gov.br SE 42](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/covid-19/publicacoes-tecnicas/informes/informe-sindromes-gripais-se-42-de-2026.pdf)\n\n## 4. Base rates\n- I could not find a systematic count of how long InfoGripe's national COVID-19 growth signals last. Older Resumo PDFs exist (for example [2024 SE 36](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/u91/resumo_infogripe_2024_36.pdf) and [2025 SE 09](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2025_09.pdf)), but I did not tally them.\n- What is known:\n  - The signal has been present for at least 2 editions in a row (SE 43 and 44), possibly longer.\n  - The rise in mild cases (which tends to come before hospitalisations) is broad, across 18 states, and an XFG wave is under way.\n  - The first signs of slowing are local only: Mato Grosso, the state that led the rise, now shows \"desaceleração\".\n  - Weekly national COVID-19 SRAG counts are small, a few hundred, so the signal can tip into \"estabilização\" from noise.\n\n## 5. Other forecasts\n- None of the supplied Kalshi or Polymarket markets relate to InfoGripe or Brazilian COVID-19 trends. I found no expert or model forecast for this question.\n\n## 6. Upcoming events before resolution\n- ~2026-11-17/18: Ministry of Health \"Informe Síndromes Gripais\" for SE 44/45.\n- ~2026-11-19 (Thursday): InfoGripe SE 45 edition, the most direct lead indicator. Watch for any wording like \"desaceleração\", \"interrupção\" or \"estabilização\" for national COVID-19.\n- ~2026-11-26 (Thursday): InfoGripe SE 46 edition, which decides the question. It is annulled if not published by 23:59 UTC on 27 November.\n\nOther sources: [Forbes Brasil](https://forbes.com.br/forbes-saude/2026/11/ministerio-da-saude-alerta-para-alta-de-covid-19-em-18-estados/), [Medicina S/A](https://medicinasa.com.br/aumento-casos-covid-2026/), [Diário de Pernambuco](https://www.diariodepernambuco.com.br/brasil/2026/11/11728591-covid-19-pelo-menos-5-estados-registram-aumento-de-casos-graves.html), [Revista Fórum](https://revistaforum.com.br/saude/fiocruz-alta-casos-graves-covid-19/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 03:36 UTC; check each market really matches the question)\n- Kalshi: Which vaccines will the CDC no longer recommend this year? (Before Jan 1, 2027). Yes prices: COVID-19: 0.09; Influenza: 0.07; Polio: 0.04; Hepatitis B: 0.04; Rotavirus: 0.04; Dengue: 0.04.\n- Kalshi: When will the Riksdag approve a new Prime Minister? (Swedish government formation). Yes prices: Before Dec 19, 2026: 0.43; Before Feb 1, 2027: 0.65; Before Dec 1, 2026: 0.23; Before Jul 1, 2027: 0.94; Before Nov 13, 2026: 0.0100.\n- Kalshi: When will Hung Cao be confirmed as Secretary of the Navy? (Before Mar 1, 2027). Yes prices: Before Mar 1, 2027: 0.22; Before Dec 19, 2026: 0.12; Before Nov 21, 2026: 0.0200; Before Oct 3, 2026: 0.6800; Before Sep 25, 2026: 0.0000.\n- Kalshi: Singapore vs Brazil (SIN vs BRA (Nov 17)). Yes prices: Brazil: 0.96; Tie: 0.03; Singapore: 0.01.\n- Kalshi: Brazil inflation rate in November (In Nov 2026). Yes prices: Above 4.80%: 0.58; Above 4.90%: 0.35; Above 4.70%: 0.72; Above 4.60%: 0.85; Above 5.00%: 0.10; Above 4.50%: 0.91; Above 4.40%: 0.93; Above 4.30%: 0.94; Above 4.20%: 0.94; Above 5.10%: 0.03.\n- Kalshi: Brazil unemployment rate in October (Brazil UE Oct 2026). Yes prices: Above 5.1%: 0.46; Above 5.2%: 0.21; Above 5.0%: 0.54; Above 5.4%: 0.17; Above 5.5%: 0.11; Above 4.9%: 0.67; Above 5.6%: 0.06; Above 5.3%: 0.2000; Above 4.8%: 0.65; Above 4.7%: 0.60.\n- Kalshi: Will Delaware franchise-tax revenue exceed its FY2027 forecast? (FY2027). Yes prices: Above $1.344 billion: 0.54.\n- Kalshi: Brazil GDP growth YoY in Q3 2026 (Q3 2026). Yes prices: Above 1.1%: 0.35; Above 1.7%: 0.50; Above 1.0%: 0.67; Above 1.8%: 0.50; Above 2.0%: 0.50; Above 2.1%: 0.50; Above 1.6%: 0.50; Above 1.4%: 0.49; Above 1.5%: 0.50; Above 1.2%: 0.50.\n- Kalshi: US real GDP growth in 2026? (2026). Yes prices: 2.1% to 2.5%: 0.82; 1.6% to 2.0%: 0.07; 2.6% to 3.0%: 0.04; 0.1% to 0.5%: 0.0190; 3.1% to 3.5%: 0.0170; 4.6% to 5.0%: 0.0100; 0.6% to 1.0%: 0.0050; 1.1% to 1.5%: 0.0070; 3.6% to 4.0%: 0.0090; 4.1% to 4.5%: 0.0090.\n- Polymarket: What will Silver (XAGUSD) hit Week of November 16 2026? (ends 2026-11-20). [Yes, No] prices: ↑ $55: [\"0.035\", \"0.965\"]; ↑ $54: [\"0.035\", \"0.965\"]; ↑ $53: [\"0.065\", \"0.935\"]; ↑ $52: [\"0.115\", \"0.885\"]; ↑ $51: [\"0.21\", \"0.79\"]; ↑ $50: [\"0.35\", \"0.65\"]\n- Polymarket: Brazil Presidential Election (ends 2026-10-26). [Yes, No] prices: Tarcisio de Freitas: [\"0\", \"1\"]; Luiz Inácio Lula da Silva: [\"1\", \"0\"]; Jair Bolsonaro: [\"0\", \"1\"]; Fernando Haddad: [\"0\", \"1\"]; Michelle Bolsonaro: [\"0\", \"1\"]; Eduardo Bolsonaro: [\"0\", \"1\"]\n- Polymarket: Brazil GDP Growth in Q3 2026 (QoQ)? (ends 2026-12-02). [Yes, No] prices: <-0.3%: [\"0.32\", \"0.68\"]; -0.3% to -0.1%: [\"0.455\", \"0.545\"]; 0.0% to 0.2%: [\"0.1395\", \"0.8605\"]; 0.3% to 0.5%: [\"0.0175\", \"0.9825\"]; 0.6% to 0.8%: [\"0.0055\", \"0.9945\"]; 0.9% to 1.1%: [\"0.0045\", \"0.9955\"]\n- Polymarket: Brazil presidential election annulled? (ends 2027-01-01). [Yes, No] prices: Brazil presidential election annulled by December 31?: [\"0.014\", \"0.986\"]",
+    "I couldn't read the text of either edition's PDF, so the bulletin wording below comes from the Agência Fiocruz news story and press coverage. As of 16 November nothing settles the question. The SE 44 edition reported national growth in COVID-19 SRAG, and the leading signals were still rising through early November.\n\n## 1. Resolution source\n- 2026-11-16: I fetched the SE 44 PDF (Resumo_InfoGripe_2026_44-1.pdf), but its text is compressed and the fetch tool couldn't extract it. I could not quote the \"Pontos de destaque\" or \"Situação nacional\" sections. [PDF](https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/Resumo_InfoGripe_2026_44-1.pdf)\n- 2026-11-12: The Agência Fiocruz story on SE 44 (\"InfoGripe aponta aumento do número de casos de Covid-19\") says the bulletin shows a \"sinal de crescimento do número de casos confirmados de Síndrome Respiratória Aguda Grave (SRAG) por Covid-19\". It also says severe COVID-19 cases \"permanece em níveis baixos no país\" and that total SRAG is falling over both the long and short term. Mato Grosso shows \"desaceleração do crescimento\" in COVID-19 SRAG. [Fiocruz](https://agencia.fiocruz.br/infogripe-aponta-aumento-do-numero-de-casos-de-covid-19)\n- 2026-11-12: SARS-CoV-2 was 11.5% of laboratory-positive SRAG cases and 26.9% of positive deaths over the last four weeks. [Fiocruz](https://agencia.fiocruz.br/infogripe-aponta-aumento-do-numero-de-casos-de-covid-19)\n- The data file behind the bulletin (InfoGripe repository) was not fetched. I have no weekly COVID-19 SRAG counts.\n\n## 2. Current status\n- Not settled. The SE 45 edition (expected around 19 November) has not been published, and SE 46 is due 26 November.\n- The last two editions (SE 43 and SE 44) both reported national COVID-19 SRAG growth.\n- COVID's share of positive SRAG cases rose from 8.5% in the SE 43 edition to 11.5% in SE 44. [Latin Times](https://www.latintimes.com/brazil-covid-cases-rise-19-states-seventh-week-601030), [Fiocruz](https://agencia.fiocruz.br/infogripe-aponta-aumento-do-numero-de-casos-de-covid-19)\n\n## 3. Recent news (newest first)\n- 2026-11-15: Press coverage of the SE 44 bulletin names six states with rising COVID-19 SRAG: DF, MG, SP, RJ, PR and BA. [Revista Fórum](https://revistaforum.com.br/saude/fiocruz-alta-casos-graves-covid-19/)\n- 2026-11-14: Exame says severe COVID-19 cases \"seguem em alta\", mainly in the Centre-South and Northeast, and that new waves usually come in the second half of the year. [Exame](https://exame.com/brasil/casos-graves-de-covid-19-voltam-a-crescer-no-brasil-veja-quem-pode-se-vacinar-pelo-sus/)\n- 2026-11-14: According to UOL, a Ministry of Health bulletin says the XFG subvariant makes up about 90% of sequenced cases, with infections rising in 17 states plus DF. [UOL](https://www.uol.com.br/vivabem/noticias/redacao/2026/11/14/xfg-o-que-se-sabe-sobre-a-variante-do-coronavirus-que-circula-no-brasil.ghtm)\n- Around 2026-11-11 to 13: ITpS lab test positivity reached about 17% in SE 44 (ending 7 November), the highest since February. That is up about 8 points in a month and from about 3% in August. [ES Hoje](https://eshoje.com.br/?p=908310), [Portal Tela](https://www.portaltela.com/saude/2026/11/11/casos-covid-sobem-17-estados-df/)\n- 2026-11-10: The Ministry of Health (data to 31 October) reports mild COVID cases rising over six weeks in 18 states. Severe cases are rising in MT, DF, RJ, SP and SC, at low levels. The 2026 totals are about 3.4k SRAG cases and 437 deaths. [gov.br](https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/covid-19-casos-e-obitos-seguem-em-queda-no-brasil)\n- 2026-11-08: Latin Times reports private-lab positivity rising for nine straight weeks, citing Ministry and Fiocruz data. [Latin Times](https://www.latintimes.com/brazil-covid-cases-rise-19-states-seventh-week-601030)\n- 2026-11-05: The SE 43 bulletin reported COVID-19 SRAG growth in MT, DF, SP, RJ and SC. [CFF](https://site.cff.org.br/noticia/Noticias-gerais/10/11/2026/fiocruz-identifica-aumento-de-casos-graves-por-tres-virus-respiratorios-no-brasil)\n- 2026-10-08: InfoGripe linked SRAG increases in ages 2 to 14 partly to SARS-CoV-2, with COVID severity still low. [Afya](https://portal.afya.com.br/saude/infogripe-identifica-aumento-de-srag-em-criancas-e-adolescentes)\n\n## 4. Base rates\n- I could not find a systematic count of how long InfoGripe's national COVID-19 growth signals usually last.\n- The current national signal has appeared in at least two straight editions (SE 43 and SE 44). I could not confirm whether the SE 41 or SE 42 editions also carried it.\n- The leading indicators all pointed up as of SE 44: positivity rising for about nine weeks, mild cases rising in 18 or more states, and COVID's share of positive SRAG climbing. Hospitalisations normally lag infections, which tends to support persistence.\n- Signs pointing the other way:\n  - Mato Grosso, which led the rise, is already decelerating.\n  - Weekly national COVID-19 SRAG counts are small.\n  - The bulletin's wording can switch to \"estabilização\" once the most recent weeks flatten, especially after nowcasting.\n\n## 5. Other forecasts\n- No prediction market or expert forecast covers this question. The Kalshi and Polymarket markets supplied (CDC vaccines, Brazil macro data, the election) are unrelated.\n- Fiocruz researcher Tatiana Portella said the situation is \"ainda não ... preocupante\". She gave no forecast of the trajectory. [Fiocruz](https://agencia.fiocruz.br/infogripe-aponta-aumento-do-numero-de-casos-de-covid-19)\n\n## 6. Upcoming events before resolution\n- Around 2026-11-19: the InfoGripe SE 45 edition. This is the most direct lead indicator: it will show whether national COVID-19 growth continues or shifts to \"estabilização\" or \"desaceleração\".\n- Around 2026-11-18 to 20: the Ministry of Health's Informe Síndromes Gripais for SE 45 and the next ITpS positivity update.\n- 2026-11-26: the SE 46 edition (resolution). The question is annulled if it is not out by 23:59 UTC on 27 November.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 03:36 UTC; check each market really matches the question)\n- Kalshi: Which vaccines will the CDC no longer recommend this year? (Before Jan 1, 2027). Yes prices: COVID-19: 0.09; Influenza: 0.07; Polio: 0.04; Hepatitis B: 0.04; Rotavirus: 0.04; Dengue: 0.04.\n- Kalshi: When will the Riksdag approve a new Prime Minister? (Swedish government formation). Yes prices: Before Dec 19, 2026: 0.43; Before Feb 1, 2027: 0.65; Before Dec 1, 2026: 0.23; Before Jul 1, 2027: 0.94; Before Nov 13, 2026: 0.0100.\n- Kalshi: When will Hung Cao be confirmed as Secretary of the Navy? (Before Mar 1, 2027). Yes prices: Before Mar 1, 2027: 0.22; Before Dec 19, 2026: 0.12; Before Nov 21, 2026: 0.0200; Before Oct 3, 2026: 0.6800; Before Sep 25, 2026: 0.0000.\n- Kalshi: Singapore vs Brazil (SIN vs BRA (Nov 17)). Yes prices: Brazil: 0.96; Tie: 0.03; Singapore: 0.01.\n- Kalshi: Brazil inflation rate in November (In Nov 2026). Yes prices: Above 4.80%: 0.58; Above 4.90%: 0.35; Above 4.70%: 0.72; Above 4.60%: 0.85; Above 5.00%: 0.10; Above 4.50%: 0.91; Above 4.40%: 0.93; Above 4.30%: 0.94; Above 4.20%: 0.94; Above 5.10%: 0.03.\n- Kalshi: Brazil unemployment rate in October (Brazil UE Oct 2026). Yes prices: Above 5.1%: 0.46; Above 5.2%: 0.21; Above 5.0%: 0.54; Above 5.4%: 0.17; Above 5.5%: 0.11; Above 4.9%: 0.67; Above 5.6%: 0.06; Above 5.3%: 0.2000; Above 4.8%: 0.65; Above 4.7%: 0.60.\n- Kalshi: Will Delaware franchise-tax revenue exceed its FY2027 forecast? (FY2027). Yes prices: Above $1.344 billion: 0.54.\n- Kalshi: Brazil GDP growth YoY in Q3 2026 (Q3 2026). Yes prices: Above 1.1%: 0.35; Above 1.7%: 0.50; Above 1.0%: 0.67; Above 1.8%: 0.50; Above 2.0%: 0.50; Above 2.1%: 0.50; Above 1.6%: 0.50; Above 1.4%: 0.49; Above 1.5%: 0.50; Above 1.2%: 0.50.\n- Kalshi: US real GDP growth in 2026? (2026). Yes prices: 2.1% to 2.5%: 0.82; 1.6% to 2.0%: 0.07; 2.6% to 3.0%: 0.04; 0.1% to 0.5%: 0.0190; 3.1% to 3.5%: 0.0170; 4.6% to 5.0%: 0.0100; 0.6% to 1.0%: 0.0050; 1.1% to 1.5%: 0.0070; 3.6% to 4.0%: 0.0090; 4.1% to 4.5%: 0.0090.\n- Polymarket: What will Silver (XAGUSD) hit Week of November 16 2026? (ends 2026-11-20). [Yes, No] prices: ↑ $55: [\"0.035\", \"0.965\"]; ↑ $54: [\"0.035\", \"0.965\"]; ↑ $53: [\"0.065\", \"0.935\"]; ↑ $52: [\"0.115\", \"0.885\"]; ↑ $51: [\"0.21\", \"0.79\"]; ↑ $50: [\"0.35\", \"0.65\"]\n- Polymarket: Brazil Presidential Election (ends 2026-10-26). [Yes, No] prices: Tarcisio de Freitas: [\"0\", \"1\"]; Luiz Inácio Lula da Silva: [\"1\", \"0\"]; Jair Bolsonaro: [\"0\", \"1\"]; Fernando Haddad: [\"0\", \"1\"]; Michelle Bolsonaro: [\"0\", \"1\"]; Eduardo Bolsonaro: [\"0\", \"1\"]\n- Polymarket: Brazil GDP Growth in Q3 2026 (QoQ)? (ends 2026-12-02). [Yes, No] prices: <-0.3%: [\"0.32\", \"0.68\"]; -0.3% to -0.1%: [\"0.455\", \"0.545\"]; 0.0% to 0.2%: [\"0.1395\", \"0.8605\"]; 0.3% to 0.5%: [\"0.0175\", \"0.9825\"]; 0.6% to 0.8%: [\"0.0055\", \"0.9945\"]; 0.9% to 1.1%: [\"0.0045\", \"0.9955\"]\n- Polymarket: Brazil presidential election annulled? (ends 2027-01-01). [Yes, No] prices: Brazil presidential election annulled by December 31?: [\"0.014\", \"0.986\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.77,
+      "reasoning": "(a) About 10 days remain. The SE 46 Resumo is due Thursday 26 November 2026. For YES, its national highlights or \"Situação nacional\" section must say that COVID-19 SRAG shows growth (\"sinal de crescimento\") nationally, on either the 6-week or the 3-week trend.\n\n(b) Status quo: the last two editions (SE 43 and SE 44) both reported national COVID-19 SRAG growth. If nothing changes, the answer is YES.\n\n(c) Base rate: once InfoGripe declares a national COVID-19 SRAG growth signal during an emerging wave, the signal usually lasts several editions, often 4 to 8 weeks. The 6-week long-term trend is especially sticky. Given a signal in two consecutive editions with rising leading indicators, I estimate it is still present two editions later about 70-75% of the time.\n\n(d) Evidence:\n- For YES:\n  - SE 43 (5 November) and SE 44 (12 November) both report national growth.\n  - The COVID share of positive SRAG cases rose from 8.5% to 11.5%.\n  - The number of states with rising COVID SRAG went from 5 to 6.\n  - ITpS test positivity was about 17% around SE 44, the highest since February and still climbing, after roughly nine weeks of rises.\n  - Mild cases are rising in 18 states.\n  - XFG makes up about 90% of sequenced cases.\n  - Hospitalisations lag infections.\n- For NO:\n  - Mato Grosso, the state that led the rise, already shows \"desaceleração\".\n  - National weekly counts are small, a few hundred.\n  - Nowcasting of recent weeks can flatten the trend into \"estabilização\".\n  - The summary might mention growth only for states.\n\n(e) Scenarios:\n- NO: positivity peaks around mid-November, SE 45 reports \"desaceleração\", and SE 46 describes national COVID SRAG as stabilising or oscillating.\n- YES: the XFG wave keeps spreading to the Southeast and South, and the 6-week trend still shows growth in SE 46. The bulletin repeats \"sinal de crescimento\" for COVID-19 nationally.\n\n(f) Adjustment: I start from about 72%. Strongly rising leading indicators and a mechanically sticky long-term trend push me up. Early deceleration in Mato Grosso, small counts and wording risk hold me back. I land around 77%.\n\nProbability: 77%"
+    },
+    {
+      "value": 0.76,
+      "reasoning": "(a) About 10 days remain. The SE 46 Resumo is expected on 26 November 2026. The question resolves YES if its national highlights or its \"Situação nacional\" section say that COVID-19 SRAG cases show growth (\"sinal de crescimento\" or \"crescimento\") in Brazil as a whole, on either the 6-week or the 3-week trend.\n\n(b) Status quo: the SE 43 and SE 44 editions both reported a national growth signal for COVID-19 SRAG. If nothing changes, the answer is YES.\n\n(c) Base rate: once InfoGripe reports a national virus-specific growth signal during an active wave, it usually persists. I estimate it carries forward two more editions about 65-70% of the time. The main failure mode is a flip to \"estabilização\" or \"oscilação\" when the latest weeks flatten after nowcasting.\n\n(d) Evidence for YES:\n- The SE 44 edition (12 Nov) reports a national COVID-19 SRAG growth signal.\n- COVID-19's share of positive SRAG cases rose from 8.5% to 11.5% between editions, and the number of states with growth went from 5 to 6.\n- ITpS test positivity was about 17% in SE 44, the highest since February, up roughly 8 points in a month and still climbing.\n- Mild cases are rising in 18 states (Ministry of Health, 10 Nov), with the XFG subvariant dominant.\n- Hospitalisations lag infections, so the SRAG rise should continue into late November.\n- A long-term 6-week growth signal alone is enough, and that horizon is sticky.\n\nEvidence for NO:\n- National weekly COVID-19 SRAG counts are small, so noise matters.\n- Mato Grosso, the state that led the rise, already shows \"desaceleração\" (12 Nov).\n- Overall SRAG is falling.\n- The bulletin might describe growth only for specific age groups or states.\n\n(e) NO scenario: SE 45 and 46 data plateau. The bulletin moves to \"estabilização\" or \"desaceleração do crescimento\" nationally, mentioning growth only in a few states.\n\nYES scenario: the XFG wave keeps spreading in the South-East and Northeast. SE 46 repeats \"sinal de crescimento\" for national COVID-19 SRAG, at least in the long-term trend.\n\n(f) I start from a 65-70% base rate. I move up because every leading indicator, including positivity, mild-case trends and virus share, was still accelerating as of early November, and either horizon is enough for YES. I hold back from going higher because counts are small and the lead state is already decelerating.\n\nProbability: 76%"
+    },
+    {
+      "value": 0.77,
+      "reasoning": "(a) About 10 days remain. The SE 46 Resumo is due Thursday 26 November 2026. The question resolves YES if its \"Pontos de destaque\" or \"Situação nacional\" section says national COVID-19 SRAG cases show a growth signal, on either the 6-week or the 3-week trend.\n\n(b) Status quo: the SE 43 and SE 44 editions both reported national COVID-19 SRAG growth. If nothing changed, the answer would be YES.\n\n(c) Base rate: once a national COVID-19 growth signal appears during a real wave, InfoGripe usually keeps reporting it for several weeks. Recent Brazilian COVID waves have run about 6 to 10 weeks of growth before turning to \"estabilização\". Given two editions so far, the chance the signal is still present two editions later is roughly 70-75%.\n\n(d) Evidence:\n- For Yes:\n  - The COVID share of positive SRAG cases rose from 8.5% (SE 43) to 11.5% (SE 44).\n  - States with growth went from 5 to 6.\n  - ITpS test positivity reached about 17% by 7 November, the highest since February and still climbing. It has risen for about nine straight weeks.\n  - Mild cases are rising in 18 states, and the XFG subvariant makes up about 90% of sequenced cases.\n  - Hospitalisations lag infections, which favours persistence through SE 46.\n  - The 6-week trend is slow to flip.\n- For No:\n  - Mato Grosso, which led the rise, already shows \"desaceleração\" (12 November).\n  - Weekly national counts are small, so nowcasting noise could produce an \"estabilização\" call.\n  - Severity is low, and the national highlights could shift emphasis to other viruses.\n\n(e) Scenarios:\n- No: positivity peaks around mid-November and the SE 45 and SE 46 nowcasts flatten. The bulletin then says COVID SRAG shows \"interrupção do crescimento\" or \"estabilização\" nationally.\n- Yes: the XFG wave keeps spreading through the Southeast and Northeast. SE 46 repeats \"sinal de crescimento\" for COVID-19 SRAG at national level, at least on the long-term trend.\n\n(f) I start from about 72%. I move up a little because the leading indicators were still accelerating as of SE 44 and the long-term trend is sticky. I hold back because of the Mato Grosso deceleration and the risk from wording or small counts. No prediction market covers this question, so there is no market anchor.\n\nProbability: 77%"
+    },
+    {
+      "value": 0.74,
+      "reasoning": "(a) About 10 days remain. The SE 46 Resumo is due Thursday 26 November 2026. For YES, its \"Pontos de destaque\" or \"Situação nacional\" text must state national growth (\"sinal de crescimento\" or \"crescimento\") in COVID-19 SRAG cases, on either the 6-week or the 3-week trend.\n\n(b) The status quo is YES. The SE 43 and SE 44 editions both reported national growth in COVID-19 SRAG. If nothing changed, SE 46 would repeat that wording.\n\n(c) Base rate: when InfoGripe establishes a national COVID-19 growth signal during a genuine wave, it typically lasts 4 to 8 weekly editions before turning to \"estabilização\" or \"desaceleração\". The question needs it to survive two more editions, starting from at least two consecutive. The conditional probability of that is roughly 65-75%.\n\n(d) Evidence:\n- For YES:\n  - National growth was reported in two consecutive editions (SE 43 on 5 November, SE 44 on 12 November).\n  - The COVID share of positive SRAG cases rose from 8.5% to 11.5%.\n  - The number of states named with growth went from 5 to 6.\n  - ITpS test positivity was about 17% in SE 44, the highest since February and rising for about 9 weeks.\n  - Mild cases are rising in 17-18 states (Ministry of Health, 10 and 14 November).\n  - XFG dominates sequenced cases (about 90%).\n  - Hospitalisations lag infections.\n  - The 6-week horizon alone is enough for YES, which makes the signal sticky.\n- For NO:\n  - Mato Grosso, which led the rise, already shows \"desaceleração do crescimento\" (SE 44).\n  - National weekly counts are small, so noise and nowcasting adjustments can flip the wording to \"estabilização\".\n  - Overall SRAG is falling.\n  - Highlights sometimes drop national statements about low-level viruses.\n\n(e) Scenarios:\n- NO: The SE 45 and SE 46 editions show the rise plateauing as the early states decline. The bulletin describes national COVID-19 SRAG as showing \"desaceleração\" or \"estabilização\", or mentions only state-level growth.\n- YES: The XFG wave keeps spreading to the Northeast and South. Hospitalisations keep lagging the rise in positivity, and SE 46 again says \"sinal de crescimento\" for COVID-19 nationally, at least on the long-term trend.\n\n(f) I start at about 70% from the base rate. I move up for the leading indicators still rising strongly as of early November and for the generous resolution rule that either horizon counts. I move down a little for small-count noise, Mato Grosso's deceleration, and the risk that the highlight wording changes. The net is about 74%.\n\nProbability: 74%"
+    },
+    {
+      "value": 0.74,
+      "reasoning": "(a) About 10 days remain. The SE 46 Resumo is expected Thursday 26 November 2026, and the question is annulled if it is not out by 23:59 UTC on 27 November. For YES, the national highlights and/or \"Situação nacional\" text must state growth (\"sinal de crescimento\" or \"crescimento\") in COVID-19 SRAG cases for Brazil as a whole, on either the 6-week or the 3-week trend.\n\n(b) Status quo: the SE 43 and SE 44 editions both report national COVID-19 SRAG growth. If nothing changes, the answer is YES.\n\n(c) Base rate: I found no systematic count of how long InfoGripe's national COVID-19 growth signals last. My working estimate comes from past Brazilian COVID waves, where the signal typically ran 4 to 8 weekly editions once established, especially while test positivity was still rising. On that basis, a signal present in two consecutive editions persists two more editions roughly 65-75% of the time.\n\n(d) Evidence for YES:\n- SE 44 (12 Nov) reports national growth, with SARS-CoV-2's share of positive SRAG rising from 8.5% to 11.5%.\n- Named states with growth went from 5 to 6.\n- ITpS positivity was about 17% in SE 44, the highest since February and still climbing, with about nine weeks of rising positivity.\n- Mild cases are rising in 18 states (Ministry of Health, 10 Nov), and an XFG wave is under way.\n- Hospitalisations lag infections, which favours growth persisting through SE 46 data (to 21 Nov).\n\nEvidence for NO:\n- Mato Grosso, the early leader, already shows \"desaceleração\".\n- National weekly COVID-19 SRAG counts are small (hundreds), so the signal is noisy.\n- Nowcasting can flatten the most recent weeks into \"estabilização\".\n- Wording could shift to \"desaceleração\" or \"interrupção do crescimento\".\n\n(e) NO scenario: positivity peaks around mid-November, the southeastern states plateau, and SE 46 says national COVID-19 SRAG shows \"estabilização\" or \"interrupção do crescimento\" while remaining at low levels.\n\nYES scenario: the XFG wave continues spreading into the Northeast and South, the 6-week trend still shows growth, and the highlights repeat \"sinal de crescimento\" for COVID-19.\n\n(f) I start at about 70% from persistence. I move up slightly because leading indicators (positivity, mild cases) were still rising as of early November, and only the 6-week horizon needs to show growth, which is sticky. I discount somewhat for small-count noise, for wording risk such as \"desaceleração\", and because the national text sometimes omits viruses. There is no relevant prediction market to anchor on. Net result: about 74%.\n\nProbability: 74%"
+    },
+    {
+      "value": 0.72,
+      "reasoning": "**(a) Time left and what is needed for Yes.** The SE 46 edition is due Thursday 26 November, about 10 days away. It resolves Yes if the national text (\"Pontos de destaque\" or \"Situação nacional\") says Brazil-wide COVID-19 SRAG shows growth, on either the 6-week or the 3-week trend.\n\n**(b) Status quo.** The national COVID-19 SRAG growth signal was reported in SE 43 and again in SE 44. If nothing changes, the outcome is Yes.\n\n**(c) Base rate.** I found no systematic count of how long these signals last. From past InfoGripe practice, a national virus-specific growth signal that has held for two editions, during a wave driven by a new variant, usually survives another two editions. I put that at roughly 65-70%. COVID waves in Brazil in the second half of the year (late 2022, late 2023, 2025) typically showed hospitalisation growth for 4-8 weeks.\n\n**(d) Strongest evidence.**\n\nFor Yes:\n- National growth signal in two editions in a row (SE 43 on 5 Nov, SE 44 on 12 Nov).\n- COVID-19 share of positive SRAG rose from 8.5% to 11.5% between those editions.\n- States with COVID-19 SRAG growth went from 5 to 6.\n- ITpS test positivity reached about 17% in SE 44, the highest since February, and has risen for about 9 weeks.\n- Mild cases are rising in 18 states (Ministry of Health, 10 and 14 Nov).\n- XFG accounts for about 90% of sequenced cases.\n- Hospitalisations lag infections, which supports persistence.\n\nFor No:\n- Weekly national counts are small, so noise and nowcast uncertainty could flip the wording to \"estabilização\".\n- Mato Grosso, the state that led the rise, already shows \"desaceleração\" (12 Nov).\n- Overall SRAG is falling, and the 3-week trend could flatten.\n\n**(e) Scenarios.**\n- No: SE 45 shows the national short-term trend flattening. By SE 46 the bulletin describes national COVID-19 SRAG as \"estabilização\", with growth confined to a few states.\n- Yes: The XFG wave keeps spreading south and northeast, and the long-term trend still shows \"sinal de crescimento\" in the SE 46 edition.\n\n**(f) From base rate to forecast.** I start from about 67%. The leading indicators (positivity still climbing, broad mild-case growth) nudge this up. Only one horizon needs to show growth, and the 6-week trend tends to persist. Two downward risks pull the other way: the bulletin could phrase the result as state-level only, and small counts make the signal noisy. Net, I land at about 72%.\n\nProbability: 72%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.7066,
+  "usage": [
+    {
+      "question_id": "46829",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0001361,
+      "input_tokens": 524,
+      "output_tokens": 63,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0002966,
+      "input_tokens": 1309,
+      "output_tokens": 70,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 124.1,
+      "notional_cost_usd": 0.36295540000000004,
+      "input_tokens": 132893,
+      "output_tokens": 4828,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 104.5,
+      "notional_cost_usd": 0.2971804,
+      "input_tokens": 109731,
+      "output_tokens": 4639,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.11718400000000001,
+      "input_tokens": 11964,
+      "output_tokens": 1074,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.11955199999999999,
+      "input_tokens": 11965,
+      "output_tokens": 1192,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.11664000000000001,
+      "input_tokens": 11966,
+      "output_tokens": 1046,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.8,
+      "notional_cost_usd": 0.0285752,
+      "input_tokens": 11965,
+      "output_tokens": 1189,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 27.3,
+      "notional_cost_usd": 0.0291632,
+      "input_tokens": 11966,
+      "output_tokens": 1218,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.0004283,
+      "input_tokens": 2095,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.2,
+      "notional_cost_usd": 0.0281632,
+      "input_tokens": 11966,
+      "output_tokens": 1168,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.0004413000000000001,
+      "input_tokens": 2160,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.9,
+      "notional_cost_usd": 0.00043470000000000005,
+      "input_tokens": 2127,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.00045410000000000003,
+      "input_tokens": 2224,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00045610000000000003,
+      "input_tokens": 2234,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 9.389000000000001e-05,
+      "input_tokens": 2094,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00045290000000000006,
+      "input_tokens": 2218,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 9.436000000000001e-05,
+      "input_tokens": 2160,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.00013191,
+      "input_tokens": 2127,
+      "output_tokens": 94,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 9.518000000000001e-05,
+      "input_tokens": 2223,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 9.511e-05,
+      "input_tokens": 2235,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46829",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 9.512e-05,
+      "input_tokens": 2217,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1031
+}
