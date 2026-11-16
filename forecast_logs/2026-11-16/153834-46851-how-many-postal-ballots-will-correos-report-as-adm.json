@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T15:45:40.065943+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T15:38:34.700647+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46851,
+    "post_id": 46591,
+    "url": "https://www.metaculus.com/questions/46591",
+    "type": "NumericQuestion",
+    "unit": "ballots",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How many postal ballots will Correos report as admitted for Spain's 29 November 2026 general election in the most recent figure it publishes on or before 26 November 2026?",
+    "resolution_criteria": "This question resolves to the cumulative national number of postal ballots reported by Correos as admitted, deposited or sent (\"votos admitidos\", \"votos emitidos\", \"votos depositados\" or \"enviados\") for the 29 November 2026 Spanish general election, in the most recent Correos press release with a publication date of 26 November 2026 or earlier (Correos dates its releases in Madrid local time), as listed in its press room at https://www.correos.com/press-release-category/voto-por-correo/ . Counts of postal-vote applications (\"solicitudes\") are not used. Only the headline national cumulative total stated by Correos is used, exactly as published; no adjustment is made and regional or foreign-constituency (CERA) breakdowns are not summed. As an example of the metric, Correos' 22 July 2023 release (https://www.correos.com/sala-prensa/exito-en-la-gestion-del-voto-por-correo-que-marca-record-historico-con-2-471-935-votos-admitidos-para-las-elecciones-generales) reported 2,471,935 ballots admitted for the 23 July 2023 election, which would resolve as 2471935; if Correos states such a total only approximately (e.g. \"more than 2.4 million\"), the stated number is used (2,400,000). If no cumulative ballots-admitted figure for the 29N election has been published by that cutoff, the question is annulled.",
+    "fine_print": "If Correos' press-room listing is unavailable or not yet updated, the figure published in the corresponding Correos press note (including its PDF version) or reported by [credible sources](https://www.metaculus.com/faq/#definitions) citing Correos is used. Any extension of the ballot-deposit deadline by the Junta Electoral Central does not change the cutoff date.",
+    "close_time": "2026-11-16 18:35 UTC",
+    "scheduled_resolution_time": "2026-11-27 00:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n- 2026-11-16: I read the Correos \"Voto por correo\" press-room listing directly. The newest entry is \"El próximo jueves, 19 de noviembre, finaliza el plazo para solicitar el voto por correo\" (Madrid, 16 Nov 2026). It covers procedure only and gives no count of applications or ballots. The entry before it, dated 10 Nov (\"Así es el voto por correo en las Elecciones Generales del 29 de noviembre\"), sets out the calendar and also has no figures. [Correos](https://www.correos.com/press-release-category/voto-por-correo/)\n- There is no data file or API behind the listing. Figures only ever appear in the text of press releases.\n\n## 2. Current status\n- Nothing has settled the question. So far Correos has published no cumulative figure for 29N, neither applications nor ballots.\n- 2026-11-16: Herqles reports that neither Interior nor Correos has released any aggregate count of applications or ballots for 29N. This differs from July 2023, when Correos figures were public about 40 days out (around 600,000 applications in the first days, more than 2.3 million by mid-July). Interior receives daily data from Correos under Orden PJC/1461/2025 but says it uses it only to check that the service is working. [Herqles](https://herqles.com/2026/11/16/interior-voto-correo-29n-datos/)\n- The usual Correos practice of publishing applications figures during the campaign has not happened this time. That is a small warning sign for annulment, although Correos did publish both applications and ballot figures for the Andalusian election in May 2026.\n\n## 3. Recent news (newest first)\n- 2026-11-16: Several outlets repeat the deadlines: applications close 19 Nov, ballots must be deposited by 25 Nov, ballot papers have been sent out since 9 Nov, and Correos has 2,303 offices. [Antena 3](https://www.antena3.com/noticias/espana/estos-son-ultimos-dias-pedir-voto-correo-29n-asi-funciona-estos-son-plazos_202611166afaaa0403bbf30bb04d9488.html); [elEconomista](https://www.eleconomista.es/actualidad/noticias/14028185/11/26/fechas-clave-para-el-voto-por-correo-esta-semana-acaba-el-plazo-maximo-para-solicitarlo-pero-se-puede-enviar-hasta-antes-del-25-de-noviembre.html)\n- 2026-11-15: Telecinco reports that ballot and envelope distribution continues until 22 Nov. [Telecinco](https://www.telecinco.es/noticias/espana/20261115/elecciones-generales-2026-plazos-solicitud-voto-correo-ultimo-dia-entregar_18_020667405.html)\n- 2026-11-03: PP and Vox asked the Junta Electoral Central (JEC) to have Correos' daily data shared with the JEC and all parties. Vox also wants it published on the Correos website. I found no final JEC ruling. [El Español](https://www.elespanol.com/espana/politica/20261103/vox-pide-junta-electoral-obligue-gobierno-compartir-participacion-diaria-voto-correo-forma-inmediata/1003744443764_0.html); [Infobae](https://www.infobae.com/espana/agencias/2026/11/03/el-pp-pide-a-la-junta-electoral-acceder-a-la-informacion-de-correos-del-voto-por-correo/)\n- Background, already in the question: Abascal has urged voters not to vote by post, and the government calls the system \"100% secure\".\n\n## 4. Base rates\nNational general elections (ballots admitted, per Correos):\n- April 2019: 1,241,716. [Correos 2023](https://www.correos.com/sala-prensa/exito-en-la-gestion-del-voto-por-correo-que-marca-record-historico-con-2-471-935-votos-admitidos-para-las-elecciones-generales)\n- November 2019: 918,455 applications as of 31 Oct 2019, before the last day was counted, about 30% below April. [El Independiente](https://www.elindependiente.com/politica/2019/10/31/correo-tramita-30-menos-peticiones-voto-28-a/) Correos reported 900,188 ballots sent on the deposit-deadline day (8 Nov, a deadline the JEC had extended). A later reference gives 924,403 postal voters.\n- July 2023: 2,622,808 applications, 2,461,284 ballots on the night of 20-21 Jul, final 2,471,935 on 22 Jul (94.2%).\n- Applicants who end up not voting: 6-9%, so ballots are usually 91-94% of applications.\n\nRegional elections in the 2025-26 cycle, as a guide to the current climate:\n- Andalusia, 17 May 2026: 178,541 applications, up 1.11% on 2022. Correos reported 163,510 ballots admitted (91.58%) on 14 May, one day after the 13 May deposit deadline. [Andalucía Informa](https://andaluciainforma.es/?p=29737); [El Debate](https://www.eldebate.com/espana/andalucia/20260511/voto-postal-alcanza-maximos-historicos-andalucia-pese-apagon-correos_416198.html)\n- Aragón, 8 Feb 2026: 21,467 postal votes, down 37.2% on May 2023 (figure from the Aragón government). [El Debate](https://www.eldebate.com/espana/20260208/voto-correo-desploma-aragon-cae-372-cns_383129.html)\n\nTiming: the release this question needs has usually come out 0-2 days after the deposit deadline. The examples are 8 Nov 2019 (deadline day), 20-22 Jul 2023, and 14 May 2026 (the day after the deadline). A release on 26 Nov would therefore be typical and falls inside the cutoff.\n\nSeasonality: November general elections drew about 0.9 million ballots (2019), compared with 2.47 million for a summer election (2023). The only November data point is 2019, which was also a repeat election with voter fatigue. Without an applications count I cannot tell whether 2026 is running above or below past years.\n\n## 5. Other forecasts\n- I found no prediction market or expert forecast on postal-ballot counts.\n- Related markets: Polymarket gives PP 80.5% to win and PP+Vox a majority at 87%. Kalshi gives Feijóo 84% to be PM and Vox's median at about 19%. These show a highly salient election, but Vox voters may be steering away from postal voting.\n\n## 6. Upcoming events\n- 19 Nov: application deadline. The JEC could extend it, as it did in Andalusia in 2026.\n- About 20-23 Nov: a likely Correos release with total applications admitted. This would be the strongest anchor, since ballots have run at roughly 91-94% of applications.\n- Any JEC ruling on the PP/Vox request for the daily data.\n- 25 Nov: deposit deadline. A JEC extension would not move the 26 Nov cutoff.\n- 25-26 Nov: the most likely window for the release with ballots admitted. If Correos waits until 27 Nov or later, the question would be annulled or would resolve on an earlier, partial figure.\n- Weather: not relevant.\n\nNote: an Ávila item claiming 8,945 applications in \"August 2026\" for the general election looks like a misdated archive page, so I have ignored it. [Ávilared](https://avilared.com/art/70806/correos-ha-admitido-cerca-de-9000-solicitudes-de-voto-por-correo-en-avila)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 15:41 UTC; check each market really matches the question)\n- Kalshi: Prime Minister of Spain after the next election? (Before Aug 22, 2028). Yes prices: Alberto Núñez Feijóo: 0.84; Pedro Sánchez: 0.14; Santiago Abascal: 0.04.\n- Kalshi: Will Alberta vote to secede from Canada? (Before the next general election). Yes prices: Before the next general election: 0.07.\n- Kalshi: Spanish general election: how many seats will Vox win? (On Nov 29, 2026). Yes prices: 65 or more: 0.55; 70 or more: 0.34; 60 or more: 0.74; 75 or more: 0.14; 55 or more: 0.89; 80 or more: 0.06; 50 or more: 0.95; 45 or more: 0.96; 85 or more: 0.0000.\n- Kalshi: How many votes will Jeffries get on the first Speaker ballot? (Opening of the 120th Congress). Yes prices: At least 255: 0.42; At least 252: 0.58; At least 249: 0.77; At least 258: 0.18; At least 246: 0.84; At least 243: 0.89; At least 240: 0.94; At least 261: 0.06.\n- Kalshi: Total Fed dissents in 2026 (2026). Yes prices: Exactly 9: 0.58; Exactly 10: 0.10; Exactly 11: 0.07; Exactly 12: 0.07; 13+: 0.05; Exactly 7: 0.0500; Exactly 8: 0.0000.\n- Kalshi: Will California Proposition 42 receive more “Yes” votes than Proposition 40? (On Nov 3, 2026). Yes prices: Yes: 0.98.\n- Kalshi: Spanish general election: Vox vote percent (Vote Percent - Vox). Yes prices: At least 19%: 0.47; At least 18%: 0.66; At least 20%: 0.27; At least 17%: 0.82; At least 21%: 0.12; At least 22%: 0.07; At least 14%: 0.97; At least 15%: 0.97; At least 13%: 0.97; At least 16%: 0.96.\n- Kalshi: Will PP and Vox win 50% of the vote in Spain's election? (Vote Percent - PP and Vox combined). Yes prices: At least 50%: 0.47.\n- Polymarket: Spain General Election Winner (ends 2026-11-30). [Yes, No] prices: PSOE: [\"0.205\", \"0.795\"]; PP: [\"0.805\", \"0.195\"]; Vox: [\"0.003\", \"0.997\"]; Broad Front (FA): [\"0.0005\", \"0.9995\"]; Podemos: [\"0.0005\", \"0.9995\"]; Party D: [\"0.5\", \"0.5\"]\n- Polymarket: Spain General Election: PP + Vox Majority? (ends 2026-11-30). [Yes, No] prices: Spain General Election: PP + Vox Majority?: [\"0.87\", \"0.13\"]\n- Polymarket: Spain General Election: La Rioja Winner (ends 2026-11-30). [Yes, No] prices: PP: [\"0.9205\", \"0.0795\"]; PSOE: [\"0.053\", \"0.947\"]; Vox: [\"0.0015\", \"0.9985\"]; Broad Front (FA): [\"0.0015\", \"0.9985\"]; Podemos: [\"0.0015\", \"0.9985\"]; Party A: [\"0.5\", \"0.5\"]\n- Polymarket: Spain General Election: PSOE % of vote? (ends 2026-11-30). [Yes, No] prices: <24%: [\"0.05\", \"0.95\"]; 24-26%: [\"0.11\", \"0.89\"]; 26-28%: [\"0.25\", \"0.75\"]; 28-30%: [\"0.28\", \"0.72\"]; 30%+: [\"0.285\", \"0.715\"]\n- Polymarket: Spain General Election: Vox % of vote? (ends 2026-11-30). [Yes, No] prices: <16%: [\"0.0595\", \"0.9405\"]; 16-18%: [\"0.265\", \"0.735\"]; 18-20%: [\"0.39\", \"0.61\"]; 20-22%: [\"0.235\", \"0.765\"]; 22%+: [\"0.065\", \"0.935\"]\n- Polymarket: Spain General Election: PP % of vote? (ends 2026-11-30). [Yes, No] prices: <28%: [\"0.105\", \"0.895\"]; 28-30%: [\"0.25\", \"0.75\"]; 30-32%: [\"0.29\", \"0.71\"]; 32-34%: [\"0.175\", \"0.825\"]; 34-36%: [\"0.055\", \"0.945\"]; 36%+: [\"0.0595\", \"0.9405\"]",
+    "I found no cumulative ballots-admitted figure for 29N yet, and no total of applications either. The question is still open.\n\n## 1. Resolution source\n- 2026-11-16: I read the Correos press-room listing directly. The newest release is \"El próximo jueves, 19 de noviembre, finaliza el plazo para solicitar el voto por correo\" (Madrid, 16 Nov 2026). It has no figures, only deadlines: applications close 19 Nov, ballots must be deposited by 25 Nov, and the census office has been mailing ballot packs since 9 Nov. [Correos](https://www.correos.com/press-release-category/voto-por-correo/)\n- 2026-11-10: \"Así es el voto por correo en las Elecciones Generales del 29 de noviembre\" covers procedure only. It notes that voters can, for the first time in a general election, get an email confirming their vote reached the polling table, and that ballot transport now uses GPS beacons and 24/7 video surveillance. [Correos](https://www.correos.com/press-release-category/voto-por-correo/)\n- Neither release has any count of applications or ballots for 29N. There is no data file behind the page. I found no higher-frequency public series (for example daily counts).\n\n## 2. Current status\n- Nothing settles the question yet. The application total should come out after 19 Nov, and the ballots figure around 25-26 Nov.\n- On timing, Correos has usually published the ballots figure the day after the deposit deadline. Here that would be 26 Nov, the last day inside the cutoff:\n  - July 2023: deadline 20 July, 2,461,284 published 21 July, final 2,471,935 on 22 July.\n  - Andalusia 2026: deadline 13 May, figure reported 14 May.\n  - November 2019: published on the deadline day itself (8 Nov), 900,188.\n- If Correos publishes nothing by 26 Nov, the question is annulled. If its last release before the cutoff is an earlier partial count, that partial count is what resolves.\n\n## 3. Recent news (newest first)\n- 2026-11-16: Several outlets repeat the deadlines (applications by 19 Nov, deposit by 25 Nov) and say Correos has 2,303 offices. None gives an application count. [elEconomista](https://www.eleconomista.es/actualidad/noticias/14028185/11/26/fechas-clave-para-el-voto-por-correo-esta-semana-acaba-el-plazo-maximo-para-solicitarlo-pero-se-puede-enviar-hasta-antes-del-25-de-noviembre.html); [Antena 3](https://www.antena3.com/noticias/espana/estos-son-ultimos-dias-pedir-voto-correo-29n-asi-funciona-estos-son-plazos_202611166afaaa0403bbf30bb04d9488.html)\n- 2026-11-15: Telecinco says ballot packs will keep going out until 22 Nov. [Telecinco](https://www.telecinco.es/noticias/espana/20261115/elecciones-generales-2026-plazos-solicitud-voto-correo-ultimo-dia-entregar_18_020667405.html)\n- 2026-11-14: Correos' director of operations defended the system's safeguards after fraud claims (as summarised by the news API). [Diario Vasco](https://www.diariovasco.com/politica/proceso-seguro-garantias-funciona-voto-correo-espana-20261009000341-ntrc.html)\n- 2026-10-06: Esdiario says it was too early to know application numbers. It argues 29N will look more like November 2019 than July 2023, pointing to postal-service costs of about €56.5M in November 2019 versus €101.5M in July 2023. [Esdiario](https://www.esdiario.com/nacional/261006/199537/carambola-millonaria-29n-esconde-detras-voto-correo_amp.html)\n- Around 2026-10-05: Abascal and Ayuso questioned postal voting, and Abascal urged people to vote in person. I could not confirm the exact date. [Diario de León](https://www.diariodeleon.es/nacional/261005/2099374/abascal-ayuso-cuestionan-voto-correo-podra-solicitar-manana-29n.html); [Demócrata](https://www.democrata.es/politica/abascal-se-niega-a-respaldar-la-limpieza-del-voto-por-correo-al-no-poder-garantizar-su-proteccion/)\n- 2026-06-23: Congress rejected Vox's bill to reform postal voting. [El Independiente](https://www.elindependiente.com/espana/2026/06/23/vox-reforma-voto-correo-fraudes-congreso-sanchez/)\n\n## 4. Base rates\nCorreos figures for past general elections:\n- **April 2019:** 1,241,716 ballots admitted; about 1.3M applications. [Correos 2023](https://www.correos.com/sala-prensa/exito-en-la-gestion-del-voto-por-correo-que-marca-record-historico-con-2-471-935-votos-admitidos-para-las-elecciones-generales)\n- **November 2019:**\n  - Applications were just under 1M, about 30% below April 2019 (Vozpópuli cited 918k before the last day's applications were counted). [El Independiente](https://www.elindependiente.com/politica/2019/10/31/correo-tramita-30-menos-peticiones-voto-28-a/)\n  - Correos reported 900,188 sent on 8 Nov 2019. [Correos](https://www.correos.com/sala-prensa/900-000-ciudadanos-ya-han-enviado-su-voto-por-correo-para-las-elecciones-a-cortes-generales-del-10-de-noviembre)\n  - A later figure of 924,403 is cited by Cronista, quoting Correos. [Cronista](https://www.cronista.com/espana/actualidad-es/elecciones-generales-el-voto-por-correo-alcanzo-la-cifra-mas-alta-registrada-en-la-historia-de-la-democracia-espanola)\n- **July 2023:** 2,622,808 applications, then 2,461,284 ballots (21 July) and 2,471,935 final (22 July). That is 94.2% of applications.\n\nHow many applicants actually vote:\n- Historically 91-94%.\n- In the most recent election, Andalusia in May 2026, 163,510 ballots came from 178,541 applications (91.58%). Applications were about 1.1% above 2022 and ballots about the same as 2022, so the Vox campaign did not visibly cut postal voting there. [Andalucía Informa](https://andaluciainforma.es/?p=29737); [El Debate](https://www.eldebate.com/espana/andalucia/20260511/voto-postal-alcanza-maximos-historicos-andalucia-pese-apagon-correos_416198.html)\n\nSeason: the only comparable November general election is 2019, with roughly 0.90-0.92M ballots. Summer elections drew about 2.5 times as many. 2019 was also the fourth general election in four years, and voter fatigue cut postal voting then.\n\n## 5. Other forecasts\n- I found no market or expert forecast on the number of postal ballots.\n- Related markets on 2026-11-16:\n  - Polymarket gives PP 80.5% to win and PP+Vox a majority 87%.\n  - Kalshi puts Feijóo at 84% to be the next PM, and Vox reaching 65+ seats at 55%.\n- None of these bears directly on the postal-ballot count.\n\n## 6. Upcoming events before resolution\n- 19 Nov: application deadline. The Junta Electoral Central could extend it, as it did in Andalusia 2026 and in 2023.\n- Shortly after 19 Nov: Correos release with the total applications admitted. This will be the main anchor, since 91-94% of applicants usually vote.\n- 22 Nov: last ballot packs mailed. 21-26 Nov: deposit window for voters abroad (CERA) at consulates.\n- 25 Nov: deposit deadline. A JEC extension would not move the 26 Nov cutoff.\n- 26 Nov: the likely date of the ballots-admitted release. A release dated 27 Nov or later would not count.\n- Weather is not relevant, apart from possible local disruption.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 15:41 UTC; check each market really matches the question)\n- Kalshi: Prime Minister of Spain after the next election? (Before Aug 22, 2028). Yes prices: Alberto Núñez Feijóo: 0.84; Pedro Sánchez: 0.14; Santiago Abascal: 0.04.\n- Kalshi: Will Alberta vote to secede from Canada? (Before the next general election). Yes prices: Before the next general election: 0.07.\n- Kalshi: Spanish general election: how many seats will Vox win? (On Nov 29, 2026). Yes prices: 65 or more: 0.55; 70 or more: 0.34; 60 or more: 0.74; 75 or more: 0.14; 55 or more: 0.89; 80 or more: 0.06; 50 or more: 0.95; 45 or more: 0.96; 85 or more: 0.0000.\n- Kalshi: How many votes will Jeffries get on the first Speaker ballot? (Opening of the 120th Congress). Yes prices: At least 255: 0.42; At least 252: 0.58; At least 249: 0.77; At least 258: 0.18; At least 246: 0.84; At least 243: 0.89; At least 240: 0.94; At least 261: 0.06.\n- Kalshi: Total Fed dissents in 2026 (2026). Yes prices: Exactly 9: 0.58; Exactly 10: 0.10; Exactly 11: 0.07; Exactly 12: 0.07; 13+: 0.05; Exactly 7: 0.0500; Exactly 8: 0.0000.\n- Kalshi: Will California Proposition 42 receive more “Yes” votes than Proposition 40? (On Nov 3, 2026). Yes prices: Yes: 0.98.\n- Kalshi: Spanish general election: Vox vote percent (Vote Percent - Vox). Yes prices: At least 19%: 0.47; At least 18%: 0.66; At least 20%: 0.27; At least 17%: 0.82; At least 21%: 0.12; At least 22%: 0.07; At least 14%: 0.97; At least 15%: 0.97; At least 13%: 0.97; At least 16%: 0.96.\n- Kalshi: Will PP and Vox win 50% of the vote in Spain's election? (Vote Percent - PP and Vox combined). Yes prices: At least 50%: 0.47.\n- Polymarket: Spain General Election Winner (ends 2026-11-30). [Yes, No] prices: PSOE: [\"0.205\", \"0.795\"]; PP: [\"0.805\", \"0.195\"]; Vox: [\"0.003\", \"0.997\"]; Broad Front (FA): [\"0.0005\", \"0.9995\"]; Podemos: [\"0.0005\", \"0.9995\"]; Party D: [\"0.5\", \"0.5\"]\n- Polymarket: Spain General Election: PP + Vox Majority? (ends 2026-11-30). [Yes, No] prices: Spain General Election: PP + Vox Majority?: [\"0.87\", \"0.13\"]\n- Polymarket: Spain General Election: La Rioja Winner (ends 2026-11-30). [Yes, No] prices: PP: [\"0.9205\", \"0.0795\"]; PSOE: [\"0.053\", \"0.947\"]; Vox: [\"0.0015\", \"0.9985\"]; Broad Front (FA): [\"0.0015\", \"0.9985\"]; Podemos: [\"0.0015\", \"0.9985\"]; Party A: [\"0.5\", \"0.5\"]\n- Polymarket: Spain General Election: PSOE % of vote? (ends 2026-11-30). [Yes, No] prices: <24%: [\"0.05\", \"0.95\"]; 24-26%: [\"0.11\", \"0.89\"]; 26-28%: [\"0.25\", \"0.75\"]; 28-30%: [\"0.28\", \"0.72\"]; 30%+: [\"0.285\", \"0.715\"]\n- Polymarket: Spain General Election: Vox % of vote? (ends 2026-11-30). [Yes, No] prices: <16%: [\"0.0595\", \"0.9405\"]; 16-18%: [\"0.265\", \"0.735\"]; 18-20%: [\"0.39\", \"0.61\"]; 20-22%: [\"0.235\", \"0.765\"]; 22%+: [\"0.065\", \"0.935\"]\n- Polymarket: Spain General Election: PP % of vote? (ends 2026-11-30). [Yes, No] prices: <28%: [\"0.105\", \"0.895\"]; 28-30%: [\"0.25\", \"0.75\"]; 30-32%: [\"0.29\", \"0.71\"]; 32-34%: [\"0.175\", \"0.825\"]; 34-36%: [\"0.055\", \"0.945\"]; 36%+: [\"0.0595\", \"0.9405\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 740000.0,
+        "p25": 970000.0,
+        "p50": 1200000.0,
+        "p75": 1450000.0,
+        "p90": 1760000.0
+      },
+      "reasoning": "(a) About 10 days remain. The resolving figure should appear between 25 and 26 November 2026, and the cutoff is 26 November in Madrid time.\n\n(b) The latest known value from Correos, as of 16 November 2026, is nothing. Correos has published no cumulative applications or ballots figure for 29N. Its 10 November and 16 November releases cover procedure only.\n\n(c) If nothing changed, no ballots figure would be published and the question would be annulled. For the distribution I condition on a figure being published. History suggests a release 0 to 2 days after the 25 November deadline.\n\n(d) If the current trend continued, the outcome would be roughly 1.0 to 1.4 million. The reasoning:\n- Non-summer general elections have drawn about 0.9 to 1.3 million ballots: 1.24 million in April 2019 and about 0.92 million in November 2019.\n- Postal voting has become more familiar since 2023.\n- Andalusia in May 2026 was flat to slightly up on 2022.\n- Against that, Vox discourages postal voting, and Aragón's postal vote fell sharply.\n- Ballots usually run at 91 to 94% of applications.\n\n(e) Historical variation: between general elections the totals range from 0.9 to 2.5 million, a swing of more than 2.5 times. Seasonality and salience drive most of that. A release on deadline day or the night after usually captures 97 to 99% of the final total. An earlier partial release could capture much less.\n\n(f) No markets or experts forecast this figure. Election markets show a highly salient contest, with PP favoured and PP plus Vox likely to win a majority. High salience could raise turnout, possibly including PSOE-leaning postal voters.\n\n(g) Unexpected scenarios:\n- Low: Correos, under political pressure, publishes only a mid-period partial figure, such as \"500,000 have already sent their vote\" around 22 to 24 November, and nothing more by the 26 November cutoff. Vox's boycott also suppresses postal demand.\n- High: polarisation and travel around the long weekend push applications toward 2 million or more, as in summer 2023, with a full count published on 26 November.\n\nPercentile 1: 380000\nPercentile 5: 600000\nPercentile 10: 740000\nPercentile 20: 910000\nPercentile 30: 1030000\nPercentile 40: 1120000\nPercentile 50: 1200000\nPercentile 60: 1280000\nPercentile 70: 1380000\nPercentile 80: 1520000\nPercentile 90: 1760000\nPercentile 95: 1980000\nPercentile 99: 2450000"
+    },
+    {
+      "value": {
+        "p10": 880000.0,
+        "p25": 1020000.0,
+        "p50": 1180000.0,
+        "p75": 1360000.0,
+        "p90": 1580000.0
+      },
+      "reasoning": "(a) About 10 days. The deposit deadline is 25 November and the cutoff for the release is 26 November (Madrid time). Resolution is expected around 27 November.\n\n(b) Correos has published no cumulative figure, either applications or ballots, for 29N. Its latest release (16 Nov 2026) covers procedure only.\n\n(c) If nothing changed, no figure would be published and the question would be annulled. Conditional on a figure appearing, the release would most likely come on 25 or 26 November, which is the usual 0-2 day lag.\n\n(d) Comparable non-summer general elections have drawn roughly 0.9 to 1.25 million ballots: Nov 2019 about 0.92M, Apr 2019 1.24M, and from memory 2011 and 2015 roughly 1.0-1.15M. The 2026 climate looks flat to slightly negative. Andalusia rose only 1% on its 2022 regional, Aragón fell 37%, and Vox is discouraging postal voting. Partly offsetting this, the election is highly salient, it is not a repeat election, and voters have become more used to postal voting since 2023. That trend implies about 1.1-1.3M ballots.\n\n(e) Postal ballots vary widely between elections: plus or minus 30% between April and November 2019, and doubling in the summer 2023 election. Ballots usually come to 91-94% of applications. The figure published by 26 November could also be partial, as on the deadline night in 2023, or rounded down, such as \"más de 1,1 millones\".\n\n(f) No market or expert forecast exists on this quantity. The election markets show a highly salient contest with a strong Vox.\n\n(g) Low scenario: the Vox boycott plus November apathy pushes applications below 1M. Correos then publishes only a partial deadline-day figure, or a rounded one such as \"más de 800.000\", giving about 750k. High scenario: polarisation and mobilisation by the left, with strong pro-postal messaging from the government, push applications to about 1.8-2M, giving roughly 1.7-1.9M ballots.\n\nPercentile 1: 650000\nPercentile 5: 800000\nPercentile 10: 880000\nPercentile 20: 980000\nPercentile 30: 1060000\nPercentile 40: 1120000\nPercentile 50: 1180000\nPercentile 60: 1240000\nPercentile 70: 1310000\nPercentile 80: 1410000\nPercentile 90: 1580000\nPercentile 95: 1750000\nPercentile 99: 2150000"
+    },
+    {
+      "value": {
+        "p10": 860000.0,
+        "p25": 1025000.0,
+        "p50": 1220000.0,
+        "p75": 1450000.0,
+        "p90": 1700000.0
+      },
+      "reasoning": "(a) About 10 days remain. The deposit deadline is 25 Nov, the resolution cutoff is 26 Nov (Madrid time) and resolution follows around 27 Nov.\n\n(b) As of 16 Nov 2026, Correos has published no cumulative figure for 29N, neither applications nor ballots. Its 10 Nov and 16 Nov releases cover procedure only.\n\n(c) If nothing changed, no figure would be published and the question would be annulled. Conditional on resolution, Correos normally issues a ballots-admitted release 0 to 2 days after the deposit deadline, so a 25 or 26 Nov figure close to the final total is likely.\n\n(d) If the current trend continued:\n- The structural growth in postal voting (ageing population, habits formed in 2023) points to more ballots.\n- Andalusia in May 2026 was flat to slightly up on 2022 and set a record.\n- Aragón in February 2026 was down 37% on May 2023.\n- November elections draw far fewer postal votes than summer ones: 2019 was about 0.92 million and 2011 roughly 0.9 to 1.0 million.\n- A high-salience, non-repeat election should beat November 2019.\n- Vox's campaign against postal voting cuts some demand.\n\nMy trend estimate is about 1.1 to 1.35 million ballots, with a central value near 1.2 million.\n\n(e) Across general elections the figure has ranged from about 0.9 million (November 2019) to 2.47 million (July 2023). The month of the election and fatigue from a repeat election matter most. Ballots usually come to 91 to 94% of applications. There is also extra timing risk: the latest release by 26 Nov could be a partial count from the deadline day, about 2 to 5% low, or an earlier mid-week figure that is much lower.\n\n(f) I found no markets or expert forecasts on this quantity. Election markets point to a highly salient, competitive race, with PP+Vox favoured.\n\n(g) Low and high scenarios:\n- **Low:** Correos does not publish on 25 or 26 Nov. The latest release by the cutoff is then a partial \"more than 600,000 have already voted\" figure from around 23 Nov. A Vox boycott combined with distrust could also hold the total to around 0.8 million.\n- **High:** Polarisation and mobilisation, older voters avoiding November weather, and the habit formed in 2023 push applications toward 2 million, giving 1.8 to 2.0 million or more ballots admitted.\n\nPercentile 1: 550000\nPercentile 5: 760000\nPercentile 10: 860000\nPercentile 20: 980000\nPercentile 30: 1070000\nPercentile 40: 1150000\nPercentile 50: 1220000\nPercentile 60: 1300000\nPercentile 70: 1390000\nPercentile 80: 1510000\nPercentile 90: 1700000\nPercentile 95: 1870000\nPercentile 99: 2250000"
+    },
+    {
+      "value": {
+        "p10": 870000.0,
+        "p25": 1035000.0,
+        "p50": 1235000.0,
+        "p75": 1475000.0,
+        "p90": 1760000.0
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The deposit deadline is 25 November, and the cutoff for a Correos release is 26 November, Madrid time.\n\n(b) **Latest value:** none yet. The Correos releases of 10 and 16 November 2026 give only the calendar. There is no application total and no ballot count for this election.\n\n(c) **If nothing changed:** no figure would be published and the question would be annulled. Correos has always published one in the past, though. The usual timing is the deposit-deadline day or the day after, which here would be 25 or 26 November.\n\n(d) **If the trend continued:** the only comparable November general election is 2019, with about 1.0M applications and 0.90 to 0.92M ballots. Several factors point higher than that:\n- Voter fatigue, which depressed 2019, is absent.\n- The election is highly salient.\n- Voters may have formed a postal-voting habit after the record 2023 election.\n\nTwo factors point lower:\n- Vox is campaigning against postal voting.\n- Budget planning reported by Esdiario points to a level closer to November 2019.\n\nAndalusia in May 2026 showed postal voting flat relative to 2022, with no visible Vox effect. My central estimate is about 1.2 to 1.3M ballots.\n\n(e) **Historical variation:**\n- General-election postal ballots have ranged from 0.9M (November 2019) and 1.24M (April 2019) to 2.47M (July 2023).\n- Ballots usually equal 91 to 94% of applications.\n- On the deadline day, a partial count can be about 97% of the final total.\n\n(f) **Experts and markets:** there are no forecasts or markets on this quantity. The election markets (PP win at 80%) say nothing about postal turnout.\n\n(g) **Scenarios:**\n- **Low:** the last release before the cutoff is an early partial count, for example \"more than 700,000 already sent\" from 23 to 25 November. Alternatively, Vox's boycott and November weather combine to keep applications under 0.9M.\n- **High:** a highly mobilised, polarised electorate, plus a postal-voting habit carried over from 2023, pushes applications toward 2M or more and ballots toward 1.9 to 2.3M.\n\nPercentile 1: 600000\nPercentile 5: 770000\nPercentile 10: 870000\nPercentile 20: 990000\nPercentile 30: 1080000\nPercentile 40: 1160000\nPercentile 50: 1235000\nPercentile 60: 1315000\nPercentile 70: 1410000\nPercentile 80: 1540000\nPercentile 90: 1760000\nPercentile 95: 1960000\nPercentile 99: 2400000"
+    },
+    {
+      "value": {
+        "p10": 850000.0,
+        "p25": 990000.0,
+        "p50": 1165000.0,
+        "p75": 1370000.0,
+        "p90": 1600000.0
+      },
+      "reasoning": "(a) Time left: about 10 days. The deposit deadline is 25 November, and the cutoff for counting a release is 26 November (Madrid time).\n\n(b) Latest known value: none. The newest Correos releases (10 and 16 November 2026) contain only calendar details, with no application or ballot counts for 29N.\n\n(c) If nothing changed: there is no current value to carry forward. The best structural anchor is the November 2019 general election, with about 0.90 to 0.92 million ballots.\n\n(d) If the trend continued: postal voting has grown over time, with records in 2023, and stable or slightly higher levels in Andalusia in May 2026 despite Vox's campaign against it. This election is also highly salient, unlike the fatigued repeat election of November 2019. Non-summer general elections (2011 to April 2019) drew roughly 1.0 to 1.3 million ballots, so a trend-adjusted November figure is around 1.1 to 1.25 million.\n\n(e) Historical variation: across general elections the level swings a lot, from 0.9 million to 2.47 million, driven mostly by season. Among non-summer elections the range is about 0.9 to 1.3 million. About 91% to 94% of applicants end up voting. A release dated 26 November should be close to final, but a release dated the deadline day could be partial and about 2% to 3% lower.\n\n(f) Experts and markets: there is no market or expert forecast on this count. Esdiario expects 29N to resemble November 2019 more than July 2023.\n\n(g) Unexpected scenarios:\n- Low: Vox's boycott call and fraud doubts depress demand, Correos publishes only a rounded partial figure on 25 November (for example \"more than 700,000\"), and the total ends up around 600,000 to 750,000.\n- High: extreme polarisation and mobilisation, a JEC extension of the application window and the \"safe vote\" confirmation feature together drive applications toward 2 million, so ballots reach about 1.8 to 2.1 million.\n\nPercentile 1: 600000\nPercentile 5: 770000\nPercentile 10: 850000\nPercentile 20: 950000\nPercentile 30: 1030000\nPercentile 40: 1100000\nPercentile 50: 1165000\nPercentile 60: 1235000\nPercentile 70: 1315000\nPercentile 80: 1425000\nPercentile 90: 1600000\nPercentile 95: 1760000\nPercentile 99: 2100000"
+    },
+    {
+      "value": {
+        "p10": 850000.0,
+        "p25": 985000.0,
+        "p50": 1140000.0,
+        "p75": 1320000.0,
+        "p90": 1530000.0
+      },
+      "reasoning": "(a) About 10 days. Ballots must be deposited by 25 November, and the release that counts must be dated 26 November or earlier.\n\n(b) Correos has published no 29N figure yet, neither applications nor ballots. Its 10 and 16 November releases give only the calendar.\n\n(c) If nothing changed, there would be no figure and the question would be annulled. Conditional on a figure appearing, the anchor is November 2019: 900,188 ballots on deadline day and about 924,000 final. April 2019 had 1,241,716.\n\n(d) The long-run trend in postal voting is upward: more familiarity since 2020, record use in 2023, and record applications in Andalusia in 2026 with ballots flat versus 2022. This cycle also matters more politically than the fatigued repeat election of November 2019. Against that, Vox is discouraging use, and November elections draw far fewer postal votes than summer ones. My central estimate is about 1.1 to 1.2 million.\n\n(e) Across general elections, the count has ranged from about 0.9 million (November 2019) to 2.47 million (July 2023), and season is the main driver. Non-summer elections have fallen in a 0.9 to 1.3 million band. Ballots usually equal 91 to 94 percent of applications. There is extra downside risk because the last release before the cutoff could be a partial count, for example one dated 25 November, or a rounded \"más de X\".\n\n(f) There are no markets or expert forecasts on this quantity. One outlet (Esdiario) expects 29N to look like November 2019 rather than July 2023, based on Correos' contract costs.\n\n(g) Low scenario: Correos publishes a partial, rounded figure on 25 November (\"más de 700.000\"), or the Vox boycott cuts usage among right-leaning voters, giving 0.6 to 0.8 million. High scenario: strong mobilisation and post-pandemic habit push applications toward 1.8 to 2 million, giving 1.7 to 1.9 million ballots.\n\nPercentile 1: 600000\nPercentile 5: 760000\nPercentile 10: 850000\nPercentile 20: 950000\nPercentile 30: 1020000\nPercentile 40: 1080000\nPercentile 50: 1140000\nPercentile 60: 1200000\nPercentile 70: 1270000\nPercentile 80: 1370000\nPercentile 90: 1530000\nPercentile 95: 1680000\nPercentile 99: 2050000"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 851632.5306,
+    "p25": 1004983.8579,
+    "p50": 1190125.7354,
+    "p75": 1410633.6008,
+    "p90": 1675052.2856
+  },
+  "usage": [
+    {
+      "question_id": "46851",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.2,
+      "notional_cost_usd": 0.0002453,
+      "input_tokens": 525,
+      "output_tokens": 281,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.9,
+      "notional_cost_usd": 0.00028999999999999995,
+      "input_tokens": 1256,
+      "output_tokens": 78,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 107.8,
+      "notional_cost_usd": 0.4210136,
+      "input_tokens": 166116,
+      "output_tokens": 4785,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.5,
+      "notional_cost_usd": 0.08996000000000001,
+      "input_tokens": 7311,
+      "output_tokens": 1574,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.7,
+      "notional_cost_usd": 0.09436,
+      "input_tokens": 7311,
+      "output_tokens": 1794,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 0.0008063,
+      "input_tokens": 2805,
+      "output_tokens": 491,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.8,
+      "notional_cost_usd": 0.0007498,
+      "input_tokens": 2775,
+      "output_tokens": 390,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.00029201,
+      "input_tokens": 2806,
+      "output_tokens": 401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 38.3,
+      "notional_cost_usd": 0.0394802,
+      "input_tokens": 7312,
+      "output_tokens": 1780,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.0,
+      "notional_cost_usd": 0.00034349,
+      "input_tokens": 2773,
+      "output_tokens": 505,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0008051,
+      "input_tokens": 2919,
+      "output_tokens": 443,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00029634,
+      "input_tokens": 2920,
+      "output_tokens": 407,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 91.4,
+      "notional_cost_usd": 0.4098803999999999,
+      "input_tokens": 169761,
+      "output_tokens": 4810,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.8,
+      "notional_cost_usd": 0.08970800000000001,
+      "input_tokens": 7517,
+      "output_tokens": 1479,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.6,
+      "notional_cost_usd": 0.09146,
+      "input_tokens": 7516,
+      "output_tokens": 1567,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 22.0,
+      "notional_cost_usd": 0.096752,
+      "input_tokens": 7515,
+      "output_tokens": 1832,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.2,
+      "notional_cost_usd": 0.0007698000000000001,
+      "input_tokens": 2750,
+      "output_tokens": 440,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0007708000000000001,
+      "input_tokens": 2750,
+      "output_tokens": 442,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.0007978000000000001,
+      "input_tokens": 2825,
+      "output_tokens": 466,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00033245,
+      "input_tokens": 2750,
+      "output_tokens": 483,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00029375,
+      "input_tokens": 2749,
+      "output_tokens": 406,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46851",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00036269,
+      "input_tokens": 2824,
+      "output_tokens": 542,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.3398
+}

@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-16T15:48:12.051019+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T15:38:34.700733+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46852,
+    "post_id": 46592,
+    "url": "https://www.metaculus.com/questions/46592",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will Strategy (MSTR) close below $100 on Friday, November 27, 2026?",
+    "resolution_criteria": "This question resolves using the Nasdaq closing price of Strategy Inc. (ticker MSTR) for the regular trading session of Friday, November 27, 2026, as shown in the \"Close\" column of the November 27, 2026 row on the [Yahoo Finance MSTR historical prices page](https://finance.yahoo.com/quote/MSTR/history/). It resolves YES if that closing price is strictly below $100.00 (for example, $99.87 resolves YES) and NO if it is $100.00 or above. If that page does not display a closing price for November 27, 2026, the official Nasdaq closing price for that date as reported by [credible sources](https://www.metaculus.com/faq/#definitions) will be used; if no closing price is published at all for that session because trading did not occur, the closing price of the next regular session for which one is published is used instead.",
+    "fine_print": "The value used is the one in Yahoo Finance's \"Close\" column, not its \"Adj Close\" column, with no further adjustment applied.",
+    "close_time": "2026-11-16 18:35 UTC",
+    "scheduled_resolution_time": "2026-11-27 18:00 UTC"
+  },
+  "research": [
+    "Note on the data: Yahoo shows the November 13 close at **$111.62**, not the $109.82 given in the question background.\n\n### 1. Resolution source\n- 2026-11-16 (about 15:46 UTC): Yahoo's chart data for MSTR (Nasdaq \"NMS\") shows the stock trading at **$103.475**, down 7.30% from Friday's $111.62. The day's range is $101.70 to $105.79 on 8.6M shares so far. Yahoo lists the 52-week range as $81.81 to $213.83. The question background says the high was about $250, which disagrees. [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/MSTR?range=1mo&interval=1d)\n- Recent Yahoo closes: Oct 28 $145.16, Oct 29 $141.62, Oct 30 $130.51, Nov 2 $130.76, Nov 3 $135.63, Nov 4 $142.54, Nov 5 $129.30, Nov 6 $128.93, Nov 9 $125.59, Nov 10 $121.07, Nov 11 $122.35, Nov 12 $114.41, Nov 13 $111.62. \"Close\" and \"Adj Close\" are the same. [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/MSTR?range=1mo&interval=1d)\n\n### 2. Current status\n- Nothing has settled the question yet. Around midday on Nov 16 the price was about 3.5% above $100. The stock would need a further drop of about 3% over 8 sessions to resolve YES. The decline has been steady: 13 of the last 16 sessions closed lower.\n\n### 3. Recent news (newest first)\n- 2026-11-16: MSTR fell about 8% to around $102.35 to $102.50. Bitcoin was near $64,200 to $64,300, down 17% since late October and below Strategy's average cost of about $75,456. Benzinga puts the paper loss at about $9.6B. [Benzinga](https://www.benzinga.com/trading-ideas/movers/26/11/63289216/strategy-stock-plunges-8-as-bitcoin-sinks-to-64000-msci-exit-looms), [24/7 Wall St](https://247wallst.com/investing/2026/11/16/strategy-sinks-8-as-bitcoin-selloff-deepens-coinbase-and-mara-fall-7/)\n- 2026-11-16: The Monday 8-K reports 485 BTC bought for $33.4M from Nov 9 to 15 at about $68,900 each, bringing holdings to 850,849 BTC. That is less than half the prior week's 1,036 BTC. [24/7 Wall St](https://247wallst.com/investing/2026/11/16/strategy-sinks-8-as-bitcoin-selloff-deepens-coinbase-and-mara-fall-7/), [haberler](https://www.haberler.com/kripto-para/strategy-dususte-bitcoin-alimini-yavaslatti-20432937-haberi/)\n- 2026-11-15: One outlet says the stock trades at about 0.9x book value (its mNAV, the share price relative to its bitcoin holdings). That is below the roughly 1.22x level needed for new share sales to add value, so issuing stock now dilutes holders. [Foreign Policy Journal](https://www.foreignpolicyjournal.com/2026/11/15/strategys-nasdaq-mstr-bitcoin-buying-machine-stalls-as-premium-collapses-and-msci-index-exit-looms/)\n- 2026-11-14: Bitcoin was about $67,400, leaving a $6.85B paper loss. [CryptoTimes](https://www.cryptotimes.io/2026/11/14/michael-saylors-strategy-mstr-faces-6-85b-paper-loss-as-bitcoin-slides-below-its-75k-cost/)\n- 2026-11-12: MSTR dropped 6.8% pre-market after MSCI confirmed the deletion, effective after the Nov 30 close. Estimates of forced passive selling range from about $1.5B to $3B. JPMorgan says outflows could reach $9B if other index providers follow. The stock had already fallen 9.6% on Oct 16 when MSCI's proposal came out. [CryptoTimes](https://www.cryptotimes.io/2026/11/12/michael-saylors-strategy-mstr-stock-drops-6-8-pre-market-after-msci-confirms-index-removal/), [24/7 Wall St](https://247wallst.com/investing/2026/11/12/its-official-michael-saylors-strategy-is-out-of-the-msci-indexes/), [Decrypt](https://decrypt.co/383204/why-msci-removing-bitcoin-treasury-strategy-stock-indexes)\n- Strategy reportedly argues it is a genuine operating business. It has not issued a formal statement on the decision. [cryptopotato](https://cryptopotato.com/strategy-is-officially-out-of-msci-what-it-could-mean-for-mstr-and-bitcoin/)\n\n### 4. Base rates\n- The code-computed baseline (latest close $103.40, 8 sessions ahead, 3 years of data) gives these percentiles for the Nov 27 price: p5 $81.83, p10 $86.46, p25 $94.46, p50 $103.00, p75 $112.45, p90 $124.23, p95 $134.82.\n- I estimate roughly 40 to 45% of that distribution falls below $100, but this is interpolated, not computed. It ignores momentum and the MSCI flows.\n- Over the last 22 sessions, single-day moves of 5% or more happened about 7 times, for example -7.8% on Oct 30, -9.3% on Nov 5, -6.5% on Nov 12 and -7.3% on Nov 16. Since Oct 28 the stock is down about 29%.\n- Index-deletion selling usually peaks at the close on the effective date (Nov 30), which is after resolution. Some of it gets front-run before then.\n- The stock tracks bitcoin with leverage: it fell about 7 to 8% on Nov 16 while bitcoin fell about 2%.\n\n### 5. Other forecasts\n- Polymarket, \"MSTR hit week of Nov 16\" (ends Nov 20): ↑$115 at 31%, ↑$120 at 18.5%, ↑$125 at 13.5%, ↑$130 at 7%. These are upside-only and do not match the question. Prices fetched 2026-11-16 15:45 UTC.\n- Polymarket's November upside ladder ($160 and above) sits at 0.5, which looks stale or illiquid.\n- I found no market on MSTR closing below $100 on Nov 27. Kalshi puts bitcoin crossing $100k before 2027 at 4%. No analyst price targets for this window turned up.\n\n### 6. Upcoming events before resolution\n- 2026-11-23 (Mon): weekly 8-K on bitcoin purchases and at-the-market share sales, including possible STRC buybacks.\n- Before Nov 30: passive funds may sell early ahead of the MSCI deletion. Disclosed MSCI-tracker holdings are about 13M shares, roughly 3.1% of basic shares.\n- Bitcoin price path: it is currently about $64k. Any pressure on Strategy's preferred shares or financing would also matter.\n- 2026-11-26: Thanksgiving, markets closed. 2026-11-27: shortened session closing at 1:00 p.m. ET, typically on light volume.\n- I could not confirm any decisions from other index providers (FTSE, S&P, CRSP) that fall inside this window.\n\nSources: [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/MSTR?range=1mo&interval=1d), [Benzinga](https://www.benzinga.com/trading-ideas/movers/26/11/63289216/strategy-stock-plunges-8-as-bitcoin-sinks-to-64000-msci-exit-looms), [24/7 Wall St Nov 16](https://247wallst.com/investing/2026/11/16/strategy-sinks-8-as-bitcoin-selloff-deepens-coinbase-and-mara-fall-7/), [24/7 Wall St Nov 12](https://247wallst.com/investing/2026/11/12/its-official-michael-saylors-strategy-is-out-of-the-msci-indexes/), [Yahoo/24/7 Nov 15](https://finance.yahoo.com/markets/stocks/articles/michael-saylor-strategy-just-lost-172850606.html), [CryptoTimes Nov 14](https://www.cryptotimes.io/2026/11/14/michael-saylors-strategy-mstr-faces-6-85b-paper-loss-as-bitcoin-slides-below-its-75k-cost/), [CryptoTimes Nov 12](https://www.cryptotimes.io/2026/11/12/michael-saylors-strategy-mstr-stock-drops-6-8-pre-market-after-msci-confirms-index-removal/), [Decrypt](https://decrypt.co/383204/why-msci-removing-bitcoin-treasury-strategy-stock-indexes), [cryptopotato](https://cryptopotato.com/strategy-is-officially-out-of-msci-what-it-could-mean-for-mstr-and-bitcoin/), [Foreign Policy Journal](https://www.foreignpolicyjournal.com/2026/11/15/strategys-nasdaq-mstr-bitcoin-buying-machine-stalls-as-premium-collapses-and-msci-index-exit-looms/), [haberler](https://www.haberler.com/kripto-para/strategy-dususte-bitcoin-alimini-yavaslatti-20432937-haberi/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 15:45 UTC; check each market really matches the question)\n- Kalshi: Will the 2027 House rules package ban member stock trading? (Before Feb 1, 2027). Yes prices: Yes: 0.21.\n- Kalshi: How high will the S&P/BMV IPC Index get this year? (2026). Yes prices: At least MX$73,000: 0.37; At least MX$74,000: 0.2900; At least MX$67,000: 0.9900; At least MX$72,000: 0.5500; At least MX$70,000: 0.8700; At least MX$69,000: 0.9800; At least MX$71,000: 0.9800; At least MX$68,000: 0.9900.\n- Kalshi: S&P 2027 year end price (On Dec 31, 2027 at 4pm EST). Yes prices: 8,200 or above: 0.49; 8,000 or above: 0.55; 8,400 or above: 0.43; 7,800 or above: 0.58; 7,600 or above: 0.63; 8,600 or above: 0.34; 7,400 or above: 0.73; 7,200 or above: 0.77; 7,000 or above: 0.78; 8,800 or above: 0.26.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: When will Northstar California Resort open for the 26/27 winter season? (26/27 winter season). Yes prices: Before Nov 22, 2026: 0.61; Before Dec 13, 2026: 0.96; Before Dec 6, 2026: 0.92; Before Dec 27, 2026: 0.98; Before Nov 29, 2026: 0.56; Before Dec 20, 2026: 0.98.\n- Kalshi: Peak Strait of Hormuz traffic day? (11/9 - 11/15) (11/9 - 11/15). Yes prices: November 11: 0.34; November 15: 0.28; November 10: 0.16; November 9: 0.14; November 12: 0.04; November 13: 0.03; November 14: 0.03.\n- Kalshi: Will the Treasury purchase Bitcoin? (Before Jan 1, 2028). Yes prices: Before Jan 1, 2028: 0.14; Before Jan 1, 2027: 0.01.\n- Kalshi: When will Bitcoin cross $100k again? (2026). Yes prices: Before January 2027: 0.04; Before December 2026: 0.0100; Before July 2026: 0.0100; Before October 2026: 0.0100; Before June 2026: 0.0100; Before May 2026: 0.0100; Before April 2026: 0.0100; Before March 2026: 0.0100; Before November 2026: 0.0100; Before February 2026: 0.0100.\n- Kalshi: Will Trump create a National Bitcoin Reserve this year? (Before 2027). Yes prices: Before Jan 1, 2027: 0.02.\n- Polymarket: What will MicroStrategy (MSTR) hit in November 2026? (ends 2026-12-01). [Yes, No] prices: ↑ $210: [\"0.5\", \"0.5\"]; ↑ $200: [\"0.5\", \"0.5\"]; ↑ $190: [\"0.495\", \"0.505\"]; ↑ $180: [\"0.5\", \"0.5\"]; ↑ $170: [\"0.5\", \"0.5\"]; ↑ $160: [\"0.5\", \"0.5\"]\n- Polymarket: What will MicroStrategy (MSTR) hit Week of November 16 2026? (ends 2026-11-20). [Yes, No] prices: ↑ $140: [\"0.5\", \"0.5\"]; ↑ $135: [\"0.5\", \"0.5\"]; ↑ $130: [\"0.07\", \"0.93\"]; ↑ $125: [\"0.135\", \"0.865\"]; ↑ $120: [\"0.185\", \"0.815\"]; ↑ $115: [\"0.31\", \"0.69\"]\n- Manifold: Will MicroStrategy's ($MSTR) stock price reach $10,000 by 2030? (13%) https://manifold.markets/nick/will-microstrategys-mstr-stock-pric-852c7f19e40b\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for MSTR: latest close 103.4000 on 2026-11-16.\nTarget date 2026-11-27 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 81.8338, p10: 86.457, p25: 94.4597, p50: 103.0002, p75: 112.4503, p90: 124.2316, p95: 134.8152\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).",
+    "# MSTR research brief (as of 2026-11-16, around 15:46 UTC)\n\n**Summary:** MSTR is trading about 3.5% above the $100 line. That compares with about 10% on Friday. The stock has fallen for months, and forced index selling (MSCI is removing it from its indexes) lands right before the resolution date.\n\n## 1. Resolution source\n- 2026-11-16: Yahoo's chart data shows MSTR at **$103.70** during the session, about 15:46 UTC. That is down 7.1% on the day. The intraday range is $101.70 to $105.79, on volume of 8.66M shares. [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/MSTR?range=1mo&interval=1d)\n- Recent Yahoo closes: Oct 28 $145.16, Nov 4 $142.54, Nov 9 $125.59, Nov 10 $121.07, Nov 11 $122.35, Nov 12 $114.41, **Nov 13 $111.62**. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/MSTR?range=1mo&interval=1d)\n- Two numbers in the question's background don't match Yahoo:\n  - Background gives Nov 13 as $109.82. Yahoo shows $111.62, and 247wallst also quotes $111.62.\n  - Background puts the 52-week high near $250. Yahoo shows $213.83. Yahoo's 52-week low is **$81.81**, which matches.\n- Yahoo's \"Close\" and \"Adj Close\" are identical here, so there is no split or dividend adjustment.\n\n## 2. Current status\n- Nothing has settled the question yet.\n- 2026-11-16: The stock has fallen to within about 1.7% of $100 at its intraday low ($101.70). Closing below $100 on Nov 27 needs a further drop of about 3.5% from $103.70.\n\n## 3. Recent news (newest first)\n- 2026-11-16: Bitcoin was about **$64,560**, down from $71,343 on Nov 11. Its daily low was $62,018 on Nov 14 (Yahoo BTC-USD dates). [Yahoo BTC](https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=5d&interval=1d)\n- 2026-11-16: Strategy bought **485 BTC for $33.4M** (average $68,900) during Nov 9-15. That is down from 1,036 BTC the week before. Holdings are now 850,849 BTC. Bitcoin is below Strategy's average cost of about $75,456. [247wallst](https://247wallst.com/investing/2026/11/16/strategy-sinks-8-as-bitcoin-selloff-deepens-coinbase-and-mara-fall-7/), [Haberler](https://www.haberler.com/kripto-para/strategy-dususte-bitcoin-alimini-yavaslatti-20432937-haberi/). I could not find the 8-K itself.\n- 2026-11-16: Benzinga reported MSTR down 8.3% to $102.35 and a paper loss of about $9.6B on the bitcoin holdings. I could not verify this directly: the page returned a 403 error. [Benzinga](https://www.benzinga.com/trading-ideas/movers/26/11/63289216/strategy-stock-plunges-8-as-bitcoin-sinks-to-64000-msci-exit-looms)\n- 2026-11-15: The stock trades at about 0.9x the value of its bitcoin holdings (mNAV). That is below the roughly 1.22x level needed for new share sales to add bitcoin per share, so selling shares now dilutes holders. This weakens the company's main funding tool. [Foreign Policy Journal](https://www.foreignpolicyjournal.com/2026/11/15/strategys-nasdaq-mstr-bitcoin-buying-machine-stalls-as-premium-collapses-and-msci-index-exit-looms/)\n- 2026-11-15: Coverage estimates **$2-3B** of forced selling by passive funds when MSCI removes the stock. [Gulf365](https://gulf365.net/cryptocurrency-news/13239503/%D8%AE%D8%B1%D9%88%D8%AC-Strategy-%D9%85%D9%86-%D9%85%D8%A4%D8%B4%D8%B1%D8%A7%D8%AA-MSCI-%D9%85%D8%A7%D8%B0%D8%A7-%D9%8A%D8%B9%D9%86%D9%8A-%D8%B0%D9%84%D9%83-%D9%84%D8%B3%D9%87%D9%85-MSTR-%D9%88%D9%84%D9%84%D8%A8%D9%8A%D8%AA%D9%83%D9%88%D9%8A%D9%86%D8%9F.html)\n- 2026-11-12: MSTR fell 6.8% premarket after MSCI confirmed the removal, effective after the close on Nov 30. [CryptoTimes](https://www.cryptotimes.io/2026/11/12/michael-saylors-strategy-mstr-stock-drops-6-8-pre-market-after-msci-confirms-index-removal/)\n\n## 4. Base rates\n- Statistical baseline supplied with the question: 3-year distribution of 8-session returns, anchored at $103.40. That puts the median Nov 27 price at about $103.0, the 25th percentile at $94.46 and the 10th percentile at $86.46.\n- From that distribution, the implied chance of finishing below $100 is roughly 40-45%. I interpolated this myself. It ignores the recent trend and the index event.\n- The trend is strongly down: -29% from Oct 28 to Nov 16 intraday. The stock closed lower in 6 of the last 7 sessions.\n- Daily moves of 5-8% are common. Recent drops: -9.3% Nov 5, -6.5% Nov 12, -7.1% Nov 16 intraday.\n- The 52-week low is $81.81, so the stock has traded below $100 within the past year.\n\n## 5. Other forecasts\n- Polymarket, \"MSTR hit, week of Nov 16\" (ends Nov 20). Only upside strikes were captured, and none is close to this question:\n  - above $115: 31%\n  - above $120: 18.5%\n  - above $125: 13.5%\n  - above $130: 7%\n  - The $135 and $140 strikes sit at 0.50, which looks like placeholder or illiquid pricing.\n- I did not find downside strikes or a closing-price market for Nov 27.\n- Polymarket \"MSTR hit in November\" (upside strikes $160-$210) sits at 0.50 throughout. This looks stale or illiquid, so don't rely on it.\n- Kalshi \"Bitcoin above $100k before Jan 2027\" is at 4%. This is only loosely related.\n- I found no analyst price targets for this window.\n\n## 6. Upcoming events before resolution\n- **2026-11-23 (Mon):** Strategy's weekly 8-K, showing BTC purchases and how many shares it sold through at-the-market offerings. Purchases are shrinking and the stock trades below its bitcoin value, so this may weigh on sentiment.\n- **Nov 17-25:** Index funds may sell ahead of the MSCI deletion. Most index-tracking selling usually happens at the close on the effective date, Nov 30, which is after resolution. Some front-running before Nov 27 is plausible.\n- **2026-11-26:** Thanksgiving, markets closed. **2026-11-27:** half-day session closing at 1:00 p.m. ET on light volume. Bitcoin trades through the holiday, so a weekend-style gap in bitcoin can carry into the Nov 27 open.\n- **Bitcoin price:** this is the main driver. It is about $64.5k now, and its 52-week low is $57,748.\n- I found no other specific macro dates for Nov 17-27 in my searches.\n\n**Sources:** I used the links above. These searches returned nothing on Nov 2026 (only older items): [observer-reporter StockStory](https://stocks.observer-reporter.com/observerreporter/article/stockstory-2026-9-1-why-strategy-mstr-stock-is-trading-lower-today), [Investing.com](https://uk.investing.com/equities/microstrategy-inc), [Cryptorank](https://cryptorank.io/news/feed/72754-strategy-resumes-bitcoin-buying-4603-btc).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 15:45 UTC; check each market really matches the question)\n- Kalshi: Will the 2027 House rules package ban member stock trading? (Before Feb 1, 2027). Yes prices: Yes: 0.21.\n- Kalshi: How high will the S&P/BMV IPC Index get this year? (2026). Yes prices: At least MX$73,000: 0.37; At least MX$74,000: 0.2900; At least MX$67,000: 0.9900; At least MX$72,000: 0.5500; At least MX$70,000: 0.8700; At least MX$69,000: 0.9800; At least MX$71,000: 0.9800; At least MX$68,000: 0.9900.\n- Kalshi: S&P 2027 year end price (On Dec 31, 2027 at 4pm EST). Yes prices: 8,200 or above: 0.49; 8,000 or above: 0.55; 8,400 or above: 0.43; 7,800 or above: 0.58; 7,600 or above: 0.63; 8,600 or above: 0.34; 7,400 or above: 0.73; 7,200 or above: 0.77; 7,000 or above: 0.78; 8,800 or above: 0.26.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: When will Northstar California Resort open for the 26/27 winter season? (26/27 winter season). Yes prices: Before Nov 22, 2026: 0.61; Before Dec 13, 2026: 0.96; Before Dec 6, 2026: 0.92; Before Dec 27, 2026: 0.98; Before Nov 29, 2026: 0.56; Before Dec 20, 2026: 0.98.\n- Kalshi: Peak Strait of Hormuz traffic day? (11/9 - 11/15) (11/9 - 11/15). Yes prices: November 11: 0.34; November 15: 0.28; November 10: 0.16; November 9: 0.14; November 12: 0.04; November 13: 0.03; November 14: 0.03.\n- Kalshi: Will the Treasury purchase Bitcoin? (Before Jan 1, 2028). Yes prices: Before Jan 1, 2028: 0.14; Before Jan 1, 2027: 0.01.\n- Kalshi: When will Bitcoin cross $100k again? (2026). Yes prices: Before January 2027: 0.04; Before December 2026: 0.0100; Before July 2026: 0.0100; Before October 2026: 0.0100; Before June 2026: 0.0100; Before May 2026: 0.0100; Before April 2026: 0.0100; Before March 2026: 0.0100; Before November 2026: 0.0100; Before February 2026: 0.0100.\n- Kalshi: Will Trump create a National Bitcoin Reserve this year? (Before 2027). Yes prices: Before Jan 1, 2027: 0.02.\n- Polymarket: What will MicroStrategy (MSTR) hit in November 2026? (ends 2026-12-01). [Yes, No] prices: ↑ $210: [\"0.5\", \"0.5\"]; ↑ $200: [\"0.5\", \"0.5\"]; ↑ $190: [\"0.495\", \"0.505\"]; ↑ $180: [\"0.5\", \"0.5\"]; ↑ $170: [\"0.5\", \"0.5\"]; ↑ $160: [\"0.5\", \"0.5\"]\n- Polymarket: What will MicroStrategy (MSTR) hit Week of November 16 2026? (ends 2026-11-20). [Yes, No] prices: ↑ $140: [\"0.5\", \"0.5\"]; ↑ $135: [\"0.5\", \"0.5\"]; ↑ $130: [\"0.07\", \"0.93\"]; ↑ $125: [\"0.135\", \"0.865\"]; ↑ $120: [\"0.185\", \"0.815\"]; ↑ $115: [\"0.31\", \"0.69\"]\n- Manifold: Will MicroStrategy's ($MSTR) stock price reach $10,000 by 2030? (13%) https://manifold.markets/nick/will-microstrategys-mstr-stock-pric-852c7f19e40b\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for MSTR: latest close 103.4000 on 2026-11-16.\nTarget date 2026-11-27 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 81.8338, p10: 86.457, p25: 94.4597, p50: 103.0002, p75: 112.4503, p90: 124.2316, p95: 134.8152\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": 0.45,
+      "reasoning": "(a) There are 8 trading sessions left (Nov 17 to Nov 27), and the outcome is known at the 1:00 p.m. ET close on Nov 27. YES requires Yahoo's \"Close\" for MSTR on Nov 27 to be strictly below $100.00.\n\n(b) Status quo: MSTR is around $103.4 to $103.7 intraday on Nov 16, about 3.5% above $100. If nothing changed, the answer would be NO, but only narrowly.\n\n(c) Base rate: the empirical 8-session return distribution, anchored at $103.40, puts the median at about $103 and the 25th percentile at $94.46. That implies roughly a 40 to 43% chance of finishing below $100. A lognormal check gives a similar figure: daily volatility of about 5% implies about 14% over 8 sessions. With ln(100/103.5) = -0.034, z is about -0.25, which is roughly 40%. Base rate: about 41%.\n\n(d) Evidence:\n- **For YES:**\n  - The trend is persistently down: 13 of the last 16 sessions closed lower, and the stock is down about 29% since Oct 28.\n  - Bitcoin was about $64k on Nov 16 and still sliding, below Strategy's cost basis of about $75.5k.\n  - mNAV is about 0.9x (Nov 15), which removes the accretive equity-issuance engine.\n  - Bitcoin purchases are slowing (Nov 16 8-K: 485 BTC, down from 1,036).\n  - The MSCI deletion (announced Nov 11, effective after Nov 30) invites front-running and short-selling ahead of the forced selling.\n- **For NO:**\n  - The stock still has to fall a further 3.5%.\n  - The bulk of index selling hits at the Nov 30 close, after resolution. Front-run deletions often see the price bottom ahead of the effective date as arbitrageurs position, with some recovery near the event.\n  - Sharp selloffs in MSTR and bitcoin often see relief bounces.\n  - A sub-1 mNAV could attract value buyers or prompt Strategy buybacks.\n  - Short-term momentum is a weak predictor.\n\n(e) Scenarios:\n- **NO:** Bitcoin stabilizes in the $65 to 70k range and the index flows are already largely priced. MSTR bounces to $105 to 115 by the thin holiday session.\n- **YES:** Bitcoin breaks below its Nov 14 low of about $62k toward $58k. Front-running of the MSCI exit plus a weak Nov 23 8-K push MSTR into the $90s by Nov 27.\n\n(f) Adjustment: I start at about 41%. I add a few points for the bearish catalysts that a purely statistical baseline ignores: bitcoin downtrend, discount to NAV, and index front-running. I temper that because momentum is weak evidence and deletion-related selling is concentrated after the resolution date. Final estimate: about 45%.\n\nProbability: 45%"
+    },
+    {
+      "value": 0.46,
+      "reasoning": "(a) The question resolves at the 1:00 p.m. ET close on Friday, November 27, 2026, which is 8 trading sessions after today's (Nov 16) session. YES requires Yahoo's \"Close\" for MSTR on Nov 27 to be strictly below $100.00.\n\n(b) If nothing changed, MSTR stays around $103.5 (midday Nov 16), which is above $100, so the status quo is NO, but only by about 3.5%.\n\n(c) Base rate: the supplied 8-session empirical return distribution, anchored at $103.40, puts the median at about $103 and the 25th percentile at $94.46. That implies roughly 40-43% below $100. A lognormal check gives a similar figure: with daily volatility of about 5.5%, 8-session volatility is about 15%, and ln(100/103.5) = -0.034, so z ≈ -0.23 and P ≈ 41%.\n\n(d) Evidence:\n- **For YES:**\n  - The downtrend is relentless: -29% since Oct 28, with 13 of 16 sessions lower.\n  - Bitcoin fell to about $64k on Nov 16, below Strategy's roughly $75.5k cost basis.\n  - mNAV is about 0.9x (Nov 15), which breaks the at-the-market share-issuance funding model.\n  - Bitcoin purchases were cut in half (8-K, Nov 16).\n  - MSCI deletion (announced Nov 11, effective Nov 30) brings $1.5-3B of forced selling, and some of it can be front-run before Nov 27.\n  - The intraday low today was already $101.70.\n- **For NO:**\n  - The stock is still above $100 and needs a further decline.\n  - Bulk index selling typically occurs at the Nov 30 close, after resolution.\n  - After a roughly 29% slide in three weeks, oversold bounces are common.\n  - The distribution median is near the current price, and $100 is a round-number level where buyers may step in.\n\n(e) Scenarios:\n- **NO:** Bitcoin stabilizes in the mid-$60ks, short covering lifts MSTR back to $105-115, and the light holiday session closes it around $108.\n- **YES:** Bitcoin breaks its $62k low toward $58-60k, front-running of the MSCI deletion adds pressure, and MSTR closes in the $90s by the 23rd and stays there through the 27th.\n\n(f) I start from about 41%. I add a few points for negative momentum, MSCI front-running in the run-up, and the possibility that today closes nearer the intraday low. Momentum is a weak predictor and bounces are frequent, so I keep it below 50%.\n\nProbability: 46%"
+    },
+    {
+      "value": 0.45,
+      "reasoning": "(a) The outcome will be known at the 1:00 p.m. ET close on Friday, November 27, 2026, about 8 trading sessions from now. For Yes, MSTR's Yahoo Finance \"Close\" for that day must be strictly below $100.00.\n\n(b) Status quo: MSTR is trading at about $103.4 to $103.7 on Nov 16. If nothing changed it would close above $100, so No, but only by a margin of about 3.5%.\n\n(c) Base rate: the code-computed empirical distribution of 8-session returns, anchored at $103.40, puts the median at $103.0 and the 25th percentile at $94.46. Interpolating, about 40 to 42% of outcomes fall below $100. A simple volatility model agrees: daily moves average about 5%, so 8 sessions give about a 14% standard deviation, and a 3.4% required drop means a z-score of about -0.24, or roughly 40%.\n\n(d) Evidence:\n- For Yes:\n  - The downtrend is relentless: down 29% since Oct 28, and 13 of the last 16 sessions closed lower.\n  - Bitcoin is at about $64k, below Strategy's average cost of about $75.5k, and is still falling.\n  - The mNAV is about 0.9x, so issuing stock now dilutes holders and the funding engine stalls. Bitcoin purchases already slowed to 485 BTC per the Nov 16 8-K.\n  - MSCI deletion selling of about $2 to 3B may be front-run before the Nov 30 effective date.\n  - Intraday on Nov 16 the stock already touched $101.70.\n- For No:\n  - Most index-deletion selling usually happens at the Nov 30 close, after resolution.\n  - The stock is heavily oversold, and sharp relief rallies in MSTR and bitcoin are common.\n  - With mNAV below 1, Strategy could support the stock, for example with buybacks.\n  - The thin Thanksgiving session slightly reduces volatility on the final day.\n\n(e) Scenarios:\n- No: bitcoin stabilizes around $65 to 70k, short covering lifts MSTR back to $105 to 115, and it closes the holiday-shortened session above $100.\n- Yes: bitcoin slips toward $60k, arbitrageurs and passive funds sell ahead of Nov 30, the Nov 23 8-K shows dilutive at-the-market sales, and MSTR breaks $100 and closes at around $92.\n\n(f) I start at about 41% from the base rate. I add a few points for the downtrend and the MSCI front-running pressure, which the empirical distribution ignores. I hold back from going higher because most of the forced selling lands on Nov 30, after resolution, and oversold bounces are frequent. There is no matching prediction market to anchor on. Final: about 45%.\n\nProbability: 45%"
+    },
+    {
+      "value": 0.46,
+      "reasoning": "(a) The outcome is known at the 1:00 p.m. ET close on Friday, November 27, 2026, about 8 trading sessions from now. YES requires Yahoo's \"Close\" for MSTR on that date to be strictly below $100.00.\n\n(b) Status quo: MSTR trades around $103.4 to $103.7 midday on Nov 16. If that held, the answer would be NO, but the cushion is only about 3.5%. That is well under one day's typical move.\n\n(c) Base rate: the empirical distribution of 8-session returns, anchored at $103.40, puts the median at $103.0 and p25 at $94.46. That implies roughly 40 to 43% below $100. As a cross-check, with daily volatility near 5%, an 8-session sigma of about 14% and a needed move of about -3.4%, z is about -0.24, which gives about 40%. Base rate: about 41%.\n\n(d) Evidence:\n- **For YES:**\n  - The trend is persistently down: -29% since Oct 28, with 13 of the last 16 sessions closing lower.\n  - On Nov 16 the stock fell about 7% while bitcoin traded near $64k, below Strategy's roughly $75.5k cost basis.\n  - Strategy's bitcoin buying is slowing: 485 BTC in the Nov 16 8-K, down from 1,036 the week before.\n  - mNAV is about 0.9x (reported Nov 15), which weakens the company's funding model.\n  - MSCI deletion takes effect Nov 30. Some of the $1.5 to 3B of passive selling may be front-run before Nov 27.\n  - The Nov 23 8-K could weigh on sentiment.\n- **For NO:**\n  - The stock still sits above $100.\n  - Most index selling is concentrated at the Nov 30 close, after resolution.\n  - The deletion was announced Nov 11 and is largely priced in.\n  - Short-term momentum has weak predictive power, and mean-reversion bounces after steep drops are common.\n  - With mNAV below 1, value buyers or arbitrageurs may step in.\n  - Bitcoin could rebound, and the stock amplifies bitcoin's moves in both directions.\n\n(e) Scenarios:\n- **NO:** Bitcoin stabilizes around $65 to 68k, MSTR bounces on oversold conditions, and it drifts to $105 to 110 into a quiet holiday session.\n- **YES:** Bitcoin breaks below $62k toward its $57.7k low, passive funds pre-sell ahead of Nov 30, and MSTR closes in the $90s on Nov 27.\n\n(f) I start from about 41%. I add a few points for the bearish catalyst cluster: front-running of index flows, weakened financing and the downward drift. I do not go further, because momentum is a weak signal and the main index flow falls after resolution. Final estimate: about 46%.\n\nProbability: 46%"
+    },
+    {
+      "value": 0.47,
+      "reasoning": "(a) There are 8 trading sessions until the outcome is known, resolving at the 1:00 p.m. ET close on Friday Nov 27, 2026, about 11 days from now. For Yes, the Yahoo Finance \"Close\" for MSTR that day must be strictly below $100.00.\n\n(b) MSTR is trading around $103.5 intraday on Nov 16, down about 7% on the day. If nothing changed it would close above $100, so the status quo is No, though only narrowly: about 3.5% above the line.\n\n(c) Base rate: the empirical distribution of 8-session MSTR returns over 3 years, anchored at $103.40, puts the median at $103.0 and p25 at $94.5. That implies roughly 40-43% below $100. A simple volatility check gives a similar figure: with about 5% daily vol, 8-day sigma is about 14%. The threshold is about 0.24 sigma below spot, so roughly 40% with zero drift.\n\n(d) Evidence for Yes:\n- The downtrend is strong: down about 29% since Oct 28, with 13 of the last 16 sessions lower.\n- Bitcoin fell to about $64k on Nov 16, below Strategy's $75.5k average cost.\n- mNAV is about 0.9x (Nov 15), which breaks the company's ATM funding flywheel. Weekly BTC buying has slowed to 485 BTC (Nov 16 8-K).\n- MSCI deletion takes effect after the Nov 30 close, with $1.5-3B of forced selling estimated (Nov 11-12). Some of that may be front-run before Nov 27.\n\nEvidence for No:\n- Spot is still above $100.\n- Index selling usually concentrates at the effective-date close (Nov 30), after resolution, and the deletion has been known and partly priced in since Oct 16 and Nov 11.\n- Short-horizon momentum is weak as a predictor.\n- Oversold crypto names often bounce sharply, and bitcoin can rebound.\n- The light holiday session reduces the chance of a sharp final-day drop.\n\n(e) No scenario: bitcoin stabilizes in the $65-70k range, short covering lifts MSTR back to $105-115, and the heavy index selling waits for Nov 30.\n\nYes scenario: bitcoin breaks below its Nov 14 low of about $62k toward $58-60k. MSTR, at roughly 2-3x beta, falls into the low $90s, helped by pre-deletion selling and a weak Nov 23 8-K.\n\n(f) I start from about 41% (distribution-based) and move up about 5-6 points. The reasons are the known pre-deletion selling pressure in the window and the loss of the mNAV premium, which removes a support. I hold back from going higher because momentum is unreliable and the main index flow lands after the resolution date.\n\nProbability: 47%"
+    },
+    {
+      "value": 0.45,
+      "reasoning": "(a) There are about 8 trading sessions until the outcome is known, ending with the shortened session that closes at 1:00 p.m. ET on Nov 27. Yes requires MSTR's Yahoo \"Close\" for Nov 27, 2026 to be strictly below $100.00. That is roughly a 3.4% fall from the ~$103.5 intraday price on Nov 16.\n\n(b) If nothing changed, the stock would sit at about $103.5 and the question would resolve No. The margin is thin, though.\n\n(c) The base rate comes from the empirical distribution of 8-session returns over the last 3 years, anchored at $103.40. It puts p25 at $94.46 and the median at $103.00, which implies about 40-43% below $100. A lognormal check gives a similar answer: 8-day volatility is about 14%, and a 3.4% drop is a z-score of about -0.25, or roughly 40%. Base rate: about 41%.\n\n(d) Evidence:\n- **For Yes:**\n  - Strong downtrend, -29% since Oct 28, with 13 of 16 sessions lower.\n  - The MSCI deletion takes effect after the Nov 30 close, and front-running of the $1.5-3B in forced selling is likely before then.\n  - Bitcoin fell to about $64k on Nov 16, below Strategy's ~$75.5k cost basis.\n  - mNAV is about 0.9x (Nov 15), which breaks the at-the-market funding flywheel. Bitcoin buying slowed to 485 BTC (Nov 16 8-K).\n  - The intraday low on Nov 16 was $101.70, already close to the line.\n- **For No:**\n  - Short-horizon momentum is a weak predictor.\n  - Arbitrageurs who front-run index deletions often cover into the effective-date close, so stocks frequently bottom before the effective date.\n  - A sub-1x mNAV may attract value buyers, and a Saylor buyback or other support is possible.\n  - Bitcoin has already fallen 17% and could bounce.\n  - The thin holiday session on Nov 27 adds noise but not direction.\n\n(e) **No scenario:** Bitcoin stabilizes around $65-70k, MSCI selling is mostly absorbed at the Nov 30 close, and MSTR drifts in a $100-110 range, closing around $105 on Nov 27. **Yes scenario:** Bitcoin slides toward $60k over the week, front-running sellers and weak 8-K numbers on Nov 23 push MSTR into the $90s, and the stock closes around $95 on Nov 27.\n\n(f) I start at about 41% and move up modestly, by about 4 points, for the known pending selling pressure and the weakened financing story. I don't move further, because event-driven front-running is partly priced in already and momentum effects are weak. That gives about 45%.\n\nProbability: 45%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.464,
+  "usage": [
+    {
+      "question_id": "46852",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 20.4,
+      "notional_cost_usd": 7.180000000000001e-05,
+      "input_tokens": 503,
+      "output_tokens": 43,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 22.0,
+      "notional_cost_usd": 0.00028700000000000004,
+      "input_tokens": 1051,
+      "output_tokens": 154,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 49.7,
+      "notional_cost_usd": 0.20041,
+      "input_tokens": 33074,
+      "output_tokens": 3883,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 54.1,
+      "notional_cost_usd": 0.16765049999999998,
+      "input_tokens": 48018,
+      "output_tokens": 4061,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.6,
+      "notional_cost_usd": 0.117756,
+      "input_tokens": 12043,
+      "output_tokens": 1071,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.8,
+      "notional_cost_usd": 0.119648,
+      "input_tokens": 12042,
+      "output_tokens": 1166,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.0,
+      "notional_cost_usd": 0.121336,
+      "input_tokens": 12043,
+      "output_tokens": 1250,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 27.4,
+      "notional_cost_usd": 0.0284826,
+      "input_tokens": 12041,
+      "output_tokens": 1184,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.2,
+      "notional_cost_usd": 0.0287426,
+      "input_tokens": 12041,
+      "output_tokens": 1197,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.5,
+      "notional_cost_usd": 0.028006600000000003,
+      "input_tokens": 12044,
+      "output_tokens": 1159,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.00048120000000000004,
+      "input_tokens": 2172,
+      "output_tokens": 94,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.7,
+      "notional_cost_usd": 0.0004551,
+      "input_tokens": 2229,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.1,
+      "notional_cost_usd": 0.0005032999999999999,
+      "input_tokens": 2285,
+      "output_tokens": 93,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.00045850000000000003,
+      "input_tokens": 2246,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.0004952,
+      "input_tokens": 2237,
+      "output_tokens": 96,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.00045610000000000003,
+      "input_tokens": 2234,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.00013717,
+      "input_tokens": 2172,
+      "output_tokens": 104,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 9.484e-05,
+      "input_tokens": 2227,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 9.58e-05,
+      "input_tokens": 2285,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.7,
+      "notional_cost_usd": 0.00013262,
+      "input_tokens": 2248,
+      "output_tokens": 93,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 0.00012582,
+      "input_tokens": 2237,
+      "output_tokens": 80,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46852",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.0,
+      "notional_cost_usd": 9.49e-05,
+      "input_tokens": 2233,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8159
+}
