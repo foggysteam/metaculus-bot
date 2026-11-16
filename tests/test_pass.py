@@ -661,6 +661,29 @@ def test_metaculus_benchmark_data_and_results_stay_out_of_the_public_repo() -> N
     assert build_benchmark_dataset.community_yes({"aggregations": {"recency_weighted": {"latest": None}}}) is None
 
 
+def test_forward_test_hides_the_questions_own_community_prediction() -> None:
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import forward_benchmark as fw
+
+    text = "\n".join([
+        "- 2026-11-10: Metaculus community at 35%. [source](https://www.metaculus.com/questions/41234/some-slug/)",
+        "- Metaculus community prediction: Related -> [0.2] (https://www.metaculus.com/questions/412345/)",
+        "- 2026-11-12: on the community page https://www.metaculus.com/c/ai/41234/x",
+        "- 2026-11-13: an unrelated fact. [source](https://example.com/41234)",
+    ])
+    kept, n = fw.drop_own(text, 41234)
+    assert n == 2 and "412345" in kept and "example.com" in kept and "35%" not in kept
+    snapshot_post = {"group_of_questions": {"questions": [
+        {"id": 1, "status": "open", "scheduled_resolve_time": "2027-01-15T00:00:00Z"},
+        {"id": 2, "status": "open", "scheduled_resolve_time": "2027-03-01T00:00:00Z"},
+        {"id": 3, "status": "resolved", "scheduled_resolve_time": "2027-01-15T00:00:00Z"},
+    ]}}
+    assert fw.wanted_questions(snapshot_post) == [1]
+    out = fw.ROOT / "backtest" / "private" / "forward" / "fw1" / "questions" / "1.json"
+    import subprocess
+    assert subprocess.run(["git", "check-ignore", "-q", out.relative_to(ROOT).as_posix()], cwd=ROOT).returncode == 0
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for test in tests:
