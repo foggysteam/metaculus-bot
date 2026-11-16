@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T09:58:07.964798+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T09:52:00.812672+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46842,
+    "post_id": 46582,
+    "url": "https://www.metaculus.com/questions/46582",
+    "type": "DiscreteQuestion",
+    "unit": "deaths",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How many total 2026 measles-associated deaths will CDC's measles data page report as of November 26, 2026?",
+    "resolution_criteria": "This question resolves based on the number of measles-associated deaths reported for 2026 in the \"U.S. Deaths\" table of the CDC's \"Measles Cases and Outbreaks\" page — specifically the value in the \"Total Deaths\" row under the \"2026\" column — as that page appeared at 23:59 UTC on November 26, 2026 (https://www.cdc.gov/measles/data-research/index.html). The number displayed on the page at that time is the resolved value (for example, a displayed total of 8 resolves as 8). If the page layout has changed, the total number of 2026 measles-associated deaths stated anywhere on that page at that time applies. Figures published or revised after 23:59 UTC on November 26, 2026 do not count.",
+    "fine_print": "If the live page no longer shows the version that was in effect at 23:59 UTC on November 26, 2026, that version will be identified from its \"Updated on\" date or, failing that, from the Internet Archive capture of the page closest to that time. If the page or the figure is unavailable, CDC's reported total as described by [credible sources](https://www.metaculus.com/faq/#definitions) will be used.",
+    "close_time": "2026-11-16 12:38 UTC",
+    "scheduled_resolution_time": "2026-11-27 00:00 UTC"
+  },
+  "research": [
+    "I could not open the CDC page's underlying data file (raw fetch returned 403) or Internet Archive captures (rate-limited, 429). The page's figures were read through a summarising fetch.\n\n## 1. Resolution source\n- 2026-11-13: The CDC page says \"Updated November 13, 2026\", with data as of 12:00 PM Thursday, Nov 12. It shows 5,412 confirmed cases and **6 measles deaths**, with an asterisk saying the number is subject to change. It also says CDC is working with the Council of State and Territorial Epidemiologists (CSTE) on a standard case definition for measles deaths. My fetch did not show the 2026 and 2025 columns separately. [CDC](https://www.cdc.gov/measles/data-research/index.html)\n- Path of the 2026 figure (from the question background): 1 (Sept 24), 3 (data as of Oct 29), 4 (Nov 5), 6 (Nov 12). The page has been updated on Fridays (Oct 30, Nov 6, Nov 13). The next expected update is Fri Nov 20, with data as of Nov 19. The one after would be Fri Nov 27, after the resolution cutoff. That is my inference from the pattern: I could not find a published Thanksgiving schedule.\n\n## 2. Current status\n- Nothing settles the question yet. The page shows 6 now. State-reported deaths total 10: Pennsylvania 7, Wisconsin 2, New York 1. That leaves 4 deaths CDC has not counted.\n- 2026-11-12: Per Reuters, the federal count now uses verified National Center for Health Statistics (NCHS) mortality data under Department of Health and Human Services (HHS) procedures, not state health department figures. CDC did not say which states its 6 deaths are in. [KFGO/Reuters](https://kfgo.com/2026/11/12/us-cdc-confirms-six-measles-related-deaths-in-2026/)\n\n## 3. Recent news (newest first)\n- 2026-11-14/15: Several outlets report 10 US measles deaths, \"exceeding the provisional federal count of 6.\" [Al Jazeera](https://www.aljazeera.com/news/2026/11/14/measles-associated-deaths-reach-10-in-us-after-two-more-deaths-reported), [ABC](https://abcnews.com/Health/measles-cases-nationwide-top-5400-outbreaks-spread-us/story?id=138108176), [DW](https://www.dw.com/es/eeuu-registra-diez-muertes-por-sarampi%C3%B3n-y-m%C3%A1s-de-5400-casos-en-lo-que-va-de-2026/a-79950308)\n- 2026-11-15: KFF Health News reports that the Pan American Health Organization (PAHO) commission concluded measles is endemic in the US, with a public announcement planned for Nov 17. [Latin Times](https://www.latintimes.com/paho-revokes-us-measles-elimination-status-601372)\n- 2026-11-13: Pennsylvania reported its 7th death, an unvaccinated Montour County resident (1,542 state cases). Wisconsin reported its 2nd death, a child or infant. [The Hill](https://thehill.com/policy/healthcare/6220695-measles-cases-increase-pennsylvania-wisconsin/), [AOL](https://www.aol.com/articles/pennsylvania-reports-seventh-measles-linked-192132000.html)\n- 2026-11-12: Reuters says the CDC site lists 6 deaths, double 2025. [US News/Reuters](https://www.usnews.com/news/top-news/articles/2026-11-12/us-cdc-confirms-six-measles-related-deaths-in-2026)\n- 2026-11-05: Wisconsin announced its first death, an infant; the coroner listed measles as the cause. [WI DHS](https://www.dhs.wisconsin.gov/node/154446), [Wisconsin Examiner](https://wisconsinexaminer.com/?p=48799)\n- 2026-11-02: New York reported a child's death. [Al Jazeera](https://www.aljazeera.com/news/2026/11/14/measles-associated-deaths-reach-10-in-us-after-two-more-deaths-reported)\n- Nov 6-9: CDC listed 4 deaths against 8 reported by states. [Contagion Live](https://www.contagionlive.com/view/measles-update-november-6-2026)\n- Late Aug to Sept: Reuters reported that HHS Secretary Kennedy asked CDC Director Schwartz to remove two Pennsylvania (Lancaster County) deaths, and she did. Pennsylvania counts a death as \"measles-associated\" if it occurs within 30 days of symptom onset, unless an unrelated event caused it. The Lancaster coroner says it has no record of measles deaths. [The Hill](https://thehill.com/policy/healthcare/6063769-cdc-disputes-pennsylvania-measles-deaths/), [CNN](https://www.cnn.com/2026/09/01/health/cdc-measles-deaths), [FactCheck.org](https://www.factcheck.org/2026/08/what-we-know-about-pennsylvanias-two-measles-associated-deaths/), [NOTUS](https://www.notus.org/healthcare/rfk-cdc-scrubs-two-pennsylvania-measles-deaths-from-website)\n\n## 4. Base rates\n- CDC's count has risen in steps: +2 (Oct 29 data), +1 (Nov 5), +2 (Nov 12). Before that it stayed at 1-2 for weeks while Pennsylvania reported 4-6 deaths. That is about +5 over the last 3 weekly updates, with some weeks flat earlier.\n- The CDC count has trailed state counts by 2 to 4 deaths throughout. On Nov 5 it was 4 against 8; on Nov 12 it was 6 against 8 (10 by Nov 13).\n- Deaths announced by states on Nov 13 would normally miss the Nov 12 data cutoff. The Nov 19 cutoff is the first one that could include them, but past lags have been weeks long, and some Pennsylvania deaths have been disputed or held back.\n- Seasonality: there is no meaningful multi-year record for this 2026 page. The 2025 total was 3 deaths, and recent earlier years had 0 to 2. Measles is not strongly seasonal in late November.\n- Downward revisions have happened before: two deaths were removed in late August.\n\n## 5. Other forecasts\n- Manifold, \"Number of measles deaths reported by CDC in the US in 2026\": 0-10 at 90%, 11-25 at 6%. It resolves on the full-year figure no earlier than March 2027, so it is only loosely related. [Manifold](https://manifold.markets/JZB/number-of-measles-deaths-reported-b)\n- Kalshi and Polymarket: I found no market on deaths, only on cases. Kalshi puts 2026 cases above 7,000 at 0.78, and Polymarket puts 6,000+ cases by Nov 30 at 0.545.\n- I found no expert forecasts of the CDC death count.\n\n## 6. Upcoming events before resolution\n- 2026-11-17: PAHO's public announcement on US elimination status, which may raise pressure on how deaths are reported.\n- About 2026-11-20 (Fri): the likely last CDC update before the cutoff, with data as of Nov 19. It could add Wisconsin #2, Pennsylvania #7 or others not yet counted, depending on the NCHS and HHS review.\n- 2026-11-26 (Thanksgiving): an update on Wed Nov 25 or Thu Nov 26 is possible but unconfirmed. If the Friday pattern holds, the Nov 27 update falls after the cutoff.\n- Wildcards: new deaths reported by states (Pennsylvania's outbreak is ongoing, with 305 hospitalizations), the CDC/CSTE definition of a measles death being finalised, or further HHS intervention or reclassification.\n- Weather is not relevant.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 09:52 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 8000: 0.21; Above 7000: 0.78; Above 9000: 0.14; Above 10000: 0.06; Above 6000: 0.98; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900; Above 1000: 0.9900.\n- Kalshi: Will the US lose measles elimination status this year? (Before Jan 1, 2027). Yes prices: Yes: 0.9800.\n- Kalshi: Will CDC cut the childhood vaccine schedule below 11 diseases? (Before Jul 1, 2027). Yes prices: Before Jan 1, 2027: 0.35; Before Jul 1, 2027: 0.49.\n- Kalshi: Runner-Up Daily Music Video USA on YouTube: Nov 16, 2026 (Nov 16, 2026 Chart). Yes prices: All I Want for Christmas Is You (Make My Wish Come True Edition): 0.0000; Alma Rota: 0.0000; Choosin' Texas: 0.0000; Daddy Yankee en vivo Premio Latin GRAMMY 2026: 0.0000; Dai Dai: 0.0000; Future ft. Drake, Travis Scott & Loe Shimmy - Ya Hit (Official Music Video): 0.0000; Hong Kong: 0.0000; IDK & Eminem — WELCOME (Prd. By J Dilla) [Official Music Video]: 0.0000; Janice STFU: 0.0000; OK (Clean): 0.0000.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.59; At least 3500: 0.87; At least 4500: 0.80; At least 2500: 0.95; At least 2000: 0.97; At least 3000: 0.96; At least 4000: 0.88; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: Cyclosporiasis cases reported in the US this year? (2026). Yes prices: Above 34k: 0.57; Above 36k: 0.20; Above 40k: 0.05; Above 38k: 0.06; Above 44k: 0.1200; Above 42k: 0.1300; Above 20k: 0.9200; Above 14k: 0.9900; Above 18k: 0.9600; Above 10k: 0.9800.\n- Polymarket: Measles cases in U.S. in 2026? (ends 2027-01-01). [Yes, No] prices: ↑3.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑500: [\"1\", \"0\"]; ↑1k: [\"1\", \"0\"]; ↑2k: [\"1\", \"0\"]\n- Polymarket: Measles cases in U.S. by November 30? (ends 2026-12-01). [Yes, No] prices: 4600+: [\"1\", \"0\"]; 4800+: [\"1\", \"0\"]; 5000+: [\"1\", \"0\"]; 6000+: [\"0.545\", \"0.455\"]; 5600+: [\"0.973\", \"0.027\"]; 5800+: [\"0.96\", \"0.04\"]\n- Manifold: Number of measles deaths reported by CDC in the US in 2026? (MULTIPLE_CHOICE) https://manifold.markets/JZB/number-of-measles-deaths-reported-b\n- Manifold: Total number of deaths attributed to measles in the US in 2027 (MULTIPLE_CHOICE) https://manifold.markets/JZB/total-number-of-deaths-attributed-t",
+    "## Research summary: CDC's reported 2026 measles deaths as of Nov 26, 2026\n\n**Bottom line:** CDC's page currently shows 6 deaths for 2026. State health departments have reported 10. The 4-death gap comes from a federal review and classification dispute that is still running. CDC's count has gone 1 → 2 → 3 → 4 → 6 between Sept 23 and Nov 12.\n\n### 1. Resolution source\n- 2026-11-16: I could not read the CDC page directly (it returned HTTP 403), and the Internet Archive timed out. So I could not confirm the live figure or its \"Updated on\" date myself. [CDC](https://www.cdc.gov/measles/data-research/index.html)\n- 2026-11-13: Contagion Live reports the CDC page, dated Nov 13 with data as of Nov 12, showing **6 deaths in 2026** against 3 for 2025, with the note that the figure \"may change as additional reviews are completed.\" [Contagion Live](https://www.contagionlive.com/view/measles-update-november-13-2026)\n- 2026-11-12: Reuters (via US News and Star-Advertiser) also says CDC confirmed 6 deaths. CDC did not say which states they were in. [US News](https://www.usnews.com/news/top-news/articles/2026-11-12/us-cdc-confirms-six-measles-related-deaths-in-2026), [Star-Advertiser](https://www.staradvertiser.com/2026/11/12/breaking-news/cdc-confirms-6-measles-related-deaths-in-2026/)\n\n### 2. Current status\n- Nothing settles the question yet. The latest known CDC value is 6. State-reported deaths total **10**: Pennsylvania 7, Wisconsin 2, New York 1. [ABC News](https://abcnews.com/Health/measles-cases-nationwide-top-5400-outbreaks-spread-us/story?id=138108176)\n- At least two state-reported deaths, Pennsylvania's 7th and Wisconsin's 2nd (both announced Nov 13), came after CDC's Nov 12 data cutoff and could appear in the next refresh. I found nothing confirming which of the other 8 state-reported deaths CDC already counts.\n\n### 3. Recent news (newest first)\n- 2026-11-15/17: KFF Health News reports that PAHO's commission has concluded measles is endemic in the US, with an announcement scheduled for Nov 17. This affects elimination status, not death counts directly. [Latin Times](https://www.latintimes.com/paho-revokes-us-measles-elimination-status-601372)\n- 2026-11-14: Al Jazeera puts the state-reported total at 10 for 2026 (13 since last year). It says Kennedy asked CDC Director Erica Schwartz not to count some deaths. CDC is working with the Council of State and Territorial Epidemiologists (CSTE) on a standard definition of a measles death. Pennsylvania counts a death if a confirmed case dies within 30 days of symptom onset. [Al Jazeera](https://www.aljazeera.com/news/2026/11/14/measles-associated-deaths-reach-10-in-us-after-two-more-deaths-reported)\n- 2026-11-13: Pennsylvania reports its 7th death (an unvaccinated Montour County resident) and Wisconsin its 2nd pediatric death. [AOL](https://www.aol.com/articles/pennsylvania-reports-seventh-measles-linked-192132000.html)\n- 2026-11-02 to 11-05: New York, Pennsylvania and Wisconsin each announce a death. [Contagion Live](https://www.contagionlive.com/view/measles-update-november-13-2026)\n- Search summaries say CDC switched from state health department reports to National Center for Health Statistics mortality data for counting deaths. I could not confirm this in a primary source.\n- 2026-09 (around Sept 4-20): Reuters, citing three unnamed sources, reported that Kennedy asked for Pennsylvania deaths to be removed from the CDC tally and that Schwartz complied. CDC asked for records containing personally identifiable information, which Pennsylvania says it is legally barred from sharing. [Daily Mirror/Reuters](https://www.dailymirror.lk/breaking-news/Kennedy-asked-to-remove-Pennsylvania-measles-death-from-CDC-tally--sources-say/108-349366), [Mediaite](https://mediaite.com/media/news/cdc-chief-excludes-pa-measles-deaths-against-states-own-health-dept-assessment-after-rfk-casts-doubt)\n\n### 4. Base rates and trend\nHow CDC's 2026 count has moved:\n- 2026-09-23: 1. [Washington Post](https://www.washingtonpost.com/health/2026/09/23/cdc-updates-measles-death-toll-one-despite-pennsylvanias-higher-tally/)\n- 2026-09-30: 2, while Pennsylvania had reported 4. [6abc](https://6abc.com/post/cdc-updates-measles-death-toll-2-2026/19891630/)\n- around 2026-10-20: 3. [Al Jazeera](https://www.aljazeera.com/news/2026/10/20/cdc-reports-third-measles-death-in-the-united-states-this-year)\n- 2026-11-05: 4\n- 2026-11-12: 6\n\nPattern:\n- That is +5 in about 7 weekly refreshes. The count rose at 4 of the roughly 7 refreshes, by +1 or +2 each time, and has never gone down.\n- CDC has lagged the state tally by about 2 to 4 deaths throughout.\n- In a 2-week window like the one to resolution, past changes have been 0 to +2.\n\nSeasonality and past years:\n- Death counts are not really seasonal. Changes here are driven by when reviews finish.\n- In earlier years (2019 to 2024: 0 to 2 deaths a year; 2025: 3 deaths) the CDC total barely moved between mid- and late November.\n- This year is far above any recent year.\n\n### 5. Other forecasts\n- Manifold, \"Number of measles deaths reported by CDC in the US in 2026\": 0-10 deaths at 90%, 11-25 at 6%. This is a year-end market that will not resolve before March 1, 2027, so it only loosely relates to the Nov 26 snapshot. [Manifold](https://manifold.markets/JZB/number-of-measles-deaths-reported-b)\n- Kalshi and Polymarket have markets on case counts (for example, Kalshi gives \"above 7,000 cases in 2026\" 0.78) and elimination status (0.98 Yes). I found no market on CDC death counts.\n\n### 6. Upcoming events before resolution\n- **Around Nov 19-20:** the next weekly CDC refresh (data as of Thursday Nov 19). This is likely the last update before resolution if the Thanksgiving-week refresh is moved earlier or skipped. I could not confirm CDC's holiday schedule. Thanksgiving is Nov 26, so a refresh around Nov 25 is possible but uncertain.\n- **Nov 17:** expected PAHO announcement on US elimination status. This could increase pressure on CDC's reporting.\n- **Pending:** CDC/CSTE work on a standard measles death definition, plus ongoing CDC reviews of Pennsylvania and Wisconsin deaths. Either could raise the count, or reclassification could lower it.\n- New state-announced deaths are also possible. Pennsylvania announced its 6th and 7th within about 10 days.\n- The weather is not relevant to this question.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 09:52 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 8000: 0.21; Above 7000: 0.78; Above 9000: 0.14; Above 10000: 0.06; Above 6000: 0.98; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900; Above 1000: 0.9900.\n- Kalshi: Will the US lose measles elimination status this year? (Before Jan 1, 2027). Yes prices: Yes: 0.9800.\n- Kalshi: Will CDC cut the childhood vaccine schedule below 11 diseases? (Before Jul 1, 2027). Yes prices: Before Jan 1, 2027: 0.35; Before Jul 1, 2027: 0.49.\n- Kalshi: Runner-Up Daily Music Video USA on YouTube: Nov 16, 2026 (Nov 16, 2026 Chart). Yes prices: All I Want for Christmas Is You (Make My Wish Come True Edition): 0.0000; Alma Rota: 0.0000; Choosin' Texas: 0.0000; Daddy Yankee en vivo Premio Latin GRAMMY 2026: 0.0000; Dai Dai: 0.0000; Future ft. Drake, Travis Scott & Loe Shimmy - Ya Hit (Official Music Video): 0.0000; Hong Kong: 0.0000; IDK & Eminem — WELCOME (Prd. By J Dilla) [Official Music Video]: 0.0000; Janice STFU: 0.0000; OK (Clean): 0.0000.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.59; At least 3500: 0.87; At least 4500: 0.80; At least 2500: 0.95; At least 2000: 0.97; At least 3000: 0.96; At least 4000: 0.88; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: Cyclosporiasis cases reported in the US this year? (2026). Yes prices: Above 34k: 0.57; Above 36k: 0.20; Above 40k: 0.05; Above 38k: 0.06; Above 44k: 0.1200; Above 42k: 0.1300; Above 20k: 0.9200; Above 14k: 0.9900; Above 18k: 0.9600; Above 10k: 0.9800.\n- Polymarket: Measles cases in U.S. in 2026? (ends 2027-01-01). [Yes, No] prices: ↑3.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑500: [\"1\", \"0\"]; ↑1k: [\"1\", \"0\"]; ↑2k: [\"1\", \"0\"]\n- Polymarket: Measles cases in U.S. by November 30? (ends 2026-12-01). [Yes, No] prices: 4600+: [\"1\", \"0\"]; 4800+: [\"1\", \"0\"]; 5000+: [\"1\", \"0\"]; 6000+: [\"0.545\", \"0.455\"]; 5600+: [\"0.973\", \"0.027\"]; 5800+: [\"0.96\", \"0.04\"]\n- Manifold: Number of measles deaths reported by CDC in the US in 2026? (MULTIPLE_CHOICE) https://manifold.markets/JZB/number-of-measles-deaths-reported-b\n- Manifold: Total number of deaths attributed to measles in the US in 2027 (MULTIPLE_CHOICE) https://manifold.markets/JZB/total-number-of-deaths-attributed-t"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 6.0,
+        "p25": 6.25,
+        "p50": 7.1,
+        "p75": 8.2,
+        "p90": 9.2
+      },
+      "reasoning": "(a) **Time left:** about 10.5 days. Resolution uses the page as it stands at 23:59 UTC on Nov 26. That most likely means one more refresh (around Fri Nov 20, data as of Nov 19). A pre-Thanksgiving refresh on Nov 25 or 26 is possible but unconfirmed.\n\n(b) **Latest known value:** 6 deaths for 2026, on the CDC page updated Nov 13, 2026 (data as of Nov 12).\n\n(c) **If nothing changed:** 6.\n\n(d) **If the trend continued:** CDC's count rose by 2, 1 and 2 over the last three weekly updates. States report 10 deaths against CDC's 6, so CDC has a backlog of 4 (PA #7, WI #2 and others). One or two more updates suggests about 7 to 8.\n\n(e) **Historical variation:** Before late October the figure sat flat for weeks. More recently it has moved 1 to 2 per weekly update. In late August it was revised down by 2 under HHS intervention. Over one or two updates, a change of 0 to 3 is typical. Larger jumps would need several pending reviews to clear at once.\n\n(f) **Experts and markets:** No market targets this exact date. Manifold's full-year market puts 0 to 10 at 90%, which is consistent with a modest rise. The question creator's range is 4 to 12. State and media tallies of 10 (CIDRAP said at least 8 earlier) set a soft ceiling unless new deaths occur.\n\n(g) **Unexpected scenarios:**\n- Low: HHS or NCHS review reclassifies one or two deaths, as with the Lancaster removals, or the CDC/CSTE case definition tightens. The count could fall to 4 or 5.\n- High: CDC adopts the CSTE definition and clears the whole state backlog. Two refreshes land before Thanksgiving, and Pennsylvania reports new deaths. The count could reach 10 to 12.\n\nPercentile 1: 4.5\nPercentile 5: 5.8\nPercentile 10: 6\nPercentile 20: 6.1\nPercentile 30: 6.4\nPercentile 40: 6.8\nPercentile 50: 7.1\nPercentile 60: 7.5\nPercentile 70: 8\nPercentile 80: 8.4\nPercentile 90: 9.2\nPercentile 95: 10\nPercentile 99: 12"
+    },
+    {
+      "value": {
+        "p10": 6.0,
+        "p25": 6.1,
+        "p50": 7.0,
+        "p75": 8.0,
+        "p90": 9.0
+      },
+      "reasoning": "(a) **Time left:** About 10.5 days, until 23:59 UTC on November 26, 2026. Probably only one more CDC refresh falls in the window: around Friday November 20, with data as of November 19. A second, pre-Thanksgiving update on November 25 or 26 is possible but unconfirmed.\n\n(b) **Latest value:** 6 deaths in 2026, from the CDC page updated November 13, 2026, with data as of November 12.\n\n(c) **If nothing changes:** 6.\n\n(d) **If the trend continues:** The CDC count has risen +2, +1 and +2 over the last three weekly updates. States now report 10 deaths: Pennsylvania 7, Wisconsin 2, New York 1. That leaves a backlog of 4 not yet counted by CDC. One to two more updates at the recent pace would give about 7 to 9. However, CDC now relies on verified NCHS mortality data, which lags state announcements, and some Pennsylvania deaths have been disputed or removed in the past.\n\n(e) **Historical variation:** Over a span of one to two updates, the count has moved by 0 to +2 per update. It sat flat for weeks earlier in the year. There was one downward revision of -2 in late August, after HHS intervention.\n\n(f) **Experts and markets:** There is no market on this specific date. Manifold's full-year market puts 90% on 0 to 10 deaths, which loosely fits. The question creator's range is 4 to 12.\n\n(g) **Unexpected scenarios:**\n- Low: HHS or CDC reclassifies deaths under a new CDC/CSTE death definition, or removes disputed Pennsylvania deaths again, dropping the count to 4 or 5.\n- High: CDC clears the full state backlog of 10, plus new deaths from the ongoing Pennsylvania and Wisconsin outbreaks, and posts a pre-Thanksgiving update, reaching 11 or 12.\n\nPercentile 1: 4\nPercentile 5: 5.5\nPercentile 10: 6\nPercentile 20: 6\nPercentile 30: 6.2\nPercentile 40: 6.8\nPercentile 50: 7\nPercentile 60: 7.3\nPercentile 70: 8\nPercentile 80: 8\nPercentile 90: 9\nPercentile 95: 10\nPercentile 99: 12"
+    },
+    {
+      "value": {
+        "p10": 6.0,
+        "p25": 6.0,
+        "p50": 7.0,
+        "p75": 7.9,
+        "p90": 9.0
+      },
+      "reasoning": "(a) About 10.5 days remain until the outcome is known. Resolution uses the page as it stood at 23:59 UTC on Nov 26, 2026. Most likely only one more refresh lands before then, around Fri Nov 20 with data as of Nov 19. A Wed Nov 25 refresh before Thanksgiving is possible but unconfirmed.\n\n(b) The latest value is 6 deaths, from the page updated Nov 13, 2026, with data as of Nov 12.\n\n(c) If nothing changed, the answer is 6.\n\n(d) If the trend continued, the answer would be about 7 to 8. Recent weekly increments were +2, +1 and +2, so one or two more refreshes would add roughly 1 to 3.\n- States report 10 deaths, so 4 are not yet counted by CDC.\n- CDC now relies on verified NCHS data, which lags state reports, and some Pennsylvania deaths are disputed.\n\n(e) Over the last three updates the count moved +1 to +2 per week. Earlier it sat flat for weeks while states reported more deaths. There was one downward revision of -2 in late August. Over 1 to 2 updates, a typical move is 0 to +3.\n\n(f) There are no markets or expert forecasts that match this question. Manifold's full-year market puts 90% on 0-10 deaths. The question creator's range is 4 to 12.\n\n(g) Two unexpected scenarios:\n- Low: HHS or CDC reclassifies deaths under a new CSTE death definition, or removes disputed Pennsylvania deaths again, and the count drops to 4 or 5.\n- High: two refreshes happen before Thanksgiving, NCHS verification clears the backlog of state deaths, and new deaths occur in the ongoing Pennsylvania and Wisconsin outbreaks, taking the count to 11 or 12.\n\nMy rough probabilities by outcome:\n\n| Outcome | Probability |\n|---|---|\n| Stays at 6 | about 38% |\n| 7 | about 22% |\n| 8 | about 18% |\n| 9 | about 10% |\n| 10 or more | about 8% |\n| Below 6 | about 3% |\n\nPercentile 1: 4\nPercentile 5: 5.5\nPercentile 10: 6\nPercentile 20: 6\nPercentile 30: 6\nPercentile 40: 6.4\nPercentile 50: 7\nPercentile 60: 7\nPercentile 70: 7.8\nPercentile 80: 8\nPercentile 90: 9\nPercentile 95: 10\nPercentile 99: 12"
+    },
+    {
+      "value": {
+        "p10": 5.9,
+        "p25": 6.25,
+        "p50": 7.1,
+        "p75": 8.15,
+        "p90": 9.1
+      },
+      "reasoning": "(a) **Time left:** About 10.5 days, to 23:59 UTC on November 26, 2026. There are probably one or two CDC refreshes before then: data as of November 19, and possibly a Thanksgiving-week update around November 24 to 25 that could be moved or skipped.\n\n(b) **Latest known value:** 6 deaths for 2026, on the CDC page dated November 13 with data as of November 12, 2026.\n\n(c) **If nothing changed:** 6.\n\n(d) **If the trend continued:** CDC added +5 over about 7 weekly refreshes, about +0.7 per week, rising at 4 of those 7 refreshes. Two state-reported deaths, Pennsylvania's 7th and Wisconsin's 2nd, were announced after the November 12 cutoff. States have reported 10 in total, so there is a backlog of 4. That points to about 7 to 8.\n\n(e) **Historical variation:** Over two-week windows this fall, CDC changes have ranged from 0 to +2 and have never gone down. The holiday could reduce the number of refreshes to one.\n\n(f) **Experts and markets:** There is no direct market on this snapshot. The year-end Manifold market puts about 90% on 0 to 10 deaths. The state tally of 10 is a practical ceiling unless new deaths occur. A political and classification dispute between Kennedy, CDC and Pennsylvania is holding the CDC count below the state count, but CDC has kept adding deaths anyway.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** The CDC/CSTE standard definition, or Kennedy's push, leads to reclassification and removal of one or two deaths, giving 4 to 5. Alternatively, there is no refresh before Thanksgiving, giving 6.\n- **High outcome:** Under pressure after PAHO revokes US elimination status, CDC accepts Pennsylvania's 30-day definition and clears its review backlog. Together with new deaths, that could push the count to 10 to 12.\n\nPercentile 1: 4.5\nPercentile 5: 5.6\nPercentile 10: 5.9\nPercentile 20: 6.1\nPercentile 30: 6.4\nPercentile 40: 6.8\nPercentile 50: 7.1\nPercentile 60: 7.4\nPercentile 70: 7.9\nPercentile 80: 8.4\nPercentile 90: 9.1\nPercentile 95: 9.9\nPercentile 99: 11.8"
+    },
+    {
+      "value": {
+        "p10": 6.0,
+        "p25": 6.3,
+        "p50": 7.0,
+        "p75": 8.0,
+        "p90": 9.0
+      },
+      "reasoning": "(a) About 10.5 days remain, from Nov 16 to 23:59 UTC Nov 26. Probably one CDC refresh is left (data as of Nov 19), and possibly a second around Nov 25 if the Thanksgiving-week update runs early.\n\n(b) The latest known value is 6 deaths for 2026, from the page updated Nov 13 with data as of Nov 12.\n\n(c) If nothing changed, the answer is 6.\n\n(d) If the trend continued, the answer is about 7 to 8. The count has risen +5 over about 7 refreshes, roughly +0.7 per week, with recent acceleration (+1, then +2). Two state-reported deaths, Pennsylvania's 7th and Wisconsin's 2nd, came after the Nov 12 cutoff. The state tally is 10, so 4 deaths are not yet counted by CDC.\n\n(e) Over a 1 to 2 refresh window, past changes have ranged from 0 to +2. The count has never been revised downward.\n\n(f) There is no market on this snapshot. The Manifold year-end market puts 90% on 0 to 10 deaths. The question creator expects a range of 4 to 12. State and CIDRAP tallies (8 to 10) suggest more upside as reviews finish. However, political pressure, Kennedy's push to exclude some deaths and the change in death definitions slow how fast CDC adds them.\n\n(g) Two scenarios fall outside the expected range:\n- **Low:** CDC adopts a stricter CSTE or NCHS-based definition and reclassifies one or two deaths downward, giving 4 to 5. Alternatively, no refresh adds deaths, leaving it at 6.\n- **High:** Under pressure after PAHO's revocation of US elimination status, CDC completes its reviews and accepts all of Pennsylvania's deaths. Combined with new deaths reported before Nov 19, this could push the count to 10 to 12.\n\nPercentile 1: 5\nPercentile 5: 5.8\nPercentile 10: 6\nPercentile 20: 6.2\nPercentile 30: 6.4\nPercentile 40: 6.8\nPercentile 50: 7\nPercentile 60: 7.3\nPercentile 70: 7.8\nPercentile 80: 8.2\nPercentile 90: 9\nPercentile 95: 10\nPercentile 99: 12"
+    },
+    {
+      "value": {
+        "p10": 6.0,
+        "p25": 6.35,
+        "p50": 7.0,
+        "p75": 7.95,
+        "p90": 9.0
+      },
+      "reasoning": "(a) **Time left:** About 10.5 days until the snapshot at 23:59 UTC on November 26, 2026. Probably one more CDC refresh lands before then (data as of November 19). A second, Thanksgiving-week refresh is possible but uncertain.\n\n(b) **Latest known value:** 6 deaths, from the CDC page dated November 13, 2026 (data as of November 12).\n\n(c) **If nothing changed:** 6.\n\n(d) **If the trend continued:** The count has risen by about +0.7 per weekly refresh, moving at 4 of roughly 7 refreshes, by +1 or +2 each time. One or two more refreshes suggests about 7, possibly 8. Two deaths announced by states on November 13 (Pennsylvania's 7th and Wisconsin's 2nd) fall after the CDC cutoff and are candidates for inclusion. CDC's count is 4 below the state total of 10.\n\n(e) **Historical variation:** Over 2-week windows this fall, changes have ranged from 0 to +2. The count has never gone down. A disputed review process (the Kennedy and Pennsylvania exclusions, and the definition work with the Council of State and Territorial Epidemiologists) holds the count down but could also release several deaths at once.\n\n(f) **Experts and markets:** No market targets this snapshot. Manifold's year-end market puts 0-10 deaths at 90%. The question creator's range is 4 to 12. State tallies (10) act as a soft ceiling unless several reviews are cleared together or new deaths occur.\n\n(g) **Unexpected scenarios:**\n- *Low:* CDC adopts a stricter death definition, or bows to pressure to reclassify, and revises down to 4 or 5.\n- *High:* A standard definition is finalized and CDC accepts the Pennsylvania deaths it has been withholding, plus new deaths, pushing the total to 10 to 12.\n\nPercentile 1: 5\nPercentile 5: 5.8\nPercentile 10: 6\nPercentile 20: 6.2\nPercentile 30: 6.5\nPercentile 40: 6.8\nPercentile 50: 7\nPercentile 60: 7.3\nPercentile 70: 7.7\nPercentile 80: 8.2\nPercentile 90: 9\nPercentile 95: 10\nPercentile 99: 12"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 5.6925,
+    "p25": 6.2298,
+    "p50": 7.0692,
+    "p75": 8.0839,
+    "p90": 9.2537
+  },
+  "usage": [
+    {
+      "question_id": "46842",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 6.97e-05,
+      "input_tokens": 507,
+      "output_tokens": 38,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00023459999999999998,
+      "input_tokens": 1019,
+      "output_tokens": 62,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 173.8,
+      "notional_cost_usd": 0.3635034,
+      "input_tokens": 162722,
+      "output_tokens": 5352,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.0,
+      "notional_cost_usd": 0.075928,
+      "input_tokens": 6527,
+      "output_tokens": 1186,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.07784,
+      "input_tokens": 6526,
+      "output_tokens": 1282,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0007779,
+      "input_tokens": 2723,
+      "output_tokens": 467,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.1,
+      "notional_cost_usd": 0.0007976000000000001,
+      "input_tokens": 2699,
+      "output_tokens": 516,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.00036218,
+      "input_tokens": 2723,
+      "output_tokens": 543,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.0,
+      "notional_cost_usd": 0.0262032,
+      "input_tokens": 6527,
+      "output_tokens": 1124,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.6,
+      "notional_cost_usd": 0.00021273,
+      "input_tokens": 2697,
+      "output_tokens": 245,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.000814,
+      "input_tokens": 2771,
+      "output_tokens": 520,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00026766,
+      "input_tokens": 2771,
+      "output_tokens": 353,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 149.7,
+      "notional_cost_usd": 0.21688499999999997,
+      "input_tokens": 82153,
+      "output_tokens": 4633,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.3,
+      "notional_cost_usd": 0.073052,
+      "input_tokens": 6370,
+      "output_tokens": 1105,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.3,
+      "notional_cost_usd": 0.07336,
+      "input_tokens": 6371,
+      "output_tokens": 1120,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.6,
+      "notional_cost_usd": 0.075564,
+      "input_tokens": 6369,
+      "output_tokens": 1231,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0006661,
+      "input_tokens": 2704,
+      "output_tokens": 251,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0006645,
+      "input_tokens": 2696,
+      "output_tokens": 251,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0007326,
+      "input_tokens": 2744,
+      "output_tokens": 368,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00027168,
+      "input_tokens": 2704,
+      "output_tokens": 362,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00021612999999999998,
+      "input_tokens": 2699,
+      "output_tokens": 251,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46842",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0002701,
+      "input_tokens": 2746,
+      "output_tokens": 358,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9887
+}
