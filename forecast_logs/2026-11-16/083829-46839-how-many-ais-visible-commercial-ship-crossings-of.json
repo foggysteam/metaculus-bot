@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T08:41:14.872216+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T08:38:29.969932+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46839,
+    "post_id": 46579,
+    "url": "https://www.metaculus.com/questions/46579",
+    "type": "DiscreteQuestion",
+    "unit": "crossings",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How many AIS-visible commercial ship crossings of the Strait of Hormuz will hormuz.now record for 26 November 2026?",
+    "resolution_criteria": "This question resolves to the number displayed as the headline 'commercial crossings' count on hormuz.now's daily archive page for 26 November 2026, https://hormuz.now/traffic/2026-11-26 (the same daily totals are listed at https://hormuz.now/data). The snapshot is the value shown on that page at 2026-11-27 12:00 UTC; any later revision of the figure is ignored. That archive page is authoritative: where it disagrees with hormuz.now's news page, status page or daily briefing email — which have at times reported different numbers for the same day — the archive page governs. For example, if the page shows '6 commercial crossings', the question resolves to 6. If the page is not yet showing a complete-day figure at the snapshot time, the first complete-day figure subsequently shown on that page is used (and later revisions still ignored). If hormuz.now publishes no count for 26 November 2026 at all, the question is annulled.",
+    "fine_print": "The counted figure is hormuz.now's own AIS-based 'commercial crossings' total — AIS-visible commercial ships (cargo ships and tankers of 80 m or more) crossing its counting line, counted once per direction — as defined at https://hormuz.now/methodology. Small-craft crossings are excluded, and the inbound/outbound and tanker sub-figures are not used. Only crossings occurring between 00:00 and 23:59 UTC on 26 November 2026 count. A figure presented as an in-progress count for the day (e.g. 'so far today') is not a complete-day figure.",
+    "close_time": "2026-11-16 11:29 UTC",
+    "scheduled_resolution_time": "2026-11-27 12:00 UTC"
+  },
+  "research": [
+    "I haven't made a forecast, only gathered the facts. **Main point:** nothing settles the question yet. hormuz.now's live series started on 19 Oct and has stayed between 4 and 13 complete-day crossings a day. Some numbers in the question's background no longer match the archive. 11 Nov now reads **13** on its archive page, not 4. The table that had \"4 (11 Nov), 6 (12 Nov)\" looks like 10 Nov and 12 Nov.\n\n## 1. Resolution source\n- 2026-11-16: The page for 26 Nov doesn't exist yet. hormuz.now's daily CSV (/api/daily.csv, one row per UTC day since 19 Oct 2026) lists these complete days: 9 Nov **6**, 10 Nov **4**, 11 Nov **13**, 12 Nov **6**, 13 Nov **5**, 14 Nov **6**, 15 Nov **6**. 16 Nov is partial: 3 crossings by 08:38 UTC. [CSV](https://hormuz.now/api/daily.csv)\n- 2026-11-15: The archive page title reads \"15 November 2026: 6 Ship Crossings\". It also lists 8 small-craft crossings, which don't count. [page](https://hormuz.now/traffic/2026-11-15)\n- 2026-11-11: The archive page now reads \"13 Ship Crossings\", not the 4 given in the background. 10 Nov reads 4. So either the background mixed up dates or the archive figures get revised later. That matters because the question fixes the 27 Nov 12:00 UTC snapshot. [11 Nov](https://hormuz.now/traffic/2026-11-11), [10 Nov](https://hormuz.now/traffic/2026-11-10)\n- 2026-11-16: status.json shows a 7-day average of 6.7 (about 7.9% of normal), 6 crossings in the last 24 hours, and a \"live\" feed. PortWatch data runs only to 8 Nov (3 that day, 7-day average 3.9). [status.json](https://hormuz.now/status.json)\n\n## 2. Current status\n- Nothing has happened that settles or nearly settles the result. 26 Nov is 10 days away.\n- hormuz.now's status reads \"Restricted, severely restricted\" and hasn't changed since 19 Oct. [news](https://hormuz.now/news)\n\n## 3. Recent news (newest first)\n- 2026-11-15/16: The IRGC (Iran's Revolutionary Guard) says three tankers hit mines on 14-15 Nov. It says two sank, and that they were running with AIS off on unauthorised routes. I haven't confirmed the sinkings independently. [newtalk](https://newtalk.tw/news/view/2026-11-16/1071356), [noticiasaominuto](https://www.noticiasaominuto.com/mundo/3084515/dois-petroleiros-afundam-se-no-estreito-de-ormuz-diz-irao)\n- 2026-11-15: UKMTO (the UK's maritime trade reporting agency), citing Indian authorities, reports a tanker attacked heading eastbound just before the strait. The crew is safe. [india.com](https://www.india.com/news/world/tanker-attacked-in-arabian-gulf-near-strait-of-hormuz-all-crew-safe-indian-shipping-authorities-report-to-ukmto-8545186/)\n- 2026-11-13: Windward counted 9 transits, all AIS-dark. Iran's blacklist stands at 240 ships. Kpler puts oil flows at about 8.3m barrels a day, around 48% of pre-war. The UN Security Council met with no deal. [hormuz.now news](https://hormuz.now/news)\n- 2026-11-12: JMIC Update 113 keeps the threat level at SEVERE. It reports US Navy figures of about 34 US-assisted transits a day over 8-11 Nov, mostly invisible on AIS. Trump said \"We don't need a deal with Iran.\" [news](https://hormuz.now/news)\n- 2026-11-10: Iran's security chief said the strait won't reopen until the US meets its conditions. On 31 Oct Iran had cut its reopening plan from seven days to two. [news](https://hormuz.now/news)\n\n## 4. Base rates\n- hormuz.now complete days from 20 Oct to 15 Nov (27 days): 7, 11, 6, 9, 6, 4, 8, 5, 6, 11, 13, 12, 10, 5, 7, 7, 9, 13, 5, 5, 6, 4, 13, 6, 5, 6, 6. [api/traffic](https://hormuz.now/api/traffic)\n  - Mean about 7.6, median 6, range 4-13.\n  - Values of 4-6 came up on 14 of 27 days (52%). Values of 10 or more came up on 6 days (22%).\n- Trend: the 7-day average peaked at about 9.3 (1-4 Nov) and has fallen to about 6.6. Since 12 Nov the days have been flat at 5-6, despite the attacks.\n- No zero days since live counting began. Earlier dates show 0 only because the tracker didn't exist before 19 Oct.\n- Monthly hormuz.now averages: Oct 7.5 (13 days), Nov 7.1 (15 days). PortWatch shows about half that: Mar 3.2, Apr 7.1, May 3.9, Jun 12.9 (partial reopening), Jul 10.2, Aug 4.7, Sep 3.6, Oct 3.8, Nov 3.5.\n- Seasonality: the pre-crisis PortWatch average usually fell from October to November: 2021 80.8 to 83.9, 2022 101.1 to 84.8, 2023 95.2 to 76.9, 2024 90.0 to 83.2, 2025 89.4 to 67.4. Today's traffic is about 8% of normal and driven by the conflict, so the seasonal pattern probably matters little.\n\n## 5. Other forecasts\nNone of these markets settles on hormuz.now. The weekly Kalshi and Polymarket markets look like they use PortWatch-style counts, judging by their price levels, but I haven't checked their rules.\n- Kalshi, week of 16-22 Nov total: \"Above 25\" at 0.47, \"Above 20\" at 0.74, \"Above 30\" at 0.17. That implies roughly 3.5-4 a day.\n- Polymarket, week of 16 Nov total: \"26+\" at 0.485. Peak day that week: \"6+\" at 0.66, \"8+\" at 0.27.\n- Polymarket, \"Avg. # of ships end of November\": 0-4 at 0.865, 5-9 at 0.115.\n- Kalshi, highest single day in November: \"at least 8\" at 0.71, \"at least 10\" at 0.18. hormuz.now has already recorded 13 this month, so this market clearly uses a different source.\n- Polymarket, return to normal by 31 Jan 2027: 0.095.\n- I found no expert forecast for hormuz.now's daily count.\n\n## 6. Upcoming events before resolution\n- Mining or attack claims continuing near the strait (14-15 Nov) could put more ships off crossing, or push more of them to go dark, which lowers the AIS count. So far the daily count hasn't fallen below 5 after these incidents.\n- Any US-Iran deal under the two-day reopening plan, or a new escalation or closure, before or on 26 Nov. Nothing is scheduled. Trump's 12 Nov remarks point away from a quick deal.\n- JMIC advisory updates (roughly weekly), PortWatch's weekly release (Tuesday 17 Nov, and 24 Nov), and possible revisions to hormuz.now's archive figures before the 27 Nov 12:00 UTC snapshot.\n- 26 Nov is a Thursday. Weather isn't a material factor, and I didn't find a relevant forecast.\n\nSources: [hormuz.now data](https://hormuz.now/data), [daily.csv](https://hormuz.now/api/daily.csv), [status.json](https://hormuz.now/status.json), [api/traffic](https://hormuz.now/api/traffic), [news](https://hormuz.now/news), [15 Nov](https://hormuz.now/traffic/2026-11-15), [11 Nov](https://hormuz.now/traffic/2026-11-11), [10 Nov](https://hormuz.now/traffic/2026-11-10), [newtalk](https://newtalk.tw/news/view/2026-11-16/1071356), [india.com](https://www.india.com/news/world/tanker-attacked-in-arabian-gulf-near-strait-of-hormuz-all-crew-safe-indian-shipping-authorities-report-to-ukmto-8545186/), [noticiasaominuto](https://www.noticiasaominuto.com/mundo/3084515/dois-petroleiros-afundam-se-no-estreito-de-ormuz-diz-irao), [AA](https://aa.com.tr/en/us-israel-iran-war/hormuz-ship-traffic-stays-limited-as-only-4-commercial-vessels-transit-in-24-hours/3927525), [gCaptain](https://gcaptain.com/shipping-traffic-through-hormuz-still-largely-halted/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 08:38 UTC; check each market really matches the question)\n- Kalshi: Traffic through the Strait of Hormuz? (11/16 - 11/22) (11/16 - 11/22). Yes prices: Above 25: 0.47; Above 27: 0.35; Above 23: 0.65; Above 20: 0.74; Above 30: 0.17; Above 35: 0.07; Above 15: 0.94; Above 40: 0.03; Above 50: 0.01.\n- Kalshi: Traffic through the Strait of Hormuz? (11/9 - 11/15) (11/9 - 11/15). Yes prices: Above 23: 0.34; Above 20: 0.79; Above 25: 0.12; Above 27: 0.06; Above 15: 0.96; Above 30: 0.01; Above 35: 0.0100; Above 40: 0.0100; Above 50: 0.0100.\n- Kalshi: Peak traffic through the Strait of Hormuz? (11/9 - 11/15) (11/9 - 11/15). Yes prices: Above 4: 0.56; Above 5: 0.39; Above 6: 0.17; Above 3: 0.94; Above 7: 0.04; Above 10: 0.01; Above 8: 0.01; Above 9: 0.01.\n- Kalshi: Average traffic through the Strait of Hormuz on Apr 1, 2026? (on Apr 1, 2026). Yes prices: Above 5: 0.7700; Above 3: 0.9600; Above 1: 0.9900; Above 10: 0.0100; Above 20: 0.0100; Above 100: 0.0100; Above 30: 0.0200; Above 50: 0.0100; Above 70: 0.0100.\n- Kalshi: How high will average weekly Hormuz traffic get this year? (after July 6, 2026 and before Jan 1, 2027). Yes prices: Above 30: 0.10; Above 40: 0.10; Above 50: 0.07; Above 60: 0.05; Above 70: 0.04; Above 90: 0.03; Above 100: 0.01; Above 110: 0.01; Above 80: 0.02; Above 120: 0.0200.\n- Kalshi: Strait of Hormuz: highest single-day traffic (November 2026) (in Nov 2026). Yes prices: At least 9: 0.40; At least 8: 0.71; At least 10: 0.18; At least 7: 0.86; At least 12: 0.12; At least 20: 0.06; At least 25: 0.04; At least 14: 0.06; At least 16: 0.04; At least 5: 0.9700.\n- Kalshi: Hormuz traffic × July 2027 gas price (Jul 31, 2027). Yes prices: Hormuz traffic: Back to normal, Gas price: Below $3.40: 0.28; Hormuz traffic: Back to normal, Gas price: $3.40 to $3.79: 0.32; Hormuz traffic: Back to normal, Gas price: $3.80 to $4.19: 0.23; Hormuz traffic: Not back to normal, Gas price: Below $3.40: 0.26; Hormuz traffic: Not back to normal, Gas price: $3.40 to $3.79: 0.26; Hormuz traffic: Not back to normal, Gas price: $3.80 to $4.19: 0.10; Hormuz traffic: Back to normal, Gas price: $4.20 or above: 0.17; Hormuz traffic: Not back to normal, Gas price: $4.20 or above: 0.23.\n- Polymarket: Highest 7-day average ship traffic through the Strait of Hormuz by December 31? (ends 2027-01-01). [Yes, No] prices: 10+: [\"0.255\", \"0.745\"]; 20+: [\"0.205\", \"0.795\"]; 30+: [\"0.175\", \"0.825\"]; 40+: [\"0.145\", \"0.855\"]; 50+: [\"0.105\", \"0.895\"]; 60+: [\"0.085\", \"0.915\"]\n- Polymarket: Ship traffic through the Strait of Hormuz week of November 16? (ends 2026-11-23). [Yes, No] prices: 22+: [\"0.72\", \"0.28\"]; 24+: [\"0.635\", \"0.365\"]; 26+: [\"0.485\", \"0.515\"]; 28+: [\"0.34\", \"0.66\"]; 30+: [\"0.245\", \"0.755\"]; 32+: [\"0.155\", \"0.845\"]\n- Polymarket: Peak daily ship traffic through the Strait of Hormuz week of November 16? (ends 2026-11-23). [Yes, No] prices: 3+: [\"0.915\", \"0.085\"]; 4+: [\"0.87\", \"0.13\"]; 5+: [\"0.82\", \"0.18\"]; 6+: [\"0.66\", \"0.34\"]; 7+: [\"0.45\", \"0.55\"]; 8+: [\"0.27\", \"0.73\"]\n- Polymarket: Avg. # of ships transiting Strait of Hormuz end of November? (ends 2026-12-01). [Yes, No] prices: 0-4: [\"0.865\", \"0.135\"]; 5-9: [\"0.115\", \"0.885\"]; 10-14: [\"0.0045\", \"0.9955\"]; 15-19: [\"0.0015\", \"0.9985\"]; 20-24: [\"0.0055\", \"0.9945\"]; 25-29: [\"0.0055\", \"0.9945\"]\n- Polymarket: Which month will Strait of Hormuz traffic return to normal in 2027? (ends 2028-01-01). [Yes, No] prices: January 2027: [\"0.004\", \"0.996\"]; February 2027: [\"0.09\", \"0.91\"]; March 2027: [\"0.0455\", \"0.9545\"]; April 2027: [\"0.0285\", \"0.9715\"]; May 2027: [\"0.0145\", \"0.9855\"]; June 2027: [\"0.0355\", \"0.9645\"]\n- Polymarket: Strait of Hormuz traffic returns to normal by...? (ends 2028-01-01). [Yes, No] prices: January 31, 2027: [\"0.095\", \"0.905\"]; March 31, 2027: [\"0.225\", \"0.775\"]; June 30, 2027: [\"0.405\", \"0.595\"]; December 31, 2027: [\"0.62\", \"0.38\"]",
+    "I've pulled hormuz.now's own data files and checked recent news, and I'm writing up the findings now.\n\n## 1. Resolution source\n- 2026-11-16 (08:39 UTC): hormuz.now's daily file (https://hormuz.now/api/daily.csv) runs from 19 Oct 2026. Recent complete-day totals: 2 Nov 5, 3 Nov 7, 4 Nov 7, 5 Nov 9, 6 Nov 13, 7 Nov 5, 8 Nov 5, 9 Nov 6, 10 Nov 4, 11 Nov 13, 12 Nov 6, 13 Nov 5, 14 Nov 6, 15 Nov 6. 16 Nov is marked partial, with 3 so far. [csv](https://hormuz.now/api/daily.csv)\n- 2026-11-16: The 15 Nov archive page shows \"6 Ship Crossings\": 2 inbound tankers, 3 outbound bulk carriers and 1 inbound container ship, plus 8 small-craft crossings that are not counted. [page](https://hormuz.now/traffic/2026-11-15)\n- 2026-11-16: status.json gives a 7-day average of 6.7, 47 crossings in the last 7 days, status \"restricted\" (about 8% of normal), and ships waiting: 504 on the Oman side and 106 on the Gulf side. [status](https://hormuz.now/status.json)\n- One discrepancy you should know about: the 11 Nov archive page now shows **13** crossings, not the 4 given in the question background. The 4 matches 10 Nov in the CSV, so the background probably has the dates off by one. It could also mean the archive page gets revised after the fact, which would matter for the 27 Nov 12:00 UTC snapshot. The background's \"13 Nov: 4 so far\" ended the day at 5. [11 Nov page](https://hormuz.now/traffic/2026-11-11)\n- The 26 Nov page will appear at https://hormuz.now/traffic/2026-11-26. The CSV's partial_day flag shows whether a day is complete.\n\n## 2. Current status\n- Nothing settles the question yet. The day in question is 10 days away.\n\n## 3. Recent news (newest first)\n- 2026-11-16: Iranian media and the Jerusalem Post carry IRGC claims that more tankers caught fire on 15-16 Nov. The IRGC says the ships had turned off their AIS and were crossing with US help. Reuters could not verify this. [newscord](https://newscord.org/article/irans-navy-reports-tanker-fire-after-mine-hit-east-of-strait-of-hormuz--Story_20261116_Twomoreoiltankershitfdf2291f)\n- 2026-11-15: The IRGC says two tankers hit mines in the southern strait and one supertanker (2m barrels) sank. UKMTO separately reported, via Indian authorities, an attack on an eastbound tanker just before the strait, with the crew safe. [anews](https://www.anews.com.tr/middle-east/2026/11/15/iran-says-2-oil-tankers-hit-mines-near-strait-of-hormuz-1-sinks), [india.com](https://www.india.com/news/world/tanker-attacked-in-arabian-gulf-near-strait-of-hormuz-all-crew-safe-indian-shipping-authorities-report-to-ukmto-8545186/)\n- About 2026-11-10/12: US officials say the US escorted 40 ships in one day, a wartime high. Many of these appear to sail with AIS off. That fits Windward's count (8 of 10 transits dark on 12 Nov) and explains why hormuz.now's AIS-only count barely moved. [arabnews](https://www.arabnews.com/middle-east/iran-says-supertanker-with-2-million-barrels-of-oil-sank-in-gulf-3012053)\n- 2026-11-10: UKMTO's weekly count was 170 outbound and 155 inbound. UANI reported US-facilitated transits averaging 30.3 a day. [UANI](https://www.unitedagainstnucleariran.com/node/46596)\n- Diplomacy looks stalled: on 21 Oct Araghchi said the strait won't be \"open to everyone\" until the US accepts Iran's terms. Lloyd's List's next Hormuz brief is due 19 Nov. [LLI](https://www.lloydslistintelligence.com/resources/blog/strait-of-hormuz-brief-5-november-2026)\n\n## 4. Base rates\n- 20 Oct to 15 Nov (27 complete days, leaving out 19 Oct, which shows 0 and looks like a start-up artefact): mean 7.6, median 6, range 4-13. Days at 4: 2. Days at 5: 5. Days at 6: 7. Days at 7-9: 6. Days at 10 or more: 7. [csv](https://hormuz.now/api/daily.csv)\n- Last 14 days (2-15 Nov): mean 6.9. Last 7 days: 46-47 total, about 6.6 a day. Monthly average from hormuz.now: 7.5 in Oct (13 days), 7.1 in Nov so far.\n- The series has calmed down: 12-15 Nov came in at 6, 5, 6, 6, even with the attacks. Highs of 13 show up about once a week (30 Oct, 6 Nov, 11 Nov).\n- 26 Nov is a Thursday. Earlier Thursdays: 22 Oct 6, 29 Oct 11, 5 Nov 9, 12 Nov 6. I found no clear weekday pattern.\n- Seasonality: in PortWatch's normal years, November averaged 67-85 transits a day (2022: 84.8, 2023: 76.9, 2024: 83.2, 2025: 67.4), down from October. That drop is tiny next to the crisis effect. hormuz.now has no earlier years. PortWatch during the crisis: Sep 3.6, Oct 3.8, Nov (8 days) 3.5. [traffic api](https://hormuz.now/api/traffic)\n\n## 5. Other forecasts\n- None of these markets resolves on hormuz.now's daily count. Their levels (weekly totals of about 25, a November average of 0-4) look like PortWatch-based resolution, which runs about half of hormuz.now. Check each market's rules before using them.\n- Polymarket, week of 16 Nov total: 26+ at 48.5%, 30+ at 24.5%. Peak day that week: 6+ at 66%, 8+ at 27%. End-of-November average: 0-4 at 86.5%.\n- Kalshi, week of 16-22 Nov: above 25 at 47%. Highest single day in November: at least 9 at 40%, at least 10 at 18%. That is consistent with PortWatch, since hormuz.now has already recorded 13.\n- I found no expert forecast of hormuz.now's daily figure.\n\n## 6. Upcoming events before resolution\n- More mine and tanker attacks look likely. The question is whether they cut AIS-visible crossings or mainly push ships to go dark (the IRGC says the ships hit were dark).\n- US escort tempo, and whether the 504 ships waiting on the Oman side start moving with AIS on.\n- Any talks via Pakistan, Qatar or Vance that lead to a reopening or a new closure.\n- 19 Nov: Lloyd's List brief. 17 and 24 Nov (Tuesdays): PortWatch updates.\n- Weather: I did not check a forecast. Late November in the strait is usually calm, apart from occasional shamal winds.\n\nSources: [hormuz.now data](https://hormuz.now/data), [daily.csv](https://hormuz.now/api/daily.csv), [status.json](https://hormuz.now/status.json), [UANI](https://www.unitedagainstnucleariran.com/node/46596), [Gulf News](https://gulfnews.com/world/mena/hormuz-shipping-below-normal-but-not-stalled-1.500741839), [Arab News](https://www.arabnews.com/middle-east/iran-says-supertanker-with-2-million-barrels-of-oil-sank-in-gulf-3012053), [Tribune](https://tribune.com.pk/story/2640572/irans-navy-says-oil-tanker-struck-mine-and-caught-fire-east-of-strait-of-hormuz)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 08:38 UTC; check each market really matches the question)\n- Kalshi: Traffic through the Strait of Hormuz? (11/16 - 11/22) (11/16 - 11/22). Yes prices: Above 25: 0.47; Above 27: 0.35; Above 23: 0.65; Above 20: 0.74; Above 30: 0.17; Above 35: 0.07; Above 15: 0.94; Above 40: 0.03; Above 50: 0.01.\n- Kalshi: Traffic through the Strait of Hormuz? (11/9 - 11/15) (11/9 - 11/15). Yes prices: Above 23: 0.34; Above 20: 0.79; Above 25: 0.12; Above 27: 0.06; Above 15: 0.96; Above 30: 0.01; Above 35: 0.0100; Above 40: 0.0100; Above 50: 0.0100.\n- Kalshi: Peak traffic through the Strait of Hormuz? (11/9 - 11/15) (11/9 - 11/15). Yes prices: Above 4: 0.56; Above 5: 0.39; Above 6: 0.17; Above 3: 0.94; Above 7: 0.04; Above 10: 0.01; Above 8: 0.01; Above 9: 0.01.\n- Kalshi: Average traffic through the Strait of Hormuz on Apr 1, 2026? (on Apr 1, 2026). Yes prices: Above 5: 0.7700; Above 3: 0.9600; Above 1: 0.9900; Above 10: 0.0100; Above 20: 0.0100; Above 100: 0.0100; Above 30: 0.0200; Above 50: 0.0100; Above 70: 0.0100.\n- Kalshi: How high will average weekly Hormuz traffic get this year? (after July 6, 2026 and before Jan 1, 2027). Yes prices: Above 30: 0.10; Above 40: 0.10; Above 50: 0.07; Above 60: 0.05; Above 70: 0.04; Above 90: 0.03; Above 100: 0.01; Above 110: 0.01; Above 80: 0.02; Above 120: 0.0200.\n- Kalshi: Strait of Hormuz: highest single-day traffic (November 2026) (in Nov 2026). Yes prices: At least 9: 0.40; At least 8: 0.71; At least 10: 0.18; At least 7: 0.86; At least 12: 0.12; At least 20: 0.06; At least 25: 0.04; At least 14: 0.06; At least 16: 0.04; At least 5: 0.9700.\n- Kalshi: Hormuz traffic × July 2027 gas price (Jul 31, 2027). Yes prices: Hormuz traffic: Back to normal, Gas price: Below $3.40: 0.28; Hormuz traffic: Back to normal, Gas price: $3.40 to $3.79: 0.32; Hormuz traffic: Back to normal, Gas price: $3.80 to $4.19: 0.23; Hormuz traffic: Not back to normal, Gas price: Below $3.40: 0.26; Hormuz traffic: Not back to normal, Gas price: $3.40 to $3.79: 0.26; Hormuz traffic: Not back to normal, Gas price: $3.80 to $4.19: 0.10; Hormuz traffic: Back to normal, Gas price: $4.20 or above: 0.17; Hormuz traffic: Not back to normal, Gas price: $4.20 or above: 0.23.\n- Polymarket: Highest 7-day average ship traffic through the Strait of Hormuz by December 31? (ends 2027-01-01). [Yes, No] prices: 10+: [\"0.255\", \"0.745\"]; 20+: [\"0.205\", \"0.795\"]; 30+: [\"0.175\", \"0.825\"]; 40+: [\"0.145\", \"0.855\"]; 50+: [\"0.105\", \"0.895\"]; 60+: [\"0.085\", \"0.915\"]\n- Polymarket: Ship traffic through the Strait of Hormuz week of November 16? (ends 2026-11-23). [Yes, No] prices: 22+: [\"0.72\", \"0.28\"]; 24+: [\"0.635\", \"0.365\"]; 26+: [\"0.485\", \"0.515\"]; 28+: [\"0.34\", \"0.66\"]; 30+: [\"0.245\", \"0.755\"]; 32+: [\"0.155\", \"0.845\"]\n- Polymarket: Peak daily ship traffic through the Strait of Hormuz week of November 16? (ends 2026-11-23). [Yes, No] prices: 3+: [\"0.915\", \"0.085\"]; 4+: [\"0.87\", \"0.13\"]; 5+: [\"0.82\", \"0.18\"]; 6+: [\"0.66\", \"0.34\"]; 7+: [\"0.45\", \"0.55\"]; 8+: [\"0.27\", \"0.73\"]\n- Polymarket: Avg. # of ships transiting Strait of Hormuz end of November? (ends 2026-12-01). [Yes, No] prices: 0-4: [\"0.865\", \"0.135\"]; 5-9: [\"0.115\", \"0.885\"]; 10-14: [\"0.0045\", \"0.9955\"]; 15-19: [\"0.0015\", \"0.9985\"]; 20-24: [\"0.0055\", \"0.9945\"]; 25-29: [\"0.0055\", \"0.9945\"]\n- Polymarket: Which month will Strait of Hormuz traffic return to normal in 2027? (ends 2028-01-01). [Yes, No] prices: January 2027: [\"0.004\", \"0.996\"]; February 2027: [\"0.09\", \"0.91\"]; March 2027: [\"0.0455\", \"0.9545\"]; April 2027: [\"0.0285\", \"0.9715\"]; May 2027: [\"0.0145\", \"0.9855\"]; June 2027: [\"0.0355\", \"0.9645\"]\n- Polymarket: Strait of Hormuz traffic returns to normal by...? (ends 2028-01-01). [Yes, No] prices: January 31, 2027: [\"0.095\", \"0.905\"]; March 31, 2027: [\"0.225\", \"0.775\"]; June 30, 2027: [\"0.405\", \"0.595\"]; December 31, 2027: [\"0.62\", \"0.38\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 3.6,
+        "p25": 4.7,
+        "p50": 6.2,
+        "p75": 8.8,
+        "p90": 12.0
+      },
+      "reasoning": "(a) **Time left:** 26 Nov is 10 days away. The snapshot is taken 27 Nov 12:00 UTC, about 11 days from now.\n\n(b) **Latest known value:** On 15 Nov 2026, hormuz.now recorded 6 complete-day crossings. The days before were 12 Nov 6, 13 Nov 5 and 14 Nov 6. The 7-day average is about 6.7.\n\n(c) **If nothing changed:** about 6.\n\n(d) **If the current trend continued:** The 7-day average has drifted down from a peak of about 9.3 in early November to about 6.6. Continuing that trend points to about 5-6.\n\n(e) **Historical variation:**\n- Over 27 live days the daily count ran from 4 to 13, with a mean of 7.6 and a median of 6.\n- About half of those days were 4-6, and 22% were 10 or more.\n- There have been no zero days.\n- Single days are noisy: one day can be 2-3 times another.\n- Archive revisions (11 Nov now shows 13) add some extra uncertainty.\n\n(f) **Experts and markets:** No market settles on hormuz.now. The PortWatch-style markets imply about 3.5-4 a day, and hormuz.now runs at roughly twice PortWatch levels. That makes the markets consistent with about 6-8 on this counter. Markets give a low probability to a quick return to normal (about 9.5% by end of January 2027).\n\n(g) **Unexpected scenarios:**\n- **Low:** Mine strikes escalate or Iran declares a total closure. Ships halt or go AIS-dark en masse, and the count falls to 0-2.\n- **High:** A US-Iran deal triggers Iran's two-day reopening plan. The queue on the Gulf of Oman side starts to flush with AIS on, and the count reaches 20-40. Alternatively, a large AIS-visible US-escorted convoy goes through on that day, giving about 13-15.\n\nPercentile 1: 1\nPercentile 5: 3\nPercentile 10: 3.6\nPercentile 20: 4.4\nPercentile 30: 5\nPercentile 40: 5.6\nPercentile 50: 6.2\nPercentile 60: 7\nPercentile 70: 8\nPercentile 80: 9.6\nPercentile 90: 12\nPercentile 95: 14\nPercentile 99: 25"
+    },
+    {
+      "value": {
+        "p10": 4.0,
+        "p25": 4.9,
+        "p50": 6.3,
+        "p75": 8.8,
+        "p90": 12.0
+      },
+      "reasoning": "(a) **Time left:** About 11 days. The question covers crossings during 26 November 2026 (UTC), and the snapshot is taken on 27 November 2026 at 12:00 UTC.\n\n(b) **Latest known value:** 6 crossings on 15 November 2026, per the hormuz.now archive page and daily CSV. The last week of complete days reads 6, 4, 13, 6, 5, 6, 6 (9 to 15 November). On 16 November, 3 crossings had been recorded by 08:38 UTC.\n\n(c) **If nothing changes:** About 6 crossings, the modal recent value. The 7-day average is 6.7.\n\n(d) **If the current trend continues:** The 7-day average has drifted down from about 9.3 in early November to about 6.6. If that continues, 26 November lands around 5 to 6, still with typical spikes. The mining and attack claims of 14 to 15 November could push more ships to go dark on AIS, which lowers the count slightly.\n\n(e) **Historical variation:** Over 27 days of live counting, daily values ran from 4 to 13, with a mean of 7.6 and a median of 6. About half of days fell at 4 to 6 and about 22% at 10 or more. There have been no zero days. The count moves day to day as much as over 10 days, so the single-day noise dominates.\n\n(f) **Experts and markets:** No market settles on hormuz.now. The PortWatch-style markets (Kalshi and Polymarket weekly totals, about 3.5 to 4 a day) run roughly half of hormuz.now's level. Scaled up, they imply about 7 to 8 a day on hormuz.now, which is consistent with the base rate. Markets price a reopening by late November as very unlikely; \"return to normal\" by January 2027 is only about 9.5%.\n\n(g) **Unexpected scenarios:**\n- **Low:** A major escalation, such as a new mine campaign, multiple sinkings or a declared full closure, halts AIS-visible traffic or pushes nearly all ships dark. That could give 0 to 2 crossings.\n- **High:** A sudden US-Iran deal under Iran's two-day reopening plan clears part of the Gulf of Oman queue on 26 November, giving 20 to 30 or more. The June partial reopening shows this is possible, but it is unlikely within 10 days.\n\nPercentile 1: 1.5\nPercentile 5: 3\nPercentile 10: 4\nPercentile 20: 4.6\nPercentile 30: 5.2\nPercentile 40: 5.8\nPercentile 50: 6.3\nPercentile 60: 7\nPercentile 70: 8\nPercentile 80: 9.6\nPercentile 90: 12\nPercentile 95: 14\nPercentile 99: 23"
+    },
+    {
+      "value": {
+        "p10": 3.5,
+        "p25": 4.65,
+        "p50": 6.0,
+        "p75": 8.25,
+        "p90": 11.5
+      },
+      "reasoning": "(a) **Time left:** About 10 days to 26 Nov, and resolution at the 27 Nov 12:00 UTC snapshot, roughly 11 days from now.\n\n(b) **Latest known value:** The latest complete day is 15 Nov 2026, with 6 crossings (14 Nov: 6, 13 Nov: 5). The 7-day average is about 6.7.\n\n(c) **If nothing changed:** About 6 crossings.\n\n(d) **If the current trend continued:** The 7-day average has drifted down from about 9.3 to about 6.6, and has been flat at 5-6 since 12 Nov. That points to about 5-6.\n\n(e) **Historical variation:** Over 27 days of live data, daily values ranged from 4 to 13.\n- Median 6, mean about 7.6.\n- 52% of days fell in 4-6, and 22% were 10 or more.\n- Day-to-day swings of 2-3x are common.\n- There have been no zero days.\n- Archive revisions are possible: the 11 Nov page now shows 13.\n\n(f) **Experts and markets:** No market settles on hormuz.now. The PortWatch-style markets imply about 3.5-4 a day, roughly half of hormuz.now's level, which is consistent with a hormuz.now figure of about 6-7. Markets give low odds of reopening by end-November.\n\n(g) **Unexpected scenarios:**\n- **Low:** A major mining or attack escalation, such as further sinkings or an Iranian declaration of full closure. Ships either stop or go fully AIS-dark, and the count falls to 0-2.\n- **High:** A sudden US-Iran deal under the two-day reopening plan, or a surge of escorted convoys clearing the Gulf of Oman queue with AIS on. A single day could then reach 15-30 or more, as with the partial reopening in June.\n\nThe middle of the distribution is anchored on the recent 5-6 level, with a right skew because spikes of 10-13 occur about one day in five.\n\nPercentile 1: 1\nPercentile 5: 2.5\nPercentile 10: 3.5\nPercentile 20: 4.3\nPercentile 30: 5\nPercentile 40: 5.5\nPercentile 50: 6\nPercentile 60: 6.6\nPercentile 70: 7.5\nPercentile 80: 9\nPercentile 90: 11.5\nPercentile 95: 13.5\nPercentile 99: 22"
+    },
+    {
+      "value": {
+        "p10": 3.8,
+        "p25": 4.95,
+        "p50": 6.2,
+        "p75": 8.65,
+        "p90": 12.0
+      },
+      "reasoning": "(a) **Time left:** The target day is 26 November 2026, 10 days from now. The figure is snapshotted at 27 November, 12:00 UTC, about 11 days away.\n\n(b) **Latest known value:** 6 crossings on 15 November 2026, a complete day per the hormuz.now daily.csv and archive page. The 7-day average is 6.7.\n\n(c) **If nothing changed:** About 6 crossings, which is the recent run of 6, 5, 6, 6.\n\n(d) **If the current trend continued:** About 6 to 7. Traffic is flat around 6 to 7 a day. More US escorts appear to sail AIS-dark, so they do not lift the hormuz.now count. Ongoing attacks have not visibly cut the AIS-visible count.\n\n(e) **Historical variation:**\n- Over 27 complete days the mean was 7.6 and the median 6.\n- The range was 4 to 13, with about 26% of days at 10 or more.\n- Spikes to 13 come roughly weekly (30 Oct, 6 Nov, 11 Nov).\n- On a single day, the series can easily be double or half the typical level.\n\n(f) **Experts and markets:** No market resolves on hormuz.now's daily count. Polymarket and Kalshi levels look PortWatch-based, running about half of hormuz.now. They imply a flat, restricted regime with no reopening priced for late November. Only about 10% is priced for traffic returning to normal by January.\n\n(g) **Unexpected scenarios:**\n- Low: A major escalation lands right before 26 November, such as a mass mining or sinking, or Iran declaring a full closure. Escorted ships then go fully dark and visible traffic drops to 0 to 2.\n- High: A sudden deal or announced reopening, or a mass escorted convoy with AIS on, starts clearing the queue of more than 500 ships waiting on the Oman side. That could push the count to 20 or more.\n\nPercentile 1: 1\nPercentile 5: 3\nPercentile 10: 3.8\nPercentile 20: 4.7\nPercentile 30: 5.2\nPercentile 40: 5.7\nPercentile 50: 6.2\nPercentile 60: 6.8\nPercentile 70: 7.8\nPercentile 80: 9.5\nPercentile 90: 12\nPercentile 95: 13.8\nPercentile 99: 21"
+    },
+    {
+      "value": {
+        "p10": 4.0,
+        "p25": 5.05,
+        "p50": 6.3,
+        "p75": 8.8,
+        "p90": 12.0
+      },
+      "reasoning": "(a) **Time left:** About 11 days. 26 November ends at 23:59 UTC, and the snapshot is taken at 12:00 UTC on 27 November.\n\n(b) **Latest known value:** 6 commercial crossings on 15 November 2026 (complete day). The 7-day average is 6.7, with 47 crossings in the last 7 days. 16 November is partial, with 3 so far.\n\n(c) **If nothing changed:** About 6 crossings. That is the recent modal and median day; 12 to 15 November ran 6, 5, 6, 6.\n\n(d) **If the trend continued:** About 6 to 7. The 14-day mean is 6.9 and the 27-day mean is 7.6, drifting slightly lower and calming. Attacks so far seem to push escorted ships to go AIS-dark rather than cut the AIS-visible count.\n\n(e) **Historical variation:** Over the 27 complete days from 20 October to 15 November:\n- Daily values ranged from 4 to 13, with a median of 6 and a mean of 7.6.\n- About 7% of days were at 4 or fewer, about 26% at 5 or fewer, about 52% at 6 or fewer and about 74% at 9 or fewer.\n- About 26% of days were at 10 or more, with spikes to 13 roughly once a week.\n- Single-day noise dominates any 10-day drift.\n\n(f) **Experts and markets:** No market resolves on hormuz.now's daily count. The Polymarket and Kalshi markets appear to track PortWatch, which runs at about half hormuz.now's level. Their pricing implies a stable regime: a weekly total around 25, a November average in the 0-4 range on PortWatch, and no reopening expected before 2027 (about 9.5% by 31 January 2027). That supports no regime change by 26 November.\n\n(g) **Unexpected scenarios:**\n- **Low:** A major escalation, such as a mass mine strike, a sinking in the lane or a formal full closure, makes AIS-visible ships stop or go fully dark. That could give 0 to 2 crossings.\n- **High:** A deal or ceasefire, or a large escorted convoy clearing part of the 504-ship Oman-side queue with AIS on. That could give 15 to 25 or more crossings.\n\nPercentile 1: 1\nPercentile 5: 3\nPercentile 10: 4\nPercentile 20: 4.8\nPercentile 30: 5.3\nPercentile 40: 5.9\nPercentile 50: 6.3\nPercentile 60: 7\nPercentile 70: 8\nPercentile 80: 9.6\nPercentile 90: 12\nPercentile 95: 13.8\nPercentile 99: 20"
+    },
+    {
+      "value": {
+        "p10": 4.0,
+        "p25": 5.2,
+        "p50": 6.4,
+        "p75": 9.0,
+        "p90": 12.5
+      },
+      "reasoning": "(a) About 11 days. 26 November is 10 days away, and the snapshot is taken at 12:00 UTC on 27 November.\n\n(b) The latest complete day on hormuz.now's daily.csv is 15 November 2026, with 6 crossings. The 7-day average is 6.7, with 47 crossings over 7 days. 16 November is partial, at 3 so far.\n\n(c) If nothing changed, the figure would be about 6, close to the recent run of 6, 5, 6, 6.\n\n(d) If the trend continued, the figure would be about 6 to 7. The 14-day mean is 6.9 and the 27-day mean is 7.6 (median 6). The series is roughly flat to slightly down.\n\n(e) Historical variation is large from day to day. Over 20 October to 15 November the range was 4 to 13. About 26% of days were 10 or more, about 7% were 4, and none were below 4. Highs of 13 occur about once a week. Over 10 days the regime itself has been stable for weeks, but escalation or a reopening could shift it.\n\n(f) Markets do not match the resolution source. Polymarket and Kalshi appear to resolve on PortWatch, which runs at about half of hormuz.now's counts. Even so, they imply a continued restricted status quo with no reopening soon: a 9.5% chance of traffic returning to normal by January 31. No expert forecast exists for hormuz.now's daily count.\n\n(g) Two unexpected scenarios:\n- **Low:** A major mining or attack escalation, or a declared full closure, around 25 to 26 November leads escorted ships to go fully AIS-dark or halt. The count drops to 0 to 2.\n- **High:** A partial deal or a large US-escorted convoy with AIS on starts clearing part of the 504-ship queue on the Oman side. The day records 20 or more crossings.\n\nI set the percentiles from the empirical distribution (median 6, right-skewed), and widened them for the 10-day horizon and the regime-change tails in both directions.\n\nPercentile 1: 1\nPercentile 5: 3\nPercentile 10: 4\nPercentile 20: 5\nPercentile 30: 5.4\nPercentile 40: 6\nPercentile 50: 6.4\nPercentile 60: 7\nPercentile 70: 8\nPercentile 80: 10\nPercentile 90: 12.5\nPercentile 95: 14.5\nPercentile 99: 22"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 3.711,
+    "p25": 4.9039,
+    "p50": 6.3332,
+    "p75": 8.8845,
+    "p90": 12.2839
+  },
+  "usage": [
+    {
+      "question_id": "46839",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.0002599,
+      "input_tokens": 1093,
+      "output_tokens": 83,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00012820000000000003,
+      "input_tokens": 517,
+      "output_tokens": 50,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 63.9,
+      "notional_cost_usd": 0.4695125999999999,
+      "input_tokens": 207672,
+      "output_tokens": 5291,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.7,
+      "notional_cost_usd": 0.085952,
+      "input_tokens": 8135,
+      "output_tokens": 1044,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.4,
+      "notional_cost_usd": 0.0879,
+      "input_tokens": 8136,
+      "output_tokens": 1141,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.0007057000000000001,
+      "input_tokens": 2722,
+      "output_tokens": 323,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0006937,
+      "input_tokens": 2847,
+      "output_tokens": 249,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.00021416000000000002,
+      "input_tokens": 2721,
+      "output_tokens": 247,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.0,
+      "notional_cost_usd": 0.024989200000000003,
+      "input_tokens": 8135,
+      "output_tokens": 1048,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.4,
+      "notional_cost_usd": 0.00026263,
+      "input_tokens": 2849,
+      "output_tokens": 341,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.0006726999999999999,
+      "input_tokens": 2732,
+      "output_tokens": 253,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00029649,
+      "input_tokens": 2735,
+      "output_tokens": 411,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 63.7,
+      "notional_cost_usd": 0.305989,
+      "input_tokens": 126434,
+      "output_tokens": 4759,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.3,
+      "notional_cost_usd": 0.08488,
+      "input_tokens": 7831,
+      "output_tokens": 1112,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.3,
+      "notional_cost_usd": 0.083132,
+      "input_tokens": 7830,
+      "output_tokens": 1025,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.9,
+      "notional_cost_usd": 0.086652,
+      "input_tokens": 7830,
+      "output_tokens": 1201,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0007361,
+      "input_tokens": 2719,
+      "output_tokens": 385,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0007735000000000001,
+      "input_tokens": 2731,
+      "output_tokens": 455,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0007194,
+      "input_tokens": 2828,
+      "output_tokens": 308,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00031813,
+      "input_tokens": 2718,
+      "output_tokens": 455,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00036086000000000007,
+      "input_tokens": 2729,
+      "output_tokens": 541,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46839",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00032103,
+      "input_tokens": 2827,
+      "output_tokens": 459,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.2355
+}
