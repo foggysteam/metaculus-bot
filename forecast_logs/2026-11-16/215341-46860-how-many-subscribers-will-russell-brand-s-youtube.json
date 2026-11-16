@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T21:57:14.524440+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T21:53:41.642685+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46860,
+    "post_id": 46600,
+    "url": "https://www.metaculus.com/questions/46600",
+    "type": "DiscreteQuestion",
+    "unit": "subscribers",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How many subscribers will Russell Brand's YouTube channel show on 27 November 2026?",
+    "resolution_criteria": "This question resolves to the subscriber count displayed on Russell Brand's YouTube channel page (https://www.youtube.com/@russellbrand) as of 12:00 UTC on 27 November 2026, in YouTube's default logged-out English display. YouTube rounds subscriber counts down to three significant figures, so the figure is read at face value and moves in steps of 10,000 at this channel's size: a display of \"6.59M\" resolves as 6,590,000, \"6.6M\" as 6,600,000, and \"6.61M\" as 6,610,000. If no live reading is taken at that moment, the reading is taken from the Wayback Machine capture of the channel page closest to 12:00 UTC on 27 November 2026 (listed at http://web.archive.org/web/2026*/https://www.youtube.com/@russellbrand), and failing that from Social Blade's daily-metrics entry for 27 November 2026 (https://socialblade.com/youtube/handle/russellbrand).",
+    "fine_print": "The reading is the one shown in the channel's \"About\" panel; if the header and the About panel briefly show different rounded figures, the About panel governs. If the channel has been terminated, deleted, or has its subscriber count hidden as of 12:00 UTC on 27 November 2026, this question resolves to the last subscriber count displayed for the channel before its removal, as recorded on Social Blade (https://socialblade.com/youtube/handle/russellbrand), read at face value in the same way; if no such record exists, the question is annulled.",
+    "close_time": "2026-11-17 00:47 UTC",
+    "scheduled_resolution_time": "2026-11-27 12:00 UTC"
+  },
+  "research": [
+    "I found nothing that settles this yet. The channel still shows \"6.6M\" on 16 November, and the last two drops of 10,000 came about 9 days apart. One more drop by 27 November would give 6,590,000. Two correct points on the background: Brand has posted a new upload (15 November), and Wayback captures are thin.\n\n## 1. Resolution source\n- 2026-11-16: I fetched the live About page: \"6.6M subscribers\", 1,704,784,737 views, joined 1 January 2007, 6.1K videos. The header and the About panel both show 6.6M. [YouTube](https://www.youtube.com/@russellbrand/about)\n- 2026-11-16: The Social Blade page blocked automated access (HTTP 403), so I could not read its daily table. Its latest Wayback capture is from July 2025. [Social Blade](https://socialblade.com/youtube/handle/russellbrand)\n- 2026-11-16: The latest Wayback capture of the channel page is 2026-11-11 13:56 UTC. In 2026 the captures are irregular: 16 so far, with gaps of up to 6 weeks before late October. That matters if the archive is the fallback source. When I tried to open old captures I got rate limited (HTTP 429), so I could not read their counts. [Wayback CDX](http://web.archive.org/cdx/search/cdx?url=youtube.com/@russellbrand&from=2026&filter=statuscode:200&collapse=timestamp:8&fl=timestamp)\n\n## 2. Current status\n- 2026-11-16: The display is 6.6M, meaning an underlying count of 6,600,000 to 6,609,999. It went to 6.6M on 11 November (vidIQ), so the count was probably near the top of that range then. Anything above 6,610,000 would display \"6.61M\". Nothing settles the question yet.\n- Correction to the background: the channel uploaded \"The Good Work Continues | SS25\" about 1 day ago, around 15 November, and it had about 570K views. So \"no upload since late October\" is out of date. [YouTube videos tab](https://www.youtube.com/@russellbrand/videos)\n\n## 3. Recent news (newest first)\n- 2026-11-16: The UK government is looking into whether Brand broke prison rules. The trigger was a statement from him, read by Laura Brand on the channel, in which he says he is \"not guilty\". [ABC](https://www.abc.net.au/news/2026-11-17/russell-brand-prison-message-read-by-laura-on-sunday-service/107392812)\n- 2026-11-16: Netflix released the documentary \"Russell Brand: Open Secret\". [Ámbito](https://www.ambito.com/espectaculos/netflix-estrena-un-documental-russell-brand-medio-del-escandalo-su-condena-prision-violacion-n6345582)\n- 2026-11-15: Laura Brand presented Sunday Service alone and said it will continue in a different format. TMZ says the episode also included pre-recorded Brand content. [TMZ](https://www.tmz.com/2026/11/15/russell-brand-appears-on-his-youtube-show/), [OK!](https://okmagazine.com/p/russell-brand-wife-laura-prison-sentence-painful/)\n- 2026-11-16: CORQ says Brand has more than 23 million followers across five platforms. [AOL](https://www.aol.co.uk/articles/russell-brand-huge-fortune-trial-094800000.html)\n- I found no new statement from YouTube about the account's status.\n\n## 4. Base rates and trend\nvidIQ daily snapshots (rounded): [vidIQ](https://vidiq.com/youtube-stats/channel/@russellbrand/)\n- 2026-10-18 to 11-01: 6.62M (at least 15 days at that level; I could not see earlier rows).\n- 2026-11-02: dropped to 6.61M, held through 11-10 (9 days).\n- 2026-11-11: dropped to 6.6M, unchanged through 11-16.\n- vidIQ change: -10K over 7 days, -20K over 28 days, so roughly -700 to -1,100 a day, and somewhat faster recently.\n- If the 9-day gap repeats, the next drop (to 6.59M) would come around 20 November, and another (to 6.58M) around 29 November, just after resolution. If the 15-day-plus pace returns, the next drop would land around 26 November or later.\n- The other trackers in the background disagree (youtubers.me shows -2.6K over 7 days; HypeAuditor estimates 6,615,643). I could not check them independently.\n- Earlier figures: Press Gazette listed 6.7M (undated, 2026), and the channel was about 6.6M in 2023. [Press Gazette](https://pressgazette.co.uk/social_media/biggest-news-publishers-youtube/)\n- Seasonality: none expected. I could not get year-ago readings because of the Wayback rate limit.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on this channel. The Kalshi markets that were supplied (MrBeast, IShowSpeed, PBD Podcast, FTC vs YouTube, Starlink) do not match this question. The FTC one (27% for a lawsuit before January 2027) is only loosely related to YouTube account policy.\n\n## 6. Upcoming events before 27 November\n- Netflix documentary attention (released 16 November): could speed up unsubscribes, or pull in curious viewers.\n- The government inquiry into the prison broadcast: could lead YouTube to act, such as terminating the channel, which would make Social Blade's last reading the result, or Laura's broadcasts from prison could stop.\n- More Sunday Service episodes are likely on 22 November, since Laura says the show continues. New uploads may slow the losses.\n- Spillover from Musk's support on X, more allegations reported to the Met Police, and any appeal news.\n\nSources: [YouTube About](https://www.youtube.com/@russellbrand/about), [YouTube videos](https://www.youtube.com/@russellbrand/videos), [vidIQ](https://vidiq.com/youtube-stats/channel/@russellbrand/), [Wayback CDX](http://web.archive.org/cdx/search/cdx?url=youtube.com/@russellbrand&from=2026&filter=statuscode:200&collapse=timestamp:8&fl=timestamp), [ABC](https://www.abc.net.au/news/2026-11-17/russell-brand-prison-message-read-by-laura-on-sunday-service/107392812), [TMZ](https://www.tmz.com/2026/11/15/russell-brand-appears-on-his-youtube-show/), [OK!](https://okmagazine.com/p/russell-brand-wife-laura-prison-sentence-painful/), [Ámbito](https://www.ambito.com/espectaculos/netflix-estrena-un-documental-russell-brand-medio-del-escandalo-su-condena-prision-violacion-n6345582), [AOL](https://www.aol.co.uk/articles/russell-brand-huge-fortune-trial-094800000.html), [Press Gazette](https://pressgazette.co.uk/social_media/biggest-news-publishers-youtube/), [Tubefilter](https://www.tubefilter.com/?p=195099)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 21:53 UTC; check each market really matches the question)\n- Kalshi: MrBeast: 1 Billion subscribers (In 2026). Yes prices: before Jan 1, 2027: 0.01.\n- Kalshi: When will IShowSpeed reach 100 million Youtube subscribers? (100 million Youtube subscribers). Yes prices: Before 2029: 0.53; Before 2030: 0.63; Before 2028: 0.31; Before 2027: 0.01.\n- Kalshi: Will the PBD Podcast reach 10 million subscribers this year? (In 2026). Yes prices: Jan 1, 2027: 0.03.\n- Kalshi: Will the FTC sue YouTube over account suspensions? (Before Jan 2027). Yes prices: Before Jan 2027: 0.27.\n- Kalshi: Starlink active subscribers in fiscal 2026 (starlink active subscribers in 2026). Yes prices: Above 15.5 million: 0.46; Above 15 million: 0.84; Above 16 million: 0.12; Above 16.5 million: 0.07; Above 19 million: 0.03; Above 17 million: 0.05; Above 18.5 million: 0.03; Above 17.5 million: 0.03; Above 18 million: 0.03.",
+    "Short version: the channel page showed \"6.6M subscribers\" on 16 November. The display would need to lose about 10,000 more subscribers by 27 November to read \"6.59M\". That is about 650 a day, which is above the pace before the conviction.\n\n## 1. Resolution source\n- 2026-11-16: I read the live channel page directly. The About panel shows \"6.6M subscribers\" (6,600,000), with 1,704,784,737 views, \"6.1K videos\" and \"Joined Jan 1, 2007\". [YouTube](https://www.youtube.com/@russellbrand/about)\n- 2026-11-16: Social Blade blocked my request (HTTP 403), so I could not read its daily table. HypeAuditor also blocked me. [Social Blade](https://socialblade.com/youtube/handle/russellbrand)\n- 2026-11-11: vidIQ lists 6,600,000 subscribers, 1,697,693,964 views and 6,138 videos. [vidIQ](https://vidiq.com/youtube-stats/channel/@russellbrand/)\n\n## 2. Current status\n- Nothing has settled the question yet. The display dropped from 6.61M to 6.60M sometime between 9 and 12 November. If the count only just crossed below 6,610,000, the true figure is probably in the high 6,600,000s to around 6,609,000. That is my inference, not a published figure.\n- 2026-11-09: HypeAuditor estimated 6,615,643, which fits that reading (per a search snippet). [HypeAuditor](https://hypeauditor.com/youtube/UCswH8ovgUp5Bdg-0_JTYFNw/)\n\n## 3. Recent news (newest first)\n- 2026-11-17 (AU time): The UK government is investigating whether Brand broke prison rules. Laura Brand read his statement on the channel's \"Sunday Service\". The prime minister's spokesperson called it \"appalling\" and said action should follow if rules were broken. The article reports no response from YouTube. It also says six more women came forward publicly on Friday 13 November. [ABC](https://www.abc.net.au/news/2026-11-17/russell-brand-prison-message-read-by-laura-on-sunday-service/107392812)\n- 2026-11-16: Netflix premiered the documentary \"Russell Brand: Open Secret\". [Ámbito](https://www.ambito.com/espectaculos/netflix-estrena-un-documental-russell-brand-medio-del-escandalo-su-condena-prision-violacion-n6345582)\n- 2026-11-15: The channel posted a new upload, \"The Good Work Continues | SS25\" (366.9K views). This contradicts the background claim that nothing has been uploaded since late October. Laura Brand says the show will continue. [Trendreport](https://trendreport.com/channels/stats/russellbrand/), [TMZ](https://www.tmz.com/2026/11/15/russell-brand-appears-on-his-youtube-show/), [OK!](https://okmagazine.com/p/russell-brand-wife-laura-prison-sentence-painful/)\n- 2023-09: YouTube cut off advertising income, but a YouTube executive said Brand's content was not considered harmful, so the channel was not removed. I found no 2026 statement from YouTube about removing the channel. [Rolling Stone](https://www.rollingstone.com/tv-movies/tv-movie-news/russell-brand-wont-be-banned-youtube-1234828329/), [Mediaite](https://www.mediaite.com/news/russell-brand-demonetized-on-youtube-amid-rape-sexual-assault-allegations)\n\n## 4. Base rates and trend\nThese are Trendreport's weekly readings of the rounded display:\n- 2026-08-31 to 09-14: 6.64M\n- 2026-09-21: 6.63M\n- 2026-10-12: 6.62M\n- 2026-11-02: 6.61M\n- 2026-11-16: 6.60M\n- Overall that is -40K in 11 weeks. Through the trial period one notch was lost about every 3 weeks, roughly -475 a day. Trendreport puts the last 30 days at -20K. [Trendreport](https://trendreport.com/channels/stats/russellbrand/)\n- ViewsBrain shows a slightly different timing:\n  - Oct 22: 6,620,000\n  - Oct 29: 6,620,000\n  - Nov 5: 6,610,000 (-10K)\n  - Nov 12: 6,600,000 (-10K)\n  \n  That suggests the losses sped up after the conviction, with the latest notch lost about 7 to 10 days after the previous one. [ViewsBrain](https://viewsbrain.com/channels/russellbrand)\n- What this means for the 15 days from 12 to 27 November: the pre-conviction pace (about -475 a day) would give about -7K, not enough for a notch. The post-verdict pace from ViewsBrain (about -1,000 to -1,400 a day) would give about -15K to -21K, enough for one notch and possibly close to two (6.58M). The result also depends on where in the 6.600 to 6.610M band the true count sits now, which I could not observe.\n- Seasonality does not really apply. YouTube subscriber counts have no strong calendar cycle; this one is driven by news.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on Brand's subscriber count. The Kalshi markets listed (MrBeast, IShowSpeed, PBD Podcast, a possible FTC lawsuit against YouTube at 27%) are not relevant.\n- The trackers' own estimates, from search snippets and the background:\n  - HypeAuditor: -0.22% for November\n  - Social Blade: about -20K over 30 days\n  - youtubers.me: -2,641 over 7 days, which looks stale (it also shows 6.76M)\n  - vidIQ: \"20K in 28d\"\n\n## 6. Upcoming events before 27 November\n- Results of the UK government's investigation into the prison broadcast. Possible pressure on YouTube to remove or restrict the channel. If it is terminated, the question resolves to Social Blade's last recorded count.\n- The aftermath of the Netflix documentary (released 16 November), which may speed up unsubscribes.\n- Sunday Service episodes on 22 November (likely) could hold on to or attract supporters. Elon Musk's backing on X could do the same.\n- Further allegations: the Metropolitan Police say more people have come forward, and six more women spoke publicly on 13 November.\n- The weather does not matter here.\n\nSources: [YouTube About](https://www.youtube.com/@russellbrand/about), [Trendreport](https://trendreport.com/channels/stats/russellbrand/), [ViewsBrain](https://viewsbrain.com/channels/russellbrand), [vidIQ](https://vidiq.com/youtube-stats/channel/@russellbrand/), [HypeAuditor](https://hypeauditor.com/youtube/UCswH8ovgUp5Bdg-0_JTYFNw/), [youtubers.me](https://us.youtubers.me/russell-brand/youtuber-stats), [ABC](https://www.abc.net.au/news/2026-11-17/russell-brand-prison-message-read-by-laura-on-sunday-service/107392812), [TMZ](https://www.tmz.com/2026/11/15/russell-brand-appears-on-his-youtube-show/), [Rolling Stone](https://www.rollingstone.com/tv-movies/tv-movie-news/russell-brand-wont-be-banned-youtube-1234828329/), [Mediaite](https://www.mediaite.com/news/russell-brand-demonetized-on-youtube-amid-rape-sexual-assault-allegations)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 21:53 UTC; check each market really matches the question)\n- Kalshi: MrBeast: 1 Billion subscribers (In 2026). Yes prices: before Jan 1, 2027: 0.01.\n- Kalshi: When will IShowSpeed reach 100 million Youtube subscribers? (100 million Youtube subscribers). Yes prices: Before 2029: 0.53; Before 2030: 0.63; Before 2028: 0.31; Before 2027: 0.01.\n- Kalshi: Will the PBD Podcast reach 10 million subscribers this year? (In 2026). Yes prices: Jan 1, 2027: 0.03.\n- Kalshi: Will the FTC sue YouTube over account suspensions? (Before Jan 2027). Yes prices: Before Jan 2027: 0.27.\n- Kalshi: Starlink active subscribers in fiscal 2026 (starlink active subscribers in 2026). Yes prices: Above 15.5 million: 0.46; Above 15 million: 0.84; Above 16 million: 0.12; Above 16.5 million: 0.07; Above 19 million: 0.03; Above 17 million: 0.05; Above 18.5 million: 0.03; Above 17.5 million: 0.03; Above 18 million: 0.03."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 6583000.0,
+        "p25": 6590250.0,
+        "p50": 6592000.0,
+        "p75": 6600500.0,
+        "p90": 6603000.0
+      },
+      "reasoning": "(a) **Time left:** about 10.5 days, from 16 November to 27 November 2026, 12:00 UTC.\n\n(b) **Latest known value:** \"6.6M\" on 16 November 2026. This means an underlying count of 6,600,000 to 6,609,999. The display fell from 6.61M to 6.6M on 11 November, so the count was probably near 6,609,000 then. By 16 November it is likely around 6,603,000 to 6,605,000.\n\n(c) **If nothing changed:** 6,600,000.\n\n(d) **If the current trend continued:** at about -700 to -1,100 subscribers per day, the count by 27 November would be roughly 6,592,000 to 6,596,000. That displays \"6.59M\", which resolves as 6,590,000. Recent drops of 10,000 came about 9 days apart, which points to a drop around 20 November and the next one around 29 November.\n\n(e) **Historical variation:** recent drops of 10,000 took 9 to 15 or more days. Over 11 days, the count typically moves by about one 10,000 step, or occasionally two.\n\n(f) **Experts and markets:** there is no market on this channel. Third-party trackers mostly show slow declines of -10K to -20K per month. HypeAuditor's estimate is higher, at 6,615,643.\n\n(g) **Unexpected scenarios:**\n- **Low:** the Netflix documentary and the controversy over the prison broadcast speed up unsubscribes to 2,000 or more per day, giving 6.58M or even 6.57M. If YouTube terminates the channel, the result is the last Social Blade reading, which would be similar to the live figure at the time.\n- **High:** new Sunday Service uploads and spillover from Musk's support on X reverse the trend, so the display stays at 6.6M or climbs back to 6.61M.\n\n**Estimated probabilities by display value:**\n\n| Display | Resolves as | Probability |\n|---|---|---|\n| 6.57M or lower | 6,570,000 or lower | about 1% |\n| 6.58M | 6,580,000 | about 12% |\n| 6.59M | 6,590,000 | about 55% |\n| 6.6M | 6,600,000 | about 28% |\n| 6.61M | 6,610,000 | about 4% |\n\nPercentile 1: 6572000\nPercentile 5: 6580000\nPercentile 10: 6583000\nPercentile 20: 6590000\nPercentile 30: 6590500\nPercentile 40: 6591000\nPercentile 50: 6592000\nPercentile 60: 6594000\nPercentile 70: 6600000\nPercentile 80: 6601000\nPercentile 90: 6603000\nPercentile 95: 6606000\nPercentile 99: 6612000"
+    },
+    {
+      "value": {
+        "p10": 6587000.0,
+        "p25": 6590250.0,
+        "p50": 6593000.0,
+        "p75": 6599750.0,
+        "p90": 6601000.0
+      },
+      "reasoning": "(a) **Time left:** about 10.5 days, from 16 November to 27 November 2026, 12:00 UTC.\n\n(b) **Latest known value:** \"6.6M\" (6,600,000) on the About panel, 16 November 2026. vidIQ shows the display changed to 6.6M on 11 November. That suggests the underlying count was then near the top of the 6,600,000 to 6,609,999 band.\n\n(c) **If nothing changed:** 6,600,000.\n\n(d) **If the current trend continued:** Net losses are about -700 to -1,100 per day.\n- 16 days of losses after 11 November gives about -11K to -18K.\n- That puts the underlying count at roughly 6,592K to 6,599K.\n- That displays \"6.59M\", so the result would be 6,590,000.\n- The earlier notch gaps were 15 or more days and 9 days, so this crossing is likely but not certain.\n\n(e) **Historical variation:** Recently the display has moved about one 10K notch every 9 to 15 days. Over an 11-to-16-day window that means 0 to 2 notches, most likely 1.\n\n(f) **Experts and markets:** No market covers this channel. The trackers disagree:\n- Social Blade and vidIQ show about -20K over 28 to 30 days.\n- youtubers.me shows only about -2.6K per week.\n- HypeAuditor estimates about 6,615,643 subscribers.\n\n(g) **Unexpected scenarios:**\n- **Low:** The Netflix \"Open Secret\" documentary and the prison-broadcast controversy spark a mass-unsubscribe wave, reaching 6.58M or 6.57M. If YouTube terminates the channel, resolution uses the last count shown, which is still likely 6.6M or 6.59M.\n- **High:** Musk's backing, the \"not guilty\" message and new Sunday Service uploads create sympathy subscriptions. Losses stall and the count rebounds to 6.61M.\n\n**Probabilities I assign:**\n\n| Display | Resolves as | Probability |\n|---|---|---|\n| 6.57M or lower | 6,570,000 or lower | about 2% |\n| 6.58M | 6,580,000 | about 7% |\n| 6.59M | 6,590,000 | about 55% |\n| 6.6M | 6,600,000 | about 33% |\n| 6.61M | 6,610,000 | about 3% |\n\nThe percentiles in between these values smooth the boundaries between discrete outcomes.\n\nPercentile 1: 6570000\nPercentile 5: 6580000\nPercentile 10: 6587000\nPercentile 20: 6590000\nPercentile 30: 6590500\nPercentile 40: 6591000\nPercentile 50: 6593000\nPercentile 60: 6596000\nPercentile 70: 6599500\nPercentile 80: 6600000\nPercentile 90: 6601000\nPercentile 95: 6603000\nPercentile 99: 6610000"
+    },
+    {
+      "value": {
+        "p10": 6582000.0,
+        "p25": 6589000.0,
+        "p50": 6592000.0,
+        "p75": 6599000.0,
+        "p90": 6602000.0
+      },
+      "reasoning": "(a) **Time left:** About 10.5 days. The question resolves at 12:00 UTC on 27 November 2026, and today is 16 November.\n\n(b) **Latest known value:** The channel shows \"6.6M\" (6,600,000 to 6,609,999) as of 16 November 2026. The display dropped from 6.61M on 11 November, so the underlying count was probably near the top of the 6.60M band then.\n\n(c) **If nothing changed:** 6,600,000.\n\n(d) **If the current trend continued:** At about -700 to -1,100 per day, the channel loses 11,000 to 17,600 between 11 and 27 November. That puts the underlying count near 6,592,000 to 6,599,000, which displays as \"6.59M\", or 6,590,000. The last notch gaps were 9 days and at least 15 days. A 9-day pace implies a drop around 20 November, and a slower pace implies a drop around 26 November.\n\n(e) **Historical variation:** Recently the channel has lost one 10,000 notch every 9 to 15 or more days. Over 11 days, that means zero, one or occasionally two notches.\n\n(f) **Experts and markets:** There are no markets on this channel. The trackers disagree: Social Blade and vidIQ show about -20K over 30 days, while youtubers.me shows a smaller decline. HypeAuditor's estimate of 6,615,643 conflicts with the displayed figure.\n\n(g) **Unexpected scenarios:**\n- **Low:** The Netflix documentary \"Open Secret\" and the prison-broadcast inquiry trigger a wave of unsubscribes, giving two notches (6.58M) or even 6.57M.\n- **High:** Musk's backing and sympathy for Brand bring a rush of new subscribers, and the new Sunday Service uploads slow the losses. The count holds at 6.6M or climbs back to 6.61M.\n- **Termination:** If YouTube terminates the channel, the last recorded count, likely 6.6M or 6.59M, would decide the question.\n\n**Probability by display value:**\n\n| Display | Resolves as | Probability |\n|---|---|---|\n| 6.57M or lower | 6,570,000 or lower | about 4% |\n| 6.58M | 6,580,000 | about 15% |\n| 6.59M | 6,590,000 | about 50% |\n| 6.6M | 6,600,000 | about 28% |\n| 6.61M | 6,610,000 | about 3% |\n\nThe percentiles below must increase strictly, so I spread them slightly around the discrete values above.\n\nPercentile 1: 6570000\nPercentile 5: 6578000\nPercentile 10: 6582000\nPercentile 20: 6588000\nPercentile 30: 6590000\nPercentile 40: 6591000\nPercentile 50: 6592000\nPercentile 60: 6594000\nPercentile 70: 6598000\nPercentile 80: 6600000\nPercentile 90: 6602000\nPercentile 95: 6606000\nPercentile 99: 6612000"
+    },
+    {
+      "value": {
+        "p10": 6584000.0,
+        "p25": 6589500.0,
+        "p50": 6593000.0,
+        "p75": 6599750.0,
+        "p90": 6601000.0
+      },
+      "reasoning": "(a) Time left: about 10.5 days, until 12:00 UTC on 27 November 2026.\n\n(b) Latest known value: \"6.6M subscribers\" (6,600,000) in the About panel, read live on 16 November 2026. The display dropped from 6.61M to 6.60M at some point between about 5 and 12 November. ViewsBrain recorded 6,600,000 on 12 November, while press reports on 9 to 11 November still cited 6.61M. So the true count is probably around 6,603,000 to 6,609,000.\n\n(c) If nothing changed: 6,600,000.\n\n(d) If the current trend continued: there are about 15 to 16 days from the notch crossing to resolution.\n- At the pre-conviction pace of about 475 a day, the loss is about 7K to 8K. That probably keeps the display at 6.6M.\n- At the post-verdict pace of about 1,000 to 1,400 a day, the loss is 15K to 21K. That gives 6.59M, possibly 6.58M.\n- The Netflix documentary (released 16 November), the prison broadcast controversy and new allegations probably keep unsubscribes elevated. Continuing Sunday Service uploads and Musk's backing partly offset that.\n- The display needs roughly 625 a day of net loss to reach 6.59M, which seems more likely than not.\n\n(e) Historical variation: from late August to mid-November the display fell 40K in 11 weeks, about one notch every 3 weeks. After the conviction it fell about one notch per week. Over 2 weeks, typical moves are 0 to 2 notches downward.\n\n(f) Experts and markets: there are no markets on this question. The trackers agree on a decline: Social Blade about -20K over 30 days, HypeAuditor -0.22% for November, ViewsBrain -10K a week.\n\n(g) Unexpected scenarios:\n- Low: YouTube terminates the channel after the prison-rules outcry. Even then, the last recorded count would likely be 6.59M or 6.6M. Alternatively, a mass-unsubscribe wave after the documentary takes the display to 6.57M or 6.58M.\n- High: a free-speech backlash, amplified by Musk on X, drives net-positive subscriptions back to 6.61M.\n\nFor the tails:\n- Percentile 1: a documentary-driven mass unsubscribe of roughly 30K or more in two weeks, giving about 6.575M.\n- Percentile 99: a supporter surge back to 6.61M.\n\nPercentile 1: 6575000\nPercentile 5: 6580000\nPercentile 10: 6584000\nPercentile 20: 6589000\nPercentile 30: 6590000\nPercentile 40: 6591000\nPercentile 50: 6593000\nPercentile 60: 6597000\nPercentile 70: 6599500\nPercentile 80: 6600000\nPercentile 90: 6601000\nPercentile 95: 6603000\nPercentile 99: 6611000"
+    },
+    {
+      "value": {
+        "p10": 6583000.0,
+        "p25": 6590250.0,
+        "p50": 6592000.0,
+        "p75": 6600250.0,
+        "p90": 6601000.0
+      },
+      "reasoning": "**(a) Time left:** About 10.5 days, from 16 November to 12:00 UTC on 27 November 2026.\n\n**(b) Latest known value:** The About panel showed \"6.6M subscribers\" (6,600,000) on 16 November 2026. ViewsBrain dates the drop from 6.61M to about 12 November.\n\n**(c) Outcome if nothing changed:** 6,600,000.\n\n**(d) Outcome if the current trend continued:**\n- **Post-verdict pace:** ViewsBrain shows a notch lost every 7 to 10 days since the verdict, about -1,000 to -1,400 a day. If the count crossed below 6,610,000 around 10 to 12 November, a further 15,000 to 20,000 would be lost by the 27th. That gives 6.59M, possibly approaching 6.58M.\n- **Pre-conviction pace:** About -475 a day, which gives roughly -7,000 to -8,000. That could leave the display at 6.60M if the true count sits near the top of the band.\n- **New pressures:** The Netflix documentary (16 November), the row over the prison message and six more women coming forward push the pace towards faster losses.\n- **Offsetting factors:** Continued Sunday Service uploads and Musk's backing could slow the losses.\n\n**(e) Historical variation:** Over August to November the channel lost about 10,000 every 2 to 3 weeks, and recently faster. Over a 2-week window the display usually moves 0 or 1 notch, and occasionally 2.\n\n**(f) Experts and markets:** There are no markets on this quantity. Trackers agree the count is falling: Social Blade and Trendreport show about -20,000 over 30 days, and HypeAuditor estimates -0.22% for November.\n\n**(g) Unexpected scenarios:**\n- **Low:** A mass-unsubscribe wave after the Netflix documentary and the prison-message scandal, perhaps with YouTube restricting the channel, could bring it to 6.58M or 6.57M. If YouTube terminates the channel, the last Social Blade figure would be used, which is likely 6.59M or 6.60M.\n- **High:** A Musk-driven or free-speech rally of supporters, with the new uploads attracting new subscribers, could stop the losses or bring a gain back to 6.61M.\n\n**Probabilities I assign to each display:**\n\n| Display | Probability |\n|---|---|\n| 6.57M | about 2% |\n| 6.58M | about 12% |\n| 6.59M | about 50% |\n| 6.60M | about 32% |\n| 6.61M | about 4% |\n\nThe values below are nudged slightly within each notch so that the percentiles stay strictly increasing.\n\nPercentile 1: 6570000\nPercentile 5: 6580000\nPercentile 10: 6583000\nPercentile 20: 6590000\nPercentile 30: 6590500\nPercentile 40: 6591000\nPercentile 50: 6592000\nPercentile 60: 6594000\nPercentile 70: 6600000\nPercentile 80: 6600500\nPercentile 90: 6601000\nPercentile 95: 6603000\nPercentile 99: 6610000"
+    },
+    {
+      "value": {
+        "p10": 6582000.0,
+        "p25": 6588500.0,
+        "p50": 6591000.0,
+        "p75": 6600500.0,
+        "p90": 6602000.0
+      },
+      "reasoning": "(a) **Time left:** about 10.5 days, until 12:00 UTC on 27 November 2026.\n\n(b) **Latest value:** \"6.6M subscribers\" (6,600,000) on the About panel, read live on 16 November 2026. The display dropped from 6.61M sometime between 9 and 12 November. So the true count was probably near 6,605,000 to 6,610,000 at that point, and is likely somewhat lower now.\n\n(c) **If nothing changed:** 6,600,000.\n\n(d) **If the trend continued:** the answer depends on which pace holds.\n- The pre-conviction pace was about -475 a day. Over roughly 16 days since the notch was lost, that is about -8K, which most likely leaves the display at 6.6M.\n- The post-verdict pace from ViewsBrain is about -1,000 to -1,400 a day. That gives about -15K to -20K, so the display would read 6.59M, with an outside chance of 6.58M.\n- Averaging the two puts the true count right around 6,599,000 to 6,600,000. That sits on the boundary, tilting slightly toward 6.59M.\n\n(e) **Historical variation:** the display lost 40K over 11 weeks, about one notch every 2 to 3 weeks. It recently sped up to about one notch per week. Over 15 days, a move of zero or one notch is typical, and two notches would be unusual.\n\n(f) **Experts and markets:** there are no markets on this question. The trackers point in the same direction:\n- Social Blade: -20K over 30 days.\n- HypeAuditor: -0.22% for November.\n- ViewsBrain: -10K a week recently.\n\nAll of these imply continued decline. Some things may slow the losses: new Sunday Service uploads, Elon Musk's backing and supporters rallying. Other things may speed them up: the Netflix documentary, the scandal over the prison broadcast and the new allegations.\n\n(g) **Unexpected scenarios:**\n- **Low:** YouTube faces pressure after the prison broadcast and the Netflix documentary, and a wave of unsubscribes follows. The count falls to 6.58M or even 6.57M. If YouTube instead terminates the channel, the question resolves to Social Blade's last recorded figure, which would most likely be 6.59M or 6.6M.\n- **High:** Musk-driven sympathy causes a burst of new subscribers that outweighs the losses, pushing the display back to 6.61M.\n\n**Probabilities by displayed value:**\n\n| Display | Probability |\n|---|---|\n| 6.58M or lower | about 10% |\n| 6.59M | about 47% |\n| 6.6M | about 39% |\n| 6.61M or higher | about 4% |\n\nPercentile 1: 6565000\nPercentile 5: 6578000\nPercentile 10: 6582000\nPercentile 20: 6588000\nPercentile 30: 6589000\nPercentile 40: 6590000\nPercentile 50: 6591000\nPercentile 60: 6599000\nPercentile 70: 6600000\nPercentile 80: 6601000\nPercentile 90: 6602000\nPercentile 95: 6605000\nPercentile 99: 6612000"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 6581831.0726,
+    "p25": 6587594.2091,
+    "p50": 6593049.0641,
+    "p75": 6599463.9472,
+    "p90": 6603633.5955
+  },
+  "usage": [
+    {
+      "question_id": "46860",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 7.87e-05,
+      "input_tokens": 502,
+      "output_tokens": 57,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.00024870000000000003,
+      "input_tokens": 1097,
+      "output_tokens": 59,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 94.0,
+      "notional_cost_usd": 0.3142064,
+      "input_tokens": 146011,
+      "output_tokens": 5622,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.5,
+      "notional_cost_usd": 0.075236,
+      "input_tokens": 5703,
+      "output_tokens": 1481,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.5,
+      "notional_cost_usd": 0.07904800000000001,
+      "input_tokens": 5702,
+      "output_tokens": 1672,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.0007915999999999999,
+      "input_tokens": 2834,
+      "output_tokens": 450,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.6,
+      "notional_cost_usd": 0.0008685,
+      "input_tokens": 2901,
+      "output_tokens": 577,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.9,
+      "notional_cost_usd": 0.00037928,
+      "input_tokens": 2833,
+      "output_tokens": 575,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 31.6,
+      "notional_cost_usd": 0.035162799999999994,
+      "input_tokens": 5703,
+      "output_tokens": 1581,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.2,
+      "notional_cost_usd": 0.00028546,
+      "input_tokens": 2901,
+      "output_tokens": 386,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0007507,
+      "input_tokens": 2927,
+      "output_tokens": 331,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00036571,
+      "input_tokens": 2926,
+      "output_tokens": 546,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 70.9,
+      "notional_cost_usd": 0.19874190000000003,
+      "input_tokens": 70499,
+      "output_tokens": 4299,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.07880000000000001,
+      "input_tokens": 5846,
+      "output_tokens": 1602,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.8,
+      "notional_cost_usd": 0.082288,
+      "input_tokens": 5847,
+      "output_tokens": 1776,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.9,
+      "notional_cost_usd": 0.08313599999999999,
+      "input_tokens": 5848,
+      "output_tokens": 1818,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0007930000000000001,
+      "input_tokens": 2976,
+      "output_tokens": 396,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0008439000000000001,
+      "input_tokens": 2978,
+      "output_tokens": 497,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0008556,
+      "input_tokens": 2904,
+      "output_tokens": 550,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0003074,
+      "input_tokens": 2976,
+      "output_tokens": 428,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.00022392,
+      "input_tokens": 2973,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46860",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00028531,
+      "input_tokens": 2905,
+      "output_tokens": 386,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9537
+}
