@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-16T02:54:52.538006+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T02:51:16.765794+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46828,
+    "post_id": 46568,
+    "url": "https://www.metaculus.com/questions/46568",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will the Detroit Lions beat the Chicago Bears in their Thanksgiving Day game on November 26, 2026?",
+    "resolution_criteria": "This question resolves YES if the Detroit Lions are the winning team in the NFL regular-season game between the Chicago Bears and the Detroit Lions scheduled at Ford Field for Thursday, November 26, 2026. The result is taken from the ESPN scoreboard for Week 12 of the 2026 NFL season (https://www.espn.com/nfl/scoreboard/_/week/12/seasontype/2/year/2026), which shows each game's final score, or from official NFL game statistics if that page is unavailable. A win in overtime counts as a win; a game that ends in a tie resolves NO. If the game is not completed on November 26, 2026 — for example, if it is postponed or canceled — the question is annulled.",
+    "fine_print": "",
+    "close_time": "2026-11-16 05:36 UTC",
+    "scheduled_resolution_time": "2026-11-26 23:00 UTC"
+  },
+  "research": [
+    "I'm writing up the findings now. The main points: the game hasn't been played, the market has the Lions as a slight favorite (about 52-60%), and Detroit has lost Aidan Hutchinson for the season.\n\n## 1. Resolution source\n- 2026-11-16: ESPN's Week 12 scoreboard data (the JSON feed behind the page in the criteria) has every Week 12 game as \"STATUS_SCHEDULED\", with no scores. Thanksgiving night, Chiefs at Bills, is listed for \"Thu, November 26th at 8:20 PM EST\". My filtered pulls didn't show the Bears at Lions entry itself, but the 1:00 p.m. ET Ford Field slot is confirmed elsewhere. [ESPN API](https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=12&seasontype=2&dates=2026)\n- NFL.com has a page for the game (\"bears-at-lions-2026-reg-12\"). It said the Bears' injury report was not yet available. [NFL.com](https://www.nfl.com/games/bears-at-lions-2026-reg-12)\n\n## 2. Current status\n- Nothing has settled the question. The game is 10 days away.\n- **The records in the question's background are out of date.** After Week 10, both teams are 7-2:\n  - The Lions beat the Patriots 35-10 in Munich on 2026-11-15. [dpa](https://dpa-international.com/sports/urn:newsml:dpa.com:20090101:261115-930-999936/)\n  - The Bears are 7-2 and lead the NFC North. [Beacon Journal](https://www.beaconjournal.com/story/shopping/sports/tickets/2026/11/15/chicago-bears-tickets-bye-week-next-opponent-new-orleans-saints/92765604007/)\n\n## 3. Recent news (newest first)\n- 2026-11-16: FanDuel has Detroit as a 5.5-point favorite (-255) over Tampa Bay (3-6) in their next game. [Detroit Sports Nation](https://detroitsportsnation.com/detroit-lions-buccaneers-fanduel-betting-odds-week-11/ddrysdale/detroit-lions/11/15/2026/508021/)\n- 2026-11-15: **Lions edge rusher Aidan Hutchinson is reportedly out for the season** with a right knee injury suffered in Munich, first reported by Tom Pelissero. Before the injury he had 6 sacks and, per PFF, 50 pressures. The team has only officially said he was downgraded to out. [Yahoo](https://sports.yahoo.com/articles/aidan-hutchinson-season-knee-injury-190427225.html), [Pride of Detroit](https://www.prideofdetroit.com/detroit-lions-news/181118/aidan-hutchinson-suffers-injury-sack-celebration-updates)\n- 2026-11-15: In Munich, Detroit outgained New England 494 to 151 in total yards, and Amon-Ra St. Brown scored 2 TDs. [Detroit Sports Nation](https://detroitsportsnation.com/dan-campbell-two-game-balls-lions-patriots-germany/ddrysdale/detroit-lions/11/15/2026/507995/)\n- 2026-11-08: The Bears beat Tampa Bay 27-24 on a late field goal despite 4 Caleb Williams interceptions. Running back Kyle Monangai was still out with a toe injury. All four NFC North teams had winning records. [Chicago Sun-Times](https://chicago.suntimes.com/bears/2026/11/08/bears-buccaneers-packers-lions-vikings-patriots-nfc-north-nfl-best-division)\n- The background says Bears tight end Cole Kmet is out. I could not confirm this.\n\n## 4. Base rates\n- Last season's series: the Lions won both games, 52-21 in Week 2 of 2025 and 19-16 at Soldier Field on 2026-01-04. [Bears.com](https://www.chicagobears.com/news/game-recap-bears-battle-back-but-fall-to-lions-in-regular-season-finale)\n- The Sun-Times says the Bears have lost 7 of their last 8 games against Detroit. The background says 7 of the last 10. [Sun-Times](https://chicago.suntimes.com/bears/2026/11/08/bears-buccaneers-packers-lions-vikings-patriots-nfc-north-nfl-best-division)\n- From general knowledge, not something I looked up: NFL home favorites of about 2.5 points historically win roughly 55-58% of the time. Ties are very rare (under 1%).\n- The two teams meet again in Week 17 in Chicago. [Kalshi](https://kalshi.com/matchups/nfl/lions-vs-bears)\n\n## 5. Other forecasts\n- The sportsbook line is consistently Lions -2.5, with the total between 51.5 and 52.5:\n  - CLEATZ: Lions -115, Bears -105 against the spread. [CLEATZ](https://cleatz.com/nfl-thanksgiving-2026-betting-preview/)\n  - VegasInsider consensus, dated 11/03: Lions -142, Bears +120 on the moneyline. [VegasInsider](https://www.vegasinsider.com/nfl/matchups/bears-vs-lions/)\n  - DraftKings, via Fantasy Life: Lions -2.5, total 51.5. [Fantasy Life](https://www.fantasylife.com/articles/nfl/nfl-thanksgiving-games-schedule-for-2026-bears-vs-lions-chiefs-v)\n  - I don't know whether these lines were set before or after the Hutchinson news.\n- Polymarket \"Bears vs. Lions\", as of 2026-11-16 02:51 UTC: Yes 0.47 / No 0.53. The spread ladder runs from -1.5 at 0.425 down to -5.5 at 0.305. Which team \"Yes\" stands for isn't labeled, but it is most likely the Bears, the first-listed team. That reading fits Lineups.com's report of about 48% Bears and 52% Lions. On that reading, the Lions are about 53%, lower than the 57-60% implied by the sportsbooks. [Lineups](https://www.lineups.com/articles/nfl-thanksgiving-2026-live-blog-tracker/)\n- Polymarket season series winner: Bears 0.225, Lions 0.215, Tie (1-1) 0.46.\n- Kalshi NFC North winner: Vikings 0.40, Bears 0.33, Lions 0.27, Packers 0.03.\n- Kalshi total wins:\n  - Lions: 11+ at 0.73, 12+ at 0.47.\n  - Bears: 11+ at 0.84, 12+ at 0.62.\n  - So Kalshi rates the Bears' full season slightly higher.\n- I found no Kalshi price for this specific game, and no Manifold or Metaculus market.\n\n## 6. Upcoming events before resolution\n- Bears vs. Saints on 2026-11-22 at Soldier Field. Kalshi has the Bears at 0.82 to win.\n- Lions vs. Buccaneers in Week 11, around 2026-11-22. Detroit is favored by 5.5.\n- Both teams have a short week before the Thursday game.\n- Injury reports start the week of 2026-11-23. Watch for official confirmation of Hutchinson's status, Monangai's toe and Kmet's status.\n- Line movement after Week 11.\n- Weather won't matter much because Ford Field is a dome.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 02:51 UTC; check each market really matches the question)\n- Kalshi: NFL: DET Lions Total Wins (Detroit 2026-27). Yes prices: 12+ wins: 0.47; 11+ wins: 0.73; 13+ wins: 0.24; 10+ wins: 0.88; 14+ wins: 0.12; 15+ wins: 0.06; 9+ wins: 0.95; 8+ wins: 0.96; 7+ wins: 0.9500; 5+ wins: 0.9800.\n- Kalshi: NFL: CHI Bears Total Wins (Chicago 2026-27). Yes prices: 13+ wins: 0.42; 12+ wins: 0.62; 14+ wins: 0.21; 11+ wins: 0.84; 15+ wins: 0.09; 10+ wins: 0.92; 9+ wins: 0.95; 8+ wins: 0.98; 5+ wins: 0.9500; 4+ wins: 0.9800.\n- Kalshi: CHI Bears: Team Specials (Chicago (2026-27)). Yes prices: Luther Burden III records 150+ receiving yards in a single game: 0.35; CHI Bears throw for 400+ yards in a single game: 0.49; Caleb Williams throws 5+ passing touchdowns in a single game: 0.51; Montez Sweat records 3+ sacks in a single game: 0.51; CHI Bears allow 0 points in a single game: 0.50; Colston Loveland records 125+ receiving yards in a single game: 0.49; Luther Burden III scores a rushing touchdown: 0.59; Kyle Monangai records 50+ rushing yards and 50+ receiving yards in a single game: 0.49; CHI Bears records 8+ sacks in a single game: 0.34; Caleb Williams rushes for 2+ touchdowns in a single game: 0.5000.\n- Kalshi: NFC North Division Winner (2026-27). Yes prices: MIN Vikings: 0.40; CHI Bears: 0.33; DET Lions: 0.27; GB Packers: 0.03.\n- Kalshi: Where will it rain on Thanksgiving? (Thanksgiving 2026). Yes prices: West Palm Beach: 0.47; Napa: 0.51; San Jose: 0.47; Pittsburgh: 0.47; Miami: 0.40; Detroit: 0.41; Columbus, OH: 0.42; San Francisco: 0.38; Seattle: 0.61; Gainesville: 0.40.\n- Kalshi: Where will it snow on Thanksgiving? (Thanksgiving 2026). Yes prices: Minneapolis–St. Paul: 0.29; Denver: 0.27; Cleveland: 0.30; Detroit: 0.26; Madison: 0.26; Pittsburgh: 0.24; Milwaukee: 0.28; Des Moines: 0.23; Columbus, OH: 0.24; Chicago: 0.23.\n- Kalshi: NFC Championship Matchup (NFC Championship (2026-27)). Yes prices: CHI Bears vs SF 49ers: 0.20; GB Packers vs SF 49ers: 0.07; SEA Seahawks vs SF 49ers: 0.04; CHI Bears vs LA Rams: 0.05; MIN Vikings vs SF 49ers: 0.08; CHI Bears vs SEA Seahawks: 0.03; DET Lions vs LA Rams: 0.03; GB Packers vs MIN Vikings: 0.03; CHI Bears vs GB Packers: 0.03; CHI Bears vs DET Lions: 0.01.\n- Kalshi: NFL Championship Game Matchup (Championship Game (2026-27)). Yes prices: BUF Bills vs SF 49ers: 0.12; JAC Jaguars vs SF 49ers: 0.07; BUF Bills vs CHI Bears: 0.04; JAC Jaguars vs CHI Bears: 0.04; KC Chiefs vs SF 49ers: 0.04; BUF Bills vs MIN Vikings: 0.04; DEN Broncos vs SF 49ers: 0.04; JAC Jaguars vs MIN Vikings: 0.04; CIN Bengals vs SF 49ers: 0.04; BUF Bills vs DET Lions: 0.03.\n- Kalshi: NOLA Saints vs CHI Bears (NO vs CHI (Nov 22)). Yes prices: CHI Bears: 0.82; NOLA Saints: 0.18.\n- Polymarket: Pro Football: Team to advance to NFC Championship Game (ends 2027-01-26). [Yes, No] prices: Dallas Cowboys: [\"0.12\", \"0.88\"]; New York Giants: [\"0.089\", \"0.911\"]; Philadelphia Eagles: [\"0.4165\", \"0.5835\"]; Washington Commanders: [\"0.03\", \"0.97\"]; Chicago Bears: [\"0.425\", \"0.575\"]; Detroit Lions: [\"0.2\", \"0.8\"]\n- Polymarket: Bears vs. Lions (ends 2026-11-26). [Yes, No] prices: Bears vs. Lions: [\"0.47\", \"0.53\"]; Spread -1.5: [\"0.425\", \"0.575\"]; Spread -2.5: [\"0.395\", \"0.605\"]; Spread -3.5: [\"0.365\", \"0.635\"]; Spread -4.5: [\"0.335\", \"0.665\"]; Spread -5.5: [\"0.305\", \"0.695\"]\n- Polymarket: Pro Football: Bears vs. Lions Season Series Winner (ends 2027-01-27). [Yes, No] prices: Bears: [\"0.225\", \"0.775\"]; Lions: [\"0.215\", \"0.785\"]; Tie: [\"0.46\", \"0.54\"]\n- Polymarket: Penn State Nittany Lions vs. Baylor Bears (W) (ends 2026-11-27). [Yes, No] prices: Penn State Nittany Lions vs. Baylor Bears (W): [\"0.5\", \"0.5\"]",
+    "# Research brief: Lions vs. Bears, Thanksgiving, November 26, 2026\n\n## 1. Resolution source\n- 2026-11-16: ESPN's scoreboard API for Week 12 lists \"Chicago Bears at Detroit Lions\" (event 401873081) at Ford Field on 2026-11-26 at 18:00 UTC, broadcast on CBS. Its status is STATUS_SCHEDULED and it has no score yet. [ESPN API](https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=12&seasontype=2&dates=2026)\n- 2026-11-16: ESPN's game summary for the same event shows both teams at **7-2**. Detroit is 5-0 at home. Chicago is 3-1 on the road and 5-2 against NFC teams. [ESPN summary](https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873081)\n\n## 2. Current status\n- The game has not been played, and nothing has settled the question.\n- The question's background says Detroit is 6-2. That is out of date: the Lions won 35-10 on November 15, so the teams are now tied at 7-2.\n\n## 3. Recent news (newest first)\n- 2026-11-16: FanDuel has Detroit as a 5.5-point favorite over 3-6 Tampa Bay in Week 11 (moneyline -255). [DSN](https://detroitsportsnation.com/detroit-lions-buccaneers-fanduel-betting-odds-week-11/ddrysdale/detroit-lions/11/15/2026/508021/)\n- 2026-11-15: The Lions beat the Patriots 35-10 in Munich. It was their fifth straight win. They outgained New England 494 yards to 151, and Amon-Ra St. Brown scored two touchdowns. [dpa](https://dpa-international.com/sports/urn:newsml:dpa.com:20090101:261115-930-999936/), [DSN](https://detroitsportsnation.com/dan-campbell-two-game-balls-lions-patriots-germany/ddrysdale/detroit-lions/11/15/2026/507995/)\n- 2026-11-15: The Bears had their bye and host the Saints on November 22. [Beacon Journal](https://www.beaconjournal.com/story/shopping/sports/tickets/2026/11/15/chicago-bears-tickets-bye-week-next-opponent-new-orleans-saints/92765604007/)\n- 2026-11-15, ESPN injury data:\n  - **Lions:** one player is Doubtful (knee) and several are Out. Detroit's tackles leader, a linebacker with 57 tackles, is on injured reserve with a neck injury, with an estimated return of December 6. That is after Thanksgiving.\n  - **Bears:** WR Luther Burden III (644 receiving yards) is Questionable with a concussion he suffered against Tampa Bay. Two other players are Out with toe injuries, and one is on injured reserve (wrist, return around December 13).\n  - **Quarterbacks:** Caleb Williams is listed Active (1,546 yards, 8 TD, 5 INT). Those low totals fit him having missed games earlier with a Grade 2 hamstring strain from Week 2. Jared Goff has 2,134 yards, 15 TD and 2 INT, and Jahmyr Gibbs has 847 rushing yards and 9 TD. [ESPN summary](https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873081), [BearGoggles](https://beargoggleson.com/ben-johnson-confirms-luther-burden-s-injury-status-after-bears-win), [ESPN](https://www.espn.com/nfl/story/_/id/49999247/)\n- About 2026-11-12: The consensus line was Lions -2.5 with a total of 52.5. One book had DET -142 and CHI +120, and another (DraftKings) had a total of 51.5. [CLEATZ](https://cleatz.com/nfl-thanksgiving-2026-betting-preview/), [VegasInsider](https://www.vegasinsider.com/nfl/matchups/bears-vs-lions/)\n\n## 4. Base rates\n- **Last five meetings:** Detroit won four.\n  - 2026-01-04: DET 19-16\n  - 2025-09-14: DET 52-21\n  - 2024-12-22: DET 34-17\n  - 2024-11-28 (Thanksgiving): DET 23-20\n  - 2023-12-10: CHI 28-13\n\n  The background says the Bears lost seven of the last ten meetings, but I could not verify the five games before these. [sportsbrackets](https://sportsbrackets.net/2026/09/08/bears-vs-lions-all-time-series/)\n- **Lions on Thanksgiving:** about 38-45-2 all time and 2-8 in their last ten Thanksgiving games, per one source. Sources disagree slightly on the totals. [champsorchumps](https://champsorchumps.us/team/nfl/detroit-lions/thanksgiving-record)\n- **Bears vs. Lions on Thanksgiving:** Chicago led 11-8 before 2024. Adding Detroit's 2024 win gives roughly 11-9, but that is my own calculation, not a published figure. [CBS](https://www.cbsnews.com/detroit/news/last-time-detroit-lions-won-on-thanksgiving)\n- **Market-implied rate:** removing the bookmaker margin from a 2.5-point home favorite at -142/+120 implies about 57-58% for Detroit. That is my own arithmetic.\n\n## 5. Other forecasts\n- 2026-11-16: Polymarket's \"Bears vs. Lions\" game market shows 0.47 / 0.53. Lineups.com reports Polymarket as CHI 48¢, DET 52¢, which suggests the 0.53 side is the Lions. The spread contracts priced at 0.425 (-1.5) and 0.395 (-2.5) look like the Lions side as well. Check the outcome labels before relying on this. [Lineups](https://www.lineups.com/articles/nfl-thanksgiving-2026-live-blog-tracker/)\n- Season series on Polymarket: Bears 0.225, Lions 0.215, Tie 0.46.\n- Kalshi NFC North winner: Vikings 0.40, Bears 0.33, Lions 0.27, Packers 0.03. Kalshi total wins: Lions 11+ at 0.73, Bears 11+ at 0.84 and 12+ at 0.62.\n- Kalshi Saints at Bears (November 22): Bears 0.82.\n- Kalshi Thanksgiving weather for Detroit: rain 0.41, snow 0.26. Ford Field is a dome, so weather should not affect the game.\n- I found no Manifold or Metaculus market and no published model forecast, such as ESPN FPI, for this specific game.\n\n## 6. Upcoming events before resolution\n- On about November 22, the Lions play Tampa Bay (Lions favored by 5.5) and the Bears host the Saints (Bears about 82% on Kalshi). Both games will move the standings, the line and the injury lists.\n- Thanksgiving week is a short week. Both teams play on Sunday and then again on Thursday, so injury reports from November 23 to 25 will matter. Key items are Burden's concussion protocol and Detroit's Doubtful and Out players.\n- Expect line movement from the current Lions -2.5. Final injury designations are typically released Tuesday or Wednesday of Thanksgiving week.\n- Kickoff is November 26 at 18:00 UTC. The final score will appear on the ESPN scoreboard for Week 12.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 02:51 UTC; check each market really matches the question)\n- Kalshi: NFL: DET Lions Total Wins (Detroit 2026-27). Yes prices: 12+ wins: 0.47; 11+ wins: 0.73; 13+ wins: 0.24; 10+ wins: 0.88; 14+ wins: 0.12; 15+ wins: 0.06; 9+ wins: 0.95; 8+ wins: 0.96; 7+ wins: 0.9500; 5+ wins: 0.9800.\n- Kalshi: NFL: CHI Bears Total Wins (Chicago 2026-27). Yes prices: 13+ wins: 0.42; 12+ wins: 0.62; 14+ wins: 0.21; 11+ wins: 0.84; 15+ wins: 0.09; 10+ wins: 0.92; 9+ wins: 0.95; 8+ wins: 0.98; 5+ wins: 0.9500; 4+ wins: 0.9800.\n- Kalshi: CHI Bears: Team Specials (Chicago (2026-27)). Yes prices: Luther Burden III records 150+ receiving yards in a single game: 0.35; CHI Bears throw for 400+ yards in a single game: 0.49; Caleb Williams throws 5+ passing touchdowns in a single game: 0.51; Montez Sweat records 3+ sacks in a single game: 0.51; CHI Bears allow 0 points in a single game: 0.50; Colston Loveland records 125+ receiving yards in a single game: 0.49; Luther Burden III scores a rushing touchdown: 0.59; Kyle Monangai records 50+ rushing yards and 50+ receiving yards in a single game: 0.49; CHI Bears records 8+ sacks in a single game: 0.34; Caleb Williams rushes for 2+ touchdowns in a single game: 0.5000.\n- Kalshi: NFC North Division Winner (2026-27). Yes prices: MIN Vikings: 0.40; CHI Bears: 0.33; DET Lions: 0.27; GB Packers: 0.03.\n- Kalshi: Where will it rain on Thanksgiving? (Thanksgiving 2026). Yes prices: West Palm Beach: 0.47; Napa: 0.51; San Jose: 0.47; Pittsburgh: 0.47; Miami: 0.40; Detroit: 0.41; Columbus, OH: 0.42; San Francisco: 0.38; Seattle: 0.61; Gainesville: 0.40.\n- Kalshi: Where will it snow on Thanksgiving? (Thanksgiving 2026). Yes prices: Minneapolis–St. Paul: 0.29; Denver: 0.27; Cleveland: 0.30; Detroit: 0.26; Madison: 0.26; Pittsburgh: 0.24; Milwaukee: 0.28; Des Moines: 0.23; Columbus, OH: 0.24; Chicago: 0.23.\n- Kalshi: NFC Championship Matchup (NFC Championship (2026-27)). Yes prices: CHI Bears vs SF 49ers: 0.20; GB Packers vs SF 49ers: 0.07; SEA Seahawks vs SF 49ers: 0.04; CHI Bears vs LA Rams: 0.05; MIN Vikings vs SF 49ers: 0.08; CHI Bears vs SEA Seahawks: 0.03; DET Lions vs LA Rams: 0.03; GB Packers vs MIN Vikings: 0.03; CHI Bears vs GB Packers: 0.03; CHI Bears vs DET Lions: 0.01.\n- Kalshi: NFL Championship Game Matchup (Championship Game (2026-27)). Yes prices: BUF Bills vs SF 49ers: 0.12; JAC Jaguars vs SF 49ers: 0.07; BUF Bills vs CHI Bears: 0.04; JAC Jaguars vs CHI Bears: 0.04; KC Chiefs vs SF 49ers: 0.04; BUF Bills vs MIN Vikings: 0.04; DEN Broncos vs SF 49ers: 0.04; JAC Jaguars vs MIN Vikings: 0.04; CIN Bengals vs SF 49ers: 0.04; BUF Bills vs DET Lions: 0.03.\n- Kalshi: NOLA Saints vs CHI Bears (NO vs CHI (Nov 22)). Yes prices: CHI Bears: 0.82; NOLA Saints: 0.18.\n- Polymarket: Pro Football: Team to advance to NFC Championship Game (ends 2027-01-26). [Yes, No] prices: Dallas Cowboys: [\"0.12\", \"0.88\"]; New York Giants: [\"0.089\", \"0.911\"]; Philadelphia Eagles: [\"0.4165\", \"0.5835\"]; Washington Commanders: [\"0.03\", \"0.97\"]; Chicago Bears: [\"0.425\", \"0.575\"]; Detroit Lions: [\"0.2\", \"0.8\"]\n- Polymarket: Bears vs. Lions (ends 2026-11-26). [Yes, No] prices: Bears vs. Lions: [\"0.47\", \"0.53\"]; Spread -1.5: [\"0.425\", \"0.575\"]; Spread -2.5: [\"0.395\", \"0.605\"]; Spread -3.5: [\"0.365\", \"0.635\"]; Spread -4.5: [\"0.335\", \"0.665\"]; Spread -5.5: [\"0.305\", \"0.695\"]\n- Polymarket: Pro Football: Bears vs. Lions Season Series Winner (ends 2027-01-27). [Yes, No] prices: Bears: [\"0.225\", \"0.775\"]; Lions: [\"0.215\", \"0.785\"]; Tie: [\"0.46\", \"0.54\"]\n- Polymarket: Penn State Nittany Lions vs. Baylor Bears (W) (ends 2026-11-27). [Yes, No] prices: Penn State Nittany Lions vs. Baylor Bears (W): [\"0.5\", \"0.5\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.54,
+      "reasoning": "(a) The game kicks off November 26, 2026 at 18:00 UTC, about 10 days from now, and the result will be known that evening. For Yes, Detroit must beat Chicago at Ford Field, with an overtime win counting. A tie resolves No, and a postponement annuls the question.\n\n(b) If nothing changed, the status quo is the current market view: the Lions are slight home favorites (consensus -2.5), and both teams are now 7-2.\n\n(c) The reference class is NFL home favorites of about 2.5 points. They historically win roughly 55-58% of the time. The de-vigged sportsbook moneyline (-142/+120) implies about 57-58%.\n\n(d) Evidence for Yes:\n- Detroit is 5-0 at home and on a five-game win streak.\n- The Lions beat New England 35-10 on November 15, outgaining them 494-151.\n- Detroit has won 4 of the last 5 meetings, including both games last season.\n- Bears WR Burden is questionable with a concussion, and Kmet is reportedly out.\n\nEvidence for No:\n- Aidan Hutchinson reportedly suffered a season-ending knee injury on November 15, a major loss to the pass rush.\n- Detroit's leading tackler is on injured reserve through December 6.\n- Chicago's defense allows only 20 points per game.\n- Polymarket, fetched November 16 after the Hutchinson news, has only about 53% Lions, lower than the sportsbook lines, which may predate the injury.\n- The Lions have a poor recent Thanksgiving record.\n\n(e) No scenario: Without Hutchinson, Detroit cannot pressure Caleb Williams. The Bears, coming off an easy Saints game, win a shootout 30-27.\nYes scenario: Goff, Gibbs and St. Brown keep rolling at home, and the Lions win 31-24, as Detroit has done in most recent meetings.\n\n(f) I start from about 57%, the sportsbook number that probably predates the injury news. The Polymarket price taken after the Hutchinson report is about 53%. Losing an elite edge rusher is worth roughly 1-1.5 points, which pulls the true line toward Lions -1 to -1.5, or about 53-55%. I subtract a negligible amount for tie risk. That gives about 54%.\n\nProbability: 54%"
+    },
+    {
+      "value": 0.54,
+      "reasoning": "(a) The game kicks off November 26, 2026 at 18:00 UTC, about 10 days away. For Yes, the Lions must win at Ford Field, with an overtime win counting. A tie resolves No, and postponement or cancellation annuls the question.\n\n(b) The status quo is the market view: Detroit is a slight home favorite. Both teams are now 7-2 after Detroit beat New England 35-10 on November 15. Detroit is 5-0 at home.\n\n(c) Base rate: NFL home favorites of about 2.5 points historically win roughly 55-58% of games. The de-vigged sportsbook moneyline (-142/+120, around November 3-12) implies about 57-58% for the Lions. Base rate: about 57%.\n\n(d) Evidence for Yes:\n- Detroit has won 4 of the last 5 meetings, including both 2025 games (52-21 and 19-16).\n- The Lions are on a five-game win streak, capped by a 494-151 yardage beatdown of New England on November 15.\n- They are 5-0 at home, and Goff's efficiency is elite (15 TD, 2 INT).\n- Bears WR Luther Burden III is questionable with a concussion, and Kyle Monangai is out with a toe injury.\n\nEvidence for No:\n- Aidan Hutchinson was reportedly lost for the season on November 15. He is Detroit's best defender, with 6 sacks and 50 pressures.\n- Detroit's leading tackler, a linebacker, is on IR through December 6.\n- Polymarket, priced on November 16 after the Hutchinson news, shows only about 53% for Detroit, below the sportsbook lines, which were likely set before the injury.\n- Chicago's defense is stronger (20.0 points allowed per game versus 24.0).\n- Detroit's recent Thanksgiving record is poor, though that is mostly noise.\n\n(e) No scenario: Without Hutchinson, Detroit's pass rush can't pressure Caleb Williams. Chicago's offense moves the ball, Burden returns, and the Bears win a shootout 30-27.\nYes scenario: Goff and Gibbs exploit Chicago's defense at home, Williams' turnover tendency (4 interceptions against Tampa Bay) resurfaces, and Detroit wins 31-24.\n\n(f) I start at about 57% from the sportsbook lines. The Hutchinson injury is material news that the older lines probably did not price in. The post-news Polymarket price of about 53% reflects it, though I am unsure the outcome labels map cleanly and the market's liquidity is uncertain. I blend toward Polymarket and shade down slightly for the roughly 0.3% chance of a tie, which resolves No. That gives about 54%.\n\nProbability: 54%"
+    },
+    {
+      "value": 0.55,
+      "reasoning": "**(a) Time and what Yes requires:** About 10 days remain. Kickoff is November 26, 2026 at 18:00 UTC, and the result will be known that evening. Detroit must finish ahead on the ESPN Week 12 scoreboard. An overtime win counts as Yes, a tie is No, and a postponement annuls the question.\n\n**(b) Status quo:** If nothing changes, Detroit goes in as a narrow home favorite. The sportsbook line is Lions -2.5. Both teams are 7-2, not 7-2 and 6-2 as the question background says.\n\n**(c) Base rate:** NFL home favorites of about 2.5 points win roughly 55-58% of the time. The de-vigged sportsbook moneyline (-142/+120) implies about 57-58% for Detroit.\n\n**(d) Strongest evidence:**\n\nFor Yes:\n- Detroit is 5-0 at home and has won five straight, including a 35-10 rout of New England on 2026-11-15 in which it outgained them 494-151.\n- The Lions won four of the last five meetings, including 52-21 and 19-16 last season.\n- Goff has 15 touchdowns and 2 interceptions.\n- Bears WR Luther Burden III is questionable with a concussion, and Caleb Williams threw 4 interceptions on 2026-11-08.\n\nFor No:\n- Aidan Hutchinson is reportedly out for the season (Pelissero, 2026-11-15).\n- Detroit's leading tackler is on injured reserve until December 6.\n- Polymarket (2026-11-16) has the Lions at only about 53%, below the sportsbook figure. The sportsbook lines may predate the Hutchinson news.\n- Kalshi rates Chicago's season slightly higher.\n- The Lions are 2-8 in their last ten Thanksgiving games, though this is weakly predictive.\n\n**(e) Scenarios:**\n- **No:** Without Hutchinson, Detroit's pass rush can't pressure Williams. The Bears' defense, which allows 20 points per game, makes a couple of stops, and Chicago wins a close shootout, 30-27.\n- **Yes:** Goff, Gibbs and St. Brown carry their Munich form into the dome. Detroit wins 31-24 as the Bears turn the ball over.\n\n**(f) Adjustment:** I start from the sportsbook-implied 57-58%. Losing Hutchinson is worth about a point, which is roughly 2-3 percentage points in win probability. The Polymarket price of about 53% likely already reflects this. I blend the two and also allow for the short week and other injury uncertainty. That lands at about 55%.\n\nProbability: 55%"
+    },
+    {
+      "value": 0.55,
+      "reasoning": "(a) The game kicks off November 26, 2026 at 18:00 UTC, about 10 days from now, and the result will be known that evening. The question resolves Yes only if the Lions win at Ford Field, including in overtime. A tie resolves No, and a postponement annuls the question.\n\n(b) If nothing changed, the status quo is the betting line: Detroit is a narrow home favorite at -2.5, so a Lions win is the slightly more likely outcome.\n\n(c) Base rate: NFL home favorites of about 2.5 points historically win roughly 55-58% of the time. Removing the bookmaker margin from the consensus moneyline (about -142/+120) gives Detroit about 57%. Ties occur less than 1% of the time.\n\n(d) Evidence:\n- For Yes:\n  - Detroit won 35-10 in Munich on 2026-11-15, outgaining New England 494 to 151. It was their fifth straight win.\n  - Detroit is 5-0 at home.\n  - Detroit has won 4 of the last 5 meetings, including both games in the 2025 season.\n  - The sportsbook line was consistently Lions -2.5 around November 3-12.\n  - Bears WR Luther Burden III is questionable with a concussion.\n  - Caleb Williams threw 4 interceptions on 2026-11-08.\n- For No:\n  - Aidan Hutchinson was reported out for the season on 2026-11-15, which is a major loss to Detroit's pass rush.\n  - Detroit's leading tackler is on injured reserve until after Thanksgiving.\n  - Polymarket, as of 2026-11-16 02:51 UTC, has the Lions only about 52-53%. It likely already prices in the Hutchinson news.\n  - Kalshi rates Chicago's full season higher, both on total wins and on the division title.\n  - Detroit is 2-8 in its last ten Thanksgiving games.\n  - Both teams play on a short week.\n\n(e) No scenario: Without Hutchinson, Detroit cannot pressure Williams. Chicago's defense, which has allowed 20 points per game, makes key stops, and the Bears win a shootout by a field goal. Yes scenario: Goff, Gibbs and St. Brown keep their home form going against a Bears defense missing pieces, and Detroit wins 31-24.\n\n(f) I start from the sportsbook rate of about 57%. Those lines may predate the Hutchinson injury, and the Polymarket price taken just after the news sits around 53%. I weight the more recent market and move down to about 54-55%, then subtract about 0.3 points for the chance of a tie.\n\nProbability: 55%"
+    },
+    {
+      "value": 0.54,
+      "reasoning": "(a) Kickoff is November 26, 2026 at 18:00 UTC, about 10 days away, and the result will be known that evening. YES requires the Lions to win at Ford Field, including in overtime. A tie resolves NO, and a postponement annuls the question.\n\n(b) No result exists yet. The closest thing to a status quo is the current market favorite: Detroit, a slight home favorite.\n\n(c) Base rate: NFL home favorites of about 2.5 points win roughly 55-58% of the time. The pre-injury sportsbook moneylines (DET -142 / CHI +120) imply about 57-58% for Detroit once the bookmaker margin is removed.\n\n(d) Evidence for YES:\n- The Lions beat the Patriots 35-10 on November 15, outgaining them 494 yards to 151. It was their fifth straight win.\n- Detroit is 5-0 at home.\n- The Lions have won 4 of the last 5 meetings, including both 2025-season games.\n- Bears WR Luther Burden III is questionable with a concussion, Chicago has running backs hurt, and Chicago plays on a short week.\n\nEvidence for NO:\n- On November 15, Aidan Hutchinson was reported out for the season with a knee injury. He is Detroit's best pass rusher, with 6 sacks and 50 pressures.\n- The Lions' tackles leader is on injured reserve until December 6.\n- The sportsbook lines (dated November 3-12) likely predate the Hutchinson injury.\n- Polymarket on November 16 has the Lions at only about 52-53%.\n- Kalshi rates the Bears' season higher.\n\n(e) NO scenario: without Hutchinson, Detroit's pass rush fades. Caleb Williams has time to throw, Chicago's better defense (20.0 points allowed per game) holds, and the Bears win a close game.\n\nYES scenario: Goff, Gibbs and St. Brown carry a strong home offense, a banged-up Bears skill group struggles, and Detroit wins by a field goal or more.\n\n(f) I start at the roughly 57% sportsbook price. The Hutchinson injury is real, material news that the older lines probably did not include, and the post-news Polymarket price of about 53% reflects it. I blend the two and lean toward the fresher market, which puts me at about 54%. That is a move of about 3 points down from the base rate. A small tie probability is negligible.\n\nProbability: 54%"
+    },
+    {
+      "value": 0.54,
+      "reasoning": "(a) The game kicks off on November 26, 2026 at 18:00 UTC, about 10 days from now, and the result will be known that evening. The question resolves Yes only if the Lions win at Ford Field, including in overtime. A tie resolves No. A postponement annuls the question.\n\n(b) Nothing is settled yet, so there is no true status quo outcome. The closest equivalent is the current pricing: Detroit is a narrow home favorite.\n\n(c) Base rate: NFL home favorites of about 2.5 points historically win roughly 55-58% of the time. Removing the bookmaker margin from Lions -142 / Bears +120 gives about 57-58% for Detroit. Polymarket's game market, which has about $0.53 on the Lions side, implies about 53%.\n\n(d) Evidence for Yes:\n- The Lions won 35-10 in Munich on 2026-11-15, outgaining New England 494 to 151 yards. It was their fifth straight win.\n- Detroit is 5-0 at home.\n- Detroit won 4 of the last 5 meetings, including both games in the 2025 season.\n- Jared Goff has 15 touchdowns and only 2 interceptions.\n- Bears wide receiver Luther Burden III is in concussion protocol, and Caleb Williams threw 4 interceptions on 2026-11-08.\n\nEvidence for No:\n- Aidan Hutchinson is reportedly out for the season with a knee injury (2026-11-15). He is Detroit's best pass rusher, and the defense has already allowed 24.0 points per game.\n- Detroit's leading tackler is on injured reserve until December 6.\n- The Bears' defense has been better, allowing 20.0 points per game.\n- Kalshi rates Chicago's full season slightly higher: 84% for 11+ wins versus 73% for the Lions.\n- Polymarket, which may be the only price that reflects the Hutchinson news, has the Lions at only about 53%.\n- Both teams face a short week.\n\n(e) No scenario: without Hutchinson, the Lions' pass rush cannot pressure Williams. The Bears' rested defense, coming off its bye week, slows Detroit's offense, and Chicago wins a close shootout 30-27.\nYes scenario: Goff and Jahmyr Gibbs keep up their home form, Williams turns the ball over again, and Detroit wins 31-24.\n\n(f) I start at about 57% from the sportsbook lines and the home-favorite base rate. Polymarket's 53% likely includes the Hutchinson news, and that injury plausibly costs about a point to a point and a half against the spread. Blending the two and shading slightly toward the more recent market price puts Detroit at about 54-55%. Ties are rare, under 1%, so they barely change the number.\n\nProbability: 54%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.532,
+  "usage": [
+    {
+      "question_id": "46828",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00013309999999999998,
+      "input_tokens": 514,
+      "output_tokens": 61,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00022820000000000002,
+      "input_tokens": 1022,
+      "output_tokens": 48,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 82.3,
+      "notional_cost_usd": 0.3823682,
+      "input_tokens": 120249,
+      "output_tokens": 4743,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 77.6,
+      "notional_cost_usd": 0.3880546,
+      "input_tokens": 119353,
+      "output_tokens": 4546,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.9,
+      "notional_cost_usd": 0.112332,
+      "input_tokens": 11450,
+      "output_tokens": 1037,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.2,
+      "notional_cost_usd": 0.109212,
+      "input_tokens": 11450,
+      "output_tokens": 881,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.4,
+      "notional_cost_usd": 0.112512,
+      "input_tokens": 11450,
+      "output_tokens": 1046,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.7,
+      "notional_cost_usd": 0.023852,
+      "input_tokens": 11449,
+      "output_tokens": 958,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.9,
+      "notional_cost_usd": 0.026540000000000005,
+      "input_tokens": 11450,
+      "output_tokens": 1092,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.1,
+      "notional_cost_usd": 0.0004459000000000001,
+      "input_tokens": 2183,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.2,
+      "notional_cost_usd": 0.029592,
+      "input_tokens": 11449,
+      "output_tokens": 1245,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.00042170000000000006,
+      "input_tokens": 2062,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.9,
+      "notional_cost_usd": 0.0004513,
+      "input_tokens": 2210,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0004283,
+      "input_tokens": 2095,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0005258,
+      "input_tokens": 2155,
+      "output_tokens": 190,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.00045350000000000007,
+      "input_tokens": 2221,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 9.479e-05,
+      "input_tokens": 2184,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 9.359e-05,
+      "input_tokens": 2064,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 9.525e-05,
+      "input_tokens": 2211,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 9.391e-05,
+      "input_tokens": 2096,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.00014330000000000001,
+      "input_tokens": 2154,
+      "output_tokens": 117,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46828",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.00013146000000000002,
+      "input_tokens": 2220,
+      "output_tokens": 92,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1882
+}
