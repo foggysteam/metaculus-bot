@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T17:17:59.907119+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T17:05:07.758162+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46233,
+    "post_id": 46013,
+    "url": "https://www.metaculus.com/questions/46013",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "How much will Nvidia's stock price returns exceed Microsoft's in these biweekly periods of Q4 2026? (Nov 23 - Dec 4)",
+    "resolution_criteria": "Each subquestion will resolve as the difference between the percent stock price return of [NVDA](https://finance.yahoo.com/quote/NVDA/history/) and that of [MSFT](https://finance.yahoo.com/quote/MSFT/history/) for the corresponding biweekly period, according to Yahoo Finance data.\n\nSpecifically, each subquestion will resolve as NVDA\\_return - MSFT\\_return.\n\nReturns will be calculated as follows: If P₀ is the Adj Close price of a company stock on the last trading day or half-day *before* the start of the period and P₁ is the Adj Close price of the stock on the last trading day *of* the designated period, the percentage return will be calculated as:\n\n$$\n \\text{return} = 100 \\times \\frac{P1 - P0}{P0}\n$$",
+    "fine_print": "* If Microsoft outperforms Nvidia, the corresponding subquestion will resolve as a negative number.\n* If Yahoo Finance delays or ceases reporting these data or if it reports them in error, Metaculus might use alternative credible sources to resolve this question.\n* Resolutions are based on the prices at the market close on the last trading day of the designated period. Further adjustments to Adj Close prices after that will not cause subquestions to re-resolve.\n\n***\n\nFor example, for the period Jun 9, 2025 - Jun 20, 2025, the subquestion would resolve based on the following calculations:\n\nNVDA\\_P₀ \\= 141.71 (the Adj Close price on Jun 6)\n\nNVDA\\_P₁ \\= 143.85 (the Close price on Jun 20)\n\nNVDA\\_return \\= 100 × (143.85 - 141.71) / 141.71 \\= 1.510\n\nMSFT\\_P₀ \\= 470.38 (the Adj Close price on Jun 6)\n\nMSFT\\_P₁ \\= 477.40 (the Close price on Jun 20)\n\nMSFT\\_return \\= 100 × (477.40 - 470.38) / 470.38 \\= 1.4924\n\nAnd the resolution would be 1.510 - 1.494 \\= **0.016** percentage points (pp).",
+    "close_time": "2026-11-23 04:00 UTC",
+    "scheduled_resolution_time": "2026-12-04 21:00 UTC"
+  },
+  "research": [
+    "## NVDA minus MSFT return, Nov 23 to Dec 4, 2026: research notes\n\n### 1. Resolution source\n- The starting price (P₀) is the Adj Close on **Fri 2026-11-20**. The ending price (P₁) is the close on **Fri 2026-12-04**. Markets are closed Thanksgiving Thu 11-26, and Fri 11-27 is a half-day.\n- 2026-11-16, intraday from the Yahoo chart API: NVDA at **$158.20**, down 2.9% on the day. That is a 52-week low area: the 52-week range is $148.80 (intraday low on 11-12) to $243.37. MSFT showed **$523.88**, but Yahoo had it flat at 0.0%, so the quote may be stale. [Yahoo NVDA](https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=3mo&interval=1d), [Yahoo MSFT](https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=3mo&interval=1d)\n- Recent Adj Closes, NVDA / MSFT: 10-06 record $239.24 / $529.30; 10-30 $204.64 / $521.91; 11-05 $181.60 / $555.80; 11-13 $162.85 / $523.88.\n- The question background says MSFT was \"-21% YTD\" as of Oct 7. Yahoo data contradicts this: MSFT was about $530 then, above its level at the end of 2025.\n\n### 2. Current status\n- Nothing is settled. The period has not started, and P₀ will not be set until the 11-20 close.\n- Nvidia's FQ3 earnings come out on **11-17**, before P₀. So the immediate earnings reaction will mostly fall *outside* this window, though follow-through drift could carry into it.\n\n### 3. Recent news (newest first)\n- 2026-11-16: Nvidia fell about 2% more. An online petition to reinstate Huang has more than 170k signatures, with backing from Musk and others. Treasury Secretary Bessent called for a \"dramatic shakeup\" and an outside CEO. Interim CEO Colette Kress faces her first earnings report. [CNBC](https://www.cnbc.com/2026/11/16/nvidia-stock-price-jensen-huang.html)\n- 2026-11-16: Microsoft's market cap passed Nvidia's. The FT reports that Huang's allies are working on plans for his return. [Handelsblatt](https://www.handelsblatt.com/finanzen/maerkte/marktberichte/dow-jones-sp-500-nasdaq-wall-street-startet-im-minus-microsoft-wertvoller-als-nvidia/100270217.html)\n- 2026-11-16: Consensus for FQ3 is about $108.7B revenue (+91% YoY) and $2.47 adjusted EPS. An Anthropic IPO and Microsoft Ignite (Nov 17-20) are also this week. [Stocktwits](https://stocktwits.com/news-articles/markets/equity/nvidia-s-all-important-q3-report-china-tech-results-anthropic-ipo-and-microsoft-ignite-to-keep-investors-hooked-this-week/cNb7WXNR9Xg)\n- 2026-11-13: Nvidia closed below a $4T market cap for the first time since July 2025. Mizuho cut its price target to $220 from $250; UBS and CLSA also cut. [CNBC](https://www.cnbc.com/2026/11/13/nvidia-nvda-stock-jensen-huang-transition.html)\n- 2026-11-12: Huang resigned after an internal probe into affairs, including reported ties to a suspected Chinese spy. Shares fell as much as 14% during the day and closed down 4.3%. [CNBC](https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html), [The Hill](https://thehill.com/business/6215959-jensen-huang-resigns-nvidia-stock-drops/)\n- 2026-11-05: NVDA fell 9.3% to $181.60 in an AI-chip selloff after the midterm elections. The S&P 500 fell 4.4% and AMD fell 17%. [heygotrade](https://www.heygotrade.com/en/news/nvidia-nvda-stock-news-november-6-2026/)\n\n### 4. Base rates\nI computed these from the Yahoo Adj Closes, Friday to Friday, as NVDA return minus MSFT return:\n- 08-21 to 09-04: +7.28% vs +3.41% = **+3.9 pp**\n- 09-04 to 09-18: -3.40% vs -1.18% = **-2.2 pp**\n- 09-18 to 10-02: +5.25% vs +4.81% = **+0.4 pp**\n- 10-02 to 10-16: -8.47% vs +2.23% = **-10.7 pp**\n- 10-16 to 10-30: -4.43% vs -1.35% = **-3.1 pp**\n- 10-30 to 11-13: -20.42% vs +0.38% = **-20.8 pp**, outside the question's ±15 range\n- Trend: NVDA has underperformed in four straight two-week periods. The spread has been far more volatile than usual: NVDA has had daily moves of 5 to 10%, against a typical calm-period spread standard deviation of about 4 to 6 pp.\n- Same window in past years. These are from my memory and **not verified**:\n  - 2025 (11/21 to 12/5): about -0.4 pp\n  - 2024 (11/22 to 12/6): about -6 pp\n  - 2023 (11/17 to 12/1): about -6 pp\n  - In all three years this window came right after Nvidia's November earnings, and MSFT outperformed.\n\n### 5. Other forecasts\n- Polymarket, end of November ranking, 2nd-largest company: NVDA 0.47, MSFT 0.41. 3rd-largest: MSFT 0.45, NVDA 0.31, Alphabet 0.21. Read together, this is roughly a coin flip between the two on relative market cap. It is related to this question, but it is not a match for it.\n- Kalshi:\n  - \"Trump publicly calls for Huang reinstatement\": 0.36 before Dec 1, 0.43 before Jan 1.\n  - Next Nvidia CEO: Rene Haas 0.23, Huang 0.14, Ian Buck 0.10, Kress 0.07.\n  - Q3 earnings call postponed: 0.03.\n- I found no market or expert forecast on this exact spread.\n\n### 6. Upcoming events before resolution\n- 11-17: Nvidia FQ3 results and guidance, the first under interim CEO Kress. This comes before P₀.\n- 11-17 to 11-20: Microsoft Ignite. Also this week: the Anthropic IPO, FOMC minutes, and a reported Trump-Xi summit (Nov 17-19), which could matter for Nvidia's China exposure.\n- Inside the window: a possible CEO appointment or a Huang return, which could cause a large NVDA jump either way; a possible Trump statement; the Thanksgiving half-day on 11-27; and early-December macro data. Low holiday trading volume could make moves bigger.\n- No weather dependence.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 17:14 UTC; check each market really matches the question)\n- Kalshi: Silver at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $47.00: 0.55; Above $48.00: 0.24; Above $46.00: 0.83; Above $49.00: 0.07; Above $43.00: 0.97; Above $44.00: 0.97; Above $45.00: 0.95; Above $53.00: 0.0000; Above $54.00: 0.0000; Above $55.00: 0.0000. Settles on the Pyth feed Metal.Index.SILVER/USD, which can differ from exchange settlement prices.\n- Kalshi: Which member of Congress will have the biggest returns in 2025? (In 2025). Yes prices: Roger Williams: 0.44; Ron Wyden: 0.17; Nancy Pelosi: 0.04; David Rouzer: 0.33; Debbie Wasserman-Schultz: 0.41; David Kustoff: 0.02; Larry Bucshon: 0.02; Susan Collins: 0.04; Morgan McGarvey: 0.04; Pete Sessions: 0.16.\n- Kalshi: Will NVIDIA Q3 earnings call be postponed? (Before Nov 18, 2026). Yes prices: Yes: 0.03.\n- Kalshi: Gold at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $3850: 0.66; Above $3900: 0.26; Above $3800: 0.91; Above $3950: 0.50; Above $3600: 0.98; Above $3650: 0.98; Above $3700: 0.97; Above $3750: 0.96; Above $4200: 0.0400; Above $4050: 0.3700. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Kalshi: Copper at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $6.10: 0.54; Above $6.20: 0.12; Above $6.00: 0.91; Above $5.50: 0.98; Above $5.60: 0.98; Above $5.70: 0.98; Above $5.80: 0.97; Above $5.90: 0.97; Above $6.50: 0.0000; Above $6.60: 0.0000. Settles on the Pyth feed Commodities.Index.CU/USD, which can differ from exchange settlement prices.\n- Kalshi: Will Trump publicly call for Jensen Huang to be reinstated as Nvidia CEO? (Before Jan 1, 2027). Yes prices: Before Jan 1, 2027: 0.43; Before Nov 18, 2026: 0.32; Before Dec 1, 2026: 0.36.\n- Kalshi: Will Tulsi Gabbard rejoin the Trump administration? (Before Apr 1, 2027). Yes prices: Before Apr 1, 2027: 0.06; Before Jan 1, 2027: 0.0100; Before Nov 1, 2026: 0.0100.\n- Kalshi: Who will be the next CEO of NVIDIA? (Before 2029). Yes prices: Rene Haas: 0.23; Jensen Huang: 0.14; Ian Buck: 0.10; Colette Kress: 0.07; Johny Srouji: 0.07; Nikesh Arora: 0.04; Tim Cook: 0.04; Lisa Su: 0.03; Matt Murphy: 0.01; Thomas Kurian: 0.01.\n- Polymarket: Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: Alphabet: [\"0.003\", \"0.997\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]; Broadcom: [\"0.0005\", \"0.9995\"]; NVIDIA: [\"0.032\", \"0.968\"]; Microsoft: [\"0.0015\", \"0.9985\"]\n- Polymarket: 3rd Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: NVIDIA: [\"0.31\", \"0.69\"]; Microsoft: [\"0.45\", \"0.55\"]; Apple: [\"0.0025\", \"0.9975\"]; Alphabet: [\"0.213\", \"0.787\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: 2nd Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: NVIDIA: [\"0.47\", \"0.53\"]; Microsoft: [\"0.406\", \"0.594\"]; Apple: [\"0.0345\", \"0.9655\"]; Alphabet: [\"0.087\", \"0.913\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: Which Mag 7 Stock Has the Biggest Single-Day Move in 2026? (ends 2027-01-01). [Yes, No] prices: Apple (AAPL): [\"0.43\", \"0.57\"]; Microsoft (MSFT): [\"0.41\", \"0.59\"]; Alphabet (GOOGL): [\"0.425\", \"0.575\"]; Amazon (AMZN): [\"0.415\", \"0.585\"]; NVIDIA (NVDA): [\"0.4\", \"0.6\"]; Meta (META): [\"0.41\", \"0.59\"]",
+    "I'm finishing the write-up now, using Yahoo price data through today (Nov 16, intraday) and news on the Huang resignation.\n\nThe key finding: Nvidia is in an exceptional high-volatility period after Jensen Huang's Nov 12 resignation. In the last full two-week period, Nvidia trailed Microsoft by about 20.8 pp, which is beyond the question's ±15 range. The resolution window is Nov 23 to Dec 4. The starting price (P₀) is the Fri Nov 20 close, so the effect of the Nov 17 earnings will already be in it.\n\n## 1. Resolution source\n- Yahoo Finance Adj Close. P₀ is the Nov 20, 2026 close and P₁ is the Dec 4, 2026 close. Markets are closed Thu Nov 26 (Thanksgiving) and close early Fri Nov 27.\n- Latest Yahoo chart API data ([NVDA](https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=1mo&interval=1d), [MSFT](https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=1mo&interval=1d)):\n  - 2026-11-16 (intraday): NVDA about 158.06 (-2.9%), MSFT about 523.64 (flat). NVDA's 52-week range is 148.80 to 243.37.\n  - 2026-11-13 close: NVDA 162.85, MSFT 523.88.\n  - 2026-10-16 close: NVDA 214.13, MSFT 529.05.\n\n## 2. Current status\n- Nothing is settled. The window has not started and P₀ is not known yet.\n- I could not open the Metaculus spreadsheet of past resolutions. The figures below are my own calculations from Yahoo data:\n  - Oct 19 to Oct 30: NVDA -4.43%, MSFT -1.35%, difference **-3.08 pp**.\n  - Nov 2 to Nov 13: NVDA -20.42% (204.64 to 162.85), MSFT +0.38% (521.91 to 523.88), difference **about -20.8 pp**.\n\n## 3. Recent news (newest first)\n- 2026-11-16: NVDA fell about 2% more. President Trump said a Huang return \"certainly isn't a bad idea\", while Treasury Secretary Bessent called for a \"dramatic shakeup\". The Nvidia board called talk about candidates \"premature\". [CNBC](https://www.cnbc.com/2026/11/16/nvidia-stock-price-jensen-huang.html), [CNBC](https://www.cnbc.com/2026/11/16/morning-squawk-nvidia-share-calls-reinstate-huang-ceo.html)\n- 2026-11-16: Handelsblatt reports Microsoft has overtaken Nvidia in market value. [Handelsblatt](https://www.handelsblatt.com/finanzen/maerkte/marktberichte/dow-jones-sp-500-nasdaq-wall-street-startet-im-minus-microsoft-wertvoller-als-nvidia/100270217.html)\n- 2026-11-15: The FT reports Huang is weighing a comeback, and Musk backs his return. [Yahoo](https://finance.yahoo.com/markets/article/nvidia-stock-steady-as-jensen-huang-reportedly-weighs-ceo-comeback-musk-backs-return-015644730.html)\n- 2026-11-14: Two large shareholders, Altimeter and Atreides, urged the board to keep a Huang return open as an option. [CNBC](https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html)\n- 2026-11-12: Huang resigned amid reports of affairs, including one with an alleged Chinese spy. CFO Colette Kress is interim CEO and Harvey Jones is board chair. NVDA fell 4.3% that day. [SEC 8-K](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm), [NBC](https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402), [CBS timeline](https://www.cbsnews.com/news/jensen-huang-nvidia-resignation-scandal-timeline/)\n- 2026-11-08: Nvidia opened an independent investigation into reports that Huang was targeted by foreign intelligence. [Trefis](https://www.trefis.com/stock/nvda/articles/623357/what-sent-nvidia-stock-lower/2026-11-06)\n- 2026-11-05: NVDA fell 9.26% to 181.60, its worst day since DeepSeek in January 2025, during an AI-chip selloff. [Sesamedisk](https://sesamedisk.com/nvidia-stock-falls-9-on-board-probe/)\n- 2026-11-04: MSFT rose about 6.7% (520.99 to 555.80). I could not find the cause.\n- One news-API item mentioned a \"Microsoft outage\", but I could not confirm it.\n\n## 4. Base rates\n- Same window last year, Nov 24 to Dec 5, 2025 (Yahoo): NVDA 178.45 to 181.98 (+1.98%), MSFT 469.14 to 480.11 (+2.34%), difference **-0.36 pp**.\n- This is not a seasonal quantity. The Thanksgiving period has low volume, but NVDA reported earnings the week before the window in both years.\n- Rough volatility estimate (my assumptions, not sourced): in normal times, with NVDA around 40-50% annualized vol, MSFT around 25% and correlation around 0.5, the two-week difference has a standard deviation of roughly 7-8.5 pp.\n- The current regime is far more volatile. NVDA has had daily moves of -9%, -5% and -5% and fell about 26% from Oct 16 to Nov 13, while MSFT has been roughly flat.\n- The last full two-week difference (-20.8 pp) exceeded the question range.\n\n## 5. Other forecasts\n- I found no market on this exact question.\n- Related markets:\n  - Kalshi, \"Trump publicly calls for Huang to be reinstated\": 36% by Dec 1 and 43% by Jan 1.\n  - Kalshi, \"Next Nvidia CEO\": Rene Haas 23%, Jensen Huang 14%, Ian Buck 10%, Kress 7%.\n  - Kalshi, \"Nvidia earnings call postponed before Nov 18\": 3%.\n  - Polymarket, end of November: Nvidia is 2nd-largest company at 47% vs Microsoft 41%, and 3rd-largest at 31% vs Microsoft 45%. Nvidia is the largest at only 3%.\n- Analyst consensus for Q3 FY27: revenue about $108.7-109B (+91% y/y) and EPS $2.47. [Stocktwits](https://stocktwits.com/news-articles/markets/equity/nvidia-s-all-important-q3-report-china-tech-results-anthropic-ipo-and-microsoft-ignite-to-keep-investors-hooked-this-week/cNb7WXNR9Xg), [ADVFN](https://uk.advfn.com/market-news/article/26339/a-crucial-week-for-the-markets)\n\n## 6. Upcoming events\n**Before the window (they set P₀):**\n- Nov 17: Nvidia Q3 FY27 earnings, the first without Huang.\n- Nov 17-20: Microsoft Ignite. [Finanztrends](https://www.finanztrends.de/news/microsoft-aktie-ignite-im-november-2026/)\n- Nov 17-19: reported Anthropic IPO and Trump-Xi summit. [Business Insider ES](https://www.businessinsider.es/mercados/wall-street-afronta-una-semana-clave-para-ia-nvidia-sin-jensen-huang-opv-anthropic-cumbre-trump-xi_7060809_0.html)\n- This week: Fed minutes.\n\n**During the window (Nov 23 to Dec 4):**\n- Possible Nvidia board decision on a permanent CEO or Huang's reinstatement. This is the biggest possible move for NVDA in either direction.\n- Huang may testify to Congress \"as soon as next week\" (Al Jazeera, Nov 12). [Al Jazeera](https://www.aljazeera.com/news/2026/11/12/ai-titan-jensen-huang-out-as-nvidia-ceo)\n- Fallout from the Nvidia spy probe or China-related news.\n- The November jobs report is likely due Fri Dec 4. I did not confirm the date.\n- Thin holiday trading on Nov 25 and Nov 27.\n\nSources: links inline above.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 17:14 UTC; check each market really matches the question)\n- Kalshi: Silver at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $47.00: 0.55; Above $48.00: 0.24; Above $46.00: 0.83; Above $49.00: 0.07; Above $43.00: 0.97; Above $44.00: 0.97; Above $45.00: 0.95; Above $53.00: 0.0000; Above $54.00: 0.0000; Above $55.00: 0.0000. Settles on the Pyth feed Metal.Index.SILVER/USD, which can differ from exchange settlement prices.\n- Kalshi: Which member of Congress will have the biggest returns in 2025? (In 2025). Yes prices: Roger Williams: 0.44; Ron Wyden: 0.17; Nancy Pelosi: 0.04; David Rouzer: 0.33; Debbie Wasserman-Schultz: 0.41; David Kustoff: 0.02; Larry Bucshon: 0.02; Susan Collins: 0.04; Morgan McGarvey: 0.04; Pete Sessions: 0.16.\n- Kalshi: Will NVIDIA Q3 earnings call be postponed? (Before Nov 18, 2026). Yes prices: Yes: 0.03.\n- Kalshi: Gold at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $3850: 0.66; Above $3900: 0.26; Above $3800: 0.91; Above $3950: 0.50; Above $3600: 0.98; Above $3650: 0.98; Above $3700: 0.97; Above $3750: 0.96; Above $4200: 0.0400; Above $4050: 0.3700. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Kalshi: Copper at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $6.10: 0.54; Above $6.20: 0.12; Above $6.00: 0.91; Above $5.50: 0.98; Above $5.60: 0.98; Above $5.70: 0.98; Above $5.80: 0.97; Above $5.90: 0.97; Above $6.50: 0.0000; Above $6.60: 0.0000. Settles on the Pyth feed Commodities.Index.CU/USD, which can differ from exchange settlement prices.\n- Kalshi: Will Trump publicly call for Jensen Huang to be reinstated as Nvidia CEO? (Before Jan 1, 2027). Yes prices: Before Jan 1, 2027: 0.43; Before Nov 18, 2026: 0.32; Before Dec 1, 2026: 0.36.\n- Kalshi: Will Tulsi Gabbard rejoin the Trump administration? (Before Apr 1, 2027). Yes prices: Before Apr 1, 2027: 0.06; Before Jan 1, 2027: 0.0100; Before Nov 1, 2026: 0.0100.\n- Kalshi: Who will be the next CEO of NVIDIA? (Before 2029). Yes prices: Rene Haas: 0.23; Jensen Huang: 0.14; Ian Buck: 0.10; Colette Kress: 0.07; Johny Srouji: 0.07; Nikesh Arora: 0.04; Tim Cook: 0.04; Lisa Su: 0.03; Matt Murphy: 0.01; Thomas Kurian: 0.01.\n- Polymarket: Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: Alphabet: [\"0.003\", \"0.997\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]; Broadcom: [\"0.0005\", \"0.9995\"]; NVIDIA: [\"0.032\", \"0.968\"]; Microsoft: [\"0.0015\", \"0.9985\"]\n- Polymarket: 3rd Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: NVIDIA: [\"0.31\", \"0.69\"]; Microsoft: [\"0.45\", \"0.55\"]; Apple: [\"0.0025\", \"0.9975\"]; Alphabet: [\"0.213\", \"0.787\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: 2nd Largest Company end of November 2026? (ends 2026-12-01). [Yes, No] prices: NVIDIA: [\"0.47\", \"0.53\"]; Microsoft: [\"0.406\", \"0.594\"]; Apple: [\"0.0345\", \"0.9655\"]; Alphabet: [\"0.087\", \"0.913\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: Which Mag 7 Stock Has the Biggest Single-Day Move in 2026? (ends 2027-01-01). [Yes, No] prices: Apple (AAPL): [\"0.43\", \"0.57\"]; Microsoft (MSFT): [\"0.41\", \"0.59\"]; Alphabet (GOOGL): [\"0.425\", \"0.575\"]; Amazon (AMZN): [\"0.415\", \"0.585\"]; NVIDIA (NVDA): [\"0.4\", \"0.6\"]; Meta (META): [\"0.41\", \"0.59\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -10.5,
+        "p25": -4.65,
+        "p50": 0.2,
+        "p75": 5.1,
+        "p90": 10.5
+      },
+      "reasoning": "(a) **Time left:** The window opens Nov 23 and closes Dec 4, 2026, so the outcome will be known in about 18 days. P₀ is the Nov 20 close, which comes after Nvidia's Nov 17 earnings.\n\n(b) **Latest known value:** On Nov 13 the Adj Closes were NVDA $162.85 and MSFT $523.88. NVDA was about $158 intraday on Nov 16. The window itself has not started, so the spread is currently 0 by construction.\n\n(c) **If nothing changed:** The spread would be 0 pp.\n\n(d) **If the current trend continued:** NVDA has underperformed MSFT in four straight biweekly periods, recently by -3 to -21 pp. Continuing that suggests roughly -5 pp or worse. Momentum after a CEO scandal could persist, but a sharp drawdown also raises the odds of a rebound.\n\n(e) **Historical variation:** In calm periods the two-week spread has a standard deviation of about 4 to 6 pp. In the current regime, with NVDA moving 5 to 10% in a day and a CEO crisis underway, the realistic standard deviation is about 8 to 10 pp, with fat tails. In past years this post-earnings window has slightly favored MSFT, but those figures come from memory and are unverified.\n\n(f) **Experts and markets:** No market covers this spread directly. Polymarket prices the ranking between NVDA and MSFT by market cap as close to a coin flip. Kalshi gives about a 36% chance that Trump calls for Huang's reinstatement before Dec 1, and puts Huang at 14% as the next CEO, a possible upside catalyst. Analysts are cutting price targets, but they remain far above the current price.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** The probe produces further revelations, such as a deepened China spy link, export restrictions or an SEC inquiry. Alternatively, a weak guidance follow-through and an unpopular outsider CEO appointment push NVDA down 15 to 20% while MSFT holds steady. That gives a spread of about -20 pp.\n- **High outcome:** The board reinstates Huang, or Trump endorses his return, or a strong CEO such as Rene Haas is named. A short squeeze combines with relief after the Trump-Xi summit on China sales, and NVDA rallies 20% or more. That gives a spread of about +20 pp or higher.\n\nI center the distribution near 0, with a slight negative tilt in the body from momentum, balanced against fat upside tails from rebound and reinstatement scenarios.\n\nPercentile 1: -25\nPercentile 5: -15\nPercentile 10: -10.5\nPercentile 20: -6\nPercentile 30: -3.3\nPercentile 40: -1.2\nPercentile 50: 0.2\nPercentile 60: 1.7\nPercentile 70: 3.7\nPercentile 80: 6.5\nPercentile 90: 10.5\nPercentile 95: 14.5\nPercentile 99: 25"
+    },
+    {
+      "value": {
+        "p10": -12.5,
+        "p25": -6.0,
+        "p50": 0.0,
+        "p75": 6.0,
+        "p90": 12.5
+      },
+      "reasoning": "(a) **Time left:** The period has not started. P₀ is set at the Fri 2026-11-20 close and P₁ at the Fri 2026-12-04 close, so the outcome is known in about 18 days.\n\n(b) **Latest known values:** These are from Yahoo Finance, Adj Close on 2026-11-13.\n- NVDA: $162.85, and about $158 intraday on 11-16, near its 52-week low.\n- MSFT: $523.88.\n- The prior two-week spread (10-30 to 11-13) was -20.8 pp.\n\n(c) **If nothing changed:** The spread would be 0 pp, because the period has not started.\n\n(d) **If the trend continued:** NVDA has underperformed in four straight periods, by -2.2, -10.7, -3.1 and -20.8 pp. Simply extending that gives about -5 to -10 pp. However:\n- Momentum in a two-week relative spread is weak.\n- The window starts after the earnings reaction, which lands before P₀.\n\n(e) **Historical variation:**\n- In calm markets, the two-week spread has a standard deviation of about 4 to 6 pp.\n- Right now NVDA is making 5 to 10% daily moves because of the CEO crisis, the leadership vacuum and the AI chip selloff.\n- That implies NVDA two-week volatility of about 12 to 15% against roughly 5% for MSFT, so the spread standard deviation is about 9 to 11 pp, with fat tails from headline jumps.\n- The same post-earnings window in prior years leaned toward MSFT outperforming, by about -0.4, -6 and -6 pp, but those figures are unverified.\n\n(f) **Experts and markets:**\n- No market covers this exact spread.\n- Polymarket's market-cap ranking for 2nd vs 3rd place is roughly a coin flip between NVDA and MSFT, which implies no strong directional expectation.\n- Kalshi gives about 36% that Trump calls for Huang's reinstatement before Dec 1, and 14% that Huang ends up as the next CEO. These are upside jump risks for NVDA.\n- Analysts are cutting price targets, but they remain far above the current price.\n\n(g) **Scenarios:**\n- **Low:** More scandal revelations, such as the China spy angle leading to export or regulatory action. Or a disorderly CEO search, a board fight, weak guidance follow-through and an AI capex scare. NVDA falls 20% or more while MSFT holds steady, giving about -20 pp or worse.\n- **High:** Huang is reinstated or a credible star CEO is named, a short squeeze follows, or the Trump-Xi summit opens up China sales. NVDA rebounds 20 to 25% from oversold levels while MSFT is flat or down, giving about +20 pp or more.\n\n**Distribution:**\n- I center slightly below 0. The negative pull comes from momentum and the seasonal pattern; the positive pull comes from oversold mean reversion and Huang-return optionality.\n- I use a wide standard deviation of about 9 to 10 pp, with fat tails on both sides.\n\nPercentile 1: -27\nPercentile 5: -17\nPercentile 10: -12.5\nPercentile 20: -7.5\nPercentile 30: -4.5\nPercentile 40: -2\nPercentile 50: 0\nPercentile 60: 2\nPercentile 70: 4.5\nPercentile 80: 7.5\nPercentile 90: 12.5\nPercentile 95: 17\nPercentile 99: 27"
+    },
+    {
+      "value": {
+        "p10": -10.5,
+        "p25": -4.6,
+        "p50": 0.3,
+        "p75": 5.2,
+        "p90": 10.8
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 23 to Dec 4, 2026. P₀ is the Nov 20 close and the result is known at the Dec 4 close, about 18 days from now and roughly 7 trading days inside the window, including the Thanksgiving half-day.\n\n(b) **Latest known values:** On Nov 13 the Adj Closes were NVDA $162.85 and MSFT $523.88. On Nov 16 NVDA traded intraday near $158 (down about 3%) and MSFT was about flat. Over the most recent completed biweekly period (Oct 30 to Nov 13) the spread was -20.8 pp.\n\n(c) **If nothing changed:** The spread would be 0 pp, since the period has not started.\n\n(d) **If the trend continued:** NVDA has underperformed in four straight biweekly periods, by -10.7, -3.1 and -20.8 pp in the last three. A naive momentum read gives about -5 to -10 pp. However, momentum in a two-week relative return is weak. After a roughly 35% drawdown driven by the CEO scandal, mean reversion or news-driven rebounds are about as likely.\n\n(e) **Historical variation:** In calm periods the biweekly spread has a standard deviation of about 4 to 6 pp. Right now NVDA's daily moves are 5 to 10%, so a realistic standard deviation for this window is about 8 to 10 pp, with fat tails. Nvidia's earnings (Nov 17) fall before P₀, which removes one major shock from the window. Seasonally, this post-earnings window has tended to favor MSFT by a few pp, though that comes from unverified recollection.\n\n(f) **Experts and markets:** No market covers this exact spread. The Polymarket 2nd and 3rd-largest-company markets put NVDA and MSFT at roughly a coin flip on relative market cap at the end of November, which implies no strong directional edge. Kalshi gives about 0.36 that Trump calls for Huang's reinstatement before Dec 1, and about 0.14 that Huang returns as CEO eventually. Both are upside jump risks for NVDA.\n\n(g) **Unexpected scenarios:**\n- **Low:** New revelations from the probe (the China-spy angle), export-control retaliation after the Trump-Xi summit, or a poorly received outside-CEO pick lead to another 15 to 25% NVDA leg down while MSFT holds. That would give a spread of -20 pp or worse.\n- **High:** The board announces Huang's return, or Trump publicly backs him, inside the window. NVDA short-covers by 20%+ while MSFT is flat or rotated out of, giving a spread of +20 pp or more.\n\nPutting this together, I center the distribution slightly above zero and keep it wide. Mean reversion and the Huang-return jump risk roughly offset negative momentum and the seasonal tendency for MSFT to lead after earnings.\n\nPercentile 1: -25\nPercentile 5: -15\nPercentile 10: -10.5\nPercentile 20: -6\nPercentile 30: -3.2\nPercentile 40: -1.2\nPercentile 50: 0.3\nPercentile 60: 1.8\nPercentile 70: 3.8\nPercentile 80: 6.6\nPercentile 90: 10.8\nPercentile 95: 14.5\nPercentile 99: 24"
+    },
+    {
+      "value": {
+        "p10": -11.5,
+        "p25": -5.0,
+        "p50": 0.5,
+        "p75": 6.0,
+        "p90": 12.5
+      },
+      "reasoning": "(a) **Time left:** The window runs Nov 23 to Dec 4, 2026. The result will be known at the Dec 4 close, about 18 days from now. P₀ (the Nov 20 close) is not set yet, so the Nov 17 Nvidia earnings and Microsoft Ignite will already be in the starting price.\n\n(b) **Latest values (Yahoo):**\n- Nov 13 close: NVDA 162.85, MSFT 523.88.\n- Nov 16 intraday: NVDA about 158.06, MSFT about 523.64.\n- The last full biweekly period (Nov 2 to Nov 13) resolved at about -20.8 pp.\n- The one before it (Oct 19 to Oct 30) was -3.08 pp.\n\n(c) **If nothing changed:** The window has not started, so with no price movement the result is 0 pp.\n\n(d) **If the trend continued:** The recent trend (NVDA down about 26% in four weeks while MSFT is flat) would point to a strongly negative value of -10 pp or worse. Momentum after a scandal tends to fade once the earnings and leadership news is priced in, so I only weight this partly.\n\n(e) **Historical variation:**\n- In normal conditions, the two-week NVDA minus MSFT difference has a standard deviation of about 7 to 8.5 pp.\n- The current regime is much more volatile. NVDA's implied and realized vol is probably 60 to 70% annualized, while MSFT is about 25%.\n- Over roughly 8.5 effective trading days (Thanksgiving holiday plus a half day), that suggests a standard deviation of about 10 to 12 pp, with fat tails.\n- Same window last year: -0.36 pp.\n\n(f) **Experts and markets:** No market covers this exact quantity.\n- Polymarket's end-of-November company rankings show NVDA and MSFT roughly neck and neck for 2nd place, which implies no strong expected drift.\n- Kalshi gives Huang about 14% as the next CEO, and 36% that Trump calls for his reinstatement by Dec 1. Both are upside catalysts for NVDA that could land inside the window.\n\n(g) **Scenarios:**\n- **Low:** The spy probe escalates, with congressional testimony revealing China-related security breaches, new export restrictions, or customer defections. NVDA drops 15 to 20% while MSFT holds, giving about -20 pp.\n- **High:** The board reinstates Huang, or names a strongly regarded permanent CEO, during the window. NVDA rallies 15 to 25% from depressed levels, giving about +18 to +25 pp.\n\nMy median is slightly above 0, reflecting the reinstatement option and some reversal after the selloff. The spread is wide with fat tails, beyond the creator's ±15 range at both extremes.\n\nPercentile 1: -27\nPercentile 5: -16\nPercentile 10: -11.5\nPercentile 20: -6.5\nPercentile 30: -3.5\nPercentile 40: -1\nPercentile 50: 0.5\nPercentile 60: 2\nPercentile 70: 4.5\nPercentile 80: 7.5\nPercentile 90: 12.5\nPercentile 95: 17\nPercentile 99: 27"
+    },
+    {
+      "value": {
+        "p10": -13.5,
+        "p25": -5.75,
+        "p50": 0.3,
+        "p75": 6.65,
+        "p90": 14.0
+      },
+      "reasoning": "(a) **Time left:** The window runs Nov 23 to Dec 4, 2026, so the outcome will be known at the Dec 4 close, about 18 days from now. P₀ (the Nov 20 close) is not set yet. Nvidia's Nov 17 earnings, Microsoft Ignite and further CEO-succession news will all land before P₀ and will not count toward the resolution.\n\n(b) **Latest known values:** As of Nov 16, 2026 intraday, NVDA is about 158.06 and MSFT about 523.64. The last complete two-week period (Nov 2 to Nov 13) resolved at about -20.8 pp, by my assistant's calculation from Yahoo data.\n\n(c) **If nothing changed:** Both returns would be 0, so the outcome would be 0 pp.\n\n(d) **If the current trend continued:** If Nvidia's post-scandal slide continued, the result would be strongly negative, perhaps -10 to -20 pp. However, momentum in a scandal-driven selloff is unreliable. The board decision, a possible Huang return and mean reversion all point the other way.\n\n(e) **Historical variation:**\n- In normal times, the two-week difference has a standard deviation of about 7-8 pp.\n- In the current regime, NVDA's realized volatility is roughly 70-80% annualized. Over two weeks, that implies a standard deviation for the difference of about 11-13 pp.\n- Volatility may ease somewhat after earnings, but CEO-decision risk remains.\n\n(f) **Expectations of experts and markets:** No market covers this exact quantity.\n- Kalshi gives Huang a 14% chance of being the next CEO, but probably only about 5-8% within this window.\n- Kalshi gives 36% that Trump publicly calls for Huang's reinstatement by Dec 1.\n- Polymarket rankings imply a roughly even NVDA versus MSFT market-cap race through end of November.\n\nOverall, this points to a median near 0 with slight upside skew from a possible resolution of the leadership question.\n\n(g) **Unexpected scenarios:**\n- **Low:** The spy-probe findings implicate company export or China dealings, Congress or regulators threaten sanctions, and the board names an underwhelming outsider. NVDA falls 20% while MSFT holds flat, giving about -20 pp.\n- **High:** The board reinstates Huang, or names a well-received CEO, in late November. NVDA rebounds 20-25% while MSFT is flat, giving about +22 pp.\n\n**Forecast reasoning:** I center the distribution near 0 with a standard deviation of about 10-11 pp and fat tails on both sides.\n\nPercentile 1: -30\nPercentile 5: -19\nPercentile 10: -13.5\nPercentile 20: -7.5\nPercentile 30: -4\nPercentile 40: -1.5\nPercentile 50: 0.3\nPercentile 60: 2.2\nPercentile 70: 4.8\nPercentile 80: 8.5\nPercentile 90: 14\nPercentile 95: 19.5\nPercentile 99: 30"
+    },
+    {
+      "value": {
+        "p10": -11.5,
+        "p25": -5.0,
+        "p50": 0.4,
+        "p75": 6.3,
+        "p90": 13.0
+      },
+      "reasoning": "(a) **Time left:** The window runs Nov 23 to Dec 4, 2026, so the outcome is known at the Dec 4 close, about 18 days from now. P₀ is the Nov 20 close, which will already include the Nov 17 earnings reaction.\n\n(b) **Latest known values (Yahoo):** The Nov 13 close was NVDA 162.85 and MSFT 523.88. Intraday on Nov 16, NVDA was about 158 (down about 2.9%) and MSFT about 523.6 (flat). The last full biweekly period (Nov 2 to Nov 13) resolved at about -20.8 pp.\n\n(c) **If nothing changed:** The result would be 0 pp, because the window has not started.\n\n(d) **If the trend continued:** NVDA has been sliding steadily relative to MSFT, by about 26 pp over the past month. Continuing that would imply roughly -8 to -12 pp over two weeks. Momentum after a scandal-driven selloff is not reliable, though, and mean reversion or a CEO resolution could reverse it.\n\n(e) **Historical variation:** In normal times, the two-week standard deviation of the difference is about 7 to 8.5 pp. The current regime is much more volatile, with NVDA swinging about 5 to 9% in a day. After earnings, assuming NVDA volatility around 55 to 65% annualized, MSFT around 25% and correlation around 0.5, the standard deviation is about 9 to 10 pp, with fat tails. The same window last year resolved at -0.36 pp.\n\n(f) **Experts and markets:** No market covers this exact quantity. Kalshi puts a Huang return as CEO at 14% and Trump calling for his reinstatement at 36% by Dec 1. Polymarket is roughly split on whether NVDA or MSFT is the second-largest company at the end of November, which implies no strong expected drift.\n\n(g) **Unexpected scenarios:**\n- **Low:** The spy probe escalates with export-control or national-security fallout, such as a congressional hearing or a DOJ action, and key executives depart. NVDA falls 20% or more while MSFT holds steady, giving about -25 pp.\n- **High:** The board reinstates Huang, or names a highly credible CEO, during the window, and NVDA rallies 20 to 25% in a short squeeze, giving about +25 pp.\n\nI center the distribution near zero, with slight positive skew from a possible CEO resolution offset by the negative momentum. I keep it wide with fat tails.\n\nPercentile 1: -27\nPercentile 5: -16.5\nPercentile 10: -11.5\nPercentile 20: -6.5\nPercentile 30: -3.5\nPercentile 40: -1.2\nPercentile 50: 0.4\nPercentile 60: 2.2\nPercentile 70: 4.6\nPercentile 80: 8\nPercentile 90: 13\nPercentile 95: 17.5\nPercentile 99: 28"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -11.5898,
+    "p25": -5.0401,
+    "p50": 0.2984,
+    "p75": 6.0301,
+    "p90": 12.565
+  },
+  "usage": [
+    {
+      "question_id": "46233",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 13.8,
+      "notional_cost_usd": 0.00013350000000000002,
+      "input_tokens": 526,
+      "output_tokens": 57,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 15.3,
+      "notional_cost_usd": 0.0002464,
+      "input_tokens": 1063,
+      "output_tokens": 68,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 82.0,
+      "notional_cost_usd": 0.35716030000000004,
+      "input_tokens": 89515,
+      "output_tokens": 5895,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.078708,
+      "input_tokens": 6692,
+      "output_tokens": 1259,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.3,
+      "notional_cost_usd": 0.08227999999999999,
+      "input_tokens": 6691,
+      "output_tokens": 1438,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0007323000000000001,
+      "input_tokens": 3025,
+      "output_tokens": 255,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.0008981000000000001,
+      "input_tokens": 3184,
+      "output_tokens": 523,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.5,
+      "notional_cost_usd": 0.00022099,
+      "input_tokens": 3023,
+      "output_tokens": 255,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.4,
+      "notional_cost_usd": 0.0321284,
+      "input_tokens": 6692,
+      "output_tokens": 1419,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0008884000000000001,
+      "input_tokens": 3133,
+      "output_tokens": 524,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 11.7,
+      "notional_cost_usd": 0.00034399,
+      "input_tokens": 3185,
+      "output_tokens": 497,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00033377,
+      "input_tokens": 3132,
+      "output_tokens": 478,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 89.0,
+      "notional_cost_usd": 0.3407065,
+      "input_tokens": 105659,
+      "output_tokens": 6347,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.086112,
+      "input_tokens": 7235,
+      "output_tokens": 1412,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.08698,
+      "input_tokens": 7236,
+      "output_tokens": 1455,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.5,
+      "notional_cost_usd": 0.089156,
+      "input_tokens": 7238,
+      "output_tokens": 1563,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.000879,
+      "input_tokens": 2996,
+      "output_tokens": 560,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0008229,
+      "input_tokens": 3038,
+      "output_tokens": 431,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.00022071,
+      "input_tokens": 2995,
+      "output_tokens": 255,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.7,
+      "notional_cost_usd": 0.0008615000000000001,
+      "input_tokens": 3091,
+      "output_tokens": 487,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.00033604,
+      "input_tokens": 3040,
+      "output_tokens": 484,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46233",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00040735,
+      "input_tokens": 3090,
+      "output_tokens": 626,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1606
+}

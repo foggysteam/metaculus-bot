@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T17:08:32.709581+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T17:05:07.757979+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46245,
+    "post_id": 46015,
+    "url": "https://www.metaculus.com/questions/46015",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "What will be the maximum intraday value of the VIX over these biweekly periods in Q4 2026? (Nov 23 - Dec 4)",
+    "resolution_criteria": "Each subquestion will resolve as the maximum intraday value of the VIX recorded from the market open on the first Monday to the market close on the last Friday of the specified biweekly period. Specifically, it will resolve as the highest HIGH value for the relevant days in the CSV published [on the Cboe website](https://www.cboe.com/tradable_products/vix/vix_historical_data/).",
+    "fine_print": "* If the market is closed on one or more trading days within the period, only the available trading days will be considered.\n* If the resolution source delays or ceases its reporting of these data, Metaculus might use alternative [credible sources](https://www.metaculus.com/faq/#definitions) to resolve this question.",
+    "close_time": "2026-11-23 04:00 UTC",
+    "scheduled_resolution_time": "2026-12-04 21:00 UTC"
+  },
+  "research": [
+    "I've finished the research and am writing up the summary now.\n\n# VIX maximum intraday high, Nov 23 to Dec 4, 2026: research summary\n\n## 1. Resolution source\n- 2026-11-13: The newest row in the Cboe CSV is 11/13/2026: open 18.78, high 20.92, low 17.64, close 19.30. Nov 16 had not been added yet. [Cboe VIX_History.csv](https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv)\n- Daily highs in the CSV since Oct 30: 23.93 (10/30), 21.77 (11/2), 21.91 (11/3), 19.22 (11/4), **28.36 (11/5, the high for Q4 so far)**, 27.76 (11/6), 25.08 (11/9), 21.61 (11/10), 18.96 (11/11), 19.34 (11/12), 20.92 (11/13). [Cboe CSV](https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv)\n- Sources disagree on the Nov 5 high. Quartz reported an intraday peak of 28.09, while the Cboe CSV shows 28.36. Only the CSV counts for resolution. [qz.com](https://qz.com/vix-jumps-liberation-day-ai-chip-stocks-selloff-110526)\n\n## 2. Current status\n- Nothing is settled yet, because the window opens Monday Nov 23. Markets are closed Thursday Nov 26 for Thanksgiving, and Friday Nov 27 is normally a half day. That leaves 9 trading days.\n- 2026-11-16, midday: VIX about 21.19 (+9.8%), with the S&P 500 down 1.27% at 7,465. [Yahoo Finance live](https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html)\n\n## 3. Recent news (newest first)\n- 2026-11-16: Stocks fell ahead of a big week for AI names. Nvidia had dropped about 13% over the previous five days, and reports say allies of former CEO Jensen Huang want to reinstate him. The 10-year yield is 5.15%, Brent is about $94, and a hot CPI print raised the odds of a rate hike. [Yahoo](https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html)\n- 2026-11-16: Saxo's early read on volatility:\n  - VIX 19.29, November VIX future 19.45, curve in contango.\n  - VVIX back above 100; VIX1D at 18.63.\n  - Options price about a 1.78% S&P move through Nov 20.\n  - A 25bp Fed hike on Dec 9 is fully priced. [Saxo](https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---fed-chair-warsh-to-speak-today---16-november-2026-16112026)\n- 2026-11-16: VIX closed 32% below its Nov 5 peak (28.18 down to 19.30) even as Bitcoin fell toward $62K. [Coinpaper](https://coinpaper.com/38903/vix-falls-32-from-november-peak-even-as-bitcoin-crashes-toward-62-k)\n- 2026-11-05: VIX had its biggest one-day jump since April 2025 as chip and data-center stocks sold off. [qz.com](https://qz.com/vix-jumps-liberation-day-ai-chip-stocks-selloff-110526)\n- 2026-11-13: S&P 500 -0.4% to 7,561.67; VIX closed at 19.30. [Yahoo/Zacks](https://finance.yahoo.com/markets/stocks/articles/stock-market-news-nov-16-132700717.html)\n\n## 4. Base rates and seasonality\nThese are the maximum highs in the CSV for the same Thanksgiving-to-first-Friday-of-December window, compared with the VIX close in mid-November of each year ([Cboe CSV](https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv)):\n\n| Year | Window | Mid-Nov close | Window max high | Ratio |\n|---|---|---|---|---|\n| 2021 | Nov 22 to Dec 3 | 16.29 (11/12) | **35.32** (12/3, Omicron) | 2.17x |\n| 2022 | Nov 21 to Dec 2 | 23.73 (11/14) | **22.63** (11/30) | 0.95x |\n| 2023 | Nov 20 to Dec 1 | 14.16 (11/14) | **14.31** (11/20, 11/21) | 1.01x |\n| 2024 | Nov 25 to Dec 6 | 16.14 (11/15) | **15.72** (11/25) | 0.97x |\n| 2025 | Nov 24 to Dec 5 | 19.83 (11/14) | **23.68** (11/24) | 1.19x |\n\n- Seasonal pattern: the VIX usually drifts down through Thanksgiving week and early December. In 4 of 5 years the window's maximum came on its first day or two, and 2021 is the exception. The window max landed between 0.95x and 1.2x the mid-November level, apart from the 2021 shock year.\n- 2026 compared with past years: the current level, about 19 to 21, is above 2023 and 2024, close to 2025, and below 2022. Realized volatility is high. Q4 2026 daily highs have run from about 14.8 to 28.4. Since Oct 14 the VIX has topped 20 intraday on 10 of 23 days in the CSV through Nov 13, and spikes have repeatedly reached 22 to 28 (10/16 at 22.31, 10/30 at 23.93, 11/5 at 28.36).\n- Earlier 2026 reference highs: 3/11 at 26.23 and 6/11 at 22.59.\n\n## 5. Other forecasts\n- I could not find any Kalshi, Polymarket or Manifold market on the VIX level for this window.\n- Kalshi's \"Fear & Greed Index on Dec 4, 2026\" market: Fear 38%, Extreme Fear 21%, Greed 22%, Neutral 15%, Extreme Greed 4%. That puts about 59% on fear readings at the end of the window. (These are prices supplied with the question, as of Nov 16.)\n- The November VIX future was 19.45 on the morning of Nov 16, in contango. I could not find the December future's price. [Saxo](https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---fed-chair-warsh-to-speak-today---16-november-2026-16112026)\n\n## 6. Upcoming events\nBefore the window opens (these set the starting level):\n- Nov 17: Nvidia earnings (its first report since Huang left), plus retail sales and industrial production.\n- Nov 18: FOMC minutes.\n- Nov 19: Walmart earnings, and the Anthropic IPO is expected to start trading at a target valuation of about $1.4T.\n- [Yahoo](https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html), [Saxo](https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---fed-chair-warsh-to-speak-today---16-november-2026-16112026)\n\nDuring the window:\n- Nov 26: market closed for Thanksgiving. Nov 27: likely half day, with low liquidity.\n- Nov 30: monthly VIX expiration/settlement week. I have not checked the exact date.\n- Dec 4, 8:30 ET: November jobs report, the last trading day of the window. [BLS schedule](https://www.bls.gov/schedule/2026/12_sched_list.htm)\n- I did not confirm the date of the October PCE release.\n\nAfter the window:\n- Dec 9: FOMC meeting, with a 25bp hike fully priced. It falls outside the window, but positioning ahead of it could lift implied volatility in early December.\n- Dec 10: November CPI. [Kalshi](https://kalshi.com/markets/kxcpicore/cpi-core/kxcpicore-26nov)\n\nBackground risks:\n- Long-term yields above 5%.\n- Weak AI and chip stocks, including the Nvidia leadership turmoil.\n- Bitcoin near 3-month lows.\n- Oil around $94, with Strait of Hormuz shipments only just recovering.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 17:05 UTC; check each market really matches the question)\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: How high will XRP get in November? (November). Yes prices: Above $1.40: 0.07; Above $1.50: 0.05; Above $1.60: 0.04; Above $2.00: 0.03; Above $1.80: 0.04; Above $1.70: 0.02; Above $1.90: 0.02; Above $1.30: 0.8500.\n- Kalshi: CPI in November (exact value) (In Nov 2026). Yes prices: Exactly 0.0%: 0.33; Exactly -0.1%: 0.29; Exactly 0.1%: 0.18; Exactly -0.2%: 0.12; Exactly 0.2%: 0.06; Exactly 0.4%: 0.03; Exactly 0.6%: 0.03; Exactly 0.3%: 0.0200; Exactly 0.5%: 0.0700.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Fear & Greed Index on Dec 4, 2026? (On Dec 4, 2026). Yes prices: Fear: 0.38; Extreme Fear: 0.21; Greed: 0.22; Neutral: 0.15; Extreme Greed: 0.04.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 30.8%: 0.9900; Above 29.2%: 0.9900; Above 29.9%: 0.9900; Above 30.3%: 0.9900; Above 31.2%: 0.9900; Above 31.7%: 0.9900; Above 27.8%: 0.9900; Above 32.4%: 0.0100; Above 33.8%: 0.0100.\n- Kalshi: Will the Fed publish a dot plot in December? (In December 2026). Yes prices: In December 2026: 0.95.\n- Kalshi: When will OpenAI release Astra 6.1+? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.95; Before Nov 13, 2026: 0.0100; Before Nov 6, 2026: 0.0100; Before Oct 30, 2026: 0.0100; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100.\n- Kalshi: When will xAI release Grok 5? (Grok 5). Yes prices: Before 2027: 0.09; Before December: 0.0300; Before October: 0.0100; Before July: 0.0500; Before April: 0.0300; Before September: 0.0400; Before November: 0.0500.\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.04\", \"0.96\"]; $2M: [\"0.0345\", \"0.9655\"]; $3M: [\"0.031\", \"0.969\"]; $4M: [\"0.0075\", \"0.9925\"]; $5M: [\"0.021\", \"0.979\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.12\", \"0.88\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.04\", \"0.96\"]\n- Polymarket: Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.08\", \"0.92\"]; Microsoft: [\"0.0055\", \"0.9945\"]; Apple: [\"0.9055\", \"0.0945\"]; Alphabet: [\"0.0115\", \"0.9885\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: 3rd Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.32\", \"0.68\"]; Microsoft: [\"0.355\", \"0.645\"]; Apple: [\"0.0215\", \"0.9785\"]; Alphabet: [\"0.29\", \"0.71\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0055\", \"0.9945\"]\n- Polymarket: ECB Interest Rates: December 2026 (ends 2026-12-17). [Yes, No] prices: 50+ bps decrease: [\"0.002\", \"0.998\"]; 25 bps decrease: [\"0.002\", \"0.998\"]; No change: [\"0.026\", \"0.974\"]; 25 bps increase: [\"0.9675\", \"0.0325\"]; 50+ bps increase: [\"0.012\", \"0.988\"]",
+    "The resolution file is current through Nov 13, so here is the write-up.\n\n## 1. Resolution source\n- 2026-11-13: The Cboe VIX_History.csv (the file behind the resolution page) runs through 11/13/2026. That day: open 18.78, high 20.92, low 17.64, close 19.30. [Cboe CSV](https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv)\n- Recent daily HIGHs in the CSV:\n  - Oct 16: 22.31\n  - Oct 30: 23.93\n  - Nov 2: 21.77\n  - Nov 5: 28.36, the highest since at least August\n  - Nov 6: 27.76\n  - Nov 9: 25.08\n  - Nov 10: 21.61\n  - Nov 11: 18.96\n  - Nov 12: 19.34\n  - Nov 13: 20.92\n- Through August to mid-October, daily highs were mostly 14 to 18.\n- 2026-11-13: Seeking Alpha gives a 52-week range of 13.38 to 35.30. [Seeking Alpha](https://seekingalpha.com/symbol/VIX)\n\n## 2. Current status\n- Nothing is settled yet. The window opens Monday Nov 23. Thanksgiving (Thu Nov 26) is a market holiday and Fri Nov 27 is usually a half day, so there should be about 9 trading days.\n- 2026-11-16: CoinPaper says the VIX was \"recovering toward 20.00\" today. I could not confirm an intraday figure for today.\n\n## 3. Recent news (newest first)\n- 2026-11-16: The Motley Fool says CME FedWatch puts the chance of a December rate hike at 100% after a strong October jobs report, and the odds of a 50bp hike are rising. [Fool](https://www.fool.com/investing/2026/11/16/theres-now-100-chance-fed-rate-hike-in-december-thats-not-worst-news-for-wall-street/)\n- 2026-11-16: Bitcoin is below $65K, near three-month lows, with Fed hike bets cited as a cause. [AA](https://www.aa.com.tr/en/economy/bitcoin-remains-below-65-000-as-crypto-market-sentiment-falters/4126328)\n- 2026-11-13: The VIX closed at 19.30, and the S&P 500 at 7,561.67 has erased most of the losses from the spike. [Lance Roberts](https://lanceroberts.substack.com/p/bull-bear-report-week-of-november-00f), [CoinPaper](https://coinpaper.com/38903/vix-falls-32-from-november-peak-even-as-bitcoin-crashes-toward-62-k)\n- 2026-11-10: Seeking Alpha headline: \"Chip sell-off sends volatility gauges jumping, SocGen says.\" [Seeking Alpha](https://seekingalpha.com/symbol/VIX)\n- 2026-11-09: The VIX fell sharply as stocks rebounded. Saxo's options brief describes the VIX futures curve as still inverted. [Benzinga](https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/11/63062490/vix-crashes-21-as-wall-street-short-squeeze-accelerates-are-volatility-etf-bulls-losing-their-edge), [Saxo](https://www.home.saxo/content/articles/options/the-spike-settles-the-curve-stays-inverted---options-brief---9-november-2026-09112026)\n- 2026-11-05: The VIX rose about 70% in one day (16.61 to 28.18) in an AI and chip sell-off after the midterms. Big tech lost about $1.7 to 2.2T in market value, led by Nvidia, AMD and Micron. Reports of the S&P 500's drop differ (about 4.4% or more). [Benzinga](https://www.benzinga.com/markets/equities/26/11/62939997/stock-market-today-vix-spikes-ai-tech-rout-wipes-out-2-trillion-nvidia-amd), [RIA](https://realinvestmentadvice.com/resources/blog/vix-spike-complacencys-bill-coming-due-what-happens-now/)\n- Early November: Both a hot October CPI and a jobs beat (+165K) pushed hike odds higher. [Yahoo](https://finance.yahoo.com/economy/policy/articles/odds-december-rate-hike-jump-173301658.html)\n\n## 4. Base rates (same holiday window, from the Cboe CSV)\nWindow max is the highest HIGH from the Monday of Thanksgiving week through the Friday after next. Mid-Nov close is the close on the Friday about 1.5 weeks before the window.\n\n| Year | Window | Window max HIGH | Mid-Nov close |\n|---|---|---|---|\n| 2025 | Nov 24 to Dec 5 | 23.68 (Nov 24) | 19.83 (Nov 14) |\n| 2024 | Nov 25 to Dec 6 | 15.72 (Nov 25) | 16.14 (Nov 15) |\n| 2023 | Nov 20 to Dec 1 | 14.31 | 13.80 (Nov 17) |\n| 2022 | Nov 21 to Dec 2 | 22.63 | 23.12 (Nov 18) |\n| 2021 | Nov 22 to Dec 3 | 35.32 (Omicron, Dec 3) | 17.91 (Nov 19) |\n\n- Seasonal pattern: in 4 of the 5 years, the window max was within about plus or minus 20% of the mid-November close, and the VIX usually drifted down through Thanksgiving. The exception is 2021, when a shock took the max to about 2x.\n- In 2025, a pre-window spike (high of 28.27 on Nov 20) had faded to 16 to 18 by early December.\n- This year: the level (about 19 to 20) is above 2023 and 2024, similar to 2025, and below 2022.\n- Within the last month, 10-day maximum HIGHs have ranged from about 20 to 28.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on the VIX for this window.\n- The closest related market is Kalshi's \"Fear & Greed Index on Dec 4, 2026\": Fear 0.38, Extreme Fear 0.21, Greed 0.22, Neutral 0.15, Extreme Greed 0.04. That puts about 59% on fear readings.\n- Kalshi and Polymarket had a 25bp December hike at about 91% as of Nov 13. [DefiRate](https://defirate.com/odds/fed-decision/)\n- Saxo (Nov 9) describes the VIX futures curve as inverted, which signals stress near term. I could not find current VIX futures prices for November or December.\n\n## 6. Upcoming events\n- 2026-11-17 (Tue, after the close): Nvidia reports fiscal Q3 FY2027 results, with guidance of about $108B revenue. This comes after the Nvidia-led sell-off and lands before the window opens. [NVIDIA](https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873)\n- Week of Nov 16: Fed minutes and inflation data are due. [FXStreet](https://www.fxstreet.com/analysis/week-ahead-fed-minutes-inflation-data-and-nvidia-earnings-to-guide-investors-202611131033)\n- 2026-11-26: Thanksgiving, market closed. Nov 27 is likely a shortened session.\n- Around 2026-12-04 (Fri, last day of the window): the November jobs report would normally come out. I have not confirmed this date. A strong number could raise the odds of a 50bp hike.\n- Around 2026-12-08/09: the FOMC decision falls just after the window. Hedging ahead of it could lift the VIX in the window's final days.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 17:05 UTC; check each market really matches the question)\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: How high will XRP get in November? (November). Yes prices: Above $1.40: 0.07; Above $1.50: 0.05; Above $1.60: 0.04; Above $2.00: 0.03; Above $1.80: 0.04; Above $1.70: 0.02; Above $1.90: 0.02; Above $1.30: 0.8500.\n- Kalshi: CPI in November (exact value) (In Nov 2026). Yes prices: Exactly 0.0%: 0.33; Exactly -0.1%: 0.29; Exactly 0.1%: 0.18; Exactly -0.2%: 0.12; Exactly 0.2%: 0.06; Exactly 0.4%: 0.03; Exactly 0.6%: 0.03; Exactly 0.3%: 0.0200; Exactly 0.5%: 0.0700.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Fear & Greed Index on Dec 4, 2026? (On Dec 4, 2026). Yes prices: Fear: 0.38; Extreme Fear: 0.21; Greed: 0.22; Neutral: 0.15; Extreme Greed: 0.04.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 30.8%: 0.9900; Above 29.2%: 0.9900; Above 29.9%: 0.9900; Above 30.3%: 0.9900; Above 31.2%: 0.9900; Above 31.7%: 0.9900; Above 27.8%: 0.9900; Above 32.4%: 0.0100; Above 33.8%: 0.0100.\n- Kalshi: Will the Fed publish a dot plot in December? (In December 2026). Yes prices: In December 2026: 0.95.\n- Kalshi: When will OpenAI release Astra 6.1+? (Astra 6.1). Yes prices: Before Dec 31, 2026: 0.95; Before Nov 13, 2026: 0.0100; Before Nov 6, 2026: 0.0100; Before Oct 30, 2026: 0.0100; Before Oct 23, 2026: 0.0100; Before Oct 16, 2026: 0.0100; Before Oct 9, 2026: 0.0100; Before Oct 2, 2026: 0.0100; Before Sep 25, 2026: 0.0100.\n- Kalshi: When will xAI release Grok 5? (Grok 5). Yes prices: Before 2027: 0.09; Before December: 0.0300; Before October: 0.0100; Before July: 0.0500; Before April: 0.0300; Before September: 0.0400; Before November: 0.0500.\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.04\", \"0.96\"]; $2M: [\"0.0345\", \"0.9655\"]; $3M: [\"0.031\", \"0.969\"]; $4M: [\"0.0075\", \"0.9925\"]; $5M: [\"0.021\", \"0.979\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.12\", \"0.88\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.04\", \"0.96\"]\n- Polymarket: Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.08\", \"0.92\"]; Microsoft: [\"0.0055\", \"0.9945\"]; Apple: [\"0.9055\", \"0.0945\"]; Alphabet: [\"0.0115\", \"0.9885\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0005\", \"0.9995\"]\n- Polymarket: 3rd Largest Company end of December 2026? (ends 2027-01-01). [Yes, No] prices: NVIDIA: [\"0.32\", \"0.68\"]; Microsoft: [\"0.355\", \"0.645\"]; Apple: [\"0.0215\", \"0.9785\"]; Alphabet: [\"0.29\", \"0.71\"]; Tesla: [\"0.0005\", \"0.9995\"]; Saudi Aramco: [\"0.0055\", \"0.9945\"]\n- Polymarket: ECB Interest Rates: December 2026 (ends 2026-12-17). [Yes, No] prices: 50+ bps decrease: [\"0.002\", \"0.998\"]; 25 bps decrease: [\"0.002\", \"0.998\"]; No change: [\"0.026\", \"0.974\"]; 25 bps increase: [\"0.9675\", \"0.0325\"]; 50+ bps increase: [\"0.012\", \"0.988\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 17.1,
+        "p25": 19.05,
+        "p50": 21.6,
+        "p75": 25.0,
+        "p90": 29.5
+      },
+      "reasoning": "(a) **Time left:** The window runs from Mon Nov 23 to Fri Dec 4, 2026. That is 9 trading days, since Nov 26 is closed for Thanksgiving and Nov 27 is a half day. The outcome will be known about 18 days from now, on Dec 4 after the close.\n\n(b) **Latest known value:** The latest row in the Cboe CSV is Nov 13, 2026, with a high of 20.92 and a close of 19.30. Intraday on Nov 16 the VIX was about 21.2. The Q4 high so far is 28.36 on Nov 5.\n\n(c) **If nothing changed:** If the VIX holds around 19 to 21, the maximum high over 9 trading days would likely be about 21 to 22.\n\n(d) **If the current trend continued:** The recent trend is choppy and elevated, with repeated spikes to 22 to 28 and the VIX above 20 intraday on 10 of 23 recent days. Pre-window catalysts include Nvidia earnings, Fed hike pricing, 5%+ long yields, AI stock weakness and the Anthropic IPO. Against that, Thanksgiving seasonality usually pulls the VIX down. Netting these gives a window max of roughly 22 to 24.\n\n(e) **Historical variation:**\n- In 4 of the last 5 years, the window max was 0.95 to 1.2 times the mid-November level.\n- 2021 was the outlier at 2.17x (Omicron).\n- In 4 of 5 years the max came on the first day or two of the window.\n- The VIX level a week from now is itself uncertain, with a plausible range of about 16 to 27.\n\n(f) **Experts and markets:**\n- The November VIX future is about 19.45, with the curve in contango, so markets expect mild mean reversion.\n- VVIX is above 100, which signals a high chance of spikes.\n- Kalshi prices about 59% on \"Fear\" or \"Extreme Fear\" readings on Dec 4.\n- A Fed hike on Dec 9 is fully priced, and the jobs report on Dec 4 falls inside the window.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia earnings reassure, the Anthropic IPO goes smoothly and yields ease. A Thanksgiving melt-up then pushes the VIX to about 15 to 16, and the window high is around 16 to 17.\n- **High:** The Nvidia leadership crisis and a bond selloff, with the 10-year yield near 5.5%, plus a strong jobs report on Dec 4 that raises the odds of a 50bp hike. That could trigger a correlated deleveraging spike, with the VIX reaching the low-to-mid 30s, or above 40 in a true shock.\n\nPercentile 1: 14.8\nPercentile 5: 16.2\nPercentile 10: 17.1\nPercentile 20: 18.5\nPercentile 30: 19.6\nPercentile 40: 20.6\nPercentile 50: 21.6\nPercentile 60: 22.7\nPercentile 70: 24.0\nPercentile 80: 26.0\nPercentile 90: 29.5\nPercentile 95: 33.0\nPercentile 99: 42.0"
+    },
+    {
+      "value": {
+        "p10": 17.4,
+        "p25": 19.35,
+        "p50": 21.9,
+        "p75": 25.25,
+        "p90": 29.5
+      },
+      "reasoning": "(a) Time left: the window runs Nov 23 to Dec 4, 2026, so the outcome is known around Dec 4 at 21:00 UTC, about 18 days from now. There are 9 trading days: Thanksgiving is closed and Nov 27 is a half day.\n\n(b) Latest value in the resolution source: the Cboe CSV row for Nov 13, 2026 shows a high of 20.92 and a close of 19.30. Intraday on Nov 16 the VIX was about 21.2. The Q4 high so far is 28.36 on Nov 5.\n\n(c) If nothing changed: with the VIX sitting around 19 to 21, the maximum intraday high over 9 days would typically land about 1 to 2 points above the prevailing level. That gives roughly 21 to 22.\n\n(d) If the current trend continued: the trend is mixed.\n- The VIX has fallen sharply from the Nov 5 spike.\n- Against that, it rose again on Nov 16, with yields at 5.15%, rate-hike pricing, Nvidia leadership turmoil and weak AI stocks.\n- Seasonal drift is usually downward into Thanksgiving week.\n- Rate-hike positioning ahead of the Dec 9 FOMC and the Dec 4 jobs report could support implied volatility.\n- Net trend outcome: about 21 to 23.\n\n(e) Historical variation: in 4 of the last 5 years, the window maximum was 0.95x to 1.2x the mid-November level. The exception was 2021, when the Omicron shock drove it to 2.17x. In Q4 2026, daily highs have ranged from 14.8 to 28.4, with frequent spikes to 22 to 28. The VVIX is above 100, which signals high volatility of volatility. The level a week from now is itself uncertain by roughly ±20%.\n\n(f) Expectations of experts and markets:\n- The November VIX future was 19.45, with the curve in contango.\n- Kalshi puts about 59% on a \"Fear\" or \"Extreme Fear\" Fear & Greed reading on Dec 4, which leans toward an elevated level.\n- There is no direct market on the VIX maximum for this window.\n\n(g) Unexpected scenarios:\n- Low: Nvidia earnings reassure, the Anthropic IPO goes smoothly and yields ease. The VIX bleeds to about 15 to 16 over the holiday lull, and the window maximum is about 16 to 17.\n- High: the AI and chip selloff deepens or a bond-market rout hits, with the 10-year moving toward 5.5%, possibly alongside a Hormuz flare-up. The VIX spikes past the Nov 5 high into the 30s or even the 40s.\n\nPercentile 1: 15\nPercentile 5: 16.5\nPercentile 10: 17.4\nPercentile 20: 18.8\nPercentile 30: 19.9\nPercentile 40: 20.9\nPercentile 50: 21.9\nPercentile 60: 23\nPercentile 70: 24.3\nPercentile 80: 26.2\nPercentile 90: 29.5\nPercentile 95: 32.5\nPercentile 99: 41"
+    },
+    {
+      "value": {
+        "p10": 17.6,
+        "p25": 19.45,
+        "p50": 22.0,
+        "p75": 25.55,
+        "p90": 30.0
+      },
+      "reasoning": "(a) **Time left:** The window runs Nov 23 to Dec 4, 2026, which is 9 trading days (Nov 26 closed, Nov 27 a half day). The outcome will be known about 18 days from now, on Dec 4 at the close.\n\n(b) **Latest value from the resolution source:** The Cboe CSV shows 11/13/2026 with a high of 20.92 and a close of 19.30. Intraday on Nov 16 the VIX was about 21.2, and the Q4 high so far is 28.36 on Nov 5.\n\n(c) **If nothing changed:** With the VIX holding near 19 to 21, normal daily swings over 9 days would give a maximum high of about 21 to 22.\n\n(d) **If the current trend continued:** The trend is choppy and elevated, with repeated spikes to 22 to 28 since mid-October and stress building (10-year yield at 5.15%, a Fed hike priced, Nvidia leadership turmoil, Bitcoin weak). That points to a window maximum of about 23 to 25.\n\n(e) **Historical variation:**\n- The Thanksgiving-window maximum usually lands at 0.95x to 1.2x the mid-November level.\n- 2021 (Omicron) was the exception at 2.2x.\n- The VIX also usually drifts down through Thanksgiving week.\n- The starting level on Nov 23 is itself uncertain, likely somewhere in 16 to 26, because Nvidia earnings, the FOMC minutes and the Anthropic IPO all fall before the window.\n\n(f) **Expert and market expectations:**\n- The November VIX future is about 19.45, in contango, and the December future was not found.\n- VVIX is above 100, which signals high volatility of volatility.\n- Kalshi puts about 59% on Fear or Extreme Fear readings on Dec 4.\n- Inside the window, the Dec 4 jobs report and positioning ahead of the Dec 9 hike could lift implied volatility.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia earnings reassure, the Anthropic IPO goes smoothly, and yields ease. The VIX then slides to about 15 to 16 into Thanksgiving, and the window maximum is about 16.\n- **High:** A disorderly bond selloff takes yields toward 5.5%, the Nvidia governance crisis deepens, or a Hormuz flare-up hits. Any of these could push the VIX into the mid-30s to 40s, similar to the Omicron spike in 2021.\n\nPercentile 1: 15.3\nPercentile 5: 16.7\nPercentile 10: 17.6\nPercentile 20: 18.9\nPercentile 30: 20.0\nPercentile 40: 21.0\nPercentile 50: 22.0\nPercentile 60: 23.1\nPercentile 70: 24.5\nPercentile 80: 26.6\nPercentile 90: 30.0\nPercentile 95: 33.5\nPercentile 99: 42.0"
+    },
+    {
+      "value": {
+        "p10": 16.6,
+        "p25": 18.6,
+        "p50": 21.2,
+        "p75": 24.9,
+        "p90": 29.5
+      },
+      "reasoning": "(a) **Time left:** The window runs Mon Nov 23 to Fri Dec 4, 2026. That is about 9 trading days: Thanksgiving is closed and Nov 27 is likely a half day. The outcome will be known Dec 4 after the close, about 18 days from now.\n\n(b) **Latest known value:** The Cboe CSV on 2026-11-13 shows a high of 20.92 and a close of 19.30. Reports on Nov 16 have the VIX near 20.\n\n(c) **If nothing changed:** With the VIX holding around 19-20, the normal intraday range over 9 days would put the window maximum around 21-22.\n\n(d) **If the current trend continued:** The VIX has been fading since the Nov 5 spike (high 28.36), helped by the usual pre-Thanksgiving drift lower. If that continues, the level would be about 16-18 by Nov 23 and the window maximum about 18-20. Working against this are the inverted futures curve, the hawkish Fed (100% December hike priced, 50bp risk rising) and the jobs report on Dec 4.\n\n(e) **Historical variation:**\n- In the same holiday window, the maximum high was usually within about ±20% of the mid-November close: 4 of the last 5 years.\n- The exception is 2021 (Omicron), when it reached about 2x.\n- In the last month, 10-day maximum highs ranged from 20 to 28.\n- The window maximum is also an upward-biased statistic relative to any single level.\n\n(f) **Experts and markets:**\n- There is no direct VIX market.\n- Kalshi's Fear & Greed reading for Dec 4 puts about 59% on fear, which points to a moderately elevated VIX.\n- Saxo describes the futures curve as inverted, which signals near-term stress.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia's results calm the AI selloff, inflation data soften the hike talk, and the holiday rally pulls the VIX to about 14-15. The window maximum would then be around 15-16.\n- **High:** A weak Nvidia report or a renewed chip rout, combined with a hot jobs report on Dec 4 that prices in 50bp, could push the VIX to 35-45.\n\n**Tail reasoning:**\n- 1st percentile: a VIX already back near 2024 lows, around 13-14, with a quiet holiday period.\n- 99th percentile: a shock like Omicron or the 52-week high (35.30), stacked on hike fears.\n\nPercentile 1: 14.5\nPercentile 5: 15.8\nPercentile 10: 16.6\nPercentile 20: 18.0\nPercentile 30: 19.2\nPercentile 40: 20.2\nPercentile 50: 21.2\nPercentile 60: 22.4\nPercentile 70: 23.8\nPercentile 80: 26.0\nPercentile 90: 29.5\nPercentile 95: 33.0\nPercentile 99: 42.0"
+    },
+    {
+      "value": {
+        "p10": 17.1,
+        "p25": 18.9,
+        "p50": 21.2,
+        "p75": 24.6,
+        "p90": 29.0
+      },
+      "reasoning": "(a) Time left: The window runs Nov 23 to Dec 4, 2026, about 9 trading days (Thanksgiving closed, Nov 27 a half day). The outcome will be known around Dec 4, which is about 2.5 weeks from today.\n\n(b) Latest known value: In the Cboe CSV for Nov 13, 2026, the high was 20.92 and the close was 19.30. On Nov 16 the VIX was reported \"recovering toward 20.\"\n\n(c) If nothing changed: With the VIX sitting near 19 to 20, the normal intraday range over 9 sessions would put the window maximum around 21 to 22.\n\n(d) If the current trend continued: The VIX has been fading after the Nov 5 spike (28.36 high), and it usually drifts lower into Thanksgiving. That points to a maximum around 18 to 20. Against this, rising Fed hike odds, a possible 50bp hike, an inverted futures curve and the Dec 4 jobs report all push the other way.\n\n(e) Historical variation: In 4 of the last 5 years, the maximum over this same window was within about ±20% of the mid-November close. The exception was 2021, when Omicron pushed the maximum to about 2x. Over the last month, 10-day maximum highs have ranged from about 20 to 28.\n\n(f) Experts and markets: There is no direct VIX market for this window. The Kalshi Fear & Greed market for Dec 4 puts about 59% on \"fear\" readings, which suggests an elevated but not extreme VIX. The futures curve was reported inverted as of Nov 9. Markets price a December hike at roughly 91 to 100%.\n\n(g) Unexpected scenarios:\n- **Low:** Nvidia's earnings reassure, the hike is fully priced in, and the holiday calm pulls the VIX down to 15 or 16, so the window maximum is around 16 to 17.\n- **High:** Nvidia disappoints, the AI sell-off resumes, and a hot jobs report on Dec 4 raises 50bp hike fears. That could push the VIX above 30, and with a credit or geopolitical shock, into the 40s.\n\nPercentile 1: 14.8\nPercentile 5: 16.2\nPercentile 10: 17.1\nPercentile 20: 18.4\nPercentile 30: 19.4\nPercentile 40: 20.3\nPercentile 50: 21.2\nPercentile 60: 22.2\nPercentile 70: 23.6\nPercentile 80: 25.6\nPercentile 90: 29.0\nPercentile 95: 32.5\nPercentile 99: 42.0"
+    },
+    {
+      "value": {
+        "p10": 16.6,
+        "p25": 18.6,
+        "p50": 21.4,
+        "p75": 25.35,
+        "p90": 30.5
+      },
+      "reasoning": "(a) **Time left:** The window runs Mon Nov 23 to Fri Dec 4, 2026. That is about 9 trading days: Thanksgiving is closed and Nov 27 is likely a half day. The outcome is known at the close on Dec 4, about 18 days from now.\n\n(b) **Latest known value:** The Cboe CSV shows a HIGH of 20.92 and a close of 19.30 on Nov 13, 2026. Reports put the VIX near 20 on Nov 16.\n\n(c) **If nothing changed:** If the VIX holds around 19-20, intraday highs over 9 sessions would typically reach about 20.5-22.\n\n(d) **If the current trend continued:** The Nov 5 spike (high 28.36) is fading. Thanksgiving seasonality usually drifts the VIX lower, toward 17-18. That would give a window max of about 18-20. Offsetting this, Fed hike odds are rising and the futures curve is inverted.\n\n(e) **Historical variation:**\n- In 4 of the last 5 years, the max HIGH in this holiday window was within about ±20% of the mid-November close.\n- In 2021, the Omicron shock roughly doubled it.\n- 10-day max highs this autumn have ranged from about 20 to 28.\n\n(f) **Experts and markets:**\n- There is no direct VIX market for this window.\n- Kalshi's Fear & Greed market for Dec 4 puts about 59% on fear readings.\n- A December Fed hike is priced at 90-100%, and the odds of a 50bp hike are growing.\n- The November jobs report likely lands Dec 4, and the FOMC meeting follows just after the window, which is a hedging catalyst.\n- Nvidia earnings on Nov 17 fall before the window, but they set its starting tone.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia beats, the AI trade recovers, and holiday calm sets in. The VIX settles at 15-16, and the window max could be about 16 or lower.\n- **High:** A renewed AI or chip rout, or a hot jobs print that locks in a 50bp hike, triggers a spike similar to Nov 5 or larger. The VIX could reach the 30s-40s.\n\n**Percentiles 1 and 99:**\n- Percentile 1 (about 14.5) requires a full return to the summer regime of 14-16 highs by late November.\n- Percentile 99 (about 44) requires a crash-type shock, comparable to an Omicron-scale or larger move, starting from an already-elevated base.\n\nPercentile 1: 14.5\nPercentile 5: 15.8\nPercentile 10: 16.6\nPercentile 20: 18.0\nPercentile 30: 19.2\nPercentile 40: 20.3\nPercentile 50: 21.4\nPercentile 60: 22.6\nPercentile 70: 24.2\nPercentile 80: 26.5\nPercentile 90: 30.5\nPercentile 95: 34.0\nPercentile 99: 44.0"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 17.0612,
+    "p25": 18.9689,
+    "p50": 21.5325,
+    "p75": 25.211,
+    "p90": 29.8429
+  },
+  "usage": [
+    {
+      "question_id": "46245",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.00012220000000000002,
+      "input_tokens": 517,
+      "output_tokens": 38,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.6,
+      "notional_cost_usd": 0.0003835,
+      "input_tokens": 916,
+      "output_tokens": 401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 81.1,
+      "notional_cost_usd": 0.3316545,
+      "input_tokens": 85896,
+      "output_tokens": 4860,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.5,
+      "notional_cost_usd": 0.08136,
+      "input_tokens": 6656,
+      "output_tokens": 1406,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.0,
+      "notional_cost_usd": 0.080424,
+      "input_tokens": 6654,
+      "output_tokens": 1360,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0008897,
+      "input_tokens": 3072,
+      "output_tokens": 551,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.6,
+      "notional_cost_usd": 0.0007389,
+      "input_tokens": 3053,
+      "output_tokens": 257,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.00025987000000000004,
+      "input_tokens": 3073,
+      "output_tokens": 331,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.1,
+      "notional_cost_usd": 0.030241,
+      "input_tokens": 6655,
+      "output_tokens": 1325,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.00022248,
+      "input_tokens": 3053,
+      "output_tokens": 257,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0007309,
+      "input_tokens": 2998,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 0.00022494000000000002,
+      "input_tokens": 2999,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 72.7,
+      "notional_cost_usd": 0.2640576,
+      "input_tokens": 84647,
+      "output_tokens": 4379,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.3,
+      "notional_cost_usd": 0.07384,
+      "input_tokens": 6406,
+      "output_tokens": 1130,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.078252,
+      "input_tokens": 6405,
+      "output_tokens": 1351,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.9,
+      "notional_cost_usd": 0.079724,
+      "input_tokens": 6404,
+      "output_tokens": 1425,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.0007041,
+      "input_tokens": 2864,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0007327,
+      "input_tokens": 3007,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.0007281,
+      "input_tokens": 2984,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00022360000000000001,
+      "input_tokens": 2865,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00022522,
+      "input_tokens": 3008,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46245",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00022479,
+      "input_tokens": 2984,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.026
+}
