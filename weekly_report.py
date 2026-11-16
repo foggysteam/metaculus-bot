@@ -10,6 +10,7 @@ from __future__ import annotations
 import asyncio
 import csv
 import json
+import math
 import os
 import re
 import time
@@ -201,6 +202,28 @@ def describe_outcome(question: dict, time_averaged: bool = False) -> str:
     return f"resolved: {_resolution_text(resolution)}{scored}"
 
 
+def others_answer(final, question: dict) -> str:
+    """What the average other forecaster gave the actual outcome at close, worked out from our spot
+    peer score. Peer score = 100 x (ln ours - average ln theirs), so their (geometric) average
+    probability for what happened is ours x e^(-score/100). Shows why a forecast on the right side
+    can still lose points: the others were more confident still. Numeric questions get the ratio
+    of their weight on the result to ours, since a density is not a probability."""
+    resolution = question.get("resolution")
+    score = ((question.get("my_forecasts") or {}).get("score_data") or {}).get("spot_peer_score")
+    if score is None or final is None or resolution in (None, "", "annulled", "ambiguous"):
+        return ""
+    ratio = math.exp(-score / 100)
+    if isinstance(final, (int, float)) and resolution in ("yes", "no"):
+        ours = final if resolution == "yes" else 1 - final
+        theirs = min(ours * ratio, 0.999)
+        return f"{(theirs if resolution == 'yes' else 1 - theirs):.0%} yes"
+    if isinstance(final, dict) and "p50" not in final and resolution in final:
+        return f"{resolution}: {min(final[resolution] * ratio, 0.999):.0%}"
+    if isinstance(final, dict) and "p50" in final:
+        return f"{ratio:.2f}x our weight on the result"
+    return ""
+
+
 def _outcome(post_id: int | None, question_id: int | None = None, time_averaged: bool = False) -> str:
     if not post_id:
         return ""
@@ -271,7 +294,7 @@ def resolved_since(since: datetime, now: datetime, log_dir: Path = LOG_DIR) -> s
     for post_id in sorted(candidates):
         post = _post(post_id)
         if post is None:
-            rows.append(f"| post {post_id} | | | could not be read | |")
+            rows.append(f"| post {post_id} | | | | could not be read | |")
             continue
         for entry in by_post[post_id]:
             q = entry["question"]
@@ -285,8 +308,9 @@ def resolved_since(since: datetime, now: datetime, log_dir: Path = LOG_DIR) -> s
             if score is not None and question.get("resolution") not in ("annulled", "ambiguous"):
                 scores.append(score)
             answer = _answer(q["type"], entry.get("final_forecast"), q.get("unit") or "")
+            others = others_answer(entry.get("final_forecast"), question)
             rows.append(
-                f"| [{_title(q['text'])}]({q['url']}) | {_series(slugs)} | {answer} "
+                f"| [{_title(q['text'])}]({q['url']}) | {_series(slugs)} | {answer} | {others} "
                 f"| {describe_outcome(question, time_averaged)} | {resolved_at[:10]} |"
             )
     if not rows:
@@ -297,7 +321,13 @@ def resolved_since(since: datetime, now: datetime, log_dir: Path = LOG_DIR) -> s
             f"; {len(scores)} scored, peer scores add up to {sum(scores):+.1f}, "
             f"{sum(s > 0 for s in scores)} positive (positive beats the average forecaster)"
         )
-    header = "| Question | Series | KCAP2.0 answer | Outcome | Resolved |\n|---|---|---|---|---|"
+    summary += (
+        ".\nPeer score compares us with the other forecasters, not with the outcome: being on the right side "
+        "still loses points if they were more confident. \"Others\" is the average other forecaster's answer "
+        "at close, worked out from our peer score (for numeric questions, their weight on the result "
+        "compared with ours)"
+    )
+    header = "| Question | Series | KCAP2.0 answer | Others | Outcome | Resolved |\n|---|---|---|---|---|---|"
     return summary + ".\n\n" + header + "\n" + "\n".join(rows)
 
 

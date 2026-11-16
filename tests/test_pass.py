@@ -266,6 +266,21 @@ def test_weekly_report_reads_outcome_and_score_of_group_subquestions() -> None:
     assert weekly_report._title(long).endswith("... (AMD)") and len(weekly_report._title(long)) == 90
 
 
+def test_weekly_report_shows_the_other_forecasters_answer_from_our_peer_score() -> None:
+    import weekly_report
+
+    # MiniBench 2 Nov, real forecasts and spot peer scores (forecast_logs/2026-11-02, issue #19).
+    gas = resolved_question(46628, "yes", "2026-11-13T00:00:00Z", spot=-31.08)
+    assert weekly_report.others_answer(0.3066, gas) == "42% yes"
+    paraguay = resolved_question(46624, "Paraguay win", "2026-11-13T00:00:00Z", spot=-5.71)
+    assert weekly_report.others_answer({"Singapore win": 0.0967, "Draw": 0.2, "Paraguay win": 0.7033}, paraguay) == "Paraguay win: 74%"
+    red_wings = resolved_question(1, "no", "x", spot=-2.0)  # right side, others a little surer of no
+    assert weekly_report.others_answer(0.40, red_wings) == "39% yes"
+    assert weekly_report.others_answer({"p10": 1, "p50": 2, "p90": 3}, resolved_question(1, "24.0", "x", spot=-14.1)) == "1.15x our weight on the result"
+    assert weekly_report.others_answer(0.4, resolved_question(1, "annulled", "x", spot=1.0)) == ""
+    assert weekly_report.others_answer(0.4, resolved_question(1, "yes", "x")) == ""
+
+
 def test_weekly_report_lists_what_resolved_this_week_however_long_ago_it_was_forecast() -> None:
     import tempfile
     import weekly_report
@@ -300,6 +315,7 @@ def test_weekly_report_lists_what_resolved_this_week_however_long_ago_it_was_for
     assert text.startswith("3 resolved; 2 scored, peer scores add up to +64.3, 2 positive"), text
     assert "resolved: 1.46, peer score +49.5" in text and "resolved: 56.5, peer score +14.8" in text, text
     assert "annulled, not scored" in text and "46176" not in text and "46183" not in text and "46500" not in text, text
+    assert "| KCAP2.0 answer | Others | Outcome |" in text and "x our weight on the result" in text, text
 
 
 def forecast_question(post: int, age_minutes: float = 30, forecasts: int = 1, forecast: bool = True):
