@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T07:19:01.079490+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T07:16:05.480360+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46836,
+    "post_id": 46576,
+    "url": "https://www.metaculus.com/questions/46576",
+    "type": "NumericQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will the Nasdaq Composite (^IXIC) close at on Friday, November 27, 2026?",
+    "resolution_criteria": "This question resolves to the closing value of the Nasdaq Composite Index (ticker ^IXIC; Nasdaq index code COMP) for the regular trading session of Friday, November 27, 2026, expressed in index points, as given in the \"Close\" column of the row dated Nov 27, 2026 in Yahoo Finance's historical price table for ^IXIC (https://finance.yahoo.com/quote/%5EIXIC/history/). For example, a close of 25,214.87 resolves as 25214.87. Nasdaq's regular session on Friday, November 27, 2026 is a shortened post-Thanksgiving session ending at 1:00 p.m. ET (18:00 UTC); the closing value of that shortened session is the value used, and no after-hours or extended-hours trading counts. If Yahoo Finance shows no closing value for that date, the closing index value published by Nasdaq for the same session at https://indexes.nasdaq.com/Index/History/COMP will be used instead.",
+    "fine_print": "If the Nasdaq Composite's regular session on November 27, 2026 does not take place at all (for example, a market-wide closure), the question is annulled.",
+    "close_time": "2026-11-16 10:02 UTC",
+    "scheduled_resolution_time": "2026-11-27 20:00 UTC"
+  },
+  "research": [
+    "## Nasdaq Composite (^IXIC) close on Nov 27, 2026: research notes\n\n**Heads-up: the background's Nov 13 figure is wrong.** Yahoo, the resolution source, shows a Nov 13 close of **25,136.27 (-0.91%)**, not 24,922.08 (-1.75%). Several news reports agree with Yahoo. The 24,922 number was probably an intraday reading. The statistical baseline already uses 25,136.27.\n\n### 1. Resolution source\n- 2026-11-13: Yahoo ^IXIC close was 25,136.27, down 229.83 (-0.906%). High 25,423.09, low 24,872.41, volume 7.74B. 52-week range 20,690.25 to 27,722.75. [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1mo&interval=1d)\n- Last 10 Yahoo closes:\n\n| Date | Close |\n|---|---|\n| Nov 2 | 25,164.31 |\n| Nov 3 | 25,372.01 |\n| Nov 4 | 25,736.51 |\n| Nov 5 | 24,315.00 |\n| Nov 6 | 24,579.43 |\n| Nov 9 | 25,253.14 |\n| Nov 10 | 25,065.87 |\n| Nov 11 | 25,466.19 |\n| Nov 12 | 25,366.09 |\n| Nov 13 | 25,136.27 |\n\n  The mid-October closes were around 26,700. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1mo&interval=1d)\n- The fallback Nasdaq history page loads its table with scripts, so I could not read any values from it. [Nasdaq](https://indexes.nasdaq.com/Index/History/COMP)\n\n### 2. Current status\n- Nothing has settled the question. Ten trading sessions remain before Nov 27, and the last one is a half day.\n- 2026-11-13: The S&P 500 was up 2.5% for the week. CNBC says the Nasdaq still had its best week since August, even though it fell on Friday. [CNBC](https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html), [Arkansas Online](https://www.arkansasonline.com/news/2026/nov/14/stocks-close-lower-amid-turbulence-in-ai-industry/)\n\n### 3. Recent news (newest first)\n- 2026-11-16: Overnight futures reports conflict:\n  - TipRanks: Nasdaq-100 futures -1.08% at 1:45 a.m. ET.\n  - CNBC, earlier update: -0.77%.\n  - CNBC, later update: +0.4%.\n\n  [TipRanks](https://www.tipranks.com/news/u-s-stocks-brace-for-nvidia-earnings-and-anthropics-mega-ipo), [CNBC](https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html)\n- 2026-11-15: Nvidia reports earnings Tuesday (Nov 17) after the close.\n  - Consensus: EPS $2.47, revenue about $108.9B (+91% year on year).\n  - NVDA fell 13% last week, its worst week since April 2025.\n  - CFO Colette Kress is interim CEO.\n\n  [TipRanks](https://www.tipranks.com/news/u-s-stocks-brace-for-nvidia-earnings-and-anthropics-mega-ipo), [CNBC](https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html)\n- 2026-11-15: Anthropic IPO terms:\n  - Price range $70 to $78, valuation about $1.4T.\n  - Sources disagree on the raise size: about $64B vs $90B.\n  - Trades as ANT on Nasdaq Thursday, Nov 19.\n\n  [TipRanks](https://www.tipranks.com/news/u-s-stocks-brace-for-nvidia-earnings-and-anthropics-mega-ipo), [RiskReversal](https://riskreversal.substack.com/p/the-week-ahead-a-huge-week-for-ai)\n- 2026-11-14: Commentary calls Nov 18 a \"massive day\" for AI stocks. It notes the Nasdaq entered correction territory earlier in 2026. [AOL](https://www.aol.com/articles/prediction-nov-18-massive-day-093002000.html)\n- 2026-11-12: Jensen Huang resigned. [CNBC](https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html)\n- 2026-11-05: The index's steepest drop of the year left it at 24,315, more than 10% below its Oct 6 record. [search summary](https://cryptobriefing.com/nasdaq-erases-post-election-losses-ai-rally/)\n- Fed futures price a near-certain 25bp hike in December. [VT Markets](https://www.vtmarkets.com/en-asia/featured/week-ahead-nvidia-earnings-and-anthropic-ipo-test-ai-market-confidence/)\n\n### 4. Base rates\n- Statistical baseline from 10-day returns over the last 3 years, anchored at 25,136.27:\n\n| Percentile | Level |\n|---|---|\n| p5 | 23,921 |\n| p10 | 24,156 |\n| p25 | 24,766 |\n| p50 | 25,319 |\n| p75 | 25,841 |\n| p90 | 26,383 |\n| p95 | 26,844 |\n\n- Recent realized volatility is high: daily moves of -5.5% (Nov 5), +2.7% (Nov 9) and +1.6% (Nov 11).\n- Seasonal comparison, from the mid-November Friday close to the post-Thanksgiving Friday close. All values are Yahoo weekly closes. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=1636848000&period2=1764460800&interval=1wk)\n\n| Year | Mid-Nov Friday close | Post-Thanksgiving close | Change | Note |\n|---|---|---|---|---|\n| 2021 | 15,860.96 (Nov 12) | 15,491.66 (Nov 26) | -2.3% | Omicron Black Friday selloff |\n| 2022 | 11,323.33 (Nov 11) | 11,226.36 (Nov 25) | -0.9% | |\n| 2023 | 13,798.11 (Nov 10) | 14,250.85 (Nov 24) | +3.3% | |\n| 2024 | 18,680.12 (Nov 15) | 19,218.17 (Nov 29) | +2.9% | |\n| 2025 | 22,900.59 (Nov 14) | 23,365.69 (Nov 28) | +2.0% | |\n\n- In 2025 the Black Friday half day itself was +0.7%, with thin volume. [WTOP](https://wtop.com/news/2025/11/how-major-us-stock-indexes-fared-friday-11-28-2025)\n- Across those five years the median change was +2.0% and the range was -2.3% to +3.3%. This year starts from a weaker position: the index is about 9% below its record and 2026 is a rate-hiking environment, unlike the cutting cycle of 2024-25.\n\n### 5. Other forecasts\n- I found no market that matches this question (Nov 27 ^IXIC close).\n- Related markets:\n  - Kalshi, Fear & Greed category on Nov 27: Fear 0.45, Extreme Fear 0.24, Neutral 0.23, Greed 0.17. These prices add up to more than 1.\n  - Kalshi, NDX finishing 2026 positive (at or above 25,249.86): 0.78. For reference, NDX was about 27,908 on Nov 13.\n  - Polymarket, NDX December buckets: the prices are incoherent (each bucket is around 0.4 to 0.5), so I treated them as uninformative.\n- I found no expert targets specific to Nov 27.\n\n### 6. Upcoming events before resolution\n- Nov 17 (Tue), after the close: Nvidia earnings, the first under interim CEO Kress.\n- Nov 18: Anthropic IPO prices. Fed minutes are also due this week. [Stocktwits](https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-edge-lower-as-markets-brace-for-nvidia-earnings-anthropic-ipo-fed-minutes-smmt-nbis-help-mstr-in-focus/cNb7ePKR9Xb)\n- Nov 19: ANT starts trading on Nasdaq. It is unclear when it would enter the Composite, so its direct weight in the index during this window is uncertain.\n- Nov 25: October PCE and the second estimate of Q3 GDP.\n- Nov 26: Thanksgiving, markets closed.\n- Nov 27: half-day session closing at 1:00 p.m. ET, typically on thin volume.\n- Later: FOMC on Dec 9, with a hike priced in. The 10-year yield is about 5.1%.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 07:16 UTC; check each market really matches the question)\n- Kalshi: Nasdaq-100 close price end of 2026? (On Dec 31, 2026). Yes prices: 28,500 to 28,999.99: 0.09; 29,000 to 29,499.99: 0.07; 27,500 to 27,999.99: 0.07; 28,000 to 28,499.99: 0.07; 30,000 to 30,499.99: 0.04; 30,500 to 30,999.99: 0.04; 33,000.01 or above: 0.04; 24,500 to 24,999.99: 0.04; 25,000 to 25,499.99: 0.04; 25,500 to 25,999.99: 0.04.\n- Kalshi: How high will the S&P/TSX Composite Index get this year? (2026). Yes prices: At least 38,000: 0.34; At least 39,000: 0.07; At least 40,000: 0.03; At least 37,000: 0.3500; At least 36,000: 0.9900.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: How high will the KOSPI Composite Index get in June 2026? (June 2026). Yes prices: At least ₩8,750: 0.9900; At least ₩8,800: 0.9900; At least ₩9,300: 0.9900; At least ₩8,900: 0.9900; At least ₩8,875: 0.9900; At least ₩9,200: 0.9900; At least ₩8,825: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩9,400: 0.1800.\n- Kalshi: Will the NASDAQ-100 finish positive this year? (2026). Yes prices: 25,249.86 or above: 0.78.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 32.4%: 0.0100; Above 33.8%: 0.0100; Above 27.8%: 0.9900; Above 29.2%: 0.9900; Above 29.9%: 0.9900; Above 30.3%: 0.9900; Above 30.8%: 0.9900; Above 31.2%: 0.9900; Above 31.7%: 0.9900.\n- Kalshi: Fear & Greed Index on Nov 27, 2026? (On Nov 27, 2026). Yes prices: Fear: 0.45; Extreme Fear: 0.24; Neutral: 0.23; Greed: 0.17; Extreme Greed: 0.0100.\n- Polymarket: What will Nasdaq 100 (NDX) close at in December? (ends 2026-12-31). [Yes, No] prices: <$23,500: [\"0.51\", \"0.49\"]; $23,500-$25,000: [\"0.395\", \"0.605\"]; $25,000-$26,500: [\"0.42\", \"0.58\"]; $26,500-$28,500: [\"0.43\", \"0.57\"]; $28,500-$30,500: [\"0.395\", \"0.605\"]; $30,500-$33,000: [\"0.445\", \"0.555\"]\n- Polymarket: What will Nasdaq 100 (QQQ) hit Week of April 20 2026? (ends 2026-04-24). [Yes, No] prices: ↑ $680: [\"0.0155\", \"0.9845\"]; ↑ $675: [\"0.0245\", \"0.9755\"]; ↑ $670: [\"0.0435\", \"0.9565\"]; ↑ $665: [\"0.5\", \"0.5\"]; ↑ $660: [\"0.515\", \"0.485\"]; ↑ $655: [\"1\", \"0\"]\n- Polymarket: Nasdaq 100 (NDX) Up or Down on April 24? (ends 2026-04-24). [Yes, No] prices: Nasdaq 100 (NDX) Up or Down on April 24?: [\"0.7\", \"0.3\"]\n- Polymarket: Nasdaq round-the-clock trading by December 31? (ends 2027-01-01). [Yes, No] prices: Nasdaq round-the-clock trading by December 31?: [\"0.964\", \"0.036\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^IXIC: latest close 25136.2695 on 2026-11-13.\nTarget date 2026-11-27 is 10 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 10-observation returns over the last 3 years (last year weighted double):\np5: 23920.7022, p10: 24155.8057, p25: 24766.2233, p50: 25318.9355, p75: 25841.2886, p90: 26382.74, p95: 26844.1385\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).",
+    "Note before the details: the question background gives the November 13 close as 24,922.08 (-1.75%). That number is wrong. Yahoo and Nasdaq both show **25,136.27 (-0.91%)**. The statistical baseline and the news articles use the correct figure.\n\n## 1. Resolution source\n- 2026-11-13: Yahoo's ^IXIC data (the chart API behind its history table) shows the last close as **25,136.27**, down 229.83 (-0.906%). The day's high was 25,423.09 and the low 24,872.41. Volume was 7.74B. The 52-week high is 27,722.75 and the 52-week low 20,690.25. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1mo&interval=1d)\n- 2026-11-13: The fallback source, Nasdaq's COMP index page, agrees: 25,136.27, -229.82 (-0.91%), high 25,423.09, low 24,872.41. [Nasdaq](https://indexes.nasdaq.com/Index/Overview/COMP)\n- Recent Yahoo closes:\n\n| Date | Close |\n|---|---|\n| Oct 14 | 26,140 |\n| Oct 20 | 26,703 |\n| Oct 30 | 25,437 |\n| Nov 2 | 25,164 |\n| Nov 3 | 25,372 |\n| Nov 4 | 25,737 |\n| Nov 5 | 24,315 (-5.5%) |\n| Nov 6 | 24,579 |\n| Nov 9 | 25,253 |\n| Nov 10 | 25,066 |\n| Nov 11 | 25,466 |\n| Nov 12 | 25,366 |\n| Nov 13 | 25,136 |\n\n## 2. Current status\n- Nothing has settled the question yet. There are 9 sessions left, from Nov 16 to Nov 25, plus the Nov 27 half day.\n- The index is about 9.3% below its 52-week high of 27,722.75. A Nov 5 report put the close at more than 10% below the October 6 record. [search result](https://www.metatradingclub.com/?p=28118)\n\n## 3. Recent news (newest first)\n- 2026-11-16: Futures reports conflict, depending on when they were taken:\n  - Nasdaq-100 futures were down 0.77% in one early-Monday snapshot. [CNBC](https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html)\n  - TipRanks had them down 1.08% at 1:45 a.m. EST. [TipRanks](https://www.tipranks.com/news/u-s-stocks-brace-for-nvidia-earnings-and-anthropics-mega-ipo)\n  - Sunday's open was up about 0.4%. [FX Leaders](https://www.fxleaders.com/news/2026/11/15/dow-jones-and-nasdaq-futures-reverse-as-nvidia-earnings-and-anthropic-iposet-the-tone/)\n- 2026-11-16: Asian markets fell: the Kospi dropped 3.48% and the Nikkei 2.04%. Nvidia suppliers SK Hynix and TSMC were lower, and Japan's Q3 GDP shrank. [CNBC](https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html)\n- 2026-11-13: The S&P 500 closed at 7,561.67, up 2.5% for the week. The Dow closed at 52,347.55. All three major averages had their best week since August. [Gorge News](https://gorgenewscenter.com/2026/11/13/stocks-fall-but-wall-street-notches-a-winning-week-after-several-turbulent-days/)\n- 2026-11-13: Nvidia fell about 13% for the week, its worst week since April 2025, and was near $160 after dropping more than 30% over six weeks. Colette Kress is interim CEO. Anthropic's IPO valuation estimate is about $1.2T according to CNBC, down from $2T earlier in the fall; other outlets say about $1.4T. [CNBC](https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html)\n- 2026-11-10: October CPI came in above expectations, and markets are pricing a December rate hike. The 10-year yield is about 5.1%. This comes from the question background; I did not check it independently.\n\n## 4. Base rates\n- The code baseline over 10 trading days, starting from 25,136, gives these percentiles: p5 23,921; p10 24,156; p25 24,766; p50 25,319; p75 25,841; p90 26,383; p95 26,844.\n- Realized volatility right now is above normal. Recent daily moves were -5.5% (Nov 5), +2.7% (Nov 9) and +1.6% (Nov 11). The index has traded between 24,315 and 25,737 since Nov 2.\n- Seasonality: change from mid-November to the Friday after Thanksgiving, about 10 sessions.\n\n| Year | Mid-November close | Friday after Thanksgiving close | Change | Checked against Yahoo? |\n|---|---|---|---|---|\n| 2025 | 22,900.59 (Nov 14) | 23,365.69 (Nov 28) | +2.0% | Yes [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=1762905600&period2=1764547200&interval=1d) |\n| 2024 | about 18,680 (Nov 15) | about 19,218 (Nov 29) | about +2.9% | No, from memory |\n| 2023 | about 13,798 (Nov 10) | about 14,251 (Nov 24) | about +3.3% | No, from memory |\n| 2022 | about 11,323 (Nov 11) | about 11,226 (Nov 25) | about -0.9% | No, from memory |\n| 2021 | about 15,861 (Nov 12) | about 15,492 (Nov 26) | about -2.3% (Omicron selloff on the Friday) | No, from memory |\n\n- Thanksgiving week has historically leaned slightly positive, but the spread across years is wide. Compared with those years, this year's starting point follows a correction and comes with higher volatility.\n\n## 5. Other forecasts\n- I found no market on the Nasdaq Composite closing level for Nov 27.\n- Kalshi: \"NASDAQ-100 finish 2026 positive\", meaning a close at or above 25,249.86, trades at 0.78. The Nasdaq-100 was about 27,908 on Nov 13.\n- Kalshi: the Fear & Greed Index for Nov 27 is priced at Fear 0.45, Extreme Fear 0.24, Neutral 0.23 and Greed 0.17. These prices add up to more than 1.\n- Polymarket: the December NDX range prices don't hang together (each bucket is around 0.4-0.5), so they look unreliable.\n- I found no expert point forecasts for the Composite on this date.\n\n## 6. Upcoming events before resolution\n- Nov 16: Empire State manufacturing index.\n- Nov 17: October retail sales and industrial production. **Nvidia earnings after the close**, the first report under interim leadership. Home Depot and Disney also report.\n- Nov 18: FOMC minutes at 2pm. Palo Alto Networks, Target and Lowe's report. **Anthropic prices its IPO.** [CNBC](https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html)\n- Nov 19: **Anthropic (ANT) starts trading on Nasdaq.** Jobless claims, Philadelphia Fed index, Walmart and Intuit earnings.\n- Nov 20: Final Michigan sentiment.\n- Nov 25: October PCE and the second estimate of Q3 GDP, which matter for the December hike pricing.\n- Nov 26: Market closed for Thanksgiving.\n- Nov 27: Half-day session closing at 1pm ET, usually on thin volume.\n\nSources: [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1mo&interval=1d), [Nasdaq COMP](https://indexes.nasdaq.com/Index/Overview/COMP), [CNBC live](https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html), [CNBC week ahead](https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html), [TipRanks](https://www.tipranks.com/news/u-s-stocks-brace-for-nvidia-earnings-and-anthropics-mega-ipo), [FX Leaders](https://www.fxleaders.com/news/2026/11/15/dow-jones-and-nasdaq-futures-reverse-as-nvidia-earnings-and-anthropic-iposet-the-tone/), [Gorge News](https://gorgenewscenter.com/2026/11/13/stocks-fall-but-wall-street-notches-a-winning-week-after-several-turbulent-days/), [Arkansas Online](https://www.arkansasonline.com/news/2026/nov/14/stocks-close-lower-amid-turbulence-in-ai-industry/), [metatradingclub](https://www.metatradingclub.com/?p=28118), [RiskReversal](https://riskreversal.substack.com/p/the-week-ahead-a-huge-week-for-ai), [FXEmpire](https://www.fxempire.com/forecasts/article/the-week-ahead-nvidia-earnings-anthropic-ipo-test-ai-trade-1644719)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 07:16 UTC; check each market really matches the question)\n- Kalshi: Nasdaq-100 close price end of 2026? (On Dec 31, 2026). Yes prices: 28,500 to 28,999.99: 0.09; 29,000 to 29,499.99: 0.07; 27,500 to 27,999.99: 0.07; 28,000 to 28,499.99: 0.07; 30,000 to 30,499.99: 0.04; 30,500 to 30,999.99: 0.04; 33,000.01 or above: 0.04; 24,500 to 24,999.99: 0.04; 25,000 to 25,499.99: 0.04; 25,500 to 25,999.99: 0.04.\n- Kalshi: How high will the S&P/TSX Composite Index get this year? (2026). Yes prices: At least 38,000: 0.34; At least 39,000: 0.07; At least 40,000: 0.03; At least 37,000: 0.3500; At least 36,000: 0.9900.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: How high will the KOSPI Composite Index get in June 2026? (June 2026). Yes prices: At least ₩8,750: 0.9900; At least ₩8,800: 0.9900; At least ₩9,300: 0.9900; At least ₩8,900: 0.9900; At least ₩8,875: 0.9900; At least ₩9,200: 0.9900; At least ₩8,825: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩9,400: 0.1800.\n- Kalshi: Will the NASDAQ-100 finish positive this year? (2026). Yes prices: 25,249.86 or above: 0.78.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 32.4%: 0.0100; Above 33.8%: 0.0100; Above 27.8%: 0.9900; Above 29.2%: 0.9900; Above 29.9%: 0.9900; Above 30.3%: 0.9900; Above 30.8%: 0.9900; Above 31.2%: 0.9900; Above 31.7%: 0.9900.\n- Kalshi: Fear & Greed Index on Nov 27, 2026? (On Nov 27, 2026). Yes prices: Fear: 0.45; Extreme Fear: 0.24; Neutral: 0.23; Greed: 0.17; Extreme Greed: 0.0100.\n- Polymarket: What will Nasdaq 100 (NDX) close at in December? (ends 2026-12-31). [Yes, No] prices: <$23,500: [\"0.51\", \"0.49\"]; $23,500-$25,000: [\"0.395\", \"0.605\"]; $25,000-$26,500: [\"0.42\", \"0.58\"]; $26,500-$28,500: [\"0.43\", \"0.57\"]; $28,500-$30,500: [\"0.395\", \"0.605\"]; $30,500-$33,000: [\"0.445\", \"0.555\"]\n- Polymarket: What will Nasdaq 100 (QQQ) hit Week of April 20 2026? (ends 2026-04-24). [Yes, No] prices: ↑ $680: [\"0.0155\", \"0.9845\"]; ↑ $675: [\"0.0245\", \"0.9755\"]; ↑ $670: [\"0.0435\", \"0.9565\"]; ↑ $665: [\"0.5\", \"0.5\"]; ↑ $660: [\"0.515\", \"0.485\"]; ↑ $655: [\"1\", \"0\"]\n- Polymarket: Nasdaq 100 (NDX) Up or Down on April 24? (ends 2026-04-24). [Yes, No] prices: Nasdaq 100 (NDX) Up or Down on April 24?: [\"0.7\", \"0.3\"]\n- Polymarket: Nasdaq round-the-clock trading by December 31? (ends 2027-01-01). [Yes, No] prices: Nasdaq round-the-clock trading by December 31?: [\"0.964\", \"0.036\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for ^IXIC: latest close 25136.2695 on 2026-11-13.\nTarget date 2026-11-27 is 10 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 10-observation returns over the last 3 years (last year weighted double):\np5: 23920.7022, p10: 24155.8057, p25: 24766.2233, p50: 25318.9355, p75: 25841.2886, p90: 26382.74, p95: 26844.1385\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 23900.0,
+        "p25": 24625.0,
+        "p50": 25250.0,
+        "p75": 25875.0,
+        "p90": 26550.0
+      },
+      "reasoning": "(a) **Time left:** About 11 days. There are 10 trading sessions from Nov 16 through the half-day session on Nov 27, and the result will be known around 18:00 UTC on Nov 27.\n\n(b) **Latest known value:** The Yahoo Finance ^IXIC close on Nov 13, 2026 was 25,136.27 (-0.91%). The background's figure of 24,922.08 conflicts with the resolution source, so I anchor on Yahoo.\n\n(c) **If nothing changed:** About 25,136.\n\n(d) **If the trend continued:** The trend is mixed.\n- Over about a month the index is down from roughly 26,700 in mid-October.\n- It has rebounded about 3% from the Nov 5 low of 24,315.\n- Overnight Nov 16 futures reports conflict, ranging from -1.1% to +0.4%.\n- On balance there is no strong drift, perhaps a slight upward lean from post-Thanksgiving seasonality.\n\n(e) **Historical variation:**\n- The empirical 10-day distribution gives p5 23,921, p50 25,319 and p95 26,844, which is roughly ±5.5% at the tails.\n- Recent realized volatility is elevated, including a -5.5% day on Nov 5 and repeated moves of 1.5-2.7%.\n- Binary events are coming: Nvidia earnings on Nov 17 under an interim CEO, and Anthropic's roughly $1.4T IPO on Nov 18-19, which could pull liquidity from other names.\n- I therefore widen the tails modestly versus the baseline.\n\n(f) **Expectations of experts and markets:**\n- No market matches this exact question.\n- Kalshi's Fear & Greed prices lean toward \"Fear\" on Nov 27.\n- Kalshi prices NDX ending 2026 positive at 0.78, a mildly constructive signal.\n- Seasonal Nov-to-Black-Friday changes in 2021-2025 had a median of +2.0%, but this is a rate-hiking environment with the 10-year yield around 5.1%.\n\n(g) **Scenarios:**\n- **Low:** Nvidia misses on guidance or shows leadership turmoil, Anthropic's IPO drains liquidity or breaks issue, and hot PCE fuels talk of a 50bp hike. The Nasdaq could revisit the Nov 5 low and fall below 23,000 on thin Black Friday volume.\n- **High:** Nvidia beats strongly and reassures on demand, Anthropic pops and revives the AI trade, and benign PCE eases hike fears. The index could rally toward 27,000 or higher.\n\nPercentile 1: 22300\nPercentile 5: 23400\nPercentile 10: 23900\nPercentile 20: 24450\nPercentile 30: 24800\nPercentile 40: 25050\nPercentile 50: 25250\nPercentile 60: 25450\nPercentile 70: 25700\nPercentile 80: 26050\nPercentile 90: 26550\nPercentile 95: 26950\nPercentile 99: 27800"
+    },
+    {
+      "value": {
+        "p10": 24050.0,
+        "p25": 24715.0,
+        "p50": 25250.0,
+        "p75": 25795.0,
+        "p90": 26400.0
+      },
+      "reasoning": "(a) **Time left:** About 11 days. That is 10 trading sessions from the Nov 13 close, and the last one is the Nov 27 half day closing at 1:00 p.m. ET. The answer will be known around Nov 27, 18:00 to 20:00 UTC.\n\n(b) **Latest known value:** Yahoo Finance shows a close of 25,136.27 on Nov 13, 2026 (-0.91%). The background figure of 24,922.08 appears to be an intraday reading. Yahoo is the resolution source, so I anchor on its value.\n\n(c) **If nothing changed:** about 25,136.\n\n(d) **If the trend continued:** The trend is mixed.\n- The index fell roughly 6% from mid-October (about 26,700) to Nov 13.\n- It still had its best week since August in the week to Nov 13.\n- Monday futures signals conflict, ranging from -1.1% to +0.4%.\n- Continuing the post-Oct 6 drawdown points to roughly 24,500 to 24,800. Continuing the last week's rebound points to roughly 25,500 or higher.\n\n(e) **Historical variation:** Over 10 trading days, the empirical 5th to 95th percentile range is about -4.8% to +6.8%, which is roughly 23,900 to 26,850. Realized volatility is currently elevated, including a -5.5% day on Nov 5. Over the last five years, the change from mid-November to the post-Thanksgiving close ran from -2.3% to +3.3%, with a seasonal tilt toward gains.\n\n(f) **Experts and markets:**\n- No market matches this exact question.\n- Kalshi prices a 0.69 combined probability of \"Fear\" or \"Extreme Fear\" on the Fear and Greed index for Nov 27. That suggests mildly bearish sentiment.\n- The December rate hike is fully priced, and the 10-year yield is about 5.1%.\n- Nvidia earnings (Nov 17) and the Anthropic IPO (Nov 19) are binary swing events.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia misses or guides down under its interim CEO, Anthropic breaks its IPO price, and hot PCE data on Nov 25 revives talk of a 50bp hike. The index could slide to about 22,600 to 23,500.\n- **High:** Nvidia beats strongly, ANT pops and lifts AI sentiment, PCE comes in soft, and the seasonal Thanksgiving rally adds to it. The index could climb back to about 26,800 to 27,500.\n\nI center slightly above the latest close, trimming the empirical drift because of the hawkish backdrop. I widen both tails for the event risk.\n\nPercentile 1: 22600\nPercentile 5: 23650\nPercentile 10: 24050\nPercentile 20: 24550\nPercentile 30: 24880\nPercentile 40: 25080\nPercentile 50: 25250\nPercentile 60: 25420\nPercentile 70: 25640\nPercentile 80: 25950\nPercentile 90: 26400\nPercentile 95: 26750\nPercentile 99: 27500"
+    },
+    {
+      "value": {
+        "p10": 24050.0,
+        "p25": 24700.0,
+        "p50": 25230.0,
+        "p75": 25760.0,
+        "p90": 26320.0
+      },
+      "reasoning": "(a) Time left: about 11 days. The outcome is known after the 1:00 p.m. ET close on Friday, Nov 27, 2026. Ten trading sessions remain, and the last is a half day.\n\n(b) Latest known value: Yahoo, the resolution source, shows a Nov 13, 2026 close of 25,136.27 (-0.91%). The 24,922.08 in the background looks like an intraday reading, so I anchor on Yahoo's figure.\n\n(c) If nothing changed: about 25,136.\n\n(d) If the trend continued: the trend is mixed.\n- The index had its best week since August.\n- It remains about 9% below its October record and fell on Friday.\n- Overnight futures reports conflict, ranging from -1.1% to +0.4%.\n- Continuing the trend therefore implies roughly flat to slightly lower, around 25,000 to 25,200.\n\n(e) Historical variation:\n- The empirical 10-day distribution has a p5 to p95 range of about -4.8% to +6.8%, with a median of +0.7%.\n- Realized volatility is currently elevated, including a -5.5% day on Nov 5 and +2.7% on Nov 9.\n- Post-Thanksgiving seasonality has been mildly positive: a median of +2% over 5 years, with a range of -2.3% to +3.3%.\n\n(f) Expectations of experts and markets:\n- No market matches this question directly.\n- Kalshi's Fear & Greed market leans toward \"Fear\" on Nov 27, which is mildly bearish.\n- Fed futures fully price a December rate hike, and the 10-year yield is about 5.1%, which is a headwind.\n- The key catalysts before resolution are Nvidia earnings (Nov 17), the Anthropic IPO (prices Nov 18, trades Nov 19), Fed minutes, and PCE (Nov 25).\n\n(g) Unexpected scenarios:\n- Low: Nvidia misses or guides down under its interim CEO, Anthropic's IPO breaks issue price and drains liquidity from megacaps, and hot PCE data drives talk of a 50bp hike. The index could revisit the Nov 5 low near 24,300 and fall below it toward 23,000. A crash-like 10% drop would take it to about 22,600.\n- High: Nvidia blows out its numbers, ANT pops strongly and lifts AI sentiment broadly, and soft PCE eases fears of a rate hike. A Thanksgiving-week melt-up could recover a large part of the drop from mid-October levels near 26,700, reaching 26,500 to 27,000 or more.\n\nMy distribution centres slightly below the code baseline's median of 25,319, to reflect the negative overnight futures reports, Kalshi's \"Fear\" lean and the rate headwind. I widened the tails beyond the baseline because of elevated volatility and binary event risk.\n\nPercentile 1: 22600\nPercentile 5: 23650\nPercentile 10: 24050\nPercentile 20: 24550\nPercentile 30: 24850\nPercentile 40: 25060\nPercentile 50: 25230\nPercentile 60: 25400\nPercentile 70: 25620\nPercentile 80: 25900\nPercentile 90: 26320\nPercentile 95: 26700\nPercentile 99: 27450"
+    },
+    {
+      "value": {
+        "p10": 23900.0,
+        "p25": 24560.0,
+        "p50": 25050.0,
+        "p75": 25650.0,
+        "p90": 26280.0
+      },
+      "reasoning": "(a) **Time left:** About 11.5 days. The question resolves at the close of the half-day session on Friday, November 27, 2026 (1:00 p.m. ET). That leaves 9 full sessions plus the half day.\n\n(b) **Latest known value:** 25,136.27 at the close on November 13, 2026, down 0.91%. The research report verified this against both Yahoo and Nasdaq. The 24,922.08 figure in the question background appears to be wrong.\n\n(c) **If nothing changed:** About 25,136.\n\n(d) **If the current trend continued:** The trend is unclear.\n- The index has been choppy at 24,300-25,700 since early November, after a correction of more than 10% from the October record.\n- Monday futures point to an open about 0.8-1% lower, around 24,900-24,950.\n- Continuing the six-week downtrend would put the index around 24,500. Continuing last week's rebound would put it around 25,500.\n\n(e) **Historical variation:**\n- The empirical 10-session baseline gives p5 23,921, p50 25,319 and p95 26,844, which is roughly ±5.8%.\n- Realized volatility is currently above normal. There was a -5.5% day on November 5, and daily moves are often 1.5-2.7%.\n- Thanksgiving-week seasonality leans mildly positive, but the spread across years is wide.\n\n(f) **Expert and market expectations:**\n- No direct market exists for this quantity.\n- Kalshi prices the Fear & Greed reading for November 27 mostly in \"Fear\", which fits a cautious tone.\n- Kalshi gives about 78% that the Nasdaq-100 finishes 2026 positive. That implies modest upside expectations into year-end, though the price is not precise.\n- Key catalysts are Nvidia earnings (November 17), the FOMC minutes and Anthropic pricing (November 18), the ANT trading debut (November 19), and PCE plus GDP (November 25).\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia's first report under interim leadership disappoints on guidance. The Anthropic debut drains liquidity from megacaps and trades poorly. A hot PCE print stokes talk of a 50bp hike, with the 10-year yield moving toward 5.3%. The index revisits and breaks the November 5 low, ending near 22,500-23,300.\n- **High:** Nvidia beats strongly, ANT pops and lifts sentiment across AI, and a soft PCE print eases hike fears. A short-covering rally plus seasonal tailwinds pushes the index to 26,800-27,500.\n\n**Approach:** I started from the statistical baseline (median about 25,320), shifted it down for Monday's weak futures, and kept a slight seasonal positive tilt, which gives a median near 25,050. I widened the tails modestly for the dense event calendar and the elevated realized volatility.\n\nPercentile 1: 22400\nPercentile 5: 23450\nPercentile 10: 23900\nPercentile 20: 24400\nPercentile 30: 24720\nPercentile 40: 24900\nPercentile 50: 25050\nPercentile 60: 25230\nPercentile 70: 25480\nPercentile 80: 25820\nPercentile 90: 26280\nPercentile 95: 26650\nPercentile 99: 27400"
+    },
+    {
+      "value": {
+        "p10": 23600.0,
+        "p25": 24400.0,
+        "p50": 25070.0,
+        "p75": 25755.0,
+        "p90": 26440.0
+      },
+      "reasoning": "(a) **Time left:** About 11.5 days. That is 9 full sessions from Nov 16 to Nov 25, plus the Nov 27 half day ending at 1:00 p.m. ET. The outcome is known around Nov 27, 18:00 to 20:00 UTC.\n\n(b) **Latest known value:** 25,136.27, the Nov 13, 2026 close, per Yahoo and Nasdaq. The background's figure of 24,922.08 is wrong, and the researcher's source check supports 25,136.27. Index futures were down roughly 0.8% to 1.1% in early Monday trading on Nov 16, so the implied starting point is closer to about 24,900 to 25,000.\n\n(c) **If nothing changed:** about 25,136.\n\n(d) **If the current trend continued:** The trend is mixed. The index is about 9% below its October record after a correction, but it posted its best week since August last week. The short-term drift is roughly flat to slightly negative given Monday's futures. Seasonality around Thanksgiving week leans slightly positive, at about +1% to +2% on average. Net, the trend points to about 25,000 to 25,200.\n\n(e) **Historical variation:** The empirical 10-session baseline gives p5 23,921, p50 25,319 and p95 26,844, which is roughly -5% to +7%. Realized volatility is currently above normal, including a -5.5% day on Nov 5. The index has ranged from 24,315 to 25,737 since Nov 2. Nvidia earnings and the Anthropic IPO add event risk, so I widen the tails somewhat.\n\n(f) **Expectations of experts and markets:** There is no direct market on this quantity. Kalshi's Fear & Greed market leans \"Fear\" for Nov 27. Kalshi gives 0.78 to the Nasdaq-100 finishing 2026 positive, which is a mildly constructive year-end lean. Markets price a December Fed hike, with 10-year yields around 5.1%, which is a headwind for growth stocks.\n\n(g) **Scenarios:**\n- **Low:** Nvidia's first report under interim leadership disappoints, or guidance is cut. The Anthropic IPO prices weakly or breaks issue, which deflates the AI trade. Hot PCE on Nov 25 revives 50bp hike talk. A thin post-Thanksgiving session amplifies the selloff, and the index ends around 22,500 to 23,000.\n- **High:** Nvidia beats and raises, and the Anthropic debut is strong, which reignites AI enthusiasm. A soft PCE eases fears of a hike, and a Thanksgiving-week rally carries the index to about 26,800 to 27,500.\n\n**Building the distribution:** I start from the code baseline. I shift the center down by about 1% for Monday's weak futures, then partly offset that with positive seasonality, which gives a median near 25,050. I widen both tails for the elevated volatility and the event risk.\n\nPercentile 1: 22000\nPercentile 5: 23100\nPercentile 10: 23600\nPercentile 20: 24200\nPercentile 30: 24600\nPercentile 40: 24870\nPercentile 50: 25070\nPercentile 60: 25290\nPercentile 70: 25570\nPercentile 80: 25940\nPercentile 90: 26440\nPercentile 95: 26850\nPercentile 99: 27600"
+    },
+    {
+      "value": {
+        "p10": 23700.0,
+        "p25": 24450.0,
+        "p50": 25100.0,
+        "p75": 25765.0,
+        "p90": 26450.0
+      },
+      "reasoning": "(a) **Time left:** About 11 days. That is 9 full sessions (Nov 16 to Nov 25) plus the Nov 27 half-day session, which closes at 1pm ET. The result will be known on the evening of Nov 27.\n\n(b) **Latest known value:** 25,136.27, the Nov 13, 2026 close shown by both Yahoo and Nasdaq. The 24,922.08 figure in the question background appears to be wrong.\n\n(c) **If nothing changed:** about 25,136.\n\n(d) **If the current trend continued:** The index has been choppy and range-bound between about 24,300 and 25,700 since a correction from the 27,700 high. Nasdaq-100 futures point to a Monday open about 0.8 to 1% lower, which puts the starting point near 24,900 to 25,000. The short-term trend is flat to mildly negative.\n\n(e) **Historical variation:** The empirical 10-session baseline runs from roughly -4.8% at p5 to +6.8% at p95, with a median of +0.7%. Realized volatility is currently elevated: there was a -5.5% day on Nov 5. At roughly 1.8% daily volatility, a 10-session standard deviation is about 5.5 to 6%, or about 1,400 points. The week from mid-November to the Friday after Thanksgiving has historically leaned slightly positive.\n\n(f) **Expectations of experts and markets:** There is no direct market on this quantity. Kalshi prices the Nasdaq-100 finishing 2026 positive at 78%, a mildly bullish year-end lean. The Fear & Greed market for Nov 27 leans toward \"Fear.\" Markets fully price a December rate hike.\n\n(g) **Unexpected scenarios:**\n- **Low:** Nvidia guides down under interim leadership, the Anthropic IPO breaks issue price, and hot PCE on Nov 25 revives talk of a 50bp hike. That cascade could pull the index down 8 to 11%, to around 22,400 to 23,000.\n- **High:** Nvidia blows out earnings, Anthropic pops on debut and rekindles the AI trade, and soft PCE eases hike fears. A squeeze could take the index to around 26,800 to 27,500.\n\nI set the median slightly below the baseline's 25,319, at about 25,100. This reflects the weak Monday futures, partly offset by positive seasonality. I widened the tails beyond the baseline for the event risk from Nvidia earnings, the Anthropic IPO and PCE.\n\nPercentile 1: 22300\nPercentile 5: 23200\nPercentile 10: 23700\nPercentile 20: 24250\nPercentile 30: 24650\nPercentile 40: 24900\nPercentile 50: 25100\nPercentile 60: 25320\nPercentile 70: 25580\nPercentile 80: 25950\nPercentile 90: 26450\nPercentile 95: 26850\nPercentile 99: 27600"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 23867.5475,
+    "p25": 24582.6584,
+    "p50": 25172.9137,
+    "p75": 25769.5365,
+    "p90": 26441.3413
+  },
+  "usage": [
+    {
+      "question_id": "46836",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0002718,
+      "input_tokens": 1105,
+      "output_tokens": 102,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 7.15e-05,
+      "input_tokens": 505,
+      "output_tokens": 42,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 65.4,
+      "notional_cost_usd": 0.31289439999999996,
+      "input_tokens": 76601,
+      "output_tokens": 4856,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.090456,
+      "input_tokens": 7958,
+      "output_tokens": 1340,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.091808,
+      "input_tokens": 7957,
+      "output_tokens": 1408,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.0007801,
+      "input_tokens": 2939,
+      "output_tokens": 385,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.0008009,
+      "input_tokens": 2958,
+      "output_tokens": 419,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.00029724000000000005,
+      "input_tokens": 2936,
+      "output_tokens": 410,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.1,
+      "notional_cost_usd": 0.029541400000000002,
+      "input_tokens": 7957,
+      "output_tokens": 1277,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.00029984,
+      "input_tokens": 2958,
+      "output_tokens": 414,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008049999999999999,
+      "input_tokens": 3011,
+      "output_tokens": 406,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.00021857000000000002,
+      "input_tokens": 3012,
+      "output_tokens": 250,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 68.1,
+      "notional_cost_usd": 0.21381740000000005,
+      "input_tokens": 68708,
+      "output_tokens": 4857,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.9,
+      "notional_cost_usd": 0.09106,
+      "input_tokens": 8146,
+      "output_tokens": 1295,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.09486,
+      "input_tokens": 8146,
+      "output_tokens": 1485,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.4,
+      "notional_cost_usd": 0.093888,
+      "input_tokens": 8147,
+      "output_tokens": 1436,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0008313000000000001,
+      "input_tokens": 2895,
+      "output_tokens": 505,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.000822,
+      "input_tokens": 3041,
+      "output_tokens": 428,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.0008686,
+      "input_tokens": 3019,
+      "output_tokens": 530,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0003209,
+      "input_tokens": 2895,
+      "output_tokens": 457,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00031886,
+      "input_tokens": 3041,
+      "output_tokens": 450,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46836",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00028434,
+      "input_tokens": 3020,
+      "output_tokens": 381,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0253
+}
