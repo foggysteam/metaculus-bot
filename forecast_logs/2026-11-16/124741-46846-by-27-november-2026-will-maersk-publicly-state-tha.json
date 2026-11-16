@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-16T12:52:52.691474+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T12:47:41.327423+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46846,
+    "post_id": 46586,
+    "url": "https://www.metaculus.com/questions/46586",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "By 27 November 2026, will Maersk publicly state that personal data was accessed or disclosed in the IT security incident it announced on 11 November 2026?",
+    "resolution_criteria": "Resolves YES if, on or before 27 November 2026, A.P. Moller–Maersk (or a Maersk spokesperson quoted in the media) publicly states that personal data — records identifying or relating to individuals, such as names, contact details, login credentials or passwords, driver/employee records, or device identifiers such as IMEI numbers — was accessed, extracted, disclosed or leaked in the IT security incident the company announced on 11 November 2026. Such a statement may appear in Maersk's incident advisory (https://www.maersk.com/news/articles/2026/11/11/it-security-incident), elsewhere on maersk.com, or be reported by [credible sources](https://www.metaculus.com/faq/#definitions). A statement counts even if Maersk characterises the data as old, low-risk or not sensitive, provided it acknowledges that records identifying individuals were involved. Resolves NO if no such statement is public by 27 November 2026 — including if Maersk's position remains that its findings so far 'strongly suggest no sensitive data has been disclosed', that the investigation is ongoing, or that it has not yet determined what data was taken.",
+    "fine_print": "Statements that merely confirm 'unauthorised access and data extraction' or 'data theft' in general, without indicating that personal data of individuals was involved, do not count. A statement that the company is investigating whether any personal data was affected, on its own, does not count.",
+    "close_time": "2026-11-16 15:43 UTC",
+    "scheduled_resolution_time": "2026-11-27 00:00 UTC"
+  },
+  "research": [
+    "Maersk has not clearly said that personal data was involved. Its own advisory still says its findings \"so far strongly suggest no sensitive data has been disclosed.\" The one possible exception is a set of media statements, made around 11-12 November, that the stolen material held only expired one-time codes. That could be argued either way under the criteria, and it predates the question.\n\n## 1. Resolution source\n- 2026-11-16 (fetched today): the advisory at maersk.com/news/articles/2026/11/11/it-security-incident is unchanged. It confirms \"unauthorised access and data extraction from one of our local legacy systems from a previous acquisition.\" It says \"Our findings so far strongly suggest no sensitive data has been disclosed,\" that the investigation \"remains ongoing,\" and that \"if we identify any need to inform impacted parties of any further findings, we will do so.\" It mentions no personal data, drivers, passwords or LF Logistics, and the page shows no update date. Newer advisories (13 and 16 Nov) on the same page are unrelated. [Maersk](https://www.maersk.com/news/articles/2026/11/11/it-security-incident)\n\n## 2. Current status\n- Nothing clearly settles the question as YES yet. One ambiguous item needs judging:\n- Around 2026-11-11/12: Maersk told Cybernews that \"the claims about passwords are not accurate.\" It said passwords are stored in protected form and the attackers took single-use codes that are now expired. [Cybernews](https://cybernews.com/security/maersk-confirms-cyberattack-ransomware/) (403 when fetched; known only from search summaries)\n- Around 2026-11-12: In a written follow-up to Ingeniøren, Maersk reportedly said the data \"contained no passwords, only temporary one-time codes that had expired.\" It also rejected the claim that 16,000 drivers' passwords were exposed. Ingeniøren says Maersk confirmed the system came from the LF Logistics acquisition. [Ingeniøren](https://ing.dk/artikel/maersk-hackere-gik-ind-ad-en-aaben-doer-vanvittigt-det-kan-ske)\n- How to read this: the statement implicitly admits that login-code data linked to users was taken. But Maersk presents it as a denial, and nothing I found names individuals' names, emails, phones or IMEIs. A strict reading says this does not count, since it is not an acknowledgement that \"records identifying individuals were involved.\" A loose reading could call it \"login credentials.\" The question's background leaves this statement out, which suggests the question writer did not see it as resolving.\n\n## 3. Recent news (newest first)\n- 2026-11-15: The igor'sLAB weekly roundup says Maersk has not confirmed the scope or the data categories, and the full scope is unknown until the investigation ends. [igor'sLAB](https://www.igorslab.de/en/leakwatch-week-46-2026-tsmc-maersk-data-leaks-ai-services-zero-days-hardware-rumors/)\n- 2026-11-13: Shipping Herald repeats the advisory with nothing new. [Shipping Herald](https://www.shippingherald.com/maersk-identifies-it-security-incident/)\n- 2026-11-12: SecurityWeek says Maersk \"has not confirmed WhiteArmor's involvement or identified the types of data stolen.\" [SecurityWeek](https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/)\n- 2026-11-11: The Register and Security Affairs say Maersk did not specify the data types or address personal data. [The Register](https://www.theregister.com/a/5309096), [Security Affairs](https://securityaffairs.com/?p=202869)\n- 2026-11-11: Ingeniøren's first report says Maersk confirmed the incident and denied that sensitive data was compromised. Ingeniøren says its own review found driver names, emails, phone numbers and plaintext passwords; that finding is the paper's, not Maersk's. [Ingeniøren](https://ing.dk/artikel/maersk-bekraefter-datalaek-efter-ingenioerens-afsloering-her-broed-hackerne-ind)\n- 2026-11-10: Ingeniøren first reports WhiteArmor's claim. At that point Maersk only said it was investigating \"potential security breaches.\" [Ingeniøren](https://ing.dk/artikel/maersk-ramt-af-datalaek-hackere-haevder-have-adgang-til-kundedata)\n- I found no report of filings with or statements by Datatilsynet or Denmark's Centre for Cyber Security, and no leaked data published.\n\n## 4. Base rates\n- I found no formal base rate. Comparable cases point both ways:\n- 2026-11-12: TSMC confirmed within days that employee data leaked through a cloud provider, after an attacker made an extortion claim. [igor'sLAB](https://www.igorslab.de/en/leakwatch-week-46-2026-tsmc-maersk-data-leaks-ai-services-zero-days-hardware-rumors/)\n- 2026-11-14: La Poste disclosed about two months after a September breach. [il Giornale](https://www.ilgiornale.it/news/cronaca-internazionale/attaccate-le-poste-francesi-rubati-i-dati-di-22milioni-di-utenti/)\n- General pattern: companies that start with \"no sensitive data\" usually keep that line until the data is leaked or their forensics finish, which often takes weeks. Notices to affected individuals under GDPR Article 34 often come privately rather than as public statements.\n- Maersk has also disputed leaked data before, saying posted data was \"not current and not from attack.\" [The Loadstar](https://theloadstar.com/maersk-says-posted-data-is-not-current-and-not-from-attack-by-hackers/)\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on this question. The markets listed in the brief (GitHub, Cloudflare and so on) are unrelated.\n\n## 6. Upcoming events before 27 Nov\n- Maersk could update the advisory or issue notices to affected people, which it has promised \"if we identify any need.\"\n- WhiteArmor might publish samples or proof. Its payment deadline is about 7 Dec, after resolution, but the group could leak early to add pressure.\n- Danish media (Ingeniøren) may keep pressing Maersk over the driver data it says it saw.\n- Datatilsynet or Hong Kong's privacy commissioner could comment, since LF Logistics is based in Hong Kong.\n- Maersk does not appear to have a scheduled earnings report before 27 Nov; its Q3 results usually come in early November.\n\nSources: [Maersk advisory](https://www.maersk.com/news/articles/2026/11/11/it-security-incident), [Cybernews](https://cybernews.com/security/maersk-confirms-cyberattack-ransomware/), [Ingeniøren 12 Nov](https://ing.dk/artikel/maersk-hackere-gik-ind-ad-en-aaben-doer-vanvittigt-det-kan-ske), [Ingeniøren 11 Nov](https://ing.dk/artikel/maersk-bekraefter-datalaek-efter-ingenioerens-afsloering-her-broed-hackerne-ind), [Ingeniøren 10 Nov](https://ing.dk/artikel/maersk-ramt-af-datalaek-hackere-haevder-have-adgang-til-kundedata), [SecurityWeek](https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/), [The Register](https://www.theregister.com/a/5309096), [Security Affairs](https://securityaffairs.com/?p=202869), [igor'sLAB](https://www.igorslab.de/en/leakwatch-week-46-2026-tsmc-maersk-data-leaks-ai-services-zero-days-hardware-rumors/), [Shipping Herald](https://www.shippingherald.com/maersk-identifies-it-security-incident/), [Bitdefender](https://www.bitdefender.com/en-us/blog/hotforsecurity/whitearmor-gang-cyberattack-maersk), [Infosecurity Magazine](https://www.infosecurity-magazine.com/news/maersk-data-breach-extortion-group/), [eSecurity Planet](https://www.esecurityplanet.com/threats/news-maersk-legacy-system-breach-5m-extortion/), [The Loadstar](https://theloadstar.com/maersk-says-posted-data-is-not-current-and-not-from-attack-by-hackers/), [il Giornale](https://www.ilgiornale.it/news/cronaca-internazionale/attaccate-le-poste-francesi-rubati-i-dati-di-22milioni-di-utenti/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 12:47 UTC; check each market really matches the question)\n- Kalshi: When will serious AI-incident reporting become U.S. law? (Mandatory serious AI-incident reporting). Yes prices: Before Jul 1, 2027: 0.50; Before Jan 1, 2028: 0.51; Before Jan 1, 2027: 0.03.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: Peak Strait of Hormuz traffic day? (11/16 - 11/22) (11/16 - 11/22). Yes prices: November 16: 0.20; November 17: 0.14; November 18: 0.14; November 20: 0.14; November 19: 0.14; November 22: 0.14; November 21: 0.13.\n- Kalshi: Copper at 9:30am ET · US PCE inflation + GDP (Nov 25, 2026 · 9:30am ET · 1 hour after US PCE inflation and GDP). Yes prices: Above $6.10: 0.56; Above $6.20: 0.36; Above $6.00: 0.73; Above $6.30: 0.20; Above $5.90: 0.86; Above $6.40: 0.10; Above $5.80: 0.94; Above $5.50: 0.97; Above $5.60: 0.97; Above $5.70: 0.96. Settles on the Pyth feed Commodities.Index.CU/USD, which can differ from exchange settlement prices.\n- Kalshi: Gold at 9:30am ET · US PCE inflation + GDP (Nov 25, 2026 · 9:30am ET · 1 hour after US PCE inflation and GDP). Yes prices: Above $3850: 0.56; Above $3900: 0.40; Above $3800: 0.71; Above $3950: 0.25; Above $3750: 0.83; Above $4000: 0.14; Above $3700: 0.92; Above $4050: 0.08; Above $3600: 0.96; Above $4100: 0.04. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Kalshi: Solana at 9:30am ET · US PCE inflation + GDP (Nov 25, 2026 · 9:30am EST · US PCE inflation + GDP). Yes prices: Above $77: 0.0000; Above $78: 0.0000; Above $79: 0.0000; Above $80: 0.0000; Above $81: 0.0000; Above $82: 0.0000; Above $83: 0.0000; Above $84: 0.0000; Above $85: 0.0000; Above $86: 0.0000.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 32.4%: 0.0100; Above 33.8%: 0.0100; Above 27.8%: 0.9900; Above 29.2%: 0.9900; Above 29.9%: 0.9900; Above 30.3%: 0.9900; Above 30.8%: 0.9900; Above 31.2%: 0.9900; Above 31.7%: 0.9900.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Kalshi: EV market share in 2030? (In Jan 2030). Yes prices: Above 30%: 0.44; Above 20%: 0.61; Above 50%: 0.23; Above 10%: 0.85.\n- Polymarket: Longest GitHub critical incident in November 2026? (ends 2026-12-01). [Yes, No] prices: <1 hour: [\"0\", \"1\"]; 1-3 hours: [\"0.435\", \"0.565\"]; 3-6 hours: [\"0.27\", \"0.73\"]; 6-12 hours: [\"0.14\", \"0.86\"]; 12+ hours: [\"0.0595\", \"0.9405\"]\n- Polymarket: Another critical Cloudflare incident by...? (ends 2027-01-01). [Yes, No] prices: October 31: [\"0\", \"1\"]; November 30: [\"0.465\", \"0.535\"]; December 31: [\"0.495\", \"0.505\"]\n- Polymarket: GitHub Git Operations critical incident by...? (ends 2027-01-01). [Yes, No] prices: November 30: [\"0.48\", \"0.52\"]; December 31: [\"0.51\", \"0.49\"]\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.04\", \"0.96\"]; $2M: [\"0.0345\", \"0.9655\"]; $3M: [\"0.0315\", \"0.9685\"]; $4M: [\"0.0075\", \"0.9925\"]; $5M: [\"0.021\", \"0.979\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.12\", \"0.88\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.04\", \"0.96\"]",
+    "Maersk has not said that personal data was accessed. As of 16 Nov 2026, its only public position is that its \"findings so far strongly suggest no sensitive data has been disclosed\", which by itself resolves NO.\n\n## 1. Resolution source\n- 2026-11-16 (fetched today): The advisory at maersk.com still has its original text. It says there was \"unauthorised access and data extraction from one of our local legacy systems from a previous acquisition\" and that \"Our findings so far strongly suggest no sensitive data has been disclosed.\" It says the investigation \"remains ongoing\" and that \"if we identify any need to inform impacted parties of any further findings, we will do so.\" There is no update stamp and nothing about personal data, drivers, employees or credentials. Maersk's advisory list shows no follow-up incident post through 16 Nov. [Maersk advisory](https://www.maersk.com/news/articles/2026/11/11/it-security-incident)\n\n## 2. Current status\n- Nothing settles the question yet. Maersk has confirmed \"data extraction\" in general, which the fine print says does not count. It has not confirmed any category of data.\n- The wording \"no sensitive data\" leaves room for a later admission that non-sensitive personal data, such as names or phone numbers, was taken. That kind of admission would count.\n- 2026-11-12: In a written reply to the Danish engineering outlet Ingeniøren, Maersk named the system as \"et afgrænset system fra et tidligere opkøb, LF Logistics\" (a limited system from an earlier acquisition, LF Logistics). That goes further than the advisory, which names no business, but it says nothing about personal data. [Ingeniøren](https://ing.dk/artikel/maersk-hackere-gik-ind-ad-en-aaben-doer-vanvittigt-det-kan-ske)\n\n## 3. Recent news (newest first)\n- 2026-11-15: IgorsLab's weekly LeakWatch roundup: Maersk has not confirmed the scope or the data categories (drivers, devices, delivery receipts and so on). It had no new Maersk statement. [IgorsLab](https://www.igorslab.de/en/leakwatch-week-46-2026-tsmc-maersk-data-leaks-ai-services-zero-days-hardware-rumors/)\n- 2026-11-13: Shipping Herald repeated the advisory, with no new detail. [Shipping Herald](https://www.shippingherald.com/maersk-identifies-it-security-incident/)\n- 2026-11-12: Ingeniøren reported that WhiteArmor says it got in using admin credentials left in plain text on a Maersk website, and that Ingeniøren checked this itself. The group also claims names and addresses for about 19,000 delivery recipients. [Ingeniøren](https://ing.dk/artikel/maersk-hackere-gik-ind-ad-en-aaben-doer-vanvittigt-det-kan-ske)\n- 2026-11-11: Ingeniøren: Maersk confirmed the breach and denied that sensitive data was compromised. [Ingeniøren](https://ing.dk/artikel/maersk-bekraefter-datalaek-efter-ingenioerens-afsloering-her-broed-hackerne-ind)\n- 2026-11-11: BleepingComputer sent Maersk further questions and had no reply by publication. Maersk \"did not share the compromised data types.\" [BleepingComputer](https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/)\n- 2026-11-11 to 11-14: SecurityWeek, Container News, Marine Insight, TechRadar and Bitdefender all say WhiteArmor's claims about driver records, passwords and IMEI numbers are unverified and that Maersk has not confirmed the data types. [SecurityWeek](https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/), [Container News](https://container-news.com/maersk-confirms-security-breach-amid-hacker-claims-of-major-data-theft/), [TechRadar](https://www.techradar.com/pro/security/shipping-giant-maersk-confirms-data-breach-as-hackers-demand-usd5-million-ransom), [Bitdefender](https://www.bitdefender.com/en-us/blog/hotforsecurity/whitearmor-gang-cyberattack-maersk)\n- I found no reports that WhiteArmor has published any data, and no statement from Datatilsynet (the Danish data protection authority), Denmark's Centre for Cyber Security or Hong Kong's privacy commissioner (PCPD).\n\n## 4. Base rates\n- I found no systematic data on how often companies move from \"no sensitive data\" to admitting personal data was exposed within about 16 days of first disclosure.\n- Examples from the same week:\n  - 2026-11-12: TSMC confirmed employee data leaked through a cloud provider soon after an extortion claim. [IgorsLab](https://www.igorslab.de/en/leakwatch-week-46-2026-tsmc-maersk-data-leaks-ai-services-zero-days-hardware-rumors/)\n  - 2026-11-14: La Poste's Maileva breach happened in September but was only disclosed in November. That shows how slowly some admissions come. [il Giornale](https://www.ilgiornale.it/news/cronaca-internazionale/attaccate-le-poste-francesi-rubati-i-dati-di-22milioni-di-utenti/)\n- Under GDPR Art. 33, a company has 72 hours to notify the regulator once it becomes aware of a breach, but it does not have to say so publicly. Telling affected people directly (Art. 34) is only required for high-risk breaches, and such notices often do not show up in the media.\n- Extortion groups usually escalate by leaking samples near or after their deadline. WhiteArmor's deadline is about 7 Dec, after this question closes.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on this or a closely related question. None of the markets in the supplied list are relevant.\n\n## 6. Upcoming events before 27 Nov\n- Maersk could update the advisory as its investigation goes on. It has promised to inform \"impacted parties\" if needed.\n- WhiteArmor could post samples or proof-of-hack files before its deadline (about 7 Dec), which would put pressure on Maersk to confirm data types.\n- Former LF Logistics drivers or staff could receive notification emails or texts, especially in Asia under Hong Kong's privacy law (PDPO) and other local rules, and the media could report them.\n- Datatilsynet or the PCPD could confirm they have received a notification.\n- Reporters at BleepingComputer, Ingeniøren and Cybernews have open questions with Maersk and could quote a spokesperson.\n- Maersk has no scheduled corporate event I know of before 27 Nov. Q3 results were already published.\n\nSources: [Maersk advisory](https://www.maersk.com/news/articles/2026/11/11/it-security-incident), [BleepingComputer](https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/), [SecurityWeek](https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/), [Ingeniøren 1](https://ing.dk/artikel/maersk-hackere-gik-ind-ad-en-aaben-doer-vanvittigt-det-kan-ske), [Ingeniøren 2](https://ing.dk/artikel/maersk-bekraefter-datalaek-efter-ingenioerens-afsloering-her-broed-hackerne-ind), [IgorsLab](https://www.igorslab.de/en/leakwatch-week-46-2026-tsmc-maersk-data-leaks-ai-services-zero-days-hardware-rumors/), [Container News](https://container-news.com/maersk-confirms-security-breach-amid-hacker-claims-of-major-data-theft/), [TechRadar](https://www.techradar.com/pro/security/shipping-giant-maersk-confirms-data-breach-as-hackers-demand-usd5-million-ransom), [Bitdefender](https://www.bitdefender.com/en-us/blog/hotforsecurity/whitearmor-gang-cyberattack-maersk), [Shipping Herald](https://www.shippingherald.com/maersk-identifies-it-security-incident/), [Cybernews](https://cybernews.com/security/maersk-confirms-cyberattack-ransomware/) (could not load the page, error 403), [Marine Insight](https://www.marineinsight.com/worlds-second-largest-container-line-maersk-confirms-cybersecurity-incident-involving-data-theft/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 12:47 UTC; check each market really matches the question)\n- Kalshi: When will serious AI-incident reporting become U.S. law? (Mandatory serious AI-incident reporting). Yes prices: Before Jul 1, 2027: 0.50; Before Jan 1, 2028: 0.51; Before Jan 1, 2027: 0.03.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: Peak Strait of Hormuz traffic day? (11/16 - 11/22) (11/16 - 11/22). Yes prices: November 16: 0.20; November 17: 0.14; November 18: 0.14; November 20: 0.14; November 19: 0.14; November 22: 0.14; November 21: 0.13.\n- Kalshi: Copper at 9:30am ET · US PCE inflation + GDP (Nov 25, 2026 · 9:30am ET · 1 hour after US PCE inflation and GDP). Yes prices: Above $6.10: 0.56; Above $6.20: 0.36; Above $6.00: 0.73; Above $6.30: 0.20; Above $5.90: 0.86; Above $6.40: 0.10; Above $5.80: 0.94; Above $5.50: 0.97; Above $5.60: 0.97; Above $5.70: 0.96. Settles on the Pyth feed Commodities.Index.CU/USD, which can differ from exchange settlement prices.\n- Kalshi: Gold at 9:30am ET · US PCE inflation + GDP (Nov 25, 2026 · 9:30am ET · 1 hour after US PCE inflation and GDP). Yes prices: Above $3850: 0.56; Above $3900: 0.40; Above $3800: 0.71; Above $3950: 0.25; Above $3750: 0.83; Above $4000: 0.14; Above $3700: 0.92; Above $4050: 0.08; Above $3600: 0.96; Above $4100: 0.04. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Kalshi: Solana at 9:30am ET · US PCE inflation + GDP (Nov 25, 2026 · 9:30am EST · US PCE inflation + GDP). Yes prices: Above $77: 0.0000; Above $78: 0.0000; Above $79: 0.0000; Above $80: 0.0000; Above $81: 0.0000; Above $82: 0.0000; Above $83: 0.0000; Above $84: 0.0000; Above $85: 0.0000; Above $86: 0.0000.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 9, 2026). Yes prices: Above 32.4%: 0.0100; Above 33.8%: 0.0100; Above 27.8%: 0.9900; Above 29.2%: 0.9900; Above 29.9%: 0.9900; Above 30.3%: 0.9900; Above 30.8%: 0.9900; Above 31.2%: 0.9900; Above 31.7%: 0.9900.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Kalshi: EV market share in 2030? (In Jan 2030). Yes prices: Above 30%: 0.44; Above 20%: 0.61; Above 50%: 0.23; Above 10%: 0.85.\n- Polymarket: Longest GitHub critical incident in November 2026? (ends 2026-12-01). [Yes, No] prices: <1 hour: [\"0\", \"1\"]; 1-3 hours: [\"0.435\", \"0.565\"]; 3-6 hours: [\"0.27\", \"0.73\"]; 6-12 hours: [\"0.14\", \"0.86\"]; 12+ hours: [\"0.0595\", \"0.9405\"]\n- Polymarket: Another critical Cloudflare incident by...? (ends 2027-01-01). [Yes, No] prices: October 31: [\"0\", \"1\"]; November 30: [\"0.465\", \"0.535\"]; December 31: [\"0.495\", \"0.505\"]\n- Polymarket: GitHub Git Operations critical incident by...? (ends 2027-01-01). [Yes, No] prices: November 30: [\"0.48\", \"0.52\"]; December 31: [\"0.51\", \"0.49\"]\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.04\", \"0.96\"]; $2M: [\"0.0345\", \"0.9655\"]; $3M: [\"0.0315\", \"0.9685\"]; $4M: [\"0.0075\", \"0.9925\"]; $5M: [\"0.021\", \"0.979\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.12\", \"0.88\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.04\", \"0.96\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.13,
+      "reasoning": "(a) There are about 10.5 days left, until 27 Nov 2026. For Yes, Maersk or a quoted Maersk spokesperson must publicly acknowledge that records identifying individuals were accessed or extracted. Examples would be driver or staff names, contact details, credentials or IMEIs. The acknowledgement counts even if Maersk calls the data low-risk.\n\n(b) Status quo is No. The advisory, unchanged as of 16 Nov, says findings \"strongly suggest no sensitive data has been disclosed.\" Maersk has not confirmed any data categories.\n\n(c) Base rate: companies that open with \"no sensitive data\" and then concede personal data exposure within about two weeks are uncommon. That usually happens only when the attackers leak samples or forensics finish quickly. I estimate roughly 10-20% for a window this short.\n\n(d) Evidence for Yes:\n- 11-12 Nov: Ingeniøren says it verified driver names, emails and phone numbers in the data.\n- 12 Nov: Maersk said the stolen material contained \"temporary one-time codes that had expired.\" That implicitly admits user-linked login data was taken, so there is some interpretive risk.\n- Maersk's wording \"no sensitive data\" leaves room to later concede non-sensitive personal data such as contact details.\n- 12 Nov: TSMC confirmed an employee data leak quickly after an extortion claim.\n\nEvidence for No:\n- Maersk framed the one-time-code statement as a denial, and the question says the criteria \"have not yet been satisfied\" after it.\n- As of 15-16 Nov there is no advisory update, and all outlets say Maersk has not confirmed data types.\n- WhiteArmor's deadline (around 7 Dec) falls after resolution, so a pressure leak is less likely before 27 Nov.\n- Notices to affected individuals are often private.\n\n(e) No scenario: Maersk stays silent, notifies Datatilsynet or Hong Kong's privacy commissioner privately, and WhiteArmor waits for its deadline. The question resolves No.\n\nYes scenario: WhiteArmor posts driver-record samples, or Ingeniøren presses with the names and phone numbers it found. A spokesperson then concedes \"limited contact details of drivers of the former LF Logistics business were included, but no passwords.\"\n\n(f) I start at about 13%. I add a little for active Danish press scrutiny and the existing one-time-code admission, which a lenient resolver might count. I subtract for Maersk's defensive posture and an extortion deadline that falls after the window. Net, I stay near 13%.\n\nProbability: 13%"
+    },
+    {
+      "value": 0.15,
+      "reasoning": "(a) About 10 days remain (until 27 Nov 2026). For YES, Maersk or a quoted Maersk spokesperson must publicly say that personal data was accessed, extracted or leaked in this incident. That means records relating to individuals, such as names, contact details, credentials, driver or employee records, or IMEIs.\n\n(b) Status quo: NO. The advisory, unchanged as of 16 Nov, says findings \"strongly suggest no sensitive data has been disclosed.\" No category of data has been confirmed. Maersk's 11-12 Nov comments that the attackers took only \"expired one-time codes\" are framed as a denial. The question states the criteria are not yet met, so the question writer evidently does not count those comments.\n\n(c) Base rate: companies that open with \"no sensitive data\" and an ongoing investigation rarely make an explicit public admission about personal data within about 2-3 weeks, unless the attackers leak samples. I estimate roughly 15-25% within this window, lower if no leak happens.\n\n(d) Evidence:\n- For YES:\n  - Ingeniøren (11-12 Nov) says its own review found driver names, emails, phone numbers and passwords, which keeps pressure on Maersk.\n  - Maersk's careful wording \"no sensitive data\" leaves room to later admit that non-sensitive personal data, such as names or phone numbers, was taken.\n  - Maersk has already told the press that one-time codes were taken. A loose resolver could treat this as \"login credentials,\" which adds a little ambiguity risk.\n  - TSMC confirmed an employee data leak within days of a similar extortion claim (12 Nov).\n- For NO:\n  - The advisory is unchanged through 16 Nov.\n  - Media summaries on 12-15 Nov (SecurityWeek, igor'sLAB) all say Maersk has not confirmed any data types.\n  - No data has been leaked so far.\n  - WhiteArmor's deadline is about 7 Dec, after this question closes, and the group's post contained no proof.\n  - GDPR notices to the regulator and to affected individuals are often private.\n\n(e) NO scenario: Maersk keeps its line, the investigation continues quietly, and WhiteArmor waits for its December deadline. YES scenario: WhiteArmor leaks a sample of driver records early, or Ingeniøren publishes more of what it saw. A spokesperson then concedes that driver contact details were in the system but \"not sensitive.\"\n\n(f) I start at about 18%. I adjust down slightly because there has been no leak and the deadline falls after the window. I adjust up slightly for the \"no sensitive data\" wording and for the small chance the one-time-codes statement is read as an admission about credentials. These roughly cancel, leaving me at about 15%.\n\nProbability: 15%"
+    },
+    {
+      "value": 0.16,
+      "reasoning": "(a) About 10.5 days remain, from 16 Nov to 27 Nov 2026. For Yes, Maersk or a quoted spokesperson must publicly acknowledge that records identifying individuals were accessed, extracted or leaked in this incident. Examples would be driver or staff names, contact details, credentials or IMEIs. Confirming \"data extraction\" in general does not count.\n\n(b) The status quo is No. The advisory is unchanged as of 16 Nov and still says findings \"strongly suggest no sensitive data has been disclosed.\" Maersk has not confirmed any data categories.\n\n(c) Base rate: companies that start with \"no sensitive data\" and are under an extortion deadline after the question window rarely reverse publicly within about two weeks. Reversals usually follow a data leak or the end of forensics, which takes weeks. I put the reference class at roughly 10-15%.\n\n(d) Evidence for Yes:\n- On 11-12 Nov Ingeniøren said it had independently seen driver names, emails, phone numbers and passwords.\n- On 12 Nov Maersk told Ingeniøren and Cybernews that the stolen data held \"only temporary one-time codes that had expired.\" That implicitly admits user-linked login data was taken. A lenient resolver might count it as \"login credentials,\" though it was framed as a denial and predates the question.\n- The wording \"no sensitive data\" leaves room to admit non-sensitive personal data later.\n- TSMC confirmed employee data quickly in a similar case.\n\nEvidence for No:\n- The advisory is unchanged as of 16 Nov.\n- Outlets from 12 to 15 Nov (SecurityWeek, BleepingComputer, igor'sLAB) all say Maersk has not confirmed data types.\n- No data has leaked, and the extortion deadline (about 7 Dec) falls after resolution.\n- GDPR notifications are made to the regulator, not the public, and Maersk has incentives to keep disputing the claims.\n- The question writer left out the one-time-code statement, which suggests they did not treat it as resolving.\n\n(e) No scenario: Maersk stays silent while forensics continue, WhiteArmor waits for its deadline, and 27 Nov passes with the advisory unchanged.\n\nYes scenario: WhiteArmor leaks driver samples early, or Ingeniøren publishes verified records. Maersk then updates its advisory to say that \"limited contact information of drivers and staff\" from the legacy LF Logistics system was accessed, and that affected individuals are being notified.\n\n(f) I start at about 12% for a genuinely new admission in the window. I add about 4% for the chance that a resolver counts the existing \"expired one-time codes\" statement as acknowledging login credentials. I also add a little for the active Danish press pressure and Ingeniøren's verified findings. That gives about 16%.\n\nProbability: 16%"
+    },
+    {
+      "value": 0.14,
+      "reasoning": "(a) About 10.5 days remain (to 27 Nov 2026). For YES, Maersk or a quoted spokesperson must publicly acknowledge that records identifying individuals were accessed or extracted. Examples would be names, contact details, credentials, driver or employee records, or IMEIs. A general \"data extraction\" statement does not count.\n\n(b) Status quo: NO. The advisory is unchanged as of 16 Nov and still says findings \"strongly suggest no sensitive data has been disclosed\". Maersk has not confirmed any data categories.\n\n(c) Base rate: companies that open with \"no sensitive data\" and an ongoing investigation usually keep that line for weeks. They tend to change it only when data leaks, forensics finish or notices reach affected people. The share that publicly confirm personal data within about 2 to 3 weeks of first disclosure looks like 15-25%. TSMC is a quick example and La Poste a slow one.\n\n(d) Evidence:\n- **For YES:**\n  - On 11-12 Nov, Ingeniøren said its own review found driver names, emails, phone numbers and plaintext passwords.\n  - Around 11-12 Nov, Maersk told Cybernews and Ingeniøren that the attackers took expired single-use codes rather than passwords. This implicitly admits that user-linked login data was taken, so a later admission is plausible.\n  - The phrase \"no sensitive data\" leaves room to concede later that non-sensitive personal data, such as contact details, was involved.\n  - Journalists have open questions with Maersk.\n- **For NO:**\n  - The advisory was still unchanged on 16 Nov, and no follow-up has been posted.\n  - Maersk presents the one-time-code statement as a denial, and the question's framing treats the criteria as not yet met.\n  - WhiteArmor's deadline is about 7 Dec, after resolution, and no data has been published.\n  - Notices under GDPR Art. 34 or Hong Kong's privacy law are often private.\n  - Maersk has historically disputed leaked data rather than conceded it.\n\n(e) NO scenario: Maersk stays quiet while forensics continue, WhiteArmor waits for its deadline, and media coverage fades. YES scenario: WhiteArmor leaks samples early, or Ingeniøren publishes verified driver records. A Maersk spokesperson then concedes that \"limited contact information of former LF Logistics drivers\" was involved, or affected drivers get notices that reporters quote.\n\n(f) I start at about 20%. I move down slightly because the advisory has not changed in 5 days, coverage is fading, and the extortion deadline falls after the window. I keep some weight on the chance that a resolver counts the existing one-time-code statement, and on continued pressure from Ingeniøren. That puts me at about 14%.\n\nProbability: 14%"
+    },
+    {
+      "value": 0.11,
+      "reasoning": "**(a) Time left and what Yes requires**\nAbout 10.5 days remain, until 27 Nov 2026. Yes requires Maersk, or a quoted Maersk spokesperson, to publicly acknowledge that records identifying individuals were accessed or extracted. Examples would be names, contact details, credentials, driver or employee records, or IMEIs. A general admission of \"data extraction\" does not count.\n\n**(b) Status quo**\nThe answer is No today. The advisory is unchanged as of 16 Nov and says findings \"strongly suggest no sensitive data has been disclosed.\" Media reports through 15 Nov all say Maersk has not confirmed what types of data were taken.\n\n**(c) Base rate**\nThe reference class is large companies that confirm a breach, open with \"no sensitive data,\" and face an extortion group making specific claims. In roughly the 2-3 weeks after first disclosure, perhaps 15-25% publicly concede that personal data was involved. Most keep the denial until the data is leaked or forensics finish, which usually takes weeks to months. Notifications to affected individuals often go out privately. My base rate is about 15%.\n\n**(d) Strongest evidence**\n- For Yes:\n  - On 11-12 Nov, Ingeniøren independently reported seeing driver names, emails, phone numbers and plaintext passwords.\n  - Around 11-12 Nov, Maersk told Cybernews and Ingeniøren that the attackers took \"temporary one-time codes that had expired.\" That implicitly concedes that login-related user data was taken, and a lenient resolver could count it as \"login credentials.\"\n  - The phrase \"no sensitive data\" leaves room to later admit that non-sensitive personal data was taken.\n- For No:\n  - The advisory still carries its original text on 16 Nov.\n  - Maersk framed the one-time-code comments as a denial, and the question writer evidently did not treat them as resolving, since the criteria are marked \"not yet satisfied.\"\n  - WhiteArmor's payment deadline is about 7 Dec, after the question closes, so leak pressure is likely to peak too late.\n  - No regulator statements have been reported.\n\n**(e) Scenarios**\n- No: Maersk stays silent or repeats \"no sensitive data.\" WhiteArmor waits for its deadline, and the news cycle fades. This is the most likely path.\n- Yes: WhiteArmor posts samples showing driver records, or former LF Logistics staff publicize notification emails. Maersk then updates the advisory to say limited contact details of some employees or drivers were accessed but pose low risk.\n\n**(f) Adjustment**\nI start from about 15%. I move down for the short window, the post-deadline leak timing and Maersk's active denials. I move slightly up for the small chance that a resolver counts the earlier one-time-code statement, and because Ingeniøren is pressing hard with evidence it has seen itself. Net result is about 11%.\n\nProbability: 11%"
+    },
+    {
+      "value": 0.12,
+      "reasoning": "(a) There are about 10.5 days left, until 27 Nov 2026. For Yes, Maersk or a quoted spokesperson must publicly acknowledge that records identifying individuals were accessed or extracted. That could mean names, contact details, credentials, driver or employee records, or IMEIs. A general \"data extraction\" confirmation does not count, and neither does \"investigating.\"\n\n(b) The status quo is No. The advisory is unchanged as of 16 Nov and still says \"findings so far strongly suggest no sensitive data has been disclosed.\"\n\n(c) Base rate: companies that open with \"no sensitive data\" and are disputing an extortion group's claims rarely reverse publicly within about two weeks. They usually wait for a leak or for forensics to finish, which takes weeks to months. Individual notifications often stay private. In my rough estimate, 10-20% of such cases see a public personal-data acknowledgement within about 16 days.\n\n(d) Evidence for Yes:\n- On 11-12 Nov, Ingeniøren said its own review found driver names, emails, phones and passwords. The outlet is persistent and is pressing Maersk.\n- Also on 12 Nov, Maersk told Cybernews and Ingeniøren that attackers took \"only temporary one-time codes that had expired.\" This implicitly concedes that user-linked authentication data was extracted. A loose resolver might count it as \"login credentials.\" However, it predates the question, and the question states the criteria are not yet satisfied, so it is probably treated as non-resolving.\n- The phrase \"no sensitive data\" leaves room to later admit non-sensitive contact data.\n\nEvidence for No:\n- The advisory was unchanged on 16 Nov.\n- Maersk is actively disputing the password claims.\n- SecurityWeek, BleepingComputer and igor'sLAB (12-15 Nov) all report that no data types have been confirmed.\n- WhiteArmor has published no data, and its deadline of about 7 Dec falls after resolution.\n- No regulator statements have been reported.\n\n(e) No scenario: Maersk keeps its line and the investigation runs into December. WhiteArmor waits until its deadline to leak, and any notices to former LF Logistics drivers go out privately or after 27 Nov.\n\nYes scenario: WhiteArmor leaks samples early, or Ingeniøren publishes driver data it has verified. Maersk then concedes that \"limited contact details of drivers and staff\" were in the extracted data while still stressing that the risk is low.\n\n(f) I start near 15%. I move down slightly because the status quo is entrenched, the denial is active and the leak deadline falls after the window. I move back up a little because of the existing one-time-code admission, which could be re-stated more explicitly or read loosely, and because of sustained Danish media pressure. The net result is roughly 12%.\n\nProbability: 12%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.1845,
+  "usage": [
+    {
+      "question_id": "46846",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00012550000000000001,
+      "input_tokens": 521,
+      "output_tokens": 43,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0002697,
+      "input_tokens": 1172,
+      "output_tokens": 71,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 148.2,
+      "notional_cost_usd": 0.47211179999999997,
+      "input_tokens": 232541,
+      "output_tokens": 6098,
+      "web_searches": 8,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 99.2,
+      "notional_cost_usd": 0.2640642,
+      "input_tokens": 106991,
+      "output_tokens": 4650,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.123328,
+      "input_tokens": 12367,
+      "output_tokens": 1220,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.12268799999999999,
+      "input_tokens": 12367,
+      "output_tokens": 1188,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.7,
+      "notional_cost_usd": 0.124928,
+      "input_tokens": 12367,
+      "output_tokens": 1300,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 29.0,
+      "notional_cost_usd": 0.029343400000000002,
+      "input_tokens": 12367,
+      "output_tokens": 1223,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.3,
+      "notional_cost_usd": 0.0291754,
+      "input_tokens": 12366,
+      "output_tokens": 1215,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.1,
+      "notional_cost_usd": 0.00045670000000000004,
+      "input_tokens": 2237,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 31.9,
+      "notional_cost_usd": 0.0308194,
+      "input_tokens": 12364,
+      "output_tokens": 1298,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.9,
+      "notional_cost_usd": 0.0004491000000000001,
+      "input_tokens": 2199,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 19.6,
+      "notional_cost_usd": 0.0004407,
+      "input_tokens": 2157,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.00045290000000000006,
+      "input_tokens": 2218,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.0004599,
+      "input_tokens": 2253,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 9.533e-05,
+      "input_tokens": 2238,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 9.515e-05,
+      "input_tokens": 2201,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.00045570000000000007,
+      "input_tokens": 2232,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.7,
+      "notional_cost_usd": 9.533e-05,
+      "input_tokens": 2219,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.0,
+      "notional_cost_usd": 9.530000000000001e-05,
+      "input_tokens": 2254,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.3,
+      "notional_cost_usd": 9.455000000000001e-05,
+      "input_tokens": 2160,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46846",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 9.526e-05,
+      "input_tokens": 2231,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.2001
+}
