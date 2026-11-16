@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T16:44:06.243782+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T16:40:27.139667+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46854,
+    "post_id": 46594,
+    "url": "https://www.metaculus.com/questions/46594",
+    "type": "NumericQuestion",
+    "unit": "in",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will the Northern Sierra 8-Station Precipitation Index be for November 26, 2026 (water-year-to-date, inches)?",
+    "resolution_criteria": "This question resolves to the water-year-to-date value of the Northern Sierra 8-Station Precipitation Index (CDEC station code 8SI) for the observation date 2026-11-26 — i.e. the value in the cumulative 'RAIN' column (inches) on the row dated 11/26/2026 in the daily data table at https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2026-11-26&s=8SI (for example, a row showing RAIN = 5.83 resolves as 5.83). The first value CDEC publishes for that date is used, and later revisions of CDEC's provisional data do not change the resolution. If no value for 11/26/2026 has been published when resolution is attempted on November 27, 2026, resolution waits until CDEC publishes it; if CDEC never publishes a value for that date, the question is annulled. If the CDEC page is inaccessible, the value may be taken from CDEC's daily precipitation report at http://cdec.water.ca.gov/reportapp/javareports?name=DailyPrecip (the 8SI value carrying data date 11/26/2026) or otherwise from [credible sources](https://www.metaculus.com/faq/#definitions).",
+    "fine_print": "CDEC's date label for each daily precipitation value is used as-is, regardless of the exact hourly cut-off or timezone convention behind that label; precipitation recorded after that observation does not affect the answer. The index is a DWR composite and is not recomputed from the eight individual station records by the resolver. Because CDEC re-renders its pages with current data, resolvers should preserve a copy of the page used (e.g. a Wayback Machine capture) at the time of resolution.",
+    "close_time": "2026-11-16 19:38 UTC",
+    "scheduled_resolution_time": "2026-11-27 23:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n\n- 2026-11-16 (fetched today): The CDEC 8SI daily table shows the water-year-to-date RAIN column at **3.44 in for 11/16/2026**. Recent rows: 11/12 0.71; 11/13 +0.01 = 0.72; 11/14 +1.43 = 2.15; 11/15 +0.07 = 2.22; 11/16 +1.22 = 3.44. Today is 11/16, so that row is probably a partial day and may still change. Earlier rows: 10/22 0.22, 10/23 0.46, 11/01 0.55, 11/04 0.71. [CDEC 8SI](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2026-11-16&s=8SI)\n\n## 2. Current status\n\n- Nothing settles the question yet. About 2.7 in has fallen since 11/13, more than the whole water year before that. To finish at a given value, the index needs that value minus 3.44 in between now and the 11/26 row.\n- 2026-11-16: NWS Sacramento expects a further 1.00-1.50 in for the Sierra today, mostly in the morning, with dry weather by midnight. Some of this may already be in the 3.44 figure. [NWS STO AFD](https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD)\n\n## 3. Recent news (newest first)\n\n- 2026-11-16: NWS Sacramento forecast discussion:\n  - A strong storm runs from Tuesday night (11/17) to early Friday (11/20), bringing **2 to 3.5 in liquid over the mountains**, 1.5-2.75 in in the foothills and 1.25-2 in in the Valley.\n  - The latest trend raised totals from I-80 south and \"slightly decrease[d] amounts over the northern mountains.\" Most 8SI gauges (Mt Shasta, Shasta Dam, Mineral, Quincy, Brush Creek) are in that northern zone.\n  - Snow levels are 3,500-6,000 ft, with 1-2 ft of snow above 5,000 ft.\n  - The office sees \"increasing confidence towards the active pattern returning for the weekend,\" possibly continuing \"into Thanksgiving week.\"\n  - [NWS STO AFD](https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD)\n- 2026-11-16: The Watchers reports two atmospheric rivers, with the stronger one arriving late on 11/17. It gives no liquid totals for the northern Sierra. [Watchers](https://watchers.news/2026/11/16/2-atmospheric-rivers-to-bring-heavy-sierra-snow-and-california-flood-risk/)\n- 2026-11-16: Winter storm watches are out with up to 48 in of snow above 8,000 ft. [AOL](https://www.aol.com/articles/winter-storm-watches-issued-48-085652000.html)\n- 2026-11-15: KCRA calls the midweek storm possibly the strongest of the season: 1-2 in Valley, 2-3 in foothills, up to 3 ft of snow at the peaks. [KCRA](https://www.kcra.com/article/northern-california-evening-forecast-nov-15-2026-1794832352/74439116)\n- 2026-11-15: First significant Sierra snowfall of the season. [CBS SF](https://www.cbsnews.com/sanfrancisco/news/first-significant-snowfall-sierra-optimism/)\n- 2026-11-14: The NWS cancelled the Sierra winter storm warning six hours early. [Nevada Appeal](https://www.nevadaappeal.com/news/2026/nov/14/road-controls-in-effect-over-kingsbury-grade/)\n\n## 4. Base rates (CDEC 8SI, change from Nov 16 to Nov 26)\n\n| Year | Nov 16 | Nov 26 | Change |\n|---|---|---|---|\n| 2025 | 8.07 | 10.67 | +2.60 (rain fell 11/17-11/21, then dry) |\n| 2024 | 2.79 | 14.10 | +11.31 (atmospheric river, 11/21-11/23 added 9.7) |\n| 2023 | 1.97 | 3.89 | +1.92 |\n| 2022 | 4.27 | 4.27 | 0.00 |\n| 2021 | 15.58 | 15.76 | +0.18 |\n\n- Sources: [2025](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2025-11-26&s=8SI), [2024](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2024-11-26&s=8SI), [2023](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2023-11-26&s=8SI), [2022](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2022-11-26&s=8SI), [2021](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2021-11-26&s=8SI).\n- Over this 10-day window the gain ranged from 0 to 11.3 in, with a median of about 1.9 in. The spread is very wide and driven by single storms.\n- This year's 3.44 in on 11/16 is above 2023 (1.97) and 2024 (2.79), but below 2022, 2025 and 2021.\n- Typical accumulation by mid-November is about 5 in (from the question background).\n\n## 5. Other forecasts\n\n- I found no market or expert forecast on the 8SI itself.\n- Related Kalshi prices as of 2026-11-16 (all from the collected price list):\n  - San Francisco November rain: above 6 in 0.70, above 7 in 0.42, above 8 in 0.31. That implies a wet rest of the month.\n  - Los Angeles November rain: above 2 in 0.85, above 3 in 0.34.\n  - Sierra-at-Tahoe opening before Dec 13: 0.62.\n- Polymarket \"California winter 2026-27 wetter or drier?\": 0.525 for \"wetter\".\n\n## 6. Upcoming events before resolution and official outlooks\n\n- 11/17 (Tue, daytime): A dry break with frost possible. [NWS STO](https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD)\n- 11/17 night to 11/20 morning: Main storm, 2-3.5 in liquid in the mountains, slightly lower trend for the northern mountains. Thunderstorms are possible 11/18-11/19.\n- 11/21-11/22 weekend and Thanksgiving week (Thanksgiving is 11/26): The NWS says the active pattern is likely to return.\n- 2026-11-15 CPC outlooks: [CPC](https://www.cpc.ncep.noaa.gov/products/predictions/610day/fxus06.html)\n  - 6-10 day (11/21-11/25): above-normal precipitation favoured along the West Coast, over 60% chance for parts of coastal central and northern California.\n  - 8-14 day (11/23-11/29): over 50% chance from the Pacific Northwest to northern and central California. A slow-moving deep trough sits offshore, but CPC notes uncertainty about how close it comes to the coast.\n- I did not get WPC 7-day QPF numbers for the specific 8SI stations.\n- Data caveat: the resolver uses the first value CDEC publishes for 11/26. Quick checks around 11/27 could catch a partial-day figure, and estimated (\"e\") flags appear in past years' data.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 16:40 UTC; check each market really matches the question)\n- Kalshi: When will Sierra-at-Tahoe open for the 26/27 winter season? (2026-27 winter season). Yes prices: Before Dec 13, 2026: 0.62; Before Dec 20, 2026: 0.98; Before Dec 27, 2026: 0.98; Before Jan 10, 2027: 0.94; Before Jan 3, 2027: 0.55.\n- Kalshi: Annual Return: S&P 500 vs. S&P 500 Equal Weight Index (2026). Yes prices: S&P 500 Equal Weight Index: 0.92; S&P 500 Index: 0.10.\n- Kalshi: Fear & Greed Index on Dec 11, 2026? (On Dec 11, 2026). Yes prices: Fear: 0.0000; Greed: 0.0000; Neutral: 0.0000; Extreme Fear: 0.0000; Extreme Greed: 0.0000.\n- Kalshi: Loudoun Water data center potable water use next quarter (Q1 2027). Yes prices: Above 250 million gallons: 0.48; Above 300 million gallons: 0.20; Above 200 million gallons: 0.81; Above 350 million gallons: 0.10; Above 150 million gallons: 0.91; Above 450 million gallons: 0.04; Above 400 million gallons: 0.05.\n- Kalshi: Lake Mead end-of-month water elevation next month? (Dec 2026). Yes prices: Above 1038 Ft: 0.53; Above 1039 Ft: 0.56; Above 1036 Ft: 0.65; Above 1037 Ft: 0.66; Above 1040 Ft: 0.58; Above 1035 Ft: 0.91; Above 1034 Ft: 0.94; Above 1033 Ft: 0.96.\n- Kalshi: Will Nevada home prices rise YoY? (Q4 2026). Yes prices: Above 423.62: 0.81.\n- Kalshi: Rain in San Francisco this month? (In Nov 2026). Yes prices: Above 7 inches: 0.42; Above 8 inches: 0.31; Above 6 inches: 0.70; Above 9 inches: 0.21; Above 5 inches: 0.91; Above 10 inches: 0.13; Above 4 inches: 0.95; Above 3 inches: 0.98; Above 2 inches: 0.99; Above 1 inch: 0.9900.\n- Kalshi: Rain in Los Angeles this month? (In Nov 2026). Yes prices: Above 3 inches: 0.34; Above 2 inches: 0.85; Above 4 inches: 0.10; Above 6 inches: 0.04; Above 7 inches: 0.03; Above 5 inches: 0.04; Above 1 inch: 0.9900.\n- Kalshi: Rain in Seattle this month? (In Nov 2026). Yes prices: Above 5 inches: 0.48; Above 6 inches: 0.19; Above 4 inches: 0.81; Above 7 inches: 0.10; Above 3 inches: 0.96; Above 2 inches: 0.9900; Above 1 inch: 0.9900.\n- Polymarket: Northern Nalšia District By-Election Winner (ends 2026-11-08). [Yes, No] prices: Gintautas Kindurys: [\"0.76\", \"0.24\"]; Mėta Palauskaitė: [\"0.1885\", \"0.8115\"]; Vladislav Kondratovič: [\"0.0005\", \"0.9995\"]; Antanas Šakalis: [\"0.0005\", \"0.9995\"]; Andrej Šildiajėv: [\"0.0005\", \"0.9995\"]; Nikolajus Lebedevičius: [\"0.0005\", \"0.9995\"]\n- Polymarket: Hungary vs. Northern Ireland (ends 2026-11-17). [Yes, No] prices: Hungary: [\"0.495\", \"0.505\"]; Draw (Hungary vs. Northern Ireland): [\"0.285\", \"0.715\"]; Northern Ireland: [\"0.225\", \"0.775\"]\n- Polymarket: Sierra Leone vs. DR Congo (ends 2026-11-17). [Yes, No] prices: Sierra Leone: [\"0.08\", \"0.92\"]; Draw (Sierra Leone vs. DR Congo): [\"0.205\", \"0.795\"]; DR Congo: [\"0.715\", \"0.285\"]\n- Polymarket: La Sierra Golden Eagles vs. UC Riverside Highlanders (W) (ends 2026-11-29). [Yes, No] prices: La Sierra Golden Eagles vs. UC Riverside Highlanders (W): [\"0.5\", \"0.5\"]\n- Polymarket: California winter 2026-27 wetter or drier? (ends 2027-03-16). [Yes, No] prices: California winter 2026-27 wetter or drier?: [\"0.525\", \"0.475\"]",
+    "## Northern Sierra 8-Station Index (8SI) for Nov 26, 2026: research notes\n\n**Bottom line:** The index already stands at 3.44 in. CNRFC's forecast adds roughly 3.4 to 4.3 in through about Nov 22, and outlooks favour more storms through Nov 29. The range of 1.0 to 16.0 in has a firm floor at 3.44, because the index is cumulative and can't fall.\n\n### 1. Resolution source\n- 2026-11-16: The CDEC 8SI daily table shows these rows. [CDEC](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2026-11-16&s=8SI)\n\n| Date | PPT INC (in) | RAIN, cumulative (in) |\n|---|---|---|\n| 11/13 | 0.01 | 0.72 |\n| 11/14 | 1.43 | 2.15 |\n| 11/15 | 0.07 | 2.22 |\n| 11/16 | 1.22 | **3.44** (latest) |\n\n- Earlier context: 0.47 in on 10/31 and 0.71 in on 11/04, then no rain Nov 5-12.\n- The 11/16 row may cover only part of the day and could still be revised; I couldn't confirm CDEC's cut-off time. All values are marked provisional.\n\n### 2. Current status\n- Nothing settles the question yet. The value is 3.44 in and cannot go below that.\n- 2026-11-16: The CNRFC 6-day basin rainfall forecast (issued 14:24 UTC, covering roughly 12Z Nov 16 to 12Z Nov 22) gives these totals, which I summed from the 6-hourly values. [CNRFC CSV](https://www.cnrfc.noaa.gov/data/cnrfc_qpf.csv)\n  - Shasta Lake local area: about 3.5 in\n  - Sacramento at Delta: about 3.8 in\n  - Feather at Oroville: about 3.4 in\n  - Yuba at Englebright: about 3.3 in\n  - North Fork American at NF Dam: about 4.3 in\n  - Timing: the main storm runs Nov 17 night to Nov 19, with a second pulse around Nov 21-22.\n  - Some of the first forecast periods (about 0.1-0.4 in) may overlap rain already counted in the 11/16 row.\n\n### 3. Recent news (newest first)\n- 2026-11-16, NWS Sacramento forecast discussion (3:48 AM): [NWS AFD](https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD)\n  - Observed so far: 1-2 in in the mountains north of I-80, and 1.70 in at Redding.\n  - Monday: another 1.0-1.5 in for the Sierra.\n  - Tuesday night to Friday morning: 2-3.5 in liquid in the mountains, with amounts \"slightly decreased\" over the northern mountains.\n  - Snow: 1-2 ft above 5,000 ft, up to 3 ft on the highest peaks. A Winter Storm Watch runs from 10 PM Tuesday to 4 AM Friday.\n  - Outlook: an active pattern returns for the weekend and possibly into Thanksgiving week.\n- 2026-11-16: The second, stronger storm is an atmospheric river arriving late Nov 17 and lasting through Nov 19. The article gives Bay Area totals of 2-3 in, but no northern Sierra figures. [The Watchers](https://watchers.news/2026/11/16/2-atmospheric-rivers-to-bring-heavy-sierra-snow-and-california-flood-risk/)\n- 2026-11-16: NWS winter storm watches call for up to 48 in of snow above 8,000 ft, with snow levels falling to about 3,500 ft. [AOL](https://www.aol.com/articles/winter-storm-watches-issued-48-085652000.html)\n- 2026-11-15: First significant Sierra snowfall of the season. [CBS SF](https://www.cbsnews.com/sanfrancisco/news/first-significant-snowfall-sierra-optimism/)\n- 2026-11-14: The NWS cancelled the Sierra winter storm warning six hours early. [Nevada Appeal](https://www.nevadaappeal.com/news/2026/nov/14/road-controls-in-effect-over-kingsbury-grade/)\n\n### 4. Base rates and seasonality\n- I read past years' 8SI values from CDEC. The change shown runs from the Nov 16 value to the Nov 26 value.\n\n| Year | Nov 16 (in) | Nov 26 (in) | Change (in) | What happened |\n|---|---|---|---|---|\n| 2025 | 8.07 | 10.67 | +2.60 | Storms Nov 17-21, then dry |\n| 2024 | 2.79 | 14.10 | +11.31 | Atmospheric river and \"bomb cyclone\", Nov 21-23 |\n| 2023 | 1.97 | 3.89 | +1.92 | |\n| 2022 | 4.27 | 4.27 | 0.00 | |\n| 2021 | 15.58 | 15.76 | +0.18 | |\n\n  Sources: [2025](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2025-11-26&s=8SI), [2024](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2024-11-26&s=8SI), [2023](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2023-11-26&s=8SI), [2022](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2022-11-26&s=8SI), [2021](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2021-11-26&s=8SI)\n- Over this 10-day window the change ranged from 0 to 11.3 in, with a median of about 1.9 in.\n- 2024 shows that a strong atmospheric river can add more than 10 in in three days. The single biggest day was +3.59 in on Nov 22, 2024.\n- This year is running below 2025 (8.07), 2022 (4.27) and 2021 (15.58) for the date, and above 2024 (2.79) and 2023 (1.97).\n- The question background says typical accumulation is about 5 in by mid-November.\n\n### 5. Other forecasts\n- I found no prediction market on the 8SI itself.\n- Related Kalshi markets (prices from 2026-11-16):\n  - San Francisco November rain: \"Above 6 in\" 0.70, \"Above 7 in\" 0.42, \"Above 8 in\" 0.31. These prices point to a wet November in Northern California.\n  - Sierra-at-Tahoe opening before Dec 13: 0.62.\n- Polymarket \"California winter 2026-27 wetter or drier?\": 0.525.\n- None of these maps directly onto this question.\n\n### 6. Upcoming events before resolution\n- Nov 17 night to Nov 20 morning: the main atmospheric-river storm. NWS gives 2-3.5 in liquid in the mountains, and CNRFC basin forecasts are about 3-4 in through Nov 22. [NWS AFD](https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD)\n- About Nov 21-22: the next system is already showing in the CNRFC forecast, at about 0.6-1.0 in by basin.\n- CPC outlook issued 2026-11-15: [CPC](https://www.cpc.ncep.noaa.gov/products/predictions/610day/fxus06.html)\n  - 6-10 day (Nov 21-25): above-normal precipitation is favoured, with a >60% chance in coastal central and northern California.\n  - 8-14 day (Nov 23-29): above-normal is likely from the Pacific Northwest to northern and central California, with a >50% chance.\n- Nov 22-26: NWS expects an \"active pattern\" possibly into Thanksgiving week, but gives no amounts yet.\n- I found no 2026 Weather West update after the Nov 11 post described in the question.\n- Remember that the question uses the first value CDEC publishes for 11/26.\n\nSources: [CDEC 8SI](https://cdec.water.ca.gov/dynamicapp/QueryDaily?end=2026-11-16&s=8SI), [CNRFC QPF](https://www.cnrfc.noaa.gov/data/cnrfc_qpf.csv), [NWS STO AFD](https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD), [CPC](https://www.cpc.ncep.noaa.gov/products/predictions/610day/fxus06.html), [The Watchers](https://watchers.news/2026/11/16/2-atmospheric-rivers-to-bring-heavy-sierra-snow-and-california-flood-risk/), [Men's Journal](https://www.mensjournal.com/news/sierra-snow-forecast-3-feet-70-mph-winds-this-week), [YubaNet](https://yubanet.com/regional/major-winter-storm-mid-next-week-with-heavy-mountain-snow-rain-strong-winds-and-thunderstorms/), [AOL](https://www.aol.com/articles/winter-storm-watches-issued-48-085652000.html), [CBS SF](https://www.cbsnews.com/sanfrancisco/news/first-significant-snowfall-sierra-optimism/), [Nevada Appeal](https://www.nevadaappeal.com/news/2026/nov/14/road-controls-in-effect-over-kingsbury-grade/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 16:40 UTC; check each market really matches the question)\n- Kalshi: When will Sierra-at-Tahoe open for the 26/27 winter season? (2026-27 winter season). Yes prices: Before Dec 13, 2026: 0.62; Before Dec 20, 2026: 0.98; Before Dec 27, 2026: 0.98; Before Jan 10, 2027: 0.94; Before Jan 3, 2027: 0.55.\n- Kalshi: Annual Return: S&P 500 vs. S&P 500 Equal Weight Index (2026). Yes prices: S&P 500 Equal Weight Index: 0.92; S&P 500 Index: 0.10.\n- Kalshi: Fear & Greed Index on Dec 11, 2026? (On Dec 11, 2026). Yes prices: Fear: 0.0000; Greed: 0.0000; Neutral: 0.0000; Extreme Fear: 0.0000; Extreme Greed: 0.0000.\n- Kalshi: Loudoun Water data center potable water use next quarter (Q1 2027). Yes prices: Above 250 million gallons: 0.48; Above 300 million gallons: 0.20; Above 200 million gallons: 0.81; Above 350 million gallons: 0.10; Above 150 million gallons: 0.91; Above 450 million gallons: 0.04; Above 400 million gallons: 0.05.\n- Kalshi: Lake Mead end-of-month water elevation next month? (Dec 2026). Yes prices: Above 1038 Ft: 0.53; Above 1039 Ft: 0.56; Above 1036 Ft: 0.65; Above 1037 Ft: 0.66; Above 1040 Ft: 0.58; Above 1035 Ft: 0.91; Above 1034 Ft: 0.94; Above 1033 Ft: 0.96.\n- Kalshi: Will Nevada home prices rise YoY? (Q4 2026). Yes prices: Above 423.62: 0.81.\n- Kalshi: Rain in San Francisco this month? (In Nov 2026). Yes prices: Above 7 inches: 0.42; Above 8 inches: 0.31; Above 6 inches: 0.70; Above 9 inches: 0.21; Above 5 inches: 0.91; Above 10 inches: 0.13; Above 4 inches: 0.95; Above 3 inches: 0.98; Above 2 inches: 0.99; Above 1 inch: 0.9900.\n- Kalshi: Rain in Los Angeles this month? (In Nov 2026). Yes prices: Above 3 inches: 0.34; Above 2 inches: 0.85; Above 4 inches: 0.10; Above 6 inches: 0.04; Above 7 inches: 0.03; Above 5 inches: 0.04; Above 1 inch: 0.9900.\n- Kalshi: Rain in Seattle this month? (In Nov 2026). Yes prices: Above 5 inches: 0.48; Above 6 inches: 0.19; Above 4 inches: 0.81; Above 7 inches: 0.10; Above 3 inches: 0.96; Above 2 inches: 0.9900; Above 1 inch: 0.9900.\n- Polymarket: Northern Nalšia District By-Election Winner (ends 2026-11-08). [Yes, No] prices: Gintautas Kindurys: [\"0.76\", \"0.24\"]; Mėta Palauskaitė: [\"0.1885\", \"0.8115\"]; Vladislav Kondratovič: [\"0.0005\", \"0.9995\"]; Antanas Šakalis: [\"0.0005\", \"0.9995\"]; Andrej Šildiajėv: [\"0.0005\", \"0.9995\"]; Nikolajus Lebedevičius: [\"0.0005\", \"0.9995\"]\n- Polymarket: Hungary vs. Northern Ireland (ends 2026-11-17). [Yes, No] prices: Hungary: [\"0.495\", \"0.505\"]; Draw (Hungary vs. Northern Ireland): [\"0.285\", \"0.715\"]; Northern Ireland: [\"0.225\", \"0.775\"]\n- Polymarket: Sierra Leone vs. DR Congo (ends 2026-11-17). [Yes, No] prices: Sierra Leone: [\"0.08\", \"0.92\"]; Draw (Sierra Leone vs. DR Congo): [\"0.205\", \"0.795\"]; DR Congo: [\"0.715\", \"0.285\"]\n- Polymarket: La Sierra Golden Eagles vs. UC Riverside Highlanders (W) (ends 2026-11-29). [Yes, No] prices: La Sierra Golden Eagles vs. UC Riverside Highlanders (W): [\"0.5\", \"0.5\"]\n- Polymarket: California winter 2026-27 wetter or drier? (ends 2027-03-16). [Yes, No] prices: California winter 2026-27 wetter or drier?: [\"0.525\", \"0.475\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 5.8,
+        "p25": 6.95,
+        "p50": 8.5,
+        "p75": 10.6,
+        "p90": 13.0
+      },
+      "reasoning": "(a) About 10 to 11 days. The 11/26 row should appear on CDEC around November 27, 2026.\n\n(b) The CDEC 8SI water-year-to-date value is 3.44 in on 11/16/2026. This is probably a partial day, after +1.43 on 11/14 and +1.22 so far on 11/16.\n\n(c) If nothing changed, the outcome would be about 3.4 to 3.7 in, depending on how much of today's forecast 1 to 1.5 in is still to post.\n\n(d) If the current trend continued, the outcome would be roughly 8 to 9 in:\n- About 3.6 by the end of today.\n- About 2 to 3 in from the main 11/17-11/20 storm. NWS gives 2 to 3.5 in for the mountains, trending a bit lower over the northern Sierra.\n- About 1.5 to 3 in from the active pattern returning over the weekend and Thanksgiving week.\n\n(e) Historical variation: across the last five years, the change from 11/16 to 11/26 ranged from 0 to +11.3 in, with a median of about 1.9 in. Big jumps come from single atmospheric rivers. This year, about 2 to 3 in for the first storm is already close to certain.\n\n(f) Experts and markets point wet:\n- NWS forecasts 2 to 3.5 in for the mountains midweek, with an active pattern likely continuing.\n- CPC favours above-normal precipitation for both the 6-10 day and 8-14 day windows.\n- Kalshi prices San Francisco November rain above 6 in at 0.70 and above 8 in at 0.31, which implies a very wet rest of the month.\n- There is no direct market on the 8SI.\n\n(g) Unexpected scenarios:\n- Low: the midweek storm underperforms in the north, at about 1.2 in averaged across the stations. The weekend and Thanksgiving-week trough then stays offshore or goes south, and the 11/26 figure is published low or partial. The result would be about 4.5 to 5 in.\n- High: the offshore trough moves in and drives a strong atmospheric river into the northern Sierra over 11/22-11/25, like 2024's +9.7 in over three days. Together with the midweek storm, that could push the index to 15 to 18 in.\n\nPercentile 1: 4.5\nPercentile 5: 5.2\nPercentile 10: 5.8\nPercentile 20: 6.6\nPercentile 30: 7.3\nPercentile 40: 7.9\nPercentile 50: 8.5\nPercentile 60: 9.2\nPercentile 70: 10.0\nPercentile 80: 11.2\nPercentile 90: 13.0\nPercentile 95: 14.6\nPercentile 99: 17.5"
+    },
+    {
+      "value": {
+        "p10": 6.0,
+        "p25": 7.1,
+        "p50": 8.6,
+        "p75": 10.65,
+        "p90": 12.9
+      },
+      "reasoning": "(a) About 10 to 11 days remain. The 11/26 row should publish around 11/27, and the question resolves around 11/27 23:00 UTC.\n\n(b) The latest value is 3.44 in on 11/16/2026, per CDEC 8SI. That row is likely a partial day, since NWS expected 1.00-1.50 in for the Sierra today, mostly in the morning.\n\n(c) If nothing changed, the index would end at about 3.4 to 3.7 in. The higher end allows for the rest of today's rain.\n\n(d) If the current trend continued, the total would be around 8 to 9 in:\n- The 11/17-11/20 storm is forecast at 2-3.5 in liquid in the mountains. Amounts trend slightly lower for the northern zone, so I expect roughly 2-3 in on the index.\n- The NWS and CPC expect the active pattern to return for the weekend and Thanksgiving week, which could add another 1-4 in.\n\n(e) Over Nov 16-26 in recent years, the index gained between 0 and 11.3 in, with a median near 1.9 in. The gain is very sensitive to single atmospheric rivers. This year, the known forecast storm alone is already above that median.\n\n(f) There is no forecast or market on the 8SI itself. NWS forecasts 2-3.5 in for the midweek storm. CPC favours above-normal precipitation for 11/21-11/29. Kalshi prices for San Francisco November rain (about 70% for over 6 in) imply a wet remainder of the month.\n\n(g) Two unexpected scenarios:\n- **Low outcome:** the midweek storm focuses south of I-80 and underdelivers in the north, at about 1.5 in. The offshore trough then stays offshore, keeping Thanksgiving week mostly dry. The index ends around 5 in.\n- **High outcome:** the midweek storm overperforms at the wet stations, Brush Creek, Blue Canyon and Pacific House. A slow trough then drives a strong atmospheric river into the northern Sierra on 11/22-11/26, adding 6 to 9 in, similar to 2024. The index ends at 15 to 18 in.\n\nPercentile 1: 4.6\nPercentile 5: 5.4\nPercentile 10: 6.0\nPercentile 20: 6.8\nPercentile 30: 7.4\nPercentile 40: 8.0\nPercentile 50: 8.6\nPercentile 60: 9.3\nPercentile 70: 10.1\nPercentile 80: 11.2\nPercentile 90: 12.9\nPercentile 95: 14.4\nPercentile 99: 17.6"
+    },
+    {
+      "value": {
+        "p10": 5.5,
+        "p25": 6.6,
+        "p50": 7.9,
+        "p75": 9.7,
+        "p90": 11.8
+      },
+      "reasoning": "(a) About 10 to 11 days. The 11/26 row should be published around November 27, 2026.\n\n(b) The latest value is 3.44 in on 11/16/2026 (provisional). This is probably a partial day, since NWS expected 1.00-1.50 in for the Sierra today, mostly in the morning.\n\n(c) If no more precipitation fell, the index would stay near 3.44 in. Allowing for the rest of today's rain, it would end up around 3.6-3.9 in.\n\n(d) If the current trend continued:\n- The forecast for today plus the 11/17-11/20 storm adds roughly 2-3 in to the index. Mountain forecasts are 2-3.5 in, trimmed slightly for the northern gauges. The 11/14 storm was forecast at 1-3 in and delivered 1.43 in to the index, so I discount the forecast somewhat.\n- That puts the index near 6 in by 11/20.\n- An active pattern returning for the weekend and Thanksgiving week could add a further 1-4 in, giving a central estimate near 8 in.\n\n(e) Over the same 10-day window in the last five years, the gain ranged from 0 to 11.3 in, with a median of about 1.9 in. Single atmospheric rivers drive large right-skewed jumps, such as 2024.\n\n(f) Experts and markets point to a wet rest of the month:\n- NWS gives 2-3.5 in for the mountains midweek and has growing confidence in an active pattern over the weekend and into Thanksgiving week.\n- CPC favours above-normal precipitation in both the 6-10 day and 8-14 day outlooks.\n- Kalshi prices for San Francisco November rain imply a wet remainder of the month.\n- There is no market on the 8SI itself.\n\n(g) Unexpected scenarios:\n- Low: the midweek storm shifts south (the trend already favours south of I-80) and gives the northern gauges only about 1.2 in. The offshore trough then stays offshore and the weekend and Thanksgiving week are mostly dry, leaving about 5 in.\n- High: a stalled, deep offshore trough sends a strong atmospheric river into Shasta and the Feather River basin on 11/22-11/26, similar to November 2024. That adds 8-10 in on top of the midweek storm, giving 15-17 in.\n\nPercentile 1: 4.3\nPercentile 5: 5.0\nPercentile 10: 5.5\nPercentile 20: 6.3\nPercentile 30: 6.9\nPercentile 40: 7.4\nPercentile 50: 7.9\nPercentile 60: 8.5\nPercentile 70: 9.2\nPercentile 80: 10.2\nPercentile 90: 11.8\nPercentile 95: 13.2\nPercentile 99: 16.0"
+    },
+    {
+      "value": {
+        "p10": 5.9,
+        "p25": 6.9,
+        "p50": 8.2,
+        "p75": 9.7,
+        "p90": 11.4
+      },
+      "reasoning": "(a) **Time left:** The 11/26/2026 value should publish around November 27, so about 10 to 11 days remain.\n\n(b) **Latest known value:** 3.44 in water-year-to-date on the 11/16/2026 row (CDEC 8SI). This is provisional and possibly a partial day.\n\n(c) **If nothing changed:** 3.44 in. The index is cumulative, so this is a hard floor.\n\n(d) **If the current trend continued:**\n- CNRFC basin forecasts for the 8SI basins (Shasta, Sacramento, Feather, Yuba, North Fork American) average about 3.5 to 3.8 in through about Nov 22. Some of that may already be counted in the 11/16 row.\n- That implies roughly 6.8 to 7.2 in by Nov 22.\n- CPC and NWS favour an active, above-normal pattern for Nov 22 to 26, which might add about 0.5 to 2 in.\n- The central estimate is therefore about 8 in.\n\n(e) **Historical variation:** Over the past five years, the Nov 16 to Nov 26 change ranged from 0 to 11.3 in, with a median of about 1.9 in. This year has a strong, well-forecast atmospheric river within the window, so the expected change is well above that median.\n\n(f) **Experts and markets:**\n- NWS expects 2 to 3.5 in of liquid in the mountains from Tuesday night to Friday, after another 1 to 1.5 in on Monday.\n- CNRFC forecasts about 3.3 to 4.3 in by basin through Nov 22.\n- CPC favours above-normal precipitation for Nov 21 to 29.\n- Kalshi prices for San Francisco November rain imply a very wet month.\n\n(g) **Unexpected scenarios:**\n- **Low:** The atmospheric river shifts north or south, or underperforms, adding only about 1.5 to 2 in. Then a ridge builds and Thanksgiving week is dry. The result would be about 5 to 5.5 in.\n- **High:** The atmospheric river stalls over the northern Sierra and adds 5 to 6 in. A second strong atmospheric river arrives around Nov 23 to 25, similar to 2024, and adds another 4 to 5 in. The result would be about 13 to 15 in.\n\nPercentile 1: 4.6\nPercentile 5: 5.3\nPercentile 10: 5.9\nPercentile 20: 6.6\nPercentile 30: 7.2\nPercentile 40: 7.7\nPercentile 50: 8.2\nPercentile 60: 8.7\nPercentile 70: 9.3\nPercentile 80: 10.1\nPercentile 90: 11.4\nPercentile 95: 12.5\nPercentile 99: 15.0"
+    },
+    {
+      "value": {
+        "p10": 5.9,
+        "p25": 6.9,
+        "p50": 8.1,
+        "p75": 9.6,
+        "p90": 11.3
+      },
+      "reasoning": "(a) **Time left:** About 10 days until the 11/26/2026 row is published, with resolution around Nov 27.\n\n(b) **Latest known value:** 3.44 in water-year-to-date, from the 11/16/2026 row (provisional, possibly a partial day). Rows for 11/14 to 11/16 added 1.43, 0.07 and 1.22 in.\n\n(c) **If nothing changed:** 3.44 in. The index is cumulative, so this is a hard floor.\n\n(d) **If the current trend continued:** The CNRFC QPF for northern basins gives roughly 3.3 to 4.3 in through Nov 22. About 0.1 to 0.4 in of that may overlap rain already counted. That puts the index near 6.5 to 7.5 in by Nov 22. The active pattern then continues into Thanksgiving week, with CPC favouring above-normal precipitation for Nov 21-29. Adding perhaps 0.5 to 2.5 in for Nov 23-26 gives a central estimate of about 8 in.\n\n(e) **Historical variation:** Over the same 10-day window (Nov 16 to Nov 26), recent years added 0 to 11.3 in, with a median of about 1.9 in. 2024 added 11.3 in from a single strong atmospheric river. This year, a confirmed atmospheric-river storm sits inside the window, so the median gain should be well above the climatological median.\n\n(f) **Expert and market expectations:**\n* NWS forecasts 2-3.5 in of liquid in the mountains from Tuesday night to Friday, after about 1-1.5 in Monday, with amounts slightly lower in the northern mountains.\n* CNRFC basin totals are about 3.4-4.3 in through Nov 22.\n* CPC favours above-normal precipitation for the 6-10 and 8-14 day periods.\n* Kalshi prices for San Francisco November rain imply a very wet month, with a median of about 6.7 in.\n\n(g) **Unexpected scenarios:**\n* **Low:** The atmospheric river shifts south or weakens, the northern stations underperform, and Nov 22-26 turns dry under a ridge. Only about 2 in is added, giving roughly 5-5.5 in. A partial-day first publication for 11/26 would trim a little more.\n* **High:** The atmospheric river stalls over the northern Sierra and a second strong atmospheric river arrives Nov 23-25, similar to 2024. That could add 9-11 in, reaching 13-15 in.\n\nPercentile 1: 4.7\nPercentile 5: 5.4\nPercentile 10: 5.9\nPercentile 20: 6.6\nPercentile 30: 7.2\nPercentile 40: 7.7\nPercentile 50: 8.1\nPercentile 60: 8.6\nPercentile 70: 9.2\nPercentile 80: 10.0\nPercentile 90: 11.3\nPercentile 95: 12.4\nPercentile 99: 14.6"
+    },
+    {
+      "value": {
+        "p10": 5.9,
+        "p25": 7.1,
+        "p50": 8.5,
+        "p75": 10.3,
+        "p90": 12.3
+      },
+      "reasoning": "(a) **Time left:** About 10 days until the 11/26 observation. CDEC should publish it on Nov 27.\n\n(b) **Latest known value:** 3.44 in water-year-to-date, from the CDEC row dated 11/16/2026. That row may be partial or provisional.\n\n(c) **If nothing changed:** 3.44 in. The index is cumulative, so it cannot end below this.\n\n(d) **If the current trend continued:**\n- CNRFC basin forecasts add about 3.3 to 4.3 in through Nov 22. Part of the earliest forecast period may already be counted in the 11/16 row.\n- CPC and NWS favour an active, above-normal pattern for Nov 22-26, which could add another 1 to 3 in.\n- That gives a central estimate of about 8.5 in.\n\n(e) **Historical variation:** Over this 10-day window in 2021-2025, the change ranged from 0 to 11.3 in, with a median of about 1.9 in. This year has a strong storm already in the near-term forecast, so the change should be well above that median.\n\n(f) **Experts and markets:**\n- NWS expects 2 to 3.5 in of liquid in the mountains from Tuesday night to Friday, with amounts slightly decreased in the north.\n- CNRFC basin totals are about 3.4 to 4.3 in through Nov 22.\n- CPC gives above-normal precipitation a 50-60% or better chance for Nov 21-29.\n- Kalshi prices for San Francisco November rain imply a very wet month.\n\n(g) **Unexpected scenarios:**\n- **Low:** The atmospheric river shifts south or underperforms, giving only about 1.5 to 2 in in the northern Sierra, and a ridge then dries out Thanksgiving week. The total ends near 5 in.\n- **High:** The main storm overperforms (about 5 in) and a strong atmospheric river arrives around Nov 23-26, similar to 2024. The total could reach 14 to 16 in or more.\n\nPercentile 1: 4.5\nPercentile 5: 5.3\nPercentile 10: 5.9\nPercentile 20: 6.8\nPercentile 30: 7.4\nPercentile 40: 8.0\nPercentile 50: 8.5\nPercentile 60: 9.1\nPercentile 70: 9.8\nPercentile 80: 10.8\nPercentile 90: 12.3\nPercentile 95: 13.6\nPercentile 99: 16.2"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 5.8631,
+    "p25": 6.9104,
+    "p50": 8.337,
+    "p75": 10.0201,
+    "p90": 12.1721
+  },
+  "usage": [
+    {
+      "question_id": "46854",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0002836,
+      "input_tokens": 1189,
+      "output_tokens": 92,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0001274,
+      "input_tokens": 518,
+      "output_tokens": 48,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 66.1,
+      "notional_cost_usd": 0.3126854,
+      "input_tokens": 84929,
+      "output_tokens": 4551,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.08463599999999999,
+      "input_tokens": 7123,
+      "output_tokens": 1383,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.1,
+      "notional_cost_usd": 0.0857,
+      "input_tokens": 7126,
+      "output_tokens": 1435,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.4,
+      "notional_cost_usd": 0.0009,
+      "input_tokens": 2796,
+      "output_tokens": 682,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.1,
+      "notional_cost_usd": 0.0007943,
+      "input_tokens": 2830,
+      "output_tokens": 457,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.00034690999999999997,
+      "input_tokens": 2796,
+      "output_tokens": 511,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.3,
+      "notional_cost_usd": 0.032619,
+      "input_tokens": 7123,
+      "output_tokens": 1440,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.1,
+      "notional_cost_usd": 0.00025906000000000003,
+      "input_tokens": 2830,
+      "output_tokens": 335,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0008454000000000001,
+      "input_tokens": 2848,
+      "output_tokens": 552,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00029263,
+      "input_tokens": 2849,
+      "output_tokens": 401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 106.6,
+      "notional_cost_usd": 0.41366390000000003,
+      "input_tokens": 231672,
+      "output_tokens": 7196,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.2,
+      "notional_cost_usd": 0.08876400000000001,
+      "input_tokens": 7829,
+      "output_tokens": 1307,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.091744,
+      "input_tokens": 7829,
+      "output_tokens": 1456,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.0,
+      "notional_cost_usd": 0.092144,
+      "input_tokens": 7829,
+      "output_tokens": 1476,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0007592,
+      "input_tokens": 2742,
+      "output_tokens": 422,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0008346,
+      "input_tokens": 2914,
+      "output_tokens": 504,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0007939,
+      "input_tokens": 2843,
+      "output_tokens": 451,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00029741,
+      "input_tokens": 2915,
+      "output_tokens": 410,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00036639,
+      "input_tokens": 2844,
+      "output_tokens": 549,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46854",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.00028916,
+      "input_tokens": 2740,
+      "output_tokens": 397,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.2091
+}
