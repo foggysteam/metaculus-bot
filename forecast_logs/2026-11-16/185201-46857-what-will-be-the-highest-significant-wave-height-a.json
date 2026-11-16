@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T18:56:31.076111+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T18:52:01.043946+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46857,
+    "post_id": 46597,
+    "url": "https://www.metaculus.com/questions/46597",
+    "type": "DiscreteQuestion",
+    "unit": "m",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will be the highest significant wave height at NDBC buoy 46026 (18 NM west of San Francisco) on November 26, 2026 (UTC)?",
+    "resolution_criteria": "This question resolves to the highest value in the WVHT (significant wave height, in meters) column of the NDBC station 46026 realtime standard meteorological data file (https://www.ndbc.noaa.gov/data/realtime2/46026.txt) among all rows whose timestamp (YY MM DD hh mm, UTC) falls on November 26, 2026, i.e. timestamps from 00:00 through 23:50 UTC on that date. For example, if the largest WVHT entry on that date reads 3.4, the question resolves to 3.4 m; if the largest reads 4.1, it resolves to 4.1 m. Rows in which WVHT is reported as \"MM\" are treated as missing and ignored. Only station 46026 (SAN FRANCISCO – 18NM West of San Francisco, CA, 37.750 N 122.838 W) is used, and no smoothing, averaging, or unit conversion is applied to the file's WVHT values.",
+    "fine_print": "Resolution uses the realtime data file as it stands when the question resolves; later quality-controlled revisions of the same observations do not change the outcome. If the buoy reports no valid WVHT value at all for November 26, 2026 (for example, a sensor or mooring outage), the question will be annulled. If the realtime file itself is inaccessible, the same NDBC 46026 WVHT observations as published on other NDBC pages or by [credible sources](https://www.metaculus.com/faq/#definitions) may be used.",
+    "close_time": "2026-11-16 21:42 UTC",
+    "scheduled_resolution_time": "2026-11-27 18:00 UTC"
+  },
+  "research": [
+    "I found nothing that settles this yet. The answer depends on weather 10 days out, and the season so far is far rougher than recent years. The buoy reached about 7.0 m on Nov 14 and 6.5 m early on Nov 16. On Nov 26 in 2021-2025 it peaked between about 1.5 and 2.9 m.\n\n## 1. Resolution source\n- 2026-11-16: The realtime file at https://www.ndbc.noaa.gov/data/realtime2/46026.txt is live. It holds 6,470 rows, from 2026-10-02 to 2026-11-16 18:10 UTC. The latest WVHT is 4.2 m (18:10 UTC), with an average period of 10.3 s from 276°, and 4.4 m at 17:50. [NDBC realtime](https://www.ndbc.noaa.gov/data/realtime2/46026.txt)\n- Oddity: the file shows water temperature (WTMP) of about 18.5 °C, which is unusually warm for November here. The wave data look normal.\n\n## 2. Current status\n- Nothing settles the question yet; it depends on conditions about 10 days out.\n- The buoy is reporting normally, with WVHT every 10 to 20 minutes and some \"MM\" (missing) gaps. I found no sign of an outage.\n\n## 3. Recent news (newest first)\n- 2026-11-16, 10:24 AM PST: The NWS San Francisco forecast discussion says seas ease Tuesday afternoon, then \"build again by Wednesday with larger swells arriving.\" It expects gale gusts and thunderstorms midweek, and another system \"starting Saturday\" (Nov 21), with no details given. [NWS AFD](https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD)\n- 2026-11-16: Buoy readings sampled at 3-hour intervals:\n  - Nov 16: 3.9 m (00:20), 5.0 (03:20), 6.5 (06:20), 6.0 (09:20), 4.8 (12:20 and 15:20).\n  - Nov 15: 3.1 to 4.3 m.\n  - Nov 14: 3.8 (00:20), 6.0 (06:20), 7.0 (12:20), 6.8 (15:20), 6.1 (18:20), 5.2 (21:20). The true peak may be higher, because I only sampled.\n  - [NDBC](https://www.ndbc.noaa.gov/data/realtime2/46026.txt)\n- 2026-11-14/15: The Nov 14-15 swell hit the coast. News reports say NWS measured waves over 30 ft at Monterey and Point Reyes, buoy 46042 read 32 ft at 21 s, and a buoy off Point Reyes recorded 9.5 m, its highest since 2015. Reports also mention a \"super El Niño.\" [NY Post](https://nypost.com/2026/11/14/us-news/massive-waves-up-to-60-feet-threaten-northern-california-coast-as-nws-issues-urgent-warning/), [Lodi News](https://www.lodinews.com/news/national/article_e346de5a-256e-5f98-a080-b13943ca60b1.html)\n- 2026-11-10: NWS was quoted saying \"Seven or eight pulses of energy are possible through the week of Thanksgiving.\" [GovTech/SF Chronicle](https://www.govtech.com/em/biggest-waves-in-years-to-slam-californias-coast)\n- Undated, about 1 day old: an SF Chronicle headline says \"another round of mammoth waves within days,\" with 40-55 ft maximum individual waves \"Wednesday evening into Thursday morning.\" That most likely means Nov 18-19, not Nov 25-26. The page would not load, so I could not check. [SF Chronicle](https://www.sfchronicle.com/weather/article/waves-tide-california-bay-area-coast-22531154.php)\n\n## 4. Base rates\nHighest WVHT at 46026 on Nov 26 in past years. 2025 is the full-day maximum; 2021-2024 are 4-hourly samples, so the true maxima are slightly higher.\n- 2025: 1.49 m, a calm day of 0.7-1.5 m. [NDBC 2025](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2025.txt.gz&dir=data/historical/stdmet/)\n- 2024: about 2.5 m, falling from 2.48 to 1.4. [NDBC 2024](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2024.txt.gz&dir=data/historical/stdmet/)\n- 2023: about 2.9 m (2.1-2.92). [NDBC 2023](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2023.txt.gz&dir=data/historical/stdmet/)\n- 2022: about 2.3 m (1.8-2.33). [NDBC 2022](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2022.txt.gz&dir=data/historical/stdmet/)\n- 2021: about 2.0 m (1.4-1.97). [NDBC 2021](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2021.txt.gz&dir=data/historical/stdmet/)\n\nSeasonal comparison:\n- The past 5 years span about 1.5 to 2.9 m, with a median near 2.3 m.\n- This year is running far above them: 3-7 m on Nov 13-16, against early-October values of about 1.3 m.\n- Values swing a lot day to day. Nov 14-15 alone went from 7.0 down to 3.1 m.\n- I did not pull mid-November values for earlier years, so I can't compare each year's change from Nov 16 to Nov 26.\n\n## 5. Other forecasts\n- I found no prediction market or Metaculus question on buoy wave heights.\n- The Kalshi markets listed are unrelated (elections, ballot measures, test scores). The one loosely related is San Francisco November rainfall: \"Above 6 inches\" is priced at 0.54 and \"Above 8 inches\" at 0.24. Those prices point to a very wet, stormy month.\n\n## 6. Upcoming events and latest official forecasts\nNWS coastal waters forecast for Point Reyes to Pigeon Point, 10-60 NM out, issued 2026-11-16 10:05 AM PST (offshore of the buoy, which sits about 18 NM out):\n- Mon: 14-17 ft (about 4.3-5.2 m)\n- Tue: 10-13 ft\n- Wed: 11-14 ft\n- Wed night to Thu (Nov 18-19): building to 13-18 ft, with a W swell of 17 ft at 15 s\n- Fri (Nov 20): 6-8 ft\n- Fri night: 5-7 ft\n- The 0-10 NM zone is 2 to 4 ft lower.\n- A Gale Watch is in effect for Tuesday night.\n- [NWS CWF](https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=CWF)\n\nBeyond that:\n- Another system is expected from about Sat Nov 21. [NWS AFD](https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD)\n- Reporting says NWS flags a higher risk of heavy precipitation and strong winds around Nov 25-27, and that storms could line up with king tides. CPC favors above-normal precipitation for Thanksgiving week. I could not read the source articles. [SF Chronicle](https://www.sfchronicle.com/weather-forecast/article/rain-storm-weather-san-francisco-california-22529476.php), [Country Herald](https://countryherald.com/california/sacramento/northern-california-thanksgiving-weather-rain-mountain-snow-risk-nov-22-28)\n- I found no official wave forecast for Nov 26 itself. The NWS forecast ends Nov 20.\n- Things to check before the forecast closes: WaveWatch III/GFS-Wave runs covering Nov 26, plus CDIP and Surfline long-range outlooks.\n\nOther search results: [Active NorCal](https://www.activenorcal.com/the-biggest-waves-in-years-set-to-slam-northern-california-starting-tonight/), [Surfer](https://www.surfer.com/news/40-foot-california-swell-el-nino).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 18:52 UTC; check each market really matches the question)\n- Kalshi: Midterms: Biggest blue wave since 2008? (In 2026). Yes prices: Yes: 0.94.\n- Kalshi: Blue wave this year? (In 2026). Yes prices: Will Democrats hold 218 or more seats in the House AND hold 49 or more seats in the Senate?: 0.99.\n- Kalshi: Red wave this year? (Before Feb 2027). Yes prices: Yes: 0.0100.\n- Kalshi: Rain in San Francisco this month? (In Nov 2026). Yes prices: Above 6 inches: 0.54; Above 7 inches: 0.34; Above 8 inches: 0.24; Above 9 inches: 0.20; Above 5 inches: 0.89; Above 10 inches: 0.12; Above 4 inches: 0.97; Above 3 inches: 0.98; Above 2 inches: 0.99; Above 1 inch: 0.9900.\n- Kalshi: Which ballot measures will pass in San Francisco? (In 2026). Yes prices: Proposition I: 0.0100; Proposition G: 0.0400; Proposition C: 0.99; Proposition J: 0.99; Proposition D: 0.99; Proposition H: 0.99; Proposition A: 0.98; Proposition B: 0.98; Proposition F: 0.98; Proposition E: 0.97.\n- Kalshi: Rain in San Francisco on Feb 20, 2027? (On Feb 20, 2027). Yes prices: Above 0 inches: 0.41.\n- Kalshi: US test scores in Math this year? (In 2026). Yes prices: No significant difference: 0.45; Significant decrease: 0.30; Significant increase: 0.21.\n- Kalshi: US test scores in Reading this year? (In 2026). Yes prices: No significant difference: 0.40; Significant decrease: 0.31; Significant increase: 0.24.",
+    "I found no forecast that reaches November 26 itself, and the question is not settled yet. NWS sea forecasts only run through November 20. The longer-range outlooks point to a stormy week, with the main storm signal on November 24-25 rather than the 26th.\n\n## 1. Resolution source\n- 2026-11-16: The realtime file ([46026.txt](https://www.ndbc.noaa.gov/data/realtime2/46026.txt)) is online. It covers 2026-10-02 to now, so November 26 rows will be there on November 27. The newest row (18:10 UTC) shows WVHT 4.2 m, with 4.4 m at 17:40-17:50 UTC. Waves are 10-11 s on average, wind is NW at about 8 m/s, and the latest dominant wave period reading is 17 s.\n- The file gives WVHT to 1 decimal. Wave values usually appear only every 30 minutes, with \"MM\" in between.\n\n## 2. Current status\n- Nothing settles the question yet. Nov 26 is 10 days away.\n- 2026-11-14: Swell peaked on the buoy at 7.0 m (12:20 UTC). It stayed at 5.3-7.0 m from about 05:50 to 21:50 UTC. [NDBC](https://www.ndbc.noaa.gov/data/realtime2/46026.txt)\n- 2026-11-15: Highest reading was 4.4 m (00:50 UTC). It eased to 3.0-3.9 m through the day. [NDBC](https://www.ndbc.noaa.gov/data/realtime2/46026.txt)\n- 2026-11-16: Highest so far is 4.4 m.\n- Spot readings at 12:50 UTC each day, Nov 2-13: 1.8, 1.9, 2.6, 2.1, 3.2, 3.1, 2.0, 3.1, 2.1, 2.4, 2.8, 3.2 m. [NDBC](https://www.ndbc.noaa.gov/data/realtime2/46026.txt)\n- October 2-31 spot values were mostly 0.8-2.3 m. The October peak was about 3.2 m on Oct 11.\n\n## 3. Recent news (newest first)\n- 2026-11-16: The Watchers reports more large surf is expected, with another round on Thursday-Friday, Nov 19-20. [Watchers](https://watchers.news/2026/11/16/huge-waves-pummel-california-coast-el-nino-piers-closed-pacifica-san-diego/)\n- 2026-11-16: The NWS marine discussion says seas reach up to 20 ft through Tuesday morning, ease a little Tuesday afternoon, then build again Wednesday as larger swells arrive. It says swells of 12-16 ft at 14-16 s are \"less energetic\" than last weekend's. [NWS AFD](https://tgftp.nws.noaa.gov/data/raw/fx/fxus66.kmtr.afd.mtr.txt)\n- 2026-11-15/16: News reports describe the biggest Bay Area waves in more than a decade during a strong El Niño. A Point Reyes buoy recorded a 9.5 m wave, the highest there since 2015. [n.com.do](https://n.com.do/2026/11/15/olas-18-metros-california-cierre-playas-alerta-evacuacion/), [internewscast](https://internewscast.com/news/california-coast-slammed-by-biggest-waves-in-more-than-a-decade/)\n- 2026-11-14: The SF Chronicle, via Yahoo, says a stronger storm is due Tuesday night through Thursday (Nov 17-19). The NWS sees a higher risk of heavy rain and strong winds over Thanksgiving week (Nov 25-27), along with king tides. [Yahoo/SFChronicle](https://www.yahoo.com/news/weather-news/articles/bay-area-mostly-dry-weather-130000994.html)\n- 2026-11-10: NWS meteorologist Joe Merchant expects seven or eight swell pulses through Thanksgiving week. [Yahoo](https://www.yahoo.com/news/weather-news/articles/40-foot-biggest-waves-years-171501838.html)\n\n## 4. Base rates\nDaily maximum on Nov 26 in past years, from the NDBC historical files (2-decimal values):\n- 2025-11-26: about 1.5 m, from readings every 3 hours (1.45 at 00:10, dropping to 0.83). A calm day. [NDBC 2025](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2025.txt.gz&dir=data/historical/stdmet/)\n- 2024-11-26: 2.53 m. I checked every reading that day; the range was 1.36-2.53. [NDBC 2024](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2024.txt.gz&dir=data/historical/stdmet/)\n- 2023-11-26: about 2.9 m from 3-hourly readings (top value 2.92). [NDBC 2023](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2023.txt.gz&dir=data/historical/stdmet/)\n- 2022-11-26: about 2.5 m from 3-hourly readings (top value 2.53). [NDBC 2022](https://www.ndbc.noaa.gov/view_text_file.php?filename=46026h2022.txt.gz&dir=data/historical/stdmet/)\n\nTakeaways:\n- In those four years, Nov 26 maxima were about 1.5-2.9 m, with a median near 2.5 m. The 3-hourly figures are lower bounds.\n- This year is running well above those years. Mid-November 2026 daily maxima were 3-7 m, against roughly 1.5-3 m in a typical year.\n- Day-to-day swings are big: the buoy went from 3.8 m to 7.0 m in about 16 hours on Nov 13-14, then fell to about 3 m within 24 hours.\n- I did not pull a full climatology of Nov 16 to Nov 26 changes, and I did not check 2021.\n\n## 5. Other forecasts\n- I found no prediction market on this buoy or on Bay Area wave heights.\n- The Kalshi contracts supplied (SF November rain, elections) don't match this question. Kalshi gives 54% for more than 6 in of SF rain in November, which only tells you a wet, stormy month is expected.\n- I found no Metaculus community forecast.\n\n## 6. Upcoming events and official forecasts\nNWS coastal waters forecast PZZ545 (Pt Reyes to Pigeon Pt, out to 10 NM), issued 2026-11-16 10:05 AM PST. [NWS CWF](https://tgftp.nws.noaa.gov/data/forecasts/marine/coastal/pz/pzz545.txt)\n\n| Period | Seas | Wind / notes |\n|---|---|---|\n| Today (Mon) | 10-14 ft (W 13 ft at 16 s) | |\n| Tue | 7-10 ft | |\n| Tue night | 7-10 ft | S 25-30 kt, gusts to 40 kt (Gale Watch) |\n| Wed | 8-11 ft | SW gusts to 40 kt |\n| Wed night to Thu | 9-13 ft (W 12 ft at 15 s) | |\n| Fri (Nov 20) | 6-9 ft, easing to 5-7 ft | |\n| Fri night | 4-6 ft | |\n\n- In metres, Nov 20 seas are roughly 1.5-2.7 m.\n\nCPC 8-14 day hazards outlook, issued 2026-11-15, valid Nov 23-29. [CPC](https://www.cpc.ncep.noaa.gov/products/predictions/threats/threats.php)\n- Moderate risk of high winds on the northern and central West Coast and heavy rain in Northern California, Nov 24-25.\n- Slight risk of both across the whole week. The main driver is an atmospheric river.\n- It does not mention wave heights.\n\nOther:\n- King tides are expected Thanksgiving week. They affect coastal flooding, not the buoy's WVHT reading.\n- Watch next: NWS forecast updates from about Nov 19-20, when the 7-day window first reaches Nov 26, and WaveWatch III/GFS-Wave output for Nov 24-27. I could not get the offshore zone forecast or wave model output.\n\nSources: [NDBC 46026 realtime](https://www.ndbc.noaa.gov/data/realtime2/46026.txt), [NWS PZZ545](https://tgftp.nws.noaa.gov/data/forecasts/marine/coastal/pz/pzz545.txt), [NWS AFD](https://tgftp.nws.noaa.gov/data/raw/fx/fxus66.kmtr.afd.mtr.txt), [CPC hazards](https://www.cpc.ncep.noaa.gov/products/predictions/threats/threats.php), [Yahoo/SFChronicle Nov 14](https://www.yahoo.com/news/weather-news/articles/bay-area-mostly-dry-weather-130000994.html), [Yahoo Nov 10](https://www.yahoo.com/news/weather-news/articles/40-foot-biggest-waves-years-171501838.html), [Watchers](https://watchers.news/2026/11/16/huge-waves-pummel-california-coast-el-nino-piers-closed-pacifica-san-diego/), [SF Chronicle](https://www.sfchronicle.com/weather/article/waves-tide-california-bay-area-coast-22531154.php) (page wouldn't load), [Houseberry](https://www.houseberry.com/blog/bay-area-storm-high-surf-november-13/), [n.com.do](https://n.com.do/2026/11/15/olas-18-metros-california-cierre-playas-alerta-evacuacion/), [internewscast](https://internewscast.com/news/california-coast-slammed-by-biggest-waves-in-more-than-a-decade/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 18:52 UTC; check each market really matches the question)\n- Kalshi: Midterms: Biggest blue wave since 2008? (In 2026). Yes prices: Yes: 0.94.\n- Kalshi: Blue wave this year? (In 2026). Yes prices: Will Democrats hold 218 or more seats in the House AND hold 49 or more seats in the Senate?: 0.99.\n- Kalshi: Red wave this year? (Before Feb 2027). Yes prices: Yes: 0.0100.\n- Kalshi: Rain in San Francisco this month? (In Nov 2026). Yes prices: Above 6 inches: 0.54; Above 7 inches: 0.34; Above 8 inches: 0.24; Above 9 inches: 0.20; Above 5 inches: 0.89; Above 10 inches: 0.12; Above 4 inches: 0.97; Above 3 inches: 0.98; Above 2 inches: 0.99; Above 1 inch: 0.9900.\n- Kalshi: Which ballot measures will pass in San Francisco? (In 2026). Yes prices: Proposition I: 0.0100; Proposition G: 0.0400; Proposition C: 0.99; Proposition J: 0.99; Proposition D: 0.99; Proposition H: 0.99; Proposition A: 0.98; Proposition B: 0.98; Proposition F: 0.98; Proposition E: 0.97.\n- Kalshi: Rain in San Francisco on Feb 20, 2027? (On Feb 20, 2027). Yes prices: Above 0 inches: 0.41.\n- Kalshi: US test scores in Math this year? (In 2026). Yes prices: No significant difference: 0.45; Significant decrease: 0.30; Significant increase: 0.21.\n- Kalshi: US test scores in Reading this year? (In 2026). Yes prices: No significant difference: 0.40; Significant decrease: 0.31; Significant increase: 0.24."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 1.8,
+        "p25": 2.35,
+        "p50": 3.05,
+        "p75": 3.95,
+        "p90": 5.0
+      },
+      "reasoning": "(a) **Time left:** The outcome will be known about 11 days from now. Nov 26 data will be complete by Nov 27, and the question resolves around Nov 27 18:00 UTC. That is far beyond the range of any skillful deterministic wave forecast.\n\n(b) **Latest known value:** 4.2 m at 18:10 UTC on 2026-11-16 (4.4 m at 17:50). Recent peaks were about 7.0 m on Nov 14 and 6.5 m on Nov 16.\n\n(c) **If nothing changed:** about 4.2 m. Daily maxima in a stormy pattern like this run around 4 to 5 m.\n\n(d) **If the current trend continued:** The trend is a series of large swell pulses, with a big one around Nov 18-19 and seas easing to 6-8 ft (about 2 m) on Nov 20. Another system follows from Nov 21, and Nov 25-27 is flagged for heavy rain and wind. On that pattern the Nov 26 maximum would be roughly 3 to 4 m.\n\n(e) **Historical variation:** Daily maxima swing widely within days. Nov 14 to 15 went from 7.0 m down to 3.1 m. The Nov 26 maxima for 2021-2025 ranged from 1.5 to 2.9 m (median about 2.3 m). Over 10 days, the value essentially resets to climatology conditioned on the regime.\n\n(f) **Experts and markets:**\n- An NWS forecaster was quoted on Nov 10 saying \"seven or eight pulses of energy\" were possible through Thanksgiving week.\n- NWS reportedly flags elevated storm and wind risk for Nov 25-27, and CPC favors a wet Thanksgiving week.\n- Kalshi prices about a 54% chance of more than 6 inches of November rain in San Francisco, which points to a very active month.\n- No market exists on wave height itself.\n\nTaken together, I shift the climatological median of about 2.3-2.5 m up to about 3.0 m.\n\n(g) **Unexpected scenarios:**\n- **Low:** A ridge builds over Thanksgiving, with light winds and a small, decaying swell. The daily maximum is about 1.3-1.6 m, like 2025.\n- **High:** A deep low arrives on Nov 26, combining strong south or west winds with a large northwest groundswell. Seas reach 6-7 m or more, as on Nov 14.\n\n**Tail scenarios behind the extreme percentiles:**\n- **1st percentile:** a flat, post-ridge day with leftover small swell, around 1.2 m.\n- **99th percentile:** a repeat of the Nov 14 event landing on Nov 26, around 7.2 m.\n\nPercentile 1: 1.2\nPercentile 5: 1.55\nPercentile 10: 1.8\nPercentile 20: 2.2\nPercentile 30: 2.5\nPercentile 40: 2.8\nPercentile 50: 3.05\nPercentile 60: 3.35\nPercentile 70: 3.7\nPercentile 80: 4.2\nPercentile 90: 5.0\nPercentile 95: 5.7\nPercentile 99: 7.2"
+    },
+    {
+      "value": {
+        "p10": 1.85,
+        "p25": 2.35,
+        "p50": 3.05,
+        "p75": 3.95,
+        "p90": 4.95
+      },
+      "reasoning": "(a) Time left: about 10 days until November 26, 2026. The data will be in the realtime file by about November 27, 18:00 UTC.\n\n(b) Latest known value: 4.2 m at 18:10 UTC on November 16, 2026. Peaks this week were about 7.0 m on November 14 and 6.5 m on November 16.\n\n(c) If nothing changed: about 4.2 m. A 10-day persistence forecast for waves has almost no skill, though.\n\n(d) If the trend continued: the pattern is a series of swell pulses. NWS expects another build November 18-19, easing seas around November 20, and another system from November 21. NWS also flags elevated wind and storm risk around November 25-27. That points to a stormier than normal regime, but the timing of any single pulse 10 days out is unknown.\n\n(e) Historical variation:\n- Daily maxima swing by 2-4 m within days. For example, November 14 to 15 went from 7.0 m to 3.1 m.\n- November 26 maxima in 2021-2025 were about 1.5-2.9 m, median about 2.3 m. Four of those years were 4-hourly samples, so the true 10-minute maxima were slightly higher.\n- Climatology for a typical late-November day is about 2-3.5 m. Big events reach 4-6 m or more.\n\n(f) Experts and markets:\n- There is no direct forecast for November 26.\n- NWS hints at heavy precipitation and strong wind risk around November 25-27, and CPC favors a wet Thanksgiving week.\n- Kalshi prices SF November rain above 6 inches at 0.54, which implies a very stormy month.\n- NWS earlier spoke of \"seven or eight pulses of energy\" through Thanksgiving week.\n- Overall, I shift the distribution up from climatology: median about 3.0 m.\n\n(g) Unexpected scenarios:\n- Low: a ridge builds and a calm lull sets in with only small residual swell and light winds. The daily maximum could be around 1.3-1.6 m, as on November 26, 2025.\n- High: a strong storm hits around November 26, with a powerful nearby low bringing gale-force wind sea on top of a large northwest groundswell. That could push WVHT to 6-7.5 m, similar to November 14.\n\nPercentile 1: 1.3\nPercentile 5: 1.6\nPercentile 10: 1.85\nPercentile 20: 2.2\nPercentile 30: 2.5\nPercentile 40: 2.8\nPercentile 50: 3.05\nPercentile 60: 3.35\nPercentile 70: 3.7\nPercentile 80: 4.2\nPercentile 90: 4.95\nPercentile 95: 5.6\nPercentile 99: 6.9"
+    },
+    {
+      "value": {
+        "p10": 1.9,
+        "p25": 2.45,
+        "p50": 3.1,
+        "p75": 4.0,
+        "p90": 5.0
+      },
+      "reasoning": "(a) About 11 days remain. Nov 26 data will appear in the realtime file through Nov 27, and resolution is around Nov 27 18:00 UTC.\n\n(b) The latest value from the resolution source is 4.2 m WVHT at 18:10 UTC on 2026-11-16, after peaks of about 6.5 m early on Nov 16 and about 7.0 m on Nov 14.\n\n(c) If nothing changed, the daily maximum would be about 4.2 to 4.5 m. Persistence over 10 days has little skill, though.\n\n(d) If the current trend continued, the active storm train would keep going. NWS expects another pulse on Nov 18-19 (13-18 ft offshore), a system from Nov 21, and a flagged storm risk around Nov 25-27. That would suggest a daily maximum of roughly 3-4.5 m.\n\n(e) Historical variation:\n- Daily maxima at this buoy swing by 3-4 m within days; Nov 14-15 alone fell from 7.0 to 3.1 m.\n- Over 10 days, the forecast is essentially climatology.\n- Nov 26 daily maxima in 2021-2025 ranged from 1.5 to 2.9 m, with a median near 2.3 m.\n- This season is clearly more active, possibly linked to a strong El Niño, so I shift the distribution upward.\n\n(f) Experts and markets:\n- NWS flags elevated storm and wind risk for Nov 25-27, and CPC favors a wet Thanksgiving week.\n- The Kalshi market on San Francisco November rainfall implies a very wet month.\n- There is no direct market on wave height.\n\n(g) Unexpected scenarios:\n- Low: a ridge builds over Thanksgiving week, with light winds and only a decaying small swell, so the daily maximum is about 1.3-1.6 m.\n- High: a deep Gulf of Alaska low or landfalling storm brings a large northwest groundswell plus gale-force wind sea on Nov 26, giving 6-7.5 m, similar to Nov 14.\n\nPercentile 1: 1.4\nPercentile 5: 1.7\nPercentile 10: 1.9\nPercentile 20: 2.3\nPercentile 30: 2.6\nPercentile 40: 2.85\nPercentile 50: 3.1\nPercentile 60: 3.4\nPercentile 70: 3.75\nPercentile 80: 4.25\nPercentile 90: 5.0\nPercentile 95: 5.6\nPercentile 99: 6.9"
+    },
+    {
+      "value": {
+        "p10": 2.0,
+        "p25": 2.55,
+        "p50": 3.3,
+        "p75": 4.25,
+        "p90": 5.3
+      },
+      "reasoning": "(a) About 10 days remain until Nov 26, 2026 UTC. Resolution comes around Nov 27.\n\n(b) The latest value is 4.2 m at 18:10 UTC on Nov 16, 2026. Earlier that day it reached 4.4 m. The Nov 14 peak was 7.0 m.\n\n(c) If nothing changed, the outcome would be about 4.2-4.4 m. Persistence over 10 days carries little information, though.\n\n(d) The near-term trend is easing, with seas around 1.5-2.7 m by Nov 20 per the NWS. After that, the CPC flags an atmospheric river and high-wind risk on Nov 24-25. That suggests energetic post-frontal northwest swell and wind sea are plausible on Nov 26, but not certain.\n\n(e) Daily maxima swing widely. In mid-November they ranged from 3 m to 7 m within days. Nov 26 maxima in past years ran 1.5-2.9 m, with a median near 2.5 m. This season (El Niño, active storm track) is running well above normal.\n\n(f) NWS meteorologists expect repeated swell pulses through Thanksgiving week. The CPC shows a moderate risk of high winds and heavy rain on Nov 24-25. There are no wave model forecasts or markets for Nov 26.\n\n(g) Two surprise scenarios:\n- **Low:** A ridge builds after the Nov 24-25 storm, or the storm tracks north. The swell decays and winds go light, giving about 1.5-2 m.\n- **High:** A deep low sits close offshore on Nov 25-26. Strong northwest winds add wind sea on top of a fresh long-period swell, giving 6-7+ m, similar to Nov 14.\n\nFor the extreme percentiles:\n- **1st percentile:** A rare flat spell between systems could leave the max near 1.4 m.\n- **99th percentile:** A repeat of the Nov 14 setup near the buoy could reach about 7.5 m.\n\nPercentile 1: 1.4\nPercentile 5: 1.8\nPercentile 10: 2.0\nPercentile 20: 2.4\nPercentile 30: 2.7\nPercentile 40: 3.0\nPercentile 50: 3.3\nPercentile 60: 3.6\nPercentile 70: 4.0\nPercentile 80: 4.5\nPercentile 90: 5.3\nPercentile 95: 6.0\nPercentile 99: 7.4"
+    },
+    {
+      "value": {
+        "p10": 2.0,
+        "p25": 2.55,
+        "p50": 3.2,
+        "p75": 4.05,
+        "p90": 5.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days to Nov 26 UTC. The question resolves around Nov 27.\n\n(b) **Latest known value:** On Nov 16, 2026 at 18:10 UTC, WVHT was 4.2 m. The day's maximum so far is 4.4 m. Nov 14 peaked at 7.0 m and Nov 15 at 4.4 m.\n\n(c) **If nothing changed:** The daily maximum would be about 4.2 to 4.4 m. That is unrealistic, because swell events decay within 1 to 2 days.\n\n(d) **If the trend continued:** The NWS forecast has seas easing to roughly 1.5 to 2.7 m by Nov 20. After that the pattern turns active again, with an atmospheric river and high-wind risk on Nov 24-25 and a stormy Thanksgiving week. That puts Nov 26 in the aftermath of a storm, or in a following swell, at roughly 2.5 to 4 m.\n\n(e) **Historical variation:**\n- Over 10 days the buoy can swing between about 1.5 and 7 m.\n- Nov 26 maxima in 2022 through 2025 were about 1.5 to 2.9 m, with a median near 2.5 m. These come from 3-hourly readings, so they are lower bounds. A daily maximum taken from 48 half-hourly readings is usually 0.2 to 0.4 m above a 3-hourly spot value.\n- This El Niño season is running well above normal: early-November spot values were 1.8 to 3.2 m.\n\n(f) **Experts and markets:**\n- CPC shows a moderate risk of high winds on Nov 24-25 and a slight risk across the whole week.\n- An NWS meteorologist expects repeated swell pulses through Thanksgiving week.\n- There is no market on wave height. Kalshi's November rain market implies a wet, stormy month.\n\n(g) **Unexpected scenarios:**\n- **Low:** A ridge builds after the Nov 24-25 system passes quickly, or the storm tracks north. Nov 26 then sees light winds and a small swell, around 1.4 to 1.8 m.\n- **High:** A deep low near the coast on Nov 25-26 brings strong southerly-to-northwesterly winds plus a large, long-period northwest swell. That pushes the maximum to 5.5 to 7 m, similar to Nov 14.\n\nPercentile 1: 1.4\nPercentile 5: 1.8\nPercentile 10: 2.0\nPercentile 20: 2.4\nPercentile 30: 2.7\nPercentile 40: 2.9\nPercentile 50: 3.2\nPercentile 60: 3.4\nPercentile 70: 3.8\nPercentile 80: 4.3\nPercentile 90: 5.0\nPercentile 95: 5.6\nPercentile 99: 6.8"
+    },
+    {
+      "value": {
+        "p10": 2.0,
+        "p25": 2.55,
+        "p50": 3.3,
+        "p75": 4.25,
+        "p90": 5.3
+      },
+      "reasoning": "(a) About 10 days remain until Nov 26 (UTC). The question resolves around Nov 27.\n\n(b) The latest value is 4.2 m at 18:10 UTC on 2026-11-16, with 4.4 m earlier the same day. Recent daily maxima were 7.0 m on Nov 14, 4.4 m on Nov 15 and 4.4 m so far on Nov 16.\n\n(c) If nothing changed, the outcome would be about 4.2-4.4 m. Ten days out, though, persistence carries little information.\n\n(d) The current trend points to a moderate outcome:\n- Seas are easing now, rebuilding Nov 18-19, then falling to about 1.5-2.7 m by Nov 20.\n- After that, the CPC flags an atmospheric river and high-wind risk on Nov 24-25.\n- Seas on Nov 26 could therefore be elevated in the wake of that storm, roughly 3-4.5 m. A lull is also possible.\n\n(e) Historical variation is large:\n- On the same date in 2022-2025, daily maxima ranged from about 1.5 to 2.9 m.\n- Daily maxima this season have ranged from 1.8 to 7.0 m within two weeks.\n- Changes of 3 m or more in a day are possible.\n\n(f) Expert expectations:\n- The NWS expects repeated swell pulses through Thanksgiving week.\n- The CPC gives a moderate risk of high winds and heavy rain Nov 24-25, with an atmospheric river as the driver.\n- There is no direct market. A Kalshi contract implies a wet November in San Francisco, which fits an active pattern.\n- 2026 is a strong El Niño year running well above climatology.\n\n(g) Two unexpected scenarios:\n- **Low:** A ridge builds after the Nov 24-25 storm, winds go light or offshore, and only residual small swell remains. The daily maximum would be about 1.5-1.8 m.\n- **High:** A deep low tracks close to the coast on Nov 25-26, combining strong local wind sea with a large northwest groundswell, much like Nov 14. The daily maximum would be 6-7 m or more.\n\nPercentile 1 is set by the low scenario, a calm post-storm lull near 1.3 m. Percentile 99 is set by a Nov 14-style event of about 7 m.\n\nPercentile 1: 1.3\nPercentile 5: 1.7\nPercentile 10: 2.0\nPercentile 20: 2.4\nPercentile 30: 2.7\nPercentile 40: 3.0\nPercentile 50: 3.3\nPercentile 60: 3.6\nPercentile 70: 4.0\nPercentile 80: 4.5\nPercentile 90: 5.3\nPercentile 95: 5.9\nPercentile 99: 7.0"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 1.9331,
+    "p25": 2.4984,
+    "p50": 3.1537,
+    "p75": 4.0399,
+    "p90": 5.0431
+  },
+  "usage": [
+    {
+      "question_id": "46857",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.00012419999999999998,
+      "input_tokens": 522,
+      "output_tokens": 40,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.00025170000000000005,
+      "input_tokens": 1107,
+      "output_tokens": 61,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 119.0,
+      "notional_cost_usd": 0.4677979,
+      "input_tokens": 233711,
+      "output_tokens": 6656,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.2,
+      "notional_cost_usd": 0.070776,
+      "input_tokens": 6203,
+      "output_tokens": 1058,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.9,
+      "notional_cost_usd": 0.075088,
+      "input_tokens": 6202,
+      "output_tokens": 1274,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.0006987,
+      "input_tokens": 2837,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.0007299000000000001,
+      "input_tokens": 2993,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.5,
+      "notional_cost_usd": 0.025150600000000002,
+      "input_tokens": 6203,
+      "output_tokens": 1075,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.6,
+      "notional_cost_usd": 0.00022311,
+      "input_tokens": 2835,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.00033417,
+      "input_tokens": 2991,
+      "output_tokens": 482,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.0006853,
+      "input_tokens": 2770,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.00022225,
+      "input_tokens": 2768,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 108.0,
+      "notional_cost_usd": 0.6967530999999999,
+      "input_tokens": 368877,
+      "output_tokens": 7256,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.073516,
+      "input_tokens": 6743,
+      "output_tokens": 979,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.077496,
+      "input_tokens": 6743,
+      "output_tokens": 1178,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.7,
+      "notional_cost_usd": 0.0764,
+      "input_tokens": 6741,
+      "output_tokens": 1124,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0006809,
+      "input_tokens": 2748,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0007035,
+      "input_tokens": 2861,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.0008712,
+      "input_tokens": 2882,
+      "output_tokens": 590,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00029472,
+      "input_tokens": 2746,
+      "output_tokens": 408,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00027477000000000003,
+      "input_tokens": 2863,
+      "output_tokens": 365,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46857",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00027678,
+      "input_tokens": 2883,
+      "output_tokens": 369,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.5693
+}
