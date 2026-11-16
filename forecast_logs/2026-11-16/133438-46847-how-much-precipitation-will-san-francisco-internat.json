@@ -1,0 +1,352 @@
+{
+  "logged_at": "2026-11-16T13:37:27.498222+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T13:34:38.267961+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46847,
+    "post_id": 46587,
+    "url": "https://www.metaculus.com/questions/46587",
+    "type": "MultipleChoiceQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How much precipitation will San Francisco International Airport record on Thanksgiving Day (November 26, 2026)?",
+    "resolution_criteria": "This question resolves using the daily precipitation total reported for November 26, 2026 (Pacific local time) at San Francisco International Airport (SFO/KSFO) in the National Weather Service's daily climate report for that station, product CLISFO from the NWS San Francisco Bay Area office: https://forecast.weather.gov/product.php?site=MTR&product=CLI&issuedby=SFO. Specifically, the resolution value is the \"PRECIPITATION (IN)\" block's \"YESTERDAY\" figure in the CLISFO report dated November 27, 2026, which summarizes November 26, 2026; the multiple-choice option whose range contains that value resolves YES (for example, a reported value of 0.32 in resolves to \"0.10–0.49 in\"). If the November 27, 2026 CLISFO product cannot be retrieved, or if its precipitation value is reported as missing (\"MM\"), the archived NWS product copy in the Iowa Environmental Mesonet text-product archive (https://mesonet.agron.iastate.edu/wx/afos/list.phtml) and/or the official daily precipitation value for station USW00023234 on 2026-11-26 in NOAA's daily climate records will be used, [credible sources](https://www.metaculus.com/faq/#definitions) being consulted if needed.",
+    "fine_print": "Where more than one CLISFO report dated November 27, 2026 is issued (for example an original issuance at about 1:30 a.m. PST and a later corrected/CCA reissue that same day), the last such version issued on November 27, 2026 is the one used; corrections or reissues dated after November 27, 2026 do not change the resolution. Precipitation means total liquid-equivalent precipitation in inches for the calendar day, including rainfall and the melted equivalent of any frozen or freezing precipitation; reported snow depth does not count. A report of \"T\" (trace) is below 0.01 in and resolves to the \"0.00 in (no measurable precipitation)\" option.",
+    "close_time": "2026-11-16 16:31 UTC",
+    "scheduled_resolution_time": "2026-11-27 18:00 UTC"
+  },
+  "research": [
+    "Thanksgiving is 10 days away, so nothing is settled yet. The latest outlook (CPC, November 15) puts the strongest storm on November 24-25 and calls for a slight easing on November 26.\n\n## 1. Resolution source\n- 2026-11-16: The newest CLISFO report covers November 15. SFO recorded **0.80 in** of rain that day; the normal is 0.06 in and the record is 1.03 in (1966). Month to date: 2.35 in (normal 0.78). Since October 1: 2.52 in. Since January 1: 13.30 in (normal 14.24). [CLISFO](https://forecast.weather.gov/product.php?site=MTR&product=CLI&issuedby=SFO)\n- The background said 0.24 in month to date as of November 12, so the November 13-15 storms have added about 2.1 in.\n- The November 27 report, which decides the question, does not exist yet.\n\n## 2. Current status\n- Nothing has happened yet that settles or nearly settles the question.\n\n## 3. Recent news (newest first)\n- 2026-11-16, NWS Bay Area forecast discussion: rain is clearing today. Another cold front arrives late Tuesday, November 17, with an \"impactful system\" Wednesday and Thursday, November 18-19. That Thursday is not Thanksgiving. The WPC gives a slight risk of excessive rain and some chance of thunderstorms. Rain tapers off Friday, November 20, and \"the next system… beginning on Saturday\" (November 21) is expected. The discussion does not cover November 26. [NWS AFD](https://forecast.weather.gov/product.php?site=MTR&product=AFD&issuedby=MTR)\n- 2026-11-15, CPC Week-2 Hazards Outlook for November 23-29 (CPC is NOAA's Climate Prediction Center):\n  - It puts a **moderate risk of heavy precipitation for northern California and southwestern Oregon on November 24-25**, plus high-elevation heavy snow and high winds. Ensemble guidance gives 40-50% odds of more than 2 in over three days.\n  - On Thanksgiving itself it says: \"By day 11 (Nov 26), there is good agreement in the GEFS and ECMWF ensembles favoring a westward retreat of the negative height departures over the West Coast, with precipitation tools also showing a reduction of exceedance probabilities.\" In other words, the storm pattern is expected to pull back offshore and heavy-rain odds drop.\n  - A slight risk of heavy precipitation still covers most of California for all of November 23-29. [CPC](https://www.cpc.ncep.noaa.gov/products/predictions/threats/threats.php)\n- 2026-11-15, SFGate: back-to-back storms this week, with heavy rain, thunder and gusts up to 60 mph in the hills. [SFGate](https://www.sfgate.com/weather/article/storms-waves-bay-area-22532191.php)\n- 2026-11-14, Yahoo/SF Chronicle: the NWS sees an \"increased risk of heavy precipitation and strong winds Nov. 25-27\". The year's first king tides could coincide with the storms. [Yahoo](https://www.yahoo.com/news/weather-news/articles/bay-area-mostly-dry-weather-130000994.html)\n- 2026-11-13: news reports describe a strong to \"extreme\" El Niño and record-warm ocean water off the California coast. [NBC Bay Area](https://www.nbcbayarea.com/news/local/california-ocean-temperature-records/4175530/)\n- 2026-11-10, Fox Weather: models show a wet pattern over the West on November 26-27. [Fox Weather](https://www.foxweather.com/weather-news/thanksgiving-week-weather-outlook-rain-storms-snow)\n\n## 4. Base rates\n- In 1991-2020, measurable rain fell on about 1 Thanksgiving in 4 in San Francisco. It is \"a little more likely\" in El Niño years. Downtown San Francisco was dry every Thanksgiving from 2020 to 2025. Holiday rain tends to be light and clears within 12 to 24 hours. [SFBayWeather](https://www.sfbayweather.com/learn/thanksgiving-weather-san-francisco)\n- By late November, SFO's daily chance of measurable rain is about 24% (Weather Spark, cited in the background).\n- I could not find a year-by-year table of SFO Thanksgiving rain totals. The daily amounts are right-skewed: most wet days get under 0.5 in.\n\n## 5. Other forecasts\n- Kalshi, \"Where will it rain on Thanksgiving?\", prices as of 2026-11-16 13:34 UTC: **San Francisco Yes 0.37**, San Jose 0.46, Ontario CA 0.43. I did not check which station or threshold Kalshi uses to settle; it is likely more than 0 in, which would match \"anything other than 0.00/T\" here.\n- Kalshi, \"Rain in San Francisco in Nov 2026\": above 5 in at 0.85, above 6 in at 0.65, above 7 in at 0.34. The market expects a very wet rest of the month, but that says little about one specific day.\n- I found no Polymarket or Manifold market for this question.\n\n## 6. Upcoming events before resolution\n- November 17-20: a front and the November 18-19 system, possibly with thunderstorms. Rain then is irrelevant to the answer but shows how the pattern is behaving.\n- About November 21-22: the next system.\n- Daily CPC 6-10 and 8-14 day outlooks and hazards updates, and WPC days 3-7 outputs from about November 19 onward. The key question is the timing of the November 24-25 atmospheric river and whether rain after the front lingers into November 26.\n- NWS Bay Area forecast discussions (about every 6-12 hours) and the point forecast for SFO, which will start showing November 26 rain chances about seven days ahead, around November 19.\n- 2026-11-27, about 1:30 a.m. PST: the CLISFO report that settles the question, plus any correction issued later that day.\n\nSources: [CLISFO](https://forecast.weather.gov/product.php?site=MTR&product=CLI&issuedby=SFO), [NWS AFD](https://forecast.weather.gov/product.php?site=MTR&product=AFD&issuedby=MTR), [CPC Hazards](https://www.cpc.ncep.noaa.gov/products/predictions/threats/threats.php), [Yahoo](https://www.yahoo.com/news/weather-news/articles/bay-area-mostly-dry-weather-130000994.html), [SFBayWeather](https://www.sfbayweather.com/learn/thanksgiving-weather-san-francisco), [SFGate](https://www.sfgate.com/weather/article/storms-waves-bay-area-22532191.php), [Fox Weather](https://www.foxweather.com/weather-news/thanksgiving-week-weather-outlook-rain-storms-snow), [NBC Bay Area](https://www.nbcbayarea.com/news/local/california-ocean-temperature-records/4175530/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 13:34 UTC; check each market really matches the question)\n- Kalshi: Where will it rain on Thanksgiving? (Thanksgiving 2026). Yes prices: West Palm Beach: 0.49; Jacksonville: 0.50; San Jose: 0.46; Pittsburgh: 0.47; Ontario, CA: 0.43; Detroit: 0.41; Atlanta: 0.38; Miami: 0.38; San Francisco: 0.37; Columbus, OH: 0.41.\n- Kalshi: Where will it snow on Thanksgiving? (Thanksgiving 2026). Yes prices: Minneapolis–St. Paul: 0.31; Cleveland: 0.30; Detroit: 0.26; Madison: 0.26; Milwaukee: 0.28; Pittsburgh: 0.24; Des Moines: 0.23; Denver: 0.21; Columbus, OH: 0.24; Chicago: 0.23.\n- Kalshi: Rain in San Francisco this month? (In Nov 2026). Yes prices: Above 7 inches: 0.34; Above 6 inches: 0.65; Above 5 inches: 0.85; Above 4 inches: 0.96; Above 3 inches: 0.98; Above 2 inches: 0.99; Above 1 inch: 0.9900.\n- Kalshi: Rain in San Francisco on Feb 20, 2027? (On Feb 20, 2027). Yes prices: Above 0 inches: 0.41.\n- Kalshi: SF 49ers vs DAL Cowboys: Both Teams to Score in Every Quarter (SF vs DAL (Nov 15)). Yes prices: Both teams to score in every quarter: 0.9900.\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.04\", \"0.96\"]; $2M: [\"0.0345\", \"0.9655\"]; $3M: [\"0.0315\", \"0.9685\"]; $4M: [\"0.0075\", \"0.9925\"]; $5M: [\"0.021\", \"0.979\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.125\", \"0.875\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.04\", \"0.96\"]",
+    "# SFO precipitation on Thanksgiving Day (Nov 26, 2026): research notes\n\nThe setup is a wet pattern over the West Coast. But the ensembles put the heaviest rain on Nov 24-25 and show it easing by Nov 26. Thanksgiving is about 10 days out, so no short-range rain forecast covers it yet.\n\n## 1. Resolution source\n- 2026-11-16: The latest CLISFO, issued 12:39 AM PST and covering Nov 15, shows: YESTERDAY 0.80 in (record for the date 1.03 in, 1966; normal 0.06 in), month to date 2.35 in (normal 0.78), since Oct 1 2.52 in, since Jan 1 13.30 in (normal 14.24). Yesterday's weather included heavy rain. [CLISFO](https://forecast.weather.gov/product.php?site=MTR&product=CLI&issuedby=SFO)\n- The resolving value is the \"YESTERDAY\" precipitation figure in the CLISFO dated Nov 27, 2026. That report does not exist yet.\n\n## 2. Current status\n- Nothing has happened that settles or nearly settles the question. Thanksgiving is 10 days away.\n- The question's background said SFO had 0.24 in month to date as of Nov 12. Since then the month total has risen to 2.35 in after the Nov 13-15 storms, so the \"dry season so far\" framing is out of date.\n\n## 3. Recent news (newest first)\n- 2026-11-16 (NWS Bay Area forecast discussion, 4:14 AM PST):\n  - Rain is clearing today.\n  - Another cold front arrives late Tue Nov 17, with an \"impactful system\" Wed-Thu Nov 18-19. It brings possible thunderstorms and a WPC slight risk of excessive rainfall.\n  - Rain tapers off Fri Nov 20, and the next system brings rain \"beginning on Saturday\" Nov 21.\n  - Temperatures stay cooler than normal throughout. Note that the \"Thursday\" in this discussion is Nov 19, not Thanksgiving. [NWS forecast discussion](https://forecast.weather.gov/product.php?site=MTR&product=AFD&issuedby=MTR)\n- 2026-11-15 (CPC US Hazards Outlook for Nov 23-29):\n  - Moderate risk of heavy precipitation for northern California and SW Oregon, and moderate risk of high winds, on Tue-Wed Nov 24-25. Both ensembles show 40-50% chances of 3-day totals above 2 in for northern California.\n  - \"By day 11 (Nov 26), there is good agreement in the GEFS and ECMWF ensembles favoring a westward retreat of the negative height departures over the West Coast, with precipitation tools also showing a reduction of exceedance probabilities.\" Negative height departures here means the trough of low pressure aloft, so it is pulling back offshore.\n  - A slight risk of heavy precipitation still covers much of California for the whole of Nov 23-29. [CPC Hazards](https://www.cpc.ncep.noaa.gov/products/predictions/threats/threats.php)\n- 2026-11-15 (CPC 6-10 and 8-14 day outlooks): Above-normal precipitation is favored on the West Coast for Nov 21-25 and Nov 23-29. Confidence is above 60% for coastal central and northern California in the 6-10 day outlook, and above 50% in the 8-14 day outlook. A powerful trough sits offshore, and CPC flags uncertainty about how close to the coast it will come. [CPC](https://www.cpc.ncep.noaa.gov/products/predictions/610day/fxus06.html)\n- 2026-11-15: SFGate reports back-to-back storms this week with heavy rain, thunder and gusts up to 60 mph. [SFGate](https://www.sfgate.com/weather/article/storms-waves-bay-area-22532191.php)\n- 2026-11-14: The NWS flagged \"increased risk of heavy precipitation and strong winds Nov. 25-27\", possibly coinciding with king tides. The article also says the Nov 13 storm brought nearly an inch to the city. [Yahoo](https://www.yahoo.com/news/weather-news/articles/bay-area-mostly-dry-weather-130000994.html)\n- 2026-11-13: NBC Bay Area reports record ocean warmth off California during an \"extreme El Niño\" (Daniel Swain). [NBC Bay Area](https://www.nbcbayarea.com/news/local/california-ocean-temperature-records/4175530/)\n- 2026-11-10: Fox Weather's outlook showed a wet West around Nov 26-27. [Fox Weather](https://www.foxweather.com/weather-news/thanksgiving-week-weather-outlook-rain-storms-snow)\n\n## 4. Base rates\n- The daily chance of measurable rain at SFO in late November is about 22-24%, which implies roughly 76-78% climatological odds of 0.00 in or a trace. [Weather Spark](https://weatherspark.com/m/145212/11/Average-Weather-in-November-at-San-Francisco-International-Airport-California-United-States)\n- The CLI normal for a single mid-November day is about 0.06 in. Daily totals are strongly right-skewed: most wet days get less than 0.25 in, and days of 1 in or more are rare (record for Nov 15 is 1.03 in).\n- I could not get a year-by-year list of past SFO Nov 26 totals.\n- Context that cuts against pure climatology: this month is already running 3x normal, a strong El Niño is in place, and the pattern is active.\n\n## 5. Other forecasts\n- Kalshi \"Where will it rain on Thanksgiving?\" (prices as of 2026-11-16 13:34 UTC): San Francisco Yes at 0.37 and San Jose at 0.46. These are close matches for \"any rain\", but I did not check the market's exact station or threshold rules.\n- Kalshi \"Rain in San Francisco in Nov 2026\": above 5 in at 0.85, above 6 in at 0.65, above 7 in at 0.34. This implies a lot more rain is expected for the rest of the month beyond the current 2.35 in. The station basis is unverified.\n- I found no Polymarket or Manifold market on this. The Farmers' Almanac calls it a typical late-November setup with rain in the Pacific Northwest. [Farmers' Almanac](https://www.farmersalmanac.com/thanksgiving-weather-forecast)\n\n## 6. Upcoming events before resolution\n- Nov 17-20: Front and storm, with the heavy rain falling before Thanksgiving.\n- Nov 21-22: Weekend system.\n- Nov 24-25: Possible atmospheric river (CPC moderate risk). Watch whether its timing slips into Nov 26, which would push totals into the higher ranges, or speeds up so Thanksgiving is post-frontal showers or dry.\n- Daily from about Nov 19: NWS forecast discussions start covering Nov 26.\n- Daily: CPC 6-10 and 8-14 day outlooks and hazards updates.\n- From about Nov 23: WPC QPF and the NWS point forecast for SFO become useful.\n- About 1:30 AM PST Nov 27: the resolving CLISFO is issued, with possible corrected reissues later that day.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 13:34 UTC; check each market really matches the question)\n- Kalshi: Where will it rain on Thanksgiving? (Thanksgiving 2026). Yes prices: West Palm Beach: 0.49; Jacksonville: 0.50; San Jose: 0.46; Pittsburgh: 0.47; Ontario, CA: 0.43; Detroit: 0.41; Atlanta: 0.38; Miami: 0.38; San Francisco: 0.37; Columbus, OH: 0.41.\n- Kalshi: Where will it snow on Thanksgiving? (Thanksgiving 2026). Yes prices: Minneapolis–St. Paul: 0.31; Cleveland: 0.30; Detroit: 0.26; Madison: 0.26; Milwaukee: 0.28; Pittsburgh: 0.24; Des Moines: 0.23; Denver: 0.21; Columbus, OH: 0.24; Chicago: 0.23.\n- Kalshi: Rain in San Francisco this month? (In Nov 2026). Yes prices: Above 7 inches: 0.34; Above 6 inches: 0.65; Above 5 inches: 0.85; Above 4 inches: 0.96; Above 3 inches: 0.98; Above 2 inches: 0.99; Above 1 inch: 0.9900.\n- Kalshi: Rain in San Francisco on Feb 20, 2027? (On Feb 20, 2027). Yes prices: Above 0 inches: 0.41.\n- Kalshi: SF 49ers vs DAL Cowboys: Both Teams to Score in Every Quarter (SF vs DAL (Nov 15)). Yes prices: Both teams to score in every quarter: 0.9900.\n- Polymarket: What will Based prediction market revenue hit before 2027? (ends 2027-01-01). [Yes, No] prices: $1M: [\"0.04\", \"0.96\"]; $2M: [\"0.0345\", \"0.9655\"]; $3M: [\"0.0315\", \"0.9685\"]; $4M: [\"0.0075\", \"0.9925\"]; $5M: [\"0.021\", \"0.979\"]\n- Polymarket: Sports Prediction Markets taxed as gambling? (ends 2027-04-16). [Yes, No] prices: Sports Prediction Markets taxed as gambling?: [\"0.125\", \"0.875\"]\n- Polymarket: Law banning sports prediction markets enacted in 2026? (ends 2027-01-01). [Yes, No] prices: Law banning sports prediction markets enacted in 2026?: [\"0.04\", \"0.96\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "0.00 in (no measurable precipitation)": 0.6,
+        "0.01-0.09 in": 0.14,
+        "0.10-0.49 in": 0.15,
+        "0.50-0.99 in": 0.065,
+        "1.00 in or more": 0.045
+      },
+      "reasoning": "(a) **Time left:** About 10.5 days. The November 27 CLISFO report, issued around 1:30 a.m. PST, settles the question. Forecasts close today.\n\n(b) **Status quo:** On any given day, SFO most often records no measurable rain, even in late November (about 76% of days are dry). With nothing changed, the answer would be \"0.00 in\".\n\n(c) **Base rates:**\n- Climatological chance of measurable rain on a late-November day at SFO is about 24%.\n- Measurable rain fell on about 1 Thanksgiving in 4 over 1991-2020.\n- Given measurable rain, rough split: about 40% fall in 0.01-0.09 in, about 40% in 0.10-0.49 in, about 13% in 0.50-0.99 in, and about 7% at 1 in or more.\n\n(d) **Strongest evidence:**\n- 2026-11-15, CPC Week-2 hazards: moderate risk of heavy precipitation in NorCal on November 24-25. For November 26, GEFS and ECMWF ensembles agree the trough retreats westward and exceedance probabilities fall. A slight risk still covers November 23-29.\n- 2026-11-14, NWS via SF Chronicle: increased risk of heavy rain and wind on November 25-27.\n- Strong El Niño and a very active pattern; November month-to-date rainfall is already 2.35 in.\n- 2026-11-10, Fox Weather: models show a wet pattern on November 26-27.\n- 2026-11-16, Kalshi \"Rain in SF on Thanksgiving\": Yes at 0.37. The threshold is likely above 0 in, which matches \"anything but 0.00/T\" here. This is a reasonably close anchor for P(measurable).\n\n(e) **Unexpected scenario:** The November 24-25 atmospheric river slows by 24-36 hours, as AR timing often slips at day 9-10. Its core then lands on SFO on Thanksgiving, giving more than 1 in. Alternatively, the ridge builds faster and the whole week dries out.\n\n**Reasoning:** I start from the 24% base rate. I adjust upward for the El Niño-driven active pattern and the NWS signal for November 25-27, and partly back down for the CPC's expectation of a retreat on day 11. That gives about 40% measurable, slightly above Kalshi's 0.37. In a wet regime, the split given rain shifts somewhat toward larger amounts. Post-frontal showers following the November 24-25 storm would most often produce light totals.\n\nOption_A: 0.60\nOption_B: 0.14\nOption_C: 0.15\nOption_D: 0.065\nOption_E: 0.045"
+    },
+    {
+      "value": {
+        "0.00 in (no measurable precipitation)": 0.6,
+        "0.01-0.09 in": 0.14,
+        "0.10-0.49 in": 0.14,
+        "0.50-0.99 in": 0.07,
+        "1.00 in or more": 0.05
+      },
+      "reasoning": "(a) **Time left:** About 10.5 days until the CLISFO report dated November 27, 2026 is issued. Forecasts close today, November 16, so the decision rests on week-2 guidance.\n\n(b) **Status quo:** On a typical late-November day at SFO there is no measurable rain (about a 76% daily chance of dry). The current pattern is far wetter than usual, but the guidance points to a lull on November 26 itself.\n\n(c) **Base rates:**\n- Measurable rain falls on about 24% of late-November days at SFO, and on roughly 1 Thanksgiving in 4 in 1991-2020.\n- It is somewhat more likely in El Niño years.\n- Given a wet day, amounts skew small:\n  - about 40-45% fall in 0.01-0.09 in;\n  - about 35% fall in 0.10-0.49 in;\n  - about 12-15% fall in 0.50-0.99 in;\n  - about 5-8% are 1.00 in or more.\n- Unconditional base rates: about 76% / 10% / 9% / 3% / 1.5%.\n\n(d) **Strongest evidence:**\n- **Wet season so far:** SFO had 2.35 in month to date by November 15, with 0.80 in on November 15 alone. A strong El Niño is under way.\n- **CPC Week-2 Hazards Outlook (November 15):** it gives a moderate risk of heavy precipitation in northern California on November 24-25. It adds that \"by day 11 (Nov 26)\" the GEFS and ECMWF ensembles agree on a westward retreat of the trough, with lower exceedance probabilities. A slight risk still covers all of November 23-29.\n- **NWS via the SF Chronicle (November 14):** cites an increased risk of heavy precipitation on November 25-27.\n- **Fox Weather (November 10):** depicted a wet pattern on November 26-27.\n- **Kalshi \"Rain in San Francisco on Thanksgiving\" (November 16):** Yes at 0.37. Its threshold is probably above 0 in, but the settlement station is unverified and may be downtown rather than SFO. It is the best available anchor for P(measurable).\n- **Kalshi November total:** above 5 in priced at 0.85, which implies a very active rest of the month.\n\n(e) **Unexpected scenario:** The November 24-25 atmospheric river slows by 24-36 hours, as AR timing often slips at 10-day leads. Its main band or trailing cold front would then hit SFO on November 26 and bring 1 in or more. The opposite is also possible: the ridge builds in faster and November 26 is entirely dry despite the hype.\n\n**Reasoning:** I start from the climatological P(measurable) of about 24%. I move up to about 40% because of the very active El Niño pattern, the CPC slight risk covering the whole week, and the Kalshi price of 0.37. I stop near the market because the CPC specifically expects the pattern to retreat on November 26. Post-frontal showers or lingering rain early on the 26th would most likely produce light amounts. A timing slip could still bring heavy totals, so I keep meaningful weight on the upper bins.\n\nOption_A: 0.60\nOption_B: 0.14\nOption_C: 0.14\nOption_D: 0.07\nOption_E: 0.05"
+    },
+    {
+      "value": {
+        "0.00 in (no measurable precipitation)": 0.59,
+        "0.01-0.09 in": 0.15,
+        "0.10-0.49 in": 0.15,
+        "0.50-0.99 in": 0.069,
+        "1.00 in or more": 0.041
+      },
+      "reasoning": "(a) **Time left:** The outcome is decided by the November 26 observations at SFO. It is published in the CLISFO report around 1:30 a.m. PST on November 27, about 10.5 days from now. At this lead time forecasts for a single day have limited skill.\n\n(b) **Status quo:** On any given day, the default at SFO is no measurable rain (0.00 or T). Even in late November that holds on about 76% of days.\n\n(c) **Base rates:**\n- In late November, SFO has roughly a 24% daily chance of measurable rain.\n- About 1 Thanksgiving in 4 has been wet since 1991, a little more often in El Niño years.\n- Daily amounts are right-skewed. When it rains, roughly 40-45% of wet days get under 0.10 in, about 35-40% get 0.10-0.49 in, about 12% get 0.50-0.99 in, and about 5-8% get 1 in or more.\n- That gives a climatological split of roughly 76 / 10 / 9 / 3 / 2.\n\n(d) **Strongest evidence:**\n- **Wet regime (Nov 13-16):** The pattern is very wet. SFO got 0.80 in on Nov 15, month-to-date is 2.35 in, and a strong El Niño is under way.\n- **Kalshi month total (Nov 16):** The market implies a very wet rest of November (85% for more than 5 in).\n- **CPC Week-2 Hazards (Nov 15):** There is a moderate risk of heavy precipitation in NorCal on Nov 24-25. But on Nov 26 there is \"good agreement\" that the trough retreats westward and exceedance probabilities fall. A slight risk still covers California for Nov 23-29.\n- **NWS via the SF Chronicle (Nov 14):** It cited \"increased risk of heavy precipitation… Nov. 25-27.\"\n- **Kalshi San Francisco Thanksgiving rain market (Nov 16):** Yes is at 0.37, likely meaning any measurable rain. This is the closest anchor, though its exact station and threshold are unverified.\n- **My adjustment:** I start from climatology (24% wet) and move up to about 41% wet. That is slightly above the Kalshi price because of the active storm track and the risk of lingering post-frontal showers. I keep it near the market because the CPC signal points to easing on the day itself.\n\n(e) **Unexpected outcome:** The Nov 24-25 atmospheric river could slow down, as these often do in El Niño patterns, and stall over the Bay Area into Thursday. SFO could then record 1 in or more on Thanksgiving. Alternatively, the ridge could rebuild faster than expected and the day is completely dry. A third possibility is that showers after the front leave only 0.02 in.\n\nOption_A: 0.59\nOption_B: 0.15\nOption_C: 0.15\nOption_D: 0.069\nOption_E: 0.041"
+    },
+    {
+      "value": {
+        "0.00 in (no measurable precipitation)": 0.58,
+        "0.01-0.09 in": 0.15,
+        "0.10-0.49 in": 0.15,
+        "0.50-0.99 in": 0.075,
+        "1.00 in or more": 0.045
+      },
+      "reasoning": "(a) **Time left:** Ten days until Thanksgiving. The outcome is known when the CLISFO report is issued around 1:30 a.m. PST on Nov 27, 2026, about 10.5 days from now.\n\n(b) **Status quo:** On any given late-November day at SFO, the most likely outcome is no measurable rain (0.00 in or a trace). The current pattern is wet, with storms on Nov 13-15, Nov 17-20, around Nov 21-22 and possibly Nov 24-25. Even so, ensembles show the trough pulling back and precipitation chances easing by Nov 26.\n\n(c) **Base rates:**\n- Climatologically, about 22-24% of late-November days at SFO have measurable rain, so 0.00 in or a trace happens roughly 76-78% of the time.\n- Among wet days, roughly 40% get 0.01-0.09 in and about 40% get 0.10-0.49 in. About 13% get 0.50-0.99 in, and 1 in or more is rare (around 5-7%).\n- The normal for the day is about 0.06 in.\n\n(d) **Strongest evidence:**\n- CPC 6-10 and 8-14 day outlooks (Nov 15) favor above-normal precipitation for coastal northern California, with more than 60% and more than 50% probabilities. A strong El Niño is in place and the month is already at 3x normal (2.35 in through Nov 15).\n- The CPC Hazards Outlook (Nov 15) puts a moderate risk of heavy rain on Nov 24-25. It states that \"by day 11 (Nov 26), there is good agreement in GEFS and ECMWF\" that the trough retreats westward and exceedance probabilities fall. A slight risk still covers Nov 23-29.\n- The NWS (Nov 14) flagged an increased risk of heavy rain and wind for Nov 25-27.\n- Kalshi prices \"rain in San Francisco on Thanksgiving\" at 0.37. That is a close but unverified match for this question; the exact station and threshold are not checked.\n- Kalshi's monthly market implies roughly 3-4 more inches over the rest of November, which signals a very active pattern.\n\nI move up from the roughly 23% climatological chance of measurable rain to about 42%. That is slightly above the Kalshi price, because of the El Niño, the active storm track and the NWS flag for Nov 25-27. The day-11 retreat signal keeps me from going higher. Given rain, an active pattern shifts the amounts somewhat toward the heavier ranges.\n\n(e) **Unexpected-outcome scenario:** The Nov 24-25 atmospheric river slows down, as offshore troughs often do, and its main plume stalls over the Bay Area on Thursday. That could bring 1 in or more to SFO. Alternatively, a light post-frontal shower leaves only a trace, which resolves as 0.00 in.\n\nOption_A: 0.58\nOption_B: 0.15\nOption_C: 0.15\nOption_D: 0.075\nOption_E: 0.045"
+    },
+    {
+      "value": {
+        "0.00 in (no measurable precipitation)": 0.56,
+        "0.01-0.09 in": 0.15,
+        "0.10-0.49 in": 0.17,
+        "0.50-0.99 in": 0.08,
+        "1.00 in or more": 0.04
+      },
+      "reasoning": "(a) **Time left:** The outcome is known when the CLISFO report dated Nov 27 is issued, about 11 days from now, around 1:30 a.m. PST on Nov 27, 2026.\n\n(b) **Status quo:** Most days at SFO, even in late November, record no measurable rain. With no specific storm timed for Nov 26, the default outcome is 0.00 in or a trace.\n\n(c) **Base rates:** The climatological chance of measurable rain on a late-November day at SFO is about 22-24%. Measurable days split roughly as follows:\n- about half bring 0.01-0.09 in,\n- about a third bring 0.10-0.49 in,\n- about 10% bring 0.50-0.99 in,\n- a few percent bring 1 in or more.\n\nThat gives approximate climatological odds of:\n- 0.00 in: 77%\n- 0.01-0.09 in: 11%\n- 0.10-0.49 in: 8%\n- 0.50-0.99 in: 2.5%\n- 1.00 in or more: 1%\n\n(d) **Strongest evidence:**\n- **CPC Hazards, Nov 15:** moderate risk of heavy precipitation for northern California on Nov 24-25. By Nov 26 the GEFS and ECMWF ensembles agree the trough retreats westward and exceedance probabilities drop. A slight risk of heavy precipitation still covers California for the whole of Nov 23-29.\n- **CPC 6-10 and 8-14 day outlooks, Nov 15:** above-normal precipitation favored for coastal California, with more than 50-60% confidence.\n- **NWS, Nov 14:** flagged increased risk of heavy precipitation and wind on Nov 25-27.\n- **Season context:** a strong El Niño and an active pattern; the month is already at 3x normal.\n- **Kalshi, Nov 16:** \"San Francisco rain on Thanksgiving\" trades at 0.37 Yes. The likely threshold is any measurable rain, but the station is unverified. San Jose trades at 0.46.\n\nI anchor on Kalshi's roughly 37-40% chance of measurable rain and nudge it slightly upward for the very active pattern and the chance that the Nov 24-25 storm slows down. That is a large move from the 23% climatological rate.\n\n(e) **Unexpected outcome scenario:** The Nov 24-25 atmospheric river stalls or slows, so its main plume or a trailing wave hits on Thanksgiving and delivers 1 in or more. Alternatively, ridging builds quickly behind the storm and Thanksgiving is completely dry, despite the \"wet Thanksgiving\" headlines.\n\nOption_A: 0.56\nOption_B: 0.15\nOption_C: 0.17\nOption_D: 0.08\nOption_E: 0.04"
+    },
+    {
+      "value": {
+        "0.00 in (no measurable precipitation)": 0.56,
+        "0.01-0.09 in": 0.15,
+        "0.10-0.49 in": 0.17,
+        "0.50-0.99 in": 0.075,
+        "1.00 in or more": 0.045
+      },
+      "reasoning": "(a) **Time left:** The question resolves with the CLISFO report dated Nov 27, 2026, about 10.5 days from now. Thanksgiving is about day 10 of the forecast, so no short-range rain-amount forecast covers it yet.\n\n(b) **Status quo:** Most days at SFO, even in late November, record no measurable rain. The default outcome is \"0.00 in\". However, the current pattern is unusually active, with a strong El Niño and storms on Nov 13-15, Nov 18-19, Nov 21 and Nov 24-25. So \"no rain\" is a weaker default than usual.\n\n(c) **Base rates:**\n- Climatologically, about 22-24% of late-November days at SFO get measurable rain. That leaves about 76-78% for 0.00 in or a trace.\n- Daily totals are heavily skewed toward small amounts. Of wet days, roughly 40% get 0.01-0.09 in, about 40% get 0.10-0.49 in, about 13% get 0.50-0.99 in, and about 5% or less get 1 in or more.\n\n(d) **Strongest evidence:**\n- **CPC hazards outlook (Nov 15):**\n  - It shows a moderate risk of heavy precipitation for northern California on Nov 24-25.\n  - By Nov 26, the GEFS and ECMWF ensembles agree well that the trough retreats westward, and the chances of heavy totals drop.\n  - A slight risk of heavy precipitation still covers California for the whole of Nov 23-29.\n- **CPC 6-10 and 8-14 day outlooks (Nov 15):** above-normal precipitation is favored for the West Coast, with uncertainty about how close the offshore trough comes.\n- **NWS (Nov 14):** it flagged an increased risk of heavy precipitation and strong winds for Nov 25-27, which conflicts somewhat with CPC's later view.\n- **Kalshi (Nov 16):** \"Rain in San Francisco on Thanksgiving\" trades at 0.37 Yes. This is the closest anchor for \"any measurable rain\". The station is unverified (it may be downtown rather than SFO) and the market is thinly traded, but it is still informative.\n- **Kalshi monthly market:** it implies 3-5 more inches for the rest of November, which confirms a very wet regime.\n\n(e) **Surprise scenario:** The Nov 24-25 atmospheric river slows down, and its cold front or main moisture plume crosses SFO on Thanksgiving. That would give 1 in or more. Alternatively, the trough retreats completely and Thanksgiving is dry, with high pressure building behind the front.\n\n**How far I moved:** I started from the climatological 22-24% chance of measurable rain. The active El Niño pattern, the CPC wet signal and the Kalshi price of 0.37 push this up. I put measurable rain at about 44%, slightly above Kalshi because of the NWS Nov 25-27 flag and the possibility that the storm's timing slips. The ensembles' agreement on easing by Nov 26 keeps me from going higher.\n\nGiven rain, I shifted the amounts somewhat toward larger totals than climatology, because this is a storm-heavy pattern.\n\nOption_A: 0.56\nOption_B: 0.15\nOption_C: 0.17\nOption_D: 0.075\nOption_E: 0.045"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "0.00 in (no measurable precipitation)": 0.5817,
+    "0.01–0.09 in": 0.1467,
+    "0.10–0.49 in": 0.155,
+    "0.50–0.99 in": 0.0723,
+    "1.00 in or more": 0.0443
+  },
+  "usage": [
+    {
+      "question_id": "46847",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 7.78e-05,
+      "input_tokens": 508,
+      "output_tokens": 54,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 64.4,
+      "notional_cost_usd": 0.305532,
+      "input_tokens": 103184,
+      "output_tokens": 4001,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.0,
+      "notional_cost_usd": 0.07397200000000001,
+      "input_tokens": 6370,
+      "output_tokens": 1151,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.4,
+      "notional_cost_usd": 0.078532,
+      "input_tokens": 6370,
+      "output_tokens": 1379,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.0005687000000000001,
+      "input_tokens": 2467,
+      "output_tokens": 151,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.0,
+      "notional_cost_usd": 0.0006875,
+      "input_tokens": 2671,
+      "output_tokens": 307,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00016363,
+      "input_tokens": 2468,
+      "output_tokens": 151,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.7,
+      "notional_cost_usd": 0.028664000000000002,
+      "input_tokens": 6370,
+      "output_tokens": 1249,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.2,
+      "notional_cost_usd": 0.00026366,
+      "input_tokens": 2671,
+      "output_tokens": 347,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0007685999999999999,
+      "input_tokens": 2544,
+      "output_tokens": 520,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.0003669,
+      "input_tokens": 2545,
+      "output_tokens": 556,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 62.4,
+      "notional_cost_usd": 0.2299333,
+      "input_tokens": 97192,
+      "output_tokens": 4162,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.2,
+      "notional_cost_usd": 0.07455600000000001,
+      "input_tokens": 6453,
+      "output_tokens": 1147,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.078128,
+      "input_tokens": 6452,
+      "output_tokens": 1326,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.3,
+      "notional_cost_usd": 0.08078400000000001,
+      "input_tokens": 6454,
+      "output_tokens": 1458,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.000746,
+      "input_tokens": 2511,
+      "output_tokens": 488,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0007203,
+      "input_tokens": 2590,
+      "output_tokens": 405,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00025857,
+      "input_tokens": 2512,
+      "output_tokens": 340,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.0008345000000000001,
+      "input_tokens": 2691,
+      "output_tokens": 593,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00016484000000000003,
+      "input_tokens": 2589,
+      "output_tokens": 151,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46847",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00016607000000000001,
+      "input_tokens": 2693,
+      "output_tokens": 151,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9559
+}
