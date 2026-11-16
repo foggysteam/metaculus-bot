@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T01:28:08.977419+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T01:24:22.699698+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46824,
+    "post_id": 46564,
+    "url": "https://www.metaculus.com/questions/46564",
+    "type": "DiscreteQuestion",
+    "unit": "R$",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will be Grupo Casas Bahia's (BHIA3) closing share price on 27 November 2026?",
+    "resolution_criteria": "This question resolves to the closing price of Grupo Casas Bahia S.A. (B3 ticker BHIA3) for the trading session of 27 November 2026, as reported in the \"Close\" column of the Yahoo Finance historical data page for BHIA3.SA: https://finance.yahoo.com/quote/BHIA3.SA/history/. Values are in Brazilian reais, so a close printed as 0.83 in that column resolves as 0.83 (i.e., R$0.83). The price used is the close for that session in the share structure in effect on that date, so if a share grouping (grupamento/reverse split) or comparable share-count-changing corporate action takes effect on or before 27 November 2026, the question resolves to the post-action price displayed for that session. If Yahoo Finance does not display a closing price for that session (for example because trading in BHIA3 was suspended or the exchange was closed), the question resolves to the most recent closing price reported for BHIA3 on or before 27 November 2026. If that Yahoo Finance page is inaccessible or no longer shows historical prices, the B3 official closing price for 27 November 2026 as reported by [credible sources](https://www.metaculus.com/faq/#definitions) will be used.",
+    "fine_print": "",
+    "close_time": "2026-11-16 04:16 UTC",
+    "scheduled_resolution_time": "2026-11-27 23:00 UTC"
+  },
+  "research": [
+    "I've collected price data and news, and now I'm writing up the findings.\n\n## 1. Resolution source\n\n- 2026-11-13: Yahoo Finance's data feed for BHIA3.SA, which sits behind the history page, shows the last close as **R$0.68** on 13 Nov, with volume of 3.68M shares. The previous close was R$0.68 on 12 Nov. The feed lists the 52-week high as R$4.17. Note that the question background says R$0.69 for 13 Nov, but Yahoo shows 0.68. [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/BHIA3.SA?range=3mo&interval=1d)\n- 2026-11-14: StockPulse also recorded R$0.68. [StockPulse](https://api.stockpulse.de/newstex/913590835)\n- Adjusted close equals close across the last 3 months, so there has been no grouping (reverse split) or other adjustment in that window.\n\n## 2. Current status\n\n- Nothing has settled the question. The stock has traded in a narrow R$0.64 to 0.72 band since 29 Oct, after a collapse in late October.\n\n## 3. Recent news (newest first)\n\n- 2026-11-13: GPA and Casas Bahia signed a definitive settlement ending 17 years of disputes. GPA no longer has to reimburse R$424M of tax contingencies. GPA still owes Casas Bahia R$231.8M in arbitral debt, which will be handled under GPA's extrajudicial recovery plan. BHIA3 closed flat that day. [Financenews](https://financenews.com.br/2026/11/gpa-celebra-acordo-com-grupo-casas-bahia-para-encerrar-de-forma-definitiva-pendencias-e-disputas-entre-as-companhias/), [Seu Dinheiro](https://www.seudinheiro.com/2026/empresas/casas-bahia-bhia3-e-gpa-pcar3-fazem-as-pazes-e-encerram-batalha-envolvendo-r-11-bilhao/), [EconomicNews](https://economicnewsbrasil.com.br/2026/11/14/acordo-entre-gpa-e-casas-bahia-divida/)\n- 2026-11-10: In its answer to the CVM's query, the company said management had not decided on any store closures. [Visno](https://visnoinvest.com.br/news/16391/casas-bahia-bhia3-adia-balanco-do-3t26-e-nega-decisao-sobre-lojas), [Acionista](https://acionista.com.br/grupo-casas-bahia-bhia3-esclarece-noticia-sobre-fechamento-de-lojas/)\n- 2026-11-06: Third-quarter results were postponed from 11 Nov to 10 Dec. [Acionista](https://acionista.com.br/casas-bahia-bhia3-adia-resultados-para-dezembro-em-meio-a-recuperacao-judicial/)\n- 2026-10-26: The stock opened at R$0.83, about 42% below the 23 Oct close of R$1.44. This was the first session after Brazil's presidential run-off. It closed at R$0.90, then fell to R$0.73 on 28 Oct and R$0.64 on 29 Oct. I could not find a clear stated cause for the crash. [Investir é o caminho](https://investirecocaresocomecar.com.br/casas-bahia-bhia3-adia-balanco-3t26/)\n- 2026-10-21: The court accepted the recovery case for processing and gave the company **30 days to file documents, or risk revocation**. [same source](https://investirecocaresocomecar.com.br/casas-bahia-bhia3-adia-balanco-3t26/)\n- 2026-08-31: The stock rose about 40% intraday after the court brought forward the 180-day stay period, which protects the group from creditor actions until 15 Feb 2027. [BP Money](https://bpmoney.com.br/mercado/acoes-da-casas-bahia-bhia3-disparam-40-apos-justica-blindar-varejista-na-recuperacao-judicial/)\n- 2026-08-17: The stock fell about 33% to R$0.44 on the first session after the judicial recovery filing. [InfoMoney](https://www.infomoney.com.br/mercados/bhia3-acao-da-casas-bahia-desaba-mais-de-30-e-vai-a-r-045-com-pedido-recuperacao-judicial/)\n- Analyst targets: Itaú BBA is neutral with a 2027 target of R$1.00 [Acionista](https://acionista.com.br/casas-bahia-bhia3-em-recuperacao-judicial-e-impacto-no-mercado/). Orion rates it sell with a target of R$1.20 [Orion](https://orionresearch.com.br/noticias/casas-bahia-bhia3-despenca-prejuizo-recuperacao-judicial/).\n\n## 4. Base rates and recent path\n\nSelected Yahoo closes, all in R$:\n- **August:** 0.65 (13 Aug), 0.44 (17 Aug), 0.34 (27 Aug, the low), 0.66 (31 Aug), 0.90 (1 Sep)\n- **September:** 0.67 to 0.82 through mid-September, then up to 1.22 by 30 Sep\n- **October:** 1.60 (9 Oct, the peak), 1.09 (14 Oct), 1.43 (20 Oct), 1.44 (23 Oct), 0.90 (26 Oct), 0.73 (28 Oct), 0.64 (29 Oct), 0.69 (30 Oct)\n- **November:** 0.67, 0.70, 0.69, 0.71, 0.72, 0.71, 0.70, 0.68, 0.68 (3 to 13 Nov)\n\nWhat the pattern shows:\n- **Recent volatility:** over the last 11 sessions the daily moves have mostly been 3% or less. That is far calmer than August to October, when 10-observation swings of ±40-60% happened several times.\n- **Volume:** it has fallen from 20-36M shares a day in October to 3.7-8.7M a day in November.\n- **Statistical baseline:** the provided calculation from 3 years of 10-session returns gives p5 0.44, p25 0.59, p50 0.64, p75 0.69, p95 1.05.\n- **Seasonality:** I found no meaningful Black Friday or seasonal pattern for this stock, and I did not compute year-by-year moves from 16 to 27 Nov.\n\n## 5. Other forecasts\n\n- None of the Kalshi or Polymarket markets supplied match BHIA3. They cover unrelated football, tennis, elections and IBOVESPA highs.\n- I did not find a Manifold or Metaculus market on BHIA3, and there is no listed options market for it.\n\n## 6. Upcoming events before 27 Nov\n\n- **Around 20 Nov:** the 30-day deadline from the 21 Oct decision to file documents falls in this period. Missing it risks revocation. This could move the price either way.\n- **20 Nov:** B3 holiday. That leaves 9 trading sessions from 17 to 27 Nov.\n- **Possible news:** confirmation of the roughly 200 further store closures, a next monthly report from the judicial administrator, or leaks about creditor talks led by Camille Faria.\n- **27 Nov:** Black Friday, a normal trading day.\n- **After resolution:** results on 10 Dec and the recovery plan due around late December.\n\nSources: listed inline above, plus [Investing.com history](https://www.investing.com/equities/via-varejo-sa-historical-data) and [Forbes](https://forbes.com.br/forbes-money/2026/08/acao-da-casas-bahia-bhia3-despenca-apos-pedido-de-recuperacao-judicial-envolvendo-dividas-de-r173-bi/).\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 01:24 UTC; check each market really matches the question)\n- Kalshi: Gremio vs Bahia (GPA vs BAH (Nov 18)). Yes prices: Gremio: 0.43; Bahia: 0.30; Tie: 0.26.\n- Kalshi: CA-38 House election: Pedro Antonio Casas vote percent (Vote Percent - Pedro Antonio Casas). Yes prices: At least 28%: 0.97; At least 30%: 0.97; At least 34%: 0.0000; At least 36%: 0.0000; At least 38%: 0.0000; At least 40%: 0.0000; At least 42%: 0.0000; At least 44%: 0.0000; At least 32%: 0.96.\n- Kalshi: Alberca de las Casas vs Brom (Alberca de las Casas vs Brom (Nov 16)). Yes prices: Fantino Alberca de las Casas: 0.53; Arthur Brom: 0.43.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: How high will the IBOVESPA get this year? (2026). Yes prices: At least R$230,000: 0.0300; At least R$235,000: 0.0400; At least R$220,000: 0.0500; At least R$225,000: 0.0700; At least R$215,000: 0.1100; At least R$210,000: 0.4400; At least R$170,500: 0.9900; At least R$171,000: 0.9900; At least R$171,500: 0.9900; At least R$200,000: 0.9900.\n- Kalshi: Will Sam Altman hold super-voting OpenAI shares at IPO? (Immediately following OpenAI's IPO). Yes prices: Will Sam Altman hold super-voting OpenAI shares at IPO?: 0.20.\n- Kalshi: Will Dario Amodei hold super-voting Anthropic shares at IPO? (Immediately following Anthropic's IPO). Yes prices: Will Dario Amodei hold super-voting Anthropic shares at IPO?: 0.01.\n- Kalshi: Bitcoin price at the end of 2026 (On Jan 1, 2027 at 12am EST). Yes prices: 65,000 to 69,999.99: 0.19; 60,000 to 64,999.99: 0.18; 70,000 to 74,999.99: 0.14; 55,000 to 59,999.99: 0.11; 75,000 to 79,999.99: 0.07; 50,000 to 54,999.99: 0.06; 80,000 to 84,999.99: 0.04; 45,000 to 49,999.99: 0.03; 40,000 to 44,999.99: 0.01; 85,000 to 89,999.99: 0.01.\n- Polymarket: Which company has the best Text-to-Image AI end of November? (ends 2026-12-01). [Yes, No] prices: OpenAI: [\"0.8935\", \"0.1065\"]; Reve: [\"0.005\", \"0.995\"]; Meta: [\"0.005\", \"0.995\"]; Google: [\"0.007\", \"0.993\"]; Microsoft AI: [\"0.0225\", \"0.9775\"]; ByteDance: [\"0.004\", \"0.996\"]\n- Polymarket: Which company has the best Text-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: Google: [\"0.9105\", \"0.0895\"]; ByteDance: [\"0.0115\", \"0.9885\"]; Meta: [\"0.026\", \"0.974\"]; Alibaba/Alibaba-ATH: [\"0.01\", \"0.99\"]; OpenAI: [\"0.019\", \"0.981\"]; SpaceXAI: [\"0.0025\", \"0.9975\"]\n- Polymarket: Which company has the best Image-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: MiniMax: [\"0.115\", \"0.885\"]; Google: [\"0.802\", \"0.198\"]; Alibaba/Alibaba-ATH: [\"0.0075\", \"0.9925\"]; ByteDance: [\"0.0135\", \"0.9865\"]; SpaceXAI: [\"0.0275\", \"0.9725\"]; Black Forest Labs: [\"0.0005\", \"0.9995\"]\n- Polymarket: M15 Santa Cruz: Fantino Alberca de las Casas vs Arthur Brom (ends 2026-11-23). [Yes, No] prices: M15 Santa Cruz: Fantino Alberca de las Casas vs Arthur Brom: [\"0.57\", \"0.43\"]\n- Polymarket: M15 Santa Cruz: Fantino Alberca de las Casas vs Leon Achurra Correa (ends 2026-11-22). [Yes, No] prices: M15 Santa Cruz: Fantino Alberca de las Casas vs Leon Achurra Correa: [\"0.5\", \"0.5\"]\n- Polymarket: M15 Alcalá de Henares: Hugo Palacios Plaza vs Jaume Casas Blasi (ends 2026-11-22). [Yes, No] prices: M15 Alcalá de Henares: Hugo Palacios Plaza vs Jaume Casas Blasi: [\"0.5\", \"0.995\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BHIA3.SA: latest close 0.6800 on 2026-11-13.\nTarget date 2026-11-27 is 10 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 10-observation returns over the last 3 years (last year weighted double):\np5: 0.4445, p10: 0.5184, p25: 0.5878, p50: 0.6392, p75: 0.692, p90: 0.8327, p95: 1.0523\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).",
+    "I found no event that settles this question. BHIA3 last closed at **R$0.68 on 13 Nov 2026** (Yahoo). For three weeks it has stayed in a tight R$0.64-0.73 band, after a very volatile August to October. One correction to the question background: it says R$0.69 for 13 Nov, but Yahoo's own data shows R$0.68.\n\n## 1. Resolution source\n- 2026-11-13: Yahoo's chart API, which feeds the BHIA3.SA history page, shows a close of 0.68. The previous close on 12 Nov was also 0.68, and that day traded between 0.67 and 0.70. The adjusted close matches the close, so no corporate action is pending in the data. [Yahoo API](https://query1.finance.yahoo.com/v8/finance/chart/BHIA3.SA?range=3mo&interval=1d)\n- Recent closes from the same data:\n  - 19 Oct to 23 Oct: 1.19, 1.43, 1.38, 1.32, 1.44\n  - 26 Oct to 30 Oct: 0.90, 0.91, 0.73, 0.64, 0.69\n  - 3 Nov to 6 Nov: 0.67, 0.70, 0.69, 0.71 (2 Nov was a holiday)\n  - 9 Nov to 13 Nov: 0.72, 0.71, 0.70, 0.68, 0.68\n- Volume fell from about 20-30M shares a day in October to 3.7-12.6M a day in November.\n- 2026-11-14: A Stockpulse report gave R$0.68 \"on Nov 14\". That was a Saturday, so it is the 13 Nov close carried over. [Stockpulse](https://api.stockpulse.de/newstex/913590835)\n\n## 2. Current status\n- Nothing has settled the question. I found no reverse split (grupamento) announced that would take effect before 27 Nov.\n- 2026-08 or 09 (exact date unclear): B3 notified the company that the stock had been below R$1 since 21 July. It has until 1 March 2027 to fix this, so a grupamento before 27 Nov looks unlikely. The last one, in 2023, combined 25 shares into 1. [Economic News Brasil](https://economicnewsbrasil.com.br/2026/09/17/casas-bahia-abaixo-r-1-bhia3-grupamento/)\n\n## 3. Recent news (newest first)\n- 2026-11-13: GPA and Casas Bahia signed a final settlement ending their disputes from the 2009 partnership. GPA no longer has to reimburse R$424M of tax contingencies. A R$231.8M arbitration debt that GPA owes Casas Bahia is kept and will be handled under GPA's extrajudicial recovery plan. [Financenews](https://financenews.com.br/2026/11/gpa-celebra-acordo-com-grupo-casas-bahia-para-encerrar-de-forma-definitiva-pendencias-e-disputas-entre-as-companhias/), [Seu Dinheiro](https://www.seudinheiro.com/2026/empresas/casas-bahia-bhia3-e-gpa-pcar3-fazem-as-pazes-e-encerram-batalha-envolvendo-r-11-bilhao/), [Economic News Brasil](https://economicnewsbrasil.com.br/2026/11/14/acordo-entre-gpa-e-casas-bahia-divida/)\n- Week of 9-13 Nov: The judicial administrator's report showed a R$13.7bn net loss for January-August. That is about 19 times the company's market value. [Investir e começar](https://investirecocaresocomecar.com.br/casas-bahia-bhia3-prejuizo-13-bilhoes-8-meses/)\n- 9-10 Nov: The CVM letter about the Veja store-closure report, and the company's denial, came and went with no visible price move (closes of 0.72 and 0.71).\n- 26-29 Oct: The stock fell from 1.44 to 0.64, about 55% in four sessions. I could not find a specific news cause. Commentary on possible debt-to-equity conversion and dilution was circulating. [Arevista](https://arevista.com.br/acoes/bhia3-reduz-divida-mas-novas-acoes-aumentam-risco-de-diluicao/)\n- 2026-10-21: The court accepted the judicial recovery for processing. Debt is R$17.3bn, and the 180-day freeze on creditor actions runs from 19 Aug. [Suno](https://www.suno.com.br/noticias/bhia3-recuperacao-judicial-casas-bahia-go/), [BPMoney](https://bpmoney.com.br/negocios/empresas/casas-bahia-bhia3-justica-sp-aprova-recuperacao-judicial/)\n- 14 and 20 Oct: The stock fell about 24% to 1.09 on 14 Oct, then rose 20% to 1.43 on 20 Oct. The reported drop on the 14th doesn't fit Yahoo's data, which shows 1.44 to 1.09 on what looks like 13 Oct, a fall closer to 25%.\n- 2026-08-17: After the judicial recovery filing, the stock fell about 33% to around R$0.44-0.45. [InfoMoney](https://www.infomoney.com.br/mercados/bhia3-acao-da-casas-bahia-desaba-mais-de-30-e-vai-a-r-045-com-pedido-recuperacao-judicial/), [Orion](https://orionresearch.com.br/noticias/casas-bahia-bhia3-despenca-prejuizo-recuperacao-judicial/)\n\n## 4. Base rates\n- **Code baseline** (10-session returns from 0.68, last year weighted double): p5 0.44, p10 0.52, p25 0.59, **p50 0.64**, p75 0.69, p90 0.83, p95 1.05.\n- **Recent 10-session moves** I worked out from the Yahoo data:\n  - 30 Oct to 13 Nov: 0.69 to 0.68 (-1%)\n  - About 9 Oct to 23 Oct: roughly flat around 1.44\n  - 23 Oct to 6 Nov: 1.44 to 0.71 (-51%)\n  - Late August to early September: 0.34 to about 0.75, more than doubling\n- **Two regimes:** August to October saw frequent ±20-50% swings. Since 29 Oct the daily range has narrowed to about ±3-7%.\n- **Seasonality:** I found nothing that makes late-November returns systematic, so I did not tabulate prior years. Black Friday sales news could matter, but results are not due until 10 December.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on BHIA3. None of the markets in your list match: \"Bahia\" is a football club and \"Casas\" are people. Kalshi's IBOVESPA year-high market is only loosely related.\n- Sell-side coverage is minimal. Stockpulse rates it \"Hold\" overall with a technical \"Sell\".\n\n## 6. Upcoming events before 27 Nov\n- Nothing is scheduled. Q3 results are due 10 Dec and the recovery plan around late December, both after resolution.\n- Things that could move the price without warning:\n  - creditor or plan leaks, such as debt-to-equity conversion terms or a plan support agreement\n  - a confirmed store-closure plan\n  - court filings, including the trustee Oliveira Trust's R$75.1M transfer complaint ([Gazeta Mercantil](https://gazetamercantil.com/casas-bahia-bhia3-transferencia-75-milhoes-debentures-recuperacao-judicial))\n  - a grupamento announcement (it could not take effect this quickly)\n  - Black Friday (27 Nov) trading commentary\n- The weather is not relevant.\n\nSources:\n- [Yahoo chart API](https://query1.finance.yahoo.com/v8/finance/chart/BHIA3.SA?range=3mo&interval=1d)\n- [Stockpulse](https://api.stockpulse.de/newstex/913590835)\n- [Economic News Brasil, grupamento](https://economicnewsbrasil.com.br/2026/09/17/casas-bahia-abaixo-r-1-bhia3-grupamento/)\n- [Financenews](https://financenews.com.br/2026/11/gpa-celebra-acordo-com-grupo-casas-bahia-para-encerrar-de-forma-definitiva-pendencias-e-disputas-entre-as-companhias/)\n- [Seu Dinheiro](https://www.seudinheiro.com/2026/empresas/casas-bahia-bhia3-e-gpa-pcar3-fazem-as-pazes-e-encerram-batalha-envolvendo-r-11-bilhao/)\n- [Economic News Brasil, GPA](https://economicnewsbrasil.com.br/2026/11/14/acordo-entre-gpa-e-casas-bahia-divida/)\n- [Investir e começar](https://investirecocaresocomecar.com.br/casas-bahia-bhia3-prejuizo-13-bilhoes-8-meses/)\n- [Arevista](https://arevista.com.br/acoes/bhia3-reduz-divida-mas-novas-acoes-aumentam-risco-de-diluicao/)\n- [Suno](https://www.suno.com.br/noticias/bhia3-recuperacao-judicial-casas-bahia-go/)\n- [BPMoney](https://bpmoney.com.br/negocios/empresas/casas-bahia-bhia3-justica-sp-aprova-recuperacao-judicial/)\n- [InfoMoney](https://www.infomoney.com.br/mercados/bhia3-acao-da-casas-bahia-desaba-mais-de-30-e-vai-a-r-045-com-pedido-recuperacao-judicial/)\n- [Orion](https://orionresearch.com.br/noticias/casas-bahia-bhia3-despenca-prejuizo-recuperacao-judicial/)\n- [Gazeta Mercantil](https://gazetamercantil.com/casas-bahia-bhia3-transferencia-75-milhoes-debentures-recuperacao-judicial)\n- [Arena do Dinheiro](https://arenadodinheiro.com.br/noticias/acao-em-recuperacao-judicial-por-que-bhia3-ainda-sobe/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 01:24 UTC; check each market really matches the question)\n- Kalshi: Gremio vs Bahia (GPA vs BAH (Nov 18)). Yes prices: Gremio: 0.43; Bahia: 0.30; Tie: 0.26.\n- Kalshi: CA-38 House election: Pedro Antonio Casas vote percent (Vote Percent - Pedro Antonio Casas). Yes prices: At least 28%: 0.97; At least 30%: 0.97; At least 34%: 0.0000; At least 36%: 0.0000; At least 38%: 0.0000; At least 40%: 0.0000; At least 42%: 0.0000; At least 44%: 0.0000; At least 32%: 0.96.\n- Kalshi: Alberca de las Casas vs Brom (Alberca de las Casas vs Brom (Nov 16)). Yes prices: Fantino Alberca de las Casas: 0.53; Arthur Brom: 0.43.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.97.\n- Kalshi: How high will the IBOVESPA get this year? (2026). Yes prices: At least R$230,000: 0.0300; At least R$235,000: 0.0400; At least R$220,000: 0.0500; At least R$225,000: 0.0700; At least R$215,000: 0.1100; At least R$210,000: 0.4400; At least R$170,500: 0.9900; At least R$171,000: 0.9900; At least R$171,500: 0.9900; At least R$200,000: 0.9900.\n- Kalshi: Will Sam Altman hold super-voting OpenAI shares at IPO? (Immediately following OpenAI's IPO). Yes prices: Will Sam Altman hold super-voting OpenAI shares at IPO?: 0.20.\n- Kalshi: Will Dario Amodei hold super-voting Anthropic shares at IPO? (Immediately following Anthropic's IPO). Yes prices: Will Dario Amodei hold super-voting Anthropic shares at IPO?: 0.01.\n- Kalshi: Bitcoin price at the end of 2026 (On Jan 1, 2027 at 12am EST). Yes prices: 65,000 to 69,999.99: 0.19; 60,000 to 64,999.99: 0.18; 70,000 to 74,999.99: 0.14; 55,000 to 59,999.99: 0.11; 75,000 to 79,999.99: 0.07; 50,000 to 54,999.99: 0.06; 80,000 to 84,999.99: 0.04; 45,000 to 49,999.99: 0.03; 40,000 to 44,999.99: 0.01; 85,000 to 89,999.99: 0.01.\n- Polymarket: Which company has the best Text-to-Image AI end of November? (ends 2026-12-01). [Yes, No] prices: OpenAI: [\"0.8935\", \"0.1065\"]; Reve: [\"0.005\", \"0.995\"]; Meta: [\"0.005\", \"0.995\"]; Google: [\"0.007\", \"0.993\"]; Microsoft AI: [\"0.0225\", \"0.9775\"]; ByteDance: [\"0.004\", \"0.996\"]\n- Polymarket: Which company has the best Text-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: Google: [\"0.9105\", \"0.0895\"]; ByteDance: [\"0.0115\", \"0.9885\"]; Meta: [\"0.026\", \"0.974\"]; Alibaba/Alibaba-ATH: [\"0.01\", \"0.99\"]; OpenAI: [\"0.019\", \"0.981\"]; SpaceXAI: [\"0.0025\", \"0.9975\"]\n- Polymarket: Which company has the best Image-to-Video AI end of November? (ends 2026-12-01). [Yes, No] prices: MiniMax: [\"0.115\", \"0.885\"]; Google: [\"0.802\", \"0.198\"]; Alibaba/Alibaba-ATH: [\"0.0075\", \"0.9925\"]; ByteDance: [\"0.0135\", \"0.9865\"]; SpaceXAI: [\"0.0275\", \"0.9725\"]; Black Forest Labs: [\"0.0005\", \"0.9995\"]\n- Polymarket: M15 Santa Cruz: Fantino Alberca de las Casas vs Arthur Brom (ends 2026-11-23). [Yes, No] prices: M15 Santa Cruz: Fantino Alberca de las Casas vs Arthur Brom: [\"0.57\", \"0.43\"]\n- Polymarket: M15 Santa Cruz: Fantino Alberca de las Casas vs Leon Achurra Correa (ends 2026-11-22). [Yes, No] prices: M15 Santa Cruz: Fantino Alberca de las Casas vs Leon Achurra Correa: [\"0.5\", \"0.5\"]\n- Polymarket: M15 Alcalá de Henares: Hugo Palacios Plaza vs Jaume Casas Blasi (ends 2026-11-22). [Yes, No] prices: M15 Alcalá de Henares: Hugo Palacios Plaza vs Jaume Casas Blasi: [\"0.5\", \"0.995\"]\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BHIA3.SA: latest close 0.6800 on 2026-11-13.\nTarget date 2026-11-27 is 10 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 10-observation returns over the last 3 years (last year weighted double):\np5: 0.4445, p10: 0.5184, p25: 0.5878, p50: 0.6392, p75: 0.692, p90: 0.8327, p95: 1.0523\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 0.56,
+        "p25": 0.615,
+        "p50": 0.67,
+        "p75": 0.73,
+        "p90": 0.82
+      },
+      "reasoning": "(a) Time left: 9 B3 trading sessions (17 to 27 November, with 20 November a holiday). The outcome will be known at the close on 27 November 2026, about 11 days from now.\n\n(b) Latest known value: R$0.68 close on 13 November 2026 (Yahoo BHIA3.SA). The question background says R$0.69, but the resolution source shows 0.68.\n\n(c) If nothing changed: R$0.68.\n\n(d) If the current trend continued: the stock has been flat in a R$0.64 to 0.72 band since 29 October, edging down slightly from about 0.72 to 0.68. Over a longer window the drift is negative. Extending the trend gives roughly R$0.64 to 0.68.\n\n(e) Historical variation: the 3-year empirical 10-session distribution has p5 0.44, p50 0.64 and p95 1.05. That window includes a strong downward drift and the very high-volatility August to October period. Recent realized volatility is much lower: daily moves are mostly 3% or less, and volume has fallen from 20-36M to 4-9M shares a day. If daily volatility runs at 4-5%, a 9-session move has a standard deviation of roughly 12-15%. The risk of a sudden jump back to the high-volatility regime fattens both tails.\n\n(f) Experts and markets:\n- There is no options market or prediction market on BHIA3.\n- Itaú BBA is neutral with a 2027 target of R$1.00. Orion rates it sell with a target of R$1.20.\n- These targets have little bearing on an 11-day horizon.\n- The question creator expects the price to fall between R$0.40 and 1.20.\n\n(g) Unexpected scenarios:\n- Low: the company misses the 30-day document deadline (around 20 November) and the court threatens to revoke the processing decision. A confirmed plan to close about 200 more stores, or leaks of severe dilution or a debt-to-equity conversion in the plan, could also hit the stock. Any of these could cut it 30-40%, to about R$0.42-0.48.\n- High: leaks that creditor talks under Camille Faria favour a plan that preserves more equity value, or a strategic investor rumour, or a retail-driven squeeze like the 40% one-day jump in August or the September-October run. These could take it to R$0.95-1.10.\n\nI anchor the median slightly below the last close, at R$0.67, reflecting the mild negative drift and the deadline risk. I keep both tails fat for the regime-shift risk, with the upper tail skewed longer, as fits a penny stock.\n\nPercentile 1: 0.42\nPercentile 5: 0.51\nPercentile 10: 0.56\nPercentile 20: 0.60\nPercentile 30: 0.63\nPercentile 40: 0.65\nPercentile 50: 0.67\nPercentile 60: 0.69\nPercentile 70: 0.71\nPercentile 80: 0.75\nPercentile 90: 0.82\nPercentile 95: 0.90\nPercentile 99: 1.08"
+    },
+    {
+      "value": {
+        "p10": 0.55,
+        "p25": 0.615,
+        "p50": 0.67,
+        "p75": 0.735,
+        "p90": 0.83
+      },
+      "reasoning": "(a) **Time left:** About 11.5 days. Resolution is the close on Friday 27 November 2026. That leaves 9 trading sessions (17 to 27 Nov), since 20 Nov is a B3 holiday.\n\n(b) **Latest known value:** R$0.68 at the close on 13 Nov 2026 (Yahoo Finance BHIA3.SA). The question background says R$0.69, but Yahoo shows 0.68.\n\n(c) **If nothing changed:** R$0.68.\n\n(d) **If the current trend continued:**\n- Since 29 Oct the stock has moved sideways in a R$0.64 to 0.72 band, drifting slightly down from 0.72 to 0.68.\n- Volume has dried up, falling from 20 to 36M shares a day in October to 4 to 9M a day.\n- Continuing that gives roughly R$0.64 to 0.68.\n- The longer-run downtrend since the crash after the October run-off points somewhat lower.\n\n(e) **Historical variation:**\n- Over 10 trading sessions, the 3-year empirical baseline gives p5 0.44, p25 0.59, p50 0.64, p75 0.69, p95 1.05. That baseline is skewed by the extreme August to October regime, when ±40-60% swings happened several times.\n- Recent daily moves have been at most about 3%.\n- A reasonable forward volatility for a penny stock in judicial recovery is about 4 to 6% a day. Over 9 sessions that is about 15 to 18%, with fat tails.\n\n(f) **Experts and markets:**\n- There is no options market or prediction market on BHIA3.\n- Itaú BBA has a 2027 target of R$1.00 (neutral). Orion has a target of R$1.20 (sell). These targets are not informative for a 2-week horizon.\n\n(g) **Unexpected scenarios:**\n- **Low:** The company misses the roughly 20 Nov document deadline, or the court threatens to revoke processing. Alternatively, a confirmed closure of 200 more stores or leaked plan terms imply massive dilution of shareholders or a debt-to-equity conversion. The stock could then fall 30 to 40%, to about R$0.42 to 0.48.\n- **High:** Leaks of a creditor deal led by Camille Faria that preserves some equity value, or a strategic investor or asset sale, set off a retail short squeeze. That could repeat the September/October run toward R$1.0 to 1.2.\n\nI center slightly below the last close, because of the negative drift typical of distressed equity and the baseline median of 0.64. The tails are wide, with a fatter right tail in R$ terms because returns are roughly lognormal.\n\nPercentile 1: 0.42\nPercentile 5: 0.50\nPercentile 10: 0.55\nPercentile 20: 0.60\nPercentile 30: 0.63\nPercentile 40: 0.655\nPercentile 50: 0.67\nPercentile 60: 0.69\nPercentile 70: 0.715\nPercentile 80: 0.755\nPercentile 90: 0.83\nPercentile 95: 0.91\nPercentile 99: 1.12"
+    },
+    {
+      "value": {
+        "p10": 0.53,
+        "p25": 0.6,
+        "p50": 0.67,
+        "p75": 0.74,
+        "p90": 0.84
+      },
+      "reasoning": "(a) **Time left:** About 11.5 days, or 9 B3 trading sessions (17-27 Nov, excluding the 20 Nov holiday). The outcome is known at the 27 Nov close.\n\n(b) **Latest value:** R$0.68 close on 13 Nov 2026 per Yahoo Finance. The background says 0.69.\n\n(c) **If nothing changed:** About R$0.68.\n\n(d) **If the trend continued:** The stock has been flat to slightly down in a R$0.64-0.72 band since 29 Oct, after the late-October crash. The longer-term trend is strongly negative, so roughly R$0.64-0.67. The code baseline median of 0.64 reflects the stock's 3-year downward drift.\n\n(e) **Historical variation:**\n- Over 10 sessions, the empirical p5-p95 range is roughly 0.44-1.05, a span of about -35% to +55%.\n- Volatility in November has compressed: daily moves are mostly 3% or less and volume is down.\n- Still, this is a stock in judicial recovery where ±40% swings happened several times between August and October.\n\n(f) **Experts and markets:** There are no options or prediction markets on BHIA3. Analyst targets are not informative over this horizon: Itaú BBA neutral at R$1.00 for 2027, Orion sell at R$1.20. The equity is a residual claim behind about R$14.9B of unsecured debt, so the fundamental pull is downward. The next hard catalysts (10 Dec results, late-December plan) fall after resolution.\n\n(g) **Scenarios:**\n- **Low:** The company misses the roughly 20 Nov document deadline or faces a revocation or bankruptcy (falência) threat. Or it confirms about 200 more store closures alongside a heavy dilution or debt-to-equity conversion leak. The stock could fall to R$0.40-0.48.\n- **High:** Creditor-talk headlines led by Camille Faria point to a plan that preserves equity value, or a retail short-squeeze around Black Friday. The stock could rally to R$0.95-1.15, as in the September-October run.\n\nPercentile 1: 0.40\nPercentile 5: 0.48\nPercentile 10: 0.53\nPercentile 20: 0.58\nPercentile 30: 0.62\nPercentile 40: 0.65\nPercentile 50: 0.67\nPercentile 60: 0.69\nPercentile 70: 0.72\nPercentile 80: 0.76\nPercentile 90: 0.84\nPercentile 95: 0.93\nPercentile 99: 1.12"
+    },
+    {
+      "value": {
+        "p10": 0.53,
+        "p25": 0.6025,
+        "p50": 0.67,
+        "p75": 0.7375,
+        "p90": 0.84
+      },
+      "reasoning": "(a) Time left: about 11 days. There are 9 B3 trading sessions from 16 Nov to 27 Nov, since 20 Nov is a holiday. The result will be known at the close on 27 Nov 2026.\n\n(b) Latest known value: R$0.68 at the close on 13 Nov 2026, from Yahoo Finance data. The question background says R$0.69. The stock has stayed between R$0.64 and R$0.73 since 29 Oct.\n\n(c) If nothing changed: about R$0.68.\n\n(d) If the current trend continued: the trend is flat to slightly down (0.72, 0.71, 0.70, 0.68, 0.68). That points to roughly R$0.64-0.68, close to the code baseline median of R$0.64.\n\n(e) Historical variation: the 3-year empirical 10-session distribution gives p5 0.44, p50 0.64 and p95 1.05.\n- In August to October, swings of ±20-50% over two weeks were common.\n- Since late October, daily moves have shrunk to about ±3-7% and volume has dropped.\n- A daily volatility of about 5-6% over 9 sessions implies a standard deviation of roughly 15-18%, with fat tails.\n\n(f) Expectations of experts and markets: there are no options or prediction markets on BHIA3, and sell-side coverage is minimal. The equity is a residual claim far underwater against R$14.9bn of unsecured debt. That supports a mild downward drift and a risk of dilution from a debt-to-equity conversion.\n\n(g) Unexpected scenarios:\n- **Low:** recovery-plan terms leak showing massive debt-to-equity dilution for current holders, or a confirmed closure of about 200 stores plus weak Black Friday sales. Either could push the price to R$0.40-0.45.\n- **High:** a retail speculative squeeze, or news of a strategic investor or plan support agreement that is favourable to equity. Either could push the price above R$1.00, as in the August-September run from R$0.34 to R$0.75.\n\nPercentile 1: 0.40\nPercentile 5: 0.48\nPercentile 10: 0.53\nPercentile 20: 0.585\nPercentile 30: 0.62\nPercentile 40: 0.65\nPercentile 50: 0.67\nPercentile 60: 0.69\nPercentile 70: 0.715\nPercentile 80: 0.76\nPercentile 90: 0.84\nPercentile 95: 0.93\nPercentile 99: 1.15"
+    },
+    {
+      "value": {
+        "p10": 0.54,
+        "p25": 0.605,
+        "p50": 0.67,
+        "p75": 0.74,
+        "p90": 0.84
+      },
+      "reasoning": "(a) About 11 days, or 9 to 10 B3 trading sessions from 16 Nov to the 27 Nov close. The outcome will be known on the evening of 27 Nov 2026.\n\n(b) The latest value is R$0.68, the Yahoo Finance close on 13 Nov 2026. The background's R$0.69 appears slightly off.\n\n(c) If nothing changed, the close would be about R$0.68.\n\n(d) The trend since 29 Oct is flat to slightly down, in a R$0.64-0.73 band. Continuing it gives roughly R$0.65-0.68. The longer-term drift, which reflects dilution fears and a deep RJ subordination, is negative. The code baseline median is 0.64.\n\n(e) Historical variation is large. The code baseline 10-session distribution from 0.68 is p5 0.44, p25 0.59, p50 0.64, p75 0.69, p95 1.05. The current regime is calmer, with daily moves of about ±3-7% and lower volume, which implies about ±12-18% over 10 sessions. August to October, however, saw frequent 20-50% swings, so the regime could switch back abruptly.\n\n(f) There is no options market or prediction market on this stock, and sell-side coverage is minimal (\"Hold\" or technical \"Sell\"). Market consensus is implicitly priced in at about R$0.68. Q3 results on 10 Dec and the plan filing in late December both fall after resolution.\n\n(g) Low scenario: a leak of recovery-plan terms showing massive debt-to-equity conversion that wipes out existing holders, or a confirmed 200-store closure with weak Black Friday sales. Either could send the stock back toward the August lows of R$0.34-0.45.\nHigh scenario: news of a creditor support agreement that preserves meaningful equity, or a retail speculative squeeze like the late-August doubling. Either could push it above R$1.00-1.20.\n\nPercentile 1: 0.40\nPercentile 5: 0.49\nPercentile 10: 0.54\nPercentile 20: 0.59\nPercentile 30: 0.62\nPercentile 40: 0.65\nPercentile 50: 0.67\nPercentile 60: 0.69\nPercentile 70: 0.72\nPercentile 80: 0.76\nPercentile 90: 0.84\nPercentile 95: 0.94\nPercentile 99: 1.20"
+    },
+    {
+      "value": {
+        "p10": 0.53,
+        "p25": 0.61,
+        "p50": 0.675,
+        "p75": 0.745,
+        "p90": 0.86
+      },
+      "reasoning": "(a) About 11 days, or 10 trading sessions. The outcome is the 27 November 2026 close, known that evening.\n\n(b) The latest value is R$0.68 at the 13 November 2026 close, from Yahoo's own data. The question background says 0.69.\n\n(c) If nothing changed, the close would be about R$0.68.\n\n(d) The trend is flat to slightly down at R$0.64-0.73 since 29 October, after a sharp fall from 1.44. Continuing it gives roughly R$0.64-0.68.\n\n(e) The code baseline for 10-session moves gives p5 0.44, p25 0.59, p50 0.64, p75 0.69 and p95 1.05. Daily swings have narrowed recently, but August to October showed ±20-50% moves within two weeks. Prices trade in R$0.01 ticks.\n\n(f) There are no markets or meaningful sell-side forecasts. Stockpulse gives a technical \"Sell\". The equity is a deep residual claim in an R$17bn judicial recovery, so the drift risk is to the downside, for example from dilution fears ahead of the recovery plan.\n\n(g) Low scenario: a leak that the plan converts debt to equity with massive dilution, or a confirmed closure of 200 more stores, pushes the stock to about R$0.40-0.45. High scenario: news of a creditor plan support agreement or a strategic investor, plus retail speculation, pushes it to about R$1.0-1.3.\n\nPercentile 1: 0.39\nPercentile 5: 0.47\nPercentile 10: 0.53\nPercentile 20: 0.59\nPercentile 30: 0.63\nPercentile 40: 0.655\nPercentile 50: 0.675\nPercentile 60: 0.695\nPercentile 70: 0.72\nPercentile 80: 0.77\nPercentile 90: 0.86\nPercentile 95: 0.97\nPercentile 99: 1.25"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 0.5323,
+    "p25": 0.6069,
+    "p50": 0.6703,
+    "p75": 0.7404,
+    "p90": 0.8477
+  },
+  "usage": [
+    {
+      "question_id": "46824",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.4,
+      "notional_cost_usd": 7.57e-05,
+      "input_tokens": 507,
+      "output_tokens": 50,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00029120000000000003,
+      "input_tokens": 1182,
+      "output_tokens": 110,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 89.4,
+      "notional_cost_usd": 0.3460039,
+      "input_tokens": 113612,
+      "output_tokens": 4995,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.4,
+      "notional_cost_usd": 0.087296,
+      "input_tokens": 7743,
+      "output_tokens": 1268,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.9,
+      "notional_cost_usd": 0.087408,
+      "input_tokens": 7742,
+      "output_tokens": 1274,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 0.0008711000000000001,
+      "input_tokens": 2974,
+      "output_tokens": 553,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.0008658,
+      "input_tokens": 2930,
+      "output_tokens": 560,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.00029291,
+      "input_tokens": 2977,
+      "output_tokens": 399,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.1,
+      "notional_cost_usd": 0.026366599999999997,
+      "input_tokens": 7744,
+      "output_tokens": 1120,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.00022407999999999998,
+      "input_tokens": 2932,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0007566000000000001,
+      "input_tokens": 2789,
+      "output_tokens": 398,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00027853999999999997,
+      "input_tokens": 2790,
+      "output_tokens": 374,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 98.8,
+      "notional_cost_usd": 0.32259249999999995,
+      "input_tokens": 132930,
+      "output_tokens": 5581,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 9.7,
+      "notional_cost_usd": 0.085228,
+      "input_tokens": 8622,
+      "output_tokens": 813,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.5,
+      "notional_cost_usd": 0.089404,
+      "input_tokens": 8619,
+      "output_tokens": 1023,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.0,
+      "notional_cost_usd": 0.091388,
+      "input_tokens": 8622,
+      "output_tokens": 1121,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0006445,
+      "input_tokens": 2566,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0007342,
+      "input_tokens": 2717,
+      "output_tokens": 382,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0008577000000000001,
+      "input_tokens": 2757,
+      "output_tokens": 613,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00036791,
+      "input_tokens": 2565,
+      "output_tokens": 558,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00030132,
+      "input_tokens": 2718,
+      "output_tokens": 421,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46824",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00037452,
+      "input_tokens": 2757,
+      "output_tokens": 567,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1426
+}
