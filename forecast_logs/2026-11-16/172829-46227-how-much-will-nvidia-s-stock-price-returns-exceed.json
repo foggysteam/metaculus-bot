@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-16T17:32:35.572190+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T17:28:29.258471+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46227,
+    "post_id": 46012,
+    "url": "https://www.metaculus.com/questions/46012",
+    "type": "NumericQuestion",
+    "unit": "pp",
+    "tournaments": [
+      "market-pulse-26q4"
+    ],
+    "text": "How much will Nvidia's stock price returns exceed Apple's in these biweekly periods of Q4 2026? (Nov 23 - Dec 4)",
+    "resolution_criteria": "Each subquestion will resolve as the difference between the percent stock price return of [NVDA](https://finance.yahoo.com/quote/NVDA/history/) and that of [AAPL](https://finance.yahoo.com/quote/AAPL/history/) for the corresponding biweekly period, according to Yahoo Finance data.\n\nSpecifically, each subquestion will resolve as NVDA\\_return - AAPL\\_return.\n\nReturns will be calculated as follows: If P₀ is the Adj Close price of a company stock on the last trading day or half-day *before* the start of the period and P₁ is the Adj Close price of the stock on the last trading day *of* the designated period, the percentage return will be calculated as:\n\n$$\n \\text{return} = 100 \\times \\frac{P1 - P0}{P0}\n$$",
+    "fine_print": "* If Apple outperforms Nvidia, the corresponding subquestion will resolve as a negative number.\n* If Yahoo Finance delays or ceases reporting these data or if it reports them in error, Metaculus might use alternative credible sources to resolve this question.\n* Resolutions are based on the prices at the market close on the last trading day of the designated period. Further adjustments to Adj Close prices after that will not cause subquestions to re-resolve.\n\n***\n\nFor example, for the period Jun 9, 2025 - Jun 20, 2025, the subquestion would have resolved based on the following calculations, based on the prices as they appeared on June 20, 2025:\n\nNVDA\\_P₀ \\= 141.71 (the Adj Close price on Jun 6)\n\nNVDA\\_P₁ \\= 143.85 (the Close price on Jun 20)\n\nNVDA\\_return \\= 100 × (143.85 - 141.71) / 141.71 \\= 1.510\n\nAAPL\\_P₀ \\= 203.92 (the Adj Close price on Jun 6)\n\nAAPL\\_P₁ \\= 201.00 (the Close price on Jun 20)\n\nAAPL\\_return \\= 100 × (201.00 - 203.92) / 203.92 \\= -1.4319\n\nAnd the resolution would be 1.510 - (-1.4319) \\= **2.9419** percentage points (pp).",
+    "close_time": "2026-11-23 04:00 UTC",
+    "scheduled_resolution_time": "2026-12-04 21:00 UTC"
+  },
+  "research": [
+    "# NVDA minus AAPL return, Nov 23 to Dec 4, 2026: research notes\n\n## 1. Resolution source\n- The window is Nov 23 to Dec 4. **P₀ is the Adj Close on Fri 2026-11-20** and P₁ is the close on Fri 2026-12-04. P₀ is not known yet, and Nvidia's earnings on Nov 17 come before it, so the earnings reaction itself falls outside this window.\n- 2026-11-16 (intraday, Yahoo chart API): NVDA at 157.14, down 3.5% on the day. Its 52-week range is 148.80 to 243.37, and the 148.80 low was hit intraday on 2026-11-12. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=1mo&interval=1d)\n- 2026-11-16 (intraday): AAPL at 352.98, down 0.9%. Its 52-week high of 360.83 was set on 2026-11-13. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=1mo&interval=1d)\n- Recent NVDA closes: 221.97 (Oct 19, the recent peak), 200.13 (Nov 4), 181.60 (Nov 5, down 9.3%), 178.67 (Nov 9), 168.89 (Nov 10), 173.73 (Nov 11), 166.19 (Nov 12), 162.85 (Nov 13). That is about 29% off the peak. [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=1mo&interval=1d)\n- Recent AAPL closes: 343.46 (Oct 16), 331.90 (Nov 3), 349.51 (Nov 4), 355.63 (Nov 10), 356.27 (Nov 13). [Yahoo](https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=1mo&interval=1d)\n- Dividends: AAPL's adjusted close stops differing from its close on Nov 11, so its ex-dividend date looks already past. NVDA's $0.01 dividend usually goes ex in early December (it did on Dec 4, 2025), but at about 0.006% the effect is negligible.\n\n## 2. Current status\n- Nothing has settled the question, and the window has not started.\n- NVDA is in an unusually volatile, stock-specific crisis: daily moves of 2% to 9% across the last two weeks. AAPL has been steady near its all-time high.\n\n## 3. Recent news (newest first)\n- 2026-11-16: NVDA fell about 2% to 3.5% after losing hundreds of billions in market value the previous week. A petition to reinstate Huang has more than 170,000 signatures, and Elon Musk is among those backing him. Treasury Secretary Bessent called for a \"dramatic shakeup\" and an outside CEO. Lawmakers are pushing for investigations. [CNBC](https://www.cnbc.com/2026/11/16/nvidia-stock-price-jensen-huang.html)\n- 2026-11-16: Handelsblatt, citing the FT, reported that Huang's allies are working on plans for his return. I could not find the FT article to confirm this. [Handelsblatt](https://www.handelsblatt.com/finanzen/maerkte/marktberichte/dow-jones-sp-500-nasdaq-wall-street-startet-im-minus-microsoft-wertvoller-als-nvidia/100270217.html)\n- 2026-11-15: Apple regained a $5T market cap and passed Nvidia. Investors were favouring Apple's lower exposure to AI capital spending. [Benzinga](https://www.benzinga.com/markets/tech/26/11/63276957/weekend-tech-roundup-apple-nvidia-jensen-huang-tim-cook)\n- 2026-11-13: NVDA fell 2.0% and closed below a $4T market cap for the first time since July 2025. It lost 12.75% for the week, its sixth straight weekly decline. Mizuho cut its target to $220 from $250, and UBS and CLSA also cut targets. [CNBC](https://www.cnbc.com/2026/11/13/nvidia-nvda-stock-jensen-huang-transition.html)\n- 2026-11-12: Huang resigned after reports of affairs, including one with a woman U.S. intelligence reportedly believes is a Chinese spy. CFO Colette Kress became interim CEO. The stock was down about 14% intraday and closed down 4.3%. [CNBC](https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html), [The Hill](https://thehill.com/business/6215959-jensen-huang-resigns-nvidia-stock-drops/)\n- 2026-11-11: Fortune reported the board has close ties to Huang, no chair, and no succession plan. [Fortune](https://fortune.com/2026/11/11/nvidia-board-directors-jensen-huang-captive-board/)\n\n## 4. Base rates (same calendar window, Yahoo closes)\n| Year | P₀ to P₁ | NVDA | AAPL | Difference (pp) |\n|---|---|---|---|---|\n| 2021 | Nov 19 to Dec 3 | -6.95% | +0.80% | **-7.75** |\n| 2022 | Nov 18 to Dec 2 | +9.52% | -2.30% | **+11.82** |\n| 2023 | Nov 24 to Dec 8 | -0.57% | about +3.0% | **about -3.6** |\n| 2024 | Nov 22 to Dec 6 | +0.35% | about +5.6% | **about -5.3** |\n| 2025 | Nov 21 to Dec 5 | +1.97% | +2.69% | **-0.72** |\n\n- The 2023 and 2024 AAPL end prices (about 195.71 and 242.84) were cut off in the data I fetched and come from memory, so treat those two rows as approximate.\n- In four of the last five years AAPL beat NVDA in this window. AAPL has often been firm into December. The spread across years runs from -7.75 to +11.8 pp, roughly a 6 to 7 pp standard deviation, which is about normal for a two-week window between these stocks.\n- NVDA's current realised volatility is far above normal: about seven moves larger than 2% in the last eight sessions. That points to a wider-than-usual range of outcomes this year. AAPL's realised volatility is low.\n- I did not open the question's Google Sheet of past fortnightly returns.\n\n## 5. Other forecasts\n- Polymarket, NVDA close for the week of Nov 16 (resolves Nov 20, which is the P₀ date): <$140 at 17%, $140-145 at 8.5%, $145-150 at 10.5%, $150-155 at 10.5%, $155-160 at 11%, $160-165 at 11%. This implies a very wide spread for P₀.\n- Kalshi, will Trump publicly call for Huang's reinstatement: 39% before Dec 1, 45% before Jan 1. This would be a possible upside catalyst for NVDA inside the window.\n- Kalshi, next Nvidia CEO: Rene Haas 23%, Huang 14%, Ian Buck 10%, Kress 7%.\n- I found no market or expert forecast on the NVDA minus AAPL two-week spread itself.\n\n## 6. Upcoming events\n- 2026-11-17, after the close: Nvidia Q3 FY27 results. The call is at 5pm ET, with Kress posting written commentary beforehand. The consensus figure of about $109B revenue comes from a secondary source. This happens before P₀, but guidance and the board's handling of the CEO question will set the starting level and the drift afterwards. [NVIDIA IR](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx)\n- Week of Nov 16: Fed minutes and the Anthropic IPO, which ADVFN reports as scheduled that week. [ADVFN](https://uk.advfn.com/market-news/article/26339/a-crucial-week-for-the-markets)\n- Inside the window:\n  - Nov 26: Thanksgiving, markets closed.\n  - Nov 27: half-day.\n  - Black Friday and Cyber Monday data on Apple-related retail.\n  - Early December: ISM data and other macro releases.\n- Nvidia-specific risks inside the window:\n  - a CEO appointment, or Huang returning\n  - congressional or export-control investigations\n  - further analyst target changes\n\nNo weather factors apply.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 17:28 UTC; check each market really matches the question)\n- Kalshi: Will NVIDIA Q3 earnings call be postponed? (Before Nov 18, 2026). Yes prices: Yes: 0.01.\n- Kalshi: Which member of Congress will have the biggest returns in 2025? (In 2025). Yes prices: Roger Williams: 0.44; Ron Wyden: 0.17; Nancy Pelosi: 0.04; David Rouzer: 0.33; Debbie Wasserman-Schultz: 0.41; David Kustoff: 0.02; Larry Bucshon: 0.02; Susan Collins: 0.04; Morgan McGarvey: 0.04; Pete Sessions: 0.16.\n- Kalshi: Silver at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $47.00: 0.55; Above $48.00: 0.24; Above $46.00: 0.83; Above $49.00: 0.07; Above $43.00: 0.97; Above $44.00: 0.97; Above $45.00: 0.95; Above $53.00: 0.0000; Above $54.00: 0.0000; Above $55.00: 0.0000. Settles on the Pyth feed Metal.Index.SILVER/USD, which can differ from exchange settlement prices.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Gold at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $3850: 0.66; Above $3900: 0.26; Above $3800: 0.92; Above $3950: 0.06; Above $3600: 0.98; Above $3650: 0.98; Above $3700: 0.97; Above $3750: 0.96; Above $4200: 0.0400; Above $4300: 0.0600. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Kalshi: Who will be the next CEO of NVIDIA? (Before 2029). Yes prices: Rene Haas: 0.23; Jensen Huang: 0.14; Ian Buck: 0.10; Colette Kress: 0.07; Johny Srouji: 0.07; Nikesh Arora: 0.04; Tim Cook: 0.04; Lisa Su: 0.03; Matt Murphy: 0.01; Thomas Kurian: 0.01.\n- Kalshi: What will Intuitive Surgical say during their next earnings call? (On Jan 21, 2027). Yes prices: Autonomy / Autonomous: 0.59; Acquire / Acquired / Acquisition: 0.40; GLP-1: 0.29; Medicare / Medicaid: 0.82; Ion (3+ times): 0.88; Hernia: 0.90; Telepresence: 0.91; Reimbursement: 0.91; Tariff: 0.91; International: 0.92.\n- Kalshi: Will Trump publicly call for Jensen Huang to be reinstated as Nvidia CEO? (Before Jan 1, 2027). Yes prices: Before Jan 1, 2027: 0.45; Before Dec 1, 2026: 0.39; Before Nov 18, 2026: 0.37.\n- Kalshi: When will the next US recession start? (Next recession). Yes prices: Q3 2025: 0.0010; Q2 2025: 0.0100; Q4 2024: 0.0020; Q4 2025: 0.0450; Q1 2026: 0.0020; Q1 2025: 0.0010.\n- Polymarket: Which Mag 7 Stock Has the Biggest Single-Day Move in 2026? (ends 2027-01-01). [Yes, No] prices: Apple (AAPL): [\"0.43\", \"0.57\"]; Microsoft (MSFT): [\"0.41\", \"0.59\"]; Alphabet (GOOGL): [\"0.425\", \"0.575\"]; Amazon (AMZN): [\"0.415\", \"0.585\"]; NVIDIA (NVDA): [\"0.4\", \"0.6\"]; Meta (META): [\"0.41\", \"0.59\"]\n- Polymarket: NVIDIA (NVDA) closes week of Nov 16 at ___? (ends 2026-11-20). [Yes, No] prices: <$140: [\"0.17\", \"0.83\"]; $140-$145: [\"0.085\", \"0.915\"]; $145-$150: [\"0.105\", \"0.895\"]; $150-$155: [\"0.105\", \"0.895\"]; $155-$160: [\"0.11\", \"0.89\"]; $160-$165: [\"0.11\", \"0.89\"]",
+    "Quick update: I've pulled the Yahoo price data and checked the Nvidia CEO news. I'm writing up the findings now.\n\n## 1. Resolution source\n- The question is decided by the Yahoo Finance Adj Close. P₀ is the close on **Fri 2026-11-20** and P₁ is the close on **Fri 2026-12-04**. Markets are shut Thu Nov 26 (Thanksgiving) and close early on Nov 27, so the period has 8.5 trading sessions. The schedule is from my own calendar check.\n- 2026-11-16 (intraday, Yahoo chart API): NVDA $156.93 (down 3.6% on the day; 52-week range $148.80 to $243.37). AAPL $352.86 (down 1.0%; 52-week high $360.83). [NVDA](https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=1mo&interval=1d), [AAPL](https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=1mo&interval=1d)\n- 2026-11-13 closes: NVDA $162.85, AAPL $356.27 (Adj).\n- I did not open the Metaculus spreadsheet. The figures below are my own calculations from Yahoo data.\n\n## 2. Current status\n- Nothing is settled yet. The period has not started and P₀ is not set. Nvidia's earnings (Nov 17) land before P₀, so the immediate earnings reaction will not count. Only follow-through after Nov 20 matters.\n\n## 3. Recent news (newest first)\n- 2026-11-16: Microsoft has passed Nvidia in market value. The FT reports that Huang's allies are working on plans for his return. [Handelsblatt](https://www.handelsblatt.com/finanzen/maerkte/marktberichte/dow-jones-sp-500-nasdaq-wall-street-startet-im-minus-microsoft-wertvoller-als-nvidia/100270217.html)\n- 2026-11-16: Nvidia reports fiscal Q3 2027 on Nov 17 after the close, with the call at 5pm ET. Consensus revenue is about $109.1B (guidance $108B ±2%) and EPS about $2.47. This is Colette Kress's first report as interim CEO. The stock is down more than 30% from its October peak. [CNBC](https://www.cnbc.com/2026/11/16/nvidia-earnings-jensen-huang-resignation.html), [Saxo](https://www.home.saxo/content/articles/equities/nvidia-earnings-preview-the-first-big-test-after-jensen-huangs-exit-16112026)\n- 2026-11-15: Apple is back above a $5T market cap and ahead of Nvidia, helped by its lower exposure to AI infrastructure spending. [Benzinga](https://www.benzinga.com/markets/tech/26/11/63276957/weekend-tech-roundup-apple-nvidia-jensen-huang-tim-cook)\n- 2026-11-12: Jensen Huang resigned with immediate effect. Kress is interim CEO and Harvey Jones is the new board chair (8-K). Press reports link the exit to affairs, including one with an alleged Chinese intelligence asset. A shareholder class action has been filed, and Huang may testify to Congress. [SEC 8-K](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm), [Al Jazeera](https://www.aljazeera.com/news/2026/11/12/ai-titan-jensen-huang-out-as-nvidia-ceo), [CBS timeline](https://www.cbsnews.com/news/jensen-huang-nvidia-resignation-scandal-timeline/)\n- 2026-11-05: NVDA fell 9.3% to $181.60 in a broad AI-chip selloff, with AMD down 17%. [Trefis](https://www.trefis.com/stock/nvda/articles/623357/what-sent-nvidia-stock-lower/2026-11-06), [247wallst](https://247wallst.com/investing/2026/11/06/nvidia-just-had-its-worst-day-since-deepseek-losing-about-450-billion/)\n\n## 4. Base rates\nRecent two-week spreads (NVDA minus AAPL), my calculations from Yahoo data:\n- Oct 26 to Nov 6, 2026: NVDA −11.5%, AAPL −1.5%, spread about **−10.0 pp**.\n- Nov 9 to Nov 16, 2026 (period still running): NVDA −15.9%, AAPL +3.1%, spread about **−19 pp** so far.\n- NVDA has been moving 3% to 9% a day this month (Nov 5 −9.3%, Nov 10 −5.5%, Nov 11 +2.9%, Nov 12 −4.3%). AAPL's daily moves are mostly under 2%, apart from a +5.3% day on Nov 4.\n\nSame period around Thanksgiving in past years (close before Thanksgiving week to the Friday a week after; NVDA end prices for 2024 and 2025 came from partly cut-off data, so treat them as approximate):\n- 2022: NVDA +9.5%, AAPL −2.3%, spread about **+11.8**\n- 2023: NVDA −5.1%, AAPL +0.8%, spread about **−6.0**\n- 2024: NVDA about −0.5%, AAPL +5.6%, spread about **−6.1**\n- 2025: NVDA about +1.1%, AAPL +2.7%, spread about **−1.6**\n- These four years show no consistent seasonal pattern. Apple outperformed in 3 of 4.\n\nTypical spread size: in normal times, two-week NVDA/AAPL spreads mostly fall within about ±6 to 7 pp (rough historical figure). NVDA volatility is far higher than usual right now, so the spread could easily be bigger. Several recent periods would have gone past the question's ±15 limit.\n\n## 5. Other forecasts\n- Polymarket, NVDA close for the week of Nov 16 (sets P₀): <$140 at 17%, $140 to 145 at 8.5%, $145 to 150 at 10.5%, $150 to 155 at 10.5%, $155 to 160 at 11%, $160 to 165 at 11%. The odds are spread widely.\n- Kalshi, \"Trump publicly calls for Huang reinstatement\": 39% before Dec 1 and 45% before Jan 1. Kalshi, next Nvidia CEO: Rene Haas 23%, Huang 14%, Ian Buck 10%, Kress 7%.\n- Kalshi, Nvidia earnings call postponed: 1%.\n- I found no market or expert forecast on the NVDA minus AAPL spread itself.\n\n## 6. Upcoming events before resolution\n- Nov 17 (before P₀): Nvidia earnings and guidance. Analysts may keep revising their views into the following week.\n- Possible at any time: Huang testifying to Congress (\"as soon as next week\"), news on his rumoured return or a permanent CEO, a Trump statement, and developments in the class action and board investigation. Each could move NVDA sharply in either direction.\n- This week: Fed minutes and the Anthropic IPO, which affect sentiment toward AI stocks.\n- Nov 26 to 27: holiday-thin trading. Black Friday and Cyber Monday (Nov 30) retail data matter more for Apple.\n- Dec 4: the November jobs report would normally come out that morning, if the BLS sticks to its usual first-Friday schedule (not confirmed).\n- No Apple earnings fall in the window.\n\n## Sources\n- [Yahoo NVDA chart data](https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=1mo&interval=1d)\n- [Yahoo AAPL chart data](https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=1mo&interval=1d)\n- [CNBC](https://www.cnbc.com/2026/11/16/nvidia-earnings-jensen-huang-resignation.html)\n- [Saxo](https://www.home.saxo/content/articles/equities/nvidia-earnings-preview-the-first-big-test-after-jensen-huangs-exit-16112026)\n- [Motley Fool](https://www.fool.com/investing/2026/11/15/nvidia-reports-earnings-on-nov-17-2026-heres-what-investors-should-be-watching/)\n- [SEC 8-K](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm)\n- [Al Jazeera](https://www.aljazeera.com/news/2026/11/12/ai-titan-jensen-huang-out-as-nvidia-ceo)\n- [NBC](https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402)\n- [CBS](https://www.cbsnews.com/news/jensen-huang-nvidia-resignation-scandal-timeline/)\n- [Trefis](https://www.trefis.com/stock/nvda/articles/623357/what-sent-nvidia-stock-lower/2026-11-06)\n- [247wallst](https://247wallst.com/investing/2026/11/06/nvidia-just-had-its-worst-day-since-deepseek-losing-about-450-billion/)\n- [Handelsblatt](https://www.handelsblatt.com/finanzen/maerkte/marktberichte/dow-jones-sp-500-nasdaq-wall-street-startet-im-minus-microsoft-wertvoller-als-nvidia/100270217.html)\n- [Benzinga](https://www.benzinga.com/markets/tech/26/11/63276957/weekend-tech-roundup-apple-nvidia-jensen-huang-tim-cook)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 17:28 UTC; check each market really matches the question)\n- Kalshi: Will NVIDIA Q3 earnings call be postponed? (Before Nov 18, 2026). Yes prices: Yes: 0.01.\n- Kalshi: Which member of Congress will have the biggest returns in 2025? (In 2025). Yes prices: Roger Williams: 0.44; Ron Wyden: 0.17; Nancy Pelosi: 0.04; David Rouzer: 0.33; Debbie Wasserman-Schultz: 0.41; David Kustoff: 0.02; Larry Bucshon: 0.02; Susan Collins: 0.04; Morgan McGarvey: 0.04; Pete Sessions: 0.16.\n- Kalshi: Silver at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $47.00: 0.55; Above $48.00: 0.24; Above $46.00: 0.83; Above $49.00: 0.07; Above $43.00: 0.97; Above $44.00: 0.97; Above $45.00: 0.95; Above $53.00: 0.0000; Above $54.00: 0.0000; Above $55.00: 0.0000. Settles on the Pyth feed Metal.Index.SILVER/USD, which can differ from exchange settlement prices.\n- Kalshi: How high will the KOSPI Composite Index get this year? (2026). Yes prices: At least ₩9,400: 0.0400; At least ₩9,500: 0.0500; At least ₩8,900: 0.9900; At least ₩9,300: 0.9900; At least ₩8,875: 0.9900; At least ₩8,850: 0.9900; At least ₩9,100: 0.9900; At least ₩8,825: 0.9900; At least ₩8,800: 0.9900; At least ₩8,750: 0.9900.\n- Kalshi: Gold at 6:30pm ET · NVIDIA earnings (Nov 17, 2026 · 6:30pm ET · Following NVIDIA earnings and its conference call). Yes prices: Above $3850: 0.66; Above $3900: 0.26; Above $3800: 0.92; Above $3950: 0.06; Above $3600: 0.98; Above $3650: 0.98; Above $3700: 0.97; Above $3750: 0.96; Above $4200: 0.0400; Above $4300: 0.0600. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Kalshi: Who will be the next CEO of NVIDIA? (Before 2029). Yes prices: Rene Haas: 0.23; Jensen Huang: 0.14; Ian Buck: 0.10; Colette Kress: 0.07; Johny Srouji: 0.07; Nikesh Arora: 0.04; Tim Cook: 0.04; Lisa Su: 0.03; Matt Murphy: 0.01; Thomas Kurian: 0.01.\n- Kalshi: What will Intuitive Surgical say during their next earnings call? (On Jan 21, 2027). Yes prices: Autonomy / Autonomous: 0.59; Acquire / Acquired / Acquisition: 0.40; GLP-1: 0.29; Medicare / Medicaid: 0.82; Ion (3+ times): 0.88; Hernia: 0.90; Telepresence: 0.91; Reimbursement: 0.91; Tariff: 0.91; International: 0.92.\n- Kalshi: Will Trump publicly call for Jensen Huang to be reinstated as Nvidia CEO? (Before Jan 1, 2027). Yes prices: Before Jan 1, 2027: 0.45; Before Dec 1, 2026: 0.39; Before Nov 18, 2026: 0.37.\n- Kalshi: When will the next US recession start? (Next recession). Yes prices: Q3 2025: 0.0010; Q2 2025: 0.0100; Q4 2024: 0.0020; Q4 2025: 0.0450; Q1 2026: 0.0020; Q1 2025: 0.0010.\n- Polymarket: Which Mag 7 Stock Has the Biggest Single-Day Move in 2026? (ends 2027-01-01). [Yes, No] prices: Apple (AAPL): [\"0.43\", \"0.57\"]; Microsoft (MSFT): [\"0.41\", \"0.59\"]; Alphabet (GOOGL): [\"0.425\", \"0.575\"]; Amazon (AMZN): [\"0.415\", \"0.585\"]; NVIDIA (NVDA): [\"0.4\", \"0.6\"]; Meta (META): [\"0.41\", \"0.59\"]\n- Polymarket: NVIDIA (NVDA) closes week of Nov 16 at ___? (ends 2026-11-20). [Yes, No] prices: <$140: [\"0.17\", \"0.83\"]; $140-$145: [\"0.085\", \"0.915\"]; $145-$150: [\"0.105\", \"0.895\"]; $150-$155: [\"0.105\", \"0.895\"]; $155-$160: [\"0.11\", \"0.89\"]; $160-$165: [\"0.11\", \"0.89\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -12.5,
+        "p25": -5.55,
+        "p50": 0.4,
+        "p75": 6.85,
+        "p90": 14.5
+      },
+      "reasoning": "(a) **Time left:** The window runs Nov 23 to Dec 4, 2026. P₀ is the Nov 20 close, which is not yet known. The outcome will be known at the close on Dec 4, about 18 days from now (Nov 16).\n\n(b) **Latest known values:** On 2026-11-16 intraday, NVDA was about 157.14, down 3.5% on the day and 29% off its October peak. AAPL was about 352.98, near its all-time high. The window has not started, so the current spread is effectively 0 pp by definition.\n\n(c) **If nothing changes:** Both returns are 0, so the outcome is 0 pp.\n\n(d) **If the current trend continues:** NVDA has had six straight weekly declines, including -12.75% last week, while AAPL has been firm. Projecting that forward gives roughly -8 to -12 pp. Momentum this extreme often partly mean-reverts, though, and the window opens only after earnings have reset the level.\n\n(e) **Historical variation:**\n- In the same calendar window over the last five years, the spread ranged from -7.75 to +11.8 pp, with a standard deviation of about 6 to 7 pp. AAPL won in 4 of those 5 years.\n- NVDA's current realised daily volatility is about 4 to 5%, versus about 2.5 to 3% normally. Over roughly 9.5 trading days that suggests a 2-week standard deviation of about 10 to 13 pp, even allowing for some decay in volatility after earnings.\n- The Polymarket distribution for NVDA's weekly close implies roughly 10% weekly dispersion, though that includes the earnings reaction.\n\n(f) **Experts and markets:**\n- No market covers the spread itself.\n- Analysts are cutting targets, but those targets (Mizuho at $220) are still far above the current price.\n- Kalshi gives 39% that Trump publicly calls for Huang's reinstatement before Dec 1, and 14% that Huang is the next CEO. These are upside jump catalysts.\n- Bessent's call for an outside CEO, and possible congressional or export probes, are downside risks.\n- Overall I see a roughly centred distribution with fat tails on both sides.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** Congressional or intelligence investigations widen into export-control sanctions or customer pullbacks, NVDA falls another 20%, and AAPL rallies on strong Black Friday data. That gives about -25 to -30 pp.\n- **High outcome:** The board reinstates Huang, or names a highly credible CEO, with Trump's public backing. NVDA then rips 20 to 30% off depressed levels while AAPL stays flat or dips as money rotates back into AI. That gives about +25 to +30 pp.\n\nPercentile 1: -28\nPercentile 5: -17.5\nPercentile 10: -12.5\nPercentile 20: -7.2\nPercentile 30: -3.9\nPercentile 40: -1.3\nPercentile 50: 0.4\nPercentile 60: 2.3\nPercentile 70: 5\nPercentile 80: 8.7\nPercentile 90: 14.5\nPercentile 95: 19.5\nPercentile 99: 30"
+    },
+    {
+      "value": {
+        "p10": -11.5,
+        "p25": -5.0,
+        "p50": 0.6,
+        "p75": 6.75,
+        "p90": 13.5
+      },
+      "reasoning": "(a) **Time left:** The window runs Nov 23 to Dec 4, 2026, and the result is known at the close on Dec 4. That is about 18 days from now. Forecasts close before P₀ (Nov 20) is even set.\n\n(b) **Latest known values (Nov 16, intraday):**\n- NVDA is at about 157.14, down about 29% from the Oct 19 peak of 221.97.\n- AAPL is at about 352.98, near its 52-week high of 360.83.\n- The window has not started, so the resolution value is undefined so far.\n\n(c) **If nothing changed:** The result would be 0 pp, since both prices would be flat from P₀.\n\n(d) **If the current trend continued:**\n- NVDA has fallen for six straight weeks, losing about 12.75% last week.\n- AAPL has been drifting up.\n- Extending that over nine sessions would give roughly -8 to -10 pp.\n- However, crisis-driven declines often partly reverse, and the earnings reaction and much of the CEO news will already be priced into P₀ by Nov 20.\n\n(e) **Historical variation:**\n- In normal times the NVDA minus AAPL two-week spread has a standard deviation of about 6 to 7 pp. The same calendar window over the last five years ranged from -7.75 to +11.8 pp, with AAPL winning in 4 of 5 years.\n- NVDA's realised volatility is now extreme, with daily moves of 2% to 9%. AAPL's is low.\n- Over nine sessions, including a half-day, assuming some decay in volatility, I estimate the spread's standard deviation at about 9 to 10 pp, with fat tails.\n\n(f) **Experts and markets:**\n- No market covers this exact spread.\n- Polymarket implies a very wide range for NVDA's Nov 20 close, which means high implied volatility.\n- Kalshi gives 39% that Trump calls for Huang's reinstatement before Dec 1, but already 37% before Nov 18. So little extra probability falls inside the window itself.\n- Kalshi gives Huang a 14% chance of being the next CEO, a right-tail catalyst.\n- Analysts are cutting targets but remain well above the current price.\n\n(g) **Unexpected scenarios:**\n- **Low:** Federal investigations or export-control action tied to the espionage story, a disorderly board fight, and customers pausing orders send NVDA down another 20%+ while AAPL rallies on Black Friday strength. Result: -25 pp or worse.\n- **High:** The board reinstates Huang or names a credible outside CEO with Trump's endorsement, and NVDA rebounds 25%+ in a short-covering rally while AAPL drifts lower. Result: +25 pp or more.\n\nI set the median slightly above zero, balancing negative momentum against mean reversion, with a right skew because Huang's return is a possible jump catalyst.\n\nPercentile 1: -26\nPercentile 5: -16\nPercentile 10: -11.5\nPercentile 20: -6.5\nPercentile 30: -3.5\nPercentile 40: -1\nPercentile 50: 0.6\nPercentile 60: 2.5\nPercentile 70: 5\nPercentile 80: 8.5\nPercentile 90: 13.5\nPercentile 95: 18\nPercentile 99: 28"
+    },
+    {
+      "value": {
+        "p10": -12.0,
+        "p25": -5.5,
+        "p50": 0.5,
+        "p75": 6.75,
+        "p90": 13.5
+      },
+      "reasoning": "(a) **Time left:** The window runs from P₀ on Fri Nov 20 to P₁ on Fri Dec 4, 2026, so the outcome is known in about 18 days. Forecasts close Nov 23, before the window starts.\n\n(b) **Latest known values:** On 2026-11-16 (intraday), NVDA was about 157.14, down 3.5% on the day and about 29% below its October peak. AAPL was about 352.98, close to its all-time high. P₀ is not set yet. Nvidia earnings (Nov 17) and the fallout from the CEO turmoil both land before P₀.\n\n(c) **If nothing changed:** The outcome would be 0 pp.\n\n(d) **If the current trend continued:** NVDA has fallen for six straight weeks while AAPL has been firm. A further NVDA decline of about 5-10% against a flat AAPL would put the result around -5 to -10 pp. However, short-term momentum after a scandal-driven selloff is unreliable, and mean reversion or a Huang-return rally could reverse it.\n\n(e) **Historical variation:**\n* In normal times, the two-week NVDA minus AAPL spread has a standard deviation of about 6-7 pp. In the same calendar window over the last five years it ranged from -7.75 to +11.8 pp.\n* NVDA's current realised volatility is extreme, with daily moves of 2-9%.\n* Assuming implied volatility decays to roughly 60% annualized by late November, NVDA's two-week standard deviation would be about 11%.\n* AAPL's two-week standard deviation would be about 5%, with a correlation of about 0.4 between the two.\n* That gives a spread standard deviation of roughly 10 pp, with fat tails.\n\n(f) **Experts and markets:**\n* No market trades this spread directly.\n* Polymarket shows a very wide distribution for NVDA's Nov 20 close.\n* Kalshi gives a 39% chance that Trump calls for Huang's reinstatement before Dec 1, a possible upside catalyst inside the window.\n* Analysts are cutting targets, though the targets (for example Mizuho's $220) remain far above the current price.\n* Overall this suggests a roughly neutral centre, with some rebound upside balanced against negative momentum.\n\n(g) **Unexpected scenarios:**\n* **Low:** Congressional or intelligence investigations escalate, new export restrictions arrive, or the board names a weak or contested CEO. NVDA falls another 20% while AAPL rises on strong holiday sales, giving about -25 pp or lower.\n* **High:** Huang is reinstated, with Trump's backing, or a strong outside CEO is named. That triggers a short-covering rally of 25-30% in NVDA while AAPL dips, giving about +30 pp.\n\nPercentile 1: -28\nPercentile 5: -17\nPercentile 10: -12\nPercentile 20: -7\nPercentile 30: -4\nPercentile 40: -1.5\nPercentile 50: 0.5\nPercentile 60: 2.5\nPercentile 70: 5\nPercentile 80: 8.5\nPercentile 90: 13.5\nPercentile 95: 18\nPercentile 99: 30"
+    },
+    {
+      "value": {
+        "p10": -13.5,
+        "p25": -6.0,
+        "p50": 0.0,
+        "p75": 6.25,
+        "p90": 13.5
+      },
+      "reasoning": "(a) **Time left:** About 18 days until resolution, at the Dec 4, 2026 close. P₀ is set at the Nov 20 close. The window has 8.5 trading sessions because of Thanksgiving.\n\n(b) **Latest known value:** Nothing has been measured yet, since the period has not started. As of Nov 16, 2026 intraday, NVDA is at $156.93 and AAPL at $352.86. The spread in the current fortnight is about -19 pp so far.\n\n(c) **If nothing changed:** The spread would be 0 pp, because P₀ would equal P₁ for both stocks.\n\n(d) **If the current trend continued:** NVDA has been underperforming AAPL by about 10 to 19 pp per fortnight since the Huang scandal and the AI-chip selloff. Extrapolating gives roughly -10 pp. However, the earnings reaction (Nov 17) falls before P₀, and momentum after a 30%+ drawdown is unreliable. I put only modest weight on continuation.\n\n(e) **Historical variation:**\n- In normal times, the two-week NVDA-AAPL spread has a standard deviation of roughly 6 to 7 pp.\n- Right now NVDA is moving 3 to 9% a day, against AAPL's usual moves under 2%.\n- Implied NVDA volatility after earnings is probably 60 to 80% annualized, which gives an 8.5-session standard deviation of about 11 to 15%. AAPL's is about 4.5%.\n- With a correlation of about 0.5, the spread's standard deviation is about 9 to 11 pp, and the tails are fat.\n\n(f) **Experts and markets:** There is no market on the spread itself. The Polymarket weekly NVDA buckets are spread very widely, which shows huge uncertainty. Kalshi gives 39% to Trump calling for Huang's reinstatement before Dec 1. That is a possible upside catalyst.\n\n(g) **Unexpected scenarios:**\n- **Low:** Huang testifies to Congress and confirms the China-intelligence link. New export restrictions or an SEC probe follow, and NVDA falls another 25% while AAPL rallies on strong Black Friday data. The spread would be around -30.\n- **High:** The board announces Huang's return, or a strong permanent CEO, with Trump's backing. A short-covering rally lifts NVDA 25 to 30% from depressed levels. The spread would be around +30.\n\nPercentile 1: -31\nPercentile 5: -19\nPercentile 10: -13.5\nPercentile 20: -7.5\nPercentile 30: -4.5\nPercentile 40: -2\nPercentile 50: 0\nPercentile 60: 2\nPercentile 70: 4.5\nPercentile 80: 8\nPercentile 90: 13.5\nPercentile 95: 18.5\nPercentile 99: 31"
+    },
+    {
+      "value": {
+        "p10": -14.5,
+        "p25": -6.75,
+        "p50": 0.0,
+        "p75": 6.85,
+        "p90": 14.5
+      },
+      "reasoning": "(a) **Time left:** The period runs Nov 23 to Dec 4, 2026. P₀ is the Nov 20 close. The outcome will be known at the Dec 4 close, about 18 days from now, covering 8.5 trading sessions.\n\n(b) **Latest known values:** On Nov 16, 2026 (intraday), NVDA was $156.93 and AAPL was $352.86. The spread for the current partial period (Nov 9 to Nov 16) is about -19 pp. P₀ for this question is not yet set.\n\n(c) **If nothing changed:** The spread would be 0 pp, since the period has not started.\n\n(d) **If the trend continued:** Recent two-week spreads were -10 pp and about -19 pp. Extrapolating momentum would mean something like -8 to -15 pp. However, the earnings reaction falls before P₀, and the stock is already down more than 30% from its peak, so a rebound is also plausible.\n\n(e) **Historical variation:** In normal times, two-week NVDA/AAPL spreads usually fall within ±6 to 7 pp, a standard deviation of roughly 5 pp. NVDA is now moving 3% to 9% a day, which implies annualized volatility of about 80% or more. Over 8.5 sessions that is roughly 14% for NVDA. AAPL's two-week volatility is about 5%. Together this suggests a spread standard deviation of about 11 to 13 pp, possibly easing after earnings.\n\n(f) **Experts and markets:** No market prices the spread itself. The Polymarket odds for NVDA's weekly close are spread widely, consistent with very high volatility. Kalshi gives about a 39% chance that Trump calls for Huang's reinstatement before Dec 1, and 14% that Huang ends up as the next CEO. Both are upside tail risks for NVDA.\n\n(g) **Unexpected scenarios:**\n- **Low:** Huang's congressional testimony deepens the alleged China intelligence angle, prompting export-control threats or board probe findings. AI-chip selling resumes, NVDA falls 25%, and Apple holds steady on strong holiday sales. The spread would be about -28 pp.\n- **High:** Trump publicly backs Huang, the board announces his return or a strong permanent CEO, and short covering lifts NVDA 25% while AAPL lags. The spread would be about +28 pp.\n\nI centre the distribution near 0, with a slightly negative-leaning momentum offset by rebound potential. I use a wide, fat-tailed spread because of the CEO saga.\n\nPercentile 1: -31\nPercentile 5: -20\nPercentile 10: -14.5\nPercentile 20: -8.5\nPercentile 30: -5\nPercentile 40: -2.2\nPercentile 50: 0\nPercentile 60: 2.2\nPercentile 70: 5\nPercentile 80: 8.7\nPercentile 90: 14.5\nPercentile 95: 20\nPercentile 99: 31"
+    },
+    {
+      "value": {
+        "p10": -13.0,
+        "p25": -5.75,
+        "p50": 0.5,
+        "p75": 6.75,
+        "p90": 14.0
+      },
+      "reasoning": "(a) **Time left:** P₀ is set at the Fri Nov 20 close and P₁ at the Fri Dec 4 close. The outcome is known in about 18 days. The window itself is 8.5 trading sessions, because of the Thanksgiving closure and the half-day on Nov 27.\n\n(b) **Latest known values (Yahoo, Nov 16 intraday):** NVDA was $156.93 and AAPL $352.86. The resolution window has not started, so the current value of the quantity is effectively 0.\n\n(c) **If nothing changed:** the spread would be 0 pp.\n\n(d) **If the current trend continued:** the last two fortnights were about -10 pp and about -19 pp (partial). Momentum after the Huang scandal points to Apple outperforming again, perhaps -5 to -15 pp. However, the 35% drawdown, the earnings reset before P₀ and possible reinstatement news make a simple extrapolation unreliable.\n\n(e) **Historical variation:**\n- In normal times, two-week NVDA-AAPL spreads mostly fall within about ±6 to 7 pp.\n- NVDA is currently moving 3-9% a day.\n- If NVDA's daily volatility settles to about 3.5% after earnings, and AAPL's is about 1.5%, the spread's standard deviation over 8.5 sessions is roughly 9-10 pp. The tails are fat because of jump risk from news.\n\n(f) **Experts and markets:**\n- No market covers the spread itself.\n- Polymarket shows wide uncertainty about where NVDA closes this week.\n- Kalshi gives about 39% that Trump calls for Huang's reinstatement before Dec 1, which is an upside jump risk for NVDA.\n- Kalshi gives Huang 14% as the next CEO.\n\n(g) **Unexpected scenarios:**\n- *Low:* Huang's congressional testimony reveals security breaches, export-control retaliation follows, the class action and board probe widen, and guidance cuts spread to hyperscalers. NVDA falls 20% or more while Apple rises on holiday sales, giving about -25 pp.\n- *High:* the board announces Huang's return or a respected permanent CEO, Trump endorses it, and a short squeeze follows. NVDA gains 25% or more while Apple drifts, giving about +25 to 30 pp.\n\nI set the median slightly above 0 to balance negative momentum against mean reversion and reinstatement upside, with wide tails on both sides.\n\nPercentile 1: -28\nPercentile 5: -18\nPercentile 10: -13\nPercentile 20: -7.5\nPercentile 30: -4\nPercentile 40: -1.5\nPercentile 50: 0.5\nPercentile 60: 2.5\nPercentile 70: 5\nPercentile 80: 8.5\nPercentile 90: 14\nPercentile 95: 19\nPercentile 99: 30"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -12.8595,
+    "p25": -5.6851,
+    "p50": 0.4459,
+    "p75": 6.7763,
+    "p90": 13.8361
+  },
+  "usage": [
+    {
+      "question_id": "46227",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0001361,
+      "input_tokens": 524,
+      "output_tokens": 63,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0003552,
+      "input_tokens": 1062,
+      "output_tokens": 286,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 92.2,
+      "notional_cost_usd": 0.4043853,
+      "input_tokens": 124255,
+      "output_tokens": 6734,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.9,
+      "notional_cost_usd": 0.087108,
+      "input_tokens": 7012,
+      "output_tokens": 1551,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.0,
+      "notional_cost_usd": 0.08670800000000001,
+      "input_tokens": 7012,
+      "output_tokens": 1531,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.0007961000000000001,
+      "input_tokens": 3109,
+      "output_tokens": 349,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.3,
+      "notional_cost_usd": 0.0009112,
+      "input_tokens": 3077,
+      "output_tokens": 592,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.00029484,
+      "input_tokens": 3108,
+      "output_tokens": 401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.3,
+      "notional_cost_usd": 0.00030654,
+      "input_tokens": 3078,
+      "output_tokens": 425,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 34.8,
+      "notional_cost_usd": 0.0376564,
+      "input_tokens": 7010,
+      "output_tokens": 1693,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.0007925,
+      "input_tokens": 3076,
+      "output_tokens": 355,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00032601,
+      "input_tokens": 3075,
+      "output_tokens": 464,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 100.8,
+      "notional_cost_usd": 0.4880339,
+      "input_tokens": 148712,
+      "output_tokens": 8809,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.086004,
+      "input_tokens": 7464,
+      "output_tokens": 1315,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.5,
+      "notional_cost_usd": 0.087524,
+      "input_tokens": 7464,
+      "output_tokens": 1391,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.6,
+      "notional_cost_usd": 0.08771599999999999,
+      "input_tokens": 7463,
+      "output_tokens": 1401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.0007181,
+      "input_tokens": 2974,
+      "output_tokens": 247,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0003592,
+      "input_tokens": 2975,
+      "output_tokens": 532,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.0,
+      "notional_cost_usd": 0.0008741,
+      "input_tokens": 2999,
+      "output_tokens": 549,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.4,
+      "notional_cost_usd": 0.0008694000000000001,
+      "input_tokens": 2963,
+      "output_tokens": 554,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.00021795,
+      "input_tokens": 3000,
+      "output_tokens": 249,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46227",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.00030858000000000003,
+      "input_tokens": 2963,
+      "output_tokens": 431,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.3724
+}
