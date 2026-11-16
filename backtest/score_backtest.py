@@ -56,8 +56,11 @@ def bootstrap_ci(values: list[float], n: int = 2000) -> tuple[float, float]:
     return means[int(0.025 * n)], means[int(0.975 * n)]
 
 
+RESULTS_DIR = ROOT / "results"  # main() points this at backtest/private/results with --private
+
+
 def load(run: str) -> list[dict]:
-    return [json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "results" / run).glob("*.json")]
+    return [json.loads(p.read_text(encoding="utf-8")) for p in (RESULTS_DIR / run).glob("*.json")]
 
 
 def compare(rows: list[dict], baseline_run: str) -> list[str]:
@@ -84,7 +87,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", required=True)
     parser.add_argument("--baseline", help="Another run to compare with question by question")
+    parser.add_argument("--private", action="store_true",
+                        help="Runs in backtest/private/results; the report goes to backtest/private/RESULTS.md")
     args = parser.parse_args()
+    global RESULTS_DIR
+    if args.private:
+        RESULTS_DIR = ROOT / "private" / "results"
     records = [r for r in load(args.run) if r["id"] not in EXCLUDE]
     leaked = [r for r in records if r["leaked"]]
     rows = [r for r in records if not r["leaked"] and r["forecasts"]]
@@ -95,8 +103,9 @@ def main() -> None:
     def ours(r):
         return med(r["forecasts"])
 
+    benchmark = "Community prediction at close" if all(r.get("source") == "metaculus" for r in rows) else "Market price on the as-of date"
     methods = {
-        "Market price on the as-of date": lambda r: r["market_price"],
+        benchmark: lambda r: r["market_price"],
         "KCAP2.0 median of 5 (live until 2026-10-26)": ours,
         f"KCAP2.0 median of 5, shrunk x{BINARY_SHRINK} (live from 2026-10-27)": lambda r: stretch(ours(r), BINARY_SHRINK),
         "KCAP2.0 single forecast": None,  # scored separately: average over samples
@@ -156,7 +165,7 @@ def main() -> None:
     ]
     report = "\n".join(lines)
     print(report)
-    results_md = ROOT / "RESULTS.md"
+    results_md = ROOT / "private" / "RESULTS.md" if args.private else ROOT / "RESULTS.md"
     if not results_md.exists():
         results_md.write_text("# Backtest results\n\nEach run's details are in backtest/results/<run>/.\n\n", encoding="utf-8")
     with results_md.open("a", encoding="utf-8") as f:

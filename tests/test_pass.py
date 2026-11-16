@@ -638,6 +638,29 @@ def test_weekly_report_judges_the_half_by_place_not_by_metaculus_rank() -> None:
     assert weekly_report.leaderboard_position(entries, entries[0]) == (1, "TOP half")
 
 
+def test_metaculus_benchmark_data_and_results_stay_out_of_the_public_repo() -> None:
+    """Ahmad's data agreement: the benchmarking download and anything derived from it are never committed."""
+    import subprocess
+
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import build_benchmark_dataset
+    import fetch_benchmark
+    import run_backtest
+
+    private = ROOT / "backtest" / "private"
+    assert fetch_benchmark.OUT.is_relative_to(private)
+    assert run_backtest.results_root(True).is_relative_to(private)
+    assert not run_backtest.results_root(False).is_relative_to(private)
+    for path in (fetch_benchmark.OUT / "binary.jsonl", fetch_benchmark.OUT / "snapshots" / "2026-11-16" / "1.json",
+                 run_backtest.results_root(True) / "mb1" / "x.json", private / "RESULTS.md"):
+        rel = path.relative_to(ROOT).as_posix()
+        assert subprocess.run(["git", "check-ignore", "-q", rel], cwd=ROOT).returncode == 0, f"{rel} is not git-ignored"
+    # The community prediction is read as P(Yes) from either form the API gives.
+    assert build_benchmark_dataset.community_yes({"aggregations": {"recency_weighted": {"latest": {"forecast_values": [0.7, 0.3]}}}}) == 0.3
+    assert build_benchmark_dataset.community_yes({"aggregations": {"recency_weighted": {"latest": {"centers": [0.25]}}}}) == 0.25
+    assert build_benchmark_dataset.community_yes({"aggregations": {"recency_weighted": {"latest": None}}}) is None
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for test in tests:

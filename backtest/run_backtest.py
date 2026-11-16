@@ -82,6 +82,11 @@ def apply_variant(bot: ClaudeForecaster, variant: str | None) -> None:
         raise ValueError(f"Unknown variant {variant}")
 
 
+def results_root(private: bool) -> Path:
+    """Runs on Metaculus benchmarking data, and anything derived from it, stay out of the public repo."""
+    return ROOT / "private" / "results" if private else ROOT / "results"
+
+
 _DATED_LINE = re.compile(r"^\s*[-*]\s*(\d{4}-\d{2}-\d{2})")
 
 
@@ -160,8 +165,8 @@ async def run_question(
     question = BinaryQuestion(
         question_text=row["question"],
         resolution_criteria=row["resolution_criteria"] or "Resolves according to the question text.",
-        fine_print="",
-        background_info="",
+        fine_print=row.get("fine_print", ""),  # Metaculus questions have these; market questions do not
+        background_info=row.get("background_info", ""),
         id_of_question=int(hashlib.md5(row["id"].encode()).hexdigest()[:8], 16),
         page_url=row["id"],
         close_time=as_of,
@@ -234,17 +239,21 @@ async def main() -> None:
     parser.add_argument("--budget-usd", type=float, help="Stop starting questions once these runs have used this much (API billing)")
     parser.add_argument("--budget-runs", help="Comma-separated runs that share the budget (default: this run)")
     parser.add_argument("--forecast-model", help="Claude model for the forecasts instead of the live one, e.g. claude-fable-5-2")
+    parser.add_argument("--data", type=Path, default=DATA, help="Question file (default backtest/data/questions.jsonl)")
+    parser.add_argument("--private", action="store_true",
+                        help="Results in the git-ignored backtest/private/results/ (Metaculus benchmarking data)")
     args = parser.parse_args()
 
-    rows = [json.loads(line) for line in DATA.open(encoding="utf-8")][args.offset : args.offset + args.limit]
-    out_dir = ROOT / "results" / args.run
+    rows = [json.loads(line) for line in args.data.open(encoding="utf-8")][args.offset : args.offset + args.limit]
+    results = results_root(args.private)
+    out_dir = results / args.run
     out_dir.mkdir(parents=True, exist_ok=True)
     bot = ClaudeForecaster(llms=build_llms(), publish_reports_to_metaculus=False)
     apply_variant(bot, args.variant)
     if args.forecast_model:
         bot.use_forecast_model(args.forecast_model)
-    reuse_dir = ROOT / "results" / args.reuse_research if args.reuse_research else None
-    reuse_dir_b = ROOT / "results" / args.reuse_research_b if args.reuse_research_b else None
+    reuse_dir = results / args.reuse_research if args.reuse_research else None
+    reuse_dir_b = results / args.reuse_research_b if args.reuse_research_b else None
     budget = Budget(args.budget_usd, (args.budget_runs or args.run).split(","))
     gate = asyncio.Semaphore(args.parallel)
 
