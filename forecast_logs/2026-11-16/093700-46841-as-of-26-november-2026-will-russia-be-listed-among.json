@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-16T09:41:35.641074+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-16T09:37:00.564897+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46841,
+    "post_id": 46581,
+    "url": "https://www.metaculus.com/questions/46581",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "As of 26 November 2026, will Russia be listed among the teams in the IIHF's official field for the 2027 IIHF U18 Women's World Championship?",
+    "resolution_criteria": "This question resolves based on the IIHF's own official tournament pages for the 2027 IIHF U18 Women's World Championship (Ostrava, Czechia, 8–16 January 2027) as they stand at 23:59 UTC on 26 November 2026. It resolves YES if a team representing Russia — listed as \"Russia\"/\"RUS\" or under a neutral designation such as \"ROC\" or \"AIN\" — appears either in the participating-teams list on the official event page (https://www.iihf.com/en/events/2027/ww18) or in at least one game on the official competition schedule (https://www.iihf.com/en/events/2027/ww18/schedule). It resolves NO if no such team appears on either page at that time. For reference, as of 13 November 2026 both pages list eight teams (Canada, Czechia, Germany, Hungary, Switzerland, Slovakia, Sweden, United States) and a 21-game schedule containing no Russian team; the question asks whether that changes by the resolution cutoff.",
+    "fine_print": "If the IIHF pages cannot be loaded at resolution time, or if resolution is checked after the cutoff, the resolver will use the Internet Archive (web.archive.org) captures of the event page and of the schedule page that are closest to, and not later than, 23:59 UTC on 26 November 2026; if no such capture exists for a page, [credible sources](https://www.metaculus.com/faq/#definitions) reporting the tournament field as of that time will be used. If the IIHF relocates the tournament or republishes the field for the same 2027 IIHF U18 Women's World Championship at a different URL, that official page governs. A slot left as a placeholder (e.g., \"TBD\") or an entry not identified as Russian does not count as Russia being listed. An IIHF news article, press statement or media report that Russia will or will not play does not by itself resolve the question; the outcome is determined solely by whether a Russian team appears in the field or schedule on those pages.",
+    "close_time": "2026-11-16 12:36 UTC",
+    "scheduled_resolution_time": "2026-11-26 23:59 UTC"
+  },
+  "research": [
+    "## Russia and the 2027 IIHF U18 Women's World Championship field: research as of 16 November 2026\n\nShort version: I found nothing that adds Russia to the Ostrava field. On 15 November the IIHF kept Russia out of the World Juniors because Canada will not let Russian players in. Czechia has taken the same visa position for Ostrava. But I found no IIHF decision that is specific to the U18 women's event.\n\n### 1. Resolution source\n- 2026-11-16: I could not load either official page. The event page and the schedule page both returned HTTP 403 to my direct fetch. The pages are built by scripts, and I found no underlying data file I could read. [event](https://www.iihf.com/en/events/2027/ww18) / [schedule](https://www.iihf.com/en/events/2027/ww18/schedule)\n- 2026-10-09: This is the most recent Wayback capture of the schedule page, so it predates the CAS ruling. The resolver may need a fresh capture or credible reports. [archive](http://web.archive.org/web/20261009105726/https://www.iihf.com/en/events/2027/ww18/schedule)\n- 2026-11-05: iSport (Czech) published the field and schedule without Russia:\n  - Group A: Germany, Switzerland, Sweden, USA.\n  - Group B: Czechia, Canada, Hungary, Slovakia.\n  - It shows no revised schedule and does not mention Germany being replaced.\n  - This matches the question's status check of 13 November (8 teams, 21 games). [iSport](https://isport.blesk.cz/clanek/hokej-reprezentace-ms-v-hokeji-do-18-let/481811/ms-v-hokeji-zen-u18-2027-ostrava-program-skupiny-cesky-prijede-rusko.html)\n\n### 2. Current status\n- Nothing settles the question yet. I found no IIHF announcement about the U18 women's event since the CAS ruling. I also found no report of a revised Ostrava schedule that includes Russia.\n- The closest precedent points against Russia being added. On 15 November the IIHF Council excluded Russia from the World Juniors, citing restrictions that the host government had \"formally communicated.\" Czechia has taken the equivalent visa position for Ostrava.\n\n### 3. Recent news (newest first)\n- 2026-11-15/16: The IIHF confirmed Russia's U20 team cannot play at the World Juniors in Edmonton and Red Deer (26 December to 5 January).\n  - It said it had considered alternative arrangements before keeping Canada as host.\n  - An updated World Juniors and U20 Division I Group A schedule is to be posted.\n  - None of the coverage I found mentions the U18 women's event. [Ukrainska Pravda](https://www.pravda.com.ua/eng/news/2026/11/15/8062987/), [CBC](https://www.cbc.ca/sports/hockey/iihf-world-juniors-russia-not-competing-9.7422880), [ESPN](https://www.espn.com/olympics/story/_/id/50373148/russia-not-allowed-world-juniors-boycott-looms)\n- 2026-11-15: The Russian federation called the decision \"unlawful.\" It says the IIHF's force majeure reasoning is unfounded and plans to appeal to the IOC with the Russian Olympic Committee. [Champion.com.ua](https://champion.com.ua/ukr/ice-hockey/rosiya-zvernetsya-do-mok-cherez-nedopusk-na-molodizhniy-chs-2027-1090952/), [EssentiallySports](https://www.essentiallysports.com/olympics-news-ice-hockey-russia-vows-legal-action-against-iihf-after-two-zero-two-seven-world-junior-championships-snub/)\n- 2026-11-14: Federations in Canada, Sweden, Finland, Germany, Czechia and Latvia say they will not play Russia, and some sponsors are threatening to pull out. Euronews repeats that Czech authorities will not issue visas for Ostrava. [Euronews](https://www.euronews.com/2026/11/14/russia-urges-iihf-to-move-canada-world-juniors-as-hockey-boycotts-spread)\n- Early to mid November (exact date not confirmed):\n  - Ostrava's new mayor, Richard Vereš, said it is \"not possible\" for Russian players to come to Ostrava. [Deník](https://moravskoslezsky.denik.cz/zpravy-region/veres-primator-ostrava-hokej-mistrovstvi-sveta-rusko-valka-ukrajina-spor-iihf-macinka-vyrok/)\n  - The Czech federation has reportedly considered giving up hosting rights. [Tiscali](https://www.tiscali.cz/ms-v-hokeji-se-rozpada-pred-ocima-sest-zemi-bojkotuje-turnaj-kvuli-rusku-skoda-auto-hrozi-stazenim-sponzorstvi-799922)\n- About 2026-11-02/03: Czechia announced it will not grant visas to the Russian U18 women's team. Daily Faceoff reports that if Russia did play, Germany, the lowest-ranked team, would be removed to make room. [Daily Faceoff](https://www.dailyfaceoff.com/news/czechia-wont-grant-visa-russia-womens-team-upcoming-iihf-u18-womens-world-championship-ban-news)\n\n### 4. Base rates\n- Russia has not appeared in the field of any IIHF championship since February 2022.\n- Since the CAS ruling, the only case decided so far is the World Juniors. There, the IIHF first sent federations a schedule with Russia in place of Norway. It then excluded Russia anyway once the host government formally refused entry. I found no case where the public IIHF pages listed Russia after the CAS ruling.\n- Ostrava differs in one way: the event moving elsewhere is less of a concern than with the World Juniors. Czechia has openly discussed handing back the event, but the question says a relocated official page would still count.\n\n### 5. Other forecasts\n- None of the supplied Kalshi or Polymarket markets match this question. The Polymarket IIHF 2027 champion market is unrelated.\n- I found no Metaculus or Manifold question on this, and no expert forecast.\n\n### 6. Upcoming events before 26 November\n- An IIHF Council decision specific to the U18 women's event. The World Juniors logic, host-government restrictions, would apply directly to Czechia.\n- Any official Czech government notification to the IIHF. For the World Juniors, a formal notification from Canada was the trigger.\n- The Russian appeal to the IOC and any new CAS filing. Neither is likely to produce a ruling within 10 days.\n- Any change to the IIHF pages, such as Germany being swapped for Russia or a ninth slot. Also, a new Wayback capture before the cutoff, since the latest one is from 9 October.\n\nSources: [IIHF event](https://www.iihf.com/en/events/2027/ww18), [IIHF schedule](https://www.iihf.com/en/events/2027/ww18/schedule), [Wayback](http://web.archive.org/web/20261009105726/https://www.iihf.com/en/events/2027/ww18/schedule), [iSport](https://isport.blesk.cz/clanek/hokej-reprezentace-ms-v-hokeji-do-18-let/481811/ms-v-hokeji-zen-u18-2027-ostrava-program-skupiny-cesky-prijede-rusko.html), [Ukrainska Pravda](https://www.pravda.com.ua/eng/news/2026/11/15/8062987/), [CBC](https://www.cbc.ca/sports/hockey/iihf-world-juniors-russia-not-competing-9.7422880), [ESPN](https://www.espn.com/olympics/story/_/id/50373148/russia-not-allowed-world-juniors-boycott-looms), [Euronews](https://www.euronews.com/2026/11/14/russia-urges-iihf-to-move-canada-world-juniors-as-hockey-boycotts-spread), [EssentiallySports](https://www.essentiallysports.com/olympics-news-ice-hockey-russia-vows-legal-action-against-iihf-after-two-zero-two-seven-world-junior-championships-snub/), [Champion.com.ua](https://champion.com.ua/ukr/ice-hockey/rosiya-zvernetsya-do-mok-cherez-nedopusk-na-molodizhniy-chs-2027-1090952/), [Daily Faceoff](https://www.dailyfaceoff.com/news/czechia-wont-grant-visa-russia-womens-team-upcoming-iihf-u18-womens-world-championship-ban-news), [Deník](https://moravskoslezsky.denik.cz/zpravy-region/veres-primator-ostrava-hokej-mistrovstvi-sveta-rusko-valka-ukrajina-spor-iihf-macinka-vyrok/), [Tiscali](https://www.tiscali.cz/ms-v-hokeji-se-rozpada-pred-ocima-sest-zemi-bojkotuje-turnaj-kvuli-rusku-skoda-auto-hrozi-stazenim-sponzorstvi-799922), [Inside The Games](https://www.insidethegames.biz/articles/mass-boycott-greets-russias-return-to-ice-hockey), [The Hockey News](https://thehockeynews.com/news/latest-news/iihf-expresses-its-disappointment-in-decision-to-allow-russia-to-play-in-international-tournaments)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 09:37 UTC; check each market really matches the question)\n- Kalshi: 2027 FIFA Women's World Cup Champion (2027). Yes prices: Spain: 0.27; USA: 0.19; Brazil: 0.11; Japan: 0.06; Germany: 0.05; England: 0.07; Nigeria: 0.01; Colombia: 0.02; France: 0.04; Netherlands: 0.04.\n- Kalshi: Will the 2030 Men's World Cup Tournament have 64 teams? (2030). Yes prices: 64 teams in the 2030 Men's World Cup field: 0.71.\n- Kalshi: Women's 2027 College Basketball Champion (2026-27 Season). Yes prices: South Carolina: 0.32; UConn: 0.21; USC: 0.20; Michigan: 0.07; Texas: 0.06; Louisville: 0.04; LSU: 0.03; Iowa: 0.01; Kentucky: 0.01; Duke: 0.01.\n- Kalshi: 2027 FIFA Women's World Cup Champion (2027). Yes prices: Spain: 0.28; USA: 0.19; Brazil: 0.11; Japan: 0.06; Germany: 0.05; England: 0.07; Nigeria: 0.01; Colombia: 0.02; France: 0.04; Netherlands: 0.04.\n- Kalshi: Women's Quarterfinals Qualifiers (2027 Quarterfinals). Yes prices: LSU: 0.47; Michigan: 0.41; Texas: 0.58; UCLA: 0.38; Duke: 0.35; Vanderbilt: 0.27; Notre Dame: 0.28; Iowa: 0.26; USC: 0.77; Louisville: 0.21.\n- Kalshi: Women's Semifinals Qualifiers (2027 Semifinals). Yes prices: USC: 0.55; UConn: 0.60; Texas: 0.33; South Carolina: 0.71; LSU: 0.25; UCLA: 0.15; Michigan: 0.19; Duke: 0.17; Vanderbilt: 0.12; Iowa: 0.12.\n- Kalshi: Women's Outdoor World Records to be Broken this year (Women's (2026)). Yes prices: Women's 1500m: 0.46; Women's 200m: 0.46; Women's 3km Steeplechase: 0.47; Women's 800m: 0.50; Women's 5km: 0.50; Women's Marathon: 0.50; Women's 400m: 0.51; Women's 100m: 0.0100; Women's 400m Hurdles: 0.9800; Women's Polevault: 0.9500.\n- Kalshi: Will the US government lift Microsoft's PERM suspension? (Before Jan 1, 2027). Yes prices: Before Jan 1, 2027: 0.07; Before Dec 1, 2026: 0.03.\n- Kalshi: Will courts let the 75-country visa suspension resume? (Before Nov 24, 2026). Yes prices: Yes: 0.09.\n- Polymarket: Will Ukraine agree to cede territory to Russia by...? (ends 2027-01-01). [Yes, No] prices: August 31, 2026: [\"0\", \"1\"]; December 31, 2026: [\"0.0245\", \"0.9755\"]; June 30, 2027: [\"0.145\", \"0.855\"]; December 31, 2027: [\"0.22\", \"0.78\"]\n- Polymarket: IIHF World Championship: 2027 Champion (ends 2027-06-14). [Yes, No] prices: Austria: [\"0.2545\", \"0.7455\"]; Canada: [\"0.4\", \"0.6\"]; Czechia: [\"0.26\", \"0.74\"]; Denmark: [\"0.2545\", \"0.7455\"]; Finland: [\"0.35\", \"0.65\"]; Germany: [\"0.2515\", \"0.7485\"]",
+    "I couldn't confirm what the resolution pages show today, but I found nothing suggesting Russia has been added to the Ostrava field. The closest precedent points the other way: on 15 November the IIHF kept Russia out of the 2027 World Juniors because Canada refused visas, and Czechia has said the same about Ostrava.\n\n## 1. Resolution source\n- 2026-11-16: The official event page (iihf.com/en/events/2027/ww18) blocked both of my tools with a \"403 Forbidden\" error. So I could not check the team list or schedule myself today. [IIHF](https://www.iihf.com/en/events/2027/ww18)\n- 2026-11-16: The Internet Archive's index has only three captures of ww18 pages since 1 November 2026, all from 11 November: a news item, the Ostrava page and the volunteers page. There are no November captures of the event or schedule pages, and fetching an archived schedule copy failed with a \"too many requests\" error. [Wayback CDX](https://web.archive.org/cdx/search/cdx?url=iihf.com/en/events/2027/ww18*&from=202611&output=txt)\n- 2026-10-07: The original announcement put USA, Sweden, Switzerland and Germany in Group A, and Czechia, Canada, Hungary and Slovakia in Group B. There was no Russia. [The Hockey News](https://thehockeynews.com/womens/international/czechia-set-to-host-2027-u-18-womens-world-championships-in-january)\n- The question says the field was unchanged as of 13 November (8 teams, 21 games). I found no report of a revised Ostrava schedule since then.\n\n## 2. Current status\n- Nothing settles the question yet. I found no IIHF decision, in either direction, specific to the U18 Women's event after the CAS ruling.\n- The latest precedent points to NO. On 15 November the IIHF dropped Russia from the World Juniors because of host-government restrictions and put Norway back in. That reversed the earlier adjusted schedule that had Russia in Norway's place. Czechia's visa refusal is the same kind of obstacle.\n\n## 3. Recent news (newest first)\n- 2026-11-15/16: The Russian federation called the World Juniors exclusion \"unlawful\" and said the IIHF's force majeure argument was unfounded. It plans to appeal to the IOC with the Russian Olympic Committee and will seek compensation. [EssentiallySports](https://www.essentiallysports.com/olympics-news-ice-hockey-russia-vows-legal-action-against-iihf-after-two-zero-two-seven-world-junior-championships-snub/), [Champion.com.ua](https://champion.com.ua/ukr/ice-hockey/rosiya-zvernetsya-do-mok-cherez-nedopusk-na-molodizhniy-chs-2027-1090952/)\n- 2026-11-15: The IIHF Council said Russia's U20 team will not take part, citing \"formally communicated\" Canadian restrictions. It considered alternatives but kept the event in Canada, and said updated World Juniors and U20 Division 1A schedules would follow. The report does not mention Ostrava. [Ukrainska Pravda](https://www.pravda.com.ua/eng/news/2026/11/15/8062987/), [bluewin](https://www.bluewin.ch/en/sport/russia-is-barred-from-participating-in-the-u-20-world-cup-li.3674679)\n- 2026-11-12: Meduza wrote an overview of Canada blocking implementation of the CAS ruling. [Meduza](https://meduza.io/en/feature/2026/11/12/a-sports-court-ordered-russia-s-return-to-international-hockey-canada-has-other-plans)\n- Early November: Czech Interior Minister Metnar said a 2023 government resolution bars short-stay visas and that the CAS ruling does not bind Prague. Russia has reportedly told the Czech side its team will come anyway. Boris Mikhailov urged the IIHF not to hold championships in countries that refuse visas. [Sovsport](https://www.sovsport.ru/hockey/news/rossijskie-yuniorki-ne-poluchat-vizy-dlya-uchastiya-v-ch-m-v-chehii), [Sports.ru](https://www.sports.ru/hockey/1117424027-chexiya-ne-vydast-vizy-rossijskim-xokkeistkam-dlya-uchastiya-na-yuchm-.html), [Sports.ru on Mikhailov](https://www.sports.ru/hockey/1117426475-boris-mixajlov-v-evrosoyuze-vse-rusofoby-ix-czel-ubrat-odnogo-iz-silne.html)\n- Early November: Prime Minister Babiš announced no visas for the Ostrava tournament. Daily Faceoff reported that if Russia were admitted, Germany, as the lowest-ranked team, would be removed. [Daily Faceoff](https://www.dailyfaceoff.com/news/czechia-wont-grant-visa-russia-womens-team-upcoming-iihf-u18-womens-world-championship-ban-news)\n- Early November: Czech federation general secretary Jan Černý said he found it hard to imagine the January tournament with Russia, pointing to visas, security, group placement and the schedule. [frews.cz](https://www.frews.cz/rusky-se-chteji-vratit-na-hokejovy-led-ostrava-je-ale-mozna-neuvidi-cesko-jim-muze-zavrit-dvere/)\n\n## 4. Base rates\n- Russia has not appeared in any IIHF championship field since February 2022, which is about 4.5 seasons. [IIHF 2022](https://www.iihf.com/en/news/32301/iihf_council_announces_decisions_over_russia_belar)\n- Since the CAS ruling, there is one case where the IIHF had to decide on a host that refuses visas: the World Juniors. Russia was written into an adjusted schedule sent to federations around 8 November, then removed on 15 November. Russia ending up in the published field: 0 of 1.\n\n## 5. Other forecasts\n- None of the pre-collected Kalshi or Polymarket markets match this question. The IIHF World Championship 2027 winner market is unrelated.\n- I found no Metaculus, Manifold or expert forecast on Russia at the U18 Women's World Championship.\n\n## 6. Upcoming events before 26 November\n- An IIHF Council decision on the Ostrava event is likely. The World Juniors decision suggests it will treat a formal Czech visa refusal as making Russian participation impossible. Watch whether Czechia formally notifies the IIHF, as Canada did.\n- The IIHF could consider moving the event, but it chose not to move the World Juniors.\n- The Russian federation's IOC appeal, or any new CAS enforcement request, is unlikely to change the published field within 10 days.\n- The women's World Championship decision was due to be reviewed separately in November 2026. [The Hockey News](https://thehockeynews.com/news/latest-news/iihf-bans-russia-from-2027-world-juniors-mens-worlds-u-18s)\n\nSources: [Inside The Games](https://www.insidethegames.biz/articles/mass-boycott-greets-russias-return-to-ice-hockey), [Yahoo Sports](https://sports.yahoo.com/articles/canadian-prime-minister-mark-carney-230722518.html), [tsn.ua](https://tsn.ua/prosport/ukhvaleno-ostatochne-rishennia-shchodo-uchasti-rosiyi-u-molodiznomu-chempionati-svitu-z-khokeiu-3217583.html), [forum24](https://www.forum24.cz/arbitraz-otevrela-rusku-dvere-viza-ale-nezaridi-pro-cestu-do-ceska-je-hokejistky-pry-nedostanou), [iSport](https://isport.blesk.cz/clanek/hokej-reprezentace-ms-v-hokeji/481578/klicove-otazky-k-navratu-ruska-na-ms-chaos-s-rozlosovanymi-turnaji-co-kdyz-souper-nenastoupi.html)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-16 09:37 UTC; check each market really matches the question)\n- Kalshi: 2027 FIFA Women's World Cup Champion (2027). Yes prices: Spain: 0.27; USA: 0.19; Brazil: 0.11; Japan: 0.06; Germany: 0.05; England: 0.07; Nigeria: 0.01; Colombia: 0.02; France: 0.04; Netherlands: 0.04.\n- Kalshi: Will the 2030 Men's World Cup Tournament have 64 teams? (2030). Yes prices: 64 teams in the 2030 Men's World Cup field: 0.71.\n- Kalshi: Women's 2027 College Basketball Champion (2026-27 Season). Yes prices: South Carolina: 0.32; UConn: 0.21; USC: 0.20; Michigan: 0.07; Texas: 0.06; Louisville: 0.04; LSU: 0.03; Iowa: 0.01; Kentucky: 0.01; Duke: 0.01.\n- Kalshi: 2027 FIFA Women's World Cup Champion (2027). Yes prices: Spain: 0.28; USA: 0.19; Brazil: 0.11; Japan: 0.06; Germany: 0.05; England: 0.07; Nigeria: 0.01; Colombia: 0.02; France: 0.04; Netherlands: 0.04.\n- Kalshi: Women's Quarterfinals Qualifiers (2027 Quarterfinals). Yes prices: LSU: 0.47; Michigan: 0.41; Texas: 0.58; UCLA: 0.38; Duke: 0.35; Vanderbilt: 0.27; Notre Dame: 0.28; Iowa: 0.26; USC: 0.77; Louisville: 0.21.\n- Kalshi: Women's Semifinals Qualifiers (2027 Semifinals). Yes prices: USC: 0.55; UConn: 0.60; Texas: 0.33; South Carolina: 0.71; LSU: 0.25; UCLA: 0.15; Michigan: 0.19; Duke: 0.17; Vanderbilt: 0.12; Iowa: 0.12.\n- Kalshi: Women's Outdoor World Records to be Broken this year (Women's (2026)). Yes prices: Women's 1500m: 0.46; Women's 200m: 0.46; Women's 3km Steeplechase: 0.47; Women's 800m: 0.50; Women's 5km: 0.50; Women's Marathon: 0.50; Women's 400m: 0.51; Women's 100m: 0.0100; Women's 400m Hurdles: 0.9800; Women's Polevault: 0.9500.\n- Kalshi: Will the US government lift Microsoft's PERM suspension? (Before Jan 1, 2027). Yes prices: Before Jan 1, 2027: 0.07; Before Dec 1, 2026: 0.03.\n- Kalshi: Will courts let the 75-country visa suspension resume? (Before Nov 24, 2026). Yes prices: Yes: 0.09.\n- Polymarket: Will Ukraine agree to cede territory to Russia by...? (ends 2027-01-01). [Yes, No] prices: August 31, 2026: [\"0\", \"1\"]; December 31, 2026: [\"0.0245\", \"0.9755\"]; June 30, 2027: [\"0.145\", \"0.855\"]; December 31, 2027: [\"0.22\", \"0.78\"]\n- Polymarket: IIHF World Championship: 2027 Champion (ends 2027-06-14). [Yes, No] prices: Austria: [\"0.2545\", \"0.7455\"]; Canada: [\"0.4\", \"0.6\"]; Czechia: [\"0.26\", \"0.74\"]; Denmark: [\"0.2545\", \"0.7455\"]; Finland: [\"0.35\", \"0.65\"]; Germany: [\"0.2515\", \"0.7485\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.03,
+      "reasoning": "(a) About 10 days remain, until 23:59 UTC on 26 November 2026. For Yes, a Russian team (RUS, ROC, AIN or similar) has to appear on the official IIHF U18 Women's event page or in at least one game on its schedule at the cutoff, including on any relocated official page.\n\n(b) If nothing changes, the answer is No. As of 13 November both pages show eight teams and 21 games, none involving Russia.\n\n(c) Base rate: Russia has appeared in no IIHF championship field since February 2022. Since the CAS ruling there is one comparable case, a host government refusing visas, at the World Juniors. Russia did not end up in the published field there, so the record is 0 of 1. The base rate for Russia being added within a 10-day window is roughly 5% or less.\n\n(d) Evidence:\n- For Yes:\n  - On 30 October, CAS explicitly ordered the IIHF to admit Russia to this event.\n  - Around 8 November, the IIHF circulated an adjusted World Juniors schedule containing Russia, which shows it is willing to rewrite programmes.\n  - Russia is applying legal and political pressure: an IOC appeal, demands to relocate events, and threats of sanctions.\n- For No:\n  - On 15 November, the IIHF Council excluded Russia from the World Juniors, citing restrictions the host government had formally communicated. It also chose not to relocate that event.\n  - Around 2 November, Czechia stated it will refuse visas for Ostrava. The prime minister, interior minister, sports minister and the Ostrava mayor have all said so.\n  - The Czech federation refuses to play Russia, and the tournament is about seven weeks away.\n  - No revised Ostrava schedule containing Russia has been reported.\n\n(e) Scenarios:\n- No: The IIHF applies the World Juniors logic to Ostrava, either through a formal decision or by simply leaving the pages unchanged, and the field stays at eight teams through 26 November.\n- Yes: The IIHF, under CAS enforcement pressure, publishes a revised Ostrava schedule that swaps Russia for Germany, perhaps temporarily before a force majeure ruling. Alternatively, it moves the event to a visa-issuing host such as Slovakia and lists Russia there, all before the cutoff.\n\n(f) I start from a base rate of about 5%. The 15 November World Juniors decision is a direct precedent applying almost identical facts, and it pushes the estimate down. A small residual covers the chance of a page update or relocation, and the resolver's reliance on archives adds some noise. I end at about 3%.\n\nProbability: 3%"
+    },
+    {
+      "value": 0.03,
+      "reasoning": "**(a) Time left and what Yes requires.** There are about 10 days until 23:59 UTC on 26 November 2026. Yes requires a Russian team, under any name including a neutral one, to appear in the team list on the official IIHF event page or in at least one game on the official schedule at that moment.\n\n**(b) Status quo.** As of 13 November the field had 8 teams and 21 games, with no Russia. If nothing changes, the answer is No.\n\n**(c) Base rate.** Russia has appeared in no published IIHF championship field since February 2022. Since the CAS ruling, only one case has been decided: the World Juniors, where the host also refused visas. Russia was briefly placed in a schedule sent to federations, but there is no confirmation it reached the public pages, and on 15 November it was removed. That gives a base rate of about 0 of 1, so roughly 5% or less.\n\n**(d) Strongest evidence.**\n- **For Yes:**\n  - The CAS order of 30 October explicitly covers this event.\n  - The IIHF said on 7 November it was \"taking the necessary steps\" to implement the ruling.\n  - For the World Juniors, an adjusted schedule including Russia was circulated around 8 November, so the IIHF has shown it will at least draft such schedules.\n  - The Russian federation is pressing hard and threatening legal action.\n- **For No:**\n  - On 15 November the IIHF Council excluded Russia from the World Juniors, citing visa restrictions the host government had \"formally communicated.\"\n  - Czechia's position is the same:\n    - The Prime Minister said on 2 November that no visas would be issued.\n    - The Interior Minister cites a 2023 government resolution barring short-stay visas.\n    - The Ostrava mayor and the Czech federation are also opposed.\n  - Neither research report found any revised Ostrava schedule.\n\n**(e) Scenarios.**\n- **No:** The IIHF applies its World Juniors reasoning to Ostrava, either through an explicit decision or by inaction. The public pages keep the current eight teams through 26 November.\n- **Yes:** Under Russian legal pressure, the IIHF publishes an \"implementation\" version of the Ostrava schedule with Russia replacing Germany before taking a host-restriction decision, and the public page updates before the cutoff. Alternatively, the event is moved to a country willing to issue visas and republished with Russia in the field. That is very unlikely within 10 days.\n\n**(f) From base rate to final probability.** I start near 5%. The 15 November World Juniors decision gives the IIHF a ready template for excluding Russia from Ostrava, and the window is short, which pushes slightly lower. The leftover risk is a brief public listing driven by the CAS order, or a resolver mishap such as an unusual archive capture. I settle at about 3%.\n\nProbability: 3%"
+    },
+    {
+      "value": 0.03,
+      "reasoning": "(a) About 10 days remain, until 23:59 UTC on 26 November 2026. For YES, a Russian team (RUS, ROC, AIN or similar) must appear in the participating-teams list on the official IIHF U18 Women's event page, or in at least one game on its schedule, at that moment. A relocated official page would also count.\n\n(b) If nothing changes, the answer is NO. As of 13 November both pages list eight teams and a 21-game schedule, with no Russian team.\n\n(c) Base rate: Russia has appeared in 0 IIHF championship fields since February 2022. Since the CAS ruling, there has been one case with a host that refuses visas, the World Juniors. Russia was put into a schedule sent to federations, but it was never confirmed on the public pages, and Russia was excluded on 15 November. That is 0 of 1, so the base rate is around 2-5%.\n\n(d) Evidence for YES:\n- On 30 October, CAS explicitly ordered the IIHF to let Russia enter this specific event.\n- The IIHF said on 7 November that it is \"taking the necessary steps\" to implement the ruling.\n- Around 8 November, an adjusted World Juniors schedule including Russia was circulated to federations. This shows the IIHF will at least draft Russian slots.\n- Russia is pressing hard and threatening legal action.\n\nEvidence for NO:\n- On 15 November, the IIHF Council excluded Russia from the World Juniors because of host-government restrictions that had been \"formally communicated.\"\n- Czechia's position is the same or stronger. Babiš, Metnar and Šťastný say no visas will be issued and the state has tools to block participation even through another Schengen country (around 2-3 November).\n- The Czech federation will not play Russia.\n- The Ostrava mayor says Russian players coming is \"not possible.\"\n- Replacing Germany would be operationally awkward this close to the event.\n\n(e) NO scenario: the IIHF applies the World Juniors reasoning to Ostrava, citing Czechia's formal visa refusal, and the pages stay unchanged. This could also happen simply because the IIHF does nothing before 26 November.\n\nYES scenario: the IIHF publishes a revised Ostrava schedule that swaps Germany for Russia, as an interim step to show it is complying with CAS before it rules on force majeure. Alternatively, it moves the event to a country that will grant visas and the new page lists Russia. Both are unlikely within 10 days.\n\n(f) I start from the roughly 3% base rate and the strong status quo. The World Juniors precedent pushes further toward NO. The small remaining risk is a temporary schedule edit on the public pages, or a relocation. That leaves about 3%.\n\nProbability: 3%"
+    },
+    {
+      "value": 0.03,
+      "reasoning": "(a) About 10 days remain, until 23:59 UTC on 26 November 2026. For YES, the IIHF's official ww18 event page or schedule page (or a relocated official page) must list a Russian team, under any name, at the cutoff. That would mean a revised field, for example Russia replacing Germany or a ninth slot, published publicly before the deadline.\n\n(b) Status quo: eight teams and a 21-game schedule with no Russia. Nothing changing resolves NO.\n\n(c) Base rate: Russia has not appeared in any IIHF championship field since February 2022. Since the CAS ruling, the one comparable case is the World Juniors, where the host also refused visas. Russia appeared in an adjusted schedule sent to federations around 8 November, and it is unclear whether the public pages ever showed it. The IIHF then excluded Russia on 15 November. Russia in the published field: about 0 of 1. A base rate of roughly 5% or lower for a public listing within a short window seems right.\n\n(d) Evidence for YES:\n- The CAS ruling of 30 October explicitly names the Ostrava event.\n- The IIHF said on 7 November it is \"taking the necessary steps\" to implement it.\n- Russia is pressing hard, with sanctions threats and an IOC appeal.\n- Daily Faceoff reports a contingency plan to replace Germany with Russia.\n\nEvidence for NO:\n- On 15 November the IIHF Council excluded Russia from the World Juniors, citing formally communicated host-government restrictions. That is the same logic Czechia triggers.\n- Czechia's PM (2 November), Interior Minister, Sports Minister, Foreign Minister and Ostrava's mayor have all ruled out visas or participation.\n- The Czech federation refuses to play Russia.\n- No revised Ostrava schedule has been reported as of 16 November.\n\n(e) NO scenario: Czechia formally notifies the IIHF. The Council applies the World Juniors reasoning and keeps the eight-team field, or simply leaves the pages unchanged through 26 November.\n\nYES scenario: The IIHF, under legal pressure, publishes an adjusted Ostrava schedule with Russia replacing Germany before it rules on force majeure. Or it briefly relocates the event and the new page lists Russia. Either would have to happen within 10 days.\n\n(f) I start at about 5% and move slightly down. The most recent precedent shows the IIHF choosing exclusion over relocation when a host refuses entry, and Czech resistance is formal and multi-level. There is also little time left. Some residual risk remains: a transitional public schedule including Russia, as briefly happened in federation-circulated materials for the World Juniors.\n\nProbability: 3%"
+    },
+    {
+      "value": 0.03,
+      "reasoning": "(a) About 10 days remain, until 23:59 UTC on 26 November 2026. For Yes, Russia (or a neutral Russian designation such as ROC or AIN) must appear in the IIHF's official U18 Women's World Championship team list or schedule at the cutoff, or on the closest earlier archived capture.\n\n(b) If nothing changes, the answer is No. The field has eight teams and a 21-game schedule with no Russia, last confirmed on 13 November.\n\n(c) Base rate: Russia has not appeared in any IIHF championship field since February 2022. Since the CAS ruling, the IIHF has decided one comparable case, the World Juniors, where the host refused visas. Russia was not added to the published field there. Reference class: 0 of 1 post-CAS cases, and 0 of many before that. I put the prior around 5%.\n\n(d) Evidence:\n- For Yes:\n  - The CAS ruling of 30 October explicitly names this tournament.\n  - The IIHF says it is \"taking the necessary steps\" to implement the ruling.\n  - On about 8 November the IIHF circulated an adjusted World Juniors schedule to federations that included Russia, so Russia can briefly enter planning documents.\n  - The Russian federation is applying pressure and threatening legal action.\n- For No:\n  - On 15 November the IIHF Council excluded Russia from the World Juniors, citing host-government restrictions that Canada had \"formally communicated.\"\n  - Czechia's government has taken an identical or stronger position: Babiš on 2 November, plus the Interior Minister, the Sports Minister and the Ostrava mayor.\n  - The Czech federation refuses to play Russia.\n  - No revised Ostrava schedule has been reported.\n  - Fitting Russia in would mean removing Germany or restructuring the format.\n\n(e) Scenarios:\n- No: Czechia formally notifies the IIHF of its visa refusal, the Council applies the World Juniors logic, and the pages stay unchanged. This is the most likely path.\n- Yes: The IIHF, fearing CAS contempt or compensation claims, publishes an adjusted Ostrava schedule with Russia replacing Germany before making a final decision, and it is captured before 26 November. Alternatively, the event is relocated and Russia is listed on the new page. Both seem unlikely in 10 days.\n\n(f) I start from about 5% and move slightly down. The World Juniors decision gives the IIHF a ready template for exclusion, and even there the Russia-inclusive schedule apparently went only to federations, not clearly to the public pages. I keep some weight for implementation steps appearing on the public pages, or for archive and resolution quirks.\n\nProbability: 3%"
+    },
+    {
+      "value": 0.03,
+      "reasoning": "(a) About 10 days remain, until 23:59 UTC on 26 November 2026. For Yes, a Russian team (RUS, ROC, AIN or similar) has to appear in the participating-teams list or in at least one game on the official IIHF Ostrava event or schedule pages, or on a relocated official page, at the cutoff.\n\n(b) If nothing changes, the answer is No. The pages list eight teams and 21 games without Russia, as checked on 13 November and consistent with iSport on 5 November.\n\n(c) Base rate: Russia has appeared in 0 IIHF championship fields since February 2022. Since the CAS ruling, there has been one test case with a host that refuses visas, the World Juniors. Russia was never confirmed on the public pages and was formally excluded on 15 November, so 0 of 1. A reasonable base rate is about 3-5%.\n\n(d) Evidence for Yes:\n- On 30 October, CAS ordered the IIHF to let Russia enter this specific event.\n- The IIHF said on 7 November that it is \"taking the necessary steps\" to implement the ruling.\n- Around 8 November, an adjusted World Juniors schedule including Russia was circulated to federations. This shows the IIHF was willing to write Russia into schedules at least temporarily.\n- Russia is pressing hard and threatening legal action.\n\nEvidence for No:\n- On 15 November, the IIHF Council excluded Russia from the World Juniors, citing host restrictions that Canada had \"formally communicated.\" It kept the event in Canada and put Norway back in.\n- Czechia's position is the same or stronger. PM Babiš (2 November), the interior, sports and foreign ministers, and the Ostrava mayor have all said no visas.\n- The Czech federation refuses to play Russia, and the general secretary finds a tournament with Russia hard to imagine.\n- No revised Ostrava schedule has been reported.\n\n(e) No scenario: the IIHF applies its World Juniors reasoning to Ostrava, either through a Council decision or by simply leaving the pages untouched. The field stays eight teams without Russia through 26 November. This is the most likely outcome.\n\nYes scenario: the IIHF, under CAS or legal pressure, publicly posts an adjusted Ostrava schedule with Russia in Germany's place pending visa outcomes. Alternatively, it relocates the event to a host willing to issue visas and posts a new field with Russia. Both are unlikely within 10 days, given that the IIHF just chose not to relocate the World Juniors.\n\n(f) I start from a base rate of about 4%. The 15 November World Juniors decision is a direct, very recent template pointing to No, and Czechia's refusal is even more explicit. That pushes slightly lower. There is a small residual risk that the IIHF publishes an interim schedule with Russia in it, or that the resolver relies on stale or ambiguous sources. I settle around 3%.\n\nProbability: 3%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.0584,
+  "usage": [
+    {
+      "question_id": "46841",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.0002565,
+      "input_tokens": 1126,
+      "output_tokens": 63,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0001362,
+      "input_tokens": 522,
+      "output_tokens": 64,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 102.6,
+      "notional_cost_usd": 0.3136801,
+      "input_tokens": 114398,
+      "output_tokens": 5076,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 116.2,
+      "notional_cost_usd": 0.3299933,
+      "input_tokens": 124617,
+      "output_tokens": 4703,
+      "web_searches": 7,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.3,
+      "notional_cost_usd": 0.11838,
+      "input_tokens": 12076,
+      "output_tokens": 1089,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.11766,
+      "input_tokens": 12076,
+      "output_tokens": 1053,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.9,
+      "notional_cost_usd": 0.11929200000000001,
+      "input_tokens": 12075,
+      "output_tokens": 1135,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.5,
+      "notional_cost_usd": 0.025613,
+      "input_tokens": 12076,
+      "output_tokens": 1039,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.3,
+      "notional_cost_usd": 0.025797,
+      "input_tokens": 12074,
+      "output_tokens": 1049,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.4,
+      "notional_cost_usd": 0.027529,
+      "input_tokens": 12073,
+      "output_tokens": 1136,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.8,
+      "notional_cost_usd": 0.0005009000000000001,
+      "input_tokens": 2218,
+      "output_tokens": 115,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.8,
+      "notional_cost_usd": 0.00044750000000000004,
+      "input_tokens": 2191,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.7,
+      "notional_cost_usd": 0.00044110000000000004,
+      "input_tokens": 2159,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0004844,
+      "input_tokens": 2178,
+      "output_tokens": 98,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0004839,
+      "input_tokens": 2193,
+      "output_tokens": 91,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0004625,
+      "input_tokens": 2266,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 9.494000000000001e-05,
+      "input_tokens": 2218,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.0,
+      "notional_cost_usd": 9.507e-05,
+      "input_tokens": 2193,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 9.453e-05,
+      "input_tokens": 2177,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.6,
+      "notional_cost_usd": 9.474e-05,
+      "input_tokens": 2160,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 9.448e-05,
+      "input_tokens": 2191,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46841",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.9,
+      "notional_cost_usd": 9.562000000000001e-05,
+      "input_tokens": 2267,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0817
+}
