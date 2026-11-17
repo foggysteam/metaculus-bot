@@ -166,6 +166,7 @@ def detach(args) -> None:
     log_file.parent.mkdir(parents=True, exist_ok=True)
     cmd = [backup.console_python(), "-B", str(Path(__file__).resolve()), "--run", args.run,
            "--limit", str(args.limit), "--batch", str(args.batch), "--log-file", str(log_file)]
+    cmd += ["--wait-for-lock"] * args.wait_for_lock
     base = getattr(subprocess, "CREATE_NO_WINDOW", 0) | getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0)
     for flags in (base | getattr(subprocess, "CREATE_BREAKAWAY_FROM_JOB", 0), base):
         try:
@@ -183,6 +184,8 @@ async def main() -> None:
     parser.add_argument("--limit", type=int, default=10_000, help="questions to forecast in this start")
     parser.add_argument("--batch", type=int, default=2, help="questions in flight at once")
     parser.add_argument("--log-file", type=Path)
+    parser.add_argument("--wait-for-lock", action="store_true",
+                        help="if another copy is running, wait for it to finish instead of exiting")
     parser.add_argument("--detach", action="store_true",
                         help="start a copy with no window that outlives this shell, logging to the run folder")
     args = parser.parse_args()
@@ -201,6 +204,11 @@ async def main() -> None:
     (out / "posts").mkdir(parents=True, exist_ok=True)
     backup.LOCK_FILE = out / "run.lock"
     lock = backup.hold_single_instance_lock()
+    if lock is None and args.wait_for_lock:
+        log("Another copy is running; waiting for it to finish")
+        while lock is None:
+            time.sleep(300)
+            lock = backup.hold_single_instance_lock()
     if lock is None:
         log("Another copy is already running")
         return
@@ -243,6 +251,7 @@ async def main() -> None:
     plan = []  # (post_id, [question ids])
     for path in sorted(snapshot_dir.glob("*.json")):
         post = json.loads(path.read_text(encoding="utf-8"))
+        # Failed questions are not saved, so every start retries them.
         ids = [i for i in wanted_questions(post) if not (out / "questions" / f"{i}.json").exists()]
         if ids:
             plan.append((post["id"], ids))

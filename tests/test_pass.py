@@ -677,6 +677,39 @@ def test_metaculus_benchmark_data_and_results_stay_out_of_the_public_repo() -> N
     assert build_benchmark_dataset.community_yes({"aggregations": {"recency_weighted": {"latest": None}}}) is None
 
 
+def test_date_forecast_wholly_past_an_open_bound_is_kept_not_refused() -> None:
+    import main
+    from forecasting_tools import DateQuestion, NumericDistribution, Percentile
+
+    def question(open_upper: bool) -> DateQuestion:
+        return DateQuestion(question_text="When will The Winds of Winter be released?",
+                            lower_bound=datetime(2024, 8, 21, tzinfo=timezone.utc), upper_bound=datetime(2026, 12, 31, tzinfo=timezone.utc),
+                            open_lower_bound=False, open_upper_bound=open_upper)
+
+    levels = [0.1, 0.2, 0.4, 0.6, 0.8, 0.9]
+    # One of the forward test's refused forecasts (27552, 16 Nov): every percentile after the range ends.
+    late = [Percentile(percentile=p, value=v) for p, v in zip(levels, [1828828800, 1867017600, 1948579200, 2064268800, 2272147200, 2524608000])]
+    try:
+        NumericDistribution.from_question(late, question(True))
+        raise AssertionError("the library now accepts this; the workaround may be unnecessary")
+    except ValueError as error:
+        assert "within the range of the question" in str(error)
+    kept = main.date_distribution(late, question(True))
+    upper = question(True).upper_bound.timestamp()
+    at_bound = [p for p in kept.declared_percentiles if p.value == upper]
+    assert len(at_bound) == 1 and abs(at_bound[0].percentile - 0.021) < 0.002  # its own chance of release by the end
+    assert all(upper < p.value <= upper + 0.2 * (upper - question(True).lower_bound.timestamp()) for p in kept.declared_percentiles if p.value != upper)
+    assert kept.get_cdf()[-1].percentile < 0.05  # almost everything past the end, as forecast
+    # A forecast inside the range is untouched, and a closed bound still refuses.
+    inside = [Percentile(percentile=p, value=1730000000 + i * 8e6) for i, p in enumerate(levels)]
+    assert main.date_distribution(inside, question(True)).declared_percentiles == NumericDistribution.from_question(inside, question(True)).declared_percentiles
+    try:
+        main.date_distribution(late, question(False))
+        raise AssertionError("a closed bound should still refuse")
+    except ValueError as error:
+        assert "within the range of the question" in str(error)
+
+
 def test_benchmark_fetcher_retries_connection_and_server_errors() -> None:
     import requests
     sys.path.insert(0, str(ROOT / "backtest"))

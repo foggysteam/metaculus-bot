@@ -44,6 +44,66 @@ from forecasting_tools import (
 dotenv.load_dotenv()
 logger = logging.getLogger(__name__)
 
+# How far past an open bound the values beyond it are squeezed, as a share of the question's range.
+# The library refuses forecasts with nothing within 25% of the range or anything more than twice
+# the range out, so this must stay under 0.25.
+PAST_BOUND_BAND = 0.2
+
+
+def date_distribution(percentiles: list[Percentile], question: DateQuestion) -> NumericDistribution:
+    """NumericDistribution.from_question for a date question, keeping a forecast that lies wholly
+    (or far) past an open bound. The library refuses those to catch unit mistakes, which cannot
+    happen with dates, so the question went without a forecast: "When will The Winds of Winter be
+    released?" with every percentile after the range's end in 2026 (forward test, 16 and 17 Nov).
+
+    Only when the library refuses: a point is added exactly at the bound at the forecast's own
+    probability there (from the percentiles, extended along the nearest two if all lie past it),
+    and the values past the bound are squeezed, in order, into a band just beyond it. Metaculus
+    only stores the forecast inside the range plus the total past an open bound, and both stay as
+    the forecaster gave them. Closed bounds and any other error raise as before."""
+    try:
+        return NumericDistribution.from_question(percentiles, question)
+    except ValueError as error:
+        message = str(error)
+        if "within the range of the question" not in message and "far exceeding the bounds" not in message:
+            raise
+        refusal = error
+    lower, upper = question.lower_bound.timestamp(), question.upper_bound.timestamp()
+    span = upper - lower
+    points = sorted((p.percentile, p.value) for p in percentiles)
+    if (points[0][1] < lower and not question.open_lower_bound) or (points[-1][1] > upper and not question.open_upper_bound):
+        raise refusal
+
+    def level_at(x: float) -> float:
+        """The forecast's cumulative probability at x, straight lines between percentiles."""
+        pairs = list(zip(points, points[1:]))
+        for (p1, v1), (p2, v2) in pairs:
+            if v1 <= x <= v2:
+                return p1 if v2 == v1 else p1 + (p2 - p1) * (x - v1) / (v2 - v1)
+        (p1, v1), (p2, v2) = pairs[0] if x < points[0][1] else pairs[-1]
+        return (p1 if x < v1 else p2) / 2 if v2 == v1 else p1 + (p2 - p1) * (x - v1) / (v2 - v1)
+
+    def squeeze(v: float) -> float:
+        if v > upper:
+            return upper + PAST_BOUND_BAND * span * (v - upper) / ((v - upper) + span)
+        if v < lower:
+            return lower - PAST_BOUND_BAND * span * (lower - v) / ((lower - v) + span)
+        return v
+
+    kept = [(p, squeeze(v)) for p, v in points]
+    for bound, past in ((upper, points[-1][1] > upper), (lower, points[0][1] < lower)):
+        if not past or any(v == bound for _, v in kept):
+            continue
+        below = max((p for p, v in kept if v < bound), default=0.0)
+        above = min((p for p, v in kept if v > bound), default=1.0)
+        level = min(max(level_at(bound), below + 0.001, 0.001), above - 0.001)
+        kept = sorted(kept + [(level, bound)])
+    logger.warning(
+        f"Date forecast for {question.page_url} lies past the question's range; kept with the part "
+        f"past the bound squeezed ({len(points)} percentiles, first {points[0][1]:.0f}, range {lower:.0f} to {upper:.0f})"
+    )
+    return NumericDistribution.from_question([Percentile(percentile=p, value=v) for p, v in kept], question)
+
 
 class FallTemplateBot2026(ForecastBot):
     """
@@ -524,7 +584,7 @@ class FallTemplateBot2026(ForecastBot):
             )
             for percentile in date_percentile_list
         ]
-        prediction = NumericDistribution.from_question(percentile_list, question)
+        prediction = date_distribution(percentile_list, question)
         logger.info(
             f"Forecasted URL {question.page_url} with prediction: {prediction.declared_percentiles}."
         )
