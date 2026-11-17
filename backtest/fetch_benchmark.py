@@ -48,15 +48,24 @@ class Fetcher:
                 time.sleep(wait)
             self.last = time.monotonic()
             self.requests += 1
-            r = requests.get(url, params=params, headers=self.headers, timeout=60)
+            try:
+                r = requests.get(url, params=params, headers=self.headers, timeout=60)
+            except (requests.ConnectionError, requests.Timeout) as e:  # SSL drops too (fw1 died on one, 17 Nov)
+                print(f"  {type(e).__name__}, retrying in {60 * (attempt + 1)} s", flush=True)
+                time.sleep(60 * (attempt + 1))
+                continue
             if r.status_code == 429:
                 pause = float(r.headers.get("Retry-After") or 0) or 90 * (attempt + 1)
                 print(f"  429, pausing {pause:.0f} s", flush=True)
                 time.sleep(pause)
                 continue
+            if r.status_code >= 500:
+                print(f"  HTTP {r.status_code}, retrying in {60 * (attempt + 1)} s", flush=True)
+                time.sleep(60 * (attempt + 1))
+                continue
             r.raise_for_status()
             return r.json()
-        raise RuntimeError(f"Still rate-limited after 6 tries: {url}")
+        raise RuntimeError(f"Gave up after 6 tries (rate limit, connection or server errors): {url}")
 
 
 def closed_at(post: dict) -> str:

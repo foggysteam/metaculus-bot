@@ -677,6 +677,41 @@ def test_metaculus_benchmark_data_and_results_stay_out_of_the_public_repo() -> N
     assert build_benchmark_dataset.community_yes({"aggregations": {"recency_weighted": {"latest": None}}}) is None
 
 
+def test_benchmark_fetcher_retries_connection_and_server_errors() -> None:
+    import requests
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import fetch_benchmark
+
+    class Reply:
+        def __init__(self, status: int) -> None:
+            self.status_code, self.headers = status, {}
+
+        def raise_for_status(self) -> None:
+            if self.status_code >= 400:
+                raise requests.HTTPError(str(self.status_code))
+
+        def json(self) -> dict:
+            return {"id": 42840}
+
+    # fw1 stopped on 17 Nov when one request to Metaculus got an SSL drop.
+    replies = [requests.exceptions.SSLError("EOF"), Reply(502), Reply(200)]
+
+    def fake_get(*args, **kwargs):
+        reply = replies.pop(0)
+        if isinstance(reply, Exception):
+            raise reply
+        return reply
+
+    real = fetch_benchmark.requests.get, fetch_benchmark.time.sleep, os.environ.get("METACULUS_TOKEN")
+    fetch_benchmark.requests.get, fetch_benchmark.time.sleep = fake_get, lambda seconds: None
+    os.environ["METACULUS_TOKEN"] = real[2] or "test"
+    try:
+        assert fetch_benchmark.Fetcher(spacing=0).get("https://www.metaculus.com/api/posts/42840/") == {"id": 42840}
+    finally:
+        fetch_benchmark.requests.get, fetch_benchmark.time.sleep = real[0], real[1]
+    assert not replies
+
+
 def test_forward_test_hides_the_questions_own_community_prediction() -> None:
     sys.path.insert(0, str(ROOT / "backtest"))
     import forward_benchmark as fw
