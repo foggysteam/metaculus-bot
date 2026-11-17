@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-17T10:04:49.004109+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-17T10:00:25.748078+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46871,
+    "post_id": 46611,
+    "url": "https://www.metaculus.com/questions/46611",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will Ituri province report at least 10 more new confirmed Ebola cases than Nord-Kivu province for 26 November 2026?",
+    "resolution_criteria": "This question resolves using the daily Ebola situation report (SitRep) published by the Democratic Republic of the Congo's Institut National de Santé Publique (INSP) with reporting date 26 November 2026 (expected to be SitRep N°196, published on 27 November 2026), available at https://insp.cd/ and archived at https://ebola-tracker.org/en/reports. Using the province-level daily new confirmed case figures in Table 1 of that report, subtract the number reported for Nord-Kivu province for 26 November 2026 from the number reported for Ituri province for the same day. If that difference is 10 or more, the question resolves Yes; if it is 9 or less, the question resolves No. Only laboratory-confirmed cases count; suspected or probable cases do not.",
+    "fine_print": "If the report's key-points summary and its Table 1 give different daily new confirmed case figures for a province for 26 November 2026, the Table 1 figures govern. If INSP publishes a corrected version (e.g. one marked \"corrigé\") of the SitRep for reporting date 26 November 2026, the corrected figures are used, provided that corrected version appears within 14 days of 27 November 2026. If that SitRep does not report province-level daily new confirmed case counts for 26 November 2026, the figures in the first subsequent INSP SitRep that does report them for that date are used. If no INSP publication ever reports province-level daily confirmed case counts for 26 November 2026, the question is annulled.",
+    "close_time": "2026-11-17 12:56 UTC",
+    "scheduled_resolution_time": "2026-11-27 18:00 UTC"
+  },
+  "research": [
+    "# Ituri vs Nord-Kivu daily new confirmed Ebola cases: research for 26 November 2026\n\n**Bottom line:** Nothing settles this yet. Using the database's daily splits, Ituri reported at least 10 more new confirmed cases than Nord-Kivu on 19 of the 44 days from 2 October to 14 November (about 43%). That held on 6 of the last 14 days. Most of the daily figures I use come from a database whose method may not match Table 1 exactly, so treat these counts as approximate.\n\n## 1. Resolution source\n- 2026-11-17: The ebola-tracker.org archive goes up to SitRep N°184 (reporting date 14 November). It does not yet have SitReps 185 or 186. It lists nine bulletins INSP never put online (N°003, 029, 043, 045, 063, 075, 076, 142, 172), so a missing SitRep is possible. [ebola-tracker](https://ebola-tracker.org/en/reports)\n- 2026-11-14 (SitRep 184): 60 new confirmed cases nationally, 11,376 in total. Ituri had 28 new (7,858 total) and Nord-Kivu 25 new (2,860 total), a gap of +3. [database CSV](https://ebola-tracker.org/data/ebola-drc-database.csv)\n- Caveat on the data: the database's daily \"new_cases\" is the site's own day-to-day change in cumulative totals, not necessarily the Table 1 figure. Its \"lab_positives\" column sometimes differs: Nord-Kivu shows 27 vs 17 on 21 October and 14 vs 24 on 6 November. I could not extract Table 1 from the PDF to check (the PDF text couldn't be read). [methodology](https://ebola-tracker.org/en/database)\n\n## 2. Current status\n- Nothing settles the question. The reporting date is nine days away.\n- Daily gap (Ituri minus Nord-Kivu), from the database:\n  - 1-5 Nov: −20, −8 (rebuilt by the site because SitRep 172 was never published), −13, −6, −4\n  - 6-10 Nov: +23, +12, +17, +13, +20\n  - 11-14 Nov: −4, −1, +33 (40 vs 7), +3\n\n## 3. Recent news\n- 2026-11-16: The IOM sitrep counts 10,920 confirmed cases as of 7 November, still concentrated in Ituri and Nord-Kivu. [ReliefWeb](https://reliefweb.int/report/democratic-republic-congo/multi-country-bundibugyo-ebola-virus-disease-outbreak-situation-report-no-26-2-8-november-2026)\n- 2026-11-16: 11,254 cases and 5,505 deaths as of 12 November. WHO says 400-500 new cases a week as the virus spreads into remote areas hit by violence. [Telangana Today](https://telanganatoday.com/dr-congo-ebola-outbreak-spreads-to-remote-areas-as-violence-hampers-response)\n- 2026-11-15: AP reports the outbreak is still out of control six months in. [ITV](https://www.itv.com/news/2026-11-15/ebola-outbreak-remains-out-of-control-in-congo-after-6-months)\n- 2026-11-12: WHO warns that insecurity is now a major obstacle to the response. A health centre treating Ebola patients was burned in Lolwa (Ituri). [actualite.cd](https://actualite.cd/2026/11/12/ebola-en-rdc-loms-alerte-sur-linsecurite-devenue-lun-des-plus-grands-obstacles-la)\n- 2026-11-07: ACP reports 2,754 cumulative cases in Nord-Kivu as of 5 November. Beni (814) and Katwa (714) are the most affected zones. [ACP](https://acp.cd/province/trente-deux-nouveaux-cas-confirmes-enregistres-portant-le-cumul-a-2754-au-nord-kivu/)\n\n## 4. Base rates (database daily splits)\n- 2-27 October: the gap was 10 or more on 11 of 26 days. Those days were 3, 9, 11, 12, 13, 15, 16, 17, 19, 21 and 27 October; the 3 October figure was rebuilt by the site.\n- 28 October-14 November: 8 of 18 days (28 and 31 October; 6, 7, 8, 9, 10 and 13 November).\n- Overall: 19 of 44 days, about 43%. Last 14 days: 6 of 14.\n- Range of the gap: −26 (25 October, 32 vs 58) to +33 (13 November). Several days fell just short of 10: +8 on 20 October, +9 on 30 October.\n- Ituri typically reports 20-47 new cases a day, Nord-Kivu 7-58. Both vary a lot from day to day.\n- Weekly pattern (my tallies): Ituri ahead by 10 or more on 5 of 7 days in 6-12 October and 13-19 October, 1 of 7 in 20-26 October, 2 of 7 in 27 October-2 November, 4 of 7 in 3-9 November, and 2 of 5 in 10-14 November.\n- Nord-Kivu's share has risen. WHO said Nord-Kivu supplied 640 of 1,463 cases in the 21 days to 3 November, with Ituri at 710.\n\n## 5. Other forecasts\n- I found no market or expert forecast on the daily split between the two provinces.\n- The Kalshi and Polymarket Ebola markets (which countries will report a case, \"pandemic in 2026\" at about 1%) don't bear on this question.\n\n## 6. Upcoming events before resolution\n- Daily SitReps N°185-195 (15-25 November) will show whether the split is trending one way. N°196, with reporting date 26 November, is due on 27 November.\n- Things that could move the numbers:\n  - Attacks and disruption in Ituri (Lolwa, Mambasa and Mandima areas) can push Ituri's count down, or bunch up a backlog of results.\n  - Lab backlogs in Beni, Katwa, Butembo or Mutwanga can spike Nord-Kivu's count.\n  - Retrospective data reconciliation, as with the \"harmonisation\" notes on 30-31 October.\n- A corrected (\"corrigé\") version of the 26 November SitRep would count if it appears by 11 December.\n\nSources: [ebola-tracker reports](https://ebola-tracker.org/en/reports), [database CSV](https://ebola-tracker.org/data/ebola-drc-database.csv), [database page](https://ebola-tracker.org/en/database), [ACP](https://acp.cd/province/trente-deux-nouveaux-cas-confirmes-enregistres-portant-le-cumul-a-2754-au-nord-kivu/), [actualite.cd](https://actualite.cd/2026/11/12/ebola-en-rdc-loms-alerte-sur-linsecurite-devenue-lun-des-plus-grands-obstacles-la), [ReliefWeb IOM](https://reliefweb.int/report/democratic-republic-congo/multi-country-bundibugyo-ebola-virus-disease-outbreak-situation-report-no-26-2-8-november-2026), [Telangana Today](https://telanganatoday.com/dr-congo-ebola-outbreak-spreads-to-remote-areas-as-violence-hampers-response), [ITV](https://www.itv.com/news/2026-11-15/ebola-outbreak-remains-out-of-control-in-congo-after-6-months), [Beninwebtv](https://beninwebtv.bj/rdc-ebola-11000-cas-5387-morts-novembre-2026/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 10:00 UTC; check each market really matches the question)\n- Kalshi: Which countries will report an Ebola case this year? (Before 2027). Yes prices: South Sudan: 0.32; Central African Republic: 0.27; Tanzania: 0.17; Ethiopia: 0.14; Angola: 0.11; Somalia: 0.10; Burundi: 0.12; Republic of the Congo: 0.10; Italy: 0.07; United Arab Emirates: 0.07.\n- Kalshi: Ebola pandemic this year? (In 2026). Yes prices: In Dec 31, 2026: 0.01.\n- Kalshi: Measles cases next year? (In 2027). Yes prices: Above 1250: 0.80; Above 1500: 0.71; Above 500: 0.93; Above 1750: 0.67; Above 2000: 0.65; Above 4000: 0.63; Above 750: 0.88; Above 3000: 0.62; Above 5000: 0.61; Above 1000: 0.84.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.99.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Polymarket: Which countries will have an Ebola case in 2026? (ends 2027-01-01). [Yes, No] prices: Uganda: [\"1\", \"0\"]; South Sudan: [\"0.29\", \"0.71\"]; Rwanda: [\"0.07\", \"0.93\"]; Burundi: [\"0.155\", \"0.845\"]; United States: [\"0.045\", \"0.955\"]; Canada: [\"0.055\", \"0.945\"]\n- Polymarket: Ebola pandemic in 2026? (ends 2027-01-01). [Yes, No] prices: Ebola pandemic in 2026?: [\"0.012\", \"0.988\"]",
+    "I couldn't find anything that settles this question yet. Over the last 20 reported days, Ituri beat Nord-Kivu by 10 or more in 9 of them, about 45%. The daily gap moves around a lot, from Nord-Kivu +26 to Ituri +33.\n\n## 1. Resolution source\n- 2026-11-17: The newest report in the ebola-tracker archive is INSP SitRep N°184 (reporting date 14 Nov, published 15 Nov). No SitRep for 15 or 16 Nov was online yet (the page for no. 185 returns 404). [archive](https://ebola-tracker.org/en/reports) · [latest.json](https://ebola-tracker.org/data/latest.json)\n- 2026-11-14 (SitRep 184): Ituri **+28** new confirmed cases, Nord-Kivu **+25**, so a gap of +3, which would be No. The national total was 60 new cases, 11,376 cumulative and 5,568 deaths. Cumulative cases: Ituri 7,858 and Nord-Kivu 2,860. Of the day's cases, 14 were in Beni (Nord-Kivu) but only 4 in Bunia (Ituri). [letter 184](https://ebola-tracker.org/en/letter/)\n- insp.cd timed out when I tried it. The INSP PDFs are compressed, so I couldn't read them directly. All the daily splits below come from ebola-tracker's summaries of each bulletin (\"letters\"), not from the PDFs themselves.\n- Missing bulletins happen: INSP never put SitReps 003, 029, 043, 045, 063, 075, 076, 142 and 172 online. That matters for the \"first subsequent SitRep\" rule and the annulment clause. [archive](https://ebola-tracker.org/en/reports)\n\n## 2. Current status\n- Nothing settles the question. The data covers 26 Nov, and that report is due 27 Nov.\n\n## 3. Recent news (newest first)\n- 2026-11-16: IOM SitRep 26 says transmission is concentrated in Ituri and Nord-Kivu. [ReliefWeb](https://reliefweb.int/report/democratic-republic-congo/multi-country-bundibugyo-ebola-virus-disease-outbreak-situation-report-no-26-2-8-november-2026)\n- 2026-11-16: WHO and partners report 400-500 new cases a week, with violence getting in the way of the response. [Telangana Today](https://telanganatoday.com/dr-congo-ebola-outbreak-spreads-to-remote-areas-as-violence-hampers-response)\n- 2026-11-15: AP says the outbreak is still out of control after six months. [ITV](https://www.itv.com/news/2026-11-15/ebola-outbreak-remains-out-of-control-in-congo-after-6-months)\n- 2026-11-13 (SitRep 183): Ituri +40, Nord-Kivu +7. Ituri's lab positivity was 25.6%. Staff at the Kasenyi treatment centre (Ituri) are on strike, and some days Kasenyi sends no data at all, which can lower Ituri's daily count. [letter 183](https://ebola-tracker.org/en/letter/183/)\n- 2026-11-12: WHO is warning that insecurity is one of the biggest obstacles to the response. [actualite.cd](https://actualite.cd/2026/11/12/ebola-en-rdc-loms-alerte-sur-linsecurite-devenue-lun-des-plus-grands-obstacles-la)\n\n## 4. Base rates (gap = Ituri minus Nord-Kivu)\nDates for SitReps 164-169 are inferred from the numbering. The ✔ marks a gap of 10 or more.\n- 164 (~25 Oct): 32 vs 58 → −26\n- 165 (~26 Oct): 36 vs 36 → 0\n- 166 (~27 Oct): 31 vs 16 → +15 ✔\n- 167 (~28 Oct): 40 vs 30 → +10 ✔\n- 168 (~29 Oct): 28 vs 45 → −17\n- 169 (30 Oct): 34 vs 25 → +9\n- 170 (31 Oct): 32 vs 18 → +14 ✔\n- 171 (1 Nov): 19 vs 39 → −20\n- 172 (2 Nov): not published\n- 173 (3 Nov): 23 vs 36 → −13\n- 174 (4 Nov): 30 vs 36 → −6. The question background lists 4 Nov differently; I found 30 vs 36 in letter 174.\n- 175 (5 Nov): 28 vs 32 → −4\n- 176 (6 Nov): 47 vs 24 → +23 ✔\n- 177 (7 Nov): 24 vs 12 → +12 ✔\n- 178 (8 Nov): 40 vs 23 → +17 ✔\n- 179 (9 Nov): 30 vs 17 → +13 ✔\n- 180 (10 Nov): 44 vs 24 → +20 ✔\n- 181 (11 Nov): 37 vs 41 → −4\n- 182 (12 Nov): 25 vs 26 → −1\n- 183 (13 Nov): 40 vs 7 → +33 ✔\n- 184 (14 Nov): 28 vs 25 → +3\n\nSources: [letters 164-184](https://ebola-tracker.org/en/letter/183/)\n\nWhat the numbers show:\n- In the most recent 13 bulletins (1-14 Nov), 6 days reached the threshold (46%). Over all 20 days, 9 did (45%). The median gap in the last 13 days is +3, and +9 over the 20.\n- Ituri usually reports 25-47 new cases a day. Nord-Kivu is more erratic, anywhere from 7 to 58. In late October and early November, surges in Beni, Biena and Mutwanga often pushed Nord-Kivu ahead. Since about 6 Nov, Ituri has led more often.\n- National daily totals are about 41-96, with a 7-day average of about 62-65.\n\n## 5. Other forecasts\n- I found no market or expert forecast on the daily split between provinces. The markets I checked only cover other things: which countries will report Ebola (Kalshi, Polymarket) and whether there will be an Ebola \"pandemic\" in 2026 (Kalshi 0.01, Polymarket 0.012).\n\n## 6. Upcoming events before resolution\n- SitReps 185-195 (reporting dates 15-25 Nov) should come out daily. Watch whether Nord-Kivu's low-to-mid-20s level and the Beni cluster keep going, and whether Ituri's lab positivity stays high.\n- Things in reporting that could shift the split:\n  - The Kasenyi strike in Ituri may continue, which can mean missing data.\n  - Insecurity has kept the Butuhe checkpoint (Nord-Kivu) shut.\n  - Provinces sometimes harmonise their data, as Ituri did on 30-31 Oct, though that changed totals rather than daily counts.\n  - Nord-Kivu has received more Ervebo vaccine than other provinces (24,957 doses given nationally by 14 Nov). The vaccine wasn't developed for Bundibugyo virus, so its effect is uncertain.\n- Release: SitRep N°196 (reporting date 26 Nov) is expected 27 Nov. Bulletins are sometimes never published, as with no. 172.\n\nSources:\n- [ebola-tracker reports](https://ebola-tracker.org/en/reports)\n- [latest.json](https://ebola-tracker.org/data/latest.json)\n- [letter 184](https://ebola-tracker.org/en/letter/)\n- [letter 183](https://ebola-tracker.org/en/letter/183/)\n- [letter 182](https://ebola-tracker.org/en/letter/182/)\n- [letter 179](https://ebola-tracker.org/en/letter/179/)\n- [letter 177](https://ebola-tracker.org/en/letter/177/)\n- [letter 174](https://ebola-tracker.org/en/letter/174/)\n- [letter 173](https://ebola-tracker.org/en/letter/173/)\n- [letter 171](https://ebola-tracker.org/en/letter/171/)\n- [letter 170](https://ebola-tracker.org/en/letter/170/)\n- [letters 164-169](https://ebola-tracker.org/en/letter/169/)\n- [ACP Nord-Kivu](https://acp.cd/province/trente-deux-nouveaux-cas-confirmes-enregistres-portant-le-cumul-a-2754-au-nord-kivu/)\n- [Africanews](https://www.africanews.com/amp/2026/11/12/dr-congo-ebola-outbreak-surpasses-11000-cases-as-conflict-hampers-response/)\n- [actualite.cd](https://actualite.cd/2026/11/12/ebola-en-rdc-loms-alerte-sur-linsecurite-devenue-lun-des-plus-grands-obstacles-la)\n- [beninwebtv](https://beninwebtv.bj/rdc-ebola-11000-cas-5387-morts-novembre-2026/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 10:00 UTC; check each market really matches the question)\n- Kalshi: Which countries will report an Ebola case this year? (Before 2027). Yes prices: South Sudan: 0.32; Central African Republic: 0.27; Tanzania: 0.17; Ethiopia: 0.14; Angola: 0.11; Somalia: 0.10; Burundi: 0.12; Republic of the Congo: 0.10; Italy: 0.07; United Arab Emirates: 0.07.\n- Kalshi: Ebola pandemic this year? (In 2026). Yes prices: In Dec 31, 2026: 0.01.\n- Kalshi: Measles cases next year? (In 2027). Yes prices: Above 1250: 0.80; Above 1500: 0.71; Above 500: 0.93; Above 1750: 0.67; Above 2000: 0.65; Above 4000: 0.63; Above 750: 0.88; Above 3000: 0.62; Above 5000: 0.61; Above 1000: 0.84.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.99.\n- Kalshi: Will France impose capital controls? (Before Jan 1, 2028). Yes prices: Before Aug 1, 2027: 0.04; Before Jul 1, 2027: 0.04; Before Jun 1, 2027: 0.04; Before Nov 1, 2027: 0.05; Before Oct 1, 2027: 0.05; Before Sep 1, 2027: 0.05; Before Dec 1, 2027: 0.06; Before Jan 1, 2028: 0.06.\n- Polymarket: Which countries will have an Ebola case in 2026? (ends 2027-01-01). [Yes, No] prices: Uganda: [\"1\", \"0\"]; South Sudan: [\"0.29\", \"0.71\"]; Rwanda: [\"0.07\", \"0.93\"]; Burundi: [\"0.155\", \"0.845\"]; United States: [\"0.045\", \"0.955\"]; Canada: [\"0.055\", \"0.945\"]\n- Polymarket: Ebola pandemic in 2026? (ends 2027-01-01). [Yes, No] prices: Ebola pandemic in 2026?: [\"0.012\", \"0.988\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.4,
+      "reasoning": "(a) **Time left and what Yes requires.** The outcome will be known in about 10 days, when SitRep N°196 (reporting date 26 Nov) is published on 27 Nov. Yes requires Ituri's daily new confirmed cases in Table 1 to exceed Nord-Kivu's by 10 or more for 26 November.\n\n(b) **Status quo.** The most recent day (14 Nov) showed a gap of +3, which would resolve No. The typical median gap in recent weeks is about +3 to +9, just below the threshold. So the status quo leans slightly towards No.\n\n(c) **Base rate.** Using daily splits from 2 Oct to 14 Nov, the gap was 10 or more on 19 of 44 days, about 43%. Over the last 20 bulletins it was 9 of 20 (45%), and over the last 13 it was 6 of 13 (46%). Reference value: about 43-45%.\n\n(d) **Strongest evidence.**\n- For Yes:\n  - From 6 to 14 Nov Ituri led strongly: 315 vs 199 cases, an average gap of about 13 per day, with gaps of 10 or more on 6 of 9 days.\n  - Ituri's lab positivity is high (25.6% on 13 Nov).\n  - Ituri has many more affected health zones (28 vs 17).\n- For No:\n  - Nord-Kivu's share has been rising. In the 21 days to 3 Nov the split was 710 vs 640, an average gap of only about 3 per day.\n  - Recent days were mixed: 11 Nov at −4, 12 Nov at −1, 14 Nov at +3.\n  - The Beni cluster keeps producing spikes, such as 14 new cases in Beni on 14 Nov.\n  - The Kasenyi treatment centre strike and insecurity in Ituri (Lolwa) can suppress Ituri's daily counts.\n  - Nord-Kivu's count is erratic and can spike above Ituri's.\n\n(e) **Scenarios.**\n- No: Nord-Kivu reports about 25-30 cases (Beni, Katwa and Mutwanga keep producing), while Ituri reports about 30, or Kasenyi data are missing that day. The gap lands between −5 and +8.\n- Yes: Ituri has a typical 35-45 day (Bunia and Mandima), and Nord-Kivu has a low day of 15-25. The gap reaches 10 or more, as it did on 6-10 Nov.\n\n(f) **From base rate to final probability.** I start at about 44%. I adjust down slightly because:\n- the medium-term trend shows Nord-Kivu's share rising,\n- the most recent splits are near zero,\n- the threshold sits a little above the median gap.\n\nThe roughly 13-per-day Ituri lead over 6-14 Nov partly offsets this. The daily noise is very large, with a standard deviation of about 15, so I stay close to the base rate. I move about 4 points down, to roughly 40%.\n\nProbability: 40%"
+    },
+    {
+      "value": 0.4,
+      "reasoning": "(a) The outcome will be known about 10 days from now, when SitRep N°196 (reporting date 26 November) appears on about 27 November. Yes requires Table 1's Ituri daily new confirmed count for 26 November minus Nord-Kivu's to be 10 or more.\n\n(b) Status quo: the latest split (14 November) was Ituri 28 vs Nord-Kivu 25, a gap of +3, which would resolve No. The median gap over the last 13 days is about +3, so the typical day is a No.\n\n(c) Base rate: across 44 days (2 October to 14 November), the gap reached 10 or more on 19 days, about 43%. In the last 13 to 20 bulletins it was about 45-46%. A reasonable reference rate is about 43%.\n\n(d) Evidence:\n- For Yes:\n  - Ituri led by 10 or more on 6 to 10 November (five days running) and again on 13 November (+33).\n  - Ituri still has the larger caseload, typically 25-47 cases a day, and high lab positivity (25.6% on 13 November).\n- For No:\n  - Nord-Kivu's share of new cases has grown: 640 of 1,463 in the 21 days to 3 November (WHO, 6 November).\n  - Beni is active, with 14 cases on 14 November, and there is a newer cluster in Mutwanga.\n  - The Kasenyi treatment-centre strike in Ituri (noted 13 November) causes days with no data from that site, which lowers Ituri's count.\n  - Insecurity in Ituri (the Lolwa attack, 12 November) may suppress case detection.\n  - The 14 November gap was only +3.\n\n(e) Scenarios:\n- No: Nord-Kivu's Beni and Mutwanga clusters keep producing 25-35 cases a day, while Ituri reports in the high 20s or low 30s, held down by the Kasenyi strike and disruption. The gap ends up somewhere between −10 and +8.\n- Yes: Ituri clears a lab backlog or Bunia surges to about 40 cases, while Nord-Kivu has a quiet day of about 15-20. The gap reaches +15 or more.\n\n(f) I start from the 43% base rate. The daily gap is very noisy (−26 to +33), and with nine days to go, current trends add little information. I shade down slightly, by about 3 points, for three reasons:\n- Nord-Kivu's rising share.\n- Ituri reporting disruptions (the Kasenyi strike and insecurity).\n- The structural asymmetry: Yes needs a gap of 10 or more, while the median gap is in single digits.\n\nThere are no relevant markets to anchor on.\n\nProbability: 40%"
+    },
+    {
+      "value": 0.41,
+      "reasoning": "(a) There are about 10 days until the outcome is known. SitRep N°196 (reporting date 26 Nov) is due 27 Nov. Yes requires Table 1 to show Ituri's new confirmed cases for 26 Nov at least 10 higher than Nord-Kivu's.\n\n(b) If nothing changed: the latest split (14 Nov) was 28 vs 25, a gap of +3, which would resolve No. Day-to-day noise is large, so this \"status quo\" carries little weight. The real status quo is a roughly 45% daily hit rate.\n\n(c) Base rate: Ituri led by 10 or more on 19 of 44 days from 2 Oct to 14 Nov (43%). Over the last 20 bulletins it was 9 of 20 (45%), and over 1-14 Nov 6 of 13 (46%). Across the last 20 days the mean gap is about +6 to +8, the median about +9 and the SD about 15. That puts P(gap ≥ 10) at about 40-45%.\n\n(d) Evidence:\n- For Yes:\n  - Ituri led by 10 or more on 6-10 Nov and 13 Nov (+33).\n  - Ituri's lab positivity was high (25.6%, 13 Nov).\n  - Ituri carries most of the cases (about 57% of new notifications).\n- For No:\n  - Nord-Kivu's share has been rising (640 vs 710 over the 21 days to 3 Nov).\n  - The Beni cluster was active on 14 Nov (14 new cases there vs 4 in Bunia).\n  - The Kasenyi treatment centre strike in Ituri causes days with missing data.\n  - Insecurity in Ituri (Lolwa) can suppress reporting.\n  - The median gap over 1-14 Nov was only +3.\n\n(e) Scenarios:\n- No: Nord-Kivu's Beni, Katwa and Mutwanga clusters keep it in the 25-40 range while Ituri reports about 30, so the gap ends up between −10 and +9.\n- Yes: Ituri has a batch day, for example after Kasenyi data catch up (around 40 cases), while Nord-Kivu has a quiet day (around 20).\n\n(f) I start from the base rate of about 44%. I adjust down slightly for three reasons: Nord-Kivu's share is trending up, Ituri faces reporting disruptions (strike, insecurity), and the threshold sits just above the median gap. I end at about 41%.\n\nProbability: 41%"
+    },
+    {
+      "value": 0.41,
+      "reasoning": "(a) The outcome will be known in about 10 days, when SitRep N°196 (reporting date 26 Nov) comes out on 27 Nov. For Yes, Ituri's daily new confirmed cases in Table 1 for 26 Nov must exceed Nord-Kivu's by 10 or more.\n\n(b) Status quo: the latest day (14 Nov) showed a gap of +3, which would be No. The median gap over the last 13 days is about +3, also No.\n\n(c) Base rate: Ituri led by 10 or more on 19 of 44 days from 2 Oct to 14 Nov (43%). Over the last 20 bulletins it was 9 of 20 (45%), and over the last 14 days 6 of 14 (43%). Reference class: about 43%.\n\n(d) Evidence:\n- For Yes:\n  - Ituri led by 10 or more on 6 to 10 Nov (five straight days) and on 13 Nov (+33).\n  - Ituri carries about 69% of cumulative cases and usually reports 25-47 new cases a day.\n  - Ituri's lab positivity was high (25.6% on 13 Nov).\n- For No:\n  - Nord-Kivu's share of new cases has risen: 640 vs 710 in the 21 days to 3 Nov (WHO, 6 Nov).\n  - Days 11, 12 and 14 Nov showed gaps of −4, −1 and +3.\n  - The Kasenyi treatment centre strike in Ituri can suppress Ituri's reported counts.\n  - Beni was active, with 14 cases on 14 Nov.\n  - The threshold of 10 sits above the median gap.\n\n(e) Scenarios:\n- No: Beni, Mutwanga and Katwa keep Nord-Kivu at 25-35 a day while Kasenyi data gaps hold Ituri near 28-32, giving a gap of about 0-5.\n- Yes: Bunia and Mandima flare up, or a lab backlog clears in Ituri (40+ cases), while Nord-Kivu has a low day around 15-20.\n\n(f) Final probability: I start at 43%. The daily split is very noisy and close to a coin flip, and there is no strong directional trend. Nord-Kivu's rising share and the Kasenyi reporting gaps lean slightly toward No, while Ituri's recent cluster of big-lead days leans slightly toward Yes. I move down slightly, to about 41%.\n\nProbability: 41%"
+    },
+    {
+      "value": 0.42,
+      "reasoning": "(a) The outcome is known about 10 days from now, when SitRep N°196 (reporting date 26 November) is published on 27 November. Yes requires Ituri's daily new confirmed cases in Table 1 to exceed Nord-Kivu's by 10 or more for that day.\n\n(b) Status quo: the latest split (14 November) was +3 (28 vs 25), which would be No. The typical median gap is around +3 to +9, just short of the threshold.\n\n(c) Base rate: across daily splits from 2 October to 14 November, the gap was 10 or more on 19 of 44 days (about 43%). Over the last 13-20 days it was about 45-46%.\n\n(d) Evidence:\n- For Yes:\n  - Ituri led by 10 or more on 6, 7, 8, 9, 10 and 13 November.\n  - Ituri carries about 57% of new cases and has higher lab positivity (25.6% on 13 November).\n  - Ituri averages about 30-35 new cases a day, versus about 20-25 for Nord-Kivu recently.\n- For No:\n  - Nord-Kivu's share has been rising (640 vs 710 in the 21 days to 3 November).\n  - The Beni and Mutwanga clusters are producing spikes (14 cases in Beni on 14 November).\n  - The Kasenyi treatment centre strike and insecurity in Ituri (Lolwa) can depress Ituri's reported count.\n  - The threshold of 10 sits above the median gap.\n  - Table 1 may differ slightly from the database figures.\n\n(e) Scenarios:\n- No: Nord-Kivu reports a Beni or Katwa surge of 30+ while Ituri sits around 30, or Kasenyi data drop out. Either way the gap lands between -10 and +9.\n- Yes: Ituri has a Bunia or Mandima batch of about 40 while Nord-Kivu reports a low day of 15-25.\n\n(f) Reasoning: I start from about 44%. The early-to-mid November pattern favours Ituri somewhat, but Nord-Kivu's rising share and the Ituri reporting disruptions pull the other way. Day-to-day noise dominates, so I stay close to the base rate and shade slightly lower for the reporting risks in Ituri.\n\nProbability: 42%"
+    },
+    {
+      "value": 0.41,
+      "reasoning": "(a) The outcome is known when SitRep N°196 comes out around 27 November, about 10 days from now. Yes requires that Table 1 shows Ituri's new confirmed cases for 26 November at least 10 higher than Nord-Kivu's.\n\n(b) Status quo: the latest day (14 November) had Ituri 28 vs Nord-Kivu 25, a gap of +3, which would be No. The median gap over the last 13 days is about +3, also No.\n\n(c) Base rate: the gap was 10 or more on 19 of 44 days (2 October to 14 November), about 43%. Over the last 20 days it was 9 of 20 (45%), and over the last 14 days 6 of 14 (43%).\n\n(d) Evidence:\n- For Yes:\n  - Ituri led by 10 or more on five straight days, 6-10 November.\n  - On 13 November the gap was +33.\n  - Ituri's lab positivity is high (25.6%).\n  - Ituri still makes up about 57% of new cases.\n- For No:\n  - Nord-Kivu's share is rising: 640 of 1,463 cases in the 21 days to 3 November.\n  - The Beni cluster keeps contributing, for example 14 Beni cases on 14 November against 4 in Bunia.\n  - The Kasenyi strike in Ituri causes days with missing data.\n  - Insecurity in Ituri (Lolwa, Mambasa) could suppress Ituri's reporting.\n  - The gap swings widely, from -26 to +33, with many days in the +3 to +9 range.\n\n(e) Scenarios:\n- No: Nord-Kivu clusters (Beni, Mutwanga) keep it reporting in the 25-40 range. Ituri reports around 30 because of Kasenyi data gaps, so the gap lands somewhere between -5 and +8.\n- Yes: a Nord-Kivu lull (like the 7 cases on 13 November) coincides with an Ituri batch of 35-45 results.\n\n(f) The data is noisy and the resolution is a single day 10 days out, so I stay near the base rate of about 43%. I shade down slightly for three reasons:\n- Nord-Kivu's share has been trending upward.\n- Ituri has operational problems (the strike and insecurity).\n- Possible discrepancies between the database figures and Table 1 add noise.\n\nFinal estimate: about 41%.\n\nProbability: 41%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.4277,
+  "usage": [
+    {
+      "question_id": "46871",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00013509999999999998,
+      "input_tokens": 514,
+      "output_tokens": 65,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00024130000000000004,
+      "input_tokens": 1040,
+      "output_tokens": 67,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 77.6,
+      "notional_cost_usd": 0.4240581,
+      "input_tokens": 162967,
+      "output_tokens": 5272,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 130.2,
+      "notional_cost_usd": 0.7754565,
+      "input_tokens": 577426,
+      "output_tokens": 8093,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.3,
+      "notional_cost_usd": 0.100636,
+      "input_tokens": 10183,
+      "output_tokens": 959,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.6,
+      "notional_cost_usd": 0.10156000000000001,
+      "input_tokens": 10181,
+      "output_tokens": 1006,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.8,
+      "notional_cost_usd": 0.105964,
+      "input_tokens": 10184,
+      "output_tokens": 1225,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 21.9,
+      "notional_cost_usd": 0.023486600000000003,
+      "input_tokens": 10183,
+      "output_tokens": 952,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 21.9,
+      "notional_cost_usd": 0.021986600000000002,
+      "input_tokens": 10183,
+      "output_tokens": 877,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.9,
+      "notional_cost_usd": 0.022306600000000003,
+      "input_tokens": 10183,
+      "output_tokens": 893,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 12.7,
+      "notional_cost_usd": 0.00044450000000000007,
+      "input_tokens": 2176,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.0004687,
+      "input_tokens": 2112,
+      "output_tokens": 93,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 12.4,
+      "notional_cost_usd": 0.00046590000000000005,
+      "input_tokens": 2283,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 0.00042870000000000007,
+      "input_tokens": 2097,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.0,
+      "notional_cost_usd": 0.0004179,
+      "input_tokens": 2043,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.00042510000000000003,
+      "input_tokens": 2079,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 9.451e-05,
+      "input_tokens": 2175,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 0.00014056000000000002,
+      "input_tokens": 2111,
+      "output_tokens": 112,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 9.598e-05,
+      "input_tokens": 2284,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 9.318e-05,
+      "input_tokens": 2042,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.4,
+      "notional_cost_usd": 9.393000000000002e-05,
+      "input_tokens": 2098,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46871",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 9.392999999999999e-05,
+      "input_tokens": 2079,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.5791
+}
