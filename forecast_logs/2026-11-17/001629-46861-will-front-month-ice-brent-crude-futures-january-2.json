@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-17T00:19:42.752907+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-17T00:16:29.027341+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46861,
+    "post_id": 46601,
+    "url": "https://www.metaculus.com/questions/46601",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will front-month ICE Brent crude futures (January 2027 contract) settle above $100.00 per barrel on 27 November 2026?",
+    "resolution_criteria": "This question resolves YES if the ICE Futures Europe official daily settlement price for the Brent Crude January 2027 futures contract (ICE logical code BRN, January 2027 delivery; Barchart symbol CBF27) for the trading session of Friday, 27 November 2026 is greater than $100.00 per barrel, and NO otherwise; a settlement of exactly $100.00 per barrel resolves NO. ICE's official settlement price for this contract and session is displayed as the end-of-day value on the 27 November 2026 row of Barchart's price history page: https://www.barchart.com/futures/quotes/CBF27/historical-prices. If that page is unavailable or shows no value for the 27 November 2026 session, the ICE settlement price for this contract and session as reported by [credible sources](https://www.metaculus.com/faq/#definitions) will be used. Where the Barchart figure and ICE's official settlement differ, ICE's official settlement governs.",
+    "fine_print": "If ICE Futures Europe publishes a corrected settlement price for the 27 November 2026 session of this contract, the corrected figure governs.",
+    "close_time": "2026-11-17 03:14 UTC",
+    "scheduled_resolution_time": "2026-11-28 00:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n\n- 2026-11-17: I tried to read Barchart's CBF27 historical-prices page, the official resolution source. It returned HTTP 202 with no content because the page is built by scripts, so I could not read any value there. I also could not find an ICE settlement file that I could access. [Barchart](https://www.barchart.com/futures/quotes/CBF27/historical-prices)\n- 2026-11-16: The latest settlement I found is for the January 2027 contract: $92.44, down $3.40 (3.55%) from the 13 November settlement of $95.84. [Infobae/EFE](https://www.infobae.com/america/agencias/2026/11/16/el-brent-baja-un-355-hasta-9244-dolares-por-el-auge-de-exportaciones-en-oriente-medio/); [Business Times](https://www.businesstimes.com.sg/companies-markets/energy-commodities/oil-settles-lower-recovering-middle-east-exports-bolster-surplus-outlook) (from the news feed, which also gave $92.44 / -$3.40). Yahoo's BZ=F close for the same day was $92.13, slightly different, probably because it is taken at a different time than ICE's settlement.\n- To settle above $100.00, the contract needs to rise about 8.2% from $92.44 over 9 trading sessions (17 to 27 November).\n\n## 2. Current status\n\n- Nothing has settled the question yet. The price has moved further below the threshold since the 13 November baseline in the question: it was 4-5% below $100 then and is about 8% below now.\n\n## 3. Recent news (newest first)\n\n- 2026-11-17: Kalshi's Brent market for 17 November (settled on the Pyth feed) puts about a 51% chance on a close above $90. That implies overnight trading around $90, below Monday's settlement (from the market data provided to me).\n- 2026-11-16: Brent fell as Strait of Hormuz flows recovered. The IEA now expects a Q4 surplus, with supply of 105 mb/d running 1.7 mb/d above demand; it had earlier forecast a deficit. China's October refinery throughput fell 8.1% year on year. Iran's Revolutionary Guards said mines hit tankers near Hormuz, which Reuters could not verify. BMI said the export recovery is \"fragile.\" [CNBC](https://www.cnbc.com/2026/11/16/oil-prices-brent-wti-latest.html)\n- 2026-11-16: TradingNEWS reported:\n  - The IEA says global observed inventories rose 52 million barrels in October, the first monthly rise since June.\n  - Gulf exports are at 60-80% of normal.\n  - Brent peaked near $118 on 30 October and is down about 19% since.\n  - The dollar index is near a 19-month high, and futures price a 25bp Fed hike in December.\n  - The author's base case is a $93-97 range, with $100 reachable only on escalation or a restrained OPEC+ outcome. [TradingNEWS](https://www.tradingnews.com/news/wti-slips-to-88-30-and-brent-to-95-36-as-hormuz-flows-normalize-93-usd-wti-100-usd-brent-targets)\n- 2026-11-15: Goldman Sachs expects a 2 mb/d surplus in 2027 and a Brent average of $88 that year, falling to $78 by the end of 2027. [CNBC](https://www.cnbc.com/2026/11/16/oil-prices-brent-wti-latest.html)\n- 2026-11-13: The IEA published its Oil Market Report pointing to recovering Middle East exports. [Qz](https://qz.com/oil-prices-slip-iea-supply-surplus-iran-war-111626)\n- 2026-11-09: Reports of a US-Iran deal came out and were disputed. On 2 November Iran had signaled it was ready to negotiate. [TradingNEWS](https://www.tradingnews.com/news/wti-slips-to-88-30-and-brent-to-95-36-as-hormuz-flows-normalize-93-usd-wti-100-usd-brent-targets)\n- Data conflict: the background says Brent spot averaged $124 in October, while TradingNEWS puts the late-October futures peak near $118. Wikipedia's chronology lists Brent at $109.86 on 16 October. [Wikipedia](https://en.wikipedia.org/wiki/2026%E2%80%932028_world_oil_market_chronology)\n\n## 4. Base rates\n\n- Statistical baseline from code, using 3 years of BZ=F 8-day returns from $92.13: p50 $92.46, p75 $96.21, p90 $101.03, p95 $105.36. On that basis, the chance of being above $100 is roughly 10-12%.\n- Recent daily moves have often been 3-4% (for example +4% on 1 and 8 October, +4% on 16 October, -3.6% on 16 November). Between 3 and 10 November the price fell from about $98.32 to $91.49, roughly 7% in a week. Between 10 and 13 November it rebounded about 5%, from $91.49 to $95.84. Moves of 8% in two weeks have happened during this conflict, both up and down.\n- The trend is down: about 19% below the late-October peak, with inventories building and Hormuz flows recovering.\n\n## 5. Other forecasts\n\n- Kalshi, Brent on 30 November at 5pm EST (Pyth feed, a different date and price source from this question), prices as of 2026-11-17: above $95.99 at 18%, above $97.99 at 14%. There was no $99.99 strike in the data I received; extrapolating, above $100 would be roughly 10-12%. These prices may have been set before Monday's late-session drop.\n- Polymarket: I could not find a matching Brent market for November.\n- EIA STEO (10 November) expects Brent spot \"near $100\" for the rest of 2026, with a 2026 average of $97.44. [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php)\n- Goldman Sachs expects a $88 average for 2027 (see above).\n\n## 6. Upcoming events before 27 November\n\n- 17 November: US retail sales and industrial production; API inventory estimate. [TradingNEWS](https://www.tradingnews.com/news/wti-slips-to-88-30-and-brent-to-95-36-as-hormuz-flows-normalize-93-usd-wti-100-usd-brent-targets)\n- 18 November: EIA Petroleum Status Report; FOMC minutes.\n- This week: Trump-Xi talks focused on trade and technology. OPEC+'s capacity review, which feeds into the 2027 quotas, was delayed to mid-November.\n- Ongoing: US-Iran diplomacy, any US blockade of Iran, and tanker or mine attacks in or near Hormuz. Any of these is the most likely trigger for a sharp move up.\n- 25 November (expected): next EIA weekly report, likely moved earlier because of the US Thanksgiving holiday on 26 November. I have not verified this. Trading on Friday 27 November may be thin.\n- 29 November: the OPEC+ ministerial meeting on 2027 quotas comes after the resolution date, but positioning ahead of it could move prices. 30 November is the January contract's expiry.\n\nSources: [CNBC](https://www.cnbc.com/2026/11/16/oil-prices-brent-wti-latest.html), [TradingNEWS](https://www.tradingnews.com/news/wti-slips-to-88-30-and-brent-to-95-36-as-hormuz-flows-normalize-93-usd-wti-100-usd-brent-targets), [Infobae](https://www.infobae.com/america/agencias/2026/11/16/el-brent-baja-un-355-hasta-9244-dolares-por-el-auge-de-exportaciones-en-oriente-medio/), [Qz](https://qz.com/oil-prices-slip-iea-supply-surplus-iran-war-111626), [Wikipedia](https://en.wikipedia.org/wiki/2026%E2%80%932028_world_oil_market_chronology), [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php), [Barchart](https://www.barchart.com/futures/quotes/CBF27/historical-prices)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 00:16 UTC; check each market really matches the question)\n- Kalshi: Brent crude oil price on Nov 30, 2026 at 5:00 PM EST? (Nov 30, 2026 at 5:00 PM EST). Yes prices: Above $89.99: 0.45; Above $91.99: 0.35; Above $85.99: 0.67; Above $87.99: 0.64; Above $93.99: 0.25; Above $83.99: 0.76; Above $95.99: 0.18; Above $81.99: 0.84; Above $97.99: 0.14; Above $79.99: 0.90. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n- Kalshi: How high will WTI oil get by Jul 31, 2026? (In 2026). Yes prices: 82.01 or above: 0.9900; 79.51 or above: 0.9900; 81.51 or above: 0.9900; 81.01 or above: 0.9900; 80.01 or above: 0.9900; 80.51 or above: 0.9900; 92.01 or above: 0.9200; 78.01 or above: 0.9900; 76.51 or above: 0.9900; 91.51 or above: 0.9600.\n- Kalshi: How low will WTI oil get by Jul 31, 2026? (In 2026). Yes prices: 66.99 or below: 0.0200; 59.99 or below: 0.0100; 59.49 or below: 0.0100; 60.99 or below: 0.0200; 62.49 or below: 0.0100; 60.49 or below: 0.0200; 64.49 or below: 0.0200; 61.49 or below: 0.0100; 62.99 or below: 0.0200; 63.49 or below: 0.0100.\n- Kalshi: Annual Return: WTI vs. Brent? (2026). Yes prices: Brent Crude Oil: 0.74; WTI Crude Oil: 0.10.\n- Kalshi: Brent crude oil price tomorrow at 5:00 PM EST? (Nov 17, 2026 at 5:00 PM EST). Yes prices: Above $90: 0.51; Above $90.50: 0.43; Above $89.50: 0.60; Above $91: 0.28; Above $89: 0.69; Above $88.50: 0.77; Above $91.50: 0.14; Above $92: 0.11; Above $88: 0.83; Above $87.50: 0.86. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n- Kalshi: Cracker Barrel Credit Card Spend in November (November 2026). Yes prices: Above 98.5: 0.46; Above 96: 0.65; Above 101: 0.25; Above 93.5: 0.80; Above 103.5: 0.14; Above 106: 0.11; Above 108.5: 0.03; Above 91: 0.95; Above 86: 0.97; Above 88.5: 0.96.\n- Kalshi: What will Cracker Barrel say during their next earnings call? (On Dec 8, 2026). Yes prices: AI / Artificial Intelligence: 0.35; Campfire: 0.30; Dividend: 0.71; Maple Street: 0.78; Tailwind: 0.20; Headwind: 0.83; Road Trip: 0.14; Reward: 0.87; Deno: 0.87; Tariff: 0.89.\n- Kalshi: Will the USD Settlement Price for the Current Auction of the November 18, 2026 CARB Joint Auction #49 settle at or above the official November 18, 2026 ICE settlement price for the November 2026 California Carbon Allowance Vintage 2026 Future? (Auction #49 · November 18, 2026). Yes prices: CARB ≥ ICE: 0.20.\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BZ=F: latest close 92.1300 on 2026-11-16.\nTarget date 2026-11-27 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 79.7511, p10: 84.5578, p25: 89.0507, p50: 92.457, p75: 96.2096, p90: 101.0287, p95: 105.3555\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price).",
+    "Brent's front month settled at $92.44 on 16 November, so it needs to rise about 8.2% by the 27 November settlement to resolve YES. Overnight Kalshi pricing suggests it may be nearer $90 now, which would mean a gain of about 11%. Kalshi's Nov 30 market prices \"above $97.99\" at 14%.\n\n## 1. Resolution source\n- 2026-11-17: Barchart's CBF27 historical-prices page returned HTTP 202 with an empty body, because it is built by scripts. I could not read any settlement rows from it directly. [Barchart](https://www.barchart.com/futures/quotes/CBF27/historical-prices)\n- 2026-11-16: The January Brent contract settled at $92.44, down $3.40 (-3.55%) from $95.84 on 13 Nov. [Infobae/EFE](https://www.infobae.com/america/agencias/2026/11/16/el-brent-baja-un-355-hasta-9244-dolares-por-el-auge-de-exportaciones-en-oriente-medio/); [Business Times](https://www.businesstimes.com.sg/companies-markets/energy-commodities/oil-settles-lower-recovering-middle-east-exports-bolster-surplus-outlook)\n- The sources disagree slightly on the 13 Nov settle: $95.84 (EFE) versus $95.82 in the question's background, which gives that figure for 12 Nov.\n- Yahoo's BZ=F close was 92.13 on 16 Nov. That is close to the ICE settle, but it is a close, not the settlement.\n\n## 2. Current status\n- Nothing has settled the question yet.\n- From $92.44, the contract needs about +8.2% to clear $100.00.\n- The Kalshi market for the 17 Nov close (fetched 00:16 UTC on 17 Nov) is centred near $90: \"above $90\" trades at 51%, \"above $92\" at 11%. That points to further weakness, but it settles on the Pyth feed, not ICE, so treat it as a hint only. I found no confirmed 17 Nov ICE quote.\n\n## 3. Recent news (newest first)\n- 2026-11-16: Brent fell 3.6% as Middle East exports recovered and expectations of a supply surplus firmed. WTI fell to $85.72. [Business Times](https://www.businesstimes.com.sg/companies-markets/energy-commodities/oil-settles-lower-recovering-middle-east-exports-bolster-surplus-outlook)\n- 2026-11-16: At midday, January Brent was down $2.51 at $93.33 (OPIS). [MarketScreener](https://www.marketscreener.com/news/nymex-overview-crude-futures-fall-amid-supply-surplus-concerns-opis-ce785edfdd88ff23)\n- 2026-11-15: Goldman Sachs projected a \"considerable\" surplus of 2 mb/d in 2027, with prices falling below $80. [Taisounds](https://www.taisounds.com/news/content/84/310014)\n- 2026-11-15: Oilprice reported:\n  - The IEA expects oversupply this quarter.\n  - ING says regional flows are near pre-war levels but still depend on routes that bypass Hormuz.\n  - Tanker attacks in Hormuz are continuing.\n  - Iraq is reportedly trucking crude through Syria.\n  [Oilprice](https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Fall-as-Fears-of-a-Global-Supply-Glut-Return.html)\n- 2026-11-13: The IEA's monthly report pointed to Middle East exports recovering. Both Brent and WTI fell about 2.5% over that week. [Interfax](https://www.interfax.ru/business/1129210); [Nikkei](https://www.nikkei.com/article/DGXZQOFL161GD0W6A111C2000000/)\n- Undated, possibly recent: Iran and Oman are reported to be discussing a temporary Hormuz corridor and mine clearance. Any deal reportedly needs Khamenei's approval. I could not confirm the dates of these reports. [Oilprice](https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Fall-as-Iran-Oman-Talks-Fuel-Hopes-of-Strait-Reopening.html); [TTNews](https://www.ttnews.com/articles/iran-oman-deal-hormuz-close)\n- 2026-11-10: The EIA's Short-Term Energy Outlook expects Brent near $100 for the rest of 2026. It forecasts a 2027 average of $85.78. [EIA](https://www.eia.gov/outlooks/steo/report/global_oil.php)\n\n## 4. Base rates\n- Recent path of the front month:\n  - October average: about $124 spot.\n  - About 3 Nov: about $98.32.\n  - 10 Nov: $91.49, a ten-week low.\n  - 13 Nov: $95.8.\n  - 16 Nov: $92.44.\n- Statistical baseline from Yahoo's 92.13 close (8 trading days ahead, 3 years of data, last year weighted double):\n\n  | Percentile | Price on 27 Nov |\n  |---|---|\n  | p75 | $96.2 |\n  | p90 | $101.0 |\n  | p95 | $105.4 |\n\n- On that baseline, the unconditional chance of settling above $100 is roughly 10-12%. If the price is now nearer $90, the chance would be lower.\n- Recent daily moves of 3-4% on single headlines show that a gain of 8-11% in 8 sessions is possible, but it would probably take a renewed supply shock.\n\n## 5. Other forecasts\n- Kalshi, Brent price on 30 Nov at 5pm EST (Pyth feed; three days after this question's date and not the ICE settlement):\n\n  | Strike | Yes price |\n  |---|---|\n  | Above $89.99 | 45% |\n  | Above $93.99 | 25% |\n  | Above $95.99 | 18% |\n  | Above $97.99 | 14% |\n\n  No $100 strike was listed. By implication, above $100 is probably about 10% or slightly less.\n- Kalshi, 17 Nov close: centred near $90 (see section 2).\n- EIA (10 Nov): Brent near $100 for the rest of 2026.\n- Goldman and the IEA: bearish, expecting a surplus.\n- I found no Polymarket or Manifold market on this question.\n\n## 6. Upcoming events before 27 Nov\n- Weekly EIA inventory reports, around 18 Nov and 25 Nov. The 25 Nov report may move because of Thanksgiving.\n- Thanksgiving on 26 Nov: thin US trading. ICE still settles Brent on 27 Nov.\n- Headlines on Iran-Oman Hormuz corridor talks, US-Iran talks or the US blockade, and tanker or infrastructure attacks. These are the main upside risk.\n- Positioning ahead of the OPEC+ ministerial meeting on 29 Nov, which falls after the resolution date.\n- Possible weakness in the front month in the run-up to the January contract's expiry on 30 Nov, given the steep backwardation (February was about $93.3 when January was about $96).\n\nSources: [Barchart](https://www.barchart.com/futures/quotes/CBF27/historical-prices), [Business Times](https://www.businesstimes.com.sg/companies-markets/energy-commodities/oil-settles-lower-recovering-middle-east-exports-bolster-surplus-outlook), [Infobae](https://www.infobae.com/america/agencias/2026/11/16/el-brent-baja-un-355-hasta-9244-dolares-por-el-auge-de-exportaciones-en-oriente-medio/), [MarketScreener](https://www.marketscreener.com/news/nymex-overview-crude-futures-fall-amid-supply-surplus-concerns-opis-ce785edfdd88ff23), [Oilprice glut](https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Fall-as-Fears-of-a-Global-Supply-Glut-Return.html), [Oilprice Iran-Oman](https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Fall-as-Iran-Oman-Talks-Fuel-Hopes-of-Strait-Reopening.html), [TTNews](https://www.ttnews.com/articles/iran-oman-deal-hormuz-close), [Interfax](https://www.interfax.ru/business/1129210), [Nikkei](https://www.nikkei.com/article/DGXZQOFL161GD0W6A111C2000000/), [Taisounds](https://www.taisounds.com/news/content/84/310014), [EIA STEO](https://www.eia.gov/outlooks/steo/report/global_oil.php), [HDFC Sky](https://hdfcsky.com/news/brent-crude-oil-price-today-november-16-2026-brent-falls-1percent-to-94-86-wti-slips-below-88-as-supply-surplus-looms), [Yahoo Finance](https://finance.yahoo.com/energy/articles/current-price-oil-november-16-124500995.html)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 00:16 UTC; check each market really matches the question)\n- Kalshi: Brent crude oil price on Nov 30, 2026 at 5:00 PM EST? (Nov 30, 2026 at 5:00 PM EST). Yes prices: Above $89.99: 0.45; Above $91.99: 0.35; Above $85.99: 0.67; Above $87.99: 0.64; Above $93.99: 0.25; Above $83.99: 0.76; Above $95.99: 0.18; Above $81.99: 0.84; Above $97.99: 0.14; Above $79.99: 0.90. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n- Kalshi: How high will WTI oil get by Jul 31, 2026? (In 2026). Yes prices: 82.01 or above: 0.9900; 79.51 or above: 0.9900; 81.51 or above: 0.9900; 81.01 or above: 0.9900; 80.01 or above: 0.9900; 80.51 or above: 0.9900; 92.01 or above: 0.9200; 78.01 or above: 0.9900; 76.51 or above: 0.9900; 91.51 or above: 0.9600.\n- Kalshi: How low will WTI oil get by Jul 31, 2026? (In 2026). Yes prices: 66.99 or below: 0.0200; 59.99 or below: 0.0100; 59.49 or below: 0.0100; 60.99 or below: 0.0200; 62.49 or below: 0.0100; 60.49 or below: 0.0200; 64.49 or below: 0.0200; 61.49 or below: 0.0100; 62.99 or below: 0.0200; 63.49 or below: 0.0100.\n- Kalshi: Annual Return: WTI vs. Brent? (2026). Yes prices: Brent Crude Oil: 0.74; WTI Crude Oil: 0.10.\n- Kalshi: Brent crude oil price tomorrow at 5:00 PM EST? (Nov 17, 2026 at 5:00 PM EST). Yes prices: Above $90: 0.51; Above $90.50: 0.43; Above $89.50: 0.60; Above $91: 0.28; Above $89: 0.69; Above $88.50: 0.77; Above $91.50: 0.14; Above $92: 0.11; Above $88: 0.83; Above $87.50: 0.86. Settles on the Pyth feed Commodities.Index.BRENT/USD, which can differ from exchange settlement prices.\n- Kalshi: Cracker Barrel Credit Card Spend in November (November 2026). Yes prices: Above 98.5: 0.46; Above 96: 0.65; Above 101: 0.25; Above 93.5: 0.80; Above 103.5: 0.14; Above 106: 0.11; Above 108.5: 0.03; Above 91: 0.95; Above 86: 0.97; Above 88.5: 0.96.\n- Kalshi: What will Cracker Barrel say during their next earnings call? (On Dec 8, 2026). Yes prices: AI / Artificial Intelligence: 0.35; Campfire: 0.30; Dividend: 0.71; Maple Street: 0.78; Tailwind: 0.20; Headwind: 0.83; Road Trip: 0.14; Reward: 0.87; Deno: 0.87; Tariff: 0.89.\n- Kalshi: Will the USD Settlement Price for the Current Auction of the November 18, 2026 CARB Joint Auction #49 settle at or above the official November 18, 2026 ICE settlement price for the November 2026 California Carbon Allowance Vintage 2026 Future? (Auction #49 · November 18, 2026). Yes prices: CARB ≥ ICE: 0.20.\n\nStatistical baseline:\n\nComputed by code from Yahoo Finance daily closes for BZ=F: latest close 92.1300 on 2026-11-16.\nTarget date 2026-11-27 is 8 trading observations ahead. Percentiles of the price on the target date,\nfrom the empirical distribution of 8-observation returns over the last 3 years (last year weighted double):\np5: 79.7511, p10: 84.5578, p25: 89.0507, p50: 92.457, p75: 96.2096, p90: 101.0287, p95: 105.3555\nThis ignores news and known events; adjust for them. Check the symbol matches the resolution source\n(exchange, contract month, close vs settlement price)."
+  ],
+  "forecasts": [
+    {
+      "value": 0.07,
+      "reasoning": "(a) About 10 days remain, with roughly 9 trading sessions from 17 to 27 November. YES requires the ICE settlement of the January 2027 Brent contract on Friday 27 November to be above $100.00. The last confirmed settlement was $92.44 on 16 November, so that means a gain of about 8.2%. Overnight Kalshi pricing hints the market may be nearer $90, which would make the required gain about 11%.\n\n(b) If nothing changed, the contract would settle around $90-92, well below $100. The status quo outcome is NO.\n\n(c) Base rate: across 3 years of 8-session Brent returns, the 90th percentile from $92.13 is about $101. That gives roughly a 10-12% chance of finishing above $100. Starting from about $90 instead, it falls to roughly 7-8%. This conflict has produced unusually high volatility, with 7-8% weekly swings in both directions, so the fat tails are real.\n\n(d) Evidence for each side:\n- **For YES:**\n  - Tanker and mine attacks near Hormuz are continuing, including the IRGC's 16 November claims.\n  - BMI calls the export recovery \"fragile.\"\n  - On 10 November the EIA said it expects Brent \"near $100\" for the rest of 2026.\n  - The market rebounded 5% between 10 and 13 November, showing it can move fast.\n- **For NO:**\n  - On 13 November the IEA flipped its Q4 outlook to a 1.7 mb/d surplus, and inventories rose 52 mb in October.\n  - Hormuz flows are recovering, and Iran-Oman corridor talks are under way.\n  - Goldman (15 November) is bearish.\n  - The dollar is strong.\n  - The price fell 3.55% on 16 November, and overnight Kalshi pricing implies a further drop toward $90.\n  - Kalshi's 30 November market prices \"above $97.99\" at only 14%, which implies about 10% for above $100. Those prices were possibly set before Monday's decline.\n\n(e) Scenarios:\n- **NO:** Gulf exports keep normalizing, US stocks build, and Thanksgiving trading is thin. January Brent drifts at $87-95 into the 27 November settlement.\n- **YES:** A major tanker strike or a collapse of the US-Iran or Iran-Oman talks re-closes Hormuz flows. Brent jumps 4-6% on two separate headline days, and the January contract squeezes above $100 ahead of expiry and the OPEC+ meeting.\n\n(f) I start from the roughly 10% statistical and Kalshi anchor. I move down modestly because:\n- The latest price is likely lower than the anchor assumes, around $90.\n- The trend and fundamentals (surplus, inventories building) are bearish.\n- The Kalshi strikes may be stale.\n\nGeopolitical tail risk keeps the estimate from going much lower.\n\nProbability: 7%"
+    },
+    {
+      "value": 0.08,
+      "reasoning": "(a) About 10 days remain, ending at the ICE settlement on Friday 27 November 2026 (around 19:30 London). For YES, the January 2027 Brent contract must settle above $100.00. It settled at $92.44 on 16 November and may be trading nearer $90 overnight, so it needs a gain of roughly 8-11% in 8-9 sessions.\n\n(b) If nothing changes, the price stays around $90-93 and the question resolves NO.\n\n(c) Base rate: the empirical distribution of 8-session Brent returns over the last 3 years, starting from $92.13, puts $100 near the 88th-90th percentile, so about 10-12%. Starting nearer $90, it is closer to 8-9%. Volatility during the current conflict is above the 3-year average, which thickens both tails.\n\n(d) Evidence for YES:\n- Daily swings of 3-5% on single headlines have been common: +5% between 10 and 13 November, and repeated +4% days in October.\n- Tanker attacks and mine reports near Hormuz are continuing (16 November IRGC claims), and BMI calls the export recovery \"fragile\".\n- The EIA (10 November) sees Brent near $100 for the rest of 2026.\n- Positioning ahead of the OPEC+ meeting on 29 November could add upside.\n\nEvidence for NO:\n- On 16 November the price fell 3.6% to $92.44 on recovering Gulf exports.\n- The IEA now sees a Q4 surplus of 1.7 mb/d and an October inventory build of 52 mb (13-16 November).\n- Goldman expects a 2 mb/d surplus in 2027.\n- The dollar is near a 19-month high, a Fed hike is priced in, and China's refinery runs are weak.\n- Kalshi (17 November) prices Brent on 30 November above $97.99 at 14%, implying roughly 10% or less above $100. Its 17 November contract is centred near $90.\n- Iran-Oman talks on a Hormuz corridor point toward de-escalation.\n\n(e) NO scenario: Hormuz flows keep normalizing, inventory builds continue, and the front month drifts at $88-95 into thin Thanksgiving trading.\n\nYES scenario: a major tanker or infrastructure attack, or the collapse of the US-Iran talks, causes a two-day 6-8% spike, and the risk premium holds into the 27 November settle above $100.\n\n(f) I start from the base rate and Kalshi-implied anchor of about 10%. The Kalshi market is close but not identical: it uses a different date (30 November) and the Pyth feed rather than the ICE settlement. I move down slightly for two reasons. First, the overnight price is apparently near $90, lower than the $92.44 settle used in the baseline. Second, the trend is clearly down on fundamentals. I keep a fat tail because of the elevated geopolitical volatility, which gives a final estimate of about 8%.\n\nProbability: 8%"
+    },
+    {
+      "value": 0.09,
+      "reasoning": "(a) The question resolves at ICE's 27 November 2026 settlement, about 10 days and 8 to 9 trading sessions from now. For Yes, the January 2027 Brent contract (CBF27) must settle strictly above $100.00. From the 16 November settle of $92.44 that needs a gain of about 8.2%. If the overnight Kalshi pricing near $90 is right, it needs about 11%.\n\n(b) Status quo: Brent is around $90 to $92, well below $100, and the trend is down. If nothing changes, this resolves No.\n\n(c) Base rate:\n- The empirical distribution of 8-day returns from Yahoo's $92.13 close puts p90 at about $101. That implies roughly a 10 to 12% chance of finishing above $100.\n- Starting from about $90 lowers this to roughly 7 to 9%.\n- A lognormal model with about 55% annualized volatility gives a higher figure, around 15 to 20%. However, the market-implied spread from Kalshi is narrower.\n\n(d) Evidence for Yes:\n- Volatility is extreme, with frequent 3 to 4% daily moves on single headlines.\n- Unverified reports of mines hitting tankers near Hormuz appeared on 16 November.\n- BMI calls the export recovery \"fragile\".\n- The EIA's 10 November outlook expects Brent \"near $100\" for the rest of 2026.\n- Positioning ahead of the 29 November OPEC+ meeting could lift prices.\n\nEvidence for No:\n- Brent fell 3.6% to $92.44 on 16 November as Hormuz flows recovered.\n- The IEA now expects a Q4 surplus of 1.7 mb/d and reported an October inventory build of 52 million barrels.\n- Goldman expects a 2 mb/d surplus in 2027.\n- The dollar is strong and futures price a Fed hike.\n- Overnight Kalshi pricing suggests about $90.\n- Kalshi's 30 November market prices \"above $97.99\" at only 14%, possibly set before Monday's drop.\n- Steep backwardation may weigh on the front month as January expiry approaches.\n\n(e) No scenario: Iran-Oman corridor talks and recovering Gulf exports keep pressure on prices, and Brent drifts in the $85 to $95 range through Thanksgiving week.\nYes scenario: a verified mining or attack campaign shuts Hormuz flows again, or US-Iran talks collapse, and Brent jumps back to $100 to $105 within days, as it did in October.\n\n(f) I start from the market-implied and empirical estimate of about 10% from $92. The likely overnight move to about $90 pulls it down to roughly 8%. I add a little for fat-tailed geopolitical upside, landing at about 9%.\n\nProbability: 9%"
+    },
+    {
+      "value": 0.09,
+      "reasoning": "(a) About 10 days remain; the 27 November settlement is known that evening and resolution comes around 28 November. For Yes, the ICE settlement of the January 2027 Brent contract on Friday 27 November must be strictly above $100.00. That is about +8.2% from the 16 November settle of $92.44, or about +11% if overnight trading near $90 (implied by Kalshi's 17 November market) holds. There are 8 to 9 sessions left.\n\n(b) The status quo is No. The price sits roughly $8 to $10 below the threshold and the trend is down.\n\n(c) Base rate: the empirical distribution of 8-session Brent returns from $92.13 gives p90 at about $101, so about 10 to 12% above $100. Starting near $90 instead lowers this to about 7 to 9%. Using a conflict-era daily volatility of about 3%, 8-session volatility is about 8.5%. That gives roughly 16% from $92.44 and roughly 10% from $90.\n\n(d) Evidence for each side:\n- **For Yes:**\n  - Extreme headline volatility: +5% from 10 to 13 November, and 3 to 4% daily moves through October.\n  - Tanker and mine attacks near Hormuz are continuing; on 16 November the IRGC claimed mine hits.\n  - BMI calls the export recovery \"fragile.\"\n  - On 10 November the EIA said it expects Brent near $100.\n  - Pre-OPEC+ positioning could add support.\n- **For No:**\n  - The 16 November settle of $92.44 (-3.55%) came as Hormuz flows recovered.\n  - The IEA now projects a Q4 surplus of about 1.7 mb/d, and inventories rose 52 mb in October.\n  - Goldman expects a 2027 surplus.\n  - The dollar is strong and a Fed hike is priced in.\n  - Iran-Oman corridor talks are under way.\n  - Kalshi's 17 November market is centred near $90.\n  - Kalshi's 30 November market puts above $97.99 at 14%, implying about 10% or less above $100. That market may be partly stale, and the index may reference a lower-priced deferred month.\n\n(e) No scenario: de-escalation continues, Gulf exports keep normalizing, and inventories build, so January Brent drifts between $86 and $95 into expiry. Yes scenario: a major tanker attack or a breakdown of the Hormuz corridor talks, or a US-Iran blockade escalation, triggers two or three days of 4 to 5% gains, and the front month settles at $101 or more on 27 November.\n\n(f) I start at roughly 11% from the statistical baseline and the Kalshi extrapolation. I then shade down slightly because the price is already near $90 overnight, the fundamental trend is bearish and the surplus narrative is firming. I keep a fat right tail for geopolitical shocks.\n\nProbability: 9%"
+    },
+    {
+      "value": 0.09,
+      "reasoning": "**(a) Time left and what Yes requires.** There are about 10 days and 8 to 9 trading sessions until the outcome is known. For Yes, the ICE settlement for the January 2027 Brent contract on Friday 27 November 2026 must be above $100.00. Exactly $100.00 resolves No.\n\n**(b) Status quo.** The contract settled at $92.44 on 16 November. Overnight Kalshi pricing suggests about $90 early on 17 November. If nothing changes, the answer is No. The price needs to rise roughly 8 to 11%.\n\n**(c) Base rate.** The 3-year empirical distribution of 8-day Brent returns, starting from $92.13, gives a 90th percentile near $101. That implies roughly 10 to 12% for settling above $100.\n- Measured from about $90 instead, the chance falls to roughly 8 to 10%.\n- A rough volatility check points the same way. With current realized volatility of 50 to 60% annualized, an 8-day move of about 10.5% is roughly a 1 to 1.2 standard deviation event. That gives about 12 to 16%, but this ignores the downward drift.\n\n**(d) Evidence.**\n\nFor Yes:\n- Volatility is extreme. Single-headline daily moves of 3 to 4% are common.\n- The price rebounded 5% between 10 and 13 November.\n- Tanker and mine attacks near Hormuz are continuing. On 16 November the IRGC claimed mines had struck tankers.\n- BMI calls the export recovery \"fragile.\"\n- The EIA's 10 November outlook expects Brent \"near $100\" for the rest of 2026.\n- Positioning ahead of the 29 November OPEC+ meeting could also push prices up.\n\nFor No:\n- The IEA has switched to forecasting a fourth-quarter surplus of 1.7 mb/d, and inventories rose 52 mb in October (reported 13 to 16 November).\n- Hormuz flows are recovering, and Iran and Oman are discussing a shipping corridor.\n- China's refinery runs fell 8% year on year in October.\n- The dollar is strong.\n- Brent is down 19% from its late-October peak, and the trend is down.\n- Kalshi's 30 November market prices \"above $97.99\" at 14%, which implies roughly 10% for \"above $100.\"\n\n**(e) Scenarios.**\n- No: Hormuz flows keep normalizing and the corridor talks progress. Brent drifts in an $85 to $95 range into thin Thanksgiving-week trading, and the January contract settles around $90.\n- Yes: a major tanker or infrastructure attack, or a breakdown in US-Iran talks, produces two or three days of 4%-plus gains. Brent spikes back to $101 to $105 by 27 November.\n\n**(f) Adjustment.** I start from the 10 to 12% empirical base rate and the roughly 10% Kalshi-implied figure.\n- I adjust down slightly because the price has probably slipped to about $90 overnight and fundamentals now favor a surplus.\n- I adjust up slightly because headline risk is unusually high in this conflict.\n- There is also a basis question. If the Pyth feed on 30 November references the February contract, which trades about $3 below January in this backwardated curve, then Kalshi's 14% at $97.99 would correspond to roughly $101 on the January contract. That would make the Kalshi market a slightly higher anchor than my 10% reading.\n\nNet, I land at about 9%.\n\nProbability: 9%"
+    },
+    {
+      "value": 0.08,
+      "reasoning": "(a) About 10 days remain, so the outcome is known after the ICE settlement on Friday 27 November 2026. For YES, the January 2027 Brent contract must settle above $100.00 that day. From the 16 November settle of $92.44 that is a gain of about 8.2%. Overnight Kalshi pricing near $90 suggests the true gap may be closer to 11%.\n\n(b) If nothing changes, the price stays around $90-93 and the question resolves NO.\n\n(c) Base rate: the empirical 8-session return distribution from 3 years of BZ=F data puts p90 at about $101. That implies roughly a 10-12% chance of finishing above $100 from $92. Starting from about $90 instead, it would be nearer 7-9%. A rough volatility calculation (about 55% annualized, a 0.8-1.07 sigma move needed) gives 14-21%. That estimate likely overstates current implied volatility now that the Gulf supply shock is easing.\n\n(d) Evidence for YES:\n- Daily swings of 3-4% on single headlines have been frequent.\n- Tanker and mine attacks near Hormuz were still being reported on 16 November.\n- BMI called the export recovery \"fragile.\"\n- The EIA's 10 November outlook expected Brent near $100 for the rest of 2026.\n- The curve is steeply backwardated, which supports the prompt contract into expiry.\n- Positioning ahead of the 29 November OPEC+ meeting could lift prices.\n\nEvidence for NO:\n- Brent fell 3.6% on 16 November as Gulf exports recovered.\n- The IEA now expects a Q4 surplus of about 1.7 mb/d, and inventories rose 52 million barrels in October.\n- Goldman expects a 2 mb/d surplus in 2027.\n- Iran-Oman corridor talks point toward de-escalation.\n- The dollar is strong and markets price a Fed hike.\n- The trend is down about 19% from the late-October peak.\n- Kalshi on 17 November: the 30 November \"above $97.99\" strike trades at 14%, and the next-day market is centred near $90.\n\n(e) NO scenario: Hormuz flows keep normalizing, data confirm inventory builds, and Brent drifts in an $85-95 range into Thanksgiving week, settling near $90.\n\nYES scenario: a major tanker or infrastructure attack, or a collapse of US-Iran talks, triggers a couple of +5% sessions. Short-covering ahead of the OPEC+ meeting and January expiry then pushes the settle to $101.\n\n(f) Kalshi's 30 November market is the closest anchor. It implies about 10% for above $100, but those prices may predate Monday's late drop. The statistical baseline from about $90-92 gives 8-11%. With the downtrend and surplus narrative weighed against fat-tailed geopolitical risk, I shade slightly below 10%.\n\nProbability: 8%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.13,
+  "usage": [
+    {
+      "question_id": "46861",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0002314,
+      "input_tokens": 518,
+      "output_tokens": 256,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0004351,
+      "input_tokens": 1109,
+      "output_tokens": 427,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 73.1,
+      "notional_cost_usd": 0.2436297,
+      "input_tokens": 56184,
+      "output_tokens": 4116,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 58.8,
+      "notional_cost_usd": 0.1560458,
+      "input_tokens": 39787,
+      "output_tokens": 4064,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.11435999999999999,
+      "input_tokens": 11526,
+      "output_tokens": 1108,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.6,
+      "notional_cost_usd": 0.115924,
+      "input_tokens": 11524,
+      "output_tokens": 1187,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.120504,
+      "input_tokens": 11524,
+      "output_tokens": 1416,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.9,
+      "notional_cost_usd": 0.032123,
+      "input_tokens": 11526,
+      "output_tokens": 1370,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.5,
+      "notional_cost_usd": 0.036395000000000004,
+      "input_tokens": 11525,
+      "output_tokens": 1584,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.9,
+      "notional_cost_usd": 0.031459,
+      "input_tokens": 11523,
+      "output_tokens": 1338,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.7,
+      "notional_cost_usd": 0.00046390000000000005,
+      "input_tokens": 2273,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 19.2,
+      "notional_cost_usd": 0.0004597,
+      "input_tokens": 2252,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.2,
+      "notional_cost_usd": 0.0004537000000000001,
+      "input_tokens": 2222,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.000495,
+      "input_tokens": 2241,
+      "output_tokens": 94,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.0005001000000000001,
+      "input_tokens": 2454,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.0004623,
+      "input_tokens": 2265,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 9.568e-05,
+      "input_tokens": 2273,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 9.537e-05,
+      "input_tokens": 2242,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.00012368,
+      "input_tokens": 2223,
+      "output_tokens": 76,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00011467,
+      "input_tokens": 2253,
+      "output_tokens": 57,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 9.769999999999999e-05,
+      "input_tokens": 2456,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46861",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.4,
+      "notional_cost_usd": 9.519000000000002e-05,
+      "input_tokens": 2262,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8546
+}
