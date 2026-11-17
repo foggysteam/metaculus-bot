@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-17T17:20:47.275061+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-17T17:12:11.338454+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46875,
+    "post_id": 46615,
+    "url": "https://www.metaculus.com/questions/46615",
+    "type": "DiscreteQuestion",
+    "unit": "%",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "On Black Friday (November 27, 2026), what will be the deepest percentage-off discount advertised on the childrensplace.com homepage?",
+    "resolution_criteria": "Resolution uses the capture of The Children's Place homepage at https://www.childrensplace.com/us/home held by the Internet Archive Wayback Machine whose timestamp is closest to 17:00 UTC (12:00 US Eastern) on November 27, 2026 — the capture served at https://web.archive.org/web/20261127170000/https://www.childrensplace.com/us/home — and where two captures are equally close, the earlier one is used. The resolution value is the single largest percentage figure presented in the promotional text of that captured homepage (its banners, headlines, category tiles and deal modules) as a reduction off merchandise prices, including \"up to\" and range wording, with a range or \"X% off+\" read as its highest figure (e.g. \"take 30–60% off everything\" → 60; \"all clearance 60% off+\" → 60; \"up to 70% off select styles\" → 70). Percentage figures shown on individual product cards as a sale-price-versus-original-price comparison, and percentages relating to shipping, rewards, financing or fabric composition, do not count. Stated discounts are never combined or stacked with one another. If the captured homepage renders normally but displays no qualifying discount percentage, the value is 0.",
+    "fine_print": "If the selected capture is an error page or renders no promotional content at all (for example a bot-block page or a script-only shell), the capture on November 27, 2026 that does render the homepage's promotional text and is closest to 17:00 UTC is used instead, taking the earlier one if two are equally close; if no capture dated November 27, 2026 renders the homepage, the closest such capture in time to 17:00 UTC on that date is used. Percentages present only inside banner images whose text cannot be read on the captured page do not count unless the same figure also appears as text. The value is the percentage number itself (a \"70% off\" promotion resolves as 70, not 0.70).",
+    "close_time": "2026-11-17 20:07 UTC",
+    "scheduled_resolution_time": "2026-11-27 23:00 UTC"
+  },
+  "research": [
+    "I couldn't find anything that settles this yet. The last readable capture (Nov 14) would score 60, and last year's Black Friday homepage also topped out at 60.\n\n## 1. Resolution source\n- **2026-11-14 08:53 UTC (latest capture in the Wayback index):** this capture of /us/home renders normally. Its promo text includes:\n  - Hero banner: \"EVERYTHING MUST GO! TAKE 30-60%* EVERYTHING • ALL STORES CLOSING\". This appears as image alt text and as text on the banner's link button.\n  - Clearance tile: \"ALL CLEARANCE 60% OFF+ BUY 2 CLEARANCE BOTTOMS, GET 1 FREE WITH CODE B2G1\".\n  - \"The Dream Event 40-60% OFF\" (pajamas tile).\n  - \"Your Place to Dress Up 60% Off\" and \"30-40% Off\".\n  - Header strip: \"BLACK FRIDAY! EXTRA 20% OFF EVERYTHING* WITH CODE WOW20\".\n  - The highest promo figure is **60**. A link in the subnav is already tagged \"BLKFRI60\". [capture](https://web.archive.org/web/20261114085306/https://www.childrensplace.com/us/home)\n- **Ambiguity:**\n  - When the page is converted to plain text, only the \"EXTRA 20%\" strip shows up. The 30-60% and 60% figures sit in image alt text and the hero button text.\n  - The page's raw code also holds navigation-menu category names such as \"New Markdowns! Up to 70% Off\" (clearance) and \"Pajamas up to 60% off\". Some of these look stale or hidden (\"displayToCustomer\":false). Whether menu entries count as homepage promo text is unclear.\n- **Capture frequency:** the Wayback index lists captures on Nov 6, 9, 10, 12 and 14 only, roughly one every 1-2 days. That contradicts the \"twice daily\" note in the question, and nothing is indexed after Nov 14 yet. There may be no capture on Nov 27, in which case the fine-print fallback (closest capture in time) applies. [CDX](https://web.archive.org/cdx/search/cdx?url=childrensplace.com/us/home&from=20261101&output=txt)\n\n## 2. Current status\n- Nothing is settled yet. The latest homepage peaks at 60 and expresses discounts as ranges (30-60, 40-60, 60%+).\n\n## 3. Recent news (newest first)\n- **2026-11-16/17:** reports conflict on whether stores and websites are still open or all closing. Discounts are reported at 30-60%. [Yahoo](https://finance.yahoo.com/small-business/articles/children-place-holds-blowout-sale-142523584.html), [614NOW](https://614now.com/2026/cancellations/after-57-years-retailer-files-for-bankruptcy-closing-all-locations)\n- **2026-11-12:** the liquidators' joint venture started going-out-of-business (GOB) sales. It says \"new markdowns are expected as the sale progresses\", that discounts \"vary by location and are subject to change\", and that gift cards are honored through Dec 12, 2026. The release gives no percentages. [Yahoo/JV release](https://finance.yahoo.com/small-business/articles/going-business-sales-underway-childrens-183000224.html)\n- **2026-11-08:** Chapter 11 filing, with a sale process to follow (from the question background).\n\n## 4. Base rates / seasonality\n- **Black Friday 2025** (capture 2025-11-28 10:16 UTC): \"BLACK FRIDAY! 60% OFF ENTIRE SITE WITH CODE BLKFRI60\". Hero alt text read \"BLACK FRIDAY 60% OFF EVERYTHING\", and nav tiles showed \"Shoes 60% off\" and \"Character Shop 60% off\". Max was **60**. [capture](https://web.archive.org/web/20251128101650/https://www.childrensplace.com/us/home)\n- **Black Friday weekend 2024** (capture 2024-11-30 21:26 UTC, the nearest one): \"60% OFF ENTIRE SITE* OR MORE WITH CODE CYBER60\". Max was about **60**. [capture](https://web.archive.org/web/20241130212615/https://www.childrensplace.com/us/home)\n- **Earlier 2026:** a Slickdeals thread mentions a \"50-70% off sitewide\" event at some point, so 70 has appeared before. [Slickdeals](https://slickdeals.net/f/19211725-the-children-s-place-baby-toddler-kids-50-70-off-sitewide-sale-extra-10-off-free-shipping)\n- **Trend:** in both recent years the headline Black Friday figure sat at 60. Since the Nov 6 launch, the GOB sale has moved from 25-60% to 30-60% (floor up, ceiling unchanged).\n- **Liquidation pattern:** liquidators usually deepen discounts over the sale term (here to Feb 28, 2027), with 70-90% typically near the end. Black Friday falls only about 2 weeks into a roughly 16-week sale. This is general industry practice; I found no source specific to this sale.\n- I did not pull earlier years (2021-2023).\n\n## 5. Other forecasts\n- I found no prediction markets or expert forecasts on this. None of the Kalshi or Polymarket markets supplied are relevant.\n\n## 6. Upcoming events before resolution\n- **Nov 17-26:** possible markdown updates from the liquidators. A new Black Friday hero banner is likely; the existing \"BLKFRI60\" link tag hints at a 60 theme.\n- **Nov 27:** whether a capture lands near 17:00 UTC is uncertain because captures are sparse. A Nov 26 or Nov 28 capture could end up deciding it.\n- **Dec 9:** bid deadline. **Dec 12:** gift-card cutoff. Both fall after resolution.\n- The outcome does not depend on weather.\n\nSources: [Wayback 2026-11-14](https://web.archive.org/web/20261114085306/https://www.childrensplace.com/us/home), [Wayback 2025-11-28](https://web.archive.org/web/20251128101650/https://www.childrensplace.com/us/home), [Wayback 2024-11-30](https://web.archive.org/web/20241130212615/https://www.childrensplace.com/us/home), [CDX index](https://web.archive.org/cdx/search/cdx?url=childrensplace.com/us/home&from=20261101&output=txt), [Yahoo JV release](https://finance.yahoo.com/small-business/articles/going-business-sales-underway-childrens-183000224.html), [Yahoo blowout sale](https://finance.yahoo.com/small-business/articles/children-place-holds-blowout-sale-142523584.html), [614NOW](https://614now.com/2026/cancellations/after-57-years-retailer-files-for-bankruptcy-closing-all-locations), [Slickdeals](https://slickdeals.net/f/19211725-the-children-s-place-baby-toddler-kids-50-70-off-sitewide-sale-extra-10-off-free-shipping)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 17:17 UTC; check each market really matches the question)\n- Kalshi: MacBook base model price on Black Friday (on November 27th, 2026 at 10:00 AM ET). Yes prices: below $600: 0.07; below $650: 0.24; below $550: 0.04; below $700: 0.94; below $450: 0.0800; below $500: 0.1400; below $750: 0.97.\n- Kalshi: F1 Championship Final Driver Standings: 3rd Place Finisher (3rd Place (2026)). Yes prices: George Russell: 0.33; Lewis Hamilton: 0.32; Lando Norris: 0.12; Max Verstappen: 0.12; Charles Leclerc: 0.10.\n- Kalshi: F1 Championship Final Driver Standings: 4th Place Finisher (4th Place (2026)). Yes prices: George Russell: 0.27; Lewis Hamilton: 0.26; Lando Norris: 0.23; Charles Leclerc: 0.20; Max Verstappen: 0.0000.\n- Kalshi: EFL Championship: Promotion (2026-27 season). Yes prices: Wolverhampton: 0.49; West Ham: 0.57; Middlesbrough: 0.65; Southampton: 0.32; Birmingham: 0.28; West Bromwich: 0.21; Swansea: 0.13; Norwich: 0.15; Stoke: 0.14; QPR: 0.09.\n- Kalshi: AC Goianiense vs Vila Nova (GOI vs VIN (Nov 22)). Yes prices: AC Goianiense: 0.50; Tie: 0.27; Vila Nova: 0.23.\n- Kalshi: Will 'A Quiet Place Part III' be released before 2028? (A Quiet Place Part III - United States). Yes prices: Before Jan 1, 2028: 0.86.\n- Kalshi: Top Chinese AI Company week of November 16th (On Nov 23, 2026). Yes prices: Xiaomi: 0.84; Alibaba: 0.10; Baidu: 0.0000; ByteDance: 0.0000; DeepSeek: 0.0000; Meituan: 0.0000; MiniMax: 0.0000; Moonshot: 0.0000; Tencent: 0.0000; Z.ai: 0.0000.\n- Kalshi: Will Bitcoin exceed $120,000 before 2027? (After listing · before Jan 1, 2027 at 12:00 AM EST). Yes prices: Above $120,000: 0.0300.\n- Polymarket: The Voice Season 30: 3rd Place (ends 2026-12-15). [Yes, No] prices: Koumba Diallo: [\"0.025\", \"0.975\"]; Anna McElroy: [\"0.0415\", \"0.9585\"]; Brianna Cameron: [\"0.11\", \"0.89\"]; Kyle Davis: [\"0.18\", \"0.82\"]; Lexi Stephens: [\"0.135\", \"0.865\"]; Connor Closs: [\"0.155\", \"0.845\"]\n- Polymarket: The Voice Season 30: 2nd Place (ends 2026-12-15). [Yes, No] prices: Koumba Diallo: [\"0.099\", \"0.901\"]; Anna McElroy: [\"0.055\", \"0.945\"]; Brianna Cameron: [\"0.3045\", \"0.6955\"]; Kyle Davis: [\"0.1\", \"0.9\"]; Lexi Stephens: [\"0.3315\", \"0.6685\"]; Connor Closs: [\"0.1625\", \"0.8375\"]\n- Polymarket: NFL Regular Season Completion Percentage Leader (2026) (ends 2027-01-25). [Yes, No] prices: Josh Allen: [\"0.055\", \"0.945\"]; Joe Burrow: [\"0.905\", \"0.095\"]; Patrick Mahomes: [\"0.0055\", \"0.9945\"]; Lamar Jackson: [\"0.004\", \"0.996\"]; Jayden Daniels: [\"0.021\", \"0.979\"]; Jordan Love: [\"0.012\", \"0.988\"]",
+    "I could not find anything that settles this yet. The latest Wayback capture I could read (Nov 14) shows **60** as its largest percentage, and that figure comes only from image alt text. The plain visible text shows just \"EXTRA 20%\". Last year's Black Friday headline, before the bankruptcy, was \"up to 70%\".\n\n## 1. Resolution source\n- 2026-11-14 08:53 UTC (the latest November capture in the archive's index of saved copies, checked Nov 17): the homepage hero banner is an image. Its alt and title text read \"EVERYTHING MUST GO! TAKE 30-60%* EVERYTHING • ALL STORES CLOSING | IN-STORE & ONLINE ALL SALES FINAL.\" A clearance tile's alt text reads \"ALL CLEARANCE 60% OFF+ BUY 2 CLEARANCE BOTTOMS, GET 1 FREE WITH CODE B2G1\". Another module's alt text reads \"Prices this good won't last\". The plain visible text has only \"BLACK FRIDAY! EXTRA 20% OFF EVERYTHING* WITH CODE WOW20\" (shown twice) plus a B2G1 clearance line. Largest figure is 60 if alt text counts, 20 if only plain text counts. [capture](https://web.archive.org/web/20261114085306/https://www.childrensplace.com/us/home)\n- The fine print excludes percentages \"only inside banner images whose text cannot be read\". Whether alt text counts as readable text is a real ambiguity for whoever resolves this.\n- 2026-11-14: the page's raw code includes navigation data with menu labels such as \"Clearance 75% off\", \"Jackets & Coats up to 70% Off\", \"New Markdowns! Up to 70% Off\" and \"Shoes 60% off\". All are flagged `displayToCustomer:false`, so they look like stale, hidden data. There is also a commented-out link with tag \"BLKFRI60\". [same capture](https://web.archive.org/web/20261114085306/https://www.childrensplace.com/us/home)\n- Earlier captures (Nov 6, 9 and 12) all show the same visible \"BLACK FRIDAY! EXTRA 20% OFF EVERYTHING… WOW20\" line. Nov 6 also shows \"SHIP TO STORE & SAVE 10%\", which is shipping-related and doesn't count. [CDX index](https://web.archive.org/cdx/search/cdx?url=childrensplace.com/us/home&from=20261101&output=json)\n- **Capture frequency warning:** the index lists only 5 captures from Nov 1 to 14 (Nov 6, 9, 10, 12, 14). That is roughly every 1 to 3 days, not twice a day as the question says. There may be no Nov 27 capture at all, in which case the closest capture on another date decides. After about 17:30 UTC Wayback refused connections, so I could not check for captures after Nov 14.\n- 2026-11-17: the live site returns HTTP 403 to automated fetches.\n\n## 2. Current status\n- Nothing has settled the outcome. Promos so far top out at 60 (30-60% everything, clearance 60% off+). The visible \"extra 20%\" code banner can't be stacked on top of that under the rules.\n\n## 3. Recent news (newest first)\n- 2026-11-16: WWLP/Yahoo reports \"up to 60%\" and \"30% to 60% off\" in a \"total inventory blowout sale\". It says bids were due Dec 9 and the sale should close by end of December, but also that \"no final decisions\" on closures had been announced. [Yahoo](https://finance.yahoo.com/small-business/articles/children-place-holds-blowout-sale-142523584.html)\n- Mid-Nov 2026: TheStreet reports going-out-of-business sales at all stores. Search snippets say \"additional markdowns expected as the sales progress\"; I could not open the article itself (403). [TheStreet](https://www.thestreet.com/retail/childrens-place-closing-all-its-stores-in-chapter-11-bankruptcy)\n- 2026-11-12: the liquidator joint venture (GA, Tiger, SB360, Gordon Brothers, Hilco) announces the going-out-of-business sales; the term runs to Feb 28, 2027 (from the background; not checked separately). [GA Group](https://gagroup.com/blog/going-out-of-business-sales-underway-at-all-the-childrens-place-and-gymboree-locations)\n\n## 4. Base rates\n- 2025-11-07: before the bankruptcy, the site's Black Friday offer was \"Up to 70% Off + Extra 20% With Code BF20\". [ConsumerQueen](https://consumerqueen.com/saving-money-2/the-childrens-place-black-friday-deals-up-to-70-off-extra-20-with-code-bf20)\n- Older Black Friday events (exact years not confirmed): \"up to 70% off entire site\" [Slickdeals](https://slickdeals.net/f/18750721-children-s-place-early-black-friday-event-up-to-70-off-entire-site-w-code), \"50-70% off sitewide\" [Slickdeals](https://slickdeals.net/f/19211725-the-children-s-place-baby-toddler-kids-50-70-off-sitewide-sale-extra-10-off-free-shipping), and a mall listing for \"Up to 75% off Everything\" [Stonewood](https://shopstonewoodcenter.com/Sales/Details/2138670903). Normal Black Friday headlines at this retailer seem to run 60 to 75.\n- Pattern so far in this liquidation: 25-60% at launch (Nov 6), then 30-60% (Nov 12-16). The top figure has stayed at 60 for about 10 days. Liquidators usually deepen markdowns over weeks, and the deepest cuts typically come near the end. Black Friday is 3 weeks into a roughly 16-week sale.\n- I couldn't get the Black Friday 2025 Wayback capture because the archive went down, so the 2025 actual homepage value is unverified.\n\n## 5. Other forecasts\n- No Polymarket, Kalshi, Manifold or Metaculus market matches this question. The prices supplied (MacBook, F1 and others) are unrelated.\n\n## 6. Upcoming events before resolution\n- The liquidators may deepen markdowns before Nov 27. The hidden \"BLKFRI60\" tag points to a planned Black Friday promo at 60 (an inference from the tag name).\n- Bankruptcy court hearings or a going-concern bidder emerging before the Dec 9 bid deadline could change how the sale is run.\n- Wayback's capture schedule matters: a missing Nov 27 capture means an earlier or later capture decides the value.\n- Weather is not relevant.\n\nSources: [Wayback capture](https://web.archive.org/web/20261114085306/https://www.childrensplace.com/us/home), [CDX](https://web.archive.org/cdx/search/cdx?url=childrensplace.com/us/home&from=20261101&output=json), [Yahoo/WWLP](https://finance.yahoo.com/small-business/articles/children-place-holds-blowout-sale-142523584.html), [TheStreet](https://www.thestreet.com/retail/childrens-place-closing-all-its-stores-in-chapter-11-bankruptcy), [GA Group](https://gagroup.com/blog/going-out-of-business-sales-underway-at-all-the-childrens-place-and-gymboree-locations), [ConsumerQueen](https://consumerqueen.com/saving-money-2/the-childrens-place-black-friday-deals-up-to-70-off-extra-20-with-code-bf20), [Slickdeals 1](https://slickdeals.net/f/18750721-children-s-place-early-black-friday-event-up-to-70-off-entire-site-w-code), [Slickdeals 2](https://slickdeals.net/f/19211725-the-children-s-place-baby-toddler-kids-50-70-off-sitewide-sale-extra-10-off-free-shipping), [Stonewood](https://shopstonewoodcenter.com/Sales/Details/2138670903)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 17:17 UTC; check each market really matches the question)\n- Kalshi: MacBook base model price on Black Friday (on November 27th, 2026 at 10:00 AM ET). Yes prices: below $600: 0.07; below $650: 0.24; below $550: 0.04; below $700: 0.94; below $450: 0.0800; below $500: 0.1400; below $750: 0.97.\n- Kalshi: F1 Championship Final Driver Standings: 3rd Place Finisher (3rd Place (2026)). Yes prices: George Russell: 0.33; Lewis Hamilton: 0.32; Lando Norris: 0.12; Max Verstappen: 0.12; Charles Leclerc: 0.10.\n- Kalshi: F1 Championship Final Driver Standings: 4th Place Finisher (4th Place (2026)). Yes prices: George Russell: 0.27; Lewis Hamilton: 0.26; Lando Norris: 0.23; Charles Leclerc: 0.20; Max Verstappen: 0.0000.\n- Kalshi: EFL Championship: Promotion (2026-27 season). Yes prices: Wolverhampton: 0.49; West Ham: 0.57; Middlesbrough: 0.65; Southampton: 0.32; Birmingham: 0.28; West Bromwich: 0.21; Swansea: 0.13; Norwich: 0.15; Stoke: 0.14; QPR: 0.09.\n- Kalshi: AC Goianiense vs Vila Nova (GOI vs VIN (Nov 22)). Yes prices: AC Goianiense: 0.50; Tie: 0.27; Vila Nova: 0.23.\n- Kalshi: Will 'A Quiet Place Part III' be released before 2028? (A Quiet Place Part III - United States). Yes prices: Before Jan 1, 2028: 0.86.\n- Kalshi: Top Chinese AI Company week of November 16th (On Nov 23, 2026). Yes prices: Xiaomi: 0.84; Alibaba: 0.10; Baidu: 0.0000; ByteDance: 0.0000; DeepSeek: 0.0000; Meituan: 0.0000; MiniMax: 0.0000; Moonshot: 0.0000; Tencent: 0.0000; Z.ai: 0.0000.\n- Kalshi: Will Bitcoin exceed $120,000 before 2027? (After listing · before Jan 1, 2027 at 12:00 AM EST). Yes prices: Above $120,000: 0.0300.\n- Polymarket: The Voice Season 30: 3rd Place (ends 2026-12-15). [Yes, No] prices: Koumba Diallo: [\"0.025\", \"0.975\"]; Anna McElroy: [\"0.0415\", \"0.9585\"]; Brianna Cameron: [\"0.11\", \"0.89\"]; Kyle Davis: [\"0.18\", \"0.82\"]; Lexi Stephens: [\"0.135\", \"0.865\"]; Connor Closs: [\"0.155\", \"0.845\"]\n- Polymarket: The Voice Season 30: 2nd Place (ends 2026-12-15). [Yes, No] prices: Koumba Diallo: [\"0.099\", \"0.901\"]; Anna McElroy: [\"0.055\", \"0.945\"]; Brianna Cameron: [\"0.3045\", \"0.6955\"]; Kyle Davis: [\"0.1\", \"0.9\"]; Lexi Stephens: [\"0.3315\", \"0.6685\"]; Connor Closs: [\"0.1625\", \"0.8375\"]\n- Polymarket: NFL Regular Season Completion Percentage Leader (2026) (ends 2027-01-25). [Yes, No] prices: Josh Allen: [\"0.055\", \"0.945\"]; Joe Burrow: [\"0.905\", \"0.095\"]; Patrick Mahomes: [\"0.0055\", \"0.9945\"]; Lamar Jackson: [\"0.004\", \"0.996\"]; Jayden Daniels: [\"0.021\", \"0.979\"]; Jordan Love: [\"0.012\", \"0.988\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 57.0,
+        "p25": 59.75,
+        "p50": 60.5,
+        "p75": 67.5,
+        "p90": 70.5
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The resolving capture is on November 27, 2026, near 17:00 UTC, and the outcome should be known by roughly November 27 to 28.\n\n(b) **Latest known value:** 60. This comes from the November 14, 2026 Wayback capture, which showed \"30-60% off everything\", \"All clearance 60% off+\" and \"Dream Event 40-60% off\". The page code also contains navigation entries reading \"Up to 70% Off\", but some are flagged as not shown to customers, and it is unclear whether menu text counts.\n\n(c) **If nothing changed:** 60.\n\n(d) **If the current trend continued:** The going-out-of-business sale moved its floor from 25 to 30% while the ceiling stayed at 60. Liquidators usually deepen markdowns over time, but Black Friday is only about 2 weeks into a sale that runs to February 28. A 70% ceiling (\"up to 70%\" or \"50-70%\") is plausible, and 60 remains the modal outcome.\n\n(e) **Historical variation:** The Black Friday homepage peaked at 60 in both 2024 and 2025. A \"50-70% off\" event appeared earlier in 2026. Over about 10 days, the headline ceiling has stayed flat or stepped up by about 10 points.\n\n(f) **Experts and markets:** There are no markets on this. The liquidators' release says \"new markdowns are expected as the sale progresses\". A \"BLKFRI60\" link tag already exists on the site.\n\n(g) **Unexpected scenarios:**\n- Low: The Black Friday hero banner shows only a flat \"Extra 20%/40% off with code\" and readable text loses the 60% figures, or the capture is sparse or broken and falls back to a strip-only render. That would give 40 or lower.\n- High: The liquidators announce a Black Friday \"up to 70-80% off\" doorbuster on clearance or select categories, giving 75 to 80.\n\n**Plausible extremes:**\n- Percentile 1: a capture where only the \"extra 20%\"-style text is readable, giving roughly 20 to 40.\n- Percentile 99: an aggressive \"up to 80-90% off clearance\" Black Friday module.\n\nThe duplicated 60s are written as small increments so the percentiles stay strictly increasing.\n\nPercentile 1: 35\nPercentile 5: 50\nPercentile 10: 57\nPercentile 20: 59.5\nPercentile 30: 60\nPercentile 40: 60.2\nPercentile 50: 60.5\nPercentile 60: 61\nPercentile 70: 65\nPercentile 80: 70\nPercentile 90: 70.5\nPercentile 95: 75\nPercentile 99: 85"
+    },
+    {
+      "value": {
+        "p10": 59.0,
+        "p25": 60.005,
+        "p50": 60.05,
+        "p75": 69.95,
+        "p90": 70.1
+      },
+      "reasoning": "(a) Time left: about 10 days. The deciding capture is the Wayback snapshot of /us/home nearest 17:00 UTC on Nov 27, 2026, or the nearest readable capture if none renders that day.\n\n(b) Latest known value: the Nov 14, 2026 (08:53 UTC) capture peaks at 60. Its banners read \"30-60% everything\", \"All clearance 60% off+\" and \"Dream Event 40-60%\". There is also an \"Extra 20%\" code, which is not stacked under the rules. The raw page code includes a nav entry \"New Markdowns! Up to 70% Off\", but its status as homepage promo text is unclear.\n\n(c) If nothing changed: 60.\n\n(d) If the current trend continued: GOB sales ratchet markdowns deeper. Two weeks in, the floor has risen from 25 to 30 while the ceiling has stayed at 60. A Black Friday push to \"40-70%\" or \"up to 70%\" is plausible, but the \"BLKFRI60\" link tag points toward a 60 theme.\n\n(e) Historical variation: Black Friday headlines in 2024 and 2025 were both 60. Over roughly 2 weeks of a 16-week liquidation, the top figure typically moves by 0 or 10 points.\n\n(f) Experts and markets: none found. The question creator's range is 40-90.\n\n(g) Unexpected scenarios:\n- **Low:** the selected capture shows only the \"Extra 20% off everything with code\" strip as text, while the range figures sit in unreadable images. Or the site is down, or shows a stripped-down liquidation page. Either could resolve 20-50.\n- **High:** the liquidators deepen markdowns aggressively for Black Friday, for example \"up to 80% off\" on clearance, or 70-90% on selected categories.\n\nProbability mass: roughly 50% on 60, 33% on 70, 10% on 65, 75 or 80, and 7% below 60.\n\nPercentile 1: 35\nPercentile 5: 50\nPercentile 10: 59\nPercentile 20: 60\nPercentile 30: 60.01\nPercentile 40: 60.02\nPercentile 50: 60.05\nPercentile 60: 63\nPercentile 70: 69.9\nPercentile 80: 70\nPercentile 90: 70.1\nPercentile 95: 75\nPercentile 99: 85"
+    },
+    {
+      "value": {
+        "p10": 58.0,
+        "p25": 59.75,
+        "p50": 60.5,
+        "p75": 69.5,
+        "p90": 75.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. Resolution uses the Wayback capture of /us/home closest to 17:00 UTC on November 27, 2026, and the result should be known around November 27-28.\n\n(b) **Latest known value:** 60, from the November 14, 2026 capture at 08:53 UTC. It showed \"Take 30-60% everything\", \"All clearance 60% off+\", \"Dream Event 40-60% off\" and \"Dress Up 60% off\". The header strip said \"Extra 20% with WOW20\", which is not stacked. The subnav already has a \"BLKFRI60\" tag.\n\n(c) **If nothing changed:** 60.\n\n(d) **If the trend continued:** So far the floor has risen (25 to 30) while the ceiling has stayed at 60. Liquidators usually ratchet discounts deeper over the sale. Black Friday is only about 3 weeks into a sale that runs to February, so a step to \"up to 70%\" or \"40-70%\" is plausible but not certain. The BLKFRI60 tag suggests a 60 theme. The central estimate stays at 60, with a meaningful chance of 70.\n\n(e) **Historical variation:** The Black Friday headline was 60 in both 2024 and 2025. During this going-out-of-business sale, the ceiling has not moved in 11 days. Over a 10-day window, a move of one step (10 points) is the main risk, mostly upward. The menu text \"Up to 70% Off\" is also in the page code, which adds some upward risk if a resolver counts navigation text.\n\n(f) **Experts and markets:** There are no relevant markets. The liquidators' release says \"new markdowns are expected as the sale progresses.\"\n\n(g) **Unexpected scenarios:**\n- Low: the site shuts down or shows a bare \"closing\" notice, or the capture shows only the \"extra 20%\" text strip. That could give 20 or 0, though the alt text has rendered so far.\n- High: the liquidators run an aggressive Black Friday doorbuster such as \"up to 80% off clearance,\" or move quickly because inventory is burning slowly. That gives 75-90.\n\nPercentile 1: 40\nPercentile 5: 50\nPercentile 10: 58\nPercentile 20: 59.5\nPercentile 30: 60\nPercentile 40: 60.2\nPercentile 50: 60.5\nPercentile 60: 63\nPercentile 70: 69\nPercentile 80: 70\nPercentile 90: 75\nPercentile 95: 80\nPercentile 99: 90"
+    },
+    {
+      "value": {
+        "p10": 50.0,
+        "p25": 59.5,
+        "p50": 60.3,
+        "p75": 67.5,
+        "p90": 70.5
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The resolving capture is taken around 17:00 UTC on November 27, 2026, and the question resolves around 23:00 UTC that day.\n\n(b) **Latest known value:** The November 14, 2026 Wayback capture (08:53 UTC) shows 60. Both figures come from image alt text: \"TAKE 30-60%* EVERYTHING\" and \"ALL CLEARANCE 60% OFF+\". The plain visible text shows only \"EXTRA 20% OFF EVERYTHING WITH CODE WOW20\". News on November 16 still reported 30-60% off.\n\n(c) **If nothing changed:** 60, assuming the resolver counts alt text as readable text. If only plain text counts, the value would be 20.\n\n(d) **If the current trend continued:** Liquidators usually deepen markdowns over the course of a sale. The top figure has stayed at 60 for about 10 days. A Black Friday step up to \"40-70%\" or \"clearance 70% off+\" is plausible, but deep cuts usually come later in a 16-week sale. The hidden \"BLKFRI60\" tag suggests a planned Black Friday promotion at 60, and stale hidden menu labels mention 70 and 75. The trend points to 60 or 70.\n\n(e) **Historical variation:** Over 10 days in a liquidation, the headline figure typically moves 0-10 points. The launch went from 25-60 to 30-60 in about a week, with the top figure unchanged. Normal Black Friday headlines at this retailer have run 60-75.\n\n(f) **Experts and markets:** There is no matching market. News coverage says \"additional markdowns expected as the sales progress.\" The question creator expects a value between 40 and 90.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** The capture shows only plain-text \"EXTRA 20%\" with the hero banner rendered purely as an image, and the resolver ignores alt text, giving 20. Alternatively, a capture failure means a stale or odd page decides the value.\n- **High outcome:** Liquidators stage an aggressive Black Friday push such as \"up to 75% off\" or \"clearance 80% off\", or the remaining inventory gets deeper cuts because of the December sale timeline.\n\n**Plausible extremes:**\n- 1st percentile: a plain-text-only reading gives 20.\n- 99th percentile: an aggressive \"up to 80% off clearance\" banner gives 80.\n\nMy rough probabilities are about 45% for 60, about 30% for 70, about 10% for 65, 75 or 80, about 5% for 50 or less, and about 8% for 20 or below because of the alt-text issue.\n\nPercentile 1: 20\nPercentile 5: 40\nPercentile 10: 50\nPercentile 20: 59\nPercentile 30: 60\nPercentile 40: 60.1\nPercentile 50: 60.3\nPercentile 60: 61\nPercentile 70: 65\nPercentile 80: 70\nPercentile 90: 70.5\nPercentile 95: 75\nPercentile 99: 80"
+    },
+    {
+      "value": {
+        "p10": 45.0,
+        "p25": 58.75,
+        "p50": 60.5,
+        "p75": 68.0,
+        "p90": 74.0
+      },
+      "reasoning": "(a) Time left: about 10 days. The outcome is known once the November 27, 2026 Wayback capture closest to 17:00 UTC exists, with resolution around November 27-28.\n\n(b) Latest known value: the November 14, 2026 capture shows 60. This comes from the hero image alt and title text, \"TAKE 30-60%* EVERYTHING\", and the \"ALL CLEARANCE 60% OFF+\" tile. The plain visible text shows only \"EXTRA 20% OFF EVERYTHING WITH CODE WOW20\".\n\n(c) If nothing changed: 60. It would be 20 only if the resolver ignores alt text, which seems unlikely because the background treats the 30-60% messaging as displayed.\n\n(d) If the trend continued: the liquidation went from 25-60% at launch to 30-60% by November 12-16, so the floor is rising while the top stays at 60. A Black Friday push three weeks into a 16-week going-out-of-business sale plausibly lifts the top figure to 70, or keeps it at 60 with a higher floor. The hidden \"BLKFRI60\" tag hints at a planned 60% Black Friday promo.\n\n(e) Historical variation: in ten days, liquidators typically move headline markdowns by 0 to 10 points, sometimes 20. Before the bankruptcy, this retailer's normal Black Friday headlines ran \"up to 70%\" to \"up to 75%\". That gives an upper reference, and 70 is plausible for a marketing push.\n\n(f) Experts and markets: there is no market. News expects \"additional markdowns as the sales progress.\" The question creator puts the likely range at 40-90.\n\n(g) Low scenario: the November 27 capture renders the banners only as images, or the resolver ignores alt text, so the only plain-text figure is the \"extra 20%\" code. Another low path is that the only capture is a script-only shell and a nearby capture with only small promos decides it. High scenario: the liquidators run a Black Friday doorbuster, \"up to 80% off\" or \"clearance 75-80% off\", carrying over from hidden nav labels like \"Clearance 75% off\". Reaching 90 would require a near-end-of-sale level, which is unlikely by November 27.\n\nPlausible tails:\n- P1 reflects a resolution quirk that leaves only a small text figure, such as a 10-20% code.\n- P99 reflects a 90% clearance headline.\n\nPercentile 1: 15\nPercentile 5: 20\nPercentile 10: 45\nPercentile 20: 58\nPercentile 30: 59.5\nPercentile 40: 60\nPercentile 50: 60.5\nPercentile 60: 62\nPercentile 70: 66\nPercentile 80: 70\nPercentile 90: 74\nPercentile 95: 80\nPercentile 99: 90"
+    },
+    {
+      "value": {
+        "p10": 50.0,
+        "p25": 59.5,
+        "p50": 60.5,
+        "p75": 66.5,
+        "p90": 70.0
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The resolving capture is from November 27, 2026, around 17:00 UTC, and the outcome will be known that day.\n\n(b) **Latest known value:** the November 14, 2026 Wayback capture shows 60. This comes from the hero banner's alt text \"TAKE 30-60%* EVERYTHING\" and the clearance tile \"60% OFF+\". The only plain visible text is \"EXTRA 20% OFF EVERYTHING WITH CODE WOW20\". News coverage on November 16 still says 30-60% / \"up to 60%\".\n\n(c) **If nothing changed:** 60. It would be 20 only if the resolver ignores alt text.\n\n(d) **If the current trend continued:** liquidators usually deepen markdowns. The headline went from 25-60% to 30-60% while the top figure stayed at 60. A Black Friday push to \"40-70%\" or \"clearance 70% off+\" is plausible, so 60 to 70.\n\n(e) **Historical variation:** over about two weeks in a liquidation, the top figure typically moves by 0 to 10 points. Steps usually come in increments of 10, with the deepest levels saved for the final weeks before February 2027. Black Friday headlines before the bankruptcy ran at \"up to 70%\" to \"up to 75%\".\n\n(f) **Expectations of experts and markets:** there are no markets on this. News says \"additional markdowns expected\". A hidden \"BLKFRI60\" tag in the page code hints that a 60-level Black Friday promo was planned. The question creator puts the range at 40 to 90.\n\n(g) **Unexpected scenarios:**\n- **Low:** the resolver reads only the visible text, so the alt-text banners don't count and the value is 20. Another low path is the capture rendering only the \"extra 20%\" code banner.\n- **High:** liquidators run an aggressive Black Friday \"up to 75-80% off\" or \"clearance 80% off+\" to accelerate sell-through.\n\n**Distribution:** I put about 45% on exactly 60, about 25% on 70, about 10% on 75-80, about 10% on 40-50, and about 8% on 20 from the alt-text issue. A 1st percentile of 20 reflects the alt-text reading. A 99th percentile of 80 reflects an unusually deep Black Friday clearance push.\n\nPercentile 1: 20\nPercentile 5: 30\nPercentile 10: 50\nPercentile 20: 59\nPercentile 30: 60\nPercentile 40: 60.2\nPercentile 50: 60.5\nPercentile 60: 61\nPercentile 70: 64\nPercentile 80: 69\nPercentile 90: 70\nPercentile 95: 75\nPercentile 99: 80"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 52.4437,
+    "p25": 58.5193,
+    "p50": 61.187,
+    "p75": 67.746,
+    "p90": 71.9776
+  },
+  "usage": [
+    {
+      "question_id": "46875",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 19.8,
+      "notional_cost_usd": 0.0001279,
+      "input_tokens": 518,
+      "output_tokens": 49,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 20.5,
+      "notional_cost_usd": 0.0002734,
+      "input_tokens": 1183,
+      "output_tokens": 74,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 89.5,
+      "notional_cost_usd": 0.4060119,
+      "input_tokens": 160766,
+      "output_tokens": 4679,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.077724,
+      "input_tokens": 6744,
+      "output_tokens": 1189,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.3,
+      "notional_cost_usd": 0.080348,
+      "input_tokens": 6742,
+      "output_tokens": 1321,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.0007961,
+      "input_tokens": 2704,
+      "output_tokens": 511,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.0007624,
+      "input_tokens": 2813,
+      "output_tokens": 400,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.00037818,
+      "input_tokens": 2704,
+      "output_tokens": 575,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.4,
+      "notional_cost_usd": 0.0298186,
+      "input_tokens": 6743,
+      "output_tokens": 1303,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.8,
+      "notional_cost_usd": 0.00035580000000000003,
+      "input_tokens": 2816,
+      "output_tokens": 528,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0008037000000000001,
+      "input_tokens": 2752,
+      "output_tokens": 507,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00028158,
+      "input_tokens": 2751,
+      "output_tokens": 382,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 98.3,
+      "notional_cost_usd": 0.4392505000000001,
+      "input_tokens": 270210,
+      "output_tokens": 6118,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.9,
+      "notional_cost_usd": 0.085724,
+      "input_tokens": 7059,
+      "output_tokens": 1463,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.4,
+      "notional_cost_usd": 0.090224,
+      "input_tokens": 7059,
+      "output_tokens": 1688,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.0,
+      "notional_cost_usd": 0.086936,
+      "input_tokens": 7058,
+      "output_tokens": 1524,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0007285000000000001,
+      "input_tokens": 2826,
+      "output_tokens": 327,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0006904999999999999,
+      "input_tokens": 2851,
+      "output_tokens": 241,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0008003,
+      "input_tokens": 2945,
+      "output_tokens": 423,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00033922,
+      "input_tokens": 2827,
+      "output_tokens": 495,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.0003147,
+      "input_tokens": 2944,
+      "output_tokens": 444,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46875",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00036124999999999997,
+      "input_tokens": 2849,
+      "output_tokens": 539,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.3031
+}
