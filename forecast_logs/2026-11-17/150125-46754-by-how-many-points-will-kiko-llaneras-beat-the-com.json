@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-17T15:10:28.553776+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-17T15:01:25.859310+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46754,
+    "post_id": 46498,
+    "url": "https://www.metaculus.com/questions/46498",
+    "type": "NumericQuestion",
+    "unit": "Score Difference",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "By how many points will Kiko Llaneras beat the Community Prediction in the 2026 Fall Metaculus Cup?",
+    "resolution_criteria": "This question will resolve as the difference between the Total Score of Kiko Llaneras (username kikollan) and the Community Prediction in the tournament [leaderboard](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/#leaderboard), at the conclusion of the Metaculus Cup Fall 2026.",
+    "fine_print": "If the Community Prediction has a higher total score than Kiko Llaneras, then this question will resolve to a negative integer.\n\nThis question will resolve after all other Metaculus Cup Fall 2026 questions have resolved other than [How many bots will finish in the top 10 of the Metaculus Cup Fall 2026?](https://www.metaculus.com/questions/45619/how-many-bots-will-finish-in-the-top-10-of-the-metaculus-cup-fall-2026/), which will resolve after this one.&#x20;\n\nThis question will not be included in the scoring used to determine whether the Community Prediction outperformed Kiko Llaneras.\n\n***\nThis question's information (resolution criteria, fine print, background info, etc) is synced with an [original identical question](https://www.metaculus.com/questions/46225) which opened on 2026-11-09 18:00:00.",
+    "close_time": "2026-11-17 18:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 18:00 UTC"
+  },
+  "research": [
+    "I couldn't get the current score gap: Metaculus blocks direct fetches, and its API needs a login, so I never saw the leaderboard values. No public source I found gives an interim tally of Kiko against the Community Prediction (CP).\n\n## 1. Resolution source\n- 2026-11-17: Fetches of the tournament page returned HTTP 403. Through a text proxy the page loaded, but the leaderboard section had no numbers. The leaderboard API said \"only available to authenticated users.\" No current value for kikollan or the CP. [tournament](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/)\n- The tournament runs 2026-08-28 to 2027-01-01. It lists 46 questions, with 4-5 new ones posted each Friday. Some close early and others run to the end. [tournament](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/)\n- 2026-11-17: The original question (46225) has 68 forecasters and 11 comments. Its CP was still hidden (\"revealed in 2 hours\"), and I couldn't read the comment text. [Q46225](https://www.metaculus.com/questions/46225/)\n\n## 2. Current status\n- Nothing found settles the question. Several questions in the tournament are still open, and the final gap is unknown.\n- 2026-10-30: Comments on the bot top-10 question say a human, Zaldath, reached #1 after a large gain on the Iliana Iotova question. Kiko is not mentioned. [Q45619](https://www.metaculus.com/questions/45619/how-many-bots-will-finish-in-the-top-10-of-the-metaculus-cup-fall-2026/)\n\n## 3. Recent news (newest first)\n- 2026-11-13: Kiko posted EL PAÍS's seat-by-seat model for Spain's general election on 29 November (29N): \"153 safe, 150 probable, about 50 in the air.\" The Cup includes \"How many seats will PP and Vox collectively receive in the 2026 Spanish general election?\" (CP about 193 when scraped). This is his core expertise and may be a big swing question. [X](https://x.com/kikollan), [tournament](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/)\n- 2026-11-12: Kiko said the PP's lead in their poll average fell from 6 to 4 points. Their model has the PSOE finishing first 20% of the time. [X](https://x.com/kikollan)\n- 2026-10-09: Polls put the PP at about 31-34% and the PSOE at 25-27%. Most seat projections have PP+Vox above 176 seats. [ARA](https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html)\n- Other open Cup questions (CP values when scraped):\n  - Ukraine control of Dobropillia on 2026-12-31: 46%\n  - US executions in 2026: mode 41\n  - US-Iran return to war before December: 35%\n  - GTA VI PS5 Metascore: about 96.3\n  \n  [tournament](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/)\n- 2026-09-04: Tournament announced. Kiko gave himself about a 10% chance of beating the CP. [announcement](https://www.metaculus.com/notebooks/45384/announcing-the-metaculus-cup-fall-2026-with-kiko-llaneras/)\n\n## 4. Base rates\n- Spring 2026: guest Nathan Young beat the CP by +162 (per the question background). A related Metaculus question, \"Community beats Nathan Young,\" resolved No. [search summary](https://www.metaculus.com/accounts/profile/139876/questions/)\n- Summer 2026: Dylan Matthews lost by 413 (background figure). A comment on the resolved question gives CP 921.976 vs Dylan 511.965, about 410. [Q43367](https://www.metaculus.com/questions/43367/community-beats-dylan-matthews-in-summer-2026-cup/)\n- How Summer 2026 moved: after 12 resolved questions in early June, CP had 243.7 and Dylan 31.1. In late July Dylan's deficit narrowed to about 200, then it widened to about 410 by the end. So the gap can move by about 200 points in a few weeks. [Q43367](https://www.metaculus.com/questions/43367/community-beats-dylan-matthews-in-summer-2026-cup/)\n- Two known guest results: +162 and -413. These margins are large compared with the question's -300 to +300 range, so the result could land outside it.\n- Kiko's Metaculus account dates from April 2021 and shows 176 predictions. I couldn't see his track record. [profile](https://www.metaculus.com/accounts/profile/118208/questions/)\n- Seasonality: not applicable.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on this question. None of the prices collected by code (Kalshi, Polymarket) match it.\n- The Metaculus CP for this question was hidden as of 2026-11-17. I couldn't find the linked \"Community beats Kiko\" binary question or its CP. The bot top-10 question stands at 5.18 (range 4-6). [Q45619](https://www.metaculus.com/questions/45619/how-many-bots-will-finish-in-the-top-10-of-the-metaculus-cup-fall-2026/)\n- Kiko's own 10% chance of beating the CP (2026-09-04) is his only stated forecast. [announcement](https://www.metaculus.com/notebooks/45384/announcing-the-metaculus-cup-fall-2026-with-kiko-llaneras/)\n\n## 6. Upcoming events\n- 2026-11-29: Spanish general election, which resolves the PP+Vox seats question. Kiko's specialist model could gain him points against the CP here, or cost him if he moved away from the CP and was wrong.\n- December 2026: US executions total, US-Iran war question, GTA VI Metascore (20 December), Dobropillia control (31 December).\n- 2026-12-15: question 46225 closes (per its page). Final resolution is around 2027-01-01.\n- If you have a Metaculus login, check the leaderboard and the 11 comments on question 46225 for an interim gap; it's the most useful thing still missing.\n\nSources: [tournament](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/), [announcement](https://www.metaculus.com/notebooks/45384/announcing-the-metaculus-cup-fall-2026-with-kiko-llaneras/), [Q46225](https://www.metaculus.com/questions/46225/), [Q43367](https://www.metaculus.com/questions/43367/community-beats-dylan-matthews-in-summer-2026-cup/), [Q45619](https://www.metaculus.com/questions/45619/how-many-bots-will-finish-in-the-top-10-of-the-metaculus-cup-fall-2026/), [Kiko X](https://x.com/kikollan), [Metaculus X](https://x.com/metaculus/status/2097775038233821514), [ARA](https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html), [profile 118208](https://www.metaculus.com/accounts/profile/118208/questions/), [profile 139876](https://www.metaculus.com/accounts/profile/139876/questions/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 15:05 UTC; check each market really matches the question)\n- Kalshi: Mauricio Pochettino: Out from USMNT (Mauricio Pochettino). Yes prices: Mauricio Pochettino out before 2030 World Cup: 0.99.\n- Kalshi: Will the 2030 Men's World Cup Tournament have 64 teams? (2030). Yes prices: 64 teams in the 2030 Men's World Cup field: 0.69.\n- Kalshi: KNVB Cup Champion (2026-27 Season). Yes prices: Alkmaar: 0.25; Ajax: 0.41; Utrecht: 0.41; Feyenoord: 0.41; Heerenveen: 0.41; Nijmegen: 0.41; Eindhoven: 0.41; Enschede: 0.41; Den Haag: 0.41; Breda: 0.41.\n- Kalshi: When will AI score above 65 on Artificial Analysis Intelligence Index?  (Any AI model from any lab). Yes prices: Before Jan 1, 2027: 0.46; Before Dec 1, 2026: 0.17; Before Feb 1, 2027: 0.48; Before Jul 1, 2027: 0.94; Before Apr 1, 2027: 0.64.\n- Kalshi: Will Mamdani establish a Department of Community Safety before 2027? (Before Jan 1, 2027). Yes prices: Yes: 0.04.\n- Kalshi: Duke Admissions Rate in Fall 2026 (Fall 2026). Yes prices: Above 5.2%: 0.61; Above 5.4%: 0.30; Above 5%: 0.86; Above 5.6%: 0.10; Above 4.6%: 0.95; Above 4.8%: 0.94; Above 5.8%: 0.04.\n- Kalshi: Duke First-Year Applicant Count in Fall 2026 (Fall 2026). Yes prices: At least 58,000: 0.51; At least 60,000: 0.20; At least 56,000: 0.81; At least 50,000: 0.95; At least 52,000: 0.95; At least 54,000: 0.94; At least 62,000: 0.06.\n- Kalshi: Stanford Admissions Rate in Fall 2026 (Fall 2026). Yes prices: Above 4.2%: 0.39; Above 4%: 0.65; Above 4.4%: 0.18; Above 3.8%: 0.85; Above 3.2%: 0.95; Above 3.4%: 0.95; Above 3.6%: 0.94.\n- Polymarket: Oscars 2027: Best Original Score Winner (ends 2027-07-01). [Yes, No] prices: The Odyssey: [\"0.775\", \"0.225\"]; Dune: Part Three: [\"0.09\", \"0.91\"]; La Bola Negra: [\"0.109\", \"0.891\"]; Disclosure Day: [\"0.033\", \"0.967\"]; Project Hail Mary: [\"0.0525\", \"0.9475\"]; Wild Horse Nine: [\"0.017\", \"0.983\"]\n- Polymarket: Will any AI model reach ___ Math Arena Score by December 31? (ends 2027-01-01). [Yes, No] prices: 1525: [\"1\", \"0\"]; 1550: [\"1\", \"0\"]; 1575: [\"0.215\", \"0.785\"]; 1600: [\"0.073\", \"0.927\"]\n- Polymarket: \"I Play Rocky\" Rotten Tomatoes Score? (ends 2026-11-23). [Yes, No] prices: 60+: [\"0.9845\", \"0.0155\"]; 70+: [\"0.982\", \"0.018\"]; 75+: [\"0.982\", \"0.018\"]; 80+: [\"0.9795\", \"0.0205\"]; 85+: [\"0.81\", \"0.19\"]; 83+: [\"0.964\", \"0.036\"]",
+    "# Kiko Llaneras vs the Community Prediction, Metaculus Cup Fall 2026: research notes (as of 2026-11-17)\n\n**Bottom line:** I could not get the live leaderboard. Metaculus.com blocked every request, so I have no current Total Score for kikollan or for the Community Prediction (CP). No source I found shows the outcome as settled or nearly settled. Season ends 2027-01-01.\n\n## 1. Resolution source\n- The deciding figure is kikollan's Total Score minus the CP's Total Score on the [tournament leaderboard](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/#leaderboard).\n- 2026-11-17: The page returned HTTP 403. The question pages (46225, 45619) did too, and the raw-data tool refuses metaculus.com, so I could not read the API or a data file.\n- The season runs Aug 28, 2026 to Jan 1, 2027, and only the time questions are open counts toward scores. Questions are released a few at a time each week. [tournament listing via search](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/), [announcement](https://www.metaculus.com/notebooks/45384/announcing-the-metaculus-cup-fall-2026-with-kiko-llaneras/)\n\n## 2. Current status\n- I found no public snapshot of where Kiko stands against the CP. Nothing found settles the question.\n- The resolution date and fine print say this question resolves only after every other Cup question has resolved, except the bots-in-top-10 question. Many questions are probably still open.\n\n## 3. Recent news (newest first)\n- 2026-11-17: The question-specific news items supplied are irrelevant. They cover tennis (Francisco Llanes), hockey and basketball, not Kiko Llaneras.\n- 2026-11-09: The sister question (46225) opened. (Question text)\n- Around 2026-10-13: A search summary described the Fall Cup as underway; I could not open the underlying source. [search result](https://www.metaculus.com/tournament/metaculus-cup-fall-2026/)\n- Fall 2026 (exact date unknown): Metaculus announced the Cup with Kiko as guest. The prize pool is $5,000 plus $2,500 if the CP beats him. Kiko puts his own chance of winning at about 10%. The first batch had five questions, including US attack on Oman, Nobel Peace Prize, Sudan famine (FEWS NET), major Atlantic hurricanes, and Iotova's vote share. [announcement](https://www.metaculus.com/notebooks/45384/announcing-the-metaculus-cup-fall-2026-with-kiko-llaneras/), [Metaculus on X](https://x.com/metaculus/status/2097775038233821514)\n- Another Metaculus question, on how many bots finish in the top 10, has a community estimate of about 5 (range 4 to 6). This suggests strong bots are pushing up the top of the leaderboard; the CP is one of the entries listed there. [search summary](https://www.metaculus.com/questions/45619/how-many-bots-will-finish-in-the-top-10-of-the-metaculus-cup-fall-2026/)\n\n## 4. Base rates\n- Guest margins against the CP (from the question background):\n  - Spring 2026: Nathan Young beat the CP by **+162**.\n  - Summer 2026: Dylan Matthews lost by **-413**.\n- So in two Cups, guests have won once and lost once. The spread is wide (575 points), and the Summer result falls outside this question's -300 to +300 range.\n- Score scale in Summer 2026: at an Aug 17 snapshot, the leader (bot laertes) had 617.4 and the top human (benshindel) 586.7. Other bots were around 477 to 493. There were about 58 questions. This is from a FutureSearch write-up I could not verify independently. [FutureSearch](https://futuresearch.ai/app/p/a/will-a-bot-beat-all-humans-in-the-summer-2026)\n- Structural point: the CP effectively has a forecast on every question for the whole time it is open. A guest who skips questions or joins late loses coverage points. This is my inference from the announced scoring rule, not a sourced figure.\n- I could not find the CP's final Total Score for Spring or Summer, or how it ranked.\n- Kiko has run Metaculus tournaments before: a Spanish-language one with about 35 questions and the International Hub elections series. I found no public head-to-head record of him against the CP. [Kiko tournament](https://www.metaculus.com/c/kiko)\n- Seasonality does not apply here.\n\n## 5. Other forecasts\n- I found nothing on Polymarket, Kalshi or Manifold for this question. None of the market prices supplied are related.\n- The Metaculus sister question (46225) is where the community forecast lives, but I could not read its value because of the 403.\n- Kiko's own estimate is about a 10% chance of beating the CP. [announcement](https://www.metaculus.com/notebooks/45384/announcing-the-metaculus-cup-fall-2026-with-kiko-llaneras/)\n- A related question presumably exists (\"Will the Community beat Kiko Llaneras?\", like [the Summer version for Dylan Matthews](https://www.metaculus.com/questions/43367/community-beats-dylan-matthews-in-summer-2026-cup/)). I did not find it.\n\n## 6. Upcoming events before resolution\n- 2026-11-17 18:00 UTC: forecasting on this question closes.\n- From now to 2027-01-01: the remaining Cup questions resolve, which could include year-end items like Oman (before 2027) and Sudan famine (before 2027). Late releases and how much of the field Kiko covers could still move the gap.\n- Around 2027-01-01: the final leaderboard and resolution.\n- No weather dependence beyond the already-finished 2026 Atlantic hurricane question.\n\n**Suggestion:** if the forecaster can log in to Metaculus, the live leaderboard and question 46225's community forecast are the key missing data.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 15:05 UTC; check each market really matches the question)\n- Kalshi: Mauricio Pochettino: Out from USMNT (Mauricio Pochettino). Yes prices: Mauricio Pochettino out before 2030 World Cup: 0.99.\n- Kalshi: Will the 2030 Men's World Cup Tournament have 64 teams? (2030). Yes prices: 64 teams in the 2030 Men's World Cup field: 0.69.\n- Kalshi: KNVB Cup Champion (2026-27 Season). Yes prices: Alkmaar: 0.25; Ajax: 0.41; Utrecht: 0.41; Feyenoord: 0.41; Heerenveen: 0.41; Nijmegen: 0.41; Eindhoven: 0.41; Enschede: 0.41; Den Haag: 0.41; Breda: 0.41.\n- Kalshi: When will AI score above 65 on Artificial Analysis Intelligence Index?  (Any AI model from any lab). Yes prices: Before Jan 1, 2027: 0.46; Before Dec 1, 2026: 0.17; Before Feb 1, 2027: 0.48; Before Jul 1, 2027: 0.94; Before Apr 1, 2027: 0.64.\n- Kalshi: Will Mamdani establish a Department of Community Safety before 2027? (Before Jan 1, 2027). Yes prices: Yes: 0.04.\n- Kalshi: Duke Admissions Rate in Fall 2026 (Fall 2026). Yes prices: Above 5.2%: 0.61; Above 5.4%: 0.30; Above 5%: 0.86; Above 5.6%: 0.10; Above 4.6%: 0.95; Above 4.8%: 0.94; Above 5.8%: 0.04.\n- Kalshi: Duke First-Year Applicant Count in Fall 2026 (Fall 2026). Yes prices: At least 58,000: 0.51; At least 60,000: 0.20; At least 56,000: 0.81; At least 50,000: 0.95; At least 52,000: 0.95; At least 54,000: 0.94; At least 62,000: 0.06.\n- Kalshi: Stanford Admissions Rate in Fall 2026 (Fall 2026). Yes prices: Above 4.2%: 0.39; Above 4%: 0.65; Above 4.4%: 0.18; Above 3.8%: 0.85; Above 3.2%: 0.95; Above 3.4%: 0.95; Above 3.6%: 0.94.\n- Polymarket: Oscars 2027: Best Original Score Winner (ends 2027-07-01). [Yes, No] prices: The Odyssey: [\"0.775\", \"0.225\"]; Dune: Part Three: [\"0.09\", \"0.91\"]; La Bola Negra: [\"0.109\", \"0.891\"]; Disclosure Day: [\"0.033\", \"0.967\"]; Project Hail Mary: [\"0.0525\", \"0.9475\"]; Wild Horse Nine: [\"0.017\", \"0.983\"]\n- Polymarket: Will any AI model reach ___ Math Arena Score by December 31? (ends 2027-01-01). [Yes, No] prices: 1525: [\"1\", \"0\"]; 1550: [\"1\", \"0\"]; 1575: [\"0.215\", \"0.785\"]; 1600: [\"0.073\", \"0.927\"]\n- Polymarket: \"I Play Rocky\" Rotten Tomatoes Score? (ends 2026-11-23). [Yes, No] prices: 60+: [\"0.9845\", \"0.0155\"]; 70+: [\"0.982\", \"0.018\"]; 75+: [\"0.982\", \"0.018\"]; 80+: [\"0.9795\", \"0.0205\"]; 85+: [\"0.81\", \"0.19\"]; 83+: [\"0.964\", \"0.036\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": -420.0,
+        "p25": -260.0,
+        "p50": -120.0,
+        "p75": 7.5,
+        "p90": 130.0
+      },
+      "reasoning": "(a) Time left: about 6 weeks. The tournament ends 2027-01-01, and this question resolves after the other Cup questions.\n\n(b) Latest known value: none. The leaderboard requires a login, so the interim gap between kikollan and the Community Prediction (CP) is unknown as of 2026-11-17. The tournament is roughly 60-70% through by question count.\n\n(c) If nothing changed: this cannot be computed without the leaderboard. The prior is that the CP leads. Individual forecasters, even good ones, usually trail the CP in these Cups. Kiko himself gave himself only a 10% chance of winning.\n\n(d) Trend: no trend is observable. In past Cups the CP's lead tended to widen as more questions resolved, mainly because guests miss questions or deviate from the CP and lose peer score. In Summer 2026 the gap was about -210 in early June, narrowed to about -200 in late July and finished at -410.\n\n(e) Historical variation: the two known final gaps are +162 and -413. Within a tournament, the gap moved about 200 points in a few weeks. Each remaining question can swing the gap by tens of points, and a big miss can cost 50-100 or more.\n\n(f) Experts and markets: no market exists. Kiko's self-assessment gives a 10% chance that he beats the CP. The question creator's range is -300 to +300, which suggests the creator sees the gap near zero to moderately negative at question creation (2026-11-09).\n\n(g) Unexpected scenarios:\n- Low outcome: Kiko misses several late questions or leans hard against the CP on a few that go wrong, such as the Spanish election seat count or the US-Iran question. That could push the gap below -500.\n- High outcome: his specialist Spanish election model beats the CP, plus a few contrarian hits, could push the gap to +250 or more.\n\nMy central estimate is about -130, with roughly a 25% chance that Kiko ends ahead of the CP.\n\nPercentile 1: -750\nPercentile 5: -520\nPercentile 10: -420\nPercentile 20: -300\nPercentile 30: -220\nPercentile 40: -165\nPercentile 50: -120\nPercentile 60: -75\nPercentile 70: -25\nPercentile 80: 40\nPercentile 90: 130\nPercentile 95: 200\nPercentile 99: 340"
+    },
+    {
+      "value": {
+        "p10": -470.0,
+        "p25": -300.0,
+        "p50": -140.0,
+        "p75": 0.0,
+        "p90": 130.0
+      },
+      "reasoning": "(a) **Time left:** about 6 weeks. The tournament ends around 2027-01-01, and several questions are still open, including the 29 November Spanish election and the December questions.\n\n(b) **Latest known value:** none. The leaderboard values for kikollan and the Community Prediction could not be read as of 2026-11-17, and no interim gap was found anywhere.\n\n(c) **If nothing changed:** unknown, since there is no interim value. The prior is that the Community Prediction is usually ahead of a single guest. Kiko himself gave only a 10% chance of beating it. Guests also tend to lose coverage points by not forecasting every question.\n\n(d) **If the trend continued:** there is no observable trend. Base rates from the two previous guests are +162 (Nathan Young) and -413 (Dylan Matthews). Combined with Kiko's 10% self-estimate, this points to a moderately negative median.\n\n(e) **Historical variation:**\n- Final gaps have spanned roughly ±400.\n- In Summer 2026 the gap moved by about 200 points within a few weeks.\n- With about 6 weeks and several large questions left, a swing of 100 to 200 points is plausible.\n\n(f) **Experts and markets:**\n- No market covers this question.\n- The Community Prediction on the original question was hidden.\n- The question creator's range of -300 to +300 suggests they expect a moderate outcome.\n- Kiko's 10% self-estimate implies a negative median.\n- The Spanish PP+Vox seats question is his specialty and could give him a relative gain.\n\n(g) **Unexpected scenarios:**\n- **Low:** Kiko misses many questions or stops updating amid the election workload, while the Community Prediction collects coverage points. The gap could then reach -600 or worse, similar to or beyond Dylan Matthews.\n- **High:** Kiko's EL PAÍS seat model beats the crowd decisively on the Spanish election, and a few contrarian calls pay off. He could then finish +200 to +300 ahead, like Nathan Young.\n\nPercentile 1: -800\nPercentile 5: -580\nPercentile 10: -470\nPercentile 20: -340\nPercentile 30: -260\nPercentile 40: -195\nPercentile 50: -140\nPercentile 60: -90\nPercentile 70: -35\nPercentile 80: 35\nPercentile 90: 130\nPercentile 95: 210\nPercentile 99: 360"
+    },
+    {
+      "value": {
+        "p10": -380.0,
+        "p25": -232.5,
+        "p50": -105.0,
+        "p75": 10.0,
+        "p90": 130.0
+      },
+      "reasoning": "(a) Time left: about 6 weeks. The tournament ends 2027-01-01, and the remaining questions (Spanish election seats on 29 November, US executions, US-Iran, GTA VI Metascore, Dobropillia) resolve through December.\n\n(b) Latest known value: none. The leaderboard requires a login, and no interim gap between Kiko and the CP has been published as of 2026-11-17.\n\n(c) If nothing changed: unknown. Roughly half or more of the 46 questions have probably resolved, but the current gap is not visible.\n\n(d) If the trend continued: no observed trend for Kiko. The structural tendency is for guest forecasters to underperform the CP, which aggregates many forecasters and often scores around 900 or more in a Cup.\n\n(e) Historical variation: there are two prior guest results, +162 and -413. In Summer 2026 the gap moved by about 200 points within a few weeks. Final gaps of several hundred points in either direction are plausible.\n\n(f) Expectations:\n- Kiko himself gives roughly a 10% chance of beating the CP, though that is probably modest framing.\n- No markets exist on this question.\n- The question creator's range is -300 to +300.\n\n(g) Unexpected scenarios:\n- Low: Kiko deviates confidently from the CP on several questions that go against him, and stops updating late. He could finish -500 or worse, similar to Dylan Matthews.\n- High: his Spanish election model plus a few contrarian calls pay off, and he beats the CP by more than 200, similar to Nathan Young's +162.\n\nMy central estimate is a moderate loss to the CP of around -110, with a wide spread and a left skew, since losing by a lot is easier than winning by a lot.\n\nPercentile 1: -650\nPercentile 5: -470\nPercentile 10: -380\nPercentile 20: -270\nPercentile 30: -195\nPercentile 40: -145\nPercentile 50: -105\nPercentile 60: -65\nPercentile 70: -20\nPercentile 80: 40\nPercentile 90: 130\nPercentile 95: 200\nPercentile 99: 340"
+    },
+    {
+      "value": {
+        "p10": -390.0,
+        "p25": -257.5,
+        "p50": -135.0,
+        "p75": -45.0,
+        "p90": 35.0
+      },
+      "reasoning": "(a) About 6 weeks remain. The season ends 2027-01-01, and this question resolves once the other Cup questions are scored.\n\n(b) No current value is available. The leaderboard returned HTTP 403, so I have no snapshot of kikollan's or the Community Prediction's Total Score.\n\n(c) With no snapshot, I fall back on structure. The Community Prediction usually holds a solid positive peer-score total, and individual guests usually trail it. My expectation is that Kiko is behind by roughly 100 to 200 points.\n\n(d) The trend matches the base rates. Guests have gone 1-1 (+162 and -413), and the Community Prediction typically beats most individual forecasters. A continued trend suggests a deficit of about -150.\n\n(e) Margins between a guest and the Community Prediction over a full Cup span several hundred points. The two known results are 575 points apart.\n\n(f) Kiko himself gives about a 10% chance of beating the Community Prediction. I found no markets on this. Metaculus forecasters usually expect the Community Prediction to win comfortably.\n\n(g) Low scenario: Kiko skips several questions or joins late, and a few confident misses compound. That could produce a deficit of -450 or worse, similar to Dylan Matthews' -413. High scenario: Kiko makes contrarian calls that land on several high-uncertainty questions. That could put him clearly ahead, around +150, similar to Nathan Young's +162.\n\nPercentile 1: -620\nPercentile 5: -470\nPercentile 10: -390\nPercentile 20: -290\nPercentile 30: -225\nPercentile 40: -175\nPercentile 50: -135\nPercentile 60: -100\nPercentile 70: -65\nPercentile 80: -25\nPercentile 90: 35\nPercentile 95: 90\nPercentile 99: 200"
+    },
+    {
+      "value": {
+        "p10": -460.0,
+        "p25": -277.5,
+        "p50": -120.0,
+        "p75": 17.5,
+        "p90": 150.0
+      },
+      "reasoning": "(a) **Time left:** about 6 weeks. The tournament ends around 2027-01-01, and this question resolves after all other Cup questions do.\n\n(b) **Latest known value:** none. The leaderboard and the sister question returned HTTP 403 on 2026-11-17, so I have no current gap between kikollan and the Community Prediction.\n\n(c) **Outcome if nothing changed:** unknown, because there is no snapshot. Structurally, the Community Prediction usually ranks near the top of Metaculus leaderboards and covers every question for its full open window. That gives it a coverage advantage, so the default leans negative for the guest.\n\n(d) **Outcome if the current trend continued:** no trend is observable. The base rate is two guest results, +162 and -413, averaging about -125. Kiko's own self-assessment is roughly a 10% chance of beating the Community Prediction.\n\n(e) **Historical variation:**\n- Guest-vs-Community gaps have spanned a range of about 575 points across two Cups.\n- Top Summer 2026 scores were about 600, so gaps of several hundred points are plausible.\n- With about half the questions perhaps still unresolved, the remaining weeks could move the gap by 100 to 300 points.\n\n(f) **Experts and markets:**\n- There is no market on this question.\n- Kiko's 10% self-estimate implies that most of the probability mass is below zero.\n- The question creator's -300 to +300 range suggests a moderately centered expectation.\n- Kiko is a quantitative data journalist and likely an engaged forecaster, so I expect a smaller loss than Dylan Matthews's.\n\n(g) **Unexpected scenarios:**\n- Low: Kiko skips or joins late on several questions, losing coverage. He also takes confident contrarian positions on a few questions (for example, Oman or Sudan famine) that go wrong. The gap could then reach -600 to -800.\n- High: Kiko makes a few well-timed confident calls where the Community Prediction is miscalibrated, and his coverage is full, as Nathan Young managed. The gap could then reach +250 to +400.\n\nPercentile 1: -800\nPercentile 5: -580\nPercentile 10: -460\nPercentile 20: -320\nPercentile 30: -235\nPercentile 40: -170\nPercentile 50: -120\nPercentile 60: -70\nPercentile 70: -15\nPercentile 80: 50\nPercentile 90: 150\nPercentile 95: 230\nPercentile 99: 380"
+    },
+    {
+      "value": {
+        "p10": -390.0,
+        "p25": -220.0,
+        "p50": -75.0,
+        "p75": 30.0,
+        "p90": 130.0
+      },
+      "reasoning": "(a) About 6 weeks remain. The season ends 2027-01-01, and this question resolves around then, after the other Cup questions resolve.\n\n(b) No current value is available. The leaderboard returned 403 errors, so neither kikollan's Total Score nor the CP's is known as of 2026-11-17.\n\n(c) If nothing changed, the outcome is unknown, because there is no snapshot. The structural prior is that the CP usually leads guest forecasters. It has full coverage of every question, and aggregation usually beats individuals.\n\n(d) There is no observable trend. Base rates from guests: Spring 2026 +162, Summer 2026 -413. Kiko himself gives about a 10% chance of beating the CP. That implies a negative median with a long left tail, which would come from missed questions or late forecasts.\n\n(e) With about 50 to 60 questions, gaps between a single forecaster and the CP commonly reach the low hundreds of points. Coverage gaps can push the gap to -400 or worse, as in Summer. Since roughly the first 80% of the season has already happened and only the remaining questions will resolve, much of the final gap is probably already fixed. However, I cannot observe it.\n\n(f) No markets exist. Kiko's own estimate is about a 10% chance of a positive result. The question creator's range of -300 to +300 suggests a moderate spread centred somewhat below zero. Strong bots on the leaderboard do not directly affect this gap.\n\n(g) Low scenario: Kiko skips several questions or forecasts late, leaving coverage gaps, and makes a few confident misses. That could produce -500 to -700. High scenario: Kiko makes a few contrarian calls that prove correct, for example on Oman, Sudan famine or Nobel-type questions with skewed outcomes, while tracking the CP elsewhere. That could produce +200 to +300.\n\nPercentile 1: -720\nPercentile 5: -500\nPercentile 10: -390\nPercentile 20: -260\nPercentile 30: -180\nPercentile 40: -120\nPercentile 50: -75\nPercentile 60: -35\nPercentile 70: 5\nPercentile 80: 55\nPercentile 90: 130\nPercentile 95: 190\nPercentile 99: 310"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": -300.0,
+    "p25": -257.6808,
+    "p50": -119.0487,
+    "p75": 10.5833,
+    "p90": 133.6454
+  },
+  "usage": [
+    {
+      "question_id": "46754",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00020810000000000002,
+      "input_tokens": 899,
+      "output_tokens": 57,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 7.81e-05,
+      "input_tokens": 511,
+      "output_tokens": 54,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 160.5,
+      "notional_cost_usd": 0.45753199999999994,
+      "input_tokens": 213044,
+      "output_tokens": 5733,
+      "web_searches": 8,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.4,
+      "notional_cost_usd": 0.072828,
+      "input_tokens": 6362,
+      "output_tokens": 1097,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.9,
+      "notional_cost_usd": 0.073948,
+      "input_tokens": 6362,
+      "output_tokens": 1153,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0006903,
+      "input_tokens": 2735,
+      "output_tokens": 287,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.0007012,
+      "input_tokens": 2702,
+      "output_tokens": 322,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.0002093,
+      "input_tokens": 2735,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.5,
+      "notional_cost_usd": 0.0236144,
+      "input_tokens": 6361,
+      "output_tokens": 997,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.00025078,
+      "input_tokens": 2702,
+      "output_tokens": 321,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0006973999999999999,
+      "input_tokens": 2628,
+      "output_tokens": 344,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.00034254,
+      "input_tokens": 2628,
+      "output_tokens": 506,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 121.6,
+      "notional_cost_usd": 0.2837052,
+      "input_tokens": 139998,
+      "output_tokens": 4256,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.5,
+      "notional_cost_usd": 0.06517200000000001,
+      "input_tokens": 5880,
+      "output_tokens": 907,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.0,
+      "notional_cost_usd": 0.067072,
+      "input_tokens": 5880,
+      "output_tokens": 1002,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.07129200000000001,
+      "input_tokens": 5880,
+      "output_tokens": 1213,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.000678,
+      "input_tokens": 2536,
+      "output_tokens": 342,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0006529000000000001,
+      "input_tokens": 2673,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0007709,
+      "input_tokens": 2758,
+      "output_tokens": 439,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00020752,
+      "input_tokens": 2538,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00024203,
+      "input_tokens": 2758,
+      "output_tokens": 302,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46754",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00034918,
+      "input_tokens": 2673,
+      "output_tokens": 518,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1212
+}
