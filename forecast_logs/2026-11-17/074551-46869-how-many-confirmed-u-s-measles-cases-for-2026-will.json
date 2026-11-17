@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-17T07:49:03.805220+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-17T07:45:51.617840+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46869,
+    "post_id": 46609,
+    "url": "https://www.metaculus.com/questions/46609",
+    "type": "NumericQuestion",
+    "unit": "cases",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How many confirmed U.S. measles cases for 2026 will CDC report in its November 27, 2026 update?",
+    "resolution_criteria": "This question resolves to the national cumulative total of confirmed measles cases that the CDC reports for 2026 in the weekly update to its [Measles Cases and Outbreaks](https://www.cdc.gov/measles/data-research/index.html) page published on Friday, November 27, 2026, regardless of the data-cutoff (\"as of\") date that update uses. The value to be used is the page's national 2026 total — the figure in the statement \"As of [date], X confirmed measles cases were reported in the United States in 2026,\" equivalently the 2026 \"Total Cases\" figure in the page's summary table — reported in whole cases (for example, the November 13, 2026 update showed 5,412 for 2026 and would resolve as 5,412). If no update is published on November 27, 2026, the first CDC update published after November 26, 2026 governs. If the page has since been overwritten by later weekly updates, the Internet Archive (web.archive.org) copy of the relevant update may be used to read the figure.",
+    "fine_print": "Only CDC's own national 2026 total counts. Figures published by the Johns Hopkins US Measles Tracker, PAHO situation reports, individual state health departments, or news outlets do not count, even where they differ from CDC's. CDC's 2026 total includes confirmed cases among international visitors to the U.S. and cases reported by all jurisdictions, excludes probable cases reported by jurisdictions, and is subject to revision; the figure displayed in the governing update applies regardless of any later revision.",
+    "close_time": "2026-11-17 10:43 UTC",
+    "scheduled_resolution_time": "2026-11-27 18:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n- 2026-11-13 (data as of Nov 12): The CDC page reports **5,412 confirmed 2026 cases**. Of these, 5,394 came from 47 jurisdictions and 18 were international visitors. It also lists 43 new 2026 outbreaks, 96% of cases outbreak-associated (3,831 from 2026 outbreaks, 1,385 from outbreaks that began in 2025), and 6 deaths. [CDC](https://www.cdc.gov/measles/data-research/index.html)\n- The page blocks raw fetches (403), and the weekly rash-onset chart values aren't in the page text. I couldn't find a CSV or JSON file behind it.\n- Updates use data as of noon ET Thursday and are usually published Friday. The next one is expected around Nov 20 (data as of Nov 19). [Contagion Live](https://www.contagionlive.com/view/measles-update-november-13-2026)\n\n## 2. Current status\n- Nothing has settled the question yet. Two weekly updates remain: about Nov 20 and the governing one, about Nov 27 (the Friday after Thanksgiving).\n- As of today, 5,412 is the latest CDC figure.\n\n## 3. Recent news (newest first)\n- 2026-11-17: Taiwan CDC raised its US travel advisory to Level 2, citing more than 5,400 US cases. [UDN](https://udn.com/news/story/7266/9884076)\n- 2026-11-17: IBTimes says CDC shows \"nearly 5,500\" cases in 47 jurisdictions and counts 10 deaths using state figures. CDC has not posted a number above 5,412, so this looks like loose wording. [IBTimes](https://www.ibtimes.co.uk/us-measles-deaths-elimination-status-vaccination-rates-1832702)\n- 2026-11-16/17: A PAHO commission concluded US measles transmission is endemic again, and the formal announcement was set for Nov 17. This affects attention, not the counting itself. [US News](https://www.usnews.com/news/health-news/articles/2026-11-16/after-26-years-u-s-loses-its-measles-elimination-status-report-says), [Deseret](https://www.deseret.com/lifestyle/2026/11/16/us-loses-measles-elimination-status-outbreak-pan-american-health-organization/)\n- 2026-11-16: Pennsylvania reported 1,561 cases, up 19 since Friday Nov 13 (1,542) and up 61 over 7 days. It also reported 310 hospitalizations and 7 deaths. The Nov 9 figure was 1,505. Pennsylvania's growth looks slower than earlier in the fall, at about 60 a week. [MarketScreener/Reuters](https://www.marketscreener.com/news/pennsylvania-measles-cases-rise-to-1-561-state-health-department-says-ce785edfdd8fff23), [Medscape](https://www.medscape.com/s/viewarticle/pennsylvania-wisconsin-report-measles-linked-deaths-cases-2026a10018fp)\n- 2026-11-13: Wisconsin reported a second child death. On Nov 3 it had 431 cases. [GV Wire](https://gvwire.com/2026/11/05/wisconsin-reports-infant-death-linked-to-measles-outbreak/)\n- Early Nov 2026: Minnesota cases are rising among unvaccinated patients. I found no statewide total. [Fox 9](https://www.fox9.com/news/minnesota-measles-cases-continue-rise-unvaccinated-patients-nov-2026.amp)\n\n## 4. Base rates\n- Recent CDC totals, with weekly change where it can be calculated:\n  - Sep 10: 3,294\n  - Sep 24: 3,659\n  - Oct 1: 3,886\n  - Oct 29: 4,852 (about +240 a week in October)\n  - Nov 5: 5,182 (+330)\n  - Nov 12: 5,412 (+230)\n- That is 14 straight weeks of triple-digit increases.\n- Over the last 6 weeks, increments have mostly been between 200 and 330 a week. Two more weeks at that pace gives about 5,810 to 6,070. At the low end, it is about 5,700 to 5,800.\n- Seasonality and the holiday:\n  - In 2025, CDC reported 1,723 cases as of Nov 13. A later week showed +84 (to 1,912), and the year ended at 2,065 as of Dec 30 (later revised to 2,289). Weekly growth stayed at roughly 50 to 100 through the Thanksgiving and December period. [CIDRAP](https://www.cidrap.umn.edu/measles/us-exceeds-1900-measles-cases-outbreaks-expand), [search results](https://laist.com/news/health/us-measles-cases-hit-highest-level-in-33-years-cdc-reports)\n  - I couldn't confirm whether CDC published on schedule during Thanksgiving week 2025. It was publishing on Wednesdays then, so Nov 26, 2025 would have been the date.\n  - Years before 2025 had very few cases in November, so they aren't useful comparisons.\n- This year is running about 3 times the 2025 level for the same calendar point.\n- Holiday reporting lags could shrink the Nov 27 increment. Late revisions or catch-up could also make it larger.\n\n## 5. Other forecasts\n- Polymarket, \"Measles cases in U.S. by November 30?\": 5,600+ at 97.3%, 5,800+ at 91.5%, 6,000+ at 54% (prices as of 2026-11-17). This closely matches the question, but its resolution date (Nov 30) and source rules may differ slightly. [Polymarket]\n- Kalshi, 2026 full-year: Above 6,000 at 98%, Above 7,000 at 78%, Above 8,000 at 20%. This is a full-year total, so it only gives an upper anchor.\n- Manifold: none on this exact number.\n- No expert model forecasts were found.\n\n## 6. Upcoming events before resolution\n- About Fri Nov 20: CDC update with data as of Nov 19.\n- Thu Nov 26: Thanksgiving. The update about Nov 27 could be delayed, published early (Wed Nov 25), or use a shifted cutoff. If none is published on Nov 27, the first update after Nov 26 governs, which could be early December.\n- State updates are leading indicators: Pennsylvania (about 60 a week lately), Wisconsin, Minnesota, and South Carolina.\n- The PAHO announcement (Nov 17) could increase testing or reporting attention.\n- Weather isn't relevant.\n\nSources: [CDC](https://www.cdc.gov/measles/data-research/index.html), [Contagion Live Nov 13](https://www.contagionlive.com/view/measles-update-november-13-2026), [Contagion Live Nov 6](https://www.contagionlive.com/view/measles-update-november-6-2026), [SRN News](https://srnnews.com/us-measles-cases-rise-to-5412-cdc-says/), [2 Minute Medicine](https://www.2minutemedicine.com/cdc-reports-5412-confirmed-measles-cases-in-the-united-states-in-2026/), [US News](https://www.usnews.com/news/health-news/articles/2026-11-16/after-26-years-u-s-loses-its-measles-elimination-status-report-says), [MarketScreener](https://www.marketscreener.com/news/pennsylvania-measles-cases-rise-to-1-561-state-health-department-says-ce785edfdd8fff23), [Medscape](https://www.medscape.com/s/viewarticle/pennsylvania-wisconsin-report-measles-linked-deaths-cases-2026a10018fp), [GV Wire](https://gvwire.com/2026/11/05/wisconsin-reports-infant-death-linked-to-measles-outbreak/), [Fox 9](https://www.fox9.com/news/minnesota-measles-cases-continue-rise-unvaccinated-patients-nov-2026.amp), [CIDRAP](https://www.cidrap.umn.edu/measles/us-exceeds-1900-measles-cases-outbreaks-expand), [LAist](https://laist.com/news/health/us-measles-cases-hit-highest-level-in-33-years-cdc-reports), [IBTimes](https://www.ibtimes.co.uk/us-measles-deaths-elimination-status-vaccination-rates-1832702), [UDN](https://udn.com/news/story/7266/9884076), [Deseret](https://www.deseret.com/lifestyle/2026/11/16/us-loses-measles-elimination-status-outbreak-pan-american-health-organization/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 07:46 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 8000: 0.20; Above 7000: 0.78; Above 9000: 0.12; Above 10000: 0.05; Above 6000: 0.98; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900; Above 1000: 0.9900.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.56; At least 4500: 0.80; At least 3500: 0.87; At least 3000: 0.95; At least 2500: 0.95; At least 2000: 0.97; At least 4000: 0.87; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: How many gonorrhea cases will be reported in the United States this year? (2026). Yes prices: Above 425k: 0.39; Above 450k: 0.26; Above 400k: 0.82; Above 500k: 0.06; Above 350k: 0.99; Above 375k: 0.99; Above 300k: 0.9900; Above 285k: 0.9900; Above 325k: 0.9900.\n- Kalshi: Cyclosporiasis cases reported in the US this year? (2026). Yes prices: Above 34k: 0.56; Above 36k: 0.19; Above 40k: 0.05; Above 38k: 0.06; Above 44k: 0.1200; Above 42k: 0.1300; Above 20k: 0.9200; Above 14k: 0.9900; Above 18k: 0.9600; Above 10k: 0.9800.\n- Kalshi: Will WHO declare Hantavirus a Public Health Emergency of International Concern this Year? (In 2026). Yes prices: In Dec 31, 2026: 0.0090.\n- Polymarket: Measles cases in U.S. in 2026? (ends 2027-01-01). [Yes, No] prices: ↑3.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑500: [\"1\", \"0\"]; ↑1k: [\"1\", \"0\"]; ↑2k: [\"1\", \"0\"]\n- Polymarket: Measles cases in U.S. by November 30? (ends 2026-12-01). [Yes, No] prices: 4600+: [\"1\", \"0\"]; 4800+: [\"1\", \"0\"]; 5000+: [\"1\", \"0\"]; 6000+: [\"0.54\", \"0.46\"]; 5600+: [\"0.973\", \"0.027\"]; 5800+: [\"0.915\", \"0.085\"]\n- Manifold: Number of measles deaths reported by CDC in the US in 2026? (MULTIPLE_CHOICE) https://manifold.markets/JZB/number-of-measles-deaths-reported-b\n- Manifold: Will the CDC report twice as many measles cases in 2026 as 2025? (100%) https://manifold.markets/EvanDaniel/will-the-cdc-report-twice-as-many-m\n- Manifold: In which years will the CDC report more measles cases in the US than 2026? (MULTIPLE_CHOICE) https://manifold.markets/JimD/in-the-which-years-will-the-cdc-rep\n- Manifold: Will the CDC report more measles cases in 2027 than 2026? (58%) https://manifold.markets/LarsOsborne/will-the-cdc-report-more-measles-ca-pcZg0NACOs\n- Manifold: Total cases of measles reported in US during 2027 (MULTIPLE_CHOICE) https://manifold.markets/JZB/total-cases-of-measles-reported-in-PyN8R5qQLc",
+    "## 1. Resolution source\n\n- 2026-11-17: I couldn't read the CDC page directly. Both the page and its data file (/wcms/vizdata/measles/…json) returned \"403 Access Denied\" to my tool. [CDC](https://www.cdc.gov/measles/data-research/index.html)\n- 2026-11-13: The latest CDC update, with data as of Nov 12, shows **5,412** confirmed 2026 cases. That is up 230 (4.4%) from 5,182. It includes 18 cases among international visitors and 5,394 domestic cases from 47 jurisdictions. There were 43 outbreaks, none new that week, and 96% of cases were outbreak-associated. CDC lists 6 deaths. [Contagion Live](https://www.contagionlive.com/view/measles-update-november-13-2026)\n- The next CDC update is expected about Fri Nov 20, with data as of Nov 19. Nothing had been published as of today.\n\n## 2. Current status\n\n- Nothing has settled the question yet. The governing figure is still at least one, probably two, weekly updates away.\n- **A key timing risk:** in 2025, CDC published the Thanksgiving-week update early, on **Wednesday Nov 26, 2025**, with data as of Nov 25 ([Prism News](https://www.prismnews.com/news/measles-cases-surge-to-nearly-1800-outbreaks-strike-43-jurisdictions)). If CDC does the same in 2026 and publishes on Wed Nov 25, nothing would be published on Nov 27. The rules say the first update published *after* Nov 26 then governs. That would likely be about Dec 4, adding roughly one more week of cases. If CDC skips the holiday week entirely, the next update governs. The Polymarket \"by November 30\" market resolves on a different basis.\n\n## 3. Recent news (newest first)\n\n- 2026-11-17: Taiwan CDC raised its US travel advisory to Level 2, citing more than 5,400 US cases. [UDN](https://udn.com/news/story/7266/9884076)\n- 2026-11-17: IBTimes says CDC shows \"nearly 5,500\" cases and 10 deaths nationally. This is likely a mix of state and CDC counts; I couldn't verify it against a new CDC release. [IBTimes](https://www.ibtimes.co.uk/us-measles-deaths-elimination-status-vaccination-rates-1832702)\n- 2026-11-15/17: A PAHO commission concluded that measles transmission is endemic in the US, so the US loses elimination status. The formal announcement is set for Nov 17. [Deseret](https://www.deseret.com/lifestyle/2026/11/16/us-loses-measles-elimination-status-outbreak-pan-american-health-organization/), [Maryland Matters](https://marylandmatters.org/2026/11/15/repub/us-loses-its-measles-elimination-status-after-more-than-25-years/)\n- 2026-11-16: Pennsylvania reached 1,561 cases (+19 since Friday, +61 over 7 days), with 310 hospitalizations and 7 deaths. [MarketScreener](https://www.marketscreener.com/news/pennsylvania-measles-cases-rise-to-1-561-state-health-department-says-ce785edfdd8fff23)\n- 2026-11-13: Pennsylvania was at 1,542 cases. Wisconsin reported its 2nd death and at least 649 cases in 20 counties. [Medscape](https://www.medscape.com/s/viewarticle/pennsylvania-wisconsin-report-measles-linked-deaths-cases-2026a10018fp)\n- Mid-Nov 2026: Minnesota reported 59 new cases in one week, 139 since mid-September, centred on Todd County. [Fox9](https://www.fox9.com/news/minnesota-measles-cases-continue-rise-unvaccinated-patients-nov-2026.amp)\n- Pennsylvania's own weekly pace (about 61 a week) is slower than earlier, which suggests national growth is now spread across several states.\n\n## 4. Base rates and trend\n\n- CDC weekly totals in 2026:\n  - Sep 10: 3,294\n  - Sep 24: 3,659\n  - Oct 1: 3,886\n  - About Oct 22: 4,588 ([Medical Daily](https://medicaldaily.com/us-measles-4588-cases-paho-elimination-review-november-480442))\n  - Oct 29: 4,852 (+264)\n  - Nov 5: 5,182 (+330)\n  - Nov 12: 5,412 (+230)\n- The average from Oct 1 to Nov 12 was about 254 a week. The last 6 weeks ran roughly 200 to 330 a week.\n- Simple extrapolation (my arithmetic, not a forecast):\n  - Two more weeks at 200 to 330 a week gives about 5,810 to 6,070.\n  - If the governing update slips to about Dec 4, three weeks gives about 6,010 to 6,400.\n- Seasonality and the holiday, same period in 2025:\n  - 2025-11-18: 1,753\n  - 2025-11-25: 1,798, published Wed Nov 26. That is +45, a small Thanksgiving-week increment.\n  - 2025-12-16: 1,958 ([Contagion Live](https://www.contagionlive.com/view/us-measles-cases-near-2-000-in-2025-as-multi-state-outbreaks-expand))\n  - The 2025 growth rate was far lower in absolute terms. 2026 is running about 3 times the 2025 level, with weekly increments about 4 to 5 times larger.\n- I couldn't find comparable Nov 17 to Nov 27 values for 2022 to 2024. Those were low-case years, with only a few cases a week.\n- Measles in the US usually peaks in late winter and spring. The autumn 2026 surge is driven by outbreaks rather than by season.\n\n## 5. Other forecasts\n\n- Polymarket, \"Measles cases in U.S. by November 30?\" ([Polymarket](https://polymarket.com)). This is the closest match, though its timing and source rules may differ:\n  - 5,600+: 97.3%\n  - 5,800+: 91.5%\n  - 6,000+: 54%\n- Kalshi full-year 2026 market:\n  - Above 6,000: 98%\n  - Above 7,000: 78%\n  - Above 8,000: 20%\n  - That implies an end-of-year total of about 7,000 to 8,000, consistent with about 250 to 400 a week through December.\n- Manifold: \"twice 2025\" is at 100%. No market matches this exact question.\n- Johns Hopkins showed 5,400 as of Nov 6. It runs ahead of CDC, though it does not count for resolution.\n\n## 6. Upcoming events before resolution\n\n- About Fri Nov 20: CDC weekly update (data as of Nov 19).\n- Thanksgiving week: CDC could publish on Wed Nov 25 (as in 2025), on Fri Nov 27, or skip the week. As section 2 explains, this decides which figure governs.\n- Mon/Fri updates from Pennsylvania, plus the Wisconsin and Minnesota weekly reports. These lead the CDC numbers by a few days.\n- Nov 17: formal PAHO announcement. It could prompt more testing and reporting, but has no direct effect on the count.\n- Holiday reporting lags could push the Thanksgiving-week increment down, as happened in 2025 (+45).\n- Weather is not relevant.\n\nSources: [CDC](https://www.cdc.gov/measles/data-research/index.html), [Contagion Live Nov 13](https://www.contagionlive.com/view/measles-update-november-13-2026), [Contagion Live Nov 6](https://www.contagionlive.com/view/measles-update-november-6-2026), [Prism News](https://www.prismnews.com/news/measles-cases-surge-to-nearly-1800-outbreaks-strike-43-jurisdictions), [Contagion Live Dec 2025](https://www.contagionlive.com/view/us-measles-cases-near-2-000-in-2025-as-multi-state-outbreaks-expand), [Medical Daily](https://medicaldaily.com/us-measles-4588-cases-paho-elimination-review-november-480442), [MarketScreener](https://www.marketscreener.com/news/pennsylvania-measles-cases-rise-to-1-561-state-health-department-says-ce785edfdd8fff23), [Medscape](https://www.medscape.com/s/viewarticle/pennsylvania-wisconsin-report-measles-linked-deaths-cases-2026a10018fp), [Fox9](https://www.fox9.com/news/minnesota-measles-cases-continue-rise-unvaccinated-patients-nov-2026.amp), [Deseret](https://www.deseret.com/lifestyle/2026/11/16/us-loses-measles-elimination-status-outbreak-pan-american-health-organization/), [Maryland Matters](https://marylandmatters.org/2026/11/15/repub/us-loses-its-measles-elimination-status-after-more-than-25-years/), [IBTimes](https://www.ibtimes.co.uk/us-measles-deaths-elimination-status-vaccination-rates-1832702), [UDN](https://udn.com/news/story/7266/9884076), [Al Jazeera](https://www.aljazeera.com/amp/news/2026/11/7/cdc-reports-more-than-5000-measles-cases-highest-number-in-35-years)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 07:46 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 8000: 0.20; Above 7000: 0.78; Above 9000: 0.12; Above 10000: 0.05; Above 6000: 0.98; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900; Above 1000: 0.9900.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.56; At least 4500: 0.80; At least 3500: 0.87; At least 3000: 0.95; At least 2500: 0.95; At least 2000: 0.97; At least 4000: 0.87; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: How many gonorrhea cases will be reported in the United States this year? (2026). Yes prices: Above 425k: 0.39; Above 450k: 0.26; Above 400k: 0.82; Above 500k: 0.06; Above 350k: 0.99; Above 375k: 0.99; Above 300k: 0.9900; Above 285k: 0.9900; Above 325k: 0.9900.\n- Kalshi: Cyclosporiasis cases reported in the US this year? (2026). Yes prices: Above 34k: 0.56; Above 36k: 0.19; Above 40k: 0.05; Above 38k: 0.06; Above 44k: 0.1200; Above 42k: 0.1300; Above 20k: 0.9200; Above 14k: 0.9900; Above 18k: 0.9600; Above 10k: 0.9800.\n- Kalshi: Will WHO declare Hantavirus a Public Health Emergency of International Concern this Year? (In 2026). Yes prices: In Dec 31, 2026: 0.0090.\n- Polymarket: Measles cases in U.S. in 2026? (ends 2027-01-01). [Yes, No] prices: ↑3.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑500: [\"1\", \"0\"]; ↑1k: [\"1\", \"0\"]; ↑2k: [\"1\", \"0\"]\n- Polymarket: Measles cases in U.S. by November 30? (ends 2026-12-01). [Yes, No] prices: 4600+: [\"1\", \"0\"]; 4800+: [\"1\", \"0\"]; 5000+: [\"1\", \"0\"]; 6000+: [\"0.54\", \"0.46\"]; 5600+: [\"0.973\", \"0.027\"]; 5800+: [\"0.915\", \"0.085\"]\n- Manifold: Number of measles deaths reported by CDC in the US in 2026? (MULTIPLE_CHOICE) https://manifold.markets/JZB/number-of-measles-deaths-reported-b\n- Manifold: Will the CDC report twice as many measles cases in 2026 as 2025? (100%) https://manifold.markets/EvanDaniel/will-the-cdc-report-twice-as-many-m\n- Manifold: In which years will the CDC report more measles cases in the US than 2026? (MULTIPLE_CHOICE) https://manifold.markets/JimD/in-the-which-years-will-the-cdc-rep\n- Manifold: Will the CDC report more measles cases in 2027 than 2026? (58%) https://manifold.markets/LarsOsborne/will-the-cdc-report-more-measles-ca-pcZg0NACOs\n- Manifold: Total cases of measles reported in US during 2027 (MULTIPLE_CHOICE) https://manifold.markets/JZB/total-cases-of-measles-reported-in-PyN8R5qQLc"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 5740.0,
+        "p25": 5835.0,
+        "p50": 5945.0,
+        "p75": 6070.0,
+        "p90": 6215.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. Two CDC updates remain: about Nov 20 (data as of Nov 19) and the governing one on Fri Nov 27, the day after Thanksgiving.\n\n(b) **Latest value:** 5,412 confirmed 2026 cases (CDC update of Nov 13, data as of Nov 12).\n\n(c) **If nothing changed:** 5,412. That is implausible, because there have been 14 straight weeks of triple-digit increases.\n\n(d) **If the trend continued:** Recent weekly increments run about 230 to 330.\n- Two more weeks at that pace gives roughly 5,870 to 6,070.\n- Pennsylvania, the largest outbreak, is slowing to about 60 a week, and Thanksgiving reporting lags may shrink the second increment. A more realistic path is about +240 then +200, giving roughly 5,850 to 5,900.\n\n(e) **Historical variation:** Weekly increments over the past two months ranged from about 200 to 330, and 2-week changes from about 450 to 560. In 2025, holiday weeks slowed somewhat but did not stall.\n\n(f) **Experts and markets:**\n- Polymarket \"by Nov 30\" is a close match. It prices 5,600+ at 97%, 5,800+ at 91.5% and 6,000+ at 54%, which implies a median near 6,000.\n- I shade slightly below that because of Pennsylvania's slowdown and the holiday effect.\n\n(g) **Unexpected scenarios:**\n- **Low:** The holiday-week update uses an early cutoff (for example Wed Nov 25), and lagging jurisdictions plus data cleaning or declassification produce small increments of about 150 each. That gives roughly 5,650 to 5,700.\n- **High:** CDC publishes Wed Nov 25 or skips Nov 27, so the first update after Nov 26 governs. That would likely be Dec 4, adding a third week of data. A Minnesota or Wisconsin surge or a catch-up batch could also push the total to 6,300 to 6,600.\n\nPercentile 1: 5560\nPercentile 5: 5680\nPercentile 10: 5740\nPercentile 20: 5810\nPercentile 30: 5860\nPercentile 40: 5905\nPercentile 50: 5945\nPercentile 60: 5985\nPercentile 70: 6035\nPercentile 80: 6105\nPercentile 90: 6215\nPercentile 95: 6320\nPercentile 99: 6560"
+    },
+    {
+      "value": {
+        "p10": 5740.0,
+        "p25": 5835.0,
+        "p50": 5950.0,
+        "p75": 6085.0,
+        "p90": 6220.0
+      },
+      "reasoning": "**(a) Time left:** About 10 days. The governing update is expected Friday, November 27, 2026. If none is published that day, the first update after November 26 governs.\n\n**(b) Latest known value:** 5,412 confirmed 2026 cases, in the CDC update published November 13, 2026 (data as of November 12).\n\n**(c) If nothing changed:** 5,412. This is implausible, since there have been 14 straight weeks of triple-digit growth.\n\n**(d) If the current trend continued:** Recent weekly increments range from 230 to 330 cases. Pennsylvania, the largest cluster, has slowed to about 60 cases a week, and the Thanksgiving week may bring reporting lags. Two increments of about 200 to 250 give roughly 5,800 to 5,900.\n\nThere is also a real chance CDC publishes early on Wednesday, November 25, or skips the holiday Friday. Either way, an update dated before November 26 would not count, so the first update after November 26 would govern. That is likely December 4, which adds a third increment and gives roughly 6,050 to 6,150.\n\n**(e) Historical variation:** Weekly increments over the past two months were mostly 200 to 330. Two weeks therefore usually adds 400 to 650 cases, and three weeks adds 600 to 950. Revisions can occasionally shift totals by dozens of cases.\n\n**(f) Markets:**\n* Polymarket's \"by November 30\" market prices 5,600+ at 97%, 5,800+ at 91.5% and 6,000+ at 54%, which implies a median near 6,000.\n* Kalshi's full-year market (above 6,000 at 98%) is consistent with that.\n\nI sit slightly below the market because Pennsylvania is slowing and the holiday may depress the count. The chance that a December update governs pulls me back up.\n\n**(g) Unexpected scenarios:**\n* **Low:** The Nov 27 update uses an early cutoff (for example, data as of Tuesday, November 24), holiday reporting lags are heavy, and the main outbreaks decline. Two small increments would leave the total around 5,600.\n* **High:** No Nov 27 update is published and the governing update slips to December 4 or later. State backlogs (Minnesota, Wisconsin, South Carolina) are reported in bulk after the attention from the PAHO announcement. Three or more large increments would push the total to about 6,400 or more.\n\nPercentile 1: 5560\nPercentile 5: 5680\nPercentile 10: 5740\nPercentile 20: 5810\nPercentile 30: 5860\nPercentile 40: 5905\nPercentile 50: 5950\nPercentile 60: 5995\nPercentile 70: 6050\nPercentile 80: 6120\nPercentile 90: 6220\nPercentile 95: 6300\nPercentile 99: 6480"
+    },
+    {
+      "value": {
+        "p10": 5710.0,
+        "p25": 5807.5,
+        "p50": 5925.0,
+        "p75": 6070.0,
+        "p90": 6220.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The governing update is expected on Friday, Nov 27, 2026, with one more weekly update before it, around Nov 20.\n\n(b) **Latest known value:** 5,412 confirmed 2026 cases, in the CDC update of Nov 13, 2026 (data as of Nov 12).\n\n(c) **If nothing changed:** 5,412. This is effectively impossible, given 14 straight weeks of triple-digit increases.\n\n(d) **If the current trend continued:** Recent weekly increments have run about 230 to 330, averaging about 260. Two more weeks gives about 5,930. Some damping for Thanksgiving reporting lag lowers that to about 5,850 to 5,900.\n\nThere is also a resolution wrinkle that pushes upward. If CDC publishes early on Wednesday, Nov 25, or skips the holiday week, the first update after Nov 26 governs. That would likely be Dec 4, covering three increments, or about 6,100 to 6,250. I put roughly 25 to 30% on that.\n\n(e) **Historical variation:** Over the last 6 weeks, two-week changes have ranged from about 460 to 560. In 2025, the weekly rate fell sharply around the holidays, but from a much lower base. Pennsylvania has slowed to about 60 a week, which points to some national deceleration. South Carolina, Wisconsin and Minnesota are still growing.\n\n(f) **Experts and markets:** Polymarket's \"by Nov 30\" market prices 5,600+ at 97%, 5,800+ at 91.5% and 6,000+ at 54%. That implies a median near 6,000, slightly above my trend estimate. Kalshi's full-year market, with above 7,000 at 78%, is consistent with continued growth of roughly 250 a week.\n\n(g) **Unexpected scenarios:**\n- **Low:** A sharp slowdown, with Pennsylvania plateauing, plus a Thanksgiving update covering a shortened week with heavy reporting lag. Increments of about 150 and 100 would give about 5,650.\n- **High:** CDC publishes on Nov 25, so the Dec 4 update governs, combined with a surge or a backlog catch-up in Wisconsin, Minnesota or South Carolina. That could reach 6,400 or more.\n\nI centered the distribution slightly below the market, then mixed in the three-increment scenario on the upper side.\n\nPercentile 1: 5560\nPercentile 5: 5660\nPercentile 10: 5710\nPercentile 20: 5780\nPercentile 30: 5835\nPercentile 40: 5880\nPercentile 50: 5925\nPercentile 60: 5970\nPercentile 70: 6030\nPercentile 80: 6110\nPercentile 90: 6220\nPercentile 95: 6310\nPercentile 99: 6500"
+    },
+    {
+      "value": {
+        "p10": 5750.0,
+        "p25": 5840.0,
+        "p50": 5965.0,
+        "p75": 6115.0,
+        "p90": 6250.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The governing update is expected Friday, November 27, 2026. If CDC publishes early on Wednesday, November 25, or skips the holiday week, the update around December 4 governs instead.\n\n(b) **Latest known value:** 5,412 confirmed 2026 cases, from the CDC update of November 13, 2026 (data as of November 12).\n\n(c) **If nothing changed:** 5,412. That is not realistic, since there have been 13 or more consecutive weeks of triple-digit increases.\n\n(d) **If the current trend continued:** The pace has been about 200 to 330 cases a week, averaging around 254.\n- Two increments, with the November 27 update governing: about 5,800 to 5,950. The Thanksgiving-week increment may be dampened.\n- Three increments, if CDC publishes early on November 25 or skips the holiday week: about 6,050 to 6,250.\n- I put roughly 50 to 55% on the November 27 path and 45 to 50% on a later update governing.\n\n(e) **Historical variation:** Weekly increments over the past 6 weeks ranged from about 200 to 330. The Thanksgiving-week increment in 2025 was small (+45), but the 2025 baseline was about a fifth of 2026's. State data (Pennsylvania about 60 a week, Minnesota about 59 a week, plus Wisconsin and South Carolina) suggest the national pace is holding at roughly 200 to 300.\n\n(f) **Experts and markets:** Polymarket's \"by Nov 30\" market has 5,800+ at 91.5% and 6,000+ at 54%. That implies a median near 6,000, though its source and timing rules may differ. Kalshi's full-year pricing implies about 250 to 400 cases a week through December.\n\n(g) **Unexpected scenarios:**\n- **Low:** CDC publishes on Friday, November 27 with an early data cutoff. A holiday reporting lag and slowing Pennsylvania counts hold the two increments to about 150 to 200 combined, giving roughly 5,600.\n- **High:** The governing update slips to December 4 or later. A post-holiday catch-up and new outbreak growth in Minnesota or Wisconsin add 350 or more a week, giving 6,500 or more.\n\nPercentile 1: 5600\nPercentile 5: 5700\nPercentile 10: 5750\nPercentile 20: 5815\nPercentile 30: 5865\nPercentile 40: 5915\nPercentile 50: 5965\nPercentile 60: 6020\nPercentile 70: 6080\nPercentile 80: 6150\nPercentile 90: 6250\nPercentile 95: 6340\nPercentile 99: 6560"
+    },
+    {
+      "value": {
+        "p10": 5780.0,
+        "p25": 5895.0,
+        "p50": 6040.0,
+        "p75": 6195.0,
+        "p90": 6350.0
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The governing update is expected Friday, November 27, 2026. If CDC instead publishes early on Wednesday, November 25, as it did in 2025, the first update after November 26 governs, probably about December 4.\n\n(b) **Latest known value:** 5,412 confirmed 2026 cases, in the CDC update of November 13, 2026 (data as of November 12).\n\n(c) **If nothing changed:** 5,412, which is effectively impossible given 14 straight weeks of triple-digit increases.\n\n(d) **If the current trend continued:** Weekly increments have run about 200 to 330, averaging roughly 250.\n- If the November 27 update governs (two increments, the second possibly shortened by the holiday), the total would be about 5,850 to 5,950.\n- If CDC publishes early on November 25 and the December 4 update governs (three increments), the total would be about 6,100 to 6,200.\n- I put roughly 55% on the second path, because CDC published early in 2025, and about 40% on the first.\n\n(e) **Historical variation:** Over the last six weeks the weekly increments ranged from 200 to 330. In 2025, the Thanksgiving-week increment was depressed to about 25% of a normal week. Two to three weeks of uncertainty in the increments implies a spread of roughly plus or minus 250 cases around each scenario's center.\n\n(f) **Expectations of experts and markets:**\n- Polymarket's \"by November 30\" market puts 6,000+ at 54% and 5,800+ at 92%. It roughly matches the two-increment scenario, but its resolution rules may differ.\n- Kalshi's full-year market implies about 250 to 400 cases a week through December.\n- Pennsylvania is slowing to about 60 cases a week, while Wisconsin and Minnesota are growing.\n\n(g) **Unexpected scenarios:**\n- **Low:** CDC publishes on November 27 with a shortened holiday cutoff, increments drop to around 150, or data are revised down. The total would be about 5,650.\n- **High:** The December 4 update governs and post-holiday catch-up reporting adds large backlogs, possibly with a new outbreak cluster. The total would be about 6,500 to 6,700.\n\nPercentile 1: 5600\nPercentile 5: 5720\nPercentile 10: 5780\nPercentile 20: 5860\nPercentile 30: 5930\nPercentile 40: 5990\nPercentile 50: 6040\nPercentile 60: 6095\nPercentile 70: 6155\nPercentile 80: 6235\nPercentile 90: 6350\nPercentile 95: 6440\nPercentile 99: 6650"
+    },
+    {
+      "value": {
+        "p10": 5750.0,
+        "p25": 5860.0,
+        "p50": 5980.0,
+        "p75": 6155.0,
+        "p90": 6330.0
+      },
+      "reasoning": "(a) Time left: about 10 days. The governing update is expected around Friday, November 27, 2026. There is a real chance it slips to around December 4 if CDC publishes early on Wednesday, November 25, or skips the holiday week.\n\n(b) Latest known value: 5,412 confirmed 2026 cases, CDC update of November 13, 2026, with data as of November 12.\n\n(c) If nothing changed: 5,412.\n\n(d) If the current trend continued: weekly increments over the last six weeks ran about 200 to 330, averaging about 254.\n- Two further increments, with the Thanksgiving week possibly depressed, give about 5,800 to 5,950.\n- If the governing update slips to about December 4, three increments give about 6,050 to 6,300.\n\n(e) Historical variation: since October, weekly increments have ranged from roughly 200 to 330.\n- Holiday weeks can be sharply lower. The 2025 Thanksgiving-week increment was +45, against a much lower base rate.\n- Over a two-week span, the plausible spread is about ±150 around the trend. A three-week span adds about 250 more.\n\n(f) Markets:\n- Polymarket \"by November 30\" prices 5,800+ at about 92% and 6,000+ at about 54%, implying a median near 6,000. That market's timing may differ from this question.\n- The Kalshi full-year market implies continued increments of roughly 250 to 400 a week through December.\n\n(g) Unexpected scenarios:\n- Low: CDC publishes on November 27 with an early cutoff, such as November 24 or 25. The holiday increment collapses to under 100, and the November 19 increment is also soft at about 180. That gives about 5,650 or below.\n- High: Publication slips to December 4 or later and covers three or more weeks. New outbreaks in Minnesota and Wisconsin accelerate, and backlogged reports land after the holiday. That gives 6,500 or more.\n\nPercentile 1: 5600\nPercentile 5: 5690\nPercentile 10: 5750\nPercentile 20: 5830\nPercentile 30: 5890\nPercentile 40: 5940\nPercentile 50: 5980\nPercentile 60: 6040\nPercentile 70: 6110\nPercentile 80: 6200\nPercentile 90: 6330\nPercentile 95: 6430\nPercentile 99: 6650"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 5740.9625,
+    "p25": 5836.7014,
+    "p50": 5957.4012,
+    "p75": 6101.8805,
+    "p90": 6243.8503
+  },
+  "usage": [
+    {
+      "question_id": "46869",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.00024650000000000003,
+      "input_tokens": 1101,
+      "output_tokens": 53,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 6.769999999999999e-05,
+      "input_tokens": 507,
+      "output_tokens": 34,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 63.4,
+      "notional_cost_usd": 0.21967430000000002,
+      "input_tokens": 51609,
+      "output_tokens": 3800,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.085248,
+      "input_tokens": 7167,
+      "output_tokens": 1396,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.6,
+      "notional_cost_usd": 0.091912,
+      "input_tokens": 7170,
+      "output_tokens": 1728,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.0006760000000000001,
+      "input_tokens": 2756,
+      "output_tokens": 250,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.0007580000000000001,
+      "input_tokens": 2856,
+      "output_tokens": 374,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.7,
+      "notional_cost_usd": 0.0002162,
+      "input_tokens": 2756,
+      "output_tokens": 250,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.00025882,
+      "input_tokens": 2856,
+      "output_tokens": 334,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 36.0,
+      "notional_cost_usd": 0.0428518,
+      "input_tokens": 7170,
+      "output_tokens": 1950,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0007464,
+      "input_tokens": 2868,
+      "output_tokens": 346,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00024763000000000004,
+      "input_tokens": 2868,
+      "output_tokens": 311,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 67.6,
+      "notional_cost_usd": 0.2000322,
+      "input_tokens": 45014,
+      "output_tokens": 4682,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.5,
+      "notional_cost_usd": 0.089796,
+      "input_tokens": 7418,
+      "output_tokens": 1523,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.2,
+      "notional_cost_usd": 0.092084,
+      "input_tokens": 7419,
+      "output_tokens": 1637,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 19.5,
+      "notional_cost_usd": 0.09673599999999999,
+      "input_tokens": 7418,
+      "output_tokens": 1870,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0007099,
+      "input_tokens": 2698,
+      "output_tokens": 341,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0007385000000000001,
+      "input_tokens": 2806,
+      "output_tokens": 355,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.000689,
+      "input_tokens": 2821,
+      "output_tokens": 250,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00026414,
+      "input_tokens": 2700,
+      "output_tokens": 347,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0003478,
+      "input_tokens": 2804,
+      "output_tokens": 513,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46869",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00027965,
+      "input_tokens": 2820,
+      "output_tokens": 376,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.9246
+}
