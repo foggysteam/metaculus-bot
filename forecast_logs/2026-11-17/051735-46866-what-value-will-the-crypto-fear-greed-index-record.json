@@ -1,0 +1,359 @@
+{
+  "logged_at": "2026-11-17T05:19:57.661326+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-17T05:17:35.563826+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46866,
+    "post_id": 46606,
+    "url": "https://www.metaculus.com/questions/46606",
+    "type": "DiscreteQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What value will the Crypto Fear & Greed Index record for November 27, 2026?",
+    "resolution_criteria": "This question resolves to the value that Alternative.me's Crypto Fear & Greed Index records for 2026-11-27 in its daily history. The definitive figure is the API entry with the timestamp for November 27, 2026 (00:00 UTC), returned by https://api.alternative.me/fng/ and also listed as that date's reading at https://alternative.me/crypto/fear-and-greed-index/; if the two ever differ, the API entry governs. For example, if that daily reading is 31 the question resolves to 31; if it is 17 the question resolves to 17.",
+    "fine_print": "The index publishes one integer reading per day; the classification label Alternative.me attaches to that reading (e.g. \"Fear\" or \"Extreme Fear\") plays no role in resolution, and neither do readings from other publishers of fear-and-greed indices, whose numbers can differ by several points. If Alternative.me has permanently discontinued the index by the resolution date, the question is annulled. A temporary site or API outage, or a delayed daily update, does not annul it: resolution waits until the 2026-11-27 entry is published.",
+    "close_time": "2026-11-17 08:12 UTC",
+    "scheduled_resolution_time": "2026-11-27 12:00 UTC"
+  },
+  "research": [
+    "# Crypto Fear & Greed Index for 2026-11-27: research notes\n\n## 1. Resolution source\n- 2026-11-17: The Alternative.me API's latest entry is **12 (Extreme Fear)** for 17 Nov 2026. [API](https://api.alternative.me/fng/?limit=60&format=csv)\n- Recent daily readings from the API:\n  - 6 Nov: 28\n  - 7 Nov: 25\n  - 8 Nov: 28\n  - 9 Nov: 29\n  - 10 Nov: 32\n  - 11 Nov: 29\n  - 12 Nov: 28\n  - 13 Nov: 20\n  - 14 Nov: 13\n  - 15 Nov: 10\n  - 16 Nov: 10\n  - 17 Nov: 12\n\n  [API](https://api.alternative.me/fng/?limit=60&format=csv)\n- Earlier readings: 50 on 5 Nov; 30 to 54 from 23 Oct to 4 Nov; 53 to 74 in early to mid October. [API](https://api.alternative.me/fng/?limit=60&format=csv)\n\n## 2. Current status\n- Nothing has settled the question yet. Resolution is 10 daily prints away. The index is near the bottom of its range: 10 to 12 over the last three days, its lowest since June 2026 (8 on 8 Jun).\n\n## 3. Recent news (newest first)\n- 2026-11-17: Benzinga reports BTC trading between $63,800 and $65,500 and ETH below $1,900 (down more than 14% on the week), with about $280M of liquidations. Market described as risk-averse, in \"Extreme Fear\". [Benzinga](https://www.benzinga.com/crypto/cryptocurrency/26/11/63329476/bitcoin-ethereum-xrp-dogecoin-crypto-recap)\n- 2026-11-16: BTC is around $64,466. Daily RSI is 24.3 (oversold), and the article cites $2.1B of ETF outflows. [Cryptonomist](https://cryptonomist.ch/2026/11/16/prezzo-di-bitcoin-rsi-rimbalzo-ancora-confermare-16-novembre-2026/)\n- 2026-11-16: Axel Adler Jr. says the index fell 18 points in a week to 10, a level seen on only 8% of days over the past year. He warns of a possible test of $58K, the July low. [TradingView/Bloomingbit](https://www.tradingview.com/news/bloomingbit:3e4212f81094b:0-bitcoin-fear-index-falls-to-10-prolonged-weakness-could-test-58-000/)\n- 2026-11-15/16: BTC hit a four-month low of about $62,081 (CoinGecko) before recovering above $65K. US spot ETFs saw $2.35B of net outflows over two weeks, and IBIT has 11 straight days of outflows. [Cryptopress](https://cryptopress.site/news/bitcoin-falls-to-four-month-low-near-62000-as-spot-etfs-log-2-35-billion-outflows/), [Bitcoinist](https://bitcoinist.com/bitcoin-breaks-below-63k-as-market-panic-intensifies/)\n- 2026-11-16: BTC is 48.5% below its all-time high of $126,080. Strategy added 485 BTC. [24/7 Wall St](https://247wallst.com/investing/cryptocurrency/2026/11/16/should-you-buy-sell-or-hold-bitcoin-before-year-end/)\n- 2026-11-12: Headline: \"Bitcoin Price Slides Below $72K As Jensen Huang Exits Nvidia\". I did not verify this claim. [Coinalyze](https://coinalyze.net/bitcoin/usd/deribit/btc-15nov26/price-chart-live/)\n- 2026-11-10: BTC at $74,261. 2026-11-06: BTC at $76,024. [Fortune](https://fortune.com/article/price-of-bitcoin-11-10-2026/), [Tech-Insider](https://tech-insider.org/bitcoin-price-today-november-6-2026-76023-87-after-5-1-percent-drop/)\n\n## 4. Base rates\nAll values below are from the API.\n\n**10-day changes starting from comparable readings (8 to 14):**\n- 2025-11-17: 14 to 22 (+8). 2025-11-16: 10 to 15 (26 Nov).\n- 2026-02-12: 5 to 9. 2026-02-16: 12 to 11. 2026-02-24: 8 to 22 (5 Mar).\n- 2026-03-09: 8 to 23. 2026-03-20: 11 to 8. 2026-03-23: 8 to 11 (2 Apr was not checked; 31 Mar was 11).\n- 2026-06-03: 11 to 13. 2026-06-08: 8 to 15. 2026-06-25: 12 to 23. 2026-06-29: 12 to 22.\n- Across these cases, readings 10 days later fell roughly between 8 and 23, with a median in the mid-teens. Every one stayed at or below 23, inside \"Extreme Fear\".\n\n**How long extreme-fear episodes lasted:**\n- Feb to Mar 2026: nearly two months mostly in the 5 to 15 range.\n- June 2026: 3 to 19 Jun stayed at 8 to 15, then rose to the 20s by early July.\n- Nov 2025: the index bottomed at 10 (15 to 16 Nov), was 11 to 15 for about a week, then reached 22 by 27 Nov and 28 by 29 Nov.\n\n**Fast rebounds do happen:**\n- 19 to 21 Aug 2026: 46 to 72 in two days.\n- 4 to 5 Nov 2026: 34 to 50 in one day.\n- 18 to 19 Mar 2026: a one-day drop from 26 to 23, then 11 the next day.\n- Single-day moves of 7 to 15 points are common.\n\n**Same calendar window (17 Nov to 27 Nov) in past years:**\n\n| Year | 17 Nov | 27 Nov | Change |\n|---|---|---|---|\n| 2021 | 52 | 21 | -31 |\n| 2022 | 20 | 26 | +6 |\n| 2023 | 63 | 66 | +3 |\n| 2024 | 90 | 75 | -15 |\n| 2025 | 14 | 22 | +8 |\n\n- There is no consistent seasonal direction. This year (12) is running below every prior year for 17 Nov, and is closest to 2025 (14) and 2022 (20).\n\n## 5. Other forecasts\nThese are Kalshi prices fetched 2026-11-17 05:17 UTC. Kalshi's markets use the classification bands, and I did not confirm that Kalshi settles on Alternative.me.\n\n- **Kalshi \"Fear & Greed Index on Nov 20, 2026\":**\n  - Extreme Fear: 0.26\n  - Fear: 0.49\n  - Neutral: 0.19\n  - Greed: 0.07\n  - Extreme Greed: 0.01\n- **Kalshi, Dec 11, 2026:**\n  - Extreme Fear: 0.23\n  - Fear: 0.39\n  - Neutral: 0.19\n  - Greed: 0.16\n  - Extreme Greed: 0.03\n- These prices look out of line with the current reading of 12, since a reading of 25 or more by 20 Nov would need a jump of 13 or more points. They may be stale or thinly traded, or Kalshi may settle on a different index provider. Worth checking before relying on them.\n- **Polymarket:**\n  - \"BTC ↓60,000 in 2026\" shows Yes = 1. This is probably already resolved from February.\n  - Implied volatility index ↑60 by 30 Nov: 0.31.\n- I found no market or expert forecast for the 27 Nov value itself.\n\n## 6. Upcoming events before resolution\n- Daily ETF flows: IBIT is on an 11-day outflow streak. A reversal or continuation feeds the index's momentum and volume components.\n- Whether BTC holds the July low of about $58K, flagged by Adler as the downside target. [TradingView](https://www.tradingview.com/news/bloomingbit:3e4212f81094b:0-bitcoin-fear-index-falls-to-10-prolonged-weakness-could-test-58-000/)\n- The 26 Nov US Thanksgiving holiday means thin liquidity around 26 to 28 Nov.\n- Fed expectations: markets imply about 90% odds of a rate hike after the hot October CPI, per the question background. December FOMC commentary and late-November US data could move risk assets. I did not verify the exact FOMC date.\n- Nvidia's quarterly earnings typically come in late November. Its date this year and the reported Huang exit were not verified.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 05:17 UTC; check each market really matches the question)\n- Kalshi: Fear & Greed Index on Dec 11, 2026? (On Dec 11, 2026). Yes prices: Fear: 0.39; Extreme Fear: 0.23; Neutral: 0.19; Greed: 0.16; Extreme Greed: 0.03.\n- Kalshi: When will the S&P 500 Index be above $8,000? (S&P 500 Index - 8000). Yes prices: Before Feb 1, 2027: 0.47; Before Mar 1, 2027: 0.43; Before Jan 1, 2027: 0.06; Before Dec 1, 2026: 0.0100; Before Nov 1, 2026: 0.0300; Before Oct 1, 2026: 0.0100; Before Sep 1, 2026: 0.0100.\n- Kalshi: Paper price index in November 2026 (November 2026). Yes prices: Above 285: 0.60; Above 280: 0.90; Above 275: 0.95; Above 300: 0.03; Above 290: 0.40; Above 305: 0.0100; Above 295: 0.0100.\n- Kalshi: Fear & Greed Index on Friday? (On Nov 20, 2026). Yes prices: Fear: 0.49; Extreme Fear: 0.26; Neutral: 0.19; Greed: 0.07; Extreme Greed: 0.0100.\n- Kalshi: Chicago Fed National Financial Conditions Index in November (the week ending November 20, 2026). Yes prices: Above -0.48: 0.51; Above -0.44: 0.4200; Above -0.50: 0.0000; Above -0.52: 0.0000; Above -0.54: 0.0000; Above -0.56: 0.0000; Above -0.58: 0.0000; Above -0.60: 0.0000; Above -0.62: 0.0000; Above -0.46: 0.5600.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.99.\n- Kalshi: Will Bitcoin exceed $120,000 before 2027? (After listing · before Jan 1, 2027 at 12:00 AM EST). Yes prices: Above $120,000: 0.0300.\n- Kalshi: Gold at 11:00am ET · Michigan consumer sentiment (preliminary) (Dec 4, 2026 · 11:00am ET · Michigan consumer sentiment (preliminary)). Yes prices: Above $3850: 0.56; Above $3900: 0.43; Above $3800: 0.67; Above $3950: 0.33; Above $3750: 0.77; Above $4000: 0.23; Above $3700: 0.83; Above $4050: 0.15; Above $3650: 0.90; Above $4100: 0.10. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Polymarket: What will the Bitcoin Volatility Index hit in 2026? (ends 2027-01-01). [Yes, No] prices: ↑ 80: [\"1\", \"0\"]; ↑ 70: [\"1\", \"0\"]; ↑ 60: [\"1\", \"0\"]; ↑ 50: [\"1\", \"0\"]; ↓ 30: [\"0.105\", \"0.895\"]\n- Polymarket: What will the Bitcoin Implied Volatility Index hit by November 30? (ends 2026-12-01). [Yes, No] prices: ↑ 70: [\"0.033\", \"0.967\"]; ↑ 60: [\"0.31\", \"0.69\"]; ↑ 55: [\"1\", \"0\"]; ↑ 50: [\"1\", \"0\"]; ↑ 45: [\"1\", \"0\"]; ↓ 40: [\"1\", \"0\"]\n- Polymarket: What price will Bitcoin hit in 2026? (ends 2027-01-01). [Yes, No] prices: ↓ 60,000: None; ↓ 60,000: [\"1\", \"0\"]; ↑ 95,000: [\"0.029\", \"0.971\"]; ↑ 85,000: [\"1\", \"0\"]; ↑ 80,000: [\"1\", \"0\"]; ↑ 75,000: [\"1\", \"0\"]",
+    "I could not verify the scheduled dates in section 6 within this session. Everything else comes from Alternative.me's API, read directly.\n\n## 1. Resolution source\n- 2026-11-17: The Alternative.me API's latest entry is **12** (Extreme Fear). The previous days were 10 on Nov 16, 10 on Nov 15, 13 on Nov 14, 20 on Nov 13 and 28 on Nov 12. [API](https://api.alternative.me/fng/?limit=60&format=csv)\n- From Nov 6 to Nov 11 the index sat at 25-32, with a one-day spike to 50 on Nov 5. In late October it was around 50, and in early October 59-74. [API](https://api.alternative.me/fng/?limit=60&format=csv)\n\n## 2. Current status\n- Nothing settles the question yet. The Nov 27 reading is 10 daily prints away. The index is in its second-deepest trough of 2026; only February to early April was lower.\n\n## 3. Recent news (newest first)\n- 2026-11-17: Benzinga reports BTC trading between $63,800 and $65,500 and ETH below $1,900 (down about 14% on the week), with about $280M in liquidations. [Benzinga](https://www.benzinga.com/crypto/cryptocurrency/26/11/63329476/bitcoin-ethereum-xrp-dogecoin-crypto-recap)\n- 2026-11-16: Analyst Axel Adler Jr. notes the index fell 18 points in a week to 10, a level seen on only about 8% of days in the past year. He warns of a possible drop to $58,000, the July low. [TradingView/Bloomingbit](https://www.tradingview.com/news/bloomingbit:3e4212f81094b:0-bitcoin-fear-index-falls-to-10-prolonged-weakness-could-test-58-000/)\n- 2026-11-16: The Cryptonomist puts daily RSI at about 24.3 (oversold), with BTC below its 20/50/200-day EMAs. [Cryptonomist](https://cryptonomist.ch/2026/11/16/prezzo-di-bitcoin-rsi-rimbalzo-ancora-confermare-16-novembre-2026/)\n- 2026-11-15/16: BTC hit a four-month low of about $62,081 (CoinGecko), then recovered above $65,000. US spot ETFs had about $2.35B of net outflows over two weeks, and IBIT has 11 straight days of outflows. [Cryptopress](https://cryptopress.site/news/bitcoin-falls-to-four-month-low-near-62000-as-spot-etfs-log-2-35-billion-outflows/), [Bitcoinist](https://bitcoinist.com/bitcoin-breaks-below-63k-as-market-panic-intensifies/)\n- 2026-11-16: 24/7 Wall St. puts BTC at $64,946, down 48.5% from its $126,080 all-time high. Strategy (MSTR) bought 485 BTC. [247wallst](https://247wallst.com/investing/cryptocurrency/2026/11/16/should-you-buy-sell-or-hold-bitcoin-before-year-end/)\n\n## 4. Base rates (all figures from the API history)\nPast times the index fell to about 8-12 after a sell-off, and where it stood about 10 days later:\n- 2025-11-16: 10, then 15 on Nov 26 and 22 on Nov 27.\n- 2026-02-12: 5, then 8 on Feb 22. It stayed in single digits to low teens for weeks.\n- 2026-03-20: 11, then 8 on Mar 30.\n- 2026-04-03: 9, then 12 on Apr 13 and 21 on Apr 14.\n- 2026-06-03: 11, then 13 on Jun 13. Separately, Jun 8 was 8, then 15 on Jun 18.\n- 2026-06-25: 12, then 23 on Jul 5.\n\nWhat these show:\n- After a deep low, 10-day changes have ranged from about -5 to +11 points.\n- Readings below 25 have tended to last weeks: February to mid-April, and June 3 to about July 10.\n- Day-to-day moves in this regime are usually 1-5 points, with occasional jumps of 8-12 points (for example Mar 19 to 20: 23 to 11).\n- The fastest rebound in 2026 was Aug 17 to Aug 21, from 31 to 72.\n\nThe question asks about each year's Nov 17 to Nov 27 move. This is not truly seasonal, but for reference:\n| Year | Nov 17 | Nov 27 |\n|---|---|---|\n| 2022 (FTX crash) | 20 | 26 |\n| 2023 | 63 | 66 |\n| 2024 | 90 | 75 |\n| 2025 | 14 | 22 |\n| 2026 | 12 | ? |\n\n2026 is running close to 2025, the most similar setup: a mid-November sell-off with the index at 10. In that year it rose about 8 points over the same window. [API](https://api.alternative.me/fng/?limit=2000&format=csv)\n\n## 5. Other forecasts\nKalshi prices as of 2026-11-17 05:17 UTC (from the provided data; I did not check them myself). Kalshi uses the same bands as Alternative.me's labels; under 25 is \"Extreme Fear\".\n- Kalshi \"Fear & Greed Index on Friday\" (Nov 20): Extreme Fear 0.26, Fear 0.49, Neutral 0.19, Greed 0.07, Extreme Greed 0.01. This implies a 74% chance of 25 or above in 3 days, which seems out of line with the current 12. These prices may predate today's print or rely on a different source index, so the contract terms are worth checking.\n- Kalshi Dec 11: Extreme Fear 0.23, Fear 0.39, Neutral 0.19, Greed 0.16, Extreme Greed 0.03.\n- Polymarket: \"BTC below $60k in 2026\" has already resolved Yes (from February). The Bitcoin implied volatility index (it measures expected price swings) reaching 60 by Nov 30 is priced at 0.31.\n- I found no Polymarket or Manifold market on the Nov 27 reading itself.\n\n## 6. Upcoming events before Nov 27\nNone of these dates are verified.\n- 2026-11-26: US Thanksgiving. US markets are closed, and ETF flows and liquidity are thin around the holiday.\n- 2026-11-27: Deribit's monthly options expiry is likely on the last Friday, which is Nov 27.\n- Late November: US data releases such as PCE and FOMC minutes may land in the window. Markets are pricing about 90% odds of a Fed hike, so the next FOMC meeting (likely early-to-mid December) is a key macro factor.\n- Ongoing: daily US spot ETF flows (IBIT's outflow streak) and whether BTC retests $62k or $58k, the levels analysts are watching.\n\nNote: the Nov 27 entry is time-stamped 00:00 UTC, so it reflects conditions late on Nov 26 and early Nov 27.\n\nOther source seen: [IG, Jul 2026](https://www.ig.com/uk/trading-strategies/why-is-bitcoin-down-today--what-the-fear-and-greed-index-is-tell-260717)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 05:17 UTC; check each market really matches the question)\n- Kalshi: Fear & Greed Index on Dec 11, 2026? (On Dec 11, 2026). Yes prices: Fear: 0.39; Extreme Fear: 0.23; Neutral: 0.19; Greed: 0.16; Extreme Greed: 0.03.\n- Kalshi: When will the S&P 500 Index be above $8,000? (S&P 500 Index - 8000). Yes prices: Before Feb 1, 2027: 0.47; Before Mar 1, 2027: 0.43; Before Jan 1, 2027: 0.06; Before Dec 1, 2026: 0.0100; Before Nov 1, 2026: 0.0300; Before Oct 1, 2026: 0.0100; Before Sep 1, 2026: 0.0100.\n- Kalshi: Paper price index in November 2026 (November 2026). Yes prices: Above 285: 0.60; Above 280: 0.90; Above 275: 0.95; Above 300: 0.03; Above 290: 0.40; Above 305: 0.0100; Above 295: 0.0100.\n- Kalshi: Fear & Greed Index on Friday? (On Nov 20, 2026). Yes prices: Fear: 0.49; Extreme Fear: 0.26; Neutral: 0.19; Greed: 0.07; Extreme Greed: 0.0100.\n- Kalshi: Chicago Fed National Financial Conditions Index in November (the week ending November 20, 2026). Yes prices: Above -0.48: 0.51; Above -0.44: 0.4200; Above -0.50: 0.0000; Above -0.52: 0.0000; Above -0.54: 0.0000; Above -0.56: 0.0000; Above -0.58: 0.0000; Above -0.60: 0.0000; Above -0.62: 0.0000; Above -0.46: 0.5600.\n- Kalshi: Will core CPI be above headline CPI in November? (November 2026). Yes prices: In November 2026: 0.99.\n- Kalshi: Will Bitcoin exceed $120,000 before 2027? (After listing · before Jan 1, 2027 at 12:00 AM EST). Yes prices: Above $120,000: 0.0300.\n- Kalshi: Gold at 11:00am ET · Michigan consumer sentiment (preliminary) (Dec 4, 2026 · 11:00am ET · Michigan consumer sentiment (preliminary)). Yes prices: Above $3850: 0.56; Above $3900: 0.43; Above $3800: 0.67; Above $3950: 0.33; Above $3750: 0.77; Above $4000: 0.23; Above $3700: 0.83; Above $4050: 0.15; Above $3650: 0.90; Above $4100: 0.10. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Polymarket: What will the Bitcoin Volatility Index hit in 2026? (ends 2027-01-01). [Yes, No] prices: ↑ 80: [\"1\", \"0\"]; ↑ 70: [\"1\", \"0\"]; ↑ 60: [\"1\", \"0\"]; ↑ 50: [\"1\", \"0\"]; ↓ 30: [\"0.105\", \"0.895\"]\n- Polymarket: What will the Bitcoin Implied Volatility Index hit by November 30? (ends 2026-12-01). [Yes, No] prices: ↑ 70: [\"0.033\", \"0.967\"]; ↑ 60: [\"0.31\", \"0.69\"]; ↑ 55: [\"1\", \"0\"]; ↑ 50: [\"1\", \"0\"]; ↑ 45: [\"1\", \"0\"]; ↓ 40: [\"1\", \"0\"]\n- Polymarket: What price will Bitcoin hit in 2026? (ends 2027-01-01). [Yes, No] prices: ↓ 60,000: None; ↓ 60,000: [\"1\", \"0\"]; ↑ 95,000: [\"0.029\", \"0.971\"]; ↑ 85,000: [\"1\", \"0\"]; ↑ 80,000: [\"1\", \"0\"]; ↑ 75,000: [\"1\", \"0\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 8.0,
+        "p25": 11.0,
+        "p50": 15.0,
+        "p75": 21.5,
+        "p90": 28.0
+      },
+      "reasoning": "(a) **Time left:** about 10 days. The 27 Nov 2026 reading posts at 00:00 UTC that day, and the question resolves around 27 Nov 12:00 UTC.\n\n(b) **Latest known value:** 12 (\"Extreme Fear\") on 17 Nov 2026, per the Alternative.me API. The two days before were 10 and 10.\n\n(c) **If nothing changed:** about 12.\n\n(d) **If the current trend continued:** the drop has flattened and ticked up slightly (10, 10, 12). Bitcoin bounced from about $62K to around $64-65K. A continued slow stabilisation points to the mid-to-high teens. A renewed decline toward the $58K July low points to single digits.\n\n(e) **Historical variation:** across 12 comparable cases starting from readings of 8 to 14, the reading 10 days later ranged from 8 to 23, with a median in the mid-teens. None left Extreme Fear. The November 2025 analogue went from 10 to 15, then reached 22 by 27 Nov. Single-day moves of 7 to 15 points are common, and fast rebounds of 25 or more points within days have occurred.\n\n(f) **Experts and markets:** Kalshi band prices imply heavy weight on \"Fear\" (25 to 45) for 20 Nov. That is inconsistent with a reading of 12, so Kalshi likely settles on a different provider or the prices are stale. I give it little weight. Axel Adler warns of further weakness and a possible $58K test. Ongoing ETF outflows (IBIT on an 11-day streak) and hawkish Fed odds remain headwinds.\n\n(g) **Unexpected scenarios:**\n- **Low:** BTC breaks below $60K into a liquidation cascade, possibly alongside a Fed or macro shock. The index revisits its all-time low area of 5 to 6, as in February 2026.\n- **High:** ETF flows flip to inflows, a short squeeze takes BTC back above $72-75K, and a softer macro data print helps. The index jumps into the 30s or 40s, much like the August 36-to-81 swing.\n\nPercentile 1: 5\nPercentile 5: 7\nPercentile 10: 8\nPercentile 20: 10\nPercentile 30: 12\nPercentile 40: 14\nPercentile 50: 15\nPercentile 60: 17\nPercentile 70: 20\nPercentile 80: 23\nPercentile 90: 28\nPercentile 95: 34\nPercentile 99: 46"
+    },
+    {
+      "value": {
+        "p10": 8.0,
+        "p25": 11.0,
+        "p50": 15.0,
+        "p75": 21.0,
+        "p90": 28.0
+      },
+      "reasoning": "(a) **Time left:** The Nov 27 entry (00:00 UTC) will be published in about 10 days, roughly 10 daily prints from now.\n\n(b) **Latest known value:** 12 on 2026-11-17, per the Alternative.me API. The previous readings were 10 (Nov 16), 10 (Nov 15), 13 (Nov 14), 20 (Nov 13) and 28 (Nov 12).\n\n(c) **If nothing changed:** 12.\n\n(d) **If the current trend continued:** The steep fall seems to have flattened at 10-13, and BTC bounced from about $62k to about $65k. Continuing the collapse would give single digits (5-9). Continuing the recent flattening and slight uptick would give the low-to-mid teens.\n\n(e) **Historical variation:**\n- After past readings of 8-12 in 2025-2026, the reading 10 days later moved between about -5 and +11 points.\n- Typical outcomes were in the 8-23 range.\n- Extreme Fear regimes usually lasted weeks.\n- The closest analogue is Nov 2025, which went from 10 to 22 a day after the comparable window.\n- Rebounds of 40 points or more within a week are possible (Aug 2026), but rare from a deep-fear starting point.\n\n(f) **Experts and markets:**\n- Kalshi prices only a 26% chance of Extreme Fear (below 25) on Nov 20. That looks inconsistent with a current 12, so these prices are probably stale or tied to a different index. I discount them heavily.\n- The Dec 11 Kalshi contract (23% Extreme Fear) also looks optimistic.\n- Analysts flag oversold RSI, which is mildly bullish, but also the risk of a retest of $58k.\n- ETF outflows continue, and a Fed hike priced at about 90% is a macro headwind.\n\n(g) **Unexpected scenarios:**\n- *Low:* BTC breaks $60k and $58k on continued ETF redemptions and a hawkish surprise, causing another liquidation cascade. The index prints 5-7, matching the February lows.\n- *High:* A sharp short squeeze takes BTC back toward $75k, perhaps on ETF inflows resuming or softer data. Momentum and volatility components flip quickly and the index jumps into the 35-45 range.\n\nOverall, I anchor the median slightly above the current reading because of mild mean reversion and the 2025 analogue, with a right skew.\n\nPercentile 1: 5\nPercentile 5: 7\nPercentile 10: 8\nPercentile 20: 10\nPercentile 30: 12\nPercentile 40: 14\nPercentile 50: 15\nPercentile 60: 17\nPercentile 70: 19\nPercentile 80: 23\nPercentile 90: 28\nPercentile 95: 33\nPercentile 99: 45"
+    },
+    {
+      "value": {
+        "p10": 8.0,
+        "p25": 11.0,
+        "p50": 16.0,
+        "p75": 23.0,
+        "p90": 31.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The Nov 27 entry (00:00 UTC timestamp) should be published around Nov 27, so resolution is roughly 10 daily prints away.\n\n(b) **Latest known value:** 12 on 2026-11-17 (Alternative.me API). The prior days were 10, 10, 13, 20 and 28.\n\n(c) **If nothing changed:** 12.\n\n(d) **If the current trend continued:** The decline has stalled at 10 to 13, and bitcoin bounced from about $62k to about $65k. A continued slide would mean single digits (5 to 9). A continued mild recovery from oversold conditions (RSI about 24) would put it in the mid to high teens.\n\n(e) **Historical variation:** After deep lows of 8 to 12, 10-day changes in 2025 and 2026 ranged from about -5 to +11 points. Readings below 25 usually lasted weeks. The 2025 analogue (10 in mid-November) rose to 22 by Nov 27. Rare fast regime shifts, like the August 2026 move from 31 to 72 in four days, show that the upper tail is real.\n\n(f) **Experts and markets:**\n- Kalshi's Nov 20 market implies about 74% for 25 or above. That looks stale or mismatched against today's 12, so I discount it heavily.\n- Kalshi's Dec 11 market puts only 23% on \"Extreme Fear\", which suggests markets expect some recovery over several weeks.\n- Analysts warn of a possible retest of $58k.\n- ETF outflows are persistent and a Fed hike is about 90% priced in, both of which are headwinds.\n\n(g) **Unexpected scenarios:**\n- Low: bitcoin breaks $60k toward $58k, with further ETF redemptions and big liquidations, possibly around the hawkish Fed news. The index would print 5 to 7.\n- High: a sharp short squeeze takes bitcoin back above $72k to $75k, with a softer macro surprise and ETF inflows resuming. The index jumps into the 35 to 50 range.\n\nMy median sits slightly above the current 12, reflecting typical mean reversion from deep lows and the 2025 analogue. The right tail is wider than the left because the index has a floor near 5.\n\nPercentile 1: 5\nPercentile 5: 7\nPercentile 10: 8\nPercentile 20: 10\nPercentile 30: 12\nPercentile 40: 14\nPercentile 50: 16\nPercentile 60: 18\nPercentile 70: 21\nPercentile 80: 25\nPercentile 90: 31\nPercentile 95: 37\nPercentile 99: 52"
+    },
+    {
+      "value": {
+        "p10": 8.0,
+        "p25": 11.0,
+        "p50": 16.0,
+        "p75": 23.0,
+        "p90": 32.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The Nov 27 entry (00:00 UTC) should publish early on Nov 27, about 10 daily prints from now.\n\n(b) **Latest value:** 12 (\"Extreme Fear\") on 2026-11-17. The series before that was 10 on Nov 16, 10 on Nov 15, 13 on Nov 14, 20 on Nov 13 and 28 on Nov 12.\n\n(c) **If nothing changed:** The reading would be about 12.\n\n(d) **If the trend continued:** The drop has been steep, from 28 to 10 in four days, then it flattened and ticked up to 12. Extending the sell-off would mean single digits (5-9). The latest few days instead suggest stabilization around 10-13.\n\n(e) **Historical variation:** After past lows of 8-12, the 10-day change ranged from about -5 to +11, with the median a few points up. Extreme Fear regimes in 2026 often lasted weeks (Feb-Apr, Jun-Jul). The closest analog is Nov 2025, which went from 10 to 15 and then 22 by Nov 26-27. Daily moves are usually 1-5 points, with occasional jumps of 8-12.\n\n(f) **Experts and markets:**\n- Kalshi's Nov 20 contract implies 74% for 25 or above, which looks inconsistent with a current reading of 12. It may be stale or tied to a different source index, so I give it little weight.\n- Kalshi's Dec 11 contract puts about 23% on Extreme Fear. That shows markets expect reversion over roughly 3.5 weeks, which supports some upside skew.\n- Analysts warn of a retest of $58k.\n- BTC is oversold (RSI about 24), which often precedes relief bounces.\n\n(g) **Unexpected scenarios:**\n- **Low:** BTC breaks $62k and then $58k, ETF outflows accelerate and a hawkish Fed surprise follows, leaving the index at 5-7 by Thanksgiving.\n- **High:** A sharp short squeeze back above $75k, ETF inflows returning or a dovish macro surprise could lift the index into the 40s, similar to the August 36-to-81 swing.\n\nPercentile 1: 5\nPercentile 5: 7\nPercentile 10: 8\nPercentile 20: 10\nPercentile 30: 12\nPercentile 40: 14\nPercentile 50: 16\nPercentile 60: 18\nPercentile 70: 21\nPercentile 80: 25\nPercentile 90: 32\nPercentile 95: 38\nPercentile 99: 52"
+    }
+  ],
+  "forecast_errors": [
+    "ValueError: Sampled outputs from structure_output are not the same. There is ambiguity in the text being structured:\nFirst Sample:\n[Percentile(percentile=0.01, value=47.0), Percentile(percentile=0.05, value=35.0), Percentile(percentile=0.1, value=29.0), Percentile(percentile=0.2, value=23.0), Percentile(percentile=0.3, value=19.0), Percentile(percentile=0.4, value=17.0), Percentile(percentile=0.5, value=15.0), Percentile(percentile=0.6, value=14.0), Percentile(percentile=0.7, value=12.0), Percentile(percentile=0.8, value=10.0), Percentile(percentile=0.9, value=8.0), Percentile(percentile=0.95, value=7.0), Percentile(percentile=0.99, value=5.0)]\n\nSample 2:\n[Percentile(percentile=0.01, value=5.0), Percentile(percentile=0.05, value=7.0), Percentile(percentile=0.1, value=8.0), Percentile(percentile=0.2, value=10.0), Percentile(percentile=0.3, value=12.0), Percentile(percentile=0.4, value=14.0), Percentile(percentile=0.5, value=15.0), Percentile(percentile=0.6, value=17.0), Percentile(percentile=0.7, value=19.0), Percentile(percentile=0.8, value=23.0), Percentile(percentile=0.9, value=29.0), Percentile(percentile=0.95, value=35.0), Percentile(percentile=0.99, value=47.0)].",
+    "ValueError: Sampled outputs from structure_output are not the same. There is ambiguity in the text being structured:\nFirst Sample:\n[Percentile(percentile=0.01, value=48.0), Percentile(percentile=0.05, value=7.0), Percentile(percentile=0.1, value=8.0), Percentile(percentile=0.2, value=10.0), Percentile(percentile=0.3, value=12.0), Percentile(percentile=0.4, value=14.0), Percentile(percentile=0.5, value=15.0), Percentile(percentile=0.6, value=17.0), Percentile(percentile=0.7, value=20.0), Percentile(percentile=0.8, value=23.0), Percentile(percentile=0.9, value=29.0), Percentile(percentile=0.95, value=35.0), Percentile(percentile=0.99, value=48.0)]\n\nSample 2:\n[Percentile(percentile=0.05, value=5.0), Percentile(percentile=0.05, value=7.0), Percentile(percentile=0.1, value=8.0), Percentile(percentile=0.2, value=10.0), Percentile(percentile=0.3, value=12.0), Percentile(percentile=0.4, value=14.0), Percentile(percentile=0.5, value=15.0), Percentile(percentile=0.6, value=17.0), Percentile(percentile=0.7, value=20.0), Percentile(percentile=0.8, value=23.0), Percentile(percentile=0.9, value=29.0), Percentile(percentile=0.95, value=35.0), Percentile(percentile=0.99, value=48.0)]."
+  ],
+  "final_forecast": {
+    "p10": 7.9898,
+    "p25": 11.0184,
+    "p50": 15.5673,
+    "p75": 22.3322,
+    "p90": 30.5034
+  },
+  "usage": [
+    {
+      "question_id": "46866",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 7.54e-05,
+      "input_tokens": 499,
+      "output_tokens": 51,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0002435,
+      "input_tokens": 956,
+      "output_tokens": 105,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 51.4,
+      "notional_cost_usd": 0.24312330000000001,
+      "input_tokens": 75639,
+      "output_tokens": 4296,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.2,
+      "notional_cost_usd": 0.07726,
+      "input_tokens": 7126,
+      "output_tokens": 1013,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.5,
+      "notional_cost_usd": 0.07733999999999999,
+      "input_tokens": 7126,
+      "output_tokens": 1017,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0006659000000000001,
+      "input_tokens": 2738,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.7,
+      "notional_cost_usd": 0.0006667,
+      "input_tokens": 2742,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00020931999999999998,
+      "input_tokens": 2737,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.7,
+      "notional_cost_usd": 0.024558999999999997,
+      "input_tokens": 7123,
+      "output_tokens": 1037,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 0.00027586,
+      "input_tokens": 2741,
+      "output_tokens": 370,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.0006743000000000001,
+      "input_tokens": 2780,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00020955000000000002,
+      "input_tokens": 2779,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 46.7,
+      "notional_cost_usd": 0.17728519999999998,
+      "input_tokens": 64881,
+      "output_tokens": 3573,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.7,
+      "notional_cost_usd": 0.07638400000000001,
+      "input_tokens": 6624,
+      "output_tokens": 1170,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.076096,
+      "input_tokens": 6623,
+      "output_tokens": 1156,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.076732,
+      "input_tokens": 6625,
+      "output_tokens": 1187,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0007086000000000001,
+      "input_tokens": 2849,
+      "output_tokens": 278,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0006757000000000001,
+      "input_tokens": 2787,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.000812,
+      "input_tokens": 2771,
+      "output_tokens": 516,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00026581,
+      "input_tokens": 2786,
+      "output_tokens": 349,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00021065,
+      "input_tokens": 2851,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00029216,
+      "input_tokens": 2771,
+      "output_tokens": 402,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46866",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00021005,
+      "input_tokens": 2848,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.835
+}
