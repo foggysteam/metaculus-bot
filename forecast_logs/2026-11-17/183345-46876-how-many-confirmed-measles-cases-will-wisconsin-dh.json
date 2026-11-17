@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-17T18:37:34.536482+00:00",
+  "bot_version": "2026-11-14.1",
+  "started_at": "2026-11-17T18:33:45.883404+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46876,
+    "post_id": 46616,
+    "url": "https://www.metaculus.com/questions/46616",
+    "type": "NumericQuestion",
+    "unit": "cases",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "How many confirmed measles cases will Wisconsin DHS report for 2026 as of November 27, 2026?",
+    "resolution_criteria": "This question resolves to the headline statewide figure for measles in Wisconsin in 2026 printed on the Wisconsin Department of Health Services (DHS) \"Outbreaks, Recalls, and Investigations\" page (https://www.dhs.wisconsin.gov/outbreaks/index.htm) in the most recent version of that page available at 23:59 UTC on November 27, 2026. The resolution value is the number N in DHS's headline sentence (\"As of [date], the Wisconsin Department of Health Services (DHS) has confirmed N cases of measles in Wisconsin ... in 2026\"), used exactly as DHS publishes it, with no adjustment for case classification. For example, a headline reading \"has confirmed 738 cases of measles in Wisconsin\" resolves to 738, even if a sub-total elsewhere on the page reads \"370 confirmed and 6 probable\". County-level figures and the Southwest Wisconsin outbreak sub-total are never used. The \"as of\" date printed with the headline is irrelevant: whatever headline figure is displayed on the page at that moment is the answer, including if DHS has not posted a new update since November 24, 2026.",
+    "fine_print": "If the measles section has been moved off the outbreaks page, the statewide total 2026 case count shown in DHS's measles data dashboard at https://www.dhs.wisconsin.gov/immunization/measles.htm is used, exactly as displayed there and again without subtracting probable cases. If the outbreaks page cannot be reached and no archived copy of that page from November 27, 2026 exists (e.g., via the Internet Archive), or if no statewide 2026 case total is displayed on either page, the question is annulled.",
+    "close_time": "2026-11-17 21:32 UTC",
+    "scheduled_resolution_time": "2026-11-27 23:59 UTC"
+  },
+  "research": [
+    "## Wisconsin measles: 2026 statewide count, research as of Nov 17, 2026\n\n**Key points**\n- The resolution page still shows **651 cases (as of Nov 13)**.\n- The Nov 10 to Nov 13 rise was **33 cases a day**, the fastest yet.\n- I found no Tuesday Nov 17 update yet.\n- The figure displayed at 23:59 UTC Nov 27 could come from either the **Tue Nov 24 or Fri Nov 27 update**, depending on whether Friday's goes up on time.\n\n### 1. Resolution source\n- 2026-11-17 (fetched today): the headline reads \"Measles cases in Wisconsin - Updated November 13, 2026 … As of November 13, [DHS] has confirmed **651 cases** of measles in Wisconsin, 14 hospitalizations, and two deaths in 2026.\" [DHS outbreaks page](https://www.dhs.wisconsin.gov/outbreaks/index.htm)\n- The county table on that page (cases from Aug 1 to Nov 13) adds up to **649**:\n  - Grant 222, Lafayette 122 (6 of them probable), Iowa 97, Columbia 47, Chippewa 45, Jackson 45 (25 probable), Green Lake 14, Vernon 14, Sauk 11, Marquette 10, Marathon 6, Rock 5 (all probable), Clark 4, and seven counties with 1 each.\n  - Marathon, Richland and Rock are marked as more than 21 days since the last rash onset.\n  - The other 2 cases in the headline seem to be Dane and Waukesha cases from before August. [WIZM](https://www.wizmnews.com/2026/11/13/measles-case-reported-in-monroe-county-wi-at-551-cases/)\n- The [measles dashboard page](https://www.dhs.wisconsin.gov/immunization/measles.htm) says data are updated twice a week and counts include confirmed plus probable cases. Its numbers sit in an embedded dashboard that I could not read.\n- I found no CSV or JSON data file behind the page.\n\n### 2. Current status\n- Nothing settles the question yet.\n- There are 10 days to go, with probably 3 to 4 updates: Tue Nov 17, Fri Nov 20, Tue Nov 24 and Fri Nov 27.\n- Posting lag matters. The Nov 6 data appeared on the page around Nov 9, while the Nov 13 data was posted the same day.\n\n### 3. Recent news (newest first)\n- 2026-11-17: PAHO announced the US has lost its measles elimination status. [El Nuevo Diario](https://elnuevodiario.com.do/estados-unidos-pierde-la-certificacion-de-pais-libre-de-sarampion-tras-diez-muertes/)\n- 2026-11-16: A Green Bay hospital (Bellin) is preparing for possible measles patients and cited DHS's figure of 649. [Fox11](https://fox11online.com/news/health-news/green-bays-emplify-health-by-bellin-readies-for-possible-measles-patients-amid-case-surge)\n- 2026-11-13: DHS reported a second pediatric death in Grant County and 649 cases in 20 counties since August.\n  - Nearly 2,000 MMR doses have been delivered to local health departments since Aug 1.\n  - More than 45,600 MMR doses have been given statewide in that period. [DHS release](https://www.dhs.wisconsin.gov/news/releases/111326.htm)\n- 2026-11-13: Between Nov 10 and Nov 13, Grant, Iowa and Lafayette together went from 372 to 441 cases, and Jackson from 41 to 45. 14 people are hospitalized. [WIZM](https://www.wizmnews.com/2026/11/13/measles-case-reported-in-monroe-county-wi-at-551-cases/)\n- Changes in the Nov 6 page snapshot versus Nov 13: [Wayback Nov 9](https://web.archive.org/web/20261109152026/https://www.dhs.wisconsin.gov/outbreaks/index.htm)\n\n| Area | Nov 6 | Nov 13 |\n|---|---|---|\n| SW outbreak (Grant, Iowa, Lafayette, Vernon) | 376 | 455 |\n| Jackson | 2 | 45 |\n| Columbia | 33 | 47 |\n| Green Lake | 5 | 14 |\n| Marquette | 2 | 10 |\n\n- 2026-11-05/06: First death (an infant) reported. A public exposure was flagged at the Marshfield Medical Center - Weston emergency department on Nov 5. [DHS RSS](https://www.dhs.wisconsin.gov/news/rss.xml)\n\n### 4. Base rates and trend\nHeadline totals, with the average daily increase since the previous figure (background figures plus DHS pages):\n\n| Date | Total | Cases per day |\n|---|---|---|\n| Sep 8 | 159 | |\n| Sep 29 | 214 | about 2.6 |\n| Oct 13 | 267 | about 3.8 |\n| Oct 30 | 392 | about 7.4 |\n| Nov 3 | 431 | about 9.8 |\n| Nov 6 | 477 | about 15 |\n| Nov 10 | 551 | about 18.5 |\n| Nov 13 | 651 | about 33 |\n\n- The daily increase has roughly doubled each week lately.\n- Part of the Nov 10 to 13 jump may be reporting backlog. Jackson went from 2 to 41 in four days, 25 of those as probable cases.\n- New clusters are still appearing in central Wisconsin (Columbia, Green Lake, Marquette, Jackson).\n- DHS's page warns that newly reported counts \"may vary\" and that drops can reflect changes in how cases are found rather than real declines.\n\nSimple straight-line projections from 651 over 14 days (Nov 13 to Nov 27):\n\n| Pace assumed | Cases per day | Nov 27 total |\n|---|---|---|\n| Slowdown | 15 | about 860 |\n| Nov 3 to 10 pace | 18 | about 900 |\n| Nov 10 to 13 pace | 33 | about 1,110 |\n\nIf the Nov 27 update is not posted by 23:59 UTC, the Nov 24 figure counts instead, which is about 3 days less growth.\n\nSeasonality and earlier years:\n- There are no comparable earlier years. Wisconsin had 36 cases in all of 2025 and close to zero in most years before that, so there is no seasonal record to compare against for mid to late November.\n- This year is far above any recent year.\n- A comparison case is Pennsylvania's 2026 outbreak, which reached 1,542 cases across 46 counties. [Medscape](https://www.medscape.com/s/viewarticle/pennsylvania-wisconsin-report-measles-linked-deaths-cases-2026a10018fp)\n\n### 5. Other forecasts\n- I found no market or expert forecast on Wisconsin's count.\n- Kalshi's US 2026 total market: \"Above 7000\" at 0.76, \"Above 8000\" at 0.21.\n- Polymarket's US \"by Nov 30\" market: 6000+ at 0.55.\n- These national markets are only loosely related.\n- The CDC reported 5,412 US cases as of about Nov 12. [Latin Times](https://www.latintimes.com/paho-revokes-us-measles-elimination-status-601372)\n\n### 6. Upcoming events before resolution\n- Expected DHS updates: Tue Nov 17 (not posted when I checked), Fri Nov 20, Tue Nov 24, Fri Nov 27.\n- Thanksgiving (Thu Nov 26) is a state holiday. Holiday staffing could delay the Friday post past 23:59 UTC (5:59 pm CST).\n- Holiday gatherings increase exposure, but measles takes 10 to 21 days to show symptoms, so cases from Thanksgiving contact would mostly be reported after the question resolves.\n- Possible further DHS releases on exposures or deaths, and the effect of the vaccination push (45,600+ doses).\n- Weather is not relevant.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 18:34 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 7000: 0.76; Above 8000: 0.21; Above 9000: 0.09; Above 10000: 0.04; Above 6000: 0.98; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900; Above 1000: 0.9900.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.55; At least 3500: 0.87; At least 4500: 0.80; At least 4000: 0.88; At least 3000: 0.95; At least 2500: 0.95; At least 2000: 0.97; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: Wisconsin total milk production this year (2026). Yes prices: Above 33.50 billion pounds: 0.36; Above 33.25 billion pounds: 0.94; Above 33.00 billion pounds: 0.95; Above 33.75 billion pounds: 0.03; Above 32.75 billion pounds: 0.97.\n- Kalshi: Will DHS adopt a $100k OPT fee this year? (Before Jan 1, 2027). Yes prices: Yes: 0.13.\n- Polymarket: Marquette Golden Eagles vs. Wisconsin Badgers (W) (ends 2026-11-18). [Yes, No] prices: Marquette Golden Eagles vs. Wisconsin Badgers (W): [\"0.27\", \"0.73\"]\n- Polymarket: 2028 Presidential Election: Wisconsin Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.61\", \"0.39\"]; Republican Party: [\"0.355\", \"0.645\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: Wisconsin Governor Election: Turnout (ends 2026-11-04). [Yes, No] prices: <2.2M: [\"0.002\", \"0.998\"]; 2.2M-2.4M: [\"0.0185\", \"0.9815\"]; 2.4M-2.6M: [\"0.0085\", \"0.9915\"]; 2.6M-2.8M: [\"0.915\", \"0.085\"]; 2.8M-3M: [\"0.0105\", \"0.9895\"]; 3M-3.2M: [\"0.005\", \"0.995\"]\n- Polymarket: Wisconsin Governor Election Margin of Victory (ends 2026-11-04). [Yes, No] prices: Tiffany 12%+: [\"0.0005\", \"0.9995\"]; Tiffany 9-12%: [\"0.0005\", \"0.9995\"]; Tiffany 6-9%: [\"0.0015\", \"0.9985\"]; Tiffany 3-6%: [\"0.0005\", \"0.9995\"]; Tiffany 0-3%: [\"0.0005\", \"0.9995\"]; Crowley 0-3%: [\"0.0005\", \"0.9995\"]\n- Polymarket: Measles cases in U.S. in 2026? (ends 2027-01-01). [Yes, No] prices: ↑3.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑500: [\"1\", \"0\"]; ↑1k: [\"1\", \"0\"]; ↑2k: [\"1\", \"0\"]\n- Polymarket: Measles cases in U.S. by November 30? (ends 2026-12-01). [Yes, No] prices: 4600+: [\"1\", \"0\"]; 4800+: [\"1\", \"0\"]; 5000+: [\"1\", \"0\"]; 6000+: [\"0.55\", \"0.45\"]; 5600+: [\"0.973\", \"0.027\"]; 5800+: [\"0.905\", \"0.095\"]",
+    "## 1. Resolution source\n- 2026-11-17 (fetched today): The DHS outbreaks page headline reads: \"As of November 13, the Wisconsin Department of Health Services (DHS) has confirmed 651 cases of measles in Wisconsin, 14 hospitalizations, and two deaths in 2026.\" The section is labelled \"Updated November 13, 2026\". The Tuesday Nov 17 update was not up when I fetched the page. [DHS](https://www.dhs.wisconsin.gov/outbreaks/index.htm)\n- 2026-11-13: The county table on the same page covers Aug 1 to Nov 13 and adds up to 649. The headline says 651, so it probably includes about 2 cases from before August. The largest counts are Grant 222, Lafayette 122 (6 probable), Iowa 97, Columbia 47, Chippewa 45 and Jackson 45 (25 probable). Smaller counts: Green Lake 14, Vernon 14, Sauk 11, Marquette 10, Marathon 6, Rock 5 (all probable), Clark 4, and 1 each in Barron, Buffalo, Crawford, Dunn, Monroe, Richland and Shawano. That is 20 counties. Marathon, Richland and Rock are marked as more than 21 days since the last rash onset. [DHS](https://www.dhs.wisconsin.gov/outbreaks/index.htm)\n- I found no CSV or JSON file behind the page; the case table is plain HTML. I did not check the fallback dashboard at /immunization/measles.htm.\n\n## 2. Current status\n- Nothing has settled the question yet. The page shows 651, and two or three more updates are expected before resolution: Tue Nov 17, Fri Nov 20, Tue Nov 24, and possibly Fri Nov 27.\n- 651 is already above the bottom of the question's range (500).\n\n## 3. Recent news (newest first)\n- 2026-11-17: PAHO announced that the US has lost its measles elimination status, citing 10 deaths in 2026. [El Nuevo Diario](https://elnuevodiario.com.do/estados-unidos-pierde-la-certificacion-de-pais-libre-de-sarampion-tras-diez-muertes/)\n- 2026-11-16: A Green Bay hospital (Bellin) is preparing for measles patients. The story cites a DHS figure of 649. [Fox11](https://fox11online.com/news/health-news/green-bays-emplify-health-by-bellin-readies-for-possible-measles-patients-amid-case-surge)\n- 2026-11-15: Badger Herald, citing a DHS release: nearly 650 cases since Aug 1, spread across 20 counties (up from 13 earlier in the month), more than 45,000 MMR doses given, and cases \"expected to rise\". [Badger Herald](https://badgerherald.com/news/wisconsin/2026/11/15/measles-cases-rise-to-nearly-650-in-wisconsin-two-measles-related-deaths-reported/)\n- 2026-11-13: DHS reported a second child death in Grant County and 651 cases. Some outlets report 22 counties, others 20 (the gap between 649 and 651 explains the different counts). [WTMJ](https://wtmj.com/news/2026/11/13/second-child-dies-from-measles-in-southwest-wisconsin/), [WBAY](https://www.wbay.com/2026/11/13/wisconsin-dhs-reports-second-death-linked-measles-outbreak/), [WIZM](https://www.wizmnews.com/2026/11/13/measles-case-reported-in-monroe-county-wi-at-551-cases/)\n- Early November: Green Lake County confirmed cases linked to a case in another Wisconsin county. [Fox11](https://fox11online.com/news/health-news/green-lake-county-confirms-measles-cases-tied-to-another-wisconsin-county-disease-vaccine-illness-health-dhs)\n- Columbia County (47) and Jackson County (45) showed up quickly as new large clusters. I found no news coverage explaining the Columbia cluster.\n\n## 4. Base rates and trend\nHeadline values (from the question background and the DHS page):\n- Sept 8: 159; Sept 29: 214; Oct 13: 267; Oct 30: 392\n- Nov 3: 431, then Nov 6: 477 (+46, about 15/day)\n- Nov 10: 551 (+74, about 18/day)\n- Nov 13: 651 (+100, about 33/day, the biggest jump so far)\n- Daily increases are still rising. If the pace stayed between 18 and 33 per day, the Nov 24 figure (about 11 days after Nov 13) would be roughly 850 to 1,010. A Nov 27 figure would be about 900 to 1,100. This is plain arithmetic, not a forecast.\n- Some of the jump in new clusters (Columbia, Jackson) may come from batch reporting. DHS itself warns on the page that reported counts swing with case-finding phases, and that a fall in counts does not mean spread has slowed.\n- Seasonality: there are no comparable earlier years. Wisconsin had 36 cases in all of 2025 and only isolated cases in 2021 to 2024, so there is no history for how counts move in the second half of November. The nearest comparison is the 2025 West Texas outbreak, where growth slowed about 2 to 3 months in. This outbreak is now about 3.5 months old (declared mid-August) but is still spreading to new counties.\n\n## 5. Other forecasts\n- I found no market or expert forecast for Wisconsin's case count.\n- The Kalshi and Polymarket markets cover national US totals only and do not match this question. Kalshi prices 2026 US cases above 7,000 at 0.76. Polymarket prices US cases of 6,000+ by Nov 30 at 0.55. The CDC reported 5,412 US cases as of about Nov 12. [Latin Times](https://www.latintimes.com/paho-revokes-us-measles-elimination-status-601372)\n\n## 6. Upcoming events before resolution\n- Expected DHS updates: Tue Nov 17, Fri Nov 20, Tue Nov 24, and Fri Nov 27. The Friday update is the one that matters if it posts before 23:59 UTC (5:59 pm Central). DHS has sometimes posted updates days late, for example Nov 6 data appeared around Nov 9.\n- Thanksgiving (Nov 26): fewer people seeking care and testing could hold counts down for a while, and travel and gatherings could cause cases later, but those would mostly appear after resolution because measles takes 10 to 21 days to show symptoms.\n- Watch for more DHS-flagged exposure sites (for example the Weston emergency department) and further spread in Columbia, Jackson and Green Lake counties.\n- Weather does not drive this outcome, so no forecast is included.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-17 18:34 UTC; check each market really matches the question)\n- Kalshi: Measles cases this year? (In 2026). Yes prices: Above 7000: 0.76; Above 8000: 0.21; Above 9000: 0.09; Above 10000: 0.04; Above 6000: 0.98; Above 4000: 0.9900; Above 2000: 0.9900; Above 3000: 0.9900; Above 750: 0.9900; Above 1000: 0.9900.\n- Kalshi: What will the average number of measles cases be during Trump's term? (From 2025 to 2028). Yes prices: At least 5000: 0.55; At least 3500: 0.87; At least 4500: 0.80; At least 4000: 0.88; At least 3000: 0.95; At least 2500: 0.95; At least 2000: 0.97; At least 1000: 0.9900; At least 500: 0.9900; At least 200: 0.99.\n- Kalshi: Wisconsin total milk production this year (2026). Yes prices: Above 33.50 billion pounds: 0.36; Above 33.25 billion pounds: 0.94; Above 33.00 billion pounds: 0.95; Above 33.75 billion pounds: 0.03; Above 32.75 billion pounds: 0.97.\n- Kalshi: Will DHS adopt a $100k OPT fee this year? (Before Jan 1, 2027). Yes prices: Yes: 0.13.\n- Polymarket: Marquette Golden Eagles vs. Wisconsin Badgers (W) (ends 2026-11-18). [Yes, No] prices: Marquette Golden Eagles vs. Wisconsin Badgers (W): [\"0.27\", \"0.73\"]\n- Polymarket: 2028 Presidential Election: Wisconsin Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.61\", \"0.39\"]; Republican Party: [\"0.355\", \"0.645\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: Wisconsin Governor Election: Turnout (ends 2026-11-04). [Yes, No] prices: <2.2M: [\"0.002\", \"0.998\"]; 2.2M-2.4M: [\"0.0185\", \"0.9815\"]; 2.4M-2.6M: [\"0.0085\", \"0.9915\"]; 2.6M-2.8M: [\"0.915\", \"0.085\"]; 2.8M-3M: [\"0.0105\", \"0.9895\"]; 3M-3.2M: [\"0.005\", \"0.995\"]\n- Polymarket: Wisconsin Governor Election Margin of Victory (ends 2026-11-04). [Yes, No] prices: Tiffany 12%+: [\"0.0005\", \"0.9995\"]; Tiffany 9-12%: [\"0.0005\", \"0.9995\"]; Tiffany 6-9%: [\"0.0015\", \"0.9985\"]; Tiffany 3-6%: [\"0.0005\", \"0.9995\"]; Tiffany 0-3%: [\"0.0005\", \"0.9995\"]; Crowley 0-3%: [\"0.0005\", \"0.9995\"]\n- Polymarket: Measles cases in U.S. in 2026? (ends 2027-01-01). [Yes, No] prices: ↑3.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑4.5k: [\"1\", \"0\"]; ↑500: [\"1\", \"0\"]; ↑1k: [\"1\", \"0\"]; ↑2k: [\"1\", \"0\"]\n- Polymarket: Measles cases in U.S. by November 30? (ends 2026-12-01). [Yes, No] prices: 4600+: [\"1\", \"0\"]; 4800+: [\"1\", \"0\"]; 5000+: [\"1\", \"0\"]; 6000+: [\"0.55\", \"0.45\"]; 5600+: [\"0.973\", \"0.027\"]; 5800+: [\"0.905\", \"0.095\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 800.0,
+        "p25": 882.5,
+        "p50": 975.0,
+        "p75": 1100.0,
+        "p90": 1245.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The question resolves on whatever headline figure is on the DHS page at 23:59 UTC on Nov 27, 2026. That is likely the Fri Nov 27 update if it posts before 5:59 pm CST, and otherwise the Tue Nov 24 update. Thanksgiving week makes a late Friday post plausible, so I weight the two roughly equally, leaning slightly toward Friday.\n\n(b) **Latest value:** 651 cases (headline \"as of November 13, 2026\"), still displayed on Nov 17.\n\n(c) **If nothing changed:** 651. This is very unlikely given 3 to 4 more updates.\n\n(d) **If the current trend continued:**\n- The last week (Nov 6 to 13) added about 25 cases a day.\n- The Nov 10 to 13 jump of about 33 a day was partly backlog: Jackson County went from 2 to 45 cases, 25 of them probable.\n- At 25 cases a day, the total is about 925 by Nov 24 and about 1,000 by Nov 27.\n- At the slower 15 to 18 a day pace, it is about 820 to 900.\n- If growth keeps accelerating to 35 or more a day, it is about 1,100 to 1,150.\n\n(e) **Historical variation:** Two-week increments have been rising: about 60 (late Sep), about 125 (Oct 13 to 30), and about 220 (Oct 30 to Nov 13). A 14-day increment of 200 to 450 is plausible, with clusters still seeding new counties.\n\n(f) **Experts and markets:** There is no market on Wisconsin specifically. National markets (Kalshi above 7,000 for the year at 0.76) imply continued strong US growth, which is consistent with ongoing Wisconsin growth.\n\n(g) **Unexpected scenarios:**\n- **Low:** The southwest outbreak burns out under reactive vaccination (45,600+ doses), the new clusters stay small, and the holiday-week reporting slows. In that case the Nov 24 update would show only about 750 to 780.\n- **High:** The central Wisconsin clusters (Columbia, Green Lake, Marquette, Jackson) explode or a large case batch posts before Thanksgiving. Daily additions of 45 to 60 would push the total to 1,300 to 1,500.\n\nPercentile 1: 700\nPercentile 5: 760\nPercentile 10: 800\nPercentile 20: 860\nPercentile 30: 905\nPercentile 40: 940\nPercentile 50: 975\nPercentile 60: 1015\nPercentile 70: 1065\nPercentile 80: 1135\nPercentile 90: 1245\nPercentile 95: 1340\nPercentile 99: 1520"
+    },
+    {
+      "value": {
+        "p10": 830.0,
+        "p25": 900.0,
+        "p50": 980.0,
+        "p75": 1082.5,
+        "p90": 1200.0
+      },
+      "reasoning": "(a) **Time left:** About 10 days. The question resolves at 23:59 UTC on Nov 27, 2026. The figure displayed then will most likely come from the Tue Nov 24 update or the Fri Nov 27 update. The Friday update could slip past 5:59 pm CST because of the Thanksgiving holiday.\n\n(b) **Latest value:** 651 confirmed cases, as of the Nov 13 update, still displayed on the DHS page on Nov 17. The county sum is 649, plus 2 cases from before August.\n\n(c) **If nothing changed:** 651.\n\n(d) **If the trend continued:**\n- Recent daily increases have run at 15, then 18.5, then 33 cases per day.\n- The 33-per-day figure is inflated by a Jackson County backlog (2 to 45 cases, many of them probable).\n- A reasonable underlying pace is about 20 to 30 per day.\n- Over 14 days that gives roughly 930 to 1,070. Over 11 days, if the Nov 24 figure is still showing, it gives about 870 to 980.\n- If acceleration continues, at 35 to 40 per day, the total would be about 1,150 to 1,250.\n\n(e) **Historical variation:** Over the past month the count rose about 2.4 times (267 on Oct 13 to 651 on Nov 13). Two-week increases have grown from about 50 to about 250 or more. Growth rates have been volatile because of batch reporting and probable cases from new clusters.\n\n(f) **Experts and markets:** There is no market or expert forecast for Wisconsin specifically. National markets imply continued strong growth in US cases. A comparable case, Pennsylvania's 2026 outbreak, reached more than 1,500 cases.\n\n(g) **Unexpected scenarios:**\n- **Low:** Holiday and reporting delays leave an older figure on the page (for example the Nov 20 figure, around 780 to 820). Alternatively, reactive vaccination quickly slows the southwest outbreak and central clusters burn out, giving about 10 per day.\n- **High:** The central Wisconsin clusters (Columbia, Jackson, Green Lake, Marquette) explode or a big batch of probable cases is added, giving 45 or more per day and pushing the total above 1,300.\n\nPercentile 1: 720\nPercentile 5: 790\nPercentile 10: 830\nPercentile 20: 880\nPercentile 30: 920\nPercentile 40: 950\nPercentile 50: 980\nPercentile 60: 1015\nPercentile 70: 1055\nPercentile 80: 1110\nPercentile 90: 1200\nPercentile 95: 1280\nPercentile 99: 1450"
+    },
+    {
+      "value": {
+        "p10": 805.0,
+        "p25": 880.0,
+        "p50": 965.0,
+        "p75": 1067.5,
+        "p90": 1180.0
+      },
+      "reasoning": "(a) **Time left:** about 10 days. Resolution is 23:59 UTC on Nov 27, 2026. DHS is likely to post 3 to 4 more updates before then: Nov 17, Nov 20, Nov 24, and possibly Nov 27.\n\n(b) **Latest known value:** 651 cases, as of Nov 13, 2026, on the DHS outbreaks page, which still showed that figure on Nov 17.\n\n(c) **If nothing changed:** 651. This is implausible given the pace of the outbreak.\n\n(d) **If the current trend continued:**\n- At 18 to 33 cases a day from Nov 13, the Nov 27 figure would be about 900 to 1,110.\n- If the Friday update is not posted in time, the Nov 24 figure counts instead, which is about 50 to 100 lower.\n- Part of the 33-per-day jump looks like a reporting backlog (Jackson County's probable cases).\n- My central assumption is about 22 to 25 a day, giving a median around 950 to 1,000.\n\n(e) **Historical variation:** Daily increases have roughly doubled each week, from about 4 a day in mid-October to 15 to 33 a day in November. Over a 14-day window the total has moved from about +100 (October) to about +250 (Nov 3 to 13). Momentum and new clusters in central Wisconsin (Columbia, Green Lake, Marquette, Jackson) point to +250 to +450 over the next 11 to 14 days.\n\n(f) **Experts and markets:** There is no Wisconsin-specific forecast. National markets (Kalshi, Polymarket) imply continued strong US growth, which is consistent with Wisconsin still rising. The question creator's range is 500 to 1,500.\n\n(g) **Unexpected scenarios:**\n- Low: reactive vaccination (45,600+ doses) and burnout in the southwest counties cut new cases to about 8 to 10 a day, and the Friday post slips past the holiday, so the Nov 24 figure stands. That gives about 720 to 760.\n- High: the central Wisconsin clusters explode and testing backlogs clear, pushing the pace to 40 to 50 a day with the Nov 27 update posted on time. That gives about 1,300 to 1,400.\n\nPercentile 1: 710\nPercentile 5: 770\nPercentile 10: 805\nPercentile 20: 860\nPercentile 30: 900\nPercentile 40: 935\nPercentile 50: 965\nPercentile 60: 1000\nPercentile 70: 1040\nPercentile 80: 1095\nPercentile 90: 1180\nPercentile 95: 1250\nPercentile 99: 1400"
+    },
+    {
+      "value": {
+        "p10": 765.0,
+        "p25": 822.5,
+        "p50": 898.0,
+        "p75": 979.0,
+        "p90": 1070.0
+      },
+      "reasoning": "(a) About 10.5 days remain: resolution is at 23:59 UTC on Nov 27, 2026, which is 5:59 pm Central. Between now and then there are 3 to 4 possible DHS updates (Nov 17, 20, 24 and possibly 27).\n\n(b) Latest known value: 651 confirmed cases as of Nov 13, 2026, per the DHS outbreaks page. The Nov 17 update had not been posted when the page was fetched.\n\n(c) If nothing changed, the answer would be 651. That is very unlikely, because DHS updates twice a week and new cases are still arriving quickly.\n\n(d) If the trend continued, the count would rise by roughly 20 to 30 cases per day. Weekly increases have been accelerating: +85, then +174.\n- If the Nov 20 data is the last update shown, the figure would be about 800 to 850.\n- If the Nov 24 update is shown, about 880 to 950.\n- If a Nov 27 update posts before 23:59 UTC, about 950 to 1,050.\n\nPosting lags and the Thanksgiving week make it more likely that the Nov 24 figure (or Nov 20 data) is what shows at resolution, rather than a Friday Nov 27 update.\n\n(e) Historical variation: over 10 to 14 day windows, recent gains have been +125 (Oct 30 to Nov 10) and +220 (Oct 30 to Nov 13). Single updates have ranged from +39 to +100. Batch reporting causes lumpy jumps, as with the new Jackson and Columbia clusters.\n\n(f) There is no expert or market forecast for Wisconsin specifically. DHS says cases are \"expected to rise.\" National markets (Kalshi, Polymarket) imply continued strong growth in US cases.\n\n(g) Unexpected scenarios:\n- Low: DHS skips or delays updates during Thanksgiving week, so the page still shows Nov 17 or Nov 20 data. Mass vaccination (45,000+ MMR doses) and case-finding also wind down, giving about 700 to 760.\n- High: new clusters (Columbia, Jackson, Green Lake, Green Bay area) explode, and a big Friday Nov 27 batch posts on time, giving 1,150 to 1,350.\n\nPercentile 1: 690\nPercentile 5: 735\nPercentile 10: 765\nPercentile 20: 805\nPercentile 30: 840\nPercentile 40: 870\nPercentile 50: 898\nPercentile 60: 925\nPercentile 70: 958\nPercentile 80: 1000\nPercentile 90: 1070\nPercentile 95: 1135\nPercentile 99: 1300"
+    },
+    {
+      "value": {
+        "p10": 790.0,
+        "p25": 865.0,
+        "p50": 945.0,
+        "p75": 1042.5,
+        "p90": 1160.0
+      },
+      "reasoning": "(a) About 10 days remain. Resolution is at 23:59 UTC on Nov 27, 2026. Between now and then DHS is expected to post on Nov 17, Nov 20, Nov 24 and possibly Nov 27. Thanksgiving week may delay posting.\n\n(b) The latest known value is 651 confirmed cases, from the DHS headline dated as of Nov 13, 2026. Two deaths and 14 hospitalizations have been reported. The Nov 17 update was not yet posted.\n\n(c) If nothing changed, the answer would be 651. That is very unlikely given two or three scheduled updates.\n\n(d) If the current trend continued:\n- From Oct 30 to Nov 13 the count rose by about 18.5 cases per day.\n- From Nov 3 to Nov 13 it rose by about 22 per day.\n- The most recent interval was 33 per day, partly batch reporting from new Columbia and Jackson clusters.\n- The displayed figure at resolution will reflect Nov 24 or Nov 27 data, which is 11 to 14 days after Nov 13.\n- At 20 to 28 cases per day, that gives roughly 870 to 1,040, centred near 930 to 950.\n\n(e) Historical variation: two-week increments recently ran 130 to 260 cases, and per-update jumps varied from 39 to 100. The outbreak is still spreading to new counties: 20 counties now, up from 11 to 13 earlier in November.\n\n(f) Experts and markets: there are no Wisconsin-specific forecasts or markets. National markets imply continued strong US growth, and DHS says cases are \"expected to rise.\" Mass MMR uptake (more than 45,000 doses) could start to damp transmission by late November.\n\n(g) Unexpected scenarios:\n- **Low:** DHS skips or delays updates in Thanksgiving week, so the page still shows Nov 20 data. Reactive vaccination also slows new cases in the southwest core to about 10 to 15 per day. Result: about 750 to 800.\n- **High:** New clusters in Columbia, Jackson and Green Lake explode, the Green Bay area seeds, and batch reporting adds 40 or more per day. Result: 1,200 to 1,400 or more.\n\nPercentile 1: 700\nPercentile 5: 755\nPercentile 10: 790\nPercentile 20: 845\nPercentile 30: 885\nPercentile 40: 915\nPercentile 50: 945\nPercentile 60: 975\nPercentile 70: 1015\nPercentile 80: 1070\nPercentile 90: 1160\nPercentile 95: 1235\nPercentile 99: 1400"
+    },
+    {
+      "value": {
+        "p10": 785.0,
+        "p25": 858.0,
+        "p50": 940.0,
+        "p75": 1045.0,
+        "p90": 1165.0
+      },
+      "reasoning": "**(a) Time left:** About 10 days, resolving at 23:59 UTC on Nov 27. The figure displayed then will most likely be the Tue Nov 24 update, or the Fri Nov 27 update if it posts before 5:59 pm Central during Thanksgiving week. Posting lags could leave the Nov 20 figure in place.\n\n**(b) Latest known value:** 651 confirmed cases, as of the Nov 13 DHS headline. The page was still showing this on Nov 17.\n\n**(c) If nothing changed:** 651.\n\n**(d) If the current trend continued:**\n- Recent weekly additions were about 120 (Nov 3 to 10) and about 174 (Nov 6 to 13), with daily pace between 18 and 33.\n- Through Nov 24 (11 days), that gives roughly 870 to 1,000.\n- Through Nov 27 (14 days), it gives roughly 930 to 1,100.\n- Grant County is still rising quickly, and new clusters in Columbia, Jackson and Green Lake keep the trend going.\n- The 100-case jump to Nov 13 may partly be batch reporting.\n\n**(e) Historical variation:** Over the past month the count roughly doubled: 267 on Oct 13 to 551 on Nov 10, then 651 on Nov 13. Two-week changes have ranged from about +50 in September to about +220 in early November.\n\n**(f) Experts and markets:** There is no Wisconsin-specific market. National markets imply continued US growth of about 200 to 300 cases a week, and Wisconsin supplies a large share of that. DHS says cases are \"expected to rise.\"\n\n**(g) Unexpected scenarios:**\n- **Low:** The southwest core burns out because reactive vaccination (45,000+ doses) takes effect. Holiday-week testing and reporting slow down, and the displayed figure is stale (the Nov 20 or Nov 24 update with small gains). That could leave the result around 720 to 780.\n- **High:** The new clusters in Columbia, Jackson and Green Lake explode, a backlog is batch-reported, and the Nov 27 update posts on time. That could push the result to 1,250 to 1,400 or more.\n\nPercentile 1: 700\nPercentile 5: 750\nPercentile 10: 785\nPercentile 20: 838\nPercentile 30: 878\nPercentile 40: 910\nPercentile 50: 940\nPercentile 60: 972\nPercentile 70: 1015\nPercentile 80: 1075\nPercentile 90: 1165\nPercentile 95: 1245\nPercentile 99: 1410"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 792.2777,
+    "p25": 871.8044,
+    "p50": 955.1362,
+    "p75": 1058.144,
+    "p90": 1178.1874
+  },
+  "usage": [
+    {
+      "question_id": "46876",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.00027130000000000004,
+      "input_tokens": 1165,
+      "output_tokens": 77,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 7.18e-05,
+      "input_tokens": 508,
+      "output_tokens": 42,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 110.0,
+      "notional_cost_usd": 0.4768724000000001,
+      "input_tokens": 224116,
+      "output_tokens": 6124,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.2,
+      "notional_cost_usd": 0.082252,
+      "input_tokens": 7010,
+      "output_tokens": 1309,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.9,
+      "notional_cost_usd": 0.08702,
+      "input_tokens": 7011,
+      "output_tokens": 1547,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.0007204,
+      "input_tokens": 2813,
+      "output_tokens": 316,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.2,
+      "notional_cost_usd": 0.0007534000000000001,
+      "input_tokens": 2833,
+      "output_tokens": 374,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 29.7,
+      "notional_cost_usd": 0.0315002,
+      "input_tokens": 7012,
+      "output_tokens": 1384,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.00026838,
+      "input_tokens": 2812,
+      "output_tokens": 354,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.5,
+      "notional_cost_usd": 0.00022628999999999998,
+      "input_tokens": 2834,
+      "output_tokens": 269,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.0007460000000000001,
+      "input_tokens": 2806,
+      "output_tokens": 370,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.00031352,
+      "input_tokens": 2807,
+      "output_tokens": 444,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 55.7,
+      "notional_cost_usd": 0.2121957,
+      "input_tokens": 55684,
+      "output_tokens": 3589,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.1,
+      "notional_cost_usd": 0.080248,
+      "input_tokens": 6567,
+      "output_tokens": 1386,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.3,
+      "notional_cost_usd": 0.08146400000000001,
+      "input_tokens": 6569,
+      "output_tokens": 1446,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.6,
+      "notional_cost_usd": 0.082228,
+      "input_tokens": 6567,
+      "output_tokens": 1485,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00068,
+      "input_tokens": 2796,
+      "output_tokens": 242,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0007888,
+      "input_tokens": 2805,
+      "output_tokens": 456,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.0007634,
+      "input_tokens": 2783,
+      "output_tokens": 414,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00031913,
+      "input_tokens": 2799,
+      "output_tokens": 455,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.00022509,
+      "input_tokens": 2783,
+      "output_tokens": 268,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46876",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.000279,
+      "input_tokens": 2805,
+      "output_tokens": 375,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1402
+}
