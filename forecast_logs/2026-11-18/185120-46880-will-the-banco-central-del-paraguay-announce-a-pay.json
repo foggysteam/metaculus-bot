@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-18T18:56:03.799646+00:00",
+  "bot_version": "2026-11-17.1",
+  "started_at": "2026-11-18T18:51:20.462015+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46880,
+    "post_id": 46620,
+    "url": "https://www.metaculus.com/questions/46620",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "Will the Banco Central del Paraguay announce a payment start date for ueno bank CDA holders by 28 November 2026?",
+    "resolution_criteria": "This question resolves **Yes** if, by 28 November 2026 (23:59 Paraguay local time, UTC−3), the Banco Central del Paraguay (BCP), including its Equipo Interventor, or the Fondo de Garantía de Depósitos (FGD) has publicly stated a specific calendar day on which FGD payments to holders of Certificados de Depósito de Ahorro (CDA) issued by ueno bank S.A. begin or began. The stated day may fall on any date, before or after 28 November 2026, and the statement may cover only a subset of ueno bank's CDA holders (for example, only those with balances below a threshold). The first such statement by the BCP or FGD resolves the question Yes, and later restatements, revisions or postponements of the CDA payment date do not change that outcome.\n\nIt resolves **No** if no BCP, Equipo Interventor or FGD statement giving a calendar day for the start of ueno bank CDA payments is publicly available by that deadline. The statement must be issued by one of those bodies — published through its official channels or directly quoted in [credible sources](https://www.metaculus.com/faq/#definitions); unattributed media reports of a date do not count.",
+    "fine_print": "Statements that CDA holders will be paid \"in the second stage\", \"in the coming weeks\", \"in December\" or in any other named month or period without a specific calendar day do not count, nor do announcements about CDA registration or title-verification deadlines, about the CDA validation platform, or about payments to any other class of claimant (deposits already covered by the 40-minimum-wage anticipo, mutual-fund investors, or balances above the G. 228,300,000 guarantee cap).",
+    "close_time": "2026-11-18 21:43 UTC",
+    "scheduled_resolution_time": "2026-11-29 03:00 UTC"
+  },
+  "research": [
+    "**Bottom line:** I think the question may already be settled as Yes, but it hinges on how the fine print is read. On 13 November 2026 La Nación quoted a BCP \"publicación\" saying payments for ueno CDAs begin \"este viernes\" (Friday 13 November), released \"por cortes a lo largo del día\" as verifications are completed. That is a specific calendar day for the start of FGD payments to CDA holders. Two things cut against counting it:\n- The money paid appears to be the CDA holders' share of the 40-minimum-wage anticipo, which had been sent to banks but blocked until title was verified. The fine print excludes \"deposits already covered by the 40-minimum-wage anticipo\".\n- The question's background says no CDA date had been announced as of 13 November, so the question writer may have missed this or may not count it.\n\nIf the 13 November statement is ruled out, the next qualifying event would be a dated start for CDA payments above 40 wages.\n\n## 1. Resolution source\n- There is no single official data series. Resolution depends on BCP, Equipo Interventor or FGD statements. I could not find the original 13 November statement on bcp.gov.py through search. Media attribute it to a \"publicación del regulador\" without saying what format it took.\n- The CDA ownership-validation platform is registrocda.bcp.gov.py. [Hoy](https://www.hoy.com.py/nacionales/2026/11/17/entidades-financieras-continuan-pagos-de-cda-informa-el-bcp)\n\n## 2. Current status\n- 2026-11-13: La Nación reports the BCP announced CDA fund releases starting that Friday (13 November) after verification, quoting: \"Los fondos se irán liberando por cortes a lo largo del día, a medida que se completen las verificaciones necesarias.\" [La Nación](https://www.lanacion.com.py/negocios/2026/11/13/el-bcp-anuncia-la-liberacion-de-fondos-de-los-cda-desde-este-viernes/)\n- 2026-11-14: La Nación says the BCP began paying CDA holders on Friday 13 November. [La Nación](https://www.lanacion.com.py/negocios_edicion_impresa/2026/11/14/el-banco-central-hizo-la-liberacion-de-fondos-de-los-cda-desde-ayer/)\n- 2026-11-11: FGD director José Maciel said the fifth tranche (G. 1.7 trillion) had been sent to banks but stayed blocked while the BCP checked CDA ownership. Digital CDAs would be credited to accounts; physical CDAs had to be registered on the platform. This suggests the CDA money paid was the anticipo portion. [Hoy](https://www.hoy.com.py/nacionales/2026/11/11/bcp-libera-fondos-para-titulares-de-cda-pero-con-bloqueo-preventivo-para-el-cobro)\n- I found no announcement of a specific date for paying CDA balances between 40 and 75 wages.\n\n## 3. Recent news (newest first)\n- 2026-11-18: In Resolución N.º 14 (Acta N.º 54), the BCP Directorio extended the deadline for paying the deposit guarantee by 15 days, to 2 December, at the Equipo Interventor's request. Some accounts are still blocked or under verification, and the balance de exclusión is still provisional. [RDN/ABC](https://www.rdn.com.py/2026/11/18/ueno-bank-bcp-amplia-hasta-el-2-de-diciembre-el-plazo-de-pago-de-la-garantia-de-depositos)\n- 2026-11-17: The BCP said banks and financieras keep releasing CDA anticipo payments \"durante los próximos días\", with no date given. [Hoy](https://www.hoy.com.py/nacionales/2026/11/17/entidades-financieras-continuan-pagos-de-cda-informa-el-bcp)\n- 2026-11-16: Maciel said blocks on 5,800 CDA-linked cases were lifted by 13 November and another 4,000 over the weekend. About 14,000 people had registered and about 10,200 had been paid. The BCP reviews cases \"caso por caso\". [ABC](https://www.abc.com.py/economia/2026/11/16/ueno-bank-ahorristas-protestan-frente-al-bcp-por-pagos-pendientes-y-falta-de-respuestas/)\n- 2026-11-16: Next stage: the balance de exclusión, then a tender to move portfolios to other banks, aiming to cover the remaining 35 wages. The BCP wants a full diagnosis by the end of November. More than G. 1 trillion is still owed. [RDN](https://rdn.com.py/2026/11/16/ueno-bank-bcp-prepara-nueva-etapa-para-pagar-depositos)\n- 2026-11-12: The CDA validation platform opened. [La Nación](https://www.lanacion.com.py/negocios/2026/11/12/bcp-habilita-plataforma-web-para-validar-dinero-retornado-de-cda/)\n\n## 4. Base rates\n- During this resolution the BCP has repeatedly announced payments with specific days, sometimes only a day or two ahead: anticipo tranches from 5 November, CDA releases on 13 November. But steps that depend on the balance de exclusión or the transfer of deposits to other banks have had no fixed dates and have slipped, for example the 17 November deadline moving to 2 December.\n- I found no comparable historical base rate for Paraguayan bank resolutions.\n\n## 5. Other forecasts\n- None of the supplied Kalshi or Polymarket markets match this question. They cover Robinhood, central-bank rate decisions, US bank failures and tennis.\n- I found no prediction market or expert forecast on ueno CDA payments.\n\n## 6. Upcoming events before 28 November\n- Completion of the balance de exclusión and the start of the asset and liability evaluation.\n- A possible tender or transfer of deposits to other banks. If that does not happen, a direct FGD payment of the 40 to 75 wage band could come with dated announcements that cover CDAs.\n- A BCP diagnosis is targeted for late November. The extended guarantee-payment deadline is 2 December, after this question's deadline.\n- Possible continued protests and Congressional bills on ueno.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 18:51 UTC; check each market really matches the question)\n- Kalshi: Robinhood funded customers next quarter (funded customers in Q1 2027 ). Yes prices: Above 29.4 million: 0.56; Above 29.6 million: 0.22; Above 29.2 million: 0.88; Above 29.8 million: 0.07; Above 29 million: 0.96; Above 30.2 million: 0.04; Above 31 million: 0.04; Above 30 million: 0.05.\n- Kalshi: Which central banks will hike before 2027? (Before 2027). Yes prices: Swiss National Bank: 0.07; US Federal Reserve: 0.9900; Bank of England: 0.9900; Bank of Canada: 0.9900; Riksbank: 0.9900; Reserve Bank of New Zealand: 0.9900; Reserve Bank of Australia: 0.9900; Norges Bank: 0.9900; European Central Bank: 0.9900; Bank of Japan: 0.9900.\n- Kalshi: Will Trump issue dividend payments? (Before Apr 1, 2027). Yes prices: Before Apr 1, 2027: 0.04; Before Jan 1, 2027: 0.01.\n- Kalshi: Bank of Canada decision next month? (In Dec 2026). Yes prices: Maintains rate: 0.52; Hike 25bps: 0.49; Cut 25bps: 0.0100; Cut >25bps: 0.0100; Hike >25bps: 0.0100.\n- Kalshi: Gold at 10:45am ET · Bank of Canada decision (Dec 9, 2026 · 10:45am ET · Bank of Canada decision). Yes prices: Above $3750: 0.47; Above $3700: 0.58; Above $3800: 0.37; Above $3650: 0.69; Above $3850: 0.28; Above $3600: 0.78; Above $3900: 0.20; Above $3950: 0.14; Above $4000: 0.09; Above $4050: 0.06. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Polymarket: Montevideo: Elmer Moeller vs Gonzalo Bueno (ends 2026-11-25). [Yes, No] prices: Montevideo: Elmer Moeller vs Gonzalo Bueno: [\"0.615\", \"0.385\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Set 1 Winner: [\"0.575\", \"0.425\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Set 2 Winner: [\"0.5\", \"0.5\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Total Sets: O/U 2.5: [\"0.4\", \"0.6\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Match O/U 21.5: [\"0.51\", \"0.49\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Match O/U 22.5: [\"0.445\", \"0.555\"]\n- Polymarket: US bank failure by December 31, 2026? (ends 2027-01-01). [Yes, No] prices: US bank failure by December 31, 2026?: [\"0.575\", \"0.425\"]\n- Polymarket: Which banks will fail by end of 2026? (ends 2027-05-01). [Yes, No] prices: JPMorgan Chase: [\"0.023\", \"0.977\"]; HSBC: [\"0.0215\", \"0.9785\"]; Scotiabank: [\"0.023\", \"0.977\"]; BNP Paribas: [\"0.0175\", \"0.9825\"]; UBS: [\"0.0245\", \"0.9755\"]; Deutsche Bank: [\"0.019\", \"0.981\"]",
+    "**Bottom line:** Several reports say the BCP has already announced and started CDA payments. If a resolver accepts that, the question is effectively settled Yes. Two things could still lead to No. First, I could not find the BCP's own communiqué. Second, the question's background says no date had been set as of 13 November, which conflicts with this reporting.\n\n### 1. Resolution source\n- No single data series decides this. It turns on BCP, Equipo Interventor or FGD statements. The BCP's FGD payments page (bcp.gov.py/web/institucional/fgd-pagos) sent me to a page that blocked automated access (Cloudflare 403), so I could not read the official notices directly. [BCP](https://www.bcp.gov.py/web/institucional/fgd-pagos)\n- The CDA validation platform is registrocda.bcp.gov.py. The fine print says platform announcements alone do not count.\n\n### 2. Current status: probably already happened\n- 2026-11-13, 07:19: La Nación ran the headline \"El BCP anuncia la liberación de fondos de los CDA desde este viernes\". \"This Friday\" was 13 Nov 2026, the day of publication. It says payments for ueno CDAs \"arrancarán este viernes, tras la verificación correspondiente\" and quotes the BCP directly: \"Los fondos se irán liberando por cortes a lo largo del día, a medida que se completen las verificaciones necesarias.\" [La Nación](https://www.lanacion.com.py/negocios/2026/11/13/el-bcp-anuncia-la-liberacion-de-fondos-de-los-cda-desde-este-viernes/)\n- 2026-11-14: La Nación (print) said the BCP reported that CDA payments \"arrancaron ayer viernes\", i.e. 13 Nov. [La Nación](https://www.lanacion.com.py/negocios_edicion_impresa/2026/11/14/el-banco-central-hizo-la-liberacion-de-fondos-de-los-cda-desde-ayer/)\n- 2026-11-11: At a BCP press conference, FGD director José Maciel said fifth-lot funds, including CDA money, had been sent to banks but stayed \"bloqueados a la espera de nuestra verificación\". Digital CDAs would be credited directly. BCP official Julio Velasco said the physical-CDA platform would open Thursday morning (12 Nov). [Hoy](https://www.hoy.com.py/nacionales/2026/11/11/bcp-libera-fondos-para-titulares-de-cda-pero-con-bloqueo-preventivo-para-el-cobro)\n- Uncertainty for the resolver:\n  - The \"this Friday\" quote comes through a newspaper. I did not find a BCP communiqué or post with the date written out.\n  - The question's background says no date had been announced as of 13 Nov, so the question writer may not count this reporting.\n  - A strict resolver might also treat \"funds released after verification\" as something other than a \"payment start date\". If so, the question would depend on a new statement, and none seems likely now that payments are under way.\n\n### 3. Recent news (newest first)\n- 2026-11-18: In El Nacional, Maciel said CDA verification is in its final stage and that held funds \"serán liberados y acreditados de manera gradual durante los próximos días\". No new date. [El Nacional](https://elnacional.com.py/economia/cda-ueno-controles-sobre-titularidad-endosos-mantienen-bloqueados-algunos-pagos-n115416)\n- 2026-11-18: The BCP Directorio (Resolution No. 14, Minutes No. 54, 17 Nov) gave itself until 2 December to finish FGD guarantee payments. The extension is for accounts that are still blocked or have problems; CDAs are not mentioned. [RDN/ABC](https://www.rdn.com.py/2026/11/18/ueno-bank-bcp-amplia-hasta-el-2-de-diciembre-el-plazo-de-pago-de-la-garantia-de-depositos)\n- 2026-11-17: The BCP said banks and financieras are still releasing CDA payments \"durante los próximos días\". Registered holders who have not been paid are probably still being verified. [Hoy](https://www.hoy.com.py/nacionales/2026/11/17/entidades-financieras-continuan-pagos-de-cda-informa-el-bcp)\n- 2026-11-17: Maciel said blocks were lifted on 5,800 CDA cases by Friday (13 Nov), and about 4,000 more were resolved over the weekend. [La Nación](https://www.lanacion.com.py/negocios/2026/11/17/por-que-siguen-bloqueados-algunos-cda/)\n- 2026-11-16: The 40-to-75-wage top-up could be delayed another 15 days. [La Nación](https://www.lanacion.com.py/negocios/2026/11/16/pago-de-hasta-75-salarios-minimos-a-depositantes-de-ueno-podria-demorarse-otros-15-dias/)\n- 2026-11-12: The BCP opened the web platform for validating CDA ownership. [La Nación](https://www.lanacion.com.py/negocios/2026/11/12/bcp-habilita-plataforma-web-para-validar-dinero-retornado-de-cda/)\n\n### 4. Base rates\n- I found no useful base rate. Paraguay's FGD has paid out in few comparable resolutions, and none at this scale.\n- In this case the BCP has repeatedly given day-specific schedules, often as \"desde el viernes\" or \"hasta el miércoles 11\". Examples are the anticipo tranches of 5 to 11 November [Hoy](https://www.hoy.com.py/nacionales/2026/11/05/atencion-ahorristas-de-ueno-bcp-explica-como-sera-el-cobro-desde-el-viernes) and the new 2 December deadline.\n\n### 5. Other forecasts\n- None of the markets supplied (Kalshi, Polymarket) is about ueno or Paraguay, so none applies. I found no Manifold or Metaculus market on this.\n\n### 6. Upcoming events before 28 November\n- Remaining physical and endorsed CDAs are being released gradually, with no new date given.\n- The \"balance de exclusión\" is being finalised. A possible transfer of ueno's assets to another bank would decide how the 40-to-75-wage top-up is paid, and the top-up may come with dated announcements. It could also include CDA balances above the anticipo.\n- 2 December 2026 is the new deadline for FGD guarantee payments, which falls after this question resolves.\n- The BCP offered loan relief for small businesses (MIPYMEs) on 17 Nov [Última Hora](https://www.ultimahora.com/bcp-facilita-renovar-y-refinanciar-deudas-de-mipymes-afectadas-por-ueno). The waiver of late-payment interest on ueno debts runs until 30 Nov.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 18:51 UTC; check each market really matches the question)\n- Kalshi: Robinhood funded customers next quarter (funded customers in Q1 2027 ). Yes prices: Above 29.4 million: 0.56; Above 29.6 million: 0.22; Above 29.2 million: 0.88; Above 29.8 million: 0.07; Above 29 million: 0.96; Above 30.2 million: 0.04; Above 31 million: 0.04; Above 30 million: 0.05.\n- Kalshi: Which central banks will hike before 2027? (Before 2027). Yes prices: Swiss National Bank: 0.07; US Federal Reserve: 0.9900; Bank of England: 0.9900; Bank of Canada: 0.9900; Riksbank: 0.9900; Reserve Bank of New Zealand: 0.9900; Reserve Bank of Australia: 0.9900; Norges Bank: 0.9900; European Central Bank: 0.9900; Bank of Japan: 0.9900.\n- Kalshi: Will Trump issue dividend payments? (Before Apr 1, 2027). Yes prices: Before Apr 1, 2027: 0.04; Before Jan 1, 2027: 0.01.\n- Kalshi: Bank of Canada decision next month? (In Dec 2026). Yes prices: Maintains rate: 0.52; Hike 25bps: 0.49; Cut 25bps: 0.0100; Cut >25bps: 0.0100; Hike >25bps: 0.0100.\n- Kalshi: Gold at 10:45am ET · Bank of Canada decision (Dec 9, 2026 · 10:45am ET · Bank of Canada decision). Yes prices: Above $3750: 0.47; Above $3700: 0.58; Above $3800: 0.37; Above $3650: 0.69; Above $3850: 0.28; Above $3600: 0.78; Above $3900: 0.20; Above $3950: 0.14; Above $4000: 0.09; Above $4050: 0.06. Settles on the Pyth feed Metal.Index.1OZGOLD/USD, which can differ from exchange settlement prices.\n- Polymarket: Montevideo: Elmer Moeller vs Gonzalo Bueno (ends 2026-11-25). [Yes, No] prices: Montevideo: Elmer Moeller vs Gonzalo Bueno: [\"0.615\", \"0.385\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Set 1 Winner: [\"0.575\", \"0.425\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Set 2 Winner: [\"0.5\", \"0.5\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Total Sets: O/U 2.5: [\"0.4\", \"0.6\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Match O/U 21.5: [\"0.51\", \"0.49\"]; Montevideo: Elmer Moeller vs Gonzalo Bueno Match O/U 22.5: [\"0.445\", \"0.555\"]\n- Polymarket: US bank failure by December 31, 2026? (ends 2027-01-01). [Yes, No] prices: US bank failure by December 31, 2026?: [\"0.575\", \"0.425\"]\n- Polymarket: Which banks will fail by end of 2026? (ends 2027-05-01). [Yes, No] prices: JPMorgan Chase: [\"0.023\", \"0.977\"]; HSBC: [\"0.0215\", \"0.9785\"]; Scotiabank: [\"0.023\", \"0.977\"]; BNP Paribas: [\"0.0175\", \"0.9825\"]; UBS: [\"0.0245\", \"0.9755\"]; Deutsche Bank: [\"0.019\", \"0.981\"]"
+  ],
+  "forecasts": [
+    {
+      "value": 0.68,
+      "reasoning": "**(a) Time left and what Yes requires.** About 10 days remain, to 28 Nov 23:59 Paraguay time. Yes needs a BCP, Equipo Interventor or FGD statement giving a specific calendar day on which FGD payments to ueno CDA holders begin or began.\n\n**(b) Status quo.** A qualifying statement probably already exists. La Nación, 13 Nov, reported that the BCP announced CDA payments would start \"este viernes\", i.e. 13 Nov. It directly quoted the BCP: \"Los fondos se irán liberando por cortes a lo largo del día…\". On 14 Nov La Nación confirmed that payments \"arrancaron ayer viernes\". If a resolver accepts this, the status quo is Yes.\n\n**(c) Base rate.** There is no meaningful historical reference class. Within this resolution, the BCP has usually attached specific days to payment steps, such as the anticipo tranches from 5 Nov, the CDA release on 13 Nov and the 2 Dec deadline. The prior that some dated CDA-related announcement occurs within a month of resolution starting is high, around 70-80%.\n\n**(d) Evidence.**\n- For Yes:\n  - The BCP statement quoted on 13 Nov gives a specific day, reported by credible media with a direct quote.\n  - Officials (Maciel) confirmed on 16-17 Nov that blocks on 5,800 CDA cases were lifted by 13 Nov.\n  - The criteria allow subsets of CDA holders and past dates.\n- For No:\n  - The question background says no CDA date had been announced as of 13 Nov. This suggests the question writer may not count the 13 Nov statement, or treats it as payment of the anticipo.\n  - The fine print excludes \"deposits already covered by the 40-minimum-wage anticipo\", and the CDA money released was the anticipo portion.\n  - The original BCP communiqué was not located.\n  - Later statements (17-18 Nov) say only \"durante los próximos días\".\n  - The 40-75 wage top-up has slipped and the balance de exclusión is provisional, so a new dated announcement before 28 Nov is uncertain.\n\n**(e) Scenarios.**\n- No: The resolver treats the 13 Nov release as anticipo money already excluded, or as unverified media framing. The 40-75 wage top-up is then announced only after 28 Nov, or is announced without mentioning CDAs.\n- Yes: The resolver finds the La Nación quote and counts it, since the background treats CDA holders as a distinct unpaid class. Alternatively, the BCP announces a dated start of the top-up before 28 Nov that explicitly includes CDAs.\n\n**(f) Adjustment.** I start around 75% given the existing reported statement. I discount for the background's explicit claim of \"no date as of 13 Nov\" and for the anticipo exclusion ambiguity, which together put perhaps 35-40% risk on the 13 Nov statement being rejected. I then add some chance, around 25-30%, of a fresh dated CDA-inclusive announcement before 28 Nov. Net result is about 68%.\n\nProbability: 68%"
+    },
+    {
+      "value": 0.62,
+      "reasoning": "(a) About 10 days remain: the deadline is 28 Nov 2026, 23:59 Paraguay time. Yes requires a BCP, Equipo Interventor or FGD statement giving a specific calendar day on which FGD payments to ueno CDA holders begin or began. The statement must be official or directly quoted by credible media.\n\n(b) Status quo: a statement that arguably qualifies may already exist. On 13 Nov, La Nación quoted a BCP publication saying CDA funds would be released \"desde este viernes\", which was 13 Nov. However, the question says the criteria \"have not yet been satisfied\", and its background says no CDA date existed as of 13 Nov. So the question writer may exclude this, possibly because the money released was the CDA holders' anticipo portion. Since then, BCP statements have only said \"durante los próximos días\", with no new date.\n\n(c) Base rate: there is no good historical reference class. Within this resolution, the BCP has often announced payment steps with specific days (\"desde el viernes\", \"hasta el miércoles 11\"). Steps that depend on the balance de exclusión have slipped, for example the 17 Nov deadline moving to 2 Dec. My rough prior that a dated CDA payment announcement appears in a given 2 to 3 week window during active payouts is about 40-50%.\n\n(d) Evidence:\n- For Yes:\n  - La Nación, 13 Nov, headline \"El BCP anuncia la liberación de fondos de los CDA desde este viernes\", with a direct BCP quote.\n  - La Nación, 14 Nov: CDA payments \"arrancaron ayer viernes\".\n  - The criteria accept any date, including past dates, and accept a subset of holders. A resolver searching the news will likely find this article.\n- For No:\n  - The question text says the criteria were not satisfied and that no date existed as of 13 Nov.\n  - The criteria exclude payments on \"deposits already covered by the 40-minimum-wage anticipo\", and the 13 Nov releases appear to be exactly that.\n  - Later statements (17 and 18 Nov) give no dates.\n  - The 40-75 wage top-up is delayed, with the deadline extended to 2 Dec (Resolution 14, 17 Nov). A dated CDA-specific top-up announcement before 28 Nov is uncertain.\n\n(e) Scenarios:\n- No: the resolver treats the 13 Nov releases as anticipo payments, which are excluded. The balance de exclusión then drags on, and the BCP announces the top-up only for early December, or without a specific CDA date.\n- Yes: the resolver accepts the 13 Nov \"desde este viernes\" BCP statement. Alternatively, in late November the BCP announces that the 75-wage completion, including CDAs, starts on a named day.\n\n(f) I start at about 45% for a fresh dated announcement. I move up substantially because an arguably qualifying statement already exists and is easy to find. I move back down for the explicit exclusion and the writer's assertion that the criteria are unmet. I also add some probability for a dated top-up announcement before 28 Nov that includes CDAs.\n\nProbability: 62%"
+    },
+    {
+      "value": 0.75,
+      "reasoning": "(a) Resolution comes about 10 days from now, on 28 November 2026 at 23:59 Paraguay time. Yes requires a BCP, Equipo Interventor or FGD statement naming a specific calendar day on which FGD payments to ueno CDA holders begin or began. The statement must be official or directly quoted in credible media.\n\n(b) Status quo: a statement that may already qualify exists. On 13 November La Nación reported a BCP publication saying CDA fund releases start \"este viernes\" (13 November) and quoted the BCP directly. On 14 November it confirmed that payments \"arrancaron ayer viernes\". If a resolver accepts this, the status quo is Yes. Otherwise, no new dated CDA announcement has appeared since. Statements on 17 and 18 November only say \"próximos días\".\n\n(c) Base rate: there is no good historical reference class. Within this resolution, the BCP has usually announced payment stages with specific days (\"desde el viernes\", \"hasta el miércoles 11\"). Stages that depend on the balance de exclusión, however, have slipped without dates. For a fresh dated announcement of the 40-75 wage top-up covering CDAs before 28 November, I would put the prior around 30-40%.\n\n(d) Evidence:\n- **For Yes:**\n  - 13 November: La Nación headline \"El BCP anuncia la liberación de fondos de los CDA desde este viernes\", with a direct BCP quote.\n  - 14 November: confirmation that payments started 13 November.\n  - 11 November: Maciel's press conference describing CDA funds held pending verification.\n  - These are FGD payments to CDA holders with a start day attributable to the BCP.\n- **For No:**\n  - The question background, written around 13 November, says no CDA date had been announced. The question writer may have seen and discounted this reporting.\n  - The money released was arguably the anticipo portion, and the fine print excludes \"deposits already covered by the 40-minimum-wage anticipo\". However, that clause is framed as another class of claimant, and CDA holders were explicitly not paid in the anticipo.\n  - \"Este viernes\" is a relative day rather than a written-out date.\n  - On 17 November the guarantee deadline was extended to 2 December, which lowers the chance of a new dated CDA top-up announcement before 28 November.\n\n(e) Scenarios:\n- **No:** the resolver treats the 13 November release as part of the anticipo, or not a formal BCP date. The 40-75 wage top-up then slips into December with only \"first week of December\"-type language.\n- **Yes:** the resolver finds the 13 November La Nación article quoting the BCP and accepts it. Alternatively, in late November the BCP announces \"desde el lunes 30\" for the top-up, including CDAs.\n\n(f) Reasoning to a final number: I started from the roughly 70-80% chance that the 13 November statement is accepted, since it fits the literal wording well. I discounted for the exclusion clause and the background's contrary claim. I then added some probability for a separate dated top-up announcement before the deadline. That gives about 75%.\n\nProbability: 75%"
+    },
+    {
+      "value": 0.75,
+      "reasoning": "(a) About 10 days remain, until 28 November 2026, 23:59 Paraguay time. The question resolves Yes if the BCP, its Equipo Interventor or the FGD has publicly given a specific calendar day on which FGD payments to ueno CDA holders begin or began. A statement made at any point before the deadline counts, including one already made.\n\n(b) The status quo probably already favours Yes. On 13 November La Nación quoted a BCP publication saying CDA payments \"arrancarán este viernes\", which was 13 November, with funds released \"por cortes a lo largo del día\". On 14 November it reported that payments began that Friday. If a resolver accepts this, the question is already Yes. If not, nothing else changes, because the BCP's current language is \"próximos días\" with no new date.\n\n(c) Base rate: there is no clean reference class. In this case the BCP has almost always announced payment stages with day-specific timing (\"desde el viernes\", \"hasta el miércoles 11\"). On that pattern, a dated CDA start announcement within the window would be likely, around 70-80%.\n\n(d) Evidence for Yes:\n- La Nación, 13 Nov: \"El BCP anuncia la liberación de fondos de los CDA desde este viernes\", directly quoting the BCP.\n- La Nación, 14 Nov: payments \"arrancaron ayer viernes\".\n- The question's own background says CDAs \"have not yet been paid\". The CDA holders' anticipo share is therefore a first FGD payment to CDA holders. It is not part of the excluded class, which covers sight deposits already paid.\n\nEvidence for No:\n- The background states that no date had been announced as of 13 November, so the question writer may have seen and discounted this reporting.\n- A strict resolver could treat \"este viernes\" in a newspaper paraphrase as not a BCP-stated calendar day.\n- A strict resolver could also treat the anticipo-portion release as excluded.\n- Later BCP statements (17 and 18 Nov) give only \"próximos días\". The extended 2 December payment deadline concerns the guarantee deadline, not a CDA start date.\n\n(e) No scenario: the resolver discounts the 13 November report, as the background framing suggests, and the 40-75 wage top-up slips to December without a dated CDA announcement before 28 November.\n\nYes scenario: the resolver finds the 13 and 14 November La Nación reports and counts them. Alternatively, the BCP announces a dated start for the 40-75 wage band including CDAs before 28 November.\n\n(f) I start from roughly 75% because the event appears to have occurred and the BCP habitually gives dates. I trim slightly for resolver risk, given the background's explicit \"no date as of 13 Nov\" and the anticipo-exclusion ambiguity. I add back a little for the chance of a fresh dated announcement for the top-up before the deadline. That leaves me at about 75%.\n\nProbability: 75%"
+    },
+    {
+      "value": 0.7,
+      "reasoning": "(a) The question resolves around 29 November 2026, about 10 days from now. Yes requires a BCP, Equipo Interventor or FGD statement, made by 28 November and published officially or directly quoted in credible media, that names a specific calendar day on which FGD payments to ueno CDA holders begin or began.\n\n(b) The status quo is ambiguous. On 13 November the BCP was quoted saying CDA payments start \"este viernes\" (13 November). On 14 November it reported that they \"arrancaron ayer viernes\". If those statements count, the question is already Yes. If they don't, the status quo is No, because no dated announcement for the 40 to 75 wage top-up exists.\n\n(c) There is no clean base rate. In this resolution the BCP has repeatedly given day-specific payment schedules, often only a day or two ahead. Steps that depend on the balance de exclusión have slipped instead, such as the deadline moving from 17 November to 2 December. I estimate roughly a 35% chance of a newly dated CDA top-up announcement within 10 days.\n\n(d) Evidence for Yes:\n- On 13 November La Nación headlined \"El BCP anuncia la liberación de fondos de los CDA desde este viernes\" and directly quoted the BCP publication.\n- On 14 November the BCP reported that CDA payments began on Friday, 13 November.\n- On 16 and 17 November Maciel said blocks on 5,800 CDA cases had been lifted by 13 November.\n\nThese are FGD payments to CDA holders on a stated day, and the criteria accept a day that \"began\". The background also treats CDA holders as \"not yet paid\", which implies the CDA anticipo counts as CDA payments.\n\nEvidence for No:\n- The background says no date had been announced as of 13 November, and the criteria are flagged \"not yet satisfied\". So the question writer either missed this reporting or discounted it.\n- The exclusion of \"deposits already covered by the anticipo\" could be read as excluding these payments.\n- The day appears as \"este viernes\" in a media paraphrase, not as a written-out date in a BCP communiqué.\n- Since then the BCP has only said \"próximos días\", with no new dates, and the top-up deadline is 2 December.\n\n(e) No scenario: the resolver treats the 13 November reporting as pre-existing, excluded, or not an official dated statement, and the BCP gives no dated top-up schedule before 28 November because the balance de exclusión is still pending.\n\nYes scenario: the resolver accepts the 13 and 14 November BCP statements. Alternatively, around 25 to 27 November the BCP announces that the 40 to 75 wage top-up, including CDAs, starts on a specific day.\n\n(f) I start from about 35% for a fresh qualifying announcement. I then move up substantially because the already-documented 13 November statement plausibly satisfies the letter of the criteria, which I put at roughly 55 to 60% likely to be accepted. Combining the two paths gives about 70%.\n\nProbability: 70%"
+    },
+    {
+      "value": 0.71,
+      "reasoning": "(a) About 10 days remain, until 28 November 2026, 23:59 Paraguay time. For Yes, the BCP, its Equipo Interventor or the FGD must have publicly stated a specific calendar day on which FGD payments to ueno CDA holders begin or began. A statement covering only a subset of holders counts, and so does one made before today.\n\n(b) Status quo: a statement that arguably qualifies already exists. On 13 November La Nación quoted a BCP publication saying CDA payments start \"este viernes\" (13 Nov), released in batches through the day. If the resolver accepts it, the status quo is Yes. If not, there is no other dated CDA announcement, and the current messaging (\"gradually over the coming days\") points to No unless a new dated announcement for the 40 to 75 wage band comes out.\n\n(c) Base rate: there is no good historical reference class. Within this resolution, the BCP has given day-specific dates for most payment steps that had cleared their prerequisites, roughly 70 to 80% of them. Steps that depend on the balance de exclusión have slipped. As a prior for \"a dated CDA start statement appears within about 3 weeks of the CDA platform opening,\" I would put it near 60%.\n\n(d) Evidence for Yes:\n- 13 Nov: La Nación headline \"El BCP anuncia la liberación de fondos de los CDA desde este viernes,\" with a direct BCP quote.\n- 14 Nov: La Nación said CDA payments \"arrancaron ayer viernes.\"\n- 16 to 17 Nov: Maciel said about 10,000 CDA cases were unblocked, which confirms that FGD payments to CDA holders actually began on that date.\n\nEvidence for No:\n- The question background, written around 13 Nov, says no CDA date had been announced. This suggests the question writer either missed the statement or does not count it.\n- The money released appears to be the CDA holders' anticipo portion, which a strict resolver might read as \"deposits already covered by the 40-wage anticipo.\"\n- I could not locate an official BCP communiqué, only newspaper attribution.\n- Since then, messaging has been undated (\"próximos días,\" 17 to 18 Nov).\n- The top-up deadline was extended to 2 December, which makes a new dated announcement before 28 Nov less likely.\n\n(e) No scenario: the resolver treats the 13 Nov release as part of the anticipo, or as an unverified media report. The BCP then keeps releasing CDA funds \"gradually,\" and the 40 to 75 wage top-up has no dated start before 28 Nov.\n\nYes scenario: the resolver finds the La Nación article quoting the BCP on payments starting Friday 13 November, an FGD payment to CDA holders on a specific day, and resolves Yes. A secondary route is a BCP announcement before 28 Nov of a dated start for the 75-wage completion that explicitly includes CDAs.\n\n(f) I start from about 60% and move up to around 72%. The main reason is that a qualifying-looking statement already exists, attributed to the BCP and naming a specific day for the start of CDA payments. The exclusion clause most naturally targets sight deposits already paid, not CDA holders who had received nothing until then. I hold back from going higher because of the background's framing, the anticipo exclusion ambiguity, the lack of an official communiqué, and the low odds of a fresh dated announcement before the deadline.\n\nProbability: 71%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.6675,
+  "usage": [
+    {
+      "question_id": "46880",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0002669,
+      "input_tokens": 1178,
+      "output_tokens": 63,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 7.87e-05,
+      "input_tokens": 512,
+      "output_tokens": 55,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 99.2,
+      "notional_cost_usd": 0.3523391999999999,
+      "input_tokens": 111535,
+      "output_tokens": 4667,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 117.4,
+      "notional_cost_usd": 0.3543878,
+      "input_tokens": 158788,
+      "output_tokens": 5060,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.8,
+      "notional_cost_usd": 0.111864,
+      "input_tokens": 10049,
+      "output_tokens": 1574,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.1,
+      "notional_cost_usd": 0.112952,
+      "input_tokens": 10050,
+      "output_tokens": 1628,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.1,
+      "notional_cost_usd": 0.114292,
+      "input_tokens": 10050,
+      "output_tokens": 1695,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 35.0,
+      "notional_cost_usd": 0.036159800000000006,
+      "input_tokens": 10049,
+      "output_tokens": 1587,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 36.9,
+      "notional_cost_usd": 0.0384638,
+      "input_tokens": 10047,
+      "output_tokens": 1703,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 37.3,
+      "notional_cost_usd": 0.0410718,
+      "input_tokens": 10048,
+      "output_tokens": 1833,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 20.1,
+      "notional_cost_usd": 0.0004709,
+      "input_tokens": 2308,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 21.7,
+      "notional_cost_usd": 0.0004737,
+      "input_tokens": 2322,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 21.8,
+      "notional_cost_usd": 0.00047510000000000006,
+      "input_tokens": 2329,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.0004589000000000001,
+      "input_tokens": 2248,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.0004649,
+      "input_tokens": 2278,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0004929,
+      "input_tokens": 2418,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.00014454000000000002,
+      "input_tokens": 2309,
+      "output_tokens": 116,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 9.625000000000001e-05,
+      "input_tokens": 2330,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 9.618000000000002e-05,
+      "input_tokens": 2323,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.7,
+      "notional_cost_usd": 9.544000000000001e-05,
+      "input_tokens": 2249,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 9.694e-05,
+      "input_tokens": 2418,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46880",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 9.593e-05,
+      "input_tokens": 2279,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.1653
+}
