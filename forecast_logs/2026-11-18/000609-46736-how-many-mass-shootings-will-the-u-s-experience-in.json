@@ -1,0 +1,345 @@
+{
+  "logged_at": "2026-11-18T00:09:10.906401+00:00",
+  "bot_version": "2026-11-17.1",
+  "started_at": "2026-11-18T00:06:09.159787+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46736,
+    "post_id": 46480,
+    "url": "https://www.metaculus.com/questions/46480",
+    "type": "MultipleChoiceQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How many mass shootings will the U.S. experience in December 2026?",
+    "resolution_criteria": "This question resolves as the number of mass shootings reported at the Mass Shooting Tracker [Mass Shootings in 2026](https://www.massshootingtracker.site/data/?year=2026) database for December 2026.",
+    "fine_print": "",
+    "close_time": "2026-11-18 03:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 00:00 UTC"
+  },
+  "research": [
+    "# December 2026 U.S. mass shootings (Mass Shooting Tracker): research notes\n\n## 1. Resolution source\n- 2026-11-18: The resolution URL (`?year=2026`) loads, but its headings still say \"Mass Shootings in 2025\" and its year links stop at 2025. The site does have a 2026 data file at `.../2026-data.json` on S3, and it is being updated. [MST page](https://www.massshootingtracker.site/data/?year=2026), [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- 2026-11-16: The newest entries in that file are Alexandria, LA (0 killed, 8 wounded, marked \"preliminary\") and Baltimore, MD (0 killed, 4 wounded). [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- I counted incidents in the 2026 file by month:\n  - January to September: 419\n  - October: 43\n  - November 1 to 16: 26\n  - Year to date: about 488. [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- Volunteers keep the dataset. Entries are sometimes added late or revised, for example when a victim count is confirmed, so the final December total may keep changing for days after December 31. [MST page](https://www.massshootingtracker.site/data/?year=2026)\n\n## 2. Current status\n- December has not started, so nothing is settled yet.\n- 2026 is running higher than 2025:\n  - January to September: 419 in 2026 vs 383 in 2025, about 9% higher.\n  - October: 43 vs 38.\n  - November so far: 26 by Nov 16, 2026, vs 24 for Nov 1 to 19, 2025. [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json), [2025 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2025-data.json)\n\n## 3. Recent news (newest first)\n- 2026-11-15/16: Recent U.S. entries include Savannah, GA (murder-suicide, 4 dead), Collins, MS (4 wounded), Baltimore (4 wounded) and Alexandria, LA (8 wounded). [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- 2026-11-01: Three shootings in Dallas's Deep Ellum within an hour are logged as separate incidents. This shows the tracker can count clustered events more than once. [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- 2026-10-04: Vienna, GA: 2 killed, 28 wounded. [2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- The news articles supplied with the question are about shootings in South Africa. They are irrelevant, since the tracker only counts U.S. incidents.\n- 2025-12-02: AP reported that mass killings (4 or more dead) in 2025 were at their lowest since 2006. Experts warned the drop might not last (\"what goes down must also go back up\"). This uses a different definition from MST. [Fox/AP](https://www.fox5atlanta.com/news/mass-killings-2025-drop-database), [Colorado Politics](https://www.coloradopolitics.com/2025/12/02/mass-killings-on-track-to-reach-lowest-point-in-almost-20-years/)\n\n## 4. Base rates\nDecember counts from the MST JSON files (entries counted by date prefix):\n- 2021-12: 46 [2021 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2021-data.json)\n- 2022-12: 34 [2022 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2022-data.json)\n- 2023-12: 45 [2023 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2023-data.json)\n- 2024-12: 35 [2024 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2024-data.json)\n- 2025-12: 35 [2025 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2025-data.json)\n\nSeasonal pattern in the same data:\n- 2025: October 38, November 32, December 35, a total of 488 for the year.\n- 2026: September 38, October 43.\n- Before 2025, December usually came in close to or a bit above November.\n\nWhat these numbers show:\n- Over the last five Decembers the range was 34 to 46 and the median 35. Three of the five fell in 27-35 and two were at 44 or above.\n- No December in that span was 26 or lower. The 2022 to 2025 years all sat near the 35/36 line between two answer options.\n- If 2026 stays about 9% above 2025, scaling December 2025's 35 gives about 38. That is only an arithmetic scaling, not a forecast.\n- Holiday weekends add risk: Christmas, New Year's Eve, and January 1 entries that are often dated Dec 31. Dec 31, 2025 had at least one entry (Round Rock, TX).\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on U.S. mass shooting counts for December 2026.\n- None of the pre-collected market prices match this question. The closest, Kalshi's \"Minnesota assault weapons ban\" at 0.68, is not related to the count.\n- I found no expert forecast for this specific number.\n\n## 6. Upcoming events before resolution\n- 2026-11-26: Thanksgiving weekend. This falls in November and does not count, but it shows the current pace.\n- 2026-12-24/25: Christmas Eve and Christmas Day. These often bring family-gathering and domestic incidents.\n- 2026-12-31: New Year's Eve parties. Incidents after midnight are dated Jan 1 and fall outside the window.\n- After 2027-01-01: the tracker may add December entries late. Check whether the resolution snapshot is taken immediately on Jan 1, which could undercount.\n- Weather: a cold December usually holds counts below summer levels (2026 summer months were higher).\n\nSources:\n- https://www.massshootingtracker.site/data/?year=2026\n- https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json\n- https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2025-data.json\n- https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2024-data.json\n- https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2023-data.json\n- https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2022-data.json\n- https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2021-data.json\n- https://www.fox5atlanta.com/news/mass-killings-2025-drop-database\n- https://www.coloradopolitics.com/2025/12/02/mass-killings-on-track-to-reach-lowest-point-in-almost-20-years/\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 00:06 UTC; check each market really matches the question)\n- Kalshi: US active housing listings in November (November 2026). Yes prices: Above 1,175,000 listings: 0.47; Above 1,150,000 listings: 0.88; Above 1,200,000 listings: 0.10; Above 1,125,000 listings: 0.94; Above 1,250,000 listings: 0.01; Above 1,100,000 listings: 0.97; Above 1,225,000 listings: 0.04.\n- Kalshi: How many government shutdowns will there be before 2028? (Before 2028). Yes prices: At least 2: 0.53; At least 3: 0.27; At least 1: 0.83; At least 4: 0.10.\n- Kalshi: US electricity price in November (November 2026). Yes prices: Above 18.8¢: 0.39; Above 18.6¢: 0.85; Above 19.2¢: 0.04; Above 19.4¢: 0.03; Above 18.4¢: 0.97; Above 19.0¢: 0.05; Above 18.2¢: 0.98.\n- Kalshi: How many gonorrhea cases will be reported in the United States this year? (2026). Yes prices: Above 425k: 0.45; Above 450k: 0.27; Above 400k: 0.83; Above 500k: 0.06; Above 350k: 0.99; Above 375k: 0.99; Above 300k: 0.9900; Above 285k: 0.9900; Above 325k: 0.9900.\n- Kalshi: How many mpox clade Ib cases will be reported in the United States this year? (2026). Yes prices: Above 25: 0.49; Above 30: 0.46; Above 35: 0.39; Above 40: 0.37; Above 20: 0.65; Above 15: 0.78; Above 10: 0.88.\n- Kalshi: Number of US data centers this year? (2026). Yes prices: At least 5,300: 0.57; At least 5,400: 0.40; At least 5,500: 0.34; At least 5,600: 0.21; At least 5,700: 0.20; At least 5,800: 0.17; At least 5,900: 0.13; At least 6,000: 0.09; At least 5,200: 0.51; At least 4,400: 0.9600.\n- Kalshi: When will Yang–Mills and the Mass Gap be resolved? (Before 2032). Yes prices: Before 2029: 0.42; Before 2030: 0.57; Before 2031: 0.59; Before 2032: 0.67; Before 2028: 0.26; Before 2027: 0.1100.\n- Kalshi: Will Pennsylvania dedicate more sales tax to mass transit? (Pennsylvania legislation). Yes prices: Before Jul 1, 2027: 0.38; Before Jan 1, 2028: 0.72.\n- Kalshi: Will Minnesota ban assault weapons next year? (Before Jan 1, 2028). Yes prices: Yes: 0.68.\n- Polymarket: Mass College of Liberal Arts Trailblazers vs. New Haven Chargers (ends 2026-11-19). [Yes, No] prices: Mass College of Liberal Arts Trailblazers vs. New Haven Chargers: [\"0.5\", \"0.5\"]",
+    "## 1. Resolution source\n- 2026-11-18: The page linked in the question (massshootingtracker.site/data/?year=2026) loads with a \"2025\" header, and its year links run only to 2025. The data itself is in a JSON file that is already being updated: [2026-data.json](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json). [page](https://www.massshootingtracker.site/data/?year=2026)\n- 2026-11-18: The JSON holds 488 incidents for 2026. The newest entries are dated 2026-11-16: Alexandria, LA (0 killed, 8 wounded, marked \"preliminary\") and Baltimore, MD (0 killed, 4 wounded). There are no December entries yet. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- How I counted: I counted the lines in each year's JSON that contain a given month's date string. These are tool line counts, not a hand count of every entry. The file also shows a small reporting lag, with entries appearing about 1 to 2 days after the event.\n\n## 2. Current status\n- Nothing has happened yet that settles the question, because December has not started. Recent pace on the tracker:\n- 2026-11-16: November 2026 has 26 incidents so far (Nov 1-16). 13 of them are dated Nov 1, the Halloween weekend, including 3 separate Deep Ellum shootings in Dallas. October 2026 had 43 and September 2026 had 38. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- January 2026 had 34 and February 2026 had 36. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- Compared with last year, 2026 is running about 10% higher. The 488 incidents through Nov 16, 2026 compare with about 443 through Nov 16, 2025 (2025's full-year 488, minus 35 in December and about 10 in Nov 17-30). For Nov 1-16 alone, 2025 had 22 against 26 in 2026. [2025 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2025-data.json)\n\n## 3. Recent news\n- 2026-11-15/16: The news-API items about \"mass shootings\" (Atteridgeville, Sweetwaters, Wedela) are all in South Africa. They do not count toward this question. [briefly.co.za](https://briefly.co.za/south-africa/259198-17-killed-gauteng-kzn-mass-shootings-police-commissioner-condemns-attacks/)\n- 2026-11-12: In Washington, DC, a shooting at a gym in Logan Circle left 2 killed (including the shooter, who died by suicide) and 5 wounded. The tracker lists it. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json)\n- 2026-04/05: Gun Violence Archive (GVA) counted about 121 mass shootings from Jan 1 to Apr 23, 2026, which reports called the worst start to a year since 2021. GVA does not count the shooter, so its totals run lower than this tracker's. [UnoTV](https://www.unotv.com/estados-unidos/estados-unidos-registra-121-tiroteos-masivos-en-2026-los-episodios-mas-impactantes/)\n- Background: according to the manager of the AP/USA Today/Northeastern mass killing database, mass shootings fell almost 40% over 2024-2025, and 2025 had the fewest mass killings since 2006. He warns that steep declines are often followed by an uptick. [Northeastern](https://cssh.northeastern.edu/policyschool/theres-no-mass-shooting-epidemic-but-fear-epidemic-is-real-opinion/)\n\n## 4. Base rates (this tracker, December counts)\n- December 2021: 46. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2021-data.json)\n- December 2022: 34. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2022-data.json)\n- December 2023: 45. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2023-data.json)\n- December 2024: 35. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2024-data.json)\n- December 2025: 35. [JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2025-data.json)\n- What the numbers show:\n  - Over 2021-2025, December ranged from 34 to 46, with a mean of about 39 and a spread of about ±6.\n  - The last three years each sit right around the 35/36 boundary between two answer options, so this cutoff matters.\n  - No December in 2021-2025 was ≤26.\n  - December usually comes in a bit above November: 2025 had November 32 and December 35.\n  - Annual totals: 2025 had 488 (the low point). 2026 had matched that by Nov 16 and is heading for about 520-530.\n  - Christmas and New Year's Eve tend to produce clusters. Shootings in the early hours of Jan 1 are dated January.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi or Manifold market on monthly US mass-shooting counts. None of the pre-collected markets match this question; the Minnesota assault-weapons ban market (Yes 0.68) is only loosely related.\n- I found no expert forecast for December 2026.\n\n## 6. Upcoming events before resolution\n- Thanksgiving weekend (Nov 26-29) shows the late-November pace but does not count for December.\n- In December, holiday parties, Christmas (Fri Dec 25) and New Year's Eve (Thu Dec 31) bring a higher risk of clusters. In this year's calendar, Christmas and the following weekend fall together.\n- Reporting lag and later edits: incidents marked \"preliminary\" can be added, reclassified or removed. Late-December incidents may not appear until after Jan 1, which could affect the count at resolution time.\n- The question was resolving against a page whose header still reads 2025. If the site adds a 2026 page, the count should match the JSON.\n\nSources: [MST 2026 page](https://www.massshootingtracker.site/data/?year=2026), [MST 2026 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2026-data.json), [MST 2025 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2025-data.json), [MST 2024 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2024-data.json), [MST 2023 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2023-data.json), [MST 2022 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2022-data.json), [MST 2021 JSON](https://mass-shooting-tracker-data.s3.us-east-2.amazonaws.com/2021-data.json), [UnoTV](https://www.unotv.com/estados-unidos/estados-unidos-registra-121-tiroteos-masivos-en-2026-los-episodios-mas-impactantes/), [Northeastern](https://cssh.northeastern.edu/policyschool/theres-no-mass-shooting-epidemic-but-fear-epidemic-is-real-opinion/), [FOX 6](https://www.fox6now.com/news/shreveport-louisiana-shooting-was-7th-mass-killing-2026-see-full-list), [Dallas Observer](https://www.dallasobserver.com/news/every-texas-mass-shooting-in-2026-so-far-40671617/), [briefly.co.za](https://briefly.co.za/south-africa/259198-17-killed-gauteng-kzn-mass-shootings-police-commissioner-condemns-attacks/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 00:06 UTC; check each market really matches the question)\n- Kalshi: US active housing listings in November (November 2026). Yes prices: Above 1,175,000 listings: 0.47; Above 1,150,000 listings: 0.88; Above 1,200,000 listings: 0.10; Above 1,125,000 listings: 0.94; Above 1,250,000 listings: 0.01; Above 1,100,000 listings: 0.97; Above 1,225,000 listings: 0.04.\n- Kalshi: How many government shutdowns will there be before 2028? (Before 2028). Yes prices: At least 2: 0.53; At least 3: 0.27; At least 1: 0.83; At least 4: 0.10.\n- Kalshi: US electricity price in November (November 2026). Yes prices: Above 18.8¢: 0.39; Above 18.6¢: 0.85; Above 19.2¢: 0.04; Above 19.4¢: 0.03; Above 18.4¢: 0.97; Above 19.0¢: 0.05; Above 18.2¢: 0.98.\n- Kalshi: How many gonorrhea cases will be reported in the United States this year? (2026). Yes prices: Above 425k: 0.45; Above 450k: 0.27; Above 400k: 0.83; Above 500k: 0.06; Above 350k: 0.99; Above 375k: 0.99; Above 300k: 0.9900; Above 285k: 0.9900; Above 325k: 0.9900.\n- Kalshi: How many mpox clade Ib cases will be reported in the United States this year? (2026). Yes prices: Above 25: 0.49; Above 30: 0.46; Above 35: 0.39; Above 40: 0.37; Above 20: 0.65; Above 15: 0.78; Above 10: 0.88.\n- Kalshi: Number of US data centers this year? (2026). Yes prices: At least 5,300: 0.57; At least 5,400: 0.40; At least 5,500: 0.34; At least 5,600: 0.21; At least 5,700: 0.20; At least 5,800: 0.17; At least 5,900: 0.13; At least 6,000: 0.09; At least 5,200: 0.51; At least 4,400: 0.9600.\n- Kalshi: When will Yang–Mills and the Mass Gap be resolved? (Before 2032). Yes prices: Before 2029: 0.42; Before 2030: 0.57; Before 2031: 0.59; Before 2032: 0.67; Before 2028: 0.26; Before 2027: 0.1100.\n- Kalshi: Will Pennsylvania dedicate more sales tax to mass transit? (Pennsylvania legislation). Yes prices: Before Jul 1, 2027: 0.38; Before Jan 1, 2028: 0.72.\n- Kalshi: Will Minnesota ban assault weapons next year? (Before Jan 1, 2028). Yes prices: Yes: 0.68.\n- Polymarket: Mass College of Liberal Arts Trailblazers vs. New Haven Chargers (ends 2026-11-19). [Yes, No] prices: Mass College of Liberal Arts Trailblazers vs. New Haven Chargers: [\"0.5\", \"0.5\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "≤26": 0.04,
+        "27-35": 0.29,
+        "36-43": 0.42,
+        "≥44": 0.25
+      },
+      "reasoning": "(a) **Time left:** About 6 weeks until December 2026 ends. Resolution comes around 2027-01-01. Late additions to the tracker could shift the count slightly, most likely upward if the snapshot is taken after January 1.\n\n(b) **Status quo:** The current pace points to a December around 38-40.\n- 2026 is running roughly 9-13% above 2025: 419 vs 383 for January to September, and 43 vs 38 for October.\n- November is on a fast pace: 26 incidents by November 16, which works out to about 1.6 per day.\n- Scaling December 2025 (35) by about 10% gives roughly 38-39.\n\n(c) **Base rates:** Mass Shooting Tracker December counts for 2021-2025 were 46, 34, 45, 35 and 35.\n- No December fell in \"≤26\".\n- Three fell in \"27-35\", all right at the top edge (34, 35, 35).\n- None fell in \"36-43\".\n- Two fell in \"≥44\".\n- Recent years cluster right at the 35/36 boundary, so a small upward shift moves the most likely outcome into \"36-43\".\n\n(d) **Strongest evidence:**\n- 2026 has run consistently higher than 2025 (data through November 16, 2026).\n- October 2026 had 43 incidents and November 2026 is on pace for 40 or more.\n- December 2025 had 35, so the elevated 2026 trend pushes the central estimate into \"36-43\".\n- Holiday clustering (Christmas, New Year's Eve) adds upside risk. The tracker logging clustered events separately, as with Deep Ellum on November 1, also adds variance.\n\n(e) **Unexpected scenario:**\n- Low side: a cold, quiet December, plus a resolution snapshot taken on January 1 before volunteers add late entries, could leave the count near 30 or below.\n- High side: a violent holiday week with several clustered incidents could push it to 46 or more, as in 2021 and 2023.\n\n**Method:** I modeled the count as roughly normal with a mean of about 39 and a standard deviation of about 7, reflecting overdispersed counts. That gives roughly 4%, 30%, 42% and 25% for the four options. Compared with the raw base rate, which favors \"27-35\", I shifted toward \"36-43\" because of the sustained 2026 elevation. I kept substantial weight on \"27-35\" because the last three Decembers sat exactly at 34-35.\n\nOption_A: 0.04\nOption_B: 0.29\nOption_C: 0.42\nOption_D: 0.25"
+    },
+    {
+      "value": {
+        "≤26": 0.04,
+        "27-35": 0.32,
+        "36-43": 0.45,
+        "≥44": 0.19
+      },
+      "reasoning": "(a) **Time left:** About 6 weeks. December 2026 runs from Dec 1 to 31, and resolution is around Jan 1, 2027. Late entries or revisions by the tracker's volunteers could shift the count slightly. A snapshot taken right on Jan 1 could miss 1 to 3 late-added incidents.\n\n(b) **Status quo:** With 2026 running about 9-13% above 2025, a typical December would come in around 38-40. That falls in the 36-43 bin.\n\n(c) **Base rates:** Mass Shooting Tracker December counts for 2021-2025 were 46, 34, 45, 35 and 35.\n- **≤26:** 0 of 5\n- **27-35:** 3 of 5, all at 34-35, right on the boundary\n- **36-43:** 0 of 5\n- **≥44:** 2 of 5\n\nTaken alone the history looks bimodal. With so few years, though, a smooth distribution centered in the high 30s is more sensible. 36-43 sits in the middle of the plausible range.\n\n(d) **Strongest evidence:**\n- January-September 2026 had 419 incidents vs 383 in 2025 (about +9%).\n- October 2026 had 43 vs 38 in 2025.\n- November 2026 had 26 by Nov 16 vs 24 by Nov 19 in 2025. 2025's November finished at 32.\n- The 2026 pace runs roughly 10-15% above 2025. Scaling December 2025's 35 gives about 38-40.\n- Clustered events, such as the Nov 1 Deep Ellum shootings, can be logged as separate incidents, which pushes counts up.\n- Christmas and New Year's Eve add upside risk.\n\n(e) **Unexpected scenario:**\n- **Upside:** A violent Christmas weekend with several multi-incident nights in big cities, plus a warm December, pushes the total to 45 or more.\n- **Downside:** A cold snap, plus lagged entries missing from the Jan 1 snapshot, keeps the count around 30-33. A drop to 26 or below would need both a big undercount and a quiet month, which looks unlikely.\n\n**Reasoning for the forecast:** I started from the five-year base rates (60% for 27-35, 40% for ≥44). I then moved toward 36-43 because the 2026 pace points to a mean near 38-39, with a standard deviation of about 6. I kept substantial weight on 27-35 because of possible snapshot undercounting and recent Decembers sitting at 35.\n\nOption_A: 0.04\nOption_B: 0.32\nOption_C: 0.45\nOption_D: 0.19"
+    },
+    {
+      "value": {
+        "≤26": 0.04,
+        "27-35": 0.29,
+        "36-43": 0.42,
+        "≥44": 0.25
+      },
+      "reasoning": "**(a) Time left:** About 6 weeks until December begins. The outcome will be known roughly when the tracker finalizes its December entries, around January 1 to 7, 2027. Late additions may continue for some days after that.\n\n**(b) Status quo:** The most recent comparable December (2025) had 35 incidents. Applying 2026's elevated pace, about 9 to 15% above 2025, gives roughly 38 to 40. That would fall in 36-43.\n\n**(c) Base rates:** The last five Decembers were 46, 34, 45, 35 and 35.\n- 27-35 won three times, though all three sat right at the 35/36 boundary.\n- ≥44 won twice.\n- 36-43 won zero times, despite sitting between the two clusters.\n- ≤26 won zero times.\n\nThe median is 35 and the mean is 39.\n\n**(d) Strongest evidence:**\n- January to September 2026 had 419 incidents vs 383 in 2025, about 9% higher.\n- October 2026 had 43 vs 38 in 2025.\n- November 1 to 16, 2026 had 26 vs 24 for November 1 to 19, 2025, suggesting a pace about 15 to 20% higher.\n- The 2026 year-to-date total by mid-November, about 488, already equals the full 2025 total.\n- Scaling December 2025 (35) by 10 to 15% gives about 38 to 40.\n- Poisson noise alone gives a standard deviation of about 6. Combined with uncertainty about the rate, that implies an SD of about 7.\n\n**(e) Unexpected scenarios:**\n- **Low:** A snapshot taken right at January 1, before volunteers log late December entries, combined with a cold, quiet month, could push the count to the high 20s.\n- **High:** Clustered holiday incidents could push it to the mid or high 40s, as happened in 2021 and 2023. Examples include multiple shootings at the same party being logged separately, a violent Christmas weekend, and New Year's Eve parties before midnight.\n\n**Reasoning:** I start from a normal-ish distribution with mean about 39 and SD about 7. The historical record splits between the two adjacent options, so I moved toward the center from the raw base-rate frequencies because of the elevated 2026 pace. I keep substantial weight on 27-35, because three recent Decembers landed at 34 to 35 and late-entry undercounting at resolution is a real risk.\n\nOption_A: 0.04\nOption_B: 0.29\nOption_C: 0.42\nOption_D: 0.25"
+    },
+    {
+      "value": {
+        "≤26": 0.04,
+        "27-35": 0.32,
+        "36-43": 0.45,
+        "≥44": 0.19
+      },
+      "reasoning": "(a) **Time left:** December 2026 begins in about 13 days and ends in about 43 days. The count will be largely known by early January 2027, although entries usually appear 1 to 2 days after the event, so late-December incidents could still be added or revised around the resolution date.\n\n(b) **Status quo:** If 2026 keeps its current pace, about 10% above 2025, December should come in around 38 or 39 (December 2025 had 35). That falls in the 36-43 bin, close to the 35/36 boundary.\n\n(c) **Base rates:** December counts on this tracker were 46, 34, 45, 35 and 35 for 2021-2025.\n- 36-43: 0 of 5 Decembers.\n- 27-35: 3 of 5 (each at 34 or 35, right at the boundary).\n- ≥44: 2 of 5.\n- ≤26: 0 of 5.\n\nThe mean is about 39 with a spread of about ±6. Bin outcomes from 5 years are noisy, so a continuous model centered near the mean is more useful than these bin counts.\n\n(d) **Strongest evidence (all from the tracker's 2026 JSON, as of 2026-11-16/18):**\n- 2026 has 488 incidents through Nov 16, against about 443 at the same point in 2025, roughly 10% higher.\n- Recent months: September had 38 and October had 43.\n- November has 26 through Nov 16, but 13 of those fell on Nov 1 (Halloween weekend). That leaves a slower 13 over Nov 2-16, about 0.9 per day.\n- December usually runs slightly above November (2025: 32 in November, 35 in December).\n- Christmas falls on a Friday this year, a weekend-adjacent date that tends to produce clusters.\n\n(e) **Unexpected-outcome scenario:** A cold, quiet December combined with reporting lag on late-December incidents at resolution time could push the count down to around 28-30. In the other direction, holiday-weekend clusters around Christmas and New Year's Eve could push it to 45 or more, as happened in 2021 and 2023.\n\n**Model:** I used a mean of about 38 and a standard deviation of about 6.5, reflecting Poisson noise plus uncertainty about the level. This gives:\n- P(≤26) ≈ 4%\n- P(27-35) ≈ 31%\n- P(36-43) ≈ 45%\n- P(≥44) ≈ 20%\n\nI then moved slightly toward lower counts because late-December entries may not have appeared by the time the question resolves. Relative to the raw 5-year bin frequencies, I moved toward 36-43 because the 2026 level sits about 10% above 2025.\n\nOption_A: 0.04\nOption_B: 0.32\nOption_C: 0.45\nOption_D: 0.19"
+    },
+    {
+      "value": {
+        "≤26": 0.05,
+        "27-35": 0.34,
+        "36-43": 0.41,
+        "≥44": 0.2
+      },
+      "reasoning": "**(a) Time left:** About 6 weeks. December starts in 13 days, and the count will be known around January 1 to 3, 2027, given the tracker's 1 to 2 day reporting lag.\n\n**(b) Status quo outcome:** The tracker is running about 10% above 2025, whose December had 35. Recent months were September 38 and October 43. That points to roughly 37 to 39 in December, in the 36-43 bin and close to the 35/36 boundary.\n\n**(c) Base rates (December, 2021-2025):**\n- Monthly counts were 46, 34, 45, 35 and 35.\n- ≤26 occurred 0 of 5 times.\n- 27-35 occurred 3 of 5 times.\n- 36-43 occurred 0 of 5 times.\n- ≥44 occurred 2 of 5 times.\n- The mean is about 39. The data cluster at the edges of the 36-43 bin, but a smooth distribution centered near 38 to 39 still puts the most mass in 36-43.\n\n**(d) Strongest evidence:**\n- 2026 had 488 incidents through November 16, compared with about 443 for the same period of 2025, about 10% higher.\n- October 2026 had 43 and September 2026 had 38.\n- November 1-16 had 26 incidents, but 13 of them fell on November 1 (Halloween weekend). Excluding that day, the pace is slower, about 0.9 per day.\n- December usually runs slightly above November, with clusters around Christmas and New Year's Eve. This year, Christmas falls on a Friday.\n- A Poisson process with a mean of about 38, plus uncertainty about the mean, gives a standard deviation of about 7.\n\n**(e) Unexpected scenario:**\n- A quiet, cold December with a reporting lag of late-December incidents at resolution time could push the total to about 30. This argues for keeping meaningful weight on 27-35.\n- Alternatively, holiday weekend clusters (Christmas weekend and New Year's Eve) could push the total to 45 or more, as happened in 2021 and 2023.\n\n**Reasoning:** I started from a normal approximation with a mean of about 38 and a standard deviation of about 7. That gives roughly 5% / 31% / 42% / 22% across the four bins. I then shifted slightly toward lower counts, because late-December incidents may not yet be recorded when the question resolves around January 1.\n\nOption_A: 0.05\nOption_B: 0.34\nOption_C: 0.41\nOption_D: 0.20"
+    },
+    {
+      "value": {
+        "≤26": 0.03,
+        "27-35": 0.33,
+        "36-43": 0.44,
+        "≥44": 0.2
+      },
+      "reasoning": "(a) Time left: December 2026 has not started. The outcome will be known around January 1, 2027, about 6 weeks from now. Late-December incidents may take 1 to 2 days to appear in the JSON.\n\n(b) Status quo: If December follows recent pace (September 38, October 43, November on track for roughly 38-40) and is about 10% above December 2025's 35, the count lands around 38. That falls in the 36-43 bin.\n\n(c) Base rates for December on this tracker, 2021-2025:\n- The counts were 46, 34, 45, 35 and 35.\n- By bin: ≤26 had 0 of 5, 27-35 had 3 of 5, 36-43 had 0 of 5, and ≥44 had 2 of 5.\n- The mean is about 39 and the spread is about ±6. The 36-43 bin sits right at the center, even though no recent year actually landed in it.\n\n(d) Strongest evidence:\n- On 2026-11-16, the 2026 total stood at 488, about 10% ahead of the same date in 2025 (about 443).\n- Recent monthly counts were October 2026 at 43 and September at 38.\n- November 1-16 had 26 incidents. 13 of those fell on the Halloween weekend, so the underlying pace is about 0.85 per day.\n- December has historically come in slightly above November (November 2025 was 32, December 2025 was 35).\n- Christmas falls on a Friday, which adds weekend clustering risk.\n\n(e) Unexpected scenarios:\n- A low outcome: a cold, quiet December plus reporting lag on late-December incidents at resolution time could push the count to 30-33.\n- A high outcome: a heavy Christmas weekend and New Year's Eve cluster could push it to 45 or more, as happened in 2021 and 2023.\n\nMy forecast starts from a mean of about 38 with an overdispersed spread (standard deviation about 6.5). I shaded the 27-35 bin slightly up for the reporting-lag risk and for the last two Decembers both being 35. That moves it a little from the pure model toward the recent December record.\n\nOption_A: 0.03\nOption_B: 0.33\nOption_C: 0.44\nOption_D: 0.20"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "≤26": 0.04,
+    "27-35": 0.315,
+    "36-43": 0.4317,
+    "≥44": 0.2133
+  },
+  "usage": [
+    {
+      "question_id": "46736",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 7.12e-05,
+      "input_tokens": 492,
+      "output_tokens": 44,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 64.0,
+      "notional_cost_usd": 0.320419,
+      "input_tokens": 96285,
+      "output_tokens": 5848,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.5,
+      "notional_cost_usd": 0.065464,
+      "input_tokens": 5049,
+      "output_tokens": 1254,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.5,
+      "notional_cost_usd": 0.06464400000000001,
+      "input_tokens": 5049,
+      "output_tokens": 1213,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0005296,
+      "input_tokens": 2409,
+      "output_tokens": 96,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.0006602,
+      "input_tokens": 2377,
+      "output_tokens": 370,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.00020665,
+      "input_tokens": 2408,
+      "output_tokens": 239,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.00022482,
+      "input_tokens": 2375,
+      "output_tokens": 276,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 28.1,
+      "notional_cost_usd": 0.0273278,
+      "input_tokens": 5050,
+      "output_tokens": 1195,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0006135,
+      "input_tokens": 2376,
+      "output_tokens": 277,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.000135,
+      "input_tokens": 2374,
+      "output_tokens": 96,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 74.6,
+      "notional_cost_usd": 0.3566089,
+      "input_tokens": 143133,
+      "output_tokens": 6730,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.1,
+      "notional_cost_usd": 0.064,
+      "input_tokens": 5281,
+      "output_tokens": 1088,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.0663,
+      "input_tokens": 5281,
+      "output_tokens": 1203,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.3,
+      "notional_cost_usd": 0.06882,
+      "input_tokens": 5281,
+      "output_tokens": 1329,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0005008,
+      "input_tokens": 2265,
+      "output_tokens": 96,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0006237,
+      "input_tokens": 2367,
+      "output_tokens": 301,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0006036,
+      "input_tokens": 2459,
+      "output_tokens": 224,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00030009,
+      "input_tokens": 2264,
+      "output_tokens": 428,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.00013543,
+      "input_tokens": 2455,
+      "output_tokens": 96,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46736",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.00026293,
+      "input_tokens": 2367,
+      "output_tokens": 352,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0385
+}
