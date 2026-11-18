@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-18T03:04:14.069351+00:00",
+  "bot_version": "2026-11-17.1",
+  "started_at": "2026-11-18T03:01:22.834142+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46737,
+    "post_id": 46481,
+    "url": "https://www.metaculus.com/questions/46481",
+    "type": "DiscreteQuestion",
+    "unit": "EOs",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How many executive orders will the US president sign during December 2026?",
+    "resolution_criteria": "This question will resolve as the total number of numbered Executive Orders that are officially published in the [Federal Register](https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026) and signed by the US president during December 2026.",
+    "fine_print": "Presidential Memoranda, Presidential Proclamations, Presidential Determinations, Administrative Orders, National Security Presidential Memoranda, and any other presidential documents that are not formally designated as \"Executive Orders\" do not count toward resolution.\n\nOrders that are later revoked still count toward the total.\n\nOrders that are blocked by courts still count toward the total.",
+    "close_time": "2026-11-18 06:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 00:00 UTC"
+  },
+  "research": [
+    "I've finished the research. The main finding is that, as far as the Federal Register shows, Trump has signed no numbered executive orders since October 22, 2026, almost four weeks. That's well below the 2026 average of about 7 a month. Every past December I checked had 3 to 11.\n\n## 1. Resolution source\n- 2026-11-18: A Federal Register API query (EOs signed since 2026-06-01) shows the latest is **EO 14438, \"Decreasing Housing Costs for the American People,\" signed 2026-10-22 and published 2026-10-28**. None are listed with a November 2026 signing date. [FR API](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[signing_date][gte]=2026-06-01&per_page=200&fields[]=executive_order_number&fields[]=signing_date&fields[]=publication_date&fields[]=title&order=newest)\n- 2026-11-18: The White House EO page also shows 14438 (Oct 22) as the newest. [whitehouse.gov](https://www.whitehouse.gov/presidential-actions/executive-orders/)\n- October 2026 count: 4 (Oct 5, 16, 19, 22). Your background list stops at September.\n- Today's Federal Register public inspection file has no presidential documents in it. [FR public inspection](https://www.federalregister.gov/api/v1/public-inspection-documents/current.json)\n\n## 2. Current status\n- Nothing about December can be settled yet. The relevant signal is a lull: no EOs from about Oct 23 to Nov 18.\n- 2026-11-05: Trump signed an order on the Oval Office and Cabinet Room. The White House caption calls it an \"Executive Order,\" but CTV reports it was a **proclamation**, which would not count. [CTV](https://www.ctvnews.ca/world/article/trump-signs-proclamation-he-says-will-prevent-future-changes-to-the-oval-office-and-cabinet-room/), [WH gallery](https://www.whitehouse.gov/gallery/president-donald-j-trump-signs-an-executive-order-designating-the-oval-office-and-cabinet-room-as-national-landmarks/)\n\n## 3. Recent news\n- 2026-11-16: The Supreme Court agreed to hear three immigration cases involving Trump EOs during its 2026-27 term. [CBC](https://www.cbc.ca/news/world/us-scotus-major-immigration-cases-9.7423295)\n- Early November 2026: Democrats won control of Congress in the midterms (CTV coverage of the Nov 5 order). A Democratic Congress could lead to more governing by executive action, or to a quiet lame-duck period. [CTV](https://www.ctvnews.ca/world/article/trump-signs-proclamation-he-says-will-prevent-future-changes-to-the-oval-office-and-cabinet-room/)\n- 2026-11-16: The US and 9 other countries signed the Pax Silica AI supply-chain declaration. This is an AI policy topic that could later lead to an EO. [Telegraph India](https://www.telegraphindia.com/world/india-united-states-join-eight-nations-to-strengthen-artificial-intelligence-supply-chains-amid-china-competition/cid/2189660)\n- I found no reporting that explains the lull or says a batch of orders is being prepared.\n\n## 4. Base rates (December counts, from Federal Register signing dates)\n- December 2017: 4. December 2018: 5. December 2019: 3. December 2020: 11 (lame duck). December 2025: 8. [FR API](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[president]=donald-trump&conditions[signing_date][gte]=2017-12-01&conditions[signing_date][lte]=2020-12-31&per_page=500&fields[]=executive_order_number&fields[]=signing_date&order=newest)\n- December 2025 included two routine year-end orders: EO 14368, \"Adjustments of Certain Rates of Pay\" (Dec 18), and EO 14371, closing federal agencies on Dec 24 and 26 (Dec 18). [FR API](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[signing_date][gte]=2025-11-01&conditions[signing_date][lte]=2026-01-31&per_page=200&fields[]=executive_order_number&fields[]=signing_date&fields[]=title&order=newest)\n  - The annual pay-adjustment EO appeared in late December in 2017, 2018 and 2025, which makes at least 1 December EO likely.\n  - Holiday-closing EOs are discretionary.\n- Monthly pattern in 2026: 10, 8, 10, 4, 5, 6, 2, 7, 11, 4 (Jan to Oct), averaging about 6.7. November so far is 0. The trend since spring is lower and more volatile, with lows of 2 (July) and 0 so far in November.\n- Seasonality: December has been at or above the median month in 2020 and 2025, and lower (3 to 5) in 2017 to 2019. This year is running well below 2025's pace: November 2025 had 7 EOs, November 2026 has 0 so far.\n- The question's range tops out at 10.5. December 2020 (11) would have gone over it.\n\n## 5. Other forecasts\n- Manifold, \"How many EOs in November 2026\": 0-2 at 14%, 3-4 at 18%, 5-6 at 18%, 7-8 at 18%, 9-10 at 18%, 11+ at 14%. This is thinly traded and close to the default spread. [Manifold](https://manifold.markets/Terminator2/how-many-executive-orders-will-trum-Qut9UpS9O2)\n- Kalshi weekly EO markets for Nov 1-7 and Nov 8-14, 2026: \"Above 0\" at 1%. This is consistent with zero EOs in those weeks; they look settled at No.\n- Kalshi, second-term total: the most likely bucket is 400-449 (25%), then 350-399 (20%). The current count is about 213 (14438 minus 14147 plus 1, roughly 292 across both years).\n  - Correction: the second-term total so far is about 292 EOs (14148 to 14438 plus 14147). Getting to 400 by January 2029 needs about 4.5 a month.\n- Polymarket, \"Trump issues AI Restrictions EO by Dec 31\": 13%. By Nov 30: 0.7%.\n- I found no Kalshi or Polymarket market on December 2026 EO counts specifically.\n\n## 6. Upcoming events before resolution\n- Mid to late December: the annual federal pay-rate adjustment EO is expected, as in 2017, 2018 and 2025. A possible Christmas Eve or Dec 26 closure EO could also come.\n- The lame-duck Congress and government funding deadlines could trigger EOs. A new Democratic Congress takes office Jan 3, 2027, after resolution.\n- Possible AI EO (Polymarket gives 13% by Dec 31), plus tariff or sanctions follow-ups.\n- Federal Register publication lag is about 3 to 6 days. EOs signed in late December may not be published until early January, which matters for when the question can resolve.\n- Weather is not relevant.\n\nSources: [Federal Register API](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[signing_date][gte]=2026-06-01&per_page=200&fields[]=executive_order_number&fields[]=signing_date&fields[]=publication_date&fields[]=title&order=newest), [White House EOs](https://www.whitehouse.gov/presidential-actions/executive-orders/), [CTV](https://www.ctvnews.ca/world/article/trump-signs-proclamation-he-says-will-prevent-future-changes-to-the-oval-office-and-cabinet-room/), [WH gallery](https://www.whitehouse.gov/gallery/president-donald-j-trump-signs-an-executive-order-designating-the-oval-office-and-cabinet-room-as-national-landmarks/), [UPI photo](https://www.upi.com/News_Photos/view/upi/453c1a1211271f252f0cb6883da6140c/President-Donald-Trump-sign-an-Executive-Order-in-the-Oval-Office/), [CBC](https://www.cbc.ca/news/world/us-scotus-major-immigration-cases-9.7423295), [Manifold](https://manifold.markets/Terminator2/how-many-executive-orders-will-trum-Qut9UpS9O2), [LBC](https://www.lbc.co.uk/article/executive-orders-us-donald-trump-congress-5Hjdm5D_2/), [Telegraph India](https://www.telegraphindia.com/world/india-united-states-join-eight-nations-to-strengthen-artificial-intelligence-supply-chains-amid-china-competition/cid/2189660)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 03:01 UTC; check each market really matches the question)\n- Kalshi: 2028 U.S. Presidential Election winner? (In 2028). Yes prices: Jon Ossoff: 0.17; J.D. Vance: 0.14; Alexandria Ocasio-Cortez: 0.09; Gavin Newsom: 0.08; Marco Rubio: 0.08; Ron DeSantis: 0.05; Kamala Harris: 0.03; Andy Beshear: 0.02; Josh Shapiro: 0.02; Mark Kelly: 0.02.\n- Kalshi: Will Trump sign an executive order this week (12/28-1/3)? (Dec 28, 2025 to Jan 3, 2026). Yes prices: Above 0: 0.1000.\n- Kalshi: How many executive orders will Trump sign in his second term? (Trump's second term). Yes prices: Between 400 and 449: 0.25; Between 350 and 399: 0.20; Between 450 and 499: 0.17; Between 500 and 549: 0.12; Between 550 and 599: 0.05; Below 300: 0.04; Between 600 and 649: 0.01; Above 800: 0.01; Between 650 and 699: 0.0160; Between 300 and 349: 0.0200.\n- Kalshi: How many bills will President Trump sign in May 2026? (In May 2026). Yes prices: 8: 0.9900; 7: 0.0100; 3: 0.0100; 2: 0.0300; 6: 0.0100; 5: 0.0100; 0: 0.0100; 1: 0.0400; 10 or above: 0.0100; 9: 0.9500.\n- Kalshi: Will the Supreme Court rehear Trump’s birthright case this year? (Before Jan 1, 2027). Yes prices: Yes: 0.0100.\n- Kalshi: How many Executive Orders will Trump sign this week? (11/8 - 11/14) (Nov 8, 2026 to Nov 14, 2026). Yes prices: Above 0: 0.0100; Above 1: 0.0100; Above 2: 0.0100; Above 3: 0.0100; Above 4: 0.0100.\n- Kalshi: How many Executive Orders will Trump sign this week? (11/1 - 11/7) (Nov 1, 2026 to Nov 7, 2026). Yes prices: Above 0: 0.0100; Above 1: 0.0100; Above 2: 0.0100; Above 3: 0.0100; Above 4: 0.0100.\n- Polymarket: Will the next elected US president be a woman? (ends 2028-11-08). [Yes, No] prices: Will the next elected US president be a woman?: [\"0.125\", \"0.875\"]\n- Polymarket: Next US president's age at inauguration? (ends 2029-01-21). [Yes, No] prices: 50+: [\"0.26\", \"0.74\"]; 60+: [\"0.17\", \"0.83\"]; 70+: [\"0.045\", \"0.955\"]; 80+: [\"0.0385\", \"0.9615\"]; 40+: [\"0.91\", \"0.09\"]; 45+: [\"0.49\", \"0.51\"]\n- Polymarket: Trump issues AI Restrictions Executive Order by...? (ends 2027-01-01). [Yes, No] prices: September 30: [\"0\", \"1\"]; October 31: [\"0\", \"1\"]; December 31: [\"0.13\", \"0.87\"]; November 30: [\"0.007\", \"0.993\"]\n- Polymarket: 2028 Presidential Election: Minnesota Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.845\", \"0.155\"]; Republican Party: [\"0.13\", \"0.87\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: 2028 Presidential Election: Pennsylvania Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.64\", \"0.36\"]; Republican Party: [\"0.325\", \"0.675\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: 2028 Presidential Election: Tennessee Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.095\", \"0.905\"]; Republican Party: [\"0.865\", \"0.135\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Manifold: How many executive orders will Trump sign in November 2026? (Federal Register count) (MULTIPLE_CHOICE) https://manifold.markets/Terminator2/how-many-executive-orders-will-trum-Qut9UpS9O2\n- Manifold: Will there be any significant legislation or executive orders cancelling vote-by-mail in the 2026 federal elections? (18%) https://manifold.markets/LittleBunnyvzsw/will-there-be-any-significant-legis",
+    "The question will be decided by the Federal Register, which shows no EOs signed since Oct 22, 2026, so November is at 0 so far. December has recurring year-end orders: in 2025 it had 8, including a pay-rate adjustment and a holiday closing order.\n\n## 1. Resolution source\n- 2026-11-18: I pulled the Federal Register API's list of 2026 Trump EOs. The newest is **EO 14438, \"Decreasing Housing Costs for the American People\", signed 2026-10-22**. October 2026 has 4 published EOs (14435 to 14438, signed Oct 5, 16, 19 and 22). None has a November signing date. [FR API](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[president]=donald-trump&conditions[signing_date][gte]=2026-06-01&fields[]=executive_order_number&fields[]=signing_date&fields[]=title&per_page=200&order=newest)\n- 2026-11-18: The White House EO page agrees: its newest EO is dated October 22, 2026. [WH](https://www.whitehouse.gov/presidential-actions/executive-orders/)\n- 2026-11-18: The Federal Register's public inspection list has no presidential documents waiting to be published. [FR PI](https://www.federalregister.gov/api/v1/public-inspection-documents/current.csv)\n\n## 2. Current status\n- Nothing settles the December count yet. The trend is a sharp slowdown: 11 EOs in September, 4 in October, and **0 in November so far** (through Nov 18).\n- 2026-11-05: Trump signed a document making the Oval Office and Cabinet Room national landmarks. UPI and ArtDependence called it an \"executive order\", but AP/CTV says it was a **proclamation**, and it does not appear in the FR EO list. It would not count. [CTV](https://www.ctvnews.ca/world/article/trump-signs-proclamation-he-says-will-prevent-future-changes-to-the-oval-office-and-cabinet-room/), [UPI](https://www.upi.com/News_Photos/view/upi/453c1a1211271f252f0cb6883da6140c/President-Donald-Trump-sign-an-Executive-Order-in-the-Oval-Office/)\n\n## 3. Recent news (newest first)\n- 2026-11-16: CBP is enforcing EO 14411 (customs, June 3). This is an older order, not a new one. [JD Supra](https://www.jdsupra.com/legalnews/89-november-16-2026-increased-customs-6290443/)\n- 2026-11-16: The Supreme Court will hear immigration cases about Trump EOs. This could prompt new EOs but none has been reported. [CBC](https://www.cbc.ca/news/world/us-scotus-major-immigration-cases-9.7423295)\n- Early Nov 2026: AP reports that Democrats won control of Congress in the midterms. Since then, no EOs have been signed. [CTV](https://www.ctvnews.ca/world/article/trump-signs-proclamation-he-says-will-prevent-future-changes-to-the-oval-office-and-cabinet-room/)\n- 2026-10-22: The last EO signed (14438, housing costs). [FR API](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[president]=donald-trump&conditions[signing_date][gte]=2026-06-01&fields[]=executive_order_number&fields[]=signing_date&fields[]=title&per_page=200&order=newest)\n\n## 4. Base rates\n- **Monthly counts for 2026:** Jan 10, Feb 8, Mar 10, Apr 4, May 5, Jun 6, Jul 2, Aug 7, Sep 11, Oct 4, Nov 0 so far. The January to October average is about 6.7. The median since April is about 5.\n- **Seasonal pattern:** December counts from FR signing dates were:\n  - 2017: 4\n  - 2018: 5\n  - 2019: 3\n  - 2020: 11 (lame-duck period)\n  - 2025: 8 (14364 to 14371)\n\n  The average is about 6.2. [FR API, first term](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[president]=donald-trump&conditions[signing_date][lte]=2021-01-20&fields[]=executive_order_number&fields[]=signing_date&per_page=1000&order=newest), [FR API, 2025](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[president]=donald-trump&conditions[signing_date][gte]=2025-11-01&conditions[signing_date][lte]=2026-01-31&fields[]=executive_order_number&fields[]=signing_date&fields[]=title&per_page=200&order=newest)\n- **Orders that recur in late December:**\n  - \"Adjustments of Certain Rates of Pay\" (EO 14368, signed 2025-12-18). This is issued every year and is very likely in December 2026.\n  - An order closing federal agencies around Christmas (EO 14371, 2025-12-18). In 2026, Dec 24 falls on a Thursday, so a similar order is plausible.\n\n  Together these give a floor of roughly 1 to 2.\n- **Compared with past years:** November to December 2025 went from 7 to 8. This year is far below that, with 0 in November so far against 7 last November.\n\n## 5. Other forecasts\n- 2026-11-18: Kalshi's weekly EO markets for Nov 1-7 and Nov 8-14 price \"Above 0\" at 0.01, which points to zero EOs in those weeks. I found no Kalshi or Polymarket market specifically for December 2026.\n- Kalshi, whole second term: the most likely bucket is 400-449 at 25%, then 350-399 at 20%.\n- Polymarket, \"AI Restrictions EO by December 31\": 13%. This is one specific EO that might be signed in December.\n- Manifold, November 2026 count (data pulled Nov 4, thin market): roughly flat at 14-18% across buckets, now probably stale. [Manifold](https://manifold.markets/Terminator2/how-many-executive-orders-will-trum-Qut9UpS9O2)\n\n## 6. Upcoming events before resolution\n- Mid to late December: the yearly pay-rate EO, and possibly a Christmas Eve closing EO.\n- The Supreme Court immigration cases, the Polymarket-watched AI EO, and any policy push after the midterms could each produce EOs.\n- One timing risk: orders signed Dec 29-31 might not be published in the Federal Register by Jan 1. They should still count by signing date once published, but if the question resolves exactly on Jan 1 they may not have appeared yet.\n- I found no reports of a queue of EOs waiting to be signed.\n\nSources: [FR API 2026](https://www.federalregister.gov/api/v1/documents.csv?conditions[presidential_document_type]=executive_order&conditions[president]=donald-trump&conditions[signing_date][gte]=2026-06-01&fields[]=executive_order_number&fields[]=signing_date&fields[]=title&per_page=200&order=newest), [White House EOs](https://www.whitehouse.gov/presidential-actions/executive-orders/), [CTV](https://www.ctvnews.ca/world/article/trump-signs-proclamation-he-says-will-prevent-future-changes-to-the-oval-office-and-cabinet-room/), [UPI](https://www.upi.com/News_Photos/view/upi/453c1a1211271f252f0cb6883da6140c/President-Donald-Trump-sign-an-Executive-Order-in-the-Oval-Office/), [Manifold](https://manifold.markets/Terminator2/how-many-executive-orders-will-trum-Qut9UpS9O2), [CBC](https://www.cbc.ca/news/world/us-scotus-major-immigration-cases-9.7423295), [JD Supra](https://www.jdsupra.com/legalnews/89-november-16-2026-increased-customs-6290443/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 03:01 UTC; check each market really matches the question)\n- Kalshi: 2028 U.S. Presidential Election winner? (In 2028). Yes prices: Jon Ossoff: 0.17; J.D. Vance: 0.14; Alexandria Ocasio-Cortez: 0.09; Gavin Newsom: 0.08; Marco Rubio: 0.08; Ron DeSantis: 0.05; Kamala Harris: 0.03; Andy Beshear: 0.02; Josh Shapiro: 0.02; Mark Kelly: 0.02.\n- Kalshi: Will Trump sign an executive order this week (12/28-1/3)? (Dec 28, 2025 to Jan 3, 2026). Yes prices: Above 0: 0.1000.\n- Kalshi: How many executive orders will Trump sign in his second term? (Trump's second term). Yes prices: Between 400 and 449: 0.25; Between 350 and 399: 0.20; Between 450 and 499: 0.17; Between 500 and 549: 0.12; Between 550 and 599: 0.05; Below 300: 0.04; Between 600 and 649: 0.01; Above 800: 0.01; Between 650 and 699: 0.0160; Between 300 and 349: 0.0200.\n- Kalshi: How many bills will President Trump sign in May 2026? (In May 2026). Yes prices: 8: 0.9900; 7: 0.0100; 3: 0.0100; 2: 0.0300; 6: 0.0100; 5: 0.0100; 0: 0.0100; 1: 0.0400; 10 or above: 0.0100; 9: 0.9500.\n- Kalshi: Will the Supreme Court rehear Trump’s birthright case this year? (Before Jan 1, 2027). Yes prices: Yes: 0.0100.\n- Kalshi: How many Executive Orders will Trump sign this week? (11/8 - 11/14) (Nov 8, 2026 to Nov 14, 2026). Yes prices: Above 0: 0.0100; Above 1: 0.0100; Above 2: 0.0100; Above 3: 0.0100; Above 4: 0.0100.\n- Kalshi: How many Executive Orders will Trump sign this week? (11/1 - 11/7) (Nov 1, 2026 to Nov 7, 2026). Yes prices: Above 0: 0.0100; Above 1: 0.0100; Above 2: 0.0100; Above 3: 0.0100; Above 4: 0.0100.\n- Polymarket: Will the next elected US president be a woman? (ends 2028-11-08). [Yes, No] prices: Will the next elected US president be a woman?: [\"0.125\", \"0.875\"]\n- Polymarket: Next US president's age at inauguration? (ends 2029-01-21). [Yes, No] prices: 50+: [\"0.26\", \"0.74\"]; 60+: [\"0.17\", \"0.83\"]; 70+: [\"0.045\", \"0.955\"]; 80+: [\"0.0385\", \"0.9615\"]; 40+: [\"0.91\", \"0.09\"]; 45+: [\"0.49\", \"0.51\"]\n- Polymarket: Trump issues AI Restrictions Executive Order by...? (ends 2027-01-01). [Yes, No] prices: September 30: [\"0\", \"1\"]; October 31: [\"0\", \"1\"]; December 31: [\"0.13\", \"0.87\"]; November 30: [\"0.007\", \"0.993\"]\n- Polymarket: 2028 Presidential Election: Minnesota Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.845\", \"0.155\"]; Republican Party: [\"0.13\", \"0.87\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: 2028 Presidential Election: Pennsylvania Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.64\", \"0.36\"]; Republican Party: [\"0.325\", \"0.675\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Polymarket: 2028 Presidential Election: Tennessee Winner (ends 2028-11-08). [Yes, No] prices: Democratic Party: [\"0.095\", \"0.905\"]; Republican Party: [\"0.865\", \"0.135\"]; Person A: [\"0.5\", \"0.5\"]; Person B: [\"0.5\", \"0.5\"]; Person C: [\"0.5\", \"0.5\"]; Person D: [\"0.5\", \"0.5\"]\n- Manifold: How many executive orders will Trump sign in November 2026? (Federal Register count) (MULTIPLE_CHOICE) https://manifold.markets/Terminator2/how-many-executive-orders-will-trum-Qut9UpS9O2\n- Manifold: Will there be any significant legislation or executive orders cancelling vote-by-mail in the 2026 federal elections? (18%) https://manifold.markets/LittleBunnyvzsw/will-there-be-any-significant-legis"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 1.9,
+        "p50": 3.3,
+        "p75": 5.4,
+        "p90": 7.7
+      },
+      "reasoning": "(a) **Time left:** December 2026 begins in about 2 weeks. The full count will be known in early January 2027, after Federal Register publication of late-December orders.\n\n(b) **Latest known value:** The newest EO in the Federal Register is EO 14438, signed 2026-10-22. As of 2026-11-18 there are no EOs with a November signing date. October had 4.\n\n(c) **If nothing changed:** The lull would continue and December would have 0. However, the annual pay-adjustment EO has appeared in late December every year checked (2017, 2018, 2019, 2020 and 2025). So \"nothing changed\" realistically means about 1.\n\n(d) **If the current trend continued:** The trend since spring is lower and volatile: 4, 5, 6, 2, 7, 11, 4, then 0 so far in November. That points to about 2 to 4 in December, including the routine pay order and possibly a holiday-closure order.\n\n(e) **Historical variation:** Past December counts were 4, 5, 3, 11 and 8. The 2026 monthly counts ranged from 2 to 11, and the current month-to-date is 0. The spread is wide.\n\n(f) **Experts and markets:** There is no market on December counts.\n- The Kalshi second-term total market (mode 400 to 449, against about 292 so far) implies roughly 4 to 5 per month on average.\n- The Manifold November market is near its default spread and not informative.\n- Kalshi weekly markets confirm zero EOs in early November.\n\n(g) **Unexpected scenarios:**\n- **Low:** The lull persists through the holidays, perhaps because of the president's health, a strategic pause after the midterms, or a shift to proclamations and memoranda. The pay adjustment could come by another vehicle or slip to January, giving 0.\n- **High:** Facing a Democratic Congress arriving January 3, the administration rushes a batch of executive actions in the lame-duck period, on AI, tariffs, immigration and the funding fight. Together with the pay and closure orders, that could give 10 to 15, as in December 2020 (11).\n\nPercentile 1: 0\nPercentile 5: 0.8\nPercentile 10: 1\nPercentile 20: 1.6\nPercentile 30: 2.2\nPercentile 40: 2.8\nPercentile 50: 3.3\nPercentile 60: 4\nPercentile 70: 4.8\nPercentile 80: 6\nPercentile 90: 7.7\nPercentile 95: 9.5\nPercentile 99: 13"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 2.5,
+        "p50": 4.0,
+        "p75": 6.0,
+        "p90": 8.0
+      },
+      "reasoning": "(a) **Time left:** About 6 weeks. December runs from Dec 1 to 31, and resolution is around Jan 1, 2027. EOs signed in late December may not be published in the Federal Register until early January.\n\n(b) **Latest known value:** EO 14438, signed 2026-10-22, is the most recent one (checked 2026-11-18). No numbered EOs have been signed since then, so November is at 0 so far. October had 4.\n\n(c) **If nothing changed:** The lull would continue and December would have 0. However, the annual \"Adjustments of Certain Rates of Pay\" EO is nearly routine in late December, so 1 is a more realistic \"nothing changes\" outcome.\n\n(d) **If the trend continued:** The 2026 average is about 6.7 a month, but the trend since spring is lower and more volatile: 4, 5, 6, 2, 7, 11, 4, then 0 so far in November. Extrapolating the recent trend gives about 2 to 5.\n\n(e) **Historical variation:** Past Decembers had 4, 5, 3, 11 and 8 EOs (2017, 2018, 2019, 2020, 2025). Monthly counts in 2026 ranged from 0 to 11. The month-to-month swings are large.\n\n(f) **Experts and markets:** No market covers December specifically. Kalshi weekly markets confirm zero EOs in early November. The Kalshi second-term total market implies roughly 4 to 5 a month going forward. Polymarket gives a possible AI EO by Dec 31 a 13% chance.\n\n(g) **Unexpected scenarios:**\n- Low: The lull continues, perhaps for health or political reasons or because the White House relies on proclamations and memoranda instead. The pay adjustment is handled differently or slips into January, giving 0.\n- High: After the midterm loss, the White House governs by executive action in a lame-duck burst, adding tariff, AI and immigration orders plus holiday-closing and pay EOs, giving 10 to 14 (as in December 2020, which had 11).\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 1\nPercentile 20: 2\nPercentile 30: 3\nPercentile 40: 3\nPercentile 50: 4\nPercentile 60: 5\nPercentile 70: 5\nPercentile 80: 7\nPercentile 90: 8\nPercentile 95: 10\nPercentile 99: 14"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 2.3,
+        "p50": 4.0,
+        "p75": 6.3,
+        "p90": 9.0
+      },
+      "reasoning": "(a) **Time left:** December 2026 begins in about 2 weeks and ends in about 6 weeks. EOs signed late in December may not appear in the Federal Register until early January 2027.\n\n(b) **Latest known value:** EO 14438, signed 2026-10-22, is the newest. No numbered EOs have been signed from Oct 23 through Nov 18, 2026. October had 4.\n\n(c) **If nothing changed:** The lull would continue and December would have 0 EOs. However, the routine pay-rate adjustment EO is usually signed in late December, so in practice the floor is likely 1.\n\n(d) **If the current trend continued:** The 2026 trend is declining and volatile: 10, 8, 10, 4, 5, 6, 2, 7, 11, 4, then 0 so far in November. Continuing it suggests roughly 2 to 4 in December, including the year-end administrative orders.\n\n(e) **Historical variation:** Trump's past Decembers had 4, 5, 3, 11 and 8 EOs. 2026 months have ranged from 2 to 11, and now possibly 0. Month-to-month swings of 5 or more are common.\n\n(f) **Experts and markets:** There is no market on December 2026 itself. Kalshi weekly markets confirmed zero EOs in early November. The Kalshi second-term total market implies about 4 to 5 EOs a month on average from here. Polymarket gives an AI EO by Dec 31 a 13% chance.\n\n(g) **Unexpected scenarios:**\n- Low: The unexplained lull continues because of health issues, a political crisis or a deliberate shift toward proclamations and memoranda, and the pay adjustment is skipped or done another way. Result: 0.\n- High: After losing Congress in the midterms, Trump pushes a burst of lame-duck executive actions on AI, tariffs and immigration, like December 2020's 11, plus the pay and holiday-closure orders. Result: 12 to 15.\n\n**Weighing:** I put about an 85% chance on at least one administrative EO (pay adjustment, possibly holiday closures). The 4-week lull pulls my median below the 2026 average, while the end-of-term activity seen in December 2020 widens the upper tail.\n\nPercentile 1: 0\nPercentile 5: 0.6\nPercentile 10: 1\nPercentile 20: 2\nPercentile 30: 2.6\nPercentile 40: 3.2\nPercentile 50: 4\nPercentile 60: 4.7\nPercentile 70: 5.6\nPercentile 80: 7\nPercentile 90: 9\nPercentile 95: 10.5\nPercentile 99: 14"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 3.0,
+        "p75": 4.5,
+        "p90": 7.0
+      },
+      "reasoning": "(a) **Time left:** About 6 weeks. December 2026 starts in about 2 weeks, and resolution is around January 1, 2027.\n\n(b) **Latest known value:** EO 14438, signed October 22, 2026, is the most recent EO in the Federal Register. November 2026 has 0 EOs as of November 18. December 2026 has nothing yet, since the month has not started.\n\n(c) **If nothing changed:** At the current pace of zero EOs, December would come out at 0. That is unlikely, though, because the annual pay-rate adjustment EO is almost certain to be signed in late December.\n\n(d) **If the current trend continued:** The slowdown runs 11 (September), then 4 (October), then 0 so far in November. Projecting that forward gives about 1 to 3 in December, mostly year-end routine orders: the pay-rate EO and possibly a Christmas Eve closure order.\n\n(e) **Historical variation:** Past December counts were 4, 5, 3, 11 and 8, averaging about 6. In 2026, monthly counts have ranged from 2 to 11, with a median of about 5 since April. Month-to-month swings of plus or minus 4 are common.\n\n(f) **Experts and markets:** There is no December market. Kalshi's November weekly markets priced essentially zero EOs, which confirms the lull. Polymarket gives a specific AI EO by December 31 a 13% chance. Kalshi's whole-term market of 400 or more EOs implies a higher average pace than the recent lull.\n\n(g) **Scenarios:**\n- **Low:** The post-midterm disengagement continues and the president relies on proclamations and memoranda. Only the pay-rate EO is signed, or even that is delayed into January. Result: 0 to 1.\n- **High:** After the Democratic midterm wins, the White House shifts to a burst of executive action before the new Congress is seated in January, similar to the 11 EOs in the December 2020 lame-duck period. Combined with the routine year-end orders, that gives 8 to 12.\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 1\nPercentile 20: 2\nPercentile 30: 2\nPercentile 40: 3\nPercentile 50: 3\nPercentile 60: 4\nPercentile 70: 4\nPercentile 80: 5\nPercentile 90: 7\nPercentile 95: 8\nPercentile 99: 12"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 1.8,
+        "p50": 3.0,
+        "p75": 4.9,
+        "p90": 7.5
+      },
+      "reasoning": "(a) About 6 weeks remain until the question resolves around 2027-01-01. December itself has not started yet.\n\n(b) The latest known value from the resolution source is EO 14438, signed 2026-10-22, the newest EO in the Federal Register as of 2026-11-18. There have been 0 EOs in November so far, and nothing is pending on public inspection.\n\n(c) If nothing changed and the current drought continued exactly, December would have 0 EOs. That is unlikely, because the annual pay-rate EO is almost always signed in December.\n\n(d) If the current trend continued, the decline (Sep 11, Oct 4, Nov 0 so far) suggests a low December. It would mainly be the recurring year-end orders: the pay-rate adjustment and a likely Christmas Eve closure order (Dec 24 is a Thursday). That gives about 2 to 3 EOs.\n\n(e) Historical variation:\n- Past Decembers under Trump were 4, 5, 3, 11 and 8.\n- Monthly counts in 2026 ranged from 2 to 11.\n- Month-to-month swings of 4 to 6 EOs are common.\n\n(f) Expectations of experts and markets:\n- There is no December-specific market.\n- Kalshi weekly markets priced November weeks at about 0.\n- Polymarket gives an AI Restrictions EO by Dec 31 13%.\n- The whole-term Kalshi market implies a continued pace of a few EOs per month on average.\n\n(g) Unexpected scenarios:\n- **Low:** The administration's apparent pause, for health, strategic or post-midterm reasons, continues. Even the pay-rate adjustment slips to early January or is done by another instrument, giving 0.\n- **High:** After the midterm loss to Democrats, Trump turns to an executive-action blitz before the new Congress is seated, as in the December 2020 lame duck, which had 11. That plus the year-end routine orders could give 10 to 14.\n\nPercentile 1: 0\nPercentile 5: 0.6\nPercentile 10: 1\nPercentile 20: 1.6\nPercentile 30: 2\nPercentile 40: 2.6\nPercentile 50: 3\nPercentile 60: 3.6\nPercentile 70: 4.3\nPercentile 80: 5.5\nPercentile 90: 7.5\nPercentile 95: 9.5\nPercentile 99: 13"
+    },
+    {
+      "value": {
+        "p10": 1.0,
+        "p25": 2.0,
+        "p50": 3.0,
+        "p75": 5.5,
+        "p90": 8.0
+      },
+      "reasoning": "(a) About 6 weeks remain. December runs Dec 1-31, 2026, and resolution is around Jan 1, 2027. Orders signed Dec 29-31 might not be published in the Federal Register by then.\n\n(b) The latest Federal Register EO is EO 14438, signed 2026-10-22. October had 4 EOs, and November has 0 through Nov 18. Nothing for December can be known yet.\n\n(c) If nothing changed and no EOs were signed, the outcome would be 0. That is unlikely, because the annual pay-rate adjustment order is nearly certain.\n\n(d) The trend runs from 11 in September to 4 in October to 0 so far in November. Continuing that trend implies a low December, roughly 1 to 3, made up mostly of recurring year-end orders: the pay-rate order and a likely Christmas Eve closing order, since Dec 24 falls on a Thursday.\n\n(e) Past December counts:\n- 2017: 4\n- 2018: 5\n- 2019: 3\n- 2020: 11\n- 2025: 8\n\nMonthly counts in 2026 ranged from 2 to 11. Month-to-month swings of 5 or more are common.\n\n(f) There is no market on December specifically. Kalshi weekly markets price November weeks at about 0. Polymarket gives an AI restrictions EO by Dec 31 a 13% chance. The second-term total markets imply a continued pace of a few EOs per month on average.\n\n(g) Low scenario: the post-midterm lull deepens, possibly because of health or political turmoil. Only the pay-rate EO is signed, or it slips to a late-December signing that is not published in time, giving 0 to 1. High scenario: a push after the midterms to act unilaterally against a Democratic Congress, or responses to Supreme Court rulings, AI or tariff actions, produces a burst of 10 or more, like September's 11 or December 2020's 11.\n\nPercentile 1: 0\nPercentile 5: 1\nPercentile 10: 1\nPercentile 20: 2\nPercentile 30: 2\nPercentile 40: 3\nPercentile 50: 3\nPercentile 60: 4\nPercentile 70: 5\nPercentile 80: 6\nPercentile 90: 8\nPercentile 95: 10\nPercentile 99: 14"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 1.0716,
+    "p25": 2.0024,
+    "p50": 3.3034,
+    "p75": 5.4864,
+    "p90": 8.0738
+  },
+  "usage": [
+    {
+      "question_id": "46737",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 6.639999999999999e-05,
+      "input_tokens": 489,
+      "output_tokens": 35,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.9,
+      "notional_cost_usd": 0.0001728,
+      "input_tokens": 845,
+      "output_tokens": 8,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 69.4,
+      "notional_cost_usd": 0.3004453,
+      "input_tokens": 107697,
+      "output_tokens": 5337,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.4,
+      "notional_cost_usd": 0.074216,
+      "input_tokens": 6528,
+      "output_tokens": 1100,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.3,
+      "notional_cost_usd": 0.076372,
+      "input_tokens": 6530,
+      "output_tokens": 1207,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.0006597,
+      "input_tokens": 2707,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.0006731,
+      "input_tokens": 2734,
+      "output_tokens": 253,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00020923,
+      "input_tokens": 2709,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.6,
+      "notional_cost_usd": 0.0266078,
+      "input_tokens": 6528,
+      "output_tokens": 1145,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.3,
+      "notional_cost_usd": 0.00021728000000000003,
+      "input_tokens": 2733,
+      "output_tokens": 253,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0006812999999999999,
+      "input_tokens": 2785,
+      "output_tokens": 249,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.00036049,
+      "input_tokens": 2785,
+      "output_tokens": 538,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 59.4,
+      "notional_cost_usd": 0.19599069999999996,
+      "input_tokens": 88334,
+      "output_tokens": 4563,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.8,
+      "notional_cost_usd": 0.07252,
+      "input_tokens": 6236,
+      "output_tokens": 1132,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.2,
+      "notional_cost_usd": 0.07233200000000001,
+      "input_tokens": 6235,
+      "output_tokens": 1123,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.074984,
+      "input_tokens": 6234,
+      "output_tokens": 1256,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.0006509,
+      "input_tokens": 2663,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.0006649,
+      "input_tokens": 2693,
+      "output_tokens": 253,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0007749,
+      "input_tokens": 2703,
+      "output_tokens": 469,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00020837999999999998,
+      "input_tokens": 2662,
+      "output_tokens": 237,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00021648000000000001,
+      "input_tokens": 2691,
+      "output_tokens": 253,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46737",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00024698,
+      "input_tokens": 2703,
+      "output_tokens": 313,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.8993
+}
