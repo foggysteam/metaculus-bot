@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-18T09:06:45.736542+00:00",
+  "bot_version": "2026-11-17.1",
+  "started_at": "2026-11-18T09:03:28.872560+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46739,
+    "post_id": 46483,
+    "url": "https://www.metaculus.com/questions/46483",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "Will Donald Trump's approval rating reach a new low in the second half of December 2026?",
+    "resolution_criteria": "This question resolves as **Yes** if Donald Trump's approval rating after December 15, 2026 and before January 1, 2027 reaches an approval level strictly lower than any Trump second presidential term level before that time period, according to Nate Silver's [Do Americans approve or disapprove of Donald Trump?](https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin) tracker.\n\nFor example, on July 22, 2026, the lowest approval rating according to the resolution source was 38.29062, reported for May 21, 2026. Thus, a question asked on July 22, 2026 would require Trump's approval rating to be below that level in order to resolve as Yes.",
+    "fine_print": "Between the value shown in the chart and the csv file under the chart (\"Get the data\"), the csv file takes precedence. See the \"approve\" column in the csv. The question resolves based on the values shown when checked by Metaculus on or after the resolution date and will not be re-resolved in case of a later update to the resolution source.",
+    "close_time": "2026-11-18 12:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 00:00 UTC"
+  },
+  "research": [
+    "# Trump approval: will the Silver Bulletin tracker hit a new low between Dec 16 and Dec 31, 2026?\n\n**Short answer:** Nothing has settled this yet. The record to beat is **36.25311 (Oct 21, 2026)**. The latest reading is **37.16927 (Nov 17)**, so approval needs to fall about another 0.92 points, on some day from Dec 16 to Dec 31.\n\n## 1. Resolution source\n- The tracker page embeds Datawrapper chart kSCt4. Its latest version (8787) has this CSV: [dataset.csv](https://datawrapper.dwcdn.net/kSCt4/8787/dataset.csv). Columns are modeldate, approve, disapprove, plus lo/hi bands.\n- 2026-11-17: approve **37.16927**, disapprove 59.8534. This is the latest row. [CSV](https://datawrapper.dwcdn.net/kSCt4/8787/dataset.csv)\n- **Second-term low so far: 36.25311 on 2026-10-21.** The only other values starting with 36 are 36.46 (Oct 22), 36.88 to 36.89 (Oct 23 to 25) and 36.64 (Oct 9 to 10). [CSV](https://datawrapper.dwcdn.net/kSCt4/8787/dataset.csv)\n- The May 21 value of 38.29062 cited in the question still matches the CSV, so past rows do not seem to have been revised.\n- 2026-11-17: the page text says \"Today, 37 percent of Americans approve... 60 percent disapprove\", with strong approval at 18.9%. [Silver Bulletin](https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin)\n\n## 2. Current status\n- Not settled. A Yes needs a daily value **below 36.25311** dated Dec 16 to Dec 31, about 0.92 points under the Nov 17 level.\n\n## 3. Recent news (newest first)\n- 2026-11-16/17: Reuters/Ipsos (Nov 13 to 16, n=1,521) has approval at 32% and disapproval at 66%. That is the fourth straight reading of about 32%, after the series low of 31% in mid-October. The poll ties the low numbers to the Iran war and fuel prices. [Democrat & Chronicle](https://eu.democratandchronicle.com/story/news/2026/11/17/donald-trump-approval-rating-latest-polls/92824140007/), [GV Wire](https://gvwire.com/2026/11/16/trump-approval-holds-near-career-low-at-32-reuters-ipsos-poll-finds/)\n- 2026-11-16: Economist/YouGov (Nov 9 to 11) has 32/63, a record low for that series. [HNGN](https://www.hngn.com/articles/273849/20261116/trump-hits-record-low-32-yougov-averages-sit-higher.htm)\n- Early November: Emerson (Nov 3 to 4) has approval at 41%, down from 45%. Pollsters disagree widely. [search summary](https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719)\n- 2026-11-03: Democrats won both chambers in the midterms. They take control on Jan 3. [Democrat & Chronicle](https://eu.democratandchronicle.com/story/news/2026/11/17/donald-trump-approval-rating-latest-polls/92824140007/)\n- 2026-10-21: the average hit its new low of about 36%. [political.org](https://political.org/2026/10/21/trump-approval-hits-new-low-at-36-two-weeks-before-midterms-polls-show/)\n\n## 4. Base rates and variation (from the CSV)\n- The trend is down. The average was about 41 to 42 in Jan to Mar 2026, about 39 in Apr to Jul, about 38.2 in Aug, and about 37 to 37.5 from late September on.\n- New lows were set in May, Aug, Sep, Oct 9 and Oct 21. That is roughly one new low every one to two months over the past six months.\n- Monthly swings run about 1 to 2 points:\n  - Sep 18 to Oct 21: 38.49 down to 36.25 (−2.2).\n  - Oct 21 to Nov 2: up to 38.35 (+2.1), including a one-day jump of +1.1 on Nov 2.\n  - Nov 2 to Nov 17: back down to 37.17.\n- Values stay flat on weekends and other days with few polls. Holiday polling in late December is usually sparse, which could keep the line flat.\n- Since Oct 21 the series has not gone below 36.46.\n\n## 5. Other forecasts\n- I could not confirm which approval source the Kalshi markets resolve on, and their prices may not match the Silver Bulletin series.\n- **Kalshi, \"How low before 2027?\" (Dec 2025 to Dec 2026):**\n  - Below 36%: 0.57\n  - Below 35.5%: 0.40\n  - Below 35%: 0.21\n  - Below 34%: 0.12\n- **Kalshi, \"How low during his term?\" (to Jan 2029):** below 36%: 0.94.\n- **Kalshi, VoteHub approval on Nov 20:** the most likely band is 37.5 to 37.7 (0.36), and below 37.5 is 0.25.\n- **Polymarket, \"How low in 2026?\":** 37% has resolved Yes. 35% is at 0.13, and 30% at 0.026.\n- **Polymarket, Nov 20 level:** the most likely band is 38.0 to 38.4 (0.52), and below 38.0 is 0.21. That is higher than the Silver Bulletin's 37.17, so it probably uses a different source. I did not verify this.\n- **Manifold:** there is an ACX market on net approval on Dec 31, 2026 ([link](https://manifold.markets/DaftPunkRock/acx-2026-what-will-be-donald-trumps)), but I could not get its values.\n- I found no expert forecast on this exact question.\n\n## 6. Upcoming events before resolution\n- **Dec 11, 2026: government funding runs out** under the September stopgap. Kalshi has priced a shutdown starting Dec 12 at about 43.8%. Democrats are weighing using this deadline as leverage over the Iran war. [Kalshi News](https://news.kalshi.com/p/government-shutdown-odds-december-2026-43-percent), [roic.ai](https://www.roic.ai/news/us-shutdown-risk-rises-as-democrats-weigh-using-funding-deadline-to-challenge-iran-war-11-09-2026)\n- **Iran war:** war funding was put off to the December lame-duck session. Reports say fighting has resumed and gas prices are rising, but these reports conflict and are not up to date. [NOTUS](https://www.notus.org/congress/trump-resumed-the-iran-war-republicans-are-rattled), [Punchbowl](https://punchbowl.news/article/defense/iran-trump-gop/)\n- **Holidays:** fewer polls come out during Thanksgiving and late December, which could leave the average flat.\n- **Jan 3, 2027:** the Democratic Congress is seated, after the resolution window closes.\n\nSources: [Silver Bulletin](https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin); [Datawrapper CSV](https://datawrapper.dwcdn.net/kSCt4/8787/dataset.csv); [Newsweek](https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719); [GV Wire](https://gvwire.com/2026/11/16/trump-approval-holds-near-career-low-at-32-reuters-ipsos-poll-finds/); [Democrat & Chronicle](https://eu.democratandchronicle.com/story/news/2026/11/17/donald-trump-approval-rating-latest-polls/92824140007/); [HNGN](https://www.hngn.com/articles/273849/20261116/trump-hits-record-low-32-yougov-averages-sit-higher.htm); [political.org](https://political.org/2026/10/21/trump-approval-hits-new-low-at-36-two-weeks-before-midterms-polls-show/); [Kalshi News](https://news.kalshi.com/p/government-shutdown-odds-december-2026-43-percent); [roic.ai](https://www.roic.ai/news/us-shutdown-risk-rises-as-democrats-weigh-using-funding-deadline-to-challenge-iran-war-11-09-2026); [NOTUS](https://www.notus.org/congress/trump-resumed-the-iran-war-republicans-are-rattled); [Punchbowl](https://punchbowl.news/article/defense/iran-trump-gop/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 09:03 UTC; check each market really matches the question)\n- Kalshi: How low will Trump's approval rating get during his term? (Jan 2025 to Jan 2029). Yes prices: Below 30%: 0.40; Below 31%: 0.58; Below 32%: 0.66; Below 33%: 0.75; Below 34%: 0.84; Below 35%: 0.92; Below 36%: 0.94.\n- Kalshi: How low will Trump's approval rating get before 2027? (Dec 2025 to Dec 2026). Yes prices: Below 36%: 0.57; Below 35.5%: 0.40; Below 35%: 0.21; Below 34.5%: 0.17; Below 34%: 0.12; Below 33.5%: 0.10; Below 33%: 0.07; Below 38%: 0.9800; Below 37%: 0.9930; Below 40%: 0.98.\n- Kalshi: How high will Trump's approval rating get before 2027? (Dec 2025 to Dec 2026). Yes prices: Above 45%: 0.02; Above 46%: 0.01; Above 43%: 0.03; Above 44%: 0.01; Above 47%: 0.02; Above 49%: 0.01; Above 50%: 0.0220; Above 48%: 0.0010.\n- Kalshi: Will Trump's approval rating increase this week? (For Dec 18, 2025). Yes prices: Yes: 0.7700.\n- Kalshi: Will Trump's approval rating increase this week? (For Dec 4, 2025). Yes prices: Yes: 0.1200.\n- Kalshi: Trump's VoteHub approval rating on Friday? (On Nov 20, 2026). Yes prices: 37.5-37.7%: 0.36; 37.8-38.0%: 0.26; Below 37.5%: 0.25; 38.1-38.3%: 0.09; Above 39.2%: 0.0000; 39.0-39.2%: 0.0000; 38.7-38.9%: 0.0000; 38.4-38.6%: 0.1700.\n- Polymarket: How low will Trump's approval rating go in 2026? (ends 2027-01-04). [Yes, No] prices: 40%: [\"1\", \"0\"]; 35%: [\"0.13\", \"0.87\"]; 30%: [\"0.026\", \"0.974\"]; 25%: [\"0.0195\", \"0.9805\"]; 20%: [\"0.029\", \"0.971\"]; 37%: [\"1\", \"0\"]\n- Polymarket: Trump approval rating at least ___ on November 20? (ends 2026-11-21). [Yes, No] prices: 37.0+: [\"0.9655\", \"0.0345\"]; 38.0+: [\"0.715\", \"0.285\"]; 39.0+: [\"0.385\", \"0.615\"]; 40.0+: [\"0.0405\", \"0.9595\"]; 41.0+: [\"0.0065\", \"0.9935\"]; 42.0+: [\"0.008\", \"0.992\"]\n- Polymarket: Trump approval rating on November 20? (ends 2026-11-21). [Yes, No] prices: <38.0: [\"0.21\", \"0.79\"]; 38.0–38.4: [\"0.52\", \"0.48\"]; 38.5–38.9: [\"0.23\", \"0.77\"]; 39.0–39.4: [\"0.055\", \"0.945\"]; 39.5–39.9: [\"0.081\", \"0.919\"]; 40.0+: [\"0.012\", \"0.988\"]\n- Manifold: [ACX 2026] What will be Donald Trump's net approval on December 31, 2026? (MULTI_NUMERIC) https://manifold.markets/DaftPunkRock/acx-2026-what-will-be-donald-trumps",
+    "I haven't made a forecast below. One finding matters most: Silver Bulletin's record low is **36.25311, on 2026-10-21**. For Yes, the CSV \"approve\" value on some date from Dec 16 to Dec 31 has to fall below that. The latest value, 37.169 on Nov 17, is about **0.92 points** above it.\n\n## 1. Resolution source\n- 2026-11-17: The CSV behind the Silver Bulletin chart (Datawrapper kSCt4, current version 8787) has a last row of **approve 37.16927**, disapprove 59.8534. [CSV](https://datawrapper.dwcdn.net/kSCt4/8787/dataset.csv)\n- 2026-11-17: The page text says \"After rebounding slightly to 38 percent... Today, 37 percent approve, 60 percent disapprove.\" Strong approval is 18.9%. [Silver Bulletin](https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin)\n- I checked every second-term row for 34.x, 35.x and 36.x values. The low is **36.25311 (2026-10-21)**. The next lowest are 36.46453 (Oct 22) and 36.63914 (Oct 9-10). Nothing is below 36.25. [CSV](https://datawrapper.dwcdn.net/kSCt4/8787/dataset.csv)\n- Recent daily values in the CSV:\n  - Nov 1: 37.25\n  - Nov 2-8: 38.35, held flat\n  - Nov 9: 37.83\n  - Nov 12: 37.39\n  - Nov 16: 37.48\n  - Nov 17: 37.17\n- The question's background text (low of 36.3, then 37.4) matches the CSV.\n\n## 2. Current status\n- Nothing has settled the question yet. Only values from Dec 16-31 count, and they must be below 36.25311.\n\n## 3. Recent news (newest first)\n- 2026-11-17: Reuters/Ipsos poll (Nov 13-16, n=1,521) has Trump at 32% approve, 66% disapprove. That is the fourth straight 32% reading since his intra-term low of 31% in mid-October. Only 31% support the Iran war, which has pushed up fuel prices. [Democrat & Chronicle](https://eu.democratandchronicle.com/story/news/2026/11/17/donald-trump-approval-rating-latest-polls/92824140007/), [Pravda](https://www.pravda.com.ua/rus/news/2026/11/17/8063202/)\n- 2026-11-16: Economist/YouGov (Nov 9-11) has 32/63, net -31. That is the lowest in YouGov's series across both terms. [HNGN](https://www.hngn.com/articles/273849/20261116/trump-hits-record-low-32-yougov-averages-sit-higher.htm)\n- 2026-11-10: Reuters/Ipsos (Nov 6-9) also has 32%, with 25% approving of his handling of the economy. [The Star](https://www.thestar.com.my/news/world/2026/11/10/trump-approval-holds-at-32-near-lowest-of-his-career-reuters-ipsos-poll-finds)\n- 2026-11-03: Democrats won both the House and the Senate in the midterms. [Democrat & Chronicle](https://eu.democratandchronicle.com/story/news/2026/11/17/donald-trump-approval-rating-latest-polls/92824140007/)\n\n## 4. Base rates and variation\n- The tracker has fallen from about 42 in Jan 2026 to about 37 now, roughly -0.5 points a month on average. Lows came one after another:\n  - 38.29 on May 21\n  - about 38.05 in Aug and Sep\n  - 37.37 on Sep 24\n  - 37.07 on Oct 2\n  - 36.64 on Oct 9\n  - 36.25 on Oct 21\n- That means new lows were set in about 4 of the last 6 months (May, Sep and twice in Oct), but none since Oct 21.\n- Daily moves of up to about 0.9 points happen: 37.13 to 36.25 between Oct 20 and 21, and 37.25 to 38.35 between Nov 1 and 2. Over a 4-6 week window the range has been about 1-2 points. So a drop of 0.9 or more by late December is within normal variation, but it would take a renewed downtrend.\n- The individual polls (Reuters/Ipsos, YouGov) are flat near their lows. The average has bounced about 1 point off its low and is now drifting down again.\n\n## 5. Other forecasts\nI'm not sure which data source each market below settles on, so check before relying on them.\n- **Polymarket, \"How low will Trump's approval go in 2026?\"** 37%: Yes 1.00; 35%: 0.13. The 36% threshold that would matter here is not listed.\n- **Polymarket, Nov 20 value.** About 72% that it is 38.0 or higher, and 21% that it is below 38.0. That points to a source reading about 38, higher than the Silver CSV.\n- **Kalshi, \"How low before 2027?\"** Below 36%: 0.57; below 35.5%: 0.40; below 35%: 0.21. Because the Silver series has never gone below 36.25, Kalshi probably uses a different aggregator.\n- **Kalshi, VoteHub Nov 20 value.** Most likely range is 37.5-37.7 (0.36).\n- **Manifold ACX 2026** has a market on net approval on Dec 31, 2026. I did not get its price. [Manifold](https://manifold.markets/DaftPunkRock/acx-2026-what-will-be-donald-trumps)\n- I found no market that matches this exact question.\n\n## 6. Upcoming events before resolution\n- Government funding runs out on **Dec 11, 2026**. Without a new bill or another stopgap, a shutdown starts Dec 12, just before the window opens. Goldman expects a temporary extension. [Harvard OFR](https://ofr.harvard.edu/news/2026/09/congress-extends-government-funding-through-december-11), [Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/10/beyond-the-midterms-congress-faces-converging-year-end-deadlines)\n- The Iran war (since Feb 28, 2026) and fuel prices are still the main drags. I could not find a November 2026 gas price. [Fox5](https://www.fox5atlanta.com/news/iran-war-latest-u-s-gas-prices-cross-4-average)\n- Also in play: the lame-duck session, the run-up to a Democratic Congress in January, weekly Reuters/Ipsos and YouGov releases, and slower holiday-season polling. In the CSV, values often stay flat for several days, such as Nov 2-8.\n\nSources: [Silver Bulletin](https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin), [CSV](https://datawrapper.dwcdn.net/kSCt4/8787/dataset.csv), [Democrat & Chronicle](https://eu.democratandchronicle.com/story/news/2026/11/17/donald-trump-approval-rating-latest-polls/92824140007/), [HNGN](https://www.hngn.com/articles/273849/20261116/trump-hits-record-low-32-yougov-averages-sit-higher.htm), [The Star](https://www.thestar.com.my/news/world/2026/11/10/trump-approval-holds-at-32-near-lowest-of-his-career-reuters-ipsos-poll-finds), [Pravda](https://www.pravda.com.ua/rus/news/2026/11/17/8063202/), [Harvard OFR](https://ofr.harvard.edu/news/2026/09/congress-extends-government-funding-through-december-11), [Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/10/beyond-the-midterms-congress-faces-converging-year-end-deadlines), [Fox5](https://www.fox5atlanta.com/news/iran-war-latest-u-s-gas-prices-cross-4-average), [Manifold](https://manifold.markets/DaftPunkRock/acx-2026-what-will-be-donald-trumps)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 09:03 UTC; check each market really matches the question)\n- Kalshi: How low will Trump's approval rating get during his term? (Jan 2025 to Jan 2029). Yes prices: Below 30%: 0.40; Below 31%: 0.58; Below 32%: 0.66; Below 33%: 0.75; Below 34%: 0.84; Below 35%: 0.92; Below 36%: 0.94.\n- Kalshi: How low will Trump's approval rating get before 2027? (Dec 2025 to Dec 2026). Yes prices: Below 36%: 0.57; Below 35.5%: 0.40; Below 35%: 0.21; Below 34.5%: 0.17; Below 34%: 0.12; Below 33.5%: 0.10; Below 33%: 0.07; Below 38%: 0.9800; Below 37%: 0.9930; Below 40%: 0.98.\n- Kalshi: How high will Trump's approval rating get before 2027? (Dec 2025 to Dec 2026). Yes prices: Above 45%: 0.02; Above 46%: 0.01; Above 43%: 0.03; Above 44%: 0.01; Above 47%: 0.02; Above 49%: 0.01; Above 50%: 0.0220; Above 48%: 0.0010.\n- Kalshi: Will Trump's approval rating increase this week? (For Dec 18, 2025). Yes prices: Yes: 0.7700.\n- Kalshi: Will Trump's approval rating increase this week? (For Dec 4, 2025). Yes prices: Yes: 0.1200.\n- Kalshi: Trump's VoteHub approval rating on Friday? (On Nov 20, 2026). Yes prices: 37.5-37.7%: 0.36; 37.8-38.0%: 0.26; Below 37.5%: 0.25; 38.1-38.3%: 0.09; Above 39.2%: 0.0000; 39.0-39.2%: 0.0000; 38.7-38.9%: 0.0000; 38.4-38.6%: 0.1700.\n- Polymarket: How low will Trump's approval rating go in 2026? (ends 2027-01-04). [Yes, No] prices: 40%: [\"1\", \"0\"]; 35%: [\"0.13\", \"0.87\"]; 30%: [\"0.026\", \"0.974\"]; 25%: [\"0.0195\", \"0.9805\"]; 20%: [\"0.029\", \"0.971\"]; 37%: [\"1\", \"0\"]\n- Polymarket: Trump approval rating at least ___ on November 20? (ends 2026-11-21). [Yes, No] prices: 37.0+: [\"0.9655\", \"0.0345\"]; 38.0+: [\"0.715\", \"0.285\"]; 39.0+: [\"0.385\", \"0.615\"]; 40.0+: [\"0.0405\", \"0.9595\"]; 41.0+: [\"0.0065\", \"0.9935\"]; 42.0+: [\"0.008\", \"0.992\"]\n- Polymarket: Trump approval rating on November 20? (ends 2026-11-21). [Yes, No] prices: <38.0: [\"0.21\", \"0.79\"]; 38.0–38.4: [\"0.52\", \"0.48\"]; 38.5–38.9: [\"0.23\", \"0.77\"]; 39.0–39.4: [\"0.055\", \"0.945\"]; 39.5–39.9: [\"0.081\", \"0.919\"]; 40.0+: [\"0.012\", \"0.988\"]\n- Manifold: [ACX 2026] What will be Donald Trump's net approval on December 31, 2026? (MULTI_NUMERIC) https://manifold.markets/DaftPunkRock/acx-2026-what-will-be-donald-trumps"
+  ],
+  "forecasts": [
+    {
+      "value": 0.22,
+      "reasoning": "(a) About six weeks remain. The outcome is known once Metaculus checks the CSV on or after Jan 1, 2027. For Yes, some daily \"approve\" value dated Dec 16 to 31, 2026 must be strictly below every earlier second-term value. Today that bar is 36.25311 (Oct 21). If a lower low is set between now and Dec 15, the bar drops to that value.\n\n(b) Status quo: the latest value is 37.17 (Nov 17), about 0.92 points above the record. If nothing changed, the answer is No.\n\n(c) Base rate: over the past roughly 13 half-month windows (May to mid-November), a new record low was set in about 5 or 6, so roughly 40%. Most of those windows started with the series already at or near its low, though, and none has occurred since Oct 21. Starting from about 0.9 points above the record, a random-walk view gives roughly a 35% chance of breaking 36.25 by Dec 31. It must break the record inside the window and not earlier, which lowers this to roughly 20-25%.\n\n(d) Evidence for Yes:\n- The long downtrend runs at about -0.5 points a month, with a new low every 1-2 months from May to October.\n- Reuters/Ipsos (Nov 13-16) is stuck at 32%, and Economist/YouGov (Nov 9-11) is at 32%, a series record.\n- The average drifted down from 38.35 (Nov 2-8) to 37.17 (Nov 17).\n- Funding lapses Dec 11, with about a 44% chance of a shutdown starting Dec 12. That could depress approval right into the window.\n- The Iran war and fuel prices are still drags.\n\nEvidence for No:\n- No new low has been set since Oct 21, and the series bounced to 38.35 in early November.\n- Holiday polling in late December is sparse, so the line often stays flat for days.\n- A decline that comes early (late November or early December) would raise the bar for the window itself.\n- Kalshi's \"below 36% before 2027\" price of 0.57 likely tracks a different source; the Silver series has never gone below 36.25.\n\n(e) No scenario: approval hovers at 37-37.5 through December, a short stopgap avoids a shutdown, and holiday polls are sparse, so the line stays flat above 36.25.\n\nYes scenario: a shutdown starts Dec 12 amid an Iran war escalation and high gas prices. The weekly Reuters and YouGov polls tick down to 31%, and the average slides to about 36.0 around Dec 18-22.\n\n(f) I start from a base of about 22%. Continuing the trend gives about 36.6 by mid-to-late December, so reaching a new low needs roughly 0.4 points of extra negative noise, which is plausible. Shutdown risk timed right before the window nudges the estimate up. Holiday flatness and the requirement that the record fall inside the window nudge it down. No market covers this exact question. These factors roughly cancel, so I stay near 22%.\n\nProbability: 22%"
+    },
+    {
+      "value": 0.21,
+      "reasoning": "(a) About six weeks remain; the outcome is known around Jan 1, 2027. For Yes, the Silver Bulletin CSV \"approve\" value on some date from Dec 16 to Dec 31, 2026 must fall strictly below every earlier second-term value. Today that bar is 36.25311 (Oct 21). If a new low is set between Nov 18 and Dec 15, the bar drops further.\n\n(b) If nothing changes, approval sits near 37.2, about 0.92 points above the record low, and the question resolves No.\n\n(c) Base rate: new lows were set in roughly 4 of the last 6 months. However, any given 16-day window contains a new record far less often. Since May, about 5 or 6 record-setting episodes have occurred over about 180 days, mostly in clusters. Given we start 0.9 points above the record, a specific half-month window holds a new low roughly 20-25% of the time.\n\n(d) Evidence for Yes:\n- The trend has been down about 0.5 points a month all year.\n- Nov 17 was 37.17, drifting down from 38.35 on Nov 2.\n- Reuters/Ipsos (Nov 13-16) is stuck at 32%, and YouGov hit a record low of 32% (Nov 9-11).\n- The Iran war and fuel prices remain drags.\n- A possible shutdown from Dec 12 (Kalshi about 44%) falls just before the window.\n\nEvidence for No:\n- The gap of 0.92 points is meaningful.\n- There have been no new lows since Oct 21, and the average rebounded after it.\n- Holiday polling is sparse, so the line often stays flat for days.\n- Any decline in early December resets the bar lower, so the window must hold the absolute minimum.\n- Approval sometimes stabilizes or rises slightly in late December.\n\n(e) No scenario: approval drifts between 36.5 and 37.5 through December, Congress passes a stopgap, holiday polling thins out and the line stays flat. Alternatively, a dip to 36.0 happens in early December and the window does not beat it.\n\nYes scenario: a shutdown from Dec 12, renewed escalation in Iran and higher gas prices push several mid-December polls to new lows, and the average crosses 36.2 around Dec 17-22.\n\n(f) The Kalshi and Polymarket thresholds use different sources and a full-year window, so they are only loose anchors. For example, Kalshi gives 0.57 for approval below 36% before 2027, which suggests material chances of further declines. Starting from about 22%, the downward drift and shutdown risk push up, while the sparse holiday data and the requirement that the window hold the absolute minimum push down. These roughly offset.\n\nProbability: 21%"
+    },
+    {
+      "value": 0.17,
+      "reasoning": "(a) About 6 weeks remain; the outcome is known around Jan 1, 2027. For Yes, the Silver Bulletin CSV \"approve\" value on some date from Dec 16 to Dec 31, 2026 must be strictly lower than every earlier second-term value. The current low is 36.25311 (Oct 21). If a lower value is set between now and Dec 15, that becomes the new bar. The latest reading is 37.17 (Nov 17), so approval must fall at least about 0.92 points, and the bottom must land inside the 16-day window.\n\n(b) If nothing changed, the tracker would stay around 37 to 37.5, above 36.25, and the question resolves No.\n\n(c) Base rate: new lows came in May, Aug/Sep, Sep 24, Oct 2, Oct 9 and Oct 21. That is roughly 4 of the last 6 months, but they cluster: four came in about a month, and none in the 4 weeks since. The chance that any particular 16-day window contains a new all-time low is roughly 25 to 35%. It is lower when the series is currently about 0.9 points above the low, maybe 15 to 25%.\n\n(d) Evidence:\n- **For Yes:**\n  - The long-run drift is about -0.5 points a month.\n  - Reuters/Ipsos showed 32% on Nov 16, near its low, and Economist/YouGov hit a record low of 32% on Nov 16.\n  - The average is drifting down again (38.35 on Nov 2, 37.17 on Nov 17).\n  - A possible shutdown on Dec 12 (about 44% on Kalshi) and the Iran war and fuel prices are continuing drags.\n  - Daily moves of up to 1.1 points do happen.\n- **For No:**\n  - The series has not gone below 36.46 since Oct 21.\n  - Individual polls are flat rather than still falling.\n  - Holiday polling is sparse, so the line often holds flat for days.\n  - A dip in early December would raise the bar for the window itself.\n  - Polymarket's 2026 low market puts \"35%\" at only 0.13, though its source may differ.\n\n(e) Scenarios:\n- **No:** Approval drifts between 36.5 and 37.5 through December. A shutdown is averted or brief, and holiday polling keeps the line flat.\n- **Yes:** A shutdown begins Dec 12, the Iran war escalates or gas prices rise, and several weekly polls come in at 31 to 32. The average slides to about 36.0 in the week of Dec 16 to 22.\n\n(f) I start from about 20% for a 0.9-point drop that puts a new low inside a narrow window. I add a little for the downward trend and the shutdown risk. I subtract for sparse holiday polling, which flattens the line, and for the chance that a new low lands in early December instead of inside the window. Net, I land near 17%. No market covers this exact source, threshold and window, so none serves as an anchor.\n\nProbability: 17%"
+    },
+    {
+      "value": 0.2,
+      "reasoning": "(a) About 6 weeks remain; the outcome is known after Dec 31, 2026. For Yes, some daily \"approve\" value in the Silver Bulletin CSV dated Dec 16 to Dec 31 must be strictly below every earlier second-term value. Today that bar is 36.25311 (Oct 21). If a new low is set before Dec 16, the bar drops further.\n\n(b) Status quo: the latest value is 37.17 (Nov 17), about 0.92 points above the record. If nothing changed, this resolves No.\n\n(c) Base rate: new lows were set in about 4 of the last 6 months, so roughly a 50 to 60% chance of a new low in any given month. Restricting to a specific 16-day window cuts that to about 25 to 35%. The requirement to beat any low set in late November or early December cuts it further. A random-walk view gives a similar answer:\n- From 37.17, with a drift of about -0.5 points a month and a month-scale standard deviation of about 1 point, the chance of breaking 36.25 at some point by Dec 31 is roughly 45%.\n- The chance that the running minimum falls in the final 16 of the 44 days is about 0.4 to 0.5 (arcsine law, tilted toward the end by the downward drift).\n- Combined, that gives roughly 20 to 25%.\n\n(d) Evidence for Yes:\n- The long downtrend, from about 42 in January to about 37 now.\n- Reuters/Ipsos (Nov 13 to 16) at 32% and YouGov (Nov 9 to 11) at a series-low 32%.\n- The average drifting down again since Nov 2.\n- A possible shutdown from Dec 12 and the unpopular Iran war with rising fuel prices.\n\nEvidence for No:\n- No new low since Oct 21, and the series rebounded to 38.35 in early November.\n- Individual polls look flat near their lows rather than falling.\n- Sparse holiday polling often leaves the line flat for days, which reduces movement in late December.\n- Goldman expects a stopgap that avoids a shutdown.\n- Any new low set before Dec 16 raises the bar for the window itself.\n\nMarkets: no market matches this question. The Kalshi and Polymarket markets appear to use other aggregators and are not directly usable as anchors.\n\n(e) No scenario: approval drifts between 36.5 and 37.5 through December, Congress passes a stopgap, and holiday polling keeps the line flat. Alternatively, a shutdown in early December produces a new low around 36.0 before Dec 16, and the window fails to beat it.\n\nYes scenario: a shutdown or Iran escalation drags approval steadily down through December, and a new low of about 36.1 lands on Dec 17 or 18 with nothing lower before it.\n\n(f) I start from a structural estimate of about 22%. I move down slightly for the holiday flattening of the data and the risk that a pre-window low raises the bar. I move up slightly for the persistent downtrend and the shutdown risk. These roughly cancel, leaving me at about 20%.\n\nProbability: 20%"
+    },
+    {
+      "value": 0.18,
+      "reasoning": "(a) About six weeks remain; the outcome will be known around Jan 1, 2027. For Yes, the CSV \"approve\" value on some date from Dec 16 to Dec 31, 2026 must be strictly below every earlier second-term value. Right now that means below 36.25311 (Oct 21). If a new low is set between Nov 18 and Dec 15, the bar drops further.\n\n(b) Status quo: the latest reading is 37.17 (Nov 17), 0.92 points above the record. If nothing changes, the answer is No.\n\n(c) Base rate: the tracker has set new lows in roughly 4 of the last 6 months. The question, though, is about one specific 16-day window, and the low in that window must also beat anything set earlier in the month.\n- Chance a given half-month window holds a new running low during a downtrend: roughly 20-30%.\n- During flat periods: roughly 10%.\n- My starting point: about 20%.\n\n(d) Evidence for Yes:\n- The trend is down, about -0.5 points per month since January.\n- The average fell back from 38.35 (Nov 2) to 37.17 (Nov 17).\n- Reuters/Ipsos (Nov 13-16) is stuck at 32%, and YouGov hit a record low of 32% (Nov 9-11).\n- The Iran war and fuel prices are still dragging on approval.\n- A possible government shutdown starting Dec 12 would land just before the window opens.\n- Daily moves of about 0.9 points have happened.\n\nEvidence for No:\n- A drop of about 0.9 points is needed.\n- There has been no new low since Oct 21.\n- Holiday polling is sparse, and the line often stays flat for days.\n- Any new low set in late November or early December raises the bar for the window.\n- Presidents sometimes recover slightly after the midterms.\n- Kalshi's 57% for \"below 36% before 2027\" likely uses a different source and covers a broader window.\n\n(e) No scenario: approval hovers between 37 and 37.5 through December, any shutdown is short or avoided, and holiday polling is thin, so the line stays flat. Alternatively, it dips to 36.0 in early December and then holds steady in late December above that new low.\n\nYes scenario: a shutdown from Dec 12 plus Iran escalation and rising gas prices push a steady decline, and the average crosses below 36.25 in the final weeks of December.\n\n(f) Expected level in late December is about 36.5-36.8, with a standard deviation of about 1.2 points.\n- Chance the window's minimum falls below 36.25: about 35%.\n- Chance that minimum also beats any interim low set between Nov 18 and Dec 15: about 55-60%.\n- Combined: about 20%. I shade slightly lower for holiday flatness.\n\nProbability: 18%"
+    },
+    {
+      "value": 0.22,
+      "reasoning": "(a) The question resolves around Jan 1, 2027, about six weeks from now. Yes requires that some daily \"approve\" value in the Silver Bulletin CSV dated Dec 16 to Dec 31, 2026 be strictly lower than every earlier second-term value. Today that bar is 36.25311 (Oct 21). If a new low is set between now and Dec 15, the bar drops to that new low, which makes Yes harder.\n\n(b) Status quo: the average sits at 37.17 (Nov 17), about 0.92 points above the record. Flat holiday polling would leave it there, so the status quo outcome is No.\n\n(c) Base rate: during the 2026 downtrend, new lows came in May, Aug, Sep (twice) and Oct (twice). That is roughly 30-35% of half-month windows. However, none has come since Oct 21, and the average bounced after the midterms. As a random-walk check:\n- Monthly standard deviation is about 1 point, with slight negative drift.\n- A drop of 0.92 or more by late December has roughly a 30-40% chance.\n- Requiring the low to land inside the 16-day window, rather than before Dec 16, cuts that to about 25%.\n\n(d) Evidence:\n- For Yes:\n  - Reuters/Ipsos was at 32% on Nov 13-16, its fourth straight reading near the low.\n  - Economist/YouGov hit a record-low 32/63 (Nov 9-11).\n  - The average has drifted down from 38.35 (Nov 2-8) to 37.17 (Nov 17).\n  - Government funding runs out Dec 11, and Kalshi prices a shutdown at about 44%.\n  - The Iran war and fuel prices remain drags.\n- For No:\n  - The average is still 0.9 points above the low, and the Oct 21 low looks like a short spike (36.46 and 36.88 on the following days).\n  - Individual polls are flat rather than falling.\n  - Sparse holiday polling tends to freeze the line.\n  - Any new low set before Dec 16 raises the bar for the window itself.\n\n(e) Scenarios:\n- No: the funding fight ends with a stopgap and the average hovers at 37-37.5 through December, with few polls over the holidays.\n- Yes: a shutdown starting Dec 12 and rising gas prices push several polls to fresh lows, and the average slides to about 36.0 around Dec 17-22.\n\n(f) I start from a base rate of about 25-30%. I move down slightly for holiday flatness and for the risk that a low set before Dec 16 raises the bar. I move up slightly for the shutdown risk and the current downward drift. No market covers this exact question; the Kalshi and Polymarket markets use different sources and thresholds, so they are only loosely informative. Net result: about 22%.\n\nProbability: 22%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.2527,
+  "usage": [
+    {
+      "question_id": "46739",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.2,
+      "notional_cost_usd": 6.64e-05,
+      "input_tokens": 499,
+      "output_tokens": 33,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.4,
+      "notional_cost_usd": 0.0002357,
+      "input_tokens": 1002,
+      "output_tokens": 71,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 68.5,
+      "notional_cost_usd": 0.3628161,
+      "input_tokens": 149517,
+      "output_tokens": 5235,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 67.3,
+      "notional_cost_usd": 0.2762392,
+      "input_tokens": 133609,
+      "output_tokens": 4781,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.8,
+      "notional_cost_usd": 0.1075,
+      "input_tokens": 9986,
+      "output_tokens": 1381,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.7,
+      "notional_cost_usd": 0.107396,
+      "input_tokens": 9983,
+      "output_tokens": 1377,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.4,
+      "notional_cost_usd": 0.113792,
+      "input_tokens": 9985,
+      "output_tokens": 1696,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.9,
+      "notional_cost_usd": 0.030031,
+      "input_tokens": 9983,
+      "output_tokens": 1282,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.1,
+      "notional_cost_usd": 0.0004617,
+      "input_tokens": 2262,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 18.4,
+      "notional_cost_usd": 0.0004779,
+      "input_tokens": 2188,
+      "output_tokens": 81,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 36.0,
+      "notional_cost_usd": 0.040879,
+      "input_tokens": 9984,
+      "output_tokens": 1824,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.9,
+      "notional_cost_usd": 0.00046650000000000006,
+      "input_tokens": 2286,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.2,
+      "notional_cost_usd": 0.0004513,
+      "input_tokens": 2210,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 38.2,
+      "notional_cost_usd": 0.036407,
+      "input_tokens": 9985,
+      "output_tokens": 1600,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.4,
+      "notional_cost_usd": 9.577e-05,
+      "input_tokens": 2263,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.00047170000000000003,
+      "input_tokens": 2312,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 0.00011333,
+      "input_tokens": 2188,
+      "output_tokens": 56,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.00014731,
+      "input_tokens": 2286,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.00045270000000000005,
+      "input_tokens": 2217,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 9.485e-05,
+      "input_tokens": 2209,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 9.626e-05,
+      "input_tokens": 2312,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46739",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 1.8,
+      "notional_cost_usd": 9.511e-05,
+      "input_tokens": 2216,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0788
+}
