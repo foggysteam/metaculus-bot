@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-18T12:46:06.769111+00:00",
+  "bot_version": "2026-11-17.1",
+  "started_at": "2026-11-18T12:41:48.558059+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46879,
+    "post_id": 46619,
+    "url": "https://www.metaculus.com/questions/46619",
+    "type": "NumericQuestion",
+    "unit": "ft",
+    "tournaments": [
+      "minibench"
+    ],
+    "text": "What will be the highest observed water level (ft above MLLW) at NOAA's La Jolla, CA tide gauge (station 9410230) on November 26-27, 2026?",
+    "resolution_criteria": "This question resolves to the highest observed water level, in feet above MLLW, recorded at NOAA Tides & Currents station 9410230 (La Jolla, CA) during the local calendar days November 26 and November 27, 2026, Pacific Standard Time (2026-11-26 08:00 UTC through 2026-11-28 07:59 UTC). The resolution value is the maximum of the station's 6-minute observed water level values in that window (datum MLLW, units English), as displayed on NOAA's water level page for the station: https://tidesandcurrents.noaa.gov/waterlevels.html?id=9410230 (set Datum to MLLW, Units to English, Interval to 6 minutes, and enter the November 26-27, 2026 date range). The same series is available from NOAA's CO-OPS Data Retrieval API with product=water_level, station=9410230, datum=MLLW, units=english, interval=6. For example, if the highest 6-minute reading in the window is 8.11 ft, the question resolves to 8.11. Resolution uses the preliminary observed data NOAA publishes in near real time; any later verification or revision of those values does not change the resolution.",
+    "fine_print": "If valid 6-minute observations are missing within one hour of either predicted high tide in the window (09:15 PST on November 26; 10:05 PST on November 27), the question is annulled, because the window's maximum could not be established. Late posting of the data is not a reason to annul; resolution simply waits until NOAA publishes the window's observations.",
+    "close_time": "2026-11-18 15:34 UTC",
+    "scheduled_resolution_time": "2026-11-28 18:00 UTC"
+  },
+  "research": [
+    "I found nothing that settles this yet: the window opens 2026-11-26. The best guide is that the gauge has been running about 1.15 to 1.55 ft above predicted tide at every high tide from late October through this morning. Adding that to the predicted 6.84 ft high on Nov 26 gives roughly 8.0 to 8.4 ft, and adding it to the 6.50 ft high on Nov 27 gives about 7.65 to 8.05 ft. That is my arithmetic, not a forecast.\n\n## 1. Resolution source\n- 2026-11-18: The CO-OPS API returns preliminary 6-minute water levels for 9410230 through 04:36 PST today. The latest reading is 5.31 ft MLLW, against a predicted high of 4.16 ft at 04:55, so about 1.15 ft above prediction. [API](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&station=9410230&date=recent&datum=MLLW&units=english&time_zone=lst&format=csv&application=research)\n- NOAA's predicted highs match the question:\n  - Nov 24: 6.85 ft at 07:48\n  - Nov 25: 6.96 ft at 08:29\n  - Nov 26: 6.84 ft at 09:15\n  - Nov 27: 6.50 ft at 10:05\n  - Nov 28: 5.96 ft at 11:01\n  \n  The night highs on Nov 26-27 are only about 3.6 ft, so the morning highs decide it. [Predictions](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&station=9410230&begin_date=20261101&end_date=20261130&datum=MLLW&units=english&time_zone=lst&interval=hilo&format=csv&application=research)\n- The record in the 6-minute preliminary series is **7.983 ft at 2026-10-27 09:00 PST**, not quite 8.0. Other October peaks were 7.904 (Oct 26) and 7.914 (Oct 28). [API](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&station=9410230&begin_date=20261020&end_date=20261116&datum=MLLW&units=english&time_zone=lst&format=csv&application=research)\n\n## 2. Current status\n- Observed peak minus predicted high, from my reading of the API data:\n\n| Date | Observed peak (ft) | Predicted high (ft) | Above prediction (ft) |\n|---|---|---|---|\n| Oct 26 | 7.90 | 6.44 | +1.46 |\n| Oct 27 | 7.98 | 6.59 | +1.39 |\n| Oct 28 | 7.91 | 6.55 | +1.37 |\n| Oct 29 | 7.64 | 6.30 | +1.33 |\n| Oct 30 | 7.20 | 5.88 | +1.32 |\n| Nov 7 | 7.20 | 5.97 | +1.23 |\n| Nov 8 | 7.28 | 6.08 | +1.20 |\n| Nov 9 | 7.42 | 6.07 | +1.35 |\n| Nov 10 | 7.38 | 5.97 | +1.41 |\n| Nov 11 | 7.19 | 5.79 | +1.40 |\n| Nov 12 | 7.06 | 5.54 | +1.52 |\n| Nov 13 | 6.79 | 5.23 | +1.56 |\n| Nov 14 | 6.31 | 4.86 | +1.45 |\n| Nov 16 | about 5.3 | 4.08 | about +1.25 |\n| Nov 17 | 5.16 | 3.80 | about +1.3 |\n| Nov 18 | 5.31 | 4.16 | about +1.15 |\n\n- The amount above prediction seems to be easing slightly since Nov 13, but it is still large.\n\n## 3. Recent news\n- 2026-11-18, 04:10 PST: The NWS San Diego forecast discussion says:\n  - King tides peak next week, and tides above 7 ft could start Nov 21.\n  - Coastal flooding is possible through this week, and a storm arrives Thursday Nov 19.\n  - Nov 22-23 brings a weak system. From Nov 24, models split between unsettled, windy weather and a dry ridge into the holiday.\n  \n  [NWS AFD](https://forecast.weather.gov/product.php?site=sgx&issuedby=SGX&product=AFD)\n- 2026-11-17: KPBS reported flooding in low-lying beach lots last weekend. NWS meteorologist Kyle Wheeler warned that high surf during Thanksgiving-week king tides would be concerning, but said surf is \"not yet certain.\" A search summary claimed a Nov 26 storm, but that appears wrong: the article's \"Thursday\" means Nov 19. [KPBS](https://www.kpbs.org/news/environment/2026/11/17/big-waves-back-in-san-diegos-forecast-after-weekend-flooding)\n- 2026-11-16: NWS Eureka sees possible record tides at Humboldt Bay next week, with 1.5-2 ft of surge. [Lost Coast Outpost](https://lostcoastoutpost.com/2026/nov/16/possible-record-smashing-tides-predicted-next-week/)\n- 2026-11-14 to 16: The largest surf in a decade hit California. Surge ran up the stairs at La Jolla Cove. [KTLA](https://ktla.com/news/california/california-high-surf-massive-waves/)\n\n## 4. Base rates and seasonality\n- 2025 king tides at this gauge (observed highs): 7.005 ft on 2025-11-07 and 7.468 ft on 2025-12-05. That puts normal-year peaks close to the predicted values. 2026 is running about 1.2-1.5 ft higher. [API](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=high_low&station=9410230&begin_date=20251101&end_date=20251231&datum=MLLW&units=english&time_zone=lst&format=csv&application=research)\n- The previous all-time record, before October 2026, was below the new 2.65 ft above MHHW. NOAA calls the October levels all-time highs. [NOAA](https://oceanservice.noaa.gov/news/nov26/california-record-water-levels.html)\n- Over about 3 weeks the amount above prediction has stayed within roughly ±0.2 ft of 1.35 ft.\n- I did not pull Nov 18 to 27 observations for 2022-2024.\n\n## 5. Other forecasts\n- Polymarket, \"Highest sea level in San Diego this winter\" (ends 2027-04-01): 7.70 ft+ at 97%, 7.90 ft+ at 98%, 8.10 ft+ at 70%, 8.30 ft+ at 67%. This is the San Diego Bay gauge, not La Jolla, covers the whole winter, and its prices don't fall steadily as the thresholds rise. It is only loosely relevant.\n- The Kalshi markets listed have nothing to do with this question.\n- I found no other expert water-level forecast for Nov 26-27.\n\n## 6. Upcoming events before resolution\n- Nov 19-20: A storm brings a high surf advisory, with seas of 7-10 ft. [NWS AFD](https://forecast.weather.gov/product.php?site=sgx&issuedby=SGX&product=AFD)\n- Nov 21-25: Tides may top 7 ft. Watch the Nov 24-25 peaks, which come just before the window, as the best leading indicator.\n- Nov 24-27: Weather is uncertain, either unsettled and windy or a dry ridge. Low pressure, southerly wind and west swell would push the excess higher.\n- NWS coastal flood statements and the CO-OPS total water level outlook should give values about 2-5 days ahead. I could not access them.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 12:42 UTC; check each market really matches the question)\n- Kalshi: Lake Mead end-of-month water elevation next month? (Dec 2026). Yes prices: Above 1037 Ft: 0.66; Above 1038 Ft: 0.59; Above 1039 Ft: 0.57; Above 1036 Ft: 0.88; Above 1035 Ft: 0.90; Above 1040 Ft: 0.57; Above 1034 Ft: 0.94; Above 1033 Ft: 0.96.\n- Kalshi: Loudoun Water data center potable water use next quarter (Q1 2027). Yes prices: Above 250 million gallons: 0.52; Above 300 million gallons: 0.25; Above 200 million gallons: 0.82; Above 350 million gallons: 0.15; Above 400 million gallons: 0.12; Above 150 million gallons: 0.91; Above 450 million gallons: 0.07.\n- Kalshi: Rain in Los Angeles this month? (In Nov 2026). Yes prices: Above 3 inches: 0.26; Above 2 inches: 0.82; Above 4 inches: 0.06; Above 6 inches: 0.03; Above 7 inches: 0.03; Above 5 inches: 0.04; Above 1 inch: 0.9900.\n- Kalshi: Highest temperature in Los Angeles today? (On Nov 18, 2026). Yes prices: 68° to 69°: 0.60; 66° to 67°: 0.22; 70° to 71°: 0.17; 72° or above: 0.01; 64° to 65°: 0.0100; 63° or below: 0.0100.\n- Kalshi: Los Angeles Mayor winner? (In 2030). Yes prices: Nithya Raman: 0.40; Traci Park: 0.20; Adam Miller: 0.04; Karen Bass: 0.04; Austin Beutner: 0.04; Spencer Pratt: 0.04; Kenneth Mejia: 0.05; Rick Caruso: 0.05.\n- Kalshi: San Diego, CA home values in November (November 2026). Yes prices: Above $1,125,000: 0.48; Above $1,122,500: 0.58; Above $1.12 million: 0.72; Above $1,115,000: 0.89; Above $1,135,000: 0.12.\n- Kalshi: San Diego vs UC Irvine (USD vs UCI (Nov 21)). Yes prices: UC Irvine: 0.64; San Diego: 0.34.\n- Kalshi: Stetson vs San Diego (STET vs USD (Nov 21)). Yes prices: San Diego: 0.91; Stetson: 0.09.\n- Polymarket: Highest sea level in San Diego this winter? (ends 2027-04-01). [Yes, No] prices: 7.70 ft or more: [\"0.9725\", \"0.0275\"]; 7.90 ft or more: [\"0.979\", \"0.021\"]; 8.10 ft or more: [\"0.695\", \"0.305\"]; 8.30 ft or more: [\"0.665\", \"0.335\"]\n- Polymarket: NCAA Football: San Diego State 2026 Win Total (ends 2026-12-27). [Yes, No] prices: 5.5+ Wins: [\"0.1555\", \"0.8445\"]; 6.5+ Wins: [\"0.0235\", \"0.9765\"]; 7.5+ Wins: [\"0\", \"1\"]; 8.5+ Wins: [\"0\", \"1\"]; 9.5+ Wins: [\"0\", \"1\"]",
+    "I've finished pulling NOAA's gauge data, tide predictions and the latest NWS forecast, and I'm writing up the findings now.\n\n## 1. Resolution source\n- 2026-11-18: The CO-OPS API (water_level, 9410230, MLLW, English, LST) returns preliminary 6-minute data up to 04:36 PST on Nov 18. The latest reading is 5.306 ft, close to the 04:55 predicted high of 4.16 ft, so the gauge is running about +1.15 ft above prediction. The sigma (wave-noise) values were large during the Nov 14-17 surf, about 1.2-2.3, and are now about 0.6-0.8. [API](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&station=9410230&datum=MLLW&units=english&time_zone=lst&format=csv&begin_date=20261110&end_date=20261118&interval=h)\n- NOAA predictions confirm the high tides: Nov 24 07:48 6.85; Nov 25 08:29 6.96; **Nov 26 09:15 6.84; Nov 27 10:05 6.50**; Nov 28 11:01 5.96 ft. The evening highs in the window are only about 3.6 ft. [API predictions](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&station=9410230&datum=MLLW&units=english&time_zone=lst&format=csv&begin_date=20261110&end_date=20261128&interval=hilo)\n\n## 2. Current status\n- Nothing has settled the question yet; the window opens on 2026-11-26.\n- The October record I found in the data is **7.983 ft MLLW on 2026-10-27 at 09:00 PST**. That was 6.59 predicted plus about 1.39 ft of residual, and it matches NOAA's figure of 2.65 ft above MHHW. [API](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&station=9410230&datum=MLLW&units=english&time_zone=lst&format=csv&begin_date=20261020&end_date=20261031&interval=h)\n\n## 3. Recent news (newest first)\n- 2026-11-18 (NWS San Diego discussion, 04:10 PST): \"Coastal flooding is expected at times through the rest of the week. King Tides are expected to peak next week, but chances of tides exceeding 7 ft start as early as Saturday Nov 21.\" A strong storm comes through Thursday Nov 19 with 7-10 ft seas, and the weekend should be calmer. Ensemble members are split roughly evenly between another unsettled system and a dry ridge heading into Thanksgiving. [NWS AFD](https://forecast.weather.gov/product.php?site=sgx&issuedby=SGX&product=AFD)\n- 2026-11-17: KPBS quotes NWS forecaster Kyle Wheeler saying next week's king tides will be among the year's highest. Whether there will be high surf then is uncertain, and surf \"not looking quite as intense\" as Nov 14-16. [KPBS](https://www.kpbs.org/news/environment/2026/11/17/big-waves-back-in-san-diegos-forecast-after-weekend-flooding)\n- 2026-11-14 to 16: Large swell hit the coast, with water overtopping at La Jolla Cove and flooding at Seal Beach. [KTLA](https://ktla.com/news/california/california-high-surf-massive-waves/)\n- 2026-11-16: NWS Eureka warned of possible record tides at Humboldt Bay next week, with 1.5-2 ft of surge on top of the king tide. [Lost Coast Outpost](https://lostcoastoutpost.com/2026/nov/16/possible-record-smashing-tides-predicted-next-week/)\n- 2026-11-17: Coverage of NOAA's October records. [India Today](https://www.indiatoday.in/science/story/el-nino-california-coastal-water-levels-record-high-climate-change-warming-3040566-2026-11-17)\n\n## 4. Base rates and residuals\nObserved high-tide peaks at 9410230, compared with prediction (my calculation from the API):\n- 2026-11-10: 7.38 observed vs 5.97 predicted (+1.41)\n- 2026-11-11: 7.19 vs 5.79 (+1.40)\n- 2026-11-12: 7.06 vs 5.54 (+1.52)\n- 2026-11-13: 6.49 by 08:54, still rising, vs 5.23 at 10:04 (at least +1.26)\n- 2026-11-14: 6.31 vs 4.86 (+1.45)\n- 2026-11-15: 5.73 vs 4.47 (+1.26)\n- 2026-11-16: 5.29 vs 4.08 (+1.21)\n- 2026-11-17: 5.16 vs 3.80 (+1.36) in the morning; 4.83 vs 3.81 (+1.02) in the afternoon\n- 2026-11-18: about 5.31 vs 4.16 (about +1.15)\n- 2026-10-26 to 28: residuals of +1.46, +1.39 and +1.37 at the high tides.\n\nWhat this means:\n- Over roughly 3.5 weeks, the high-tide residual has mostly stayed between +1.0 and +1.5 ft. It looks to be easing a little since Nov 12-14.\n- If you simply add those residuals to the 6.84 ft predicted high on Nov 26, you get about 7.8 to 8.35 ft. For the 6.50 ft high on Nov 27, you get about 7.5 to 8.0 ft. This is arithmetic only, not a forecast.\n- Six-minute readings jump around by about 0.05-0.1 ft between consecutive values, and more in heavy surf, which pushes the window maximum up.\n- Seasonal comparison: I did not pull Nov 18 to Nov 27 values for 2021-2025. In normal years the residual is usually around 0 to +0.5 ft, so 2026 is running far above typical years. The station's highest astronomical tide is 7.20 ft.\n\n## 5. Other forecasts\n- Polymarket, \"Highest sea level in San Diego this winter?\" (to 2027-04-01): 8.10 ft or more at 0.695 Yes; 8.30 ft or more at 0.665. This is probably the San Diego Bay gauge (9410170), which has a larger tidal range, so it is related but **not the same station**.\n- I found no market or expert forecast for La Jolla 9410230 on Nov 26-27. The Kalshi markets listed are unrelated.\n- A Newport Beach notice in the question's background warns of water up to 12+ inches above October's record. I did not verify that notice.\n\n## 6. Upcoming events before resolution\n- 2026-11-19 to 20: A strong frontal storm brings SSW-to-W winds gusting 20-30 kt, seas of 7-10 ft and a renewed NW swell. This could add short-term surge and wave setup. [NWS AFD](https://forecast.weather.gov/product.php?site=sgx&issuedby=SGX&product=AFD)\n- 2026-11-21 to 22: NWS says tides could top 7 ft starting Nov 21 (predicted high 5.62). It expects a dry, calmer weekend.\n- 2026-11-23 to 24: A weaker system brings light rain.\n- Nov 24 to Thanksgiving: Uncertain, with the ensemble split between unsettled weather and a dry ridge. Surf next week is uncertain according to NWS.\n- 2026-11-25: The highest predicted tide (6.96 ft) falls just before the window. Its residual will be the best guide to Nov 26.\n- Watch for any NWS SGX Coastal Flood Advisory or Statement next week, and the daily residual trend in the API.\n\nSources: [NOAA CO-OPS API water level](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&station=9410230&datum=MLLW&units=english&time_zone=lst&format=csv&begin_date=20261110&end_date=20261118&interval=h), [NOAA predictions](https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&station=9410230&datum=MLLW&units=english&time_zone=lst&format=csv&begin_date=20261110&end_date=20261128&interval=hilo), [NWS SGX AFD](https://forecast.weather.gov/product.php?site=sgx&issuedby=SGX&product=AFD), [KPBS](https://www.kpbs.org/news/environment/2026/11/17/big-waves-back-in-san-diegos-forecast-after-weekend-flooding), [KTLA](https://ktla.com/news/california/california-high-surf-massive-waves/), [Lost Coast Outpost](https://lostcoastoutpost.com/2026/nov/16/possible-record-smashing-tides-predicted-next-week/), [Tidewindow](https://thetidewindow.com/guides/king-tides-2026-2027-dates/), [WeatherLA](https://www.weatherla.com/learn/king-tides-in-southern-california-when-where-and-why-they-matter)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 12:42 UTC; check each market really matches the question)\n- Kalshi: Lake Mead end-of-month water elevation next month? (Dec 2026). Yes prices: Above 1037 Ft: 0.66; Above 1038 Ft: 0.59; Above 1039 Ft: 0.57; Above 1036 Ft: 0.88; Above 1035 Ft: 0.90; Above 1040 Ft: 0.57; Above 1034 Ft: 0.94; Above 1033 Ft: 0.96.\n- Kalshi: Loudoun Water data center potable water use next quarter (Q1 2027). Yes prices: Above 250 million gallons: 0.52; Above 300 million gallons: 0.25; Above 200 million gallons: 0.82; Above 350 million gallons: 0.15; Above 400 million gallons: 0.12; Above 150 million gallons: 0.91; Above 450 million gallons: 0.07.\n- Kalshi: Rain in Los Angeles this month? (In Nov 2026). Yes prices: Above 3 inches: 0.26; Above 2 inches: 0.82; Above 4 inches: 0.06; Above 6 inches: 0.03; Above 7 inches: 0.03; Above 5 inches: 0.04; Above 1 inch: 0.9900.\n- Kalshi: Highest temperature in Los Angeles today? (On Nov 18, 2026). Yes prices: 68° to 69°: 0.60; 66° to 67°: 0.22; 70° to 71°: 0.17; 72° or above: 0.01; 64° to 65°: 0.0100; 63° or below: 0.0100.\n- Kalshi: Los Angeles Mayor winner? (In 2030). Yes prices: Nithya Raman: 0.40; Traci Park: 0.20; Adam Miller: 0.04; Karen Bass: 0.04; Austin Beutner: 0.04; Spencer Pratt: 0.04; Kenneth Mejia: 0.05; Rick Caruso: 0.05.\n- Kalshi: San Diego, CA home values in November (November 2026). Yes prices: Above $1,125,000: 0.48; Above $1,122,500: 0.58; Above $1.12 million: 0.72; Above $1,115,000: 0.89; Above $1,135,000: 0.12.\n- Kalshi: San Diego vs UC Irvine (USD vs UCI (Nov 21)). Yes prices: UC Irvine: 0.64; San Diego: 0.34.\n- Kalshi: Stetson vs San Diego (STET vs USD (Nov 21)). Yes prices: San Diego: 0.91; Stetson: 0.09.\n- Polymarket: Highest sea level in San Diego this winter? (ends 2027-04-01). [Yes, No] prices: 7.70 ft or more: [\"0.9725\", \"0.0275\"]; 7.90 ft or more: [\"0.979\", \"0.021\"]; 8.10 ft or more: [\"0.695\", \"0.305\"]; 8.30 ft or more: [\"0.665\", \"0.335\"]\n- Polymarket: NCAA Football: San Diego State 2026 Win Total (ends 2026-12-27). [Yes, No] prices: 5.5+ Wins: [\"0.1555\", \"0.8445\"]; 6.5+ Wins: [\"0.0235\", \"0.9765\"]; 7.5+ Wins: [\"0\", \"1\"]; 8.5+ Wins: [\"0\", \"1\"]; 9.5+ Wins: [\"0\", \"1\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 7.77,
+        "p25": 7.955,
+        "p50": 8.13,
+        "p75": 8.305,
+        "p90": 8.48
+      },
+      "reasoning": "(a) About 8 days remain until the window opens (Nov 26). Resolution comes around Nov 28.\n\n(b) The latest reading is 5.31 ft MLLW at 04:36 PST on 2026-11-18, about 1.15 ft above the predicted 4.16 ft high. The October record in the 6-minute series is 7.98 ft.\n\n(c) If the residual stayed at today's +1.15 ft, the Nov 26 high would be 6.84 + 1.15 ≈ 7.99 ft. At the three-week average of +1.35 ft, it would be about 8.19 ft.\n\n(d) The residual has eased slightly since Nov 13 (+1.56 fell to about +1.15). If that easing continued, the residual might be about +1.0 to 1.1 by Nov 26, giving roughly 7.85 to 7.95 ft. If instead the residual drifted back toward its mean, the high would be about 8.1 to 8.2 ft.\n\n(e) Historical variation:\n- Over three weeks, the high-tide residual has stayed within about ±0.2 ft of 1.35 ft.\n- Over 8 days, Kelvin-wave-driven anomalies change slowly, but storm surge and wave setup can add or remove about 0.2 to 0.5 ft.\n- Normal years show residuals near zero, so a full collapse of the anomaly in 8 days is very unlikely.\n\n(f) The experts and markets:\n- NWS expects king tides above 7 ft from Nov 21, and the weather for Nov 24-27 is uncertain.\n- Newport Beach warns of levels possibly 12 inches or more above the October record, which looks aggressive.\n- Polymarket covers the whole winter at the San Diego Bay gauge, so it is only loosely relevant, but it implies about 8.1 ft or more is likely sometime this winter.\n\n(g) Two unexpected scenarios:\n- Low: the Kelvin wave anomaly fades quickly, a dry offshore-wind ridge sets in, and the swell is small. The residual drops to about +0.7 ft, giving roughly 7.5 ft.\n- High: a low-pressure system with southerly winds and large west swell arrives on the Nov 26 morning high. The residual reaches +1.9 to 2.1 ft, giving roughly 8.8 to 8.9 ft.\n\nPercentile 1: 7.40\nPercentile 5: 7.65\nPercentile 10: 7.77\nPercentile 20: 7.91\nPercentile 30: 8.00\nPercentile 40: 8.07\nPercentile 50: 8.13\nPercentile 60: 8.19\nPercentile 70: 8.26\nPercentile 80: 8.35\nPercentile 90: 8.48\nPercentile 95: 8.60\nPercentile 99: 8.90"
+    },
+    {
+      "value": {
+        "p10": 7.7,
+        "p25": 7.9,
+        "p50": 8.08,
+        "p75": 8.255,
+        "p90": 8.43
+      },
+      "reasoning": "(a) About 8 to 10 days remain. The window opens 2026-11-26 08:00 UTC, and the data should be posted by about 2026-11-28.\n\n(b) The latest reading, on 2026-11-18 at 04:36 PST, was 5.31 ft MLLW. That is about 1.15 ft above the predicted 4.16 ft high. The October record is 7.98 ft (Oct 27).\n\n(c) If nothing changed, adding the recent residual of about 1.15 to 1.3 ft to the predicted 6.84 ft high on Nov 26 gives about 8.0 to 8.15 ft.\n\n(d) The residual has eased slightly from about 1.55 ft on Nov 13 to about 1.15 ft on Nov 18. If that trend continued gently, it would be about 1.0 to 1.2 ft by Nov 26, giving roughly 7.85 to 8.05 ft. The three-week average residual of 1.35 ft would give about 8.2 ft.\n\n(e) Historical variation:\n- Over three weeks the residual has stayed within about ±0.2 ft of 1.35 ft.\n- Over an 8-day horizon, the Kelvin-wave signal could decay, and the weather (wind, pressure and swell) adds roughly ±0.2 to 0.3 ft.\n- The maximum 6-minute reading adds a small upward bias from wave noise.\n\n(f) Experts and markets:\n- NWS expects king tides above 7 ft from Nov 21.\n- Newport Beach warns levels could reach 12 or more inches above the October record, which looks aggressive.\n- The Polymarket contract covers the San Diego Bay gauge over the whole winter, so it is only loosely relevant. It implies sea levels above 8 ft are likely this season.\n\n(g) Two unexpected scenarios:\n- Low outcome: the Kelvin wave signal fades quickly, a dry ridge brings high pressure and offshore winds, and the residual falls to about 0.5 to 0.7 ft. That would put the peak near 7.3 to 7.5 ft.\n- High outcome: a low-pressure system with southerly winds and a big west swell arrives on Nov 26 on top of a persistent residual. The residual would reach 1.8 to 2.0 ft and the peak about 8.7 to 8.85 ft.\n\nPercentile 1: 7.3\nPercentile 5: 7.58\nPercentile 10: 7.7\nPercentile 20: 7.85\nPercentile 30: 7.95\nPercentile 40: 8.02\nPercentile 50: 8.08\nPercentile 60: 8.14\nPercentile 70: 8.21\nPercentile 80: 8.3\nPercentile 90: 8.43\nPercentile 95: 8.55\nPercentile 99: 8.82"
+    },
+    {
+      "value": {
+        "p10": 7.72,
+        "p25": 7.905,
+        "p50": 8.08,
+        "p75": 8.255,
+        "p90": 8.43
+      },
+      "reasoning": "(a) **Time left:** about 8 days until the window opens on Nov 26 (PST). The data will be known by about Nov 28.\n\n(b) **Latest value:** On 2026-11-18 at 04:36 PST, the gauge read 5.31 ft MLLW, about 1.15 ft above the predicted high of 4.16 ft. The record in the preliminary 6-minute series is 7.98 ft, set on Oct 27.\n\n(c) **If nothing changed:** The predicted 6.84 ft high on Nov 26 plus the current excess of about 1.15 to 1.35 ft gives roughly 8.0 to 8.2 ft.\n\n(d) **If the trend continued:**\n- The excess has eased slightly, from about 1.55 ft on Nov 13 to about 1.15-1.3 ft on Nov 16-18.\n- If that easing continues, the excess might be about 1.1-1.2 ft by Nov 26, giving about 7.95-8.05 ft.\n- The Nov 27 high (6.50 ft predicted) would only win if the excess jumped.\n\n(e) **Historical variation:** Over 3 weeks the excess at high tide ranged from 1.15 to 1.56 ft, so a spread of roughly ±0.2 ft. Over an 8-day horizon, a storm with low pressure, southerly wind and wave setup could add 0.2-0.4 ft. Decay of the Kelvin wave could remove a similar amount.\n\n(f) **Experts and markets:**\n- Newport Beach warns levels could reach 12 inches or more above October's record. That is a worst-case framing for a different location.\n- NWS expects tides above 7 ft, and says the weather from Nov 24 on is uncertain.\n- The Polymarket contract covers the San Diego Bay gauge for the whole winter, so it is only loosely relevant. It implies roughly 70% odds of reaching 8.1 ft or more at some point this winter.\n\n(g) **Unexpected scenarios:**\n- Low: the Kelvin wave signal fades fast and a dry offshore-wind ridge builds. The excess drops to about 0.6-0.8 ft, and the peak comes in around 7.4-7.6 ft.\n- High: a low-pressure system with southerly wind and large west swell hits on the morning of Nov 26. The excess reaches 1.7-1.9 ft, and the peak is about 8.6-8.7 ft.\n\nPercentile 1: 7.35\nPercentile 5: 7.6\nPercentile 10: 7.72\nPercentile 20: 7.86\nPercentile 30: 7.95\nPercentile 40: 8.02\nPercentile 50: 8.08\nPercentile 60: 8.14\nPercentile 70: 8.21\nPercentile 80: 8.3\nPercentile 90: 8.43\nPercentile 95: 8.53\nPercentile 99: 8.75"
+    },
+    {
+      "value": {
+        "p10": 7.6,
+        "p25": 7.83,
+        "p50": 8.05,
+        "p75": 8.255,
+        "p90": 8.46
+      },
+      "reasoning": "(a) **Time left:** The window opens November 26, 8 days from today (2026-11-18). The outcome is known once NOAA posts the November 26-27 data, around November 28.\n\n(b) **Latest value:** On 2026-11-18 at 04:36 PST the gauge read 5.31 ft MLLW against a predicted high of 4.16 ft. That is a residual of about +1.15 ft. The October record was 7.98 ft MLLW on 2026-10-27.\n\n(c) **If nothing changed:** The predicted high is 6.84 ft on November 26. Adding today's +1.15 ft residual and about 0.05-0.1 ft of 6-minute noise gives roughly 8.05 ft.\n\n(d) **If the trend continued:** High-tide residuals have eased from about +1.4-1.5 ft (November 10-14) to about +1.15-1.35 ft (November 16-18). If that slow decay continues, the November 26 residual would be about +0.9 to +1.2 ft, giving roughly 7.8-8.1 ft.\n\n(e) **Historical variation:** Over the past 3.5 weeks the residual has stayed between +1.0 and +1.5 ft. Day-to-day swings are about 0.15-0.3 ft, driven by storms, swell setup and wind. Over 8 days the residual could plausibly shift by ±0.3-0.4 ft. Kelvin-wave anomalies decay over weeks, not days.\n\n(f) **Expert and market expectations:**\n- NWS says next week's king tides will be among the year's highest and expects tides above 7 ft starting November 21. Surf next week is uncertain and is \"not looking as intense.\"\n- The Newport Beach notice warns of 12+ inches above October's record, which looks alarmist for La Jolla.\n- The Polymarket contract on San Diego's winter high covers a different station and a longer window, so it is only loosely relevant.\n\n(g) **Unexpected scenarios:**\n- **Low:** A dry offshore ridge with calm seas, plus the Kelvin-wave pulse fading faster, cuts the residual to about +0.5-0.7 ft. The peak would be about 7.4-7.5 ft.\n- **High:** A Thanksgiving storm brings low pressure, onshore wind and large west swell, adding wave setup on top of the persistent anomaly. The residual would be about +1.7-1.9 ft, and noisy 6-minute spikes would push the peak to about 8.7-8.9 ft.\n\nPercentile 1: 7.2\nPercentile 5: 7.45\nPercentile 10: 7.6\nPercentile 20: 7.77\nPercentile 30: 7.89\nPercentile 40: 7.98\nPercentile 50: 8.05\nPercentile 60: 8.12\nPercentile 70: 8.2\nPercentile 80: 8.31\nPercentile 90: 8.46\nPercentile 95: 8.59\nPercentile 99: 8.85"
+    },
+    {
+      "value": {
+        "p10": 7.55,
+        "p25": 7.815,
+        "p50": 8.05,
+        "p75": 8.275,
+        "p90": 8.5
+      },
+      "reasoning": "(a) **Time left:** About 8 to 9 days. The window covers Nov 26-27 PST, and NOAA publishes preliminary data in near real time, so the answer should be known by about Nov 28.\n\n(b) **Latest value from the resolution source:** On Nov 18 at 04:36 PST, station 9410230 read 5.31 ft MLLW, against a predicted high of 4.16 ft. That is a residual of about +1.15 ft. The October record at this gauge was 7.98 ft MLLW on Oct 27.\n\n(c) **If nothing changed:** The predicted high is 6.84 ft on Nov 26. Adding the current residual of about +1.15 ft, plus about 0.05-0.1 ft of 6-minute wave noise, gives roughly 8.0-8.1 ft.\n\n(d) **If the current trend continued:** The residual has eased slightly, from about +1.4-1.5 ft (Nov 10-14) to about +1.15-1.35 ft (Nov 16-18). If it fades further to about +0.9-1.1 ft, the result would be about 7.8-7.95 ft. If the anomaly driven by El Nino and the Kelvin wave persists at about +1.3 ft, it would be about 8.15 ft.\n\n(e) **Historical variation:** Over 3.5 weeks, high-tide residuals have stayed within +1.0 to +1.5 ft. Over about 8 days, the residual can plausibly shift by ±0.3-0.5 ft, depending on swell, winds, pressure and the evolution of the Kelvin wave. Six-minute readings add positive noise to the window maximum, more so in heavy surf.\n\n(f) **Experts and markets:**\n- The NWS expects king tides next week to be among the year's highest, and says tides could exceed 7 ft from Nov 21. It rates surf as uncertain and probably less intense than Nov 14-16.\n- A Newport Beach notice warns of water 12 inches or more above October's record. That points to a high outcome but is likely alarmist.\n- Polymarket's market is for a different station and the whole winter, so it is only loosely relevant.\n\n(g) **Unexpected scenarios:**\n- **Low:** The Kelvin wave anomaly relaxes quickly and a dry offshore ridge with high pressure sets in. The residual falls to about +0.5 ft, giving a maximum of about 7.3-7.4 ft.\n- **High:** A Thanksgiving storm arrives with low pressure, SW winds and a large west swell, on top of the persistent anomaly. The residual reaches +1.8-2.0 ft with large wave-noise spikes, giving about 8.7-8.9 ft.\n\nPercentile 1: 7.1\nPercentile 5: 7.4\nPercentile 10: 7.55\nPercentile 20: 7.75\nPercentile 30: 7.88\nPercentile 40: 7.97\nPercentile 50: 8.05\nPercentile 60: 8.13\nPercentile 70: 8.22\nPercentile 80: 8.33\nPercentile 90: 8.5\nPercentile 95: 8.63\nPercentile 99: 8.9"
+    },
+    {
+      "value": {
+        "p10": 7.57,
+        "p25": 7.795,
+        "p50": 7.99,
+        "p75": 8.185,
+        "p90": 8.39
+      },
+      "reasoning": "(a) **Time left:** About 8 days until the window opens on Nov 26. The outcome will be known by about Nov 28 once NOAA posts the preliminary data.\n\n(b) **Latest known value:** 5.31 ft MLLW at 04:36 PST on 2026-11-18, against a predicted high of 4.16 ft. The gauge is running about +1.15 ft above prediction. The October record is 7.98 ft MLLW (Oct 27).\n\n(c) **If nothing changed:** The current +1.15 ft residual added to the 6.84 ft predicted high on Nov 26 gives about 8.0 ft. The 6-minute maximum adds a little noise, so about 8.0-8.05 ft.\n\n(d) **If the trend continued:** The residual has eased slightly, from about +1.4-1.5 ft on Nov 10-14 to about +1.15 ft now. If it keeps easing to about +0.9-1.0 ft by Nov 26, the peak would be about 7.75-7.85 ft. If it holds or a storm adds surge, the peak would be about 8.0-8.3 ft.\n\n(e) **Historical variation:** Over 3.5 weeks the high-tide residuals have mostly stayed between +1.0 and +1.5 ft. Day-to-day swings are about 0.1-0.3 ft, and surge or wave-setup events can add a few tenths. The uncertainty in the residual 8 days out is roughly ±0.3 ft (1 sigma).\n\n(f) **Experts and markets:**\n- NWS expects the king tides to be among the year's highest, with tides above 7 ft from Nov 21. Surf next week is uncertain.\n- Newport Beach warns of water up to 12 inches above the October record. This looks alarmist for this gauge.\n- The Polymarket market is for a different gauge (San Diego Bay) and the whole winter, so it is only weakly informative.\n\n(g) **Unexpected scenarios:**\n- **Low:** The Kelvin-wave anomaly fades and a dry offshore ridge settles in with high pressure. The residual collapses to about +0.5 ft and the peak is about 7.35 ft.\n- **High:** A Thanksgiving storm with low pressure, onshore winds and big west swell coincides with the Nov 26 morning high tide. The residual reaches about +1.8-1.9 ft, and the noisy 6-minute peaks reach about 8.7-8.8 ft.\n\nPercentile 1: 7.2\nPercentile 5: 7.45\nPercentile 10: 7.57\nPercentile 20: 7.74\nPercentile 30: 7.85\nPercentile 40: 7.93\nPercentile 50: 7.99\nPercentile 60: 8.05\nPercentile 70: 8.13\nPercentile 80: 8.24\nPercentile 90: 8.39\nPercentile 95: 8.51\nPercentile 99: 8.78"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 7.632,
+    "p25": 7.8638,
+    "p50": 8.0659,
+    "p75": 8.2556,
+    "p90": 8.4509
+  },
+  "usage": [
+    {
+      "question_id": "46879",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.8,
+      "notional_cost_usd": 0.00012890000000000002,
+      "input_tokens": 528,
+      "output_tokens": 47,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.0,
+      "notional_cost_usd": 0.0002714,
+      "input_tokens": 1183,
+      "output_tokens": 70,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 97.2,
+      "notional_cost_usd": 0.5922491999999999,
+      "input_tokens": 319661,
+      "output_tokens": 7158,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.081316,
+      "input_tokens": 6918,
+      "output_tokens": 1299,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.7,
+      "notional_cost_usd": 0.0808,
+      "input_tokens": 6921,
+      "output_tokens": 1272,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0007712000000000001,
+      "input_tokens": 2867,
+      "output_tokens": 396,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.2,
+      "notional_cost_usd": 0.0008521000000000001,
+      "input_tokens": 2869,
+      "output_tokens": 557,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.8,
+      "notional_cost_usd": 0.00032792,
+      "input_tokens": 2866,
+      "output_tokens": 472,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.0,
+      "notional_cost_usd": 0.00036945,
+      "input_tokens": 2869,
+      "output_tokens": 555,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.6,
+      "notional_cost_usd": 0.0333542,
+      "input_tokens": 6921,
+      "output_tokens": 1478,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0008362,
+      "input_tokens": 2897,
+      "output_tokens": 514,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00027503,
+      "input_tokens": 2896,
+      "output_tokens": 366,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 77.9,
+      "notional_cost_usd": 0.35087,
+      "input_tokens": 158573,
+      "output_tokens": 6120,
+      "web_searches": 1,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.4,
+      "notional_cost_usd": 0.089784,
+      "input_tokens": 7394,
+      "output_tokens": 1532,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.7,
+      "notional_cost_usd": 0.088296,
+      "input_tokens": 7393,
+      "output_tokens": 1458,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.6,
+      "notional_cost_usd": 0.090616,
+      "input_tokens": 7393,
+      "output_tokens": 1574,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0007715,
+      "input_tokens": 2906,
+      "output_tokens": 381,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0007844,
+      "input_tokens": 2988,
+      "output_tokens": 374,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0007733,
+      "input_tokens": 2920,
+      "output_tokens": 379,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00032182,
+      "input_tokens": 2906,
+      "output_tokens": 459,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.00035933,
+      "input_tokens": 2988,
+      "output_tokens": 532,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46879",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00032696,
+      "input_tokens": 2920,
+      "output_tokens": 469,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.4145
+}
