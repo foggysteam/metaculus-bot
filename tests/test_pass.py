@@ -812,6 +812,128 @@ def test_shrink_check_recomputes_a_peer_score_exactly_for_another_factor() -> No
     assert shrink_check.score_with(item_no, 1.0) > item_no["score"]  # bolder on the right side scores more
 
 
+def _synthetic_bars(last: datetime, count: int, seed: int, start_price: float = 100.0, daily_vol: float = 0.02):
+    """`count` NYSE trading days of a random walk ending on `last`, with highs above the closes."""
+    import numpy as np
+    import numeric_baseline as nb
+    days = nb.trading_days((last - timedelta(days=int(count * 1.6) + 30)).date(), last.date())[-count:]
+    rng = np.random.default_rng(seed)
+    closes = start_price * np.exp(np.cumsum(rng.normal(0, daily_vol, len(days))))
+    highs = closes * np.exp(np.abs(rng.normal(0, daily_vol / 2, len(days))))
+    return days, closes, highs
+
+
+def test_period_baselines_count_nyse_trading_days() -> None:
+    from datetime import date
+    import numeric_baseline as nb
+    # Market Pulse 26Q4's last three periods: Thanksgiving, then a full fortnight, then Christmas and New Year.
+    assert len(nb.trading_days(date(2026, 11, 23), date(2026, 12, 4))) == 9
+    assert len(nb.trading_days(date(2026, 12, 7), date(2026, 12, 18))) == 10
+    assert len(nb.trading_days(date(2026, 12, 21), date(2027, 1, 1))) == 8
+    h = nb.nyse_holidays(2026)
+    assert {date(2026, 4, 3), date(2026, 7, 3), date(2026, 11, 26), date(2026, 12, 25)} <= h  # Good Friday, 4 July on a Saturday
+    assert date(2026, 11, 27) not in h  # a half day still trades
+    assert date(2021, 12, 31) not in nb.nyse_holidays(2021) | nb.nyse_holidays(2022)  # New Year 2022 fell on a Saturday
+
+
+def test_period_baseline_mappings_are_checked() -> None:
+    import numeric_baseline as nb
+    gap = {"source": "yahoo", "kind": "return_difference", "symbol": "NQ=F", "symbol_b": "ES=F", "start_date": "2026-11-23", "end_date": "2026-12-04"}
+    assert nb.valid_mapping(gap)
+    assert not nb.valid_mapping(gap | {"symbol_b": "NQ=F"})
+    assert not nb.valid_mapping(gap | {"start_date": "2026-12-05"})  # after the end
+    assert not nb.valid_mapping(gap | {"end_date": "2027-06-01"})  # far too long for a period
+    assert not nb.valid_mapping(gap | {"start_date": "23 Nov"})
+    assert nb.valid_mapping({"source": "yahoo", "kind": "period_high", "symbol": "^VIX", "start_date": "2026-11-23", "end_date": "2026-12-04"})
+    assert not nb.valid_mapping({"source": "yahoo", "kind": "period_low", "symbol": "^VIX", "start_date": "2026-11-23", "end_date": "2026-12-04"})
+    assert nb.valid_mapping({"source": "yahoo", "symbol": "NVDA", "target_date": "2026-12-31"})  # the level kind as before
+    assert nb.valid_mapping({"source": "fred", "series_id": "DGS10", "target_date": "2026-12-04", "transform": "level"})
+    assert not nb.valid_mapping({"source": None})
+
+
+def test_return_gap_baseline_before_and_during_the_period() -> None:
+    from datetime import date
+    import numpy as np
+    import numeric_baseline as nb
+    # Before the period: the weekend before 23 Nov, last close Friday 20 Nov.
+    days, a, _ = _synthetic_bars(datetime(2026, 11, 20), 800, seed=1)
+    _, b, _ = _synthetic_bars(datetime(2026, 11, 20), 800, seed=2)
+    before = nb.return_gap_percentiles(days, a, b, date(2026, 11, 23), date(2026, 12, 4), method="demeaned")
+    assert before["left"] == before["trading_days"] == 9 and before["realised"] is None
+    assert np.all(np.diff(before["values"]) > 0) and abs(before["values"][3]) < 1.5  # same volatility, drift removed
+    # Two days in (23 and 24 Nov): P0 is the close on Friday 20 Nov, 7 trading days are left.
+    days2, a2, _ = _synthetic_bars(datetime(2026, 11, 24), 800, seed=1)
+    _, b2, _ = _synthetic_bars(datetime(2026, 11, 24), 800, seed=2)
+    p0 = days2.index(date(2026, 11, 20))
+    during = nb.return_gap_percentiles(days2, a2, b2, date(2026, 11, 23), date(2026, 12, 4), method="demeaned")
+    assert during["left"] == 7
+    assert np.allclose(during["realised"], (100 * (a2[-1] / a2[p0] - 1), 100 * (b2[-1] / b2[p0] - 1)))
+    gap_so_far = during["realised"][0] - during["realised"][1]
+    assert during["values"][0] < gap_so_far < during["values"][-1]
+    # Nothing to forecast once the period is over, and too short a history gives no baseline.
+    assert nb.return_gap_percentiles(days2, a2, b2, date(2026, 11, 9), date(2026, 11, 20)) is None
+    assert nb.return_gap_percentiles(days[-200:], a[-200:], b[-200:], date(2026, 11, 23), date(2026, 12, 4)) is None
+
+
+def test_period_high_baseline_keeps_the_high_already_reached() -> None:
+    from datetime import date
+    import numpy as np
+    import numeric_baseline as nb
+    days, closes, highs = _synthetic_bars(datetime(2026, 11, 20), 2500, seed=3, start_price=20.0, daily_vol=0.06)
+    before = nb.period_high_percentiles(days, closes, highs, date(2026, 11, 23), date(2026, 12, 4), method="level")
+    assert before["wait"] == 0 and before["left"] == 9 and before["reached"] is None
+    assert np.all(np.diff(before["values"]) >= 0)
+    # Started earlier in the week of 16 Nov: 15 to 17 Nov are waited out first.
+    early = nb.period_high_percentiles(days[:-3], closes[:-3], highs[:-3], date(2026, 11, 23), date(2026, 12, 4), method="raw")
+    assert early["wait"] == 3
+    days2, closes2, highs2 = _synthetic_bars(datetime(2026, 11, 25), 2500, seed=3, start_price=20.0, daily_vol=0.06)
+    highs2[-2] = closes2[-1] * 3  # a spike on 24 Nov
+    during = nb.period_high_percentiles(days2, closes2, highs2, date(2026, 11, 23), date(2026, 12, 4), method="level")
+    assert during["reached"] == highs2[-2] and during["left"] == 6
+    assert np.all(during["values"] >= highs2[-2] - 1e-9)
+
+
+def test_market_anchor_check_reads_periods_and_bins() -> None:
+    from datetime import date
+    import numpy as np
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import market_anchor_check as m
+    assert m.parse_period("Nov 9 - Nov 20", 2026) == (date(2026, 11, 9), date(2026, 11, 20))
+    assert m.parse_period("Dec 21 - Jan 1", 2027) == (date(2026, 12, 21), date(2027, 1, 1))
+    assert m.parse_period("Nov 9-20 (wider range)", 2026) == (date(2026, 11, 9), date(2026, 11, 20))
+    # Percentiles of a range -5..5 question with 10 inbound bins: the middle bin (0 to 1) holds 50% to 60%.
+    scaling = {"range_min": -5.0, "range_max": 5.0, "zero_point": None}
+    values = np.array([-4.0, -3.0, -1.0, 0.0, 1.0, 3.0, 4.0])
+    assert abs(m.bin_probability(values, scaling, 11, 6) - 0.25) < 1e-9  # 0 to 1: p50 to p75
+    total = sum(m.bin_probability(values, scaling, 11, b) for b in range(12))
+    assert abs(total - 1) < 1e-6
+
+
+def test_statistical_baseline_answers_the_period_kinds() -> None:
+    import asyncio
+    import numeric_baseline as nb
+    from forecasting_tools import NumericQuestion
+    days, a, highs = _synthetic_bars(datetime(2026, 11, 20), 800, seed=4)
+    _, b, _ = _synthetic_bars(datetime(2026, 11, 20), 800, seed=5)
+    bars = {"NQ=F": (days, a, highs), "ES=F": (days, b, highs), "^VIX": (days, a / 5, highs / 5)}
+    question = NumericQuestion(question_text="How much will Nasdaq-100 Futures total price returns exceed S&P 500 Futures in these biweekly periods of Q4 2026? (Nov 23 - Dec 4)",
+                               upper_bound=5, lower_bound=-5, open_lower_bound=True, open_upper_bound=True)
+    mapped = {"gap": {"source": "yahoo", "kind": "return_difference", "symbol": "NQ=F", "symbol_b": "ES=F", "start_date": "2026-11-23", "end_date": "2026-12-04"},
+              "high": {"source": "yahoo", "kind": "period_high", "symbol": "^VIX", "start_date": "2026-11-23", "end_date": "2026-12-04"}}
+    real_map, real_bars = nb._map_to_series, nb._yahoo_bars
+    nb._yahoo_bars = lambda symbol, years: bars[symbol]
+    try:
+        for name, mapping in mapped.items():
+            async def fake_map(q, mapping=mapping):
+                return mapping
+            nb._map_to_series = fake_map
+            text = asyncio.run(nb.statistical_baseline(question))
+            assert ("NQ=F's percent return minus ES=F's" in text) if name == "gap" else ("highest daily high" in text), text
+            assert "9 trading days" in text and "p95:" in text
+    finally:
+        nb._map_to_series, nb._yahoo_bars = real_map, real_bars
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for test in tests:
