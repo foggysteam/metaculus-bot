@@ -768,6 +768,21 @@ def test_forward_test_hides_the_questions_own_community_prediction() -> None:
     assert subprocess.run(["git", "check-ignore", "-q", out.relative_to(ROOT).as_posix()], cwd=ROOT).returncode == 0
 
 
+def test_shrink_check_recomputes_a_peer_score_exactly_for_another_factor() -> None:
+    import math
+
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import shrink_check
+    from calibration import shrink_binary
+
+    # AL MVP unanimous (MiniBench): median of the forecasts 8%, 12.4% submitted after x0.8, resolved yes
+    item = {"median": 0.08, "stood": shrink_binary(0.08), "resolution": "yes", "score": -23.8}
+    assert abs(shrink_check.score_with(item, 0.8) - -23.8) < 1e-9
+    assert abs(shrink_check.score_with(item, 1.0) - (-23.8 + 100 * math.log(0.08 / shrink_binary(0.08)))) < 1e-9
+    item_no = dict(item, resolution="no")
+    assert shrink_check.score_with(item_no, 1.0) > item_no["score"]  # bolder on the right side scores more
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for test in tests:
