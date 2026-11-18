@@ -1,0 +1,344 @@
+{
+  "logged_at": "2026-11-18T06:05:45.802824+00:00",
+  "bot_version": "2026-11-17.1",
+  "started_at": "2026-11-18T06:01:19.381744+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 46738,
+    "post_id": 46482,
+    "url": "https://www.metaculus.com/questions/46482",
+    "type": "MultipleChoiceQuestion",
+    "unit": "",
+    "tournaments": [
+      "fall-futureeval-2026"
+    ],
+    "text": "How many EU member states will the AI Act National Implementation tracker classify as having clear market surveillance and notifying authorities on January 1, 2027?",
+    "resolution_criteria": "This question resolves as the number of EU member states classified as ‘Clear’ in the ‘National Competent Authorities’ column of the Future of Life Institute's [Overview of all AI Act National Implementation Plans](https://artificialintelligenceact.eu/national-implementation-plans/) tracker, when checked by Metaculus on or after January 1, 2027.",
+    "fine_print": "",
+    "close_time": "2026-11-18 09:00 UTC",
+    "scheduled_resolution_time": "2027-01-01 00:00 UTC"
+  },
+  "research": [
+    "I've written up the findings below.\n\n# AI Act tracker: how many member states are \"Clear\" on national competent authorities\n\n## 1. Resolution source\n- 2026-11-18 (fetched today): the FLI page still says **\"Last update: 17 June 2026\"**. Table 1 shows **9 member states \"Clear\"** for National Competent Authorities, 12 \"Partial clarity\" and 6 \"Unclear\". The 9 Clear countries are Cyprus, Denmark, Finland, Hungary, Ireland, Italy, Lithuania, Malta and Slovenia. [FLI tracker](https://artificialintelligenceact.eu/national-implementation-plans/)\n- The page's table still shows Germany as \"Partial\", noting the law must still pass the Bundestag and Bundesrat. Poland is also \"Partial\", described as \"awaiting approval by the upper house\". Both entries are out of date (see section 3).\n- There is no CSV or JSON behind the page. The table is plain HTML.\n\n## 2. Current status\n- Nothing settles the question yet. If FLI does not update the page before Metaculus checks it, the answer is 9 (the \"≤9\" option).\n- If FLI updates the page, Germany and Poland now meet the \"both authorities designated\" test. That would give at least 11 (\"10 or 11\"). Sweden might be a third (see section 3).\n- How often FLI updates matters most here. Wayback snapshots from 2026-02-12 and 2026-04-29 still showed \"Last update: 19 May 2025\" with only 3 Clear. So the page went about 13 months without an update, then got one on 17 June 2026, and has gone 5 months since. Wayback logged content changes in Jul to Nov 2026, but the live \"Last update\" line has not changed, so those were probably small edits. I could not open the Oct and Nov 2026 snapshots because the archive rate-limited me. [Wayback CDX](https://web.archive.org/cdx/search/cdx?url=artificialintelligenceact.eu/national-implementation-plans/&output=txt&collapse=digest&from=2025), [Apr 2026 snapshot](https://web.archive.org/web/20260429053837/https://artificialintelligenceact.eu/national-implementation-plans/)\n\n## 3. Recent news (newest first)\n- 2026-11-11: The aiactguide.net tracker (national status as of 24 Oct) lists adopted frameworks for Cyprus, Denmark, Finland, Germany, Hungary, Italy, Malta and Poland. It says Spain's bill lapsed on 6 Oct 2026. Czechia's draft (26 Jun 2026) has not been adopted. The Commission list (9 Nov) marks the entries for France, the Netherlands, Portugal, Romania, Sweden, Luxembourg and Estonia as \"pending\". [aiactguide](https://aiactguide.net/authorities/)\n- 2026-10-28: Poland's enforcement chapters took effect. The new AI commission (KRiBSI) was expected to start operating around November. [aiactguide](https://aiactguide.net/authorities/)\n- 2026-08-28: Luxembourg's bill 8476 received a new opinion. I found no plenary vote. [chd.lu](https://wdocs-pub.chd.lu/docs/Dossiers_parlementaires/8476/20260828_Avis.pdf)\n- 2026-08-17: agentliability.eu says Ireland's AI Act 2026 was signed on 21 Jul and its AI Office has operated since 2 Aug. The Netherlands draft is still not law. France's provisions were withdrawn and re-tabled. Austria's motion was postponed. [agentliability](https://agentliability.eu/articles/eu-ai-act-member-state-transposition-status-tracker-2026)\n- 2026-07-29: Germany's KI-MIG law took effect (BGBl. I Nr. 223, signed 22 Jul). It makes the Bundesnetzagentur the market surveillance authority, and the BSI is named interim notifying authority for one category. [gesetze-im-internet](https://www.gesetze-im-internet.de/ki-mig/BJNR0DF0B0026.html), [LTO](https://www.lto.de/recht/hintergruende/h/kuenstliche-intelligenz-ai-act-ki-mg-aufsicht-bussgeld)\n- 2026-07-24: Poland's president signed the AI Systems Act (Dz.U. 2026 poz. 1003). It names KRiBSI as market surveillance authority and the digital affairs minister as notifying authority. [podatki.biz](https://www.podatki.biz/artykuly/prezydent-podpisal-ustawe-o-systemach-sztucznej-inteligencji_16_63012.htm), [itwiz](https://itwiz.pl/prezydent-podpisal-ustawe-o-systemach-ai-ruszaja-piaskownice-regulacyjne-i-nowy-system-nadzoru/)\n- 2026-06-12: Swedish government decision Fi2026/01365 gave the Post and Telecom Authority (PTS) an interim role, with a mandate to 31 Dec 2026, alongside other agencies. It is unclear whether FLI would treat this as \"Clear\". [agentliability](https://agentliability.eu/articles/eu-ai-act-member-state-transposition-status-tracker-2026)\n\n## 4. Base rates\n- FLI's Clear count over time: 3 (as of 19 May 2025, still shown in Apr 2026), then 9 (17 Jun 2026). That is 6 more in one jump, after about 13 months with no update.\n- The page has been updated about once a year. I found no regular schedule. On that pattern, an update in the 6 weeks before 1 Jan 2027 is far from certain.\n- The number of countries actually designating has grown slowly: about 2 legally new designations (Germany, Poland) since 17 June, and none confirmed in Oct to Nov 2026.\n\n## 5. Other forecasts\n- None of the Kalshi markets supplied with this brief match the question. They cover US AI regulation, BRICS and similar topics.\n- I found nothing on Polymarket, Manifold or Metaculus for this question.\n\n## 6. Upcoming events before resolution\n- A possible FLI page update. This is the main factor: with an update the count is probably 11 or more, without one it stays at 9.\n- Pending bills that could pass by year-end:\n  - Denmark's bill L 3 had a first reading set for 5 Nov 2026, but Denmark is already Clear.\n  - Luxembourg's bill 8476 is after its Conseil d'État opinion.\n  - Czechia's draft is with the government.\n  - The Netherlands draft is post-consultation.\n  - Spain needs to re-table its lapsed bill.\n- None of these looks likely to be adopted and reflected on the tracker by 1 Jan 2027, but I could not confirm the timetables.\n- Sweden's interim PTS mandate ends 31 Dec 2026. A follow-up decision could come in December.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 06:01 UTC; check each market really matches the question)\n- Kalshi: Which companies will be named AI national champions this month? (Before Dec 1, 2026). Yes prices: Intel: 0.50; Salesforce: 0.50; Apple: 0.51; Cerebras: 0.51; CoreWeave: 0.51; Meta: 0.51; Palantir: 0.51; xAI: 0.51.\n- Kalshi: Will the US create a national AI regulator? (US national AI regulator). Yes prices: Before Jan 1, 2027: 0.07; Before Jul 1, 2027: 0.68; Before Jan 1, 2028: 0.57.\n- Kalshi: Which state laws will be enacted this year? (Before Jan 1, 2027). Yes prices: Clean Energy Affordability Rewrite: 0.21; Health Information Privacy Act: 0.20; Drag Show Restrictions: 0.08; Companion AI Protection Act: 0.08; $15 Minimum Wage by 2029: 0.05; AI Anti-Discrimination: 0.04; Medical Cannabis Expansion: 0.7400.\n- Kalshi: Will BRICS invite a new member to join them before 2027? (Before 2027). Yes prices: Before 2027: 0.0050.\n- Kalshi: Will LLM restrictions become law? (Before Jan 1, 2028). Yes prices: Before Jan 1, 2028: 0.37; Before Jul 1, 2027: 0.50; Before Jan 1, 2027: 0.06.\n- Kalshi: Will an AI model using neuralese recurrence be first released to the public before 2027? (Before 2027). Yes prices: Before 2027: 0.82.\n- Kalshi: Will the US government rescind the Anthropic ban? (Before Apr 1, 2027). Yes prices: Before Jan 1, 2027: 0.23; Before Apr 1, 2027: 0.40; Before Aug 1, 2026: 0.0100; Before Jul 1, 2026: 0.1000.\n- Kalshi: When will serious AI-incident reporting become U.S. law? (Mandatory serious AI-incident reporting). Yes prices: Before Jul 1, 2027: 0.50; Before Jan 1, 2027: 0.03; Before Jan 1, 2028: 0.51.",
+    "**Bottom line:** The FLI tracker currently counts 9 member states as \"Clear\" (Cyprus, Denmark, Finland, Hungary, Ireland, Italy, Lithuania, Malta, Slovenia). It hasn't been updated since 17 June 2026. Germany and Poland have since passed laws naming both authorities, so if FLI updates before Metaculus checks, the count would probably be at least 11. If it doesn't update, it stays at 9. Whether FLI updates the page in time matters more than any further legislation.\n\n## 1. Resolution source\n- 2026-11-18 (fetched today): The page reads \"Last update: 17 June 2026\". Table 1 counts National Competent Authorities as **Clear 9, Partial clarity 12, Unclear 6**. [FLI](https://artificialintelligenceact.eu/national-implementation-plans/)\n- The 9 \"Clear\" states are Cyprus, Denmark, Finland, Hungary, Ireland, Italy, Lithuania, Malta and Slovenia. \"Partial clarity\" covers Czech Republic, France, Germany, Latvia, Luxembourg, Netherlands, Poland, Portugal, Romania, Slovakia, Spain and Sweden. \"Unclear\" covers Austria, Belgium, Bulgaria, Croatia, Estonia and Greece. [FLI](https://artificialintelligenceact.eu/national-implementation-plans/)\n- The page has no CSV or JSON behind it; the table is static HTML.\n- The page's own entries are out of date. It still describes Germany's law as needing to pass the Bundestag and Bundesrat, and Poland's as \"awaiting approval by the upper house\".\n\n## 2. Current status\n- Nothing settles the question yet. The live count is 9, which falls in the \"≤9\" bin.\n- At least two states listed as \"Partial\" have since put both authorities into law:\n  - 2026-07-29: Germany's KI-MIG came into force. The Bundesnetzagentur is both market surveillance authority and notifying authority (Bundestag passed it 2026-06-11, Bundesrat consented 2026-07-10). [LTO](https://www.lto.de/recht/hintergruende/h/kuenstliche-intelligenz-ai-act-ki-mg-aufsicht-bussgeld), [gesetze-im-internet](https://www.gesetze-im-internet.de/ki-mig/BJNR0DF0B0026.html), [Simmons & Simmons](https://www.simmons-simmons.com/en/publications/cms4tri8600p6uom8vhygodt9/the-german-ai-act-implementing-law-key-provisions-and-concerns)\n  - 2026-07-24: Poland's President signed the AI systems act (Dz.U. 2026 poz. 1003). It creates KRiBSI as market surveillance authority, with the Minister of Digitalisation as notifying authority (per FLI's description of the bill). A secondary tracker says it came into force 2026-08-11 and that KRiBSI was expected to be up and running in November 2026. [podatki.biz](https://www.podatki.biz/artykuly/prezydent-podpisal-ustawe-o-systemach-sztucznej-inteligencji_16_63012.htm), [Dz.U.](https://api.sejm.gov.pl/eli/acts/DU/2026/1003/text.pdf), [agentliability](https://agentliability.eu/articles/eu-ai-act-member-state-transposition-status-tracker-2026)\n- Sweden: a government decision on 2026-06-12 (Fi2026/01365) assigned authorities under an interim mandate running to 31 Dec 2026. A secondary tracker labels this only \"Proposed\", so it is unclear whether FLI would count it as \"Clear\". [agentliability](https://agentliability.eu/articles/eu-ai-act-member-state-transposition-status-tracker-2026)\n\n## 3. Recent news (newest first)\n- 2026-10-24: A secondary tracker reports that Spain's AI bill lapsed in October 2026. The same tracker lists 8 adopted national frameworks: Cyprus, Denmark, Finland, Germany, Hungary, Italy, Malta and Poland. I could not verify this source. [search summary via agentliability/aiactguide](https://agentliability.eu/articles/eu-ai-act-member-state-transposition-status-tracker-2026)\n- 2026-08-17: Secondary tracker statuses: Luxembourg's bill 8476 is pending final adoption (Conseil d'État opinion 2026-07-10). The Dutch draft bill went to consultation only (April to June 2026). Austria's committee postponed a motion on 2026-06-03. Portugal has not confirmed a notifying authority. [agentliability](https://agentliability.eu/articles/eu-ai-act-member-state-transposition-status-tracker-2026)\n- 2026-07-21: Ireland's AI Office Act was signed. Ireland is already counted as \"Clear\". [agentliability](https://agentliability.eu/articles/eu-ai-act-member-state-transposition-status-tracker-2026)\n- I found no confirmed adoption in November 2026 of a law for any other state still listed as \"Partial\".\n\n## 4. Base rates and how often FLI updates\n- The Wayback Machine shows the \"Last update\" date unchanged at **19 May 2025** (3 Clear: Lithuania, Luxembourg, Malta) in snapshots from 2026-01-13, 2026-02-20 and 2026-04-29. [archive Jan](https://web.archive.org/web/20260113234231/https://artificialintelligenceact.eu/national-implementation-plans/), [archive Apr](https://web.archive.org/web/20260429053837/https://artificialintelligenceact.eu/national-implementation-plans/)\n- The next substantive update was dated 17 June 2026 and moved the count from 3 to 9. So the main data was frozen for about 13 months, followed by one big catch-up.\n- That update also downgraded one state: Luxembourg went from Clear to Partial. Reclassification can therefore go down as well as up.\n- The page has now gone 5 months without an update, even though Germany and Poland passed laws in July. Updates are irregular and infrequent.\n- If an update happens, a plausible count is 11 (9 plus Germany and Poland). It could reach 12 or more if Sweden or other states are counted.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus community forecast on this tracker.\n- None of the Kalshi markets supplied (US AI regulator, state laws and others) relate to this question.\n\n## 6. Upcoming events before resolution\n- An FLI update to the page before Metaculus checks on or after 2027-01-01 is the key unknown. I found no announcement of a planned update.\n- 2026-12-02: some AI Act deadlines are reported in Italian media. That date is unconfirmed, and it could prompt FLI content refreshes. [ildenaro](https://www.ildenaro.it/ai-act-aziende-italiane-in-ritardo-dal-2-dicembre-nuovi-obblighi-e-sanzioni-fino-a-35-milioni/)\n- Possible final adoptions before year end: Luxembourg (bill 8476), Czech Republic, Slovakia and Romania. I found no confirmed vote dates.\n- 2026-12-31: Sweden's interim mandate expires, which may lead to a permanent designation.\n\nSources: [FLI tracker](https://artificialintelligenceact.eu/national-implementation-plans/), [Wayback CDX](https://web.archive.org/cdx/search/cdx?url=artificialintelligenceact.eu/national-implementation-plans/), [LTO](https://www.lto.de/recht/hintergruende/h/kuenstliche-intelligenz-ai-act-ki-mg-aufsicht-bussgeld), [Simmons & Simmons](https://www.simmons-simmons.com/en/publications/cms4tri8600p6uom8vhygodt9/the-german-ai-act-implementing-law-key-provisions-and-concerns), [KI-MIG](https://www.gesetze-im-internet.de/ki-mig/BJNR0DF0B0026.html), [podatki.biz](https://www.podatki.biz/artykuly/prezydent-podpisal-ustawe-o-systemach-sztucznej-inteligencji_16_63012.htm), [itwiz](https://itwiz.pl/prezydent-podpisal-ustawe-o-systemach-ai-ruszaja-piaskownice-regulacyjne-i-nowy-system-nadzoru/), [agentliability tracker](https://agentliability.eu/articles/eu-ai-act-member-state-transposition-status-tracker-2026), [aiactguide](https://aiactguide.net/authorities/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-18 06:01 UTC; check each market really matches the question)\n- Kalshi: Which companies will be named AI national champions this month? (Before Dec 1, 2026). Yes prices: Intel: 0.50; Salesforce: 0.50; Apple: 0.51; Cerebras: 0.51; CoreWeave: 0.51; Meta: 0.51; Palantir: 0.51; xAI: 0.51.\n- Kalshi: Will the US create a national AI regulator? (US national AI regulator). Yes prices: Before Jan 1, 2027: 0.07; Before Jul 1, 2027: 0.68; Before Jan 1, 2028: 0.57.\n- Kalshi: Which state laws will be enacted this year? (Before Jan 1, 2027). Yes prices: Clean Energy Affordability Rewrite: 0.21; Health Information Privacy Act: 0.20; Drag Show Restrictions: 0.08; Companion AI Protection Act: 0.08; $15 Minimum Wage by 2029: 0.05; AI Anti-Discrimination: 0.04; Medical Cannabis Expansion: 0.7400.\n- Kalshi: Will BRICS invite a new member to join them before 2027? (Before 2027). Yes prices: Before 2027: 0.0050.\n- Kalshi: Will LLM restrictions become law? (Before Jan 1, 2028). Yes prices: Before Jan 1, 2028: 0.37; Before Jul 1, 2027: 0.50; Before Jan 1, 2027: 0.06.\n- Kalshi: Will an AI model using neuralese recurrence be first released to the public before 2027? (Before 2027). Yes prices: Before 2027: 0.82.\n- Kalshi: Will the US government rescind the Anthropic ban? (Before Apr 1, 2027). Yes prices: Before Jan 1, 2027: 0.23; Before Apr 1, 2027: 0.40; Before Aug 1, 2026: 0.0100; Before Jul 1, 2026: 0.1000.\n- Kalshi: When will serious AI-incident reporting become U.S. law? (Mandatory serious AI-incident reporting). Yes prices: Before Jul 1, 2027: 0.50; Before Jan 1, 2027: 0.03; Before Jan 1, 2028: 0.51."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "≤9": 0.68,
+        "10 or 11": 0.18,
+        "12 or 13": 0.09,
+        "14 or 15": 0.03,
+        ">15": 0.02
+      },
+      "reasoning": "(a) **Time left:** About 6 weeks. Today is 2026-11-18 and Metaculus checks on or after 2027-01-01.\n\n(b) **Status quo:** The live FLI tracker still says \"Last update: 17 June 2026\". It shows 9 member states as \"Clear\" (Cyprus, Denmark, Finland, Hungary, Ireland, Italy, Lithuania, Malta, Slovenia). If the page is not updated, the answer is \"≤9\".\n\n(c) **Base rates:** FLI updates this table rarely, with roughly one major update a year. It showed 3 Clear from May 2025 until at least April 2026, then jumped to 9 in June 2026. The page has now gone 5 months without a substantive change. At that pace, the chance of a substantive update in any given 6-week window is roughly 10-20%. The window just before the year-end check is somewhat more likely than average because the August 2026 enforcement milestone has passed. Since no matching market exists, the base rate is the main anchor.\n\n(d) **Strongest evidence:**\n- 2026-11-18: the live page still shows 9 Clear and the 17 June 2026 update date.\n- Wayback logged content changes between July and November 2026, but the update date and Clear count did not change, so those were probably small edits.\n- Two countries the table marks \"Partial\" now meet the \"both authorities designated\" test, so its entries for them are out of date:\n  - Germany's KI-MIG law took effect on 2026-07-29.\n  - Poland's AI Systems Act was signed on 2026-07-24, and its enforcement chapters took effect on 2026-10-28.\n- Sweden has had an interim PTS mandate since 2026-06-12, which might count as Clear.\n- No other countries appear likely to adopt their laws by year-end:\n  - Spain's bill lapsed on 2026-10-06.\n  - Luxembourg, Czechia, the Netherlands and France are still pending.\n\nIf FLI updates, the count would most likely reach 11, possibly 12 or 13 if Sweden and one or two others were reclassified.\n\n(e) **Unexpected scenario:** FLI does a thorough year-end refresh. It upgrades Germany, Poland, Sweden and several \"Partial\" states that have issued government designation decisions without full legislation, which pushes the count to 13-15. Alternatively, a reclassification downgrades one of the current 9, which would still resolve as \"≤9\".\n\n**Reasoning:** I start from the status quo of 9 and estimate a 30% chance of a substantive update before the check. If an update happens, the count most likely lands at 10-11, with some weight on 12-13 and a small tail higher. Distributing that 30% gives the figures below. I moved only modestly away from the status quo because the evidence on update frequency is thin and the update cadence is irregular.\n\nOption_A: 0.68\nOption_B: 0.18\nOption_C: 0.09\nOption_D: 0.03\nOption_E: 0.02"
+    },
+    {
+      "value": {
+        "≤9": 0.64,
+        "10 or 11": 0.21,
+        "12 or 13": 0.1,
+        "14 or 15": 0.03,
+        ">15": 0.02
+      },
+      "reasoning": "(a) **Time left:** about 6 weeks. Metaculus checks the page on or after 1 January 2027.\n\n(b) **Status quo:** The FLI page was last updated on 17 June 2026 and shows 9 member states as \"Clear\". If it is not updated, the answer is \"≤9\".\n\n(c) **Base rates:**\n- The page has had substantive updates roughly once a year: 19 May 2025, then 17 June 2026.\n- The chance of a major update in any given 6-week window is therefore low, perhaps 15-30%.\n- That chance is somewhat raised because the 2 August 2026 milestone has passed and the page is noticeably stale.\n- When updates do happen, they tend to come as big jumps. The last one added 6 Clear countries at once.\n\n(d) **Strongest evidence:**\n- **Germany:** The KI-MIG law took effect on 29 July 2026. It names the Bundesnetzagentur as market surveillance authority and the BSI as notifying authority.\n- **Poland:** The AI Systems Act was signed on 24 July 2026, and its enforcement chapters took effect on 28 October 2026. It names KRiBSI and the digital affairs minister.\n- **Sweden:** An interim mandate for PTS was issued on 12 June 2026. It is unclear whether FLI would count it as Clear.\n- **The live page:** As of 18 November 2026 it still reads \"Last update: 17 June 2026\". Wayback logged some edits in July to November, but the update date did not change.\n- **Pending bills:** Spain's bill lapsed. Czechia, the Netherlands, Luxembourg and France are still pending, so few further additions are likely by year-end.\n\n(e) **Unexpected scenario:**\n- FLI could do a year-end refresh in December. That would likely add Germany and Poland (giving 11), possibly Sweden plus one or two others (giving 12-13).\n- FLI could also loosen its criteria, for example by counting interim designations, which could push the count to 14 or more.\n- Less likely, FLI could reclassify a Clear country downward, but that would still resolve \"≤9\".\n\n**Reasoning:** I start from the status quo of 9 and estimate about a 30% chance of an update before the check. If an update happens, the most likely outcome is \"10 or 11\", with a meaningful tail at \"12 or 13\" and small residual probability above that.\n\nOption_A: 0.64\nOption_B: 0.21\nOption_C: 0.10\nOption_D: 0.03\nOption_E: 0.02"
+    },
+    {
+      "value": {
+        "≤9": 0.64,
+        "10 or 11": 0.17,
+        "12 or 13": 0.12,
+        "14 or 15": 0.05,
+        ">15": 0.02
+      },
+      "reasoning": "**(a) Time left:** About 6 weeks. Metaculus checks the FLI page on or after 1 January 2027.\n\n**(b) Status quo:** The page shows 9 \"Clear\" states (last updated 17 June 2026). If nothing changes, the answer is \"≤9\".\n\n**(c) Base rates:** FLI updates this tracker rarely and in batches:\n- The data stayed at the 19 May 2025 version for about 13 months, through snapshots in January, February and April 2026.\n- One catch-up update on 17 June 2026 then moved the count from 3 to 9.\n- Since then the page has gone 5 months unchanged, even though Germany and Poland passed laws in July.\n\nOn that record, the chance of a substantive update in any given 6-week window looks like roughly 15-30%. Year-end, and the obvious staleness of the German and Polish entries, push that up somewhat, to about 30-35%.\n\n**(d) Strongest evidence:**\n- 18 November 2026: the page still reads \"Last update: 17 June 2026\", with 9 Clear, 12 Partial and 6 Unclear.\n- 29 July 2026: Germany's KI-MIG came into force, naming the Bundesnetzagentur as both market surveillance and notifying authority.\n- 24 July 2026: Poland's President signed its AI systems act, creating KRiBSI as market surveillance authority, with the Minister of Digitalisation as notifying authority.\n- 12 June 2026: Sweden made an interim designation running to 31 December 2026. Whether FLI would treat it as \"Clear\" is uncertain.\n- Luxembourg's bill 8476 is pending, so further adoptions before year end are possible but unconfirmed.\n- The June update downgraded Luxembourg from Clear to Partial, so reclassification can go down as well as up.\n\n**(e) Unexpected scenario:** FLI does a full year-end refresh in December. It adds Germany and Poland, then Sweden, Luxembourg and perhaps the Netherlands or Czechia under looser criteria, reaching 13-15. Alternatively, it reclassifies some current \"Clear\" states downward, so even an update leaves the count at 9 or below.\n\n**Reasoning:** I start from the status quo of \"≤9\" and estimate a 65-70% chance of no update before the check. If FLI does update, the most likely count is 11 (adding Germany and Poland), with real weight on 12-13 and a small tail higher. Combining these, I moved about 30 points away from the status quo toward the higher bins, because the known German and Polish laws make an update likely to raise the count. No prediction market covers this question.\n\nOption_A: 0.64\nOption_B: 0.17\nOption_C: 0.12\nOption_D: 0.05\nOption_E: 0.02"
+    },
+    {
+      "value": {
+        "≤9": 0.61,
+        "10 or 11": 0.25,
+        "12 or 13": 0.09,
+        "14 or 15": 0.03,
+        ">15": 0.02
+      },
+      "reasoning": "(a) **Time left:** About 6 weeks. Metaculus checks the tracker on or after 1 January 2027, and today is 18 November 2026.\n\n(b) **Status quo:** The tracker currently shows 9 \"Clear\" states, last updated 17 June 2026. If nothing changes, the answer is \"≤9\".\n\n(c) **Base rates:** FLI updates this page rarely and irregularly.\n- The page stayed frozen at the 19 May 2025 version for about 13 months.\n- It then had one large catch-up update in June 2026, which took the count from 3 to 9.\n- It has now gone 5 months without an update, even though Germany and Poland passed laws in July.\n- Any given 6-week window has historically had a low chance of an update, perhaps 15 to 30%.\n- When updates do happen, they can lower counts as well as raise them: Luxembourg went from Clear to Partial in June.\n\n(d) **Strongest evidence:**\n- 18 November 2026: the page still reads \"Last update: 17 June 2026\" and shows 9 Clear, 12 Partial and 6 Unclear.\n- 29 July 2026: Germany's KI-MIG came into force, naming the Bundesnetzagentur as both market surveillance and notifying authority.\n- 24 July 2026: Poland's AI act was signed, with KRiBSI as market surveillance authority and the Ministry of Digitalisation as notifying authority.\n- 12 June 2026: Sweden's interim mandate was issued, running to 31 December 2026. It is ambiguous whether FLI would count this.\n- October 2026: Spain's bill reportedly lapsed.\n- If FLI updates, the most likely count is 11, with some chance of 12 to 13 if Sweden, Luxembourg or others are added.\n\n(e) **Unexpected scenario:** FLI does a large year-end refresh around the AI Act deadlines in December. It reclassifies Germany, Poland, Sweden and Luxembourg, plus one or two states with new decrees, as Clear, which pushes the count to 13 to 15. Alternatively, Metaculus checks late, after a January update.\n\n**Reasoning:** I start from the status quo of 9, given how rarely the page is updated. I put roughly a 30 to 35% chance on an update before the check. If an update happens, the count is most likely 11, and less likely 12 or more. I keep small tails on the higher options.\n\nOption_A: 0.61\nOption_B: 0.25\nOption_C: 0.09\nOption_D: 0.03\nOption_E: 0.02"
+    },
+    {
+      "value": {
+        "≤9": 0.6,
+        "10 or 11": 0.25,
+        "12 or 13": 0.1,
+        "14 or 15": 0.03,
+        ">15": 0.02
+      },
+      "reasoning": "(a) **Time left:** About 6 weeks. Metaculus checks the page on or after 1 January 2027, so the window may run a few days longer.\n\n(b) **Status quo:** The page was last updated 17 June 2026 and currently shows 9 \"Clear\" states. That falls in the \"≤9\" bin.\n\n(c) **Base rates:** FLI updates this tracker rarely and in bursts.\n- The data stayed frozen at 19 May 2025 for about 13 months.\n- One catch-up update on 17 June 2026 moved the count from 3 to 9.\n- The page has now gone 5 months without an update.\n- Over this history, the chance of an update in any given 6-week window looks like roughly 20-35%.\n- Updates can also downgrade states: Luxembourg went from Clear to Partial in June.\n\n(d) **Strongest evidence:**\n- 18 November 2026: the page still reads \"Last update: 17 June 2026\", with 9 Clear, 12 Partial and 6 Unclear.\n- 29 July 2026: Germany's KI-MIG came into force, naming the Bundesnetzagentur as both market surveillance and notifying authority.\n- 24 July 2026: Poland's AI act was signed, in force 11 August, creating KRiBSI with the Minister of Digitalisation as notifying authority.\n- 12 June 2026: Sweden made an interim designation running to 31 December 2026. It is ambiguous whether FLI would count it.\n- Other candidates are uncertain: Luxembourg's bill is pending, and Spain's bill reportedly lapsed in October 2026.\n- No update announcement was found. The page has ignored the July laws for four months.\n- If FLI does update, the likeliest count is 11, with 12 or more possible if Sweden, Luxembourg or others are reclassified.\n\n(e) **Unexpected scenario:** FLI does a full year-end refresh ahead of the August 2026/2027 milestones and counts Germany, Poland, Sweden, Luxembourg and perhaps the Netherlands or Czech Republic generously, giving 13-15. Alternatively, it downgrades a few current \"Clear\" states, so that an update still leaves the count at 9 or below.\n\n**Weighting:** I started from the status quo at about 70% and moved down to about 60%. The moderate chance of an update before the check, combined with two confirmed new laws, makes 10-11 the main alternative.\n\nOption_A: 0.60\nOption_B: 0.25\nOption_C: 0.10\nOption_D: 0.03\nOption_E: 0.02"
+    }
+  ],
+  "forecast_errors": [
+    "ValueError: Sampled outputs from structure_output are not the same. There is ambiguity in the text being structured:\nFirst Sample:\npredicted_options=[PredictedOption(option_name='≤9', probability=0.69), PredictedOption(option_name='10 or 11', probability=0.20000000000000004), PredictedOption(option_name='12 or 13', probability=0.08000000000000002), PredictedOption(option_name='>15', probability=0.020000000000000004), PredictedOption(option_name='14 or 15', probability=0.010000000000000002)]\n\nSample 2:\npredicted_options=[PredictedOption(option_name='≤9', probability=0.69), PredictedOption(option_name='10 or 11', probability=0.20000000000000004), PredictedOption(option_name='12 or 13', probability=0.08000000000000002), PredictedOption(option_name='14 or 15', probability=0.020000000000000004), PredictedOption(option_name='>15', probability=0.010000000000000002)]."
+  ],
+  "final_forecast": {
+    "≤9": 0.634,
+    "10 or 11": 0.212,
+    "12 or 13": 0.1,
+    "14 or 15": 0.034,
+    ">15": 0.02
+  },
+  "usage": [
+    {
+      "question_id": "46738",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.0001272,
+      "input_tokens": 517,
+      "output_tokens": 48,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 126.1,
+      "notional_cost_usd": 0.5857690999999999,
+      "input_tokens": 275332,
+      "output_tokens": 5786,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.3,
+      "notional_cost_usd": 0.06012,
+      "input_tokens": 4551,
+      "output_tokens": 1186,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.2,
+      "notional_cost_usd": 0.061336,
+      "input_tokens": 4553,
+      "output_tokens": 1246,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.000548,
+      "input_tokens": 2436,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.000565,
+      "input_tokens": 2521,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.00014881,
+      "input_tokens": 2436,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.0,
+      "notional_cost_usd": 0.024824399999999996,
+      "input_tokens": 4550,
+      "output_tokens": 1076,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.2,
+      "notional_cost_usd": 0.00031766,
+      "input_tokens": 2521,
+      "output_tokens": 458,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.0,
+      "notional_cost_usd": 0.0006456000000000001,
+      "input_tokens": 2374,
+      "output_tokens": 342,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.00014820000000000002,
+      "input_tokens": 2375,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 96.7,
+      "notional_cost_usd": 0.47942650000000003,
+      "input_tokens": 227636,
+      "output_tokens": 5552,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.6,
+      "notional_cost_usd": 0.06264800000000001,
+      "input_tokens": 5197,
+      "output_tokens": 1054,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.3,
+      "notional_cost_usd": 0.063968,
+      "input_tokens": 5197,
+      "output_tokens": 1120,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.5,
+      "notional_cost_usd": 0.066148,
+      "input_tokens": 5197,
+      "output_tokens": 1229,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0005392000000000001,
+      "input_tokens": 2392,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0007027,
+      "input_tokens": 2387,
+      "output_tokens": 451,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 0.000553,
+      "input_tokens": 2461,
+      "output_tokens": 122,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00029033,
+      "input_tokens": 2388,
+      "output_tokens": 406,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.00033185999999999996,
+      "input_tokens": 2391,
+      "output_tokens": 489,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "46738",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.3,
+      "notional_cost_usd": 0.00039826,
+      "input_tokens": 2462,
+      "output_tokens": 620,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.4096
+}
