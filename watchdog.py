@@ -128,7 +128,7 @@ def action_for(question: dict, long_open: bool, now: datetime) -> str | None:
         return None
     opened, close, reveal = (_time(question.get(k)) for k in ("open_time", "scheduled_close_time", "cp_reveal_time"))
     # Same rule as the platform's spot scoring time (market_pulse.spot_time).
-    spot = reveal if reveal and opened and reveal > opened else close
+    spot = _time(question.get("spot_scoring_time")) or (reveal if reveal and opened and reveal > opened else close)
     if not spot or not opened or spot <= now or now < opened:
         return None
     left = spot - now

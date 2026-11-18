@@ -128,6 +128,14 @@ def test_long_open_question_goes_by_its_spot_time() -> None:
     assert w.action_for(question(opened=10000, closes_in=9000, reveal_in=5), True, NOW) is None
 
 
+def test_a_set_spot_scoring_time_wins_over_the_reveal_time() -> None:
+    # Market Pulse 26Q4: CP reveal on 20 Nov 17:00 but the forecast that counts is taken at close, 23 Nov 04:00.
+    late = question(opened=10000, closes_in=600, reveal_in=5) | {"spot_scoring_time": stamp(-600)}
+    assert w.action_for(late, True, NOW) == "rescue"
+    early = question(opened=10000, closes_in=9000, reveal_in=6000) | {"spot_scoring_time": stamp(-600)}
+    assert w.action_for(early, True, NOW) == "rescue"
+
+
 def test_group_and_conditional_posts_are_read() -> None:
     q1, q2 = question(50, 130), question(50, 130)
     assert w.questions_of({"question": q1}) == [q1]

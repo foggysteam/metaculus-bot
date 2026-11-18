@@ -3,8 +3,9 @@ Market Pulse Challenge 26Q4: a Metaculus tournament on company earnings and mark
 ($7,500 prize pool, bots allowed, one entry per person). Entered on 27 Oct 2026.
 
 Unlike FutureEval, questions stay open for weeks and only the forecast standing at the
-spot scoring time counts (the community prediction reveal time, about 2 days before
-close). So we forecast each question as soon as we see it, so it is never missed, and
+spot scoring time counts (each question's own spot_scoring_time, which on 26Q4 is the close
+time; until 18 Nov 2026 the bot used the community prediction reveal time instead, two or more
+days early). So we forecast each question as soon as we see it, so it is never missed, and
 once more in the last day before the spot time, when the latest news is in.
 
 The tournament ID changes every quarter (next: market-pulse-27q1, from early January).
@@ -28,7 +29,12 @@ MAX_PER_PASS = 3  # keeps each pass short so FutureEval's 3-hour questions are n
 
 
 def spot_time(question: MetaculusQuestion) -> datetime | None:
-    """When Metaculus takes the forecast that counts (same rule as the platform's get_spot_scoring_time)."""
+    """When Metaculus takes the forecast that counts. Same rule as the platform's
+    Question.get_spot_scoring_time: the question's own spot_scoring_time when set, else the
+    community prediction reveal time when after opening, else the close time."""
+    explicit = ((getattr(question, "api_json", None) or {}).get("question") or {}).get("spot_scoring_time")
+    if explicit:
+        return datetime.fromisoformat(explicit.replace("Z", "+00:00"))
     reveal, opened = question.cp_reveal_time, question.open_time
     if reveal and opened and reveal > opened:
         return reveal

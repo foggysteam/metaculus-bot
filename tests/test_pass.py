@@ -57,6 +57,17 @@ def test_deadline_is_the_spot_time_when_earlier_than_close() -> None:
     assert forecaster.spot_time(question("q", 5000, reveal_in=100)) == NOW + timedelta(minutes=100)
 
 
+def test_the_question_spot_scoring_time_wins_over_the_reveal_time() -> None:
+    # Nvidia EPS, Market Pulse 26Q4: CP reveal 23 Nov 13:00 (after close), spot scoring time 17 Nov 21:00.
+    q = question("q", 5000, reveal_in=100)
+    q.api_json = {"question": {"spot_scoring_time": "2026-11-17T21:00:00Z"}}
+    assert forecaster.spot_time(q) == datetime(2026, 11, 17, 21, 0, tzinfo=timezone.utc)
+    import market_pulse
+    q.already_forecasted, q.timestamp_of_my_last_forecast = True, NOW
+    assert not market_pulse.is_due(q, datetime(2026, 11, 16, 14, 0, tzinfo=timezone.utc))  # 31 h before
+    assert market_pulse.is_due(q, datetime(2026, 11, 16, 16, 0, tzinfo=timezone.utc))  # 29 h before
+
+
 class FakeBot:
     skip_previously_forecasted_questions = True
 
@@ -276,9 +287,27 @@ def test_weekly_report_shows_the_other_forecasters_answer_from_our_peer_score() 
     assert weekly_report.others_answer({"Singapore win": 0.0967, "Draw": 0.2, "Paraguay win": 0.7033}, paraguay) == "Paraguay win: 74%"
     red_wings = resolved_question(1, "no", "x", spot=-2.0)  # right side, others a little surer of no
     assert weekly_report.others_answer(0.40, red_wings) == "39% yes"
-    assert weekly_report.others_answer({"p10": 1, "p50": 2, "p90": 3}, resolved_question(1, "24.0", "x", spot=-14.1)) == "1.15x our weight on the result"
+    assert weekly_report.others_answer({"p10": 1, "p50": 2, "p90": 3}, resolved_question(1, "24.0", "x", spot=-14.1)) == "1.33x our weight on the result"
     assert weekly_report.others_answer(0.4, resolved_question(1, "annulled", "x", spot=1.0)) == ""
     assert weekly_report.others_answer(0.4, resolved_question(1, "yes", "x")) == ""
+
+
+def test_earnings_shift_check_is_exact_and_finds_the_scored_bin() -> None:
+    import math
+    sys.path.insert(0, str(ROOT / "backtest"))
+    import earnings_shift_check as e
+    scaling = {"range_min": 0.0, "range_max": 10.0, "zero_point": None, "open_lower_bound": True, "open_upper_bound": True}
+    # 10 inbound bins between 0 and 10, 0.05 beyond each end; bin 6 (5 to 6) has 0.10, bin 7 has 0.08
+    cdf = [0.05, 0.10, 0.20, 0.35, 0.50, 0.62, 0.72, 0.80, 0.87, 0.92, 0.95]
+    assert e.bucket(5.5, scaling, 10) == 6 and e.bucket(-1, scaling, 10) == 0 and e.bucket(11, scaling, 10) == 11
+    item = {"cdf": cdf, "scaling": scaling, "bin": 6, "p": 0.10, "score": 12.0}
+    assert abs(e.score_with(item, 0.0)[0] - 12.0) < 1e-9
+    moved, tail = e.shifted_bin(cdf, scaling, 6, 0.25)  # 5 to 6 read at 4 to 4.8 of the submitted CDF
+    assert abs(moved - (0.62 - 0.50) * 0.8) < 1e-9 and tail is False
+    assert e.shifted_bin(cdf, scaling, 10, -0.05)[1] is True  # 9 to 10 read past the top of the range
+    # The spot baseline score names the bin Metaculus scored: 50 x ln(p / (0.9 / 10)) for an inbound bin.
+    assert e.scored_bin(cdf, scaling, 50 * math.log(0.10 / 0.09), 6) == 6
+    assert e.scored_bin(cdf, scaling, 50 * math.log(0.08 / 0.09), 6) == 7
 
 
 def test_weekly_report_lists_what_resolved_this_week_however_long_ago_it_was_forecast() -> None:

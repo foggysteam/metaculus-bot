@@ -207,7 +207,8 @@ def others_answer(final, question: dict) -> str:
     peer score. Peer score = 100 x (ln ours - average ln theirs), so their (geometric) average
     probability for what happened is ours x e^(-score/100). Shows why a forecast on the right side
     can still lose points: the others were more confident still. Numeric questions get the ratio
-    of their weight on the result to ours, since a density is not a probability."""
+    of their weight on the result to ours, since a density is not a probability; Metaculus halves
+    peer scores on numeric and date questions (scoring/score_math.py), so there it is e^(-score/50)."""
     resolution = question.get("resolution")
     score = ((question.get("my_forecasts") or {}).get("score_data") or {}).get("spot_peer_score")
     if score is None or final is None or resolution in (None, "", "annulled", "ambiguous"):
@@ -220,7 +221,7 @@ def others_answer(final, question: dict) -> str:
     if isinstance(final, dict) and "p50" not in final and resolution in final:
         return f"{resolution}: {min(final[resolution] * ratio, 0.999):.0%}"
     if isinstance(final, dict) and "p50" in final:
-        return f"{ratio:.2f}x our weight on the result"
+        return f"{math.exp(-score / 50):.2f}x our weight on the result"
     return ""
 
 
