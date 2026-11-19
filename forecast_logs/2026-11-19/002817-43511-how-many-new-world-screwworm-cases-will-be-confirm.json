@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-19T00:38:43.880841+00:00",
+  "bot_version": "2026-11-18.2",
+  "started_at": "2026-11-19T00:28:17.068319+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43511,
+    "post_id": 43507,
+    "url": "https://www.metaculus.com/questions/43507",
+    "type": "NumericQuestion",
+    "unit": "cases",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "How many New World screwworm cases will be confirmed in Mexico in total before July 2027?",
+    "resolution_criteria": "This question will resolve as the total number of animal cases of New World screwworm in Mexico before July 1, 2027, according to the United States Department of Agriculture (USDA) [Animal and Plant Health Inspection Service current status report](https://www.aphis.usda.gov/livestock-poultry-disease/stop-screwworm/current-status?page=1), rounded to the nearest 500.",
+    "fine_print": "The map and list of cases is updated on Tuesdays and Thursdays at 5:00 p.m. ET by the USDA. This question will resolve as the total number of animal cases on the latest report before July 1, 2027, provided this is published at the earliest by June 1, 2027.\n\nIf the USDA ceases reporting or significantly changes its criteria such that previous reporting is not comparable, this question will be **annulled**.&#x20;",
+    "close_time": "2027-07-01 00:00 UTC",
+    "scheduled_resolution_time": "2027-07-03 12:00 UTC"
+  },
+  "research": [
+    "# Mexico New World screwworm (NWS) cases before July 2027: research notes\n\nI found no data showing the question is settled. My best estimate is that Mexico's cumulative total stood at about 52,600 on 2026-11-17, about 22,000 more than the April figure quoted in the question. It is still growing by roughly 100 to 160 cases a day. A caveat: I could not read the USDA figure directly, so the totals below come from SENASICA (Mexico's animal health agency) as reported in the press.\n\n## 1. Resolution source\n- 2026-11-19: The APHIS current-status page returned a 403 error to the raw fetch. Through WebFetch, the Mexico map only showed \"Loading...\" because it is built by scripts, so no count was readable. The page was last modified 2026-11-18. It says the map updates Tuesdays and Thursdays at 5pm ET, and it points to SENASICA for figures. [APHIS](https://www.aphis.usda.gov/livestock-poultry-disease/stop-screwworm/current-status?page=1)\n- The USDA figure appears to track SENASICA's cumulative count, which runs from 2024-11-20. USDA's 20,591 on 2026-04-15 sits between SENASICA's 18,573 (2026-03-23) and \"more than 22,000\" (2026-04-26). [La Razón via search](https://www.razon.com.mx/mexico/2026/03/17/gusano-barrenador-aumentan-casos-y-altas-temperaturas-afectan-su-combate/)\n- 2026-11-17: SENASICA reported 52,573 cumulative cases and 1,570 active, with the national count rising by \"more than 100 a day\". [Periódico Correo](https://periodicocorreo.com.mx/vida-publica/2026/nov/17/caen-casos-activos-de-gusano-barrenador-en-guanajuato-a-35-la-cifra-mas-baja-en-4-meses-171709.html)\n- Mid-November 2026: Quadratín reported 1,625 active cases nationally. [Quadratín Morelos](https://morelos.quadratin.com.mx/extiende-gusano-barrenador-su-presencia-en-morelos-suma-608-casos/)\n\n## 2. Current status\n- Nothing settles the question yet. About 52,600 is already well above the 30,000 bottom of the question's range, and the count only goes up.\n- The latest report before July 1, 2027 will probably be the one on Tuesday 2027-06-29. That is about 224 days after the last data point.\n\n## 3. Recent news (newest first)\n- 2026-11-18: Nuevo León confirmed its fifth case of 2026. [MVS](https://mvsnoticias.com/nuevo-leon/2026/11/18/nuevo-leon-suma-quinto-caso-de-gusano-barrenador-en-2026-753870.html)\n- 2026-11-17: Guanajuato's active cases fell from 79 to 35 between Nov 6 and Nov 17. New cases there averaged 6.06 a day in October and 3.18 a day since Nov 6. [Correo](https://periodicocorreo.com.mx/vida-publica/2026/nov/17/caen-casos-activos-de-gusano-barrenador-en-guanajuato-a-35-la-cifra-mas-baja-en-4-meses-171709.html)\n- 2026-11-16/17: US cases reached 139 to 142 across Texas, New Mexico and Arizona, including a Tucson horse. [Source NM](https://sourcenm.com/2026/11/16/repub/new-world-screwworm-spreading-rapidly-across-southern-states/), [KJZZ](https://www.kjzz.org/science/2026-11-17/arizona-is-working-to-contain-new-world-screwworm-as-cases-rise)\n- 2026-11-16: Chihuahua had 83 active cases as of Nov 15. [El Diario](https://www.eldiariodechihuahua.mx/estado/2026/nov/16/registra-el-estado-83-casos-activos-de-gusano-barrenador-858071.html)\n- Late October 2026: Active cases were 1,958 at the end of October, and the cumulative count was 50,667. [Tierra Fuerte](https://www.tierrafuerte.mx/archivos/87212), [Segundo a Segundo](https://segundoasegundo.com/chihuahua-reporta-130-casos-activos-de-gusano-barrenador-al-cierre-de-octubre/)\n- 2026-10-22: SENASICA warned that ranchers in Campeche hide cases because they fear quarantines, so official counts may be too low. [PorEsto](https://www.poresto.com/campeche/2026/10/22/gusano-barrenador-campeche-ganaderos-ocultan-casos-temor-cuarentenas-advierte-senasica.html)\n- October 2026: The Metapa sterile-fly plant in Chiapas opened on 2026-06-28 and is ramping toward about 100M flies a week by the end of 2026. Locals protested the smell. [Farm Progress](https://www.farmprogress.com/tv-and-radio/screwworm-fight-gets-a-new-weapon-the-smell-that-makes-it-work)\n\n## 4. Base rates and trend\n\n| Date | Cumulative cases | Average new cases per day since previous point |\n|---|---|---|\n| 2025-12-05 | 11,516 | n/a |\n| 2026-01-07 | 13,335 | about 55 |\n| 2026-01-28 | 14,744 | about 67 |\n| 2026-02-19 | 15,948 | about 55 |\n| 2026-03-23 | 18,573 | about 82 |\n| 2026-04-15 (USDA) | 20,591 | about 88 |\n| early June 2026 | 28,430 | about 157 |\n| 2026-07-15 | 33,698 | about 128 |\n| 2026-08-18 | 38,820 | about 151 |\n| 2026-10-24 | 49,538 | about 160 |\n| 2026-11-17 | 52,573 | about 126 |\n\nSources: [Yucatán](https://www.yucatan.com.mx/mexico/2025/12/05/ante-dificil-panorama-por-crisis-del-gusano-barrenador.html), [Excélsior](https://www.excelsior.com.mx/nacional/aumentan-68-casos-activos-barrenador-enero), [El Mundo](https://diario.elmundo.sv/el-mundo/mexico-confirma-500-casos-del-gusano-barrenador-en-una-semana), [Crónica](https://www.cronica.com.mx/nacional/2026/01/22/gusano-barrenador-suma-mas-de-14-mil-casos-en-mexico/), [La Razón](https://www.razon.com.mx/mexico/2026/06/05/avanza-gusano-barrenador-en-eu-primer-caso-aca-en-5-meses-200-mas/), [SENASICA PDF](https://dj.senasica.gob.mx/Contenido/files/2026/julio/AVANCE12-23072026_c7e9f5f9-9196-4618-bc34-f5c487f17ba9.pdf), [UnoTV](https://www.unotv.com/salud/gusano-barrenador-alcanza-30-estados-en-mexico-que-estados-no-registran-casos/), [ZOLO](https://www.zolonoticias.com/2026/10/26/chihuahua-reporta-133-casos-activos-de-gusano-barrenador-del-ganado/).\n\n- **Seasonality:** The series only goes back to November 2024, so there is just one comparable period.\n  - From about Nov 19, 2025 (roughly 11,000, my estimate) to about Jun 30, 2026 (roughly 31,800, interpolated), about 21,000 cases were added.\n  - Growth was slowest from December to February (55 to 67 a day) and picked up from April.\n  - This year is running about 5 times higher in level than last year, and about twice as fast per day in the fall.\n- **Simple arithmetic, not a forecast:** 224 days at the range of observed rates gives:\n  - 55 a day: about 12,300 more, for a total of roughly 65,000\n  - 95 a day (last year's Nov-to-Jun average): about 21,000 more, roughly 74,000\n  - 150 a day: about 33,600 more, roughly 86,000\n- **Caveat on the sources:** they disagree in places. Two cuts near Oct 24 gave 49,538 and 50,667, and late July cuts gave 34,698 and 35,142.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on cumulative Mexico cases.\n- Related markets:\n  - Polymarket \"Screwworm National Emergency declared by Dec 31\": 24.5% Yes.\n  - Kalshi US human cases in 2026, \"above 0\": 17%.\n- I found no expert or model projections of Mexico's cumulative count.\n\n## 6. Upcoming events before resolution\n- The northern hemisphere winter (December to February) slowed spread last year. The rate of new cases has already dipped in mid-November.\n- Metapa output is ramping toward about 100M flies a week, on top of about 100M a week from Panama. Production numbers for November are unconfirmed.\n- The US sterile-fly facility in Texas and the US response funding mentioned in news coverage (about $750M) could affect northern Mexico.\n- Spring warming (March to June 2027) drove the sharp rise in 2026, from about 88 a day to about 157 a day.\n- Reporting risks: under-reporting (as in Campeche), changes in how SENASICA or USDA count cases (which would annul the question), and whether the USDA map keeps updating.\n- I did not find an official seasonal weather outlook tied to screwworm.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 00:34 UTC; check each market really matches the question)\n- Kalshi: How many human screwworm cases will be reported in the United States this year? (2026). Yes prices: Above 0: 0.17; Above 1: 0.07; Above 2: 0.03; Above 10: 0.01; Above 3: 0.01; Above 5: 0.01.\n- Kalshi: New Mexico Governor General Election: voter turnout (New Mexico Governor General Election). Yes prices: Above 710K: 0.97; Above 880K: 0.0100; Above 750K: 0.0500; Above 780K: 0.2100; Above 630K: 0.97; Above 820K: 0.0000; Above 850K: 0.0000; Above 910K: 0.0000; Above 590K: 0.97; Above 670K: 0.97.\n- Kalshi: New Mexico vs Wyoming (UNM vs WYO (Nov 20)). Yes prices: New Mexico: 0.72; Wyoming: 0.27.\n- Kalshi: Measles cases next year? (In 2027). Yes prices: Above 4000: 0.54; Above 5000: 0.42; Above 6000: 0.32; Above 3000: 0.69; Above 7000: 0.25; Above 8000: 0.19; Above 2000: 0.85; Above 9000: 0.15; Above 10000: 0.13; Above 1750: 0.88.\n- Kalshi: Mexico Chamber of Deputies election: voter turnout (On Jun 6, 2027). Yes prices: At least 51,000,000: 0.53; At least 53,000,000: 0.35; At least 49,000,000: 0.71; At least 55,000,000: 0.20; At least 47,000,000: 0.85; At least 57,000,000: 0.10; At least 59,000,000: 0.06; At least 45,000,000: 0.93.\n- Kalshi: AFC North: Total Wins (AFC North (2026-27)). Yes prices: 40+ total wins: 0.41; 38+ total wins: 0.74; 42+ total wins: 0.12; 34+ total wins: 0.96; 36+ total wins: 0.94; 28+ total wins: 0.97; 32+ total wins: 0.97; 30+ total wins: 0.97.\n- Kalshi: NFC North: Total Wins (NFC North (2026-27)). Yes prices: 42+ total wins: 0.95; 28+ total wins: 0.97; 32+ total wins: 0.97; 38+ total wins: 0.97; 40+ total wins: 0.97; 36+ total wins: 0.97; 34+ total wins: 0.97; 30+ total wins: 0.97.\n- Polymarket: FIFA Women's World Cup 2027 Winner (ends 2027-07-26). [Yes, No] prices: United States: [\"0.2\", \"0.8\"]; Spain: [\"0.225\", \"0.775\"]; England: [\"0.12\", \"0.88\"]; Germany: [\"0.065\", \"0.935\"]; France: [\"0.23\", \"0.77\"]; Japan: [\"0.075\", \"0.925\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Toss Match Double (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"1\", \"0\"]; BDW: [\"0\", \"1\"]\n- Polymarket: Screwworm National Emergency declared by...? (ends 2027-01-01). [Yes, No] prices: June 30: [\"0\", \"1\"]; August 30: [\"0\", \"1\"]; October 31: [\"0\", \"1\"]; December 31: [\"0.245\", \"0.755\"]",
+    "I could not read the USDA page's Mexico count directly (details below), so the most recent figures here are SENASICA numbers reported in the press. The latest is **52,573 cumulative animal cases as of 2026-11-17**. The question's own background figure (USDA, 20,591 through 2026-04-15) matches SENASICA's scale. That suggests both use the same running total since 2024-11-20, though I could not check this directly.\n\n## 1. Resolution source\n- 2026-11-18: The APHIS current-status page says \"Last Modified: November 18, 2026\". The Mexico map text showed only \"Loading...\", so I could not get a number from it. The raw fetch was blocked (HTTP 403). The page links to SENASICA's dashboard for Mexico figures, and the map updates Tuesdays and Thursdays at 5 p.m. ET. [APHIS](https://www.aphis.usda.gov/livestock-poultry-disease/stop-screwworm/current-status?page=1)\n- 2026-11-17: SENASICA's national figures were 52,573 cumulative and 1,570 active, with \"more than 100 new records per day\". [Periódico Correo](https://periodicocorreo.com.mx/vida-publica/2026/nov/17/caen-casos-activos-de-gusano-barrenador-en-guanajuato-a-35-la-cifra-mas-baja-en-4-meses-171709.html) A Guerrero outlet gave 52,526 cumulative and 1,625 active for the same date. [Quadratín Morelos](https://morelos.quadratin.com.mx/extiende-gusano-barrenador-su-presencia-en-morelos-suma-608-casos/)\n\n## 2. Current status\n- The total is about 52,500 and has to climb roughly 18,000 to 34,000 more to land in the middle of the question's range. Nothing settles the question yet, though the 30,000 lower bound has long been passed.\n- About 2026-11-15: Mexico reported 1,611 active cases, 357 of them in the border states. [Oklahoma Farm Report](https://www.oklahomafarmreport.com/2026/11/15/new-world-screwworm-case-numbers-continue-to-rise-54-cases-reported-in-november/)\n- 2026-11-09: USDA data showed 1,545 active cases in Mexico. [Epoch Times](https://www.theepochtimes.com/us/new-world-screwworm-cases-surge-along-southern-border-6124023)\n\n## 3. Recent news\n- 2026-11-18: Nuevo León confirmed its 5th case of 2026. [MVS](https://mvsnoticias.com/nuevo-leon/2026/11/18/nuevo-leon-suma-quinto-caso-de-gusano-barrenador-en-2026-753870.html)\n- 2026-11-17: Guanajuato's active cases fell to 35, its lowest in 4 months. [Correo](https://periodicocorreo.com.mx/vida-publica/2026/nov/17/caen-casos-activos-de-gusano-barrenador-en-guanajuato-a-35-la-cifra-mas-baja-en-4-meses-171709.html)\n- 2026-11-17: US cases reached 142 across Texas, New Mexico and Arizona, including a horse near Tucson with no travel history. [KJZZ](https://www.kjzz.org/science/2026-11-17/arizona-is-working-to-contain-new-world-screwworm-as-cases-rise)\n- 2026-11-16: Chihuahua reported 83 active cases. [El Diario](https://www.eldiariodechihuahua.mx/estado/2026/nov/16/registra-el-estado-83-casos-activos-de-gusano-barrenador-858071.html)\n- 2026-06-27: The Metapa, Chiapas sterile-fly plant opened, with a target of 100 million flies per week by the end of 2026. [Beef Magazine](https://www.beefmagazine.com/policy/mexico-and-u-s-inaugurate-new-sterile-fly-facility-in-chiapas) I found no figure for its November output.\n\n## 4. Base rates (cumulative SENASICA count, which started 2024-11-20)\n| Date | Cumulative | Approx. new cases/day |\n|---|---|---|\n| ~2025-11-20 | 10,472 (active 924) [Vanguardia](https://vanguardia.com.mx/coahuila/eliminada-en-91-la-plaga-de-gusano-barrenador-en-mexico-a-un-ano-de-detectarse-el-primer-rebrote-AL18319018) | |\n| 2025-12-05 | 11,516 | ~70 |\n| 2025-12-29 | 13,035 | ~63 |\n| 2026-01-28 | 14,744 [Crónica](https://www.cronica.com.mx/nacional/2026/01/22/gusano-barrenador-suma-mas-de-14-mil-casos-en-mexico/) | ~57 |\n| 2026-02-18 | 15,821 (active 733) [Grupo Animal](https://grupoanimal.mx/politica/gusano-barrenador-campana-educativa-mexico-eu) | ~51 |\n| mid-Mar 2026 | 17,351 | ~60 |\n| 2026-04-15 | 20,591 (USDA) | ~105 |\n| 2026-05-20 | ~25,000 [Proceso](https://www.proceso.com.mx/nacional/2026/5/20/hay-25-mil-casos-de-gusano-barrenador-en-mexico-374431.html) | ~125 |\n| 2026-06-30 | >31,000 [La Jornada](https://www.jornada.com.mx/2026/06/30/politica/015n2pol) | ~145 |\n| 2026-07-27 | 35,480 | ~165 |\n| 2026-08-18 | 38,820 (active 1,963) [El Tiempo](https://eltiempomx.com/noticia/2026/gusano-barrenador-suma-38820-casos-en-mexico-reporta-senasica.html) | ~150 |\n| 2026-11-02 | 50,820 (Durango report) | ~158 |\n| 2026-11-17 | 52,573 | ~117 |\n\nThese figures come from news articles quoting SENASICA, not from the agency's own reports.\n\n**Seasonality:** There is only one earlier season to compare against.\n- Last year, from about 2025-11-20 to 2026-06-30, the count rose from 10,472 to about 31,000, an increase of roughly 20,500.\n- Daily cases bottomed in winter at about 50 to 65 per day (December to March), then sped up from April to reach a peak of 150 to 165 per day in July and August.\n- This year is running well above last year: active cases are 1,570 now against 924 a year ago, and the current pace (about 117 per day) is nearly double last November's (about 70 per day).\n- From 2026-11-17 to 2027-06-30 is about 225 days. As simple arithmetic, not a forecast: 80 per day would end near 70,500, 117 per day near 78,900, and 150 per day near 86,300. Adding last season's increase of about 20,500 gives about 73,000.\n\n## 5. Other forecasts\n- I found no market on Mexican case counts.\n- Kalshi has a market on US human screwworm cases in 2026 (\"Above 0\" at 0.17). It is related but does not match this question.\n- Polymarket's \"Screwworm National Emergency declared by December 31\" trades at 0.245. This is indirect only.\n- I found no expert projections for Mexico's case count.\n\n## 6. Upcoming events before resolution\n- Winter (December to February): last year this was when daily cases slowed the most. Watch whether the current pace drops toward 60 per day.\n- The Metapa plant ramping up to 100 million flies per week by the end of 2026, which would roughly double sterile-fly supply alongside the Panama plant.\n- Spring and summer 2027: last year, warming from April onward brought the fastest growth.\n- Reporting quirks: last year the count barely moved over the holidays (about +300 from 2025-12-29 to 2026-01-08), and figures differ between outlets.\n- The question is annulled if the USDA stops reporting or changes how it counts cases.\n- I found no official seasonal weather outlook tied specifically to screwworm.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 00:34 UTC; check each market really matches the question)\n- Kalshi: How many human screwworm cases will be reported in the United States this year? (2026). Yes prices: Above 0: 0.17; Above 1: 0.07; Above 2: 0.03; Above 10: 0.01; Above 3: 0.01; Above 5: 0.01.\n- Kalshi: New Mexico Governor General Election: voter turnout (New Mexico Governor General Election). Yes prices: Above 710K: 0.97; Above 880K: 0.0100; Above 750K: 0.0500; Above 780K: 0.2100; Above 630K: 0.97; Above 820K: 0.0000; Above 850K: 0.0000; Above 910K: 0.0000; Above 590K: 0.97; Above 670K: 0.97.\n- Kalshi: New Mexico vs Wyoming (UNM vs WYO (Nov 20)). Yes prices: New Mexico: 0.72; Wyoming: 0.27.\n- Kalshi: Measles cases next year? (In 2027). Yes prices: Above 4000: 0.54; Above 5000: 0.42; Above 6000: 0.32; Above 3000: 0.69; Above 7000: 0.25; Above 8000: 0.19; Above 2000: 0.85; Above 9000: 0.15; Above 10000: 0.13; Above 1750: 0.88.\n- Kalshi: Mexico Chamber of Deputies election: voter turnout (On Jun 6, 2027). Yes prices: At least 51,000,000: 0.53; At least 53,000,000: 0.35; At least 49,000,000: 0.71; At least 55,000,000: 0.20; At least 47,000,000: 0.85; At least 57,000,000: 0.10; At least 59,000,000: 0.06; At least 45,000,000: 0.93.\n- Kalshi: AFC North: Total Wins (AFC North (2026-27)). Yes prices: 40+ total wins: 0.41; 38+ total wins: 0.74; 42+ total wins: 0.12; 34+ total wins: 0.96; 36+ total wins: 0.94; 28+ total wins: 0.97; 32+ total wins: 0.97; 30+ total wins: 0.97.\n- Kalshi: NFC North: Total Wins (NFC North (2026-27)). Yes prices: 42+ total wins: 0.95; 28+ total wins: 0.97; 32+ total wins: 0.97; 38+ total wins: 0.97; 40+ total wins: 0.97; 36+ total wins: 0.97; 34+ total wins: 0.97; 30+ total wins: 0.97.\n- Polymarket: FIFA Women's World Cup 2027 Winner (ends 2027-07-26). [Yes, No] prices: United States: [\"0.2\", \"0.8\"]; Spain: [\"0.225\", \"0.775\"]; England: [\"0.12\", \"0.88\"]; Germany: [\"0.065\", \"0.935\"]; France: [\"0.23\", \"0.77\"]; Japan: [\"0.075\", \"0.925\"]\n- Polymarket: Women's T20 World Cup Qualifier: Papua New Guinea Women vs Bangladesh Women - Toss Match Double (ends 2026-01-27). [Yes, No] prices: PNGW: [\"0\", \"1\"]; Draw: [\"1\", \"0\"]; BDW: [\"0\", \"1\"]\n- Polymarket: Screwworm National Emergency declared by...? (ends 2027-01-01). [Yes, No] prices: June 30: [\"0\", \"1\"]; August 30: [\"0\", \"1\"]; October 31: [\"0\", \"1\"]; December 31: [\"0.245\", \"0.755\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 66500.0,
+        "p25": 72000.0,
+        "p50": 78000.0,
+        "p75": 84250.0,
+        "p90": 91500.0
+      },
+      "reasoning": "(a) Time left: about 7.4 months. The deciding report is likely the USDA update on Tuesday 2027-06-29, about 224 days after the last data point.\n\n(b) Latest known value: USDA reported 20,591 cumulative cases on 2026-04-15. The USDA page itself was unreadable when the research was done. SENASICA's cumulative count, which USDA appears to track, was 52,573 on 2026-11-17.\n\n(c) If nothing changed: the total would be about 52,500. That is impossible in practice, because the count is cumulative and new cases are still being confirmed every day.\n\n(d) If the current trend continued:\n- At roughly 126 cases a day, the total would reach about 81,000.\n- The pattern last year was a winter slowdown, roughly halving the rate from December to February, followed by a spring rise. Applying that shape gives:\n  - December to February at about 90 to 110 a day.\n  - March at about 120 a day.\n  - April to June at about 150 to 180 a day.\n- That adds about 26,000 to 29,000 cases, for roughly 78,000 to 81,000.\n- Active cases have fallen from 1,958 at the end of October to about 1,570, and sterile-fly output from the new Metapa plant is ramping up. Both point slightly lower, so my median is about 77,500.\n\n(e) Historical variation: daily rates over the past year ranged from 55 to 160 cases. Over 224 days that range implies 12,000 to 36,000 additional cases, so the total could plausibly land anywhere from about 65,000 to 88,000.\n\n(f) Experts and markets: no market or expert projection covers Mexico's cumulative count. Related markets (a US national emergency declaration, US human cases) do not directly inform this number.\n\n(g) Unexpected scenarios:\n- Low: sterile-fly releases double and a harsh winter suppresses the fly, so the rate falls to about 30 to 50 cases a day. Under-reporting also grows. The total would land near 60,000.\n- High: spread across northern Mexico and a hot spring push the rate to 200 to 250 cases a day. The total would land near 100,000 to 110,000.\n\nPercentile 1: 58000\nPercentile 5: 63000\nPercentile 10: 66500\nPercentile 20: 70500\nPercentile 30: 73500\nPercentile 40: 76000\nPercentile 50: 78000\nPercentile 60: 80000\nPercentile 70: 82500\nPercentile 80: 86000\nPercentile 90: 91500\nPercentile 95: 96000\nPercentile 99: 106000"
+    },
+    {
+      "value": {
+        "p10": 67000.0,
+        "p25": 72500.0,
+        "p50": 78500.0,
+        "p75": 85750.0,
+        "p90": 93000.0
+      },
+      "reasoning": "(a) **Time left:** About 7.4 months. The last USDA report before July 1, 2027 is likely Tuesday June 29, 2027, about 224 days after the latest data point.\n\n(b) **Latest known value:** About 52,573 cumulative cases on 2026-11-17, from SENASICA as reported in the press. The USDA figure appears to track SENASICA closely: USDA's 20,591 on Apr 15 fits SENASICA's trajectory.\n\n(c) **If nothing changed:** About 52,500. The count is cumulative, so this is a hard floor.\n\n(d) **If the current trend continued:** About 110 to 130 new cases per day for 224 days gives a total of about 77,000 to 82,000. A seasonal model gives a similar result:\n- Late November at about 110 per day.\n- December to February at about 90 per day, a winter slowdown.\n- March at about 110 per day.\n- April to June at about 150 per day, a spring surge like 2026.\n- This adds roughly 26,500 cases, for a total of about 79,000.\n\n(e) **Historical variation:** The same Nov-to-Jun window last year added about 21,000 cases, averaging about 95 per day. Daily rates over the past year ranged from 55 to 160. Applying those extremes to 224 days gives a total between about 65,000 and 88,000. There is extra uncertainty from:\n- Ramp-up of the Metapa sterile-fly plant.\n- The spread advancing northward.\n- Under-reporting.\n\n(f) **Experts and markets:** I found no forecasts or markets on Mexico's cumulative count. The question creator's range is 30,000 to 100,000.\n\n(g) **Unexpected scenarios:**\n- **Low:** Metapa reaches full output plus a cold winter, and sterile-insect releases suppress the southern hotspots. Daily cases fall to about 40 to 50, and reporting fatigue or concealment grows, for a total of about 62,000.\n- **High:** A mild winter keeps transmission going, and a spring surge to 200 or more per day hits as the fly spreads through the northern and central states. The total exceeds 100,000.\n\nPercentile 1: 60000\nPercentile 5: 64000\nPercentile 10: 67000\nPercentile 20: 71000\nPercentile 30: 74000\nPercentile 40: 76500\nPercentile 50: 78500\nPercentile 60: 81000\nPercentile 70: 84000\nPercentile 80: 87500\nPercentile 90: 93000\nPercentile 95: 97500\nPercentile 99: 106000"
+    },
+    {
+      "value": {
+        "p10": 66000.0,
+        "p25": 71000.0,
+        "p50": 77500.0,
+        "p75": 84250.0,
+        "p90": 91000.0
+      },
+      "reasoning": "(a) **Time left:** About 7.4 months. The last report before resolution is likely the one on 2027-06-29, about 224 days after the latest data point.\n\n(b) **Latest known value:** About 52,573 cumulative cases on 2026-11-17, with about 1,570 active. This figure comes from SENASICA as reported in the press. The USDA map appears to track SENASICA closely: USDA reported 20,591 on 2026-04-15.\n\n(c) **If nothing changed:** The count is cumulative, so it cannot fall. It would resolve at about 52,500, but that would require new cases to stop completely, which is essentially impossible.\n\n(d) **If the current trend continued:**\n- Assumed seasonal pattern:\n  - Late November: about 110 a day.\n  - December to February: about 80 to 100 a day. This follows last year's winter slowdown, adjusted for this year's higher level.\n  - March to June: about 130 to 160 a day, as spring warming drives growth.\n- That pattern adds about 23,000 to 28,000 cases, for a total of about 76,000 to 81,000.\n- A flat 126 a day would give about 81,000.\n\n(e) **Historical variation:**\n- Daily rates have ranged from 55 to 160 over the past year, a factor of about 3.\n- Over 224 days, that range covers roughly 12,000 to 36,000 additional cases.\n- From November 2025 to June 2026, about 21,000 cases were added, starting from a much smaller outbreak.\n\n(f) **Experts and markets:** There are no markets or expert projections on Mexico's cumulative count. The question creator's range of 30,000 to 100,000 is consistent with my central estimate.\n\n(g) **Unusual scenarios:**\n- **Low:** The Metapa plant reaches full output of about 100M flies a week, combined with a cold winter. Daily cases fall to about 40 to 50 and stay low through spring, giving about 62,000. Increased under-reporting, as already seen in Campeche, could add to this.\n- **High:** Sterile-fly coverage fails to keep pace with spread into the large northern and central cattle states. Spring rates exceed 200 a day, giving 95,000 to 105,000 or more.\n\n**Tail percentiles:** Percentile 1 reflects the low scenario plus some under-reporting. Percentile 99 reflects the high scenario with a spring surge above last year's peak rates.\n\nPercentile 1: 60000\nPercentile 5: 63500\nPercentile 10: 66000\nPercentile 20: 69500\nPercentile 30: 72500\nPercentile 40: 75000\nPercentile 50: 77500\nPercentile 60: 80000\nPercentile 70: 82500\nPercentile 80: 86000\nPercentile 90: 91000\nPercentile 95: 95500\nPercentile 99: 104000"
+    },
+    {
+      "value": {
+        "p10": 68000.0,
+        "p25": 73500.0,
+        "p50": 79500.0,
+        "p75": 85500.0,
+        "p90": 92000.0
+      },
+      "reasoning": "(a) **Time left:** About 7.4 months. The resolving report will be the last USDA update before July 1, 2027, likely June 29 or 30, 2027.\n\n(b) **Latest known value:** About 52,573 cumulative cases as of 2026-11-17, with 1,570 active. This is the SENASICA figure reported in the press. The scale matches the USDA background figure of 20,591 through 2026-04-15, but the USDA page itself could not be read.\n\n(c) **If nothing changed:** About 52,500.\n\n(d) **If the current trend continued:** The current pace is about 117 cases a day, which over about 225 days gives roughly 79,000. Last year's pattern scaled up to this year's level gives the following:\n- Winter pace of about 80 to 100 a day from December to March: about 12,000 more cases.\n- Spring and summer pace of 130 to 180 a day from April to June: about 14,000 more cases.\n- Total: roughly 78,000 to 80,000.\n\n(e) **Historical variation:** Over the matching window last year (2025-11-20 to 2026-06-30), the count rose by about 20,500. That year started with only 924 active cases, against about 1,570 now. Scaling last year's increase by the active-case ratio of about 1.7 gives about 35,000 added cases, or roughly 87,500. Adding the same absolute increase as last year gives about 73,000. Daily rates have ranged from about 50 to 165 a day.\n\n(f) **Experts and markets:** I found no market or expert projection on Mexico's case count. The Polymarket chance of a US national emergency declaration is about 25%, which signals ongoing concern but does not bear directly on the count. The question creator's range is 30,000 to 100,000.\n\n(g) **Unexpected scenarios:**\n- Low: The Metapa plant reaches 100 million flies a week, and with the Panama supply, sterile-fly releases roughly double. This and a harsh winter push the pace down to about 50 a day through spring. The count could also stall from reporting lags or holiday gaps. The total would then end near 62,000 to 65,000.\n- High: The spread intensifies in northern and central states and spring growth is strong, with the pace exceeding 200 a day from April to June. Better surveillance would also raise the number of recorded cases. The total would then pass 95,000 to 100,000.\n\nPercentile 1: 60000\nPercentile 5: 65000\nPercentile 10: 68000\nPercentile 20: 72000\nPercentile 30: 75000\nPercentile 40: 77500\nPercentile 50: 79500\nPercentile 60: 81500\nPercentile 70: 84000\nPercentile 80: 87000\nPercentile 90: 92000\nPercentile 95: 96000\nPercentile 99: 104000"
+    },
+    {
+      "value": {
+        "p10": 68000.0,
+        "p25": 72750.0,
+        "p50": 78000.0,
+        "p75": 84000.0,
+        "p90": 90000.0
+      },
+      "reasoning": "(a) **Time left:** About 7.5 months. Resolution uses the last USDA report before July 1, 2027, likely around June 29 or 30, 2027.\n\n(b) **Latest known value:** 52,573 cumulative animal cases as of 2026-11-17. This is SENASICA's figure as reported in the press. The question's own USDA figure (20,591 on 2026-04-15) is on the same scale, so I treat the two counts as the same running total.\n\n(c) **If nothing changed:** The total would stay near 52,500. That is not realistic, because the total grows by about 100 or more cases a day.\n\n(d) **If the current trend continued:** About 225 days remain. At the current pace of about 117 per day, the total reaches roughly 79,000. A more realistic path has a seasonal shape:\n- Winter (Dec to Mar) slows to about 80 to 90 per day, adding roughly 10,000.\n- Spring (Apr to Jun) speeds up to about 150 to 180 per day, adding roughly 14,000.\n- That ends near 76,000 to 78,000.\n\nScaling last season's November to June increase (+20,500) by this year's higher activity level (about 1.7x) would give about 87,000. Better sterile-fly supply from the Metapa plant, and less room for new geographic spread, argue for staying below that.\n\n(e) **Historical variation:** Last year the daily pace ranged from about 50 per day (winter) to about 165 per day (summer). Over a 7-month window, the added cases could plausibly range from about 13,000 to over 40,000.\n\n(f) **Experts and markets:** I found no market or expert projection on Mexican case counts. The question creator's 30,000 to 100,000 range has its lower half already ruled out.\n\n(g) **Unexpected scenarios:**\n- **Low:** Sterile-fly output roughly doubles and winter control works well. Daily cases fall to about 50 to 60 and stay under 90 in spring, ending around 63,000 to 66,000. A USDA reporting lag could also give a lower figure.\n- **High:** The spread accelerates into new northern and central states while the Metapa ramp-up stalls. Spring reaches 200 or more per day, ending near 95,000 to 100,000 or above.\n\nPercentile 1: 61000\nPercentile 5: 65500\nPercentile 10: 68000\nPercentile 20: 71500\nPercentile 30: 74000\nPercentile 40: 76000\nPercentile 50: 78000\nPercentile 60: 80000\nPercentile 70: 82500\nPercentile 80: 85500\nPercentile 90: 90000\nPercentile 95: 94500\nPercentile 99: 103000"
+    },
+    {
+      "value": {
+        "p10": 68000.0,
+        "p25": 72750.0,
+        "p50": 78000.0,
+        "p75": 84000.0,
+        "p90": 90000.0
+      },
+      "reasoning": "**(a) Time left:** About 7.4 months (225 days). The relevant count is the last USDA report before July 1, 2027, and the question resolves around July 3, 2027.\n\n**(b) Latest known value:** About 52,573 cumulative cases as of 2026-11-17. This is SENASICA's figure as reported in the press. The USDA count was 20,591 on 2026-04-15, which suggests both sources use the same running total.\n\n**(c) If nothing changed:** The total would stay near 52,500. That is not realistic, because about 100 or more new cases are being confirmed every day.\n\n**(d) If the current trend continued:**\n* At the current pace of roughly 117 per day, the total would reach about 79,000 by June 30, 2027.\n* At the August to November pace of about 158 per day, it would reach about 88,000.\n* Last season, the daily rate fell to about 0.75 of its November level in winter, then rose sharply in spring. Scaling last season's November-to-June increase by this year's higher activity (about 1.65 times) gives about 86,000.\n* A more moderate path also gives a central estimate in the high 70,000s. It assumes a stronger winter slowdown (about 90 per day from December to March, then about 130 per day from April to June) plus help from the new Metapa sterile-fly plant. That would add roughly 24,000 cases, for about 76,500.\n\n**(e) Historical variation:**\n* Over a comparable window last season (November 2025 to June 2026), the count rose by about 20,500, starting from a base rate of about 70 per day.\n* Daily rates have ranged from about 50 per day (winter 2025-26) to about 165 per day (summer 2026). Over 225 days, that range implies additions of roughly 11,000 to 37,000.\n\n**(f) Experts and markets:** I found no market or expert projection for Mexico's case counts. The question creator's range of 30,000 to 100,000 is consistent with this analysis.\n\n**(g) Unexpected scenarios:**\n* **Low outcome:** The Metapa plant reaches full output, sterile-fly releases suppress the southern foci, and a cold winter pushes daily cases to about 40-50. Spring growth is muted, giving a total of about 62,000-65,000. Reporting slowdowns or lags in the USDA data could also pull the final number lower.\n* **High outcome:** Winter suppression is weak, the fly spreads further into northern and central states, and spring 2027 brings a surge of 200 or more per day. That would give a total of about 95,000-100,000 or more.\n\nPercentile 1: 61500\nPercentile 5: 65500\nPercentile 10: 68000\nPercentile 20: 71500\nPercentile 30: 74000\nPercentile 40: 76000\nPercentile 50: 78000\nPercentile 60: 80000\nPercentile 70: 82500\nPercentile 80: 85500\nPercentile 90: 90000\nPercentile 95: 93500\nPercentile 99: 101000"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 67151.8667,
+    "p25": 72523.8818,
+    "p50": 77962.5144,
+    "p75": 84258.8117,
+    "p90": 91391.2523
+  },
+  "usage": [
+    {
+      "question_id": "43511",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.9,
+      "notional_cost_usd": 7.1e-05,
+      "input_tokens": 500,
+      "output_tokens": 42,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.7,
+      "notional_cost_usd": 0.0002773,
+      "input_tokens": 1210,
+      "output_tokens": 71,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 126.7,
+      "notional_cost_usd": 0.5156248999999999,
+      "input_tokens": 135056,
+      "output_tokens": 6559,
+      "web_searches": 10,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.5,
+      "notional_cost_usd": 0.078972,
+      "input_tokens": 6465,
+      "output_tokens": 1363,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.3,
+      "notional_cost_usd": 0.079432,
+      "input_tokens": 6465,
+      "output_tokens": 1386,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.0007458,
+      "input_tokens": 2765,
+      "output_tokens": 386,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.2,
+      "notional_cost_usd": 0.0008254,
+      "input_tokens": 2763,
+      "output_tokens": 546,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.5,
+      "notional_cost_usd": 0.00031309,
+      "input_tokens": 2764,
+      "output_tokens": 444,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 30.0,
+      "notional_cost_usd": 0.03261120000000001,
+      "input_tokens": 6467,
+      "output_tokens": 1445,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.1,
+      "notional_cost_usd": 0.00032238,
+      "input_tokens": 2762,
+      "output_tokens": 463,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.0007482999999999999,
+      "input_tokens": 2850,
+      "output_tokens": 357,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.4,
+      "notional_cost_usd": 0.00037895999999999996,
+      "input_tokens": 2851,
+      "output_tokens": 574,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 118.7,
+      "notional_cost_usd": 0.3763133,
+      "input_tokens": 91966,
+      "output_tokens": 5668,
+      "web_searches": 8,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.8,
+      "notional_cost_usd": 0.07625200000000001,
+      "input_tokens": 5945,
+      "output_tokens": 1435,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.1,
+      "notional_cost_usd": 0.07824400000000001,
+      "input_tokens": 5944,
+      "output_tokens": 1535,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 18.3,
+      "notional_cost_usd": 0.080568,
+      "input_tokens": 5942,
+      "output_tokens": 1652,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.1,
+      "notional_cost_usd": 0.0007479,
+      "input_tokens": 2798,
+      "output_tokens": 377,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.5,
+      "notional_cost_usd": 0.0008217999999999999,
+      "input_tokens": 2830,
+      "output_tokens": 512,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.0008193,
+      "input_tokens": 2895,
+      "output_tokens": 481,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00030722999999999997,
+      "input_tokens": 2797,
+      "output_tokens": 432,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00028845,
+      "input_tokens": 2831,
+      "output_tokens": 393,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43511",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0002817,
+      "input_tokens": 2894,
+      "output_tokens": 379,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.325
+}
