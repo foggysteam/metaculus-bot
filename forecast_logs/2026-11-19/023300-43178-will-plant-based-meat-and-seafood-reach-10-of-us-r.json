@@ -1,0 +1,322 @@
+{
+  "logged_at": "2026-11-19T02:41:25.502788+00:00",
+  "bot_version": "2026-11-18.2",
+  "started_at": "2026-11-19T02:33:00.220228+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43178,
+    "post_id": 43163,
+    "url": "https://www.metaculus.com/questions/43163",
+    "type": "BinaryQuestion",
+    "unit": "",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "Will plant-based meat and seafood reach 10% of US retail packaged meat dollar sales before 2031?",
+    "resolution_criteria": "This question resolves as **Yes** if, for any year before 2031, plant-based meat and seafood’s dollar share in the United States is greater than or equal to 10.0% of total retail packaged meat dollar sales, as reported by the [Good Food Institute](https://gfi.org/resource/analyzing-plant-based-meat-and-seafood-sales/) (GFI).&#x20;",
+    "fine_print": "Note that this question resolves based on share of the total retail packaged meat market and not the total meat category.\n\nIf the resolution source should have material issues such as failing to update in a timely manner, then Metaculus may name an alternative [credible source](https://www.metaculus.com/faq/#definitions), as long as it judges the methodology to be substantially equivalent.\n\n*Given the Animal Futures Tournament timeframe, scores from this question will not be included in the tournament leaderboard. However participants are required to predict on at least two of the three long-term questions, as per the tournament rules.*",
+    "close_time": "2030-12-31 23:00 UTC",
+    "scheduled_resolution_time": "2031-01-01 13:00 UTC"
+  },
+  "research": [
+    "## 1. Resolution source\n\n- 2026-03 (images on the page are dated March 2026, and it carries a 2026 copyright): GFI's page says that in 2025, \"plant-based meat and seafood's dollar share was 1.4 percent of total retail packaged meat dollar sales\". That is about 0.7% of the total meat category once random-weight meat is included. Sales were about $1.0B, with dollar sales down 10% and units down 11% from 2024. The data comes from SPINS and covers 52 weeks ending 2025-11-30. GFI warns that the method changed and says \"We do not recommend comparing data released in prior years.\" [GFI](https://gfi.org/resource/analyzing-plant-based-meat-and-seafood-sales/)\n- I found no downloadable CSV or JSON behind the page. The data is shown as static images and text.\n- Timing: GFI publishes each year's figure around March or April of the following year. The 2030 figure would probably come out in spring 2031, after the question resolves around 2031-01-01. In practice, the last figure likely available is for 2029, published around spring 2030. This is my inference from past release timing.\n\n## 2. Current status\n\n- The latest share is 1.4% (2025). The 10% threshold is about 7 times that. Nothing comes close to settling the question as Yes. Every year so far has had a share below 3%.\n- 2024: 1.7% of packaged meat dollar sales, or about 0.8% of all meat. [AgFunderNews](https://agfundernews.com/plant-based-meat-by-numbers-grim-reading-for-the-us-retail-market-brighter-spots-in-foodservice-and-globally)\n\n## 3. Recent news (newest first)\n\n- 2026-11 (Q3 ended 2026-09-26): Beyond Meat's US retail revenue fell 13.2% to $24.8M, with volume down about 20.8%. CEO Ethan Brown blamed inflation and \"misinformation about the healthfulness\" of the products. International retail grew 13.3%. Guidance for Q4 total revenue is $54-59M. [Morningstar/GlobeNewswire](https://www.morningstar.com/news/globe-newswire/9870771/beyond-meat-reports-third-quarter-2026-financial-results), [ThePoultrySite](https://www.thepoultrysite.com/news/2026/11/beyond-meats-q3-revenue-falls-8-1)\n- 2026 Q2: Beyond Meat's total revenue was $68.8M, down 8.2%. Q1 2026 US retail was down 15.3% to $26.6M. [Green Queen](https://www.greenqueen.com.hk/?p=85405)\n- 2026-03/04: GFI's 2026 State of the Industry report says US plant-based meat sales declined for a second straight year. The bright spot was shreds, chunks and strips, with unit sales up 8%. [AgFunderNews](https://agfundernews.com/us-alt-meat-slump-continues-but-plant-protein-gains-traction-in-beverages-gfi), [Green Queen](https://www.greenqueen.com.hk/gfi-state-of-the-industry-report-2025-2026-plant-based-sales/)\n- 2025-11-30 (Circana): Annual refrigerated plant-based meat sales were $273.5M, close to 2019 levels. [Food Business News](https://www.foodbusinessnews.net/articles/30327-plant-based-sales-in-the-us-continue-to-slide)\n- I found no full-year 2026 category data from GFI, SPINS or Circana yet.\n- The news-API articles provided (diabetic food, surimi, red meat and similar market reports) are not relevant to this question.\n\n## 4. Base rates\n\nGFI's reported share of US retail packaged meat:\n\n- 2020: 2.7%. [GFI press](https://gfi.org/press/plant-based-food-retail-sales-grow-27-percent-to-reach-7-billion-in-2020/)\n- 2021: about 2.7% (sales flat at $1.4B). [FoodNavigator-USA](https://www.foodnavigator-usa.com/Article/2022/03/25/Plant-based-foods-sales-Plant-based-meat-sales-stall-while-eggs-yogurt-and-cheese-gain-ground-GFI-SPINS-PBFA)\n- 2022: about 2.5% (1.3% of all meat). [FoodNavigator](https://www.foodnavigator.com/Article/2023/04/11/is-there-any-evidence-the-plant-based-sector-can-move-from-niche-to-mainstream)\n- 2023: I could not find a clean GFI figure.\n- 2024: 1.7%\n- 2025: 1.4%\n\nWhat the trend implies:\n\n- The share has fallen every year since 2021 at the latest.\n- The record high is 2.7%, reached at the 2020 pandemic peak.\n- The fastest growth on record was +46% in dollar sales in 2020. Even that rate sustained for 4 years would multiply sales by about 4.5, still short of the roughly 7 times needed, and conventional meat sales would also be growing. Meat prices are rising, which inflates the denominator.\n- No comparable market reaches 10% either. Europe, the strongest region, had about 6% of pre-packaged meat in 2022 (Nielsen), and the UK about 3%. [GFI Europe](https://gfieurope.org/wp-content/uploads/2023/03/2020-2022-Europe-retail-market-insights.pdf)\n- Circana measures meat-free products at 1.07% of the overall meat market in 2024, down from 1.39% in 2020. [Green Queen](https://www.greenqueen.com.hk/plant-based-meat-alternatives-circana-report-sales-decline-retail/)\n\n## 5. Other forecasts\n\n- I found no Polymarket, Kalshi or Manifold market on this question or a close variant.\n- None of the Kalshi markets supplied (EV share, LLMs, retail sales, CPI and others) is relevant.\n- I found no Metaculus community forecast value.\n- Industry projections are generic market-research CAGRs, for example Meticulous Research's 2026-2034 outlook. None projects a US share anywhere near 10%. [Meticulous Research](https://www.meticulousresearch.com/meticulous-next/plant-based-meat-outlook-2026-2034)\n\n## 6. Upcoming events before resolution\n\n- Around March or April each year from 2027 to 2030: GFI/SPINS State of the Industry releases covering 2026 through 2029 data.\n- Quarterly: Beyond Meat earnings, with Q4 2026 results around early 2027. Circana's periodic refrigerated plant-based sales updates also give an earlier read on the trend.\n- Possible ways the share could shift:\n  - Price parity breakthroughs.\n  - Health-positioned products.\n  - Retailers cutting shelf space further.\n  - Possible consolidation or bankruptcies among brands, given Beyond Meat's continuing losses.\n  - Further GFI methodology changes, which could move the share figure without any change in sales.\n  - Changes in conventional meat prices, which affect the denominator.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 02:38 UTC; check each market really matches the question)\n- Kalshi: EV market share in 2030? (In Jan 2030). Yes prices: Above 30%: 0.47; Above 20%: 0.66; Above 50%: 0.24; Above 10%: 0.85.\n- Kalshi: Which country will have the best LLM at the end of the decade? (Dec 31, 2029 at 10:00 AM ET). Yes prices: United States: 0.66; China: 0.29; South Korea: 0.03; United Arab Emirates: 0.03; France: 0.04.\n- Kalshi: Anthropic market share this week (Anthropic market share - Nov 16, 2026). Yes prices: Above 5.9%: 0.41; Above 5.8%: 0.64; Above 6.0%: 0.34; Above 5.6%: 0.77; Above 6.3%: 0.14; Above 6.1%: 0.12; Above 5.3%: 0.89; Above 6.4%: 0.09; Above 6.8%: 0.10.\n- Kalshi: US retail sales in November (November 2026). Yes prices: Above -0.2%: 0.50; Above -0.4%: 0.61; Above 0.0%: 0.39; Above 0.2%: 0.28; Above 0.4%: 0.20; Above 0.6%: 0.13; Above 1.0%: 0.07; Above 0.8%: 0.09; Above 1.2%: 0.05; Above 1.4%: 0.04.\n- Kalshi: UK retail sales in October (October 2026). Yes prices: Above 0.0%: 0.52; Above 0.5%: 0.30; Above -0.5%: 0.74; Above 1.0%: 0.15; Above -1.0%: 0.86; Above 1.5%: 0.09; Above 2.0%: 0.0900; Above -1.5%: 0.96.\n- Kalshi: Carvana retail vehicle unit sales next quarter (retail vehicle unit sales in Q1 2027 ). Yes prices: Above 255000: 0.51; Above 260000: 0.40; Above 250000: 0.62; Above 265000: 0.28; Above 245000: 0.73; Above 270000: 0.20; Above 240000: 0.81; Above 275000: 0.12; Above 280000: 0.07; Above 220000: 0.95.\n- Kalshi: Rhode Island commercial quahog landings this year (2026). Yes prices: Above 250,000 meat pounds: 0.51; Above 280,000 meat pounds: 0.30; Above 220,000 meat pounds: 0.75; Above 310,000 meat pounds: 0.12; Above 340,000 meat pounds: 0.10; Above 190,000 meat pounds: 0.92.\n- Kalshi: US real GDP growth in 2031? (2031). Yes prices: 2.1% to 2.5%: 0.17; 2.6% to 3.0%: 0.10; 1.6% to 2.0%: 0.09; 3.1% to 3.5%: 0.10; 0.0% or Below: 0.11; 1.1% to 1.5%: 0.08; 3.6% to 4.0%: 0.09; 4.1% to 4.5%: 0.07; 0.6% to 1.0%: 0.04; 5.1% to 5.5%: 0.04.\n- Kalshi: US headline CPI inflation in December 2031 (December 2031). Yes prices: Above 2.5%: 0.49; Above 3.0%: 0.35; Above 2.0%: 0.65; Above 3.5%: 0.23; Above 1.5%: 0.78; Above 4.0%: 0.17; Above 1.0%: 0.87; Above 4.5%: 0.11; Above 5.0%: 0.09; Above 0.5%: 0.92.",
+    "## 1. Resolution source\n\n- 2026 (page undated; latest data period ends 2025-11-30; footer says \"Copyright 2026\"): GFI's resolution page puts **plant-based meat and seafood at 1.4% of total US retail packaged meat dollar sales in 2025**. Including random-weight meat, it is about 0.7% of total meat. Retail sales were about $1.0B, with dollars down 10% and units down 11% year on year. US retail data is from SPINS. [GFI](https://gfi.org/resource/analyzing-plant-based-meat-and-seafood-sales/)\n- If $1.04B is 1.4%, packaged meat comes to roughly $74B (my own calculation). At today's packaged meat sales, reaching 10% would take about $7.4B of plant-based sales, around 7x the 2025 level.\n- I found no downloadable CSV or JSON behind the page. The share is stated in the text and is updated once a year, usually alongside GFI's State of the Industry report each spring. I found no higher-frequency public data on the share.\n\n## 2. Current status\n\n- Nothing has settled the question. The latest reading is 1.4%, against a 10.0% threshold. The share has fallen every year since 2021.\n- 2026-11-05: Beyond Meat's Q3 2026 results suggest the category was still falling in 2026. US retail revenue fell 13.2% to $24.8M, on a 20.8% drop in volume. The company pointed to lost club-store distribution and weak category demand. [Beyond Meat 8-K](https://www.sec.gov/Archives/edgar/data/0001655210/000165521026000071/ex991pressrelease-q32026ea.htm), [Green Queen](https://www.greenqueen.com.hk/beyond-meat-q3-2026-earnings-sales-revenue-losses-steak-immerse/)\n\n## 3. Recent news (newest first)\n\n- 2026-11-05: Beyond Meat's total Q3 revenue fell 8.1% to about $64.5M. Its 10-Q lists weak demand in the plant-based meat category, especially refrigerated products, as a risk, and says premium pricing pushes consumers to trade down. Q4 guidance is $54-59M. [10-Q](https://www.sec.gov/Archives/edgar/data/0001655210/000165521026000079/bynd-20260926.htm), [Food Business MEA](https://www.foodbusinessmea.com/beyond-meats-q3-revenue-falls-8-1-as-sales-volumes-weaken/)\n- 2026 (spring): GFI's State of the Industry report found global plant-based food sales up 3% in 2025 while funding declined. US plant-based meat retail was down. [Green Queen](https://www.greenqueen.com.hk/gfi-state-of-the-industry-report-2025-2026-plant-based-sales/), [AgFunderNews](https://agfundernews.com/plant-based-meat-by-numbers-grim-reading-for-the-us-retail-market-brighter-spots-in-foodservice-and-globally)\n- Positive signals GFI cites: whole-cut meat alternatives grew 8% in units, and products with health claims (low saturated fat, short ingredient lists) did well. [GFI](https://gfi.org/resource/analyzing-plant-based-meat-and-seafood-sales/)\n- None of the news-API articles provided (market-research press releases) bear on US plant-based meat share.\n\n## 4. Base rates and trend\n\nGFI's reported share of US retail packaged meat dollar sales:\n- 2019: about 2% [FoodNavigator](https://www.foodnavigator.com/Article/2019/07/16/US-retail-sales-of-plant-based-meat-up-9.6-YoY-but-growth-has-decelerated/)\n- 2020 and 2021: about 2.7% (2021 figure) [Supermarket News](https://www.supermarketnews.com/consumer-trends/plant-based-food-sales-reach-record-high-of-7-4-billion-in-2021), [GFI press](https://gfi.org/press/u-s-plant-based-food-retail-sales-hit-7-4-billion/)\n- 2022: 1.3% of total retail meat (not packaged meat). In the natural channel, the share was 15% of packaged meat. [Nosh](https://www.nosh.com/news/2023/gfi-plant-based-seafood-sales-outpace-total-plant-based-meat-sales)\n- 2023: I could not find a figure.\n- 2024: 1.7% of packaged meat (about 0.8% of total meat). The natural channel was 8%. [AgFunderNews](https://agfundernews.com/plant-based-meat-by-numbers-grim-reading-for-the-us-retail-market-brighter-spots-in-foodservice-and-globally)\n- 2025: 1.4% [GFI](https://gfi.org/resource/analyzing-plant-based-meat-and-seafood-sales/)\n\nWhat the history shows:\n- The share has never come close to 10% in any year. The peak was about 2.7% in the 2020-2021 pandemic years.\n- Even the fastest growth on record, +46% in dollars in 2020, would need about five straight years to multiply the share 7x, and only if the meat denominator stayed flat. Meanwhile, animal meat prices have been rising.\n- Between 2021 and 2025, the share fell from about 2.7% to 1.4%, roughly halving.\n- Caveat: GFI changed data providers and scope over time (SPINS vs. SPINS/Circana, meat only vs. meat plus seafood), so the years are not strictly comparable.\n\n## 5. Other forecasts\n\n- I found no Polymarket, Kalshi or Manifold market on this question or a close variant. None of the prices supplied in the brief (EV share, LLMs, retail sales, CPI and so on) is relevant.\n- I did not find the current community forecast on Metaculus.\n- Market-research firms routinely publish high-CAGR \"meat substitute\" forecasts. These are global and use different definitions, so they are not comparable to GFI's US packaged-meat share.\n\n## 6. Upcoming events before resolution\n\n- About April each year from 2027 to 2030: GFI's State of the Industry report and the update to the resolution page. These publish the 2026 through 2029 shares. Under a literal reading of \"any year before 2031\", the 2030 share would only appear around spring 2031, after the question closes.\n- Quarterly results from Beyond Meat and others such as Impossible (private) and Kraft Heinz/Boca, as indicators of the category's direction.\n- Things that could change the picture:\n  - plant-based prices reaching parity with animal meat\n  - retailers adding or cutting shelf space\n  - meat price shocks (beef prices, bird flu)\n  - cultivated meat regulation\n  - GFI redefining the category, for example adding tofu or tempeh or changing data provider. Any such change would move the share without any change in actual sales.\n\nSources: the links given inline above.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 02:38 UTC; check each market really matches the question)\n- Kalshi: EV market share in 2030? (In Jan 2030). Yes prices: Above 30%: 0.47; Above 20%: 0.66; Above 50%: 0.24; Above 10%: 0.85.\n- Kalshi: Which country will have the best LLM at the end of the decade? (Dec 31, 2029 at 10:00 AM ET). Yes prices: United States: 0.66; China: 0.29; South Korea: 0.03; United Arab Emirates: 0.03; France: 0.04.\n- Kalshi: Anthropic market share this week (Anthropic market share - Nov 16, 2026). Yes prices: Above 5.9%: 0.41; Above 5.8%: 0.64; Above 6.0%: 0.34; Above 5.6%: 0.77; Above 6.3%: 0.14; Above 6.1%: 0.12; Above 5.3%: 0.89; Above 6.4%: 0.09; Above 6.8%: 0.10.\n- Kalshi: US retail sales in November (November 2026). Yes prices: Above -0.2%: 0.50; Above -0.4%: 0.61; Above 0.0%: 0.39; Above 0.2%: 0.28; Above 0.4%: 0.20; Above 0.6%: 0.13; Above 1.0%: 0.07; Above 0.8%: 0.09; Above 1.2%: 0.05; Above 1.4%: 0.04.\n- Kalshi: UK retail sales in October (October 2026). Yes prices: Above 0.0%: 0.52; Above 0.5%: 0.30; Above -0.5%: 0.74; Above 1.0%: 0.15; Above -1.0%: 0.86; Above 1.5%: 0.09; Above 2.0%: 0.0900; Above -1.5%: 0.96.\n- Kalshi: Carvana retail vehicle unit sales next quarter (retail vehicle unit sales in Q1 2027 ). Yes prices: Above 255000: 0.51; Above 260000: 0.40; Above 250000: 0.62; Above 265000: 0.28; Above 245000: 0.73; Above 270000: 0.20; Above 240000: 0.81; Above 275000: 0.12; Above 280000: 0.07; Above 220000: 0.95.\n- Kalshi: Rhode Island commercial quahog landings this year (2026). Yes prices: Above 250,000 meat pounds: 0.51; Above 280,000 meat pounds: 0.30; Above 220,000 meat pounds: 0.75; Above 310,000 meat pounds: 0.12; Above 340,000 meat pounds: 0.10; Above 190,000 meat pounds: 0.92.\n- Kalshi: US real GDP growth in 2031? (2031). Yes prices: 2.1% to 2.5%: 0.17; 2.6% to 3.0%: 0.10; 1.6% to 2.0%: 0.09; 3.1% to 3.5%: 0.10; 0.0% or Below: 0.11; 1.1% to 1.5%: 0.08; 3.6% to 4.0%: 0.09; 4.1% to 4.5%: 0.07; 0.6% to 1.0%: 0.04; 5.1% to 5.5%: 0.04.\n- Kalshi: US headline CPI inflation in December 2031 (December 2031). Yes prices: Above 2.5%: 0.49; Above 3.0%: 0.35; Above 2.0%: 0.65; Above 3.5%: 0.23; Above 1.5%: 0.78; Above 4.0%: 0.17; Above 1.0%: 0.87; Above 4.5%: 0.11; Above 5.0%: 0.09; Above 0.5%: 0.92."
+  ],
+  "forecasts": [
+    {
+      "value": 0.01,
+      "reasoning": "(a) About 4 years remain until resolution (around 2031-01-01). Realistically, only the 2026 through 2029 shares will be published before then, each around March or April of the following year. For Yes, GFI must report plant-based meat and seafood at 10.0% or more of US retail packaged meat dollar sales for one of those years.\n\n(b) Status quo: the share is 1.4% (2025) and has fallen every year since roughly 2021. Beyond Meat's Q3 2026 US retail volume fell about 21%, which suggests 2026 will come in near or below 1.3%. The status quo outcome is No.\n\n(c) Base rate: niche food categories that need to grow 7x in share within about 4 years, while currently shrinking, almost never do it. Even the record +46% year in 2020 sustained for 4 to 5 years would barely get there. A reasonable reference-class rate is under 1%.\n\n(d) Evidence:\n- For No:\n  - The share is 1.4% in 2025 (GFI, March 2026), down from a 2.7% peak in 2020-21.\n  - Dollar sales fell 10% in 2025.\n  - Beyond Meat's US retail fell 13% in Q3 2026 (November 2026).\n  - Retailers are cutting shelf space.\n  - Rising meat prices inflate the denominator.\n- For Yes (weak):\n  - Whole-cut alternatives grew 8% in units.\n  - Health-positioned products are growing.\n  - The natural channel share (8-15%) shows a 10%+ figure exists in some GFI subset, which creates a small risk of a methodology change or misresolution.\n\n(e) Scenarios:\n- No (overwhelmingly likely): the share drifts between about 1.0% and 1.6% through 2029, and none of the GFI reports gets close to 10%.\n- Yes (remote): either a breakthrough product at price parity combines with a severe meat supply shock to cause roughly 70%+ annual growth for three years, or GFI radically redefines the category or denominator and Metaculus accepts the new figure.\n\n(f) I start from a base rate below 1%. The trend is negative and the time available is short, so there is no reason to move up on fundamentals. I keep about 1% to cover methodology or definitional tail risk. The outcome cannot realistically change before the deadline, so going below 3% is justified.\n\nProbability: 1%"
+    },
+    {
+      "value": 0.01,
+      "reasoning": "(a) About 4 years remain, but in practice the last usable data point is GFI's 2029 figure, released around spring 2030. The 2030 figure would likely be published only after resolution. For Yes, GFI must report plant-based meat and seafood at 10.0% or more of total US retail packaged meat dollar sales for some year from 2026 to 2029, or 2030 if it is published in time.\n\n(b) Status quo: the share is 1.4% (2025) and falling, so the outcome is No.\n\n(c) Base rate: the share has never exceeded about 2.7% (the 2020-2021 peak). No comparable market reaches 10%. Europe's best figure is about 6% of pre-packaged meat. For a mature, shrinking food category to grow its share about 7x in 3 to 4 years, the reference-class frequency is well under 1%.\n\n(d) Evidence:\n- For Yes (weak):\n  - Whole-cut alternatives were up 8% in units (GFI, spring 2026).\n  - Products with health claims grew.\n  - In the natural channel the share runs 8-15%, but that channel does not count for resolution.\n- For No (strong):\n  - The share fell from 2.7% (2021) to 1.7% (2024) to 1.4% (2025).\n  - Dollar sales fell 10% in 2025.\n  - Beyond Meat's US retail revenue fell 13.2% in Q3 2026, on a 20.8% drop in volume (2026-11-05), so 2026 is declining again.\n  - Rising meat prices inflate the denominator.\n\n(e) Scenarios:\n- No (overwhelmingly likely): the category keeps shrinking or stabilizes around 1-1.5%, and GFI reports shares near 1.2-1.5% through 2029.\n- Yes: GFI makes a drastic methodology change, for example narrowing the denominator or broadening the category to include tofu and other proteins in a way that inflates the share. Or a combination of price parity and a massive meat supply shock produces explosive growth. Neither is realistic within 3 years.\n\n(f) I start from a base rate well below 1%. Current momentum is negative and even the record growth pace would fall short, so I make no upward adjustment for fundamentals. I keep a small residual for GFI methodology or definition changes and for Metaculus substituting a different source. That puts the probability at about 1%.\n\nProbability: 1%"
+    },
+    {
+      "value": 0.01,
+      "reasoning": "(a) **Time left and what Yes requires.** About 4 years remain until the question closes at the end of 2030. In practice, the last data available will probably be the 2029 figure, published around spring 2030. That leaves the 2026 through 2029 reports, released in spring 2027 through spring 2030. For Yes, GFI must report plant-based meat and seafood at 10.0% or more of US retail packaged meat dollar sales for one of those years.\n\n(b) **Status quo.** The share was 1.4% in 2025, down from 1.7% in 2024 and about 2.7% at the 2020-2021 peak. It falls every year. Beyond Meat's US retail revenue dropped another 13% in Q3 2026, so the 2026 share is probably below 1.4%. If nothing changes, the answer is No.\n\n(c) **Base rate.** Mature consumer food categories rarely multiply their market share 7x in 4 years, and almost never while already shrinking. No market has reached 10% of packaged meat. Europe, the strongest region, peaked at about 6%. The base rate is below 1%.\n\n(d) **Evidence.**\n- For Yes, which is weak:\n  - Whole-cut alternatives grew 8% in units in 2025 (GFI, spring 2026).\n  - Products with health claims are gaining.\n  - The natural channel share was 8% in 2024, but that is not the resolution metric.\n- For No, which is strong:\n  - The share was 1.4% in 2025 and has fallen for four years.\n  - Dollar sales fell 10% and units 11% in 2025.\n  - Beyond Meat's Q3 2026 US retail revenue fell 13.2%, with volume down 20.8%.\n  - Retailers are cutting shelf space.\n  - Meat price inflation raises the denominator.\n\n(e) **Scenarios.**\n- No: the share drifts between 1.0% and 1.5% through 2029, possibly with a modest health-driven recovery. This is near certain.\n- Yes: GFI radically redefines the category, for example by counting only the natural channel or adding tofu, tempeh and other proteins, and reports 10% or more. Alternatively, a huge shock occurs, such as an animal disease making conventional meat scarce combined with price parity. Both are vanishingly unlikely within 3 to 4 reporting cycles.\n\n(f) **Adjustment.** I start from a base rate below 1%. I allow a small tail for a methodology or definition change that the resolution source might adopt. There is no market to anchor on. The outcome cannot realistically change within the window, because it would take growth far beyond the best year on record, sustained for several years, so I stay at the floor.\n\nProbability: 1%"
+    },
+    {
+      "value": 0.01,
+      "reasoning": "(a) **Time left and what Yes requires.** About 4 years remain. GFI publishes each year's figure around March or April of the following year. That means the last figure realistically available before resolution is the 2029 share, published around spring 2030. For Yes, GFI must report plant-based meat and seafood at 10.0% or more of total US retail packaged meat dollar sales for some year up to 2029, or possibly 2030 if it were published early. That is about 7 times the current 1.4%.\n\n(b) **Status quo.** No. The share is 1.4% for 2025 and has fallen every year since its 2.7% peak in 2020-2021. Beyond Meat's Q3 2026 results (November 2026) show US retail volume down about 21%, so 2026 will very likely decline again.\n\n(c) **Base rate.** Food categories rarely multiply their share 7x in 4 years, and almost never while shrinking. Plant-based milk took more than a decade to reach about 15% of milk, and it grew steadily the whole time. Europe, the strongest region for plant-based meat, peaked around 6% of pre-packaged meat. For a niche category at 1.4% and falling to reach 10% within 4 years, the base rate is well under 1%.\n\n(d) **Evidence.**\n- *For Yes (weak):*\n  - Whole-cut alternatives grew 8% in units (GFI, 2026).\n  - Health-positioned products grew in 2025.\n  - Rising animal meat prices could narrow the price gap.\n  - In the natural channel, the share is 8-15%, but that is a different measure from the one this question uses.\n- *For No (strong):*\n  - The share is 1.4% in 2025, down from 1.7% in 2024 and 2.7% in 2021.\n  - Dollar sales fell 10% and units fell 11% in 2025.\n  - Beyond Meat's US retail revenue fell 13.2% in Q3 2026, with volume down 20.8%.\n  - Retailers keep cutting shelf space.\n  - The price and taste barriers persist.\n  - Even the record 46% annual growth rate would need about 5 years to reach 7x.\n\n(e) **Scenarios.**\n- *No:* The decline continues or flattens around 1-2% through 2029. GFI reports shares well below 10%. This is overwhelmingly likely.\n- *Yes:* A breakthrough product reaches taste and price parity, combined with a severe meat price shock such as widespread bird flu plus record beef prices. Plant-based sales grow 60% or more a year for four years. Alternatively, GFI radically redefines the category, for example by adding tofu, or the denominator, and the reported share jumps.\n\n(f) **From base rate to final probability.** I start from a base rate below 1%. I add a small allowance for tail risks: a methodology change, or a resolution ambiguity such as the natural channel share being cited. The outcome is effectively decided by the size of the gap and the direction of the trend, which justifies going below 3%.\n\nProbability: 1%"
+    },
+    {
+      "value": 0.01,
+      "reasoning": "(a) **Time left and what Yes requires.** About 4 years remain. The 2026 to 2029 GFI shares will publish each spring from 2027 to 2030. The 2030 figure would likely only appear around spring 2031, after the question resolves. For Yes, GFI must report plant-based meat and seafood at 10.0% or more of total US retail packaged meat dollar sales for some year before 2031.\n\n(b) **Status quo.** The latest share is 1.4% (2025), and it has fallen every year since about 2021. Beyond Meat's Q3 2026 US retail revenue fell 13.2%, so 2026 is likely to come in at 1.2 to 1.4%. The status quo outcome is No.\n\n(c) **Base rate.** The reference class is niche food categories that multiplied their share of a mature category roughly 7x within 4 to 5 years, especially while in decline. Examples are very rare, under about 1%. No market reaches 10% of packaged meat. Europe's best figure was about 6% (2022), and the US peak was 2.7% (2020).\n\n(d) **Strongest evidence.**\n- For No:\n  - The share is 1.4% (GFI, 2026 release), down from 2.7% in 2021.\n  - Dollar sales fell 10% in 2025.\n  - Beyond Meat's US volume fell 20.8% year on year in Q3 2026 (Nov 2026).\n  - Retailers are cutting shelf space.\n  - Rising meat prices inflate the denominator.\n- For Yes: there are only weak signals.\n  - Whole-cut alternatives grew 8% in units.\n  - Health-positioned products are growing.\n  - The natural channel share was 8% in 2024, but that is not the resolution metric.\n\n(e) **Scenarios.**\n- **No:** Sales stagnate or decline, and the share stays between 1% and 2% through 2029. This is overwhelmingly likely.\n- **Yes:** GFI radically redefines the metric, for example by folding in tofu, tempeh or cultivated meat, or by using a narrower denominator. Alternatively, a massive beef or poultry supply shock combines with a price-parity breakthrough that sends sales up 7x. Both are extremely unlikely.\n\n(f) **From base rate to final probability.** I start from a base rate under 1%. The trend is negative and data is likely only available through 2029, so the time is shorter than it looks. I add a small allowance for a methodology change or a misreported channel-specific figure. That puts me at about 1%.\n\nProbability: 1%"
+    },
+    {
+      "value": 0.01,
+      "reasoning": "(a) **Time left and what Yes requires:** About 4 years remain until resolution (around 2031-01-01). In practice, the last usable data point is GFI's 2029 figure, published around spring 2030, because 2030 data will likely come out after the question closes. Yes requires GFI to report that plant-based meat and seafood made up at least 10.0% of US retail packaged meat dollar sales in some year from 2026 to 2029 (or 2030, if published in time).\n\n(b) **Status quo:** The share is 1.4% (2025) and has fallen every year since 2021, from about 2.7%. If nothing changes, the answer is No.\n\n(c) **Base rate:** Consider mature consumer food substitutes that grew about 7x in market share within 3 to 4 years, while their sales were falling. This almost never happens, so the base rate is well under 1%. No comparable market reaches 10% either: Europe's peak was about 6% of pre-packaged meat and the UK's about 3%.\n\n(d) **Evidence:**\n- **For Yes (weak):**\n  - Whole-cut alternatives grew 8% in units in 2025.\n  - Health-positioned products are gaining.\n  - The natural channel share was 8% in 2024 (15% in 2022), but that is not the resolution metric.\n- **For No (strong):**\n  - GFI reported a 1.4% share for 2025 (published around March 2026), with dollars down 10% and units down 11%.\n  - Beyond Meat's Q3 2026 results (2026-11-05) showed US retail revenue down 13.2% and volume down 20.8%.\n  - Rising meat prices inflate the denominator.\n\n(e) **Scenarios:**\n- **No:** The category keeps shrinking or stabilizes at around 1 to 2%. The 2026 to 2029 shares all come in far below 10%.\n- **Yes:** A large animal-meat supply shock coincides with a price-parity breakthrough, or GFI radically redefines the metric, for example by including tofu or reporting a narrower channel as the headline figure. The share would then jump to 10% or more by 2029. All of this is extremely unlikely.\n\n(f) **From base rate to final probability:** I start from a near-zero base rate. The resolution path is purely mechanical: sales would need to grow about 7x in 3 years, against the current trend, with a growing denominator. I keep a small tail only for a methodology or definition change and for unknown unknowns. Since a 7x reversal cannot realistically happen in the remaining window, a value below 3% is justified. I move very little from the base rate, ending at about 1%.\n\nProbability: 1%"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": 0.0247,
+  "usage": [
+    {
+      "question_id": "43178",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 19.4,
+      "notional_cost_usd": 6.83e-05,
+      "input_tokens": 508,
+      "output_tokens": 35,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 19.5,
+      "notional_cost_usd": 0.000293,
+      "input_tokens": 1216,
+      "output_tokens": 100,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 70.2,
+      "notional_cost_usd": 0.2401144,
+      "input_tokens": 55983,
+      "output_tokens": 3435,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 52.8,
+      "notional_cost_usd": 0.1311585,
+      "input_tokens": 38202,
+      "output_tokens": 3104,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.3,
+      "notional_cost_usd": 0.10202,
+      "input_tokens": 10396,
+      "output_tokens": 943,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 11.9,
+      "notional_cost_usd": 0.102948,
+      "input_tokens": 10397,
+      "output_tokens": 989,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.10411600000000001,
+      "input_tokens": 10398,
+      "output_tokens": 1047,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.1,
+      "notional_cost_usd": 0.024317399999999996,
+      "input_tokens": 10398,
+      "output_tokens": 991,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.4,
+      "notional_cost_usd": 0.0282734,
+      "input_tokens": 10395,
+      "output_tokens": 1190,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.8,
+      "notional_cost_usd": 0.0248494,
+      "input_tokens": 10397,
+      "output_tokens": 1018,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.0,
+      "notional_cost_usd": 0.00046350000000000004,
+      "input_tokens": 2061,
+      "output_tokens": 103,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.6,
+      "notional_cost_usd": 0.0004225,
+      "input_tokens": 2066,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 14.2,
+      "notional_cost_usd": 0.00048200000000000006,
+      "input_tokens": 2166,
+      "output_tokens": 98,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0004337,
+      "input_tokens": 2122,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.3,
+      "notional_cost_usd": 0.0004629,
+      "input_tokens": 2268,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 0.00043890000000000004,
+      "input_tokens": 2148,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 9.362000000000002e-05,
+      "input_tokens": 2067,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.8,
+      "notional_cost_usd": 0.00013885999999999998,
+      "input_tokens": 2060,
+      "output_tokens": 110,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 9.462000000000001e-05,
+      "input_tokens": 2167,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.2,
+      "notional_cost_usd": 9.443e-05,
+      "input_tokens": 2148,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.1,
+      "notional_cost_usd": 0.00013447,
+      "input_tokens": 2121,
+      "output_tokens": 100,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43178",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 9.545e-05,
+      "input_tokens": 2269,
+      "output_tokens": 19,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 0.7615
+}
