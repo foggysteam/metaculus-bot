@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-19T02:02:24.503620+00:00",
+  "bot_version": "2026-11-18.2",
+  "started_at": "2026-11-19T01:50:59.260600+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43283,
+    "post_id": 43278,
+    "url": "https://www.metaculus.com/questions/43278",
+    "type": "DiscreteQuestion",
+    "unit": "%",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "What percentage of companies globally will fulfill their pre-2026 broiler commitments in 2026 and 2027?",
+    "resolution_criteria": "This question will resolve as the percentage of global companies reporting in 2026 or 2027 that they have fulfilled the broiler commitments they made before 2026 according to [Chicken Watch](https://chickenwatch.org/progress-tracker) when accessed by Metaculus on January 1, 2028.",
+    "fine_print": "Specifically, the denominator will be obtained by selecting the \"Broiler\" issue on the [Chicken Watch](https://chickenwatch.org/progress-tracker?filterK=Cage-free) progress tracker, a \"Victory Date\" of 1990 to 2025, and a \"Timeline\" of 2026 and after. The numerator will then be obtained by *additionally* selecting the \"Reporting Fulfilled\" status.\n\nIf Chicken Watch ceases reporting or significantly changes its criteria such that previous reporting is not comparable, this question will be **annulled**.",
+    "close_time": "2026-11-30 23:00 UTC",
+    "scheduled_resolution_time": "2026-12-31 23:00 UTC"
+  },
+  "research": [
+    "I couldn't read the current resolution figure. Chicken Watch's tracker loads its data from a third-party database that my tools can't query, so I don't know today's percentage. The closest data point is a February 2026 Faunalytics analysis: 6% of broiler commitments due in 2025 or earlier were fulfilled. Commitments due in 2026 or later, which is what this question counts, are probably lower so far, but that is unconfirmed.\n\n## 1. Resolution source\n- 2026-11-19: The tracker page at chickenwatch.org/progress-tracker loads but shows no figures. The data sits in an embedded \"Awesome Table\" view (ID -NqYH6wXir1Ia4I27P6G) that pulls from a Firebase database. Neither the page source, the view page nor the site's scripts expose a CSV or JSON file I could read. [Chicken Watch](https://chickenwatch.org/progress-tracker?filterK=Broiler)\n- I could not get either count the question uses: all broiler commitments made 1990-2025 with deadlines of 2026 or later, and how many of those are \"Reporting Fulfilled\". The forecaster should open the tracker in a browser and apply the filters directly.\n- The question's range runs from 0.86% to 14.9%. If Metaculus centred that range on the live value, the current figure may be in the low single digits. That is my guess, not something I verified.\n\n## 2. Current status\n- Nothing settles the question yet. The count is cumulative to 2028-01-01, so companies that report fulfilling a 2026 deadline in 2027 will raise the numerator.\n- 2026-02 (Faunalytics, citing Chicken Watch): [Faunalytics](https://faunalytics.org/tactics-in-practice-the-data-behind-corporate-outreach/)\n  - 6% of global broiler commitments due in 2025 or earlier were fulfilled.\n  - About 4.5% of those due in 2024 or earlier were fulfilled.\n  - 76% of commitments due in 2025 or earlier had never reported any progress.\n  - Fulfilment was 35% in Europe and 1% in North America.\n  - Over 350 company broiler commitments fall due in 2026.\n- For comparison, 64% of cage-free egg commitments due by 2025 were fulfilled. [Faunalytics](https://faunalytics.org/tactics-in-practice-the-data-behind-corporate-outreach/)\n\n## 3. Recent news (newest first)\n- 2026 (exact date unclear): Mercy For Animals' Serving Up Change report rated 27 North American foodservice providers. 7 had reported progress and 10 had published roadmaps. Several named firms had reported nothing. [Serving Up Change](https://servingupchange.org/)\n- 2026-03: Compassion in World Farming's European ChickenTrack 2025 report: [Retail Insight Network](https://www.retail-insight-network.com/news/european-hotels-and-retailers-advance-on-chicken-welfare-commitments/), [FDBusiness](https://www.fdbusiness.com/chickentrack-2025-shows-steady-progress-on-broiler-welfare-but-calls-for-continued-industry-commitment/)\n  - 76 of 107 companies reported progress, up from 64 of 93 the year before.\n  - Only Waitrose and REMA 1000 Norge were fully compliant ahead of 2026.\n  - About 18 UK brands withdrew their pledges, mainly because switching to slower-growing breeds was hard. Withdrawals could shrink the denominator if Chicken Watch removes them.\n  - In the 2025 edition, 36 companies reported under 10% progress on breed change and 17 reported none.\n- 2025 (exact date unclear): KFC UK said it would not meet its 2026 commitment, and UK food businesses were described as \"unlikely\" to meet the 2026 deadline. [The Grocer](https://www.thegrocer.co.uk/news/uk-food-businesses-unlikely-to-meet-2026-chicken-welfare-deadline/702371.article), [Poultry News](https://www.poultrynews.co.uk/production/where-now-for-the-better-chicken-committment.html)\n- 2024: In North America, 22% of signatories were reporting progress. Only Campfire Treats and Evermore Pet Food were fully compliant. [CIWF](https://www.ciwf.com/media-and-news/news/2024/03/more-us-food-companies-share-progress-towards-adopting-higher-welfare-chicken)\n\n## 4. Base rates\n- The fulfilment rate for older deadlines rose from about 4.5% (due by 2024) to 6% (due by 2025) as of February 2026, roughly 1.5 points per extra deadline year. [Faunalytics](https://faunalytics.org/tactics-in-practice-the-data-behind-corporate-outreach/)\n- Reporting progress is not the same as fulfilling: U.S. progress reporting was 18% in 2022 and 22% in 2024. [CIWF 2022](https://www.ciwf.com/media/7453487/chickentrack-2022.pdf)\n- Most commitments to be counted here fall due in 2026, and fulfilment reports usually come in annual reports or ChickenTrack submissions several months after the deadline year. A rise is therefore most likely in early-to-mid 2027.\n- Seasonality: ChickenTrack reports come out around March each year, so updates tend to bunch then. I found no year-by-year Chicken Watch values to compare November with December.\n\n## 5. Other forecasts\n- I found no Metaculus community prediction, Polymarket, Kalshi or Manifold market on this question.\n- None of the markets your code collected match (chicken wing prices, Arkansas broiler output and others).\n- An older question list asks \"What percentage of companies will fulfill their 2026 BCC commitments?\" using the same tracker, but gives no values. [Google Sheet](https://docs.google.com/spreadsheets/d/1U--UadjSOim6ntP2ltlTWQXdwtSpkNJ9swzzfFxf3oY/edit)\n- 2024 (Rethink Priorities): Founders Pledge assumed a 30% chance that companies follow through on broiler pledges. [Rethink Priorities](https://rethinkpriorities.org/research-area/will-companies-meet-their-animal-welfare-commitments/)\n\n## 6. Upcoming events before resolution\n- The end of 2026, when the 2026 deadline passes.\n- Company annual and ESG reports in early 2027.\n- CIWF's U.S. and European ChickenTrack reports, around March 2027.\n- Possible further pledge withdrawals, or Chicken Watch reclassifying commitments, which could move the denominator.\n- The resolution check by Metaculus on 2028-01-01.\n- Weather is not relevant to this question.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 01:57 UTC; check each market really matches the question)\n- Kalshi: Chicken wing · Average US wholesale price in November (November 2026). Yes prices: Above 105¢ per pound: 0.54; Above 110¢ per pound: 0.18; Above 100¢ per pound: 0.84; Above 115¢ per pound: 0.07; Above 85¢ per pound: 0.97; Above 130¢ per pound: 0.0000; Above 135¢ per pound: 0.0000; Above 90¢ per pound: 0.97; Above 125¢ per pound: 0.0000; Above 120¢ per pound: 0.0000.\n- Kalshi: Chick-fil-A Chicken Sandwich price in November (November 2026). Yes prices: At least $5.40: 0.23; At least $5.41: 0.17; At least $5.42: 0.16; At least $5.43: 0.15; At least $5.44: 0.14; At least $5.45: 0.13; At least $5.39: 0.94.\n- Kalshi: Chipotle Chicken Burrito price in November (November 2026). Yes prices: At least $9.87: 0.39; At least $9.86: 0.69; At least $9.88: 0.22; At least $9.89: 0.15; At least $9.85: 0.89; At least $9.84: 0.96.\n- Kalshi: Arkansas broiler production this year (2026). Yes prices: Above 8.0 billion pounds: 0.24; Above 7.8 billion pounds: 0.88; Above 8.2 billion pounds: 0.07; Above 7.6 billion pounds: 0.95; Above 8.4 billion pounds: 0.04.\n- Kalshi: Loblaw food same-store sales growth in Q3 2026 (food retail same-store sales growth in Q3 2026 ). Yes prices: Above 2%: 0.52; Above 1.5%: 0.65; Above 2.5%: 0.20; Above 1%: 0.85; Above 3.5%: 0.0300; Above 5%: 0.0400; Above 3%: 0.0400; Above 5.5%: 0.0500; Above -1%: 0.98; Above 4%: 0.0000.\n- Kalshi: Loblaw food retail same-store sales growth in fiscal 2026 (food retail same-store sales growth in 2026). Yes prices: Above 2%: 0.44; Above 3%: 0.15; Above 1.5%: 0.80; Above 2.5%: 0.15; Above 4%: 0.04; Above 3.5%: 0.04; Above 1%: 0.95.\n- Kalshi: What will Cal-Maine Foods say during their next earnings call? (On Jan 6, 2027). Yes prices: Creighton: 0.50; Avian Influenza / HPAI: 0.52; GLP-1: 0.41; Buyback / Buy Back: 0.36; Oversupply: 0.23; Crepini: 0.78; Cage-Free: 0.80; Eggland's Best: 0.18; Echo Lake: 0.81; Dividend: 0.84.\n- Kalshi: Will Trump cut corporate taxes this year? (In 2026). Yes prices: Yes: 0.03.\n- Polymarket: Will Trump cut corporate taxes before 2027? (ends 2027-01-01). [Yes, No] prices: Will Trump cut corporate taxes before 2027?: [\"0.091\", \"0.909\"]",
+    "I couldn't get the current resolution value. The Chicken Watch tracker loads its data in the browser from a Firebase-backed Awesome Table, and I couldn't read that. So I have no live numerator or denominator for the question's filter: Broiler, Victory Date 1990 to 2025, Timeline 2026 and after, plus \"Reporting Fulfilled\" for the numerator. The closest benchmark is about 6% fulfilled for broiler commitments with deadlines of 2025 or earlier (February 2026 data). Nothing settles the question yet.\n\n## 1. Resolution source\n- 2026-11-19: The tracker page (chickenwatch.org/progress-tracker) has no data in its HTML. It embeds Awesome Table view \"-NqYH6wXir1Ia4I27P6G\", which loads through Firebase scripts. I found no CSV, JSON or API, so the forecaster should apply the filters by hand in a browser. [Chicken Watch](https://chickenwatch.org/progress-tracker?filterK=Broiler), [Awesome Table view](https://view-awesome-table.com/-NqYH6wXir1Ia4I27P6G/view)\n- 2026-11-19: The Chicken Watch broiler page gives no aggregate statistics, only example companies (Kraft Heinz, Subway, Nestle and others). [Chicken Watch broiler](https://chickenwatch.org/broiler)\n\n## 2. Current status\n- Nothing settles the question yet. The status will be read on 2028-01-01, and companies can still report fulfillment until then.\n- 2026-03-25: Faunalytics, using Chicken Watch data as of February 2026, reports for Better Chicken Commitments (BCCs) with deadlines of 2025 or earlier:\n  - 6% fulfilled globally, up from about 4.5% for deadlines of 2024 or earlier.\n  - 35% fulfilled in Europe and 1% in North America.\n  - 76% of companies had not reported progress.\n  - Over 350 BCC commitments are due in 2026.\n  [Faunalytics](https://faunalytics.org/tactics-in-practice-the-data-behind-corporate-outreach/)\n\n## 3. Recent news (newest first)\n- 2026-03-13: CIWF's European ChickenTrack 2025 covers 107 of more than 410 European BCC signatories:\n  - 76 reported progress, up from 64; 31 did not report.\n  - Waitrose went from 14% to 100% on breed transition, and REMA 1000 Norge reached full compliance before the deadline.\n  - 36 companies report under 10% breed-transition progress and 17 report none.\n  - Only 8 to 10 companies are fully compliant on any single criterion.\n  [Retail Insight Network](https://www.retail-insight-network.com/newsletters/european-hotels-and-retailers-advance-on-chicken-welfare-commitments)\n- 2026-03-04: Eighteen UK brands dropped the BCC for an industry-led scheme without the slower-growing-breed requirement. Reports name KFC, Burger King, Nando's, Popeyes, Wingstop, Wagamama, The Big Table and The Restaurant Group. It is unclear whether Chicken Watch removes these commitments (smaller denominator) or keeps them as unfulfilled. [World Animal Protection](https://www.worldanimalprotection.org.uk/latest/blogs/better-chicken-commitment-dropped/), [FarmingUK](https://www.farminguk.com/news/fast-growing-breed-row-erupts-after-firms-quit-better-chicken-commitment_68043.html)\n- Undated, 2026: An Albert Schweitzer Foundation document says many companies pushed their 2026 deadlines back to 2030. [ASF](https://albert-schweitzer-stiftung.de/track/uploads/mhi_-_higher-welfare-broiler-supply.pdf)\n- 2026-06: Whitsons (US food service) reports 100% for 2026 on some BCC criteria (auditing, stocking density, enrichment). This is an example of a company that could report fulfillment. [Whitsons](https://whitsons.com/wp-content/uploads/2026/06/Whitsons-Animal-Welfare-Update-2026.pdf)\n- I found no BCC news dated October or November 2026.\n\n## 4. Base rates\n- About 4.5% of global broiler commitments due by 2024 had been fulfilled as of February 2026. Adding the 2025 deadlines raised this to about 6%, a gain of only 1.5 points even after the deadlines passed. [Faunalytics](https://faunalytics.org/tactics-in-practice-the-data-behind-corporate-outreach/)\n- Cage-free commitments for comparison: 93% fulfilled for deadlines by 2024, 64% for deadlines by 2025. Broiler fulfillment runs roughly 10 to 15 times lower. [Faunalytics](https://faunalytics.org/tactics-in-practice-the-data-behind-corporate-outreach/)\n- An undated EA Forum post says Chicken Watch listed 1,672 commitments, 1,007 due between 2020 and 2026. This is probably out of date. [EA Forum](https://forum.effectivealtruism.org/posts/oRFgCTNKZirQyFzPT/corporate-commitments-breakdown)\n- Seasonality: reporting tends to cluster around the spring ChickenTrack releases (EU in March, US around March) and companies' annual reports. I could not find year-by-year November-to-January values for this filter.\n- The denominator for this question (commitments due 2026 or later) includes many deadlines that are still in the future, such as 2030. That probably pulls the fulfilled share below the 6% figure for past-due commitments. This is my inference, not a sourced figure.\n\n## 5. Other forecasts\n- One search result summarised a Metaculus question with this exact wording: median 11.8% (range 7.74 to 17.6), 17 forecasters, date unknown. A parallel cage-free question showed 4.43% (1.97 to 7.88). I couldn't open Metaculus (HTTP 403), so I haven't verified these numbers. [Metaculus feed](https://www.metaculus.com/questions/?search=cat%3Aseries--animal-welfare--animal-welfare--prediction-party)\n- A planning spreadsheet behind this question series gives the filter recipe but no values. [Google Sheet](https://docs.google.com/spreadsheets/d/1U--UadjSOim6ntP2ltlTWQXdwtSpkNJ9swzzfFxf3oY/edit)\n- None of the Kalshi or Polymarket markets supplied match this question. They cover chicken prices, broiler production, corporate taxes and similar topics.\n\n## 6. Upcoming events\n- 2026-12-31: The original BCC deadline for most commitments. Year-end and early-2027 corporate welfare reports may report fulfillment.\n- About March 2027: CIWF's European ChickenTrack 2026 and US ChickenTrack reports. In past years these releases drove Chicken Watch status updates.\n- Throughout 2027: possible further withdrawals or deadline extensions to 2030, and possible changes to how Chicken Watch records withdrawn commitments. A major criteria change would annul the question.\n- 2028-01-01: Metaculus reads the tracker.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 01:57 UTC; check each market really matches the question)\n- Kalshi: Chicken wing · Average US wholesale price in November (November 2026). Yes prices: Above 105¢ per pound: 0.54; Above 110¢ per pound: 0.18; Above 100¢ per pound: 0.84; Above 115¢ per pound: 0.07; Above 85¢ per pound: 0.97; Above 130¢ per pound: 0.0000; Above 135¢ per pound: 0.0000; Above 90¢ per pound: 0.97; Above 125¢ per pound: 0.0000; Above 120¢ per pound: 0.0000.\n- Kalshi: Chick-fil-A Chicken Sandwich price in November (November 2026). Yes prices: At least $5.40: 0.23; At least $5.41: 0.17; At least $5.42: 0.16; At least $5.43: 0.15; At least $5.44: 0.14; At least $5.45: 0.13; At least $5.39: 0.94.\n- Kalshi: Chipotle Chicken Burrito price in November (November 2026). Yes prices: At least $9.87: 0.39; At least $9.86: 0.69; At least $9.88: 0.22; At least $9.89: 0.15; At least $9.85: 0.89; At least $9.84: 0.96.\n- Kalshi: Arkansas broiler production this year (2026). Yes prices: Above 8.0 billion pounds: 0.24; Above 7.8 billion pounds: 0.88; Above 8.2 billion pounds: 0.07; Above 7.6 billion pounds: 0.95; Above 8.4 billion pounds: 0.04.\n- Kalshi: Loblaw food same-store sales growth in Q3 2026 (food retail same-store sales growth in Q3 2026 ). Yes prices: Above 2%: 0.52; Above 1.5%: 0.65; Above 2.5%: 0.20; Above 1%: 0.85; Above 3.5%: 0.0300; Above 5%: 0.0400; Above 3%: 0.0400; Above 5.5%: 0.0500; Above -1%: 0.98; Above 4%: 0.0000.\n- Kalshi: Loblaw food retail same-store sales growth in fiscal 2026 (food retail same-store sales growth in 2026). Yes prices: Above 2%: 0.44; Above 3%: 0.15; Above 1.5%: 0.80; Above 2.5%: 0.15; Above 4%: 0.04; Above 3.5%: 0.04; Above 1%: 0.95.\n- Kalshi: What will Cal-Maine Foods say during their next earnings call? (On Jan 6, 2027). Yes prices: Creighton: 0.50; Avian Influenza / HPAI: 0.52; GLP-1: 0.41; Buyback / Buy Back: 0.36; Oversupply: 0.23; Crepini: 0.78; Cage-Free: 0.80; Eggland's Best: 0.18; Echo Lake: 0.81; Dividend: 0.84.\n- Kalshi: Will Trump cut corporate taxes this year? (In 2026). Yes prices: Yes: 0.03.\n- Polymarket: Will Trump cut corporate taxes before 2027? (ends 2027-01-01). [Yes, No] prices: Will Trump cut corporate taxes before 2027?: [\"0.091\", \"0.909\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 1.5,
+        "p25": 2.4,
+        "p50": 4.0,
+        "p75": 6.5,
+        "p90": 9.5
+      },
+      "reasoning": "(a) **Time left:** The text says Chicken Watch is checked on January 1, 2028, which is about 13.5 months away. The metadata, however, says resolution is around 2026-12-31. I weight the 2028 reading more heavily but allow for the earlier date, which would mean a lower value.\n\n(b) **Latest known value:** I could not read the tracker directly. The question's bounds give a clue: 0.98522% is exactly 2/203 and 14.778% is exactly 30/203. That suggests that when the question was created, the tracker showed 2 \"Reporting Fulfilled\" out of about 203 qualifying commitments, roughly 1%. The closest related figure is from February 2026 (Faunalytics): 6% of broiler commitments due by 2025 had been fulfilled. That is a different, older-deadline group of commitments.\n\n(c) **If nothing changed:** About 1% to 2%.\n\n(d) **If the current trend continued:** Fulfilment of older deadlines rose only about 1.5 points per extra deadline year, and it stays near 4-6% even years after the deadlines.\n- Most of this group has 2026 deadlines.\n- European companies, which fulfil far more often (35% versus 1% in North America), may report compliance in the March 2027 ChickenTrack reports and in annual reports.\n- A trend reading for January 2028 is about 3% to 6%.\n\n(e) **Historical variation:** The rate moves slowly, typically 1-2 points per year. Chicken Watch logs updates with a lag, and many companies never report at all (76% had never reported progress).\n\n(f) **Experts and markets:** No markets match this question.\n- The question creator's \"likely not higher\" bound is about 14.8%.\n- Industry press says UK and European firms are unlikely to meet the 2026 deadline.\n- KFC UK has said it will miss.\n- About 18 UK brands have withdrawn their pledges.\n\n(g) **Unexpected scenarios:**\n- **Low:** Chicken Watch barely updates the tracker, or adds many old commitments to the denominator, so the value stays near 1%.\n- **High:** A batch of European companies reports full compliance in 2027 and Chicken Watch removes withdrawn pledges from the denominator, pushing the value toward 12-16%.\n\nPercentile 1: 1.0\nPercentile 5: 1.2\nPercentile 10: 1.5\nPercentile 20: 2.1\nPercentile 30: 2.7\nPercentile 40: 3.3\nPercentile 50: 4.0\nPercentile 60: 4.8\nPercentile 70: 5.8\nPercentile 80: 7.2\nPercentile 90: 9.5\nPercentile 95: 11.5\nPercentile 99: 16"
+    },
+    {
+      "value": {
+        "p10": 1.6,
+        "p25": 2.5,
+        "p50": 4.0,
+        "p75": 6.55,
+        "p90": 9.7
+      },
+      "reasoning": "(a) **Time left.** Forecasts close on 2026-11-30, and the stated resolution is around 2026-12-31. However, the question text says Chicken Watch will be accessed on 2028-01-01. Depending on which date applies, the outcome is known in about 6 weeks or about 13 months. I hedge between the two.\n\n(b) **Latest known value.** I have no direct reading of the tracker. The bounds suggest a starting point:\n- The floor of 0.985% equals 2/203, and the creator's upper guess of 14.78% equals 30/203.\n- That implies a denominator of about 203, with about 2 commitments \"Reporting Fulfilled\" when the question was created, probably early to mid 2026.\n- Faunalytics (February 2026) reported that only 6% of broiler commitments due in 2025 or earlier were fulfilled.\n\n(c) **If nothing changed.** The outcome would be about 1% (2/203).\n\n(d) **If the current trend continued.**\n- Early-fulfilment reports trickle in: CIWF ChickenTrack 2025 found Waitrose and REMA 1000 already compliant.\n- If resolution is at end-2026, I expect roughly 2 to 5%.\n- If resolution is on 2028-01-01, after the 2026 deadline passes and 2027 reports come in, roughly 5 to 10% is plausible. That follows the pattern of older deadlines, which reached about 4.5 to 6% fulfilled a year or more after their due dates.\n\n(e) **Historical variation.** Fulfilment for older deadlines rose only about 1.5 percentage points per additional deadline year. The broiler welfare transition is slow, and 76% of commitments have never reported any progress.\n\n(f) **Experts and markets.**\n- No markets match this question.\n- CIWF and The Grocer say most UK and European companies are unlikely to meet the 2026 deadline, and KFC UK says it won't.\n- In North America, fulfilment is about 1%.\n- The question creator's upper guess is about 15%.\n\n(g) **Unexpected scenarios.**\n- Low: Chicken Watch makes no updates, so the outcome stays at about 1%. Alternatively, it adds many new pre-2026 commitments to the denominator, diluting the share.\n- High: Chicken Watch bulk-updates from ChickenTrack 2027, and withdrawn pledges are removed from the denominator. Many European retailers then show \"Reporting Fulfilled\", pushing the share to 12 to 17%.\n\nPercentile 1: 1.0\nPercentile 5: 1.3\nPercentile 10: 1.6\nPercentile 20: 2.2\nPercentile 30: 2.8\nPercentile 40: 3.4\nPercentile 50: 4.0\nPercentile 60: 4.8\nPercentile 70: 5.8\nPercentile 80: 7.3\nPercentile 90: 9.7\nPercentile 95: 12.0\nPercentile 99: 17.0"
+    },
+    {
+      "value": {
+        "p10": 1.9,
+        "p25": 2.75,
+        "p50": 4.0,
+        "p75": 5.85,
+        "p90": 8.2
+      },
+      "reasoning": "(a) Time left: forecasts close 2026-11-30. The question text says Metaculus checks the tracker on 2028-01-01, but the stated resolution date is around 2026-12-31. If the 2028 check applies, 13 months of reporting remain, including the early-2027 annual reports and the March 2027 ChickenTrack reports. If the earlier date applies, about 6 weeks remain. I blend both possibilities, leaning toward the 2028 check.\n\n(b) Latest known value: I could not read the live tracker figure. The closest data point is from February 2026 (Faunalytics, citing Chicken Watch): 6% of broiler commitments due in 2025 or earlier were fulfilled. The figure for commitments due in 2026 or later is probably lower, likely around 2-4%. That estimate rests on the question's range (0.99% to 14.8%) being centred near about 3.8% on a log scale.\n\n(c) If nothing changed: about 2.5-3.5%.\n\n(d) If the current trend continued: European firms that meet the 2026 deadline (Waitrose, REMA 1000 and some others) will report during 2027. Most of the denominator is North American firms, where fulfilment is about 1%, plus commitments due in 2027-2030. That points to roughly 4-6% by January 2028.\n\n(e) Historical variation: the fulfilment rate for older deadlines rose about 1.5 points per deadline year. Chicken Watch updates are slow and uneven.\n\n(f) Expert and market expectations: there are no matching markets. UK industry reporting says most firms will miss the 2026 deadline, and KFC UK has said it will. Pledge withdrawals could shrink the denominator if Chicken Watch removes them.\n\n(g) Unexpected scenarios:\n- Low (about 1%): Chicken Watch barely updates, or many new commitments enter the denominator, leaving the figure near 1-1.5%.\n- High (about 12-15%): Chicken Watch removes withdrawn pledges in bulk, and European retailers and foodservice firms report fulfilment en masse in 2027, pushing the figure above 10%.\n\nPercentile 1: 1.1\nPercentile 5: 1.5\nPercentile 10: 1.9\nPercentile 20: 2.5\nPercentile 30: 3.0\nPercentile 40: 3.5\nPercentile 50: 4.0\nPercentile 60: 4.6\nPercentile 70: 5.3\nPercentile 80: 6.4\nPercentile 90: 8.2\nPercentile 95: 10.0\nPercentile 99: 14.0"
+    },
+    {
+      "value": {
+        "p10": 1.3,
+        "p25": 2.1,
+        "p50": 3.6,
+        "p75": 5.9,
+        "p90": 8.8
+      },
+      "reasoning": "(a) Time left: The question text says Chicken Watch will be read on 2028-01-01, which is about 13.5 months away. The listed resolution date of around 2026-12-31 conflicts with that. I weight the January 2028 reading most but hedge toward the earlier one.\n\n(b) Latest known value: My research assistant could not read the tracker for this exact filter. The stated floor of 0.985% equals 2/203, which suggests the current value is about 1% (as of roughly November 2026). The closest published benchmark is Faunalytics, using February 2026 Chicken Watch data: about 6% of broiler commitments with deadlines of 2025 or earlier were fulfilled.\n\n(c) If nothing changed: about 1%.\n\n(d) If the trend continued: The past-due cohort rose from 4.5% to 6% fulfilled as the 2025 deadlines passed. The 2026 deadline cohort is mostly European, where fulfillment rates are higher (35% for past-due European commitments). That cohort will be reviewed in the spring 2027 ChickenTrack updates and the Chicken Watch updates that follow them. However, the denominator also includes deadlines from 2027 to 2030, which are unlikely to be fulfilled yet. There are also withdrawals (18 UK brands left the BCC) and extensions to 2030. My trend estimate for January 2028 is roughly 3 to 6%.\n\n(e) Historical variation: Broiler fulfillment shares move slowly, by about 1 to 2 points per year at the aggregate level. Moves are lumpy and cluster around the spring report releases.\n\n(f) Experts and markets: An unverified Metaculus median of about 11.8% (range 7.7 to 17.6) seems to be anchored on the creator's range. The creator's soft ceiling is about 14.8%. No relevant markets exist.\n\n(g) Scenarios:\n- Low: Chicken Watch is slow to update, or the reading effectively happens near the end of 2026, and many 2026 deadlines get extended. The value stays near 1 to 1.5%.\n- High: The spring 2027 European ChickenTrack prompts a batch update in which many European retailers that meet the BCC (like Waitrose and REMA 1000) are marked fulfilled. If withdrawn commitments are also removed from the denominator, the value could reach 10 to 15%.\n\nPercentile 1: 1.0\nPercentile 5: 1.1\nPercentile 10: 1.3\nPercentile 20: 1.8\nPercentile 30: 2.4\nPercentile 40: 3.0\nPercentile 50: 3.6\nPercentile 60: 4.3\nPercentile 70: 5.2\nPercentile 80: 6.6\nPercentile 90: 8.8\nPercentile 95: 10.8\nPercentile 99: 15"
+    },
+    {
+      "value": {
+        "p10": 2.0,
+        "p25": 3.35,
+        "p50": 5.6,
+        "p75": 8.75,
+        "p90": 12.3
+      },
+      "reasoning": "(a) The tracker is read on 2028-01-01, about 13.5 months from now. That covers the 2026 deadline, year-end reports and the spring 2027 ChickenTrack releases.\n\n(b) I have no live reading for this exact filter. The question's bounds are 0.985% = 2/203 and 14.78% = 30/203. That suggests a denominator of about 203 commitments and a current numerator of about 2, so roughly 1% as of question creation in 2026. The closest published benchmark is Faunalytics' figure of about 6% fulfilled for broiler commitments with deadlines of 2025 or earlier (February 2026 data).\n\n(c) If nothing changed, the answer would be about 1%, and it cannot go lower.\n\n(d) If the trend continued: past-due broiler commitments reach only about 4.5 to 6% fulfilled a year or more after their deadlines. Most of this cohort's deadline is 2026, with some later deadlines diluting it. Allowing for a burst of reporting after the deadline in early 2027, that implies roughly 3 to 7% by January 2028.\n\n(e) The fulfilled share for past-due broiler commitments rose only about 1.5 points when a whole new deadline year was added. A jump from about 1% to 5% over 13 months is plausible. Getting above 12% would need unusually strong reporting, likely concentrated in Europe.\n\n(f) An unverified Metaculus median is 11.8% (range 7.7 to 17.6, 17 forecasters). The question creator implies values above about 15% are unlikely. There are no relevant markets.\n\n(g) Low scenario: Chicken Watch keeps the withdrawn UK commitments in the denominator, and many companies push deadlines to 2030 without reporting, so the share stays at 1 to 2%. High scenario: the denominator turns out to be mostly European signatories, and the ChickenTrack 2026 releases plus year-end reports trigger many full-compliance updates, pushing the share to 15 to 20%.\n\nMy median is about 5.5%, slightly above the trend estimate to give some weight to the higher Metaculus median. The tails cover uncertainty about how the denominator is composed.\n\nPercentile 1: 1.0\nPercentile 5: 1.5\nPercentile 10: 2.0\nPercentile 20: 2.9\nPercentile 30: 3.8\nPercentile 40: 4.7\nPercentile 50: 5.6\nPercentile 60: 6.6\nPercentile 70: 7.9\nPercentile 80: 9.6\nPercentile 90: 12.3\nPercentile 95: 14.8\nPercentile 99: 20.0"
+    },
+    {
+      "value": {
+        "p10": 2.0,
+        "p25": 3.15,
+        "p50": 5.0,
+        "p75": 7.65,
+        "p90": 10.8
+      },
+      "reasoning": "(a) Time left: Metaculus reads the Chicken Watch tracker on 2028-01-01, about 13.5 months from today (2026-11-19). That window covers the end-2026 deadline for most commitments and the spring 2027 ChickenTrack releases.\n\n(b) Latest known value: there is no live reading for this exact filter. The question's lower bound of 0.985% looks like 2/203, which suggests roughly 2 fulfilled out of about 203 commitments when the question was created, so about 1%. The nearest sourced benchmark is Faunalytics' February 2026 figure: about 6% fulfilled globally for broiler commitments due in 2025 or earlier.\n\n(c) If nothing changed: about 1 to 2%.\n\n(d) If the current trend continued: past-due broiler commitments reach only about 4.5 to 6% fulfilled even one or more years after their deadlines. Fulfillment is concentrated in Europe (about 35%), while North America is about 1%. Most commitments in this denominator are due in 2026, but some are due in 2030 and are unlikely to be fulfilled by the read date. My trend estimate is therefore about 3 to 7% by January 2028.\n\n(e) Historical variation: adding one year of deadlines (2025) moved the past-due fulfilled share up by only about 1.5 points. Chicken Watch updates are slow and tend to bunch around the ChickenTrack releases. A move of a few points over 13 months is typical, and a move above 10 points would be unusual.\n\n(f) Expert and market expectations: an unverified Metaculus aggregate shows a median of 11.8% (range 7.7 to 17.6). The question creator thinks the value is likely not above 14.8%. No prediction markets cover this. I weight the base rate more heavily than the Metaculus aggregate, which looks optimistic.\n\n(g) Unexpected scenarios:\n- Low outcome: companies push deadlines to 2030, the UK brands withdraw, and Chicken Watch barely updates statuses, leaving the value near 1 to 2%.\n- High outcome: European retailers and caterers with 2026 deadlines report en masse in the 2027 ChickenTrack, and Chicken Watch removes withdrawn commitments, shrinking the denominator. That could push the value to 12 to 18%.\n\nPercentile 1: 1.0\nPercentile 5: 1.5\nPercentile 10: 2.0\nPercentile 20: 2.8\nPercentile 30: 3.5\nPercentile 40: 4.2\nPercentile 50: 5.0\nPercentile 60: 5.8\nPercentile 70: 6.9\nPercentile 80: 8.4\nPercentile 90: 10.8\nPercentile 95: 13.0\nPercentile 99: 18.0"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 1.7319,
+    "p25": 2.6445,
+    "p50": 4.0359,
+    "p75": 6.5853,
+    "p90": 9.7475
+  },
+  "usage": [
+    {
+      "question_id": "43283",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.9,
+      "notional_cost_usd": 0.00024180000000000002,
+      "input_tokens": 1190,
+      "output_tokens": 8,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 17.5,
+      "notional_cost_usd": 0.0001943,
+      "input_tokens": 508,
+      "output_tokens": 287,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 119.6,
+      "notional_cost_usd": 0.44148239999999994,
+      "input_tokens": 268107,
+      "output_tokens": 5697,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 19.4,
+      "notional_cost_usd": 0.078776,
+      "input_tokens": 5193,
+      "output_tokens": 1862,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 23.2,
+      "notional_cost_usd": 0.085044,
+      "input_tokens": 5194,
+      "output_tokens": 2175,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.4,
+      "notional_cost_usd": 0.0008546999999999999,
+      "input_tokens": 2912,
+      "output_tokens": 545,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.3,
+      "notional_cost_usd": 0.0008738,
+      "input_tokens": 2830,
+      "output_tokens": 616,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 35.2,
+      "notional_cost_usd": 0.032680600000000004,
+      "input_tokens": 5192,
+      "output_tokens": 1462,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.3,
+      "notional_cost_usd": 0.00036286,
+      "input_tokens": 2910,
+      "output_tokens": 541,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.4,
+      "notional_cost_usd": 0.00039136,
+      "input_tokens": 2829,
+      "output_tokens": 600,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0008512,
+      "input_tokens": 2782,
+      "output_tokens": 590,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00038478,
+      "input_tokens": 2783,
+      "output_tokens": 587,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 117.9,
+      "notional_cost_usd": 0.457137,
+      "input_tokens": 327243,
+      "output_tokens": 5680,
+      "web_searches": 6,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 19.5,
+      "notional_cost_usd": 0.07986,
+      "input_tokens": 5386,
+      "output_tokens": 1839,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.7,
+      "notional_cost_usd": 0.08197199999999999,
+      "input_tokens": 5385,
+      "output_tokens": 1945,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 24.0,
+      "notional_cost_usd": 0.090444,
+      "input_tokens": 5384,
+      "output_tokens": 2369,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.9,
+      "notional_cost_usd": 0.0008552,
+      "input_tokens": 2847,
+      "output_tokens": 572,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0008599,
+      "input_tokens": 2798,
+      "output_tokens": 601,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.0008906000000000001,
+      "input_tokens": 2859,
+      "output_tokens": 638,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00030955,
+      "input_tokens": 2798,
+      "output_tokens": 437,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.00035292,
+      "input_tokens": 2847,
+      "output_tokens": 522,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43283",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00036554,
+      "input_tokens": 2859,
+      "output_tokens": 547,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.3552
+}

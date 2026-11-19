@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-19T01:57:46.121616+00:00",
+  "bot_version": "2026-11-18.2",
+  "started_at": "2026-11-19T01:50:59.260560+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43185,
+    "post_id": 43170,
+    "url": "https://www.metaculus.com/questions/43170",
+    "type": "NumericQuestion",
+    "unit": "%",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "What proportion of global fish production will be from aquaculture in 2040?",
+    "resolution_criteria": "This question will resolve as the percentage of world production of fish from aquaculture in comparison to the total world production of fish from aquaculture and capture combined, in 2040, according [the OECD Data Explorer platform](https://data-explorer.oecd.org/vis?fs[0]=Topic%2C1%7CAgriculture%20and%20fisheries%23AGR%23%7CAgricultural%20trade%20and%20markets%23AGR_TRD%23\\&fs[1]=Commodity%2C2%7CAll%20Commodities%23_T%23%7CAgriculture%252C%20forestry%20and%20fishery%20products%23CPC_0%23%7CFish%20and%20other%20fishing%20products%23CPC_04%23\\&pg=0\\&fc=Commodity\\&snb=5\\&si=2\\&vw=tb\\&df[ds]=dsDisseminateFinalDMZ\\&df[id]=DSD_AGR%40DF_OUTLOOK_2023_2032\\&df[ag]=OECD.TAD.ATM\\&df[vs]=1.0\\&dq=W%2BOECD.A.CPC_EX_AC%2BCPC_EX_FHC...\\&pd=%2C\\&to[TIME_PERIOD]=false).",
+    "fine_print": "If the OECD ceases reporting world production of fish or significantly changes its criteria of recording such that previous reporting is not comparable, this question will be **annulled**. However, if another organisation takes over such reporting, that other source can be used for resolution as long as reporting is comparable.\n\n*Given the Animal Futures Tournament timeframe, scores from this question will not be included in the tournament leaderboard. However participants are required to predict on at least two of the three long-term questions, as per the tournament rules.*",
+    "close_time": "2039-12-31 23:59 UTC",
+    "scheduled_resolution_time": "2040-01-01 14:30 UTC"
+  },
+  "research": [
+    "# Research brief: aquaculture share of world fish production, 2040 (OECD-FAO data)\n\n## 1. Resolution source\n\n- The question's link points to an older dataset (DF_OUTLOOK_2023_2032), which only runs to 2032. Newer vintages are listed in the OECD SDMX API: 2024_2033 (v1.1), 2025_2034 (v1.1) and **2026_2035 (v1.1)**, which is the latest. [OECD dataflows](https://sdmx.oecd.org/public/rest/dataflow/OECD.TAD.ATM)\n- 2026 (July release), OECD-FAO Outlook 2026-2035, world production in thousand tonnes, aquaculture vs capture, with the share computed by me: [API data](https://sdmx.oecd.org/public/rest/data/OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2026_2035,1.1/W.A.CPC_EX_AC+CPC_EX_FHC.QP..?startPeriod=2010&format=csvfilewithlabels)\n  - 2010: 57,758 vs 87,224, share **39.8%**\n  - 2015: 72,878 vs 91,710, share **44.3%**\n  - 2018: 82,534 vs 96,365, share **46.1%**\n  - 2020: 87,727 vs 89,451, share **49.5%**\n  - 2022: 94,633 vs 90,391, share **51.1%**\n  - 2023: 98,679 vs 90,446, share **52.2%**\n  - 2024: 102,554 vs 91,921, share **52.7%** (the question background, using the 2023-2032 vintage, gives 52.1%, so the numbers shift between vintages)\n  - 2025 (projected): 105,658 vs 92,850, share **53.2%**\n  - 2030 (projected): 112,601 vs 93,812, share **54.6%**\n  - 2035 (projected): 120,663 vs 94,902, share **56.0%**\n- 2025 vintage (Outlook 2025-2034): share 52.2% in 2024 and **55.6% in 2034** (117,650 vs 93,996). [API data](https://sdmx.oecd.org/public/rest/data/OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2025_2034,1.1/W.A.CPC_EX_AC+CPC_EX_FHC.QP..?startPeriod=2023&format=csvfilewithlabels)\n- **Timing issue:** the question resolves on 2040-01-01, before any actual 2040 data can exist. The figure shown then will most likely be a projection from the Outlook 2039-2048 (or whichever vintage is latest), not observed data. The question doesn't say which vintage counts.\n\n## 2. Current status\n\n- Nothing settles the question yet. The share has risen every year since 2010 in OECD data, crossing 50% around 2021-2022.\n\n## 3. Recent news (newest first)\n\n- 2026-11-18: Infobae, citing FAO, reports farmed aquatic animal output of 103 Mt in 2024, above 100 Mt for the first time, and says aquaculture supplies 53% of aquatic animal production. [Infobae](https://www.infobae.com/peru/2026/11/18/la-acuicultura-y-la-oportunidad-de-nuestro-tiempo/)\n- 2026-11-17: A Jaljeevika/Change Engine report says India's inland fish output could double from 15.17 Mt to 30 Mt by 2035. [CNBC-TV18](https://www.cnbctv18.com/economy/indias-inland-waters-produce-far-less-fish-than-they-could-report-sees-1-8-crore-jobs-potential-20036091.htm)\n- 2026-09: A Changing Markets Foundation report says up to 45% of wild-caught fish could be used as aquaculture feed by 2040 under a fast-growth scenario. That points to a feed constraint on aquaculture growth. [Mongabay](https://news.mongabay.com/2026/09/45-of-wild-caught-fish-could-be-fed-to-farmed-fish-and-shrimp-by-2040-says-report/)\n- 2026-07: The OECD-FAO Outlook 2026-2035 projects total output of 216 Mt in 2035, with aquaculture at 121 Mt and a 56% share (53% in the base period). It says growth is slowing, and China's share of aquaculture falls to 55% as India and Viet Nam grow faster. [OECD chapter](https://www.oecd.org/en/publications/oecd-fao-agricultural-outlook-2026-2035_47874669-en/full-report/fish-and-other-aquatic-products-for-human-consumption_be23d26b); [WAM](https://www.wam.ae/en/article/17ar0fm-global-agricultural-fisheries-production-projected)\n- 2026-06: FAO's SOFIA 2026 report gives 2024 figures of 103 Mt from aquaculture and about 92 Mt from capture (capture has stayed within 86-94 Mt since the late 1980s). It projects 214 Mt for 2034: 119 Mt aquaculture (+16%) and 95 Mt capture (+3%). [DevelopmentAid](https://www.developmentaid.org/news-stream/post/208087/sofia-2026-global-fisheries-and-aquaculture-production-reaches-new-highs-report)\n\n## 4. Base rates and trend\n\n- Not seasonal: this is an annual series.\n- **Past gains:** the share rose about 4.5 points in 2010-2015, 5.2 points in 2015-2020 and about 3.2 points in 2020-2024 (roughly 0.8-1.0 point a year).\n- **Projected gains:** the 2026 vintage slows this to about 0.28 point a year (53.2% in 2025 to 56.0% in 2035). Aquaculture grows about 1.3% a year and capture about 0.2% a year.\n- **My rough arithmetic, not an OECD figure:** carrying the 2026 vintage's growth rates forward gives about 57.3-57.5% in 2040. Carrying the 2010-2024 pace forward gives about 65%.\n- **Capture swings:** capture output moves 3-5 Mt from year to year, mainly because El Niño hits Peru's anchoveta catch (96.4 Mt in 2018, 89.5 Mt in 2020). The 2026 vintage builds in a dip to 90.9 Mt in 2031. A swing of that size moves the share by about 1 point in a given year.\n- **Vintage revisions:** the 2024 share was 52.1% in the 2023 vintage, 52.2% in the 2025 vintage and 52.7% in the 2026 vintage. Projected end-year shares have stayed at about 55.6-56%.\n\n## 5. Other forecasts\n\n- No Polymarket, Kalshi, Manifold or Metaculus market matches this question. The collected Kalshi markets (Mississippi catfish, FAO Food Price Index and others) are unrelated.\n- Expert projections:\n  - OECD-FAO 2026: 56.0% in 2035.\n  - OECD-FAO 2025: 55.6% in 2034.\n  - FAO SOFIA 2026: about 55.6% in 2034 (119 of 214 Mt).\n- WRI and partners (2014) projected farmed production of about 140 Mt in 2050. [WRI](https://www.wri.org/research/improving-productivity-and-environmental-performance-aquaculture)\n- I found no official projection of the share specifically for 2040.\n\n## 6. Upcoming events before resolution\n\n- Annual OECD-FAO Outlooks each July (2027-2036 through 2039-2048). The 2031-2040 edition, around mid-2031, will be the first to include a 2040 projection.\n- FAO SOFIA reports every two years (2028, 2030 and so on), which feed the historical baseline.\n- Things that could move the outcome:\n  - El Niño years hitting the Peruvian anchoveta catch\n  - China's aquaculture policy and growth slowing\n  - expansion in India, Viet Nam and Indonesia\n  - fishmeal and feed limits\n  - disease outbreaks\n  - methodology changes, which could trigger annulment\n- Weather: ENSO matters for capture volumes, but no seasonal outlook reaches out to 2040.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 01:54 UTC; check each market really matches the question)\n- Kalshi: Will Mississippi catfish production rise YoY? (2026). Yes prices: Above 194.3 million pounds: 0.21.\n- Kalshi: US share of global GDP in 2026 (2026). Yes prices: Above 25.6%: 0.54; Above 25.7%: 0.39; Above 25.8%: 0.28; Above 25.5%: 0.72; Above 25.9%: 0.18; Above 26.0%: 0.10; Above 26.1%: 0.10; Above 25.3%: 0.96; Above 25.4%: 0.97; Above 25.1%: 0.98.\n- Kalshi: Venture Global LNG volumes next quarter (lng volumes in Q1 2027 ). Yes prices: Above 500 TBtu: 0.32; Above 475 TBtu: 0.69; Above 450 TBtu: 0.90; Above 525 TBtu: 0.06; Above 400 TBtu: 0.97; Above 600 TBtu: 0.03; Above 550 TBtu: 0.04.\n- Kalshi: Florida grapefruit forecast in January 2027 (2026–2027 season · Million boxes). Yes prices: 1.60m or above: 0.0000; Below 0.50m: 0.0000; 1.00m–below 1.10m: 0.0000; 1.10m–below 1.20m: 0.0000; 1.20m–below 1.30m: 0.0000; 1.30m–below 1.40m: 0.0000; 1.40m–below 1.50m: 0.0000; 1.50m–below 1.60m: 0.0000; 0.50m–below 0.60m: 0.0000; 0.60m–below 0.70m: 0.0000.\n- Kalshi: FAO Food Price Index for November (November 2026). Yes prices: Above 131.0: 0.37; Above 132.0: 0.23; Above 130.0: 0.80; Above 129.0: 0.86; Above 133.0: 0.12; Above 134.0: 0.06; Above 128.0: 0.94; Above 136.0: 0.04; Above 135.0: 0.05; Above 137.0: 0.01.\n- Kalshi: M2 money supply growth at year-end 2026 (December 2026). Yes prices: 6.5% or Above: 0.23; 6.0% to 6.4%: 0.20; 5.5% to 5.9%: 0.21; 5.0% to 5.4%: 0.18; Below 5.0%: 0.14.\n- Kalshi: Will Claude be permitted for use in the Department of War supply chain? (Before Jan 1, 2028). Yes prices: Before Jan 1, 2028: 0.43; Before Jul 1, 2027: 0.32; Before Apr 1, 2027: 0.24; Before Jan 1, 2027: 0.12.",
+    "# Research brief: aquaculture's share of world fish production in 2040 (OECD data)\n\n## 1. Resolution source\n- I read the OECD SDMX API directly. The dataset is DSD_AGR@DF_OUTLOOK, world (W), measure QP. Aquaculture is CPC_EX_AC and capture is CPC_EX_FHC, both in thousand tonnes.\n- **Outlook 2023-2032 edition (the edition linked in the question):** for 2024 it shows aquaculture 96,456.48 and capture 88,754.90, a 52.1% share. This matches the question background. Its last year is 2032: 110,733.87 vs 91,000.99, a **54.9%** share. [OECD API](https://sdmx.oecd.org/public/rest/data/OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2023_2032,/W.A.CPC_EX_AC+CPC_EX_FHC.QP..?format=csv&startPeriod=2010)\n- **Outlook 2026-2035 edition (newest, version 1.1).** Shares are my calculations:\n  - 2024: 102,553.6 vs 91,921.2, so 52.7%. History was revised upward from 96.5 Mt of aquaculture in the earlier edition.\n  - 2025: 105,658 vs 92,850, so 53.2%.\n  - 2030: 112,601 vs 93,812, so 54.6%.\n  - 2035: 120,663 vs 94,902, so **56.0%**, the furthest year in any edition.\n  - [OECD API](https://sdmx.oecd.org/public/rest/data/OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2026_2035,/W.A.CPC_EX_AC+CPC_EX_FHC.QP..?format=csv&startPeriod=2010)\n- **Timing problem:** no OECD edition goes as far as 2040 yet. The question resolves on 2040-01-01, before any actual 2040 data can exist. So the figure used will almost certainly be a projection from whichever Outlook edition is current then (from about 2031 onward, editions will cover 2040). How editions are chosen and how back-data revisions are handled will matter.\n\n## 2. Current status\n- Nothing settles the question yet. The latest official projection, 56.0% for 2035, is about 4 years of data short of 2040.\n\n## 3. Recent news (newest first)\n- 2026-11-18: Infobae, citing FAO, says farmed aquatic animals reached 103 Mt in 2024 and supply 53% of world aquatic animal output. [Infobae](https://www.infobae.com/peru/2026/11/18/la-acuicultura-y-la-oportunidad-de-nuestro-tiempo/)\n- 2026-11-17: A Jaljeevika and Change Engine report says India's inland waters (15.17 Mt today) could double to 30 Mt by 2035. [CNBC-TV18](https://www.cnbctv18.com/economy/indias-inland-waters-produce-far-less-fish-than-they-could-report-sees-1-8-crore-jobs-potential-20036091.htm)\n- 2026-07 (around July 1): The OECD-FAO Outlook 2026-2035 projects aquaculture at 121 Mt and 56% of output by 2035, up from 53% in the base period. Total output is projected at 216 Mt. Aquaculture growth is slowing, and China's share is expected to slip to 55% as India and Viet Nam grow faster. [OECD](https://www.oecd.org/en/publications/oecd-fao-agricultural-outlook-2026-2035_47874669-en/full-report/fish-and-other-aquatic-products-for-human-consumption_be23d26b), [Vinetur](https://www.vinetur.com/en/20260701103618/global-farm-output-will-rise-13-by-2035-fao-and-oecd-say.html)\n- 2026-06: FAO's SOFIA 2026 report finds farmed aquatic animals passed 100 Mt for the first time in 2024. Capture was about 92 Mt, still inside the 86-94 Mt band it has held since the late 1980s. China produces 56% of farmed aquatic animals. The share of marine stocks fished sustainably fell to 62.4% in 2023. [SeafoodSource](https://www.seafoodsource.com/news/supply-trade/global-seafood-production-availability-reach-record-levels-but-challenges-to-growth-persist-fao-s-latest-sofia-report-highlights), [MSC](https://www.msc.org/media-centre/news-opinion/news/2026/06/19/five-takeaways-from-the-fao-sofia-report-2026)\n\n## 4. Base rates and trend\nThese shares are my calculations from the 2026-2035 edition.\n\n| Year | Aquaculture share |\n|---|---|\n| 2010 | 39.8% |\n| 2015 | 44.3% |\n| 2018 | 46.1% |\n| 2020 | 49.5% |\n| 2022 | 51.1% |\n| 2023 | 52.2% |\n| 2024 | 52.7% |\n| 2025 | 53.2% |\n\n- **Pace is slowing:**\n  - 2010-2020: about +1.0 percentage point (pp) a year.\n  - 2020-2025: about +0.74 pp a year.\n  - Projected 2025-2035: about +0.28 pp a year.\n- **Projected growth rates:** aquaculture grows about 1.3% a year from 2030 to 2035, while capture stays roughly flat at 93-95 Mt.\n- **Simple extension of the latest projection (my illustration, not an official figure):** about +0.28 pp a year from 2035 gives roughly 57.4% in 2040.\n- **Revisions between editions are material:** the 2024 share moved from 52.1% to 52.7%. The 2023-2032 edition's 2032 share of 54.9% compares with 55.7% for 2032 in the 2026-2035 edition.\n- **Year-to-year swings:** capture moves about ±3-4 Mt with El Niño and Peruvian anchoveta catches. For example it was 96.4 Mt in 2018 and 89.5 Mt in 2020. Swings that size shift the share by roughly ±1 pp in a given year. Outlook projections usually build in El Niño dips (for example the 2031 capture dip to 90.9 Mt).\n- **Seasonality:** not relevant, because the series is annual.\n\n## 5. Other forecasts\n- **OECD-FAO Outlook 2026-2035:** 56% in 2035, the closest official projection. [OECD](https://www.oecd.org/en/publications/oecd-fao-agricultural-outlook-2026-2035_47874669-en/full-report/fish-and-other-aquatic-products-for-human-consumption_be23d26b)\n- **SOFIA 2026 (FAO):** projects production growing through 2034, but more slowly than in past decades. I could not verify FAO's exact share figure.\n- **Prediction markets:** I found no Polymarket, Kalshi, Manifold or Metaculus market on this. The Kalshi markets that were collected (Mississippi catfish, the FAO Food Price Index and others) do not match the question.\n- I could not find any authoritative published projection for 2040 specifically.\n\n## 6. Upcoming events before resolution\n- **Annual OECD-FAO Outlooks, each around July:**\n  - The 2027-2036 edition (about July 2027) will add 2036.\n  - The first edition covering 2040 should be the 2031-2040 edition, around mid-2031.\n  - Each edition revises history and projections, and the 2026 edition revised them upward.\n- **FAO SOFIA, every two years:** next in 2028. FAO FishStat data releases feed the OECD baseline.\n- **Drivers to watch:**\n  - El Niño events and Peruvian anchoveta catches.\n  - Whether China's aquaculture growth plateaus.\n  - Growth in India, Viet Nam and Indonesia.\n  - Disease outbreaks and fishmeal or feed constraints.\n  - Climate effects on capture fisheries.\n  - The WTO fisheries subsidies agreement and catch quotas.\n  - Whether the OECD changes how it defines its fish commodities, which could trigger annulment.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 01:54 UTC; check each market really matches the question)\n- Kalshi: Will Mississippi catfish production rise YoY? (2026). Yes prices: Above 194.3 million pounds: 0.21.\n- Kalshi: US share of global GDP in 2026 (2026). Yes prices: Above 25.6%: 0.54; Above 25.7%: 0.39; Above 25.8%: 0.28; Above 25.5%: 0.72; Above 25.9%: 0.18; Above 26.0%: 0.10; Above 26.1%: 0.10; Above 25.3%: 0.96; Above 25.4%: 0.97; Above 25.1%: 0.98.\n- Kalshi: Venture Global LNG volumes next quarter (lng volumes in Q1 2027 ). Yes prices: Above 500 TBtu: 0.32; Above 475 TBtu: 0.69; Above 450 TBtu: 0.90; Above 525 TBtu: 0.06; Above 400 TBtu: 0.97; Above 600 TBtu: 0.03; Above 550 TBtu: 0.04.\n- Kalshi: Florida grapefruit forecast in January 2027 (2026–2027 season · Million boxes). Yes prices: 1.60m or above: 0.0000; Below 0.50m: 0.0000; 1.00m–below 1.10m: 0.0000; 1.10m–below 1.20m: 0.0000; 1.20m–below 1.30m: 0.0000; 1.30m–below 1.40m: 0.0000; 1.40m–below 1.50m: 0.0000; 1.50m–below 1.60m: 0.0000; 0.50m–below 0.60m: 0.0000; 0.60m–below 0.70m: 0.0000.\n- Kalshi: FAO Food Price Index for November (November 2026). Yes prices: Above 131.0: 0.37; Above 132.0: 0.23; Above 130.0: 0.80; Above 129.0: 0.86; Above 133.0: 0.12; Above 134.0: 0.06; Above 128.0: 0.94; Above 136.0: 0.04; Above 135.0: 0.05; Above 137.0: 0.01.\n- Kalshi: M2 money supply growth at year-end 2026 (December 2026). Yes prices: 6.5% or Above: 0.23; 6.0% to 6.4%: 0.20; 5.5% to 5.9%: 0.21; 5.0% to 5.4%: 0.18; Below 5.0%: 0.14.\n- Kalshi: Will Claude be permitted for use in the Department of War supply chain? (Before Jan 1, 2028). Yes prices: Before Jan 1, 2028: 0.43; Before Jul 1, 2027: 0.32; Before Apr 1, 2027: 0.24; Before Jan 1, 2027: 0.12."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 55.2,
+        "p25": 56.85,
+        "p50": 58.6,
+        "p75": 60.7,
+        "p90": 63.0
+      },
+      "reasoning": "(a) **Time left:** about 13 years and 1 month. The question resolves around 2040-01-01. The figure shown then will almost certainly be a near-term projection from the 2039-2048 OECD-FAO Outlook, anchored on actual data for about 2038, rather than observed 2040 data.\n\n(b) **Latest known value:** In the 2026-2035 vintage (July 2026), the 2024 share is 52.7%: 102.6 Mt aquaculture vs 91.9 Mt capture. The projected 2025 share is 53.2%.\n\n(c) **If nothing changed:** about 53%.\n\n(d) **If the current trend continued:**\n- Extending the OECD-FAO projected path (about 0.28 points a year, with aquaculture growing about 1.3% a year and capture about 0.2%) gives roughly 57.3-57.5% in 2040.\n- Extending the 2010-2024 historical pace (about 0.9 points a year) gives about 65%.\n- OECD outlooks have tended to project a slowdown that arrives later than they predict. Aquaculture overtook capture around 2021-2022, roughly on or ahead of earlier projections, and the latest vintage revised 2024 upward. So I lean somewhat above the OECD path, at about 58-59%.\n\n(e) **Historical variation:**\n- The share moved about 13 points over 2010-2024.\n- Over a 13-year horizon, the gap between the deceleration scenario and the linear-trend scenario is about 7 points.\n- In a single year, El Niño swings in the Peruvian anchoveta catch move the share by about ±1 point.\n- Revisions between vintages add about ±0.5 points.\n\n(f) **Expert and market expectations:**\n- OECD-FAO 2026: 56.0% in 2035.\n- OECD-FAO 2025: 55.6% in 2034.\n- FAO SOFIA 2026: about 55.6% in 2034.\n- Extrapolating these gives about 57-58% for 2040.\n- No prediction markets cover this question.\n\n(g) **Unexpected scenarios:**\n- **Low:** Chinese aquaculture contracts under environmental and policy limits, major disease outbreaks hit shrimp and salmon, feed and fishmeal constraints bind, and a strong La Niña boosts the anchoveta catch in the base year. The share stalls at about 53-54%.\n- **High:** Aquaculture in India, Southeast Asia and Africa grows rapidly, alternative feeds take off, and climate-driven declines and stricter quotas cut capture to about 85 Mt, possibly alongside an El Niño year. The share reaches 65% or more.\n\n**Tails:** For percentile 1 (about 52), aquaculture output would have to plateau while capture rebounds, which is plausible only with serious disease or policy shocks. For percentile 99 (about 69), the historical pace would have to persist and capture would also have to decline.\n\nPercentile 1: 52\nPercentile 5: 54\nPercentile 10: 55.2\nPercentile 20: 56.4\nPercentile 30: 57.3\nPercentile 40: 58\nPercentile 50: 58.6\nPercentile 60: 59.3\nPercentile 70: 60.1\nPercentile 80: 61.3\nPercentile 90: 63\nPercentile 95: 64.6\nPercentile 99: 68"
+    },
+    {
+      "value": {
+        "p10": 54.8,
+        "p25": 56.7,
+        "p50": 58.7,
+        "p75": 60.75,
+        "p90": 63.0
+      },
+      "reasoning": "(a) **Time left:** about 13 years. The question resolves around 2040-01-01. At that point the 2040 figure will almost certainly be a projection from the latest OECD-FAO Outlook (probably 2039-2048), based on observed data through about 2038.\n\n(b) **Latest known value:** 52.7% aquaculture share for 2024, from the OECD-FAO Outlook 2026-2035 vintage released July 2026. The vintage cited in the question gave 52.1%.\n\n(c) **If nothing changed:** about 53%.\n\n(d) **If the trend continued:**\n- The OECD 2026 vintage path (53.2% in 2025, 56.0% in 2035), carried forward, gives about 57.4% in 2040.\n- The 2010-2024 historical pace of roughly 0.8-1.0 point a year gives about 65%.\n- The recent observed pace is slowing (2023-2025 gains of about 0.5-0.8 point a year). A middle path of about 0.4-0.45 point a year gives about 59-60%.\n\n(e) **Historical variation:** over 16 years, 2008 to 2024, the share rose about 14 points. Year-to-year noise from capture swings (El Niño and anchoveta) is about plus or minus 1 point. Vintage revisions shift the level by about 0.5 point.\n\n(f) **Expert expectations:**\n- OECD-FAO 2026: 56.0% in 2035.\n- OECD-FAO 2025: 55.6% in 2034.\n- FAO SOFIA 2026: about 55.6% in 2034.\n- There is no 2040 projection and no relevant market. The official baseline implies about 57-58% by 2040. Past OECD projections of aquaculture overtaking capture (around 2020-2022) proved roughly accurate.\n\n(g) **Scenarios:**\n- Low: aquaculture in China contracts under environmental and policy limits, disease outbreaks or feed shortages hit, and strong capture years follow. The share stalls at about 53-54%.\n- High: rapid farming growth in India, Southeast Asia and Africa, combined with climate-driven declines in wild catch. The share could reach 64-67%.\n\nPlausible extremes:\n- 1st percentile: a methodology or revision shift plus stagnation, giving about 51%.\n- 99th percentile: a capture collapse plus an aquaculture boom, giving about 68%.\n\nPercentile 1: 51\nPercentile 5: 53.5\nPercentile 10: 54.8\nPercentile 20: 56.2\nPercentile 30: 57.2\nPercentile 40: 58\nPercentile 50: 58.7\nPercentile 60: 59.4\nPercentile 70: 60.2\nPercentile 80: 61.3\nPercentile 90: 63\nPercentile 95: 64.5\nPercentile 99: 68"
+    },
+    {
+      "value": {
+        "p10": 55.6,
+        "p25": 57.25,
+        "p50": 59.1,
+        "p75": 61.3,
+        "p90": 63.6
+      },
+      "reasoning": "(a) Time left: about 13 years. The question resolves on 2040-01-01, so the value shown then will most likely be a near-term projection from the Outlook 2039-2048 vintage, not fully observed 2040 data.\n\n(b) Latest known value: 52.7% for 2024, from the OECD-FAO Outlook 2026-2035 vintage, released July 2026. The 2023 vintage gave 52.1% for the same year.\n\n(c) If nothing changed: about 52.7%.\n\n(d) If the current trend continued:\n- The OECD projected path (53.2% in 2025, 56.0% in 2035), extended forward, gives about 57.5% in 2040.\n- The realized 2020-2024 pace of roughly 0.8 points a year gives about 65%.\n- Recent aquaculture growth of 3-4% a year is well above OECD's projected 1.3%. China is slowing, while India, Viet Nam and Indonesia are growing.\n- Plausible aquaculture growth of 1.3% to 3% a year to 2040, with capture flat near 93-95 Mt, gives a share of about 57.5% to 64%.\n\n(e) Historical variation: over 13-16 years the share has moved about 8-13 points (39.8% in 2010 to 52.7% in 2024). Swings in capture from El Niño add about ±1 point in a single year. Revisions between vintages add about ±0.5-1 point.\n\n(f) Experts and markets:\n- OECD-FAO 2026: 56.0% in 2035.\n- FAO SOFIA 2026: about 55.6% in 2034.\n- No market covers this question.\n- Recent vintages have revised the base-year share upward slightly.\n\n(g) Unexpected scenarios:\n- **Low:** China's aquaculture contracts under environmental policy, disease outbreaks such as shrimp diseases hit, feed or fishmeal limits bind, and capture holds near 95 Mt. The share then stalls at about 54-55%. Further down, a methodology change that excludes some farmed categories could cut it further.\n- **High:** a rapid expansion in India and Southeast Asia, plus offshore and new-feed technology, lifts aquaculture growth above 3% a year. If capture also declines because of overfishing, climate or a strong El Niño in the reference year, the share could reach 66-70%.\n\nPercentile 1: 52.5\nPercentile 5: 54.5\nPercentile 10: 55.6\nPercentile 20: 56.8\nPercentile 30: 57.7\nPercentile 40: 58.4\nPercentile 50: 59.1\nPercentile 60: 59.8\nPercentile 70: 60.7\nPercentile 80: 61.9\nPercentile 90: 63.6\nPercentile 95: 65.0\nPercentile 99: 68.0"
+    },
+    {
+      "value": {
+        "p10": 54.2,
+        "p25": 55.95,
+        "p50": 57.7,
+        "p75": 59.45,
+        "p90": 61.3
+      },
+      "reasoning": "(a) **Time left:** about 13 years. The question resolves around 2040-01-01. At that point the \"2040\" value will almost certainly be a near-term projection from the OECD-FAO Outlook edition current in 2039, so it will reflect conditions observed up to about 2038.\n\n(b) **Latest known value:**\n- In the OECD-FAO Outlook 2026-2035 edition (July 2026), the 2024 aquaculture share is 52.7% and the 2025 estimate is 53.2%.\n- The furthest official projection is 56.0% for 2035.\n- The edition linked in the question gives 52.1% for 2024.\n\n(c) **If nothing changed:** about 53%.\n\n(d) **If the current trend continued:**\n- The latest projected pace of about +0.28 pp a year from 2035 gives roughly 57.4% in 2040.\n- The 2020-2025 historical pace of +0.74 pp a year would give about 64%. That is unlikely, given slowing Chinese growth and the OECD's own decelerating projections.\n- Upward revisions between editions (+0.6 to +0.8 pp) suggest the official projections may lean slightly low.\n\n(e) **Historical variation:**\n- Over 2010-2025 the share rose about 13 pp, but the pace is decelerating.\n- Capture swings of ±3-4 Mt (El Niño and anchoveta catches) move the share by about ±1 pp in a single year.\n- Projections made a decade ahead have historically been off by a couple of points.\n\n(f) **Expert and market expectations:**\n- The OECD-FAO projection is 56% for 2035, and FAO SOFIA expects slower aquaculture growth.\n- There is no market or published projection for 2040.\n- An implied expert expectation for 2040 is about 57-58%.\n\n(g) **Unexpected scenarios:**\n- **Low:** Chinese aquaculture contracts because of environmental crackdowns, disease and feed constraints. At the same time, capture rebounds under better management and strong anchoveta years. The share stalls near 52-53%. A definitional change that lumps in other products could also shift it.\n- **High:** Climate-driven declines in capture combine with a severe El Niño around 2038-2040. Rapid aquaculture expansion in India, Viet Nam, Indonesia and Africa pushes the share to 63-65%.\n\nPercentile 1: 51\nPercentile 5: 53\nPercentile 10: 54.2\nPercentile 20: 55.5\nPercentile 30: 56.4\nPercentile 40: 57.1\nPercentile 50: 57.7\nPercentile 60: 58.3\nPercentile 70: 59\nPercentile 80: 59.9\nPercentile 90: 61.3\nPercentile 95: 62.6\nPercentile 99: 65.5"
+    },
+    {
+      "value": {
+        "p10": 55.6,
+        "p25": 56.95,
+        "p50": 58.4,
+        "p75": 60.05,
+        "p90": 61.9
+      },
+      "reasoning": "(a) **Time left:** about 13 years. The question resolves around 2040-01-01. No real 2040 data will exist by then, so resolution will most likely use the 2040 projection from the newest OECD-FAO Outlook edition. Editions covering 2040 should start appearing around 2031.\n\n(b) **Latest known value:** the OECD-FAO Outlook 2026-2035 shows 52.7% for 2024, 53.2% for 2025 and 56.0% projected for 2035. The edition linked in the question shows 52.1% for 2024.\n\n(c) **If nothing changed:** about 53%, or about 56% if the latest official projection is held fixed.\n\n(d) **If the current trend continued:**\n- Extending the OECD projection (+0.28 pp a year after 2035) gives about 57.4%.\n- Extending the actual 2020-2025 pace (+0.74 pp a year) gives about 64%.\n- The OECD projects aquaculture growth of about 1.3-1.4% a year. That is well below the 2-3% a year seen recently, and recent revisions have been upward.\n- Capture has stayed flat at roughly 90-95 Mt for decades.\n\n(e) **Historical variation:**\n- The share rose about 13 pp over the 15 years from 2010 to 2025.\n- El Niño years move capture by about 3-4 Mt, which shifts the share by about ±1 pp in a single year.\n- Revisions between editions have moved the share by about 0.6-0.8 pp.\n\n(f) **Expert and market expectations:** the OECD-FAO projects 56% for 2035. No published projection for 2040 or market on this exists. The outlook implies roughly 57-58% in 2040. Recent outturns and upward revisions suggest some upside, perhaps 58-60%.\n\n(g) **Unexpected scenarios:**\n- **Low outcome:** China's aquaculture plateaus or contracts because of environmental rules, disease or feed constraints. At the same time, capture recovers to 97-100 Mt through good anchoveta years and stock rebuilding. The share then stalls near 54-55%.\n- **High outcome:** India, Viet Nam and Indonesia expand rapidly and aquaculture keeps growing above 2.5% a year. Meanwhile, climate damage and overfishing cut capture to about 85 Mt. The share then reaches 63-66%.\n- **Tails:** 1st percentile around 53.5, for a stalled aquaculture sector plus strong capture. 99th percentile around 66, for sustained fast growth plus a capture collapse.\n\nPercentile 1: 53.5\nPercentile 5: 54.8\nPercentile 10: 55.6\nPercentile 20: 56.6\nPercentile 30: 57.3\nPercentile 40: 57.9\nPercentile 50: 58.4\nPercentile 60: 58.9\nPercentile 70: 59.6\nPercentile 80: 60.5\nPercentile 90: 61.9\nPercentile 95: 63.1\nPercentile 99: 65.8"
+    },
+    {
+      "value": {
+        "p10": 54.5,
+        "p25": 56.25,
+        "p50": 58.0,
+        "p75": 59.8,
+        "p90": 61.8
+      },
+      "reasoning": "(a) **Time left:** about 13 years. The question resolves around 2040-01-01. No real 2040 data will exist by then, so the value will be a near-term projection from the Outlook edition current in late 2039 (likely the 2039-2048 edition).\n\n(b) **Latest known value:** the OECD-FAO Outlook 2026-2035 (version 1.1) gives a 52.7% aquaculture share for 2024 and 53.2% for 2025 (estimate). Its furthest projection is 56.0% for 2035. The edition linked in the question shows 52.1% for 2024.\n\n(c) **If nothing changed:** about 53%. If instead the latest projection is held flat beyond 2035, about 56%.\n\n(d) **If the current trend continued:** the projected pace is about +0.28 pp a year after 2035, which gives roughly 57.4% in 2040. The historical pace of 0.7 to 1.0 pp a year would give 60 to 64%, but growth is clearly slowing, mainly because China is plateauing.\n\n(e) **Historical variation:**\n- Over the past 13 years the share rose about 11 pp (2012 to 2025), but that growth is decelerating.\n- Edition-to-edition revisions have moved shares by 0.6 to 0.8 pp.\n- El Niño swings in capture shift the share by about ±1 pp in any single year.\n\n(f) **Experts and markets:**\n- The OECD-FAO projects 56% by 2035.\n- FAO's SOFIA 2026 also expects slower aquaculture growth.\n- There are no markets on this question.\n- Recent revisions have been upward, and India, Viet Nam and Indonesia are growing quickly.\n\n(g) **Unexpected scenarios:**\n- **Low:** Chinese statistics are revised down, or Chinese output stagnates. Disease and feed constraints cap farmed growth at under 1% a year, while capture recovers to about 97 Mt with strong anchoveta years. The share stays around 52 to 54%.\n- **High:** Capture fisheries decline from climate stress and overfishing to about 85 Mt, while aquaculture in South and Southeast Asia and Africa booms at 2.5% a year. The share reaches 62 to 66%.\n\nI set the median slightly above the simple extension, at about 58%, because of the recent upward revisions and stagnant capture. I keep wide tails for definitional or statistical shifts.\n\nPercentile 1: 51\nPercentile 5: 53.3\nPercentile 10: 54.5\nPercentile 20: 55.8\nPercentile 30: 56.7\nPercentile 40: 57.4\nPercentile 50: 58\nPercentile 60: 58.6\nPercentile 70: 59.3\nPercentile 80: 60.3\nPercentile 90: 61.8\nPercentile 95: 63.2\nPercentile 99: 66.5"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 54.8711,
+    "p25": 56.7554,
+    "p50": 58.4923,
+    "p75": 60.3635,
+    "p90": 62.6413
+  },
+  "usage": [
+    {
+      "question_id": "43185",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 16.0,
+      "notional_cost_usd": 0.0001465,
+      "input_tokens": 495,
+      "output_tokens": 194,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 19.1,
+      "notional_cost_usd": 0.0003475,
+      "input_tokens": 1506,
+      "output_tokens": 93,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 83.0,
+      "notional_cost_usd": 0.4989787,
+      "input_tokens": 169844,
+      "output_tokens": 5811,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.080484,
+      "input_tokens": 6294,
+      "output_tokens": 1507,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.7,
+      "notional_cost_usd": 0.08086399999999999,
+      "input_tokens": 6294,
+      "output_tokens": 1526,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0008904,
+      "input_tokens": 3018,
+      "output_tokens": 574,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.0,
+      "notional_cost_usd": 0.000869,
+      "input_tokens": 2841,
+      "output_tokens": 602,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.3,
+      "notional_cost_usd": 0.00038922,
+      "input_tokens": 3015,
+      "output_tokens": 592,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 31.8,
+      "notional_cost_usd": 0.0324088,
+      "input_tokens": 6294,
+      "output_tokens": 1437,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.7,
+      "notional_cost_usd": 0.00031917,
+      "input_tokens": 2841,
+      "output_tokens": 455,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.0008095000000000001,
+      "input_tokens": 2826,
+      "output_tokens": 489,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.9,
+      "notional_cost_usd": 0.00031791,
+      "input_tokens": 2827,
+      "output_tokens": 452,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 66.3,
+      "notional_cost_usd": 0.3265656,
+      "input_tokens": 92358,
+      "output_tokens": 5056,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.075484,
+      "input_tokens": 6274,
+      "output_tokens": 1265,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.7,
+      "notional_cost_usd": 0.074156,
+      "input_tokens": 6273,
+      "output_tokens": 1199,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 16.2,
+      "notional_cost_usd": 0.07847599999999999,
+      "input_tokens": 6273,
+      "output_tokens": 1415,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.6,
+      "notional_cost_usd": 0.0008538,
+      "input_tokens": 2850,
+      "output_tokens": 568,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.0008856999999999999,
+      "input_tokens": 2827,
+      "output_tokens": 641,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.0008012000000000001,
+      "input_tokens": 2907,
+      "output_tokens": 440,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.2,
+      "notional_cost_usd": 0.00030852,
+      "input_tokens": 2907,
+      "output_tokens": 432,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 5.2,
+      "notional_cost_usd": 0.00036745999999999995,
+      "input_tokens": 2851,
+      "output_tokens": 551,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43185",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.7,
+      "notional_cost_usd": 0.00037322,
+      "input_tokens": 2827,
+      "output_tokens": 563,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.2551
+}

@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-19T01:54:52.293605+00:00",
+  "bot_version": "2026-11-18.2",
+  "started_at": "2026-11-19T01:50:59.260468+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43284,
+    "post_id": 43279,
+    "url": "https://www.metaculus.com/questions/43279",
+    "type": "NumericQuestion",
+    "unit": "%",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "What percentage of the EU hen flock will be sexed with in-ovo sexing technology in Q1 2027?",
+    "resolution_criteria": "This question will resolve as the percentage of the EU's commercial layer hen flock that was sexed with in-ovo technology according to official the first such non-preliminary number published by Innovate Animal Ag in 2027.",
+    "fine_print": "If Innovate Animal Ag does not publish any such number in 2027 or if the criteria are significantly changed such that previous reporting is not comparable, this question can be resolved by another credible source if it is comparable. Otherwise the question will be **annulled**.",
+    "close_time": "2026-12-31 22:59 UTC",
+    "scheduled_resolution_time": "2027-05-31 11:00 UTC"
+  },
+  "research": [
+    "I've finished researching and am now writing up the findings.\n\n## 1. Resolution source\n- 2026-07 (page says \"Updated July 2026\"): Innovate Animal Ag's (IAA) market penetration page reports that **40% of the EU commercial layer flock was in-ovo sexed as of June 1, 2026**. The range is 36.2% to 43.3%, based on 125 to 142 million sexed hens out of 328 to 346 million. This is the latest published value. [IAA](https://innovateanimalag.org/market-penetration-forecast)\n- Same page: IAA revised its earlier figures upward using a smaller flock denominator. **April 1, 2025 went from 28% to 34%, and April 1, 2024 went from 20% to 23%.** The background's \"28% of 393M\" figure uses the old basis. [IAA](https://innovateanimalag.org/market-penetration-forecast)\n- How the figure is built: suppliers (AAT, Nectra, Orbem, Omegga, Seleggt) self-report how many sexed hens they produced over the previous 18 months, which is one layer production cycle. Over 90% of the estimate comes from this self-reported data. [IAA](https://innovateanimalag.org/market-penetration-forecast)\n- I found no CSV or JSON data file behind the page, and no quarterly series. Only these annual point estimates exist.\n- Report timing has slipped each year. The 2024 report used March 2024 data. The 2025 report used Q1 2025 data and came out in May 2025 ([IAA recap, 2026-01-04](https://innovateanimalag.org/blog/in-ovo-sexing-2025-review)). The 2026 report used June 1 data and came out in July 2026. **So the 2027 number may measure mid-2027 rather than Q1, and it could be published after the expected resolution date of 2027-05-31.**\n\n## 2. Current status\n- Nothing settles the question yet. No 2027 figure exists. The comparable starting point is 40% as of June 2026, on the revised denominator.\n- One ambiguity: the question asks about \"Q1 2027\", but it resolves on IAA's first non-preliminary 2027 number, whatever date that number measures.\n\n## 3. Recent news (newest first)\n- 2026-11-17: Agence Europe reports that the Commission is expected to adopt a draft regulation on 9 December (the date is provisional). It would end routine killing of male chicks after a **5-year transition**, with 10 years for hatcheries that export chicks outside the EU. About 330 million male chicks are culled each year, and the estimated cost is about 0.1 euro cent per egg. [Agence Europe](https://agenceurope.eu/en/bulletin/article/13983/5/european-commission-to-present-on-9-december-a-proposal-to-phase-out-cages-for-laying-hens-and-other-poultry)\n- 2026-07: The EU Livestock Strategy committed to propose legislation ending male culling by the end of 2026. [Animal Equality](https://animalequality.org.uk/news/2026/07/08/the-european-commission-includes-plans-to-phase-out-cages-and-end-the-killing-of-male-chicks-in-its-livestock-strategy/)\n- 2026-07: AgFunderNews covered the 40% figure. AAT's Hurlin said he is unsure how Italy's ban will play out, because importing day-old chicks from other countries could act as a loophole. [AgFunderNews](https://agfundernews.com/in-ovo-sexing-hits-40-penetration-in-the-eu-what-will-it-take-to-crack-the-us)\n- 2026-07: IAA's EU forecast is about **51% by July 2028 (range 47% to 55%)**, driven mainly by Italy's ban starting January 2027. Newly sexed chicks replace retiring flocks over about 18 months, so penetration rises gradually. IAA also warns adoption could slow as it nears saturation unless there is an EU-wide ban. The EU production rate is above 100 million female chicks per year, and 92 million were produced in the 12 months to June 2026. [IAA](https://innovateanimalag.org/market-penetration-forecast)\n- 2025-09: An Italian decree bans selective male chick culling from 31 Dec 2026 / 1 Jan 2027, with fines of €5,000 to €50,000. One article mentions possible extensions. I found no reports of a postponement. [FoodTimes](https://www.foodtimes.eu/food-system/killing-of-male-chicks-banned-in-italy-only-starting-from-2027/), [Eurogroup](https://www.eurogroupforanimals.org/news/italy-moves-forward-ban-selective-culling-male-chicks)\n\n## 4. Base rates and trend\nOn the revised basis:\n- April 2024: 23%\n- April 2025: 34% (+11 points in 12 months)\n- June 2026: 40% (+6 points in 14 months)\n\nOn the original basis: 15% (2023, [AgFunderNews](https://agfundernews.com/in-ovo-sexing-reaches-15-penetration-in-eu-as-tech-to-end-male-chick-culling-advances)), then 20% (March 2024), then 28% (Q1 2025).\n\nWhat this implies:\n- Yearly gains have slowed, from about 11 points to about 6 points.\n- If IAA's forecast path (40% in June 2026 to 51% in July 2028) were linear, it would be about 46% around mid-2027. It would be lower in Q1 2027, because the effect of Italy's ban builds up over about 18 months starting January 2027.\n- **The size of the denominator matters a lot.** One revision moved the 2025 figure by 6 points, so another methodology change could move the number substantially.\n\nSeasonality: the measure is a stock built from 18 months of cumulative production, so I found no meaningful seasonal pattern. There are only three annual data points on a consistent basis, so I cannot compare year-by-year movement from November to May.\n\n## 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on this question. None of the markets supplied with the brief (Flock cameras, EV share, etc.) is relevant.\n- The only expert forecast I found is IAA's: about 51% (47% to 55%) by July 2028, with no figure given for 2027. [IAA](https://innovateanimalag.org/market-penetration-forecast)\n\n## 6. Upcoming events before resolution\n- 2026-12-09 (provisional): the Commission adopts its proposal on laying hen welfare and male chicks. Even if it passes, the 5-year transition means little direct effect by 2027, though it could encourage earlier voluntary adoption.\n- 2027-01-01: Italy's ban takes effect. Watch for any last-minute postponement or loophole on chick imports.\n- 2027 (timing unknown, previously April to July): IAA's next market penetration report. A publication date after May 31 could delay resolution. A new denominator revision could change comparability.\n- Ongoing: Germany and France already have bans, the Netherlands has an industry-led phase-out, and new hatchery installations continue (Orbem has 9 EU hatcheries). Avian flu culls could shift the flock denominator, though that effect is speculative.\n- Weather is not relevant.\n\nSources: [IAA market penetration page](https://innovateanimalag.org/market-penetration-forecast) · [IAA 2025 recap](https://innovateanimalag.org/blog/in-ovo-sexing-2025-review) · [IAA 2025 report](https://innovateanimalag.org/market-penetration-forecast-2025) · [IAA 20% blog](https://innovateanimalag.org/blog/in-ovo-sexing-has-now-hit-20-of-the-market-in-the-eu) · [AgFunderNews 40%](https://agfundernews.com/in-ovo-sexing-hits-40-penetration-in-the-eu-what-will-it-take-to-crack-the-us) · [AgFunderNews 15%](https://agfundernews.com/in-ovo-sexing-reaches-15-penetration-in-eu-as-tech-to-end-male-chick-culling-advances) · [Agence Europe](https://agenceurope.eu/en/bulletin/article/13983/5/european-commission-to-present-on-9-december-a-proposal-to-phase-out-cages-for-laying-hens-and-other-poultry) · [Eurogroup for Animals](https://www.eurogroupforanimals.org/news/victory-chicks-eu-commission-propose-end-male-chick-culling) · [FoodTimes](https://www.foodtimes.eu/food-system/killing-of-male-chicks-banned-in-italy-only-starting-from-2027/) · [Animal Equality](https://animalequality.org.uk/news/2026/07/08/the-european-commission-includes-plans-to-phase-out-cages-and-end-the-killing-of-male-chicks-in-its-livestock-strategy/)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 01:51 UTC; check each market really matches the question)\n- Kalshi: Will Pennsylvania ban Flock cameras? (Before Jul 1, 2027). Yes prices: Before Jul 1, 2027: 0.26; Before Jan 1, 2027: 0.0600.\n- Kalshi: Which jurisdictions will drop Flock before February? (Before Feb 1, 2027). Yes prices: Richmond, CA: 0.61; Boulder, CO: 0.33; Atlanta, GA: 0.32; Binghamton, NY: 0.19; New Bedford, MA: 0.83; Fort Wayne, IN: 0.9900; Renton, WA: 0.9400.\n- Kalshi: Will another state ban or pause police use of Flock cameras? (Not counting Texas, Florida or Rhode Island). Yes prices: Before Apr 1, 2027: 0.49; Before Jul 1, 2027: 0.71; Before Jan 1, 2027: 0.23.\n- Kalshi: EV market share in 2030? (In Jan 2030). Yes prices: Above 30%: 0.47; Above 20%: 0.65; Above 50%: 0.24; Above 10%: 0.85.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 16, 2026). Yes prices: Above 28.5%: 0.09; Above 29.7%: 0.10; Above 30.2%: 0.01; Above 31.4%: 0.0100; Above 31.8%: 0.0100; Above 30.6%: 0.0100; Above 31.0%: 0.0100; Above 32.3%: 0.0100; Above 33.5%: 0.0100.\n- Kalshi: Google market share this week (Google market share - Nov 16, 2026). Yes prices: Above 17.3%: 0.80; Above 16.5%: 0.86; Above 18.9%: 0.04; Above 16.0%: 0.98; Above 15.5%: 0.98; Above 14.5%: 0.99; Above 15.0%: 0.99; Above 12.1%: 0.98; Above 13.7%: 0.98.\n- Kalshi: When will Canada gain EU associate status? (Canada-EU associate membership). Yes prices: Before 2029: 0.17; Before 2028: 0.16.\n- Kalshi: What countries will hold referenda on leaving the EU? (Before 2030). Yes prices: Greece: 0.03; Italy: 0.03; Hungary: 0.03; France: 0.03.\n- Polymarket: Will USD-denominated stablecoin market share fall below 99% in 2026? (ends 2027-01-01). [Yes, No] prices: Will USD-denominated stablecoin market share fall below 99% in 2026?: [\"0.06\", \"0.94\"]\n- Polymarket: Will China become the #2 global art market in 2026? (ends 2027-04-01). [Yes, No] prices: Will China become the #2 global art market in 2026?: [\"0.135\", \"0.865\"]\n- Polymarket: Highest third-place vote share in a 2026 Senate race? (ends 2026-11-04). [Yes, No] prices: 4%+: [\"0.999\", \"0.001\"]; 8%+: [\"0.9895\", \"0.0105\"]; 12%+: [\"0.98\", \"0.02\"]",
+    "## EU in-ovo sexing: research notes for the Q1 2027 question\n\n**Main points:** Innovate Animal Ag's (IAA) latest figure is 40% of the EU commercial layer flock as of 2026-06-01, published July 2026. That is already near the middle of the question's 20-50 range. IAA also revised its older numbers upward, which makes the 28% figure in the question background out of date. Two timing issues could matter more than the trend itself:\n- IAA's January recap of the previous year might restate the 40% figure (see section 2).\n- The 2027 report could come out after the 2027-05-31 resolution date.\n\n### 1. Resolution source\n- July 2026 (page says \"Updated July 2026\"): the [IAA market penetration page](https://innovateanimalag.org/market-penetration-forecast) reports **40%** as of 2026-06-01. The range is 36.2-43.3%: 125-142 million sexed hens out of a commercial flock of 328-346 million. IAA calls this \"a 6-point penetration increase from April 1, 2025.\"\n- The same page revises earlier figures because it now estimates the flock size differently (registered hen places times an estimated share in use). April 2025 goes from 28% to **34%**, and April 2024 from 20% to **23%**. The old 393 million denominator has been replaced, and backyard hens (about 42 million) are excluded. [IAA](https://innovateanimalag.org/market-penetration-forecast)\n- I found no CSV or JSON data behind the page; the raw HTML has only text. The reference date for 2026 was June 1, not the end of Q1 as in earlier reports.\n- The page does not label figures as \"preliminary\" or \"final.\" It reports a base case with a range and says older figures get revised.\n\n### 2. Current status\n- Nothing settles the question yet. IAA has published no number for 2027.\n- Publication timing for IAA's main reports: 2023-12-13 (15%, end of Q3 2023), 2024-07-15 (20%, Q1 2024), 2025-05-15 (28%, Q1 2025), July 2026 (40%, June 2026). [IAA 2024](https://innovateanimalag.org/blog/in-ovo-sexing-has-now-hit-20-of-the-market-in-the-eu), [IAA 2025](https://innovateanimalag.org/blog/2025-in-ovo-sexing-market-penetration-and-forecast-report). A 2027 report could therefore appear in May-July 2027, possibly after the resolution date.\n- 2026-01-04: IAA's \"2025 Yearly Recap\" restated the 28% Q1 2025 figure. [IAA](https://innovateanimalag.org/blog/in-ovo-sexing-2025-review) A January 2027 recap could do the same with 40%, and that might count as the \"first non-preliminary number published in 2027.\"\n\n### 3. Recent news (newest first)\n- 2026-11-17: Chick Farm Europe will be the first Italian hatchery to use in-ovo sexing, with Orbem/Vencomatic's Genus Focus system running from late December 2026. Italy's ban on culling male chicks takes effect 2026-12-31. Genus Focus has scanned more than 250 million eggs across 12 sites. [The Poultry Site](https://www.thepoultrysite.com/news/2026/11/chick-farm-europe-to-bring-in-ovo-sexing-to-italy)\n- 2026-10-05: IAA posted its Q3 2026 roundup; I could not read the body. [IAA blog](https://innovateanimalag.org/blog)\n- 2026-09-09: AgFunder reported about 40% EU penetration. Germany and France ban culling, Austria restricts it, Italy follows in 2027. In Ovo (a supplier) has left the market. Orbem says the technology adds about 1 cent per egg. [AgFunder](https://agfundernews.com/in-ovo-sexing-hits-40-penetration-in-the-eu-what-will-it-take-to-crack-the-us)\n- July 2026: according to IAA, the Commission's Livestock Strategy says it intends to propose legislation by the end of 2026 that is \"likely to phase out the practice EU-wide.\" [IAA](https://innovateanimalag.org/market-penetration-forecast)\n- January 2026: Orbem raised a €55.5m Series B. [IAA Q1 2026](https://innovateanimalag.org/blog/in-ovo-sexing-quarterly-roundup-q1-2026)\n\n### 4. Base rates and trend\n- Figures as originally published: 15% (Q3 2023), 20% (Q1 2024), 28% (Q1 2025), 40% (June 2026).\n- Revised series: 23% (2024-04-01), then 34% (2025-04-01, +11 points in a year), then 40% (2026-06-01, +6 points in 14 months, about 5 points a year). Growth slowed noticeably.\n- Production rate: about 92 million female chicks in the 12 months to June 2026, and more than 100 million a year at the rate when the report came out. Annual growth was about 74% over four years. [IAA](https://innovateanimalag.org/market-penetration-forecast)\n- IAA's forecast is about 51% by July 2028 (range 47-55%), driven mainly by Italy. Flocks turn over in about 18 months, so the rise should be gradual. Spreading that forecast evenly from 40% in June 2026 would give about 44% in spring 2027. That is my arithmetic, not an IAA number.\n- Figures move both from real growth and from method changes: revisions of +3 and +6 points happened when the denominator changed.\n- Seasonality: no meaningful seasonal pattern; this is a slow-moving share of a flock that turns over about every 18 months. Bird flu culls can shrink the denominator. Only four annual data points exist.\n\n### 5. Other forecasts\n- I found no Polymarket, Kalshi, Manifold or Metaculus market on this question. None of the markets supplied with the brief match it (they cover Flock cameras, EV share and similar).\n- The only expert forecast is IAA's own: 51% (47-55%) by July 2028. [IAA](https://innovateanimalag.org/market-penetration-forecast)\n\n### 6. Upcoming events before resolution\n- By 2026-12-31: Commission poultry welfare proposal, possibly including an EU-wide culling ban. It would not affect flocks before Q1 2027.\n- 2026-12-31 / 2027-01-01: Italy's ban takes effect. New Italian hatchery capacity, such as Chick Farm Europe, only gradually adds to the hens in lay.\n- About January 2027: likely IAA \"2026 Yearly Recap\" (resolution risk described in section 2).\n- About late March / early April 2027: IAA Q1 2027 roundup.\n- About May-July 2027: IAA's 2027 market penetration report. It may have a new reference date, revise the denominator again or revise the 40% figure.\n- January 2027 (IPPE trade show): Sanovo, CET and MatrixSpec plan to unveil their D4 egg-sexing system. [The Poultry Site](https://www.thepoultrysite.com/news/2026/09/sanovo-cet-to-unveil-d4-egg-sexing-system-at-ippe-2027)\n- Weather: not relevant, except that bird flu outbreaks can change flock size.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 01:51 UTC; check each market really matches the question)\n- Kalshi: Will Pennsylvania ban Flock cameras? (Before Jul 1, 2027). Yes prices: Before Jul 1, 2027: 0.26; Before Jan 1, 2027: 0.0600.\n- Kalshi: Which jurisdictions will drop Flock before February? (Before Feb 1, 2027). Yes prices: Richmond, CA: 0.61; Boulder, CO: 0.33; Atlanta, GA: 0.32; Binghamton, NY: 0.19; New Bedford, MA: 0.83; Fort Wayne, IN: 0.9900; Renton, WA: 0.9400.\n- Kalshi: Will another state ban or pause police use of Flock cameras? (Not counting Texas, Florida or Rhode Island). Yes prices: Before Apr 1, 2027: 0.49; Before Jul 1, 2027: 0.71; Before Jan 1, 2027: 0.23.\n- Kalshi: EV market share in 2030? (In Jan 2030). Yes prices: Above 30%: 0.47; Above 20%: 0.65; Above 50%: 0.24; Above 10%: 0.85.\n- Kalshi: DeepSeek market share this week (DeepSeek market share - Nov 16, 2026). Yes prices: Above 28.5%: 0.09; Above 29.7%: 0.10; Above 30.2%: 0.01; Above 31.4%: 0.0100; Above 31.8%: 0.0100; Above 30.6%: 0.0100; Above 31.0%: 0.0100; Above 32.3%: 0.0100; Above 33.5%: 0.0100.\n- Kalshi: Google market share this week (Google market share - Nov 16, 2026). Yes prices: Above 17.3%: 0.80; Above 16.5%: 0.86; Above 18.9%: 0.04; Above 16.0%: 0.98; Above 15.5%: 0.98; Above 14.5%: 0.99; Above 15.0%: 0.99; Above 12.1%: 0.98; Above 13.7%: 0.98.\n- Kalshi: When will Canada gain EU associate status? (Canada-EU associate membership). Yes prices: Before 2029: 0.17; Before 2028: 0.16.\n- Kalshi: What countries will hold referenda on leaving the EU? (Before 2030). Yes prices: Greece: 0.03; Italy: 0.03; Hungary: 0.03; France: 0.03.\n- Polymarket: Will USD-denominated stablecoin market share fall below 99% in 2026? (ends 2027-01-01). [Yes, No] prices: Will USD-denominated stablecoin market share fall below 99% in 2026?: [\"0.06\", \"0.94\"]\n- Polymarket: Will China become the #2 global art market in 2026? (ends 2027-04-01). [Yes, No] prices: Will China become the #2 global art market in 2026?: [\"0.135\", \"0.865\"]\n- Polymarket: Highest third-place vote share in a 2026 Senate race? (ends 2026-11-04). [Yes, No] prices: 4%+: [\"0.999\", \"0.001\"]; 8%+: [\"0.9895\", \"0.0105\"]; 12%+: [\"0.98\", \"0.02\"]"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 38.5,
+        "p25": 41.5,
+        "p50": 44.3,
+        "p75": 47.1,
+        "p90": 50.0
+      },
+      "reasoning": "(a) **Time left:** The question resolves on IAA's first non-preliminary 2027 figure. That is expected between about April and July 2027, roughly 5 to 8 months from now. Past reports have slipped later each year, so publication after May 31 is plausible.\n\n(b) **Latest known value:** 40% of the EU commercial layer flock was in-ovo sexed as of June 1, 2026 (range 36.2% to 43.3%), published July 2026 on IAA's revised, smaller denominator.\n\n(c) **If nothing changed:** about 40%.\n\n(d) **If the trend continued:**\n- The revised series grew from 23% to 34% to 40%, so gains slowed to about 5 to 6 points per year.\n- IAA's own forecast path, 40% in June 2026 to about 51% in July 2028, implies about 45 to 46% by mid-2027.\n- A Q1 or April 2027 measurement date would give about 43 to 45%.\n- Italy's ban from January 2027 adds gradually, because newly sexed chicks replace retiring flocks over about 18 months.\n\n(e) **Historical variation:** Annual moves have been 6 to 11 points. The bigger risk is methodology: one denominator revision shifted the 2025 figure by 6 points.\n\n(f) **Experts and markets:** IAA forecasts about 51% (47 to 55%) by July 2028 and gives no 2027 figure. There is no relevant prediction market.\n\n(g) **Unexpected scenarios:**\n- Low: IAA revises the flock denominator upward, for example by adding back flocks it previously excluded. Italy's ban could also be postponed or undercut by imported chicks, and supplier output could stall. Together these could produce a figure in the mid-30s.\n- High: hatcheries in Italy and elsewhere convert quickly ahead of the EU proposal, and another denominator cut, for instance after avian flu culls shrink the flock, pushes the figure to 50% or more.\n\nPercentile 1: 32\nPercentile 5: 36.5\nPercentile 10: 38.5\nPercentile 20: 40.8\nPercentile 30: 42.2\nPercentile 40: 43.3\nPercentile 50: 44.3\nPercentile 60: 45.3\nPercentile 70: 46.4\nPercentile 80: 47.8\nPercentile 90: 50\nPercentile 95: 52\nPercentile 99: 56"
+    },
+    {
+      "value": {
+        "p10": 39.0,
+        "p25": 42.25,
+        "p50": 45.2,
+        "p75": 48.0,
+        "p90": 50.5
+      },
+      "reasoning": "(a) **Time left:** The forecast window closes in about 6 weeks. The outcome depends on Innovate Animal Ag's (IAA) 2027 report. Its 2025 report came out in May and its 2026 report in July, so the 2027 report will likely appear sometime between April and July 2027. It will probably measure the flock in spring or mid-2027.\n\n(b) **Latest known value:** 40% of the EU commercial layer flock as of June 1, 2026. IAA's range is 36.2% to 43.3%. This uses the revised, smaller flock denominator, published July 2026.\n\n(c) **If nothing changed:** about 40%. In practice the stock will keep rising, because sexed chicks continue to replace retiring flocks.\n\n(d) **If the current trend continued:**\n- The recent gain was about 6 points over 14 months.\n- IAA's forecast path runs from 40% in June 2026 to 51% in July 2028. Read linearly, that gives about 45% to 46% by mid-2027.\n- Production gives a similar picture. About 92 to 100 million sexed female chicks are produced per year. Over an 18-month cycle that is 138 to 150 million hens, against a flock of about 337 million, or roughly 41% to 45% at steady state.\n- Italy's ban from January 2027 adds a little by mid-2027, more later.\n- Central estimate: about 45%.\n\n(e) **Historical variation:** Annual gains were about 11 points, then about 6 points. A single denominator revision moved one year's figure by 6 points. That makes methodology risk comparable in size to a year of real growth.\n\n(f) **Expert and market expectations:** IAA forecasts 51% (47% to 55%) by July 2028, which implies roughly 44% to 47% in mid-2027. There are no relevant prediction markets.\n\n(g) **Unexpected scenarios:**\n- Low outcome: IAA revises the denominator upward, or a supplier under-reports. Saturation in Germany and France, plus Italy importing unsexed day-old chicks, could leave the figure near 38% or even in the mid-30s.\n- High outcome: IAA revises the denominator down again. Fast hatchery roll-outs ahead of Italy's ban and the expected EU-wide regulation could also drive voluntary adoption, pushing the figure above 50%.\n\nPercentile 1: 33\nPercentile 5: 37\nPercentile 10: 39\nPercentile 20: 41.5\nPercentile 30: 43\nPercentile 40: 44.2\nPercentile 50: 45.2\nPercentile 60: 46.2\nPercentile 70: 47.3\nPercentile 80: 48.7\nPercentile 90: 50.5\nPercentile 95: 52.3\nPercentile 99: 56"
+    },
+    {
+      "value": {
+        "p10": 39.0,
+        "p25": 41.75,
+        "p50": 44.5,
+        "p75": 47.25,
+        "p90": 50.0
+      },
+      "reasoning": "(a) About 6 to 8 months. Resolution depends on IAA's 2027 report. The 2026 report came out in July with June data, so the 2027 number may measure mid-2027 and be published after May 2027.\n\n(b) 40% of the EU commercial layer flock as of June 1, 2026 (range 36 to 43%), published July 2026. This uses the revised, smaller denominator.\n\n(c) If nothing changed, the outcome would be about 40%.\n\n(d) If the trend continued, the outcome would be about 43 to 46%.\n- Recent gains were about +11 points from 2024 to 2025 and +6 points from 2025 to 2026, a slowing pace.\n- Italy's ban from January 2027 adds sexed chicks. These flow into the flock over about 18 months, so by mid-2027 they add roughly 2 to 4 points.\n- IAA's own path (51% by July 2028) implies about 45 to 46% around mid-2027, and slightly less if the measurement date is Q1.\n\n(e) Historical variation: annual moves have been 6 to 11 points. Denominator revisions have shifted a single figure by up to 6 points.\n\n(f) Experts and markets:\n- IAA forecasts 51% (47 to 55%) by July 2028.\n- There are no relevant prediction markets.\n\n(g) Unexpected scenarios:\n- **Low:** Italy postpones its ban or uses chick imports as a loophole, saturation stalls growth, and IAA revises the denominator upward (for example, after a flock rebound from avian flu). The figure could then land around 36%.\n- **High:** Italy adopts quickly, the Commission's December proposal triggers early voluntary adoption, and avian flu shrinks the denominator. A later measurement date in 2027 could also produce about 50% or more.\n\nPercentile 1: 33\nPercentile 5: 37\nPercentile 10: 39\nPercentile 20: 41\nPercentile 30: 42.5\nPercentile 40: 43.5\nPercentile 50: 44.5\nPercentile 60: 45.5\nPercentile 70: 46.5\nPercentile 80: 48\nPercentile 90: 50\nPercentile 95: 52\nPercentile 99: 56"
+    },
+    {
+      "value": {
+        "p10": 37.5,
+        "p25": 40.15,
+        "p50": 43.0,
+        "p75": 46.0,
+        "p90": 49.0
+      },
+      "reasoning": "(a) **Time left:** The question resolves around 2027-05-31, about 6.5 months away. The relevant IAA 2027 report could come out between January and July 2027. A January recap might simply restate the June 2026 figure, while the main report is usually published in May to July.\n\n(b) **Latest value:** 40% (range 36.2-43.3%) as of 2026-06-01, published by IAA in July 2026, using a revised denominator of about 337 million commercial hens.\n\n(c) **If nothing changed:** about 40%. This is also the likely outcome if a January 2027 recap restating 40% is used for resolution.\n\n(d) **If the trend continued:** The revised series grew about 5 points a year recently (34% to 40% over 14 months). Production is now above 100 million female chicks a year, and Italy's ban takes effect at the end of 2026. Interpolating IAA's forecast of 51% by mid-2028 gives about 43-45% for spring 2027.\n\n(e) **Historical variation:** The series rose 6-11 points a year, and methodology revisions shifted earlier figures by 3-6 points. Over 10-12 months, a move of 3-7 points is typical, and a revision adds roughly ±4 points of extra uncertainty.\n\n(f) **Experts and markets:** There are no prediction markets on this question. IAA's own forecast is 51% (47-55%) by July 2028, which implies roughly 44% in spring 2027.\n\n(g) **Unexpected scenarios:**\n- **Low:** IAA revises the denominator upward again, a supplier exits the market (as In Ovo did), or avian flu restocking with non-sexed birds pulls the figure down to the mid-30s.\n- **High:** Rapid capacity additions in Italy and elsewhere, plus a downward revision of the flock size, push the figure toward 50% or more.\n\nPercentile 1: 32\nPercentile 5: 35.5\nPercentile 10: 37.5\nPercentile 20: 39.5\nPercentile 30: 40.8\nPercentile 40: 42\nPercentile 50: 43\nPercentile 60: 44\nPercentile 70: 45.2\nPercentile 80: 46.8\nPercentile 90: 49\nPercentile 95: 51\nPercentile 99: 55"
+    },
+    {
+      "value": {
+        "p10": 38.2,
+        "p25": 39.75,
+        "p50": 41.3,
+        "p75": 44.15,
+        "p90": 46.8
+      },
+      "reasoning": "(a) **Time left:** About 6 months until resolution (around 2027-05-31). The resolving figure could appear as early as January 2027, in IAA's yearly recap. It could also come in May-July 2027, when IAA's main report usually appears, which may be after the resolution date.\n\n(b) **Latest value:** IAA reports 40% of the EU commercial layer flock as of 2026-06-01 (range 36.2-43.3%), published July 2026. IAA's revised series reads 23% for April 2024 and 34% for April 2025.\n\n(c) **If nothing changed:** 40%. This is also the likely outcome if a January 2027 recap restating the June 2026 figure counts as the \"first number published in 2027.\"\n\n(d) **If the trend continued:** Recent growth is about 5-6 points a year, slower than before. Italy's ban takes effect at the end of 2026, but its new hatchery capacity will barely show up in laying hens by spring 2027. A spring 2027 measurement would therefore be about 43-45%.\n\n(e) **Historical variation:** Annual changes in the revised series have been +11 and +6 points. Changes in how IAA counts the flock have shifted past figures by +3 to +6 points. Over roughly 10 months, a move of 3-5 points is typical, with method changes adding a few points of uncertainty in either direction.\n\n(f) **Experts and markets:** There are no prediction markets on this question. IAA's own forecast is about 51% (47-55%) by July 2028. Spreading that evenly from 40% in June 2026 implies about 44% in spring 2027.\n\n(g) **Unexpected scenarios:**\n- Low: IAA changes its flock-size method again, for example counting more of the registered hen places as in use. Supplier exits, such as In Ovo leaving, or bird flu restocking from non-sexed sources could also cut the reported share to the mid-30s.\n- High: IAA revises the flock size downward again, as it did last time, while capacity grows fast in Germany, France and the Netherlands and Italy starts early. That could put the reported share near 48-52%.\n\nMy distribution mixes these two cases. I put about 45% weight on a restated 40% from an early-2027 recap. I put about 55% weight on a new 2027 measurement centred near 44%, with a spread wide enough to cover method revisions.\n\nPercentile 1: 33\nPercentile 5: 36.5\nPercentile 10: 38.2\nPercentile 20: 39.5\nPercentile 30: 40\nPercentile 40: 40.4\nPercentile 50: 41.3\nPercentile 60: 42.4\nPercentile 70: 43.5\nPercentile 80: 44.8\nPercentile 90: 46.8\nPercentile 95: 48.5\nPercentile 99: 52"
+    },
+    {
+      "value": {
+        "p10": 38.5,
+        "p25": 40.15,
+        "p50": 42.8,
+        "p75": 45.4,
+        "p90": 48.0
+      },
+      "reasoning": "**(a) Time left:** About 6 to 7 months. The question resolves around 2027-05-31. IAA's first 2027 figure could appear as early as a January 2027 yearly recap. The main 2027 penetration report would come in May to July 2027.\n\n**(b) Latest known value:** 40% (range 36.2 to 43.3%) as of 2026-06-01. IAA published it in July 2026 using a revised flock denominator, under which April 2025 is now 34%, not 28%.\n\n**(c) If nothing changed:** 40%. This is also the likely outcome if the \"first non-preliminary number published in 2027\" turns out to be a January recap restating the June 2026 figure, as the January 2026 recap restated the 28% figure.\n\n**(d) If the trend continued:** The revised series grew about 5 to 6 points per year recently, from 34% in April 2025 to 40% in June 2026. Italy's culling ban takes effect at the end of 2026, but flock turnover is slow. This points to roughly 43 to 45% in spring 2027. IAA's 51% forecast for July 2028, interpolated, gives about 44%.\n\n**(e) Historical variation:** Annual changes have been 5 to 11 points. Method revisions have shifted past figures by 3 to 6 points, so a new denominator change could move the number either way by several points.\n\n**(f) Experts and markets:** There are no prediction markets on this. IAA's own forecast is 51% (47 to 55%) by July 2028, which implies the mid-40s for Q1 2027.\n\n**(g) Unexpected scenarios:**\n- **Low:** IAA revises the flock denominator upward again, or a large bird flu restocking wave brings in non-sexed birds, or a supplier exits (as In Ovo did). The reported figure could then come in around 35 to 38%.\n- **High:** IAA changes its methodology the other way, for example excluding more inactive places, and Italian, Spanish and Dutch adoption accelerates faster than expected. The figure could then reach 50% or more.\n\n**Weighting:** I put roughly a one-third chance on resolution at exactly 40%, from a restated figure. The remaining two-thirds is a 2027 report value centered around 44 to 45%, with a wide spread.\n\nPercentile 1: 33\nPercentile 5: 36.5\nPercentile 10: 38.5\nPercentile 20: 40\nPercentile 30: 40.3\nPercentile 40: 41.5\nPercentile 50: 42.8\nPercentile 60: 43.8\nPercentile 70: 44.8\nPercentile 80: 46\nPercentile 90: 48\nPercentile 95: 50\nPercentile 99: 54"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 38.2617,
+    "p25": 40.716,
+    "p50": 43.6209,
+    "p75": 46.5737,
+    "p90": 49.6428
+  },
+  "usage": [
+    {
+      "question_id": "43284",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.0002734,
+      "input_tokens": 1158,
+      "output_tokens": 84,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 7.61e-05,
+      "input_tokens": 506,
+      "output_tokens": 51,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 82.6,
+      "notional_cost_usd": 0.3340811,
+      "input_tokens": 94725,
+      "output_tokens": 4837,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.7,
+      "notional_cost_usd": 0.07134800000000001,
+      "input_tokens": 5957,
+      "output_tokens": 1185,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.4,
+      "notional_cost_usd": 0.07413600000000001,
+      "input_tokens": 5958,
+      "output_tokens": 1324,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.0007765000000000001,
+      "input_tokens": 2711,
+      "output_tokens": 469,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.1,
+      "notional_cost_usd": 0.0007691999999999999,
+      "input_tokens": 2827,
+      "output_tokens": 408,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 25.1,
+      "notional_cost_usd": 0.0261734,
+      "input_tokens": 5956,
+      "output_tokens": 1129,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.0,
+      "notional_cost_usd": 0.00038006,
+      "input_tokens": 2711,
+      "output_tokens": 579,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.00037123,
+      "input_tokens": 2828,
+      "output_tokens": 559,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.0,
+      "notional_cost_usd": 0.000804,
+      "input_tokens": 2646,
+      "output_tokens": 550,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.0003321,
+      "input_tokens": 2646,
+      "output_tokens": 484,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 104.5,
+      "notional_cost_usd": 0.3492818,
+      "input_tokens": 112357,
+      "output_tokens": 5424,
+      "web_searches": 5,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.4,
+      "notional_cost_usd": 0.068392,
+      "input_tokens": 5410,
+      "output_tokens": 1256,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 15.5,
+      "notional_cost_usd": 0.07064000000000001,
+      "input_tokens": 5411,
+      "output_tokens": 1368,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.0008291,
+      "input_tokens": 2799,
+      "output_tokens": 539,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 20.0,
+      "notional_cost_usd": 0.06595999999999999,
+      "input_tokens": 5411,
+      "output_tokens": 1134,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.4,
+      "notional_cost_usd": 0.00036615,
+      "input_tokens": 2801,
+      "output_tokens": 549,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.0,
+      "notional_cost_usd": 0.0008434,
+      "input_tokens": 2828,
+      "output_tokens": 556,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.4,
+      "notional_cost_usd": 0.000779,
+      "input_tokens": 2661,
+      "output_tokens": 494,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.3,
+      "notional_cost_usd": 0.00031774,
+      "input_tokens": 2829,
+      "output_tokens": 452,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43284",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.6,
+      "notional_cost_usd": 0.00036306,
+      "input_tokens": 2661,
+      "output_tokens": 546,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.0673
+}
