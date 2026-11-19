@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-19T01:08:58.606005+00:00",
+  "bot_version": "2026-11-18.2",
+  "started_at": "2026-11-19T01:02:50.690640+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 43500,
+    "post_id": 43493,
+    "url": "https://www.metaculus.com/questions/43493",
+    "type": "NumericQuestion",
+    "unit": "",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "What will be the average performance on ANIMA for AI models released between June 2026 and June 2027?",
+    "resolution_criteria": "This question will resolve as the average \"overall mean score\" of all AI models that have been released after May 31, 2026 and before July 1, 2027 and been evaluated by [ANIMA](https://compassionbench.com/ahb).\n\nOnly the models that are present on the leaderboard as of September 1, 2027 will count for the purposes of this question.",
+    "fine_print": "If ANIMA changes its scoring methodology such that it is incompatible with the current scores (e.g., scoring changes so as not to be a percentage) then this question will be **annulled**. However, if the scoring methodology is modified to include more questions in the dataset or evaluates more dimensions without changing the final metric (e.g., it remains as a percentage) this will not result in this question being **annulled**.",
+    "close_time": "2027-06-30 22:59 UTC",
+    "scheduled_resolution_time": "2027-07-01 11:00 UTC"
+  },
+  "research": [
+    "I couldn't read the live leaderboard: compassionbench.com and its API return Cloudflare 403 errors. The newest ANIMA scores I could get are from a 2026-07-01 Wayback Machine copy. As of that copy, exactly one model released in the window (GLM-5.2, 71.0) was scored. An October snapshot of the site shows ANIMA has been moved to a \"legacy\" tier, which may mean few or no new models get scored on it.\n\n## 1. Resolution source\n- 2026-07-01 (archived copy of `compassionbench.com/api/overall-scores`, ANIMA scores, 16 models): DeepSeek-V4 Flash 74.4; GPT-5.5 74.0; Claude Opus 4.7 73.5; Opus 4.6 72.5; DeepSeek-V3.2 72.4; GPT-5 Mini 71.8; **GLM-5.2 71.0** (added 2026-06-27); gpt-5-nano 70.8; gemini-3.5-flash 70.0; GPT-5.2 69.1; Grok 4 Fast 61.6; Claude Haiku 4.5 58.6; Gemini 2.5 Flash Lite 58.4; Claude 3 Opus 57.3; Sonnet 4.6 56.5; Sonnet 4.5 52.7. Error bars are about ±4 to ±6 points. [archive](https://web.archive.org/web/20260701100156id_/https://compassionbench.com/api/overall-scores)\n- The site's code holds its own release-date list. It gives GLM-5.2 as 2026-06-13 and gemini-3.5-flash as 2026-05-19, so Gemini 3.5 Flash falls outside the window. [archived JS](https://web.archive.org/web/20260701100155jm_/https://compassionbench.com/assets/index-C3DpcCcF.js)\n- The site's release dates don't always match reality (it lists GPT-5 Mini as 2025-01-31), so how \"released\" gets judged matters.\n\n## 2. Current status\n- As of 2026-07-01, only GLM-5.2 qualifies, so the average was 71.0 from a single model. With a sample that small, each new model moves the answer a lot.\n- 2026-10-13: the rebuilt site's code lists release dates for many models inside the window: Claude Fable 5 (06-09), Sonnet 5 (06-30), Opus 5 (07-24), Fable 5.1 (09-01), Opus 5.5 (09-21), Sonnet 5.5 (09-28), GPT-5.6 Sol/Terra (07-09), GPT-6 Astra (09-04), Gemini 3.7 Flash (08-13), Gemini 3.8 Flash (09-02), Grok 4.6, Kimi K3, Qwen3.8-max, Muse Spark 1.3. I couldn't confirm which of these have **ANIMA** scores rather than scores only on TAC or the newer benchmarks. [archived JS](https://web.archive.org/web/20261013222749id_/https://compassionbench.com/assets/index-Bj6BRwY2.js)\n- The same code labels ANIMA and MORU \"1st gen · legacy\" and TAC \"2nd gen · maintained\". It says the 1st-gen benchmarks have overlapping confidence intervals, \"so they no longer separate frontier performance\", and that they \"remain useful for analyzing open-source models during training\", with results \"browsable under the 1st Gen tab\". That suggests new frontier models may not be scored on ANIMA. [same source](https://web.archive.org/web/20261013222749id_/https://compassionbench.com/assets/index-Bj6BRwY2.js)\n- The Internet Archive refused connections when I tried to get the October and November ANIMA score data.\n\n## 3. Recent news (newest first)\n- About 2026-10/11: CaML's site reportedly describes ANIMA and MORU as legacy boards, with TAC and \"Manager Coercion Bench\" as current. Search summary only, because compassionml.com returned 403. [CaML](https://www.compassionml.com/compassion-bench)\n- 2026-08-05: a pull request adding ANIMA results for 13 models to the EvalEval datastore was closed unmerged, \"until anti scrape measures are in place\". [HF](https://huggingface.co/datasets/evaleval/EEE_datastore/discussions/166)\n- 2026-06-13: GLM-5.2 launched; open weights followed around 06-17. [CGTN](https://news.cgtn.com/news/2026-06-30/Chinese-AI-steps-onto-global-stage-as-GLM-5-2-narrows-frontier-gap-1OoU38NBLHO/p.html)\n- 2026-05: the benchmark was renamed from AHB to ANIMA with \"scoring unchanged\". The Hugging Face dataset page now shows ANIMA-2.2 tags. [HF](https://huggingface.co/datasets/CompassioninMachineLearning/anima)\n- 2026-05-19: Gemini 3.5 Flash was released at Google I/O. [llm-stats](https://llm-stats.com/models/gemini-3.5-flash)\n- 2026-04-08: Faunalytics wrote that updates depend on funding. [Faunalytics](https://faunalytics.org/compassionbench-a-new-way-to-measure-whether-ai-actually-cares-about-animals/)\n\n## 4. Base rates\n- All 16 models on the 2026-07-01 board averaged **66.5** (range 52.7 to 74.4).\n- The 8 models the site dates to 2026 averaged **70.1**.\n- Newer frontier models cluster at 69 to 74.4. Anthropic's Sonnet models score low (52.7 and 56.5) and Opus models high (72.5 and 73.5).\n- There is a ceiling or compression effect: the top 10 models sit within 5.3 points, inside each other's error bars.\n- Seasonality doesn't apply. The series is about 10 months old (first entries 2026-01-08).\n\n## 5. Other forecasts\n- I found no market on ANIMA or CompassionBench.\n- The markets supplied (Kalshi on the Artificial Analysis index above 65: 0.94 before 2027-07-01; Arena debut markets for Fable 5.2+ and Qwen Max) only track general capability. They don't measure this question.\n\n## 6. Upcoming events\n- What matters most is whether CaML keeps adding new frontier models to legacy ANIMA, or only open-source and training-run models. Some research checkpoints already appear in the site's release-date list (e.g. olmo-3.1-32b-em-insecure, 2026-07-26). If those get ANIMA scores and count as \"released\", they could pull the average down.\n- Expected releases before mid-2027 include a Fable 5.2+ model, Qwen Max 3.9+ and Gemini 3.5 Pro (delayed). It's unclear whether any will be scored on ANIMA.\n- Risk of the question being annulled: the dataset moved to a 2.2 tag, but the site says scoring is unchanged.\n- Only models on the board as of 2027-09-01 count.\n\nSources: links inline above.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 01:03 UTC; check each market really matches the question)\n- Kalshi: When will AI score above 65 on Artificial Analysis Intelligence Index?  (Any AI model from any lab). Yes prices: Before Jan 1, 2027: 0.56; Before Dec 1, 2026: 0.15; Before Feb 1, 2027: 0.53; Before Jul 1, 2027: 0.94; Before Apr 1, 2027: 0.76.\n- Kalshi: Fable 5.2+ debut arena score (Fable 5.2+ debut arena score). Yes prices: Above 1520: 0.33; Above 1490: 0.52; Above 1500: 0.50; Above 1510: 0.50; Above 1540: 0.45; Above 1530: 0.46; Above 1560: 0.0000; Above 1570: 0.0000; Above 1580: 0.0000; Above 1590: 0.0000.\n- Kalshi: Anthropic vs Google: Highest Arena Score at the end of 2026 (On Dec 31, 2026). Yes prices: Google: 0.70; Anthropic: 0.32.\n- Kalshi: Which AI companies will have a Pareto efficient model at the end of 2026? (On Dec 31, 2026). Yes prices: Meta: 0.70; IBM: 0.03; DeepSeek: 0.07; Tencent: 0.07; Alibaba: 0.07; xAI: 0.07; Z AI: 0.10; InclusionAI: 0.0700; Moonshot AI: 0.1500; Xiaomi: 0.4200.\n- Kalshi: Which companies will have a top-ranked AI model this year? (In 2026). Yes prices: OpenAI: 0.08; Meta: 0.07; Baidu: 0.04; Nvidia: 0.03; Mistral: 0.03; xAI: 0.03; Alibaba: 0.02; Z.ai: 0.02; Deepseek: 0.03; Moonshot AI: 0.03.\n- Kalshi: Open vs. Closed Token Volume (open weights share) today (Nov 18, 2026). Yes prices: Above 68.4%: 0.98; Above 70.0%: 0.0100; Above 71.9%: 0.0100; Above 72.7%: 0.0100; Above 64.2%: 0.99; Above 59.6%: 0.99; Above 65.9%: 0.99; Above 67.0%: 0.98; Above 66.6%: 0.97.\n- Kalshi: Alibaba vs Xiaomi: Highest Arena Score at the end of 2026 (On Dec 31, 2026). Yes prices: Alibaba: 0.55; Xiaomi: 0.45.\n- Kalshi: Will a Chinese AI model be #1 next year (From Jan 1, 2027 through Dec 31, 2027). Yes prices: any AI model developed by a company headquartered in China: 0.26.\n- Polymarket: Next Fable Model (5.2+): Text Arena Debut? (ends 2027-07-01). [Yes, No] prices: 1500+: [\"0.7115\", \"0.2885\"]; 1510+: [\"0.47\", \"0.53\"]; 1520+: [\"0.355\", \"0.645\"]; 1530+: [\"0.16\", \"0.84\"]; 1540+: [\"0.0595\", \"0.9405\"]\n- Polymarket: Next Qwen Max Model (3.9+): Text Arena Debut? (ends 2027-07-01). [Yes, No] prices: 1460+: [\"0.895\", \"0.105\"]; 1480+: [\"0.71\", \"0.29\"]; 1500+: [\"0.25\", \"0.75\"]; 1520+: [\"0.1175\", \"0.8825\"]\n- Polymarket: Next Fable Model (5.2+): Text Arena Rank Debut? (ends 2027-07-01). [Yes, No] prices: Top 1: [\"0.09\", \"0.91\"]; Top 3: [\"0.145\", \"0.855\"]; Top 5: [\"0.4\", \"0.6\"]; Top 10: [\"0.718\", \"0.282\"]\n- Manifold: Frontier AI model hits 50%+ on METR Rogue Replication/RepliBench by '27? (57%) https://manifold.markets/HaukeHillebrandt/frontier-ai-model-hits-50-on-metr-r\n- Manifold: US-China Track 1 AI dialogue commits to shared AI safety benchmark by '27? (25%) https://manifold.markets/HaukeHillebrandt/uschina-track-1-ai-dialogue-commits",
+    "I couldn't load the live leaderboard, so the newest scores I can confirm are from July 1, 2026, about 4.5 months old. Nothing settles the question yet. Two things matter most: ANIMA is now described as a \"legacy\" board, so few new models may be added, and the site's date field is ambiguous about what counts as \"released\".\n\n## 1. Resolution source\n- The live page (compassionbench.com/ahb) and its data feed (`/api/overall-scores`) both returned a Cloudflare 403. I could not see the current leaderboard. [site](https://compassionbench.com/ahb)\n- 2026-07-01: an archived copy of the data feed lists 16 models with an \"overall mean score\" (0-100 scale, 95% CI about ±4 to 6 points). The `createdAt` field below is when the model was added to the board, not its release date. [archive](https://web.archive.org/web/20260701100156id_/https://compassionbench.com/api/overall-scores)\n  - DeepSeek-V4 Flash 74.4 (added 06-27)\n  - GPT-5.5 74.0\n  - Claude Opus 4.7 73.5\n  - Claude Opus 4.6 72.5\n  - DeepSeek-V3.2 72.4\n  - GPT-5 Mini 71.8\n  - GLM-5.2 71.0 (added 06-27)\n  - gpt-5-nano 70.8 (added 05-15)\n  - gemini-3.5-flash 70.0 (added 06-08)\n  - GPT-5.2 69.1\n  - Grok 4 Fast 61.6\n  - Claude Haiku 4.5 58.6\n  - Gemini 2.5 Flash Lite 58.4\n  - Claude 3 Opus 57.3\n  - Claude Sonnet 4.6 56.5\n  - Claude Sonnet 4.5 52.7\n- The site's own code has a model-to-date table that the question may treat as \"release\" dates. Some entries are clearly not real release dates (GPT-5 Mini is listed as 2025-01-31). Examples: GLM-5.2 2026-06-13, DeepSeek-V4 Pro/Flash 2026-04-24, GPT-5.5 2026-04-24. [site JS (archived)](https://web.archive.org/web/20260701100155jm_/https://compassionbench.com/assets/index-C3DpcCcF.js)\n\n## 2. Current status\n- Nothing settles the question.\n- As of 2026-07-01, the only models added after May 31 were DeepSeek-V4 Flash (74.4), GLM-5.2 (71.0) and gemini-3.5-flash (70.0), averaging 71.8. By true release date, DeepSeek-V4 was released around April 2026, and I could not confirm Gemini 3.5 Flash's release date. GLM-5.2 (site date 06-13) is the clearest qualifying model.\n- I could not see any additions between July and November 2026.\n\n## 3. Recent news (newest first)\n- 2026-09-14: inspect_evals ANIMA changelog 6-D removed the `epochs` task parameter (default stays at 5 epochs). [inspect_evals](https://ukgovernmentbeis.github.io/inspect_evals/evals/anima/index.html)\n- 2026-08-17: changelog 6-C changed scoring so that grader responses with no readable grade are now excluded instead of averaged in. Results may differ slightly from earlier runs. The scale is unchanged, so this probably does not trigger annulment. [same](https://ukgovernmentbeis.github.io/inspect_evals/evals/anima/index.html)\n- 2026-08-10: the Hugging Face organisation was renamed to CompassioninMachineLearning. The dataset card now says ANIMA-2.2 has 26 prompts and 13 dimensions, versus the 114 questions the question cites for v2.1. Version 2.2 replaced 5 questions on 2026-03-11. [HF](https://huggingface.co/datasets/CompassioninMachineLearning/anima)\n- 2026-08-05: a submission of ANIMA results for 13 models to the EvalEval datastore was closed without being merged. [HF discussion](https://huggingface.co/datasets/evaleval/EEE_datastore/discussions/166)\n- 2026 (date unclear): CaML pages describe the leaderboard as centred on TAC, Manager Coercion Bench and HarvestBench, with ANIMA and MORU kept as \"legacy\" boards. This could mean few new models get evaluated on ANIMA. [CaML](https://www.compassionml.com/compassion-bench)\n- 2026-05: the benchmark was renamed from AHB to ANIMA; the questions and scoring were unchanged. [EA Forum](https://forum.effectivealtruism.org/posts/DfekzLg9KQj7wQwnd/an-empirical-review-of-the-animal-harm-benchmark-anima)\n\n## 4. Base rates\n- Mean of all 16 models (July 1 snapshot): 66.5. Range 52.7 to 74.4.\n- Mean of the 8 models the site dates to 2026: 70.1. The 3 models added in June averaged 71.8.\n- Frontier models cluster at 72 to 74. Smaller, Sonnet-class and older models score 52 to 62 and pull the average down a lot. Sonnet 4.6 (56.5) scored below Sonnet 4.5's successor class would suggest, so a newer model does not always score higher.\n- A March 2026 EA Forum review found the scores compressed into roughly 0.56 to 0.84 and close to a ceiling. It also notes the results depend on which model acts as judge. [EA Forum](https://forum.effectivealtruism.org/posts/DfekzLg9KQj7wQwnd/an-empirical-review-of-the-animal-harm-benchmark-anima)\n- The pace of additions was about 16 models in roughly 6 months (January to June 2026). The current pace is unknown.\n- Seasonality: not applicable.\n\n## 5. Other forecasts\n- I found no prediction market or expert forecast on ANIMA itself.\n- The collected Kalshi and Polymarket markets (Artificial Analysis index, Arena scores) measure general capability and do not map onto ANIMA. For example, Kalshi puts a model scoring above 65 on the Artificial Analysis Intelligence Index before Jul 1, 2027 at 0.94.\n\n## 6. Upcoming events before resolution\n- New models from news: GPT-6.1 Sol and Microsoft MAI Code 2 (announced 2026-11-17), plus Fable 5.2+ and Qwen Max 3.9+ (both have Arena markets). Each may or may not be added to ANIMA. [gigazine](https://gigazine.net/news/20261118-mai-code-2-flash/)\n- If ANIMA stays a legacy board, the qualifying set could be very small. Then one or two models, such as a cheap \"flash\" model or a Sonnet-class model, would dominate the average.\n- Further scoring changes or re-runs (for example under the 6-C grading fix) could shift scores by about 1 to 2 points.\n- Leaderboard cutoff for counting models: 2027-09-01.\n\nSources: [compassionbench archive (data)](https://web.archive.org/web/20260701100156id_/https://compassionbench.com/api/overall-scores), [inspect_evals ANIMA](https://ukgovernmentbeis.github.io/inspect_evals/evals/anima/index.html), [HF dataset](https://huggingface.co/datasets/CompassioninMachineLearning/anima), [EEE discussion](https://huggingface.co/datasets/evaleval/EEE_datastore/discussions/166), [EA Forum review](https://forum.effectivealtruism.org/posts/DfekzLg9KQj7wQwnd/an-empirical-review-of-the-animal-harm-benchmark-anima), [Faunalytics](https://faunalytics.org/compassionbench-a-new-way-to-measure-whether-ai-actually-cares-about-animals/), [GitHub ahb](https://raw.githubusercontent.com/AI-for-Animals/ahb/main/README.md)\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 01:03 UTC; check each market really matches the question)\n- Kalshi: When will AI score above 65 on Artificial Analysis Intelligence Index?  (Any AI model from any lab). Yes prices: Before Jan 1, 2027: 0.56; Before Dec 1, 2026: 0.15; Before Feb 1, 2027: 0.53; Before Jul 1, 2027: 0.94; Before Apr 1, 2027: 0.76.\n- Kalshi: Fable 5.2+ debut arena score (Fable 5.2+ debut arena score). Yes prices: Above 1520: 0.33; Above 1490: 0.52; Above 1500: 0.50; Above 1510: 0.50; Above 1540: 0.45; Above 1530: 0.46; Above 1560: 0.0000; Above 1570: 0.0000; Above 1580: 0.0000; Above 1590: 0.0000.\n- Kalshi: Anthropic vs Google: Highest Arena Score at the end of 2026 (On Dec 31, 2026). Yes prices: Google: 0.70; Anthropic: 0.32.\n- Kalshi: Which AI companies will have a Pareto efficient model at the end of 2026? (On Dec 31, 2026). Yes prices: Meta: 0.70; IBM: 0.03; DeepSeek: 0.07; Tencent: 0.07; Alibaba: 0.07; xAI: 0.07; Z AI: 0.10; InclusionAI: 0.0700; Moonshot AI: 0.1500; Xiaomi: 0.4200.\n- Kalshi: Which companies will have a top-ranked AI model this year? (In 2026). Yes prices: OpenAI: 0.08; Meta: 0.07; Baidu: 0.04; Nvidia: 0.03; Mistral: 0.03; xAI: 0.03; Alibaba: 0.02; Z.ai: 0.02; Deepseek: 0.03; Moonshot AI: 0.03.\n- Kalshi: Open vs. Closed Token Volume (open weights share) today (Nov 18, 2026). Yes prices: Above 68.4%: 0.98; Above 70.0%: 0.0100; Above 71.9%: 0.0100; Above 72.7%: 0.0100; Above 64.2%: 0.99; Above 59.6%: 0.99; Above 65.9%: 0.99; Above 67.0%: 0.98; Above 66.6%: 0.97.\n- Kalshi: Alibaba vs Xiaomi: Highest Arena Score at the end of 2026 (On Dec 31, 2026). Yes prices: Alibaba: 0.55; Xiaomi: 0.45.\n- Kalshi: Will a Chinese AI model be #1 next year (From Jan 1, 2027 through Dec 31, 2027). Yes prices: any AI model developed by a company headquartered in China: 0.26.\n- Polymarket: Next Fable Model (5.2+): Text Arena Debut? (ends 2027-07-01). [Yes, No] prices: 1500+: [\"0.7115\", \"0.2885\"]; 1510+: [\"0.47\", \"0.53\"]; 1520+: [\"0.355\", \"0.645\"]; 1530+: [\"0.16\", \"0.84\"]; 1540+: [\"0.0595\", \"0.9405\"]\n- Polymarket: Next Qwen Max Model (3.9+): Text Arena Debut? (ends 2027-07-01). [Yes, No] prices: 1460+: [\"0.895\", \"0.105\"]; 1480+: [\"0.71\", \"0.29\"]; 1500+: [\"0.25\", \"0.75\"]; 1520+: [\"0.1175\", \"0.8825\"]\n- Polymarket: Next Fable Model (5.2+): Text Arena Rank Debut? (ends 2027-07-01). [Yes, No] prices: Top 1: [\"0.09\", \"0.91\"]; Top 3: [\"0.145\", \"0.855\"]; Top 5: [\"0.4\", \"0.6\"]; Top 10: [\"0.718\", \"0.282\"]\n- Manifold: Frontier AI model hits 50%+ on METR Rogue Replication/RepliBench by '27? (57%) https://manifold.markets/HaukeHillebrandt/frontier-ai-model-hits-50-on-metr-r\n- Manifold: US-China Track 1 AI dialogue commits to shared AI safety benchmark by '27? (25%) https://manifold.markets/HaukeHillebrandt/uschina-track-1-ai-dialogue-commits"
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 63.5,
+        "p25": 67.75,
+        "p50": 70.8,
+        "p75": 72.5,
+        "p90": 74.6
+      },
+      "reasoning": "(a) The window for qualifying releases closes 2027-06-30, and the board snapshot that counts is 2027-09-01. That leaves about 7 months of releases and about 9.5 months until the scores are fixed.\n\n(b) The latest known value is from the 2026-07-01 archived board. Only one in-window model had been scored, GLM-5.2 at 71.0, so the qualifying average is 71.0. As of October 2026, ANIMA is labeled \"1st gen · legacy\".\n\n(c) If nothing changed, the outcome would be 71.0, from GLM-5.2 alone. Because ANIMA is now legacy, there is a real chance that few or no further in-window models get scored.\n\n(d) Recent frontier and open models cluster at 69 to 74.4, and the models the site dates to 2026 average about 70. If that pattern continued, the outcome would be roughly 70 to 72. There is mild upward drift and a ceiling effect.\n\n(e) The board-wide spread is about 53 to 74. With small samples, a single low-scoring model can move the average by several points. For example, a Sonnet-style score in the mid-50s, or a research checkpoint such as the emergent-misalignment OLMo model, would pull it down.\n\n(f) I found no markets or expert forecasts on this quantity. The question creator's range of 50 to 90 is very wide.\n\n(g) Unexpected scenarios:\n- **Low:** Under legacy status, mostly small open-source models and training checkpoints get ANIMA scores. Examples are misaligned or fine-tuned OLMo variants and small models scoring 45 to 60, which would pull the average to around 60 or below.\n- **High:** Only a few strong frontier models are scored, for example Opus 5, GPT-6 Astra or Kimi K3 at 75 to 80 as newer models push past the ceiling. That would put the average around 75 or higher.\n\nPercentile 1: 55.0\nPercentile 5: 60.5\nPercentile 10: 63.5\nPercentile 20: 66.8\nPercentile 30: 68.7\nPercentile 40: 70.0\nPercentile 50: 70.8\nPercentile 60: 71.2\nPercentile 70: 72.0\nPercentile 80: 73.0\nPercentile 90: 74.6\nPercentile 95: 76.0\nPercentile 99: 79.5"
+    },
+    {
+      "value": {
+        "p10": 63.0,
+        "p25": 67.4,
+        "p50": 70.5,
+        "p75": 72.3,
+        "p90": 74.2
+      },
+      "reasoning": "**(a) Time left:** About 7.5 months until forecasts close (2027-06-30). The leaderboard cutoff is 2027-09-01, so roughly 9.5 months until the outcome is fully known.\n\n**(b) Latest known value:** As of the 2026-07-01 archived snapshot, only GLM-5.2 qualifies, at 71.0. That gives a single-model average of 71.0.\n\n**(c) If nothing changed:** 71.0.\n\n**(d) If the current trend continued:**\n- Several in-window frontier models appear in the site's release-date list, including Fable 5, Sonnet 5, Opus 5, GPT-5.6, Gemini 3.7 and 3.8 Flash, Kimi K3 and Qwen3.8.\n- Recent frontier models score between 69 and 74.4, so if a few of them get ANIMA scores, the average likely lands around 70 to 72.\n- ANIMA is now labeled \"legacy\" and described as useful for analyzing open-source models during training. That means some scored entries could be research checkpoints, such as emergent-misalignment OLMo variants, or Sonnet-class models that have historically scored 52 to 57. These would pull the average down.\n\n**(e) Historical variation:**\n- The board-wide average is 66.5, and the 2026-dated models average 70.1.\n- Individual models range from 52.7 to 74.4, with error bars of about ±4 to ±6.\n- With a small sample, the average can move several points as each model is added.\n\n**(f) Expert and market expectations:** There are no markets on this. The question creator's range is 50 to 90. Capability markets suggest models will keep improving, but ANIMA shows compression near the top, with frontier scores capped around 74 to 75.\n\n**(g) Unexpected scenarios:**\n- **Low:** Mostly fine-tuned or misaligned research checkpoints, plus low-scoring Sonnet and Flash-type models, get scored on legacy ANIMA. The average falls to around 58 to 62.\n- **High:** Only a handful of new frontier models (Opus 5, GPT-6, DeepSeek or GLM successors) are scored, and they push past the ceiling to 75 to 78.\n\nPercentile 1: 55\nPercentile 5: 60\nPercentile 10: 63\nPercentile 20: 66.5\nPercentile 30: 68.3\nPercentile 40: 69.6\nPercentile 50: 70.5\nPercentile 60: 71\nPercentile 70: 71.8\nPercentile 80: 72.8\nPercentile 90: 74.2\nPercentile 95: 75.5\nPercentile 99: 78"
+    },
+    {
+      "value": {
+        "p10": 61.5,
+        "p25": 66.0,
+        "p50": 69.5,
+        "p75": 71.5,
+        "p90": 73.4
+      },
+      "reasoning": "**(a) Time left:** About 7 months until forecasts close (2027-06-30). The question resolves around 2027-07-01, but the leaderboard snapshot that counts is the one from 2027-09-01, so models can be added after resolution starts.\n\n**(b) Latest known value:** As of the 2026-07-01 archived copy, one qualifying model had an ANIMA score: GLM-5.2 at 71.0. The average was therefore 71.0.\n\n**(c) If nothing changed:** 71.0, from GLM-5.2 alone.\n\n**(d) If the current trend continued:** Recent frontier models cluster between 69 and 74.4. The 8 models the site dates to 2026 averaged 70.1. ANIMA has been moved to a \"legacy\" tier, which pushes things two ways:\n- Fewer frontier models may be scored on it.\n- More open-source models and research checkpoints may be scored, some of them deliberately misaligned variants such as olmo-3.1-32b-em-insecure, which would pull the average down.\n\nThe trend-based estimate is about 68 to 71.\n\n**(e) Historical variation:** Scores on the board range from 52.7 to 74.4, and each has error bars of about ±4 to ±6 points. With a small sample, a single low-scoring model, such as a Sonnet-style model at around 53 to 56 or a research checkpoint, can move the average by several points.\n\n**(f) Experts and markets:** I found no market on ANIMA or CompassionBench. The general capability markets supplied suggest models keep improving, but ANIMA scores look compressed near a ceiling of about 74.\n\n**(g) Unexpected scenarios:**\n- **Low:** Many open-source training checkpoints are scored under the 1st Gen tab, including emergent-misalignment variants scoring 40 to 55, and they count as \"released\". The average could then fall to the high 50s or below.\n- **High:** Only a few strong frontier models released between June and September (Opus 5, GPT-5.6, GPT-6 Astra) are scored, each around 74 to 78. The average would then land around 75 or higher.\n\nPercentile 1: 52\nPercentile 5: 58\nPercentile 10: 61.5\nPercentile 20: 65\nPercentile 30: 67\nPercentile 40: 68.5\nPercentile 50: 69.5\nPercentile 60: 70.3\nPercentile 70: 71\nPercentile 80: 72\nPercentile 90: 73.4\nPercentile 95: 74.6\nPercentile 99: 77.5"
+    },
+    {
+      "value": {
+        "p10": 65.5,
+        "p25": 68.8,
+        "p50": 71.3,
+        "p75": 73.3,
+        "p90": 75.2
+      },
+      "reasoning": "(a) **Time left:** The question resolves around 2027-07-01, about 7.5 months from now. Models can be added to the leaderboard until the 2027-09-01 cutoff.\n\n(b) **Latest known value:** In the 2026-07-01 snapshot, the models added after May 31 were DeepSeek-V4 Flash (74.4), GLM-5.2 (71.0) and gemini-3.5-flash (70.0), averaging 71.8. GLM-5.2 is the cleanest qualifier. If only GLM-5.2 counts, the value is 71.0. Across all 16 models the mean is 66.5. Across models the site dates to 2026, it is 70.1.\n\n(c) **If nothing changed:** The value would be roughly 71 to 72, depending on how release dates are read.\n\n(d) **If the trend continued:** New frontier and near-frontier models land at 70 to 75. The scores look compressed near a ceiling, so a continued trend gives about 71 to 73. Occasional weaker Sonnet-class or small models (52 to 62) would pull the mean down.\n\n(e) **Historical variation:** Individual model scores range from 52 to 74. Means over small sets of recent models have moved within about 70 to 72. Because ANIMA is now a \"legacy\" board, the qualifying set may be small (perhaps 2 to 8 models). One outlier can then move the average by 3 to 5 points. Rescoring under the 6-C grading fix could shift scores by about 1 to 2 points.\n\n(f) **Experts and markets:** No forecasts exist on ANIMA itself. General-capability markets suggest strong new models through mid-2027. However, ANIMA scores track general capability only loosely and appear to sit near a ceiling.\n\n(g) **Unexpected scenarios:**\n- **Low:** The board stays mostly frozen, and the only additions are a couple of weak models, such as a Sonnet-class model like Sonnet 4.6 (56.5) or a lite model. The average then falls to about 58 to 62.\n- **High:** The only additions are flagship models such as GPT-6.x or Claude Opus 5, the judge changes, or rescoring lifts scores. Averages then reach 76 to 79.\n\nPercentile 1: 58\nPercentile 5: 63\nPercentile 10: 65.5\nPercentile 20: 68\nPercentile 30: 69.6\nPercentile 40: 70.6\nPercentile 50: 71.3\nPercentile 60: 72\nPercentile 70: 72.8\nPercentile 80: 73.8\nPercentile 90: 75.2\nPercentile 95: 76.5\nPercentile 99: 79"
+    },
+    {
+      "value": {
+        "p10": 64.5,
+        "p25": 68.35,
+        "p50": 70.9,
+        "p75": 72.7,
+        "p90": 74.8
+      },
+      "reasoning": "(a) Time left: forecasts close on 2027-06-30. The qualifying set is fixed by the leaderboard as of 2027-09-01, so about 9.5 months remain for new models to be released and evaluated.\n\n(b) Latest known value: in the 2026-07-01 snapshot, the models plausibly released after May 31, 2026 are GLM-5.2 at 71.0 (site date 06-13) and possibly gemini-3.5-flash at 70.0. DeepSeek-V4 Flash (74.4) was probably released in April and likely does not count. The average of the likely qualifying models is about 70.5 to 71.\n\n(c) If nothing changed: about 70.5 to 71.0.\n\n(d) If the current trend continued: recent additions (flash, nano and frontier models from several labs) cluster at 70 to 74. A small, legacy-board set would average about 71 to 72. Adding Sonnet or Haiku-class models would pull the average toward the 60s.\n\n(e) Historical variation: individual model scores range from 52.7 to 74.4. With a small qualifying set, one low-scoring model (about 55) among three could move the average by 5 points. Judge or grading changes (the 6-C fix) add about ±1 to 2 points.\n\n(f) Experts and markets: there are no markets on ANIMA itself. The EA Forum review notes that scores are compressed near a ceiling of roughly 56 to 84.\n\n(g) Unexpected scenarios:\n- Low: the legacy board adds mostly cheap or Sonnet-class models scoring 55 to 60, or a new judge model lowers scores. The average would fall to about 60 to 63.\n- High: new frontier models (GPT-6.x, Gemini 4, Claude 5) and a more lenient judge push scores to 76 to 80. The average would be about 76 to 78.\n\nTails:\n- Percentile 1: only one qualifying model, and it is a weak one (for example a Sonnet-class model scoring about 55).\n- Percentile 99: a full re-run with a lenient judge and strong models scoring around 80.\n\nPercentile 1: 56\nPercentile 5: 61.5\nPercentile 10: 64.5\nPercentile 20: 67.5\nPercentile 30: 69.2\nPercentile 40: 70.2\nPercentile 50: 70.9\nPercentile 60: 71.5\nPercentile 70: 72.2\nPercentile 80: 73.2\nPercentile 90: 74.8\nPercentile 95: 76.3\nPercentile 99: 80"
+    },
+    {
+      "value": {
+        "p10": 64.8,
+        "p25": 68.4,
+        "p50": 71.1,
+        "p75": 72.95,
+        "p90": 74.7
+      },
+      "reasoning": "(a) **Time left:** The forecast window closes on 2027-06-30, about 7.5 months from now. Models released by then can still be added to the leaderboard until 2027-09-01, so the full qualifying set will only be known then.\n\n(b) **Latest known value:** The most recent leaderboard snapshot is from 2026-07-01. It lists three models added after May 31, 2026:\n- DeepSeek-V4 Flash: 74.4\n- GLM-5.2: 71.0\n- gemini-3.5-flash: 70.0\n\nTheir mean is 71.8. GLM-5.2 is the only one whose qualifying release date is clear, so the mean of the clearly qualifying set is about 70.5 to 71.0. The overall top score is 74.4.\n\n(c) **Outcome if nothing changed:** Roughly 70.5 to 72.\n\n(d) **Outcome if the trend continued:** Frontier and near-frontier models released in 2026 cluster at 70 to 74, and the benchmark is compressing near a ceiling. Newer models might push slightly higher, to around 72 to 74. Any small or Sonnet-class models that get added (scores in the 52 to 62 range) would pull the average down. Combining these gives a central estimate of about 71.\n\n(e) **Historical variation:** The mean of the 2026-era models was 70.1, and the June additions averaged 71.8. Individual scores range from about 52 to 74. With a small qualifying set, adding a single outlier could move the average by 3 to 6 points. Re-grading under the scoring fix (changelog 6-C) could shift scores by 1 to 2 points.\n\n(f) **Experts and markets:** There are no forecasts or markets on ANIMA itself. A March 2026 review of the benchmark notes that scores are compressed near a ceiling, roughly 56 to 84 on this scale.\n\n(g) **Unexpected scenarios:**\n- **Low:** ANIMA stays a legacy board, and the only qualifying additions are cheap or small models, or Sonnet-like models scoring 55 to 60. The average would then fall to about 60.\n- **High:** Only a couple of new frontier models (such as GPT-6.x) are added and score 76 to 80 as the benchmark saturates. The average would then reach about 76 or more.\n\nPercentile 1: 57\nPercentile 5: 62\nPercentile 10: 64.8\nPercentile 20: 67.6\nPercentile 30: 69.2\nPercentile 40: 70.3\nPercentile 50: 71.1\nPercentile 60: 71.8\nPercentile 70: 72.5\nPercentile 80: 73.4\nPercentile 90: 74.7\nPercentile 95: 75.9\nPercentile 99: 78.5"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 63.7157,
+    "p25": 68.0212,
+    "p50": 70.8343,
+    "p75": 72.6237,
+    "p90": 74.7579
+  },
+  "usage": [
+    {
+      "question_id": "43500",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.6,
+      "notional_cost_usd": 0.0002816,
+      "input_tokens": 1194,
+      "output_tokens": 86,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.7,
+      "notional_cost_usd": 6.960000000000001e-05,
+      "input_tokens": 501,
+      "output_tokens": 39,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 191.3,
+      "notional_cost_usd": 0.6669605999999999,
+      "input_tokens": 544448,
+      "output_tokens": 7768,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.4,
+      "notional_cost_usd": 0.06876399999999999,
+      "input_tokens": 6064,
+      "output_tokens": 1013,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 17.6,
+      "notional_cost_usd": 0.07416400000000001,
+      "input_tokens": 6064,
+      "output_tokens": 1283,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.9,
+      "notional_cost_usd": 0.0006671,
+      "input_tokens": 2679,
+      "output_tokens": 263,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.7,
+      "notional_cost_usd": 0.0008448,
+      "input_tokens": 2780,
+      "output_tokens": 578,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.8,
+      "notional_cost_usd": 0.0259308,
+      "input_tokens": 6065,
+      "output_tokens": 1115,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.2,
+      "notional_cost_usd": 0.00029375,
+      "input_tokens": 2680,
+      "output_tokens": 407,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.00032753999999999997,
+      "input_tokens": 2778,
+      "output_tokens": 473,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.0007460000000000001,
+      "input_tokens": 2741,
+      "output_tokens": 396,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00032236,
+      "input_tokens": 2741,
+      "output_tokens": 463,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 131.2,
+      "notional_cost_usd": 0.569497,
+      "input_tokens": 466411,
+      "output_tokens": 7218,
+      "web_searches": 4,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.8,
+      "notional_cost_usd": 0.07386000000000001,
+      "input_tokens": 6396,
+      "output_tokens": 1135,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.074048,
+      "input_tokens": 6397,
+      "output_tokens": 1144,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.07400799999999999,
+      "input_tokens": 6397,
+      "output_tokens": 1142,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.0006919000000000001,
+      "input_tokens": 2813,
+      "output_tokens": 259,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.1,
+      "notional_cost_usd": 0.0007756000000000001,
+      "input_tokens": 2784,
+      "output_tokens": 438,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 6.8,
+      "notional_cost_usd": 0.0007486999999999999,
+      "input_tokens": 2742,
+      "output_tokens": 401,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00033158,
+      "input_tokens": 2813,
+      "output_tokens": 480,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.6,
+      "notional_cost_usd": 0.00036679999999999997,
+      "input_tokens": 2785,
+      "output_tokens": 551,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "43500",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.8,
+      "notional_cost_usd": 0.00034958,
+      "input_tokens": 2744,
+      "output_tokens": 517,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.634
+}
