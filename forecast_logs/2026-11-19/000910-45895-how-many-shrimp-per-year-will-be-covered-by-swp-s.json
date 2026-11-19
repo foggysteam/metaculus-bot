@@ -1,0 +1,364 @@
+{
+  "logged_at": "2026-11-19T00:17:52.142195+00:00",
+  "bot_version": "2026-11-18.2",
+  "started_at": "2026-11-19T00:09:10.569198+00:00",
+  "published": true,
+  "status": "ok",
+  "error": null,
+  "question": {
+    "id": 45895,
+    "post_id": 45706,
+    "url": "https://www.metaculus.com/questions/45706",
+    "type": "DiscreteQuestion",
+    "unit": "Shrimp",
+    "tournaments": [
+      "animal-futures"
+    ],
+    "text": "How many shrimp per year will be covered by SWP's Humane Slaughter Initiative agreements on July 1, 2027?",
+    "resolution_criteria": "This question will resolve as the Shrimp Welfare Project's estimated \"[Shrimpact](https://www.shrimpwelfareproject.org/shrimpact)\" (in billions of shrimp helped in expectation per year) when checked by Metaculus on or soon after July 1, 2027.",
+    "fine_print": "The question will resolve as the headline estimated Shrimpact, regardless of any estimated range. If SWP ceases to provide a headline estimate and instead provides only a range, however, the question will resolve as the midpoint of the range.\n\nThe total Shrimpact will be rounded, if necessary, to the nearest 100 million shrimp.&#x20;",
+    "close_time": "2027-06-01 04:01 UTC",
+    "scheduled_resolution_time": "2027-07-01 04:01 UTC"
+  },
+  "research": [
+    "I'm done researching and am writing up the findings.\n\n## 1. Resolution source\n\n- **2026-11-19:** The [Shrimpact page](https://www.shrimpwelfareproject.org/shrimpact) shows a headline of **6,400,000,000** shrimp helped in expectation per year, with a range of 4.5B to 9.0B. It reports 37 agreements in 9 countries covering 89,773 MT per year. Of these, 22 stunners are installed and commissioned, covering 56,974 MT (about 4.1B shrimp). By country: Vietnam about 2.54B, Honduras 1.30B, India 0.63B, Indonesia 0.57B, Ecuador 0.48B, Sri Lanka 0.44B, Venezuela 0.28B, Thailand 0.18B, Nigeria 0.072B. The country figures add up to about 6.49B, slightly more than the headline.\n- The page's FAQ says the headline is \"committed impact\" from signed agreements, whether or not the stunner is installed yet. Retailer policies are not counted. It is just a number on the page: I found no data file or API behind it.\n\n## 2. Current status\n\n- Nothing is settled yet. The current 6.4B is **below the question's lower bound of 6.95B**, so roughly another 0.6B or more must be added by July 1, 2027 for the result to land inside the range.\n- The headline can go down as well as up. It read 6.5B on 2026-10-25 and 6.4B now. Committed tonnage was essentially the same (89,774 MT then, 89,773 MT now), but the installed count rose from 20 to 22, so the drop looks like a change in how tonnes are converted to shrimp numbers. [Wayback 2026-10-25](http://web.archive.org/web/20261025070430/https://www.shrimpwelfareproject.org/shrimpact)\n\n## 3. Recent news (newest first)\n\n- **2026-11-13:** Animal Charity Evaluators (ACE) named SWP a Recommended Charity for the fourth year running. The press release gives no new agreement figures. [SWP](https://www.shrimpwelfareproject.org/blog/press-release-ace-recommended-charity-2026)\n- **2026-10-08 to 2026-10-25:** Agreements went from 36 to 37 and tonnage from 86,875 to 89,774 MT. Honduras rose from 1.09B to 1.30B and the headline from 6.3B to 6.5B. [Wayback 10-08](http://web.archive.org/web/20261008223907/https://www.shrimpwelfareproject.org/shrimpact)\n- **2026-08:** Albert Heijn and Confremarca announced a pilot where SWP tracks stunner use through a database. A search summary says an ACE evaluation from August 2026 put coverage at about 6.1B; I did not verify that. [Shrimp Insights](https://www.shrimpinsights.com/advertorial/future-shrimp-welfare-how-retailers-can-validate-electrical-stunning-commitments)\n- **2026-01-14:** Trang Corporation committed to stun 1,800 MT per year. [SWP](https://www.shrimpwelfareproject.org/blog/trangs-group-trang-corporation-dary-foods-join-humane-slaughter-partnership-with-shrimp-welfare-project)\n- **2025-12-01:** C.P. Viet Nam committed to stun all vannamei shrimp for the UK market from 2026-01-01. [SWP](https://www.shrimpwelfareproject.org/blog/cpvietnam-westbridge-food-group-join-shrimp-welfare-project-electrical-stunning-programme)\n- **2025-09-16:** The 21st agreement (CAMIMEX) brought the estimate to about 4B. [SWP](https://www.shrimpwelfareproject.org/blog/major-milestone-for-humane-slaughter-shrimp-welfare-project-expected-to-help-4-billion-shrimps-annually-new-mou-with-camimex-seafood-connection)\n- SWP has published no individual press release for a new agreement since January 2026, even though the count went from about 30 to 37. New agreements seem to show up on the page without an announcement. [SWP blog](https://www.shrimpwelfareproject.org/blog)\n\n## 4. Base rates and history of the headline (Wayback snapshots)\n\n- 2024-01-01: 1.2B\n- 2024-07-17: 2.2B\n- 2025-01-05: 2.8B\n- 2025-07-21: 3.8B\n- 2025-10-22 and 2025-11-13: 4.5B\n- 2026-01-10 to 2026-03-07: 5.4B\n- 2026-08-20: 6.1B\n- 2026-09-17 and 2026-10-08: 6.3B\n- 2026-10-25: 6.5B\n- 2026-11-19: 6.4B\n\n[CDX index](http://web.archive.org/cdx/search/cdx?url=shrimpwelfareproject.org/shrimpact&output=txt&collapse=digest&fl=timestamp,digest)\n\n- **Same window in earlier years (mid-November to early July):**\n  - 2024-25: from about 2.6B (interpolated) to 3.8B, roughly +1.2B\n  - 2025-26: from 4.5B to about 6.0B (6.1B in August), roughly +1.5B\n- **Growth rate:** about 1.6 to 2.0B per year in 2025 and 2026. It came in steps, with long flat stretches such as January to March 2026 and October to November 2025.\n- **Pace slowing:** from 2026-03 to 2026-11 the headline rose only about 1.0B in 8 months, slower than before.\n- **Seasonality:** none apparent. Changes follow when agreements are signed, not the farming calendar.\n- **Possible one-off jump:** older pages marked India with \"SSFI impact to be added after our Pilot phase\". That note had disappeared by October 2026, and I could not confirm whether SSFI (SWP's Sustainable Shrimp Farming in India programme) is now included.\n\n## 5. Other forecasts\n\n- I found no Polymarket, Kalshi or Manifold market on this. None of the Kalshi markets supplied with the question (turkey slaughter, trade deals and so on) are related.\n- SWP's long-term goal is to help 100B shrimp by 2030, but it gives no number for 2027. [EA Forum](https://forum.effectivealtruism.org/posts/PHgbyFu4ikJRKPqx9/shrimp-welfare-project-s-path-to-helping-100-billion-shrimp)\n\n## 6. Upcoming events before resolution\n\n- New agreements, which are typically about 2,000 MT each (roughly 0.1 to 0.2B shrimp), signed with a buyer as co-signatory. [SeafoodSource](https://www.seafoodsource.com/news/aquaculture/uk-nonprofit-ensuring-viability-of-shrimp-welfare-commitments-through-electrical-stunner-agreements)\n- Possible changes to the tonnes-to-shrimp conversion. These have already moved the headline down by 0.1B.\n- SSFI India impact possibly being added.\n- Possible methodology changes as SWP builds out \"verified use\" monitoring. That could lower the headline or change what it measures.\n- Year-end giving season in December, and the monthly newsletters.\n- Weather is not relevant.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 00:13 UTC; check each market really matches the question)\n- Kalshi: US turkey slaughter in November 2026 (November 2026). Yes prices: Above 16 million: 0.64; Above 17 million: 0.20; Above 15 million: 0.93; Above 14 million: 0.94; Above 18 million: 0.06.\n- Kalshi: Will a ballot initiative on California secession qualify for a vote before 2030? (Before 2030). Yes prices: Before 2030: 0.25.\n- Kalshi: Will Maine approve contracts for the northern Maine wind and transmission project? (Before Jul 1, 2027). Yes prices: Yes: 0.39.\n- Kalshi: Which countries will Trump make formal trade deals with this year? (Before 2027). Yes prices: India: 0.09; Argentina: 0.09; China: 0.08; United Kingdom: 0.06; Indonesia: 0.07; European Union: 0.06; Kenya: 0.04; Switzerland: 0.05; Taiwan: 0.05.\n- Kalshi: Will the U.S. enact a free trade agreement? (During his term). Yes prices: Before Jan 20, 2029: 0.36; Before Jan 1, 2028: 0.18.\n- Kalshi: US meets its climate goals? (2025/2030 goals). Yes prices: By 2030: 0.18; By 2025: 0.04.\n- Kalshi: Will France enact its 2027 budget this year? (Before Jan 1, 2027). Yes prices: Yes: 0.37.",
+    "I found no developments that settle the question. The SWP page now shows **6.4 billion**, which is below the question's lower bound of 6.95 billion. Over the last eight months the figure has grown more slowly than in the year before.\n\n## 1. Resolution source\n- 2026-11-19: The [SWP (Shr)Impact page](https://www.shrimpwelfareproject.org/shrimpact) shows a headline of **6,400,000,000 shrimp helped in expectation each year**, with a range of 4.5 to 9.0 billion and about 1,400 shrimp per dollar.\n  - It counts 37 corporate agreements across 9 countries, covering 89,773 MT per year once all stunners are working.\n  - 22 stunners are installed and commissioned, covering 56,974 MT, or about 4.1 billion shrimp.\n  - By country: Vietnam about 2.54B, Honduras 1.30B, India 0.63B, Indonesia 0.57B, Ecuador 0.48B, Sri Lanka 0.44B, Venezuela 0.28B, Thailand 0.18B, Nigeria 0.072B.\n- The page says the figure converts committed annual tonnage into a number of shrimp. It covers all signed agreements, including stunners not yet delivered, and does not count retailer commitments. I found no underlying data file; the page is static Squarespace HTML.\n\n## 2. Current status\n- Nothing settles the question yet. The headline needs to grow by about 0.55 billion or more (about 9%) to reach the lower bound of the range.\n- 2026-10-25: The page showed **6.5B** for 37 agreements and 89,774 MT. By 2026-11-19 it showed **6.4B** for essentially the same tonnage. That points to a small change in how tonnage is converted to shrimp, not lost agreements. The country figures on today's page still add up to about 6.49B. ([Wayback](https://web.archive.org/web/20261025070430/https://www.shrimpwelfareproject.org/shrimpact))\n- The current figure works out to about 71,000 shrimp per MT. On that basis, roughly 7,700 more MT (about 4 typical MOUs of about 2,000 MT each) would be needed to reach 6.95B.\n\n## 3. Recent news (newest first)\n- 2026-11-13: Animal Charity Evaluators (ACE) named SWP a Recommended Charity for the fourth year in a row. ([SWP blog](https://www.shrimpwelfareproject.org/blog))\n- 2026-10-08 to 2026-10-25: Agreements went from 36 to 37 and tonnage from 86,875 to 89,774 MT. Honduras rose from 1.09B to 1.30B, and the headline from 6.3B to 6.5B. ([Wayback Oct 8](https://web.archive.org/web/20261008223907/https://www.shrimpwelfareproject.org/shrimpact))\n- 2026-08: SWP published a Shrimp Insights piece on how retailers can check stunning commitments, and is running a database-backed checking process with Albert Heijn and Confremarca. ACE's August 2026 report cited 6.1B. ([Shrimp Insights](https://www.shrimpinsights.com/advertorial/future-shrimp-welfare-how-retailers-can-validate-electrical-stunning-commitments))\n- Around mid-2026: SeafoodSource reported SWP's 30th MoU with producers. Wikipedia says 33 MoUs had been signed by the first half of 2026. ([SeafoodSource](https://www.seafoodsource.com/news/aquaculture/uk-nonprofit-ensuring-viability-of-shrimp-welfare-commitments-through-electrical-stunner-agreements), [Wikipedia](https://en.wikipedia.org/wiki/Shrimp_Welfare_Project))\n- 2026-01-14: Trang Corporation committed to 1,800 MT per year. SWP called this the 25th partnership. ([SWP](https://www.shrimpwelfareproject.org/blog/trangs-group-trang-corporation-dary-foods-join-humane-slaughter-partnership-with-shrimp-welfare-project))\n- 2025-12-01: C.P. Viet Nam and Westbridge joined. ([SWP](https://www.shrimpwelfareproject.org/blog/cpvietnam-westbridge-food-group-join-shrimp-welfare-project-electrical-stunning-programme))\n- I found no new MOU announced in November 2026.\n\n## 4. Base rates / history\nHeadline values from Wayback snapshots:\n- 2024-06-24: 2.2B\n- 2024-11-22: 2.6B\n- 2025-01-09: 2.8B\n- 2025-05-08: 3.3B\n- 2025-07-21: 3.8B\n- 2025-09-16: about 4.0B (21 MOUs, per an SWP press release)\n- 2025-11-13: 4.5B\n- 2026-01-10: 5.4B\n- 2026-03-07: 5.4B\n- 2026-08-20: 6.1B\n- 2026-09-17: 6.3B\n- 2026-10-08: 6.3B (36 agreements)\n- 2026-10-25: 6.5B (37 agreements)\n- 2026-11-19: 6.4B\n\nChange from November to the following July (the same stretch of the calendar as this question):\n- Nov 2024 to Jul 2025: 2.6B to 3.8B, +1.2B (+46%).\n- Nov 2025 to Aug 2026: 4.5B to 6.1B, +1.6B (+36%). There is no snapshot between March and August 2026.\n\nRecent pace:\n- Mar 2026 to Nov 2026: +1.0B in about 8 months, about 0.12B per month. Since August it has been about 0.1B per month.\n- In the 12 months before that, it grew about 0.15 to 0.2B per month.\n- Sep 2025 to Nov 2026: about 16 new agreements (21 to 37), roughly 1.1 per month, adding on average about 150M shrimp each.\n\nOther patterns:\n- The series rises in steps, often flat for months (Jan to Mar 2026, Sep to Oct 2026).\n- It has dipped slightly only once (6.5B to 6.4B, a recalibration).\n- Seasonality: none obvious. Changes depend on when MOUs are signed.\n\n## 5. Other forecasts\n- None of the collected Kalshi markets match this question. They cover turkey slaughter, trade deals and similar topics.\n- I found no Polymarket, Kalshi or Manifold market on SWP's Shrimpact, and I could not see the Metaculus community forecast.\n- ACE's earlier review says SWP could usefully spend about $3.6M a year in 2026 and 2027. Planned uses include a cheaper stunner, third-party checking and reserves to deploy many stunners if an opportunity arises. ACE gives no numeric stunner targets. ([ACE](https://animalcharityevaluators.org/charity-review/shrimp-welfare-project/))\n\n## 6. Upcoming events before resolution\n- New MOUs, each typically requiring a commitment of about 1,900 to 2,000 MT per year with a buyer co-signing. Vietnam, India, Indonesia and Latin America have been the active markets. ([HSI page](https://www.shrimpwelfareproject.org/humane-slaughter-initiative))\n- Possible further changes to the conversion method. The November 2026 tweak lowered the figure by 0.1B. The new \"verified use\" category might eventually change what the headline counts.\n- A cheaper stunner, or the reserves for deploying many stunners at once, could speed up signings.\n- Donations around Giving Tuesday and year-end after the ACE recommendation could affect how many stunners SWP can fund.\n- Weather is not relevant to this question.\n\n## Raw prediction market and Metaculus prices\n(prices fetched 2026-11-19 00:13 UTC; check each market really matches the question)\n- Kalshi: US turkey slaughter in November 2026 (November 2026). Yes prices: Above 16 million: 0.64; Above 17 million: 0.20; Above 15 million: 0.93; Above 14 million: 0.94; Above 18 million: 0.06.\n- Kalshi: Will a ballot initiative on California secession qualify for a vote before 2030? (Before 2030). Yes prices: Before 2030: 0.25.\n- Kalshi: Will Maine approve contracts for the northern Maine wind and transmission project? (Before Jul 1, 2027). Yes prices: Yes: 0.39.\n- Kalshi: Which countries will Trump make formal trade deals with this year? (Before 2027). Yes prices: India: 0.09; Argentina: 0.09; China: 0.08; United Kingdom: 0.06; Indonesia: 0.07; European Union: 0.06; Kenya: 0.04; Switzerland: 0.05; Taiwan: 0.05.\n- Kalshi: Will the U.S. enact a free trade agreement? (During his term). Yes prices: Before Jan 20, 2029: 0.36; Before Jan 1, 2028: 0.18.\n- Kalshi: US meets its climate goals? (2025/2030 goals). Yes prices: By 2030: 0.18; By 2025: 0.04.\n- Kalshi: Will France enact its 2027 budget this year? (Before Jan 1, 2027). Yes prices: Yes: 0.37."
+  ],
+  "forecasts": [
+    {
+      "value": {
+        "p10": 6450000000.0,
+        "p25": 6900000000.0,
+        "p50": 7350000000.0,
+        "p75": 7975000000.0,
+        "p90": 8800000000.0
+      },
+      "reasoning": "(a) **Time left:** About 7.4 months until the July 1, 2027 check. Forecasts close June 1, 2027.\n\n(b) **Latest known value:** 6.4B shrimp per year (range 4.5B to 9.0B), from 37 agreements, as of 2026-11-19.\n\n(c) **If nothing changed:** 6,400,000,000.\n\n(d) **If the current trend continued:**\n- Same-window growth in earlier years was +1.2B (2024-25) and +1.5B (2025-26).\n- The more recent pace has slowed to about 1.0B per 8 months, which implies roughly +0.8 to +1.0B by July 2027.\n- That gives about 7.2 to 7.5B.\n\n(e) **Historical variation:**\n- Over about 7 months, the headline has moved between roughly +0.7B and +1.5B.\n- It moves in steps, with flat stretches of 2 to 3 months.\n- It has also dropped slightly (by 0.1B) from conversion changes.\n\n(f) **Experts and markets:** There are no markets on this. SWP's long-term goal is 100B by 2030, but it gives no figure for 2027. The question creator expects roughly 7B to 12B, which looks somewhat optimistic given the slowing pace.\n\n(g) **Unexpected scenarios:**\n- **Low:** SWP switches the headline to \"verified use\" or installed-only impact, which would be about 4.1B or less. A conversion revision or a partner withdrawing could also cut it.\n- **High:** SSFI India impact gets added, or a very large producer signs (for example an Ecuadorian or Indian exporter, or an expanded CP group commitment), adding 2B or more.\n\nPercentile 1: 5,000,000,000\nPercentile 5: 6,100,000,000\nPercentile 10: 6,450,000,000\nPercentile 20: 6,800,000,000\nPercentile 30: 7,000,000,000\nPercentile 40: 7,200,000,000\nPercentile 50: 7,350,000,000\nPercentile 60: 7,550,000,000\nPercentile 70: 7,800,000,000\nPercentile 80: 8,150,000,000\nPercentile 90: 8,800,000,000\nPercentile 95: 9,500,000,000\nPercentile 99: 11,500,000,000"
+    },
+    {
+      "value": {
+        "p10": 6400000000.0,
+        "p25": 6950000000.0,
+        "p50": 7500000000.0,
+        "p75": 8200000000.0,
+        "p90": 9100000000.0
+      },
+      "reasoning": "(a) **Time left:** about 7.4 months until the July 1, 2027 check. Forecasts close June 1, 2027.\n\n(b) **Latest known value:** 6.4 billion shrimp per year, from the Shrimpact page on 2026-11-19. That covers 37 agreements and 89,773 MT, with a range of 4.5B to 9.0B.\n\n(c) **If nothing changed:** 6,400,000,000.\n\n(d) **If the current trend continued:**\n- Long-run growth has been about 1.6 to 2.0B per year. That pace would give about 7.4 to 7.6B.\n- The slower recent pace was about 1.0B over 8 months, or about 0.125B per month. That would give about 7.3B.\n- The same mid-November to early July window added +1.2B in 2024-25 and +1.5B in 2025-26. Repeating that would give about 7.6 to 7.9B.\n\n(e) **Historical variation:**\n- Over 7 to 8 month windows, the headline has risen by 0.9 to 1.5B.\n- Growth comes in steps, with flat stretches of 2 to 3 months.\n- Changes in how tonnes are converted to shrimp numbers can move it down by about 0.1B.\n- Single large agreements, or adding the SSFI India programme, could add 0.5B or more at once.\n\n(f) **Expectations of experts and markets:**\n- No prediction markets cover this.\n- SWP's goal of 100B by 2030 suggests ambition, but there is no 2027 target.\n- The question creator's range of 7 to 12B leans higher than a straight trend line.\n\n(g) **Unexpected scenarios:**\n- *Low:* SWP switches the headline to \"verified use\" or installed stunners only (about 4.1B now), or revises the conversion factor down sharply. The result could then fall to about 4 to 5.5B.\n- *High:* the SSFI India pilot impact is added, plus a few large Vietnamese or Ecuadorian integrators sign on, perhaps through a big retailer commitment. The result could jump to 10 to 12B or more.\n\nPercentile 1: 4800000000\nPercentile 5: 6000000000\nPercentile 10: 6400000000\nPercentile 20: 6800000000\nPercentile 30: 7100000000\nPercentile 40: 7300000000\nPercentile 50: 7500000000\nPercentile 60: 7700000000\nPercentile 70: 8000000000\nPercentile 80: 8400000000\nPercentile 90: 9100000000\nPercentile 95: 9800000000\nPercentile 99: 12000000000"
+    },
+    {
+      "value": {
+        "p10": 6500000000.0,
+        "p25": 6900000000.0,
+        "p50": 7400000000.0,
+        "p75": 8100000000.0,
+        "p90": 9000000000.0
+      },
+      "reasoning": "(a) **Time left:** About 7.4 months. Today is 2026-11-19 and the question resolves around 2027-07-01.\n\n(b) **Latest known value:** 6.4B shrimp per year (6,400,000,000) on the Shrimpact page, as of 2026-11-19. This comes from 37 agreements covering 89,773 MT per year.\n\n(c) **If nothing changed:** 6,400,000,000.\n\n(d) **If the current trend continued:**\n- At the recent slower pace (about 1.0B per 8 months), the value would be about 7.3B.\n- At the 2025-26 pace (about 1.6 to 2.0B per year), it would be about 7.4 to 7.6B.\n- Over the same mid-November to early-July window in earlier years, the gains were +1.2B and +1.5B, which point to about 7.6 to 7.9B.\n\n(e) **Historical variation:**\n- Over a period of this length, the headline has risen by about 1.0 to 1.5B.\n- Growth comes in steps, with flat stretches of 2 to 3 months.\n- Small downward revisions of about 0.1B have happened, from conversion changes.\n- Occasional large single agreements, or newly counted programmes such as SSFI India, could add 0.5B or more at once.\n\n(f) **Experts and markets:**\n- No markets cover this quantity.\n- SWP's long-term goal is 100B shrimp by 2030, which is aspirational and gives no 2027 figure.\n- The question creator's range is 7B to 12B, which seems somewhat optimistic given the recent slowdown.\n\n(g) **Unexpected scenarios:**\n- **Low:** SWP moves the headline to \"verified use\", or recalibrates the tonnes-to-shrimp conversion, or drops lapsed agreements. The number could then stall or fall to about 5.5 to 6.2B.\n- **High:** A large Ecuadorian or Indian producer, or a retailer-driven batch of agreements, gets signed, or the SSFI India impact is added. This could push the headline to 10 to 12B or more.\n\nPercentile 1: 5800000000\nPercentile 5: 6300000000\nPercentile 10: 6500000000\nPercentile 20: 6800000000\nPercentile 30: 7000000000\nPercentile 40: 7200000000\nPercentile 50: 7400000000\nPercentile 60: 7600000000\nPercentile 70: 7900000000\nPercentile 80: 8300000000\nPercentile 90: 9000000000\nPercentile 95: 9800000000\nPercentile 99: 12000000000"
+    },
+    {
+      "value": {
+        "p10": 6550000000.0,
+        "p25": 6900000000.0,
+        "p50": 7300000000.0,
+        "p75": 7800000000.0,
+        "p90": 8400000000.0
+      },
+      "reasoning": "(a) **Time left:** About 7.4 months until the July 1, 2027 check (forecasts close June 1, 2027).\n\n(b) **Latest known value:** 6.4 billion shrimp per year, on 2026-11-19. This covers 37 agreements and about 89,773 MT, with a range of 4.5 to 9.0 billion.\n\n(c) **If nothing changed:** 6.4 billion.\n\n(d) **If the current trend continued:** The recent pace is about 0.10 to 0.12 billion per month, which gives about +0.75 to 0.9 billion and a value of roughly 7.2 to 7.3 billion. The faster 2025 to 2026 pace (0.15 to 0.2 billion per month) would give about 7.5 to 7.9 billion.\n\n(e) **Historical variation:** Over comparable November-to-July stretches:\n- 2024 to 2025: +1.2 billion (+46%).\n- 2025 to 2026: +1.6 billion (+36%).\n\nGrowth comes in steps, with flat periods lasting months. There has been one small downward recalibration (-0.1 billion).\n\n(f) **Experts and markets:** There are no markets on this question. The question creator expects roughly 7 to 12 billion. ACE gives no numeric stunner targets. SWP plans a cheaper stunner and reserves to deploy many stunners at once, which could speed up signings.\n\n(g) **Unexpected scenarios:**\n- **Low:** Signings stall, a methodology change cuts the shrimp-per-MT conversion further, or the headline switches to verified or commissioned use only. The result would stay around 6.0 to 6.4 billion, or fall to about 4 billion in the extreme case of counting only commissioned stunners.\n- **High:** A very large producer or a national-scale agreement (India, Ecuador, Vietnam), or a cheaper stunner, triggers a burst of MOUs. That could push the figure to 9 to 10 billion or more.\n\nPercentile 1: 5600000000\nPercentile 5: 6300000000\nPercentile 10: 6550000000\nPercentile 20: 6800000000\nPercentile 30: 7000000000\nPercentile 40: 7150000000\nPercentile 50: 7300000000\nPercentile 60: 7450000000\nPercentile 70: 7650000000\nPercentile 80: 7950000000\nPercentile 90: 8400000000\nPercentile 95: 8900000000\nPercentile 99: 10200000000"
+    },
+    {
+      "value": {
+        "p10": 6550000000.0,
+        "p25": 6950000000.0,
+        "p50": 7350000000.0,
+        "p75": 7825000000.0,
+        "p90": 8450000000.0
+      },
+      "reasoning": "(a) **Time left:** about 7.4 months, from 2026-11-19 to the check on or soon after 2027-07-01.\n\n(b) **Latest known value:** 6.4 billion shrimp per year, from the SWP Shrimpact page on 2026-11-19. That figure covers 37 agreements and 89,773 MT, after a small recalibration down from 6.5 billion on 2026-10-25.\n\n(c) **If nothing changed:** about 6,400,000,000.\n\n(d) **If the current trend continued:** the recent pace is about 0.1 to 0.12 billion per month, which adds roughly 0.75 to 0.9 billion and gives about 7.15 to 7.3 billion. The faster pace of the 12 months before that (0.15 to 0.2 billion per month) would give about 7.5 to 7.9 billion.\n\n(e) **Historical variation over the same stretch (November to July):**\n* Nov 2024 to Jul 2025: +1.2 billion.\n* Nov 2025 to Aug 2026: +1.6 billion.\n* The series moves in steps and is sometimes flat for 2 to 5 months.\n* There has been one small downward recalibration, of 0.1 billion.\n\n(f) **Experts and markets:** there are no markets on this quantity. The question creator's range is about 7 to 12 billion, which leans optimistic compared with the recent slowing. ACE's renewed recommendation and year-end giving could support funding for more stunners.\n\n(g) **Unexpected scenarios:**\n* **Low:** SWP changes the headline to count only verified or installed stunners (currently about 4.1 billion), or it revises the conversion method downward and signings stall. The result would be about 4.5 to 6.3 billion.\n* **High:** one or more very large producers sign (for example a major company in Ecuador or India committing more than 15,000 MT). Alternatively, a cheaper stunner speeds up signings. Either could push the headline to 9 to 10 billion or more.\n\nPercentile 1: 4,800,000,000\nPercentile 5: 6,200,000,000\nPercentile 10: 6,550,000,000\nPercentile 20: 6,850,000,000\nPercentile 30: 7,050,000,000\nPercentile 40: 7,200,000,000\nPercentile 50: 7,350,000,000\nPercentile 60: 7,500,000,000\nPercentile 70: 7,700,000,000\nPercentile 80: 7,950,000,000\nPercentile 90: 8,450,000,000\nPercentile 95: 8,950,000,000\nPercentile 99: 10,300,000,000"
+    },
+    {
+      "value": {
+        "p10": 6600000000.0,
+        "p25": 7000000000.0,
+        "p50": 7450000000.0,
+        "p75": 8025000000.0,
+        "p90": 8800000000.0
+      },
+      "reasoning": "(a) Time left: about 7.4 months until the July 1, 2027 check. Forecasts close June 1, 2027.\n\n(b) Latest known value: 6.4 billion shrimp per year in expectation, as of 2026-11-19. That covers 37 agreements and 89,773 MT. It was 6.5B on 2026-10-25, before a small change in how tonnage is converted to shrimp.\n\n(c) If nothing changed: 6.4 billion.\n\n(d) If the current trend continued: the recent pace is about 0.10 to 0.12B per month, which gives roughly 7.2 to 7.3B by July 2027. The faster pace of the prior year, 0.15 to 0.2B per month, would give about 7.5 to 7.9B. The same calendar stretch in past years grew 36 to 46%, which would mean 8.7 to 9.3B, but growth in percentage terms is clearly slowing as the base gets larger.\n\n(e) Historical variation: over 7 to 8 months, the figure has grown by 1.0 to 1.6B. It moves in steps, with flat stretches of 2 to 5 months. It has declined only once, by 0.1B, and that was a recalibration.\n\n(f) Experts and markets: there are no markets on this. The question creator's range of 7 to 12B suggests they expect continued growth. Animal Charity Evaluators (ACE) gives no numeric targets.\n\n(g) Unexpected scenarios:\n- **Low:** MOU signings stall (funding, stunner supply, or SWP shifting toward checking that stunners are actually used). SWP could also recalibrate the shrimp-per-MT conversion again, or start counting only verified or commissioned stunners. The commissioned stunners alone come to about 4.1B, so a switch to counting only those is the 1st-percentile tail. Partial methodology tightening is more plausible and gives about 6.0 to 6.4B.\n- **High:** a cheaper stunner or the reserve fund unlocks a large batch of deployments. Alternatively, one or two very large producers in Ecuador or India sign agreements of 10,000 MT or more, or retailer-driven commitments spread quickly. Any of these would push the figure above 9.5 to 10B, the 99th-percentile tail.\n\nPercentile 1: 5,900,000,000\nPercentile 5: 6,400,000,000\nPercentile 10: 6,600,000,000\nPercentile 20: 6,900,000,000\nPercentile 30: 7,100,000,000\nPercentile 40: 7,300,000,000\nPercentile 50: 7,450,000,000\nPercentile 60: 7,600,000,000\nPercentile 70: 7,850,000,000\nPercentile 80: 8,200,000,000\nPercentile 90: 8,800,000,000\nPercentile 95: 9,400,000,000\nPercentile 99: 10,800,000,000"
+    }
+  ],
+  "forecast_errors": [],
+  "final_forecast": {
+    "p10": 6950000000.0,
+    "p25": 6950000000.0,
+    "p50": 7383401201.8712,
+    "p75": 8020901493.9721,
+    "p90": 8878718273.9021
+  },
+  "usage": [
+    {
+      "question_id": "45895",
+      "purpose": "symbol",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.0,
+      "notional_cost_usd": 0.00026470000000000004,
+      "input_tokens": 1192,
+      "output_tokens": 53,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "queries",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.4,
+      "notional_cost_usd": 0.0001326,
+      "input_tokens": 514,
+      "output_tokens": 60,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 118.5,
+      "notional_cost_usd": 0.7657869,
+      "input_tokens": 491428,
+      "output_tokens": 6852,
+      "web_searches": 3,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.0,
+      "notional_cost_usd": 0.064532,
+      "input_tokens": 5125,
+      "output_tokens": 1177,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 13.1,
+      "notional_cost_usd": 0.06452,
+      "input_tokens": 5126,
+      "output_tokens": 1176,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.5,
+      "notional_cost_usd": 0.0007109999999999999,
+      "input_tokens": 2801,
+      "output_tokens": 302,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 8.4,
+      "notional_cost_usd": 0.0007518000000000001,
+      "input_tokens": 2710,
+      "output_tokens": 420,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 9.8,
+      "notional_cost_usd": 0.00029376,
+      "input_tokens": 2800,
+      "output_tokens": 405,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 26.5,
+      "notional_cost_usd": 0.0272032,
+      "input_tokens": 5127,
+      "output_tokens": 1188,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 2.3,
+      "notional_cost_usd": 0.0006974,
+      "input_tokens": 2798,
+      "output_tokens": 276,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 7.7,
+      "notional_cost_usd": 0.00031654,
+      "input_tokens": 2709,
+      "output_tokens": 452,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.7,
+      "notional_cost_usd": 0.00031262,
+      "input_tokens": 2798,
+      "output_tokens": 442,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "research",
+      "model": "claude-opus-5-5,claude-haiku-5-5",
+      "seconds": 114.8,
+      "notional_cost_usd": 0.5519053,
+      "input_tokens": 312985,
+      "output_tokens": 6498,
+      "web_searches": 2,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 12.2,
+      "notional_cost_usd": 0.06464800000000001,
+      "input_tokens": 5272,
+      "output_tokens": 1124,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.4,
+      "notional_cost_usd": 0.068164,
+      "input_tokens": 5274,
+      "output_tokens": 1299,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "forecast",
+      "model": "claude-opus-5-5",
+      "seconds": 14.8,
+      "notional_cost_usd": 0.06967599999999999,
+      "input_tokens": 5273,
+      "output_tokens": 1375,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0007930000000000001,
+      "input_tokens": 2761,
+      "output_tokens": 482,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.1,
+      "notional_cost_usd": 0.0007720000000000001,
+      "input_tokens": 2806,
+      "output_tokens": 422,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 4.5,
+      "notional_cost_usd": 0.0007861999999999999,
+      "input_tokens": 2897,
+      "output_tokens": 414,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.8,
+      "notional_cost_usd": 0.00036578,
+      "input_tokens": 2764,
+      "output_tokens": 549,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.5,
+      "notional_cost_usd": 0.00035231,
+      "input_tokens": 2805,
+      "output_tokens": 522,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    },
+    {
+      "question_id": "45895",
+      "purpose": "parser",
+      "model": "claude-haiku-5-5",
+      "seconds": 3.9,
+      "notional_cost_usd": 0.00030842,
+      "input_tokens": 2897,
+      "output_tokens": 432,
+      "web_searches": 0,
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "notional_cost_usd": 1.6833
+}
