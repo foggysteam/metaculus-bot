@@ -1,0 +1,89 @@
+name: Health check
+
+# Daily: (1) list tournament questions that closed without our forecast,
+# (2) forecast one unscored bot-testing-area question end to end.
+# Any problem opens an issue in the owner's private repo (alerts.py), which emails the owner.
+# Outputs go to files, not to this public run log.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 7 * * *"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      ASKNEWS_API_KEY: ${{ secrets.ASKNEWS_API_KEY }}
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+      GO_LIVE_DATE: ${{ vars.GO_LIVE_DATE }}
+      GH_TOKEN: ${{ github.token }}
+      PRIVATE_REPO_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v10.3.0
+        with:
+          version: "0.13.1"
+          enable-cache: true
+      - run: uv sync --locked
+      - run: bash .github/scripts/install_claude.sh
+      - name: Reliability tests
+        id: tests
+        continue-on-error: true
+        run: uv run python tests/test_watchdog.py && uv run python tests/test_pass.py
+      # Logs and alerts need it, and it expires after a year.
+      - name: Private repo token
+        id: token
+        continue-on-error: true
+        run: python3 alerts.py check
+      - name: Coverage (questions missed since go-live, last 3 days)
+        id: coverage
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          if [ -z "$GO_LIVE_DATE" ]; then echo "Not live yet, skipping"; exit 0; fi
+          since=$(python -c "import datetime as d,os; g=d.date.fromisoformat(os.environ['GO_LIVE_DATE']); print(max(g, d.date.today()-d.timedelta(days=3)))")
+          uv run python check_coverage.py --since "$since" > coverage.txt
+          echo "$(grep -cE "MISSED|NO COMMENT|STALE" coverage.txt || true) problem line(s) in the coverage check"
+          # The 3-day window survives dropped cron firings, but keeps showing old misses, so only
+          # a miss that no earlier issue mentions opens a new one. If the lookup fails, it alerts.
+          python3 alerts.py bodies --search "health check" > reported.txt || : > reported.txt
+          for url in $(grep -E "MISSED|NO COMMENT|STALE" coverage.txt | grep -oE "https://www\.metaculus\.com/questions/[0-9]+" || true); do
+            if ! grep -qF "$url " reported.txt; then echo "New miss: $url"; echo "missed=true" >> "$GITHUB_OUTPUT"; break; fi
+          done
+          if grep -q "NO QUESTIONS" coverage.txt; then echo "missed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Canary forecast on the bot testing area
+        id: canary
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          uv run python run_bot.py --mode question --url https://www.metaculus.com/questions/43327/ > canary.log 2>&1 || { grep -E " - (ERROR|CRITICAL) - " canary.log | cut -c1-200; exit 1; }
+      - name: Open an issue if anything is wrong
+        # failure() is for a failed setup, which would otherwise be silent. A crash in the coverage
+        # check counts too, since it could then be hiding a miss.
+        if: always() && (failure() || steps.tests.outcome == 'failure' || steps.token.outcome == 'failure' || steps.coverage.outcome == 'failure' || steps.coverage.outputs.missed == 'true' || steps.canary.outcome == 'failure')
+        run: |
+          {
+            echo "Health check on $(date -u +%Y-%m-%d) found a problem."
+            echo
+            echo "Reliability tests: ${{ steps.tests.outcome }}"
+            echo "Private repo token: ${{ steps.token.outcome }}"
+            echo "Coverage check: ${{ steps.coverage.outcome }}"
+            echo "Canary forecast: ${{ steps.canary.outcome }}"
+            echo
+            echo '```'
+            cat coverage.txt 2>/dev/null || echo "no coverage output"
+            echo '```'
+            echo
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } > body.md
+          python3 alerts.py send --title "Bot health check failed $(date -u +%Y-%m-%d)" --body-file body.md

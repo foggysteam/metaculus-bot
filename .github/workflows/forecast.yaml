@@ -1,0 +1,209 @@
+name: Forecast
+run-name: Forecast ${{ inputs.mode || 'tournament' }}${{ inputs.dry_run == 'true' && ' dry run' || '' }}
+
+# Questions open for only 3 hours at random times, and GitHub drops many cron firings
+# (none for 10 hours on 2 Nov, when 5 MiniBench questions were missed). So each run polls
+# for LOOP_MINUTES (repo variable) and keeps one more run queued behind it, which starts as
+# soon as this one ends, however it ends. Cron and the watchdog (watchdog.py) only restart
+# the chain if it breaks. To stop everything, disable this workflow and Watchdog.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "tournament, test_questions, question, or rescue"
+        default: "tournament"
+      url:
+        description: "Question URL (only for mode=question or rescue)"
+        default: ""
+      dry_run:
+        description: "true = do not submit forecasts"
+        default: "false"
+  # Live since 24 Oct 2026.
+  schedule:
+    - cron: "7,37 * * * *"
+
+concurrency:
+  # Test and rescue runs stay out of the live queue. A newer queued run replaces an older
+  # one, so they would otherwise knock out the next live run.
+  group: ${{ ((inputs.mode && inputs.mode != 'tournament') || inputs.dry_run == 'true') && format('forecast-manual-{0}', github.run_id) || 'forecast' }}
+  cancel-in-progress: false
+
+# Logs, alerts and pass output go to the owner's private repo (PRIVATE_REPO_TOKEN), because
+# everything in this public repo, its issues and its run logs included, can be read by anyone.
+permissions:
+  actions: write
+  contents: read
+  issues: write  # only for the detail-free notice when the private repo cannot be reached
+
+jobs:
+  forecast:
+    runs-on: ubuntu-24.04  # ubuntu-latest is moving to Ubuntu 26, and this must not change mid-season
+    timeout-minutes: 355
+    env:
+      METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      ASKNEWS_API_KEY: ${{ secrets.ASKNEWS_API_KEY }}
+      FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+      PRIVATE_REPO_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
+      LOOP_MINUTES: ${{ vars.LOOP_MINUTES || '300' }}
+      POLL_SECONDS: ${{ vars.POLL_SECONDS || '600' }}
+      # Far longer than any pass so far (about 25 minutes), and short enough that a hung pass
+      # cannot outlast a 3-hour question.
+      PASS_TIMEOUT_SECONDS: "7200"
+      # A stalled git connection fails after a minute instead of holding up the polling.
+      GIT_HTTP_LOW_SPEED_LIMIT: "1000"
+      GIT_HTTP_LOW_SPEED_TIME: "60"
+      MODE: ${{ inputs.mode || 'tournament' }}
+      URL: ${{ inputs.url || '' }}
+      DRY_RUN: ${{ inputs.dry_run || 'false' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      # The checkout is of the commit when this run was queued, which can be hours old.
+      - name: Get the latest code
+        run: git pull -q --ff-only || echo "Could not update the checkout"
+      # Where the logs go. A failure here costs the logs, never a forecast.
+      - name: Check out the private logs repo
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: foggysteam/metaculus-bot-private
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          path: private
+      - name: Check the private repo accepts the token
+        if: env.DRY_RUN == 'true'
+        run: python3 alerts.py check
+      # First, so that a failure in any later step still leaves a run to take over.
+      - name: Keep a run queued behind this one
+        if: env.MODE == 'tournament' && env.DRY_RUN != 'true'
+        continue-on-error: true
+        run: python3 watchdog.py --keep-queued
+      - name: Alert if nothing has been polling
+        if: env.MODE == 'tournament' && env.DRY_RUN != 'true'
+        continue-on-error: true
+        run: python3 watchdog.py --gap-alert
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.3.0
+        with:
+          version: "0.13.1"
+          enable-cache: true
+      - name: Install dependencies
+        run: bash .github/scripts/retry.sh uv sync --locked
+      - name: Install Claude Code CLI
+        run: bash .github/scripts/install_claude.sh
+      - name: Run bot (and keep polling for LOOP_MINUTES)
+        run: |
+          args="--mode $MODE"
+          if [ -n "$URL" ]; then args="$args --url $URL"; fi
+          if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
+          end=$(( $(date +%s) + LOOP_MINUTES * 60 ))
+          failures=0
+          fallback_alerted=false
+          dropped_alerted=false
+          touch failed_urls.txt alerted_urls.txt
+          set -o pipefail
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          # The pass's output (research, reasoning, forecasts) goes to pass.log, not to this public
+          # run log, which shows only progress and problems, cut short.
+          summary() {
+            grep -E " - (WARNING|ERROR|CRITICAL) - |Posted prediction on question|previously forecasted|No new questions|due this pass|Claude calls:" pass.log | cut -c1-200 || true
+          }
+          alert() {  # title, body file
+            python3 alerts.py send --title "$1" --body-file "$2" || echo "Could not send the alert"
+          }
+          # Passes that failed or logged an error keep their full output in the private repo.
+          keep_pass_log() {
+            if [ -d private/.git ]; then
+              mkdir -p "private/run_logs/$(date -u +%Y-%m-%d)"
+              cp pass.log "private/run_logs/$(date -u +%Y-%m-%d)/$(date -u +%H%M)-run${{ github.run_id }}.log"
+            fi
+          }
+          # GitHub's schedule cannot be relied on for the watchdog either, so this run starts it
+          # too. In the background, so that it carries on if a pass hangs.
+          if [ "$MODE" = "tournament" ] && [ "$DRY_RUN" != "true" ]; then
+            ( while true; do sleep 900; gh workflow run watchdog.yaml -R "$GITHUB_REPOSITORY" --ref main || true; done ) > /dev/null 2>&1 &
+          fi
+          while true; do
+            if timeout -k 60 "$PASS_TIMEOUT_SECONDS" uv run python run_bot.py $args > pass.log 2>&1; then
+              summary
+              if grep -q " - ERROR - " pass.log; then keep_pass_log; fi
+            else
+              summary
+              keep_pass_log
+              failures=$(( failures + 1 ))
+              echo "Bot pass failed, will retry next pass"
+              # A question that fails twice gets its own alert, even if this run has alerted before.
+              repeated=""
+              for url in $(grep -oE "Error while processing question url: '[^']+'" pass.log | grep -oE "https://[^']+" | sort -u || true); do
+                if grep -qxF "$url" failed_urls.txt && ! grep -qxF "$url" alerted_urls.txt; then
+                  repeated="$repeated $url"
+                  echo "$url" >> alerted_urls.txt
+                fi
+                echo "$url" >> failed_urls.txt
+              done
+              # Questions are open for about 3 hours, so say so at once rather than in the
+              # next morning's health check (question 46279 failed 13 passes in a row).
+              if { [ "$failures" -eq 2 ] || [ -n "$repeated" ]; } && [ "$DRY_RUN" != "true" ]; then
+                {
+                  echo "The forecast run has had 2 failed passes. A question that keeps failing is missed when it closes, about 3 hours after it opens."
+                  echo
+                  echo '```'
+                  grep -E "Error while processing question url|errors occurred while forecasting" pass.log | tail -3 | cut -c1-700 || true
+                  echo
+                  tail -15 pass.log | cut -c1-300 || true
+                  echo '```'
+                  echo
+                  echo "Run: $run_url"
+                } > alert.md
+                alert "Forecast run failing $(date -u +%Y-%m-%d)" alert.md
+              fi
+            fi
+            # A weaker model still forecasts, but this usually means the plan's usage limit was hit.
+            if [ "$fallback_alerted" = "false" ] && [ "$DRY_RUN" != "true" ] && grep -q "Giving up on opus" pass.log; then
+              fallback_alerted=true
+              echo "Claude Opus failed on a forecast call, so it fell back to Sonnet. This usually means the Max plan's usage limit was hit, and interactive sessions share that limit. If Sonnet runs out too, questions are missed until the limit resets. Run: $run_url" > alert.md
+              alert "Forecast run falling back from Opus $(date -u +%Y-%m-%d)" alert.md
+            fi
+            # The library skips a post it cannot read with only a warning, so the pass looks fine.
+            if [ "$dropped_alerted" = "false" ] && [ "$DRY_RUN" != "true" ] && grep -q "Error processing post ID" pass.log; then
+              dropped_alerted=true
+              echo "The forecasting library skipped a post it could not read, so that question gets no forecast until the code handles it: $(grep -m3 'Error processing post ID' pass.log | cut -c1-300). Run: $run_url" > alert.md
+              alert "Forecast run could not read a question $(date -u +%Y-%m-%d)" alert.md
+            fi
+            bash .github/scripts/save_logs.sh 1
+            if [ "$MODE" != "tournament" ]; then
+              break
+            fi
+            # In case the queued run was lost.
+            if [ "$DRY_RUN" != "true" ]; then
+              python3 watchdog.py --keep-queued || echo "Could not check the queue"
+            fi
+            if [ $(( $(date +%s) + POLL_SECONDS )) -ge $end ]; then
+              break
+            fi
+            sleep "$POLL_SECONDS"
+          done
+          # Mark the run red if any pass failed, so problems are visible.
+          if [ "$failures" -gt 0 ]; then
+            echo "$failures bot pass(es) failed"
+            exit 1
+          fi
+      # Also runs when the job was killed, so finished questions keep their logs.
+      - name: Save any logs left
+        if: always()
+        continue-on-error: true
+        run: bash .github/scripts/save_logs.sh 3
+      # A failure in setup never reaches the alert in the polling loop.
+      - name: Alert if this run failed
+        if: failure() && (env.MODE == 'tournament' || env.MODE == 'rescue') && env.DRY_RUN != 'true'
+        continue-on-error: true
+        run: |
+          title="Forecast run failed $(date -u +%Y-%m-%d)"
+          if ! python3 alerts.py bodies --search "$title" | grep -qF "$title"; then
+            echo "A forecast run failed (mode $MODE). The next queued run has taken over. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" > alert.md
+            python3 alerts.py send --title "$title" --body-file alert.md
+          fi

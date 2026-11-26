@@ -1,0 +1,195 @@
+"""
+Coverage check: which tournament questions opened after we went live but closed
+without a forecast from our bot? For Market Pulse, where questions stay open for weeks,
+it is the questions whose spot scoring time passed without a forecast. For Animal Futures,
+scored on time-averaged scores, it is any open question without our forecast, or not updated
+by the weekly refresh. Read-only; never submits anything.
+
+Usage: uv run python check_coverage.py [--since 2026-10-26]
+"""
+from __future__ import annotations
+
+import argparse
+import asyncio
+import os
+import time
+from datetime import datetime, timedelta, timezone
+
+import dotenv
+import requests
+
+from bot_helpers import silence_noisy_dependencies
+
+silence_noisy_dependencies()
+dotenv.load_dotenv()
+
+from forecasting_tools import MetaculusClient, MetaculusQuestion  # noqa: E402
+from forecasting_tools.helpers.metaculus_client import ApiFilter  # noqa: E402
+
+from animal_futures import ANIMAL_FUTURES_PROJECT, REFRESH_AFTER  # noqa: E402
+from animal_futures import ENTERED as ANIMAL_FUTURES_ENTERED  # noqa: E402
+from market_pulse import ENTERED, MARKET_PULSE_ID, spot_time  # noqa: E402
+
+BOT_USER_ID = 311181
+STALE_AFTER = REFRESH_AFTER + timedelta(days=3)
+CANCELLED = ("annulled", "ambiguous")  # these score nothing, so a missing forecast costs nothing
+
+
+async def find_missed(
+    tournament: str | int, since: datetime
+) -> tuple[list[MetaculusQuestion], list[MetaculusQuestion], list[MetaculusQuestion]]:
+    """Returns (opened since `since`, of those closed, of those closed without our forecast)."""
+    client = MetaculusClient()
+    api_filter = ApiFilter(
+        allowed_tournaments=[tournament],
+        allowed_statuses=["open", "closed", "resolved"],
+        group_question_mode="unpack_subquestions",
+        open_time_gt=since,
+    )
+    questions = await client.get_questions_matching_filter(api_filter)
+    now = datetime.now(timezone.utc)
+    closed = [q for q in questions if q.close_time and q.close_time <= now]
+    missed = [q for q in closed if not q.already_forecasted and getattr(q, "resolution_string", None) not in CANCELLED]
+    return questions, closed, missed
+
+
+async def find_missed_spot(
+    tournament: str | int, since: datetime
+) -> tuple[list[MetaculusQuestion], list[MetaculusQuestion], list[MetaculusQuestion]]:
+    """Like find_missed, for long-open questions: due = spot scoring time between since and now."""
+    api_filter = ApiFilter(
+        allowed_tournaments=[tournament],
+        allowed_statuses=["open", "closed", "resolved"],
+        group_question_mode="unpack_subquestions",
+    )
+    questions = await MetaculusClient().get_questions_matching_filter(api_filter)
+    due, missed = missed_spot(questions, since, datetime.now(timezone.utc))
+    return due, due, missed
+
+
+def missed_spot(questions: list, since: datetime, now: datetime) -> tuple[list, list]:
+    """(questions whose spot scoring time fell between since and now, of those with no forecast
+    from us before it). A question cancelled before its spot time is not due: nothing could score."""
+    due = [q for q in questions if (spot := spot_time(q)) and since <= spot <= now and not cancelled_before(q, spot)]
+    # A first forecast after the spot time does not count, so it is a miss too.
+    missed = [q for q in due if not first_forecast_before(q, spot_time(q))]
+    return due, missed
+
+
+def cancelled_before(question: MetaculusQuestion, deadline: datetime) -> bool:
+    """Annulled or ambiguous, or resolved with no result after closing before `deadline`. Market Pulse
+    post 46006 kept a duplicate Nvidia subquestion (46198), annulled on 8 Oct, with its old spot time
+    of 25 Nov 11:00; the API shows it as resolved with no resolution and the early close time. A
+    question that closed early and has a result still counts: the last forecast before closing scores."""
+    if getattr(question, "resolution_string", None) in CANCELLED:
+        return True
+    raw = (getattr(question, "api_json", None) or {}).get("question") or {}
+    closed = raw.get("actual_close_time")
+    return (
+        raw.get("status") == "resolved" and raw.get("resolution") is None and bool(closed)
+        and datetime.fromisoformat(closed.replace("Z", "+00:00")) < deadline
+    )
+
+
+def first_forecast_before(question: MetaculusQuestion, deadline: datetime) -> bool:
+    if not question.already_forecasted:
+        return False
+    history = (question.api_json.get("question") or {}).get("my_forecasts", {}).get("history") or []
+    times = [f["start_time"] for f in history if f.get("start_time")]
+    return not times or datetime.fromtimestamp(min(times), timezone.utc) <= deadline
+
+
+def commented_posts() -> set[int] | None:
+    """Every post with one of our comments, or None if that cannot be read. Private comments
+    become public some time after a question closes, so it takes both lists."""
+    posts: set[int] = set()
+    for private in ("true", None):
+        offset = 0
+        while True:
+            params = {"author": BOT_USER_ID, "limit": 50, "offset": offset}
+            if private:
+                params["is_private"] = private
+            try:
+                response = requests.get(
+                    "https://www.metaculus.com/api/comments/",
+                    params=params,
+                    headers={"Authorization": f"Token {os.environ['METACULUS_TOKEN']}"},
+                    timeout=30,
+                )
+                response.raise_for_status()
+                rows = response.json()["results"]
+            except Exception as e:  # noqa: BLE001
+                print(f"Could not read our comments: {e}")
+                return None
+            if not rows:
+                break
+            posts |= {c["on_post"] for c in rows}
+            offset += len(rows)
+            time.sleep(3)  # the rate limit is shared with the live bot
+    return posts
+
+
+async def coverage(tournament: str | int, since: datetime, commented: set[int] | None) -> int:
+    """Prints what was missed. Returns how many questions opened (or fell due) in the window."""
+    if tournament == MARKET_PULSE_ID:
+        since = max(since, ENTERED)
+        questions, closed, missed = await find_missed_spot(tournament, since)
+        print(f"{tournament}: {len(questions)} questions reached their scoring time since {since.date()}, {len(missed)} missed")
+    else:
+        questions, closed, missed = await find_missed(tournament, since)
+        print(
+            f"{tournament}: {len(questions)} questions opened since {since.date()}, "
+            f"{len(closed)} closed, {len(missed)} missed"
+        )
+    for q in missed:
+        print(f"  MISSED {q.close_time:%Y-%m-%d %H:%M} {q.page_url} {q.question_text[:80]}")
+    if commented is not None:
+        for q in closed:
+            if q.already_forecasted and q.id_of_post not in commented and q not in missed:
+                print(f"  NO COMMENT {q.close_time:%Y-%m-%d %H:%M} {q.page_url} {q.question_text[:80]}")
+    return len(questions)
+
+
+def animal_futures_gaps(questions: list[MetaculusQuestion], now: datetime) -> tuple[list, list]:
+    """(open questions with no forecast from us a day after we could first have made one,
+    forecasts the weekly refresh has not updated). Each day without a forecast scores zero."""
+    missing = [
+        q for q in questions
+        if not q.already_forecasted and now - max(ANIMAL_FUTURES_ENTERED, q.open_time or ANIMAL_FUTURES_ENTERED) > timedelta(days=1)
+    ]
+    stale = [
+        q for q in questions
+        if q.already_forecasted and q.timestamp_of_my_last_forecast and now - q.timestamp_of_my_last_forecast > STALE_AFTER
+    ]
+    return missing, stale
+
+
+def animal_futures_coverage() -> None:
+    questions = MetaculusClient().get_all_open_questions_from_tournament(ANIMAL_FUTURES_PROJECT)
+    missing, stale = animal_futures_gaps(questions, datetime.now(timezone.utc))
+    print(f"animal-futures: {len(questions)} open, {len(missing)} without our forecast, {len(stale)} not updated in {STALE_AFTER.days} days")
+    for q in missing:
+        print(f"  MISSED (no forecast yet) {q.page_url} {q.question_text[:80]}")
+    for q in stale:
+        print(f"  STALE since {q.timestamp_of_my_last_forecast:%Y-%m-%d} {q.page_url} {q.question_text[:80]}")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--since", default="2026-10-26", help="Go-live date (UTC)")
+    args = parser.parse_args()
+    since = datetime.fromisoformat(args.since).replace(tzinfo=timezone.utc)
+    client = MetaculusClient()
+    commented = commented_posts()
+    opened = 0
+    for tournament in (client.CURRENT_AI_COMPETITION_ID, client.CURRENT_MINIBENCH_ID):
+        opened += asyncio.run(coverage(tournament, since, commented))
+    asyncio.run(coverage(MARKET_PULSE_ID, since, commented))
+    animal_futures_coverage()
+    # About 60 a week open normally, so none means the season changed or we have lost access.
+    if not opened and datetime.now(timezone.utc) - since >= timedelta(hours=48):
+        print(f"  NO QUESTIONS opened in FutureEval or MiniBench since {since.date()}: check the tournament ids")
+
+
+if __name__ == "__main__":
+    main()
