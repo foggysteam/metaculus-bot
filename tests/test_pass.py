@@ -247,9 +247,23 @@ def test_weekly_report_says_which_failures_need_nothing_done() -> None:
     assert "Watchdog (schedule) started 2026-11-09T18:10:32Z, never started a job: u/1" in text
     assert "Forecast (schedule) started 2026-11-09T18:10:32Z: u/2" in text
     assert weekly_report.describe_failed_runs([run(2, "Forecast")], {2: 1}).startswith("1 failed run(s):")
-    # 46337 failed twice on 4 Nov, then went in at 18:26 (forecast_logs/index.csv).
-    text, _ = weekly_report.recent_forecasts(datetime(2026, 11, 4, tzinfo=timezone.utc))
-    assert "failed: https://www.metaculus.com/questions/46337, went in on a later try (2026-11-04 18:26 UTC)" in text
+    # 46337 failed twice on 4 Nov, then went in at 18:26. The real log is in the private repo,
+    # which the health check does not check out, so this uses a copy of those rows.
+    import tempfile
+
+    url = "https://www.metaculus.com/questions/46337"
+    rows = [f'2026-11-04T{t}+00:00,46570,DiscreteQuestion,"fall-futureeval-2026",{s},{s == "ok"},"null",6,1.0,{url}' for t, s in
+            (("18:02:00", "failed"), ("18:17:59", "failed"), ("18:26:20", "ok"))]
+    header = "started_at,question_id,type,tournaments,status,published,final_forecast,n_forecasts,notional_cost_usd,url"
+    saved = weekly_report.LOG_DIR
+    with tempfile.TemporaryDirectory() as folder:
+        weekly_report.LOG_DIR = Path(folder)
+        (Path(folder) / "index.csv").write_text("\n".join([header, *rows]) + "\n", encoding="utf-8")
+        try:
+            text, _ = weekly_report.recent_forecasts(datetime(2026, 11, 4, tzinfo=timezone.utc))
+        finally:
+            weekly_report.LOG_DIR = saved
+    assert f"failed: {url}, went in on a later try (2026-11-04 18:26 UTC)" in text
 
 
 def test_weekly_report_reads_outcome_and_score_of_group_subquestions() -> None:
