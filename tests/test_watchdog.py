@@ -47,7 +47,14 @@ def test_queues_when_nothing_is_waiting() -> None:
 
 def test_does_not_queue_twice() -> None:
     assert not w.should_queue([run("pending"), run("in_progress")])
-    assert not w.should_queue([run("queued"), run("in_progress")])
+    assert not w.should_queue([run("queued", created=2), run("in_progress")], now=NOW)
+
+
+def test_a_run_stuck_as_queued_does_not_stop_the_next_one_being_queued() -> None:
+    # 26 Nov: a run stayed "queued" for good and could not be cancelled or deleted.
+    assert w.should_queue([run("queued", created=40), run("in_progress")], now=NOW)
+    # One waiting its turn behind the live run shows as pending, however long it waits.
+    assert not w.should_queue([run("pending", created=280), run("in_progress")], now=NOW)
 
 
 def test_broken_setup_cannot_loop() -> None:

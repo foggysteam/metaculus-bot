@@ -37,6 +37,9 @@ RESCUE_AFTER = timedelta(minutes=75)
 MIN_TIME_LEFT = timedelta(minutes=15)
 LONG_OPEN_RESCUE_WITHIN = timedelta(hours=12)  # Market Pulse: time left before the spot scoring time
 RESTART_AFTER = timedelta(minutes=10)  # a queued run normally starts within a minute of the last one ending
+# A run waiting its turn shows as "pending". One still "queued" this long has stuck: on 26 Nov a
+# run dispatched just after the workflow was re-enabled stayed queued and could not be cancelled.
+STUCK_QUEUED_AFTER = timedelta(minutes=30)
 GAP_ALERT_MINUTES = 60
 QUICK_RUN_SECONDS = 600
 MIN_SECONDS_TO_COUNT_AS_RAN = 600
@@ -78,11 +81,13 @@ def _end_times(runs: list[dict]) -> list[datetime]:
     ]
 
 
-def should_queue(runs: list[dict]) -> bool:
+def should_queue(runs: list[dict], now: datetime | None = None) -> bool:
     """True unless a live run is already queued, or the setup looks broken: 3 runs in a row that
     ended within 10 minutes stop the chain, so it cannot loop. The watchdog then retries slowly."""
+    now = now or datetime.now(timezone.utc)
     live = [r for r in runs if is_live(r)]
-    if any(r["status"] in WAITING for r in live):
+    stuck = [r for r in live if r["status"] == "queued" and now - _time(r["createdAt"]) > STUCK_QUEUED_AFTER]
+    if any(r["status"] in WAITING and r not in stuck for r in live):
         return False
     return len([r for r in _finished(live)[:3] if _seconds(r) < QUICK_RUN_SECONDS]) < 3
 
