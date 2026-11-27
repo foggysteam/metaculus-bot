@@ -367,6 +367,19 @@ class FallTemplateBot2026(ForecastBot):
         question: MultipleChoiceQuestion,
         prompt: str,
     ) -> ReasonedPrediction[PredictedOptionList]:
+        reasoning = await self.get_llm("default", "llm").invoke(prompt)
+        logger.info(f"Reasoning for URL {question.page_url}: {reasoning}")
+        predicted_option_list = await self._parse_option_list(question, reasoning)
+        logger.info(
+            f"Forecasted URL {question.page_url} with prediction: {predicted_option_list}."
+        )
+        return ReasonedPrediction(
+            prediction_value=predicted_option_list, reasoning=reasoning
+        )
+
+    async def _parse_option_list(
+        self, question: MultipleChoiceQuestion, reasoning: str
+    ) -> PredictedOptionList:
         parsing_instructions = clean_indents(
             f"""
             Make sure that all option names are one of the following:
@@ -377,21 +390,12 @@ class FallTemplateBot2026(ForecastBot):
             {self._create_resolved_question_parsing_message()}
             """
         )
-        reasoning = await self.get_llm("default", "llm").invoke(prompt)
-        logger.info(f"Reasoning for URL {question.page_url}: {reasoning}")
-        predicted_option_list: PredictedOptionList = await structure_output(
+        return await structure_output(
             text_to_structure=reasoning,
             output_type=PredictedOptionList,
             model=self.get_llm("parser", "llm"),
             num_validation_samples=self._structure_output_validation_samples,
             additional_instructions=parsing_instructions,
-        )
-
-        logger.info(
-            f"Forecasted URL {question.page_url} with prediction: {predicted_option_list}."
-        )
-        return ReasonedPrediction(
-            prediction_value=predicted_option_list, reasoning=reasoning
         )
 
     ##################################### NUMERIC QUESTIONS #####################################

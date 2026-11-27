@@ -382,6 +382,50 @@ def test_one_bad_option_list_does_not_sink_the_question() -> None:
     assert all({o.option_name for o in p.predicted_options} == set(options) for p in usable)
 
 
+def test_option_lines_are_read_in_the_question_order_without_the_parser() -> None:
+    # 27 Nov 2026: the parser read "Option_D: 0.045 / Option_E: 0.025" as Berkshire then Anthropic.
+    options = ["SpaceX", "Meta Platforms", "Tesla", "Anthropic", "Berkshire Hathaway"]
+    text = "Reasoning: SpaceX leads, Berkshire is far back.\n\nOption_A: 0.52\nOption_B: 0.22\nOption_C: 0.19\nOption_D: 0.045\nOption_E: 0.025"
+    read = forecaster.read_final_option_lines(text, options)
+    assert {o.option_name: round(o.probability, 3) for o in read.predicted_options} == {
+        "SpaceX": 0.52, "Meta Platforms": 0.22, "Tesla": 0.19, "Anthropic": 0.045, "Berkshire Hathaway": 0.025}
+    # Names, percentages, bold and an option name with a colon in it.
+    named = forecaster.read_final_option_lines("x\n- **Rule: no**: 70%\n- **Yes - soon**: 30%", ["Rule: no", "Yes – soon"])
+    assert [(o.option_name, round(o.probability, 2)) for o in named.predicted_options] == [("Rule: no", 0.7), ("Yes – soon", 0.3)]
+    assert forecaster.read_final_option_lines("x\nOption A: 1\nOption B: 99", ["45", "46"]).predicted_options[0].probability < 0.02
+    # Anything else goes to the parser as before.
+    for unreadable in (
+        "Option_A: 0.5\nOption_B: 0.5",  # one line short
+        "Option_A: 0.5\nOption_B: 0.3\nOption_C: 0.1",  # adds up to 0.9
+        "Option_A: 0.5\nOption_B: 0.3\nOption_D: 0.2",  # no C
+        "SpaceX: 0.5\nTesla: 0.3\nApple: 0.2",  # not an option
+        "Option_A: 0.5\nOption_B: 0.3\nOption_C: 0.2\nThat is my forecast.",
+    ):
+        assert forecaster.read_final_option_lines(unreadable, ["SpaceX", "Tesla", "Meta"]) is None, unreadable
+
+
+def test_option_list_falls_back_to_the_parser() -> None:
+    import main
+
+    calls = []
+
+    async def parser(self, question, reasoning):
+        calls.append(reasoning)
+        return options_list(("a", 0.5), ("b", 0.5))
+
+    question = SimpleNamespace(options=["a", "b"])
+    bot = object.__new__(forecaster.ClaudeForecaster)
+    saved = main.FallTemplateBot2026._parse_option_list
+    main.FallTemplateBot2026._parse_option_list = parser
+    try:
+        read = asyncio.run(bot._parse_option_list(question, "Option_A: 0.8\nOption_B: 0.2"))
+        assert [o.probability for o in read.predicted_options] == [0.8, 0.2] and not calls
+        asyncio.run(bot._parse_option_list(question, "a gets about 80%"))
+        assert calls == ["a gets about 80%"]
+    finally:
+        main.FallTemplateBot2026._parse_option_list = saved
+
+
 def test_parser_no_longer_refuses_a_decided_question() -> None:
     bot = object.__new__(forecaster.ClaudeForecaster)
     assert bot._create_resolved_question_parsing_message() == ""

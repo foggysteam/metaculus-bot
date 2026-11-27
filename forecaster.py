@@ -176,6 +176,45 @@ def usable_option_lists(predictions: list[PredictedOptionList], options: list[st
     return usable or predictions
 
 
+_OPTION_LINE = re.compile(r"^[\s>*-]*(?P<label>.+)[\s*]*[:=][\s*]*(?P<value>\d+(?:\.\d+)?)\s*(?P<pct>%?)[\s*]*$")
+_OPTION_LETTER = re.compile(r"option[\s_]*([a-z])", re.IGNORECASE)
+
+
+def read_final_option_lines(reasoning: str, options: list[str]) -> PredictedOptionList | None:
+    """The forecast's closing lines, one per option, read without the parser. The prompt asks for
+    them in the question's order, and the model nearly always labels them Option_A, Option_B and
+    so on, copying the prompt's template. The parser had to guess which letter was which option:
+    its two samples sometimes disagreed, which dropped that forecast, or agreed on a wrong match
+    (two options swapped in a forecast for 47013 on 27 Nov 2026). None if the lines are not one
+    per option or do not add up to 1, and the parser reads the text as before."""
+    lines = [line for line in reasoning.strip().splitlines() if line.strip()][-len(options):]
+    matches = [_OPTION_LINE.match(line) for line in lines]
+    if len(options) < 2 or len(lines) != len(options) or not all(matches):
+        return None
+    labels = [m["label"].strip(" *") for m in matches]
+    letters = [_OPTION_LETTER.fullmatch(label) for label in labels]
+    if all(letters):
+        positions = [ord(letter[1].upper()) - ord("A") for letter in letters]
+        if sorted(positions) != list(range(len(options))):
+            return None
+        names = [options[i] for i in positions]
+    else:
+        exact = {_option_key(o): o for o in options}
+        names = [exact.get(_option_key(label)) for label in labels]
+        if None in names or len(set(names)) != len(options):
+            return None
+    values = [float(m["value"]) for m in matches]
+    if any(m["pct"] for m in matches) or max(values) > 1:
+        values = [v / 100 for v in values]
+    by_name = dict(zip(names, values))
+    try:
+        return PredictedOptionList(
+            predicted_options=[PredictedOption(option_name=o, probability=by_name[o]) for o in options]
+        )
+    except ValueError:  # adds up to too far from 1
+        return None
+
+
 def keep_values_increasing(distribution: NumericDistribution) -> NumericDistribution:
     """Puts back in order a forecast the library has scrambled. It moves repeated values at or
     beyond a bound to just beside the bound but leaves a single one where it is, so on 4 Nov 2026
@@ -271,6 +310,10 @@ class ClaudeForecaster(FallTemplateBot2026):
         # The template's parser refuses an answer that treats the question as decided, even with
         # a final forecast in it, which would miss exactly the near-certain questions.
         return ""
+
+    async def _parse_option_list(self, question: MultipleChoiceQuestion, reasoning: str) -> PredictedOptionList:
+        read = read_final_option_lines(reasoning, question.options)
+        return read if read is not None else await super()._parse_option_list(question, reasoning)
 
     async def _aggregate_predictions(self, predictions, question: MetaculusQuestion):
         if isinstance(question, MultipleChoiceQuestion):
