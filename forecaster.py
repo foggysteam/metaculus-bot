@@ -41,7 +41,7 @@ from market_pulse import spot_time
 logger = logging.getLogger(__name__)
 
 # Bump on every change that can alter forecasts, so results can be traced to a version.
-BOT_VERSION = "2026-11-18.2"  # 18 Nov: statistical baselines for return gaps and period highs (numeric_baseline.py)
+BOT_VERSION = "2026-11-27.1"  # 27 Nov: multiple-choice answers read in the question's order, not by the parser
 
 LOG_DIR = Path(__file__).parent / "private" / "forecast_logs"  # the private repo, cloned into private/
 # Dry runs and bot-testing-area runs go here so they never mix with real forecasts.
